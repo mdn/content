@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.firCount
 slug: Web/API/RTCRtpStreamStats/firCount
+page-type: web-api-instance-property
 tags:
   - API
   - Dropped Frames
@@ -19,6 +20,7 @@ tags:
   - stream
 browser-compat: api.RTCRtpStreamStats.firCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`firCount`** property of the

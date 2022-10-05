@@ -1,6 +1,7 @@
 ---
 title: GeolocationPosition.coords
 slug: Web/API/GeolocationPosition/coords
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -10,6 +11,7 @@ tags:
   - coords
 browser-compat: api.GeolocationPosition.coords
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPosition.coords`** read-only property returns

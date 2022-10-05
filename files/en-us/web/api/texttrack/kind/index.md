@@ -1,6 +1,7 @@
 ---
 title: TextTrack.kind
 slug: Web/API/TextTrack/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.kind
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`kind`** read-only property of the {{domxref("TextTrack")}} interface returns the kind of text track this object represents. This decides how the track will be handled by a user agent.

@@ -1,6 +1,7 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -12,6 +13,7 @@ tags:
   - editor
 browser-compat: api.Document.designMode
 ---
+
 {{ApiRef()}}
 
 **`document.designMode`** controls whether the entire document

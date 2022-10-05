@@ -18,6 +18,7 @@ tags:
   - data
   - request
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Another very common task in modern websites and applications is retrieving individual data items from the server to update sections of a webpage without having to load an entire new page. This seemingly small detail has had a huge impact on the performance and behavior of sites, so in this article, we'll explain the concept and look at technologies that make it possible: in particular, the [Fetch API](/en-US/docs/Web/API/Fetch_API).
@@ -63,7 +64,7 @@ So instead of the traditional model, many websites use JavaScript APIs to reques
 
 ![Using fetch to update pages](fetch-update.svg)
 
-The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON). which is a good format for transferring structured data, but can also be HTML or just text.
+The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON), which is a good format for transferring structured data, but can also be HTML or just text.
 
 This is a common pattern for data-driven sites such as Amazon, YouTube, eBay, and so on. With this model:
 
@@ -122,7 +123,7 @@ Finally we're ready to use the Fetch API:
 fetch(url)
   // fetch() returns a promise. When we have received a response from the server,
   // the promise's `then()` handler is called with the response.
-  .then( response => {
+  .then((response) => {
     // Our handler throws an error if the request did not succeed.
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -134,10 +135,10 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then( text => poemDisplay.textContent = text )
+  .then((text) => poemDisplay.textContent = text)
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
-  .catch( error => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
 ```
 
 There's quite a lot to unpack in here.
@@ -146,9 +147,9 @@ First, the entry point to the Fetch API is a global function called {{domxref("f
 
 Next, `fetch()` is an asynchronous API which returns a {{jsxref("Promise")}}. If you don't know what that is, read the module on [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous), and in particular the article on [promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises), then come back here. You'll find that article also talks about the `fetch()` API!
 
-So because `fetch()` returns a promise, we pass a function into the {{jsxref("Promise/then", "then()")}} function of the returned promise. This function will be called when the HTTP request has received a response from the server. In the handler, we check that the request succeeded, and throw an error if it didn't. Otherwise, we call {{domxref("Response/text", "response.text()")}}, to get the response body as text.
+So because `fetch()` returns a promise, we pass a function into the {{jsxref("Promise/then", "then()")}} method of the returned promise. This method will be called when the HTTP request has received a response from the server. In the handler, we check that the request succeeded, and throw an error if it didn't. Otherwise, we call {{domxref("Response/text", "response.text()")}}, to get the response body as text.
 
-It turns out that `response.text()` is _also_ asynchronous, so we return the promise it returns, and pass a function into the `then()` function of this new promise. This function will be called when the response text is ready, and inside it we will update our `<pre>` block with the text.
+It turns out that `response.text()` is _also_ asynchronous, so we return the promise it returns, and pass a function into the `then()` method of this new promise. This function will be called when the response text is ready, and inside it we will update our `<pre>` block with the text.
 
 Finally, we chain a {{jsxref("Promise/catch", "catch()")}} handler at the end, to catch any errors thrown in either of the asynchronous functions we called or their handlers.
 
@@ -181,14 +182,14 @@ The first block that uses Fetch can be found at the start of the JavaScript:
 
 ```js
 fetch('products.json')
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((json) => initialize(json))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 The `fetch()` function returns a promise. If this completes successfully, the function inside the first `.then()` block contains the `response` returned from the network.
@@ -215,14 +216,14 @@ The second Fetch block can be found inside the `fetchBlob()` function:
 
 ```js
 fetch(url)
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.blob();
   })
-  .then( blob => showProduct(blob, product) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((blob) => showProduct(blob, product))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 This works in much the same way as the previous one, except that instead of using {{domxref("Response.json","json()")}}, we use {{domxref("Response.blob","blob()")}}. In this case we want to return our response as an image file, and the data format we use for that is [Blob](/en-US/docs/Web/API/Blob) (the term is an abbreviation of "Binary Large Object" and can basically be used to represent large file-like objects, such as images or video files).
@@ -246,7 +247,7 @@ try {
 
   request.send();
 
-} catch(error) {
+} catch (error) {
   console.error(`XHR error ${request.status}`);
 }
 ```

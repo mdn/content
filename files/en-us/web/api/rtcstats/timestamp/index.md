@@ -1,6 +1,7 @@
 ---
 title: RTCStats.timestamp
 slug: Web/API/RTCStats/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,6 +16,7 @@ tags:
   - timeStamp
 browser-compat: api.RTCStats.timestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`timestamp`** property of the

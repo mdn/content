@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.storage
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to store and retrieve data, and listen for changes to stored items.
@@ -42,19 +43,21 @@ You can examine the stored data under the Extension Storage item in the [Storage
 
 ## Properties
 
-`storage` has three properties, which represent the different types of available storage area.
+`storage` has four properties, which represent the different types of available storage area.
 
-- {{WebExtAPIRef("storage.sync")}}
-  - : Represents the `sync` storage area. Items in `sync` storage are synced by the browser, and are available across all instances of that browser that the user is logged into, across different devices.
 - {{WebExtAPIRef("storage.local")}}
   - : Represents the `local` storage area. Items in `local` storage are local to the machine the extension was installed on.
 - {{WebExtAPIRef("storage.managed")}}
   - : Represents the `managed` storage area. Items in `managed` storage are set by the domain administrator and are read-only for the extension. Trying to modify this namespace results in an error.
+- {{WebExtAPIRef("storage.session")}}
+  - : Represents the `session` storage area. Items in `session` storage are stored in memory and are not persisted to disk.
+- {{WebExtAPIRef("storage.sync")}}
+  - : Represents the `sync` storage area. Items in `sync` storage are synced by the browser, and are available across all instances of that browser that the user is logged into, across different devices.
 
 ## Events
 
 - {{WebExtAPIRef("storage.onChanged")}}
-  - : Fired when one or more items change in a storage area.
+  - : Fired when one or more items change in any of the storage areas.
 
 ## Browser compatibility
 
@@ -66,7 +69,8 @@ You can examine the stored data under the Extension Storage item in the [Storage
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,4 +97,4 @@ You can examine the stored data under the Extension Storage item in the [Storage
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

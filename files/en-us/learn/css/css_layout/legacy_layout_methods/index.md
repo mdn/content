@@ -11,6 +11,7 @@ tags:
   - grid system
   - legacy
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
@@ -60,12 +61,31 @@ First of all, we need some content to put into our columns. Replace whatever is 
 <h1>2 column layout example</h1>
 <div>
   <h2>First column</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Second column</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -156,7 +176,7 @@ Start out by making a local copy of our sample [simple-grid.html](https://github
 
 The aim is to turn this into a demonstration grid of two rows on a twelve column grid — the top row demonstrating the size of the individual columns, the second row some different sized areas on the grid.
 
-![](simple-grid-finished.png)
+![CSS grid with 16 grid items spread across twelve columns and two rows. The top row has 12 equal-width grid items in 12 columns. The second row has different-sized grid items. Item 13 spans 1 column, item 14 spans six columns, 15 spans three, and 16 spans two.](simple-grid-finished.png)
 
 In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [Changing the box model completely](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) for more explanation).
 
@@ -189,7 +209,7 @@ The gutters between the columns are 20 pixels wide. We create these gutters as a
 
 We need to subtract that from our total width of 960 pixels, giving us 720 pixels for our columns. If we now divide that by 12, we know that each column should be 60 pixels wide.
 
-Our next step is to create a rule for the class `.col`,  floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
+Our next step is to create a rule for the class `.col`, floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
 
 ```css
 .col {
@@ -213,7 +233,7 @@ Add the following at the bottom of your CSS:
 .col.span2 { width: 140px; }
 /* Three column widths (180px) plus two gutter widths (40px) */
 .col.span3 { width: 220px; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 300px; }
 .col.span5 { width: 380px; }
 .col.span6 { width: 460px; }
@@ -306,7 +326,7 @@ Update the bottom block of CSS rules with the following:
 .col.span2 { width: 14.58333333%; }
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
 .col.span3 { width: 22.91666666%; }
-/* And so on... */
+/* And so on… */
 .col.span4 { width: 31.24999999%; }
 .col.span5 { width: 39.58333332%; }
 .col.span6 { width: 47.91666665%; }
@@ -324,30 +344,30 @@ Now save your code, load it in a browser, and try changing the viewport width �
 
 ### Easier calculations using the calc() function
 
-You could use the {{cssxref("calc", "calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](</en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+You could use the {{cssxref("calc", "calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc).
 
 Anyway, back to our grids! Any column that spans more than one column of our grid has a total width of 6.25% multiplied by the number of columns spanned plus 2.08333333% multiplied by the number of gutters (which will always be the number of columns minus 1). The `calc()` function allows us to do this calculation right inside the width value, so for any item spanning 4 columns we can do this, for example:
 
 ```css
 .col.span4 {
-  width: calc((6.25%*4) + (2.08333333%*3));
+  width: calc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
 Try replacing your bottom block of rules with the following, then reload it in the browser to see if you get the same result:
 
 ```css
-.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
-.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
-.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
-.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
-.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
-.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
-.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
-.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
-.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
-.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
-.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+.col.span2 { width: calc((6.25% * 2) + 2.08333333%); }
+.col.span3 { width: calc((6.25% * 3) + (2.08333333%*2)); }
+.col.span4 { width: calc((6.25% * 4) + (2.08333333%*3)); }
+.col.span5 { width: calc((6.25% * 5) + (2.08333333%*4)); }
+.col.span6 { width: calc((6.25% * 6) + (2.08333333%*5)); }
+.col.span7 { width: calc((6.25% * 7) + (2.08333333%*6)); }
+.col.span8 { width: calc((6.25% * 8) + (2.08333333%*7)); }
+.col.span9 { width: calc((6.25% * 9) + (2.08333333%*8)); }
+.col.span10 { width: calc((6.25% * 10) + (2.08333333%*9)); }
+.col.span11 { width: calc((6.25% * 11) + (2.08333333%*10)); }
+.col.span12 { width: calc((6.25% * 12) + (2.08333333%*11)); }
 ```
 
 > **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
@@ -362,7 +382,7 @@ These are not the only approach. You could instead decide on your grid and then 
 
 ```css
 .content {
-  width: calc((6.25%*8) + (2.08333333%*7));
+  width: calc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
@@ -380,7 +400,7 @@ Let's create a class in our CSS that will offset a container element by one colu
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333%*2));
+  margin-left: calc(6.25% + (2.08333333% * 2));
 }
 ```
 
@@ -408,7 +428,7 @@ Try replacing it with
 
 Try loading and refreshing to see the difference, or check out our [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) example (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) also). The finished example should look like this:
 
-![](offset-grid-finished.png)
+![The grid has 2 rows. The first row has 12 equal-width grid items and the second row has 4 items of different widths. Item 13 spans 1 column, item 14 spans five columns, 15 spans three, and 16 spans two. Item 14 has the 'offset-by-one' class applied, which means it starts in the 3rd column, rather than the second, leaving a one-column wide empty space in the second-row second-column. ](offset-grid-finished.png)
 
 > **Note:** As an extra exercise, can you implement an `offset-by-two` class?
 
@@ -446,7 +466,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255,150,150);
+  background: rgb(255, 150, 150);
 }
 ```
 
@@ -458,7 +478,7 @@ On `.col` we set the {{cssxref("flex")}} property's first value ({{cssxref("flex
 
 On the top line we get twelve neat boxes on the grid and they grow and shrink equally as we change the viewport width. On the next line, however, we only have four items and these also grow and shrink from that 60px basis. With only four of them they can grow a lot more than the items in the row above, the result being that they all occupy the same width on the second row.
 
-![](flexbox-grid-incomplete.png)
+![The grid has two rows. Each row is a flex container. The first row has twelve equal-width flex items. The second row has four equal-width flex items.](flexbox-grid-incomplete.png)
 
 To fix this we still need to include our `span` classes to provide a width that will replace the value used by `flex-basis` for that element.
 
@@ -481,8 +501,8 @@ Make a copy of our [html-skeleton.html](https://github.com/mdn/learning-area/blo
 Include the skeleton and normalize CSS in the HTML page, by adding the following to its head:
 
 ```html
-<link href="normalize.css" rel="stylesheet">
-<link href="skeleton.css" rel="stylesheet">
+<link href="normalize.css" rel="stylesheet" />
+<link href="skeleton.css" rel="stylesheet" />
 ```
 
 Skeleton includes more than a grid system — it also contains CSS for typography and other page elements that you can use as a starting point. We'll leave these at the defaults for now, however — it's the grid we are really interested in here.
@@ -566,7 +586,9 @@ Try saving your HTML file and loading it in your browser to see the effect.
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 
 ```css
-.three.columns { width: 22%; }
+.three.columns {
+  width: 22%;
+}
 ```
 
 All Skeleton (or any other grid framework) is doing is setting up predefined classes that you can use by adding them to your markup. It's exactly the same as if you did the work of calculating these percentages yourself.

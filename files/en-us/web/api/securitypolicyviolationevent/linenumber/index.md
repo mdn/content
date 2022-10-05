@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.lineNumber
 slug: Web/API/SecurityPolicyViolationEvent/lineNumber
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
@@ -12,7 +13,8 @@ tags:
   - lineNumber
 browser-compat: api.SecurityPolicyViolationEvent.lineNumber
 ---
-{{HTTPSidebar}}")}}
+
+{{HTTPSidebar}}
 
 The **`lineNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the line number in the document

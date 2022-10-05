@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.country
 slug: Web/API/PaymentAddress/country
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -12,13 +13,16 @@ tags:
   - country
   - payment
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.country
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`country`** read-only property of the
 {{domxref('PaymentAddress')}} interface is a string identifying the address's country
-using the {{interwiki("wikipedia", "ISO 3166-1 alpha-2")}} standard. The string is
+using the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. The string is
 always in its canonical upper-case form.
 
 Some examples of valid `country` values: `"US"`,
@@ -46,7 +50,6 @@ validation error that occurred and, if possible, suggests how to fix it.
 
 ## See also
 
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref("PaymentRequestUpdateEvent.updateWith")}}
 - {{domxref("AddressErrors.country")}}

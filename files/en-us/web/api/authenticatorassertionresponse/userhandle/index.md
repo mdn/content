@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAssertionResponse.userHandle
 slug: Web/API/AuthenticatorAssertionResponse/userHandle
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorAssertionResponse
@@ -10,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.userHandle
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`userHandle`** read-only property of the
@@ -38,21 +40,20 @@ identifying information (e.g. username, e-mail, phone number, etc.)
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
-  timeout: 60000
+  timeout: 60000,
 };
 
-navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
-    var userHandle = assertionPKCred.response.userHandle;
+navigator.credentials
+  .get({ publicKey: options })
+  .then((assertionPKCred) => {
+    const userHandle = assertionPKCred.response.userHandle;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
-
-}).catch(function (err) {
-   console.error(err);
-});
+  })
+  .catch((err) => console.error(err));
 ```
 
 ## Specifications

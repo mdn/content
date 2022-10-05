@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
   - Non Standard
 ---
+
 {{APIRef("UI Events")}}
 
 > **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
@@ -28,7 +30,7 @@ this way must have been created with the
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyEvent (type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)
@@ -72,12 +74,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var event = document.createEvent('KeyboardEvent'); // create a key event
+const event = document.createEvent('KeyboardEvent'); // create a key event
 // define the event
 event.initKeyEvent("keypress",       // typeArg,
                    true,             // canBubbleArg,
                    true,             // cancelableArg,
-                   null,             // viewArg,  Specifies UIEvent.view. This value may be null.
+                   null,             // viewArg, Specifies UIEvent.view. This value may be null.
                    false,            // ctrlKeyArg,
                    false,            // altKeyArg,
                    false,            // shiftKeyArg,
@@ -90,20 +92,5 @@ document.getElementById('blah').dispatchEvent(event);
 
 ## Specifications
 
-This implementation of keyboard events is based on the key events spec in the [early versions
-of DOM 2 Events](https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html), later removed from that spec.
-
-The `initKeyEvent` is the current Gecko equivalent of the DOM Level 3 Events
-(initially drafted and also deprecated in favor of
-{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
-{{domxref("Keyboard.initKeyboardEvent()")}} method with the following arguments:
-
-```
-typeArg of type DOMString
-canBubbleArg of type boolean
-cancelableArg of type boolean
-viewArg of type views::AbstractView
-keyIdentifierArg of type DOMString
-keyLocationArg of type unsigned long
-modifiersList of type DOMString);
-```
+This implementation of keyboard events is based on the key events spec in the [early versions of DOM 2 Events](https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html), later removed from that spec in favor of
+{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} that should be used instead.

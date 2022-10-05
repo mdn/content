@@ -1,6 +1,7 @@
 ---
 title: EcKeyImportParams
 slug: Web/API/EcKeyImportParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -9,7 +10,10 @@ tags:
   - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-EcKeyImportParams
 ---
-{{ APIRef("Web Crypto API") }}The **`EcKeyImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh).
+
+{{ APIRef("Web Crypto API") }}
+
+The **`EcKeyImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh).
 
 ## Properties
 

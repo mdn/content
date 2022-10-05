@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry.intersectionRatio
 slug: Web/API/IntersectionObserverEntry/intersectionRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -11,6 +12,7 @@ tags:
   - intersectionRatio
 browser-compat: api.IntersectionObserverEntry.intersectionRatio
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
@@ -38,7 +40,7 @@ In this simple example, an intersection callback sets each target element's
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     entry.target.style.opacity = entry.intersectionRatio;
   });
 }

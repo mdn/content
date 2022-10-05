@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.hardwareConcurrency
 slug: Web/API/WorkerNavigator/hardwareConcurrency
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - hardwareConcurrency
 browser-compat: api.WorkerNavigator.hardwareConcurrency
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`navigator.hardwareConcurrency`** read-only property

@@ -1,6 +1,7 @@
 ---
 title: Split Navigation
 slug: Web/CSS/Layout_cookbook/Split_Navigation
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -8,7 +9,9 @@ tags:
   - Navigation
   - cookbook
   - flexbox
+browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 A navigation pattern where one or more elements are separated from the rest of the navigation items.
@@ -37,11 +40,7 @@ In this case the left auto margin takes up any available space and pushes the it
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### Flexbox
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## See also
 

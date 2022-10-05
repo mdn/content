@@ -1,16 +1,17 @@
 ---
 title: Range.getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
-  - Experimental
   - Method
   - Range
   - Reference
 browser-compat: api.Range.getBoundingClientRect
 ---
-{{ApiRef("DOM")}}{{SeeCompatTable}}
+
+{{ApiRef("DOM")}}
 
 The **`Range.getBoundingClientRect()`** method returns a {{
   domxref("DOMRect") }} object that bounds the contents of the range; this is a rectangle
@@ -22,7 +23,7 @@ details on the returned value.
 
 ## Syntax
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 
@@ -40,7 +41,12 @@ None ({{jsxref("undefined")}}).
 
 ```html
 <div id="highlight"></div>
-<p>This example positions a "highlight" rectangle behind the contents of a range. The range's content <b>starts here</b> and continues on until it <b>ends here</b>. The bounding client rectangle contains everything selected in the range.</p>
+<p>
+  This example positions a "highlight" rectangle behind the contents of a range.
+  The range's content <em>starts here</em> and continues on until it
+  <em>ends here</em>. The bounding client rectangle contains everything selected
+  in the range.
+</p>
 ```
 
 ### CSS
@@ -61,8 +67,8 @@ p {
 
 ```js
 const range = document.createRange();
-range.setStartBefore(document.getElementsByTagName('b').item(0), 0);
-range.setEndAfter(document.getElementsByTagName('b').item(1), 0);
+range.setStartBefore(document.getElementsByTagName('em').item(0));
+range.setEndAfter(document.getElementsByTagName('em').item(1));
 
 const clientRect = range.getBoundingClientRect();
 const highlight = document.getElementById('highlight');

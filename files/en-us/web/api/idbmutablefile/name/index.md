@@ -1,6 +1,7 @@
 ---
 title: IDBMutableFile.name
 slug: Web/API/IDBMutableFile/name
+page-type: web-api-instance-property
 tags:
   - API
   - Files
@@ -11,6 +12,7 @@ tags:
   - deprecated
 browser-compat: api.IDBMutableFile.name
 ---
+
 {{APIRef("IDBMutableFile")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).

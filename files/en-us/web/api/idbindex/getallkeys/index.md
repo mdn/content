@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
+page-type: web-api-instance-method
 tags:
   - API
   - IDBIndex
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.IDBIndex.getAllKeys
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAllKeys()`** method of the {{domxref("IDBIndex")}}
@@ -17,7 +19,7 @@ setting them as the `result` of the request object.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllKeys()
 getAllKeys(query)
 getAllKeys(query, count)
@@ -54,9 +56,9 @@ not between `0` and `2^32 - 1` included.
 ## Examples
 
 ```js
-var myIndex = objectStore.index('index');
-var getAllKeysRequest = myIndex.getAllKeys();
-getAllKeysRequest.onsuccess = function() {
+const myIndex = objectStore.index('index');
+const getAllKeysRequest = myIndex.getAllKeys();
+getAllKeysRequest.onsuccess = () => {
   console.log(getAllKeysRequest.result);
 }
 ```
@@ -77,6 +79,4 @@ getAllKeysRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example
-  live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

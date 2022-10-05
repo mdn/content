@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.capabilities
 slug: Web/API/VRDisplay/capabilities
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - capabilities
+  - Non-standard
 browser-compat: api.VRDisplay.capabilities
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`capabilities`** read-only property of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
 

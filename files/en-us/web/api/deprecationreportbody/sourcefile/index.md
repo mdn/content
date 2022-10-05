@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody.sourceFile
 slug: Web/API/DeprecationReportBody/sourceFile
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,8 +9,9 @@ tags:
   - Experimental
   - sourceFile
   - DeprecationReportBody
-spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-sourcefile
+browser-compat: api.DeprecationReportBody.sourceFile
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`sourceFile`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the path to the source file where the deprecated feature was used.
@@ -30,7 +32,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.sourceFile);
@@ -43,4 +45,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

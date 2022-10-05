@@ -1,6 +1,7 @@
 ---
 title: Creating 3D objects using WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
+page-type: guide
 tags:
   - 3D
   - Drawing
@@ -10,6 +11,7 @@ tags:
   - WebGL
   - rendering
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Let's take our square plane into three dimensions by adding five more faces to create a cube. To do this efficiently, we're going to switch from drawing using the vertices directly by calling the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method to using the vertex array as a table, and referencing individual vertices in that table to define the positions of each face's vertices, by calling {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
@@ -69,7 +71,7 @@ Since we've added a z-component to our vertices, we need to update the `numCompo
 // buffer into the vertexPosition attribute
 {
   const numComponents = 3;
-  ...
+  // …
   gl.vertexAttribPointer(
       programInfo.attribLocations.vertexPosition,
       numComponents,
@@ -102,7 +104,6 @@ We also need to build an array of colors for each of the 24 vertices. This code 
 
   for (var j = 0; j < faceColors.length; ++j) {
     const c = faceColors[j];
-
     // Repeat each color four times for the four vertices of the face
     colors = colors.concat(c, c, c, c);
   }
@@ -156,7 +157,7 @@ Next we need to add code to our `drawScene()` function to draw using the cube's 
   // Tell WebGL which indices to use to index the vertices
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
-...
+  // …
 
   {
     const vertexCount = 36;
@@ -176,8 +177,8 @@ mat4.rotate(modelViewMatrix, modelViewMatrix, cubeRotation * .7, [0, 1, 0]);
 
 At this point, we now have an animated cube rotating, its six faces rather vividly colored.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample5/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

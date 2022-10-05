@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.port
 slug: Web/API/RTCIceCandidateStats/port
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -17,6 +18,7 @@ tags:
   - port
 browser-compat: api.RTCIceCandidateStats.port
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's **`port`**

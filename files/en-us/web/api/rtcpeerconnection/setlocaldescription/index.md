@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
+page-type: web-api-instance-method
 tags:
   - API
   - Descriptions
@@ -15,6 +16,7 @@ tags:
   - setLocalDescription
 browser-compat: api.RTCPeerConnection.setLocalDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -34,7 +36,7 @@ negotiation is complete. Only then does the agreed-upon configuration take effec
 
 ## Syntax
 
-```js
+```js-nolint
 setLocalDescription()
 setLocalDescription(sessionDescription)
 setLocalDescription(sessionDescription, successCallback, errorCallback) // deprecated
@@ -50,7 +52,16 @@ setLocalDescription(sessionDescription, successCallback, errorCallback) // depre
 
 ### Return value
 
-A {{jsxref("Promise")}}.
+A {{jsxref("Promise")}} which is fulfilled once the value of
+{{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if
+the change cannot be applied (for example, if the specified description is incompatible
+with one or both of the peers on the connection). The promise's fulfillment handler
+receives no input parameters.
+
+> **Note:** The process of changing descriptions actually involves intermediary steps handled by
+> the WebRTC layer to ensure that an active connection can be changed without losing the
+> connection if the change does not succeed. See
+> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for more details on this process.
 
 #### Implicit description
 
@@ -68,35 +79,19 @@ serialized version of a {{domxref("RTCSessionDescription")}} browser object. The
 interchangeable:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-});
+myPeerConnection.createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(offer));
 ```
 
 This is equivalent to:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
-  return myPeerConnection.setLocalDescription(new RTCSessionDescription(offer));
-});
+myPeerConnection.createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(new RTCSessionDescription(offer)));
 ```
 
 For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription",
   "RTCSessionDescription()")}} constructor is deprecated.
-
-### Return value
-
-A {{jsxref("Promise")}} which is fulfilled once the value of
-{{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if
-the change cannot be applied (for example, if the specified description is incompatible
-with one or both of the peers on the connection). The promise's fulfillment handler
-receives no input parameters.
-
-> **Note:** The process of changing descriptions actually involves intermediary steps handled by
-> the WebRTC layer to ensure that an active connection can be changed without losing the
-> connection if the change does not succeed. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-    descriptions")}} for more details on this process.
 
 ### Deprecated parameters
 
@@ -165,7 +160,7 @@ async function handleNegotiationNeededEvent() {
     const offer = await pc.createOffer();
     pc.setLocalDescription(offer);
     signalRemotePeer({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     reportError(err);
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - insertAdjacentElement
 browser-compat: api.Element.insertAdjacentElement
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentElement()`** method of the
@@ -19,7 +21,7 @@ relative to the element it is invoked upon.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentElement(position, element)
 ```
 
@@ -73,8 +75,8 @@ The element that was inserted, or `null`, if the insertion failed.
 ## Examples
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+beforeBtn.addEventListener('click', () => {
+  const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
     activeElem.insertAdjacentElement('beforebegin', tempDiv);
@@ -82,8 +84,8 @@ beforeBtn.addEventListener('click', function() {
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+afterBtn.addEventListener('click', () => {
+  const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
     activeElem.insertAdjacentElement('afterend', tempDiv);
@@ -93,8 +95,7 @@ afterBtn.addEventListener('click', function() {
 ```
 
 Have a look at our [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html)
-demo on GitHub (see the [source
-code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
+demo on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/main/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
 container. When one is clicked, it becomes selected and you can then press the
 _Insert before_ and _Insert after_ buttons to insert new divs before or
 after the selected element using `insertAdjacentElement()`.

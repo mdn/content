@@ -1,6 +1,7 @@
 ---
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSSupportsRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSSupportsRule`** interface represents a single CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule).

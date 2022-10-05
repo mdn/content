@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.getLayers()
 slug: Web/API/VRDisplay/getLayers
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -12,9 +13,11 @@ tags:
   - Virtual Reality
   - WebVR
   - getLayers()
+  - Non-standard
 browser-compat: api.VRDisplay.getLayers
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getLayers()`** method of the {{domxref("VRDisplay")}} interface returns the layers currently being presented by the `VRDisplay`.
 
@@ -22,7 +25,7 @@ The **`getLayers()`** method of the {{domxref("VRDisplay")}} interface returns t
 
 ## Syntax
 
-```js
+```js-nolint
 getLayers()
 ```
 

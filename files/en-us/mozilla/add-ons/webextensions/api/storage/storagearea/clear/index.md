@@ -14,6 +14,7 @@ tags:
   - remove
 browser-compat: webextensions.api.storage.StorageArea.clear
 ---
+
 {{AddonSidebar()}}
 
 Removes all items from the storage area.
@@ -22,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let clearing = browser.storage.<storageType>.clear()
 ```
 

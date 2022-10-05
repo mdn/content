@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRoleDescription
 slug: Web/API/ElementInternals/ariaRoleDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaRoleDescription
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaRoleDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an element.

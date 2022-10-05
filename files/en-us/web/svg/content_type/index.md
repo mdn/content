@@ -7,6 +7,7 @@ tags:
   - Types
   - data types
 ---
+
 SVG makes use of a number of data types. This article lists these types along with their syntax and descriptions of what they're used for.
 
 ## Angle
@@ -41,7 +42,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     anything ::= Char*
     ```
 
-    where [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) is the production for a character, as defined in XML 1.0 , section 2.2.
+    where [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) is the production for a character, as defined in XML 1.0, section 2.2.
 
 ## Clock-value
 
@@ -79,10 +80,10 @@ SVG makes use of a number of data types. This article lists these types along wi
       - `45min` = 45 minutes
       - `30s` = 30 seconds
       - `5ms` = 5 milliseconds
-      - `12.467`= 12 seconds and 467 milliseconds
+      - `12.467` = 12 seconds and 467 milliseconds
     - Fractional values are just (base 10) floating point definitions of seconds. Thus:
-      - `00.5s = 500 milliseconds
-      - 00:00.005 = 5 milliseconds`
+      - `00.5s` = 500 milliseconds
+      - `00:00.005` = 5 milliseconds
 
 ## Color
 
@@ -151,21 +152,21 @@ SVG makes use of a number of data types. This article lists these types along wi
 - \<IRI>
   - : An **I**nternationalized **R**esource **I**dentifier.
 
-    On the Internet, resources are identified using *IRI*s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at `http://example.com` might have the following *IRI*:
+    On the Internet, resources are identified using _IRIs_ (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at `http://example.com` might have the following _IRI_:
 
     ```
     http://example.com/someDrawing.svg
     ```
 
-    An *IRI* can also address a particular element within an XML document by including an *IRI* fragment identifier as part of the *IRI*. An *IRI* which includes an *IRI* fragment identifier consists of an optional base *IRI*, followed by a "`#`" character, followed by the *IRI* fragment identifier. For example, the following *IRI* can be used to specify the element whose ID is "`Lamppost`" within file `someDrawing.svg`:
+    An _IRI_ can also address a particular element within an XML document by including an _IRI_ fragment identifier as part of the _IRI_. An _IRI_ which includes an _IRI_ fragment identifier consists of an optional base _IRI_, followed by a "`#`" character, followed by the _IRI_ fragment identifier. For example, the following _IRI_ can be used to specify the element whose ID is "`Lamppost`" within file `someDrawing.svg`:
 
     ```
     http://example.com/someDrawing.svg#Lamppost
     ```
 
-    *IRI*s are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both *IRI*s and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an *IRI* delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The *FuncIRI* form is used in presentation attributes .
+    _IRI_s are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both _IRI_s and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
 
-    SVG makes extensive use of *IRI* references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
+    SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
     ```html
     <linearGradient xml:id="MyGradient">...</linearGradient>
@@ -177,10 +178,10 @@ SVG makes use of a number of data types. This article lists these types along wi
     <rect fill="url(#MyGradient)"/>
     ```
 
-    SVG supports two types of *IRI* references:
+    SVG supports two types of _IRI_ references:
 
-    - **local *IRI* references**, where the IRI reference does not contain an `<absoluteIRI>` or `<relativeIRI>` and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
-    - **non-local *IRI* references**, where the *IRI* reference does contain an `<absoluteIRI>` or `<relativeIRI>`.
+    - **local _IRI_ references**, where the IRI reference does not contain an `<absoluteIRI>` or `<relativeIRI>` and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
+    - **non-local _IRI_ references**, where the _IRI_ reference does contain an `<absoluteIRI>` or `<relativeIRI>`.
 
       For the full specification of IRI references in SVG, see [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference).
 
@@ -212,21 +213,21 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     In the SVG DOM, \<length> values are represented using {{domxref("SVGLength")}} or {{domxref("SVGAnimatedLength")}} objects.
 
-## List-of-*T*s
+## List-of-Ts
 
-- \<list-of-*T*s>
-  - : (Where *T* is some type.) A list consists of a separated sequence of values. Unless explicitly described differently, lists within SVG's XML attributes can be either comma-separated (with optional white space before or after the comma), or white space-separated.
+- \<list-of-Ts>
+  - : (Where _T_ is some type.) A list consists of a separated sequence of values. Unless explicitly described differently, lists within SVG's XML attributes can be either comma-separated (with optional white space before or after the comma), or white space-separated.
 
     White space in lists is defined as one or more of the following consecutive characters: "space" (`U+0020`), "tab" (`U+0009`), "line feed" (`U+000A`), "carriage return" (`U+000D`), and "form-feed" (`U+000C`).
 
-    The following is a template for an EBNF grammar describing the \<list-of-*T*s> syntax:
+    The following is a template for an EBNF grammar describing the \<list-of-Ts> syntax:
 
     ```
     list-of-Ts ::= T
                     | T, list-of-Ts
     ```
 
-    Within the SVG DOM, values of a \<list-of-*T*s> type are represented by an interface specific for the particular type *T*. For example, a \<list-of-lengths> is represented in the SVG DOM using an {{domxref("SVGLengthList")}} or {{domxref("SVGAnimatedLengthList")}} object.
+    Within the SVG DOM, values of a \<list-of-Ts> type are represented by an interface specific for the particular type _T_. For example, a \<list-of-lengths> is represented in the SVG DOM using an {{domxref("SVGLengthList")}} or {{domxref("SVGAnimatedLengthList")}} object.
 
 ## Name
 

@@ -1,6 +1,7 @@
 ---
 title: RsaHashedKeyGenParams
 slug: Web/API/RsaHashedKeyGenParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -9,6 +10,7 @@ tags:
   - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaHashedKeyGenParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`RsaHashedKeyGenParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.generateKey()")}}, when generating any RSA-based key pair: that is, when the algorithm is identified as any of [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep).

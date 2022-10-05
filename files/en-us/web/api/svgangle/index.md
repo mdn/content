@@ -1,6 +1,7 @@
 ---
 title: SVGAngle
 slug: Web/API/SVGAngle
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAngle
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGAngle` interface is used to represent a value that can be an {{cssxref("&lt;angle&gt;")}} or {{cssxref("&lt;number&gt;")}} value. An `SVGAngle` reflected through the {{SVGAttr("animVal")}} attribute is always read only.

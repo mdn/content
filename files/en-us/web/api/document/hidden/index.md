@@ -1,6 +1,7 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
+page-type: web-api-instance-property
 tags:
   - DOM
   - Document
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: api.Document.hidden
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.hidden`** read-only property returns a Boolean
@@ -21,16 +23,16 @@ value indicating if the page is considered hidden or not.
 
 ## Syntax
 
-```js
-var boolean = document.hidden
+```js-nolint
+document.hidden
 ```
 
 ## Examples
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.hidden );
-  // Modify behavior...
+document.addEventListener("visibilitychange", () => {
+  console.log(document.hidden);
+  // Modify behavior…
 });
 ```
 

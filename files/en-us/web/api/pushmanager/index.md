@@ -1,9 +1,9 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Push
   - Push API
@@ -11,6 +11,7 @@ tags:
   - Service Workers
 browser-compat: api.PushManager
 ---
+
 {{ApiRef("Push API")}}
 
 The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
@@ -45,26 +46,22 @@ This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushMana
 ## Example
 
 ```js
-this.onpush = function(event) {
+this.onpush = (event) => {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
 }
 
 navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+  (serviceWorkerRegistration) => {
     serviceWorkerRegistration.pushManager.subscribe().then(
-      function(pushSubscription) {
+      (pushSubscription) => {
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
-      }, function(error) {
-        // During development it often helps to log errors to the
-        // console. In a production environment it might make sense to
-        // also report information about errors back to the
-        // application server.
-        console.log(error);
+      }, (error) => {
+        console.error(error);
       }
     );
   });

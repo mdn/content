@@ -1,6 +1,7 @@
 ---
 title: HTMLTableSectionElement
 slug: Web/API/HTMLTableSectionElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableSectionElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableSectionElement`** interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table.
@@ -20,7 +22,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTableSectionElement.align")}} {{deprecated_inline}}
   - : A string containing an enumerated value reflecting the {{htmlattrxref("align", "tr")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
-- {{domxref("HTMLTableSectionElement.rows")}} {{readonlyInline}}
+- {{domxref("HTMLTableSectionElement.rows")}} {{ReadOnlyInline}}
   - : Returns a live {{domxref("HTMLCollection")}} containing the rows in the section. The `HTMLCollection` is live and is automatically updated when rows are added or removed.
 - {{domxref("HTMLTableSectionElement.ch")}} {{deprecated_inline}}
   - : A string containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "tr")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.

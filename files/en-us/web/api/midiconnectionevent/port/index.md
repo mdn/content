@@ -1,6 +1,7 @@
 ---
 title: MIDIConnectionEvent.port
 slug: Web/API/MIDIConnectionEvent/port
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - MIDIConnectionEvent
 browser-compat: api.MIDIConnectionEvent.port
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`port`** read-only property of the {{domxref("MIDIConnectionEvent")}} interface returns the port that has been disconnected or connected.
@@ -23,9 +25,9 @@ The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that r
 
 ```js
 navigator.requestMIDIAccess()
-  .then(function(access) {
+  .then((access) => {
 
-     access.onstatechange = event => {
+     access.onstatechange = (event) => {
        console.log(event.port.name, event.port.manufacturer, event.port.state);
      };
   });

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.kind
 slug: Web/API/RTCRtpStreamStats/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -18,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCRtpStreamStats.kind
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`kind`** property of the

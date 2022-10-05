@@ -1,6 +1,7 @@
 ---
 title: SVGFEGaussianBlurElement
 slug: Web/API/SVGFEGaussianBlurElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEGaussianBlurElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEGaussianBlurElement`** interface corresponds to the {{SVGElement("feGaussianBlur")}} element.

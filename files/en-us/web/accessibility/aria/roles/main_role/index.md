@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: main role'
+title: "ARIA: main role"
 slug: Web/Accessibility/ARIA/Roles/main_role
 tags:
   - ARIA
@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#main
   - https://w3c.github.io/aria-practices/#aria_lh_main
 ---
+
 The `main` landmark role is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the main function of an application.
 
 ```html
@@ -31,7 +32,7 @@ By classifying and labeling sections of a page, structural information conveyed 
 
 There should only be one `main` landmark role per document.
 
-The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML -- in this case {{HTMLElement('main')}} -- over using ARIA.
+The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML — in this case {{HTMLElement('main')}} — over using ARIA.
 
 ### Associated ARIA roles, states, and properties
 
@@ -41,7 +42,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labelledby`
 
-  - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
+  - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 ## Example
 
@@ -54,7 +55,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
     <!-- article content -->
   </div>
 
- <!-- sidebar and footer -->
+  <!-- sidebar and footer -->
 </body>
 ```
 
@@ -136,6 +137,6 @@ Which is the equivalent of:
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

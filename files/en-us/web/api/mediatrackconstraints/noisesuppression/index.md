@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.noiseSuppression
 slug: Web/API/MediaTrackConstraints/noiseSuppression
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -13,13 +14,10 @@ tags:
   - noiseSuppression
 browser-compat: api.MediaTrackConstraints.noiseSuppression
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's
-**`noiseSuppression`** property is a
-[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
-upon the value of the {{domxref("MediaTrackSettings.noiseSuppression",
-  "noiseSuppression")}} constrainable property.
+The {{domxref("MediaTrackConstraints")}} dictionary's **`noiseSuppression`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.noiseSuppression","noiseSuppression")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of {{domxref("MediaTrackSupportedConstraints.noiseSuppression")}} as returned
@@ -40,8 +38,7 @@ result in an error.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Specifications
 
@@ -54,8 +51,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

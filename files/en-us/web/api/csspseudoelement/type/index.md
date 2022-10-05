@@ -1,6 +1,7 @@
 ---
 title: CSSPseudoElement.type
 slug: Web/API/CSSPseudoElement/type
+page-type: web-api-instance-property
 tags:
   - API
   - CSSPseudoElement
@@ -10,6 +11,7 @@ tags:
   - Type
 browser-compat: api.CSSPseudoElement.type
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the
@@ -49,5 +51,4 @@ console.log(mySelector === typeOfPseudoElement); // Outputs true
 ## See also
 
 - {{DOMxRef('Element.pseudo()')}}
-- [Index
-  of standard pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#index_of_standard_pseudo-elements)
+- [Index of standard pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#index_of_standard_pseudo-elements)

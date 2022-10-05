@@ -1,6 +1,7 @@
 ---
 title: WebSocket.protocol
 slug: Web/API/WebSocket/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.protocol
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.protocol`** read-only property returns the

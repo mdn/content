@@ -1,6 +1,7 @@
 ---
 title: Block and inline layout in normal flow
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
+page-type: guide
 tags:
   - CSS
   - CSS Flow Layout
@@ -10,6 +11,7 @@ tags:
   - Margins
   - flow
 ---
+
 {{CSSRef}}
 
 In this guide, we will explore the basics of how Block and Inline elements behave when they are part of the normal flow.
@@ -32,11 +34,11 @@ Note that the CSS 2.1 specification describes documents as being in a horizontal
 
 Block elements in a horizontal writing mode such as English, layout vertically, one below the other.
 
-![](mdn-horizontal.png)
+![Inline direction is horizontal. Block direction is vertical.](mdn-horizontal.png)
 
 In a vertical writing mode then would lay out horizontally.
 
-![](mdn-vertical.png)
+![Inline direction is vertical. Block direction is horizontal.](mdn-vertical.png)
 
 In this guide, we will be working in English and therefore a horizontal writing mode. However, everything described should work in the same way if your document is in a vertical writing mode.
 
@@ -64,7 +66,7 @@ You can read more about margin collapsing in our article [Mastering Margin Colla
 
 > **Note:** If you are not sure whether margins are collapsing, check the Box Model values in your browser DevTools. This will give you the actual size of the margin which can help you to identify what is happening.
 >
-> ![](box-model.png)
+> ![Screen shot box model panel in browser dev tools which shows the four values for margin, border, and padding along with height and width in a graphic at top and lists box-sizing, display, float, line-height, position, and z-index below the graphic.](box-model.png)
 
 ## Elements participating in an inline formatting context
 

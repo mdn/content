@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection
@@ -8,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.setIdentityProvider
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.setIdentityProvider()`** method sets
@@ -20,7 +22,7 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 
 ## Syntax
 
-```js
+```js-nolint
 setIdentityProvider(domainname)
 setIdentityProvider(domainname, protocol)
 setIdentityProvider(domainname, protocol, username)
@@ -29,13 +31,13 @@ setIdentityProvider(domainname, protocol, username)
 ### Parameters
 
 - `domainname`
-  - : A {{domxref("DOMString")}} is the domain name where the IdP is.
+  - : A string representing the domain name where the IdP is.
 - `protocol` {{optional_Inline}}
-  - : A {{domxref("DOMString")}} representing the protocol used to communicate with the
+  - : A string representing the protocol used to communicate with the
     IdP. It defaults to `"default"` and is used to determine the URL where the
     IdP is listening.
 - `username` {{optional_Inline}}
-  - : A {{domxref("DOMString")}} representing the username associated with the IdP.
+  - : A string representing the username associated with the IdP.
 
 ### Return value
 
@@ -44,7 +46,7 @@ None ({{jsxref("undefined")}}).
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
+const pc = new RTCPeerConnection();
 
 pc.setIdentityAssertion("developer.mozilla.org");
 ```

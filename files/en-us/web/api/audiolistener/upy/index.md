@@ -1,6 +1,7 @@
 ---
 title: AudioListener.upY
 slug: Web/API/AudioListener/upY
+page-type: web-api-instance-property
 tags:
   - API
   - AudioListener
@@ -10,6 +11,7 @@ tags:
   - upY
 browser-compat: api.AudioListener.upY
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `upY` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the y value of the direction vector defining the up direction the listener is pointing in.

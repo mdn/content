@@ -1,21 +1,24 @@
 ---
 title: VideoEncoder.reset()
 slug: Web/API/VideoEncoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - reset
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder.reset
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`reset()`** method of the {{domxref("VideoEncoder")}} interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 
@@ -25,7 +28,7 @@ None.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

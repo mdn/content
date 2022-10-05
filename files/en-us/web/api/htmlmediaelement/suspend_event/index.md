@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: suspend event'
 slug: Web/API/HTMLMediaElement/suspend_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -10,38 +11,26 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.suspend_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `suspend` event is fired when media data loading has been suspended.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onsuspend")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('suspend', (event) => {});
+
+onsuspend = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -102,7 +91,4 @@ video.onsuspend = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-
-<!---->
-
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

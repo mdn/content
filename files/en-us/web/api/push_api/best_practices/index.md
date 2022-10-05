@@ -1,6 +1,7 @@
 ---
 title: Web Push API Notifications best practices
 slug: Web/API/Push_API/Best_Practices
+page-type: guide
 tags:
   - Apps
   - Beginner
@@ -11,6 +12,7 @@ tags:
   - Push API
   - Usability
 ---
+
 {{DefaultAPISidebar("Push API") }}
 
 This article provides a useful summary of best practices to keep in mind when developing web sites and applications that use Push Notifications for user engagement.

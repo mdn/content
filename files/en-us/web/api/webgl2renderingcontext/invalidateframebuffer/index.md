@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.invalidateFramebuffer()
 slug: Web/API/WebGL2RenderingContext/invalidateFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.invalidateFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.invalidateFramebuffer()`** method
@@ -17,7 +19,7 @@ of attachments in a framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 invalidateFramebuffer(target, attachments)
 ```
 

@@ -10,7 +10,8 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineGetter
 ---
-{{JSRef}}
+
+{{JSRef}}{{Deprecated_Header}}
 
 > **Warning:** This feature is deprecated in favor of defining getters using the
 > [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
@@ -25,7 +26,7 @@ a function to be called when that property is looked up.
 
 ## Syntax
 
-```js
+```js-nolint
 __defineGetter__(prop, func)
 ```
 
@@ -51,7 +52,9 @@ to be defined on a pre-existing object.
 
 ```js
 const o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__('gimmeFive', function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
 ```
 
@@ -67,9 +70,9 @@ console.log(o.gimmeFive); // 5
 // Using Object.defineProperty
 const o = {};
 Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+  get() {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```
@@ -85,11 +88,11 @@ console.log(o.gimmeFive); // 5
 ## See also
 
 - [Polyfill of `Object.prototype.__defineGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - {{jsxref("Functions/get", "get")}} operator
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - {{bug(647423)}}

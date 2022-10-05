@@ -1,6 +1,7 @@
 ---
 title: hsla()
 slug: Web/CSS/color_value/hsla
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -9,10 +10,14 @@ tags:
   - Web
   - color
   - hsla
+browser-compat: css.types.color.hsla
 ---
+
 {{CSSRef}}
 
 The **`hsla()`** functional notation expresses a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
+
+{{EmbedInteractiveExample("pages/css/function-hsla.html")}}
 
 > **Note:** The Level 4 specification allows for space-separated in addition to comma-separated values.
 
@@ -37,10 +42,10 @@ hsla(235 100% 50% / 1); /* CSS Colors 4 space-separated values */
 - Functional notation: `hsla(H S L[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
-{{Compat("css.types.color.alpha")}}
-
-### Space-separated values
-
-{{Compat("css.types.color.space_separated_functional_notation")}}
+{{Compat}}

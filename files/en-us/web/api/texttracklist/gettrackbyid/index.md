@@ -1,6 +1,7 @@
 ---
 title: TextTrackList.getTrackById()
 slug: Web/API/TextTrackList/getTrackById
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -18,6 +19,7 @@ tags:
   - track
 browser-compat: api.TextTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("TextTrackList")}}** method
@@ -29,7 +31,7 @@ string.
 
 ## Syntax
 
-```js
+```js-nolint
 getTrackById(id)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
+page-type: web-api-instance-method
 tags:
   - API
   - Examine Header
@@ -16,6 +17,7 @@ tags:
   - getResponseHeader
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
@@ -35,7 +37,7 @@ which returns the entire raw header string.
 
 ## Syntax
 
-```js
+```js-nolint
 getResponseHeader(headerName)
 ```
 
@@ -61,14 +63,14 @@ the value of the {{httpheader("Content-Type")}} header is fetched. If the
 canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
 
 ```js
-var client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
+const client = new XMLHttpRequest();
+client.open("GET", "unicorns-are-awesome.txt", true);
 client.send();
 
-client.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
-    var contentType = client.getResponseHeader("Content-Type");
-    if (contentType != my_expected_type) {
+client.onreadystatechange = () => {
+  if (client.readyState === client.HEADERS_RECEIVED) {
+    const contentType = client.getResponseHeader("Content-Type");
+    if (contentType !== my_expected_type) {
       client.abort();
     }
   }
@@ -85,8 +87,7 @@ client.onreadystatechange = function() {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}

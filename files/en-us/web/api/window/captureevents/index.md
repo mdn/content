@@ -1,6 +1,7 @@
 ---
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -8,6 +9,7 @@ tags:
   - Method
   - Non-standard
 ---
+
 {{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
 
 The **`Window.captureEvents()`** method registers the window to
@@ -15,7 +17,7 @@ capture all events of the specified type.
 
 ## Syntax
 
-```js
+```js-nolint
 captureEvents(eventType)
 ```
 
@@ -42,23 +44,23 @@ None ({{jsxref("undefined")}}).
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- ... -->
-<script>
-function reg() {
-  window.captureEvents(Event.CLICK);
-  window.onclick = page_click;
-}
+  <head>
+    <!-- ... -->
+    <script>
+      function reg() {
+        window.captureEvents(Event.CLICK);
+        window.onclick = page_click;
+      }
 
-function page_click() {
-  alert('page click event detected!');
-}
-</script>
-</head>
+      function page_click() {
+        alert("page click event detected!");
+      }
+    </script>
+  </head>
 
-<body onload="reg();">
-<p>click anywhere on this page.</p>
-</body>
+  <body onload="reg();">
+    <p>click anywhere on this page.</p>
+  </body>
 </html>
 ```
 

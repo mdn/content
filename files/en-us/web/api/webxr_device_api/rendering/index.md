@@ -1,6 +1,7 @@
 ---
 title: Rendering and the WebXR frame animation callback
 slug: Web/API/WebXR_Device_API/Rendering
+page-type: guide
 tags:
   - API
   - AR
@@ -23,6 +24,7 @@ tags:
   - rendering
   - requestAnimationFrame
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Once your WebXR environment has been set up and an {{domxref("XRSession")}} created to represent an ongoing XR environment session, you need to provide frames of the scene to the XR device for rendering. This article covers the process of driving the frames of the XR scene to the device in the rendering loop, using the {{domxref("XRSession")}} to obtain an {{domxref("XRFrame")}} object representing each frame, which is then used to prepare the framebuffer for delivery to the XR device.
@@ -43,7 +45,8 @@ async function runXR(xrSession) {
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerStartPosition, viewerStartOrientation));
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation)
+    );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }
 }
@@ -110,11 +113,11 @@ Your frame rendering callback function receives as input two parameters: the tim
 
 ### The optics of 3D
 
-We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our {{interwiki("wikipedia", "depth perception")}}.
+We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our [depth perception](https://en.wikipedia.org/wiki/Depth_perception).
 
 To create the illusion of three dimensions when rendering graphics, we need to simulate as many of these factors as we can. The more of these we simulate—and the more accurately we do so—the better we are able to trick the human brain into perceiving our images in 3D. The advantage to XR is that not only can we use the classic monocular techniques to simulate 3D graphics (perspective, size, and simulated parallax), but we can also simulate binocular vision—that is, vision using two eyes—by rendering the scene twice for each frame of animation—once for each eye.
 
-The typical human's {{interwiki("wikipedia", "pupillary distance")}}—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at `[0.0, 2.0, 0.0]` (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, `[-0.032, 2.0, 0.0]` (32mm to the left of center) and then render it again at `[0.032, 2.0, 0.0]` (32mm right of center.) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.
+The typical human's [pupillary distance](https://en.wikipedia.org/wiki/Pupillary_distance)—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at `[0.0, 2.0, 0.0]` (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, `[-0.032, 2.0, 0.0]` (32mm to the left of center) and then render it again at `[0.032, 2.0, 0.0]` (32mm right of center.) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.
 
 That distance (or whatever pupillary distance the XR system is configured to use) is enough to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to perceive three dimensions despite our retinas only being 2D surfaces.
 
@@ -124,7 +127,7 @@ This is illustrated in the diagram below, in which we see how each eye perceives
 
 The left eye sees the die from a little bit to the left of center, and the right eye sees it from a bit to the right of center. As a result, the left eye sees just a little bit more of the left side of the object and a little bit less of the right, and vice versa. These two images are focused onto the retinas and the resulting signal transmitted over the optic nerves to the brain's visual cortex, located at the back of the occipital lobe.
 
-Tha brain takes those signals from the left and right eyes and constructs a single, unified, 3D image of the world in the viewer's brain, and that image is what is seen. And because of those differences between what is seen by the left eye versus the right eye, the brain is able to infer a great deal of information about how deep the object is, its size, and more. By combining that inferred depth information with other cues such as perspective, shadows, memories of what these relationships mean, and so forth, we can figure out a great deal about the world around us.
+The brain takes those signals from the left and right eyes and constructs a single, unified, 3D image of the world in the viewer's brain, and that image is what is seen. And because of those differences between what is seen by the left eye versus the right eye, the brain is able to infer a great deal of information about how deep the object is, its size, and more. By combining that inferred depth information with other cues such as perspective, shadows, memories of what these relationships mean, and so forth, we can figure out a great deal about the world around us.
 
 ### Frames, poses, views, and framebuffers
 
@@ -146,7 +149,7 @@ Ideally, you want this code to be fast enough that it can maintain a 60 FPS fram
 
 In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:
 
-```js
+```
 for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
@@ -172,7 +175,7 @@ Let's take a look at some real code that follows this basic pattern. Since in th
 let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
-  let session = frame.session;
+  const session = frame.session;
   let viewerPose;
 
   // Schedule the next frame to be painted when the time comes.
@@ -185,7 +188,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
   viewerPose = frame.getViewerPose(viewerRefSpace);
   if (viewerPose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     // Start by erasing the color and depth framebuffers.
@@ -204,8 +207,8 @@ function myDrawFrame(currentFrameTime, frame) {
     // Now call the scene rendering code once for each of
     // the session's views.
 
-    for (let view of viewerPose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of viewerPose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       myDrawSceneIntoView(view, deltaTime);
     }
@@ -243,7 +246,7 @@ An advantage of WebXR's approach of using a single WebGL framebuffer to contain 
 
 The resulting pseudocode looks like this:
 
-```js
+```
 for each object in the scene
   bindProgram()
   bindUniforms()
@@ -292,12 +295,12 @@ For that reason, you need to use the timestamp provided to ensure your animation
 let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
-  /* ... schedule next frame, prepare the buffer, etc ... */
+  // schedule next frame, prepare the buffer, etc.
 
   const deltaTime = (time - lastFrameTime) * 0.001;
   lastFrameTime = time;
 
-  for (let view of pose.views) {
+  for (const view of pose.views) {
     /* render each view */
   }
 }

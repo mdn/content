@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.submitFrame()
 slug: Web/API/VRDisplay/submitFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -11,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - submitFrame()
+  - Non-standard
 browser-compat: api.VRDisplay.submitFrame
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`submitFrame()`** method of the {{domxref("VRDisplay")}} interface captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the `VRDisplay`.
 
@@ -23,7 +26,7 @@ The frame should subsequently be rendered using the {{domxref("VRPose")}} and ma
 
 ## Syntax
 
-```js
+```js-nolint
 submitFrame()
 ```
 
@@ -38,15 +41,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var frameData = new VRFrameData();
-var vrDisplay;
+const frameData = new VRFrameData();
+let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   console.log('Display found');
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener('click', () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
   });
@@ -61,9 +64,9 @@ function drawVRScene() {
   vrDisplay.getFrameData(frameData);
 
   // You can get the position, orientation, etc. of the display from the current frame's pose
-  var curFramePose = frameData.pose;
-  var curPos = curFramePose.position;
-  var curOrient = curFramePose.orientation;
+  const curFramePose = frameData.pose;
+  const curPos = curFramePose.position;
+  const curOrient = curFramePose.orientation;
 
   // Clear the canvas before we start drawing on it.
 
@@ -72,8 +75,8 @@ function drawVRScene() {
   // WebVR: Create the required projection and view matrix locations needed
   // for passing into the uniformMatrix4fv methods below
 
-  var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+  const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
+  const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
   // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
@@ -91,14 +94,14 @@ function drawVRScene() {
     // draw the view for each eye
   }
 
-    ...
+  // …
 
   // WebVR: Indicate that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

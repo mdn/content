@@ -1,6 +1,7 @@
 ---
 title: SyncEvent.lastChance
 slug: Web/API/SyncEvent/lastChance
+page-type: web-api-instance-property
 tags:
   - API
   - Background Sync
@@ -12,6 +13,7 @@ tags:
   - lastChance
 browser-compat: api.SyncEvent.lastChance
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 The **`SyncEvent.lastChance`** read-only property of the

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
+
 {{APIRef}}
 
 The
@@ -18,7 +20,7 @@ the current path.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInPath(x, y)
 isPointInPath(x, y, fillRule)
 isPointInPath(path, x, y)
@@ -38,10 +40,11 @@ isPointInPath(path, x, y, fillRule)
   - : The algorithm by which to determine if a point is inside or outside the path.
     Possible values:
 
-    - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
-    - **`"evenodd"`**: The [even-odd winding
-      rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
+        Default rule.
+    - `evenodd`
+      - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : A {{domxref("Path2D")}} path to check against. If unspecified, the current path is
@@ -107,14 +110,10 @@ ctx.fillStyle = 'red';
 ctx.fill(circle);
 
 // Listen for mouse moves
-canvas.addEventListener('mousemove', function(event) {
+canvas.addEventListener('mousemove', (event) => {
   // Check whether point is inside circle
-  if (ctx.isPointInPath(circle, event.offsetX, event.offsetY)) {
-    ctx.fillStyle = 'green';
-  }
-  else {
-    ctx.fillStyle = 'red';
-  }
+  const isPointInPath = ctx.isPointInPath(circle, event.offsetX, event.offsetY);
+  ctx.fillStyle = isPointInPath ? 'green' : 'red';
 
   // Draw circle
   ctx.clearRect(0, 0, canvas.width, canvas.height);

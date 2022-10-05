@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.moveTo
 ---
+
 {{APIRef}}
 
 The
@@ -18,7 +20,7 @@ method of the Canvas 2D API begins a new sub-path at the point specified by the 
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(x, y)
 ```
 
@@ -52,13 +54,13 @@ The first line begins at (50, 50) and ends at (200, 50). The second line begins 
 90\) and ends at (280, 120).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50, 50);   // Begin first sub-path
+ctx.moveTo(50, 50); // Begin first sub-path
 ctx.lineTo(200, 50);
-ctx.moveTo(50, 90);   // Begin second sub-path
+ctx.moveTo(50, 90); // Begin second sub-path
 ctx.lineTo(280, 120);
 ctx.stroke();
 ```

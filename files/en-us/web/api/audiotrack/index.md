@@ -1,6 +1,7 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
+page-type: web-api-interface
 tags:
   - Audio
   - AudioTrack
@@ -12,6 +13,7 @@ tags:
   - track
 browser-compat: api.AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`AudioTrack`** interface represents a single audio track from one of the HTML media elements, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
@@ -38,8 +40,8 @@ The most common use for accessing an `AudioTrack` object is to toggle its {{domx
 To get an `AudioTrack` for a given media element, use the element's {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property, which returns an {{domxref("AudioTrackList")}} object from which you can get the individual tracks contained in the media:
 
 ```js
-var el = document.querySelector("video");
-var tracks = el.audioTracks;
+const el = document.querySelector("video");
+const tracks = el.audioTracks;
 ```
 
 You can then access the media's individual tracks using either array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}}.
@@ -47,18 +49,14 @@ You can then access the media's individual tracks using either array syntax or f
 This first example gets the first audio track on the media:
 
 ```js
-var firstTrack = tracks[0];
+const firstTrack = tracks[0];
 ```
 
 The next example scans through all of the media's audio tracks, enabling any that are in the user's preferred language (taken from a variable `userLanguage`) and disabling any others.
 
 ```js
-tracks.forEach(function(track) {
-  if (track.language === userLanguage) {
-    track.enabled = true;
-  } else {
-    track.enabled = false;
-  }
+tracks.forEach((track) => {
+  track.enabled = track.language === userLanguage;
 });
 ```
 

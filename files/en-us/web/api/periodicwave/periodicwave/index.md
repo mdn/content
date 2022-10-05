@@ -1,6 +1,7 @@
 ---
 title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -10,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.PeriodicWave.PeriodicWave
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -17,7 +19,7 @@ The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 
 ## Syntax
 
-```js
+```js-nolint
 new PeriodicWave(context)
 new PeriodicWave(context, options)
 ```
@@ -44,8 +46,7 @@ new PeriodicWave(context, options)
         you want to use to form the wave (equivalent to the `imag` parameter of
         {{domxref("BaseAudioContext.createPeriodicWave")}}).
     - `channelCount`
-      - : Represents an integer used to determine how many channels are used when [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+      - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
         {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
         definition depend on the value of `channelCountMode`.
     - `channelCountMode`
@@ -54,8 +55,7 @@ new PeriodicWave(context, options)
         information including default values.)
     - `channelInterpretation`
       - : Represents an enumerated value describing the meaning of the channels. This
-        interpretation will define how audio [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
         The possible values are `"speakers"` or `"discrete"`. (See
         {{domxref("AudioNode.channelCountMode")}} for more information including default
         values.)
@@ -67,22 +67,20 @@ A new {{domxref("PeriodicWave")}} object instance.
 ## Examples
 
 ```js
-var real = new Float32Array(2);
-var imag = new Float32Array(2);
-var ac = new AudioContext();
+const real = new Float32Array(2);
+const imag = new Float32Array(2);
+const ac = new AudioContext();
 
 real[0] = 0;
 imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var options = {
-  real : real,
-  imag : imag,
-  disableNormalization : false
-}
-
-var wave = new PeriodicWave(ac, options);
+const wave = new PeriodicWave(ac, {
+  real,
+  imag,
+  disableNormalization: false,
+});
 ```
 
 ## Specifications

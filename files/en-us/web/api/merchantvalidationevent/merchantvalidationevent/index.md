@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent()
 slug: Web/API/MerchantValidationEvent/MerchantValidationEvent
+page-type: web-api-constructor
 tags:
   - API
   - Commerce
@@ -15,13 +16,14 @@ tags:
   - Reference
 browser-compat: api.MerchantValidationEvent.MerchantValidationEvent
 ---
+
 {{deprecated_header}}{{securecontext_header}}{{APIRef()}}
 
 The **`MerchantValidationEvent()`** constructor creates a new {{domxref("MerchantValidationEvent")}} object. You should not have to create these events yourself; instead, just handle the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event.
 
 ## Syntax
 
-```js
+```js-nolint
 new MerchantValidationEvent(type)
 new MerchantValidationEvent(type, options)
 ```

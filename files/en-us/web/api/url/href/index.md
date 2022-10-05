@@ -1,6 +1,7 @@
 ---
 title: URL.href
 slug: Web/API/URL/href
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.href
 ---
+
 {{ApiRef("URL API")}}
 
 The **`href`** property of the {{domxref("URL")}} interface is

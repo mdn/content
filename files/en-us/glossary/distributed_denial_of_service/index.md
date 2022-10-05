@@ -5,10 +5,10 @@ tags:
   - Attack
   - DDoS
   - Denial of Service
-  - Glossary
   - Intro
   - Security
 ---
+
 A Distributed Denial-of-Service (DDoS) is an attack in which many compromised systems are made to attack a single target, in order to swamp server resources and block legitimate users.
 
 Normally many persons, using many bots, attack high-profile Web {{glossary("server","servers")}} like banks or credit-card payment gateways. DDoS concerns computer networks and CPU resource management.
@@ -17,7 +17,7 @@ In a typical DDoS attack, the assailant begins by exploiting a vulnerability in 
 
 There are two types of DDoS attacks: a network-centric attack (which overloads a service by using up bandwidth) and an application-layer attack (which overloads a service or database with application calls). The overflow of data to the target causes saturation in the target machine so that it cannot respond or responds very slowly to legitimate traffic (hence the name "denial of service"). The infected computers' owners normally don't know that their computers have been compromised, and they also suffer loss of service.
 
-A computer under an intruder's control is called a zombie or bot. A network of co-infected computers is known as a botnet or a zombie army. Both Kaspersky Labs and Symantec have identified botnets -- not spam, viruses, or worms -- as the biggest threat to Internet security.
+A computer under an intruder's control is called a zombie or bot. A network of co-infected computers is known as a botnet or a zombie army. Both Kaspersky Labs and Symantec have identified botnets — not spam, viruses, or worms — as the biggest threat to Internet security.
 
 The United States Computer Emergency Readiness Team (US-CERT) defines symptoms of denial-of-service attacks to include:
 
@@ -30,4 +30,4 @@ The United States Computer Emergency Readiness Team (US-CERT) defines symptoms o
 
 ## See also
 
-- {{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia
+- [Denial-of-service attack](https://en.wikipedia.org/wiki/Denial-of-service_attack) on Wikipedia

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
+page-type: web-api-interface
 tags:
   - API
   - Element
@@ -14,6 +15,7 @@ tags:
   - picture
 browser-compat: api.HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.
@@ -31,15 +33,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.alt")}}
   - : A string that reflects the {{htmlattrxref("alt", "img")}} HTML attribute, thus indicating the alternate fallback content to be displayed if the image has not been loaded.
-- {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
+- {{domxref("HTMLImageElement.complete")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the browser has finished fetching the image, whether successful or not. That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
 - {{domxref("HTMLImageElement.crossOrigin")}}
   - : A string specifying the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for further details. This may be `null` if CORS is not used.
-- {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}
+- {{domxref("HTMLImageElement.currentSrc")}} {{ReadOnlyInline}}
   - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/Media_Queries) which are in place.
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional string representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
-- {{domxref("HTMLImageElement.fetchPriority")}}
+- {{domxref("HTMLImageElement.fetchPriority")}} {{Experimental_Inline}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of the image relative to other images. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLImageElement.height")}}
   - : An integer value that reflects the {{htmlattrxref("height", "img")}} HTML attribute, indicating the rendered height of the image in CSS pixels.
@@ -47,9 +49,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A boolean value that reflects the {{htmlattrxref("ismap", "img")}} HTML attribute, indicating that the image is part of a server-side image map. This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
 - {{domxref("HTMLImageElement.loading")}}
   - : A string providing a hint to the browser used to optimize loading the document by determining whether to load the image immediately (`eager`) or on an as-needed basis (`lazy`).
-- {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
+- {{domxref("HTMLImageElement.naturalHeight")}} {{ReadOnlyInline}}
   - : Returns an integer value representing the intrinsic height of the image in CSS pixels, if it is available; else, it shows `0`. This is the height the image would be if it were rendered at its natural full size.
-- {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}
+- {{domxref("HTMLImageElement.naturalWidth")}} {{ReadOnlyInline}}
   - : An integer value representing the intrinsic width of the image in CSS pixels, if it is available; otherwise, it will show `0`. This is the width the image would be if it were rendered at its natural full size.
 - {{domxref("HTMLImageElement.referrerPolicy")}}
   - : A string that reflects the {{htmlattrxref("referrerpolicy", "img")}} HTML attribute, which tells the {{Glossary("user agent")}} how to decide which referrer to use in order to fetch the image. Read this article for details on the possible values of this string.
@@ -65,7 +67,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : An integer value that reflects the {{htmlattrxref("width", "img")}} HTML attribute, indicating the rendered width of the image in CSS pixels.
 - {{domxref("HTMLImageElement.x")}} {{ReadOnlyInline}}
   - : An integer indicating the horizontal offset of the left border edge of the image's CSS layout box relative to the origin of the {{HTMLElement("html")}} element's containing block.
-- {{domxref("HTMLImageElement.y")}} {{readonlyInline}}
+- {{domxref("HTMLImageElement.y")}} {{ReadOnlyInline}}
   - : The integer vertical offset of the top border edge of the image's CSS layout box relative to the origin of the {{HTMLElement("html")}} element's containing block.
 
 ## Obsolete properties
@@ -85,7 +87,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Methods
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.decode()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the image is decoded and it's safe to append the image to the DOM. This prevents rendering of the next frame from having to pause to decode the image, as would happen if an undecoded image were added to the DOM.
@@ -103,12 +105,12 @@ If an error occurs while trying to load or render the image, and an {{htmlattrxr
 ## Example
 
 ```js
-var img1 = new Image(); // Image constructor
+const img1 = new Image(); // Image constructor
 img1.src = 'image1.png';
 img1.alt = 'alt';
 document.body.appendChild(img1);
 
-var img2 = document.createElement('img'); // Use DOM HTMLImageElement
+const img2 = document.createElement('img'); // Use DOM HTMLImageElement
 img2.src = 'image2.jpg';
 img2.alt = 'alt text';
 document.body.appendChild(img2);

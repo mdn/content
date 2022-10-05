@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.createPolicy()
 slug: Web/API/TrustedTypePolicyFactory/createPolicy
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.createPolicy
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`createPolicy()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as `policyOptions`.
@@ -23,7 +25,7 @@ In Chrome a policy with a name of "default" creates a special policy that will b
 
 ## Syntax
 
-```js
+```js-nolint
 createPolicy(policyName, policyOptions)
 ```
 
@@ -31,16 +33,16 @@ createPolicy(policyName, policyOptions)
 
 - `policyName`
   - : A string with the name of the policy.
-- `policyOptions`{{optional_inline}}
+- `policyOptions` {{optional_inline}}
 
   - : User-defined functions for converting strings into trusted values.
 
-    - `CreateHTML(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedHTML")}} object.
-    - `CreateScript(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScript")}} object.
-    - `CreateScriptURL(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
+    - `createHTML(input[,args])`
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedHTML")}} object.
+    - `createScript(input[,args])`
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScript")}} object.
+    - `createScriptURL(input[,args])`
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
 
 ### Return value
 
@@ -59,7 +61,7 @@ The below code creates a policy with the name `"myEscapePolicy"` with a function
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 ```
 
@@ -73,8 +75,7 @@ The policy logs a message to the console to remind the developer to refactor thi
 trustedTypes.createPolicy('default', {
   createScriptURL: (s, type, sink) => {
     console.log("Please refactor.");
-    return s + '?default-policy-used&type=' + encodeURIComponent(type) +
-          '&sink=' + encodeURIComponent(sink);
+    return `${s}?default-policy-used&type=${encodeURIComponent(type)}&sink=${encodeURIComponent(sink)}`;
   }
 });
 ```

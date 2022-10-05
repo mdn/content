@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.scripting.unregisterContentScripts
 ---
+
 {{AddonSidebar()}}
 
 Unregisters one or more content scripts.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 await browser.scripting.unregisterContentScripts(
   scripts         // object
 )
@@ -32,7 +33,7 @@ await browser.scripting.unregisterContentScripts(
 
 ### Parameters
 
-- `scripts`{{optional_inline}}
+- `scripts` {{optional_inline}}
   - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter to identify the dynamic content scripts to unregistered. If not specified, all dynamic content scripts are unregistered.
 
 ### Return value

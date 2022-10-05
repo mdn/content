@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.send()
 slug: Web/API/PresentationConnection/send
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -13,7 +14,8 @@ tags:
   - send
 browser-compat: api.PresentationConnection.send
 ---
-{{APIRef("Presentation")}}
+
+{{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **`send()`** method of the
 {{domxref("PresentationConnection")}} interface tells a controlling browsing context to
@@ -21,7 +23,7 @@ send binary or text data to a presenting browsing context.
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 ```
 

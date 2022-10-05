@@ -1,6 +1,7 @@
 ---
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: api.URL.toJSON
 ---
+
 {{APIRef("URL API")}}
 
 The **`toJSON()`** method of the {{domxref("URL")}} interface
@@ -21,7 +23,7 @@ although in practice it seems to have the same effect as
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

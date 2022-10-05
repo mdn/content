@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.showPicker()
 slug: Web/API/HTMLInputElement/showPicker
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.showPicker
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.showPicker()`** method displays the browser picker for an `input` element.
@@ -22,7 +24,7 @@ More generally, this method should ideally display the picker for any input elem
 
 ## Syntax
 
-```js
+```js-nolint
 showPicker()
 ```
 
@@ -43,6 +45,10 @@ None ({{jsxref("undefined")}}).
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if called in a cross-origin iframe, except for file and color pickers (exempt for historical reasons).
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 ### Feature Detection
@@ -55,46 +61,24 @@ if ('showPicker' in HTMLInputElement.prototype) {
 }
 ```
 
-### Showing the normal pickers
+### Normal input pickers
 
-This example shows how the picker can be launched for each of the inputs that normally support this feature.
+This example shows how this feature can be used for `color` and `file` input pickers.
+
+> **Note:** Pickers for `date`, `datetime-local`, `month`, `time`, `week` are launched in the same way.
+> They cannot be shown here because live examples run in a cross-origin frame, and would cause a [`SecurityError`](#securityerror)
 
 #### HTML
 
 ```html
 <p>
-<input type="color">
-<button id ="color">Show the color picker</button>
+  <input type="color" />
+  <button id="color">Show the color picker</button>
 </p>
 
 <p>
-<input type="date">
-<button id ="date">Show the date picker</button>
-</p>
-
-<p>
-<input type="datetime-local">
-<button id ="datetime-local">Show the datetime-local picker</button>
-</p>
-
-<p>
-<input type="file">
-<button id ="file">Show the file picker</button>
-</p>
-
-<p>
-<input type="month">
-<button id ="month">Show the month picker</button>
-</p>
-
-<p>
-<input type="time">
-<button id ="time">Show the time picker</button>
-</p>
-
-<p>
-<input type="week">
-<button id ="week">Show the week picker</button>
+  <input type="file" />
+  <button id="file">Show the file picker</button>
 </p>
 ```
 
@@ -104,11 +88,11 @@ The code simply gets the previous element of the selected button and calls `show
 
 ```js
 document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
     const input = event.srcElement.previousElementSibling;
     try {
       input.showPicker();
-    } catch(error) {
+    } catch (error) {
       window.alert(error);
     }
   });
@@ -119,32 +103,29 @@ document.querySelectorAll("button").forEach((button) => {
 
 Click the button next to each input type to show its picker.
 
-{{EmbedLiveSample("Showing the normal pickers","600px", "350px")}}
+{{EmbedLiveSample("Normal input pickers", "100%", "140px")}}
 
 ### showPicker() for a datalist input
 
-This example shows how to show the picker for a input that specifies a text-based [`<datalist>`](/en-US/docs/Web/HTML/Element/datalist) (the same approach would work for other lists).
+`showPicker()` can launch the picker for a list of options defined in a [`<datalist>`](/en-US/docs/Web/HTML/Element/datalist).
 
-#### HTML
-
-Here we define a `<datalist>` in HTML consisting of a number of internet browsers.
+First we define a `<datalist>` in HTML consisting of a number of internet browsers, an input of type `text` that uses it, and a button.
 
 ```html
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
-<input type="text" list="browsers">
+
+<input type="text" list="browsers" />
 <button>Select browser</button>
 ```
 
-#### JavaScript
-
-The code below shows the picker for the input when the button is clicked.
+The code below adds an event listener that calls `showPicker()` when the button is clicked.
 
 ```js
   const button = document.querySelector("button");
@@ -159,26 +140,15 @@ The code below shows the picker for the input when the button is clicked.
   });
 ```
 
-#### Result
-
-Click the button to show the picker for the "browser options" input:
-
-{{EmbedLiveSample("showPicker() for a datalist input","600px", "50px")}}
-
 ### showPicker() for autocomplete
 
-This example shows how to show the picker for an [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) input.
-
-#### HTML
+`showPicker()` can launch a picker for an [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) input.
 
 Here we define an input that takes an autocomplete option of "name".
 
 ```html
-<input autocomplete="name">
-<button>Show autocomplete options</button>
+<input autocomplete="name" /> <button>Show autocomplete options</button>
 ```
-
-#### JavaScript
 
 The code below shows the picker for the input when the button is clicked.
 
@@ -194,12 +164,6 @@ The code below shows the picker for the input when the button is clicked.
     }
   });
 ```
-
-#### Result
-
-Click the button to show the picker for the "name" autocomplete input:
-
-{{EmbedLiveSample("showPicker() for autocomplete","600px", "50px")}}
 
 ## Specifications
 

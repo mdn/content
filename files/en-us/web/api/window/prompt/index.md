@@ -1,6 +1,7 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - prompt
 browser-compat: api.Window.prompt
 ---
+
 {{ApiRef("Window")}}
 
 `window.prompt()` instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.
@@ -19,10 +21,10 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 prompt(message)
-prompt(message, default)
+prompt(message, defaultValue)
 ```
 
 ### Parameters
@@ -30,7 +32,7 @@ prompt(message, default)
 - `message` {{optional_inline}}
   - : A string of text to display to the user. Can be omitted if there is nothing to show
     in the prompt window.
-- `default` {{optional_inline}}
+- `defaultValue` {{optional_inline}}
   - : A string containing the default value displayed in the text input field. Note that
     in Internet Explorer 7 and 8, if you do not provide this parameter, the string
     `"undefined"` is the default value.
@@ -44,7 +46,7 @@ A string containing the text entered by the user, or `null`.
 ```js
 let sign = prompt("What's your sign?");
 
-if (sign.toLowerCase() == "scorpio") {
+if (sign.toLowerCase() === "scorpio") {
   alert("Wow! I'm a Scorpio too!");
 }
 

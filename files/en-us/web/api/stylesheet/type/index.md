@@ -1,6 +1,7 @@
 ---
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.type
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`type`** property of the {{domxref("StyleSheet")}}

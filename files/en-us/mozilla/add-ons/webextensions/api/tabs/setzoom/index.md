@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.setZoom
 ---
+
 {{AddonSidebar()}}
 
 Zooms the specified tab.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let zooming = browser.tabs.setZoom(
   tabId,           // optional integer
   zoomFactor       // number
@@ -30,7 +31,7 @@ let zooming = browser.tabs.setZoom(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to zoom. Defaults to the active tab of the current window.
 - `zoomFactor`
   - : `number`. The new zoom factor. Use a value of 0 here to set the tab to its current default zoom factor. Otherwise, this must be a number between 0.3 and 5, specifying a zoom factor.
@@ -73,7 +74,8 @@ setting.then(null, onError);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,4 +102,4 @@ setting.then(null, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

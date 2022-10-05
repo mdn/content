@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.packetsDuplicated
 slug: Web/API/RTCInboundRtpStreamStats/packetsDuplicated
+page-type: web-api-instance-property
 tags:
   - API
   - Duplicate
@@ -18,6 +19,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.packetsDuplicated
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`packetsDuplicated`** property

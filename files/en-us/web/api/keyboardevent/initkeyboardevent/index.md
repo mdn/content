@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`KeyboardEvent.initKeyboardEvent()`** method initializes
@@ -19,9 +21,9 @@ Web applications should use constructor instead of this if it's available.
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyboardEvent(type, canBubble, cancelable,
-                  view,  key, location, ctrlKey,
+                  view, key, location, ctrlKey,
                   altKey, shiftKey, metaKey)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.disablePictureInPicture
 slug: Web/API/HTMLVideoElement/disablePictureInPicture
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -15,6 +16,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.disablePictureInPicture
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLVideoElement")}}

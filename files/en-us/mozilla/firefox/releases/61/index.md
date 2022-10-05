@@ -2,10 +2,11 @@
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
 tags:
-  - '61'
+  - "61"
   - Firefox
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 61 that will affect developers. Firefox 61 was released on June 26, 2018.
@@ -21,7 +22,7 @@ This article provides information about the changes in Firefox 61 that will affe
   - In addition, hovering over a CSS variable name brings up a tooltip showing what color value is stored in that variable ({{bug(1431949)}}).
 
 - The main toolbox's toolbar has been redesigned. Highlights are better responsiveness for narrow and wide viewports with a new overflow dropdown, cleaned up meatball menu, and sortable tabs to let you move up your most used panels ({{bug(1226272)}}).
-- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s toolbar now includes a dropdown menu providing easier access to the 'Copy All As HAR' and 'Save All As HAR' commands, as well as an 'Import...' option ({{bug(1403530)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s toolbar now includes a dropdown menu providing easier access to the 'Copy All As HAR' and 'Save All As HAR' commands, as well as an 'Import…' option ({{bug(1403530)}}).
 - The Network Monitor's details pane now includes a [Cache tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#cache), which displays information about previously cached resources ({{bug(859051)}}).
 - The Network Monitor's main toolbar got redesigned to be more responsive on smaller viewports and visually aligned with the Console.
 - The Network Monitor's main toolbar now includes a [Throttling](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#throttling) dropdown which was only available in the [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#network-throttling) before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).

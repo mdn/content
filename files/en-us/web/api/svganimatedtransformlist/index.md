@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedTransformList
 slug: Web/API/SVGAnimatedTransformList
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedTransformList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated transform list interface

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.endQuery()
 slug: Web/API/WebGL2RenderingContext/endQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.endQuery
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.endQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) marks the end of a given query
@@ -16,7 +18,7 @@ target.
 
 ## Syntax
 
-```js
+```js-nolint
 endQuery(target)
 ```
 
@@ -44,10 +46,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-// ...
+// …
 
 gl.endQuery(gl.ANY_SAMPLES_PASSED);
 ```

@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - createMediastreamSource
 browser-compat: api.AudioContext.createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createMediaStreamSource()` method of the {{ domxref("AudioContext") }}
@@ -29,7 +31,7 @@ For more details about media stream audio source nodes, check out the {{
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamSource(stream)
 ```
 
@@ -60,54 +62,55 @@ sound more bass heavy!
 > **Note:** You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
 
 ```js
-var pre = document.querySelector('pre');
-var video = document.querySelector('video');
-var myScript = document.querySelector('script');
-var range = document.querySelector('input');
+const pre = document.querySelector("pre");
+const video = document.querySelector("video");
+const myScript = document.querySelector("script");
+const range = document.querySelector("input");
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
 // also output the visuals into a video element
 
 if (navigator.mediaDevices) {
-    console.log('getUserMedia supported.');
-    navigator.mediaDevices.getUserMedia ({audio: true, video: true})
-    .then(function(stream) {
-        video.srcObject = stream;
-        video.onloadedmetadata = function(e) {
-            video.play();
-            video.muted = true;
-        };
+  console.log("getUserMedia supported.");
+  navigator.mediaDevices
+    .getUserMedia({ audio: true, video: true })
+    .then((stream) => {
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+        video.play();
+        video.muted = true;
+      };
 
-        // Create a MediaStreamAudioSourceNode
-        // Feed the HTMLMediaElement into it
-        var audioCtx = new AudioContext();
-        var source = audioCtx.createMediaStreamSource(stream);
+      // Create a MediaStreamAudioSourceNode
+      // Feed the HTMLMediaElement into it
+      const audioCtx = new AudioContext();
+      const source = audioCtx.createMediaStreamSource(stream);
 
-        // Create a biquadfilter
-        var biquadFilter = audioCtx.createBiquadFilter();
-        biquadFilter.type = "lowshelf";
-        biquadFilter.frequency.value = 1000;
+      // Create a biquadfilter
+      const biquadFilter = audioCtx.createBiquadFilter();
+      biquadFilter.type = "lowshelf";
+      biquadFilter.frequency.value = 1000;
+      biquadFilter.gain.value = range.value;
+
+      // connect the AudioBufferSourceNode to the gainNode
+      // and the gainNode to the destination, so we can play the
+      // music and adjust the volume using the mouse cursor
+      source.connect(biquadFilter);
+      biquadFilter.connect(audioCtx.destination);
+
+      // Get new mouse pointer coordinates when mouse is moved
+      // then set new gain value
+
+      range.oninput = () => {
         biquadFilter.gain.value = range.value;
-
-        // connect the AudioBufferSourceNode to the gainNode
-        // and the gainNode to the destination, so we can play the
-        // music and adjust the volume using the mouse cursor
-        source.connect(biquadFilter);
-        biquadFilter.connect(audioCtx.destination);
-
-        // Get new mouse pointer coordinates when mouse is moved
-        // then set new gain value
-
-        range.oninput = function() {
-            biquadFilter.gain.value = range.value;
-        }
+      };
     })
-    .catch(function(err) {
-        console.log('The following gUM error occurred: ' + err);
+    .catch((err) => {
+      console.log(`The following gUM error occurred: ${err}`);
     });
 } else {
-   console.log('getUserMedia not supported on your browser!');
+  console.log("getUserMedia not supported on your browser!");
 }
 
 // dump script to pre element
@@ -131,5 +134,4 @@ pre.innerHTML = myScript.innerHTML;
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

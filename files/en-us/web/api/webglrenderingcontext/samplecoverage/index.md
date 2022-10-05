@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.sampleCoverage()
 slug: Web/API/WebGLRenderingContext/sampleCoverage
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.sampleCoverage
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.sampleCoverage()`** method of the
@@ -17,7 +19,7 @@ parameters for anti-aliasing effects.
 
 ## Syntax
 
-```js
+```js-nolint
 sampleCoverage(value, invert)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.bufferedAmount
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.bufferedAmount`** read-only property returns

@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.host
 slug: Web/API/HTMLAnchorElement/host
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.host
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.host`** property is a
@@ -25,14 +27,14 @@ A string.
 const anchor = document.createElement("a");
 
 anchor.href = "https://developer.mozilla.org/en-US/HTMLAnchorElement"
-anchor.host == "developer.mozilla.org"
+anchor.host === "developer.mozilla.org"
 
 anchor.href = "https://developer.mozilla.org:443/en-US/HTMLAnchorElement"
-anchor.host == "developer.mozilla.org"
+anchor.host === "developer.mozilla.org"
 // The port number is not included because 443 is the scheme's default port
 
 anchor.href = "https://developer.mozilla.org:4097/en-US/HTMLAnchorElement"
-anchor.host == "developer.mozilla.org:4097"
+anchor.host === "developer.mozilla.org:4097"
 ```
 
 ## Specifications

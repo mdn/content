@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileHandle
 slug: Web/API/FileSystemFileHandle
+page-type: web-api-interface
 tags:
   - Directory
   - File
@@ -10,6 +11,7 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
@@ -28,10 +30,10 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 - {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
   - : Returns a {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object
-      representing the state on disk of the entry represented by the handle.
+    representing the state on disk of the entry represented by the handle.
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
   - : Returns a {{jsxref('Promise')}} which resolves to a newly created {{domxref('FileSystemWritableFileStream')}}
-      object that can be used to write to a file.
+    object that can be used to write to a file.
 
 ## Examples
 
@@ -40,25 +42,25 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 The following asynchronous function presents a file picker and once a file is chosen, uses the `getFile()` method to retrieve the contents.
 
 ```js
-const pickerOpts = {
-  types: [
-    {
-      description: 'Images',
-      accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
-    },
-  ],
-  excludeAcceptAllOption: true,
-  multiple: false
-};
-
 async function getTheFile() {
-  // open file picker
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+  const pickerOpts = {
+    types: [
+      {
+        description: 'Images',
+        accept: {
+          'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
+        },
+      },
+    ],
+    excludeAcceptAllOption: true,
+    multiple: false,
+  };
 
+  // open file picker
+  const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
   // get file contents
   const fileData = await fileHandle.getFile();
+  return fileData;
 }
 ```
 

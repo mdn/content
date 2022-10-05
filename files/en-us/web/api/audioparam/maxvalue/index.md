@@ -1,6 +1,7 @@
 ---
 title: AudioParam.maxValue
 slug: Web/API/AudioParam/maxValue
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - maxValue
 browser-compat: api.AudioParam.maxValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`maxValue`**

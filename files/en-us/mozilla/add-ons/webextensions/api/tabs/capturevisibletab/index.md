@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.captureVisibleTab
 ---
+
 {{AddonSidebar()}}
 
 Creates a data URL encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let capturing = browser.tabs.captureVisibleTab(
   windowId,               // optional integer
   options                 // optional extensionTypes.ImageDetails
@@ -30,9 +31,9 @@ let capturing = browser.tabs.captureVisibleTab(
 
 ### Parameters
 
-- `windowId`{{optional_inline}}
+- `windowId` {{optional_inline}}
   - : `integer`. The target window. Defaults to the current window.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}.
 
 ### Return value
@@ -52,7 +53,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });
@@ -68,7 +69,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +97,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

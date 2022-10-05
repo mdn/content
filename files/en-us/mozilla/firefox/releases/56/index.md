@@ -2,10 +2,11 @@
 title: Firefox 56 for developers
 slug: Mozilla/Firefox/Releases/56
 tags:
-  - '56'
+  - "56"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 56 was released on September 28, 2017. This article lists key changes that are useful for web developers.
@@ -20,7 +21,7 @@ Firefox 56 was released on September 28, 2017. This article lists key changes th
 ### HTML
 
 - Implemented the `labels` property for labelable form controls, for example {{domxref("HTMLInputElement.labels")}} ({{bug(556743)}}).
-- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Preloading_content) for more details ({{bug(1222633)}}). Note that currently Firefox only supports preloading of cacheable resources.
+- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload) for more details ({{bug(1222633)}}). Note that currently Firefox only supports preloading of cacheable resources.
 
 ### CSS
 
@@ -53,7 +54,7 @@ _No changes._
 
 #### DOM events
 
-- {{domxref("GlobalEventHandlers.onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
+- `onwheel` is now available on {{domxref("HTMLElement.onwheel", "HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
 
 #### Media and WebRTC
 
@@ -63,7 +64,7 @@ _No changes._
 #### Canvas and WebGL
 
 - The {{domxref("CanvasRenderingContext2D.drawImage()")}} method has been updated so that smoothing occurs when downscaling even if `imageSmoothingEnabled` is `false`. This is not mandatory as per spec, but follows Chrome's behavior. See {{bug(1360415)}}.
-- An {{domxref("SVGImageElement")}} can now be used as a {{domxref("CanvasImageSource")}}, e.g. as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
+- An {{domxref("SVGImageElement")}} can now be used as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
 
 ### Security
 

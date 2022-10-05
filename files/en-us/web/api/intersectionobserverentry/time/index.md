@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry.time
 slug: Web/API/IntersectionObserverEntry/time
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -11,6 +12,7 @@ tags:
   - Time
 browser-compat: api.IntersectionObserverEntry.time
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
@@ -27,8 +29,7 @@ specified in milliseconds since the creation of the containing document.
 
 ## Examples
 
-See [Timing
-element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility) for a complete example which
+See [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility) for a complete example which
 uses the `time` property to track how long elements are visible to the user.
 
 ## Specifications

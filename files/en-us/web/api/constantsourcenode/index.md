@@ -1,6 +1,7 @@
 ---
 title: ConstantSourceNode
 slug: Web/API/ConstantSourceNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.ConstantSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ConstantSourceNode` interface—part of the Web Audio API—represents an audio source (based upon {{domxref("AudioScheduledSourceNode")}}) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible {{domxref("AudioParam")}} by automating the value of its {{domxref("ConstantSourceNode.offset", "offset")}} or by connecting another node to it; see [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).

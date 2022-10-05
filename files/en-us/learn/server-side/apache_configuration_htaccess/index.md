@@ -9,6 +9,7 @@ tags:
   - Permanent Redirect
   - Redirect
 ---
+
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
 While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called \`httpd.conf\`), you should add this logic there under a `Directory` block.
@@ -23,7 +24,7 @@ Most of the following blocks use the [IfModule](https://httpd.apache.org/docs/2.
 
 There are times when we need to tell users that a resource has moved, either temporarily or permanently. This is what we use `Redirect` and `RedirectMatch` for.
 
-```bash
+```apache
 <IfModule mod_alias.c>
   # Redirect to a URL on a different host
   Redirect "/service" "http://foo2.example.com/service"
@@ -43,7 +44,7 @@ There are times when we need to tell users that a resource has moved, either tem
 </IfModule>
 ```
 
-The possible values for the first parameter are listed below. If the first parameter is not included is defaults to `temp`.
+The possible values for the first parameter are listed below. If the first parameter is not included, it defaults to `temp`.
 
 - permanent
   - : Returns a permanent redirect status (301) indicating that the resource has moved permanently.
@@ -64,7 +65,7 @@ For security reasons, browsers restrict cross-origin HTTP requests initiated fro
 
 This directive will add the CORS header for all resources in the directory from any website.
 
-```bash
+```apache
 <IfModule mod_headers.c>
   Header set Access-Control-Allow-Origin "*"
 </IfModule>
@@ -74,7 +75,7 @@ Unless you override the directive later in the configuration or in the configura
 
 One alternative is to explicitly state what domains have access to the content of your site. In the example below, we restrict access to a subdomain of our main site (example.com). This is more secure and, likely, what you intended to do.
 
-```bash
+```apache
 <IfModule mod_headers.c>
   Header set Access-Control-Allow-Origin "subdomain.example.com"
 </IfModule>
@@ -86,7 +87,7 @@ As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross
 
 To mitigate the possibility of these attacks, you should use the `crossorigin` attribute in the images you request and the code snippet below in your `.htaccess` to set the CORS header from the server.
 
-```bash
+```apache
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
     <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|a?png|svgz?|webp|heic|heif|avif)$">
@@ -99,7 +100,7 @@ To mitigate the possibility of these attacks, you should use the `crossorigin` a
 
 Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.com/fonts/docs/troubleshooting) tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.
 
-```bash
+```apache
 <IfModule mod_headers.c>
   <FilesMatch "\.(eot|otf|tt[cf]|woff2?)$">
     Header set Access-Control-Allow-Origin "*"
@@ -115,7 +116,7 @@ The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) resp
 
 If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin making the request some of the attributes of the `PerformanceResourceTiming` object will be set to zero.
 
-```bash
+```apache
 <IfModule mod_headers.c>
   Header set Timing-Allow-Origin: "*"
 </IfModule>
@@ -129,7 +130,7 @@ The error pages are presented as URLs. These URLs can begin with a slash (/) for
 
 See the [ErrorDocument Directive](https://httpd.apache.org/docs/current/mod/core.html#errordocument) documentation on the HTTPD documentation site for more information.
 
-```bash
+```apache
 ErrorDocument 500 /errors/500.html
 ErrorDocument 404 /errors/400.html
 ErrorDocument 401 https://example.com/subscription_info.html
@@ -144,7 +145,7 @@ The effect of `MultiViews` is as follows: if the server receives a request for /
 
 The setting disables `MultiViews` for the directory this configuration applies to and prevents Apache from returning a 404 error as the result of a rewrite when the directory with the same name does not exist
 
-```bash
+```apache
 Options -MultiViews
 ```
 
@@ -162,7 +163,7 @@ Associates media types with one or more extensions to make sure the resources wi
 
 Servers should use text/javascript for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
 
-```bash
+```apache
 <IfModule mod_expires.c>
   # Data interchange
     AddType application/atom+xml      atom
@@ -226,10 +227,9 @@ Servers should use text/javascript for JavaScript resources as indicated in the 
 
 Every piece of content on the web has a character set. Most, if not all, the content is UTF-8 Unicode.
 
-Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
-) to serve all resources labeled as `text/html` or `text/plain` with the `UTF-8` charset.
+Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset) to serve all resources labeled as `text/html` or `text/plain` with the `UTF-8` charset.
 
-```bash
+```apache
 <IfModule mod_mime.c>
   AddDefaultCharset utf-8
 </IfModule>
@@ -239,7 +239,7 @@ Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#addd
 
 Serve the following file types with the `charset` parameter set to \`UTF-8\` using the [AddCharset](https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset) directive available in `mod_mime`.
 
-```bash
+```apache
 <IfModule mod_mime.c>
   AddCharset utf-8 .appcache \
     .bbaw \
@@ -278,11 +278,11 @@ The required steps are:
 2. Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
 3. If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
 
-    - Some cloud hosting services will require you set `RewriteBase`
-    - See [Rackspace FAQ](https://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
-    - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
+   - Some cloud hosting services will require you set `RewriteBase`
+   - See [Rackspace FAQ](https://web.archive.org/web/20151223141222/http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
+   - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
 
-```bash
+```apache
 <IfModule mod_rewrite.c>
   RewriteEngine On
   Options +FollowSymlinks
@@ -296,7 +296,7 @@ The required steps are:
 
 These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
 
-```bash
+```apache
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} !=on
@@ -306,7 +306,7 @@ These Rewrite rules will redirect from the `http://` insecure version to the `ht
 
 If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create your SSL certificates, it will fail to validate the certificate if validation requests are redirected to HTTPS. Turn on the condition(s) you need.
 
-```bash
+```apache
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} !=on
@@ -327,7 +327,7 @@ Set `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate 
 
 The rule assumes by default that both HTTP and HTTPS environments are available for redirection.
 
-```bash
+```apache
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} =on
@@ -352,7 +352,7 @@ The rule assumes by default that both HTTP and HTTPS environments are available 
 
 The following might not be a good idea if you use "real" subdomains for certain parts of your website.
 
-```bash
+```apache
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} =on
@@ -377,9 +377,9 @@ This might not be the best setting for everyone. You should read about [the othe
 
 While you could send the `X-Frame-Options` header for all of your website's pages, this has the potential downside that it forbids even any framing of your content (e.g.: when users visit your website using a Google Image Search results page).
 
-Nonetheless, you should ensure that you send the `X-Frame-Options` header for all pages that allow a user to make a state-changing operation (e.g: pages that contain one-click purchase links, checkout, or bank-transfer confirmation pages, pages that make permanent configuration changes, etc.).
+Nonetheless, you should ensure that you send the `X-Frame-Options` header for all pages that allow a user to make a state-changing operation (e.g., pages that contain one-click purchase links, checkout, or bank-transfer confirmation pages, pages that make permanent configuration changes, etc.).
 
-```bash
+```apache
 <IfModule mod_headers.c>
   Header always set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
 </IfModule>
@@ -395,7 +395,7 @@ The example policy below:
 
 To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/home/generate/). You should also use a [validator](https://csp-evaluator.withgoogle.com) to make sure your header does what you want it to do.
 
-```bash
+```apache
 <IfModule mod_headers.c>
   Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
 </IfModule>
@@ -405,7 +405,7 @@ To make your CSP implementation easier, you can use an online [CSP header genera
 
 This directive will prevent access to directories that don't have an index file present in whatever format the server is configured to use, like `index.html`, or `index.php`.
 
-```bash
+```apache
 <IfModule mod_autoindex.c>
     Options -Indexes
 </IfModule>
@@ -417,7 +417,7 @@ In Macintosh and Linux systems, files that begin with a period are hidden from v
 
 The `.well-known/` directory represents [the standard (RFC 5785)](https://datatracker.ietf.org/doc/html/rfc5785) path prefix for "well-known locations" (e.g.: `/.well-known/manifest.json`, `/.well-known/keybase.txt`), and therefore, access to its visible content should not be blocked.
 
-```bash
+```apache
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
@@ -433,7 +433,7 @@ Block access to backup and source files that may be left by some text editors an
 
 Update the `<FilesMatch>` regular expression in the following example to include any files that might end up on your production server and can expose sensitive information about your website. These files may include: configuration files or files that contain metadata about the project among others.
 
-```bash
+```apache
 <IfModule mod_authz_core.c>
   <FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
     Require all denied
@@ -449,7 +449,7 @@ The following header ensures that a browser only connects to your server via HTT
 
 Be aware that Strict Transport Security is not revokable and you must ensure being able to serve the site over HTTPS for as long as you've specified in the `max-age` directive. If you don't have a valid TLS connection anymore (e.g. due to an expired TLS certificate) your visitors will see an error message even when attempting to connect over HTTP.
 
-```bash
+```apache
 <IfModule mod_headers.c>
   # Header always set
   Strict-Transport-Security "max-age=16070400; includeSubDomains" "expr=%{HTTPS} == 'on'"
@@ -463,28 +463,28 @@ Be aware that Strict Transport Security is not revokable and you must ensure bei
 
 1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
 
-    - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
-    - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
+   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
+   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
 
 2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
 
-    - If you want to use the `<base>` element, then use `base-uri 'self'` instead
+   - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
 3. Only allows form submissions are from the current origin with: `form-action 'self'`
 4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
-    - The `frame-ancestors`directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
-    - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
+   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
+   - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
 
 5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
 
-    - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
+   - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
-6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 
-```bash
+```apache
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options "nosniff"
 </IfModule>
@@ -503,7 +503,7 @@ Use services like the ones below to check your Referrer Policy:
 - [securityheaders.com](https://securityheaders.com/)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
 
-```bash
+```apache
 <IfModule mod_headers.c>
   Header always set Referrer-Policy "strict-origin-when-cross-origin" "expr=%{CONTENT_TYPE} =~ m#text\/(css|html|javascript)|application\/pdf|xml#i"
 </IfModule>
@@ -511,13 +511,13 @@ Use services like the ones below to check your Referrer Policy:
 
 ## Disable TRACE HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
+The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 
 If you have access to the main server configuration file, use the [`TraceEnable`](https://httpd.apache.org/docs/current/mod/core.html#traceenable) directive instead.
 
-```bash
+```apache
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{REQUEST_METHOD} ^TRACE [NC]
@@ -531,7 +531,7 @@ Some frameworks like PHP and ASP.NET set an `X-Powered-By` header that contains 
 
 This header doesn't provide any value, and in some cases, the information it provides can expose vulnerabilities
 
-```bash
+```apache
 <IfModule mod_headers.c>
   Header unset X-Powered-By
   Header always unset X-Powered-By
@@ -540,7 +540,7 @@ This header doesn't provide any value, and in some cases, the information it pro
 
 If you can, you should disable the `X-Powered-By` header from the language/framework level (e.g.: for PHP, you can do that by setting the following in `php.ini`.
 
-```php
+```ini
 expose_php = off;
 ```
 
@@ -548,7 +548,7 @@ expose_php = off;
 
 Prevent Apache from adding a trailing footer line containing information about the server to the server-generated documents (e.g.: error messages, directory listings, etc.). See [ServerSignature Directive](https://httpd.apache.org/docs/current/mod/core.html#serversignature) for more information on what the server signature provides and the [ServerTokens Directive](https://httpd.apache.org/docs/current/mod/core.html#servertokens) for information about configuring the information provided in the signature.
 
-```bash
+```apache
 ServerSignature Off
 ```
 
@@ -556,7 +556,7 @@ ServerSignature Off
 
 Some proxies and security software mangle or strip the `Accept-Encoding` HTTP header. See [Pushing Beyond Gzipping](https://calendar.perfplanet.com/2010/pushing-beyond-gzipping/) for a more detailed explanation.
 
-```bash
+```apache
 <IfModule mod_deflate.c>
   <IfModule mod_setenvif.c>
     <IfModule mod_headers.c>
@@ -571,7 +571,7 @@ Some proxies and security software mangle or strip the `Accept-Encoding` HTTP he
 
 Compress all output labeled with one of the following media types using the [AddOutputFilterByType Directive](https://httpd.apache.org/docs/current/mod/mod_filter.html#addoutputfilterbytype).
 
-```bash
+```apache
 <IfModule mod_deflate.c>
   <IfModule mod_filter.c>
     AddOutputFilterByType DEFLATE "application/atom+xml" \
@@ -618,7 +618,7 @@ Compress all output labeled with one of the following media types using the [Add
 
 Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these files types would be served without an appropriate `Content-Encoding` response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
 
-```bash
+```apache
 <IfModule mod_deflate.c>
   <IfModule mod_mime.c>
     AddEncoding gzip svgz
@@ -630,7 +630,7 @@ Map the following filename extensions to the specified encoding type using [AddE
 
 Serve resources with a far-future expiration date using the [mod_expires](https://httpd.apache.org/docs/current/mod/mod_expires.html) module, and [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) and [Expires](/en-US/docs/Web/HTTP/Headers/Expires) headers.
 
-```bash
+```apache
 <IfModule mod_expires.c>
     ExpiresActive on
     ExpiresDefault                                      "access plus 1 month"

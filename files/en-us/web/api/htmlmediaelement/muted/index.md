@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.muted
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.muted`** indicates whether the media
@@ -22,7 +24,7 @@ not muted.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.muted); // false
 ```
 

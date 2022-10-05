@@ -9,6 +9,7 @@ tags:
   - aria-expanded
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
+
 The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.
 
 ## Description
@@ -45,8 +46,12 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 
 ```html
 <label for="username">Username</label>
-<input id="username" name="username" aria-describedby="username-desc">
-<button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username" type="button">
+<input id="username" name="username" aria-describedby="username-desc" />
+<button
+  aria-expanded="false"
+  aria-controls="username-desc"
+  aria-label="Help about username"
+  type="button">
   <span aria-hidden="true">?</span>
 </button>
 <p id="username-desc" hidden>
@@ -62,14 +67,16 @@ Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/tre
 
 ### Rows
 
-A parent row is a row that can be expanded or collapsed to show or hide a set of child rows in a table or grid. Each parent row has the `aria-expanded` state set on either the row element or on a cell contained in the row. When the child rows are hidden, `aria-expanded="false"` is set. `aria-expanded="true"` is set when the child rows are displayed. Rows that do not control the display of child rows should not include the `aria-expanded` attribute at all because including the attribute defines the rows as parent rows.
+A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) is a row that can be expanded or collapsed to show or hide a set of child rows in a table or grid. Each parent row has the `aria-expanded` state set on either the row element or on a cell contained in the row. When the child rows are hidden, `aria-expanded="false"` is set. `aria-expanded="true"` is set when the child rows are displayed. Rows that do not control the display of child rows should not include the `aria-expanded` attribute at all because including the attribute defines the rows as parent rows.
 
 ## Values
 
 - `false`
+
   - : The grouping element this element owns or controls is collapsed.
 
 - `true`
+
   - : The grouping element this element owns or controls is expanded.
 
 - `undefined` (default)

@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService.uuid
 slug: Web/API/BluetoothRemoteGATTService/uuid
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - uuid
 browser-compat: api.BluetoothRemoteGATTService.uuid
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.uuid`** read-only property

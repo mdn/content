@@ -1,6 +1,7 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
+page-type: web-api-instance-property
 tags:
   - API
   - Gecko
@@ -10,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.scrollMaxX
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 The **`Window.scrollMaxX`** read-only property returns the

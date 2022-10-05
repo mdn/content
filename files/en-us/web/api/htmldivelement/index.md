@@ -1,6 +1,7 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLDivElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HtmlElement("div")}} elements.

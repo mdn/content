@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.trackId
 slug: Web/API/RTCRtpStreamStats/trackId
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,6 +18,7 @@ tags:
   - trackId
 browser-compat: api.RTCRtpStreamStats.trackId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

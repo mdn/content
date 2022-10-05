@@ -22,6 +22,7 @@ tags:
   - mp4
   - streaming
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 This guide introduces the video codecs you're most likely to encounter or consider using on the web, summaries of their capabilities and any compatibility and utility concerns, and advice to help you choose the right codec for your project's video.
@@ -54,7 +55,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#av1">AV1</a></th>
       <td>AOMedia Video 1</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
@@ -63,7 +64,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <td>Advanced Video Coding</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -74,14 +75,14 @@ The following video codecs are those which are most commonly used on the web. Fo
     <tr>
       <th scope="row"><a href="#hevc_h.265">HEVC (H.265)</a></th>
       <td>High Efficiency Video Coding</td>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a></td>
+      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#mp4v-es">MP4V-ES</a></th>
       <td>MPEG-4 Video Elemental Stream</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -98,7 +99,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#mpeg-2_part_2_video">MPEG-2</a></th>
       <td>MPEG-2 Part 2 Visual</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
@@ -123,7 +124,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#vp9">VP9</a></th>
       <td>Video Processor 9</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
@@ -266,7 +267,7 @@ In addition, each encoder utility may have variations in how they process the so
     <tr>
       <th scope="row">Lossy compression</th>
       <td>
-        To some degree, artifacts and other forms of quality degradation wil
+        To some degree, artifacts and other forms of quality degradation will
         occur, depending on the specific codec and how much compression is being
         applied
       </td>
@@ -324,7 +325,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="moire-pattern.jpg"><img alt="" src="moire-pattern.jpg" /></a>
+        <a href="moire-pattern.jpg"><img alt="a brick wall showing swirling effect similar to waves due to the moire pattern" src="moire-pattern.jpg" /></a>
       </td>
     </tr>
     <tr>
@@ -340,7 +341,9 @@ Aliasing is a general term for anything that upon being reconstructed from the e
       </td>
       <td>
         <a href="staircase-effect.jpg"
-          ><img alt="" src="staircase-effect.jpg"
+          ><img alt="
+          Photo of diagonal lines that look like a staircase due to aliasing causing a staircase effect
+          " src="staircase-effect.jpg"
         /></a>
       </td>
     </tr>
@@ -350,7 +353,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         <p>
           The <strong>wagon-wheel effect</strong> (or
           <strong
-            >{{interwiki("wikipedia", "stroboscopic effect")}}</strong
+            ><a href="https://en.wikipedia.org/wiki/Stroboscopic_effect">stroboscopic effect</a></strong
           >) is the visual effect that's commonly seen in film, in which a
           turning wheel appears to rotate at the wrong speed, or even in
           reverse, due to an interaction between the frame rate and the
@@ -382,7 +385,7 @@ Lost sharpness can make text in the image difficult to read, as text—especiall
 
 ### Ringing
 
-Lossy compression algorithms can introduce **{{interwiki("wikipedia", "ringing artifacts", "ringing")}}**, an effect where areas outside an object are contaminated with colored pixels generated by the compression algorithm. This happens when an algorithm that uses blocks that span across a sharp boundary between an object and its background. This is particularly common at higher compression levels.
+Lossy compression algorithms can introduce **[ringing](https://en.wikipedia.org/wiki/Ringing_artifacts)**, an effect where areas outside an object are contaminated with colored pixels generated by the compression algorithm. This happens when an algorithm that uses blocks that span across a sharp boundary between an object and its background. This is particularly common at higher compression levels.
 
 [![Example of the ringing effect](ringing-effects.png)](ringing-effects.png)
 
@@ -420,7 +423,7 @@ Mosquito noise artifacts are most commonly found in MPEG video, but can occur wh
 
 Compression of video generally works by comparing two frames and recording the differences between them, one frame after another, until the end of the video. This technique works well when the camera is fixed in place, or the objects in the frame are relatively stationary, but if there is a great deal of motion in the frame, the number of differences between frames can be so great that compression doesn't do any good.
 
-**{{interwiki("wikipedia", "Motion compensation")}}** is a technique that looks for motion (either of the camera or of objects in the frame of view) and determines how many pixels the moving object has moved in each direction. Then that shift is stored, along with a description of the pixels that have moved that can't be described just by that shift. In essence, the encoder finds the moving objects, then builds an internal frame of sorts that looks like the original but with all the objects translated to their new locations. In theory, this approximates the new frame's appearance. Then, to finish the job, the remaining differences are found, then the set of object shifts and the set of pixel differences are stored in the data representing the new frame. This object that describes the shift and the pixel differences is called a **residual frame**.
+**[Motion compensation](https://en.wikipedia.org/wiki/Motion_compensation)** is a technique that looks for motion (either of the camera or of objects in the frame of view) and determines how many pixels the moving object has moved in each direction. Then that shift is stored, along with a description of the pixels that have moved that can't be described just by that shift. In essence, the encoder finds the moving objects, then builds an internal frame of sorts that looks like the original but with all the objects translated to their new locations. In theory, this approximates the new frame's appearance. Then, to finish the job, the remaining differences are found, then the set of object shifts and the set of pixel differences are stored in the data representing the new frame. This object that describes the shift and the pixel differences is called a **residual frame**.
 
 <table class="standard-table">
   <thead>
@@ -621,7 +624,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
           >ISOBMFF</a
         >, MPEG-TS,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
@@ -751,7 +754,7 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
     <tr>
       <th scope="row">HDR support</th>
       <td>
-        Yes; {{interwiki("wikipedia", "Hybrid Log-Gamma")}} or
+        Yes; <a href="https://en.wikipedia.org/wiki/Hybrid_Log-Gamma">Hybrid Log-Gamma</a> or
         Advanced HDR/SL-HDR; both are part of ATSC
       </td>
     </tr>
@@ -795,7 +798,7 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -923,7 +926,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -938,7 +941,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
     </tr>
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
-      <td><a href="https://www.itu.net/">ITU</a></td>
+      <td><a href="https://www.itu.int/">ITU</a></td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
@@ -1098,7 +1101,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
     </tr>
     <tr>
       <th scope="row">Container support</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a></td>
+      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row">
@@ -1110,7 +1113,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
       <td>
-        <a href="https://www.itu.net/">ITU</a> /
+        <a href="https://www.itu.int/">ITU</a> /
         <a href="https://mpeg.chiariglione.org/">MPEG</a>
       </td>
     </tr>
@@ -1219,7 +1222,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -1366,7 +1369,7 @@ Because any MPEG-2 decoder can also play MPEG-1 video, it's compatible with a wi
 
 The goal was to allow MPEG-2 to compress standard definition television, so interlaced video is also supported. The standard definition compression rate and the quality of the resulting video met needs well enough that MPEG-2 is the primary video codec used for DVD video media.
 
-MPEG-2 has several profiles available with different capabilities. Each profile is then available four levels, each of which increases attributes of the video, such as frame rate, resolution, bit rate, and so forth. Most profiles use Y'CbCr with 4:2:0 chroma subsampling, but more advanced profiles support 4:2:2 as well. In addition, there are four levels, each of which offers support for larger frame dimensions and bit rates. For example, the {{interwiki("wikipedia", "ATSC standards", "ATSC")}} specification for television used in North America supports MPEG-2 video in high definition using the Main Profile at High Level, allowing 4:2:0 video at both 1920 x 1080 (30 FPS) and 1280 x 720 (60 FPS), at a maximum bit rate of 80 Mbps.
+MPEG-2 has several profiles available with different capabilities. Each profile is then available four levels, each of which increases attributes of the video, such as frame rate, resolution, bit rate, and so forth. Most profiles use Y'CbCr with 4:2:0 chroma subsampling, but more advanced profiles support 4:2:2 as well. In addition, there are four levels, each of which offers support for larger frame dimensions and bit rates. For example, the [ATSC](https://en.wikipedia.org/wiki/ATSC_standards) specification for television used in North America supports MPEG-2 video in high definition using the Main Profile at High Level, allowing 4:2:0 video at both 1920 x 1080 (30 FPS) and 1280 x 720 (60 FPS), at a maximum bit rate of 80 Mbps.
 
 However, few web browsers support MPEG-2 without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-2 a poor choice for use in web sites and web applications.
 
@@ -1502,7 +1505,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         MPEG-TS (MPEG Transport Stream),
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -1546,7 +1549,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
 
 ### Theora
 
-**{{interwiki("wikipedia", "Theora")}}**, developed by [Xiph.org](https://xiph.org/), is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.
+**[Theora](https://en.wikipedia.org/wiki/Theora)**, developed by [Xiph.org](https://xiph.org/), is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.
 
 Theora was originally based upon the VC3 codec by On2 Technologies. The codec and its specification were released under the LGPL license and entrusted to Xiph.org, which then developed it into the Theora standard.
 
@@ -1861,12 +1864,12 @@ This is especially true if you wish to use an open codec rather than a proprieta
         </table>
         <p>
           Color spaces supported:
-          {{interwiki("wikipedia", "Rec. 601")}},
-          {{interwiki("wikipedia", "Rec. 709")}},
-          {{interwiki("wikipedia", "Rec. 2020")}},
-          {{interwiki("wikipedia", "SMPTE C")}}, SMPTE-240M
+          <a href="https://en.wikipedia.org/wiki/Rec._601">Rec. 601</a>,
+          <a href="https://en.wikipedia.org/wiki/Rec._709">Rec. 709</a>,
+          <a href="https://en.wikipedia.org/wiki/Rec._2020">Rec. 2020</a>,
+          <a href="https://en.wikipedia.org/wiki/SMPTE_C">SMPTE C</a>, SMPTE-240M
           (obsolete; replaced by Rec. 709), and
-          {{interwiki("wikipedia", "sRGB")}}.
+          <a href="https://en.wikipedia.org/wiki/SRGB">sRGB</a>.
         </p>
       </td>
     </tr>
@@ -1930,7 +1933,7 @@ This is especially true if you wish to use an open codec rather than a proprieta
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
@@ -1969,7 +1972,7 @@ The decision as to which codec or codecs to use begins with a series of question
 
 In the sections below, we offer recommended codec selections for specific use cases. For each use case, you'll find up to two recommendations. If the codec which is considered best for the use case is proprietary or may require royalty payments, then two options are provided: first, an open and royalty-free option, followed by the proprietary one.
 
-If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs.The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
+If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs. The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
 
 ### Recommendations for everyday videos
 
@@ -1977,20 +1980,18 @@ First, let's look at the best options for videos presented on a typical web site
 
 1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
-    ```js
+    ```html
     <video controls src="filename.webm"></video>
     ```
 
-2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
+2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
-    ```html
-    <video controls>
-      <source type="video/webm"
-              src="filename.webm">
-      <source type="video/mp4"
-              src="filename.mp4">
-    </video>
-    ```
+   ```html
+   <video controls>
+     <source type="video/webm" src="filename.webm" />
+     <source type="video/mp4" src="filename.mp4" />
+   </video>
+   ```
 
 > **Note:** The {{HTMLElement("video")}} element requires a closing `</video>` tag, whether or not you have any {{HTMLElement("source")}} elements inside it.
 
@@ -2000,20 +2001,18 @@ If your mission is to present video at the highest possible quality, you will pr
 
 1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
 
-    ```js
+    ```html
     <video controls src="filename.webm"></video>
     ```
 
 2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
 
-    ```html
-    <video controls>
-      <source type="video/webm"
-              src="filename.webm">
-      <source type="video/mp4"
-              src="filename.mp4">
-    </video>
-    ```
+   ```html
+   <video controls>
+     <source type="video/webm" src="filename.webm" />
+     <source type="video/mp4" src="filename.mp4" />
+   </video>
+   ```
 
 ### Recommendations for archival, editing, or remixing
 
@@ -2025,7 +2024,7 @@ This is the case even though some of the lossy codecs have a lossless mode avail
 
 To prepare video for archival purposes from outside your web site or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
 
-```plain
+```bash
 x264 --crf 18 -preset ultrafast --output outfilename.mp4 infile
 ```
 
@@ -2037,11 +2036,11 @@ Given the constraints on how close to lossless you can get, you might consider u
 
 ```js
 const kbps = 1024;
-const Mbps = kbps*kbps;
+const Mbps = kbps * kbps;
 
 const options = {
   mimeType: 'video/webm; codecs="av01.2.19H.12.0.000.09.16.09.1, flac"',
-  bitsPerSecond: 800*Mbps,
+  bitsPerSecond: 800 * Mbps,
 };
 
 let recorder = new MediaRecorder(sourceStream, options);

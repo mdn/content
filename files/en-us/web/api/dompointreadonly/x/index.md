@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.x
 slug: Web/API/DOMPointReadOnly/x
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinates
@@ -15,6 +16,7 @@ tags:
   - x
 browser-compat: api.DOMPointReadOnly.x
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.framesEncoded
 slug: Web/API/RTCOutboundRtpStreamStats/framesEncoded
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding
@@ -19,6 +20,7 @@ tags:
   - stream
 browser-compat: api.RTCOutboundRtpStreamStats.framesEncoded
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`framesEncoded`** property of

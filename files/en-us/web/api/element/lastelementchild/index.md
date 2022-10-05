@@ -1,6 +1,7 @@
 ---
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Element.lastElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.lastElementChild`** read-only property
@@ -25,15 +27,15 @@ A {{domxref("Element")}} object, or `null`.
 
 ```html
 <ul id="list">
-  <li>First  (1)</li>
+  <li>First (1)</li>
   <li>Second (2)</li>
-  <li>Third  (3)</li>
+  <li>Third (3)</li>
 </ul>
 
 <script>
-const list = document.getElementById('list');
-console.log(list.lastElementChild.textContent);
-// logs "Third (3)"
+  const list = document.getElementById("list");
+  console.log(list.lastElementChild.textContent);
+  // logs "Third (3)"
 </script>
 ```
 

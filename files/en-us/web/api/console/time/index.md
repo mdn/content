@@ -1,6 +1,7 @@
 ---
 title: console.time()
 slug: Web/API/console/time
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.time
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.time()`** method starts a timer you can use to track
@@ -24,7 +26,7 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the
 
 ## Syntax
 
-```js
+```js-nolint
 time(label)
 ```
 

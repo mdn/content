@@ -1,6 +1,7 @@
 ---
 title: 'WorkerGlobalScope: offline event'
 slug: Web/API/WorkerGlobalScope/offline_event
+page-type: web-api-instance-event
 tags:
   - API
   - Event
@@ -10,6 +11,7 @@ tags:
   - offline
 browser-compat: api.WorkerGlobalScope.offline_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`offline`** event of the {{domxref("WorkerGlobalScope")}} fires when the device loses connection to the internet.
@@ -19,9 +21,9 @@ The **`offline`** event of the {{domxref("WorkerGlobalScope")}} fires when the d
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('offline', event => { });
+addEventListener('offline', (event) => { });
 
-onoffline = event => { };
+onoffline = (event) => { };
 ```
 
 ## Event type
@@ -33,7 +35,7 @@ A generic {{domxref("Event")}}.
 The following code snippet shows an `onoffline` handler set inside a worker:
 
 ```js
-self.onoffline = function() {
+self.onoffline = () => {
   console.log('Your worker is now offline');
 }
 ```
@@ -41,9 +43,9 @@ self.onoffline = function() {
 The same snippet, but using `addEventListener()`:
 
 ```js
-self.addEventListener('offline', function() {
+self.addEventListener('offline', () => {
   console.log('Your worker is now offline');
-}
+});
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: AnimationEffect.updateTiming()
 slug: Web/API/AnimationEffect/updateTiming
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -11,13 +12,14 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect.updateTiming
 ---
-{{SeeCompatTable}} {{ APIRef("Web Animations API") }}
+
+{{ APIRef("Web Animations API") }}
 
 The `updateTiming()` method of the {{domxref("AnimationEffect")}} interface updates the specified timing properties for an animation effect.
 
 ## Syntax
 
-```js
+```js-nolint
 updateTiming(timing)
 ```
 

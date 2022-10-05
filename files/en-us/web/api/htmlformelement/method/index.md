@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.method
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.method`** property represents the

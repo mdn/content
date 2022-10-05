@@ -12,6 +12,7 @@ tags:
   - Learn
   - WebGL
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 The browser contains some very powerful graphics programming tools, from the Scalable Vector Graphics ([SVG](/en-US/docs/Web/SVG)) language, to APIs for drawing on HTML {{htmlelement("canvas")}} elements, (see [The Canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API)). This article provides an introduction to canvas, and further resources to allow you to learn more.
@@ -88,30 +89,30 @@ Of course, the above message is really unhelpful! In a real example you'd want t
 Let's start by creating our own canvas that we draw future experiments on to.
 
 1. First make a local copy of the [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) directory. It contains three files:
-    - "index.html"
-    - "script.js"
-    - "style.css"
+   - "index.html"
+   - "script.js"
+   - "style.css"
 2. Open "index.html", and add the following code into it, just below the opening {{htmlelement("body")}} tag:
 
-    ```html
-    <canvas class="myCanvas">
-      <p>Add suitable fallback here.</p>
-    </canvas>
-    ```
+   ```html
+   <canvas class="myCanvas">
+     <p>Add suitable fallback here.</p>
+   </canvas>
+   ```
 
-    We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we have removed the `width` and `height` attributes for now (you could add them back in if you wanted, but we will set them using JavaScript in a below section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
+   We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we have removed the `width` and `height` attributes for now (you could add them back in if you wanted, but we will set them using JavaScript in a below section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
 
 3. Now open "script.js" and add the following lines of JavaScript:
 
-    ```js
-    const canvas = document.querySelector('.myCanvas');
-    const width = canvas.width = window.innerWidth;
-    const height = canvas.height = window.innerHeight;
-    ```
+   ```js
+   const canvas = document.querySelector('.myCanvas');
+   const width = canvas.width = window.innerWidth;
+   const height = canvas.height = window.innerHeight;
+   ```
 
-    Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
+   Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
 
-    You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (for example, if you want to draw something exactly halfway across the width of the canvas).
+   You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (for example, if you want to draw something exactly halfway across the width of the canvas).
 
 > **Note:** You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixelated/distorted.
 
@@ -136,7 +137,7 @@ ctx.fillStyle = 'rgb(0, 0, 0)';
 ctx.fillRect(0, 0, width, height);
 ```
 
-Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes [color values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors) just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the{{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left-hand corner; the last two are the width and height you want the rectangle drawn at — we told you those `width` and `height` variables would be useful)!
+Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes [color values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors) just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left-hand corner; the last two are the width and height you want the rectangle drawn at — we told you those `width` and `height` variables would be useful)!
 
 OK, our template is done and it's time to move on.
 
@@ -144,7 +145,7 @@ OK, our template is done and it's time to move on.
 
 As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, `ctx`). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.
 
-![](canvas_default_grid.png)
+![Gridded graph paper with small squares covering its area with a steelblue square in the middle. The top left corner of the canvas is point (0, 0) of the canvas x-axis and y-axis. The horizontal (x) axis runs from left to right denoting the width, and the vertical (y) axis runs from top to bottom denotes the height. The top left corner of the blue square is labeled as being a distance of x units from the y-axis and y units from the x-axis.](canvas_default_grid.png)
 
 Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.
 
@@ -155,28 +156,28 @@ Let's start with some simple rectangles.
 1. First of all, take a copy of your newly coded canvas template (or make a local copy of the [1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory if you didn't follow the above steps).
 2. Next, add the following lines to the bottom of your JavaScript:
 
-    ```js
-    ctx.fillStyle = 'rgb(255, 0, 0)';
-    ctx.fillRect(50, 50, 100, 150);
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.fillRect(50, 50, 100, 150);
+   ```
 
-    If you save and refresh, you should see a red rectangle has appeared on your canvas. Its top left corner is 50 pixels away from the top and left of the canvas edge (as defined by the first two parameters), and it is 100 pixels wide and 150 pixels tall (as defined by the third and fourth parameters).
+   If you save and refresh, you should see a red rectangle has appeared on your canvas. Its top left corner is 50 pixels away from the top and left of the canvas edge (as defined by the first two parameters), and it is 100 pixels wide and 150 pixels tall (as defined by the third and fourth parameters).
 
 3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
 
-    ```js
-    ctx.fillStyle = 'rgb(0, 255, 0)';
-    ctx.fillRect(75, 75, 100, 100);
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(0, 255, 0)';
+   ctx.fillRect(75, 75, 100, 100);
+   ```
 
-    Save and refresh, and you'll see your new rectangle. This raises an important point: graphics operations like drawing rectangles, lines, and so forth are performed in the order in which they occur. Think of it like painting a wall, where each coat of paint overlaps and may even hide what's underneath. You can't do anything to change this, so you have to think carefully about the order in which you draw the graphics.
+   Save and refresh, and you'll see your new rectangle. This raises an important point: graphics operations like drawing rectangles, lines, and so forth are performed in the order in which they occur. Think of it like painting a wall, where each coat of paint overlaps and may even hide what's underneath. You can't do anything to change this, so you have to think carefully about the order in which you draw the graphics.
 
 4. Note that you can draw semi-transparent graphics by specifying a semi-transparent color, for example by using `rgba()`. The `a` value defines what's called the "alpha channel, " or the amount of transparency the color has. The higher its value, the more it will obscure whatever's behind it. Add the following to your code:
 
-    ```js
-    ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
-    ctx.fillRect(25, 100, 175, 50);
-    ```
+   ```js
+   ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
+   ctx.fillRect(25, 100, 175, 50);
+   ```
 
 5. Now try drawing some more rectangles of your own; have fun!
 
@@ -186,16 +187,16 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 
 1. Add the following to the previous example, again below the previous JavaScript lines:
 
-    ```js
-    ctx.strokeStyle = 'rgb(255, 255, 255)';
-    ctx.strokeRect(25, 25, 175, 200);
-    ```
+   ```js
+   ctx.strokeStyle = 'rgb(255, 255, 255)';
+   ctx.strokeRect(25, 25, 175, 200);
+   ```
 
 2. The default width of strokes is 1 pixel; you can adjust the {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}} property value to change this (it takes a number representing the number of pixels wide the stroke is). Add the following line in between the previous two lines:
 
-    ```js
-    ctx.lineWidth = 5;
-    ```
+   ```js
+   ctx.lineWidth = 5;
+   ```
 
 Now you should see that your white outline has become much thicker! That's it for now. At this point your example should look like this:
 
@@ -233,43 +234,43 @@ Let's draw an equilateral triangle on the canvas.
 
 1. First of all, add the following helper function to the bottom of your code. This converts degree values to radians, which is useful because whenever you need to provide an angle value in JavaScript, it will nearly always be in radians, but humans usually think in degrees.
 
-    ```js
-    function degToRad(degrees) {
-      return degrees * Math.PI / 180;
-    }
-    ```
+   ```js
+   function degToRad(degrees) {
+     return degrees * Math.PI / 180;
+   }
+   ```
 
 2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
 
-    ```js
-    ctx.fillStyle = 'rgb(255, 0, 0)';
-    ctx.beginPath();
-    ctx.moveTo(50, 50);
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.beginPath();
+   ctx.moveTo(50, 50);
+   ```
 
 3. Now add the following lines at the bottom of your script:
 
-    ```js
-    ctx.lineTo(150, 50);
-    const triHeight = 50 * Math.tan(degToRad(60));
-    ctx.lineTo(100, 50 + triHeight);
-    ctx.lineTo(50, 50);
-    ctx.fill();
-    ```
+   ```js
+   ctx.lineTo(150, 50);
+   const triHeight = 50 * Math.tan(degToRad(60));
+   ctx.lineTo(100, 50 + triHeight);
+   ctx.lineTo(50, 50);
+   ctx.fill();
+   ```
 
-    Let's run through this in order:
+   Let's run through this in order:
 
-    First we draw a line across to (150, 50) — our path now goes 100 pixels to the right along the x axis.
+   First we draw a line across to (150, 50) — our path now goes 100 pixels to the right along the x axis.
 
-    Second, we work out the height of our equilateral triangle, using a bit of simple trigonometry. Basically, we are drawing the triangle pointing downwards. The angles in an equilateral triangle are always 60 degrees; to work out the height we can split it down the middle into two right-angled triangles, which will each have angles of 90 degrees, 60 degrees, and 30 degrees. In terms of the sides:
+   Second, we work out the height of our equilateral triangle, using a bit of simple trigonometry. Basically, we are drawing the triangle pointing downwards. The angles in an equilateral triangle are always 60 degrees; to work out the height we can split it down the middle into two right-angled triangles, which will each have angles of 90 degrees, 60 degrees, and 30 degrees. In terms of the sides:
 
-    - The longest side is called the **hypotenuse**
-    - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
-    - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
+   - The longest side is called the **hypotenuse**
+   - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
+   - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
 
-    ![](trigonometry.png)
+   ![A equilateral triangle pointing downwards with labeled angles and sides. The horizontal line at the top is labeled 'adjacent'. A perpendicular dotted line, from the middle of the adjacent line, labeled 'opposite', splits the triangle creating two equal right triangles. The right side of the triangle is labeled the hypotenuse, as it is the hypotenuse of the right triangle formed by the line labeled 'opposite'. while all three-sided of the triangle are of equal length, the hypotenuse is the longest side of the right triangle.](trigonometry.png)
 
-    One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with `50 * Math.tan(degToRad(60))`. We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.
+   One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with `50 * Math.tan(degToRad(60))`. We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.
 
 4. With the height calculated, we draw another line to `(100, 50 + triHeight)`. The X coordinate is simple; it must be halfway between the previous two X values we set. The Y value on the other hand must be 50 plus the triangle height, as we know the top of the triangle is 50 pixels from the top of the canvas.
 5. The next line draws a line back to the starting point of the triangle.
@@ -281,31 +282,31 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 
 1. Let's add an arc to our canvas — add the following to the bottom of your code:
 
-    ```js
-    ctx.fillStyle = 'rgb(0, 0, 255)';
-    ctx.beginPath();
-    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
-    ctx.fill();
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(0, 0, 255)';
+   ctx.beginPath();
+   ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
+   ctx.fill();
+   ```
 
-    `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
+   `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
 
-    > **Note:** 0 degrees is horizontally to the right.
+   > **Note:** 0 degrees is horizontally to the right.
 
 2. Let's try adding another arc:
 
-    ```js
-    ctx.fillStyle = 'yellow';
-    ctx.beginPath();
-    ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
-    ctx.lineTo(200, 106);
-    ctx.fill();
-    ```
+   ```js
+   ctx.fillStyle = 'yellow';
+   ctx.beginPath();
+   ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+   ctx.lineTo(200, 106);
+   ctx.fill();
+   ```
 
-    The pattern here is very similar, but with two differences:
+   The pattern here is very similar, but with two differences:
 
-    - We have set the last parameter of `arc()` to `true`, meaning that the arc is drawn counterclockwise, which means that even though the arc is specified as starting at -45 degrees and ending at 45 degrees, we draw the arc around the 270 degrees not inside this portion. If you were to change `true` to `false` and then re-run the code, only the 90 degree slice of the circle would be drawn.
-    - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e. one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
+   - We have set the last parameter of `arc()` to `true`, meaning that the arc is drawn counterclockwise, which means that even though the arc is specified as starting at -45 degrees and ending at 45 degrees, we draw the arc around the 270 degrees not inside this portion. If you were to change `true` to `false` and then re-run the code, only the 90 degree slice of the circle would be drawn.
+   - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e. one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
 
 That's it for now; your final example should look like this:
 
@@ -355,36 +356,36 @@ It is possible to render external images onto your canvas. These can be simple i
 
 1. As before, make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) in which to draw the new example.
 
-    Images are drawn onto canvas using the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method. The simplest version takes three parameters — a reference to the image you want to render, and the X and Y coordinates of the image's top left corner.
+   Images are drawn onto canvas using the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method. The simplest version takes three parameters — a reference to the image you want to render, and the X and Y coordinates of the image's top left corner.
 
 2. Let's start by getting an image source to embed in our canvas. Add the following lines to the bottom of your JavaScript:
 
-    ```js
-    const image = new Image();
-    image.src = 'firefox.png';
-    ```
+   ```js
+   const image = new Image();
+   image.src = 'firefox.png';
+   ```
 
-    Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element). We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
+   Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
 
 3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `load` event, which will only be fired when the image has finished loading. Add the following block below the previous one:
 
-    ```js
-    image.addEventListener('load', () => ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175));
-    ```
+   ```js
+   image.addEventListener('load', () => ctx.drawImage(image, 20, 20));
+   ```
 
-    If you load your example in the browser now, you should see the image embedded in the canvas.
+   If you load your example in the browser now, you should see the image embedded in the canvas.
 
 4. But there's more! What if we want to display only a part of the image, or to resize it? We can do both with the more complex version of `drawImage()`. Update your `ctx.drawImage()` line like so:
 
-    ```js
-    ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
-    ```
+   ```js
+   ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
+   ```
 
-    - The first parameter is the image reference, as before.
-    - Parameters 2 and 3 define the coordinates of the top left corner of the area you want to cut out of the loaded image, relative to the top-left corner of the image itself. Nothing to the left of the first parameter or above the second will be drawn.
-    - Parameters 4 and 5 define the width and height of the area we want to cut out from the original image we loaded.
-    - Parameters 6 and 7 define the coordinates at which you want to draw the top-left corner of the cut-out portion of the image, relative to the top-left corner of the canvas.
-    - Parameters 8 and 9 define the width and height to draw the cut-out area of the image. In this case, we have specified the same dimensions as the original slice, but you could resize it by specifying different values.
+   - The first parameter is the image reference, as before.
+   - Parameters 2 and 3 define the coordinates of the top left corner of the area you want to cut out of the loaded image, relative to the top-left corner of the image itself. Nothing to the left of the first parameter or above the second will be drawn.
+   - Parameters 4 and 5 define the width and height of the area we want to cut out from the original image we loaded.
+   - Parameters 6 and 7 define the coordinates at which you want to draw the top-left corner of the cut-out portion of the image, relative to the top-left corner of the canvas.
+   - Parameters 8 and 9 define the width and height to draw the cut-out area of the image. In this case, we have specified the same dimensions as the original slice, but you could resize it by specifying different values.
 
 The final example should look like so:
 
@@ -405,60 +406,60 @@ Let's build a simple example.
 1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
 
-    ```js
-    ctx.translate(width/2, height/2);
-    ```
+   ```js
+   ctx.translate(width/2, height/2);
+   ```
 
-    This causes the coordinate origin (0, 0) to be moved to the center of the canvas, rather than being at the top left corner. This is very useful in many situations, like this one, where we want our design to be drawn relative to the center of the canvas.
+   This causes the coordinate origin (0, 0) to be moved to the center of the canvas, rather than being at the top left corner. This is very useful in many situations, like this one, where we want our design to be drawn relative to the center of the canvas.
 
 3. Now add the following code to the bottom of the JavaScript:
 
-    ```js
-    function degToRad(degrees) {
-      return degrees * Math.PI / 180;
-    }
+   ```js
+   function degToRad(degrees) {
+     return degrees * Math.PI / 180;
+   }
 
-    function rand(min, max) {
-      return Math.floor(Math.random() * (max-min+1)) + (min);
-    }
+   function rand(min, max) {
+     return Math.floor(Math.random() * (max-min+1)) + (min);
+   }
 
-    let length = 250;
-    let moveOffset = 20;
+   let length = 250;
+   let moveOffset = 20;
 
-    for (let i = 0; i < length; i++) {
+   for (let i = 0; i < length; i++) {
 
-    }
-    ```
+   }
+   ```
 
-    Here we are implementing the same `degToRad()` function we saw in the triangle example above, a `rand()` function that returns a random number between given lower and upper bounds, `length` and `moveOffset` variables (which we'll find out more about later), and an empty `for` loop.
+   Here we are implementing the same `degToRad()` function we saw in the triangle example above, a `rand()` function that returns a random number between given lower and upper bounds, `length` and `moveOffset` variables (which we'll find out more about later), and an empty `for` loop.
 
 4. The idea here is that we'll draw something on the canvas inside the `for` loop, and iterate on it each time so we can create something interesting. Add the following code inside your `for` loop:
 
-    ```js
-    ctx.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
-    ctx.beginPath();
-    ctx.moveTo(moveOffset,moveOffset);
-    ctx.lineTo(moveOffset+length,moveOffset);
-    const triHeight = length/2 * Math.tan(degToRad(60));
-    ctx.lineTo(moveOffset+(length/2),moveOffset+triHeight);
-    ctx.lineTo(moveOffset,moveOffset);
-    ctx.fill();
+   ```js
+   ctx.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
+   ctx.beginPath();
+   ctx.moveTo(moveOffset,moveOffset);
+   ctx.lineTo(moveOffset+length,moveOffset);
+   const triHeight = length/2 * Math.tan(degToRad(60));
+   ctx.lineTo(moveOffset+(length/2),moveOffset+triHeight);
+   ctx.lineTo(moveOffset,moveOffset);
+   ctx.fill();
 
-    length--;
-    moveOffset += 0.7;
-    ctx.rotate(degToRad(5));
-    ```
+   length--;
+   moveOffset += 0.7;
+   ctx.rotate(degToRad(5));
+   ```
 
-    So on each iteration, we:
+   So on each iteration, we:
 
-    - Set the `fillStyle` to be a shade of slightly transparent purple, which changes each time based on the value of `length`. As you'll see later the length gets smaller each time the loop runs, so the effect here is that the color gets brighter with each successive triangle drawn.
-    - Begin the path.
-    - Move the pen to a coordinate of `(moveOffset, moveOffset)`; This variable defines how far we want to move each time we draw a new triangle.
-    - Draw a line to a coordinate of `(moveOffset+length, moveOffset)`. This draws a line of length `length` parallel to the X axis.
-    - Calculate the triangle's height, as before.
-    - Draw a line to the downward-pointing corner of the triangle, then draw a line back to the start of the triangle.
-    - Call `fill()` to fill in the triangle.
-    - Update the variables that describe the sequence of triangles, so we can be ready to draw the next one. We decrease the `length` value by 1, so the triangles get smaller each time; increase `moveOffset` by a small amount so each successive triangle is slightly further away, and use another new function, {{domxref("CanvasRenderingContext2D.rotate", "rotate()")}}, which allows us to rotate the entire canvas! We rotate it by 5 degrees before drawing the next triangle.
+   - Set the `fillStyle` to be a shade of slightly transparent purple, which changes each time based on the value of `length`. As you'll see later the length gets smaller each time the loop runs, so the effect here is that the color gets brighter with each successive triangle drawn.
+   - Begin the path.
+   - Move the pen to a coordinate of `(moveOffset, moveOffset)`; This variable defines how far we want to move each time we draw a new triangle.
+   - Draw a line to a coordinate of `(moveOffset+length, moveOffset)`. This draws a line of length `length` parallel to the X axis.
+   - Calculate the triangle's height, as before.
+   - Draw a line to the downward-pointing corner of the triangle, then draw a line back to the start of the triangle.
+   - Call `fill()` to fill in the triangle.
+   - Update the variables that describe the sequence of triangles, so we can be ready to draw the next one. We decrease the `length` value by 1, so the triangles get smaller each time; increase `moveOffset` by a small amount so each successive triangle is slightly further away, and use another new function, {{domxref("CanvasRenderingContext2D.rotate", "rotate()")}}, which allows us to rotate the entire canvas! We rotate it by 5 degrees before drawing the next triangle.
 
 That's it! The final example should look like so:
 
@@ -487,7 +488,7 @@ To see how it works, let's quickly look again at our Bouncing Balls example ([se
 ```js
 function loop() {
    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0,  width, height);
+   ctx.fillRect(0, 0, width, height);
 
    for (const ball of balls) {
      ball.draw();
@@ -524,90 +525,90 @@ Now let's create our own simple animation — we'll get a character from a certa
 1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
 
-    ```js
-    ctx.translate(width/2, height/2);
-    ```
+   ```js
+   ctx.translate(width/2, height/2);
+   ```
 
 3. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
-    ```js
-    const image = new Image();
-    image.src = 'walk-right.png';
-    image.onload = draw;
-    ```
+   ```js
+   const image = new Image();
+   image.src = 'walk-right.png';
+   image.onload = draw;
+   ```
 
 4. Now we'll add some variables to keep track of the position the sprite is to be drawn on the screen, and the sprite number we want to display.
 
-    ```js
-    let sprite = 0;
-    let posX = 0;
-    ```
+   ```js
+   let sprite = 0;
+   let posX = 0;
+   ```
 
-    Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Create a sprite sheet walk cycle using CSS animation](https://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/ "Permanent Link to Create a sprite sheet walk cycle using CSS animation")). The image looks like this:
+   Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Walking cycle using CSS animation](https://codepen.io/mikethomas/pen/kQjKLW) CodePen). The image looks like this:
 
-    ![](walk-right.png)
+   ![A sprite sheet with six sprite images of a pixelated character resembling a walking person from their right side at different instances of a single step forward. The character has a white shirt with sky blue buttons, black trousers, and black shoes. Each sprite is 102 pixels wide and 148 pixels high.](walk-right.png)
 
-    It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
+   It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
 
 5. Now let's insert an empty `draw()` function at the bottom of the code, ready for filling up with some code:
 
-    ```js
-    function draw() {
+   ```js
+   function draw() {
 
-    }
-    ```
+   }
+   ```
 
 6. The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
 
-    ```js
-    ctx.fillRect(-(width/2), -(height/2), width, height);
-    ```
+   ```js
+   ctx.fillRect(-(width/2), -(height/2), width, height);
+   ```
 
 7. Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:
 
-    ```js
-    ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
-    ```
+   ```js
+   ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
+   ```
 
-    As you can see:
+   As you can see:
 
-    - We specify `image` as the image to embed.
-    - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as `sprite` multiplied by 102 (where `sprite` is the sprite number between 0 and 5) and the Y value always 0.
-    - Parameters 4 and 5 specify the size of the slice to cut out — 102 pixels by 148 pixels.
-    - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value.
-    - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify 102 and 148 as the width and height.
+   - We specify `image` as the image to embed.
+   - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as `sprite` multiplied by 102 (where `sprite` is the sprite number between 0 and 5) and the Y value always 0.
+   - Parameters 4 and 5 specify the size of the slice to cut out — 102 pixels by 148 pixels.
+   - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value.
+   - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify 102 and 148 as the width and height.
 
 8. Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
 
-    ```js
-      if (posX % 13 === 0) {
-        if (sprite === 5) {
-          sprite = 0;
-        } else {
-          sprite++;
-        }
-      }
-    ```
+   ```js
+     if (posX % 13 === 0) {
+       if (sprite === 5) {
+         sprite = 0;
+       } else {
+         sprite++;
+       }
+     }
+   ```
 
-    We are wrapping the whole block in `if (posX % 13 === 0) { ... }`. We use the modulo (`%`) operator (also known as the [remainder operator](</en-US/docs/Web/JavaScript/Reference/Operators#remainder_()>)) to check whether the `posX` value can be exactly divided by 13 with no remainder. If so, we move on to the next sprite by incrementing `sprite` (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!
+   We are wrapping the whole block in `if (posX % 13 === 0) { }`. We use the modulo (`%`) operator (also known as the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)) to check whether the `posX` value can be exactly divided by 13 with no remainder. If so, we move on to the next sprite by incrementing `sprite` (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!
 
-    Inside the outer block we use an [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `sprite` value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset `sprite` back to 0; if not we just increment it by 1.
+   Inside the outer block we use an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `sprite` value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset `sprite` back to 0; if not we just increment it by 1.
 
 9. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
-    ```js
-      if(posX > width/2) {
-        let newStartPos = -((width/2) + 102);
-        posX = Math.ceil(newStartPos);
-        console.log(posX);
-      } else {
-        posX += 2;
-      }
-    ```
+   ```js
+     if (posX > width/2) {
+       let newStartPos = -((width/2) + 102);
+       posX = Math.ceil(newStartPos);
+       console.log(posX);
+     } else {
+       posX += 2;
+     }
+   ```
 
-    We are using another `if ... else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
+   We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
 
-    If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
+   If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
 
 10. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
 
@@ -637,9 +638,9 @@ let curY;
 let pressed = false;
 
 // update mouse pointer coordinates
-document.addEventListener('mousemove', e => {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+document.addEventListener('mousemove', (e) => {
+  curX = e.pageX;
+  curY = e.pageY;
 });
 
 canvas.addEventListener('mousedown', () => pressed = true);
@@ -660,7 +661,7 @@ The drawing loop is pretty simple this time around — if pressed is `true`, we 
 
 ```js
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
     ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
@@ -696,93 +697,93 @@ Let's look at a simple example of how to create something with a WebGL library. 
 3. Next, you need to [download the three.min.js library](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) and save it in the same directory as before.
 4. Now we've got `three.js` attached to our page, we can start to write JavaScript that makes use of it into `script.js`. Let's start by creating a new scene — add the following into your main.js file:
 
-    ```js
-    const scene = new THREE.Scene();
-    ```
+   ```js
+   const scene = new THREE.Scene();
+   ```
 
-    The [`Scene()`](https://threejs.org/docs/index.html#api/en/scenes/Scene) constructor creates a new scene, which represents the whole 3D world we are trying to display.
+   The [`Scene()`](https://threejs.org/docs/index.html#api/en/scenes/Scene) constructor creates a new scene, which represents the whole 3D world we are trying to display.
 
 5. Next, we need a **camera** so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:
 
-    ```js
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
-    ```
+   ```js
+   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+   camera.position.z = 5;
+   ```
 
-    The [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) constructor takes four arguments:
+   The [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) constructor takes four arguments:
 
-    - The field of view: How wide the area in front of the camera is that should be visible onscreen, in degrees.
-    - The aspect ratio: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
-    - The near plane: How close to the camera objects can be before we stop rendering them to the screen. Think about how when you move your fingertip closer and closer to the space between your eyes, eventually you can't see it anymore.
-    - The far plane: How far away things are from the camera before they are no longer rendered.
+   - The field of view: How wide the area in front of the camera is that should be visible onscreen, in degrees.
+   - The aspect ratio: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
+   - The near plane: How close to the camera objects can be before we stop rendering them to the screen. Think about how when you move your fingertip closer and closer to the space between your eyes, eventually you can't see it anymore.
+   - The far plane: How far away things are from the camera before they are no longer rendered.
 
-    We also set the camera's position to be 5 distance units out of the Z axis, which, like in CSS, is out of the screen towards you, the viewer.
+   We also set the camera's position to be 5 distance units out of the Z axis, which, like in CSS, is out of the screen towards you, the viewer.
 
 6. The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) constructor, but we'll not use it till later. Add the following lines next:
 
-    ```js
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-    ```
+   ```js
+   const renderer = new THREE.WebGLRenderer();
+   renderer.setSize(window.innerWidth, window.innerHeight);
+   document.body.appendChild(renderer.domElement);
+   ```
 
-    The first line creates a new renderer, the second line sets the size at which the renderer will draw the camera's view, and the third line appends the {{htmlelement("canvas")}} element created by the renderer to the document's {{htmlelement("body")}}. Now anything the renderer draws will be displayed in our window.
+   The first line creates a new renderer, the second line sets the size at which the renderer will draw the camera's view, and the third line appends the {{htmlelement("canvas")}} element created by the renderer to the document's {{htmlelement("body")}}. Now anything the renderer draws will be displayed in our window.
 
 7. Next, we want to create the cube we'll display on the canvas. Add the following chunk of code at the bottom of your JavaScript:
 
-    ```js
-    let cube;
+   ```js
+   let cube;
 
-    const loader = new THREE.TextureLoader();
+   const loader = new THREE.TextureLoader();
 
-    loader.load('metal003.png', texture => {
-      texture.wrapS = THREE.RepeatWrapping;
-      texture.wrapT = THREE.RepeatWrapping;
-      texture.repeat.set(2, 2);
+   loader.load('metal003.png', (texture) => {
+     texture.wrapS = THREE.RepeatWrapping;
+     texture.wrapT = THREE.RepeatWrapping;
+     texture.repeat.set(2, 2);
 
-      const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
-      const material = new THREE.MeshLambertMaterial( { map: texture } );
-      cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
+     const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
+     const material = new THREE.MeshLambertMaterial({ map: texture });
+     cube = new THREE.Mesh(geometry, material);
+     scene.add(cube);
 
-      draw();
-    });
-    ```
+     draw();
+   });
+   ```
 
-    There's a bit more to take in here, so let's go through it in stages:
+   There's a bit more to take in here, so let's go through it in stages:
 
-    - We first create a `cube` global variable so we can access our cube from anywhere in the code.
-    - Next, we create a new [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader) object, then call `load()` on it. `load()` takes two parameters in this case (although it can take more): the texture we want to load (our PNG), and a function that will run when the texture has loaded.
-    - Inside this function we use properties of the [`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) object to specify that we want a 2 x 2 repeat of the image wrapped around all sides of the cube. Next, we create a new [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) object and a new [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) object, and bring them together in a [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) to create our cube. An object typically requires a geometry (what shape it is) and a material (what its surface looks like).
-    - Last of all, we add our cube to the scene, then call our `draw()` function to start off the animation.
+   - We first create a `cube` global variable so we can access our cube from anywhere in the code.
+   - Next, we create a new [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader) object, then call `load()` on it. `load()` takes two parameters in this case (although it can take more): the texture we want to load (our PNG), and a function that will run when the texture has loaded.
+   - Inside this function we use properties of the [`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) object to specify that we want a 2 x 2 repeat of the image wrapped around all sides of the cube. Next, we create a new [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) object and a new [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) object, and bring them together in a [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) to create our cube. An object typically requires a geometry (what shape it is) and a material (what its surface looks like).
+   - Last of all, we add our cube to the scene, then call our `draw()` function to start off the animation.
 
 8. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
 
-    ```js
-    const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
-    scene.add(light);
+   ```js
+   const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
+   scene.add(light);
 
-    const spotLight = new THREE.SpotLight('rgb(255,255,255)');
-    spotLight.position.set( 100, 1000, 1000 );
-    spotLight.castShadow = true;
-    scene.add(spotLight);
-    ```
+   const spotLight = new THREE.SpotLight('rgb(255,255,255)');
+   spotLight.position.set(100, 1000, 1000);
+   spotLight.castShadow = true;
+   scene.add(spotLight);
+   ```
 
-    An [`AmbientLight`](https://threejs.org/docs/index.html#api/en/lights/AmbientLight) object is a kind of soft light that lightens the whole scene a bit, like the sun when you are outside. The [`SpotLight`](https://threejs.org/docs/index.html#api/en/lights/SpotLight) object, on the other hand, is a directional beam of light, more like a flashlight/torch (or a spotlight, in fact).
+   An [`AmbientLight`](https://threejs.org/docs/index.html#api/en/lights/AmbientLight) object is a kind of soft light that lightens the whole scene a bit, like the sun when you are outside. The [`SpotLight`](https://threejs.org/docs/index.html#api/en/lights/SpotLight) object, on the other hand, is a directional beam of light, more like a flashlight/torch (or a spotlight, in fact).
 
 9. Last of all, let's add our `draw()` function to the bottom of the code:
 
-    ```js
-    function draw() {
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
+   ```js
+   function draw() {
+     cube.rotation.x += 0.01;
+     cube.rotation.y += 0.01;
+     renderer.render(scene, camera);
 
-      requestAnimationFrame(draw);
-    }
-    ```
+     requestAnimationFrame(draw);
+   }
+   ```
 
-    This is fairly intuitive; on each frame, we rotate our cube slightly on its X and Y axes, then render the scene as viewed by our camera, then finally call `requestAnimationFrame()` to schedule drawing our next frame.
+   This is fairly intuitive; on each frame, we rotate our cube slightly on its X and Y axes, then render the scene as viewed by our camera, then finally call `requestAnimationFrame()` to schedule drawing our next frame.
 
 Let's have another quick look at what the finished product should look like:
 
@@ -807,7 +808,7 @@ Here we have covered only the real basics of canvas — there is so much more to
 
 ## Examples
 
-- [Violent theremin](https://github.com/mdn/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
+- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

@@ -1,6 +1,7 @@
 ---
 title: VideoColorSpace.transfer
 slug: Web/API/VideoColorSpace/transfer
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace.transfer
 ---
+
 {{DefaultAPISidebar("WebCodecs API")}}
 
 The **`transfer`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the opto-electronic transfer characteristics of the video.

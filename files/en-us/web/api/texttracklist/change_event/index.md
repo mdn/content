@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackList: change event'
 slug: Web/API/TextTrackList/change_event
+page-type: web-api-event
 tags:
   - Event
   - TextTrack
@@ -8,6 +9,7 @@ tags:
   - change event
 browser-compat: api.TextTrackList.change_event
 ---
+
 {{APIRef}}
 
 The **`change`** event is fired when a text track is made active or inactive, or a {{domxref('TextTrackList')}} is otherwise changed.
@@ -17,9 +19,9 @@ The **`change`** event is fired when a text track is made active or inactive, or
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', event => { })
+addEventListener('change', (event) => { })
 
-onchange = event => { }
+onchange = (event) => { }
 ```
 
 ## Event type

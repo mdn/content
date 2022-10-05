@@ -1,9 +1,11 @@
 ---
 title: Targeting and hit detection
 slug: Web/API/WebXR_Device_API/Targeting
+page-type: guide
 tags:
   - Draft
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 ## Virtual object hit testing
@@ -20,7 +22,7 @@ One common solution is to overlay simplified, invisible objects atop the objects
 
 The acronym "LIDAR" has multiple definitions depending on specifics of how it's implemented, but the end result is the same. Most commonly, it refers to "_Laser Imaging, Detection, And Ranging_" or "_LIght Detection and Ranging_").
 
-Testing for collisions with the real world is a different problem, which may involve not only interpreting the imagery from the device's camera (if available) but also potentially multiple additional sensors. Some devices include infrared sensors to help range objects, and others provide powerful {{interwiki("wikipedia", "LIDAR")}} systems, which use lasers (usually infrared lasers, which can't be seen by the human eye) to determine range to objects in the world.
+Testing for collisions with the real world is a different problem, which may involve not only interpreting the imagery from the device's camera (if available) but also potentially multiple additional sensors. Some devices include infrared sensors to help range objects, and others provide powerful [LIDAR](https://en.wikipedia.org/wiki/LIDAR) systems, which use lasers (usually infrared lasers, which can't be seen by the human eye) to determine range to objects in the world.
 
 The details of how to work with an individual platform's ranging system is beyond the scope of this article. However, there's hope: a proposal has been floated for a WebXR Hit Test Module that would layer atop WebXR to provide an API for performing hit testing and collision detection.
 

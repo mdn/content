@@ -1,6 +1,7 @@
 ---
 title: CSSPseudoElement.element
 slug: Web/API/CSSPseudoElement/element
+page-type: web-api-instance-property
 tags:
   - API
   - CSSPseudoElement
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSPseudoElement.element
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the

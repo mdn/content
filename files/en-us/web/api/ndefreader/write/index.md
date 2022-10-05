@@ -1,33 +1,37 @@
 ---
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference
   - Web NFC
   - Method
+  - Experimental
 browser-compat: api.NDEFReader.write
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The `write()` method of the {{DOMxRef("NDEFReader")}} interface attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
 ## Syntax
 
-```js
-NDEFReader.write(message);
-  NDEFReader.write(message, options);
+```js-nolint
+write(message)
+write(message, options)
 ```
 
 ### Parameters
 
 - `message`
 
-  - : The message to be written, one of string,
-    {{DOMxRef("BufferSource")}}, or an array of records. A record has the following members:
+  - : The message to be written, either a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+    a {{jsxref("DataView")}}, or an array of records. A record has the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted, one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+      - : Contains the data to be transmitted, a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+        a {{jsxref("DataView")}}, or an array of nested records
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}
@@ -59,9 +63,10 @@ NDEFReader.write(message);
 
   - : An object with the following properties:
 
-    - `overwrite` -- A boolean value specifying whether or not
-      existing records should be overwritten, if such exists.
-    - `signal` -- An optional {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
+    - `overwrite`
+      - : A boolean value specifying whether or not existing records should be overwritten, if such exists.
+    - `signal` {{optional_inline}}
+      - : An {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
 
 ### Return value
 
@@ -100,7 +105,7 @@ ndef.write(
   "Hello World"
 ).then(() => {
   console.log("Message written.");
-}).catch(error => {
+}).catch((error) => {
   console.log(`Write failed :-( try again: ${error}.`);
 });
 ```
@@ -134,7 +139,7 @@ function write(data, { timeout } = {}) {
     ctlr.signal.onabort = () => reject("Time is up, bailing out!");
     setTimeout(() => ctlr.abort(), timeout);
 
-    ndef.addEventListener("reading", event => {
+    ndef.addEventListener("reading", (event) => {
       ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
     }, { once: true });
   });
@@ -144,7 +149,7 @@ await ndef.scan();
 try {
   // Let's wait for 5 seconds only.
   await write("Hello World", { timeout: 5_000 });
-} catch(err) {
+} catch (err) {
   console.error("Something went wrong", err);
 } finally {
   console.log("We wrote to a tag!");

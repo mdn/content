@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/33
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 33 was released on October 14, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -47,8 +48,8 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - On Android, support for two new values for the {{htmlattrxref("name", "meta")}} attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ({{bug(1014712)}}). Example:
 
   ```html
-  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png"/>
-    <meta name="msapplication-TileColor" content="#d83434"/>
+  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png" />
+  <meta name="msapplication-TileColor" content="#d83434" />
   ```
 
 ### JavaScript
@@ -69,7 +70,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - Our experimental implementation of Media Source Extensions, behind the `media.mediasource.enabled` preference, enabled by default in Nightly and Aurora only, now supports MP4 ({{bug(1000686)}}).
 - The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the `media.track.enabled`, off by default ({{bug(744896)}}).
 - The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from Web sites. Only Firefox-internal code (Chrome code) can use it ({{bug(1035242)}}).
-- The {{event("touchenter")}} and {{event("touchleave")}} events, removed from the specification, have been removed ({{bug(1036444)}}).
+- The `touchenter` and `touchleave` events, removed from the specification, have been removed ({{bug(1036444)}}).
 - The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{domxref("Window/load_event", "load")}} to match the specification ({{bug(1035505)}}).
 - The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).
 - The IndexedDB interface `LockedFile` has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).

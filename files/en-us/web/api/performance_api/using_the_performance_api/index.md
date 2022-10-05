@@ -1,11 +1,13 @@
 ---
 title: Using the Performance API
 slug: Web/API/Performance_API/Using_the_Performance_API
+page-type: guide
 tags:
   - Guide
   - Performance
   - Web Performance
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 A fundamental requirement of web performance is a precise and consistent definition of _time._ The {{domxref("DOMHighResTimeStamp")}} type (a `double`) is used by all performance interfaces to hold such time values. Additionally, there must be a way to create a _timestamp_ for a specific point in time; this is done with the {{domxref("Performance.now","now()")}} method.
@@ -20,8 +22,8 @@ The following code example shows the use of {{domxref("DOMHighResTimeStamp")}} a
 
 ```js
 function calculate_time() {
-  var startTime;
-  var endTime;
+  let startTime;
+  let endTime;
 
   startTime = performance.now();
   do_task();
@@ -37,28 +39,22 @@ JSON serialization of the {{domxref("Performance")}} object is done via the {{do
 
 ```js
 function print_json() {
-  var json;
-  var o = document.getElementsByTagName("output")[0];
+  const output = document.getElementsByTagName("output")[0];
 
   if (window.performance.toJSON === undefined) {
-    json = "window.performance.toJSON() is NOT supported";
-    o.innerHTML += json + "<br>";
+    output.textContent += `window.performance.toJSON() is NOT supported`;
   } else {
-    var s;
-    json = window.performance.toJSON();
+    const json = window.performance.toJSON();
 
     // Print the performance object
-    s = JSON.stringify(json);
-    o.innerHTML = "<p>performance = " + s + "</p>";
+    output.textContent = `performance = ${JSON.stringify(json)} \n`;
 
     // Print the performance.timing and performance.navigation objects
-    var perf = JSON.parse(s);
+    const timing = json.timing;
+    output.textContent += `performance.timing = ${JSON.stringify(timing)} \n`;
 
-    var timing = perf.timing;
-    o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
-
-    var navigation = perf.navigation;
-    o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
+    const navigation = json.navigation;
+    output.textContent += `performance.navigation = ${JSON.stringify(navigation)} \n`;
   }
 }
 ```

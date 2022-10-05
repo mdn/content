@@ -1,6 +1,7 @@
 ---
 title: Element
 slug: Web/API/Element
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - Web API
 browser-compat: api.Element
 ---
+
 {{APIRef("DOM")}}
 
 **`Element`** is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
@@ -25,71 +27,71 @@ Languages outside the realm of the Web platform, like XUL through the `XULElemen
 
 _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("Element.assignedSlot")}}{{readonlyInline}}
+- {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
-- {{DOMxRef("Element.attributes")}} {{readOnlyInline}}
+- {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("NamedNodeMap")}} object containing the assigned attributes of the corresponding HTML element.
-- {{domxref("Element.childElementCount")}} {{readonlyInline}}
+- {{domxref("Element.childElementCount")}} {{ReadOnlyInline}}
   - : Returns the number of child elements of this element.
-- {{domxref("Element.children")}} {{readonlyInline}}
+- {{domxref("Element.children")}} {{ReadOnlyInline}}
   - : Returns the child elements of this element.
-- {{DOMxRef("Element.classList")}} {{readOnlyInline}}
+- {{DOMxRef("Element.classList")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DOMTokenList")}} containing the list of class attributes.
 - {{DOMxRef("Element.className")}}
   - : A string representing the class of the element.
-- {{DOMxRef("Element.clientHeight")}} {{readOnlyInline}}
+- {{DOMxRef("Element.clientHeight")}} {{ReadOnlyInline}}
   - : Returns a number representing the inner height of the element.
-- {{DOMxRef("Element.clientLeft")}} {{readOnlyInline}}
+- {{DOMxRef("Element.clientLeft")}} {{ReadOnlyInline}}
   - : Returns a number representing the width of the left border of the element.
-- {{DOMxRef("Element.clientTop")}} {{readOnlyInline}}
+- {{DOMxRef("Element.clientTop")}} {{ReadOnlyInline}}
   - : Returns a number representing the width of the top border of the element.
-- {{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}
+- {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
   - : Returns a number representing the inner width of the element.
-- {{domxref("Element.firstElementChild")}} {{readonlyInline}}
+- {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of this element.
 - {{DOMxRef("Element.id")}}
   - : A string representing the id of the element.
 - {{DOMxRef("Element.innerHTML")}}
   - : A string representing the markup of the element's content.
-- {{domxref("Element.lastElementChild")}} {{readonlyInline}}
+- {{domxref("Element.lastElementChild")}} {{ReadOnlyInline}}
   - : Returns the last child element of this element.
-- {{DOMxRef("Element.localName")}} {{readOnlyInline}}
+- {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : A string representing the local part of the qualified name of the element.
-- {{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}
+- {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
 
   - : The namespace URI of the element, or `null` if it is no namespace.
 
     > **Note:** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) namespace in both HTML and XML trees.
 
-- {{DOMxRef("Element.nextElementSibling")}} {{readOnlyInline}}
+- {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
   - : An {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
+- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Only available to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
 - {{DOMxRef("Element.part")}}
   - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
-- {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
+- {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the element, or `null` if no prefix is specified.
-- {{DOMxRef("Element.previousElementSibling")}} {{readOnlyInline}}
+- {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
   - : An {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
-- {{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}
+- {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
   - : Returns a number representing the scroll view height of an element.
 - {{DOMxRef("Element.scrollLeft")}}
   - : A number representing the left scroll offset of the element.
-- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
+- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a number representing the maximum left scroll offset possible for the element.
 - {{DOMxRef("Element.scrollTop")}}
   - : A number representing number of pixels the top of the element is scrolled vertically.
-- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
+- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a number representing the maximum top scroll offset possible for the element.
-- {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
+- {{DOMxRef("Element.scrollWidth")}} {{ReadOnlyInline}}
   - : Returns a number representing the scroll view width of the element.
-- {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
+- {{DOMxRef("Element.shadowRoot")}} {{ReadOnlyInline}}
   - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
 - {{DOMxRef("Element.slot")}}
   - : Returns the name of the shadow DOM slot the element is inserted in.
-- {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
+- {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
   - : Returns a string with the name of the tag for the given element.
 
 ### Properties included from ARIA
@@ -148,7 +150,7 @@ _The `Element` interface includes the following properties, defined on the `ARIA
   - : A string reflecting the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
 - {{domxref("Element.ariaReadOnly")}}
   - : A string reflecting the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
-- {{domxref("Element.ariaRelevant")}}
+- {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
   - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 - {{domxref("Element.ariaRequired")}}
   - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
@@ -187,7 +189,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.attachShadow()")}}
   - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
-- {{DOMxRef("Element.animate()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
 - {{DOMxRef("Element.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
@@ -201,7 +203,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 - {{DOMxRef("EventTarget.dispatchEvent()")}}
   - : Dispatches an event to this node in the DOM and returns a boolean value that indicates whether no handler canceled the event.
-- {{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.getAnimations()")}}
   - : Returns an array of Animation objects currently active on the element.
 - {{DOMxRef("Element.getAttribute()")}}
   - : Retrieves the value of the named attribute from the current node and returns it as a string.
@@ -215,7 +217,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Retrieves the value of the attribute with the specified namespace and name from the current node and returns it as a string.
 - {{DOMxRef("Element.getBoundingClientRect()")}}
   - : Returns the size of an element and its position relative to the viewport.
-- {{domxref("Element.getBoxQuads()")}} {{experimental_inline}}
+- {{domxref("Element.getBoxQuads()")}} {{Experimental_Inline}}
   - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
 - {{DOMxRef("Element.getClientRects()")}}
   - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
@@ -263,15 +265,15 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
 - {{DOMxRef("Element.replaceWith()")}}
   - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
-- {{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.requestFullscreen()")}}
   - : Asynchronously asks the browser to make the element fullscreen.
-- {{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.requestPointerLock()")}}
   - : Allows to asynchronously ask for the pointer to be locked on the given element.
 - {{domxref("Element.scroll()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
 - {{domxref("Element.scrollBy()")}}
   - : Scrolls an element by the given amount.
-- {{DOMxRef("Element.scrollIntoView()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.scrollIntoView()")}}
   - : Scrolls the page until the element gets into the view.
 - {{DOMxRef("Element.scrollIntoViewIfNeeded()")}} {{Non-standard_Inline}}
   - : Scrolls the current element into the visible area of the browser window if it's not already within the visible area of the browser window. **Use the standard {{DOMxRef("Element.scrollIntoView()")}} instead.**
@@ -285,7 +287,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the node representation of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setAttributeNS()")}}
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
+- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
 - {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
   - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
@@ -300,27 +302,22 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
 
-  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI. Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.
+  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.
 
 - {{domxref("Element/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
-    Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
-- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
+- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}} {{Deprecated_Inline}}
+
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
-    Also available via the global {{DOMxRef("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} property, which available on elements and the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-- {{domxref("Element/show_event", "show")}} {{deprecated_inline}}
+- {{domxref("Element/show_event", "show")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
 
 ### Clipboard events
 
@@ -347,14 +344,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/blur_event", "blur")}}
   - : Fired when an element has lost focus.
-    Also available via the {{domxref("GlobalEventHandlers/onblur", "onblur")}} property.
 - {{domxref("Element/focus_event", "focus")}}
   - : Fired when an element has gained focus.
-    Also available via the {{domxref("GlobalEventHandlers/onfocus", "onfocus")}} property
 - {{domxref("Element/focusin_event", "focusin")}}
-  - : Fired when an element is about to gain focus.
+  - : Fired when an element has gained focus, after {{domxref("Element/focus_event", "focus")}}.
 - {{domxref("Element/focusout_event", "focusout")}}
-  - : Fired when an element is about to lose focus.
+  - : Fired when an element has lost focus, after {{domxref("Element/blur_event", "blur")}}.
 
 ### Fullscreen events
 
@@ -367,74 +362,56 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
-    Also available via the {{domxref("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- {{domxref("Element/keypress_event", "keypress")}}  {{deprecated_inline}}
+- {{domxref("Element/keypress_event", "keypress")}} {{Deprecated_Inline}}
   - : Fired when a key that produces a character value is pressed down.
-    Also available via the {{domxref("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
 - {{domxref("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.
-    Also available via the {{domxref("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
 
 ### Mouse events
 
 - {{domxref("Element/auxclick_event", "auxclick")}}
   - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
-    Also available via the {{domxref("GlobalEventHandlers/onauxclick", "onauxclick")}} property.
 - {{domxref("Element/click_event", "click")}}
   - : Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
-    Also available via the {{domxref("GlobalEventHandlers/onclick", "onclick")}} property.
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
   - : Fired when the user attempts to open a context menu.
-    Also available via the {{domxref("GlobalEventHandlers/oncontextmenu", "oncontextmenu")}} property.
 - {{domxref("Element/dblclick_event", "dblclick")}}
   - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
-    Also available via the {{domxref("GlobalEventHandlers/ondblclick", "ondblclick")}} property.
 - {{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
   - : Occurs when an element is activated, for instance, through a mouse click or a keypress.
 - {{domxref("Element/mousedown_event", "mousedown")}}
   - : Fired when a pointing device button is pressed on an element.
-    Also available via the {{domxref("GlobalEventHandlers/onmousedown", "onmousedown")}} property.
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
   - : Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseenter", "onmouseenter")}} property.
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
   - : Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseleave", "onmouseleave")}} property.
 - {{domxref("Element/mousemove_event", "mousemove")}}
   - : Fired when a pointing device (usually a mouse) is moved while over an element.
-    Also available via the {{domxref("GlobalEventHandlers/onmousemove", "onmousemove")}} property.
 - {{domxref("Element/mouseout_event", "mouseout")}}
   - : Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseout", "onmouseout")}} property.
 - {{domxref("Element/mouseover_event", "mouseover")}}
   - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseover", "onmouseover")}} property.
 - {{domxref("Element/mouseup_event", "mouseup")}}
   - : Fired when a pointing device button is released on an element.
-    Also available via the {{domxref("GlobalEventHandlers/onmouseup", "onmouseup")}} property.
-- {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
+- {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
   - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
-- {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
+- {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
   - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
-- {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
+- {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
   - : Fired before the {{domxref("Element/mousedown_event", "mousedown")}} event.
-- {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}}
+- {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
   - : Fired after the {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
 
 ### Touch events
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
   - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-    Also available via the {{domxref("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}} property.
 - {{domxref("Element/touchend_event", "touchend")}}
   - : Fired when one or more touch points are removed from the touch surface.
-    Also available via the {{domxref("GlobalEventHandlers/ontouchend", "ontouchend")}} property
 - {{domxref("Element/touchmove_event", "touchmove")}}
   - : Fired when one or more touch points are moved along the touch surface.
-    Also available via the {{domxref("GlobalEventHandlers/ontouchmove", "ontouchmove")}} property
 - {{domxref("Element/touchstart_event", "touchstart")}}
   - : Fired when one or more touch points are placed on the touch surface.
-    Also available via the {{domxref("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property
 
 ## Specifications
 

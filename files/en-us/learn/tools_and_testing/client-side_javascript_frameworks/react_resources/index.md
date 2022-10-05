@@ -10,6 +10,7 @@ tags:
   - framework
   - resources
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Our final article provides you with a list of React resources that you can use to go further in your learning.
@@ -44,9 +45,9 @@ Although this tutorial doesn't use this approach, many React applications define
 
 `create-react-app` makes it possible to import CSS files into JavaScript modules, so that CSS is only sent to your user when the corresponding component is rendered. For this app, we could have for example written a dedicated `Form.css` file to house the styles of those respective components, then imported the styles into their respective modules like this:
 
-```js
-import Form from './Form';
-import './Form.css'
+```jsx
+import Form from "./Form";
+import "./Form.css";
 ```
 
 This approach makes it easy to identify and manage the CSS that belongs to a specific component. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to limit the amount of irrelevant code that's sent to your user. You'll likely have app-wide styles and specific component styles that built on top of those.
@@ -57,7 +58,7 @@ You can [read more about component stylesheets in the create-react-app docs](htt
 
 We used `console.log()` to check on the state and props of our application in this tutorial, and you'll also have seen some of the useful warnings and error message that React gives you both in the CLI and your browser's JavaScript console. But there's more we can do here.
 
-The React DevTools utility allows you to inspect the internals of your React application directly in the browser.  It adds a new panel to your browser's developer tools, and with it you can inspect the state and props of various components, and even edit state and props to make immediate changes to your application.
+The React DevTools utility allows you to inspect the internals of your React application directly in the browser. It adds a new panel to your browser's developer tools, and with it you can inspect the state and props of various components, and even edit state and props to make immediate changes to your application.
 
 This screenshot shows our finished application as it appears in React DevTools:
 
@@ -70,7 +71,7 @@ React DevTools is available in a number of forms:
 - A [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 - A [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
 - A [Microsoft Edge browser extension](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
-- A [stand-alone application you can install with NPM or Yarn](https://www.npmjs.com/package/react-devtools).
+- A [stand-alone application you can install with npm or Yarn](https://www.npmjs.com/package/react-devtools).
 
 Try installing one of these, then using it to inspect the app you've just built!
 
@@ -86,7 +87,7 @@ If you'd like to try this API for yourself, Smashing Magazine has written an [in
 
 ## Class components
 
-Although this tutorial doesn't mention them, it is possible to build React components using ES6 classes – these are called class components. Until the arrival of hooks, ES6 classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
+Although this tutorial doesn't mention them, it is possible to build React components using classes – these are called class components. Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
 
 - [State and Lifecycle in the React Docs](https://reactjs.org/docs/state-and-lifecycle.html)
 - [Intro To React in the React Docs](https://reactjs.org/tutorial/tutorial.html)

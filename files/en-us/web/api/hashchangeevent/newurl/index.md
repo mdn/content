@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent.newURL
 slug: Web/API/HashChangeEvent/newURL
+page-type: web-api-instance-property
 tags:
   - API
   - HashChangeEvent
@@ -9,6 +10,7 @@ tags:
   - Web API
 browser-compat: api.HashChangeEvent.newURL
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`newURL`** read-only property of the
@@ -22,8 +24,8 @@ A string.
 ## Examples
 
 ```js
-window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed to ' + event.newURL);
+window.addEventListener('hashchange', (event) => {
+  console.log(`Hash changed to ${event.newURL}`);
 });
 ```
 

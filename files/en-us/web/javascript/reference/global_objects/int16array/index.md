@@ -3,12 +3,14 @@ title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 tags:
   - Class
+  - Int16Array
   - JavaScript
   - TypedArray
   - TypedArrays
   - Polyfill
 browser-compat: javascript.builtins.Int16Array
 ---
+
 {{JSRef}}
 
 The **`Int16Array`** typed array represents an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
@@ -23,7 +25,7 @@ The **`Int16Array`** typed array represents an array of twos-complement 16-bit s
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of an `Int16Array`.
 - {{jsxref("TypedArray.name", "Int16Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int16Array` type: "`Int16Array`".
+  - : Returns the string value of the constructor name. In the case of the `Int16Array` type: `"Int16Array"`.
 
 ## Static methods
 
@@ -111,22 +113,23 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // From an array
-const arr = new Int16Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Int16Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-const x = new Int16Array([21, 31]);
 const y = new Int16Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-const buffer = new ArrayBuffer(8);
-const z = new Int16Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(16);
+const z = new Int16Array(buffer, 2, 4);
+console.log(z.byteOffset); // 2
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const int16_from_iterable = new Int16Array(iterable);
-// Int16Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const int16FromIterable = new Int16Array(iterable);
+console.log(int16FromIterable);
+// Int16Array [1, 2, 3]
 ```
 
 ## Specifications

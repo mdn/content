@@ -1,6 +1,7 @@
 ---
 title: History.go()
 slug: Web/API/History/go
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.go
 ---
+
 {{APIRef("History API")}}
 
 The **`History.go()`** method loads a specific page from the
@@ -21,7 +23,7 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 
 ## Syntax
 
-```js
+```js-nolint
 go()
 go(delta)
 ```
@@ -87,5 +89,4 @@ history.go(0);
 - {{DOMxRef("History.back","back()")}}
 - {{DOMxRef("History.forward","forward()")}}
 - {{domxref("Window/popstate_event", "popstate")}} event
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

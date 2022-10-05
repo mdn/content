@@ -1,6 +1,7 @@
 ---
 title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -14,9 +15,14 @@ tags:
   - text-decoration-color
 browser-compat: css.properties.text-emphasis-color
 ---
+
 {{CSSRef}}
 
 The **`text-emphasis-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of emphasis marks. This value can also be set using the {{cssxref("text-emphasis")}} shorthand.
+
+{{EmbedInteractiveExample("pages/css/text-emphasis-color.html")}}
+
+## Syntax
 
 ```css
 /* Initial value */
@@ -35,8 +41,6 @@ text-emphasis-color: revert;
 text-emphasis-color: revert-layer;
 text-emphasis-color: unset;
 ```
-
-## Syntax
 
 ### Values
 

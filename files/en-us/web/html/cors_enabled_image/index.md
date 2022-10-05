@@ -30,8 +30,7 @@ If the foreign content comes from an image obtained from either as {{domxref("HT
 Calling any of the following on a tainted canvas will result in an error:
 
 - Calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} on the canvas's context
-- Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}} on the {{HTMLElement("canvas")}} element itself
-- Calling {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} on the canvas
+- Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}, {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} or {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}} on the {{HTMLElement("canvas")}} element itself
 
 Attempting any of these when the canvas is tainted will cause a `SecurityError` to be thrown. This protects users from having private data exposed by using images to pull information from remote web sites without permission.
 
@@ -72,7 +71,7 @@ The code that starts the download (say, when the user clicks a "Download" button
 function startDownload() {
   let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
-  downloadedImg = new Image;
+  downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.src = imageURL;
@@ -89,8 +88,8 @@ The code that handles the newly-downloaded image is found in the `imageReceived(
 
 ```js
 function imageReceived() {
-  let canvas = document.createElement("canvas");
-  let context = canvas.getContext("2d");
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
 
   canvas.width = downloadedImg.width;
   canvas.height = downloadedImg.height;
@@ -100,9 +99,8 @@ function imageReceived() {
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
-    console.log("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 ```

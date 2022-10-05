@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getIdentityAssertion()
 slug: Web/API/RTCPeerConnection/getIdentityAssertion
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection
@@ -8,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.getIdentityAssertion
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getIdentityAssertion()`** method
@@ -23,8 +25,8 @@ this is automatically done; an explicit call only allows to anticipate the need.
 
 ## Syntax
 
-```js
-pc.getIdentityAssertion();
+```js-nolint
+getIdentityAssertion()
 ```
 
 _There is neither parameter nor return value for this method._
@@ -32,10 +34,10 @@ _There is neither parameter nor return value for this method._
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
+const pc = new RTCPeerConnection();
 
 pc.setIdentityProvider("developer.mozilla.org");
-var assertion = await pc.getIdentityAssertion();
+const assertion = await pc.getIdentityAssertion();
 ```
 
 ## Specifications

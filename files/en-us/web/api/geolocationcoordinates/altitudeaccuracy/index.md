@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -10,6 +11,7 @@ tags:
   - altitudeAccuracy
 browser-compat: api.GeolocationCoordinates.altitudeAccuracy
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.altitudeAccuracy`** read-only

@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - closed
 browser-compat: api.ReadableStreamDefaultReader.closed
 ---
+
 {{APIRef("Streams")}}
 
 The **`closed`** read-only property of the

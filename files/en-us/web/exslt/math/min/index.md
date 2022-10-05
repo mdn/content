@@ -7,6 +7,7 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `math:min()` returns the minimum value of a node-set.
@@ -30,4 +31,4 @@ A result tree fragment representing the lowest valued node's numeric value as a 
 
 ## Specifications
 
-[EXSLT - MATH:MIN](http://exslt.org/regexp/functions/min/index.html)
+[EXSLT - MATH:MIN](http://exslt.org/math/functions/min/index.html)

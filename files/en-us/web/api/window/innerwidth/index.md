@@ -1,6 +1,7 @@
 ---
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -13,6 +14,7 @@ tags:
   - width
 browser-compat: api.Window.innerWidth
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Window")}} property
@@ -45,17 +47,17 @@ like a window, such as a frame or tab.
 ## Examples
 
 ```js
-// This will return the width of the viewport
-var intFrameWidth = window.innerWidth;
+// This will log the width of the viewport
+console.log(window.innerWidth);
 
-// This will return the width of the frame viewport within a frameset
-var intFrameWidth = self.innerWidth;
+// This will log the width of the frame viewport within a frameset
+console.log(self.innerWidth);
 
-// This will return the width of the viewport of the closest frameset
-var intFramesetWidth = parent.innerWidth;
+// This will log the width of the viewport of the closest frameset
+console.log(parent.innerWidth);
 
-// This will return the width of the viewport of the outermost frameset
-var intOuterFramesetWidth = top.innerWidth;
+// This will log the width of the viewport of the outermost frameset
+console.log(top.innerWidth);
 ```
 
 ## Demo

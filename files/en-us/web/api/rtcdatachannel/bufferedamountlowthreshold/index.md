@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -9,6 +10,7 @@ tags:
   - bufferedAmountLowThreshold
 browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold
 ---
+
 {{APIRef("WebRTC")}}
 
 The `RTCDataChannel` property
@@ -28,15 +30,7 @@ messages are actually sent, this value is reduced accordingly.
 
 > **Note:** `bufferedamountlow` events are not fired after the data channel is closed.
 
-## Syntax
-
-```js
-var threshold = aDataChannel.bufferedAmountLowThreshold;
-
-aDataChannel.bufferedAmountLowThreshold = threshold;
-```
-
-### Value
+## Value
 
 The number of queued outgoing data bytes below which the buffer is considered to be
 "low."
@@ -49,10 +43,10 @@ handler for the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamo
 send more data into the buffer by calling {{domxref("RTCDataChannel.send", "send()")}}.
 
 ```js
-var dc = peerConnection.createDataChannel("File Transfer");
+const dc = peerConnection.createDataChannel("File Transfer");
 dc.bufferedAmountLowThreshold = 65535;
 
-dc.onbufferedamountlow = function() {
+dc.onbufferedamountlow = () => {
   /* use send() to queue more data to be sent */
 };
 ```
@@ -68,8 +62,7 @@ dc.onbufferedamountlow = function() {
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC data
-  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.bufferedAmount")}}
 - {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event

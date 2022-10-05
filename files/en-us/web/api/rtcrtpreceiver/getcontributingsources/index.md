@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getContributingSources()
 slug: Web/API/RTCRtpReceiver/getContributingSources
+page-type: web-api-instance-method
 tags:
   - API
   - CSRC
@@ -13,6 +14,7 @@ tags:
   - getContributingSources
 browser-compat: api.RTCRtpReceiver.getContributingSources
 ---
+
 {{APIRef("WebRTC API")}}
 
 The **`getContributingSources()`**
@@ -23,7 +25,7 @@ in the last ten seconds.
 
 ## Syntax
 
-```js
+```js-nolint
 getContributingSources()
 ```
 

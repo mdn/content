@@ -1,9 +1,11 @@
 ---
 title: HTMLVideoElement.msStereo3DPackingMode
 slug: Web/API/HTMLVideoElement/msStereo3DPackingMode
+page-type: web-api-instance-property
 tags:
   - msStereo3DPackingMode
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
@@ -15,8 +17,8 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-HTMLVideoElement.msStereo3DPackingMode(topbottom, sidebyside, none);
+```js-nolint
+msStereo3DPackingMode(topbottom, sidebyside, none)
 ```
 
 ## Value

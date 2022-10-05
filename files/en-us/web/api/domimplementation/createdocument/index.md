@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DOMImplementation.createDocument()`** method creates and
@@ -16,7 +18,7 @@ returns an {{domxref("XMLDocument")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createDocument(namespaceURI, qualifiedNameStr)
 createDocument(namespaceURI, qualifiedNameStr, documentType)
 ```
@@ -40,8 +42,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
-var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
+const doc = document.implementation.createDocument('http://www.w3.org/1999/xhtml', 'html', null);
+const body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
 body.setAttribute('id', 'abc');
 doc.documentElement.appendChild(body);
 alert(doc.getElementById('abc')); // [object HTMLBodyElement]

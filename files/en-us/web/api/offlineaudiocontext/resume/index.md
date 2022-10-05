@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext.resume()
 slug: Web/API/OfflineAudioContext/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -11,6 +12,7 @@ tags:
   - resume
 browser-compat: api.OfflineAudioContext.resume
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`resume()`** method of the
@@ -20,7 +22,7 @@ context that has been suspended. The promise resolves immediately because the
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 

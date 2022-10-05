@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection()`**
@@ -17,7 +19,7 @@ a connection between the local device and a remote peer.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCPeerConnection()
 new RTCPeerConnection(configuration)
 ```
@@ -25,6 +27,7 @@ new RTCPeerConnection(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
+
   - : An object providing options to configure the new connection:
 
     - `bundlePolicy` {{optional_inline}}
@@ -157,8 +160,6 @@ benefit to providing your own is identity key continuity—if you use the same c
 for subsequent calls, the remote peer can tell you're the same caller. This also avoids
 the cost of generating new keys.
 
-**<<<--- add link to information about identity --->>>**
-
 ## Specifications
 
 {{Specifications}}
@@ -169,10 +170,7 @@ the cost of generating new keys.
 
 ## See also
 
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture
-  overview](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

@@ -11,9 +11,10 @@ tags:
   - Landing page
   - Reference
   - es
-  - l10n:priority
+  - "l10n:priority"
   - programming
 ---
+
 {{JsSidebar}}
 
 This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more [about this reference](/en-US/docs/Web/JavaScript/Reference/About).
@@ -133,17 +134,6 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
 - {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
 
-### WebAssembly
-
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
-
 ## Statements
 
 [JavaScript statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)
@@ -170,6 +160,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{jsxref("Statements/function", "function")}}
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Statements/class", "class")}}
 
@@ -203,20 +194,21 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/yield", "yield")}}
 - {{JSxRef("Operators/yield*", "yield*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
+- {{JSxRef("Operators/async_function*", "async function*")}}
 - {{JSxRef("Operators/await", "await")}}
 - {{JSxRef("Global_Objects/Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 
 ### Left-hand-side expressions
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/Optional_chaining", "<code>?.</code> (Optional chaining)", "", 1)}}
+- [`?.` (Optional chaining)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Statements/import%2Emeta", "import.meta")}}
+- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
 
@@ -302,8 +294,8 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
 - {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
+- {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
 
 ### Comma operators
 
@@ -311,16 +303,23 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ## Functions
 
-This chapter documents how to work with [JavaScript functions](/en-US/docs/Web/JavaScript/Reference/Functions) to develop your applications.
+[JavaScript functions.](/en-US/docs/Web/JavaScript/Reference/Functions)
 
-- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- {{JSXRef("Functions/Arrow_functions", "Arrow Functions", "", 1)}}
+- {{JSxRef("Functions/Default_parameters", "Default parameters", "", 1)}}
+- {{JSxRef("Functions/rest_parameters", "Rest parameters", "", 1)}}
+- {{JSxRef("Functions/arguments", "arguments")}}
+- {{JSxRef("Functions/Method_definitions", "Method definitions", "", 1)}}
+- {{JSxRef("Functions/get", "getter", "", 1)}}
+- {{JSxRef("Functions/set", "setter", "", 1)}}
+
+## Classes
+
+[JavaScript classes.](/en-US/docs/Web/JavaScript/Reference/Classes)
 
 ## Additional reference pages
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- {{JSxRef("Lexical_grammar", "Lexical grammar", "", 1)}}
 - [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [Deprecated features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- {{JSxRef("Strict_mode", "Strict mode", "", 1)}}
+- {{JSxRef("Deprecated_and_obsolete_features", "Deprecated features", "", 1)}}

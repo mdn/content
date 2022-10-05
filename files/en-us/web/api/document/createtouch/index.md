@@ -1,6 +1,7 @@
 ---
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -10,9 +11,11 @@ tags:
   - Reference
   - createTouch
   - touch
+  - Non-standard
 browser-compat: api.Document.createTouch
 ---
-{{APIRef("DOM")}}{{Deprecated_Header}}
+
+{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Touch")}} object.
 
@@ -20,7 +23,7 @@ The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Tou
 
 ## Syntax
 
-```js
+```js-nolint
 createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 ```
 
@@ -75,10 +78,10 @@ In following code snippet, two {{DOMxRef("Touch")}} objects are created for the
 `target` element.
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
-var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 ```
 
 ## Specifications

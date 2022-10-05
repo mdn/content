@@ -1,6 +1,7 @@
 ---
 title: Sensor.timestamp
 slug: Web/API/Sensor/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API
@@ -12,6 +13,7 @@ tags:
   - timeStamp
 browser-compat: api.Sensor.timestamp
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`timestamp`** read-only property

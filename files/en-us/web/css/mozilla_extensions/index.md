@@ -1,6 +1,7 @@
 ---
 title: Mozilla CSS extensions
 slug: Web/CSS/Mozilla_Extensions
+page-type: landing-page
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{CSSRef}}
 
 Mozilla applications such as Firefox support a number of special **Mozilla extensions to [CSS](/en-US/docs/Web/CSS)**, including properties, values, pseudo-elements and pseudo-classes, at-rules, and media queries. These extensions are prefixed with `-moz-`.
@@ -88,10 +90,10 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ### B
 
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("background-clip", "-moz-background-clip")}}{{deprecated_inline}}
-- {{CSSxRef("background-origin", "-moz-background-origin")}}{{deprecated_inline}}
-- {{CSSxRef("-moz-background-inline-policy")}}{{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
-- {{CSSxRef("background-size", "-moz-background-size")}}{{deprecated_inline}}
+- {{CSSxRef("background-clip", "-moz-background-clip")}} {{deprecated_inline}}
+- {{CSSxRef("background-origin", "-moz-background-origin")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-background-inline-policy")}} {{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
+- {{CSSxRef("background-size", "-moz-background-size")}} {{deprecated_inline}}
 - {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end")}}]
 - {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]
 - {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-style")}}]
@@ -146,10 +148,10 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ### T–U
 
 - {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
-- {{CSSxRef("text-align-last","-moz-text-align-last")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}}{{deprecated_inline}}
+- {{CSSxRef("text-align-last","-moz-text-align-last")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}} {{deprecated_inline}}
 - {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
 - {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -277,7 +279,7 @@ Property: {{CSSxRef("background-image")}}
 
 Property: {{CSSxRef("border-color")}}
 
-- `-moz-use-text-color`{{deprecated_inline}} (removed in {{bug(1306214)}}); use {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} instead.
+- `-moz-use-text-color` {{deprecated_inline}} (removed in {{bug(1306214)}}); use {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} instead.
 
 ### order-style and outline-style
 

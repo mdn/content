@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML forms
-  - HTML5
   - HTML:Flow content
   - Reference
   - Web

@@ -1,6 +1,7 @@
 ---
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
+page-type: web-api-instance-property
 tags:
   - API
   - Clip
@@ -15,8 +16,10 @@ tags:
   - paste
 browser-compat: api.Navigator.clipboard
 ---
-The [Clipboard
-API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
+
+{{APIRef("Clipboard API")}}
+
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
 read-only **`clipboard`** property, which returns the
 {{domxref("Clipboard")}} object used to read and write the clipboard's
 contents.
@@ -40,7 +43,7 @@ in order to read the contents of the clipboard.
 
 ```js
 navigator.clipboard.readText().then(
-  clipText => document.querySelector(".cliptext").innerText = clipText);
+  (clipText) => document.querySelector(".cliptext").innerText = clipText);
 ```
 
 This snippet replaces the contents of the element whose class is
@@ -60,5 +63,3 @@ text.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Clipboard API")}}

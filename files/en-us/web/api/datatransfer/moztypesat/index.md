@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozTypesAt()
 slug: Web/API/DataTransfer/mozTypesAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozTypesAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{deprecated_header}}{{Non-standard_header()}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozTypesAt()`** method returns a list of
 the format types that are stored for an item at the specified index. If the index is not
@@ -22,7 +22,7 @@ in the range from 0 to the number of items minus one, an empty string list is re
 
 ## Syntax
 
-```js
+```js-nolint
 mozTypesAt(index)
 ```
 
@@ -35,29 +35,29 @@ mozTypesAt(index)
 ### Return value
 
 A list of data formats (which are strings). If the index
-    is not in the range from 0 to the number of items minus one, an empty string list is
-    returned.
+is not in the range from 0 to the number of items minus one, an empty string list is
+returned.
 
 ## Examples
 
 This example shows the use of the `mozTypesAt()` method in a
-{{event("drop")}} event handler.
+{{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(event)
 {
-  var dt = event.dataTransfer;
-  var count = dt.mozItemCount;
-  output("Items: " + count + "\n");
+  const dt = event.dataTransfer;
+  const count = dt.mozItemCount;
+  output(`Items: ${count}\n`);
 
-  for (var i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
-    var types = dt.mozTypesAt(i);
-    for (var t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
+  for (let i = 0; i < count; i++) {
+    output(` Item ${i}:\n`);
+    const types = dt.mozTypesAt(i);
+    for (let t = 0; t < types.length; t++) {
+      output(`  ${types[t]}: `);
       try {
-        var data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
+        const data = dt.mozGetDataAt(types[t], i);
+        output(`(${typeof data}) : <${data}>\n`);
       } catch (ex) {
         output("<>\n");
         dump(ex);

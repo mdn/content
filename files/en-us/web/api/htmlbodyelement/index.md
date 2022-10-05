@@ -1,6 +1,7 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLBodyElement`** interface provides special properties (beyond those inherited from the regular {{ domxref("HTMLElement") }} interface) for manipulating {{HtmlElement("body")}} elements.

@@ -1,6 +1,7 @@
 ---
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.replaceWith()`** method replaces this
@@ -18,10 +20,10 @@ objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceWith(param1)
 replaceWith(param1, param2)
-replaceWith(param1, param2, /* ... ,*/ paramN)
+replaceWith(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

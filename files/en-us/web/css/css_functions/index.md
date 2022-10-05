@@ -1,6 +1,7 @@
 ---
 title: CSS Functional Notation
 slug: Web/CSS/CSS_Functions
+page-type: guide
 tags:
   - CSS
   - CSS Data Type
@@ -15,6 +16,7 @@ spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-images/
 ---
+
 {{CSSRef}}
 
 **CSS functional notation** is a type of [CSS value](/en-US/docs/Web/CSS/CSS_Values_and_Units) that can represent more complex data types or invoke special data processing or calculations.
@@ -23,7 +25,7 @@ spec-urls:
 
 ```css
 selector {
-  property: functional-notation( [argument]? [, argument]! );
+  property: functional-notation([argument]? [, argument]!);
 }
 ```
 
@@ -82,49 +84,65 @@ These functions are used when the {{cssxref("&lt;transform-function&gt;")}} CSS 
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
+### Basic arithmetic
+
 - {{cssxref("calc", "calc()")}}
   - : A math function that allows basic arithmetic to be performed on numerical CSS values.
-- {{cssxref("clamp", "clamp()")}}
-  - : A comparison function that takes a minimum, central, and maximum value and represents its central calculation.
-- {{cssxref("max", "max()")}}
-  - : A comparison function that represents the largest of a list of values.
+
+### Comparison functions
+
 - {{cssxref("min", "min()")}}
   - : A comparison function that represents the smallest of a list of values.
+- {{cssxref("max", "max()")}}
+  - : A comparison function that represents the largest of a list of values.
+- {{cssxref("clamp", "clamp()")}}
+  - : A comparison function that takes a minimum, central, and maximum value and represents its central calculation.
+
+### Stepped value functions
+
+- {{cssxref("round", "round()")}} {{Experimental_Inline}}
+  - : A stepped value function that returns a rounded number based on a rounding strategy.
+- {{cssxref("mod", "mod()")}} {{Experimental_Inline}}
+  - : A function that divides one number by another and returns the modulus (with the same sign as the divisor).
+- {{cssxref("rem", "rem()")}} {{Experimental_Inline}}
+  - : A function that divides one number by another and returns the remainder (with the same sign as the dividend).
+
+### Trigonometric functions
+
+- {{cssxref("sin", "sin()")}} {{Experimental_Inline}}
+  - : A trigonometric function that returns the sine of a number.
+- {{cssxref("cos", "cos()")}} {{Experimental_Inline}}
+  - : A trigonometric function that returns the cosine of a number.
+- {{cssxref("tan", "tan()")}} {{Experimental_Inline}}
+  - : A trigonometric function that returns the tangent of a number.
+- {{cssxref("asin", "asin()")}} {{Experimental_Inline}}
+  - : A trigonometric function that returns the inverse sine of a number.
+- {{cssxref("acos", "acos()")}} {{Experimental_Inline}}
+  - : A trigonometric function that returns the inverse cosine of a number.
+- {{cssxref("atan", "atan()")}} {{Experimental_Inline}}
+  - : A trigonometric function that returns the inverse tangent of a number.
+- {{cssxref("atan2", "atan2()")}} {{Experimental_Inline}}
+  - : A trigonometric function that returns the inverse tangent of two-numbers in a plane.
+
+### Exponential functions
+
+- {{cssxref("pow", "pow()")}} {{Experimental_Inline}}
+  - : An exponential function that returns a base raised to the power of a number.
+- {{cssxref("sqrt", "sqrt()")}} {{Experimental_Inline}}
+  - : An exponential function that returns the square root of a number.
+- {{cssxref("hypot", "hypot()")}} {{Experimental_Inline}}
+  - : An exponential function that returns the square root of the sum of squares of its arguments.
+- {{cssxref("log", "log()")}} {{Experimental_Inline}}
+  - : An exponential function that returns the logarithm of a number.
+- {{cssxref("exp", "exp()")}} {{Experimental_Inline}}
+  - : An exponential function that returns `e` raised to the power of a number.
+
+### Sign-related functions
+
 - {{cssxref("abs", "abs()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns the absolute value.
-- {{cssxref("acos", "acos()")}} {{Experimental_Inline}}
-  - : An inverse trigonometric function the angle returned must be normalized to the range \[0deg, 180deg].
-- {{cssxref("asin", "asin()")}} {{Experimental_Inline}}
-  - : An inverse trigonometric function the angle returned must be normalized to the range \[-90deg, 90deg].
-- {{cssxref("atan", "atan()")}} {{Experimental_Inline}}
-  - : An inverse trigonometric function the angle returned must be normalized to the range \[-90deg, 90deg].
-- {{cssxref("atan2", "atan2()")}} {{Experimental_Inline}}
-  - : Contains two comma-separated calculations, A and B. A and B can resolve to any {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, or {{cssxref("&lt;percentage&gt;")}}, but must have the same type, or else the function is invalid.
-- {{cssxref("cos", "cos()")}} {{Experimental_Inline}}
-  - : Contains a single calculation which must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}.
-- {{cssxref("exp", "exp()")}} {{Experimental_Inline}}
-  - : Contains one calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the same value as pow(e, A) as a {{cssxref("&lt;number&gt;")}}.
-- {{cssxref("hypot", "hypot()")}} {{Experimental_Inline}}
-  - : Contains one or more comma-separated calculations, and returns the length of an N-dimensional vector with components equal to each of the calculations.
-- {{cssxref("log", "log()")}} {{Experimental_Inline}}
-  - : Contains one or two calculations (representing the value to be logarithmed, and the base of the logarithm, defaulting to e), which must both resolve as a {{cssxref("&lt;number&gt;")}}, and returns the logarithm base B of the value A, as a {{cssxref("&lt;number&gt;")}}.
-- {{cssxref("mod", "mod()")}} {{Experimental_Inline}}
-  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
-- {{cssxref("pow", "pow()")}} {{Experimental_Inline}}
-  - : Contains two comma-separated calculations A and B, both of which must resolve as a {{cssxref("&lt;number&gt;")}}, and returns the result of raising A to the power of B, returning the value as a {{cssxref("&lt;number&gt;")}}.
-- {{cssxref("rem", "rem()")}} {{Experimental_Inline}}
-  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
-- {{cssxref("round", "round()")}} {{Experimental_Inline}}
-  - : Contains an optional rounding strategy, and two calculations A and B, and returns the value of A, rounded according to the rounding strategy, to the nearest integer multiple of B either above or below A.
-- {{cssxref("sign", "sign()")}} {{Experimental_Inline}}
-  - : Takes a calculation and returns -1 if the numeric value is negative,
-    \+1 if the numeric value is positive, 0⁺ if the numeric value is 0⁺, and 0⁻ if the numeric value is 0⁻.
-- {{cssxref("sin", "sin()")}} {{Experimental_Inline}}
-  - : Contains a single calculation which must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}.
-- {{cssxref("sqrt", "sqrt()")}} {{Experimental_Inline}}
-  - : Contains a single calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the square root of the value as a {{cssxref("&lt;number&gt;")}}.
-- {{cssxref("tan", "tan()")}} {{Experimental_Inline}}
-  - : Contains a single calculation which must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}.
+- {{cssxref("sign_function", "sign()")}} {{Experimental_Inline}}
+  - : Takes a calculation and returns the sign (positive or negative) of the number.
 
 ## Filter functions
 
@@ -173,6 +191,10 @@ Functions which specify different color representations. These may be used anywh
   - : Lab color is device-independent and specifies physical measurements of color.
 - {{cssxref("color_value/lch", "lch()")}} {{Experimental_Inline}}
   - : LCH color is device-independent and specifies color using polar coordinates for chroma and hue.
+- {{cssxref("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
+  - : OKLab color is device-independent and specifies physical measurements of color.
+- {{cssxref("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
+  - : OKLCH color is device-independent and specifies color using polar coordinates for chroma and hue.
 - {{cssxref("color_value/rgb", "rgb()")}}
   - : The RGB color model defines a given color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 - {{cssxref("color_value/rgba", "rgba()")}}

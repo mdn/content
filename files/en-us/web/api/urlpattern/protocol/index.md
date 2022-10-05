@@ -1,6 +1,7 @@
 ---
 title: URLPattern.protocol
 slug: Web/API/URLPattern/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,7 +12,7 @@ tags:
 browser-compat: api.URLPattern.protocol
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`protocol`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the protocol part

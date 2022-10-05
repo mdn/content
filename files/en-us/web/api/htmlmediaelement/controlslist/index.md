@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.controlsList
 slug: Web/API/HTMLMediaElement/controlsList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.HTMLMediaElement.controlsList
 ---
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+
+{{APIRef("HTML DOM")}}
 
 The **`controlsList`** property of the
 {{domxref("HTMLMediaElement")}} interface returns a DOMTokenList that helps the user
@@ -32,5 +34,4 @@ A {{domxref("DOMTokenList")}}.
 
 ## See also
 
-- [Chrome HTMLMediaElement
-  controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)
+- [Chrome HTMLMediaElement controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)

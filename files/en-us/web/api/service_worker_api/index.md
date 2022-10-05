@@ -1,6 +1,7 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -11,6 +12,7 @@ tags:
   - Workers
 spec-urls: https://w3c.github.io/ServiceWorker/
 ---
+
 {{ServiceWorkerSidebar}}
 
 Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
@@ -21,7 +23,7 @@ A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registe
 
 A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous [XHR](/en-US/docs/Web/API/XMLHttpRequest) and [Web Storage](/en-US/docs/Web/API/Web_Storage_API) can't be used inside a service worker.
 
-Service workers only run over HTTPS, for security reasons. Having modified network requests, wide open to _man in the middle_ attacks would be really bad. In Firefox, Service Worker APIs are also hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
+Service workers only run over HTTPS, for security reasons. Most significantly, HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs. In Firefox, service worker APIs are also hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
 > **Note:** On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu.
 
@@ -132,6 +134,6 @@ In the future, service workers will be able to do a number of other useful thing
 
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

@@ -1,6 +1,7 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
+page-type: css-property
 tags:
   - CSS
   - CSS Grid
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.grid-template-columns
 ---
+
 {{CSSRef}}
 
 The **`grid-template-columns`** CSS property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
@@ -33,13 +35,16 @@ grid-template-columns: masonry;
 
 /* <auto-track-list> values */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-columns: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-columns: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-columns:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-columns:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-columns:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Global values */
 grid-template-columns: inherit;
@@ -67,9 +72,9 @@ grid-template-columns: unset;
     When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
 
 - {{cssxref("max-content")}}
-  - : Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
+  - : Is a keyword representing the largest [maximal content contribution](https://www.w3.org/TR/css-sizing-3/#max-content) of the grid items occupying the grid track. For example, if the first element of the grid track contains the sentence _"Repetitio est mater studiorum"_ and the second element contains the sentence _"Dum spiro, spero"_, maximal content contribution will be defined by the size of the largest sentence among all of the grid elements - _"Repetitio est mater studiorum"_.
 - {{cssxref("min-content")}}
-  - : Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.
+  - : Is a keyword representing the largest [minimal content contribution](https://www.w3.org/TR/css-sizing-3/#min-content) of the grid items occupying the grid track. For example, if the first element of the grid track contains the sentence _"Repetitio est mater studiorum"_ and the second element contains the sentence _"Dum spiro, spero"_, minimal content contribution will be defined by the size of the largest word among all of the sentences in the grid elements - _"studiorum"_.
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : Is a functional notation that defines a size range greater than or equal to _min_ and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. It is invalid as a minimum.
 - `auto`
@@ -83,10 +88,10 @@ grid-template-columns: unset;
     > **Note:** `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
 
 - `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
-  - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+  - : Represents the formula `max(minimum, min(limit, max-content))`, where _minimum_ represents an `auto` minimum (which is often, but not always, equal to a {{cssxref("min-content")}} minimum), and _limit_ is the track sizing function passed as an argument to fit-content(). This is essentially calculated as the smaller of `minmax(auto, max-content)` and `minmax(auto, limit)`.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns that exhibit a recurring pattern to be written in a more compact form.
-- [`masonry`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
+- [`masonry`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
   - : The masonry value indicates that this axis should be laid out according to the masonry algorithm.
 - [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
   - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid's definition.

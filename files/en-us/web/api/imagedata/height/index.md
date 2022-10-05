@@ -1,6 +1,7 @@
 ---
 title: ImageData.height
 slug: Web/API/ImageData/height
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.height
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.height`** property returns the number

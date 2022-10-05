@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.drawArraysInstanced()
 slug: Web/API/WebGL2RenderingContext/drawArraysInstanced
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawArraysInstanced
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.drawArraysInstanced()`** method
@@ -16,13 +18,13 @@ of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) renders primitives from
 array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}
 method. In addition, it can execute multiple instances of the range of elements.
 
-> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
-    1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
+> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}},
+> the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
 > too.
 
 ## Syntax
 
-```js
+```js-nolint
 drawArraysInstanced(mode, first, count, instanceCount)
 ```
 

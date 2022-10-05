@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.cssRules
 ---
+
 {{APIRef("CSSOM") }}
 
 The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes [at-rule](/en-US/docs/Web/CSS/At-rule).

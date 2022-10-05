@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.fetch()
 slug: Web/API/BackgroundFetchManager/fetch
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -12,13 +13,14 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.fetch
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 fetch(id, requests)
 fetch(id, requests, options)
 ```
@@ -56,15 +58,21 @@ method.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
-    title: 'Episode 5: Interesting things.',
-    icons: [{
-      sizes: '300x300',
-      src: '/ep-5-icon.png',
-      type: 'image/png',
-    }],
-    downloadTotal: 60 * 1024 * 1024,
-  });
+  const bgFetch = await swReg.backgroundFetch.fetch(
+    "my-fetch",
+    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+    {
+      title: "Episode 5: Interesting things.",
+      icons: [
+        {
+          sizes: "300x300",
+          src: "/ep-5-icon.png",
+          type: "image/png",
+        },
+      ],
+      downloadTotal: 60 * 1024 * 1024,
+    }
+  );
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle
 slug: Web/API/FileSystemDirectoryHandle
+page-type: web-api-interface
 tags:
   - Directories
   - Directory
@@ -11,6 +12,7 @@ tags:
   - working with directories
 browser-compat: api.FileSystemDirectoryHandle
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Access API')}} provides a handle to a file system directory. The interface is accessed via the {{domxref('window.showDirectoryPicker()')}} method.

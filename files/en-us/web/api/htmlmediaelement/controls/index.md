@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.controls
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.controls`** property reflects the
@@ -23,7 +25,7 @@ displayed.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 obj.controls = true;
 ```
 

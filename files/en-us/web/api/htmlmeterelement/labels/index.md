@@ -1,6 +1,7 @@
 ---
 title: HTMLMeterElement.labels
 slug: Web/API/HTMLMeterElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMeterElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLMeterElement.labels`** read-only property returns a
@@ -33,15 +35,15 @@ with the `<meter>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const meter = document.getElementById("test");
-  for(var i = 0; i < meter.labels.length; i++) {
-    console.log(meter.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of meter.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

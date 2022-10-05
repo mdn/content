@@ -8,6 +8,7 @@ tags:
   - WebAssembly
   - wasm
 ---
+
 {{WebAssemblySidebar}}
 
 A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.
@@ -17,7 +18,7 @@ These libraries often rely on C's standard library, an operating system, a file 
 As an example, let's compile an encoder for WebP to wasm. The source for the WebP codec is written in C and [available on GitHub](https://github.com/webmproject/libwebp) as well as some extensive [API documentation](https://developers.google.com/speed/webp/docs/api). That's a pretty good starting point.
 
 ```bash
-$ git clone https://github.com/webmproject/libwebp
+git clone https://github.com/webmproject/libwebp
 ```
 
 To start off simple, expose `WebPGetEncoderVersion()` from `encode.h` to JavaScript by writing a C file called `webp.c`:
@@ -50,9 +51,9 @@ Now you only need some HTML and JavaScript to load your new module:
 ```html
 <script src="./a.out.js"></script>
 <script>
-  Module.onRuntimeInitialized = async _ => {
+  Module.onRuntimeInitialized = async () => {
     const api = {
-      version: Module.cwrap('version', 'number', []),
+      version: Module.cwrap("version", "number", []),
     };
     console.log(api.version());
   };
@@ -61,7 +62,7 @@ Now you only need some HTML and JavaScript to load your new module:
 
 And you will see the correct version number in the [output](https://googlechrome.github.io/samples/webassembly/version.html):
 
-![  Screenshot of the DevTools console showing the correct version number.](version.png)
+![Screenshot of the DevTools console showing the correct version number.](version.png)
 
 > **Note:** libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 
@@ -72,16 +73,16 @@ Getting the encoder's version number is great, but encoding an actual image woul
 The first question you need to answer is: how do I get the image into wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you an {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
 
 ```js
- async function loadImage(src) {
+async function loadImage(src) {
   // Load image
-  const imgBlob = await fetch(src).then(resp => resp.blob());
+  const imgBlob = await fetch(src).then((resp) => resp.blob());
   const img = await createImageBitmap(imgBlob);
   // Make canvas same size as image
-  const canvas = document.createElement('canvas');
+  const canvas = document.createElement("canvas");
   canvas.width = img.width;
   canvas.height = img.height;
   // Draw image onto canvas
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
   return ctx.getImageData(0, 0, img.width, img.height);
 }
@@ -107,16 +108,16 @@ The `create_buffer()` function allocates a buffer for the RGBA image — hence 4
 
 ```js
 const api = {
-  version: Module.cwrap('version', 'number', []),
-  create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
-  destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
-  encode: Module.cwrap("encode", "", ["number","number","number","number",]),
+  version: Module.cwrap("version", "number", []),
+  create_buffer: Module.cwrap("create_buffer", "number", ["number", "number"]),
+  destroy_buffer: Module.cwrap("destroy_buffer", "", ["number"]),
+  encode: Module.cwrap("encode", "", ["number", "number", "number", "number"]),
   free_result: Module.cwrap("free_result", "", ["number"]),
   get_result_pointer: Module.cwrap("get_result_pointer", "number", []),
   get_result_size: Module.cwrap("get_result_size", "number", []),
 };
 
-const image = await loadImage('./image.jpg');
+const image = await loadImage("./image.jpg");
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
 // ... call encoder ...
@@ -129,7 +130,7 @@ The image is now available in wasm. It is time to call the WebP encoder to do it
 
 The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:
 
-```js
+```cpp
 int result[2];
 EMSCRIPTEN_KEEPALIVE
 void encode(uint8_t* img_in, int width, int height, float quality) {
@@ -164,7 +165,11 @@ Now with all of that in place, you can call the encoding function, grab the poin
 api.encode(p, image.width, image.height, 100);
 const resultPointer = api.get_result_pointer();
 const resultSize = api.get_result_size();
-const resultView = new Uint8Array(Module.HEAP8.buffer, resultPointer, resultSize);
+const resultView = new Uint8Array(
+  Module.HEAP8.buffer,
+  resultPointer,
+  resultSize
+);
 const result = new Uint8Array(resultView);
 api.free_result(resultPointer);
 ```
@@ -173,19 +178,18 @@ api.free_result(resultPointer);
 
 Depending on the size of your image, you might run into an error where wasm can't grow the memory enough to accommodate both the input and the output image:
 
-![
-  Screenshot of the DevTools console showing an error.](error.png)
+![Screenshot of the DevTools console showing an error.](error.png)
 
 Luckily, the solution to this problem is in the error message. You just need to add `-s ALLOW_MEMORY_GROWTH=1` to your compilation command.
 
 And there you have it. You have compiled a WebP encoder and transcoded a JPEG image to WebP. To prove that it worked, turn your result buffer into a blob and use it on an `<img>` element:
 
 ```js
-const blob = new Blob([result], {type: 'image/webp'});
+const blob = new Blob([result], { type: "image/webp" });
 const blobURL = URL.createObjectURL(blob);
-const img = document.createElement('img');
+const img = document.createElement("img");
 img.src = blobURL;
-document.body.appendChild(img)
+document.body.appendChild(img);
 ```
 
 Behold, the glory of a new WebP image.

@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
+
 {{AddonSidebar()}}
 
 Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.
@@ -23,13 +24,13 @@ If you use `"blocking"`, you must have the ["webRequestBlocking" API permission]
 
 It is possible for extensions to make conflicting requests. If two extensions listen to `onHeadersReceived` for the same request and return `responseHeaders` to set the same header (for example, `Set-Cookie`) not present in the original response, only one of the changes will succeed.
 
-However, the `Content-Security-Policy` header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict.  For example, if one extension sets `img-src: example.com`, and another extension sets `img-src: example.org`, the result is `img-src: 'none'`.  Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.
+However, the `Content-Security-Policy` header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict. For example, if one extension sets `img-src: example.com`, and another extension sets `img-src: example.org`, the result is `img-src: 'none'`. Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.
 
 If you want to see the headers that are processed by the system, without the risk that another extension will alter them, use {{WebExtAPIRef("webRequest.onResponseStarted")}}, although you can't modify headers on this event.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onHeadersReceived.addListener(
   listener,             // function
   filter,               //  object
@@ -57,13 +58,13 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
+      - : [`object`](#details_2). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a  `BlockingResponse`.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `BlockingResponse`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
@@ -133,7 +134,7 @@ Events have three functions:
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
-- `responseHeaders`{{optional_inline}}
+- `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP response headers that were received for this request.
 - `statusCode`
   - : `integer`. Standard HTTP status code returned by the server.
@@ -162,7 +163,7 @@ Events have three functions:
 
     - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
-    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
@@ -181,19 +182,19 @@ let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition"
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
-  let setMyCookie = {
+  const setMyCookie = {
     name: "Set-Cookie",
     value: "my-cookie1=my-cookie-value1"
   };
   e.responseHeaders.push(setMyCookie);
-  return {responseHeaders: e.responseHeaders};
+  return { responseHeaders: e.responseHeaders };
 }
 
 // Listen for onHeaderReceived for the target page.
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
-  {urls: [targetPage]},
+  { urls: [targetPage] },
   ["blocking", "responseHeaders"]
 );
 ```
@@ -201,20 +202,20 @@ browser.webRequest.onHeadersReceived.addListener(
 This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
 ```js
-let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+const targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
 // modified set of response headers.
 function setCookieAsync(e) {
-  let asyncSetCookie = new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-      let setMyCookie = {
+  const asyncSetCookie = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const setMyCookie = {
         name: "Set-Cookie",
         value: "my-cookie1=my-cookie-value1"
       };
       e.responseHeaders.push(setMyCookie);
-      resolve({responseHeaders: e.responseHeaders});
+      resolve({ responseHeaders: e.responseHeaders });
     }, 2000);
   });
 
@@ -225,7 +226,7 @@ function setCookieAsync(e) {
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
-  {urls: [targetPage]},
+  { urls: [targetPage] },
   ["blocking", "responseHeaders"]
 );
 ```
@@ -236,7 +237,8 @@ browser.webRequest.onHeadersReceived.addListener(
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -263,4 +265,4 @@ browser.webRequest.onHeadersReceived.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

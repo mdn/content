@@ -1,6 +1,7 @@
 ---
 title: Navigator.appCodeName
 slug: Web/API/Navigator/appCodeName
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.appCodeName
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`Navigator.appCodeName`** property is

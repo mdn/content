@@ -1,6 +1,7 @@
 ---
 title: SVGFEFuncGElement
 slug: Web/API/SVGFEFuncGElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEFuncGElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEFuncGElement`** interface corresponds to the {{SVGElement("feFuncG")}} element.

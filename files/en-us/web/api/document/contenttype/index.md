@@ -1,6 +1,7 @@
 ---
 title: Document.contentType
 slug: Web/API/Document/contentType
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Document.contentType
 ---
+
 {{APIRef}}
 
 The **`Document.contentType`** read-only property returns the

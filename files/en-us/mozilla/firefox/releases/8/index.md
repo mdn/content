@@ -5,9 +5,10 @@ tags:
   - Firefox
   - Firefox 8
 ---
+
 {{FirefoxSidebar}}
 
-Firefox 8 was released on November 8, 2011. This article provides information both for [web developers](/en-US/docs/Mozilla/Firefox/Releases/8#changes_for_web_developers) and for add-on and [Mozilla project developers](/en-US/docs/Mozilla/Firefox/Releases/8#changes_for_mozilla_and_add-on_developers) to help take full advantage of the features of this release.
+Firefox 8 was released on November 8, 2011. This article provides information both for [web developers](#changes_for_web_developers) and for add-on and [Mozilla project developers](#changes_for_mozilla_and_add-on_developers) to help take full advantage of the features of this release.
 
 ## Changes for web developers
 
@@ -63,8 +64,8 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### WebSockets
 
-- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`send()`](</en-US/docs/Web/API/WebSocket#send()>) method no longer incorrectly returns a Boolean value.
-- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`close()`](</en-US/docs/Web/API/WebSocket#close()>) method now matches the current draft of the standard, and close events now properly use the [`CloseEvent`](/en-US/docs/Web/API/CloseEvent) interface.
+- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`send()`](/en-US/docs/Web/API/WebSocket/send) method no longer incorrectly returns a Boolean value.
+- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`close()`](/en-US/docs/Web/API/WebSocket/close) method now matches the current draft of the standard, and close events now properly use the [`CloseEvent`](/en-US/docs/Web/API/CloseEvent) interface.
 - The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's `extensions` attribute is now supported.
 - The WebSocket constructor now supports an array of protocols as well as a single protocol string.
 - Mixed content is not allowed with WebSockets; that is, you can no longer open a connection to a non-secure WebSocket server from secure content.

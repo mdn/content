@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream.write()
 slug: Web/API/FileSystemWritableFileStream/write
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API
@@ -9,9 +10,11 @@ tags:
   - stream
   - working with files
   - write
+  - Experimental
 browser-compat: api.FileSystemWritableFileStream.write
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`write()`** method of the
 {{domxref("FileSystemWritableFileStream")}} interface writes content into the file the
@@ -24,7 +27,7 @@ file contains.
 
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 
@@ -32,14 +35,15 @@ write(data)
 
 - `data`
 
-  - : Can be either the file data to write, in the form of a {{domxref('BufferSource')}},
-    a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal. Or an object containing the following
-    properties:
+  - : Can be either the file data to write, in the form of an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+    a {{jsxref("DataView")}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
+    Or an object containing the following properties:
 
     - `type`
       - : A string that is one of the following: `"write"`, `"seek"`, or `"truncate"`.
     - `data`
-      - : The file data to write. Can be a {{domxref('BufferSource')}}, a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
+      - : The file data to write. Can be an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
+        a {{domxref('Blob')}}, a {{jsxref("String")}} object, or a string literal.
         This property is required if `type` is set to `write`.
     - `position`
       - : The byte position the current file cursor should move to if type `seek` is used.
@@ -93,16 +97,16 @@ The following show different examples of options that can be passed into the
 
 ```js
 // just pass in the data (no options)
-writableStream.write(data)
+writableStream.write(data);
 
 // writes the data to the stream from the determined position
-writableStream.write({ type: "write", position: position, data: data })
+writableStream.write({ type: "write", position, data });
 
 // updates the current file cursor offset to the position specified
-writableStream.write({ type: "seek", position: position })
+writableStream.write({ type: "seek", position });
 
 // resizes the file to be size bytes long
-writableStream.write({ type: "truncate", size: size })
+writableStream.write({ type: "truncate", size });
 ```
 
 ## Specifications
@@ -116,5 +120,4 @@ writableStream.write({ type: "truncate", size: size })
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

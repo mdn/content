@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing variable name" is a common error.
@@ -14,9 +15,9 @@ It is usually caused by omitting a variable name or a typographic error.
 
 ## Message
 
-```js
+```
 SyntaxError: missing variable name (Firefox)
-SyntaxError: Unexpected token = (Chrome)
+SyntaxError: Unexpected token '='. Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```
 
 ## Error type
@@ -28,7 +29,7 @@ SyntaxError: Unexpected token = (Chrome)
 A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
 Make sure that you've provided the name of the variable before the `=` sign.
 
-When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead of a semi-colon.
+When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead of a semicolon.
 
 ## Examples
 
@@ -62,7 +63,7 @@ Did you remember to assign values for all your `const` variables?
 
 ```js example-bad
 let x, y = "foo",
-const x, = "foo"
+const z, = "foo"
 
 const first = document.getElementById('one'),
 const second = document.getElementById('two'),
@@ -74,7 +75,7 @@ The fixed version:
 
 ```js example-good
 let x, y = "foo";
-const x = "foo";
+const z = "foo";
 
 const first = document.getElementById('one');
 const second = document.getElementById('two');

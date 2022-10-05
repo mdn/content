@@ -1,6 +1,7 @@
 ---
 title: Document.embeds
 slug: Web/API/Document/embeds
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -9,6 +10,7 @@ tags:
   - Property
 browser-compat: api.Document.embeds
 ---
+
 {{ApiRef}}
 
 The **`embeds`** read-only property of the

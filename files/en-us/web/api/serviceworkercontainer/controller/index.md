@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
+page-type: web-api-instance-property
 tags:
   - API
   - Controller
@@ -12,6 +13,7 @@ tags:
   - ServiceWorkerController
 browser-compat: api.ServiceWorkerContainer.controller
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`controller`** read-only

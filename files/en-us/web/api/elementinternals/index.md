@@ -1,6 +1,7 @@
 ---
 title: ElementInternals
 slug: Web/API/ElementInternals
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,9 +9,10 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`ElementInternals`** interface of the {{domxref('Document_Object_Model','','',' ')}} gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) to the element.
+{{APIRef("DOM")}}
+
+The **`ElementInternals`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) to the element.
 
 ## Constructor
 
@@ -18,20 +20,20 @@ This interface has no constructor. An `ElementInternals` object is returned when
 
 ## Properties
 
-- {{domxref("ElementInternals.shadowRoot")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.shadowRoot")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ShadowRoot")}} object associated with this element.
-- {{domxref("ElementInternals.form")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.form")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("HTMLFormElement")}} associated with this element.
-- {{domxref("ElementInternals.states")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
-- {{domxref("ElementInternals.willValidate")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for
     [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
-- {{domxref("ElementInternals.validity")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.validity")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
-- {{domxref("ElementInternals.validationMessage")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.validationMessage")}} {{ReadOnlyInline}}
   - : A string containing the validation message of this element.
-- {{domxref("ElementInternals.labels")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of all of the label elements associated with this element.
 
 ### Properties included from ARIA
@@ -92,10 +94,12 @@ The `ElementInternals` interface includes the following properties, defined on t
   - : A string reflecting the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
 - {{domxref("ElementInternals.ariaReadOnly")}}
   - : A string reflecting the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
-- {{domxref("ElementInternals.ariaRelevant")}}
+- {{domxref("ElementInternals.ariaRelevant")}} {{Non-standard_Inline}}
   - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 - {{domxref("ElementInternals.ariaRequired")}}
   - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
+- {{domxref("ElementInternals.role")}} {{Experimental_Inline}}
+  - : A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
 - {{domxref("ElementInternals.ariaRoleDescription")}}
   - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an Element.
 - {{domxref("ElementInternals.ariaRowCount")}}
@@ -145,7 +149,7 @@ class CustomCheckbox extends HTMLElement {
     this.internals_ = this.attachInternals();
   }
 
-  /* ... */
+  // …
 }
 
 window.customElements.define('custom-checkbox', CustomCheckbox);

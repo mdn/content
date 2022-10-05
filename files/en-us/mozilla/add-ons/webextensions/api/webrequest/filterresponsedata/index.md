@@ -12,6 +12,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.filterResponseData
 ---
+
 {{AddonSidebar()}}
 
 Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. It's the extension's responsibility to write and close or disconnect the stream, as the default behavior is to keep the request open without a response.
@@ -24,7 +25,7 @@ To use this API you must have the `"webRequestBlocking"` [API permission](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 let filter = browser.webRequest.filterResponseData(
   requestId       // string
 )
@@ -45,13 +46,15 @@ This example shows a minimal implementation that passes through the stream data 
 
 ```js
 let filter = browser.webRequest.filterResponseData(details.requestId);
-filter.ondata = event => {
+filter.ondata = (event) => {
   console.log(`filter.ondata received ${event.data.byteLength} bytes`);
   filter.write(event.data);
 };
-filter.onstop = event => {
+filter.onstop = (event) => {
   // The extension should always call filter.close() or filter.disconnect()
   // after creating the StreamFilter, otherwise the response is kept alive forever.
+  // If processing of the response data is finished, use close. If any remaining
+  // response data should be processed by Firefox, use disconnect.
   filter.close();
 };
 ```
@@ -64,7 +67,7 @@ function listener(details) {
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     let str = decoder.decode(event.data, {stream: true});
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.

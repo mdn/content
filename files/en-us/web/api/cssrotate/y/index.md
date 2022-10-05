@@ -1,6 +1,7 @@
 ---
 title: CSSRotate.y
 slug: Web/API/CSSRotate/y
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -13,6 +14,7 @@ tags:
   - Property
 browser-compat: api.CSSRotate.y
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`y`** property of the

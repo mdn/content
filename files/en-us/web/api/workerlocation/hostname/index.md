@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.hostname
 slug: Web/API/WorkerLocation/hostname
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.hostname
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`hostname`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.hostname", "hostname")}} part of the worker's location.
@@ -21,7 +23,7 @@ A string.
 
 ```js
 // In a Web worker, on the page http://localhost:8080/
-var result = location.hostname; // Returns 'localhost'
+const result = location.hostname; // Returns 'localhost'
 ```
 
 ## Specifications

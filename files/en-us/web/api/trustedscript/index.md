@@ -1,6 +1,7 @@
 ---
 title: TrustedScript
 slug: Web/API/TrustedScript
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - TrustedScript
 browser-compat: api.TrustedScript
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`TrustedScript`** interface of the {{domxref('Trusted Types API')}} represents a string with an uncompiled script body that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that might execute the script. These objects are created via {{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}} and therefore have no constructor.

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleRule.style
 slug: Web/API/CSSStyleRule/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleRule.style
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only **`style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ DOMXref("CSSStyleRule") }}.

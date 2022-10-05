@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager
 slug: Web/API/NavigationPreloadManager
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -11,7 +12,8 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+
+{{APIRef("Service Workers API")}}
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources in parallel with service worker bootup.
 
@@ -58,7 +60,7 @@ Below we enable navigation preloading in the service worker's `activate` event h
 ```js
 addEventListener("activate", (event) => {
   event.waitUntil(
-    (async function () {
+    (async () => {
       if (self.registration.navigationPreload) {
         // Enable navigation preloads!
         await self.registration.navigationPreload.enable();
@@ -82,7 +84,7 @@ If there is no matching cache entry or preloaded response, the code starts a new
 ```js
 addEventListener("fetch", (event) => {
   event.respondWith(
-    (async function () {
+    (async () => {
       // Respond from the cache if we can
       const cachedResponse = await caches.match(event.request);
       if (cachedResponse) return cachedResponse;
@@ -113,9 +115,7 @@ The code below shows how to set the value of the header directive to some variab
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.setHeaderValue(newValue);
-  })
+  .then((registration) => registration.navigationPreload.setHeaderValue(newValue))
   .then(() => {
     console.log("Done!");
   });
@@ -132,9 +132,7 @@ The code below shows how to get the promise that resolves to a `state` object an
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.getState();
-  })
+  .then((registration) => registration.navigationPreload.getState())
   .then((state) => {
     console.log(state.enabled); // boolean
     console.log(state.headerValue); // string

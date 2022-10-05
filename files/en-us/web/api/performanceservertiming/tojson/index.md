@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming.toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`toJSON()`** method of the
@@ -18,7 +20,7 @@ is the JSON representation of the {{domxref('PerformanceServerTiming')}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

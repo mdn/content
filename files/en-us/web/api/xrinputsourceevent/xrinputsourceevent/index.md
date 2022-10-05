@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent()
 slug: Web/API/XRInputSourceEvent/XRInputSourceEvent
+page-type: web-api-constructor
 tags:
   - API
   - AR
@@ -22,6 +23,7 @@ tags:
   - events
 browser-compat: api.XRInputSourceEvent.XRInputSourceEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRInputSourceEvent()`**
@@ -31,7 +33,7 @@ represented by an {{domxref("XRInputSource")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRInputSourceEvent(type, options)
 ```
 
@@ -62,7 +64,7 @@ sends it to the {{domxref("XRSession")}}.
 let event = new XRInputSourceEvent("select", {
   frame: eventFrame,
   inputSource: source
-};
+});
 if (event) {
   xrSession.dispatchEvent(event);
 }

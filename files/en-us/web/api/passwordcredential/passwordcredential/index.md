@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential()
 slug: Web/API/PasswordCredential/PasswordCredential
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,9 +9,11 @@ tags:
   - PasswordCredential
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
-{{APIRef("Credential Management API")}}{{Non-standard_header}}
+
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`PasswordCredential()`**
 constructor creates a new {{domxref("PasswordCredential")}} object. In
@@ -19,7 +22,7 @@ from the `init` object for global {{domxref('fetch()')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new PasswordCredential(passwordCredentialData)
 new PasswordCredential(htmlFormElement)
 ```
@@ -55,7 +58,9 @@ Starting with the form element.
 
 ```html
 <form id="form" method="post">
+  <label for="id">Username:</label>
   <input type="text" name="id" autocomplete="username" />
+  <label for="password">Password:</label>
   <input type="password" name="password" autocomplete="current-password" />
   <input type="hidden" name="csrf_token" value="*****" />
 </form>
@@ -66,11 +71,11 @@ a {{domxref("PasswordCredential")}} object, and storing it in the browser's pass
 system.
 
 ```js
-var form = document.querySelector('#form');
-var creds = new PasswordCredential(form);
+const form = document.querySelector('#form');
+const creds = new PasswordCredential(form);
 // Store the credentials.
 navigator.credentials.store(creds)
-  .then(function(creds) {
+  .then((creds) => {
   // Do something with the credentials if you need to.
 });
 ```

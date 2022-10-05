@@ -1,6 +1,7 @@
 ---
 title: Headers.delete()
 slug: Web/API/Headers/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -9,6 +10,7 @@ tags:
   - delete
 browser-compat: api.Headers.delete
 ---
+
 {{APIRef("Fetch")}}
 
 The **`delete()`** method of the {{domxref("Headers")}}
@@ -26,7 +28,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
+```js-nolint
 delete(name)
 ```
 
@@ -44,7 +46,7 @@ None ({{jsxref("undefined")}}).
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}:

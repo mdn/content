@@ -1,39 +1,44 @@
 ---
 title: VideoFrame.allocationSize()
 slug: Web/API/VideoFrame/allocationSize
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - allocationSize
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.allocationSize
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`allocationSize()`** method of the {{domxref("VideoFrame")}} interface returns the number of bytes required to hold the video as filtered by options passed into the method.
 
 ## Syntax
 
-```js
+```js-nolint
 allocationSize()
 allocationSize(options)
 ```
 
 ### Parameters
 
-- `options`{{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object containing the following:
-    - `rect`{{Optional_Inline}}
+    - `rect` {{optional_inline}}
       - : The rectangle of pixels to copy from the `VideoFrame`. If unspecified the {{domxref("VideoFrame.visibleRect","visibleRect")}} will be used. This is in the format of a dictionary object containing:
         - `x`: The x-coordinate.
         - `y`: The y-coordinate.
         - `width`: The width of the frame.
         - `height`: The height of the frame.
-    - `layout`{{Optional_Inline}}
+    - `layout` {{optional_inline}}
       - : A list containing the following values for each plane in the `VideoFrame`. Planes may not overlap. If unspecified the planes will be tightly packed:
-        - `offset`: An integer representing the offset in bytes where the given plane begins.
-        - `stride`: An integer representing the number of bytes, including padding, used by each row of the plane.
+        - `offset`
+          - : An integer representing the offset in bytes where the given plane begins.
+        - `stride`
+          - : An integer representing the number of bytes, including padding, used by each row of the plane.
 
 ### Return value
 

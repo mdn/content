@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedEnumeration
 slug: Web/API/SVGAnimatedEnumeration
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedEnumeration
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated enumeration interface

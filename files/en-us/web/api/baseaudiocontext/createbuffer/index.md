@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - createBuffer
 browser-compat: api.BaseAudioContext.createBuffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createBuffer()` method of the {{ domxref("BaseAudioContext") }}
@@ -36,7 +38,7 @@ reference page.
 
 ## Syntax
 
-```js
+```js-nolint
 createBuffer(numOfChannels, length, sampleRate)
 ```
 
@@ -76,8 +78,8 @@ First, a couple of simple trivial examples, to help explain how the parameters a
 used:
 
 ```js
-var audioCtx = new AudioContext();
-var buffer = audioCtx.createBuffer(2, 22050, 44100);
+const audioCtx = new AudioContext();
+const buffer = audioCtx.createBuffer(2, 22050, 44100);
 ```
 
 If you use this call, you will get a stereo buffer (two channels), that, when played
@@ -85,8 +87,8 @@ back on an AudioContext running at 44100Hz (very common, most normal sound cards
 this rate), will last for 0.5 seconds: 22050 frames / 44100Hz = 0.5 seconds.
 
 ```js
-var audioCtx = new AudioContext();
-var buffer = audioCtx.createBuffer(1, 22050, 22050);
+const audioCtx = new AudioContext();
+const buffer = audioCtx.createBuffer(1, 22050, 22050);
 ```
 
 If you use this call, you will get a mono buffer (one channel), that, when played back
@@ -104,22 +106,24 @@ on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
 Now let's look at a more complex `createBuffer()` example, in which we
 create a three-second buffer, fill it with white noise, and then play it via an {{
   domxref("AudioBufferSourceNode") }}. The comment should clearly explain what is going
-on. You can also [run the
-code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view
-the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate
+);
 
 // Fill the buffer with white noise;
 // just random values between -1.0 and 1.0
-for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
+for (let channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
   // This gives us the actual ArrayBuffer that contains the data
-  var nowBuffering = myArrayBuffer.getChannelData(channel);
-  for (var i = 0; i < myArrayBuffer.length; i++) {
+  const nowBuffering = myArrayBuffer.getChannelData(channel);
+  for (let i = 0; i < myArrayBuffer.length; i++) {
     // Math.random() is in [0; 1.0]
     // audio needs to be in [-1.0; 1.0]
     nowBuffering[i] = Math.random() * 2 - 1;
@@ -128,7 +132,7 @@ for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
 
 // Get an AudioBufferSourceNode.
 // This is the AudioNode to use when we want to play an AudioBuffer
-var source = audioCtx.createBufferSource();
+const source = audioCtx.createBufferSource();
 // set the buffer in the AudioBufferSourceNode
 source.buffer = myArrayBuffer;
 // connect the AudioBufferSourceNode to the

@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.mozOpaque
 ---
+
 {{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
 
 The non-standard **`HTMLCanvasElement.mozOpaque`** property is
@@ -37,11 +39,11 @@ Given this {{HTMLElement("canvas")}} element:
 ```
 
 You can get or set the `mozOpaque` property. For example, you could
-conditionally set it to `true` if `mimeType == 'image/jpeg'`, or
+conditionally set it to `true` if `mimeType === 'image/jpeg'`, or
 similar, to gain performance in your application when translucency is not needed.
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 console.log(canvas.mozOpaque); // true
 // deactivate it
 canvas.mozOpaque = false;
@@ -60,5 +62,4 @@ Not part of any standard.
 - The interface defining it, {{domxref("HTMLCanvasElement")}}.
 - The {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the
   {{HTMLElement("canvas")}} element.
-- [Optimizing
-  your JavaScript game for Firefox OS](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
+- [Optimizing your JavaScript game for Firefox OS](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)

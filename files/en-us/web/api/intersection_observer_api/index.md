@@ -1,6 +1,7 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
+page-type: web-api-overview
 tags:
   - API
   - Clipping
@@ -11,8 +12,9 @@ tags:
   - Performance
   - Reference
   - Web
-spec-urls: https://w3c.github.io/IntersectionObserver/
+browser-compat: api.IntersectionObserver
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary("viewport")}}.
@@ -88,7 +90,7 @@ Whenever the target meets a threshold specified for the `IntersectionObserver`, 
 
 ```js
 let callback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // Each entry describes an intersection change for one observed
     // target element:
     //   entry.boundingClientRect
@@ -110,7 +112,7 @@ Also, note that if you specified the `root` option, the target must be a descend
 
 ### How intersection is calculated
 
-All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is construed to be the smallest rectangle that contains all the visible portions of the element.
+All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is considered to be the smallest rectangle that contains all the visible portions of the element.
 
 It's useful to understand a bit about how the various properties provided by {{domxref("IntersectionObserverEntry")}} describe an intersection.
 
@@ -134,13 +136,13 @@ For example, if you want to be informed every time a target's visibility passes 
 
 When the callback is invoked, it receives a list of `IntersectionObserverEntry` objects, one for each observed target which has had the degree to which it intersects the root change such that the amount exposed crosses over one of the thresholds, in either direction.
 
-You can see if the target *currently* intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
+You can see if the target _currently_ intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
 
 Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
 To get a feeling for how thresholds work, try scrolling the box below around. Each colored box within it displays the percentage of itself that's visible in all four of its corners, so you can see these ratios change over time as you scroll the container. Each box has a different set of thresholds:
 
-- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`.
+- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]`.
 - The second box has a single threshold, at the 50% mark.
 - The third box has thresholds every 10% of visibility (0%, 10%, 20%, etc.).
 - The last box has thresholds each 25%.
@@ -157,8 +159,7 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -268,7 +269,7 @@ startup = () => {
 
   for (let i=0; i<4; i++) {
     let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+    let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
@@ -276,7 +277,7 @@ startup = () => {
 
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
-    observers[i].observe(document.querySelector("#" + boxID));
+    observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // Scroll to the starting position
@@ -288,7 +289,7 @@ startup = () => {
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;
@@ -323,7 +324,7 @@ The code snippet below shows a callback which keeps a counter of how many times 
 
 ```js
 const intersectionCallback = (entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       let elem = entry.target;
 
@@ -352,9 +353,7 @@ The HTML for this example is very short, with a primary element which is the box
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Welcome to <strong>The Box!</strong>
-  </div>
+  <div class="vertical">Welcome to <strong>The Box!</strong></div>
 </div>
 ```
 
@@ -364,7 +363,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 255);
+  background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
   width: 350px;
@@ -586,7 +585,7 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## See also
 

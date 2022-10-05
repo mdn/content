@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate()
 slug: Web/API/RTCIceCandidate/RTCIceCandidate
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidate.RTCIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 The
@@ -24,7 +26,7 @@ be configured to represent a single {{Glossary("ICE")}} candidate.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCIceCandidate()
 new RTCIceCandidate(candidateInfo)
 ```
@@ -107,7 +109,7 @@ If `candidateInfo` is provided, the new `RTCIceCandidate` is initialized as foll
 - The following fields are initialized to `null` if they are not included in the {{domxref("RTCIceCandidate.candidate")}} property:
   {{domxref("RTCIceCandidate.foundation", "foundation")}},
   {{domxref("RTCIceCandidate.component", "component")}},
-  {{domxref("RTCIceCandidate.priority", "priority")}} , {{domxref("RTCIceCandidate/address","address")}}, {{domxref("RTCIceCandidate.protocol", "protocol")}},
+  {{domxref("RTCIceCandidate.priority", "priority")}}, {{domxref("RTCIceCandidate/address","address")}}, {{domxref("RTCIceCandidate.protocol", "protocol")}},
   {{domxref("RTCIceCandidate.port", "port")}}, {{domxref("RTCIceCandidate.type", "type")}}, {{domxref("RTCIceCandidate.tcpType", "tcpType")}},
   {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}, and {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}}.
 

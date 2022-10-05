@@ -1,6 +1,7 @@
 ---
 title: ExtendableCookieChangeEvent
 slug: Web/API/ExtendableCookieChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,9 +9,10 @@ tags:
   - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The **`ExtendableCookieChangeEvent`** interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}} when any cookie changes have occurred. A cookie change event consists of a cookie and a type (either "changed" or "deleted".)
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
+
+The **`ExtendableCookieChangeEvent`** interface of the['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}} when any cookie changes occur. A cookie change event consists of a cookie and a type (either "changed" or "deleted".)
 
 Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are:
 
@@ -31,9 +33,9 @@ Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are
 
 _This interface also inherits properties from {{domxref("ExtendableEvent")}}._
 
-- {{domxref("ExtendableCookieChangeEvent.changed")}}{{ReadOnlyInline}}
+- {{domxref("ExtendableCookieChangeEvent.changed")}} {{ReadOnlyInline}}
   - : Returns an array containing the changed cookies.
-- {{domxref("ExtendableCookieChangeEvent.deleted")}}{{ReadOnlyInline}}
+- {{domxref("ExtendableCookieChangeEvent.deleted")}} {{ReadOnlyInline}}
   - : Returns an array containing the deleted cookies.
 
 ## Examples
@@ -54,7 +56,7 @@ self.addEventListener('activate', (event) => {
   });
 });
 
-self.addEventListener('cookiechange', event => {
+self.addEventListener('cookiechange', (event) => {
   console.log(event);
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: Range.setEnd()
 slug: Web/API/Range/setEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - setEnd
 browser-compat: api.Range.setEnd
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setEnd()`** method sets the end position of a {{
@@ -21,7 +23,7 @@ collapsed range with the start and end points both set to the specified end posi
 
 ## Syntax
 
-```js
+```js-nolint
 setEnd(endNode, endOffset)
 ```
 

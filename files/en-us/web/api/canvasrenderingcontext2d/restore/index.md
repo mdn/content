@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.restore
 ---
+
 {{APIRef}}
 
 The
@@ -17,12 +19,11 @@ method of the Canvas 2D API restores the most recently saved canvas state by pop
 top entry in the drawing state stack. If there is no saved state, this method does
 nothing.
 
-For more information about the [drawing
-state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
+For more information about the [drawing state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 restore()
 ```
 
@@ -51,13 +52,13 @@ default state later.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Save the default state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // Restore the default state

@@ -1,5 +1,5 @@
 ---
-title: 'Web Accessibility: Understanding Colors and Luminance'
+title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
 tags:
   - accessibility
@@ -25,7 +25,10 @@ tags:
   - photic seizure
   - seizure disorders
 ---
-## Introduction to Color and Accessibility
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 When designing visual and readable content with the aim of accessibility for all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:
 
@@ -36,11 +39,11 @@ When designing visual and readable content with the aim of accessibility for all
 
 While understanding these concepts are important for design and readability for all sighted users, they are especially important for those with reduced vision and color deficient vision, and also for those with certain neurological, cognitive, and other impairments.
 
-### Standards and Guidelines
+## Standards and Guidelines
 
 The [W3.org's](/en-US/docs/Glossary/W3C) [WAI](/en-US/docs/Glossary/WAI) publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the [WCAG 2.1 accessibility guidelines](/en-US/docs/Glossary/WCAG). The next generation, [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/), is presently published as a public working draft, pending further development and approvals.
 
-The WCAG 2.x guidelines attempt to define adequate [luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
+The WCAG 2.x guidelines attempt to define adequate [luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with reduced vision, as well as guidelines intended to help users with color insensitive vision (inaccurately called "color blindness"), and further WCAG 2.x color guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
 
 ## Color basics
 
@@ -49,6 +52,8 @@ Color and how it is used is a major part of accessibility. While at first color 
 To begin with, color is not "real," which might sound like an odd statement for an article on color. The fact is that in the visible range, light simply exists at different frequencies, or wavelengths. Consider how the keys on a piano create sounds at different frequencies. But while our ear and aural perception may "hear" sound as a range of notes, the normal human eye divides the visible light into three overlapping ranges. These three bands of light are detected by light sensitive cells in the eye known as cones, and the three cone types are called L, M, or S for long, medium, and short wavelengths.
 
 We normally associate L, M, or S cone sensitivity with the sensation of red, green, and blue colors, respectively, the three primary colors of light. Specific red, green, and blue hues are used for the "color primaries" used in an RGB additive color model. The sRGB colorspace, the default standard colorspace for web content, is an example of an additive RGB color model.
+
+![A chart showing the normalized cone spectral response curves, which demonstrate substantial overlap, especially for the M and L cones](normalizedconeresponse.svg)
 
 ### RGB additive model
 
@@ -61,12 +66,11 @@ The monitor is only emitting the red and green light shown on top to create the 
 
 CMYK is another form of color model, known as a subtractive model. Here, the cyan, magenta, yellow, black inks _remove_ certain wavelengths of light, reflecting back only the narrow range each is associated with. In this article we will be focusing on displayed web content, and so we discuss mainly the RGB color model.
 
-See this overview for [a deeper dive into how the eye and vision system functions](https://www.olympus-lifescience.com/en/microscope-resource/primer/lightandcolor/humanvisionintro/
-).
+See this overview for a deeper dive into how the [eye and vision system functions](https://www.olympus-lifescience.com/en/microscope-resource/primer/lightandcolor/humanvisionintro/).
 
 ## Perception of Color and Contrast
 
-The first thing to understand about our perception of color, light, and contrast is that:
+What's important to understand about our perception of color, light, and contrast is that:
 
 - It is not absolute,
 - that it is a context-sensitive perception,
@@ -93,7 +97,7 @@ But the threshold of 1% to 3% is wholly insufficient for fluent, easy reading. T
 
 ### Spatial Frequency
 
-Our perception of contrast is not only affected by surrounding elements and the environment, but the "Spatial Frequency" of the stimulus itself. A higher spatial frequency means smaller, thinner, and more crowded. This applies very much to text and the font size and design used.
+Our perception of contrast is not only affected by surrounding elements and the environment, but the "Spatial Frequency" of the stimulus itself. A higher spatial frequency means smaller, thinner, and more crowded. This applies very much to text and the font size and weight used, as well as letter and line spacing.
 
 In a typical eye exam for acuity (ability to focus), legibility at a particular level means getting three out of five letters correct. This is wholly insufficient for fluent, easy reading.
 
@@ -101,7 +105,7 @@ In a typical eye exam for acuity (ability to focus), legibility at a particular 
 
 This is the minimum for "just making out" letters at \~70% accuracy. That is legibility, not readability. For readability, the lower case [x-height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/) needs to be a minimum of twice that [cap height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/). This is called the critical font size for readability.
 
-This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for *read*ability is 15.6px (in print, about 12pt, the typical standard in books). And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the [WCAG standard requires](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) that users have the ability to zoom text larger.
+This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for readability is 15.6px (in print, about 12pt, the typical standard in books). And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the [WCAG standard requires](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) that users have the ability to zoom text larger.
 
 While text that is too small is hard to read, so is text that is too big. Above approximately 96px, reading speed decreases. Also, very large fonts make it difficult for a user to enlarge the smaller text on the page, as most browsers presently zoom all text regardless.
 
@@ -117,30 +121,53 @@ Today, the proliferation of easily available web fonts of all sizes and weights 
 
 The W3.org defines the sRGB colorspace as the [default for web content](https://www.w3.org/TR/css-color-3/#SRGB). The MDN page on [\<color>](/en-US/docs/Web/CSS/color_value) says "_The [CSS](/en-US/docs/Web/CSS) [color data type](/en-US/docs/Web/CSS/CSS_Types) represents a color in the [sRGB colorspace](https://en.wikipedia.org/wiki/SRGB)._"
 
-### CSS Color Level 3 notations:
+### CSS Color Level 3 notations
 
 These are examples of the CSS notations used to define a color. Here the example color for each is magenta:
 
 ```css
 /* by name (from a defined set of names) */
-div { color: 'magenta'; }
+div {
+  color: magenta;
+}
 
 /* by HSL representation of the sRGB value */
-div { color: hsl(300, 100%, 50%); }
-div { color: hsla(300, 100%, 50%, 50%); }
+div {
+  color: hsl(300, 100%, 50%);
+}
+div {
+  color: hsla(300, 100%, 50%, 50%);
+}
 
 /* by sRGB value as a percentage */
-div { color: rgb(100%, 0%, 100%); }
-div { color: rgba(100%, 0%, 100%, 50%); }
+div {
+  color: rgb(100%, 0%, 100%);
+}
+div {
+  color: rgba(100%, 0%, 100%, 50%);
+}
 
 /* by sRGB integer values */
-div { color: rgb(255, 0, 255); }
-div { color: rgba(255, 0, 255, 128); }
+div {
+  color: rgb(255, 0, 255);
+}
+div {
+  color: rgba(255, 0, 255, 0.5);
+}
 
 /* by sRGB value in hex */
-div { color: #f0f; }            /* #rgb, a shorthand for #rrggbb */
-div { color: #ff00ff; }         /* #rrggbb */
-div { color: #ff00ff80; }       /* #rrggbbaa */
+div {
+  /* #rgb, a shorthand for #rrggbb */
+  color: #f0f;
+}
+div {
+  /* #rrggbb */
+  color: #ff00ff;
+}
+div {
+  /* #rrggbbaa */
+  color: #ff00ff80;
+}
 ```
 
 The first example is using one of the defined color names. The list of basic color keywords is: `aqua`, `black`, `blue`, `fuchsia`, `gray`, `green`, `lime`, `maroon`, `navy`, `olive`, `purple`, `red`, `silver`, `teal`, `white`, and `yellow`. Some color names have aliases, for instance, `cyan` and `aqua` are the same color, as is `fuchsia` and `magenta`, and `grey` and `gray`. There are over [a hundred and forty more](https://www.w3.org/TR/css-color-3/#svg-color) names that came from the SVG specification that are supported by most browsers.
@@ -239,7 +266,7 @@ A complete color theory and color design guide is beyond the scope of this docum
 
 ### Color terms
 
-The world standard in terms of colorimetry (measuring color) is the **CIE**, and their [interactive glossary](http://eilv.cie.co.at) is filled with color information.
+The world standard in terms of colorimetry (measuring color) is the **CIE**, and their [interactive glossary](http://cie.co.at/e-ilv) is filled with color information.
 
 > **Note:** Tip: when searching the CIE glossary use the UK spelling of "colour."
 
@@ -316,7 +343,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - **Some colors can affect our perception of time:** [Color and time perception: Evidence for temporal overestimation of blue stimuli](https://pubmed.ncbi.nlm.nih.gov/29374198/)
 - **Blue also has a significant effect on brightness and glare:** [Blue and glare & brightness](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **Red tinted glasses can provide increased happiness or joy:** [Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing](https://pubmed.ncbi.nlm.nih.gov/31244627/)
-- **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, S,Macknik
+- **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, Stephen L. Macknik
 - **Red Environment:** [Studies have shown that a red environment stimulates cognition](https://pubmed.ncbi.nlm.nih.gov/20649469/), but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.
 
 ### Flashing and Seizures
@@ -335,7 +362,7 @@ The Epilepsy Foundation of America researched photic-related seizures thoroughly
 1. Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.
 2. Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.
 
-The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
+The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.31405.x). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
 
 Additional notes: The EFA recommendation from 2005 pre-dates smart phones, and was based on television set usage, defining a flash that _"occupies a solid visual angle of ≥0.006 steradians (∼10% of the central visual field or 25% of screen area at typical viewing distances)."_ This is essentially equivalent to a visual angle of 5° square. Since that time, mobile devices have substantially changed how we view media. For a typical smart phone viewed very close (5"-6" or 12cm-15cm) that would be an area about 50px to 70px square.
 
@@ -369,15 +396,15 @@ Using the function shown below:
 function sRGBtoLin(colorChannel) {
   // Send this function a decimal sRGB gamma encoded color channel
   // between 0.0 and 1.0, and it returns a linearized value.
-  if ( colorChannel &#x3C;= 0.04045 ) {
+  if (colorChannel <= 0.04045) {
     return colorChannel / 12.92;
   } else {
-      return Math.pow((( colorChannel + 0.055)/1.055),2.4);
+    return Math.pow((colorChannel + 0.055) / 1.055, 2.4);
   }
 }
 ```
 
-> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928.
+> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.0 guidelines were drafted citing an obsolete value. In May 2021, this was corrected to 0.04045 in the WCAG 2.1 document. For the record, the WCAG 2.0 value is 0.03928.
 
 #### Step three: Spectrally Weighted Luminance
 
@@ -405,15 +432,19 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 
 - [APCA Contrast Calculator](https://www.myndex.com/APCA/)
 
-  The proposed method for assessing contrast and more.
+  The proposed method for assessing contrast for WCAG 3. See also [this catalog of links](https://git.myndex.com) to documentation and further discussions of readability contrast.
 
 - [brucelindbloom.com](http://brucelindbloom.com)
 
   Bruce Lindbloom's site on colorspaces and the related math and transformations. It includes a very helpful calculator that converters between many color models, including the key CIE models.
 
+- [W3 CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/#color-conversion-code)
+
+  Code examples for color conversions that are part of the CSS Color Module Level 4
+
 ## Additional Resources
 
-#### MDN
+### MDN
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Accessibility learning path](/en-US/docs/Learn/Accessibility)
@@ -421,15 +452,15 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [`<color>`](/en-US/docs/Web/CSS/color_value)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 
-#### W3C Issues and Discussions
+### W3C Issues and Discussions
 
 - [The Visual Contrast Research Group](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup) for WCAG 3.
-- [Light and dark text](https://github.com/w3c/silver/issues/261) & WCAG 2.x vs WCAG 3.0 contrast (Silver thread #261)
+- [Light and dark text](https://github.com/w3c/silver/issues/261) & WCAG 3.0 contrast (Silver thread #261)
 - [Contrast Ratio Math](https://github.com/w3c/wcag/issues/695) and Related Visual Issue thread #695
 - [Luminance / Luma confusion](https://github.com/w3c/wcag/issues/236) thread #236
 - [Non-sRGB color spaces](https://github.com/w3c/wcag/issues/360), outdated sRGB threshold thread #360
 
-#### W3C Standards and Guidelines
+### W3C Standards and Guidelines
 
 - [The latest draft of the new WCAG 3 standards](https://www.w3.org/TR/wcag-3.0/)
 - [Ensuring that a contrast ratio of 3:1 is provided for icons](https://www.w3.org/WAI/WCAG21/Techniques/general/G207)
@@ -437,6 +468,6 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
 - [CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/)
 
-### Page Source
+## Page Source
 
 This page is based largely on the white paper on color and contrast by Andrew Somers, which is being developed for the W3 and Accessibility Guidelines Working Group, used herein by permission. Andrew Somers is an invited expert of the W3 and the AGWG, the author of the WCAG 3 Visual Contrast specifications, and the inventor of the APCA.

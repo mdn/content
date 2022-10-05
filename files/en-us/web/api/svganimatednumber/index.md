@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedNumber
 slug: Web/API/SVGAnimatedNumber
+page-type: web-api-interface
 tags:
   - API
   - HTML
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedNumber
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated number interface

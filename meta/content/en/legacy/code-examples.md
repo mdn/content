@@ -16,7 +16,7 @@ code example used on MDN:
   them into a document inside an `<iframe>` element, and embeds it into the
   page to show the code running live.
 - [GitHub "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#GitHub_live_samples)
-  — A macro that takes a document in a GitHub repo inside the [mdn organization](https://github.com/mdn),
+  — A macro that takes a document in a GitHub repo inside the [MDN organization](https://github.com/mdn),
   puts it inside an `<iframe>` element, and embeds
   it into the page to show the code running live.
 - [Interactive examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Interactive_examples)

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.foundation
 slug: Web/API/RTCIceCandidate/foundation
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -16,6 +17,7 @@ tags:
   - foundation
 browser-compat: api.RTCIceCandidate.foundation
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}**
@@ -52,7 +54,7 @@ This code snippet uses the `foundation` of two candidates to determine if
 they're actually the same candidate.
 
 ```js
-if (candidate1.foundation == candidate2.foundation) {
+if (candidate1.foundation === candidate2.foundation) {
   /* the two candidates are the same, even if they're on
      different transports */
 }

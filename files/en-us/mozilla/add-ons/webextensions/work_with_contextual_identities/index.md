@@ -9,6 +9,7 @@ tags:
   - How-to
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Many people need or want to interact with the web using multiple personas. They may have accounts for web-based work and personal email. They might sign out of their social media accounts before accessing online shopping, to ensure that any tracking scripts on the shopping sites can't pick up their social media activity. To address these requirements, users often end up working with a standard and private browser window or two different browsers.
@@ -70,12 +71,12 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 A popup on the toolbar button provides the extension's user interface. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implements this popup, but it's just a shell into which the context.js script writes the list of contextual identities and their related options.
 
 ```html
-  <body>
-    <div class="panel">
-      <div id="identity-list"></div>
-    </div>
+<body>
+  <div class="panel">
+    <div id="identity-list"></div>
+  </div>
   <script src="context.js"></script>
-  </body>
+</body>
 ```
 
 ## context.js
@@ -85,7 +86,7 @@ All the features of the extension are implemented through [context.js](https://g
 The script first gets the 'identity-list' div from context.html.
 
 ```js
-let div = document.getElementById('identity-list');
+let div = document.getElementById("identity-list");
 ```
 
 It then checks whether the contextual identities feature is turned on in the browser. If it's not on, information on how to activate it is added to the popup.
@@ -109,12 +110,12 @@ The script now uses contextualIdentities.query to determine whether there are an
       }
 ```
 
-If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the \<div> element. The function `createOptions()` then adds the options to "create" or "close all" to the \<div> before it's added to the popup.
+If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the `<div>` element. The function `createOptions()` then adds the options to "create" or "close all" to the `<div>` before it's added to the popup.
 
 ```js
-     for (let identity of identities) {
-       let row = document.createElement('div');
-       let span = document.createElement('span');
+     for (const identity of identities) {
+       const row = document.createElement('div');
+       const span = document.createElement('span');
        span.className = 'identity';
        span.innerText = identity.name;
        span.style = `color: ${identity.color}`;
@@ -127,8 +128,8 @@ If there are contextual identities present—Firefox comes with four default ide
 }
 
 function createOptions(node, identity) {
-  for (let option of ['Create', 'Close All']) {
-    let a = document.createElement('a');
+  for (const option of ['Create', 'Close All']) {
+    const a = document.createElement('a');
     a.href = '#';
     a.innerText = option;
     a.dataset.action = option.toLowerCase().replace(' ', '-');
@@ -148,18 +149,18 @@ function eventHandler(event) {
 If the user clicks the option to create a tab for an identity, one is opened using tabs.create by passing the identity's cookie store ID.
 
 ```js
-  if (event.target.dataset.action == 'create') {
-    browser.tabs.create({
-      url: 'about:blank',
-      cookieStoreId: event.target.dataset.identity
-    });
-  }
+if (event.target.dataset.action === "create") {
+  browser.tabs.create({
+    url: "about:blank",
+    cookieStoreId: event.target.dataset.identity,
+  });
+}
 ```
 
 If the user selects the option to close all tabs for the identity, the script performs a tabs.query for all tabs that are using the identity's cookie store. The script then passes this list of tabs to `tabs.remove`.
 
 ```js
-  if (event.target.dataset.action == 'close-all') {
+  if (event.target.dataset.action === 'close-all') {
     browser.tabs.query({
       cookieStoreId: event.target.dataset.identity
     }).then((tabs) => {

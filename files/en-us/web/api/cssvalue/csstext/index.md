@@ -1,6 +1,7 @@
 ---
 title: CSSValue.cssText
 slug: Web/API/CSSValue/cssText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSValue
@@ -10,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSValue.cssText
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The **`cssText`** property of the {{domxref("CSSValue")}}
@@ -30,8 +32,8 @@ A string representing the current CSS property value.
 ## Examples
 
 ```js
-var styleDeclaration = document.styleSheets[0].cssRules[0].style;
-var cssValue = styleDeclaration.getPropertyCSSValue("color");
+const styleDeclaration = document.styleSheets[0].cssRules[0].style;
+const cssValue = styleDeclaration.getPropertyCSSValue("color");
 console.log(cssValue.cssText);
 ```
 
@@ -47,7 +49,7 @@ It has been superseded by a modern, but incompatible, [CSS Typed Object Model AP
 This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
-It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](CSS_Typed_OM_API) that is now on the standard track.
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
 ## See also
 

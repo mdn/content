@@ -1,11 +1,13 @@
 ---
 title: Node.removeChild()
 slug: Web/API/Node/removeChild
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Node.removeChild
 ---
+
 {{APIRef("DOM")}}
 
 The **`removeChild()`** method of the {{domxref("Node")}} interface
@@ -22,8 +24,8 @@ Unlike {{domxref("Node.cloneNode()")}} the return value preserves the {{domxref(
 
 ## Syntax
 
-```js
-removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
 ### Parameters
@@ -70,7 +72,7 @@ if (node.parentNode) {
 To remove all children from an element:
 
 ```js
-let element = document.getElementById("top");
+let element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
@@ -80,7 +82,7 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"> </div>
+<div id="top"></div>
 ```
 
 ```js

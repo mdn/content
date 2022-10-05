@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.verify()
 slug: Web/API/SubtleCrypto/verify
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - verify
 browser-compat: api.SubtleCrypto.verify
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`verify()`** method of the {{domxref("SubtleCrypto")}}
@@ -22,7 +24,7 @@ indicating whether the signature is valid.
 
 ## Syntax
 
-```js
+```js-nolint
 verify(algorithm, key, signature, data)
 ```
 
@@ -32,7 +34,7 @@ verify(algorithm, key, signature, data)
   - : A string or object defining the algorithm to use, and for some algorithm choices, some extra parameters.
     The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.sign()", "sign()")}} call.
     - To use [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5),
-    pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form `{ "name": "RSASSA-PKCS1-v1_5" }`.
+      pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form `{ "name": "RSASSA-PKCS1-v1_5" }`.
     - To use [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), pass an {{domxref("RsaPssParams")}} object.
     - To use [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa), pass an {{domxref("EcdsaParams")}} object.
     - To use [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac), pass the string `"HMAC"` or an object of the form `{ "name": "HMAC" }`.
@@ -47,8 +49,8 @@ verify(algorithm, key, signature, data)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a
-  boolean value: `true` if the signature is valid, `false`
-  otherwise.
+boolean value: `true` if the signature is valid, `false`
+otherwise.
 
 ### Exceptions
 
@@ -72,7 +74,7 @@ method.
 ### RSASSA-PKCS1-v1_5
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsassa-pkcs1.js)
 
 ```js
 /*
@@ -110,7 +112,7 @@ async function verifyMessage(publicKey) {
 ### RSA-PSS
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsa-pss.js)
 
 ```js
 /*
@@ -151,7 +153,7 @@ async function verifyMessage(publicKey) {
 ### ECDSA
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
 
 ```js
 /*
@@ -192,7 +194,7 @@ async function verifyMessage(publicKey) {
 ### HMAC
 
 This code uses a secret key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
 
 ```js
 /*

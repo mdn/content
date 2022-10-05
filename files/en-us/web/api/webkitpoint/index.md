@@ -1,17 +1,19 @@
 ---
 title: Point
 slug: Web/API/WebKitPoint
+page-type: web-api-interface
 tags:
   - API
   - CSS Transforms
-  - CSS3 Transforms
   - Interface
   - Non-standard
   - Point
   - Reference
+  - Deprecated
 browser-compat: api.WebKitPoint
 ---
-{{APIRef("CSS3 Transforms")}}{{Deprecated_Header}}{{Non-standard_header}}
+
+{{APIRef("CSS3 Transforms")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 **`Point`** is an interface which represents a point in 2-dimensional space. It is non-standard, not broadly compatible, and should not be used.
 
@@ -19,9 +21,9 @@ browser-compat: api.WebKitPoint
 
 ## Properties
 
-- `x` {{deprecated_inline}}
+- `x` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A floating-point value specifying the point's position with respect to the X (horizontal) axis.
-- `y` {{deprecated_inline}}
+- `y` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A floating-point value specifying the point's position with respect to the Y (vertical) axis.
 
 ## Specifications

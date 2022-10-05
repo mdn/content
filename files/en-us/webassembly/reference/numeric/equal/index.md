@@ -8,9 +8,10 @@ tags:
   - Numeric
   - Comparison
 ---
+
 {{WebAssemblySidebar}}
 
-The **`eq`** instructions, short for *equal*, check if two numbers are equal. If both numbers are equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
+The **`eq`** instructions, short for _equal_, check if two numbers are equal. If both numbers are equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 
 Similarly, the **`eqz`** instructions check if a number is equal to zero, the **`eqz`** instructions are only available for the integer types and not for the floating point types.
 

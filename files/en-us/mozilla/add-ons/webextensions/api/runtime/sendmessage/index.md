@@ -13,13 +13,14 @@ tags:
   - sendMessage
 browser-compat: webextensions.api.runtime.sendMessage
 ---
+
 {{AddonSidebar()}}
 
 Sends a single message to event listeners within your extension or a different extension.
 
 If sending to your extension, omit the `extensionId` argument. The {{WebExtAPIRef('runtime.onMessage')}} event will be fired in each page in your extension, except for the frame that called `runtime.sendMessage`.
 
-If sending to a different extension, include the `extensionId` argument set to the other extension's ID. {{WebExtAPIRef('runtime.onMessageExternal')}} will be fired in the other extension.
+If sending to a different extension, include the `extensionId` argument set to the other extension's ID. {{WebExtAPIRef('runtime.onMessageExternal')}} will be fired in the other extension. By default, your extension can exchange messages with itself and any other extension (defined by `extensionId`). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions.
 
 Extensions cannot send messages to content scripts using this method. To send messages to content scripts, use {{WebExtAPIRef('tabs.sendMessage')}}.
 
@@ -29,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let sending = browser.runtime.sendMessage(
   extensionId,             // optional string
   message,                 // any
@@ -39,19 +40,19 @@ let sending = browser.runtime.sendMessage(
 
 ### Parameters
 
-- `extensionId`{{optional_inline}}
+- `extensionId` {{optional_inline}}
 
   - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
 
-    If `extensionId` is omitted, the message will be sent to your own extension.
+    If `extensionId` is omitted, the message is sent to your extension.
 
 - `message`
   - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`.
 
-    - `includeTlsChannelId`{{optional_inline}}
+    - `includeTlsChannelId` {{optional_inline}}
 
       - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.
 
@@ -90,7 +91,7 @@ Here's a content script that sends a message to the background script when the u
 // content-script.js
 
 function handleResponse(message) {
-  console.log(`Message from the background script:  ${message.response}`);
+  console.log(`Message from the background script: ${message.response}`);
 }
 
 function handleError(error) {
@@ -98,8 +99,8 @@ function handleError(error) {
 }
 
 function notifyBackgroundPage(e) {
-  let sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+  const sending = browser.runtime.sendMessage({
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -111,11 +112,9 @@ The corresponding background script looks like this:
 
 ```js
 // background-script.js
-
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log(`A content script sent a message: ${request.greeting}`);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -130,7 +129,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -157,4 +157,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

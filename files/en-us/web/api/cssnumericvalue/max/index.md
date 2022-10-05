@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.max()
 slug: Web/API/CSSNumericValue/max
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - max()
 browser-compat: api.CSSNumericValue.max
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`max()`** method of the
@@ -20,14 +22,14 @@ passed. The passed values must be of the same type.
 
 ## Syntax
 
-```js
-max(number1, /* ..., */ numberN)
+```js-nolint
+max(number1, /* …, */ numberN)
 ```
 
 ### Parameters
 
 - `number1`, …, `numberN`
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

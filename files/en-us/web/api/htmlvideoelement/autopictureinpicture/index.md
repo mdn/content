@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.autoPictureInPicture
 slug: Web/API/HTMLVideoElement/autoPictureInPicture
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -15,6 +16,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLVideoElement")}}

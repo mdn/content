@@ -1,6 +1,7 @@
 ---
 title: 'Recipe: Media objects'
 slug: Web/CSS/Layout_cookbook/Media_objects
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -10,12 +11,16 @@ tags:
   - fit-content
   - float
   - grid
+browser-compat:
+  - css.properties.grid-template-areas
+  - css.properties.float
 ---
+
 {{CSSRef}}
 
 The _Media Object_ is a pattern we see all over the web. [Named by Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) it refers to a two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet.
 
-![](media-object.png)
+![Example of a media object with profile image on the left side and lorem ipsum text to the right filling up 80% of the space](media-object.png)
 
 ## Requirements
 
@@ -71,12 +76,4 @@ What you will need to do is remove any margins applied to the item, and any widt
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### grid-template-areas
-
-{{Compat("css.properties.grid-template-areas")}}
-
-### float
-
-{{Compat("css.properties.float")}}
+{{Compat}}

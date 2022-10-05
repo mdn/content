@@ -1,6 +1,7 @@
 ---
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -10,6 +11,7 @@ tags:
   - properties
   - shorthand
 ---
+
 {{CSSRef}}
 
 **_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
@@ -70,7 +72,7 @@ Similarly, shorthands handling properties related to corners of a box, like {{cs
 
 ## Background properties
 
-A background with the following properties ...
+Consider a background with the following properties
 
 ```css
 background-color: #000;
@@ -79,7 +81,7 @@ background-repeat: no-repeat;
 background-position: left top;
 ```
 
-... can be shortened to just one declaration:
+These four declarations can be shortened to just one:
 
 ```css
 background: #000 url(images/bg.gif) no-repeat left top;
@@ -91,27 +93,27 @@ See {{cssxref("background")}} for more detailed information, including CSS3 prop
 
 ## Font properties
 
-The following declarations ...
+Consider the following declarations:
 
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-... can be shortened to the following:
+This 5 statements can be shortened to the following:
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font: italic bold 0.8em/1.2 Arial, sans-serif;
 ```
 
-This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal` and `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
+This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.
 
 ## Border properties
 
-With borders, the width, color, and style can be simplified into one declaration. For example, the following CSS ...
+With borders, the width, color, and style can be simplified into one declaration. For example, consider the following CSS:
 
 ```css
 border-width: 1px;
@@ -119,7 +121,7 @@ border-style: solid;
 border-color: #000;
 ```
 
-... can be simplified as:
+It can be simplified as:
 
 ```css
 border: 1px solid #000;
@@ -127,7 +129,7 @@ border: 1px solid #000;
 
 ## Margin and padding properties
 
-Shorthand versions of margin and padding values work similarly; the margin property allows for shorthand values to be specified using one, two, three, or four values. The following CSS declarations ...
+Shorthand versions of margin and padding values work similarly; the margin property allows for shorthand values to be specified using one, two, three, or four values. Consider the following CSS declarations:
 
 ```css
 margin-top: 10px;
@@ -136,7 +138,7 @@ margin-bottom: 10px;
 margin-left: 5px;
 ```
 
-... are the same as the following declaration using the four value shorthand. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
+They are the same as the following declaration using the four value shorthand. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
 
 ```css
 margin: 10px 5px 10px 5px;
@@ -157,5 +159,65 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
 
 ## See also
 
-- {{css_key_concepts}}
-- Shorthand properties: {{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- Shorthand properties:
+  - {{cssxref("all")}}
+  - {{cssxref("animation")}}
+  - {{cssxref("background")}}
+  - {{cssxref("border")}}
+  - {{cssxref("border-block-end")}}
+  - {{cssxref("border-block-start")}}
+  - {{cssxref("border-bottom")}}
+  - {{cssxref("border-color")}}
+  - {{cssxref("border-image")}}
+  - {{cssxref("border-inline-end")}}
+  - {{cssxref("border-inline-start")}}
+  - {{cssxref("border-left")}}
+  - {{cssxref("border-radius")}}
+  - {{cssxref("border-right")}}
+  - {{cssxref("border-style")}}
+  - {{cssxref("border-top")}}
+  - {{cssxref("border-width")}}
+  - {{cssxref("column-rule")}}
+  - {{cssxref("columns")}}
+  - {{cssxref("contain-intrinsic-size")}}
+  - {{cssxref("flex")}}
+  - {{cssxref("flex-flow")}}
+  - {{cssxref("font")}}
+  - {{cssxref("gap")}}
+  - {{cssxref("grid")}}
+  - {{cssxref("grid-area")}}
+  - {{cssxref("grid-column")}}
+  - {{cssxref("grid-row")}}
+  - {{cssxref("grid-template")}}
+  - {{cssxref("list-style")}}
+  - {{cssxref("margin")}}
+  - {{cssxref("mask")}}
+  - {{cssxref("offset")}}
+  - {{cssxref("outline")}}
+  - {{cssxref("overflow")}}
+  - {{cssxref("padding")}}
+  - {{cssxref("place-content")}}
+  - {{cssxref("place-items")}}
+  - {{cssxref("place-self")}}
+  - {{cssxref("scroll-margin")}}
+  - {{cssxref("scroll-padding")}}
+  - {{cssxref("text-decoration")}}
+  - {{cssxref("text-emphasis")}}
+  - {{cssxref("transition")}}

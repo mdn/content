@@ -1,6 +1,7 @@
 ---
 title: RTCError.sentAlert
 slug: Web/API/RTCError/sentAlert
+page-type: web-api-instance-property
 tags:
   - API
   - DTLS
@@ -16,6 +17,7 @@ tags:
   - sentAlert
 browser-compat: api.RTCError.sentAlert
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sentAlert`** property in an

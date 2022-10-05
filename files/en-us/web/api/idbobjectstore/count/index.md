@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.count()
 slug: Web/API/IDBObjectStore/count
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -12,6 +13,7 @@ tags:
   - data
 browser-compat: api.IDBObjectStore.count
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`count()`** method of the {{domxref("IDBObjectStore")}}
@@ -24,7 +26,7 @@ of records in the store.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(query)
 ```
@@ -58,11 +60,11 @@ the number of records in the store using `count()` — when the success handler
 fires, we log the count value (an integer) to the console.
 
 ```js
-var transaction = db.transaction(['fThings'], 'readonly');
-var objectStore = transaction.objectStore('fThings');
+const transaction = db.transaction(['fThings'], 'readonly');
+const objectStore = transaction.objectStore('fThings');
 
-var countRequest = objectStore.count();
-countRequest.onsuccess = function() {
+const countRequest = objectStore.count();
+countRequest.onsuccess = () => {
   console.log(countRequest.result);
 }
 ```
@@ -83,5 +85,4 @@ countRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

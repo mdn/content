@@ -1,6 +1,7 @@
 ---
 title: XPathResult.iterateNext()
 slug: Web/API/XPathResult/iterateNext
+page-type: web-api-instance-method
 tags:
   - API
   - DOM XPath API
@@ -10,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.iterateNext
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`iterateNext()`** method of the
@@ -18,7 +20,7 @@ next node from it or `null` if there are no more nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 iterateNext()
 ```
 
@@ -57,11 +59,11 @@ The following example shows the use of the `iterateNext()` method.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
-var node = null;
-var tagNames = [];
-while(node = result.iterateNext()) {
+const xpath = "//div";
+const result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
+let node = null;
+const tagNames = [];
+while (node = result.iterateNext()) {
   tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");

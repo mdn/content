@@ -1,6 +1,7 @@
 ---
 title: TrustedHTML
 slug: Web/API/TrustedHTML
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - TrustedHTML
 browser-compat: api.TrustedHTML
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`TrustedHTML`** interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML", "TrustedTypePolicy.createHTML()")}} and therefore have no constructor.
@@ -33,7 +35,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 
 let el = document.getElementById("myDiv");

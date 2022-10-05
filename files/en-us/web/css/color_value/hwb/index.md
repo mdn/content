@@ -1,6 +1,7 @@
 ---
 title: hwb()
 slug: Web/CSS/color_value/hwb
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -11,9 +12,12 @@ tags:
   - hwb
 browser-compat: css.types.color.hwb
 ---
+
 {{CSSRef}}
 
 The **`hwb()`** functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
+
+{{EmbedInteractiveExample("pages/css/function-hwb.html")}}
 
 ## Syntax
 
@@ -24,7 +28,7 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 
 ### Values
 
-> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions and the optional alpha value needs to be preceded with a forward slash (`/`) if specified.
+> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions and the optional alpha value needs to be preceded with a forward slash (`/`) if specified.
 
 - Functional notation: `hwb(H W B[ / A])`
 

@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.stopNotifications()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - stopNotifications
 browser-compat: api.BluetoothRemoteGATTCharacteristic.stopNotifications
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method
@@ -20,7 +22,7 @@ there is no longer an active notification on it.
 
 ## Syntax
 
-```js
+```js-nolint
 stopNotifications()
 ```
 

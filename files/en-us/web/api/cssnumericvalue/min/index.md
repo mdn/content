@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - min()
 browser-compat: api.CSSNumericValue.min
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`min()`** method of the
@@ -20,14 +22,14 @@ values passed. The passed values must be of the same type.
 
 ## Syntax
 
-```js
-min(number1, /* ..., */ numberN)
+```js-nolint
+min(number1, /* …, */ numberN)
 ```
 
 ### Parameters
 
 - `number1`, …, `numberN`
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

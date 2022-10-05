@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.Element.getAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 Returns the `Attr` node for the attribute with the given namespace and name.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNodeNS(namespace, nodeName)
 ```
 

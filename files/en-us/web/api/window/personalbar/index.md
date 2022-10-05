@@ -1,6 +1,7 @@
 ---
 title: Window.personalbar
 slug: Web/API/Window/personalbar
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.personalbar
 ---
+
 {{APIRef}}
 
 Returns the `personalbar` object, whose visibility can be toggled in the

@@ -1,6 +1,7 @@
 ---
 title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollLeftMax
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Element.scrollLeftMax`** read-only property returns a

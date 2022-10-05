@@ -1,6 +1,7 @@
 ---
 title: PannerNode.positionY
 slug: Web/API/PannerNode/positionY
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -10,14 +11,13 @@ tags:
   - positionY
 browser-compat: api.PannerNode.positionY
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`positionY`** property of the {{ domxref("PannerNode")
-    }} interface specifies the Y coordinate of the audio source's position in 3D Cartesian
-coordinates, corresponding to the *vertical* axis (top-bottom). The complete
+The **`positionY`** property of the {{ domxref("PannerNode") }} interface specifies the Y coordinate of the audio source's position in 3D Cartesian
+coordinates, corresponding to the _vertical_ axis (top-bottom). The complete
 vector is defined by the position of the audio source, given as
-({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
-    "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
+({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY", "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
 ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},
@@ -75,6 +75,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

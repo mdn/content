@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.name
 slug: Web/API/HTMLObjectElement/name
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - name
 browser-compat: api.HTMLObjectElement.name
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`name`** property of the
@@ -20,7 +22,7 @@ the browsing context.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

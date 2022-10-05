@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.emptyHTML
 slug: Web/API/TrustedTypePolicyFactory/emptyHTML
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.emptyHTML
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`emptyHTML`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedHTML")}} object containing an empty string.

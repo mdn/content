@@ -1,6 +1,7 @@
 ---
 title: Magnetometer()
 slug: Web/API/Magnetometer/Magnetometer
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -10,9 +11,11 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
 browser-compat: api.Magnetometer.Magnetometer
 ---
-{{APIRef("Sensor API")}}
+
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer()`** constructor
 creates a new {{domxref("Magnetometer")}} object which returns information about the
@@ -25,7 +28,7 @@ instructions.
 
 ## Syntax
 
-```js
+```js-nolint
 new Magnetometer()
 new Magnetometer(options)
 ```

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Constrain Validation API
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.setCustomValidity()`** method sets the
@@ -19,7 +21,7 @@ error.
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(string)
 ```
 
@@ -41,5 +43,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Form
-  validation.](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).

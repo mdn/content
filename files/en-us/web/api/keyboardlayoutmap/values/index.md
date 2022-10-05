@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap.values
 slug: Web/API/KeyboardLayoutMap/values
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -13,6 +14,7 @@ tags:
   - values
 browser-compat: api.KeyboardLayoutMap.values
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`values`** read-only property of

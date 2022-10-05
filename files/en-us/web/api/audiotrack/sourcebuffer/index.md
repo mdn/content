@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.sourceBuffer
 slug: Web/API/AudioTrack/sourceBuffer
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.sourceBuffer
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**

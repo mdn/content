@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -9,8 +10,10 @@ tags:
   - Reference
   - Web Audio API
   - createScriptProcessor
+  - Deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface
@@ -20,7 +23,7 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 
 ## Syntax
 
-```js
+```js-nolint
 createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 
@@ -73,74 +76,77 @@ setting that result to be the output sample in each case.
 > GitHub repo. (You can also access the [source code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
 
 ```js
-var myScript = document.querySelector('script');
-var myPre = document.querySelector('pre');
-var playButton = document.querySelector('button');
+const myScript = document.querySelector("script");
+const myPre = document.querySelector("pre");
+const playButton = document.querySelector("button");
 
 // Create AudioContext and buffer source
-var audioCtx = new AudioContext();
-source = audioCtx.createBufferSource();
+const audioCtx = new AudioContext();
+const source = audioCtx.createBufferSource();
 
 // Create a ScriptProcessorNode with a bufferSize of 4096 and a single input and output channel
-var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
+const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
 console.log(scriptNode.bufferSize);
 
 // load in an audio track via XHR and decodeAudioData
 
 function getData() {
   request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
-    var audioData = request.response;
+  request.open("GET", "viper.ogg", true);
+  request.responseType = "arraybuffer";
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-      myBuffer = buffer;
-      source.buffer = myBuffer;
-    },
-    function(e){"Error with decoding audio data" + e.err});
-  }
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
+        myBuffer = buffer;
+        source.buffer = myBuffer;
+      },
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
   request.send();
 }
 
 // Give the node a function to process audio events
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
+scriptNode.onaudioprocess = (audioProcessingEvent) => {
   // The input buffer is the song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
+  const inputBuffer = audioProcessingEvent.inputBuffer;
 
   // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
+  const outputBuffer = audioProcessingEvent.outputBuffer;
 
   // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
+  for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
+    const inputData = inputBuffer.getChannelData(channel);
+    const outputData = outputBuffer.getChannelData(channel);
 
     // Loop through the 4096 samples
-    for (var sample = 0; sample < inputBuffer.length; sample++) {
+    for (let sample = 0; sample < inputBuffer.length; sample++) {
       // make output equal to the same as the input
       outputData[sample] = inputData[sample];
 
       // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
     }
   }
-}
+};
 
 getData();
 
 // wire up play button
-playButton.onclick = function() {
+playButton.onclick = () => {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
-}
+};
 
 // When the buffer source stops playing, disconnect everything
-source.onended = function() {
+source.onended = () => {
   source.disconnect(scriptNode);
   scriptNode.disconnect(audioCtx.destination);
-}
+};
 ```
 
 ## Specifications

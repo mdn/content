@@ -1,6 +1,7 @@
 ---
 title: VRLayerInit.rightBounds
 slug: Web/API/VRLayerInit/rightBounds
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -12,6 +13,7 @@ tags:
   - WebVR
   - rightBounds
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 The **`rightBounds`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the right texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.

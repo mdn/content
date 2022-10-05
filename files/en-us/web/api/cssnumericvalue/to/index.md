@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.to()
 slug: Web/API/CSSNumericValue/to
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - to()
 browser-compat: api.CSSNumericValue.to
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`to()`** method of the
@@ -20,7 +22,7 @@ another.
 
 ## Syntax
 
-```js
+```js-nolint
 to(unit)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.referrer
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.referrer`** property returns the [URI](https://www.w3.org/Addressing/#background) of the page that linked to

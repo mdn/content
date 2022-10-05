@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.store()
 slug: Web/API/CredentialsContainer/store
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API
@@ -11,7 +12,8 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.store
 ---
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+
+{{APIRef("Credential Management API")}}
 
 The **`store()`** method of the
 {{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
@@ -22,7 +24,7 @@ The **`store()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 store(credentials)
 ```
 

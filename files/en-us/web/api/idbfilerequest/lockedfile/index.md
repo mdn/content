@@ -1,6 +1,7 @@
 ---
 title: IDBFileRequest.lockedFile
 slug: Web/API/IDBFileRequest/lockedFile
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileRequest.lockedFile
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).

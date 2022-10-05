@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.lastPacketSentTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -18,6 +19,7 @@ tags:
   - lastPacketSentTImestamp
 browser-compat: api.RTCIceCandidatePairStats.lastPacketSentTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

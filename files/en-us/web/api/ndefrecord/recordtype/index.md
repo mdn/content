@@ -1,20 +1,23 @@
 ---
 title: NDEFRecord.recordType
 slug: Web/API/NDEFRecord/recordType
+page-type: web-api-instance-property
 tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.recordType
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`recordType`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of the record.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.recordType
 ```
 

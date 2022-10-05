@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
+page-type: web-api-instance-property
 tags:
   - API
   - Feature Policy
@@ -8,8 +9,10 @@ tags:
   - HTMLIFrameElement
   - Policy
   - Property
+  - Experimental
 browser-compat: api.HTMLIFrameElement.featurePolicy
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`featurePolicy`** read-only

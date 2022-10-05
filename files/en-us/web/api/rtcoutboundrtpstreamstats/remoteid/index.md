@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.remoteId
 slug: Web/API/RTCOutboundRtpStreamStats/remoteId
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,6 +18,7 @@ tags:
   - remoteId
 browser-compat: api.RTCOutboundRtpStreamStats.remoteId
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`remoteId`** property of the

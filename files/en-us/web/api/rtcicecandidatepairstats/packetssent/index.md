@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.packetsSent
 slug: Web/API/RTCIceCandidatePairStats/packetsSent
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -18,6 +19,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidatePairStats.packetsSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's

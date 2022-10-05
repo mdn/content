@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.audioWorklet
 slug: Web/API/BaseAudioContext/audioWorklet
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - Worklet
 browser-compat: api.BaseAudioContext.audioWorklet
 ---
+
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
 
 The `audioWorklet` read-only property of the

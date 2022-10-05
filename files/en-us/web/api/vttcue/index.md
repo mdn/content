@@ -1,12 +1,14 @@
 ---
 title: VTTCue
 slug: Web/API/VTTCue
+page-type: web-api-interface
 tags:
   - VTTCue
   - text track
   - vtt
 browser-compat: api.VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The `VTTCue` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
@@ -55,7 +57,9 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using the {{domxref("TextTrack.addCue()")}} method, with a `VTTCue` object as the value.
 
 ```html
-<video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
 ```
 
 ### CSS

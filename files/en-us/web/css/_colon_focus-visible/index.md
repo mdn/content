@@ -1,9 +1,10 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
+page-type: css-pseudo-class
 tags:
-  - ':focus'
-  - ':focus-visible'
+  - ":focus"
+  - ":focus-visible"
   - CSS
   - Layout
   - Pseudo-class
@@ -12,15 +13,20 @@ tags:
   - Web
 browser-compat: css.selectors.focus-visible
 ---
+
 {{CSSRef}}
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-visible.html", "tabbed-shorter")}}
 
 This selector is useful to provide a different focus indicator based on the user's input modality (mouse vs. keyboard).
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:focus-visible
+```
 
 ## Examples
 
@@ -29,16 +35,17 @@ This selector is useful to provide a different focus indicator based on the user
 In this example, the `:focus-visible` selector uses the UA's behavior to determine when to match. Compare what happens when you click on the different controls with a mouse, versus when you tab through them using a keyboard. Note the difference in behavior from elements styled with `:focus`.
 
 ```html
-<input value="Default styles"><br>
-<button>Default styles</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Default styles" /><br />
+<button>Default styles</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 
@@ -53,42 +60,38 @@ input, button {
 
 {{EmbedLiveSample("Basic_example", "100%", 300)}}
 
-### Selectively showing the focus indicator
+### Providing a :focus fallback
 
-A custom control, such as a custom element button, can use `:focus-visible` to selectively apply a focus indicator only on keyboard-focus. This matches the native focus behavior for controls like {{htmlelement("button")}}.
+If your code has to work in old browser versions that do not support `:focus-visible`, check supports of `:focus-visible` with {{cssxref("@supports")}} and repeat the same focus styling in it, but inside a `:focus` rule. Note that even if you do not specify anything at all for `:focus`, old browsers will simply display the native outline, which can be enough.
 
 ```html
-<custom-button tabindex="0" role="button">Click Me</custom-button>
+<button class="button with-fallback" type="button">
+    Button with fallback
+</button>
+<button class="button without-fallback" type="button">
+  Button without fallback
+</button>
 ```
 
 ```css
-custom-button {
-  display: inline-block;
+.button {
   margin: 10px;
+  border: 2px solid darkgray;
+  border-radius: 4px;
 }
 
-custom-button:focus {
-  /* Provide a fallback style for browsers
-     that don't support :focus-visible */
-  outline: 2px solid red;
-  background: lightgrey;
+.button:focus-visible {
+  /* Draw the focus when :focus-visible is supported */
+  outline: 3px solid deepskyblue;
+  outline-offset: 3px;
 }
 
-@supports selector(:focus-visible) {
-  custom-button:focus {
-    /* Remove the focus indicator on mouse-focus for browsers
-       that do support :focus-visible */
-    outline: none;
-    background: transparent;
+@supports not selector(:focus-visible) {
+  .button.with-fallback:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
   }
-}
-
-custom-button:focus-visible {
-  /* Draw a very noticeable focus style for
-     keyboard-focus on browsers that do support
-     :focus-visible */
-  outline: 4px dashed darkorange;
-  background: transparent;
 }
 ```
 

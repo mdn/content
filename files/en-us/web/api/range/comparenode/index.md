@@ -1,6 +1,7 @@
 ---
 title: Range.compareNode()
 slug: Web/API/Range/compareNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - compareNode
 browser-compat: api.Range.compareNode
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_Header}}
 
 The **`Range.compareNode()`** returns a constant indicating the
@@ -39,15 +41,15 @@ The following function can be used as replacement:
 
 ```js
 function rangeCompareNode(range, node) {
-  var nodeRange = node.ownerDocument.createRange();
+  const nodeRange = node.ownerDocument.createRange();
   try {
     nodeRange.selectNode(node);
   }
   catch (e) {
     nodeRange.selectNodeContents(node);
   }
-  var nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) == 1;
-  var nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) == -1;
+  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
+  const nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
 
   if (nodeIsBefore && !nodeIsAfter)
     return 0;
@@ -62,7 +64,7 @@ function rangeCompareNode(range, node) {
 
 ## Syntax
 
-```js
+```js-nolint
 compareNode(referenceNode)
 ```
 

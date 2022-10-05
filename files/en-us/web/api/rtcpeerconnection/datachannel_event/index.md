@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: datachannel event'
 slug: Web/API/RTCPeerConnection/datachannel_event
+page-type: web-api-event
 tags:
   - Channels
   - Connection
@@ -17,6 +18,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnection.datachannel_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`datachannel`** event is sent to an {{domxref("RTCPeerConnection")}} instance when an {{domxref("RTCDataChannel")}} has been added to the connection, as a result of the remote peer calling {{domxref("RTCPeerConnection.createDataChannel()")}}.
@@ -30,9 +32,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('datachannel', event => { });
+addEventListener('datachannel', (event) => { });
 
-ondatachannel = event => { };
+ondatachannel = (event) => { };
 ```
 
 ## Event type
@@ -53,7 +55,7 @@ _Also inherits properties from {{DOMxRef("Event")}}._
 This example sets up a function that handles `datachannel` events by gathering the information needed to communicate with the newly added {{domxref("RTCDataChannel")}} and by adding event handlers for the events that occur on that channel.
 
 ```js
-pc.addEventListener("datachannel", ev => {
+pc.addEventListener("datachannel", (ev) => {
   receiveChannel = ev.channel;
   receiveChannel.onmessage = myHandleMessage;
   receiveChannel.onopen = myHandleOpen;
@@ -66,7 +68,7 @@ pc.addEventListener("datachannel", ev => {
 This same code can also instead use the {{domxref("RTCPeerConnection")}} interface's `ondatachannel` event handler property, like this:
 
 ```js
-pc.ondatachannel = ev => {
+pc.ondatachannel = (ev) => {
   receiveChannel = ev.channel;
   receiveChannel.onmessage = myHandleMessage;
   receiveChannel.onopen = myHandleOpen;

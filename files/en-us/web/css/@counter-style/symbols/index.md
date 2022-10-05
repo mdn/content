@@ -1,6 +1,7 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
+page-type: css-at-rule-descriptor
 tags:
   - '@counter-style'
   - At-rule descriptor
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.symbols
 ---
+
 {{CSSRef}}
 
 The **`symbols`** [CSS](/en-US/docs/Web/CSS) descriptor is used to specify the symbols that the specified counter system will use to construct counter representations.
@@ -48,7 +50,14 @@ The `symbols` descriptor must be specified when the value of the {{cssxref('@cou
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol>+
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 

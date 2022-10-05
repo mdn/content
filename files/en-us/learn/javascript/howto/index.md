@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
@@ -25,9 +26,9 @@ Some common built-in browser functions that cause problems are:
 | `getElementsByClassName()` | `getElementByClassName()` |
 | `getElementById()`         | `getElementsById()`       |
 
-### Semi-colon position
+### Semicolon position
 
-You need to make sure you don't place any semi-colons incorrectly. For example:
+You need to make sure you don't place any semicolons incorrectly. For example:
 
 | Correct                     | Wrong                       |
 | --------------------------- | --------------------------- |
@@ -41,8 +42,8 @@ One of the most common errors is to declare the function, but not call it anywhe
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 This code won't do anything unless you call it with the following statement:
@@ -73,9 +74,9 @@ With [Objects](/en-US/docs/Learn/JavaScript/Objects), however, you need to take 
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## Basic definitions
@@ -85,9 +86,6 @@ const myObject = {
 - [What are strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings)
 - [What is an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array)
 - [What is a loop?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-
-<!---->
-
 - [What is a function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
 - [What is an event?](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [What is an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#object_basics)
@@ -162,7 +160,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [How do you run the same bit of code over and over again?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
 - [How do you exit a loop before the end if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#exiting_loops_with_break)
 - [How do you skip to the next iteration of a loop if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#skipping_iterations_with_continue)
-- [How do you use while and do ... while loops?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
+- [How do you use while and do...while loops?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
 
 ## Intermediate use cases
 
@@ -198,7 +196,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 
 - [What are event handlers and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_handler_properties)
 - [What are inline event handlers?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_%e2%80%94_don%27t_use_these)
-- [What does the `addEventListener()` function do, and how do you use it?](</en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener()_and_removeeventlistener()>)
+- [What does the `addEventListener()` function do, and how do you use it?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener)
 - [Which mechanism should I use to add event code to my web pages?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#what_mechanism_should_i_use)
 - [What are event objects, and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
 - [How do you prevent default event behavior?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior)

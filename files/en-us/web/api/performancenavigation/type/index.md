@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -12,6 +13,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceNavigation.type
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 The legacy

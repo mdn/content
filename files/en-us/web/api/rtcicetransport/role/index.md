@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.role
 slug: Web/API/RTCIceTransport/role
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceTransport.role
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**

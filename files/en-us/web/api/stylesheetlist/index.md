@@ -1,12 +1,14 @@
 ---
 title: StyleSheetList
 slug: Web/API/StyleSheetList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
   - StyleSheetList
 browser-compat: api.StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 The `StyleSheetList` interface represents a list of {{domxref("CSSStyleSheet")}} objects. An instance of this object can be returned by {{domxref("Document.styleSheets")}}.
@@ -15,7 +17,7 @@ It is an array-like object but can't be iterated over using {{jsxref("Array")}} 
 
 ## Properties
 
-- {{domxref("StyleSheetList.length")}}{{ReadOnlyInline}}
+- {{domxref("StyleSheetList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.
 
 ## Methods
@@ -28,13 +30,11 @@ It is an array-like object but can't be iterated over using {{jsxref("Array")}} 
 ### Get CSSStyleSheet objects with for loop
 
 ```js
-let i, styleSheet, styleSheets, styleSheetsNo;
-i = 0;
-styleSheets = document.styleSheets;
-styleSheetsNo = styleSheets.length;
+const styleSheet = [];
+const styleSheets = document.styleSheets;
 
-for (i; i < styleSheetsNo; i++) {
-  styleSheet = styleSheets[i];
+for (let i = 0; i < styleSheets.length; i++) {
+  styleSheet.push(styleSheets[i]);
 }
 ```
 
@@ -42,13 +42,13 @@ for (i; i < styleSheetsNo; i++) {
 
 ```js
 const allCSS = [...document.styleSheets]
-  .map(styleSheet => {
+  .map((styleSheet) => {
     try {
       return [...styleSheet.cssRules]
-        .map(rule => rule.cssText)
+        .map((rule) => rule.cssText)
         .join('');
     } catch (e) {
-      console.log('Access to stylesheet %s is denied. Ignoring...', styleSheet.href);
+      console.log('Access to stylesheet %s is denied. Ignoring…', styleSheet.href);
     }
   })
   .filter(Boolean)

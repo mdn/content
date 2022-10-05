@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.packetsFailedDecryption
 slug: Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption
+page-type: web-api-instance-property
 tags:
   - API
   - Decryption
@@ -17,6 +18,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.packetsFailedDecryption
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`packetsFailedDecryption`**

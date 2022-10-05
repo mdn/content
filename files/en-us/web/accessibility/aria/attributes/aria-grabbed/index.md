@@ -11,13 +11,14 @@ tags:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-grabbed
 ---
+
 The `aria-grabbed` state indicates an element's "grabbed" state in a drag-and-drop operation. {{deprecated_inline}}
 
 ## Description
 
 Text selections, images, and links can be dragged by default. Setting the global [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/Document/dragstart_event), means any DOM node can be made draggable as well.
 
-The `aria-grabbed` attribute was used to indicate if an element is in a "grabbed" state in a drag-and-drop operation with `aria-grabbed="true"` or if that the element is grabbable, but not currently grabbed with`aria-grabbed="false"`.
+The `aria-grabbed` attribute was used to indicate if an element is in a "grabbed" state in a drag-and-drop operation with `aria-grabbed="true"` or if that the element is grabbable, but not currently grabbed with `aria-grabbed="false"`.
 
 Setting `aria-grabbed="true"` indicated the element had been selected for dragging. Setting `aria-grabbed="false"` indicated that the element could be grabbed for a drag-and-drop operation, but is not currently grabbed.
 
@@ -51,7 +52,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}
-- {{event("dragstart")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
 - [Accessible Drag and Drop](https://dev.opera.com/articles/accessible-drag-and-drop/) by Gez Lemon
 
 <section id="Quick_links">

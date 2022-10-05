@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a new typed array (with a new
@@ -22,7 +23,7 @@ _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Refere
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)
@@ -61,7 +62,7 @@ A new typed array containing the extracted elements.
 
 ## Description
 
-The `slice` method does not alter the original typed array, but instead returns a copy of a portion of the original typed array. As typed arrays only store primitive values, the copy the `slice` method returns is always a [shallow copy](/en-US/docs/Glossary/Shallow_copy).
+The `slice` method does not alter the original typed array, but instead returns a copy of a portion of the original typed array. As typed arrays only store primitive values, the copy the `slice` method returns is always a [deep copy](/en-US/docs/Glossary/Deep_copy).
 
 If an element is changed in either typed array, the other typed array is not affected.
 
@@ -76,26 +77,6 @@ uint8.slice(2);   // Uint8Array [ 3 ]
 uint8.slice(-2);  // Uint8Array [ 2, 3 ]
 uint8.slice(0,1); // Uint8Array [ 1 ]
 ```
-
-## Polyfill
-
-Since there is no global object with the name _TypedArray_, polyfilling must be
-done on an "as needed" basis.
-
-```js
-if (!Uint8Array.prototype.slice) {
-  Object.defineProperty(Uint8Array.prototype, 'slice', {
-    value: function (begin, end)
-     {
-        return new Uint8Array(Array.prototype.slice.call(this, begin, end));
-     }
-  });
-}
-```
-
-If you need to support truly obsolete JavaScript engines that don't support
-{{jsxref("Object.defineProperty")}}, it's best not to polyfill
-`TypedArray.prototype` methods at all, as you can't make them non-enumerable.
 
 ## Specifications
 

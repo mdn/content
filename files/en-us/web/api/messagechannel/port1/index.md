@@ -1,16 +1,18 @@
 ---
 title: MessageChannel.port1
 slug: Web/API/MessageChannel/port1
+page-type: web-api-instance-property
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - Message Channel API
   - MessageChannel
   - Property
   - Reference
 browser-compat: api.MessageChannel.port1
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`port1`** read-only property of the
@@ -36,11 +38,11 @@ putting it into a paragraph. The `handleMessage` method is associated to the
 `port1` to listen when the message arrives.
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector('p');
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const ifr = document.querySelector('iframe');
+const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
@@ -64,5 +66,4 @@ function handleMessage(e) {
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

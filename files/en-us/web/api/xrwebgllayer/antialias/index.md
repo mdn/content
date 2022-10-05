@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.antialias
 slug: Web/API/XRWebGLLayer/antialias
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -21,9 +22,11 @@ tags:
   - appearance
   - augmented
   - rendering
+  - Experimental
 browser-compat: api.XRWebGLLayer.antialias
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`antialias`** is a Boolean value which is `true`
@@ -34,8 +37,8 @@ the web site or web app.
 
 ## Syntax
 
-```js
-let antialiasingSupported = xrWebGLLayer.antialias;
+```js-nolint
+xrWebGLLayer.antialias
 ```
 
 ### Value
@@ -43,8 +46,7 @@ let antialiasingSupported = xrWebGLLayer.antialias;
 A Boolean value which is `true` if the WebGL rendering layer's frame buffer
 is configured to support antialiasing. Otherwise, this property is `false`.
 
-When the [WebXR
-compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) is enabled, this value corresponds to the value of the
+When the [WebXR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) is enabled, this value corresponds to the value of the
 `antialias` property on the object returned by the WebGL context's
 {{domxref("WebGLRenderingContext.getContextAttributes", "getContentAttributes()")}}
 method.

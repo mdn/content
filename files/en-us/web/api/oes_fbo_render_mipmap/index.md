@@ -1,6 +1,7 @@
 ---
 title: OES_fbo_render_mipmap
 slug: Web/API/OES_fbo_render_mipmap
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -9,6 +10,7 @@ tags:
   - WebGL extensions
 browser-compat: api.OES_fbo_render_mipmap
 ---
+
 {{APIRef("WebGL")}}
 
 The `OES_fbo_render_mipmap` extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and makes it possible to attach any level of a texture to a framebuffer object.

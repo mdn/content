@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.ssrc
 slug: Web/API/RTCRtpStreamStats/ssrc
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,6 +17,7 @@ tags:
   - ssrc
 browser-compat: api.RTCRtpStreamStats.ssrc
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

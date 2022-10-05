@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.subarray
 ---
+
 {{JSRef}}
 
 The **`subarray()`** method returns a new _TypedArray_
@@ -22,7 +23,7 @@ offset is **exclusive**. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 subarray()
 subarray(begin)
 subarray(begin, end)
@@ -58,13 +59,13 @@ object's contents will impact the original object and vice versa.
 ### Using the subarray() method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+uint8.set([1, 2, 3]);
 
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
-var sub = uint8.subarray(0,4);
+const sub = uint8.subarray(0, 4);
 
 console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 ```

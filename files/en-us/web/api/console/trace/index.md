@@ -1,6 +1,7 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace
+page-type: web-api-instance-method
 tags:
   - API
   - Chrome
@@ -15,6 +16,7 @@ tags:
   - web console
 browser-compat: api.console.trace
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.trace()`** method outputs a stack trace to the
@@ -27,9 +29,9 @@ See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 
 ## Syntax
 
-```js
+```js-nolint
 trace()
-trace(object1, /* ..., */ objectN)
+trace(object1, /* …, */ objectN)
 ```
 
 ### Parameters

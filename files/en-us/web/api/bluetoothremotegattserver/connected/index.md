@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.connected
 slug: Web/API/BluetoothRemoteGATTServer/connected
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -11,6 +12,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTServer.connected
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.connected`** read-only

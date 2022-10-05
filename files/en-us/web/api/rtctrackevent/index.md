@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,6 +15,7 @@ tags:
   - track
 browser-compat: api.RTCTrackEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) interface **`RTCTrackEvent`** represents the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent when a new {{domxref("MediaStreamTrack")}} is added to an {{domxref("RTCRtpReceiver")}} which is part of the {{domxref("RTCPeerConnection")}}.
@@ -61,7 +63,7 @@ You can add a `track` event listener to be notified when the new track is availa
 This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID `videobox` to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.
 
 ```js
-peerConnection.addEventListener("track", e => {
+peerConnection.addEventListener("track", (e) => {
   let videoElement = document.getElementById("videobox");
   videoElement.srcObject = e.streams[0];
 }, false);

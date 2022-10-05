@@ -1,6 +1,7 @@
 ---
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.hasFocus
 ---
+
 {{APIRef}}
 
 The **`hasFocus()`** method of the {{domxref("Document")}}
@@ -22,7 +24,7 @@ active element in a document has focus.
 
 ## Syntax
 
-```js
+```js-nolint
 hasFocus()
 ```
 
@@ -52,14 +54,13 @@ try switching between the two pages.
 
 ```js
 function checkPageFocus() {
-  let body = document.querySelector('body');
-  let log = document.getElementById('log');
+  const body = document.querySelector('body');
+  const log = document.getElementById('log');
 
   if (document.hasFocus()) {
     log.textContent = 'This document has the focus.';
     body.style.background = '#fff';
-  }
-  else {
+  } else {
     log.textContent = 'This document does not have the focus.';
     body.style.background = '#ccc';
   }
@@ -87,5 +88,5 @@ setInterval(checkPageFocus, 300);
 
 ## See also
 
-- [Using
-  the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
+- {{domxref("Document.activeElement")}}
+- [Using the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

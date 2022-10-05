@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.relList
 slug: Web/API/HTMLLinkElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLinkElement.relList
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLinkElement.relList`** read-only property reflects
@@ -24,20 +26,19 @@ changed.
 
 ## Value
 
-A live {{domxref("DOMTokenList")}}.
+A live {{domxref("DOMTokenList")}} of strings.
 
 ## Examples
 
 ```js
-var links = document.getElementsByTagName("link");
-var length = links.length;
-for (var i = 0; i < length; i++) {
-  var list = links[i].relList;
-  var listLength = list.length;
+const links = document.getElementsByTagName("link");
+const length = links.length;
+for (const link of links) {
+  const listLength = list.length;
   console.log("New link found.");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  relList.forEach((relEntry) => {
+    console.log(relEntry);
+  });
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Request.body
 slug: Web/API/Request/body
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -10,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.body
 ---
+
 {{APIRef("Fetch")}}
 
 The read-only **`body`** property of the {{domxref("Request")}}
@@ -20,7 +22,7 @@ and `null` is return in these cases.
 
 ## Value
 
-A {{domxref("ReadableStream")}} or {{jsxref("null")}}.
+A {{domxref("ReadableStream")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 

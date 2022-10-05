@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.recipient
 slug: Web/API/PaymentAddress/recipient
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request
@@ -9,9 +10,12 @@ tags:
   - Property
   - Reference
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.recipient
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`recipient`** property of the
 {{domxref('PaymentAddress')}} interface returns a string containing the name of the

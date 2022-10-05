@@ -1,12 +1,14 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Node.lastChild
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`lastChild`** property of the {{domxref("Node")}} interface

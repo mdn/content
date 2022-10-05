@@ -14,6 +14,7 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
@@ -37,6 +38,8 @@ configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
 `.htaccess` file.
 
+> **Warning:** You must include the HTTPS or HTTP protocol as part of the origin.
+
 ```
 Header set Access-Control-Allow-Origin 'origin'
 ```
@@ -52,5 +55,4 @@ add_header 'Access-Control-Allow-Origin' 'origin'
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
-- [Enable CORS: I want to add CORS
-  support to my server](https://enable-cors.org/server.html)
+- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)

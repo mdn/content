@@ -13,13 +13,14 @@ tags:
   - onClosed
 browser-compat: webextensions.api.notifications.onClosed
 ---
+
 {{AddonSidebar()}}
 
 Fired when a notification is closed, either by the system or by the user.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onClosed.addListener(listener)
 browser.notifications.onClosed.removeListener(listener)
 browser.notifications.onClosed.hasListener(listener)
@@ -56,8 +57,8 @@ Events have three functions:
 In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClosed")}} event to listen for system notifications being closed. When this occurs, we log an appropriate message to the console.
 
 ```js
-browser.notifications.onClosed.addListener(function(notificationId) {
-  console.log('Notification ' + notificationId + ' has closed.');
+browser.notifications.onClosed.addListener((notificationId) => {
+  console.log(`Notification ${notificationId} has closed.`);
 });
 ```
 

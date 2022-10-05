@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.getCapabilities() static function
 slug: Web/API/RTCRtpSender/getCapabilities
+page-type: web-api-static-method
 tags:
   - API
   - Audio
@@ -18,6 +19,7 @@ tags:
   - getCapabilities
 browser-compat: api.RTCRtpSender.getCapabilities
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The _static function_
@@ -30,7 +32,7 @@ calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities(kind) //static function
 ```
 

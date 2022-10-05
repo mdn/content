@@ -1,6 +1,7 @@
 ---
 title: TextEncoderStream.encoding
 slug: Web/API/TextEncoderStream/encoding
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - Read-only
 browser-compat: api.TextEncoderStream.encoding
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`encoding`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a

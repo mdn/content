@@ -1,6 +1,7 @@
 ---
 title: Window.screen
 slug: Web/API/Window/screen
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.screen
 ---
+
 {{APIRef("CSSOM")}}
 
 The {{DOMxRef("Window")}} property **`screen`** returns a

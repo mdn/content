@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.enterKeyHint
 slug: Web/API/HTMLElement/enterKeyHint
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Keyboard
 browser-compat: api.HTMLElement.enterKeyHint
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`enterKeyHint`** property is an enumerated property defining

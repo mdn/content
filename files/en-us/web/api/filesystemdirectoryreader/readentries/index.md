@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -12,6 +13,7 @@ tags:
   - readEntries
 browser-compat: api.FileSystemDirectoryReader.readEntries
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryReader")}} interface's **`readEntries()`** method retrieves the directory entries
@@ -22,7 +24,7 @@ Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which rep
 
 ## Syntax
 
-```js
+```js-nolint
 readEntries(successCallback)
 readEntries(successCallback, errorCallback)
 ```

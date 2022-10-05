@@ -1,6 +1,7 @@
 ---
 title: Center an element
 slug: Web/CSS/Layout_cookbook/Center_an_element
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -10,7 +11,11 @@ tags:
   - centering
   - cookbook
   - flexbox
+browser-compat:
+  - css.properties.align-items
+  - css.properties.justify-content
 ---
+
 {{CSSRef}}
 
 In this recipe you will see how to center one box inside another. Centering both horizontally and vertically was difficult before flexbox, with the Box Alignment properties it is now straightforward.
@@ -37,15 +42,7 @@ In the future we may be able to center elements without needing to turn the pare
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### align-items
-
-{{Compat("css.properties.align-items")}}
-
-### justify-content
-
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## Resources on MDN
 

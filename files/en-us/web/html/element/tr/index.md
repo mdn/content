@@ -32,7 +32,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The following attributes may still be implemented in browsers but are no longer part of the HTML specification and may be missing or may not work as expected. They should be avoided.
 
-- {{HTMLAttrDef("align")}}{{deprecated_inline}}
+- {{HTMLAttrDef("align")}} {{deprecated_inline}}
 
   - : A string which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using `align` on every cell in the row individually. Possible values are:
 
@@ -51,30 +51,30 @@ The following attributes may still be implemented in browsers but are no longer 
 
     > **Note:** Instead of using the obsolete `align` attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish `left`, `center`, `right`, or `justify` alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as `"."` or `","`).
 
-- {{HTMLAttrDef("bgcolor")}}{{deprecated_inline}}
+- {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
 
-  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either an [hexadecimal `#RRGGBB` or `#RGB` value](</en-US/docs/Web/CSS/color_value#rgb()>) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
+  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either an [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
 
-    > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the [CSS](/en-US/docs/Web/CSS) property {{CSSxRef("background-color")}}.
+    > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the CSS property {{CSSxRef("background-color")}}.
 
-- {{HTMLAttrDef("char")}}{{deprecated_inline}}
+- {{HTMLAttrDef("char")}} {{deprecated_inline}}
 
-  - : A string which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+  - : A string which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
 
     > **Note:** This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
 
-- {{HTMLAttrDef("charoff")}}{{deprecated_inline}}
+- {{HTMLAttrDef("charoff")}} {{deprecated_inline}}
 
   - : A string indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the `char` attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with `char` being set to `"."`, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.
 
     > **Note:** This attribute is obsolete, and was never widely supported anyway.
 
-- {{HTMLAttrDef("valign")}}{{deprecated_inline}}
+- {{HTMLAttrDef("valign")}} {{deprecated_inline}}
 
   - : A string specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
 
     - `baseline`
-      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the {{interwiki("wikipedia", "baseline")}} of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
+      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the [baseline](https://en.wikipedia.org/wiki/Baseline) of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
     - `bottom`,
       - : Draws the text in each of the row's cells as closely as possible to the bottom edge of those cells.
     - `middle`
@@ -136,7 +136,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -210,7 +211,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -272,7 +274,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -349,9 +352,10 @@ thead > tr {
   background-color: rgb(228, 240, 245);
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 ```
 
@@ -429,9 +433,10 @@ table {
 Here we've added the {{CSSxRef("border-spacing")}} and {{CSSxRef("border-collapse")}} properties to eliminate spacing between cells and collapse borders that touch one another to be a single border instead of winding up with double borders.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 
 th {
@@ -502,7 +507,7 @@ Finally, since it's standard practice to right-justify currency values in tables
 
 ```css
 tbody > tr > td:last-of-type {
-  text-align:right;
+  text-align: right;
 }
 ```
 
@@ -588,4 +593,4 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
 - {{DOMxRef("HTMLTableRowElement")}}: the interface on which `<tr>` is based.
 - Other table-related elements:
 
-  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}},{{HTMLElement("caption")}}, {{HTMLElement("col")}}, and {{HTMLElement("colgroup")}}
+  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("caption")}}, {{HTMLElement("col")}}, and {{HTMLElement("colgroup")}}

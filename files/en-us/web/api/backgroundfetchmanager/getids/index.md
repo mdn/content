@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.getIds()
 slug: Web/API/BackgroundFetchManager/getIds
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -12,13 +13,14 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.getIds
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface returns the IDs of all registered background fetches.
 
 ## Syntax
 
-```js
+```js-nolint
 getIds()
 ```
 

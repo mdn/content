@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getActiveUniforms()
 slug: Web/API/WebGL2RenderingContext/getActiveUniforms
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getActiveUniforms
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getActiveUniforms()`** method of
@@ -17,7 +19,7 @@ active uniforms within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniforms(program, uniformIndices, pname)
 ```
 
@@ -34,8 +36,7 @@ getActiveUniforms(program, uniformIndices, pname)
 
     - `gl.UNIFORM_TYPE`
       - : Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLenum")}} indicating the [types
-        of the uniforms](/en-US/docs/Web/API/WebGLRenderingContext/getUniform#return_value).
+        {{domxref("WebGL_API/Types", "GLenum")}} indicating the [types of the uniforms](/en-US/docs/Web/API/WebGLRenderingContext/getUniform#return_value).
     - `gl.UNIFORM_SIZE`
       - : Returns an {{jsxref("Array")}} of
         {{domxref("WebGL_API/Types", "GLuint")}} indicating the sizes of the uniforms.
@@ -64,8 +65,8 @@ Depends on which information is requested using the `pname` parameter.
 ## Examples
 
 ```js
-var uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
-var uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);
+const uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
+const uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);
 ```
 
 ## Specifications

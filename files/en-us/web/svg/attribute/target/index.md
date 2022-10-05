@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.a.target
 ---
+
 {{SVGRef}}
 
 The **`target`** attribute should be used when there are multiple possible targets for the ending resource, such as when the parent document is embedded within an HTML or XHTML document, or is viewed with a tabbed browser. This attribute specifies the name of the browsing context (e.g., a browser tab or an (X)HTML iframe or object element) into which a document is to be opened when the link is activated:
@@ -17,7 +18,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 

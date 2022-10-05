@@ -1,6 +1,7 @@
 ---
 title: Navigator.storage
 slug: Web/API/Navigator/storage
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator
@@ -10,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.Navigator.storage
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`Navigator.storage`**

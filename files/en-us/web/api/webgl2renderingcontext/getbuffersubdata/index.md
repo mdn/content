@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getBufferSubData()
 slug: Web/API/WebGL2RenderingContext/getBufferSubData
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getBufferSubData
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getBufferSubData()`** method of
@@ -18,7 +20,7 @@ binding point and writes them to an {{jsxref("ArrayBuffer")}} or
 
 ## Syntax
 
-```js
+```js-nolint
 getBufferSubData(target, srcByteOffset, dstData)
 getBufferSubData(target, srcByteOffset, dstData, dstOffset)
 getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)
@@ -55,7 +57,7 @@ getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the byte offset from which to start reading
     from the buffer.
 - `dstData`
-  - : An {{domxref("ArrayBufferView")}} to copy the data to. If `dstData` is a
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object to copy the data to. If `dstData` is a
     {{jsxref("DataView")}} then `dstOffset` and `length` are
     interpreted in bytes, otherwise `dstData`'s element type is used.
 - `dstOffset` {{optional_inline}}
@@ -76,7 +78,7 @@ An `INVALID_VALUE` error is generated if:
 
 - `offset` + `returnedData.byteLength` would extend beyond the
   end of the buffer
-- `returnedData` is {{jsxref("null")}}
+- `returnedData` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 - `offset` is less than zero.
 
 An `INVALID_OPERATION` error is generated if:
@@ -88,11 +90,11 @@ An `INVALID_OPERATION` error is generated if:
 ## Examples
 
 ```js
-var buffer = gl.createBuffer();
+const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
-var arrBuffer = new ArrayBuffer(vertices.length * Float32Array.BYTES_PER_ELEMENT);
+const arrBuffer = new ArrayBuffer(vertices.length * Float32Array.BYTES_PER_ELEMENT);
 gl.getBufferSubData(gl.ARRAY_BUFFER, 0, new Float32Array(arrBuffer));
 ```
 

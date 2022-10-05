@@ -1,6 +1,7 @@
 ---
 title: Document.mozSyntheticDocument
 slug: Web/API/Document/mozSyntheticDocument
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.mozSyntheticDocument
 ---
+
 {{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 The **`Document.mozSyntheticDocument`** property indicates
@@ -25,7 +27,7 @@ This can be useful if you have a contextual menu item you only want to display f
 synthetic documents (or, conversely, for documents that aren't synthetic).
 
 ```js
-var isSynthetic = document.mozSyntheticDocument;
+const isSynthetic = document.mozSyntheticDocument;
 
 if (isSynthetic) {
   /* insert your menu item here */

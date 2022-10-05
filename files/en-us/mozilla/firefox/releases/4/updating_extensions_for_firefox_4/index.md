@@ -2,7 +2,7 @@
 title: Updating extensions for Firefox 4
 slug: Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4
 tags:
-  - '4'
+  - "4"
   - Add-ons
   - Extensions
   - Firefox
@@ -11,6 +11,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article offers details on changes in Firefox 4 that may impact existing extensions.
@@ -58,7 +59,7 @@ You can no longer pass JavaScript objects between threads. This renders the Thre
 
 ## Network redirects
 
-The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use [the new API](</en-US/docs/XPCOM_Interface_Reference/nsIChannelEventSink#asyncOnChannelRedirect()>).
+The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use the new API `asyncOnChannelRedirect`.
 
 ## XPI unpacking
 

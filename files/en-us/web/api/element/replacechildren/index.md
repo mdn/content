@@ -1,6 +1,7 @@
 ---
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - replaceChildren
 browser-compat: api.Element.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.replaceChildren()`** method replaces the
@@ -19,10 +21,10 @@ can be string or {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceChildren(param1)
 replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* ... ,*/ paramN)
+replaceChildren(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
@@ -95,9 +97,7 @@ look something like this:
   <div>
     <label for="yes">Yes please!</label>
 
-    <select id="yes" multiple size="10">
-
-    </select>
+    <select id="yes" multiple size="10"></select>
   </div>
 </main>
 ```
@@ -114,7 +114,8 @@ div {
   margin-right: 20px;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 

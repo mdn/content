@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.entries
 ---
+
 {{APIRef("URL API")}}
 
 The **`entries()`** method of the
@@ -21,7 +23,7 @@ string objects.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -37,11 +39,11 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
-for(var pair of searchParams.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (const [key, value] of searchParams.entries()) {
+   console.log(`${key}, ${value}`);
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.drawBuffers()
 slug: Web/API/WebGL2RenderingContext/drawBuffers
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawBuffers
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.drawBuffers()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) defines draw buffers to which
@@ -17,7 +19,7 @@ currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
 
 ## Syntax
 
-```js
+```js-nolint
 drawBuffers(buffers)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue
 slug: Web/API/CSSNumericValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSNumericValue
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSNumericValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents operations that all numeric values can perform.
@@ -40,30 +42,30 @@ None.
 
 ### Instance methods
 
-- {{domxref('CSSNumericValue.add')}}
+- {{domxref('CSSNumericValue.add')}} {{Experimental_Inline}}
   - : Adds a supplied number to the `CSSNumericValue`.
-- {{domxref('CSSNumericValue.sub')}}
+- {{domxref('CSSNumericValue.sub')}} {{Experimental_Inline}}
   - : Subtracts a supplied number from the `CSSNumericValue`.
-- {{domxref('CSSNumericValue.mul')}}
+- {{domxref('CSSNumericValue.mul')}} {{Experimental_Inline}}
   - : Multiplies the `CSSNumericValue` by the supplied value.
-- {{domxref('CSSNumericValue.div')}}
+- {{domxref('CSSNumericValue.div')}} {{Experimental_Inline}}
   - : Divides the `CSSNumericValue` by the supplied value.
-- {{domxref('CSSNumericValue.min')}}
+- {{domxref('CSSNumericValue.min')}} {{Experimental_Inline}}
   - : Returns the minimum value passed
-- {{domxref('CSSNumericValue.max')}}
+- {{domxref('CSSNumericValue.max')}} {{Experimental_Inline}}
   - : Returns the maximum value passed
-- {{domxref('CSSNumericValue.equals')}}
+- {{domxref('CSSNumericValue.equals')}} {{Experimental_Inline}}
   - : _True_ if all the values are the exact same type and value, in the same order. Otherwise, _false._
-- {{domxref('CSSNumericValue.to')}}
+- {{domxref('CSSNumericValue.to')}} {{Experimental_Inline}}
   - : Converts `value` into another one with the specified _unit._
-- {{domxref('CSSNumericValue.toSum')}}
+- {{domxref('CSSNumericValue.toSum')}} {{Experimental_Inline}}
   - : Converts an existing `CSSNumericValue` into a {{domxref("CSSMathSum")}} object with values of a specified unit.
-- {{domxref('CSSNumericValue.type')}}
+- {{domxref('CSSNumericValue.type')}} {{Experimental_Inline}}
   - : Returns the type of `CSSNumericValue`, one of `angle`, `flex`, `frequency`, `length`, `resolution`, `percent`, `percentHint`, or `time`.
 
 ### Static methods
 
-- {{domxref('CSSNumericValue.parse')}}
+- {{domxref('CSSNumericValue.parse')}} {{Experimental_Inline}}
   - : Allows a `CSSNumericValue` to be constructed directly from a string containing CSS.
 
 ## Specifications

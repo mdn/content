@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox for Developers
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -12,7 +13,7 @@ tags:
 ### Developer Tools
 
 - A Box Model Highlighter has been implemented ({{bug(663778)}}).
-- Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this [blog post](https://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30).
+- Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this [blog post](https://web.archive.org/web/20150427210606/http://mihai.sucan.ro/mihai/blog/web-console-improvements-episode-30).
 - Support for {{domxref("console.count()")}} has been added ({{bug(922208)}}).
 
 ### CSS
@@ -68,7 +69,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0` ,  `1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})
+- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0 , 1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})
 
 ### Older versions
 

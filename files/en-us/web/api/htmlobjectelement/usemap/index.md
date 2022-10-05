@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.useMap
 slug: Web/API/HTMLObjectElement/useMap
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - useMap
 browser-compat: api.HTMLObjectElement.useMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`useMap`** property of the
@@ -20,7 +22,7 @@ reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

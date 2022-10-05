@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.registerContentScripts
 ---
+
 {{AddonSidebar()}}
 
 Registers one or more content scripts.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 await browser.scripting.registerContentScripts(
   scripts         // array
 )

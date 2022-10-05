@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.308
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
@@ -41,5 +42,6 @@ incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.
 
 ## See also
 
-- {{HTTPStatus("301", "301 Moved Permanently")}}
-- {{HTTPStatus("302", "302 Found")}}, the temporary redirect
+- {{HTTPStatus("301", "301 Moved Permanently")}}, the equivalent of this status code, but that may
+  change the method used when it is not a {{HTTPMethod("GET")}}.
+- {{HTTPStatus("302", "302 Found")}}, a temporary redirect

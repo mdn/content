@@ -1,6 +1,7 @@
 ---
 title: CSSTranslate.x
 slug: Web/API/CSSTranslate/x
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSTranslate.x
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`x`** property of the

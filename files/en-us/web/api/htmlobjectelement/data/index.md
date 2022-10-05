@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.data
 slug: Web/API/HTMLObjectElement/data
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - data
 browser-compat: api.HTMLObjectElement.data
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`data`** property of the
@@ -20,7 +22,7 @@ of a resource's data.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.groupId
 slug: Web/API/MediaTrackSupportedConstraints/groupId
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -14,6 +15,7 @@ tags:
   - groupId
 browser-compat: api.MediaTrackSupportedConstraints.groupId
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
@@ -37,8 +39,7 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
@@ -48,18 +49,14 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().groupId) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().groupId;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

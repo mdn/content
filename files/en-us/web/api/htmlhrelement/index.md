@@ -1,6 +1,7 @@
 ---
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLHRElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLHRElement`** interface provides special properties (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("hr")}} elements.

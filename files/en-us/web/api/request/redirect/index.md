@@ -1,6 +1,7 @@
 ---
 title: Request.redirect
 slug: Web/API/Request/redirect
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -10,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.redirect
 ---
+
 {{APIRef("Fetch")}}
 
 The **`redirect`** read-only property of the {{domxref("Request")}} interface contains the mode for how redirects are handled.
@@ -29,8 +31,8 @@ If not specified when the request is created, it takes the default value of `fol
 In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request `redirect` value in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.redirect;
+const myRequest = new Request('flowers.jpg');
+const myCred = myRequest.redirect;
 ```
 
 ## Specifications

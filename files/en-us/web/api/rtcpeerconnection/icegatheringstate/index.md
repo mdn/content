@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -10,6 +11,7 @@ tags:
   - iceGatheringState
 browser-compat: api.RTCPeerConnection.iceGatheringState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCPeerConnection.iceGatheringState`** returns a string
@@ -36,8 +38,8 @@ The possible values are:
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var state = pc.iceGatheringState;
+const pc = new RTCPeerConnection();
+const state = pc.iceGatheringState;
 ```
 
 ## Specifications

@@ -6,10 +6,10 @@ tags:
   - Geolocation
   - HTTP
   - header
-  - Experimental
 browser-compat: http.headers.Feature-Policy.geolocation
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header
 `geolocation` directive controls whether the current document is allowed to
@@ -25,7 +25,7 @@ accessing geolocation. This includes same-origin frames.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: geolocation <allowlist>;
 ```
 
@@ -44,7 +44,7 @@ SecureCorp Inc. wants to disable the Geolocation API within all browsing context
 except for its own origin and those whose origin is `https://example.com`. It
 can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: geolocation 'self' https://example.com
 ```
 
@@ -54,7 +54,7 @@ FastCorp Inc. wants to disable `geolocation` for all cross-origin child
 frames, except for a specific \<iframe>. It can do so by delivering the following
 HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: geolocation 'self'
 ```
 
@@ -80,5 +80,4 @@ even if those frames contain documents from the same origin.
 
 - {{HTTPHeader("Feature-Policy")}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature
-  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

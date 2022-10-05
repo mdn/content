@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.length
 slug: Web/API/CSSTransformValue/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSS T
@@ -12,6 +13,7 @@ tags:
   - length
 browser-compat: api.CSSTransformValue.length
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`length`** property of the

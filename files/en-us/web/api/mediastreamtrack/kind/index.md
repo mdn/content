@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.kind
 slug: Web/API/MediaStreamTrack/kind
+page-type: web-api-instance-property
 tags:
   - Media Capture and Streams
   - MediaStreamTrack
@@ -11,20 +12,13 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.kind
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack.kind`**
-read-only property returns a string set to `"audio"` if
-the track is an audio track and to `"video"`, if it is a video
-track. It doesn't change if the track is disassociated from its source.
+The **`MediaStreamTrack.kind`** read-only property returns a string set to `"audio"` if the track is an audio track and to `"video"`, if it is a video track.
+It doesn't change if the track is disassociated from its source.
 
-## Syntax
-
-```js
-const type = track.kind
-```
-
-### Value
+## Value
 
 The possible values are a string with one of the following values:
 

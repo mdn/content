@@ -1,6 +1,7 @@
 ---
 title: MediaSource.setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -14,7 +15,8 @@ tags:
   - setLiveSeekableRange()
 browser-compat: api.MediaSource.setLiveSeekableRange
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`setLiveSeekableRange()`** method of the
 {{domxref("MediaSource")}} interface sets the range that the user can seek to in the
@@ -22,7 +24,7 @@ media element.
 
 ## Syntax
 
-```js
+```js-nolint
 setLiveSeekableRange(start, end)
 ```
 

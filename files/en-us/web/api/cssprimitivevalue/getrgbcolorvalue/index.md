@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -9,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getRGBColorValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getRGBColorValue()`** method of the
@@ -27,7 +29,7 @@ Modification to the corresponding style property can be achieved using the
 
 ## Syntax
 
-```js
+```js-nolint
 getRGBColorValue()
 ```
 
@@ -48,8 +50,8 @@ An {{domxref("RGBColor")}} object representing the color value.
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("color");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("color");
 console.log(cssValue.getRGBColorValue());
 ```
 

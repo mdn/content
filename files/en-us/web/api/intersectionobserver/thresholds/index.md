@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
+page-type: web-api-instance-property
 tags:
   - API
   - Draft
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.IntersectionObserver.thresholds
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only

@@ -1,6 +1,7 @@
 ---
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding
@@ -10,17 +11,16 @@ tags:
   - TextEncoder
 browser-compat: api.TextEncoder.encoding
 ---
+
 {{APIRef("Encoding API")}}
 
-The **`TextEncoder.encoding`** read-only property returns a
-string containing the name of the encoding algorithm used by the
-specific encoder.
+The **`TextEncoder.encoding`** read-only property returns a string containing the name of the encoding algorithm used by the specific encoder.
 
 It can only have the following value `utf-8`.
 
 ## Value
 
-A string.
+A string with the value `utf-8`.
 
 ## Specifications
 

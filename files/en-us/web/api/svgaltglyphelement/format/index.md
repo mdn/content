@@ -1,8 +1,10 @@
 ---
 title: SVGAltGlyphElement.format
 slug: Web/API/SVGAltGlyphElement/format
+page-type: web-api-instance-property
 browser-compat: api.SVGAltGlyphElement.format
 ---
+
 {{APIRef("SVGAltGlyphElement")}}
 
 {{Deprecated_header}}
@@ -16,9 +18,9 @@ of the font.
 
 ## Syntax
 
-```js
-string = myGlyph.format;
- myGlyph.format = string;
+```js-nolint
+string = myGlyph.format
+myGlyph.format = string
 ```
 
 ### Value

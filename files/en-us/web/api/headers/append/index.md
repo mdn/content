@@ -1,6 +1,7 @@
 ---
 title: Headers.append()
 slug: Web/API/Headers/append
+page-type: web-api-instance-method
 tags:
   - API
   - Append
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.append
 ---
+
 {{APIRef("Fetch")}}
 
 The **`append()`** method of the {{domxref("Headers")}}
@@ -27,7 +29,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
+```js-nolint
 append(name, value)
 ```
 
@@ -47,7 +49,7 @@ None ({{jsxref("undefined")}}).
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using `append()`:

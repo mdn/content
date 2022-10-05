@@ -1,6 +1,7 @@
 ---
 title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
+page-type: web-api-constructor
 tags:
   - API
   - Background Sync
@@ -11,13 +12,14 @@ tags:
   - SyncEvent
 browser-compat: api.SyncEvent.SyncEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`SyncEvent()`** constructor creates a new {{domxref("SyncEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new SyncEvent(type, options)
 ```
 

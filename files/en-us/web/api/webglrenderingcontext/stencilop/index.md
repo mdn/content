@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilOp()
 slug: Web/API/WebGLRenderingContext/stencilOp
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilOp
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.stencilOp()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets both the front and back-facing
@@ -16,7 +18,7 @@ stencil test actions.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilOp(fail, zfail, zpass)
 ```
 

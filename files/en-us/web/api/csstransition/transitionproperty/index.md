@@ -1,6 +1,7 @@
 ---
 title: CSSTransition.transitionProperty
 slug: Web/API/CSSTransition/transitionProperty
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -9,7 +10,8 @@ tags:
   - Reference
 browser-compat: api.CSSTransition.transitionProperty
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations API")}}
 
 The **`transitionProperty`** property of the
 {{domxref("CSSTransition")}} interface returns the **expanded transition property

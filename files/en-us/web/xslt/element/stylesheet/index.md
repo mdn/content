@@ -8,6 +8,7 @@ tags:
   - XSLT
 spec-urls: https://www.w3.org/TR/xslt-30/#stylesheet-element
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}
 
 The `<xsl:stylesheet>` element (or the equivalent `<xsl:transform>` element) is the outermost element of a stylesheet.

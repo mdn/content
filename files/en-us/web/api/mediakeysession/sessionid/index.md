@@ -1,10 +1,10 @@
 ---
 title: MediaKeySession.sessionId
 slug: Web/API/MediaKeySession/sessionId
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - NeedsExample
   - Property
@@ -12,6 +12,7 @@ tags:
   - sessionId
 browser-compat: api.MediaKeySession.sessionId
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeySession.sessionId`** is a read-only property

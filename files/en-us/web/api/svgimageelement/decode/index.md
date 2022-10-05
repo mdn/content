@@ -1,10 +1,10 @@
 ---
 title: SVGImageElement.decode()
 slug: Web/API/SVGImageElement/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Decode
-  - Experimental
   - Image
   - Method
   - NeedsExample
@@ -15,6 +15,7 @@ tags:
   - asynchronous
 browser-compat: api.SVGImageElement.decode
 ---
+
 {{APIRef("SVG")}}
 
 The **`decode()`** method of the
@@ -24,7 +25,7 @@ for use.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 ```
 

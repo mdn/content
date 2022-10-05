@@ -1,6 +1,7 @@
 ---
 title: CSSNamespaceRule.prefix
 slug: Web/API/CSSNamespaceRule/prefix
+page-type: web-api-instance-property
 tags:
   - API
   - CSSNamespaceRule
@@ -10,6 +11,7 @@ tags:
   - prefix
 browser-compat: api.CSSNamespaceRule.prefix
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only **`prefix`** property of the {{domxref("CSSNamespaceRule")}} returns a string with the name of the prefix associated to this namespace. If there is no such prefix, it returns an empty string.
@@ -29,8 +31,8 @@ The stylesheet includes two namespace rules. The first has no prefix the second 
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].namespaceURI); an empty string ""
-console.log(myRules[1].namespaceURI); "svg"
+console.log(myRules[0].namespaceURI); // an empty string ""
+console.log(myRules[1].namespaceURI); // "svg"
 ```
 
 ## Specifications

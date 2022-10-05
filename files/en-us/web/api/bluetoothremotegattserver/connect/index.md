@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - connect()
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The
@@ -20,7 +22,7 @@ script execution environment to connect to `this.device`.
 
 ## Syntax
 
-```js
+```js-nolint
 connect()
 ```
 

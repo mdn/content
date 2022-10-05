@@ -1,14 +1,16 @@
 ---
 title: CSS Charsets
 slug: Web/CSS/CSS_Charsets
+page-type: css-module
 tags:
   - CSS
   - CSS Charsets
   - Guide
   - Overview
   - Reference
-spec-urls: https://www.w3.org/TR/CSS22/syndata.html#x57
+browser-compat: css.at-rules.charset
 ---
+
 {{CSSRef}}
 
 **CSS Charsets** is a module of CSS that lets you specify the character set used in the style sheet.
@@ -25,6 +27,4 @@ spec-urls: https://www.w3.org/TR/CSS22/syndata.html#x57
 
 ## Browser compatibility
 
-### `@charset` rule
-
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

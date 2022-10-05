@@ -1,6 +1,7 @@
 ---
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.surroundContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.surroundContents()`** method moves content of the
@@ -26,7 +28,7 @@ instead the operation will fail.
 
 ## Syntax
 
-```js
+```js-nolint
 surroundContents(newParent)
 ```
 

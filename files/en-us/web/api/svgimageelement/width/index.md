@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.width
 slug: Web/API/SVGImageElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -13,6 +14,7 @@ tags:
   - width
 browser-compat: api.SVGImageElement.width
 ---
+
 {{APIRef("SVG")}}
 
 The **`width`** read-only property of the

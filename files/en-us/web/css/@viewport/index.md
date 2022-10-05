@@ -1,8 +1,9 @@
 ---
-title: '@viewport'
+title: "@viewport"
 slug: Web/CSS/@viewport
+page-type: css-at-rule
 tags:
-  - '@viewport'
+  - "@viewport"
   - At-rule
   - CSS
   - Deprecated
@@ -11,9 +12,11 @@ tags:
   - Reference
   - Screen Layout
   - viewport
+  - Non-standard
 browser-compat: css.at-rules.viewport
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 > **Note:** See <https://github.com/w3c/csswg-drafts/issues/4766> for discussion around @viewport's removal from the standards track.
 
@@ -68,7 +71,11 @@ Browser support for `@viewport` is weak at this time, with support being largely
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@viewport {
+  <group-rule-body>
+}
+```
 
 ## Examples
 

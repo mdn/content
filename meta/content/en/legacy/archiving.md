@@ -18,8 +18,7 @@ you can follow the below steps to unarchive it:
   the [Archived content](https://github.com/mdn/archived-content/) repo,
   the structure of which is the same as this repo (except that there are
   also locale directories present other than `en-US`). As an example:
-  - Take the archived [Mobile developer challenge](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge)
-    page, which is at the URL `https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge`.
+  - Take the archived 'Mobile developer challenge' page, which was at the URL `https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge`.
   - This page's source code is at [https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html](https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html).
 - To unarchive the page, you need to open a pull request to move the page's
   directory into the appropriate place inside this repo, and update the
@@ -30,7 +29,7 @@ you can follow the below steps to unarchive it:
 > When removing the page from MDN, remember to use the [delete command](#deleting-a-document).
 
 **Note:** You can have an archived page with non-archived pages below it in the
-hierarchy, and vice-versa. To achieve this you need to have the same directory
+hierarchy, and vice versa. To achieve this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is
 in. As an example, compare the [archived-content mozilla directory](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla)

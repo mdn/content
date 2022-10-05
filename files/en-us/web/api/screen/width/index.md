@@ -1,6 +1,7 @@
 ---
 title: Screen.width
 slug: Web/API/Screen/width
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Screen.width
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`Screen.width`** read-only property returns the width of

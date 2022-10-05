@@ -1,6 +1,7 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.scripts
 ---
+
 {{APIRef("DOM")}}
 
 The **`scripts`** property of the {{domxref("Document")}}

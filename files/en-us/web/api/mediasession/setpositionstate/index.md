@@ -1,6 +1,7 @@
 ---
 title: MediaSession.setPositionState()
 slug: Web/API/MediaSession/setPositionState
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -18,6 +19,7 @@ tags:
   - speed
 browser-compat: api.MediaSession.setPositionState
 ---
+
 {{APIRef("Media Session API")}}
 
 The {{domxref("MediaSession")}} method
@@ -32,7 +34,7 @@ Call this method on the `navigator` object's
 
 ## Syntax
 
-```js
+```js-nolint
 setPositionState()
 setPositionState(stateDict)
 ```
@@ -88,7 +90,7 @@ We can use this function when updating {{domxref('MediaMetadata', 'media session
   metadata')}} and within callbacks for actions, such as below.
 
 ```js
-navigator.mediaSession.setActionHandler('seekbackward', details => {
+navigator.mediaSession.setActionHandler('seekbackward', (details) => {
 
   // our time to skip
   const skipTime = details.seekOffset || 10;

@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.keys()
 slug: Web/API/URLSearchParams/keys
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.keys
 ---
+
 {{APIRef("URL API")}}
 
 The **`keys()`** method of the {{domxref("URLSearchParams")}}
@@ -20,7 +22,7 @@ objects.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -36,10 +38,10 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the keys
-for(var key of searchParams.keys()) {
+for (const key of searchParams.keys()) {
   console.log(key);
 }
 ```

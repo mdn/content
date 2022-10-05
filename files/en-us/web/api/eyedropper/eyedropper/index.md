@@ -1,20 +1,23 @@
 ---
 title: EyeDropper()
 slug: Web/API/EyeDropper/EyeDropper
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - EyeDropper
+  - Experimental
 browser-compat: api.EyeDropper.EyeDropper
 ---
+
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new EyeDropper()
 ```
 

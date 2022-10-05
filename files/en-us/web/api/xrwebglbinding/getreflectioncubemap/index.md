@@ -1,6 +1,7 @@
 ---
 title: XRWebGLBinding.getReflectionCubeMap()
 slug: Web/API/XRWebGLBinding/getReflectionCubeMap
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -8,9 +9,11 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.getReflectionCubeMap
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getReflectionCubeMap()`** method of the {{domxref("XRWebGLBinding")}} interface returns a {{domxref("WebGLTexture")}} object containing a reflection cube map texture.
 
@@ -18,7 +21,7 @@ The texture format is specified by the session's `reflectionFormat`. See the `op
 
 ## Syntax
 
-```js
+```js-nolint
 getReflectionCubeMap(lightProbe)
 ```
 
@@ -41,7 +44,7 @@ If the `rgba16f` format is used, enable the {{domxref("OES_texture_half_float")}
 const glBinding = new XRWebGLBinding(xrSession, gl);
 gl.getExtension('OES_texture_half_float'); // if rgba16f is the preferredReflectionFormat
 
-xrSession.requestLightProbe().then(function (lightProbe) {
+xrSession.requestLightProbe().then((lightProbe) => {
   lightProbe.addEventListener('reflectionchange', () => {
     glBinding.getReflectionCubeMap(lightProbe);
   });

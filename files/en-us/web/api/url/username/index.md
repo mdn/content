@@ -1,6 +1,7 @@
 ---
 title: URL.username
 slug: Web/API/URL/username
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - username
 browser-compat: api.URL.username
 ---
+
 {{ApiRef("URL API")}}
 
 The **`username`** property of the {{domxref("URL")}} interface

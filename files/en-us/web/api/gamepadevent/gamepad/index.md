@@ -1,6 +1,7 @@
 ---
 title: GamepadEvent.gamepad
 slug: Web/API/GamepadEvent/gamepad
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.GamepadEvent.gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadEvent.gamepad`** property of the
@@ -25,16 +27,12 @@ The `gamepad` property being called on a fired
 {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} event.
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
 });
 ```
-
-## Value
-
-A {{domxref("Gamepad")}} object.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -8,8 +9,9 @@ tags:
   - Data Type
   - Reference
   - display-box
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-box
+browser-compat: css.properties.display.contents
 ---
+
 {{CSSRef}}
 
 These keywords define whether an element generates display boxes at all.
@@ -34,6 +36,10 @@ Current implementations in most browsers will remove from the [accessibility tre
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -96,9 +102,7 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
 
 ## Browser compatibility
 
-### Support of contents
-
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## See also
 

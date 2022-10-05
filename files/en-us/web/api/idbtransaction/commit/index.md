@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.commit()
 slug: Web/API/IDBTransaction/commit
+page-type: web-api-instance-method
 tags:
   - API
   - IDBTransaction
@@ -10,6 +11,7 @@ tags:
   - commit
 browser-compat: api.IDBTransaction.commit
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`commit()`** method of the {{domxref("IDBTransaction")}} interface commits the transaction if it is called on an active transaction.
@@ -22,7 +24,7 @@ If it is called on a transaction that is not active, it throws an `InvalidStateE
 
 ## Syntax
 
-```js
+```js-nolint
 commit()
 ```
 
@@ -42,25 +44,27 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
+const note = document.getElementById('notifications');
+
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["myDB"], "readwrite");
+const transaction = db.transaction(["myDB"], "readwrite");
 
 // report on the success of opening the transaction
-transaction.oncomplete = event => {
+transaction.oncomplete = (event) => {
   note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
-transaction.onerror = event {
+transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
 // create an object store on the transaction
-var objectStore = transaction.objectStore("myObjStore");
+const objectStore = transaction.objectStore("myObjStore");
 
 // add our newItem object to the object store
-var objectStoreRequest = objectStore.add(newItem[0]);
+const objectStoreRequest = objectStore.add(newItem[0]);
 
-objectStoreRequest.onsuccess = event => {
+objectStoreRequest.onsuccess = (event) => {
   // report the success of the request (this does not mean the item
   // has been stored successfully in the DB - for that you need transaction.onsuccess)
   note.innerHTML += '<li>Request successful.</li>';
@@ -86,4 +90,4 @@ transaction.commit();
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

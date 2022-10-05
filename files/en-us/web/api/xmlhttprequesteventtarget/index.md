@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
+page-type: web-api-interface
 tags:
   - AJAX
   - API
@@ -10,6 +11,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequestEventTarget
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 `XMLHttpRequestEventTarget` is the interface that describes the event handlers shared on {{domxref("XMLHttpRequest")}} and {{domxref("XMLHttpRequestUpload")}}.

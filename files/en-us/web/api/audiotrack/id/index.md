@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.id
 slug: Web/API/AudioTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.id
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`id`** property contains a

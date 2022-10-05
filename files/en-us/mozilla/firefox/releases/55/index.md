@@ -2,10 +2,11 @@
 title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
 tags:
-  - '55'
+  - "55"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 55 was released on August 8, 2017. This article lists key changes that are useful for web developers.
@@ -65,13 +66,13 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 - {{domxref("MediaQueryList")}} (and other related features) have been updated to match the latest spec. See {{bug("1354441")}}, and also see {{domxref("MediaQueryList")}} and {{domxref("MediaQueryListEvent")}}.
 - Methods of the {{domxref("DOMTokenList")}} that modify the list value now automatically trim whitespace and remove duplicate tokens ({{bug("869788")}}, also see [Trimming of whitespace and removal of duplicates](/en-US/docs/Web/API/DOMTokenList#trimming_of_whitespace_and_removal_of_duplicates)).
 - The {{domxref("HTMLInputElement")}}'s `maxLength` property can now be dynamically altered with JavaScript after the equivalent HTML has been created ({{bug(1352799)}}).
-- The {{domxref("URL.URL", "URL()")}} constructor can no longer accept a {{domxref("DOMString")}} as its base (2nd parameter) — it only accepts a {{domxref("USVString")}}. It can still use an existing {{domxref("URL")}} object for the base, which stringifies itself to the object's {{domxref("DOMString.href","href")}} attribute ({{bug(1368950)}}).
+- The {{domxref("URL.URL", "URL()")}} constructor can no longer accept a `DOMString` as its base (2nd parameter) — it only accepts a `USVString`. It can still use an existing {{domxref("URL")}} object for the base, which stringifies itself to the object's `href` attribute ({{bug(1368950)}}).
 
 #### DOM events
 
 - The event types supported by the {{domxref("Document.createEvent()")}} method have been updated as per the latest DOM spec ({{bug(1251198)}}).
-- The {{domxref("MessageEvent.origin")}} property value is now of type {{domxref("USVString")}}, not {{domxref("DOMString")}}, and the {{domxref("MessageEvent.source")}} property now takes a `MessageEventSource` value (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) ({{bug(1311324)}}).
-- The pinch-to-zoom gesture has now been mapped to the {{event("wheel")}} event plus the + `Ctrl` key. This mapping was implemented to allow developers to implement simple zooming functionality using the pinch-to-zoom gesture on mobile screens/trackpads (mousewheel + `Ctrl` commonly zooms) ({{bug(1052253)}}).
+- The {{domxref("MessageEvent.origin")}} property value is now of type `USVString`, not `DOMString`, and the {{domxref("MessageEvent.source")}} property now takes a `MessageEventSource` value (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) ({{bug(1311324)}}).
+- The pinch-to-zoom gesture has now been mapped to the {{domxref("Element/wheel_event","wheel")}} event plus the + `Ctrl` key. This mapping was implemented to allow developers to implement simple zooming functionality using the pinch-to-zoom gesture on mobile screens/trackpads (mousewheel + `Ctrl` commonly zooms) ({{bug(1052253)}}).
 
 #### Selection API
 

@@ -10,17 +10,16 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.includes
 ---
+
 {{JSRef}}
 
-The **`includes()`** method performs a case-sensitive search to determine whether one string may
-be found within another string, returning `true` or `false` as
-appropriate.
+The **`includes()`** method performs a case-sensitive search to determine whether one string may be found within another string, returning `true` or `false` as appropriate.
 
 {{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchString)
 includes(searchString, position)
 ```
@@ -28,15 +27,18 @@ includes(searchString, position)
 ### Parameters
 
 - `searchString`
-  - : A string to be searched for within `str`.
+  - : A string to be searched for within `str`. Cannot be a regex.
 - `position` {{optional_inline}}
-  - : The position within the string at which to begin searching for
-    `searchString`. (Defaults to `0`.)
+  - : The position within the string at which to begin searching for `searchString`. (Defaults to `0`.)
 
 ### Return value
 
-**`true`** if the search string is found anywhere within the
-given string; otherwise, **`false`** if not.
+**`true`** if the search string is found anywhere within the given string; otherwise, **`false`** if not.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : If `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Description
 
@@ -44,32 +46,16 @@ This method lets you determine whether or not a string includes another string.
 
 ### Case-sensitivity
 
-The `includes()` method is case sensitive. For example, the following
-expression returns `false`:
+The `includes()` method is case sensitive. For example, the following expression returns `false`:
 
 ```js
 'Blue Whale'.includes('blue')  // returns false
 ```
 
-## Polyfill
-
-This method has been added to the ECMAScript 2015 specification and may not be
-available in all JavaScript implementations yet.
-
-However, you can easily polyfill this method:
+You can work around this constraint by transforming both the original string and the search string to all lowercase:
 
 ```js
-if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
-
-    if (search instanceof RegExp) {
-      throw TypeError('first argument must not be a RegExp');
-    }
-    if (start === undefined) { start = 0; }
-    return this.indexOf(search, start) !== -1;
-  };
-}
+'Blue Whale'.toLowerCase().includes('blue')  // returns true
 ```
 
 ## Examples

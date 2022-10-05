@@ -1,6 +1,7 @@
 ---
 title: CSSPerspective.length
 slug: Web/API/CSSPerspective/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSPerspective.length
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`length`** property of the

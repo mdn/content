@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.statusCode
 slug: Web/API/SecurityPolicyViolationEvent/statusCode
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
@@ -12,6 +13,7 @@ tags:
   - statusCode
 browser-compat: api.SecurityPolicyViolationEvent.statusCode
 ---
+
 {{HTTPSidebar}}
 
 The **`statusCode`** read-only property of the

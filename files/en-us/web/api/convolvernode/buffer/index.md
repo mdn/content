@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode.buffer
 slug: Web/API/ConvolverNode/buffer
+page-type: web-api-instance-property
 tags:
   - API
   - Buffer
@@ -10,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.ConvolverNode.buffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`buffer`** property of the {{ domxref("ConvolverNode") }} interface represents a mono, stereo, or 4-channel {{domxref("AudioBuffer")}} containing the (possibly multichannel) impulse response used by the `ConvolverNode` to create the reverb effect.
@@ -25,31 +27,32 @@ An {{domxref("AudioBuffer")}}.
 ## Examples
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource;
+let concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 ajaxRequest.open('GET', 'concert-crowd.ogg', true);
 ajaxRequest.responseType = 'arraybuffer';
 
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
+ajaxRequest.onload = () => {
+  const audioData = ajaxRequest.response;
+  audioCtx.decodeAudioData(audioData, (buffer) => {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
+    }, (e) => console.error(`Error with decoding audio data: ${e.err}`));
 }
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.buffer = concertHallBuffer;
 ```

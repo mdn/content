@@ -79,7 +79,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ### Using ruby annotations
 
-This example uses ruby annotations to display the {{interwiki("wikipedia", "Romaji")}} equivalents for each character.
+This example uses ruby annotations to display the [Romaji](https://en.wikipedia.org/wiki/Romaji) equivalents for each character.
 
 ```html
 <ruby>

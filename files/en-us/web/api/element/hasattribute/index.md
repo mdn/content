@@ -1,6 +1,7 @@
 ---
 title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.hasAttribute
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.hasAttribute()`** method returns a
@@ -17,7 +19,7 @@ specified attribute or not.
 
 ## Syntax
 
-```js
+```js-nolint
 hasAttribute(name)
 ```
 
@@ -33,21 +35,10 @@ A boolean.
 ## Examples
 
 ```js
-var foo = document.getElementById("foo");
+const foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
     // do something
 }
-```
-
-## Polyfill
-
-```js
-;(function(prototype) {
-    prototype.hasAttribute = prototype.hasAttribute || function(name) {
-        return !!(this.attributes[name] &&
-                  this.attributes[name].specified);
-    }
-})(Element.prototype);
 ```
 
 ## Notes

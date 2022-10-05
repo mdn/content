@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.readable
 slug: Web/API/RTCIceCandidatePairStats/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -14,9 +15,11 @@ tags:
   - WebRTC
   - WebRTC API
   - readable
+  - Non-standard
 browser-compat: api.RTCIceCandidatePairStats.readable
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
 property **`readable`** reports whether or not the connection

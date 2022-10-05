@@ -1,14 +1,17 @@
 ---
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - NavigatorUAData
+  - Experimental
 browser-compat: api.NavigatorUAData
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
+
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`NavigatorUAData`** interface of the {{domxref('User-Agent Client Hints API')}} returns information about the browser and operating system of a user.
 
@@ -18,18 +21,18 @@ An instance of this object is returned by calling {{domxref("Navigator.userAgent
 
 ## Properties
 
-- {{domxref("NavigatorUAData.brands")}}{{ReadOnlyInline}}
+- {{domxref("NavigatorUAData.brands")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of brand information containing the browser name and version.
-- {{domxref("NavigatorUAData.mobile")}}{{ReadOnlyInline}}
+- {{domxref("NavigatorUAData.mobile")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the user-agent is running on a mobile device.
-- {{domxref("NavigatorUAData.platform")}}{{ReadOnlyInline}}
+- {{domxref("NavigatorUAData.platform")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the platform brand the user-agent is running on.
 
 ## Methods
 
-- {{domxref("NavigatorUAData.getHighEntropyValues()")}}
+- {{domxref("NavigatorUAData.getHighEntropyValues()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
-- {{domxref("NavigatorUAData.toJSON()")}}
+- {{domxref("NavigatorUAData.toJSON()")}} {{Experimental_Inline}}
   - : A _serializer_ that returns a JSON representation of the _low entropy_ properties of the `NavigatorUAData` object.
 
 ## Examples
@@ -53,7 +56,7 @@ navigator.userAgentData.getHighEntropyValues(
   "platform",
   "platformVersion",
   "fullVersionList"])
-  .then(ua => { console.log(ua) });
+  .then((ua) => { console.log(ua) });
 ```
 
 ## Specifications

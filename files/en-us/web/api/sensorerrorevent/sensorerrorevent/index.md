@@ -1,6 +1,7 @@
 ---
 title: SensorErrorEvent()
 slug: Web/API/SensorErrorEvent/SensorErrorEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.SensorErrorEvent.SensorErrorEvent
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`SensorErrorEvent`** constructor
@@ -21,7 +23,7 @@ errors thrown by any of the interfaces based on {{domxref('Sensor')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new SensorErrorEvent(type, options)
 ```
 

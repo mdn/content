@@ -1,6 +1,7 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,6 +10,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStream
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink.
@@ -23,7 +25,7 @@ This object comes with built-in backpressure and queuing.
 
 ## Properties
 
-- {{domxref("WritableStream.locked")}} {{readonlyinline}}
+- {{domxref("WritableStream.locked")}} {{ReadOnlyInline}}
   - : A boolean indicating whether the `WritableStream` is locked to a writer.
 
 ## Methods
@@ -49,9 +51,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -80,20 +80,20 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(1);
-      var view = new Uint8Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {

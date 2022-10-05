@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -17,6 +18,7 @@ tags:
   - relatedAddress
 browser-compat: api.RTCIceCandidate.relatedAddress
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`relatedAddress`** property is a
@@ -64,19 +66,16 @@ the candidate's {{domxref("RTCIceCandidate/address", "ip")}} and `relatedAddress
 ```js
 switch(candidate.type) {
   case "host":
-    console.log("Host candidate's IP address is " + candidate.ip);
+    console.log(`Host candidate's IP address is ${candidate.ip}`);
     break;
   case "srflx":
-    console.log("Server reflexive candidate's base address is " +
-        candidate.relatedAddress + "; reachable at " + candidate.ip);
+    console.log(`Server reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`);
     break;
   case "prflx":
-    console.log("Peer reflexive candidate's base address is " +
-        candidate.relatedAddress + "; reachable at " + candidate.ip);
+    console.log(`Peer reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`);
     break;
   case "relay":
-    console.log("Relay candidate's address assigned by the TURN server is " +
-        candidate.relatedAddress + "; reachable at " + candidate.ip);
+    console.log(`Relay candidate's address assigned by the TURN server is ${candidate.relatedAddress}; reachable at ${candidate.ip}`);
     break;
 }
 ```

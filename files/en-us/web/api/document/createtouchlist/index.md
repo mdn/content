@@ -1,6 +1,7 @@
 ---
 title: Document.createTouchList()
 slug: Web/API/Document/createTouchList
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -10,18 +11,20 @@ tags:
   - Mobile
   - createTouchList
   - touch
+  - Non-standard
 browser-compat: api.Document.createTouchList
 ---
-{{APIRef("DOM")}}{{Deprecated_Header}}
+
+{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef("TouchList")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 createTouchList(touch1)
 createTouchList(touch1, touch2)
-createTouchList(touch1, touch2, /* ... ,*/ touchN)
+createTouchList(touch1, touch2, /* … ,*/ touchN)
 ```
 
 ### Parameters
@@ -47,20 +50,20 @@ In following code snippet, some {{DOMxRef("Touch")}} objects are created for the
 {{DOMxRef("TouchList")}} objects.
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
 // Create some touch points
-var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 
 // Create an empty TouchList objects
-var list0 = document.createTouchList();
+const list0 = document.createTouchList();
 
 // Create a TouchList with only one Touch object
-var list1 = document.createTouchList(touch1);
+const list1 = document.createTouchList(touch1);
 
 // Create a list with two Touch objects
-var list2 = document.createTouchList(touch1, touch2);
+const list2 = document.createTouchList(touch1, touch2);
 ```
 
 ## Specifications

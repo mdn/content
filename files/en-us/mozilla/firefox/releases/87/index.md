@@ -2,11 +2,12 @@
 title: Firefox 87 for developers
 slug: Mozilla/Firefox/Releases/87
 tags:
-  - '87'
+  - "87"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 was released on March 23, 2021.
@@ -78,13 +79,12 @@ _No changes._
 
 - The work of rewriting Marionette to support Fission (site-isolation) has been finished, so the old Marionette implementation has been removed. The `marionette.actors.enabled` preference, which toggled between the new and old implementations, has therefore also been removed ({{bug(1669172)}}).
 - WebDriver commands following a call to `WebDriver:SwitchToFrame` will no longer fail with a "no such window" error if the frame's content hasn't yet finished loading ({{bug(1691348)}}).
-- After a [cross-group
-  page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element will now always raise a "stale element" error; there is no longer a chance that this action will lead to a "no such element" error ({{bug(1690308)}}).
+- After a [cross-group page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element will now always raise a "stale element" error; there is no longer a chance that this action will lead to a "no such element" error ({{bug(1690308)}}).
 - `Addon:Uninstall` now raises an `unknown error` when the id of the add-on to uninstall is unknown ({{bug(1693022)}}).
 
 ## Changes for add-on developers
 
-- [nativeMessaging](en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) is now an [optional permission](en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) ({{bug(1630415)}}).
+- [nativeMessaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) is now an [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) ({{bug(1630415)}}).
 - Added support for querying and setting color management related features with {{WebExtAPIRef("browserSettings.colorManagement")}} ({{bug(1719688)}}) and ({{bug(1714428)}}).
 
 ## Older versions

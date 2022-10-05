@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.label
 slug: Web/API/AudioTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.label
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -41,17 +43,21 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  const trackList = [];
   const wantedKinds = [
-    "main", "alternative", "main-desc", "translation", "commentary"
+    "main",
+    "alternative",
+    "main-desc",
+    "translation",
+    "commentary",
   ];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        label: track.label
+        label: track.label,
       });
     }
   });

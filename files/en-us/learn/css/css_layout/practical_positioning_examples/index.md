@@ -13,6 +13,7 @@ tags:
   - fixed
   - relative
 ---
+
 {{LearnSidebar}}
 
 This article shows how to build some real world examples to illustrate what kinds of things you can do with positioning.
@@ -40,7 +41,7 @@ This article shows how to build some real world examples to illustrate what kind
 
 The first example we'll look at is a classic tabbed info box — a very common feature used when you want to pack a lot of information into a small area. This includes information-heavy apps like strategy/war games, mobile versions of websites where the screen is narrow and space is limited, and compact information boxes where you might want to make lots of information available without having it fill the whole UI. Our simple example will look like this once we are finished:
 
-![](tabbed-info-box.png)
+![Tab 1 is selected. 'Tab 2' and 'Tab 3' are the other two tabs. Only the contents of the selected tab are visible. When a tab is selected, it's text-color changes from black to white and it's background-color changes from orange-red to saddle-brown.](tabbed-info-box.png)
 
 > **Note:** You can see the finished example running live at [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
@@ -61,17 +62,32 @@ To start with, we'd like you to make a local copy of the starting HTML file — 
     <article class="active-panel">
       <h2>The first tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>The second tab</h2>
 
-      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
     </article>
     <article>
       <h2>The third tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -157,7 +173,8 @@ Add the following CSS:
 Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -207,28 +224,27 @@ The second rule we'll add here makes it so that a panel with a `class` of `activ
 The final step to getting this feature working is to add some JavaScript. Put the following block of code, exactly as written in between your opening and closing {{htmlelement("script")}} tags (you'll find these below the HTML content):
 
 ```js
-var tabs = document.querySelectorAll('.info-box li a');
-var panels = document.querySelectorAll('.info-box article');
+const tabs = document.querySelectorAll(".info-box li a");
+const panels = document.querySelectorAll(".info-box article");
 
-for(i = 0; i < tabs.length; i++) {
-  var tab = tabs[i];
-  setTabHandler(tab, i);
+for (let i = 0; i < tabs.length; i++) {
+  setTabHandler(tabs[i], i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(i = 0; i < tabs.length; i++) {
-      tabs[i].className = '';
+  tab.onclick = () => {
+    for (const tab of tabs) {
+      tab.className = "";
     }
 
-    tab.className = 'active';
+    tab.className = "active";
 
-    for(i = 0; i < panels.length; i++) {
-      panels[i].className = '';
+    for (const panel of panels) {
+      panel.className = "";
     }
 
-    panels[tabPos].className = 'active-panel';
-  }
+    panels[tabPos].className = "active-panel";
+  };
 }
 ```
 
@@ -249,7 +265,7 @@ That's it for the first example. Keep your code open, as we'll be adding to it i
 
 In our second example, we will take our first example — our info-box — and add it into the context of a full web page. But not only that — we'll give it fixed position so that it stays in the same position in the browser window. When the main content scrolls, the info-box will stay in the same position on the screen. Our finished example will look like this:
 
-![](fixed-info-box.png)
+![Info-box is a container with 3 tabs with the first tab selected and only the contents of the first tab are displayed. It is given a fixed position. The info-box is positioned at the top left corner of the window with a width of 452 pixels. A container of fake content occupies the rest right half of the window; the fake content container is taller than the window and is scrollable. When the page is scrolled, the right-hand side container moves while the info-box stays fixed in the same position on the screen. ](fixed-info-box.png)
 
 > **Note:** You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
@@ -262,14 +278,30 @@ First of all, we need some additional HTML to represent the web site main conten
 ```html
 <section class="fake-content">
   <h1>Fake content</h1>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
 </section>
 ```
 
@@ -314,18 +346,18 @@ The final example we'll present here is a panel that slides on and off the scree
 
 Our finished example will look like this:
 
-![](hidden-sliding-panel.png)
+![A blank screen on the left 60% of the screen with a 40% width panel displaying information on the right. A 'question mark' icon is in the top-right corner. The panel slides on and off the screen at the press of this 'question mark' icon.](hidden-sliding-panel.png)
 
 > **Note:** You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
 
 As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our GitHub repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
-```css
+```html
 <label for="toggle">❔</label>
 <input type="checkbox" id="toggle">
 <aside>
 
-  ...
+…
 
 </aside>
 ```
@@ -394,14 +426,14 @@ There's a lot going on here — let's discuss it bit by bit:
 - Next, we set a fixed {{cssxref("width")}} on the panel, and make its {{cssxref("height")}} the entire height of the browser viewport.
 - We also include some horizontal {{cssxref("padding")}} to space it out a bit.
 - Next we set {{cssxref("position")}}`: fixed;` on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the {{cssxref("top")}} of the viewport, and set it so that by default it is offscreen to the {{cssxref("right")}}.
-- Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the `<label>` will check the associated checkbox! We told you it was a hack.) You will learn a lot more about...
+- Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the `<label>` will check the associated checkbox! We told you it was a hack.) You will learn a lot more about…
 
 ### Setting the checked state
 
 There is one final bit of CSS to add — put the following at the bottom of your CSS:
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```

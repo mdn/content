@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.stroke
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +26,7 @@ means that path intersections will still get filled.
 
 ## Syntax
 
-```js
+```js-nolint
 stroke()
 stroke(path)
 ```

@@ -1,10 +1,10 @@
 ---
 title: KeyframeEffect.setKeyframes()
 slug: Web/API/KeyframeEffect/setKeyframes
+page-type: web-api-instance-method
 tags:
   - API
   - Animations
-  - Experimental
   - KeyframeEffect
   - Method
   - Reference
@@ -13,13 +13,14 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.setKeyframes
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+
+{{ APIRef("Web Animations API") }}
 
 The **`setKeyframes()`** method of the {{domxref("KeyframeEffect")}} interface replaces the keyframes that make up the affected `KeyframeEffect` with a new set of keyframes.
 
 ## Syntax
 
-```js
+```js-nolint
 setKeyframes(keyframes)
 ```
 

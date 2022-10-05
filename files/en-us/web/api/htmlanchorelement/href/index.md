@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.href
 slug: Web/API/HTMLAnchorElement/href
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.href
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.href`** property is a

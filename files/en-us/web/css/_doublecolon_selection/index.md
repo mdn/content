@@ -1,6 +1,7 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout
@@ -9,15 +10,12 @@ tags:
   - Selector
 browser-compat: css.selectors.selection
 ---
+
 {{CSSRef}}
 
 The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
 
-```css
-::selection {
-  background-color: cyan;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
 
 ## Allowable properties
 
@@ -27,17 +25,14 @@ Only certain CSS properties can be used with `::selection`:
 - {{CSSxRef("background-color")}}
 - {{CSSxRef("text-decoration")}} and its associated properties
 - {{CSSxRef("text-shadow")}}
-- {{SVGAttr("stroke-color")}}, {{SVGAttr("fill-color")}} and {{SVGAttr("stroke-width")}}
+- {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}} and {{CSSxRef("-webkit-text-stroke-width")}}
 
 In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```css
-/* Legacy Firefox syntax (version 61 and below) */
-::-moz-selection
-
-{{CSSSyntax}}
+```
+::selection
 ```
 
 ## Examples

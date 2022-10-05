@@ -1,6 +1,7 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -13,9 +14,12 @@ tags:
   - gradient
 browser-compat: css.types.image.gradient.repeating-conic-gradient
 ---
+
 {{CSSRef}}
 
 The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a {{cssxref("gradient/conic-gradient","single gradient")}}) with color transitions rotated around a center point (rather than {{cssxref("gradient/repeating-radial-gradient","radiating from the center")}}).
+
+{{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
 
 ## Syntax
 
@@ -25,9 +29,9 @@ The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-U
    centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
 background: repeating-conic-gradient(
-    from 3deg at 25% 25%,
-    hsl(200, 100%, 50%) 0deg 15deg,
-    hsl(200, 100%, 60%) 10deg 30deg);
+  from 3deg at 25% 25%,
+  hsl(200, 100%, 50%) 0deg 15deg,
+  hsl(200, 100%, 60%) 10deg 30deg
 );
 ```
 
@@ -76,7 +80,7 @@ radial-gradient(red 33%, yellow 33% 66%, blue 66%);
 
 For a repeating gradient to repeat we define the first and last color stops. Like in non-repeating gradients, the first and last color stops are assumed to be 0 and either 100% or 360deg if not explicitly declared. When defaulting to these values, the repeating arc is 360 degrees, and therefore doesn't repeat.
 
-Like the non-repeating conic gradient, the color-stops are placed around a gradient arc -- the circumference of a circle, rather than on the gradient line emerging from the center of the gradient. The colors transition as if spun around the center of a circle, starting at the top if no `from <angle>` is declared, and going clockwise for the size of the angle that is the different between the largest and smallest color angle, then repeating.
+Like the non-repeating conic gradient, the color-stops are placed around a gradient arc — the circumference of a circle, rather than on the gradient line emerging from the center of the gradient. The colors transition as if spun around the center of a circle, starting at the top if no `from <angle>` is declared, and going clockwise for the size of the angle that is the different between the largest and smallest color angle, then repeating.
 
 A repeating conic gradient is specified by indicating a rotation angle, the center of the gradient, and then specifying a list of color-stops. Like non-repeating conic gradients, the color-stops of a repeating conic gradient are specified with an {{cssxref('angle')}}. Units include `deg` for degrees, `grad` for gradients, `rad` for radians, and `turn` for turns. There are 360 degrees, 400 gradians, 2π radians, and 1 turn in a circle. Browsers supporting repeating conic gradients also accept percent values, with 100% equaling 360 degrees, but this is not in the specification.
 
@@ -127,8 +131,7 @@ div {
 
 ```css
 div {
-  background-image:
-     repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
 }
 ```
 
@@ -153,7 +156,12 @@ div {
 div {
   background: repeating-conic-gradient(
     from 3deg at 25% 25%,
-    green, blue 2deg 5deg, green, yellow 15deg 18deg, green 20deg);
+    green,
+    blue 2deg 5deg,
+    green,
+    yellow 15deg 18deg,
+    green 20deg
+  );
 }
 ```
 

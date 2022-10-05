@@ -1,9 +1,9 @@
 ---
 title: Navigator.locks
 slug: Web/API/Navigator/locks
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - LockManager
   - Property
   - Reference
@@ -11,7 +11,8 @@ tags:
   - locks
 browser-compat: api.Navigator.locks
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+
+{{APIRef("Web Locks")}}
 
 The **`locks`** read-only property of
 the {{domxref("Navigator")}} interface returns a {{domxref("LockManager")}} object

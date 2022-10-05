@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.secureConnectionStart
 slug: Web/API/PerformanceTiming/secureConnectionStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -12,6 +13,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.secureConnectionStart
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.

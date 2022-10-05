@@ -1,6 +1,7 @@
 ---
 title: 'Element: copy event'
 slug: Web/API/Element/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -10,30 +11,10 @@ tags:
   - Web
 browser-compat: api.Element.copy_event
 ---
+
 {{APIRef}}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 The event's default action is to copy the selection (if any) to the clipboard.
 
@@ -43,6 +24,22 @@ However, the handler cannot _read_ the clipboard data.
 
 It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `copy` event, but this will not affect the system clipboard.
 
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('copy', (event) => { });
+
+oncopy = (event) => { };
+```
+
+## Event type
+
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
+
 ## Examples
 
 ### Live example
@@ -50,21 +47,22 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 #### HTML
 
 ```html
-<div class="source" contenteditable="true">Try copying text from this box...</div>
-<div class="target" contenteditable="true">...and pasting it into this one</div>
+<div class="source" contenteditable="true">Copy text from this box.</div>
+<div class="target" contenteditable="true">And paste it into this one.</div>
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const source = document.querySelector('div.source');

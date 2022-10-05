@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.component
 slug: Web/API/RTCIceTransport/component
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -18,6 +19,7 @@ tags:
   - component
 browser-compat: api.RTCIceTransport.component
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**

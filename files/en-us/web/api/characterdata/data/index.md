@@ -1,11 +1,13 @@
 ---
 title: CharacterData.data
 slug: Web/API/CharacterData/data
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
 browser-compat: api.CharacterData.data
 ---
+
 {{APIRef("DOM")}}
 
 The **`data`** property of the {{domxref("CharacterData")}} interface represent the value of the current object's data.
@@ -22,13 +24,13 @@ A string with the character information contained in the {{domxref("CharacterDat
 ### Reading a comment using data
 
 ```html
-<!-- This is an HTML comment !-->
-<output id="Result"></output>
+<!-- This is an HTML comment -->
+<output id="result"></output>
 ```
 
 ```js
-let comment = document.body.childNodes[1];
-let output = document.getElementById("Result");
+const comment = document.body.childNodes[1];
+const output = document.getElementById("result");
 
 output.value = comment.data;
 ```
@@ -42,10 +44,10 @@ output.value = comment.data;
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
-textnode.data = "This text has been set using textnode.data."
+textnode.data = "This text has been set using 'textnode.data'.";
 ```
 
 {{EmbedLiveSample("Setting_the_content_of_a_text_node_using_data", "100%", 50)}}

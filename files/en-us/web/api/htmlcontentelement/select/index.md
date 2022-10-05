@@ -1,6 +1,7 @@
 ---
 title: HTMLContentElement.select
 slug: Web/API/HTMLContentElement/select
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -8,9 +9,11 @@ tags:
   - Reference
   - Web Components
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLContentElement.select
 ---
-{{ APIRef("Web Components") }}{{Deprecated_header}}
+
+{{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLContentElement.select`** property reflects the
 `select` attribute. It is a string containing a

@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.notify
 ---
+
 {{JSRef}}
 
 The static **`Atomics.notify()`**
@@ -19,7 +20,7 @@ method notifies up some agents that are sleeping in the wait queue.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.notify(typedArray, index, count)
 ```
 

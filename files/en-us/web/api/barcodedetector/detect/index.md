@@ -1,6 +1,7 @@
 ---
 title: BarcodeDetector.detect()
 slug: Web/API/BarcodeDetector/detect
+page-type: web-api-instance-method
 tags:
   - Barcode Detection API
   - BarcodeDetector
@@ -10,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector.detect
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`detect()`** method of the
@@ -18,7 +20,7 @@ with an {{jsxref('Array')}} of detected barcodes within an image.
 
 ## Syntax
 
-```js
+```js-nolint
 detect(imageBitmapSource)
 ```
 
@@ -60,13 +62,14 @@ This example uses the `detect()` method to detect the barcodes within the
 given image. These are iterated over and the barcode data is logged to the console.
 
 ```js
-barcodeDetector.detect(imageEl)
-  .then(barcodes => {
-    barcodes.forEach(barcode => console.log(barcode.rawData));
-  }
-  .catch(err => {
-    console.log(err);
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
   })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## Specifications

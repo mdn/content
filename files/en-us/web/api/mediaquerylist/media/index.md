@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.media
 slug: Web/API/MediaQueryList/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MediaQueryList.media
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`media`** read-only property of the
@@ -73,8 +75,7 @@ A simple `<span>` to receive the output.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

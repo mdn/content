@@ -1,6 +1,7 @@
 ---
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -10,9 +11,11 @@ tags:
   - Reference
   - Stylesheets
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.preferredStyleSheetSet
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`preferredStyleSheetSet`** property returns the preferred style sheet set as set by the page
 author.
@@ -28,7 +31,7 @@ If there isn't a preferred style sheet set defined by the author, the empty stri
 
 ```js
 if (document.preferredStyleSheetSet) {
-  console.log("The preferred style sheet set is: " + document.preferredStyleSheetSet);
+  console.log(`The preferred style sheet set is: ${document.preferredStyleSheetSet}`);
 } else {
   console.log("There is no preferred style sheet.");
 }

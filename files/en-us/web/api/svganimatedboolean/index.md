@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedBoolean
 slug: Web/API/SVGAnimatedBoolean
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedBoolean
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated boolean interface

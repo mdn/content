@@ -13,6 +13,7 @@ tags:
   - setIcon
 browser-compat: webextensions.api.action.setIcon
 ---
+
 {{AddonSidebar()}}
 
 Sets the icon for the browser action.
@@ -29,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let settingIcon = browser.action.setIcon(
   details         // object
 )
@@ -41,7 +42,7 @@ let settingIcon = browser.action.setIcon(
 
   - : `object`. An object containing either `imageData` or `path` properties, and optionally a `tabId` property.
 
-    - `imageData`{{optional_inline}}
+    - `imageData` {{optional_inline}}
 
       - : `{{WebExtAPIRef('action.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -56,7 +57,7 @@ let settingIcon = browser.action.setIcon(
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    - `path`{{optional_inline}}
+    - `path` {{optional_inline}}
 
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
@@ -71,9 +72,9 @@ let settingIcon = browser.action.setIcon(
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given tab. The icon is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the icon for the given window.
 
 <!---->
@@ -163,7 +164,8 @@ browser.action.onClicked.addListener((tab) => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -190,4 +192,4 @@ browser.action.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

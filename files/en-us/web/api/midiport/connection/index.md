@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.connection
 slug: Web/API/MIDIPort/connection
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.connection
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`connection`** property of the {{domxref("MIDIPort")}} interface returns the connection state of the port.
@@ -29,8 +31,8 @@ Returns a string containing the connection state of the port, one of:
 The following example loops through all input ports and prints the connection status of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.connection);
 }
 ```

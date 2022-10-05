@@ -1,19 +1,19 @@
 ---
 title: Subgrid
 slug: Web/CSS/CSS_Grid_Layout/Subgrid
+page-type: guide
 tags:
   - CSS
   - CSS Display
   - CSS Grid
   - Guide
   - subgrid
-spec-urls: https://drafts.csswg.org/css-grid/
+browser-compat: css.properties.grid-template-columns.subgrid
 ---
+
 {{CSSRef}}
 
 Level 2 of the CSS Grid Layout specification includes a `subgrid` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what subgrid does, and gives some use cases and design patterns that are solved by the feature.
-
-> **Warning:** This feature is shipped in Firefox 71, which is currently the only browser to implement subgrid.
 
 ## Introduction to subgrid
 
@@ -97,7 +97,7 @@ As the subgrid value acts in much the same way as a regular nested grid, it is e
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.subgrid")}}
+{{Compat}}
 
 ## See also
 

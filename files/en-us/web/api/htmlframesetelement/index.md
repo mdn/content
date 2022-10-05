@@ -1,6 +1,7 @@
 ---
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
+page-type: web-api-interface
 tags:
   - API
   - HTML-DOM
@@ -10,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLFrameSetElement
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`HTMLFrameSetElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface they also inherit) for manipulating {{HTMLELEment("frameset")}} elements.

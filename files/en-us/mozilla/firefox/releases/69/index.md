@@ -2,11 +2,12 @@
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
 tags:
-  - '69'
+  - "69"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 69 that will affect developers. Firefox 69 was released on September 3, 2019.
@@ -24,7 +25,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Console
 
-- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ({{bug(1522396)}}).
+- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Tracking_Protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ({{bug(1522396)}}).
 - All visible logs in the console can shared by saving to a file or copying to clipboard via a new _Export visible messages to_ context menu item ({{bug(1517728)}}).
 - The console's toolbar now responsively reduces its height into a single row to save vertical space ({{bug(972530)}}).
 - Messages from content can now be hidden in the console to focus on logs from the Firefox UI ({{bug(1523842)}}).

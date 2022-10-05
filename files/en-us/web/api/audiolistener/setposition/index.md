@@ -1,6 +1,7 @@
 ---
 title: AudioListener.setPosition()
 slug: Web/API/AudioListener/setPosition
+page-type: web-api-instance-method
 tags:
   - API
   - AudioListener
@@ -11,6 +12,7 @@ tags:
   - setPosition
 browser-compat: api.AudioListener.setPosition
 ---
+
 {{ APIRef("Web Audio API") }} {{deprecated_header}}
 
 The `setPosition()` method of the {{ domxref("AudioListener") }} Interface defines the position of the listener.
@@ -21,7 +23,7 @@ The default value of the position vector is `(0,` `0,` `0)`.
 
 ## Syntax
 
-```js
+```js-nolint
 setPosition(x, y, z)
 ```
 

@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 24
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -40,8 +41,8 @@ tags:
 ### Developer Tools
 
 - The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
-- The Devtools options panel to the left lets you disable/enable Javascript temporarily.
-- Extension developers may use the new [Browser Console](https://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) for Chrome-level scripts (Replaces Error Console).
+- The Devtools options panel to the left lets you disable/enable JavaScript temporarily.
+- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) for Chrome-level scripts (Replaces Error Console).
 - The source map syntax has been changed to use `//#` instead of `//@` ({{bug(870361)}}).
 
 ### MathML

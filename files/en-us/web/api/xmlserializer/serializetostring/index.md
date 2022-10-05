@@ -1,6 +1,7 @@
 ---
 title: XMLSerializer.serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -16,6 +17,7 @@ tags:
   - serializeToString
 browser-compat: api.XMLSerializer.serializeToString
 ---
+
 {{APIRef("DOM Parsing")}}
 
 The {{domxref("XMLSerializer")}} method
@@ -24,7 +26,7 @@ specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 
 ## Syntax
 
-```js
+```js-nolint
 serializeToString(rootNode)
 ```
 
@@ -97,8 +99,7 @@ There are some things worth noting about the XML output by
 
 ## See also
 
-- [Parsing and serializing
-  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - Serializing to HTML: {{domxref("Element.innerHTML")}} and
   {{domxref("Element.outerHTML")}}
 - Parsing HTML or XML to create a DOM tree: {{domxref("DOMParser")}}

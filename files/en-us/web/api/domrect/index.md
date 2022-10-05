@@ -1,6 +1,7 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 A **`DOMRect`** describes the size and position of a rectangle.
@@ -40,13 +42,13 @@ _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. 
 - {{domxref("DOMRectReadOnly.height")}}
   - : The height of the `DOMRect`.
 - {{domxref("DOMRectReadOnly.top")}}
-  - : Returns the top coordinate value of the `DOMRect` (has the same value as `y`, or `y + height` if `height` is negative.)
+  - : Returns the top coordinate value of the `DOMRect` (has the same value as `y`, or `y + height` if `height` is negative).
 - {{domxref("DOMRectReadOnly.right")}}
-  - : Returns the right coordinate value of the `DOMRect` (has the same value as `x + width`, or `x` if `width` is negative.)
+  - : Returns the right coordinate value of the `DOMRect` (has the same value as `x + width`, or `x` if `width` is negative).
 - {{domxref("DOMRectReadOnly.bottom")}}
-  - : Returns the bottom coordinate value of the `DOMRect` (has the same value as `y + height`, or `y` if `height` is negative.)
+  - : Returns the bottom coordinate value of the `DOMRect` (has the same value as `y + height`, or `y` if `height` is negative).
 - {{domxref("DOMRectReadOnly.left")}}
-  - : Returns the left coordinate value of the `DOMRect` (has the same value as `x`, or `x + width` if `width` is negative.)
+  - : Returns the left coordinate value of the `DOMRect` (has the same value as `x`, or `x + width` if `width` is negative).
 
 ## Methods
 

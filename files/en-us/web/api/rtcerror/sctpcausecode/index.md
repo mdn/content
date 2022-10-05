@@ -1,6 +1,7 @@
 ---
 title: RTCError.sctpCauseCode
 slug: Web/API/RTCError/sctpCauseCode
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -16,6 +17,7 @@ tags:
   - sctpCauseCode
 browser-compat: api.RTCError.sctpCauseCode
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sctpCauseCode`** property in an

@@ -1,6 +1,7 @@
 ---
 title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - scriptURL
 browser-compat: api.ServiceWorker.scriptURL
 ---
+
 {{APIRef("Service Workers API")}}
 
 Returns the `ServiceWorker` serialized script URL defined as part of [`ServiceWorkerRegistration`](/en-US/docs/Web/API/ServiceWorkerRegistration).

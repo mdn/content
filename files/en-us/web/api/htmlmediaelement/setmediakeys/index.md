@@ -1,11 +1,11 @@
 ---
 title: HTMLMediaElement.setMediaKeys()
 slug: Web/API/HTMLMediaElement/setMediaKeys
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
   - EncryptedMediaExtensions
-  - Experimental
   - HTMLMediaElement
   - Media
   - Method
@@ -13,7 +13,8 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.setMediaKeys
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`setMediaKeys()`** property of the
 {{domxref("HTMLMediaElement")}} interface returns a {{jsxref("Promise")}} that resolves
@@ -22,7 +23,7 @@ playback.
 
 ## Syntax
 
-```js
+```js-nolint
 setMediaKeys(mediaKeys)
 ```
 

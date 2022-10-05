@@ -1,6 +1,7 @@
 ---
 title: VRFrameData.leftViewMatrix
 slug: Web/API/VRFrameData/leftViewMatrix
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - leftViewMatrix
+  - Non-standard
 browser-compat: api.VRFrameData.leftViewMatrix
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`leftViewMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye's rendering.
 

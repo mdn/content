@@ -1,6 +1,7 @@
 ---
 title: MIDIAccess.inputs
 slug: Web/API/MIDIAccess/inputs
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - MIDIAccess
 browser-compat: api.MIDIAccess.inputs
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`inputs`** read-only property of the {{domxref("MIDIAccess")}} interface provides access to any available MIDI input ports.
@@ -23,7 +25,7 @@ The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that r
 
 ```js
 navigator.requestMIDIAccess()
-  .then(function(access) {
+  .then((access) => {
 
      console.log(access.inputs);
 

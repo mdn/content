@@ -1,8 +1,8 @@
 ---
 title: RTCIceServers.urls
 slug: Web/API/RTCIceServer/urls
+page-type: web-api-instance-property
 tags:
-  - Experimental
   - Property
   - RTCIceServer
   - Reference
@@ -10,7 +10,8 @@ tags:
   - urls
 browser-compat: api.RTCIceServer.urls
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's **`urls`**
 property specifies the URL or URLs of the servers to be used for ICE negotiations. These
@@ -18,12 +19,12 @@ are typically STUN and/or TURN servers.
 
 ## Syntax
 
-```js
-var iceServer = {
-                  urls = iceServerUrl | [ url1, ..., urlN ],
-                  username: "webrtc", // optional
-                  credential: "turnpassword" // optional
-                };
+```js-nolint
+const iceServer = {
+  urls: iceServerUrl, /* or an array or URLs: [ url1, ..., urlN ] */
+  username: "webrtc", // optional
+  credential: "turnpassword" // optional
+};
 
 iceServers.push(iceServer);
 ```

@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.fecPacketsDiscarded
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded
+page-type: web-api-instance-property
 tags:
   - API
   - Errors
@@ -17,6 +18,7 @@ tags:
   - fecPacketsDiscarded
 browser-compat: api.RTCInboundRtpStreamStats.fecPacketsDiscarded
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`fecPacketsDiscarded`** property

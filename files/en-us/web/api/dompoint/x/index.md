@@ -1,6 +1,7 @@
 ---
 title: DOMPoint.x
 slug: Web/API/DOMPoint/x
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinates
@@ -14,6 +15,7 @@ tags:
   - x
 browser-compat: api.DOMPoint.x
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

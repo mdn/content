@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - stageParameters
+  - Non-standard
 browser-compat: api.VRDisplay.stageParameters
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`stageParameters`** read-only property of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRStageParameters")}} object containing room-scale parameters, if the `VRDisplay` is capable of supporting room-scale experiences.
 

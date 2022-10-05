@@ -1,11 +1,13 @@
 ---
 title: Locating DOM elements using selectors
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+page-type: guide
 tags:
   - Beginner
   - DOM
   - NeedsBeginnerUpdate
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The Selectors API provides methods that make it quick and easy to retrieve {{domxref("Element")}} nodes from the DOM by matching against a set of [selectors](/en-US/docs/Web/CSS/CSS_Selectors). This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.

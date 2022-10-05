@@ -1,6 +1,7 @@
 ---
-title: Mastering Wrapping of Flex Items
+title: Mastering wrapping of flex items
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+page-type: guide
 tags:
   - CSS
   - Flex
@@ -10,6 +11,7 @@ tags:
   - grid
   - wrapping
 ---
+
 {{CSSRef}}
 
 Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. In this guide I will explain how this works, what it is designed for and what situations really require [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) rather than flexbox.
@@ -50,7 +52,7 @@ This is the difference between one and two-dimensional layout. In a one dimensio
 
 Typically flexbox-based grid systems work by taking flexbox back to the familiar world of float-based layouts. If you assign percentage widths to flex items — either as `flex-basis` or by adding a width to the item itself leaving the value of `flex-basis` as `auto` — you can get the impression of a two dimensional layout. You can see this working in the example below.
 
-Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and am then controlling flexibility using percentages, just like we used to do in float layouts.
+Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and I'm then controlling flexibility using percentages, just like we used to do in float layouts.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
 
@@ -58,9 +60,7 @@ If you need flex items to line up in the cross axis, controlling the width in th
 
 ## Creating gutters between items
 
-When wrapping flex items, the need to space them out is likely to arise. At the current time we do not have any implementations of the gap properties from the [Box Alignment module](https://www.w3.org/TR/css-align-3/) for Flexbox. In the future we will be able to use `row-gap` and `column-gap` for flexbox as we do for CSS Grid. At the current time you will need to use margins to achieve this.
-
-You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
+When wrapping flex items, the need to space them out is likely to arise. You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
 
 It is this requirement that the gap properties, once implemented, will solve for us. Proper gaps only happen on the inside edges of items.
 

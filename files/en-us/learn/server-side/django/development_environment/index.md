@@ -10,6 +10,7 @@ tags:
   - Python
   - django
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Now that you know what Django is for, we'll show you how to set up and test a Django development environment on Windows, Linux (Ubuntu), and macOS — whatever common operating system you are using, this article should give you what you need to be able to start developing Django apps.
@@ -96,13 +97,13 @@ When you install Python3 you get a single global environment that is shared by a
 
 If you install Django into the default/global environment then you will only be able to target one version of Django on the computer. This can be a problem if you want to create new websites (using the latest version of Django) while still maintaining websites that rely on older versions.
 
-As a result, experienced Python/Django developers typically run Python apps within independent *Python virtual environments*. This enables multiple different Django environments on a single computer. The Django developer team itself recommends that you use Python virtual environments!
+As a result, experienced Python/Django developers typically run Python apps within independent _Python virtual environments_. This enables multiple different Django environments on a single computer. The Django developer team itself recommends that you use Python virtual environments!
 
 This module assumes that you've installed Django into a virtual environment, and we'll show you how below.
 
 ## Installing Python 3
 
-In order to use Django you will have to install Python on your operating system. If you're using *Python 3* then you will also need the [Python Package Index](https://pypi.org/) tool — _pip3_ — which is used to manage (install, update, and remove) Python packages/libraries used by Django and your other Python apps.
+In order to use Django you will have to install Python on your operating system. If you're using _Python 3_ then you will also need the [Python Package Index](https://pypi.org/) tool — _pip3_ — which is used to manage (install, update, and remove) Python packages/libraries used by Django and your other Python apps.
 
 This section briefly explains how you can check what versions of Python are present, and install new versions as needed, for Ubuntu Linux 20.04, macOS, and Windows 10.
 
@@ -142,9 +143,9 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 
 1. Download the required installer:
 
-    1. Go to <https://www.python.org/downloads/macos/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
-       (at time of writing this is Python 3.10.2).
+   1. Go to <https://www.python.org/downloads/macos/>
+   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+      (at time of writing this is Python 3.10.2).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -167,9 +168,10 @@ Windows doesn't include Python by default, but you can easily install it (along 
 
 1. Download the required installer:
 
-    1. Go to <https://www.python.org/downloads/windows/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
-       (at time of writing this is Python 3.10.2).
+   1. Go to <https://www.python.org/downloads/windows/>
+   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+      (at time of writing this is Python 3.10.2).
+
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
 
@@ -193,15 +195,15 @@ pip3 list
 
 ## Using Django inside a Python virtual environment
 
-The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org//virtualenvwrapper-win) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
+The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
 
 ### Installing the virtual environment software
 
 #### Ubuntu virtual environment setup
 
-After installing Python and pip you can install *virtualenvwrapper* (which includes *virtualenv*). The official installation guide can be found [here](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), or follow the instructions below.
+After installing Python and pip you can install _virtualenvwrapper_ (which includes _virtualenv_). The official installation guide can be found [here](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), or follow the instructions below.
 
-Install the tool using *pip3*:
+Install the tool using _pip3_:
 
 ```bash
 sudo pip3 install virtualenvwrapper
@@ -232,7 +234,7 @@ At this point you should see a bunch of scripts being run as shown below:
 ```bash
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
-...
+# …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
@@ -244,7 +246,7 @@ Now you can create a new virtual environment with the `mkvirtualenv` command.
 
 Setting up _virtualenvwrapper_ on macOS is almost exactly the same as on Ubuntu (again, you can follow the instructions from either the [official installation guide](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) or below).
 
-Install *virtualenvwrapper* (and bundling *virtualenv*) using *pip* as shown.
+Install _virtualenvwrapper_ (and bundling _virtualenv_) using _pip_ as shown.
 
 ```bash
 sudo pip3 install virtualenvwrapper
@@ -295,7 +297,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 
 #### Windows 10 virtual environment setup
 
-Installing [virtualenvwrapper-win](https://pypi.org/virtualenvwrapper-win) is even simpler than setting up *virtualenvwrapper* because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
+Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up _virtualenvwrapper_ because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
 
 ```bash
 pip3 install virtualenvwrapper-win
@@ -305,7 +307,7 @@ Now you can create a new virtual environment with the `mkvirtualenv` command
 
 ### Creating a virtual environment
 
-Once you've installed *virtualenvwrapper* or *virtualenvwrapper-win* then working with virtual environments is very similar on all platforms.
+Once you've installed _virtualenvwrapper_ or _virtualenvwrapper-win_ then working with virtual environments is very similar on all platforms.
 
 Now you can create a new virtual environment with the `mkvirtualenv` command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in brackets (below we show this for Ubuntu, but the final line is similar for Windows/macOS).
 
@@ -313,7 +315,7 @@ Now you can create a new virtual environment with the `mkvirtualenv` command. As
 $ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
-...
+# …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
 (my_django_environment) ubuntu@ubuntu:~$
 ```
@@ -333,7 +335,7 @@ There are just a few other useful commands that you should know (there are more 
 
 ## Installing Django
 
-Once you've created a virtual environment, and called `workon` to enter it, you can use *pip3* to install Django.
+Once you've created a virtual environment, and called `workon` to enter it, you can use _pip3_ to install Django.
 
 ```bash
 pip3 install django~=4.0
@@ -359,7 +361,14 @@ py -3 -m django --version
 >
 > In Windows _Python 3_ scripts are launched by prefixing the command with `py -3`, although this can vary depending on your specific installation. Try omitting the `-3` modifier if you encounter any problems with commands. In Linux/macOS, the command is `python3.`
 
-> **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`) . If you're working on _Windows_ replace this prefix with: `py -3`
+> **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
+
+## Other Python tools
+
+Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
+
+Note that you should use a [Django aware linter](https://djangopackages.org/grids/g/linters/) like [pylint-django](https://pypi.org/project/pylint-django/).
+Commonly used Python linters, such as `pylint`, may incorrectly report errors in the standard files generated for Django.
 
 ## Testing your installation
 
@@ -382,7 +391,7 @@ We can run the _development web server_ from within this folder using **manage.p
 ```bash
 $ python3 manage.py runserver
 Watching for file changes with StatReloader
-Performing system checks...
+Performing system checks…
 
 System check identified no issues (0 silenced).
 
@@ -395,7 +404,7 @@ Quit the server with CONTROL-C.
 ```
 
 > **Note:** The above command shows the Linux/macOS command.
-> You can ignore the warnings about  "18 unapplied migration(s)" at this point!
+> You can ignore the warnings about "18 unapplied migration(s)" at this point!
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 

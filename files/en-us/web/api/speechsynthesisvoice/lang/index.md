@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisVoice.lang
 slug: Web/API/SpeechSynthesisVoice/lang
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -12,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.lang
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`lang`** read-only property of the {{domxref("SpeechSynthesisVoice")}} interface returns a BCP 47 language tag indicating the language of the voice.
@@ -23,12 +25,12 @@ A string representing the language of the device.
 ## Examples
 
 ```js
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+for (let i = 0; i < voices.length ; i++) {
+  const option = document.createElement('option');
+  option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-  if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+  if (voices[i].default) {
+    option.textContent += ' — DEFAULT';
   }
 
   option.setAttribute('data-lang', voices[i].lang);

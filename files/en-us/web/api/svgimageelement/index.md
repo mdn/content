@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement
 slug: Web/API/SVGImageElement
+page-type: web-api-interface
 tags:
   - API
   - Image
@@ -12,6 +13,7 @@ tags:
   - SVGImageElement
 browser-compat: api.SVGImageElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGImageElement`** interface corresponds to the {{SVGElement("image")}} element.

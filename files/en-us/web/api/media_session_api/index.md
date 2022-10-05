@@ -1,6 +1,7 @@
 ---
 title: Media Session API
 slug: Web/API/Media_Session_API
+page-type: web-api-overview
 tags:
   - Audio
   - Media
@@ -10,8 +11,9 @@ tags:
   - Overview
   - Reference
   - Video
-spec-urls: https://w3c.github.io/mediasession/
+browser-compat: api.MediaSession
 ---
+
 {{DefaultAPISidebar("Media Session API")}}
 
 The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
@@ -66,28 +68,28 @@ if ('mediaSession' in navigator) {
     ]
   });
 
-  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('play', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('pause', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekbackward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekforward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('previoustrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('nexttrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', () => { /* Code excerpted. */ });
 }
 ```
 
 Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a `pointerup` event to an on-page play button, which is then used to kick off the media session code:
 
 ```js
-playButton.addEventListener('pointerup', function(event) {
-  var audio = document.querySelector('audio');
+playButton.addEventListener('pointerup', (event) => {
+  const audio = document.querySelector('audio');
 
-  // User interacted with the page. Let's play audio...
+  // User interacted with the page. Let's play audio!
   audio.play()
-  .then(_ => { /* Set up media session controls, as shown above. */ })
-  .catch(error => { console.log(error) });
+  .then(() => { /* Set up media session controls, as shown above. */ })
+  .catch((error) => { console.error(error) });
 });
 ```
 
@@ -97,4 +99,4 @@ playButton.addEventListener('pointerup', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

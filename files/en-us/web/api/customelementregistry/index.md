@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
+page-type: web-api-interface
 tags:
   - API
   - CustomElementRegistry
@@ -9,6 +10,7 @@ tags:
   - Web Components
 browser-compat: api.CustomElementRegistry
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
@@ -40,7 +42,7 @@ class WordCount extends HTMLParagraphElement {
 
     function countWords(node){
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
@@ -56,7 +58,7 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);

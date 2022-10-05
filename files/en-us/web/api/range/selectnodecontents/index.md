@@ -1,6 +1,7 @@
 ---
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,10 +10,10 @@ tags:
   - Reference
 browser-compat: api.Range.selectNodeContents
 ---
+
 {{ApiRef("DOM")}}
 
-The **`Range.selectNodeContents()`** method sets the {{
-  domxref("Range") }} to contain the contents of a {{ domxref("Node") }}.
+The **`Range.selectNodeContents()`** method sets the {{domxref("Range")}} to contain the contents of a {{domxref("Node")}}.
 
 The parent `Node` of the start and end of the `Range` will be the
 reference node. The `startOffset` is 0, and the `endOffset` is the
@@ -21,15 +22,14 @@ node.
 
 ## Syntax
 
-```js
+```js-nolint
 selectNodeContents(referenceNode)
 ```
 
 ### Parameters
 
 - `referenceNode`
-  - : The {{ domxref("Node") }} whose contents will be selected within a {{
-    domxref("Range") }}.
+  - : The {{domxref("Node")}} whose contents will be selected within a {{domxref("Range")}}.
 
 ### Return value
 
@@ -38,8 +38,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-range = document.createRange();
-referenceNode = document.getElementsByTagName("div")[0];
+const range = document.createRange();
+const referenceNode = document.querySelector("div");
 range.selectNodeContents(referenceNode);
 ```
 
@@ -54,7 +54,10 @@ used to deselect it.
 #### HTML
 
 ```html
-<p id="p"><b>Use the buttons below</b> to select or deselect the contents of this paragraph.</p>
+<p id="p">
+  <strong>Use the buttons below</strong> to select or deselect the contents of
+  this paragraph.
+</p>
 <button id="select-button">Select paragraph</button>
 <button id="deselect-button">Deselect paragraph</button>
 ```
@@ -62,11 +65,11 @@ used to deselect it.
 #### JavaScript
 
 ```js
-const p = document.getElementById('p');
-const selectButton = document.getElementById('select-button');
-const deselectButton = document.getElementById('deselect-button');
+const p = document.getElementById("p");
+const selectButton = document.getElementById("select-button");
+const deselectButton = document.getElementById("deselect-button");
 
-selectButton.addEventListener('click', e => {
+selectButton.addEventListener("click", (e) => {
   // Clear any current selection
   const selection = window.getSelection();
   selection.removeAllRanges();
@@ -77,7 +80,7 @@ selectButton.addEventListener('click', e => {
   selection.addRange(range);
 });
 
-deselectButton.addEventListener('click', e => {
+deselectButton.addEventListener("click", (e) => {
   const selection = window.getSelection();
   selection.removeAllRanges();
 });

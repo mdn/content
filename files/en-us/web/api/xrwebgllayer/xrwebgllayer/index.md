@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer()
 slug: Web/API/XRWebGLLayer/XRWebGLLayer
+page-type: web-api-constructor
 tags:
   - API
   - AR
@@ -20,20 +21,21 @@ tags:
   - XRWebGLLayer
   - augmented
   - new
+  - Experimental
 browser-compat: api.XRWebGLLayer.XRWebGLLayer
 ---
-{{APIRef("WebXR Device API")}}
 
-The [WebXR
-Device API](/en-US/docs/Web/API/WebXR_Device_API) **`XRWebGLLayer()`** constructor creates and
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) **`XRWebGLLayer()`** constructor creates and
 returns a new {{domxref("XRWebGLLayer")}} object, providing the linkage between the
 WebXR device and the WebGL graphics layer used to render the 3D scene.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRWebGLLayer(session, context)
-new XRWebGLLayer(session, context, layerInit)
+new XRWebGLLayer(session, context, options)
 ```
 
 ### Parameters
@@ -45,7 +47,7 @@ new XRWebGLLayer(session, context, layerInit)
   - : A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
     identifying the WebGL drawing context to use for rendering the scene for the specified
     WebXR session.
-- `layerInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing configuration options for the new `XRWebGLLayer`. The available options
     are:
@@ -53,7 +55,7 @@ new XRWebGLLayer(session, context, layerInit)
     - `alpha`
       - : The frame buffer's color buffer will be established with an alpha channel if the `alpha` Boolean property is `true`. Otherwise, the color buffer will not have an alpha channel. The default value is `true`.
     - `antialias`
-      - : A Boolean value which is `true` if anti-aliasing is to be used when rendering in the context; otherwise `false`. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet.  The default value is `true`.
+      - : A Boolean value which is `true` if anti-aliasing is to be used when rendering in the context; otherwise `false`. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet. The default value is `true`.
     - `depth`
       - : A Boolean value which, if `true`, requests that the new layer have a depth buffer; otherwise, no depth layer is allocated. The default is `true`.
     - `framebufferScaleFactor`
@@ -77,8 +79,7 @@ are used to tailor the rendering system's configuration.
     possible state errors:
     - The {{domxref("XRSession")}} specified by `session` has already been
       stopped.
-    - The specified WebGL context, `context`, [has
-      been lost](/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#usage_notes) for any reason, such as a GPU switch or reset.
+    - The specified WebGL context, `context`, [has been lost](/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#usage_notes) for any reason, such as a GPU switch or reset.
     - The specified `session` is immersive but the `context` is
       not WebXR compatible.
 - `OperationError` {{domxref("DOMException")}}
@@ -99,7 +100,7 @@ xrSession.updateRenderState({
      framebufferScaleFactor: 0.5,
      ignoreDepthValues: true,
      stencil: false
-  });
+  })
 });
 ```
 
@@ -114,7 +115,5 @@ xrSession.updateRenderState({
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- [Getting
-  started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
-- [Handling lost
-  context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki
+- [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
+- [Handling lost context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki

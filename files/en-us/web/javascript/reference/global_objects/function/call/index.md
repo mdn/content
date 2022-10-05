@@ -7,47 +7,35 @@ tags:
   - Method
 browser-compat: javascript.builtins.Function.call
 ---
+
 {{JSRef}}
 
-The **`call()`** method calls a
-function with a given `this` value and arguments provided
-individually.
+The **`call()`** method calls the function with a given `this` value and arguments provided individually.
 
 {{EmbedInteractiveExample("pages/js/function-call.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 call()
 call(thisArg)
-call(thisArg, arg1)
-call(thisArg, arg1, arg2)
-call(thisArg, arg1, ... , argN)
+call(thisArg, arg1, /* …, */ argN)
 ```
 
 ### Parameters
 
-- `thisArg` {{optional_inline}}
-
-  - : The value to use as `this` when calling `func`.
-
-    > **Note:** In certain cases, `thisArg` may
-    > not be the actual value seen by the method.
-    >
-    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "",
-        1)}}, {{jsxref("Global_Objects/null", "null")}} and
-    > {{jsxref("Global_Objects/undefined", "undefined")}} will be replaced with the
-    > global object, and primitive values will be converted to objects.
-
-- `arg1, arg2, ...argN` {{optional_inline}}
+- `thisArg`
+  - : The value to use as `this` when calling `func`. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects.
+- `arg1, …, argN` {{optional_inline}}
   - : Arguments for the function.
 
 ### Return value
 
-The result of calling the function with the specified
-**`this`** value and arguments.
+The result of calling the function with the specified `this` value and arguments.
 
 ## Description
+
+> **Note:** This function is almost identical to {{jsxref("Function.prototype.apply()", "apply()")}}, except that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments** — for example, `func.apply(this, ['eat', 'bananas'])` vs. `func.call(this, 'eat', 'bananas')`.
 
 The `call()` allows for a function/method belonging to one object to be
 assigned and called for a different object.
@@ -55,11 +43,6 @@ assigned and called for a different object.
 `call()` provides a new value of `this` to the function/method.
 With `call()`, you can write a method once and then inherit it in another
 object, without having to rewrite the method for the new object.
-
-> **Note:** While the syntax of this function is almost identical to that
-> of {{jsxref("Function.prototype.apply", "apply()")}}, the fundamental difference is
-> that `call()` accepts an **argument list**, while
-> `apply()` accepts a **single array of arguments**.
 
 ## Examples
 
@@ -112,14 +95,15 @@ const animals = [
   { species: 'Whale', name: 'Fail' }
 ];
 
+function assignPrintMethod(i) {
+  this.print = function () {
+    console.log(`#${i} ${this.species}: ${this.name}`);
+  }
+  this.print();
+}
+
 for (let i = 0; i < animals.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.species
-                  + ': ' + this.name);
-    }
-    this.print();
-  }).call(animals[i], i);
+  assignPrintMethod.call(animals[i], i);
 }
 ```
 
@@ -135,7 +119,8 @@ function greet() {
 }
 
 const obj = {
-  animal: 'cats', sleepDuration: '12 and 16 hours'
+  animal: 'cats',
+  sleepDuration: '12 and 16 hours',
 };
 
 greet.call(obj);  // cats typically sleep between 12 and 16 hours
@@ -148,28 +133,28 @@ first argument. If the first argument is not passed, the value of `this` is
 bound to the global object.
 
 ```js
-const sData = 'Wisen';
+// var creates a property on the global object
+var globProp = 'Wisen';
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log(`globProp value is ${this.globProp}`);
 }
 
-display.call();  // sData value is Wisen
+display.call(); // logs "globProp value is Wisen"
 ```
 
-> **Note:** In strict mode, the value of `this` will be
-> `undefined`. See below.
+In strict mode, the value of `this` will be `undefined`.
 
 ```js
 'use strict';
 
-const sData = 'Wisen';
+var globProp = 'Wisen';
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log(`globProp value is ${this.globProp}`);
 }
 
-display.call(); // Cannot read the property of 'sData' of undefined
+display.call(); // throws TypeError: Cannot read the property of 'globProp' of undefined
 ```
 
 ## Specifications

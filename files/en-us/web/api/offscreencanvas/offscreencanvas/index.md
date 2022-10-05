@@ -1,24 +1,24 @@
 ---
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
+page-type: web-api-constructor
 tags:
   - API
   - Canvas
   - Constructor
-  - Experimental
   - OffscreenCanvas
   - Reference
   - WebGL
 browser-compat: api.OffscreenCanvas.OffscreenCanvas
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-The **`OffscreenCanvas()`** constructor returns a newly
-instantiated {{domxref("OffscreenCanvas")}} object.
+{{APIRef("Canvas API")}}
+
+The **`OffscreenCanvas()`** constructor returns a newly instantiated {{domxref("OffscreenCanvas")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new OffscreenCanvas(width, height)
 ```
 
@@ -31,14 +31,12 @@ new OffscreenCanvas(width, height)
 
 ## Examples
 
-This example creates a new offscreen canvas using the `OffscreenCanvas()`
-constructor. We then initialize a [WebGL](/en-US/docs/Web/API/WebGL_API)
-context on it using the {{domxref("OffscreenCanvas.getContext()", "getContext()")}}
-method.
+This example creates a new offscreen canvas using the `OffscreenCanvas()` constructor.
+We then initialize a [WebGL](/en-US/docs/Web/API/WebGL_API) context on it using the {{domxref("OffscreenCanvas.getContext()", "getContext()")}} method.
 
 ```js
-let offscreen = new OffscreenCanvas(256, 256);
-let gl = offscreen.getContext('webgl');
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext('webgl');
 ```
 
 ## Specifications

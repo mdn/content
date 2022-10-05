@@ -1,6 +1,7 @@
 ---
 title: URL.password
 slug: Web/API/URL/password
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - password
 browser-compat: api.URL.password
 ---
+
 {{ApiRef("URL API")}}
 
 The **`password`** property of the {{domxref("URL")}} interface

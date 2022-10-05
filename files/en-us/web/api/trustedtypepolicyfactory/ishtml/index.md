@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.isHTML()
 slug: Web/API/TrustedTypePolicyFactory/isHTML
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.isHTML
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedHTML")}} object.
@@ -17,7 +19,7 @@ The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 isHTML(value)
 ```
 

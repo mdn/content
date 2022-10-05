@@ -1,6 +1,7 @@
 ---
 title: CSSMathMin()
 slug: Web/API/CSSMathMin/CSSMathMin
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,6 +12,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMathMin.CSSMathMin
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathMin()`** constructor creates a
@@ -19,7 +21,7 @@ new {{domxref("CSSMathMin")}} object which represents the CSS
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathMin(args)
 ```
 

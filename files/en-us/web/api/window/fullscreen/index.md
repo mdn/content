@@ -1,6 +1,7 @@
 ---
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.fullScreen
 ---
+
 {{APIRef}}{{Non-standard_Header}}
 
 The **`fullScreen`** property of the `Window`

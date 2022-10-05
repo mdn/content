@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.clearBuffer[fiuv]()
 slug: Web/API/WebGL2RenderingContext/clearBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.clearBufferiv
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.clearBuffer[fiuv]()`** methods of
@@ -17,7 +19,7 @@ currently bound framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearBufferfv(buffer, drawbuffer, values)
 clearBufferfv(buffer, drawbuffer, values, srcOffset)
 

@@ -1,6 +1,7 @@
 ---
 title: AesCtrParams
 slug: Web/API/AesCtrParams
+page-type: web-api-interface
 tags:
   - API
   - AesCtrParams
@@ -9,6 +10,7 @@ tags:
   - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCtrParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`AesCtrParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) algorithm.
@@ -34,7 +36,7 @@ Essentially: the nonce should ensure that counter blocks are not reused from one
 - `name`
   - : A string. This should be set to `AES-CTR`.
 - `counter`
-  - : A {{domxref("BufferSource")}} — the initial value of the counter block. This must be 16 bytes long (the AES block size). The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce. For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block. This must be 16 bytes long (the AES block size). The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce. For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
 - `length`
   - : A `Number` — the number of bits in the counter block that are used for the actual counter. The counter must be big enough that it doesn't wrap: if the message is `n` blocks and the counter is `m` bits long, then the following must be true: `n <= 2^m`. The [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) standard, which defines CTR, suggests that the counter should occupy half of the counter block (see [Appendix B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)), so for AES it would be 64.
 

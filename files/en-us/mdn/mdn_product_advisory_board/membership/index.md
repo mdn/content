@@ -8,6 +8,7 @@ tags:
   - Product advisory board
   - Terms and conditions
 ---
+
 {{MDNSidebar}}
 
 ## 1. Purpose and Objectives
@@ -26,7 +27,7 @@ The primary purpose of the PAB is to provide advice, input, and feedback on cont
 - Provide feedback on recruiting and retaining contributors (both corporate and individual)
 - Share experience and best practices
 
-## 2. Membership Selection and Termination.
+## 2. Membership Selection and Termination
 
 a. The PAB shall consist of 10 to 12 Members (as defined in the MDN Product Advisory Board Agreement and including those individuals representing a Member organization), to be selected by Mozilla.
 
@@ -42,7 +43,7 @@ f. Members may resign in writing, via email to the PAB mailing list. Member orga
 
 g. Mozilla may terminate a Member in the case of violation of the MDN Advisory Board Agreement, violation of the MDN PAB Code of Conduct, violation of the Antitrust Policy, or if the Member fails to participate in two consecutive review meetings without notice. At that time, a notice will be sent to the principal contact stating that they have been removed as a Member.
 
-## 3. PAB Membership Qualifications.
+## 3. PAB Membership Qualifications
 
 a. PAB Members have in-depth industry knowledge and expertise. Members will be knowledgeable about web standards, with the ability and experience to align MDN's overall strategic goals and content plans with evolution of web standards, industry direction, and the needs of developers using MDN's documentation.
 
@@ -58,7 +59,7 @@ d. Individual Members of the PAB must have at least one of the following qualifi
 - Works as part of a group doing technical documentation of Web standards; or
 - Makes significant, sustained contributions to MDN Web standards documentation as a volunteer.
 
-## 4. Member Responsibilities and Commitments.
+## 4. Member Responsibilities and Commitments
 
 a. Members are expected to provide feedback and responses in a timely manner, and attend a minimum number of review meetings. Participation is welcome from all over the world. Members' expectations include:
 
@@ -74,7 +75,7 @@ b. Members may be required to provide personal information and material (bios, e
 
 c. All Members must sign the MDN Product Advisory Board Agreement and agree to the MDN PAB Code of Conduct and Antitrust Policy.
 
-## 5. MDN PAB Member Benefits.
+## 5. MDN PAB Member Benefits
 
 It is anticipated that PAB membership will have the following benefits:
 
@@ -83,33 +84,30 @@ It is anticipated that PAB membership will have the following benefits:
 - Make suggestions for features and platform improvements to grow MDN audience and contribution; and
 - Provide feedback and technical reviews of content.
 
-## 6. Scheduled and Ad Hoc Meetings.
+## 6. Scheduled and Ad Hoc Meetings
 
 a. Members will be invited to the following meetings:
 
 - Annual Product Strategy review meetings to take place between October and December of each calendar year;
 - Quarterly content strategy and prioritization review meetings ("Quarterly Reviews); and
-- Ad-hoc product review/check-in meetings, which can be initiated by Mozilla or any Member as needed ("Ad Hoc Meetings").
+- Ad hoc product review/check-in meetings, which can be initiated by Mozilla or any Member as needed ("Ad Hoc Meetings").
 
 b. Annual Product Strategy review meetings will review the previous year's progress and make recommendations for MDN's strategy and objectives for the following year.
 
 c. Annual Product Strategy review meetings can take place in Mozilla headquarters or worldwide office, the offices of a Member, or external locations, as determined by vote of the PAB. Virtual attendance will be accommodated for Members who are unable to attend in person.
 
-d. Quarterly Reviews and Ad-Hoc Meetings will primarily be held via video/conference call, although in-person attendance will be possible at the discretion of Members.
+d. Quarterly Reviews and Ad Hoc Meetings will primarily be held via video/conference call, although in-person attendance will be possible at the discretion of Members.
 
-e. Ad-Hoc Meeting dates will depend upon the work in development. Review points will have a specific emphasis such as coordination around product release dates and major features or new specs and standards reaching broad release that require more in-depth coordination and planning beyond the Quarterly Review.
+e. Ad Hoc Meeting dates will depend upon the work in development. Review points will have a specific emphasis such as coordination around product release dates and major features or new specs and standards reaching broad release that require more in-depth coordination and planning beyond the Quarterly Review.
 
-## 7. Time Commitment and Costs.
+## 7. Time Commitment and Costs
 
 a. Members are asked to make a commitment to the PAB for at least 12 months.
 
-b. Members are asked to commit the time to prepare for, attend (sometimes in person), and participate in regularly scheduled and ad-hoc PAB meetings.
+b. Members are asked to commit the time to prepare for, attend (sometimes in person), and participate in regularly scheduled and ad hoc PAB meetings.
 
 c. Costs for participant travel and living expenses or other involvement are to be paid by the individual board member or the sponsoring organization.
 
 ## See also
 
 - [Product Advisory Board home](/en-US/docs/MDN/MDN_Product_Advisory_Board)
-- [Product Advisory Board meeting minutes](https://github.com/mdn/pab) (GitHub)
-- [Product Advisory Board members](/en-US/docs/MDN/MDN_Product_Advisory_Board/Members)
-- [Membership application](https://www.surveygizmo.com/s3/4024118/MDN-Advisory-Board-Application)

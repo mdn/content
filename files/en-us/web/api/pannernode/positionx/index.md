@@ -1,6 +1,7 @@
 ---
 title: PannerNode.positionX
 slug: Web/API/PannerNode/positionX
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -10,6 +11,7 @@ tags:
   - positionX
 browser-compat: api.PannerNode.positionX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`positionX`** property of the {{ domxref("PannerNode")
@@ -73,6 +75,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

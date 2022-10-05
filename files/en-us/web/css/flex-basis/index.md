@@ -1,6 +1,7 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -9,13 +10,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
+
 {{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-In this example the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
+In this example, the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
 The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `200px`, it will start out at 200px but then shrink to fit the space available with the other items being at least `min-content` sized.
 
@@ -23,7 +25,7 @@ The image below shows how the Firefox [Flexbox Inspector](https://firefox-source
 
 ![The Firefox Flexbox Inspector showing the size of the item once it has shrunk.](firefox-flex-basis.png)
 
-> **Note:** in case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
+> **Note:** In case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
 
 ## Syntax
 
@@ -31,10 +33,10 @@ The image below shows how the Firefox [Flexbox Inspector](https://firefox-source
 /* Specify <'width'> */
 flex-basis: 10em;
 flex-basis: 3px;
+flex-basis: 50%;
 flex-basis: auto;
 
 /* Intrinsic sizing keywords */
-flex-basis: fill;
 flex-basis: max-content;
 flex-basis: min-content;
 flex-basis: fit-content;
@@ -107,17 +109,17 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 14px;
   text-align: center;
   position: relative;
 }
 
-.flex:after {
+.flex::after {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -132,48 +134,40 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: auto;
 }
 
-.flex1:after {
-  content: 'auto';
+.flex1::after {
+  content: "auto";
 }
 
 .flex2 {
   flex-basis: max-content;
 }
 
-.flex2:after {
-  content: 'max-content';
+.flex2::after {
+  content: "max-content";
 }
 
 .flex3 {
   flex-basis: min-content;
 }
 
-.flex3:after {
-  content: 'min-content';
+.flex3::after {
+  content: "min-content";
 }
 
 .flex4 {
   flex-basis: fit-content;
 }
 
-.flex4:after {
-  content: 'fit-content';
+.flex4::after {
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
-.flex5:after {
-  content: 'content';
-}
-
-.flex6 {
-  flex-basis: fill;
-}
-
-.flex6:after {
-  content: 'fill';
+.flex5::after {
+  content: "content";
 }
 ```
 

@@ -1,20 +1,22 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Touch_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - TouchEvent
   - touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
 
-A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/tree/master/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/tree/main/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Example
 
-This example demonstrates using the {{event("touchstart")}}, {{event("touchmove")}}, {{event("touchcancel")}}, and {{event("touchend")}}) touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
+This example demonstrates using the {{domxref("Element/touchstart_event", "touchstart")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/touchcancel_event", "touchcancel")}}, and {{domxref("Element/touchend_event", "touchend")}}) touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
 
 ### Define touch targets
 
@@ -51,20 +53,20 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 
 ```js
 // Log events flag
-var logEvents = false;
+const logEvents = false;
 
 // Touch Point cache
-var tpCache = new Array();
+const tpCache = [];
 ```
 
 ### Register event handlers
 
-Event handlers are registered for all four touch event types. The {{event("touchend")}} and {{event("touchcancel")}} event types use the same handler.
+Event handlers are registered for all four touch event types. The {{domxref("Element/touchend_event", "touchend")}} and {{domxref("Element/touchcancel_event", "touchcancel")}} event types use the same handler.
 
 ```js
 function set_handlers(name) {
  // Install event handlers for the given element
- var el=document.getElementById(name);
+ const el = document.getElementById(name);
  el.ontouchstart = start_handler;
  el.ontouchmove = move_handler;
  // Use same handler for touchcancel and touchend
@@ -88,36 +90,36 @@ This function provides very basic support for 2-touch horizontal move/pinch/zoom
 // This is a very basic 2-touch move/pinch/zoom handler that does not include
 // error handling, only handles horizontal moves, etc.
 function handle_pinch_zoom(ev) {
+  if (ev.targetTouches.length === 2 && ev.changedTouches.length === 2) {
+    // Check if the two target touches are the same ones that started
+    // the 2-touch
+    const point1 = tpCache.findLastIndex(
+      (tp) => tp.identifier === ev.targetTouches[0].identifier
+    );
+    const point2 = tpCache.findLastIndex(
+      (tp) => tp.identifier === ev.targetTouches[1].identifier
+    );
 
- if (ev.targetTouches.length == 2 && ev.changedTouches.length == 2) {
-   // Check if the two target touches are the same ones that started
-   // the 2-touch
-   var point1=-1, point2=-1;
-   for (var i=0; i < tpCache.length; i++) {
-     if (tpCache[i].identifier == ev.targetTouches[0].identifier) point1 = i;
-     if (tpCache[i].identifier == ev.targetTouches[1].identifier) point2 = i;
-   }
-   if (point1 >=0 && point2 >= 0) {
-     // Calculate the difference between the start and move coordinates
-     var diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
-     var diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
+    if (point1 >= 0 && point2 >= 0) {
+      // Calculate the difference between the start and move coordinates
+      const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
+      const diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
 
-     // This threshold is device dependent as well as application specific
-     var PINCH_THRESHOLD = ev.target.clientWidth / 10;
-     if (diff1 >= PINCH_THRESHOLD && diff2 >= PINCH_THRESHOLD)
-         ev.target.style.background = "green";
-   }
-   else {
-     // empty tpCache
-     tpCache = new Array();
-   }
- }
+      // This threshold is device dependent as well as application specific
+      const PINCH_THRESHOLD = ev.target.clientWidth / 10;
+      if (diff1 >= PINCH_THRESHOLD && diff2 >= PINCH_THRESHOLD)
+          ev.target.style.background = "green";
+    } else {
+      // empty tpCache
+      tpCache = [];
+    }
+  }
 }
 ```
 
 ### Touch start handler
 
-The {{event("touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
+The {{domxref("Element/touchstart_event", "touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
 
 ```js
 function start_handler(ev) {
@@ -128,8 +130,8 @@ function start_handler(ev) {
  // of two, and so on.
  ev.preventDefault();
  // Cache the touch points for later processing of 2-touch pinch/zoom
- if (ev.targetTouches.length == 2) {
-   for (var i=0; i < ev.targetTouches.length; i++) {
+ if (ev.targetTouches.length === 2) {
+   for (let i = 0; i < ev.targetTouches.length; i++) {
      tpCache.push(ev.targetTouches[i]);
    }
  }
@@ -140,7 +142,7 @@ function start_handler(ev) {
 
 ### Touch move handler
 
-The {{event("touchmove")}} handler calls {{domxref("Event.preventDefault","preventDefault()")}} for the same reason mentioned above, and invokes the pinch/zoom handler.
+The {{domxref("Element/touchmove_event", "touchmove")}} handler calls {{domxref("Event.preventDefault","preventDefault()")}} for the same reason mentioned above, and invokes the pinch/zoom handler.
 
 ```js
 function move_handler(ev) {
@@ -155,7 +157,7 @@ function move_handler(ev) {
  if (logEvents) log("touchMove", ev, false);
  // To avoid too much color flashing many touchmove events are started,
  // don't update the background if two touch points are active
- if (!(ev.touches.length == 2 && ev.targetTouches.length == 2))
+ if (!(ev.touches.length === 2 && ev.targetTouches.length === 2))
    update_background(ev);
 
  // Set the target element's border to dashed to give a clear visual
@@ -169,13 +171,13 @@ function move_handler(ev) {
 
 ### Touch end handler
 
-The {{event("touchend")}} handler restores the event target's background color back to its original color.
+The {{domxref("Element/touchend_event", "touchend")}} handler restores the event target's background color back to its original color.
 
 ```js
 function end_handler(ev) {
   ev.preventDefault();
   if (logEvents) log(ev.type, ev, false);
-  if (ev.targetTouches.length == 0) {
+  if (ev.targetTouches.length === 0) {
     // Restore background and border to original values
     ev.target.style.background = "white";
     ev.target.style.border = "1px solid black";
@@ -188,10 +190,10 @@ function end_handler(ev) {
 The application uses {{HTMLElement("div")}} elements for the touch areas and provides buttons to enable logging and clear the log.
 
 ```html
-<div id="target1"> Tap, Hold or Swipe me 1</div>
-<div id="target2"> Tap, Hold or Swipe me 2</div>
-<div id="target3"> Tap, Hold or Swipe me 3</div>
-<div id="target4"> Tap, Hold or Swipe me 4</div>
+<div id="target1">Tap, Hold or Swipe me 1</div>
+<div id="target2">Tap, Hold or Swipe me 2</div>
+<div id="target3">Tap, Hold or Swipe me 3</div>
+<div id="target4">Tap, Hold or Swipe me 4</div>
 
 <!-- UI for logging/debugging -->
 <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
@@ -237,29 +239,27 @@ The functions are used to log event activity to the application window, to suppo
 
 ```js
 function enableLog(ev) {
-  logEvents = logEvents ? false : true;
+  logEvents = !logEvents;
 }
 
 function log(name, ev, printTargetIds) {
-  var o = document.getElementsByTagName('output')[0];
-  var s = name + ": touches = " + ev.touches.length +
-                " ; targetTouches = " + ev.targetTouches.length +
-                " ; changedTouches = " + ev.changedTouches.length;
-  o.innerHTML += s + "
-";
+  const o = document.getElementsByTagName('output')[0];
+  let s = `${name}: touches = ${ev.touches.length} ; ` +
+    `targetTouches = ${ev.targetTouches.length} ; ` +
+    `changedTouches = ${ev.changedTouches.length}`;
+  o.innerHTML += `${s}<br>`;
 
   if (printTargetIds) {
     s = "";
-    for (var i=0; i < ev.targetTouches.length; i++) {
-      s += "... id = " + ev.targetTouches[i].identifier + "
-";
+    for (let i = 0; i < ev.targetTouches.length; i++) {
+      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
     }
     o.innerHTML += s;
   }
 }
 
 function clearLog(event) {
- var o = document.getElementsByTagName('output')[0];
+ const o = document.getElementsByTagName('output')[0];
  o.innerHTML = "";
 }
 ```

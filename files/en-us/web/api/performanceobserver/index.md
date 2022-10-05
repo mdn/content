@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -11,6 +12,7 @@ tags:
   - observers
 browser-compat: api.PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformanceObserver`** interface is used to _observe_ performance measurement events and be notified of new {{domxref("PerformanceEntry","performance entries", '', 'true')}} as they are recorded in the browser's _performance timeline_.
@@ -24,7 +26,7 @@ The **`PerformanceObserver`** interface is used to _observe_ performance measure
 
 ## Properties
 
-- {{domxref("PerformanceObserver.supportedEntryTypes")}}{{readonlyInline}}
+- {{domxref("PerformanceObserver.supportedEntryTypes")}} {{ReadOnlyInline}}
   - : Returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
 ## Methods

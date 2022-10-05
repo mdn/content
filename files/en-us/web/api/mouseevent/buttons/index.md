@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - UIEvent
 browser-compat: api.MouseEvent.buttons
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.buttons`** read-only property indicates which buttons are pressed on the mouse (or other input device) when a mouse event is triggered.
@@ -65,7 +67,7 @@ document.querySelector('#log').appendChild(log)
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -86,7 +88,7 @@ with the following restrictions:
 - Single-button devices may emulate additional buttons with combinations of button and keyboard presses.
 - Touch devices may emulate buttons with configurable gestures (e.g., one-finger touch for _primary_, two-finger touch for _secondary_, etc.).
 - On Linux (GTK), the 4th button and the 5th button are not supported.
-  In addition, a {{Event("mouseup")}} event always includes the releasing button information in the `buttons` value.
+  In addition, a {{domxref("Element/mouseup_event", "mouseup")}} event always includes the releasing button information in the `buttons` value.
 - On Mac OS X 10.5, the `buttons` attribute always returns `0` because there is no platform API for implementing this feature.
 
 ## See also

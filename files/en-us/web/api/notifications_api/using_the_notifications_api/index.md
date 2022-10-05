@@ -1,6 +1,7 @@
 ---
 title: Using the Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
+page-type: guide
 tags:
   - API
   - Advanced
@@ -11,13 +12,14 @@ tags:
   - Tutorial
 browser-compat: api.Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.
 
 Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.
 
-![](android-notification.png)
+![Android device notifications feed containing a list of several alerts from multiple sources.](android-notification.png)
 
 The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
@@ -25,7 +27,7 @@ The system notification system will vary of course by platform and browser, but 
 
 One of the most obvious use cases for web notifications is a web-based mail or IRC application that needs to notify the user when a new message is received, even if the user is doing something else with another application. Many examples of this now exist, such as [Slack](https://slack.com/).
 
-We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/to-do-notifications/tree/gh-pages), or [view the app running live](https://mdn.github.io/to-do-notifications/).
+We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## Requesting permission
 
@@ -51,7 +53,7 @@ You can check to see if you already have permission by checking the value of the
 If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then((result) => {
   console.log(result);
 });
 ```
@@ -79,27 +81,21 @@ function askNotificationPermission() {
   // function to actually ask the permissions
   function handlePermission(permission) {
     // set the button to shown or hidden, depending on what the user answers
-    if(Notification.permission === 'denied' || Notification.permission === 'default') {
-      notificationBtn.style.display = 'block';
-    } else {
-      notificationBtn.style.display = 'none';
-    }
+    notificationBtn.style.display =
+      Notification.permission === 'granted' ? 'none' : 'block';
   }
 
   // Let's check if the browser supports notifications
   if (!('Notification' in window)) {
     console.log("This browser does not support notifications.");
+  } else if (checkNotificationPromise()) {
+    Notification.requestPermission().then((permission) => {
+      handlePermission(permission);
+    });
   } else {
-    if(checkNotificationPromise()) {
-      Notification.requestPermission()
-      .then((permission) => {
-        handlePermission(permission);
-      })
-    } else {
-      Notification.requestPermission(function(permission) {
-        handlePermission(permission);
-      });
-    }
+    Notification.requestPermission((permission) => {
+      handlePermission(permission);
+    });
   }
 }
 ```
@@ -116,14 +112,14 @@ Above we said that we had to check whether the browser supports the promise vers
 
 ```js
 function checkNotificationPromise() {
-    try {
-      Notification.requestPermission().then();
-    } catch(e) {
-      return false;
-    }
-
-    return true;
+  try {
+    Notification.requestPermission().then();
+  } catch (e) {
+    return false;
   }
+
+  return true;
+}
 ```
 
 We basically try to see if the `.then()` method is available on `requestPermission()`. If so, we move on and return `true`. If it fails, we return `false` in the `catch() {}` block.
@@ -135,18 +131,18 @@ Creating a notification is easy; just use the {{domxref("Notification")}} constr
 For example, in the to-do-list example we use the following snippet to create a notification when required (found inside the `createNotification()` function):
 
 ```js
-var img = '/to-do-notifications/img/icon-128.png';
-var text = 'HEY! Your task "' + title + '" is now overdue.';
-var notification = new Notification('To do list', { body: text, icon: img });
+const img = '/to-do-notifications/img/icon-128.png';
+const text = `HEY! Your task "${title}" is now overdue.`;
+const notification = new Notification('To do list', { body: text, icon: img });
 ```
 
 ## Closing notifications
 
-Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.
+Use {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.
 
 ```js
-var n = new Notification('My Great Song');
-document.addEventListener('visibilitychange', function() {
+const n = new Notification('My Great Song');
+document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') {
     // The tab has become visible so clear the now-stale Notification.
     n.close();
@@ -190,8 +186,8 @@ Assume the following basic HTML:
 It's possible to handle multiple notifications this way:
 
 ```js
-window.addEventListener('load', function () {
-  var button = document.getElementsByTagName('button')[0];
+window.addEventListener('load', () => {
+  const button = document.querySelector('button');
 
   if (window.self !== window.top) {
     // Ensure that if our document is in a frame, we get the user
@@ -202,49 +198,44 @@ window.addEventListener('load', function () {
     return;
   }
 
-  button.addEventListener('click', function () {
-    // If the user agreed to get notified
-    // Let's try to send ten notifications
-    if (window.Notification && Notification.permission === "granted") {
-      var i = 0;
+  button.addEventListener('click', () => {
+    if (Notification?.permission === "granted") {
+      // If the user agreed to get notified
+      // Let's try to send ten notifications
+      let i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-      var interval = window.setInterval(function () {
+      const interval = setInterval(() => {
         // Thanks to the tag, we should only see the "Hi! 9" notification
-        var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
-        if (i++ == 9) {
-          window.clearInterval(interval);
+        const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
+        if (i === 9) {
+          i++;
+          clearInterval(interval);
         }
       }, 200);
-    }
-
-    // If the user hasn't told if they want to be notified or not
-    // Note: because of Chrome, we are not sure the permission property
-    // is set, therefore it's unsafe to check for the "default" value.
-    else if (window.Notification && Notification.permission !== "denied") {
-      Notification.requestPermission(function (status) {
+    } else if (Notification && Notification.permission !== "denied") {
+      // If the user hasn't told if they want to be notified or not
+      // Note: because of Chrome, we are not sure the permission property
+      // is set, therefore it's unsafe to check for the "default" value.
+      Notification.requestPermission((status) => {
         // If the user said okay
         if (status === "granted") {
-          var i = 0;
+          let i = 0;
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-          var interval = window.setInterval(function () {
+          const interval = setInterval(() => {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
-            if (i++ == 9) {
-              window.clearInterval(interval);
+            const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
+            if (i === 9) {
+              i++;
+              clearInterval(interval);
             }
           }, 200);
-        }
-
-        // Otherwise, we can fallback to a regular modal alert
-        else {
+        } else {
+          // Otherwise, we can fallback to a regular modal alert
           alert("Hi!");
         }
       });
-    }
-
-    // If the user refuses to get notified
-    else {
-      // We can fallback to a regular modal alert
+    } else {
+      // If the user refuses to get notified, we can fallback to a regular modal alert
       alert("Hi!");
     }
   });

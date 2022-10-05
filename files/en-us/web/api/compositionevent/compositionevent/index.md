@@ -1,6 +1,7 @@
 ---
 title: CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
+page-type: web-api-constructor
 tags:
   - API
   - CompositionEvent
@@ -8,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.CompositionEvent.CompositionEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`CompositionEvent()`** constructor creates a new {{domxref("CompositionEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new CompositionEvent(type)
 new CompositionEvent(type, options)
 ```

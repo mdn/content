@@ -2,11 +2,12 @@
 title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
 tags:
-  - '79'
+  - "79"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.
@@ -81,7 +82,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Media, WebRTC, and Web Audio
 
-- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsType")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).
+- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStats.type")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).
 
 #### Removals
 

@@ -1,6 +1,7 @@
 ---
 title: Notification.lang
 slug: Web/API/Notification/lang
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Notification.lang
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`lang`** read-only property of the
@@ -18,8 +20,7 @@ as specified in the `lang` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
 The language itself is specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-See the Sitepoint [ISO 2
-letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
+See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
 
 ## Value
 
@@ -32,12 +33,12 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   lang: 'en-US'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.lang) // should return 'en-US'
 ```
@@ -52,5 +53,4 @@ console.log(n.lang) // should return 'en-US'
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

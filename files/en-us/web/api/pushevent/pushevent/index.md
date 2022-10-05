@@ -1,10 +1,10 @@
 ---
 title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - Push
   - Push API
   - PushEvent
@@ -12,7 +12,8 @@ tags:
   - Service Workers
 browser-compat: api.PushEvent.PushEvent
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}
 
 The **`PushEvent()`** constructor creates a new
 {{domxref("PushEvent")}} object. Note that this constructor is exposed only to a
@@ -20,7 +21,7 @@ service worker context.
 
 ## Syntax
 
-```js
+```js-nolint
 new PushEvent(type)
 new PushEvent(type, options)
 ```
@@ -44,11 +45,11 @@ A new {{domxref("PushEvent")}} object.
 ## Examples
 
 ```js
-var dataInit = {
+const dataInit = {
   data : 'Some sample text'
 }
 
-var myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent('push', dataInit);
 
 myPushEvent.data.text(); // should return 'Some sample text'
 ```

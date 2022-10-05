@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList.selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -13,6 +14,7 @@ tags:
   - track
 browser-compat: api.VideoTrackList.selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrackList")}}**

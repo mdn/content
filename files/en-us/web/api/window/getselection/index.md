@@ -1,6 +1,7 @@
 ---
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.getSelection
 ---
+
 {{ ApiRef() }}
 
 The **`Window.getSelection()`** method returns a
@@ -19,7 +21,7 @@ the current position of the caret.
 
 ## Syntax
 
-```js
+```js-nolint
 getSelection()
 ```
 
@@ -34,7 +36,7 @@ A {{domxref("Selection")}} object.
 When cast to string, either by appending an empty string (`""`) or using
 {{domxref("Selection.toString()")}}, this object returns the text selected.
 
-When called on an {{htmlelement("iframe")}} that is not displayed (eg. where
+When called on an {{htmlelement("iframe")}} that is not displayed (e.g., where
 `display: none` is set) Firefox will return `null`, whereas other
 browsers will return a {{domxref("Selection")}} object with
 {{domxref("Selection.type")}} set to `None`.
@@ -43,9 +45,9 @@ browsers will return a {{domxref("Selection")}} object with
 
 ```js
 function foo() {
-    var selObj = window.getSelection();
+    const selObj = window.getSelection();
     alert(selObj);
-    var selRange = selObj.getRangeAt(0);
+    const selRange = selObj.getRangeAt(0);
     // do stuff with the range
 }
 ```
@@ -72,7 +74,7 @@ have that property or method and may return unexpected results if it does. To us
 directly:
 
 ```js
-var selectedText = selObj.toString();
+const selectedText = selObj.toString();
 ```
 
 - `selObj` is a `Selection` object.

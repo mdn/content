@@ -1,6 +1,7 @@
 ---
 title: DelayNode()
 slug: Web/API/DelayNode/DelayNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.DelayNode.DelayNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`DelayNode()`**
@@ -21,7 +23,7 @@ its propagation to the output.
 
 ## Syntax
 
-```js
+```js-nolint
 new DelayNode(context)
 new DelayNode(context, options)
 ```
@@ -41,8 +43,7 @@ new DelayNode(context, options)
       - : The maximum delay time for the node, in seconds.
         Defaults to `1`.
     - `channelCount`
-      - : Represents an integer used to determine how many channels are used when [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+      - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
         {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
         definition depend on the value of `channelCountMode`.
     - `channelCountMode`
@@ -51,8 +52,7 @@ new DelayNode(context, options)
         information including default values.)
     - `channelInterpretation`
       - : Represents an enumerated value describing the meaning of the channels. This
-        interpretation will define how audio [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
         The possible values are `"speakers"` or `"discrete"`. (See
         {{domxref("AudioNode.channelCountMode")}} for more information including default
         values.)

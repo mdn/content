@@ -1,6 +1,7 @@
 ---
 title: CSS Declaration Block
 slug: Web/API/CSS_Object_Model/CSS_Declaration_Block
+page-type: guide
 tags:
   - CSS
   - CSS Object Model
@@ -9,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/cssom/#css-declaration-blocks
 ---
+
 {{ APIRef("CSSOM") }}
 
 A **CSS declaration block** is an ordered collection of CSS properties and values. It is represented in the DOM as a {{domxref("CSSStyleDeclaration")}}.

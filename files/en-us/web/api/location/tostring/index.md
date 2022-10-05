@@ -1,6 +1,7 @@
 ---
 title: location.toString()
 slug: Web/API/Location/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Location
@@ -9,6 +10,7 @@ tags:
   - Stringifier
 browser-compat: api.Location.toString
 ---
+
 {{ApiRef("Location")}}
 
 The **`toString()`** {{Glossary("stringifier")}} method of the
@@ -17,7 +19,7 @@ whole URL. It is a read-only version of {{domxref("Location.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -33,8 +35,8 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Let's imagine an <a id="myAnchor" href="/en-US/docs/Location/toString"> element is in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US/docs/Location/toString'
+const anchor = document.getElementById("myAnchor");
+const result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US/docs/Location/toString'
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: EXT_shader_texture_lod
 slug: Web/API/EXT_shader_texture_lod
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - WebGL extensions
 browser-compat: api.EXT_shader_texture_lod
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_shader_texture_lod`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds additional texture functions to the OpenGL ES Shading Language which provide the shader writer with explicit control of LOD ([Level of detail](https://en.wikipedia.org/wiki/Level_of_detail)).

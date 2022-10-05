@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
@@ -16,7 +18,7 @@ The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 bindBuffer(target, buffer)
 ```
 
@@ -30,9 +32,10 @@ bindBuffer(target, buffer)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
+
       - : Buffer used for element indices.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+        the following values are available additionally:
 
       - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object
         to another.
@@ -69,9 +72,9 @@ and the current binding will remain untouched.
 ### Binding a buffer to a target
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 ```

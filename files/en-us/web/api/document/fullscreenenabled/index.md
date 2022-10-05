@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -14,6 +15,7 @@ tags:
   - screen
 browser-compat: api.Document.fullscreenEnabled
 ---
+
 {{APIRef("Fullscreen API")}}
 
 The read-only **`fullscreenEnabled`**

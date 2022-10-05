@@ -8,6 +8,7 @@ tags:
   - Strict Mode
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "property is non-configurable and can't be deleted" occurs
@@ -15,10 +16,10 @@ when it was attempted to delete a property, but that property is [non-configurab
 
 ## Message
 
-```js
-TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
-TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
-TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+```
+TypeError: Cannot delete property 'x' of #<Object> (V8-based)
+TypeError: property "x" is non-configurable and can't be deleted (Firefox)
+TypeError: Unable to delete property. (Safari)
 ```
 
 ## Error type
@@ -43,16 +44,20 @@ Non-configurable properties are not super common, but they can be created using
 
 ```js example-bad
 'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
+const obj = Object.freeze({name: 'Elsa', score: 157});
 delete obj.score;  // TypeError
+```
 
+```js example-bad
 'use strict';
-var obj = {};
+const obj = {};
 Object.defineProperty(obj, 'foo', {value: 2, configurable: false});
 delete obj.foo;  // TypeError
+```
 
+```js example-bad
 'use strict';
-var frozenArray = Object.freeze([0, 1, 2]);
+const frozenArray = Object.freeze([0, 1, 2]);
 frozenArray.pop();  // TypeError
 ```
 

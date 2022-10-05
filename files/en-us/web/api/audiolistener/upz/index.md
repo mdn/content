@@ -1,6 +1,7 @@
 ---
 title: AudioListener.upZ
 slug: Web/API/AudioListener/upZ
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - upZ
 browser-compat: api.AudioListener.upZ
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `upZ` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the z value of the direction vector defining the up direction the listener is pointing in.

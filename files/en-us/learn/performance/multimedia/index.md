@@ -8,6 +8,7 @@ tags:
   - Video
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
 
 Media, namely images and video, account for over 70% of the bytes downloaded for the average website. In terms of download performance, eliminating media, and reducing file size is the low-hanging fruit. This article looks at optimizing image and video to improve web performance.
@@ -37,7 +38,7 @@ Media, namely images and video, account for over 70% of the bytes downloaded for
   </tbody>
 </table>
 
-> **Note:** This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques. For a more in-depth guide, see  <https://images.guide>.
+> **Note:** This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques. For a more in-depth guide, see <https://images.guide>.
 
 ## Why optimize your multimedia?
 
@@ -85,7 +86,7 @@ Other formats improve on JPEG's capabilities in regards to compression, but are 
 
   > **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
 
-- [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif-converter.online).
+- [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif.io/).
 - **JPEG-XR** — created by Microsoft and only available in Internet Explorer and EdgeHTML based Edge. Doesn't support progressive display and the image decoding is not hardware accelerated and therefore resource-intensive on the browser's main thread. Progressive JPEG above-the-fold is that they render progressively (hence the name), meaning the user sees a low-resolution version that gains clarity as the image downloads, rather than the image loading at full resolution top-to-bottom or even only rendering once completely downloaded.
 - **JPEG2000** — once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.
 
@@ -97,15 +98,15 @@ And finally, should you want to include animated images into your page, then kno
 
 ```html
 <picture>
-   <source type="video/mp4" src="giphy.mp4">
-   <source type="image/webp" src="giphy.webp">
-   <img src="giphy.gif" alt="" />
+  <source type="video/mp4" src="giphy.mp4" />
+  <source type="image/webp" src="giphy.webp" />
+  <img src="giphy.gif" alt="A GIF animation" />
 </picture>
 ```
 
 #### Serving the optimal size
 
-In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vis-versa for larger screens. On top of that you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g. "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Element/source#attr-media) and/or [sizes](/en-US/docs/Web/HTML/Element/source#attr-sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
+In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g. "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Element/source#attr-media) and/or [sizes](/en-US/docs/Web/HTML/Element/source#attr-sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
 
 Two interesting effects to keep in mind regarding high dpi screens is that:
 

@@ -1,6 +1,7 @@
 ---
 title: CSSMathSum.values
 slug: Web/API/CSSMathSum/values
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -13,6 +14,7 @@ tags:
   - values
 browser-compat: api.CSSMathSum.values
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum.values`** read-only property

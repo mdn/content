@@ -1,17 +1,19 @@
 ---
 title: FileReaderSync.readAsDataURL()
 slug: Web/API/FileReaderSync/readAsDataURL
+page-type: web-api-instance-method
 browser-compat: api.FileReaderSync.readAsDataURL
 ---
+
 {{APIRef("File API")}}
 
 The `readAsDataURL()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string representing a data URL. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Syntax
 
-```js
-readAsDataURL(File);
-readAsDataURL(Blob);
+```js-nolint
+readAsDataURL(File)
+readAsDataURL(Blob)
 ```
 
 ### Parameters
@@ -49,8 +51,8 @@ The following exceptions can be raised by this method:
 
 ## See also
 
-- [File API](/en-US/docs/API/File_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

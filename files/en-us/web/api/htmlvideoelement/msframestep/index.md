@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msFrameStep()
 slug: Web/API/HTMLVideoElement/msFrameStep
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
@@ -9,6 +10,7 @@ tags:
   - Reference
   - msFrameStep
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 The **`HTMLVideoElement.msFrameStep()`** method steps the video
@@ -18,7 +20,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 msFrameStep(forward)
 ```
 

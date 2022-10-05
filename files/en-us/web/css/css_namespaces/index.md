@@ -1,6 +1,7 @@
 ---
 title: CSS Namespaces
 slug: Web/CSS/CSS_Namespaces
+page-type: css-module
 tags:
   - CSS
   - CSS Namespaces
@@ -8,8 +9,9 @@ tags:
   - Overview
   - Reference
   - Web
-spec-urls: https://drafts.csswg.org/css-namespaces/
+browser-compat: css.at-rules.namespace
 ---
+
 {{CSSRef}}
 
 **CSS Namespaces** is a CSS module that allows authors to specify [XML namespaces](/en-US/docs/Namespaces) in CSS.
@@ -26,6 +28,4 @@ spec-urls: https://drafts.csswg.org/css-namespaces/
 
 ## Browser compatibility
 
-### `@namespace` rule
-
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

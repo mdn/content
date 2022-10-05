@@ -1,6 +1,7 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Window.scrollTo
 ---
+
 {{APIRef}}
 
 **`Window.scrollTo()`** scrolls to a particular set of
@@ -16,7 +18,7 @@ coordinates in the document.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollTo(x-coord, y-coord)
 scrollTo(options)
 ```

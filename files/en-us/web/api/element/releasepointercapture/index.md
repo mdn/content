@@ -1,6 +1,7 @@
 ---
 title: Element.releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.releasePointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`releasePointerCapture()`** method of the
@@ -22,7 +24,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 releasePointerCapture(pointerId)
 ```
 
@@ -45,7 +47,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example sets pointer capture on a {{HtmlElement("div")}} when you press down on
-it. This lets you slide the element horizontally, even when you pointer moves outside of
+it. This lets you slide the element horizontally, even when your pointer moves outside of
 its boundaries.
 
 ### HTML

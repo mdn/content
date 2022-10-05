@@ -1,10 +1,10 @@
 ---
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -12,20 +12,17 @@ tags:
   - delete
 browser-compat: api.CacheStorage.delete
 ---
+
 {{APIRef("Service Workers API")}}
 
-The **`delete()`** method of the
-{{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the
-`cacheName`, and if found, deletes the {{domxref("Cache")}} object and
-returns a {{jsxref("Promise")}} that resolves to `true`. If no
-{{domxref("Cache")}} object is found, it resolves to `false`.
+The **`delete()`** method of the {{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`.
+If no {{domxref("Cache")}} object is found, it resolves to `false`.
 
-You can access `CacheStorage` through the global
-{{domxref("caches")}} property.
+You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(cacheName)
 ```
 
@@ -50,17 +47,19 @@ check each key to see if it is in the array. If not, we delete it using
 `delete()`.
 
 ```js
-this.addEventListener('activate', function(event) {
-  var cachesToKeep = ['v2'];
+this.addEventListener("activate", (event) => {
+  const cachesToKeep = ["v2"];
 
   event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cachesToKeep.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          if (!cachesToKeep.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
   );
 });
 ```
@@ -75,7 +74,6 @@ this.addEventListener('activate', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

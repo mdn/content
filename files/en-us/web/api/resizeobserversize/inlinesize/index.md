@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverSize.inlineSize
 slug: Web/API/ResizeObserverSize/inlineSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - ResizeObserverSize
 browser-compat: api.ResizeObserverSize.inlineSize
 ---
+
 {{DefaultAPISidebar("Resize Observer API")}}
 
 The **`inlineSize`** read-only property of the {{domxref("ResizeObserverSize")}} interface returns the length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.
@@ -24,9 +26,9 @@ A decimal representing the inline size in pixels.
 In this example we return an array of sizing information with {{domxref("ResizeObserverEntry.contentBoxSize")}}. The `inlineSize` property returns the inline dimension size of the observed element.
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    let elemSize = entry.contentBoxSize[0];
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    const elemSize = entry.contentBoxSize[0];
     console.log(elemSize.inlineSize); // a decimal
   }
 });

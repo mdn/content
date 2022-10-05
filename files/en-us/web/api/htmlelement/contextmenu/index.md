@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -10,9 +11,11 @@ tags:
   - Property
   - Reference
   - UX
+  - Non-standard
 browser-compat: api.HTMLElement.contextMenu
 ---
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLElement.contextMenu`** property refers to the
 context menu assigned to an element using the {{htmlattrxref("contextmenu")}}
@@ -25,7 +28,7 @@ A {{HTMLElement("menu")}} element.
 ## Examples
 
 ```js
-var contextMenu = document.getElementById("element").contextMenu;
+const contextMenu = document.getElementById("element").contextMenu;
 
 // Change the label of the first menu entry
 contextMenu.firstElementChild.label = "New label";

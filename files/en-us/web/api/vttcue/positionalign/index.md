@@ -1,6 +1,7 @@
 ---
 title: VTTCue.positionAlign
 slug: Web/API/VTTCue/positionAlign
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.positionAlign
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`positionAlign`** property of the {{domxref("VTTCue")}} interface is used to determine what {{domxref("VTTCue.position")}} is anchored to.

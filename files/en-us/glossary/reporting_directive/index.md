@@ -9,6 +9,7 @@ tags:
   - Security
   - Violation
 ---
+
 **{{Glossary("CSP")}} reporting directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and control the reporting process of CSP violations.
 
 See [Reporting directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#reporting_directives) for a complete list.

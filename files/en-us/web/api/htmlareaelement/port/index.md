@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.port
 slug: Web/API/HTMLAreaElement/port
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.port
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.port`** property is a

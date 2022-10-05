@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.entries()
 slug: Web/API/StylePropertyMapReadOnly/entries
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - entries()
 browser-compat: api.StylePropertyMapReadOnly.entries
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`StylePropertyMapReadOnly.entries()`** method returns an
@@ -22,7 +24,7 @@ well).
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

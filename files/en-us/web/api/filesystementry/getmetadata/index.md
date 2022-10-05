@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.getMetadata()
 slug: Web/API/FileSystemEntry/getMetadata
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -13,7 +14,8 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.getMetadata
 ---
-{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`getMetadata()`** obtains a
@@ -22,7 +24,7 @@ its modification date and time and its size.
 
 ## Syntax
 
-```js
+```js-nolint
 getMetadata(successCallback)
 getMetadata(successCallback, errorCallback)
 ```
@@ -55,10 +57,10 @@ This example checks the size of a log file in a temporary folder and, if it exce
 megabyte, moves it into a different directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
+workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
+  fileEntry.getMetadata((metadata) => {
     if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, function(dirEntry) {
+      workingDirectory.getDirectory("log", {}, (dirEntry) => {
         fileEntry.moveTo(dirEntry);
       }, handleError);
     }

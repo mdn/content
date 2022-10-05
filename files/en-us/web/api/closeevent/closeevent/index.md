@@ -1,6 +1,7 @@
 ---
 title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
+page-type: web-api-constructor
 tags:
   - API
   - CloseEvent
@@ -8,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.CloseEvent.CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 The **`CloseEvent()`** constructor creates a new {{domxref("CloseEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new CloseEvent(type)
 new CloseEvent(type, options)
 ```

@@ -1,21 +1,24 @@
 ---
 title: VideoDecoder.configure()
 slug: Web/API/VideoDecoder/configure
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - configure
   - VideoDecoder
+  - Experimental
 browser-compat: api.VideoDecoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -25,18 +28,18 @@ configure(config)
   - : An object containing the following members:
     - `codec`
       - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
-    - `description`{{Optional_Inline}}
-      - : A {{domxref("BufferSource")}} containing a sequence of codec specific bytes, commonly known as extradata.
-    - `codedWidth`{{Optional_Inline}}
+    - `description` {{optional_inline}}
+      - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
+    - `codedWidth` {{optional_inline}}
       - : An integer representing the width of the {{domxref("VideoFrame")}} in pixels, including any non-visible padding, before any ratio adjustments.
-    - `codedHeight`{{Optional_Inline}}
+    - `codedHeight` {{optional_inline}}
       - : An integer representing the height of the {{domxref("VideoFrame")}} in pixels, including any non-visible padding, before any ratio adjustments.
-    - `displayAspectWidth`{{Optional_Inline}}
+    - `displayAspectWidth` {{optional_inline}}
       - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
-    - `displayAspectHeight`{{Optional_Inline}}
+    - `displayAspectHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
     - `colorSpace`
-      - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
+      - : An object representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
           - : A string representing the color {{glossary("gamut")}} of the video sample. One of:
             - `"bt709"`
@@ -59,7 +62,7 @@ configure(config)
         - `"prefer-hardware"`
         - `"prefer-software"`
     - `optimizeForLatency`
-      - : A boolean. If `true`this is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
+      - : A boolean. If `true` this is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
 
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 

@@ -1,19 +1,23 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
+page-type: css-property
 tags:
   - CSS
   - CSS Text Decoration
-  - Property
+  - CSS Property
   - Reference
   - recipe:css-property
   - text-decoration
   - text-underline-offset
 browser-compat: css.properties.text-underline-offset
 ---
+
 {{CSSRef}}
 
 The **`text-underline-offset`** [CSS](/en-US/docs/Web/CSS) property sets the offset distance of an underline text decoration line (applied using {{cssxref("text-decoration")}}) from its original position.
+
+{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
 
 `text-underline-offset` is not part of the {{cssxref('text-decoration')}} shorthand. While an element can have multiple `text-decoration` lines, `text-underline-offset` only impacts underlining, and **not** other possible line decoration options such as `overline` or `line-through`.
 
@@ -63,8 +67,10 @@ The `text-underline-offset` property is specified as a single value from the lis
 
 ```html
 <p class="oneline">Here's some text with an offset wavy red underline!</p>
-<br>
-<p class="twolines">This text has lines both above and below it. Only the bottom one is offset.</p>
+<br />
+<p class="twolines">
+  This text has lines both above and below it. Only the bottom one is offset.
+</p>
 ```
 
 ```css

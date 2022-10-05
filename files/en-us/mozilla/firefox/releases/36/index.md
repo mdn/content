@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/36
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -15,7 +16,7 @@ Firefox 36 was released on February 24th, 2015. This article lists key changes t
 Highlights:
 
 - [eval sources now appear in the Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html#debug-eval-sources)
-- [Simpler process for connecting to Firefox for Android](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html)
+- [Simpler process for connecting to Firefox for Android](https://web.archive.org/web/20220410035837/https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html)
 - Box Model Highlighter works on remote targets
 - ["Invert the call tree" option in the Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html#inverting-the-call-tree)
 - [Inspect DOM promises in the console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#type-specific-rich-output)
@@ -80,12 +81,12 @@ Highlights:
 
 - The {{domxref("MediaDevices")}} interface, containing the {{jsxref("Promise")}}-based version of {{domxref("MediaDevices.getUserMedia()", "getUserMedia()")}}, has been added. It is available via {{domxref("Navigator.mediaDevices")}} ({{bug(1033885)}}).
 - The EME-related {{domxref("Navigator.requestMediaKeySystemAccess()")}} method, and the related {{domxref("MediaKeySystemAccess")}}, is now supported ({{bug(1095257)}}).
-- The {{event("keyschange")}} event is now sent when an EME-related CDM change keys in a session ({{bug(1081755)}}).
+- The {{domxref("MediaKeySession/keystatuseschange_event", "keyschange")}} event is now sent when an EME-related CDM change keys in a session ({{bug(1081755)}}).
 - The default values of the options for {{domxref("MutationObserver.observe()")}} have been updated to match the latest specification ({{bug(973638)}}).
 - Experimental support for virtual reality devices has landed behind the `dom.vr.enabled` preference, off by default ({{bug(1036604)}}).
 - The function associated with {{domxref("RTCPeerConnection.signalingstatechange_event", "RTCPeerConnection.onsignalingstatechange")}} now receives an event as parameter, as per spec ({{bug(1075133)}}).
 - The experimental implementation of Web Animations make progress: the method {{domxref("Animation/play", "AnimationPlayer.play()")}} and {{domxref("Animation/pause", "AnimationPlayer.pause()")}} are now supported ({{bug(1070745)}}), as well as {{domxref("Animation/playState", "AnimationPlayer.playState")}} ({{bug(1037321)}}).
-- The non-standard {{domxref("DOMRequest")}} interface has now a {{domxref("DOMRequest.then()", "then()")}} method ({{bug(839838)}}).
+- The non-standard `DOMRequest` interface has now a `DOMRequest.then()` method ({{bug(839838)}}).
 - The CSSOM View scroll behavior controlling methods, {{domxref("Element.scroll()")}}, {{domxref("Element.scrollTo()")}}, {{domxref("Element.scrollBy()")}}, and {{domxref("Element.scrollIntoView()")}}, have been implemented or extended ({{bug(1045754)}} and {{bug(1087559)}}).
 - Assigning to {{domxref("Element.innerHTML")}} on an {{domxref("SVGElement")}} now create elements in the SVG namespace ({{bug(886390)}}).
 - The `nsIWebBrowserPersist.saveURI()`>) method now requires 8 arguments, in an order incompatible with previous releases.
@@ -120,12 +121,15 @@ _No change._
 
 #### Highlights
 
-- The [`sdk/test/httpd`](en-US/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed in [Firefox 36](/en-US/docs/Mozilla/Firefox/Releases/36), please use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
-- Add badges to [`sdk/ui`](en-US/Add-ons/SDK/High-Level_APIs/ui) buttons ({{bug(994280)}}).
+- The [`sdk/test/httpd`](/en-US/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed in [Firefox 36](/en-US/docs/Mozilla/Firefox/Releases/36), please use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
+- Add badges to [`sdk/ui`](/en-US/Add-ons/SDK/High-Level_APIs/ui) buttons ({{bug(994280)}}).
 - Implemented global `require` function to access sdk modules anywhere ({{bug(1070927)}}), using:
 
   ```js
-  var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
+  var { require } = Cu.import(
+    "resource://gre/modules/commonjs/toolkit/require.js",
+    {}
+  );
   ```
 
 #### Details
@@ -134,8 +138,8 @@ _No change._
 
 ### JavaScript code modules
 
-- [PromiseUtils.resolveOrTimeout](</en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.jsm#resolveOrTimeout()>) is implemented ({{bug(1080466)}}).
-- [PromiseUtils.defer](</en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.jsm#defer()>) (a replacement for [Promise.defer](</en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm#defer()>)) is implemented ({{bug(1093021)}}).
+- `PromiseUtils.resolveOrTimeout` is implemented ({{bug(1080466)}}).
+- [PromiseUtils.defer](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.html#defer()>) (a replacement for `Promise.defer()`) is implemented ({{bug(1093021)}}).
 
 ### Interfaces
 
@@ -154,7 +158,7 @@ _No change._
 
 ### Other
 
-- Firefox `-remote` [command line option](/en-US/docs/Mozilla/Command_Line_Options) has been removed ({{bug(1080319)}}).
+- Firefox `-remote` [command line option](https://wiki.mozilla.org/Firefox/CommandLineOptions) has been removed ({{bug(1080319)}}).
 
 ## Older versions
 

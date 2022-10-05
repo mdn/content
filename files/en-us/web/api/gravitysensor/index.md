@@ -1,6 +1,7 @@
 ---
 title: GravitySensor
 slug: Web/API/GravitySensor
+page-type: web-api-interface
 tags:
   - API
   - Accelerometer
@@ -14,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.GravitySensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`GravitySensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the gravity applied to the device along all three axes.
@@ -46,7 +48,7 @@ Gravity is typically read in the {{domxref('Sensor.reading_event', 'reading')}} 
 ```js
 let gravitySensor = new GravitySensor({frequency: 60});
 
-gravitySensor.addEventListener("reading", e => {
+gravitySensor.addEventListener("reading", (e) => {
   console.log(`Gravity along the X-axis ${gravitySensor.x}`);
   console.log(`Gravity along the Y-axis ${gravitySensor.y}`);
   console.log(`Gravity along the Z-axis ${gravitySensor.z}`);

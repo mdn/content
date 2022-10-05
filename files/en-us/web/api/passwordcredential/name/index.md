@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential.name
 slug: Web/API/PasswordCredential/name
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API
@@ -9,8 +10,10 @@ tags:
   - Property
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.PasswordCredential.name
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`name`** read-only property of

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.pendingRemoteDescription
 slug: Web/API/RTCPeerConnection/pendingRemoteDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -38,9 +39,9 @@ This example looks at the `pendingRemoteDescription` to determine whether or
 not there's a description change being processed.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.pendingRemoteDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.pendingRemoteDescription;
 if (sd) {
   // There's a description change underway!
 }

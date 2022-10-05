@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction
 slug: Web/API/IDBTransaction
+page-type: web-api-interface
 tags:
   - API
   - Database
@@ -11,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBTransaction`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, {{domxref("IDBTransaction")}} to set the mode of the transaction (e.g. is it `readonly` or `readwrite`), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an `IDBTransaction` object to abort transactions.
@@ -22,10 +24,10 @@ The **`IDBTransaction`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 Transactions are started when the transaction is created, not when the first request is placed; for example consider this:
 
 ```js
-var trans1 = db.transaction("foo", "readwrite");
-var trans2 = db.transaction("foo", "readwrite");
-var objectStore2 = trans2.objectStore("foo")
-var objectStore1 = trans1.objectStore("foo")
+const trans1 = db.transaction("foo", "readwrite");
+const trans2 = db.transaction("foo", "readwrite");
+const objectStore2 = trans2.objectStore("foo")
+const objectStore1 = trans1.objectStore("foo")
 objectStore2.put("2", "key");
 objectStore1.put("1", "key");
 ```
@@ -51,15 +53,15 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 
 ## Properties
 
-- {{domxref("IDBTransaction.db")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.db")}} {{ReadOnlyInline}}
   - : The database connection with which this transaction is associated.
-- {{domxref("IDBTransaction.durability")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.durability")}} {{ReadOnlyInline}}
   - : Returns the durability hint the transaction was created with.
-- {{domxref("IDBTransaction.error")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.
-- {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.error")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the {{domxref("IDBTransaction.abort()")}} function.
+- {{domxref("IDBTransaction.mode")}} {{ReadOnlyInline}}
   - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
-- {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.objectStoreNames")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
 
 ## Methods
@@ -128,16 +130,9 @@ Transactions can have one of three modes:
       <td>"versionchange" (2 in Chrome)</td>
       <td>
         Allows any operation to be performed, including ones that delete and
-        create object stores and indexes. This mode is for updating the version
-        number of transactions that were started using the
-        <a href="/en-US/docs/Web/API/IDBDatabase#setversion"
-          ><code>setVersion()</code></a
-        >
-        method of
-        <a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a> objects.
-        Transactions of this mode cannot run concurrently with other
-        transactions. Transactions in this mode are known as "upgrade
-        transactions."
+        create object stores and indexes. Transactions of this mode cannot run
+        concurrently with other transactions. Transactions in this mode are
+        known as "upgrade transactions."
       </td>
     </tr>
   </tbody>
@@ -146,18 +141,23 @@ Transactions can have one of three modes:
 Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
 
 ```js
-var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+const myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
 ```
 
 ## Examples
 
-In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
-// Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const note = document.getElementById('notifications');
 
-DBOpenRequest.onsuccess = function(event) {
+// an instance of a db object for us to store the IDB data in
+let db;
+
+// Let us open our database
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db
@@ -170,27 +170,27 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Create a new object to insert into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
   // open a read/write db transaction, ready to add data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
-  transaction.onerror = function(event) {
+  transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
 
   // add our newItem object to the object store
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.oncomplete)
     note.innerHTML += '<li>Request successful.</li>';
@@ -214,4 +214,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

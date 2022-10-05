@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,6 +18,7 @@ tags:
   - uniformMatrix4fv
 browser-compat: api.WebGLRenderingContext.uniformMatrix2fv
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.uniformMatrix[234]fv()`** methods
@@ -30,7 +32,7 @@ expected to have 4, 9 or 16 floats.
 
 ## Syntax
 
-```js
+```js-nolint
 uniformMatrix2fv(location, transpose, value)
 uniformMatrix3fv(location, transpose, value)
 uniformMatrix4fv(location, transpose, value)

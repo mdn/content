@@ -1,10 +1,10 @@
 ---
 title: PushSubscription.subscriptionId
 slug: Web/API/PushSubscription/subscriptionId
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
-  - Experimental
   - Property
   - Push
   - Push API
@@ -14,6 +14,7 @@ tags:
   - subscriptionId
 browser-compat: api.PushSubscription.subscriptionId
 ---
+
 {{APIRef("Push API")}}{{Deprecated_header}}
 
 The **`subscriptionId`** read-only property of the

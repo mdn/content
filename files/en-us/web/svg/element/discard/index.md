@@ -9,6 +9,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.discard
 ---
+
 {{SVGRef}}
 
 The **`<discard>`** [SVG](/en-US/docs/Web/SVG) element allows authors to specify the time at which particular elements are to be discarded, thereby reducing the resources required by an SVG user agent. This is particularly useful to help SVG viewers conserve memory while displaying long-running documents.

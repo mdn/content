@@ -1,6 +1,7 @@
 ---
 title: CSSTranslate.z
 slug: Web/API/CSSTranslate/z
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSTranslate.z
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`z`** property of the

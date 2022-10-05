@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.device
 slug: Web/API/BluetoothRemoteGATTServer/device
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.BluetoothRemoteGATTServer.device
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.device`** read-only property

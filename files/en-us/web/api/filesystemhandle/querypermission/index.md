@@ -1,15 +1,18 @@
 ---
 title: FileSystemHandle.queryPermission()
 slug: Web/API/FileSystemHandle/queryPermission
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
   - File System Access API
   - FileSystemHandle
   - Method
+  - Experimental
 browser-compat: api.FileSystemHandle.queryPermission
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
@@ -17,8 +20,8 @@ current handle.
 
 ## Syntax
 
-```js
-var PermissionState = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);
+```js-nolint
+queryPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters
@@ -89,5 +92,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

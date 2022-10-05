@@ -1,6 +1,7 @@
 ---
 title: CSSMathInvert()
 slug: Web/API/CSSMathInvert/CSSMathInvert
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,6 +12,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMathInvert.CSSMathInvert
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathInvert()`** constructor creates a
@@ -19,7 +21,7 @@ new {{domxref("CSSMathInvert")}} object which represents a CSS
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathInvert(arg)
 ```
 

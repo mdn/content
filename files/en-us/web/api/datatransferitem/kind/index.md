@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.kind
 slug: Web/API/DataTransferItem/kind
+page-type: web-api-instance-property
 tags:
   - API
   - DataTransferItem
@@ -12,6 +13,7 @@ tags:
   - kind
 browser-compat: api.DataTransferItem.kind
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only **`DataTransferItem.kind`** property returns a
@@ -36,23 +38,23 @@ This example shows the use of the `kind` property.
 function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
- var data = event.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
-   if ((data[i].kind == 'string') &&
+ const data = event.dataTransfer.items;
+ for (let i = 0; i < data.length; i += 1) {
+   if ((data[i].kind === 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
-     data[i].getAsString(function (s){
+     data[i].getAsString((s) => {
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &&
+   } else if ((data[i].kind === 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
-     console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'file') &&
+     console.log("… Drop: HTML");
+   } else if ((data[i].kind === 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
-     var f = data[i].getAsFile();
-     console.log("... Drop: File ");
+     const f = data[i].getAsFile();
+     console.log("… Drop: File ");
    }
  }
 }

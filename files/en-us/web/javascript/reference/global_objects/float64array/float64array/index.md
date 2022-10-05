@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Float64Array.Float64Array
 ---
+
 {{JSRef}}
 
 The **`Float64Array()`** typed array constructor creates a new
@@ -21,16 +22,18 @@ notation).
 
 ## Syntax
 
-```js
-new Float64Array(); // new in ES2017
-new Float64Array(length);
-new Float64Array(typedArray);
-new Float64Array(object);
+```js-nolint
+new Float64Array()
+new Float64Array(length)
+new Float64Array(typedArray)
+new Float64Array(object)
 
-new Float64Array(buffer);
-new Float64Array(buffer, byteOffset);
-new Float64Array(buffer, byteOffset, length);
+new Float64Array(buffer)
+new Float64Array(buffer, byteOffset)
+new Float64Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Float64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -65,29 +68,30 @@ new Float64Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-let float64 = new Float64Array(2);
+const float64 = new Float64Array(2);
 float64[0] = 42;
 console.log(float64[0]); // 42
 console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-const arr = new Float64Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Float64Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-const x = new Float64Array([21, 31]);
 const y = new Float64Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-const buffer = new ArrayBuffer(32);
-const z = new Float64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(64);
+const z = new Float64Array(buffer, 8, 4);
+console.log(z.byteOffset); // 8
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const float64 = new Float64Array(iterable);
-// Float64Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const float64FromIterable = new Float64Array(iterable);
+console.log(float64FromIterable);
+// Float64Array [1, 2, 3]
 ```
 
 ## Specifications
@@ -97,23 +101,6 @@ const float64 = new Float64Array(iterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Float64Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Float64Array` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Float64Array([1, 2, 3]);
-// TypeError: calling a builtin Float64Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Float64Array([1, 2, 3]);
-```
 
 ## See also
 

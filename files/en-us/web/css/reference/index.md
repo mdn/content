@@ -1,13 +1,15 @@
 ---
 title: CSS reference
 slug: Web/CSS/Reference
+page-type: landing-page
 tags:
   - CSS
   - Guide
   - Overview
   - Reference
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{CSSRef}}
 
 Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_Types), [functional notations](/en-US/docs/Web/CSS/CSS_Functions) and [at-rules](/en-US/docs/Web/CSS/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
@@ -23,7 +25,7 @@ style-rule ::=
     }
 ```
 
-... where :
+Where :
 
 ```css
 selectors-list ::=
@@ -68,7 +70,7 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), wh
 
 **Basic selectors** are fundamental selectors; these are the most basic selectors that are frequently combined to create other, more complex selectors.
 
-- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) `*`
 - [Type selector](/en-US/docs/Web/CSS/Type_selectors) `elementname`
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors) `.classname`
 - [ID selector](/en-US/docs/Web/CSS/ID_selectors) `#idname`
@@ -81,7 +83,7 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), wh
 
 ### Combinators
 
-Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`."
+Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`", creating a complex selector.
 
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
   - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.

@@ -2,10 +2,10 @@
 title: CORS
 slug: Glossary/CORS
 tags:
-  - Glossary
   - Infrastructure
   - Security
 ---
+
 **CORS** (Cross-Origin Resource Sharing) is a system, consisting of transmitting {{Glossary("HTTP_header", "HTTP headers")}}, that determines whether browsers block frontend JavaScript code from accessing responses for cross-origin requests.
 
 The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
@@ -13,7 +13,7 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
 ## See also
 
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
-- {{Interwiki("wikipedia", "Cross-origin resource sharing")}} on Wikipedia
+- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
 - [Fetch specification](https://fetch.spec.whatwg.org)
 
 ### CORS headers

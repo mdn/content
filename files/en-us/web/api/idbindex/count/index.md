@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.count()
 slug: Web/API/IDBIndex/count
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -12,6 +13,7 @@ tags:
   - count
 browser-compat: api.IDBIndex.count
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`count()`** method of the {{domxref("IDBIndex")}}
@@ -22,7 +24,7 @@ returns the number of records within a key range.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(key)
 ```
@@ -62,34 +64,32 @@ and the result of that request is logged to the console when its success callbac
 returns.
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples
-demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex/).)
+complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {
   tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  const transaction = db.transaction(['contactsList'], 'readonly');
+  const objectStore = transaction.objectStore('contactsList');
 
-  var myIndex = objectStore.index('lName');
-  var countRequest = myIndex.count();
-  countRequest.onsuccess = function() {
+  const myIndex = objectStore.index('lName');
+  const countRequest = myIndex.count();
+  countRequest.onsuccess = () => {
     console.log(countRequest.result);
   }
 
-  myIndex.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+  myIndex.openCursor().onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const tableRow = document.createElement('tr');
+      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
+                         + `<td>${cursor.value.lName}</td>`
+                         + `<td>${cursor.value.fName}</td>`
+                         + `<td>${cursor.value.jTitle}</td>`
+                         + `<td>${cursor.value.company}</td>`
+                         + `<td>${cursor.value.eMail}</td>`
+                         + `<td>${cursor.value.phone}</td>`
+                         + `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -116,5 +116,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

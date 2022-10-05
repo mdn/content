@@ -18,6 +18,7 @@ tags:
   - screen reader
   - screenreader
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
 This article starts the module off with a good look at what accessibility is — this overview includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.
@@ -46,7 +47,7 @@ You might also think of accessibility as treating everyone the same, and giving 
 
 Accessibility is the right thing to do. Providing accessible sites is part of the law in some countries, which can open up some significant markets that otherwise would not be able to use your services or buy your products.
 
-Building accessible sites benefit everyone:
+Building accessible sites benefits everyone:
 
 - Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.
 - Caring about accessibility demonstrates good ethics and morals, which improves your public image.
@@ -64,10 +65,10 @@ People with disabilities are just as diverse as people without disabilities, and
 People with visual impairments include people with blindness, low-level vision, and color blindness. Many people with visual impairments use screen magnifiers that are either physical magnifiers or software zoom capabilities. Most browsers and operating systems these days have zoom capabilities. Some users will rely on screen readers, which is software that reads digital text aloud. Some screen reader examples include:
 
 - Paid commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/en-gb/products/individuals/screen-reader) (Windows).
-- Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://www.chromevox.com/) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
+- Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
-It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) for more details on using them. The below video also provides a brief example of what the experience is like.
+It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details on using them. The below video also provides a brief example of what the experience is like.
 
 {{EmbedYouTube("IK97XMibEws")}}
 

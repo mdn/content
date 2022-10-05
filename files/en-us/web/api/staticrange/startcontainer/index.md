@@ -1,6 +1,7 @@
 ---
 title: StaticRange.startContainer
 slug: Web/API/StaticRange/startContainer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -16,6 +17,7 @@ tags:
   - startContainer
 browser-compat: api.StaticRange.startContainer
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`startContainer`**

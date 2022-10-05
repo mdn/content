@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
+page-type: web-api-instance-property
 tags:
   - API
   - Media Capture and Streams
@@ -11,10 +12,11 @@ tags:
   - muted
 browser-compat: api.MediaStreamTrack.muted
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`muted`** read-only property of the
-{{domxref("MediaStreamTrack")}} interface returns a {{jsxref('Boolean')}} value
+{{domxref("MediaStreamTrack")}} interface returns a boolean value
 indicating whether or not the track is currently unable to provide media output.
 
 > **Note:** To implement a way for users to mute and unmute a track, use the
@@ -25,7 +27,7 @@ indicating whether or not the track is currently unable to provide media output.
 
 ## Value
 
-A {{jsxref('Boolean')}} which is `true` if the track is currently muted, or
+A boolean which is `true` if the track is currently muted, or
 `false` if the track is currently unmuted.
 
 > **Note:** When possible, avoid polling `muted` to monitor the track's muting status.

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransfer
@@ -11,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.clearData()`** method removes the drag
@@ -24,12 +26,12 @@ This method does _not_ remove files from the drag operation, so it's possible
 for there still to be an entry with the type `"Files"` left in the object's
 {{domxref("DataTransfer.types")}} list if there are any files included in the drag.
 
-> **Note:** This method can only be used in the handler for the {{event("dragstart")}} event,
+> **Note:** This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
 > because that's the only time the drag operation's data store is writeable.
 
 ## Syntax
 
-```js
+```js-nolint
 clearData()
 clearData(format)
 ```
@@ -56,7 +58,8 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 
 ```html
 <span class="tweaked" id="source" draggable="true">
-  Select this element, drag it to the Drop Zone and then release the selection to move the element.
+  Select this element, drag it to the Drop Zone and then release the selection
+  to move the element.
 </span>
 <span class="tweaked" id="target">Drop Zone</span>
 <div>Status: <span id="status">Drag to start</span></div>
@@ -85,13 +88,13 @@ span.tweaked {
 ### JavaScript
 
 ```js
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', () => {
   // Select HTML elements
-  var draggable = document.getElementById('source');
-  var droppable = document.getElementById('target');
-  var status = document.getElementById('status');
-  var data = document.getElementById('data');
-  var dropped = false;
+  const draggable = document.getElementById('source');
+  const droppable = document.getElementById('target');
+  const status = document.getElementById('status');
+  const data = document.getElementById('data');
+  let dropped = false;
 
   // Register event handlers
   draggable.addEventListener('dragstart', dragStartHandler);
@@ -157,8 +160,8 @@ window.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
 
     // Get data linked to event format « text »
-    var _data = event.dataTransfer.getData('text/plain');
-    var element = document.getElementById(_data);
+    const _data = event.dataTransfer.getData('text/plain');
+    const element = document.getElementById(_data);
 
     // Append drag source element to event's target element
     event.target.appendChild(element);

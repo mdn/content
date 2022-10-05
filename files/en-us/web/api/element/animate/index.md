@@ -1,6 +1,7 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -10,6 +11,7 @@ tags:
   - Web Animations
 browser-compat: api.Element.animate
 ---
+
 {{APIRef('Web Animations')}}
 
 The {{domxref("Element")}} interface's **`animate()`** method
@@ -22,7 +24,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 animate(keyframes, options)
 ```
 
@@ -36,7 +38,7 @@ animate(keyframes, options)
   - : Either an **integer representing the animation's duration** (in
     milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#parameters) and/or the following options:
 
-    - `id`{{optional_inline}}
+    - `id` {{optional_inline}}
       - : A property unique to `animate()`: a string
         with which to reference the animation.
 
@@ -53,13 +55,14 @@ In this example we use the `animate()` method to rotate and scale an element.
 #### HTML
 
 ```html
-<div class="newspaper">Spinning newspaper<br>causes dizziness</div>
+<div class="newspaper">Spinning newspaper<br />causes dizziness</div>
 ```
 
 #### CSS
 
 ```css
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -71,7 +74,7 @@ body {
 }
 
 .newspaper {
-  padding: .5rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   text-align: center;
   background-color: white;

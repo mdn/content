@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msIsStereo3D
 slug: Web/API/HTMLVideoElement/msIsStereo3D
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -10,6 +11,7 @@ tags:
   - msIsStereo3D
 browser-compat: api.HTMLVideoElement.msIsStereo3D
 ---
+
 {{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}
 
 **`msIsStereo3D`** is a read-only property which determines

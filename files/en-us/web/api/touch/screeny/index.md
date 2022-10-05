@@ -1,6 +1,7 @@
 ---
 title: Touch.screenY
 slug: Web/API/Touch/screenY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - touch
 browser-compat: api.Touch.screenY
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## Summary

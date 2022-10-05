@@ -1,6 +1,7 @@
 ---
 title: Transcoding assets for Media Source Extensions
 slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
+page-type: guide
 tags:
   - DASH
   - Dynamic Adaptive Streaming over HTTP
@@ -24,9 +25,7 @@ Below we'll cover all of these steps, but first let's look at a toolchain we can
 
 ### Sample Media
 
-If you're looking to follow the steps listed here, but don't have any media to experiment with, you can grab the trailer to Big Buck Bunny \[0] [here](https://web.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov). Big Buck Bunny is licensed under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license. Throughout this tutorial, you'll see the filename trailer_1080p.mov which is the download.
-
-\[0] (c) Copyright 2008, Blender Foundation / www\.bigbuckbunny.org / https\://peach.blender.org/about/
+If you're looking to follow the steps listed here, but don't have any media to experiment with, you can grab the [trailer to Big Buck Bunny](https://web.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov). Big Buck Bunny copyrighted by the Blender Foundation and is licensed under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license. Throughout this tutorial, you'll see the filename trailer_1080p.mov, which is the download.
 
 ### Tools required
 
@@ -79,13 +78,13 @@ To check whether an MP4 file is a proper MP4 stream, you can again use the [mp4i
 If you have an asset that is not already an MP4, ffmpeg can handle emitting a properly fragmented MP4 during the transcode process, with the `-movflags frag_keyframe+empty_moov` command line flag:
 
 ```bash
-$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
+ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
 ```
 
 If you already have an MP4, but it's not properly fragmented, you can again use ffmpeg:
 
 ```bash
-$ ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
+ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
 ```
 
 In both cases, Chrome may require an extra movie flag to be set:

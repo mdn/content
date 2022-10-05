@@ -1,11 +1,13 @@
 ---
 title: CharacterData.substringData()
 slug: Web/API/CharacterData/substringData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.CharacterData.substringData
 ---
+
 {{APIRef("DOM")}}
 
 The **`substringData()`** method of the {{domxref("CharacterData")}} interface
@@ -15,7 +17,7 @@ and extending for a given number of characters afterwards.
 
 ## Syntax
 
-```js
+```js-nolint
   domString = characterData.substringData(offset, count)
 ```
 

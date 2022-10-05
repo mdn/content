@@ -1,6 +1,7 @@
 ---
 title: ConstantSourceNode()
 slug: Web/API/ConstantSourceNode/ConstantSourceNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.ConstantSourceNode.ConstantSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`ConstantSourceNode()`** constructor creates a new
@@ -19,7 +21,7 @@ constantly outputs samples whose values are always the same.
 
 ## Syntax
 
-```js
+```js-nolint
 new ConstantSourceNode(context, options)
 ```
 

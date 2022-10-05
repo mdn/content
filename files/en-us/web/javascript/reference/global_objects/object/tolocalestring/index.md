@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing
@@ -19,7 +20,7 @@ purposes.
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 ```
 
@@ -30,7 +31,7 @@ A string representing the object.
 ## Description
 
 {{jsxref("Object")}}'s `toLocaleString` returns the result of calling
-{{jsxref("Object.toString", "toString()")}}.
+{{jsxref("Object/toString", "toString()")}}.
 
 This function is provided to give objects a generic `toLocaleString` method,
 even though not all may use it. See the list below.
@@ -47,7 +48,7 @@ even though not all may use it. See the list below.
 
 ### Array toLocaleString() override
 
-On {{jsxref("Array")}} objects, {{jsxref("Array.toLocaleString", "toLocaleString()")}}
+On {{jsxref("Array")}} objects, {{jsxref("Array/toLocaleString", "toLocaleString()")}}
 can be used to print array values as a string, optionally with locale-specific
 identifiers (such as currency symbols) appended to them:
 
@@ -56,13 +57,16 @@ For example:
 ```js
 const testArray = [4, 7, 10];
 
-let euroPrices = testArray.toLocaleString('fr', { style: 'currency', currency: 'EUR'});
+const euroPrices = testArray.toLocaleString('fr', {
+  style: 'currency',
+  currency: 'EUR',
+});
 // "4,00 €,7,00 €,10,00 €"
 ```
 
 ### Date toLocaleString() override
 
-On {{jsxref("Date")}} objects, {{jsxref("Date.toLocaleString", "toLocaleString()")}} is
+On {{jsxref("Date")}} objects, {{jsxref("Date/toLocaleString", "toLocaleString()")}} is
 used to print out date displays more suitable for specific locales:
 
 For example:
@@ -71,7 +75,7 @@ For example:
 const testDate = new Date(Date.now());
 // "Date Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
 
-let deDate = testDate.toLocaleString('de');
+const deDate = testDate.toLocaleString('de');
 // "29.5.2020, 18:04:24"
 
 const frDate = testDate.toLocaleString('fr');
@@ -80,7 +84,7 @@ const frDate = testDate.toLocaleString('fr');
 
 ### Number toLocaleString() override
 
-On {{jsxref("Number")}} objects, {{jsxref("Number.toLocaleString",
+On {{jsxref("Number")}} objects, {{jsxref("Number/toLocaleString",
   "toLocaleString()")}} is used to print out number displays more suitable for specific
 locales, e.g. with the correct separators:
 
@@ -90,10 +94,10 @@ For example:
 const testNumber = 2901234564;
 // "2901234564"
 
-let deNumber = testNumber.toLocaleString('de');
+const deNumber = testNumber.toLocaleString('de');
 // "2.901.234.564"
 
-let frNumber = testNumber.toLocaleString('fr');
+const frNumber = testNumber.toLocaleString('fr');
 // "2 901 234 564"
 ```
 

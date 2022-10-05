@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.target
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`target`** property of the {{domxref("HTMLFormElement")}}

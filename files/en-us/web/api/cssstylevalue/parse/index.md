@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue.parse()
 slug: Web/API/CSSStyleValue/parse
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - parse()
 browser-compat: api.CSSStyleValue.parse
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`parse()`** method of the {{domxref("CSSStyleValue")}}
@@ -20,7 +22,7 @@ value as a {{domxref('CSSStyleValue')}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 parse(property, cssText)
 ```
 

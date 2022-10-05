@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 39 was released on July 2, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -42,7 +43,7 @@ Highlights:
 ### JavaScript
 
 - The [`RegExp` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) no longer throws when the first argument is a `RegExp` and the second `flags` argument is present ({{bug(1108949)}}).
-- The {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} property is now deprecated and throws a console warning (see {{bug(1140428)}} and this [platform announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
+- The `Object.prototype.__noSuchMethod__` property is now deprecated and throws a console warning (see {{bug(1140428)}} and this [platform announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - The implementation of the {{jsxref("Proxy")}} object has been updated to comply more with the ES2015 specification:
 
   - The {{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "defineProperty")}} and {{jsxref("Global_Objects/Proxy/Proxy/set", "set")}} handlers now need to explicitly return `true` to be successful, otherwise a {{jsxref("TypeError")}} exception will be thrown in strict mode ({{bug(1132522)}}).
@@ -79,7 +80,7 @@ _No change._
 ### Miscellaneous
 
 - [WOFF2](/en-US/docs/Web/Guide/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ({{bug(1084026)}}).
-- The [`-remote`](/en-US/docs/Mozilla/Command_Line_Options#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
+- The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ({{bug(1080319)}}).
 - Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ({{bug(1153460)}}).
 
 ## Networking

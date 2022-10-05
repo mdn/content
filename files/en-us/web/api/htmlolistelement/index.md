@@ -1,6 +1,7 @@
 ---
 title: HTMLOListElement
 slug: Web/API/HTMLOListElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLOListElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLOListElement`** interface provides special properties (beyond those defined on the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating ordered list elements.
@@ -27,7 +29,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string value reflecting the {{htmlattrxref("type", "ol")}} and defining the kind of marker to be used to display. It can have the following values:
 
     - `'1'` meaning that decimal numbers are used: `1`, `2`, `3`, `4`, `5`, …
-    - `'a'` meaning that the lowercase latin alphabet is used:  `a`, `b`, `c`, `d`, `e`, …
+    - `'a'` meaning that the lowercase latin alphabet is used: `a`, `b`, `c`, `d`, `e`, …
     - `'A'` meaning that the uppercase latin alphabet is used: `A`, `B`, `C`, `D`, `E`, …
     - `'i'` meaning that the lowercase latin numerals are used: `i`, `ii`, `iii`, `iv`, `v`, …
     - `'I'` meaning that the uppercase latin numerals are used: `I`, `II`, `III`, `IV`, `V`, …

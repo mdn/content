@@ -1,6 +1,7 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,6 +14,7 @@ tags:
   - localStorage
 browser-compat: api.Window.localStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`localStorage`** read-only property of the {{domxref("window")}} interface allows you to access a {{DOMxRef("Storage")}} object for the {{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across browser sessions.
@@ -26,7 +28,13 @@ A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 ### Exceptions
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` schemes, for example). For example, the user may have their browser configured to deny permission to persist data for the specified origin.
+
+  - : Thrown in one of the following cases:
+
+    - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
+    - The request violates a policy decision. For example, the user has configured the browsers to prevent the page from persisting data.
+
+    Note that if the user blocks cookies, browsers will probably interpret this as an instruction to prevent the page from persisting data.
 
 ## Description
 

@@ -1,6 +1,7 @@
 ---
 title: Navigator.product
 slug: Web/API/Navigator/product
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.product
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`Navigator.product`** property is always

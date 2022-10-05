@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.getDirectoryHandle()
 slug: Web/API/FileSystemDirectoryHandle/getDirectoryHandle
+page-type: web-api-instance-method
 tags:
   - Directories
   - Directory
@@ -10,6 +11,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getDirectoryHandle()`** method of the
@@ -19,7 +21,7 @@ within the directory handle on which the method is called.
 
 ## Syntax
 
-```js
+```js-nolint
 getDirectoryHandle(name)
 getDirectoryHandle(name, options)
 ```
@@ -76,5 +78,4 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

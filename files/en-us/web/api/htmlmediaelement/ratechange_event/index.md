@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: ratechange event'
 slug: Web/API/HTMLMediaElement/ratechange_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -10,38 +11,26 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.ratechange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `ratechange` event is fired when the playback rate has changed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onratechange")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('ratechange', (event) => {});
+
+onratechange = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

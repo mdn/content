@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.platform
 slug: Web/API/WorkerNavigator/platform
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,6 +12,7 @@ tags:
   - platform
 browser-compat: api.WorkerNavigator.platform
 ---
+
 {{ APIRef("HTML DOM") }} {{Deprecated_Header}}
 
 Returns a string representing the platform of the browser. The specification allows

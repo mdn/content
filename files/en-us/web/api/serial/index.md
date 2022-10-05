@@ -1,14 +1,17 @@
 ---
 title: Serial
 slug: Web/API/Serial
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - Serial
+  - Experimental
 browser-compat: api.Serial
 ---
-{{securecontext_header}}{{APIRef("Serial API")}}
+
+{{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides attributes and methods for finding and connecting to serial ports from a web page.
 
@@ -16,13 +19,13 @@ The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} pr
 
 ## Methods
 
-- {{domxref("Serial.requestPort()")}}
+- {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
 
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
     This method must be called with user activation.
 
-- {{domxref("Serial.getPorts()")}}
+- {{domxref("Serial.getPorts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to
     the host which the origin has permission to access.
 
@@ -57,7 +60,7 @@ navigator.serial.getPorts().then((ports) => {
 });
 
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {

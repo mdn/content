@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowBlur
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowBlur
 ---
+
 {{APIRef}}
 
 The
@@ -43,15 +45,15 @@ property sets its color, and `shadowBlur` sets its level of blurriness.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = 'red';
+ctx.shadowColor = "red";
 ctx.shadowBlur = 15;
 
 // Rectangle
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(20, 20, 150, 100);
 ```
 

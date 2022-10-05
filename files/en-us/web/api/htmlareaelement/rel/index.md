@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.rel
 slug: Web/API/HTMLAreaElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.rel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAreaElement.rel`** property reflects the
@@ -24,10 +26,9 @@ A string.
 ## Examples
 
 ```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
-for (var i = 0; i < length; i++) {
-  alert("Rel: " + areas[i].rel);
+const areas = document.getElementsByTagName("area");
+for (const area of areas) {
+  console.log(`Rel: ${area.rel}`);
 }
 ```
 

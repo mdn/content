@@ -9,9 +9,9 @@ tags:
   - Reference
   - polyfill
   - at
-  - Experimental
 browser-compat: javascript.builtins.String.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns a new {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
@@ -20,7 +20,7 @@ The **`at()`** method takes an integer value and returns a new {{jsxref('String'
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 
@@ -47,12 +47,12 @@ function returnLast(arr) {
 
 let invoiceRef = 'myinvoice01';
 
-console.log( returnLast(invoiceRef) );
+console.log(returnLast(invoiceRef));
 // Logs: '1'
 
 invoiceRef = 'myinvoice02';
 
-console.log( returnLast(invoiceRef) );
+console.log(returnLast(invoiceRef));
 // Logs: '2'
 ```
 

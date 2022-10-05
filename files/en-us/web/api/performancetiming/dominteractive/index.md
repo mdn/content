@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domInteractive
 slug: Web/API/PerformanceTiming/domInteractive
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.domInteractive
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
@@ -28,8 +30,7 @@ thrown.
 
 This property can be used to measure the speed of loading Web sites that users
 _feels_. Nevertheless there are a few caveats that happens if scripts are
-blocking rendering and not loaded asynchronously or with custom Web fonts. [Check
-if you are in one of these cases](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) before using this property as a proxy for the
+blocking rendering and not loaded asynchronously or with custom Web fonts. [Check if you are in one of these cases](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) before using this property as a proxy for the
 user experience of a Web site's speed of loading.
 
 ## Value
@@ -48,6 +49,5 @@ Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 ## See also
 
 - The {{domxref("PerformanceTiming")}} interface it belongs to.
-- The article "[domInteractive:
-  is it? really?](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/)" explaining when you can use this property as a proxy for the
+- The article "[domInteractive: is it? really?](https://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/)" explaining when you can use this property as a proxy for the
   user experience of loading a Web site.

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 The exponentiation operator (`**`) returns the result of raising the first
@@ -18,7 +19,7 @@ except it also accepts BigInts as operands.
 
 ## Syntax
 
-```js
+```js-nolint
 x ** y
 ```
 
@@ -36,16 +37,9 @@ have a lower precedence than unary operators.
 
 In JavaScript, it is impossible to write an ambiguous exponentiation expression. That
 is, you cannot put a unary operator (`+/-/~/!/delete/void/typeof`)
-immediately before the base number; doing so will cause a SyntaxError.
+immediately before the base number; [doing so will cause a SyntaxError](/en-US/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation).
 
-```js
--2 ** 2;
-// 4 in Bash, -4 in other languages.
-// This is invalid in JavaScript, as the operation is ambiguous.
-
--(2 ** 2);
-// -4 in JavaScript and the author's intention is unambiguous.
-```
+For example, `-2 ** 2` is 4 in Bash, but is -4 in other languages (such as Python). This is invalid in JavaScript, as the operation is ambiguous. You have to parenthesize either side — for example, as `-(2 ** 2)` — to make the intention unambiguous.
 
 Note that some programming languages use the caret symbol <kbd>^</kbd> for
 exponentiation, but JavaScript uses that symbol for the

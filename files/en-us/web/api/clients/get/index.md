@@ -1,16 +1,17 @@
 ---
 title: Clients.get()
 slug: Web/API/Clients/get
+page-type: web-api-instance-method
 tags:
   - API
   - Clients
-  - Experimental
   - Method
   - Reference
   - Service Workers
   - get
 browser-compat: api.Clients.get
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`get()`** method of the
@@ -19,7 +20,7 @@ The **`get()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 get(id)
 ```
 
@@ -36,7 +37,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Client")}} object or
 ## Examples
 
 ```js
-self.clients.get(id).then(function(client) {
+self.clients.get(id).then((client) => {
   self.clients.openWindow(client.url);
 });
 ```

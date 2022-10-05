@@ -15,33 +15,25 @@ tags:
   - Learn
   - Objects
   - Tutorial
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
-JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
+JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
-        familiarity with JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
-          >Building blocks</a
-        >) and OOJS basics (see
-        <a href="/en-US/docs/Learn/JavaScript/Objects/Basics"
-          >Introduction to objects</a
-        >).
+        Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Introduction to objects</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to work with data stored in JSON, and create your own
-        JSON strings.
+        To understand how to work with data stored in JSON, and create your own JSON strings.
       </td>
     </tr>
   </tbody>
@@ -49,9 +41,12 @@ JavaScript Object Notation (JSON) is a standard text-based format for representi
 
 ## No, really, what is JSON?
 
-{{glossary("JSON")}} is a text-based data format following JavaScript object syntax, which was popularized by [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford). Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.
+{{glossary("JSON")}} is a text-based data format following JavaScript object syntax, which was popularized by [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford).
+Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.
 
-JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue — JavaScript provides a global [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object that has methods available for converting between the two.
+JSON exists as a string — useful when you want to transmit data across a network.
+It needs to be converted to a native JavaScript object when you want to access the data.
+This is not a big issue — JavaScript provides a global [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object that has methods available for converting between the two.
 
 > **Note:** Converting a string to a native object is called _deserialization_, while converting a native object to a string so it can be transmitted across the network is called _serialization_.
 
@@ -59,7 +54,9 @@ A JSON string can be stored in its own file, which is basically just a text file
 
 ### JSON structure
 
-As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:
+As described above, JSON is a string whose format very much resembles JavaScript object literal format.
+You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals.
+This allows you to construct a data hierarchy, like so:
 
 ```json
 {
@@ -73,11 +70,7 @@ As described above, JSON is a string whose format very much resembles JavaScript
       "name": "Molecule Man",
       "age": 29,
       "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
     },
     {
       "name": "Madame Uppercut",
@@ -105,7 +98,8 @@ As described above, JSON is a string whose format very much resembles JavaScript
 }
 ```
 
-If we loaded this string into a JavaScript program, parsed it into a variable called `superHeroes` for example, we could then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article. For example:
+If we loaded this string into a JavaScript program and parsed it into a variable called `superHeroes` for example, we could then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article.
+For example:
 
 ```js
 superHeroes.homeTown
@@ -118,17 +112,19 @@ To access data further down the hierarchy, you have to chain the required proper
 superHeroes['members'][1]['powers'][2]
 ```
 
-1. First we have the variable name — `superHeroes`.
-2. Inside that we want to access the `members` property, so we use `["members"]`.
+1. First, we have the variable name — `superHeroes`.
+2. Inside that, we want to access the `members` property, so we use `["members"]`.
 3. `members` contains an array populated by objects. We want to access the second object inside the array, so we use `[1]`.
 4. Inside this object, we want to access the `powers` property, so we use `["powers"]`.
 5. Inside the `powers` property is an array containing the selected hero's superpowers. We want the third one, so we use `[2]`.
 
-> **Note:** We've made the JSON seen above available inside a variable in our [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)). Try loading this up and then accessing data inside the variable via your browser's JavaScript console.
+> **Note:** We've made the JSON seen above available inside a variable in our [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)).
+> Try loading this up and then accessing data inside the variable via your browser's JavaScript console.
 
 ### Arrays as JSON
 
-Above we mentioned that JSON text basically looks like a JavaScript object inside a string. We can also convert arrays to/from JSON. Below is also valid JSON, for example:
+Above we mentioned that JSON text basically looks like a JavaScript object inside a string.
+We can also convert arrays to/from JSON. Below is also valid JSON, for example:
 
 ```json
 [
@@ -136,11 +132,7 @@ Above we mentioned that JSON text basically looks like a JavaScript object insid
     "name": "Molecule Man",
     "age": 29,
     "secretIdentity": "Dan Jukes",
-    "powers": [
-      "Radiation resistance",
-      "Turning tiny",
-      "Radiation blast"
-    ]
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
   },
   {
     "name": "Madame Uppercut",
@@ -160,9 +152,13 @@ The above is perfectly valid JSON. You'd just have to access array items (in its
 ### Other notes
 
 - JSON is purely a string with a specified data format — it contains only properties, no methods.
-- JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.
-- Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like [JSONLint](https://jsonlint.com/).
-- JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be valid JSON.
+- JSON requires double quotes to be used around strings and property names.
+  Single quotes are not valid other than surrounding the entire JSON string.
+- Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work.
+  You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
+  You can validate JSON using an application like [JSONLint](https://jsonlint.com/).
+- JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects.
+  So for example, a single string or number would be valid JSON.
 - Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.
 
 ## Active learning: Working through a JSON example
@@ -171,7 +167,8 @@ So, let's work through an example to show how we could make use of some JSON for
 
 ### Getting started
 
-To begin with, make local copies of our [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) and [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) files. The latter contains some simple CSS to style our page, while the former contains some very simple body HTML, plus a {{HTMLElement("script")}} element to contain the JavaScript code we will be writing in this exercise:
+To begin with, make local copies of our [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) and [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) files.
+The latter contains some simple CSS to style our page, while the former contains some very simple body HTML, plus a {{HTMLElement("script")}} element to contain the JavaScript code we will be writing in this exercise:
 
 ```html
 <header>
@@ -191,7 +188,7 @@ We have made our JSON data available on our GitHub, at <https://mdn.github.io/le
 
 We are going to load the JSON into our script, and use some nifty DOM manipulation to display it, like this:
 
-![](json-superheroes.png)
+![Image of a document titled "Super hero squad" (in a fancy font) and subtitled "Hometown: Metro City // Formed: 2016". Three columns below the heading are titled "Molecule Man", "Madame Uppercut", and "Eternal Flame", respectively. Each column lists the hero's secret identity name, age, and superpowers.](json-superheroes.png)
 
 ### Top-level function
 
@@ -212,7 +209,8 @@ async function populate() {
 }
 ```
 
-To obtain the JSON, we use an API called [Fetch](/en-US/docs/Web/API/Fetch_API). This API allows us to make network requests to retrieve resources from a server via JavaScript (e.g. images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
+To obtain the JSON, we use an API called [Fetch](/en-US/docs/Web/API/Fetch_API).
+This API allows us to make network requests to retrieve resources from a server via JavaScript (e.g. images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
 
 In our function, the first four lines use the Fetch API to fetch the JSON from the server:
 
@@ -221,7 +219,7 @@ In our function, the first four lines use the Fetch API to fetch the JSON from t
 - we make the network request using the {{domxref("fetch", "fetch()")}} function, and this returns a {{domxref("Response")}} object
 - we retrieve the response as JSON using the {{domxref("Response/json", "json()")}} function of the `Response` object.
 
-> **Note:** The `fetch()` API is **asynchronous**. We'll learn a lot about asynchronous functions in [the next module](/en-US/docs/Learn/JavaScript/Asynchronous), but for now we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.
+> **Note:** The `fetch()` API is **asynchronous**. We'll learn a lot about asynchronous functions in [the next module](/en-US/docs/Learn/JavaScript/Asynchronous), but for now, we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.
 
 After all that, the `superHeroes` variable will contain the JavaScript object based on the JSON. We are then passing that object to two function calls — the first one fills the `<header>` with the correct data, while the second one creates an information card for each hero on the team, and inserts it into the `<section>`.
 
@@ -233,11 +231,11 @@ Now that we've retrieved the JSON data and converted it into a JavaScript object
 function populateHeader(obj) {
   const header = document.querySelector('header');
   const myH1 = document.createElement('h1');
-  myH1.textContent = obj['squadName'];
+  myH1.textContent = obj.squadName;
   header.appendChild(myH1);
 
   const myPara = document.createElement('p');
-  myPara.textContent = `Hometown: ${obj['homeTown']} // Formed: ${obj['formed']}`;
+  myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
   header.appendChild(myPara);
 }
 ```
@@ -249,10 +247,9 @@ Here we first create an {{HTMLElement("h1")}} element with [`createElement()`](/
 Next, add the following function at the bottom of the code, which creates and displays the superhero cards:
 
 ```js
-
 function populateHeroes(obj) {
   const section = document.querySelector('section');
-  const heroes = obj['members'];
+  const heroes = obj.members;
 
   for (const hero of heroes) {
     const myArticle = document.createElement('article');
@@ -298,7 +295,8 @@ Next, we use a [for...of loop](/en-US/docs/Learn/JavaScript/Building_blocks/Loop
 
 > **Note:** If you are having trouble getting the example to work, try referring to our [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) source code (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) also.)
 
-> **Note:** If you are having trouble following the dot/bracket notation we are using to access the JavaScript object, it can help to have the [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) file open in another tab or your text editor, and refer to it as you look at our JavaScript. You should also refer back to our [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article for more information on dot and bracket notation.
+> **Note:** If you are having trouble following the dot/bracket notation we are using to access the JavaScript object, it can help to have the [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) file open in another tab or your text editor, and refer to it as you look at our JavaScript.
+> You should also refer back to our [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article for more information on dot and bracket notation.
 
 ### Calling the top-level function
 
@@ -312,7 +310,7 @@ populate();
 
 The above example was simple in terms of accessing the JavaScript object, because we converted the network response directly into a JavaScript object using `response.json()`.
 
-But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and we need to convert it to an object ourselves. And when we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending. Luckily, these two problems are so common in web development that a built-in [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object is available in browsers, which contains the following two methods:
+But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and we need to convert it to an object ourselves. And when we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending it. Luckily, these two problems are so common in web development that a built-in [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object is available in browsers, which contains the following two methods:
 
 - [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.
 - [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Accepts an object as a parameter, and returns the equivalent JSON string.

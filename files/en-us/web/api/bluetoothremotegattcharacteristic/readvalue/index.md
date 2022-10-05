@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.readValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/readValue
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - readValue
 browser-compat: api.BluetoothRemoteGATTCharacteristic.readValue
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.readValue()`** method
@@ -21,7 +23,7 @@ it throws an error.
 
 ## Syntax
 
-```js
+```js-nolint
 readValue()
 ```
 

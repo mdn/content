@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.loopStart
 slug: Web/API/AudioBufferSourceNode/loopStart
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loopStart
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`loopStart`** property of the {{
@@ -47,13 +49,15 @@ function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
+  request.open("GET", "viper.ogg", true);
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
         myBuffer = buffer;
         songLength = buffer.duration;
         source.buffer = myBuffer;
@@ -61,28 +65,28 @@ function getData() {
         source.connect(audioCtx.destination);
         source.loop = true;
 
-        loopstartControl.setAttribute('max', Math.floor(songLength));
-        loopendControl.setAttribute('max', Math.floor(songLength));
+        loopstartControl.setAttribute("max", Math.floor(songLength));
+        loopendControl.setAttribute("max", Math.floor(songLength));
       },
 
-      function(e){"Error with decoding audio data" + e.err});
-
-  }
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
 
   request.send();
 }
 
-  ...
+// …
 
-loopstartControl.oninput = function() {
+loopstartControl.oninput = () => {
   source.loopStart = loopstartControl.value;
   loopstartValue.innerHTML = loopstartControl.value;
-}
+};
 
-loopendControl.oninput = function() {
+loopendControl.oninput = () => {
   source.loopEnd = loopendControl.value;
   loopendValue.innerHTML = loopendControl.value;
-}
+};
 ```
 
 ## Specifications
@@ -96,5 +100,4 @@ loopendControl.oninput = function() {
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

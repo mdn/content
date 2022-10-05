@@ -1,6 +1,7 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -16,6 +17,7 @@ tags:
   - Visible Pages
 browser-compat: api.Document.visibilityState
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 The Page Visibility API provides events you can watch for to know when a document becomes visible or hidden, as well as features to look at the current visibility state of the page.
@@ -35,9 +37,9 @@ Let's consider a few use cases for the Page Visibility API.
 - A page wants to detect when it is being prerendered so it can keep accurate count of page views
 - A site wants to switch off sounds when a device is in standby mode (user pushes power button to turn screen off)
 
-Developers have historically used imperfect proxies to detect this. For example, watching for {{event("blur")}} and {{event("focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
+Developers have historically used imperfect proxies to detect this. For example, watching for {{domxref("Window/blur_event", "blur")}} and {{domxref("Window/focus_event", "focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
 
-> **Note:** While {{domxref("GlobalEventHandlers.onblur", "onblur")}} and {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
+> **Note:** While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
 
 ### Policies in place to aid background page performance
 
@@ -67,7 +69,8 @@ The example, which pauses the video when you switch to another tab and plays aga
 
 ```js
 // Set the name of the hidden property and the change event for visibility
-var hidden, visibilityChange;
+let hidden;
+let visibilityChange;
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
@@ -79,7 +82,7 @@ if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and 
   visibilityChange = "webkitvisibilitychange";
 }
 
-var videoElement = document.getElementById("videoElement");
+const videoElement = document.getElementById("videoElement");
 
 // If the page is hidden, pause the video;
 // if the page is shown, play the video
@@ -100,12 +103,12 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
+  videoElement.addEventListener("pause", () => {
     document.title = 'Paused';
   }, false);
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
+  videoElement.addEventListener("play", () => {
     document.title = 'Playing';
   }, false);
 
@@ -126,17 +129,6 @@ The Page Visibility API adds the following properties to the {{domxref("Document
       - : The page content may be at least partially visible. In practice this means that the page is the foreground tab of a non-minimized window.
     - `hidden`
       - : The page's content is not visible to the user, either due to the document's tab being in the background or part of a window that is minimized, or because the device's screen is off.
-    - `prerender`
-
-      - : The page's content is being prerendered and is not visible to the user. A document may start in the `prerender` state, but will never switch to this state from any other state, since a document can only prerender once.
-
-        > **Note:** Not all browsers support prerendering.
-
-    - `unloaded`
-
-      - : The page is in the process of being unloaded from memory.
-
-        > **Note:** Not all browsers support the `unloaded` value.
 
 ## Events added to the Document interface
 

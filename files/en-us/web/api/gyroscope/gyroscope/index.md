@@ -1,6 +1,7 @@
 ---
 title: Gyroscope()
 slug: Web/API/Gyroscope/Gyroscope
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -12,6 +13,7 @@ tags:
   - Sensors
 browser-compat: api.Gyroscope.Gyroscope
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`Gyroscope()`** constructor
@@ -24,7 +26,7 @@ a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implem
 
 ## Syntax
 
-```js
+```js-nolint
 new Gyroscope()
 new Gyroscope(options)
 ```

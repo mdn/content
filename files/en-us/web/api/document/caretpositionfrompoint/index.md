@@ -1,6 +1,7 @@
 ---
 title: Document.caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Document
@@ -8,7 +9,8 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
-{{APIRef("CSSOM View")}} {{SeeCompatTable}}
+
+{{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**
 property of the {{domxref("Document")}} interface returns a
@@ -17,7 +19,7 @@ caret's character offset within that node.
 
 ## Syntax
 
-```js
+```js-nolint
 caretPositionFromPoint(x, y)
 ```
 
@@ -65,7 +67,7 @@ function insertBreakAtPoint(e) {
     return;
   }
   // Only split TEXT_NODEs
-  if (textNode && textNode.nodeType == 3) {
+  if (textNode?.nodeType === 3) {
     let replacement = textNode.splitText(offset);
     let br = document.createElement('br');
     textNode.parentNode.insertBefore(br, replacement);
@@ -73,18 +75,20 @@ function insertBreakAtPoint(e) {
 }
 
 let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+for (const paragraph of paragraphs) {
+  paragraph.addEventListener('click', insertBreakAtPoint, false);
 }
 ```
 
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 ## Specifications

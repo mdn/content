@@ -12,20 +12,21 @@ tags:
   - XPCOM
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 4, which shipped on March 22, 2011, enhances performance, adds more support for HTML5 and other evolving Web technologies, and further improves security. This article provides information about this release and what features are available for Web developers, add-on developers, and Gecko platform developers alike.
 
 ## Features for web developers
 
-Gecko now uses the [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
+Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
 
 ### HTML
 
-- [Meet the HTML5 parser](/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser)
+- [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
   - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
 - [Forms in HTML5](/en-US/docs/Learn/Forms)
-  - : A look at improvements to web forms in HTML5. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
+  - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
 - [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
 - [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes#hidden)
@@ -54,7 +55,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
 - Support for the obsolete {{HTMLElement("spacer")}} element, which was absent in all other browsers, has been removed.
 - The {{HTMLElement("isindex")}} element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
-- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](</en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click()_method>) in the article [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 - The {{HTMLElement("input")}} element supports a new [`mozactionhint`](/en-US/docs/Web/HTML/Element/input#mozactionhint) attribute, which lets you specify the label for the enter key on virtual keyboards.
 - {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.
 
@@ -70,7 +71,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a {{cssxref("background-image")}}.
 - CSS touch properties
   - : Support for touch properties is added. Details, and real article names, to come later.
-- [Using arbitrary elements as CSS backgrounds](</en-US/docs/Web/CSS/element()>)
+- [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
 - [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
@@ -220,11 +221,11 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 #### Renamed CSS properties
 
-| Old Name               | New Name                                 | Notes                                                                                                                                                                        |
-| ---------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Old Name               | New Name                       | Notes                                                                                                                                                                        |
+| ---------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `-moz-background-size` | {{cssxref("background-size")}} | The name `-moz-background-size` is no longer supported.                                                                                                                      |
-| `-moz-border-radius`   | {{cssxref("border-radius")}}     | The old name is supported for a limited time to allow you time to update your sites. Rendering changes have also been made to match the latest version of the specification. |
-| `-moz-box-shadow`      | {{cssxref("box-shadow")}}         |                                                                                                                                                                              |
+| `-moz-border-radius`   | {{cssxref("border-radius")}}   | The old name is supported for a limited time to allow you time to update your sites. Rendering changes have also been made to match the latest version of the specification. |
+| `-moz-box-shadow`      | {{cssxref("box-shadow")}}      |                                                                                                                                                                              |
 
 #### Miscellaneous CSS changes
 
@@ -272,11 +273,11 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 Several HTML elements have had their DOM interfaces changed to the ones required by the HTML5 specification, as shown below.
 
-| Interface in Firefox 3.6                                 | Interface in Firefox 4                           | HTML Element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| -------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Interface in Firefox 3.6                                 | Interface in Firefox 4                           | HTML Element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, {{HTMLElement("blink")}}, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, {{HTMLElement("listing")}}, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, , {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}} |
-| [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 #### Miscellaneous DOM changes
 
@@ -293,7 +294,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("document.onreadystatechange")}} event has been implemented.
 - The {{domxref("document.createElement")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
-- The {{domxref("window.mozPaintCount")}} property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
+- The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
 - The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. {{Bug(572656)}}
 - The [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
@@ -301,11 +302,11 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
 - {{domxref("Node.mozMatchesSelector()")}} now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
 - You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.
-- The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
+- The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
 - The DOM [`StorageEvent`](/en-US/docs/DOM/event/StorageEvent) object now matches the latest version of the specification.
 - The minimum allowed delay for the {{domxref("setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
-- The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#MozAfterPaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
+- The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
 
 ### Security
 
@@ -327,7 +328,7 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 - [Using the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
   - : The Web Console tool is a useful debugging aid for web developers and extension developers alike.
 
-> **Note:**The Error Console is disabled by default starting in {{Gecko("2.0")}}. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.
+> **Note:**The Error Console is disabled by default starting in Gecko 2.0. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.
 
 ## Changes for Mozilla and add-on developers
 
@@ -345,7 +346,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
   - : The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.
 - [PopupNotifications.jsm](/en-US/docs/JavaScript_code_modules/PopupNotifications.jsm)
   - : The new popup notifications module makes it easy to present attractive, non-modal notifications to the user. You can see how to use this API in [Using popup notifications](/en-US/docs/Using_popup_notifications).
-- [Loading code modules from chrome: URLs](/en-US/docs/JavaScript_code_modules/Using#Locating_the_code_module)
+- [Loading code modules from chrome: URLs](/en-US/docs/JavaScript_code_modules/Using#locating_the_code_module)
   - : You can now load JavaScript code modules using **chrome:** URLs, even inside JAR files.
 - DownloadLastDir.jsm
   - : The [`DownloadLastDir.jsm`](/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm) code module provides the `gDownloadLastDir` global variable, which contains a string you can use to learn the path of the directory into which the last download occurred. This module handles issues related to private browsing for you.
@@ -354,8 +355,8 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Miscellaneous changes to code modules
 
-- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
-- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#IterSimpleEnumerator()>) and [IterStringEnumerator()](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
+- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
+- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterSimpleEnumerator()>) and [IterStringEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
 - You can now [use workers in JavaScript code modules](/en-US/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
 
 ### DOM changes
@@ -367,7 +368,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Other DOM changes
 
-- The [new "document-element-inserted" notification](/en-US/docs/Observer_Notifications#Documents) is sent when a document's root element is created, but before any scripts are executed on it.
+- The [new "document-element-inserted" notification](/en-US/docs/Observer_Notifications#documents) is sent when a document's root element is created, but before any scripts are executed on it.
 
 ### XUL
 
@@ -392,7 +393,7 @@ Several changes were made to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/X
 
 #### Remote XUL support removed
 
-Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The [Remote XUL Manager extension](https://addons.mozilla.org/en-US/firefox/addon/235281/) lets you manage this whitelist.
+Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL.
 
 #### Miscellaneous XUL changes
 
@@ -448,14 +449,14 @@ In addition to the specific changes referenced below, it's important to note tha
 ### Places
 
 - Places query results may now be observed by multiple observers, and queries may be executed asynchronously. This means there have been some changes to the `nsINavHistoryResult`, `nsINavHistoryQueryOptions`, and `nsINavHistoryContainerResultNode` interfaces. More significantly, the `nsINavHistoryResultViewer` interface has been renamed to `nsINavHistoryResultObserver`.
-- Some [new notifications](/en-US/docs/Observer_Notifications#Places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
+- Some [new notifications](/en-US/docs/Observer_Notifications#places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
 - The array size output parameter on several Places methods is now optional.
-- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#Menu_view) for details.
+- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#menu_view) for details.
 
 ### Interface changes
 
 - The `nsIDocShell` and `nsIWebBrowser` interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
-- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) to watch for low memory situations instead.
+- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#low_memory_notifications) to watch for low memory situations instead.
 - The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using `nsIChannelEventSink.onChannelRedirect()` needs to be updated to use `nsIChannelEventSink.asyncOnChannelRedirect()` instead. This accepts a callback handler that must be called when a redirect is successfully completed.
 - The `nsINavHistoryResultObserver.batching()` method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
 - The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to `nsIPrefService`, now is the time.
@@ -482,7 +483,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - The `accessibility.disablecache` preference is no longer supported; it was only exposed for debugging purposes and is no longer used.
 - Addons whose GUID changes from one version to another can now be updated properly.
 - As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.
-- By default, [extensions are no longer unpacked when they are installed](https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#SQLite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
+- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
 - You may now include extensions that [automatically get installed at application startup](/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox#including_extensions_with_your_distribution_of_firefox) within a customized Firefox.
 
 ## Other changes

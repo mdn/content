@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
@@ -67,16 +69,16 @@ for (const p of searchParams) {
   console.log(p);
 }
 
-searchParams.has('topic') === true;      // true
-searchParams.get('topic') === "api";     // true
-searchParams.getAll('topic');            // ["api"]
-searchParams.get('foo') === null;        // true
-searchParams.append('topic', 'webdev');
-searchParams.toString();                 // "q=URLUtils.searchParams&topic=api&topic=webdev"
-searchParams.set('topic', 'More webdev');
-searchParams.toString();                 // "q=URLUtils.searchParams&topic=More+webdev"
-searchParams.delete('topic');
-searchParams.toString();                 // "q=URLUtils.searchParams"
+console.log(searchParams.has('topic'));               // true
+console.log(searchParams.get('topic') === "api");     // true
+console.log(searchParams.getAll('topic'));            // ["api"]
+console.log(searchParams.get('foo') === null);        // true
+console.log(searchParams.append('topic', 'webdev'));
+console.log(searchParams.toString());                 // "q=URLUtils.searchParams&topic=api&topic=webdev"
+console.log(searchParams.set('topic', 'More webdev'));
+console.log(searchParams.toString());                 // "q=URLUtils.searchParams&topic=More+webdev"
+console.log(searchParams.delete('topic'));
+console.log(searchParams.toString());                 // "q=URLUtils.searchParams"
 ```
 
 ```js
@@ -84,9 +86,9 @@ searchParams.toString();                 // "q=URLUtils.searchParams"
 const paramsObj = {foo: 'bar', baz: 'bar'};
 const searchParams = new URLSearchParams(paramsObj);
 
-searchParams.toString();                 // "foo=bar&baz=bar"
-searchParams.has('foo');                 // true
-searchParams.get('foo');     
+console.log(searchParams.toString());                 // "foo=bar&baz=bar"
+console.log(searchParams.has('foo'));                 // true
+console.log(searchParams.get('foo'));                 // "bar"
 ```
 
 ### Duplicate search parameters
@@ -95,10 +97,10 @@ searchParams.get('foo');
 const paramStr = 'foo=bar&foo=baz';
 const searchParams = new URLSearchParams(paramStr);
 
-searchParams.toString();                 // "foo=bar&foo=baz"
-searchParams.has('foo');                 // true
-searchParams.get('foo');                 // bar, only returns the first value
-searchParams.getAll('foo');              // ["bar", "baz"]
+console.log(searchParams.toString());                 // "foo=bar&foo=baz"
+console.log(searchParams.has('foo'));                 // true
+console.log(searchParams.get('foo'));                 // bar, only returns the first value
+console.log(searchParams.getAll('foo'));              // ["bar", "baz"]
 ```
 
 ### No URL parsing
@@ -109,19 +111,19 @@ The `URLSearchParams` constructor does _not_ parse full URLs. However, it will s
 const paramsString1 = 'http://example.com/search?query=%40';
 const searchParams1 = new URLSearchParams(paramsString1);
 
-searchParams1.has('query'); // false
-searchParams1.has('http://example.com/search?query'); // true
+console.log(searchParams1.has('query')); // false
+console.log(searchParams1.has('http://example.com/search?query')); // true
 
-searchParams1.get('query'); // null
-searchParams1.get('http://example.com/search?query'); // "@" (equivalent to decodeURIComponent('%40'))
+console.log(searchParams1.get('query')); // null
+console.log(searchParams1.get('http://example.com/search?query')); // "@" (equivalent to decodeURIComponent('%40'))
 
 const paramsString2 = '?query=value';
 const searchParams2 = new URLSearchParams(paramsString2);
-searchParams2.has('query'); // true
+console.log(searchParams2.has('query')); // true
 
 const url = new URL('http://example.com/search?query=%40');
 const searchParams3 = new URLSearchParams(url.search);
-searchParams3.has('query'); // true
+console.log(searchParams3.has('query')); // true
 ```
 
 ### Preserving plus signs
@@ -157,10 +159,10 @@ console.log(atob(binQuery) === rawData); // true
 
 ```js
 const emptyVal = new URLSearchParams('foo=&bar=baz');
-emptyVal.get('foo'); // returns ''
+console.log(emptyVal.get('foo')); // returns ''
 const noEquals = new URLSearchParams('foo&bar=baz');
-noEquals.get('foo'); // also returns ''
-noEquals.toString(); // 'foo=&bar=baz'
+console.log(noEquals.get('foo')); // also returns ''
+console.log(noEquals.toString()); // 'foo=&bar=baz'
 ```
 
 ## Specifications

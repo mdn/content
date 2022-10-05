@@ -1,10 +1,10 @@
 ---
 title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
+page-type: web-api-constructor
 tags:
   - Constructor
   - Deprecated
-  - Experimental
   - Media
   - RTCSessionDescription
   - Reference
@@ -13,7 +13,7 @@ tags:
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
 The **`RTCSessionDescription()`** constructor creates a new
 {{domxref("RTCSessionDescription")}} with its properties initialized as described in the
@@ -27,13 +27,13 @@ specified object.
 
 ## Syntax
 
-```js
-new RTCSessionDescription(rtcSessionDescriptionInit);
+```js-nolint
+new RTCSessionDescription(options)
 ```
 
 ### Values
 
-- `rtcSessionDescriptionInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing the default values for the session description; the object
     conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has
@@ -56,17 +56,17 @@ This example uses the constructor to convert an SDP offer into an
 > `RTCSessionDescription` yourself.
 
 ```js
-navigator.getUserMedia({video: true}, function(stream) {
-  pc.onaddstream({stream: stream});
+navigator.getUserMedia({ video: true }, (stream) => {
+  pc.onaddstream({ stream });
   // Adding a local stream won't trigger the onaddstream callback
   pc.addStream(stream);
 
-  pc.createOffer(function(offer) {
-    pc.setLocalDescription(new RTCSessionDescription(offer), function() {
+  pc.createOffer((offer) => {
+    pc.setLocalDescription(new RTCSessionDescription(offer), () => {
       // send the offer to a server to be forwarded to the friend you're calling.
     }, error);
   }, error);
-}
+});
 ```
 
 ## Specifications

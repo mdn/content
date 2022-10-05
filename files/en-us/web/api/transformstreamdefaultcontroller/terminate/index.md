@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController.terminate()
 slug: Web/API/TransformStreamDefaultController/terminate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,13 +10,14 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.terminate
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`terminate()`** method of the {{domxref("TransformStreamDefaultController")}} interface closes the readable side and errors the writable side of the stream.
 
 ## Syntax
 
-```js
+```js-nolint
 terminate()
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.href
 slug: Web/API/HTMLAreaElement/href
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.href
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.href`** property is a

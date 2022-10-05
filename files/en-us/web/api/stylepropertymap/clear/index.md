@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.clear()
 slug: Web/API/StylePropertyMap/clear
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -9,8 +10,10 @@ tags:
   - Reference
   - StylePropertyMap
   - clear()
+  - Experimental
 browser-compat: api.StylePropertyMap.clear
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("StylePropertyMap")}}
@@ -18,7 +21,7 @@ interface removes all declarations in the `StylePropertyMap`.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

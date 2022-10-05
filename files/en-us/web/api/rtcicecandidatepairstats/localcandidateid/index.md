@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.localCandidateId
 slug: Web/API/RTCIceCandidatePairStats/localCandidateId
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -19,6 +20,7 @@ tags:
   - localCandidateId
 browser-compat: api.RTCIceCandidatePairStats.localCandidateId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

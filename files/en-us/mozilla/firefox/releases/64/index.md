@@ -2,11 +2,12 @@
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
 tags:
-  - '64'
+  - "64"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 64 that will affect developers. Firefox 64 was released on December 11, 2018.
@@ -17,7 +18,7 @@ This article provides information about the changes in Firefox 64 that will affe
 
 - The [Accessibility info-bar](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting-of-ui-items) has been enhanced to include information about the color contrast ratio of text or images on the page ({{bug(1473037)}}).
 - [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) device selection is now saved between sessions ({{bug(1248619)}}).
-- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(1333994)}}).
+- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Tracking_Protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(1333994)}}).
 - The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) got improvements around entering and evaluating code:
 
   - [Autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) for Console expressions is now case-insensitive ({{bug(672733)}}).
@@ -64,7 +65,7 @@ _No changes._
 
 - The TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify) proposal has been implemented, to prevent {{jsxref("JSON.stringify")}} from returning ill-formed Unicode strings ({{bug(1469021)}}).
 - Proxied functions can now be passed to {{jsxref("Function.prototype.toString")}}`.call()` ({{bug(1440468)}}).
-- In the {{jsxref("WebAssembly.Global")}} constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ({{bug(1490286)}}).
+- In the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ({{bug(1490286)}}).
 
 ### APIs
 
@@ -74,7 +75,7 @@ _No changes._
 
   - The API has been unprefixed ({{bug(1269276)}}).
   - The {{domxref("Element.requestFullscreen()")}} and {{domxref("Document.exitFullscreen()")}} methods both now return a {{jsxref("Promise")}}, which is resolved when the mode change is complete ({{bug(1188256)}} and {{bug(1491212)}}).
-  - Previously, {{domxref("fullscreenchange")}} and {{domxref("fullscreenerror")}} events were dispatched to the {{domxref("Document")}} first, then the {{domxref("Element")}}. This has been reversed so that the element gets the event first. This matches the latest specification as well as the behavior of Google Chrome ({{bug(1375319)}}).
+  - Previously, {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} and {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} events were dispatched to the {{domxref("Document")}} first, then the {{domxref("Element")}}. This has been reversed so that the element gets the event first. This matches the latest specification as well as the behavior of Google Chrome ({{bug(1375319)}}).
 
 - The {{domxref("WebVR_API", "WebVR API", "", "1")}} (1.1) is now re-enabled in macOS ({{bug(1476091)}}).
 - {{domxref("Window.screenLeft")}} and {{domxref("Window.screenTop")}} have been implemented, as aliases of {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} ({{bug(1498860)}}).

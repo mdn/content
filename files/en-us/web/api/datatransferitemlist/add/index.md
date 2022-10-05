@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.add()
 slug: Web/API/DataTransferItemList/add
+page-type: web-api-instance-method
 tags:
   - API
   - Add
@@ -12,6 +13,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItemList.add
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList.add()`** method creates a new
@@ -22,7 +24,7 @@ given type. If the item is successfully added to the list, the newly-created
 
 ## Syntax
 
-```js
+```js-nolint
 add(data, type)
 add(file)
 ```
@@ -58,10 +60,21 @@ This example shows the use of the `add()` method.
 
 ```html
 <div>
- <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
- Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+  <p
+    id="source"
+    ondragstart="dragstart_handler(event);"
+    ondragend="dragend_handler(event);"
+    draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+<div
+  id="target"
+  ondrop="drop_handler(event);"
+  ondragover="dragover_handler(event);">
+  Drop Zone
+</div>
 ```
 
 ### CSS
@@ -80,40 +93,40 @@ div {
 }
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
+  dataList.add("<p>Paragraph…</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
 function drop_handler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  var data = event.dataTransfer.items;
+  const data = event.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
+  for (let i = 0; i < data.length; i++) {
+    if ((data[i].kind === 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
-      data[i].getAsString(function (s){
+      data[i].getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
-      data[i].getAsString(function (s){
-        console.log("... Drop: HTML = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind === 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
-      data[i].getAsString(function (s){
-        console.log("... Drop: URI = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }
@@ -128,8 +141,8 @@ function dragover_handler(ev) {
 
 function dragend_handler(ev) {
   console.log("dragEnd");
-  var dataList = ev.dataTransfer.items;
-  for (var i = 0; i < dataList.length; i++) {
+  const dataList = ev.dataTransfer.items;
+  for (let i = 0; i < dataList.length; i++) {
     dataList.remove(i);
   }
   // Clear any remaining drag data

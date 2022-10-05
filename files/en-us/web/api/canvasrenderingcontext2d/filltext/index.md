@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -17,6 +18,7 @@ tags:
   - fillText
 browser-compat: api.CanvasRenderingContext2D.fillText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -42,7 +44,7 @@ The text is rendered using the font and text layout configuration as defined by 
 
 ## Syntax
 
-```js
+```js-nolint
 fillText(text, x, y)
 fillText(text, x, y, maxWidth)
 ```
@@ -91,18 +93,18 @@ First, we need a canvas to draw into. This code creates a context 400 pixels wid
 The JavaScript code for this example follows.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90);
 ```
 
 This code obtains a reference to the {{HTMLElement("canvas")}}, then gets a reference
 to its 2D graphics context.
 
 With that in hand, we set the {{domxref("CanvasRenderingContext2D.font", "font")}} to
-50-pixel-tall "serif" (the user's default {{interwiki("wikipedia", "serif")}} font),
+50-pixel-tall "serif" (the user's default [serif](https://en.wikipedia.org/wiki/Serif) font),
 then call `fillText()` to draw the text "Hello world," starting at the
 coordinates (50, 90).
 
@@ -123,11 +125,11 @@ This example writes the words "Hello world," restricting its width to 140 pixels
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90, 140);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90, 140);
 ```
 
 #### Result

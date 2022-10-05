@@ -12,8 +12,9 @@ tags:
   - Learn
   - Tutorial
   - console.log
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 When you built up the "Guess the number" game in the previous article, you may have found that it didn't work. Never fear — this article aims to save you from tearing your hair out over such problems by providing you with some tips on how to find and fix errors in JavaScript programs.
@@ -61,20 +62,20 @@ At this point, let's consult the developer console to see if it reports any synt
 
 Earlier on in the course we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
 
-1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: ![](not-a-function.png)
+1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: !["Number guessing game" demo page in Firefox. One error is visible in the JavaScript console: "X TypeError: guessSubmit.addeventListener is not a function [Learn More] (number-game-errors.html:86:3)".](not-a-function.png)
 2. This is a pretty easy error to track down, and the browser gives you several useful bits of information to help you out (the screenshot above is from Firefox, but other browsers provide similar information). From left to right, we've got:
 
-    - A red "x" to indicate that this is an error.
-    - An error message to indicate what's gone wrong: "TypeError: guessSubmit.addeventListener is not a function"
-    - A "Learn More" link that links through to an MDN page that explains what this error means in greater detail.
-    - The name of the JavaScript file, which links through to the Debugger tab of the developer tools. If you follow this link, you'll see the exact line where the error is highlighted.
-    - The line number where the error is, and the character number in that line where the error is first seen. In this case, we've got line 86, character number 3.
+   - A red "x" to indicate that this is an error.
+   - An error message to indicate what's gone wrong: "TypeError: guessSubmit.addeventListener is not a function"
+   - A "Learn More" link that links through to an MDN page that explains what this error means in greater detail.
+   - The name of the JavaScript file, which links through to the Debugger tab of the developer tools. If you follow this link, you'll see the exact line where the error is highlighted.
+   - The line number where the error is, and the character number in that line where the error is first seen. In this case, we've got line 86, character number 3.
 
 3. If we look at line 86 in our code editor, we'll find this line:
 
-    ```js
-    guessSubmit.addeventListener('click', checkGuess);
-    ```
+   ```js
+   guessSubmit.addeventListener("click", checkGuess);
+   ```
 
 4. The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn _name-of-feature_" with your favorite search engine. Here's a shortcut to save you some time in this instance: [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 5. So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
@@ -84,41 +85,41 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 ### Syntax errors round two
 
 1. Save your page and refresh, and you should see the error has gone.
-2. Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! ![](variable-is-null.png)
+2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![Screenshot of the same "Number guessing game" demo. This time, a different error is visible in the console, reading "X TypeError: lowOrHi is null".](variable-is-null.png)
 3. This time the error being reported is "TypeError: lowOrHi is null", on line 78.
 
-    > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
+   > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
 
-    > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { ... }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
+   > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
 
 4. Have a look at line 78, and you'll see the following code:
 
-    ```js
-    lowOrHi.textContent = 'Last guess was too high!';
-    ```
+   ```js
+   lowOrHi.textContent = "Last guess was too high!";
+   ```
 
-5. This line is trying to set the `textContent` property of the `lowOrHi` constant to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find in the JavaScript is on line 48:
+5. This line is trying to set the `textContent` property of the `lowOrHi` constant to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find in the JavaScript is on line 49:
 
-    ```js
-    const lowOrHi = document.querySelector('lowOrHi');
-    ```
+   ```js
+   const lowOrHi = document.querySelector("lowOrHi");
+   ```
 
-6. At this point we are trying to make the variable contain a reference to an element in the document's HTML. Let's check whether the value is `null` after this line has been run. Add the following code on line 49:
+6. At this point we are trying to make the variable contain a reference to an element in the document's HTML. Let's check whether the value is `null` after this line has been run. Add the following code on line 50:
 
-    ```js
-    console.log(lowOrHi);
-    ```
+   ```js
+   console.log(lowOrHi);
+   ```
 
-    > **Note:** [`console.log()`](/en-US/docs/Web/API/console/log) is a really useful debugging function that prints a value to the console. So it will print the value of `lowOrHi` to the console as soon as we have tried to set it in line 48.
+   > **Note:** [`console.log()`](/en-US/docs/Web/API/console/log) is a really useful debugging function that prints a value to the console. So it will print the value of `lowOrHi` to the console as soon as we have tried to set it in line 49.
 
-7. Save and refresh, and you should now see the `console.log()` result in your console. ![](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 48.
-8. Let's think about what the problem could be. Line 48 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
+7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 49.
+8. Let's think about what the problem could be. Line 49 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 
-    ```js
-    <p class="lowOrHi"></p>
-    ```
+   ```html
+   <p class="lowOrHi"></p>
+   ```
 
-9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 48 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 48.
+9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 49 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 49.
 10. Try saving and refreshing again, and your `console.log()` statement should return the `<p>` element we want. Phew! Another error fixed! You can delete your `console.log()` line now, or keep it to reference later on — your choice.
 
 > **Note:** See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
@@ -127,7 +128,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 1. Now if you try playing the game through again, you should get more success — the game should play through absolutely fine, until you end the game, either by guessing the right number, or by running out of guesses.
 2. At that point, the game fails again, and the same error is spat out that we got at the beginning — "TypeError: resetButton.addeventListener is not a function"! However, this time it's listed as coming from line 94.
-3. Looking at line number 94, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `.addEventListener`. Do this now.
+3. Looking at line number 94, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `addEventListener`. Do this now.
 
 ## A logic error
 
@@ -135,23 +136,23 @@ At this point, the game should play through fine, however after playing through 
 
 There's definitely a problem in the game logic somewhere — the game is not returning an error; it just isn't playing right.
 
-1. Search for the `randomNumber` variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 44:
+1. Search for the `randomNumber` variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 45:
 
-    ```js
-    let randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   let randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
 2. And the one that generates the random number before each subsequent game is around line 113:
 
-    ```js
-    randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
 3. To check whether these lines are indeed the problem, let's turn to our friend `console.log()` again — insert the following line directly below each of the above two lines:
 
-    ```js
-    console.log(randomNumber);
-    ```
+   ```js
+   console.log(randomNumber);
+   ```
 
 4. Save and refresh, then play a few games — you'll see that `randomNumber` is equal to 1 at each point where it is logged to the console.
 
@@ -160,25 +161,25 @@ There's definitely a problem in the game logic somewhere — the game is not ret
 To fix this, let's consider how this line is working. First, we invoke [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), which generates a random decimal number between 0 and 1, e.g. 0.5675493843.
 
 ```js
-Math.random()
+Math.random();
 ```
 
 Next, we pass the result of invoking `Math.random()` through [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), which rounds the number passed to it down to the nearest whole number. We then add 1 to that result:
 
 ```js
-Math.floor(Math.random()) + 1
+Math.floor(Math.random()) + 1;
 ```
 
 Rounding a random decimal number between 0 and 1 down will always return 0, so adding 1 to it will always return 1. We need to multiply the random number by 100 before we round it down. The following would give us a random number between 0 and 99:
 
 ```js
-Math.floor(Math.random()*100);
+Math.floor(Math.random() * 100);
 ```
 
 Hence us wanting to add 1, to give us a random number between 1 and 100:
 
 ```js
-Math.floor(Math.random()*100) + 1;
+Math.floor(Math.random() * 100) + 1;
 ```
 
 Try updating both lines like this, then save and refresh — the game should now play like we are intending it to!
@@ -197,7 +198,7 @@ const userGuess = Number(guessField.value);
 
 to
 
-```js
+```js example-bad
 const userGuess === Number(guessField.value);
 ```
 

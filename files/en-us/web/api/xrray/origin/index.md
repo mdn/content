@@ -1,6 +1,7 @@
 ---
 title: XRRay.origin
 slug: Web/API/XRRay/origin
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -13,7 +14,8 @@ tags:
   - WebXR Device API
 browser-compat: api.XRRay.origin
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`origin`** property of the {{DOMxRef("XRRay")}} interface is a {{domxref("DOMPointReadOnly")}} representing the 3-dimensional point in space that the ray originates from, in meters.
 

@@ -1,6 +1,7 @@
 ---
 title: StaticRange.collapsed
 slug: Web/API/StaticRange/collapsed
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,6 +15,7 @@ tags:
   - collapsed
 browser-compat: api.StaticRange.collapsed
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The **`collapsed`** read-only property

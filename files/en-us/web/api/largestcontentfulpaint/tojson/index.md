@@ -1,21 +1,24 @@
 ---
 title: LargestContentfulPaint.toJSON()
 slug: Web/API/LargestContentfulPaint/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - toJSON
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.toJSON
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface is a _serializer_, and returns a JSON representation of the `LargestContentfulPaint` object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

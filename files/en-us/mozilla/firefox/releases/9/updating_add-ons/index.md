@@ -6,6 +6,7 @@ tags:
   - Firefox 9
   - Guide
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.
@@ -27,7 +28,9 @@ If your add-on uses `nsIChromeFrameMessageManager.loadFrameScript()` with the de
 Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.removeDelayedFrameScript()` method to stop loading your script in newly-created frames. You do this like this, for example:
 
 ```js
-browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
+browser.messageManager.removeDelayedFrameScript(
+  "chrome://myextension/content/somescript.js"
+);
 ```
 
 ## Interface changes
@@ -49,7 +52,7 @@ The `geo.wifi.*` preferences no longer have default values, although they're hon
 ## DOM changes
 
 - The long-obsolete method `Navigator.taintEnabled()` has been removed. This hasn't done anything useful in a very long time, but was often used in browser detection scripts, since it was Netscape-specific. Calling this method throws an exception starting in Firefox 9.
-- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, but [there are exceptions](/en-US/docs/Web/Guide/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, but [there are exceptions](/en-US/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
 
 ## Other changes that may affect binary compatibility
 

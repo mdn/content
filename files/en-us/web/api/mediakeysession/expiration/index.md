@@ -1,10 +1,10 @@
 ---
 title: MediaKeySession.expiration
 slug: Web/API/MediaKeySession/expiration
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - NeedsExample
   - Property
@@ -12,6 +12,7 @@ tags:
   - expiration
 browser-compat: api.MediaKeySession.expiration
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeySession.expiration`** read-only property returns

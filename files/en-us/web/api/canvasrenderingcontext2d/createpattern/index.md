@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
+
 {{APIRef}}
 
 The
@@ -23,7 +25,7 @@ applied to any subsequent drawing.
 
 ## Syntax
 
-```js
+```js-nolint
 createPattern(image, repetition)
 ```
 
@@ -31,7 +33,7 @@ createPattern(image, repetition)
 
 - `image`
 
-  - : A {{domxref("CanvasImageSource")}} to be used as the pattern's image. It can be any
+  - : An image to be used as the pattern's image. It can be any
     of the following:
 
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
@@ -41,6 +43,7 @@ createPattern(image, repetition)
     - {{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}})
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 
 - `repetition`
 
@@ -53,7 +56,7 @@ createPattern(image, repetition)
     - `"no-repeat"` (neither direction)
 
     If `repetition` is specified as an empty string (`""`) or
-    {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of `"repeat"`
+    [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"`
     will be used.
 
 ### Return value
@@ -82,13 +85,13 @@ The original image looks like this:
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-var img = new Image();
-img.src = 'canvas_createpattern.png';
-img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
+const img = new Image();
+img.src = "canvas_createpattern.png";
+img.onload = () => {
+  const pattern = ctx.createPattern(img, "repeat");
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);
 };
@@ -105,23 +108,23 @@ apply it to the fill style of our primary canvas, and fill that canvas with the 
 
 ```js
 // Create a pattern, offscreen
-const patternCanvas = document.createElement('canvas');
-const patternContext = patternCanvas.getContext('2d');
+const patternCanvas = document.createElement("canvas");
+const patternContext = patternCanvas.getContext("2d");
 
 // Give the pattern a width and height of 50
 patternCanvas.width = 50;
 patternCanvas.height = 50;
 
 // Give the pattern a background color and draw an arc
-patternContext.fillStyle = '#fec';
+patternContext.fillStyle = "#fec";
 patternContext.fillRect(0, 0, patternCanvas.width, patternCanvas.height);
-patternContext.arc(0, 0, 50, 0, .5 * Math.PI);
+patternContext.arc(0, 0, 50, 0, 0.5 * Math.PI);
 patternContext.stroke();
 
 // Create our primary canvas and fill it with the pattern
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const pattern = ctx.createPattern(patternCanvas, 'repeat');
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const pattern = ctx.createPattern(patternCanvas, "repeat");
 ctx.fillStyle = pattern;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -140,15 +143,6 @@ document.body.appendChild(canvas);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a `null` or
-  `undefined` image correctly throws a `TYPE_MISMATCH_ERR`
-  exception.
-- Starting with Gecko 16.0 {{geckoRelease("16.0")}}, specifying `null` for
-  the `repetition` parameter is now allowed and results in the repetition
-  being set to `"repeat"` ({{bug(762657)}}).
 
 ## See also
 

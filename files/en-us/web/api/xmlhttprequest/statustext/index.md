@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -11,9 +12,10 @@ tags:
   - XMLHttpRequest Status
 browser-compat: api.XMLHttpRequest.statusText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
-The read-only **`XMLHttpRequest.statusText`** property returns a [`DOMString`](/en-US/docs/Web/API/DOMString) containing the response's status message as returned by the HTTP server. Unlike [`XMLHTTPRequest.status`](/en-US/docs/Web/API/XMLHttpRequest/status) which indicates a numerical status code, this property contains the _text_ of the response status, such as "OK" or "Not Found". If the request's [`readyState`](/en-US/docs/Web/API/XMLHttpRequest/readyState) is in `UNSENT` or `OPENED` state, the value of `statusText` will be an empty string.
+The read-only **`XMLHttpRequest.statusText`** property returns a string containing the response's status message as returned by the HTTP server. Unlike [`XMLHTTPRequest.status`](/en-US/docs/Web/API/XMLHttpRequest/status) which indicates a numerical status code, this property contains the _text_ of the response status, such as "OK" or "Not Found". If the request's [`readyState`](/en-US/docs/Web/API/XMLHttpRequest/readyState) is in `UNSENT` or `OPENED` state, the value of `statusText` will be an empty string.
 
 If the server response doesn't explicitly specify a status text, `statusText` will assume the default value "OK".
 
@@ -26,17 +28,17 @@ A string.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('0 UNSENT', xhr.statusText);
 
 xhr.open('GET', '/server', true);
 console.log('1 OPENED', xhr.statusText);
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
   console.log('3 LOADING', xhr.statusText);
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
   console.log('4 DONE', xhr.statusText);
 };
 

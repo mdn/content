@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.flush()
 slug: Web/API/IDBFileHandle/flush
+page-type: web-api-instance-method
 tags:
   - API
   - Files
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.flush
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -27,7 +29,7 @@ To avoid that, it's possible to force a write onto the disk by calling the `flus
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

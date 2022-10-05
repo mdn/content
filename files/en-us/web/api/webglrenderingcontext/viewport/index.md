@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.viewport()
 slug: Web/API/WebGLRenderingContext/viewport
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.viewport
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.viewport()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the viewport, which specifies
@@ -17,7 +19,7 @@ coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 viewport(x, y, width, height)
 ```
 

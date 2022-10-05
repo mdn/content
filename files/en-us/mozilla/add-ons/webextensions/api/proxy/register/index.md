@@ -13,6 +13,7 @@ tags:
   - registerProxyScript
 browser-compat: webextensions.api.proxy.register
 ---
+
 {{AddonSidebar()}} {{deprecated_header}}
 
 > **Warning:** This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:
@@ -100,7 +101,7 @@ The first proxy in the array will be tried first. If it does not respond in `fai
 
 ### PAC file environment
 
-The global helper functions usually available for PAC files ([`isPlainHostName()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname()_2>), [`dnsDomainIs()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis()>), and so on) are not available.
+The global helper functions usually available for PAC files ([`isPlainHostName()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname), [`dnsDomainIs()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis), and so on) are not available.
 
 Code running in the PAC file does not get access to:
 
@@ -120,7 +121,7 @@ browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);
 
 function handleMessage(message, sender) {
   // only handle messages from the proxy script
-  if (sender.url != browser.extension.getURL(proxyScriptURL)) {
+  if (sender.url !== browser.extension.getURL(proxyScriptURL)) {
     return;
   }
   console.log(message);
@@ -131,7 +132,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ## Syntax
 
-```js
+```js-nolint
 let registering = browser.proxy.register(
   url   // string
 )

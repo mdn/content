@@ -1,6 +1,7 @@
 ---
 title: Introduction to WebRTC protocols
 slug: Web/API/WebRTC_API/Protocols
+page-type: guide
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{WebRTCSidebar}}
 
 This article introduces the protocols on top of which the WebRTC API is built.

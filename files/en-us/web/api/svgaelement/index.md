@@ -1,6 +1,7 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVGAElement
 browser-compat: api.SVGAElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAElement`** interface provides access to the properties of an {{SVGElement("a")}} element, as well as methods to manipulate them.
@@ -32,7 +34,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : See {{domxref("HTMLAnchorElement.rel")}}.
 - {{domxref("SVGAElement.relList")}}
   - : See {{domxref("HTMLAnchorElement.relList")}}.
-- {{domxref("SVGAElement.target")}} {{readonlyInline}}
+- {{domxref("SVGAElement.target")}} {{ReadOnlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}}
   - : A string being a synonym for the {{domxref("Node.textContent")}} property.
@@ -48,10 +50,10 @@ _This interface has no methods but inherits methods from its parent, {{domxref("
 In the example below, the {{SVGAttr("target")}} attribute of the {{SVGElement("a")}} element is set to `_blank` and when the link is clicked, it logs to notify whether the condition is met or not.
 
 ```js
-var linkRef = document.querySelector("a");
+const linkRef = document.querySelector("a");
 linkRef.target = "_self";
 
-linkRef.onclick = function(){
+linkRef.onclick = () => {
   if (linkRef.target === "_blank") {
     console.log("BLANK!");
     linkRef.target = "_self";

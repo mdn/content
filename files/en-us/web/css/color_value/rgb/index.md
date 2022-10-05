@@ -1,6 +1,7 @@
 ---
 title: rgb()
 slug: Web/CSS/color_value/rgb
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -9,10 +10,14 @@ tags:
   - Web
   - color
   - rgb
+browser-compat: css.types.color.rgb
 ---
+
 {{CSSRef}}
 
 The **`rgb()`** functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
+
+{{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 
 > **Note:** CSS Colors Level 4 made some changes to `rgb()`. In browsers that support the standard {{cssxref("color_value/rgba","rgba()")}} is an alias for `rgb()`, they accept the same parameters and behave the same way.
 >
@@ -36,12 +41,4 @@ rgb(255 255 255 / .5); /* white with 50% opacity, using CSS Colors 4 space-separ
 
 ## Browser compatibility
 
-{{Compat("css.types.color.rgb_functional_notation")}}
-
-### Space-separated values
-
-{{Compat("css.types.color.space_separated_functional_notation")}}
-
-### Accepts alpha value
-
-{{Compat("css.types.color.rgb_function_accepts_alpha")}}
+{{Compat}}

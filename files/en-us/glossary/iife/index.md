@@ -5,45 +5,25 @@ tags:
   - CodingScripting
   - DesignPattern
   - Functions
-  - Glossary
   - JavaScript
 ---
+
 An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
 The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife).
 
-<table>
-<thead>
-<tr>
-<th>IIFE</td>
-<th><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow function</a> IIFE</th>
-<th><a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async</a> IIFE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<pre class="brush: js notranslate">
+```js
 (function () {
-  /* ... */
+  // …
 })();
-</pre>
-</td>
-<td>
-<pre class="brush: js notranslate">
+
 (() => {
-  /* ... */
+  // …
 })();
-</pre>
-</td>
-<td>
-<pre class="brush: js notranslate">
+
 (async () => {
-  /* ... */
+  // …
 })();
-</pre>
-</tr>
-</tbody>
-</table>
+```
 
 It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:
 
@@ -74,10 +54,12 @@ using a function declaration or a function expression.
 An [`async`](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) IIFE allows you to use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`for-await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) even in older browsers and JavaScript runtimes that have no [top-level await](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await):
 
 ```js
-const getFileStream = async (url) => { /* implementation */ };
+const getFileStream = async (url) => {
+  // implementation
+};
 
 (async () => {
-  const stream = await getFileStream('https://domain.name/path/file.ext');
+  const stream = await getFileStream("https://domain.name/path/file.ext");
   for await (const chunk of stream) {
     console.log({ chunk });
   }
@@ -90,45 +72,46 @@ We would also use IIFE to create private and public variables and methods. For a
 pattern and other use of IIFE, you could see the book Learning JavaScript Design Patterns by Addy Osmani.
 
 ```js
-const makeWithdraw = (balance) => ((copyBalance) => {
-  let balance = copyBalance; // This variable is private
-  const doBadThings = () => {
-    console.log('I will do bad things with your money');
-  };
-  doBadThings();
-  return {
-    withdraw(amount) {
-      if (balance >= amount) {
-        balance -= amount;
-        return balance;
-      }
-      return 'Insufficient money';
-    },
-  };
-})(balance);
+const makeWithdraw = (balance) =>
+  ((copyBalance) => {
+    let balance = copyBalance; // This variable is private
+    const doBadThings = () => {
+      console.log("I will do bad things with your money");
+    };
+    doBadThings();
+    return {
+      withdraw(amount) {
+        if (balance >= amount) {
+          balance -= amount;
+          return balance;
+        }
+        return "Insufficient money";
+      },
+    };
+  })(balance);
 
-const firstAccount = makeWithdraw(100);   // "I will do bad things with your money"
-console.log(firstAccount.balance);        // undefined
-console.log(firstAccount.withdraw(20));   // 80
-console.log(firstAccount.withdraw(30));   // 50
-console.log(firstAccount.doBadThings);    // undefined; this method is private
-const secondAccount = makeWithdraw(20);   // "I will do bad things with your money"
-console.log(secondAccount.withdraw(30));  // "Insufficient money"
-console.log(secondAccount.withdraw(20));  // 0
+const firstAccount = makeWithdraw(100); // "I will do bad things with your money"
+console.log(firstAccount.balance); // undefined
+console.log(firstAccount.withdraw(20)); // 80
+console.log(firstAccount.withdraw(30)); // 50
+console.log(firstAccount.doBadThings); // undefined; this method is private
+const secondAccount = makeWithdraw(20); // "I will do bad things with your money"
+console.log(secondAccount.withdraw(30)); // "Insufficient money"
+console.log(secondAccount.withdraw(20)); // 0
 ```
 
 ### For loop with var before ES6
 
 We could see the following use of IIFE in some old code, before the introduction of the statements **let** and **const**
 in **ES6** and the block scope. With the statement **var**, we have only function scopes and the global scope.
-Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and we click
+Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and when we click
 them, we would like them to alert 0 and 1. The following code doesn't work:
 
 ```js
 for (var i = 0; i < 2; i++) {
-  const button = document.createElement('button');
-  button.innerText = 'Button ' + i;
-  button.onclick = function() {
+  const button = document.createElement("button");
+  button.innerText = `Button ${i}`;
+  button.onclick = function () {
     console.log(i);
   };
   document.body.appendChild(button);
@@ -141,9 +124,9 @@ with the last value 2. To fix this problem before ES6, we could use the IIFE pat
 
 ```js
 for (var i = 0; i < 2; i++) {
-  const button = document.createElement('button');
-  button.innerText = 'Button ' + i;
-  button.onclick = (function(copyOfI) {
+  const button = document.createElement("button");
+  button.innerText = `Button ${i}`;
+  button.onclick = (function (copyOfI) {
     return () => {
       console.log(copyOfI);
     };
@@ -160,8 +143,8 @@ Using the statement **let**, we could simply do:
 ```js
 for (let i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerText = 'Button ' + i;
-  button.onclick = function() {
+  button.innerText = `Button ${i}`;
+  button.onclick = function () {
     console.log(i);
   };
   document.body.appendChild(button);
@@ -173,8 +156,7 @@ When clicked, these buttons alert 0 and 1.
 
 ## See also
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} (Wikipedia)
+- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Function")}}

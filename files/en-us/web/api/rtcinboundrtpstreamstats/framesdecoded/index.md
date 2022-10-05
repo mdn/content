@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.framesDecoded
 slug: Web/API/RTCInboundRtpStreamStats/framesDecoded
+page-type: web-api-instance-property
 tags:
   - API
   - Decode
@@ -20,6 +21,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.framesDecoded
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`framesDecoded`** property of

@@ -1,12 +1,14 @@
 ---
 title: 'Element: MSGestureHold event'
 slug: Web/API/Element/MSGestureHold_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard
   - Reference
 browser-compat: api.Element.MSGestureHold_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`MSGestureHold`** event is fired when the user contacts the touch surface and remains in the same position for a while.
@@ -41,7 +43,7 @@ The {{domxref("UIEvent.detail")}} property of an `MSGestureHold` event has 3 pos
 - `MSGESTURE_FLAG_END`
   - : This value indicates that the user has stopped touching the touch surface.
 - `MSGESTURE_FLAG_END & MSGESTURE_FLAG_CANCEL` (bitwise AND-ed together)
-  - : This value indicates that the user has moved their finger, regardless of whether they also stopped touching the touch surface
+  - : This value indicates that the user has moved their finger, regardless of whether they also stopped touching the touch surface.
 
 ## Specifications
 

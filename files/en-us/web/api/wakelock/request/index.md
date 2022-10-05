@@ -1,15 +1,18 @@
 ---
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - Screen Wake Lock API
   - WakeLock
+  - Experimental
 browser-compat: api.WakeLock.request
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`request()`** method of the
 {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
@@ -18,7 +21,7 @@ locking.
 
 ## Syntax
 
-```js
+```js-nolint
 request(type)
 ```
 

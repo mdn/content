@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - DedicatedWorkerGlobalScope
@@ -10,6 +11,7 @@ tags:
   - Workers
 browser-compat: api.DedicatedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference). See also: [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
@@ -20,20 +22,20 @@ The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global sc
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-- {{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}
+- {{domxref("DedicatedWorkerGlobalScope.name")}} {{ReadOnlyInline}}
   - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
 
 ### Properties inherited from WorkerGlobalScope
 
 - {{domxref("WorkerGlobalScope.self")}}
   - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
-- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("console")}} associated with the worker.
-- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. `WorkerLocation` is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
+- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
 ## Methods

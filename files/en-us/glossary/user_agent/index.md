@@ -3,7 +3,6 @@ title: User agent
 slug: Glossary/User_agent
 tags:
   - Browser
-  - Glossary
   - UA
   - User-agent
   - Web Browser
@@ -12,6 +11,7 @@ tags:
   - user agent
   - userAgent
 ---
+
 A user agent is a computer program representing a person, for example, a {{Glossary("Browser","browser")}} in a {{Glossary("World Wide Web", "Web")}} context.
 
 Besides a browser, a user agent could be a bot scraping webpages, a download manager, or another app accessing the Web. Along with each request they make to the server, browsers include a self-identifying {{HTTPHeader("User-Agent")}} {{Glossary("HTTP")}} header called a user agent (UA) string. This string often identifies the browser, its version number, and its host operating system.
@@ -24,7 +24,7 @@ A typical user agent string looks like this: `"Mozilla/5.0 (X11; Ubuntu; Linux x
 
 ## See also
 
-- {{interwiki("wikipedia", "User agent")}} on Wikipedia
+- [User agent](https://en.wikipedia.org/wiki/User_agent) on Wikipedia
 - {{domxref("Navigator/userAgent", "NavigatorID.userAgent")}}
 - [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}: The `User-Agent` header

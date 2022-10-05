@@ -8,6 +8,7 @@ tags:
   - Success
 browser-compat: http.status.204
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`204 No Content`** success status response code
@@ -38,8 +39,7 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 
 - Although this status code is intended to describe a response with no body, servers
   may erroneously include data following the headers. The protocol allows user agents to
-  vary in how they process such responses ([discussion regarding this
-  specification text can be found here](https://github.com/httpwg/http-core/issues/26)). This is observable in persistent
+  vary in how they process such responses ([discussion regarding this specification text can be found here](https://github.com/httpwg/http-core/issues/26)). This is observable in persistent
   connections, where the invalid body may include a distinct response to a subsequent
   request.
 

@@ -1,6 +1,7 @@
 ---
 title: SVGFEDisplacementMapElement
 slug: Web/API/SVGFEDisplacementMapElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEDisplacementMapElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement("feDisplacementMap")}} element.

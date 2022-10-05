@@ -1,6 +1,7 @@
 ---
 title: VRPose.position
 slug: Web/API/VRPose/position
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,9 +12,11 @@ tags:
   - VRPose
   - Virtual Reality
   - WebVR
+  - Non-standard
 browser-compat: api.VRPose.position
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`position`** read-only property of the {{domxref("VRPose")}} interface returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector.
 

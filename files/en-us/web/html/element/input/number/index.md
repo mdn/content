@@ -70,7 +70,7 @@ On browsers that don't support inputs of type `number`, a `number` input falls b
 A number representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
 ```html
-<input id="number" type="number" value="42">
+<input id="number" type="number" value="42" />
 ```
 
 {{EmbedLiveSample('Value', 600, 40)}}
@@ -124,7 +124,7 @@ The default stepping value for `number` inputs is `1`, allowing only integers to
 The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) or other {{HTMLElement('input')}} type with the {{HTMLAttrXref('inputmode')}} attribute:
 
 ```html
-<input type="text" inputmode="numeric" pattern="\d*">
+<input type="text" inputmode="numeric" pattern="\d*" />
 ```
 
 `<input type="number">` elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper `type` value, `number`, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.
@@ -141,7 +141,7 @@ In its most basic form, a number input can be implemented like this:
 
 ```html
 <label for="ticketNum">Number of tickets you would like to buy:</label>
-<input id="ticketNum" type="number" name="ticketNum" value="0">
+<input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
 {{EmbedLiveSample('A_simple_number_input', 600, 40)}}
@@ -157,7 +157,7 @@ Sometimes it's helpful to offer an in-context hint as to what form the input dat
 Here, we have an `number` input with the placeholder "`Multiple of 10`". Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
-<input type="number" placeholder="Multiple of 10">
+<input type="number" placeholder="Multiple of 10" />
 ```
 
 {{EmbedLiveSample('Placeholders', 600, 40)}}
@@ -167,7 +167,7 @@ Here, we have an `number` input with the placeholder "`Multiple of 10`". Note ho
 By default, the up and down buttons provided for you to step the number up and down will step the value up and down by 1. You can change this by providing a {{htmlattrxref("step", "input")}} attribute, which takes as its value a number specifying the step amount. Our above example contains a placeholder saying that the value should be a multiple of 10, so it makes sense to add a `step` value of `10`:
 
 ```html
-<input type="number" placeholder="multiple of 10" step="10">
+<input type="number" placeholder="multiple of 10" step="10" />
 ```
 
 {{EmbedLiveSample('Controlling_step_size', 600, 40)}}
@@ -179,7 +179,7 @@ In this example, you should find that the up and down step arrows will increase 
 You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to specify a minimum and maximum value that the field can have. For example, let's give our example a minimum of `0`, and a maximum of `100`:
 
 ```html
-<input type="number" placeholder="multiple of 10" step="10" min="0" max="100">
+<input type="number" placeholder="multiple of 10" step="10" min="0" max="100" />
 ```
 
 {{EmbedLiveSample('Specifying_minimum_and_maximum_values', 600, 40)}}
@@ -191,7 +191,7 @@ In this updated version, you should find that the up and down step buttons will 
 One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a simple example:
 
 ```html
-<input type="number" placeholder="1.0" step="0.01" min="0" max="10">
+<input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
 ```
 
 {{EmbedLiveSample("Allowing_decimal_values", 600, 40)}}
@@ -205,7 +205,13 @@ See that this example allows any value between `0.0` and `10.0`, with decimals t
 For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an {{htmlattrxref("id")}} and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
 
 ```html
-<input type="number" placeholder="x10" step="10" min="0" max="100" id="number">
+<input
+  type="number"
+  placeholder="x10"
+  step="10"
+  min="0"
+  max="100"
+  id="number" />
 ```
 
 Then we add some CSS to narrow the width of the element with the `id` selector `#number`:
@@ -225,15 +231,15 @@ The result looks like this:
 You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the {{htmlattrxref("id")}} of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
 
 ```html
-<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers">
+<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
 <span class="validity"></span>
 
 <datalist id="defaultNumbers">
-  <option value="10045678">
-  <option value="103421">
-  <option value="11111111">
-  <option value="12345678">
-  <option value="12999922">
+  <option value="10045678"></option>
+  <option value="103421"></option>
+  <option value="11111111"></option>
+  <option value="12345678"></option>
+  <option value="12999922"></option>
 </datalist>
 ```
 
@@ -254,11 +260,18 @@ The following example exhibits all of the above features, as well as using some 
 <form>
   <div>
     <label for="balloons">Number of balloons to order (multiples of 10):</label>
-    <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required>
+    <input
+      id="balloons"
+      type="number"
+      name="balloons"
+      step="10"
+      min="0"
+      max="100"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit">
+    <input type="submit" />
   </div>
 </form>
 ```
@@ -274,13 +287,13 @@ div {
   margin-bottom: 10px;
 }
 
-input:invalid+span:after {
-  content: '✖';
+input:invalid + span::after {
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
-  content: '✓';
+input:valid + span::after {
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -313,26 +326,36 @@ The HTML looks like this:
 
 ```html
 <form>
-    <div class="metersInputGroup">
-        <label for="meters">Enter your height — meters:</label>
-        <input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required>
-        <span class="validity"></span>
-    </div>
-    <div class="feetInputGroup" style="display: none;">
-        <span>Enter your height — </span>
-        <label for="feet">feet:</label>
-        <input id="feet" type="number" name="feet" min="0" step="1">
-        <span class="validity"></span>
-        <label for="inches">inches:</label>
-        <input id="inches" type="number" name="inches" min="0" max="11" step="1">
-        <span class="validity"></span>
-    </div>
-    <div>
-      <input type="button" class="meters" value="Enter height in feet and inches">
-    </div>
-    <div>
-        <input type="submit" value="Submit form">
-    </div>
+  <div class="metersInputGroup">
+    <label for="meters">Enter your height — meters:</label>
+    <input
+      id="meters"
+      type="number"
+      name="meters"
+      step="0.01"
+      min="0"
+      placeholder="e.g. 1.78"
+      required />
+    <span class="validity"></span>
+  </div>
+  <div class="feetInputGroup" style="display: none;">
+    <span>Enter your height — </span>
+    <label for="feet">feet:</label>
+    <input id="feet" type="number" name="feet" min="0" step="1" />
+    <span class="validity"></span>
+    <label for="inches">inches:</label>
+    <input id="inches" type="number" name="inches" min="0" max="11" step="1" />
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input
+      type="button"
+      class="meters"
+      value="Enter height in feet and inches" />
+  </div>
+  <div>
+    <input type="submit" value="Submit form" />
+  </div>
 </form>
 ```
 
@@ -356,15 +379,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -372,15 +395,15 @@ input:valid+span:after {
 And finally, the JavaScript:
 
 ```js
-let metersInputGroup = document.querySelector('.metersInputGroup');
-let feetInputGroup = document.querySelector('.feetInputGroup');
-let metersInput = document.querySelector('#meters');
-let feetInput = document.querySelector('#feet');
-let inchesInput = document.querySelector('#inches');
-let switchBtn = document.querySelector('input[type="button"]');
+const metersInputGroup = document.querySelector('.metersInputGroup');
+const feetInputGroup = document.querySelector('.feetInputGroup');
+const metersInput = document.querySelector('#meters');
+const feetInput = document.querySelector('#feet');
+const inchesInput = document.querySelector('#inches');
+const switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', function() {
-  if(switchBtn.getAttribute('class') === 'meters') {
+switchBtn.addEventListener('click', () => {
+  if (switchBtn.getAttribute('class') === 'meters') {
     switchBtn.setAttribute('class', 'feet');
     switchBtn.value = 'Enter height in meters';
 
@@ -419,7 +442,7 @@ After declaring a few variables, an event listener is added to the `button` to c
 
 ## Accessibility
 
-The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider *not* using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they’re trying to do something else. Additionally, if users try to enter something that’s not a number, there’s no explicit feedback about what they’re doing wrong.
+The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
 
 Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to help users complete forms more quickly and with fewer chances of errors. For example, to enable autofill on a zip code field, set `autocomplete="postal-code"`.
 

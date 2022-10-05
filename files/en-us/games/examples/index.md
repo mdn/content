@@ -7,6 +7,7 @@ tags:
   - Games
   - Web
 ---
+
 {{GamesSidebar}}
 
 This page lists a number of impressive web technology demos for you to get inspiration from, and generally have fun with. A testament to what can be done with JavaScript, WebGL, and related technologies. The first two sections list playable games, while the second is a catch-all area to list demos that aren't necessarily interactive/games.
@@ -27,18 +28,14 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A fast-paced, futuristic racing game.
 - [Angry Bots](https://beta.unity3d.com/jonas/AngryBots/)
   - : A futuristic Aliens-esque isometric 3rd person shooter demo, made with [Unity](https://unity.com/).
-- [Nutmeg](http://sandbox.photonstorm.com/html5/nutmeg/)
-  - : Cute retro scrolling platforming action.
-- [Back to Candyland](http://www.zibbo.com/game/match-3-games-top/back-to-candyland-episode-1)
-  - : A match-3 (Candy Crush) style game.
 - [Biolab Disaster](https://playbiolab.com/)
   - : Side-scrolling platform shooter.
 - [X-Type](https://phoboslab.org/xtype/)
   - : Vertically scrolling space shooter demo.
 - [Xibalba](https://phoboslab.org/xibalba/)
-  - : Retro (Doom-style) first person shooter.
+  - : Retro (Doom-style) first-person shooter.
 - [Gorescript](https://timeinvariant.github.io/gorescript/play/)
-  - : Another retro style first person shooter.
+  - : Another retro style first-person shooter.
 - [The Wizard](https://hypnoticowl.com/games/the-wizard/)
   - : A turn-based, dungeon puzzle game.
 - [Hextris](https://hextris.io/)
@@ -49,16 +46,6 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A multiplayer, 3D first-person shooter game developed using Emscripten, WebGL, and WebRTC.
 - [Monster Madness](https://hacks.mozilla.org/2013/12/monster-madness-creating-games-on-the-web-with-emscripten/)
   - : A WebGL and asm.js-based multiplayer online shooter, developed by Nom Nom Games and Trendy entertainment.
-- [Auralux](http://www.auraluxgame.com/game/)
-  - : WebGL and asm.js-based strategy game: capture all the suns to win!
-- [BrowserQuest](http://browserquest.mozilla.org/)
-  - : A MMORPG created by the Little Workshop and Mozilla.
-- [Shoot The Rocks](https://arcade.ly/games/asteroids/)
-  - : A canvas 2D single-player shooter in the style of Atari's classic Asteroids arcade game from 1979.
-- [Star Citadel](https://arcade.ly/games/starcastle/)
-  - : A new take on Star Castle, Cinematronics' classic 1980 arcade game, built with canvas 2D.
-- [Classic Platformer](https://maximumroulette.com/applications/visual-typescript-game-engine/single-player/app.html)
-  - : Canvas 2D game based on \`Visual-ts game engine\` - physics based on Matter.js
 - [Solitaire](https://online-solitaire.com/mozilla-foundation)
   - : A classic solitaire game in the style and colors of the Mozilla Foundation. Built with ReactJS, Firebase and Greensock for animations.
 
@@ -66,24 +53,20 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 - [A Wizard's Lizard](http://www.wizardslizard.com/)
   - : Top down Zelda-esque exploration/RPG.
-- [QbQbQb](http://qbqbqb.rezoner.net/)
-  - : A sci-fi themed arcade puzzle game.
-
-**[Bullet Force](https://www.crazygames.com/game/bullet-force-multiplayer)**
-    3D multiplayer first-person shooter.
-
+- [Bullet Force](https://www.crazygames.com/game/bullet-force-multiplayer)
+  - : 3D multiplayer first-person shooter.
 - [Elliot Quest](https://elliotquest.com/)
   - : 8-bit graphic retro adventure game.
 - [RPG MO](https://data.mo.ee/index2.html)
   - : Isometric MMORPG with similarities to RuneScape Classic and Ultima.
 - [colonist.io](https://colonist.io/)
-  - : HTML5 and canvas implementation of Settlers of Catan.
+  - : HTML and canvas implementation of Settlers of Catan.
 - [Pyramid Solitaire Ancient Egypt](https://www.solitaireparadise.com/games_list/pyramid_solitaire_ancient_egypt.html)
   - : Pyramid solitaire app ported to WebAssembly with Emscripten
 
 ## Assorted demos
 
-- [WaveGL](https://greweb.me/wavegl/)
+- [WaveGL](https://github.com/gre/wavegl)
   - : WebGL visualizer for sound sources.
 - [Canvas Airport Simulation](https://codepen.io/jackrugile/pen/oNgrYm)
   - : Animated map showing planes taking off and landing at airports, along with flight path patterns.
@@ -109,8 +92,6 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : An Xray machine, creating using an SVG mask.
 - [Realistic Water Simulation](https://www.shadertoy.com/view/Ms2SD1)
   - : Flowing water, like the waves on the ocean.
-- [Dungeon demo](https://www.haxor.xyz/demos/1.0/dungeon/)
-  - : Haxor-based dungeon scene with walkable character.
 - [Massive Assault tech demo](http://massiveassaultnetwork.com/html5/)
   - : Rendered archipelago with futuristic military vehicles.
 - [Flight Stream](https://callumprentice.github.io/apps/flight_stream/index.html)

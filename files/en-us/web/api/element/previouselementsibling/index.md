@@ -1,6 +1,7 @@
 ---
 title: Element.previousElementSibling
 slug: Web/API/Element/previousElementSibling
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.previousElementSibling`**
@@ -30,13 +32,13 @@ An {{domxref("Element")}} object, or `null`.
 <div id="div-03">Here is div-03</div>
 
 <script>
-  let el = document.getElementById('div-03').previousElementSibling;
-  document.write('<p>Siblings of div-03</p><ol>');
+  let el = document.getElementById("div-03").previousElementSibling;
+  document.write("<p>Siblings of div-03</p><ol>");
   while (el) {
-    document.write('<li>' + el.nodeName + '</li>');
+    document.write("<li>" + el.nodeName + "</li>");
     el = el.previousElementSibling;
   }
-  document.write('</ol>');
+  document.write("</ol>");
 </script>
 ```
 

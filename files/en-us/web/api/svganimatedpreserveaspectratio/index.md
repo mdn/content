@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedPreserveAspectRatio
 slug: Web/API/SVGAnimatedPreserveAspectRatio
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedPreserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated preserveAspectRatio interface

@@ -1,6 +1,7 @@
 ---
 title: Window.screenX
 slug: Web/API/Window/screenX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -11,6 +12,7 @@ tags:
   - screenX
 browser-compat: api.Window.screenX
 ---
+
 {{APIRef}}
 
 The **`Window.screenX`** read-only property returns the
@@ -28,7 +30,7 @@ to the left edge of the screen.
 
 ## Examples
 
-In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) ([source code](https://github.com/mdn/dom-examples/blob/master/screenleft-screentop/index.html)) example, you'll see a canvas onto which has been drawn a circle. In this
+In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) ([source code](https://github.com/mdn/dom-examples/blob/main/screenleft-screentop/index.html)) example, you'll see a canvas onto which has been drawn a circle. In this
 example we are using {{domxref("Window.screenLeft")}}/{{domxref("Window.screenTop")}}
 plus {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in
 the same physical position on the screen, even if the window position is moved.
@@ -51,7 +53,7 @@ function positionElem() {
   ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent = `Window.screenLeft: ${window.screenLeft}, Window.screenTop: ${window.screenTop}`;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -66,7 +68,7 @@ supported, and if not, polyfills in `screenLeft`/`screenTop` using
 `screenX`/`screenY`.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

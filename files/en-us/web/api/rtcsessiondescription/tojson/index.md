@@ -1,8 +1,8 @@
 ---
 title: RTCSessionDescription.toJSON()
 slug: Web/API/RTCSessionDescription/toJSON
+page-type: web-api-instance-method
 tags:
-  - Experimental
   - Method
   - RTCSessionDescription
   - Reference
@@ -10,7 +10,8 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.toJSON
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The **`RTCSessionDescription.toJSON()`** method generates a
 {{Glossary("JSON")}} description of the object. Both properties,
@@ -19,7 +20,7 @@ The **`RTCSessionDescription.toJSON()`** method generates a
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

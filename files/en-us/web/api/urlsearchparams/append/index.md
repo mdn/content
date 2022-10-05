@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
+page-type: web-api-instance-method
 tags:
   - API
   - Append
@@ -9,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.append
 ---
+
 {{ApiRef("URL API")}}
 
 The **`append()`** method of the {{domxref("URLSearchParams")}}
@@ -21,7 +23,7 @@ appear in the parameter string multiple times for each value.
 
 ## Syntax
 
-```js
+```js-nolint
 append(name, value)
 ```
 
@@ -59,5 +61,4 @@ params.append('foo', 4);
 
 - Other URL-related interfaces: {{domxref("URL")}},
   {{domxref("HTMLHyperlinkElementUtils")}}.
-- [Google
-  Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)
+- [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

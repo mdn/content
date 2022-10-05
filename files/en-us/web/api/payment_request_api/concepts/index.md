@@ -1,6 +1,7 @@
 ---
 title: Payment processing concepts
 slug: Web/API/Payment_Request_API/Concepts
+page-type: guide
 tags:
   - API
   - Apple Pay
@@ -17,6 +18,7 @@ spec-urls:
   - https://w3c.github.io/payment-request/
   - https://w3c.github.io/payment-method-id/
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy to handle payments in a web site or app. In this article, we'll take a look at how the API operates and what each of its components does.
@@ -73,7 +75,7 @@ Some payment handlers use **merchant validation**, which is the process of valid
 The exact validation technology depends on the payment handler, and merchant validation is entirely optional. In the end, the only thing that the web site or app is responsible for is fetching the merchant's validation key and passing it into the event's {{domxref("MerchantValidationEvent.complete", "complete()")}} method.
 
 ```js
-paymentRequest.onmerchantvalidation = function(event) {
+paymentRequest.onmerchantvalidation = (event) => {
   event.complete(fetchValidationData(event.validationURL));
 }
 ```

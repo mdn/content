@@ -9,6 +9,7 @@ tags:
   - NeedsActiveLearning
   - Web
 ---
+
 <table>
   <tbody>
     <tr>
@@ -47,7 +48,7 @@ To solve all those problems we use human-readable addresses called domain names.
 
 ### Structure of domain names
 
-A domain name has a simple structure made of several parts (it might be one part only, two, three...), separated by dots and **read from right to left**:
+A domain name has a simple structure made of several parts (it might be one part only, two, three…), separated by dots and **read from right to left**:
 
 ![Anatomy of the MDN domain name](structure.png)
 
@@ -71,7 +72,7 @@ Each of those parts provides specific information about the whole domain name.
 
     The label located right before the TLD is also called a _Secondary Level Domain_ (SLD).
 
-    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a valid domain name. For any domain you control (e.g. [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](https://developer.mozilla.org), [iot.mozilla.org](https://iot.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org).
+    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a valid domain name. For any domain you control (e.g. [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](/), [iot.mozilla.org](https://iot.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org).
 
 ### Buying a domain name
 

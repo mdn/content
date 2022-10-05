@@ -9,6 +9,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{HTTPSidebar}}
 
 **HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.
@@ -104,15 +105,15 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 
 ### Device client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{experimental_inline}}
   - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}}
   - : Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
   - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-- {{HTTPHeader("Width")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
   - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
 
 ### Network client hints
@@ -168,7 +169,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("Expect")}}
   - : Indicates expectations that need to be fulfilled by the server to properly handle the request.
 - {{HTTPHeader("Max-Forwards")}}
-  - : TBD
+  - : When using [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE), indicates the maximum number of hops the request can do before being reflected to the sender.
 
 ## Cookies
 
@@ -179,7 +180,7 @@ Network client hints allow a server to choose what information is sent based on 
 
 ## CORS
 
-_Learn more about CORS [here](CORS)._
+_Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indicates whether the response can be shared.
@@ -298,20 +299,11 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html) for more information.
+  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) for more information.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
 - {{HTTPHeader("X-XSS-Protection")}}
   - : Enables cross-site scripting filtering.
-
-### HTTP Public Key Pinning (HPKP)
-
-{{Glossary("HPKP", "HTTP Public Key Pinning")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.
-
-- {{HTTPHeader("Public-Key-Pins")}}
-  - : Associates a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates.
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-  - : Sends reports to the report-uri specified in the header and does still allow clients to connect to the server even if the pinning is violated.
 
 ### Fetch metadata request headers
 
@@ -395,7 +387,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("SourceMap")}}
   - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
 - {{HTTPHeader("Upgrade")}}
-  - : The relevant RFC document for the [Upgrade header field is RFC 7230, section 6.7](https://datatracker.ietf.org/doc/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field [please see section 6.1 of the aforementioned RFC](https://datatracker.ietf.org/doc/html/rfc7230#section-6.1).
+  - : The relevant RFC document for the [Upgrade header field is RFC 9110, section 7.8](https://httpwg.org/specs/rfc9110.html#field.upgrade). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to [WebSocket](/en-US/docs/Glossary/WebSockets), assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field [please see section 7.6.1 of the aforementioned RFC](https://httpwg.org/specs/rfc9110.html#field.connection).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}
   - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 - {{HTTPHeader("X-Firefox-Spdy")}} {{deprecated_inline}} {{non-standard_inline}}
@@ -405,13 +397,13 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="...">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : Used by Internet Explorer to signal which document mode to use.
 
 ## Contributing
 
-You can help by [writing new entries](/en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header) or improving the existing ones.
+You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header) or improving the existing ones.
 
 ## See also
 

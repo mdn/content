@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.profiles
 slug: Web/API/XRInputSource/profiles
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -20,6 +21,7 @@ tags:
   - profile
 browser-compat: api.XRInputSource.profiles
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}} property **`profiles`** returns an array of strings, each describing a configuration profile for the input source. The profile strings are listed in order of specificity, with the most specific profile listed first.
@@ -45,8 +47,7 @@ input source may be configured to use. Each string:
   that the product is capable of using
 - Does not provide information about handedness of the device, if applicable
 
-The [WebXR
-Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/registry) is used by device developers and browser developers to
+The [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/registry) is used by device developers and browser developers to
 attempt to ensure that a given device will report the same profile strings regardless of
 which browser or other {{Glossary("user agent")}} you use.
 

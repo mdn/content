@@ -1,6 +1,7 @@
 ---
 title: AudioListener.positionY
 slug: Web/API/AudioListener/positionY
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - positionY
 browser-compat: api.AudioListener.positionY
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `positionY` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the y position of the listener in 3D cartesian space.

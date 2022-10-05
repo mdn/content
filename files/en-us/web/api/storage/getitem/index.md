@@ -1,6 +1,7 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`getItem()`** method of the {{domxref("Storage")}}
@@ -17,7 +19,7 @@ the key does not exist, in the given `Storage` object.
 
 ## Syntax
 
-```js
+```js-nolint
 getItem(keyName)
 ```
 
@@ -39,15 +41,15 @@ set custom styles on a page.
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem('bgcolor');
+  const currentFont = localStorage.getItem('font');
+  const currentImage = localStorage.getItem('image');
 
   document.getElementById('bgcolor').value = currentColor;
   document.getElementById('font').value = currentFont;
   document.getElementById('image').value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
 }
@@ -66,5 +68,4 @@ function setStyles() {
 ## See also
 
 - [Storage.setItem()](/en-US/docs/Web/API/Storage/setItem)
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

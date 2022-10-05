@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getActiveAttrib()
 slug: Web/API/WebGLRenderingContext/getActiveAttrib
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveAttrib
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getActiveAttrib()`** method of the
@@ -19,7 +21,7 @@ generic library creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveAttrib(program, index)
 ```
 

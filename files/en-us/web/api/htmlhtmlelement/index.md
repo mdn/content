@@ -1,6 +1,7 @@
 ---
 title: HTMLHtmlElement
 slug: Web/API/HTMLHtmlElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLHtmlElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLHtmlElement`** interface serves as the root node for a given HTML document. This object inherits the properties and methods described in the {{domxref("HTMLElement")}} interface.

@@ -4,10 +4,11 @@ slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 tags:
   - Apps
   - CSS
-  - HTML5
+  - HTML
   - Mobile
   - Responsive Design
 ---
+
 In this article we will discuss the main essential components of responsive design, with some links to further information where necessary.
 
 For Web developers, it is now fairly common to be called upon to create a Web site or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.
@@ -26,7 +27,7 @@ There are disadvantages to responsive-design approach, however. If the content, 
 
 The best place to start is with fluid measurements for our application layout — essentially, this means using a combination of percentages and ems/rems to size your containers and text, not fixed widths such as pixels. This has a lot of advantages in that the layout will adapt to different viewport dimensions. Let's look at an example.
 
-We've written a simple-but-fun prototype for an application called Snapshot, which takes a video stream from your webcam (using {{domxref("navigator.getUserMedia", "getUserMedia()")}}) then allows you to capture stills from that video stream (using HTML5 {{HTMLElement("canvas")}}), and save them to a gallery. You can then view previously-captured images and delete them. Other articles will discuss the functionality in more detail, but here we're interested in the layout.
+We've written a simple-but-fun prototype for an application called Snapshot, which takes a video stream from your webcam (using {{domxref("navigator.getUserMedia", "getUserMedia()")}}) then allows you to capture stills from that video stream (using HTML {{HTMLElement("canvas")}}), and save them to a gallery. You can then view previously-captured images and delete them. Other articles will discuss the functionality in more detail, but here we're interested in the layout.
 
 > **Note:** You can find the [Snapshot app on GitHub](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
 
@@ -38,19 +39,13 @@ The markup is as follows:
 
 ```html
 <x-deck selected-index="0">
-  <x-card>
-    …
-  </x-card>
-  <x-card>
-    …
-  </x-card>
-  <x-card>
-    …
-  </x-card>
+  <x-card> … </x-card>
+  <x-card> … </x-card>
+  <x-card> … </x-card>
 </x-deck>
 ```
 
-> **Note:** These weird x- elements may be unfamiliar; they are part of [Brick](https://mozbrick.github.io/), Mozilla's UI element library for mobile web apps. We have used Brick to create the mobile layout for Snapshot, which you will read more about below.
+> **Note:** These weird x- elements may be unfamiliar; they are part of [Brick](https://github.com/mozbrick/brick), Mozilla's UI element library for mobile web apps. We have used Brick to create the mobile layout for Snapshot, which you will read more about below.
 
 To get these sitting side-by-side we have used the following rules:
 
@@ -59,7 +54,8 @@ x-card {
   width: 100%;
 }
 
-x-card:nth-child(1), x-card:nth-child(2) {
+x-card:nth-child(1),
+x-card:nth-child(2) {
   width: 30%;
   float: left;
   padding: 2rem;
@@ -81,9 +77,9 @@ So we're giving the first two columns a {{cssxref("width")}} of `30%`, and the t
 The padding does not affect the overall width and height of the containers because we have set the {{cssxref("box-sizing")}} of all elements to `border-box`:
 
 ```css
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 ```
@@ -99,7 +95,8 @@ Things are working fairly well now, but there are still some issues just waiting
 Because the size of replaced elements is dictated by the size of the media inserted into them, and the media is a fixed size, they explode out of their containing elements and make a mess of the layout. This is pretty horrible, but generally this kind of problem is easily fixed with some simple CSS:
 
 ```css
-img, video {
+img,
+video {
   max-width: 100%;
 }
 ```
@@ -107,9 +104,10 @@ img, video {
 This tells the replaced elements to remain constrained inside their container's widths, no matter what. However, if they aren't as wide as their containers, they will not stretch to fill them. In the snapshot example, we ended up with slightly different code:
 
 ```css
-x-card:nth-child(1) video, x-card:nth-child(2) img {
+x-card:nth-child(1) video,
+x-card:nth-child(2) img {
   width: 100%;
-    …
+  /* … */
 }
 ```
 
@@ -121,7 +119,7 @@ This is because in our case, we do in fact want the video and image to stretch t
 
 Fluid grids are a great start, but you'll notice that at certain points (known as breakpoints) the layout starts to break down. At these points you'll want to change the layout to rectify the layout problem, and this can be done using media queries.
 
-> **Note:** Media queries are a CSS3 feature that allow you to selectively apply CSS depending on the results of media feature tests — for more on the basics, read [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+> **Note:** Media queries are a CSS feature that allow you to selectively apply CSS depending on the results of media feature tests — for more on the basics, read [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
 
 ### Typical desktop layout
 
@@ -135,7 +133,8 @@ We also have a mid-width layout, which is aimed at working well on tablets and n
 
 ```css
 @media all and (max-width: 1024px) {
-  x-card:nth-child(1), x-card:nth-child(2) {
+  x-card:nth-child(1),
+  x-card:nth-child(2) {
     width: 50%;
   }
 
@@ -182,26 +181,29 @@ We then have a narrow screen layout, designed to fit the bill for a mobile app/o
 This first block resets a number of different things from the widescreen layouts that weren't required for the mobile app.
 
 ```css
-  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
-    margin-top: 17.5vw;
-  }
+x-card:nth-child(1) video,
+x-card:nth-child(2) img,
+x-card:nth-child(3) {
+  margin-top: 17.5vw;
+}
 
-  x-card:nth-child(1) button, x-card:nth-child(2) button {
-    position: absolute;
-    bottom: 0;
-  }
+x-card:nth-child(1) button,
+x-card:nth-child(2) button {
+  position: absolute;
+  bottom: 0;
+}
 
-  x-card:nth-child(2) button:nth-of-type(2) {
-    bottom: 5.9rem;
-  }
+x-card:nth-child(2) button:nth-of-type(2) {
+  bottom: 5.9rem;
+}
 
-  x-card:nth-child(1) button {
-    font-size: 7vw;
-  }
+x-card:nth-child(1) button {
+  font-size: 7vw;
+}
 
-  x-card:nth-child(2) button {
-    font-size: 7vw;
-  }
+x-card:nth-child(2) button {
+  font-size: 7vw;
+}
 ```
 
 The next rules do some sizing on the buttons inside the first two cards, and give all card contents a top margin so that their content won't be lost under the navigation buttons (see below). This was necessary because Mozilla Brick (also see below) forces its components to be 100% of the screen width and height. We have used `vw` (viewport width) units for these — `1vw` is equivalent to 1% of the viewport width. This makes the dimensions scale up and down nicely along with the viewport width. Last for this section, we absolutely positioned all buttons at the bottom of the cards they are in, so the layout looks OK at different viewport size variations. We then add a rule that positions the second button in any card a button's width higher up the card. When you click on an image in the gallery it brings up options to delete or cancel deletion of the card, and you don't want two buttons on top of one another.
@@ -219,19 +221,11 @@ This rule changes the width of the gallery images so now there are two per line.
     width: 100%;
     position: absolute;
     z-index: 1000;
-
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 
   nav button {
     font-size: 6.8vw;
-
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
     flex: 1;
 
     border-left: 1px solid rgba(100,100,100,0.4);
@@ -249,12 +243,15 @@ Next up, the `font-size` of the buttons is set to `6.8vw`. Why? Because the top-
 
 Last, we have used `flex: 1;` to make the buttons always take up the same proportion of space on the line. Let's have a look at the mobile layout, in the below image.
 
-![single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button.](mobile-layout.png)But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used [Mozilla Brick](https://mozilla.github.io/brick/), a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the [deck](https://mozilla.github.io/brick/docs.html#deck) component for the nice transition effect between cards when the buttons are pressed. For more on using Brick, read [Mozilla Brick: ready made UI components](/en-US/docs/Web/Apps/app_layout/Mozilla_Brick_ready_made_UI_components).
+![single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button.](mobile-layout.png)But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used [Mozilla Brick](https://github.com/mozbrick/brick), a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the [deck](https://github.com/mozbrick/brick/tree/master/dist/brick-deck/dist) component for the nice transition effect between cards when the buttons are pressed.
 
 What's more relevant to this article is that we didn't want the Brick CSS and JavaScript files being applied to the markup unless we were looking at the mobile app view. To achieve this, we applied the Brick CSS to the page using a separate {{HTMLElement("link")}} element with a `media` attribute:
 
 ```html
-<link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)">
+<link
+  href="dist/brick.css"
+  rel="stylesheet"
+  media="all and (max-width: 480px)" />
 ```
 
 This says that the whole stylesheet will not be linked to the HTML unless the viewport width is 480px or less. Moving on to the JavaScript, {{HTMLElement("script")}} elements don't accept `media` attributes, so I had to do this a different way. Fortunately there is a JavaScript construct called {{domxref("window.matchMedia()")}}, which can conditionally run JavaScript constructs depending on whether a media query returns `true` or not. We opened up the `brick.js` file and wrapped the whole lot in the following:
@@ -297,10 +294,6 @@ We also came across some problems with orientation: the mobile-app layout of our
 @media all and (max-width: 480px) and (orientation: landscape) {
   nav {
     width: auto;
-
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -312,11 +305,14 @@ We also came across some problems with orientation: the mobile-app layout of our
     border-left: 0;
   }
 
-  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
+  x-card:nth-child(1) video,
+  x-card:nth-child(2) img,
+  x-card:nth-child(3) {
     margin-top: 0;
   }
 
-  x-card:nth-child(1) button, x-card:nth-child(2) button {
+  x-card:nth-child(1) button,
+  x-card:nth-child(2) button {
     font-size: 2rem;
   }
 }
@@ -344,7 +340,7 @@ One last problem to mention for our example app is concerned with mobile browser
 There is a way to override this mobile rendering behavior — viewport, which is inserted into our HTML pages in the form of a {{HTMLElement("meta")}} tag. In my example, let's add the following into our HTML {{HTMLElement("head")}}:
 
 ```html
-<meta name="viewport" content="width=480">
+<meta name="viewport" content="width=480" />
 ```
 
 This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
@@ -379,14 +375,13 @@ This means that mobile browsers only download the mobile background image asset 
 
 ```css
 button {
-  background: url(images/low-res-header.jpg) 1rem center ;
+  background: url(images/low-res-header.jpg) 1rem center;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and ( min-resolution: 192dpi),
-       only screen and ( min-resolution: 2dppx) {
+@media only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
   button {
-    background: url(images/high-res-header.jpg) 1rem center ;
+    background: url(images/high-res-header.jpg) 1rem center;
   }
 }
 ```
@@ -395,12 +390,12 @@ This looks rather complicated, but really it's not — we are providing a number
 
 ### \<video>
 
-HTML5 video is fairly well catered for in terms of responsive capabilities. If you wish, you can point to multiple video files via {{HTMLElement("source")}} attributes, each with their own source and MIME type:
+HTML video is fairly well catered for in terms of responsive capabilities. If you wish, you can point to multiple video files via {{HTMLElement("source")}} attributes, each with their own source and MIME type:
 
 ```html
 <video controls>
-  <source src="videos/720/crystal720.mp4" type="video/mp4">
-  <source src="videos/720/crystal720.webm" type="video/webm">
+  <source src="videos/720/crystal720.mp4" type="video/mp4" />
+  <source src="videos/720/crystal720.webm" type="video/webm" />
 </video>
 ```
 
@@ -408,10 +403,22 @@ But you can go one step further. You can include `media` attributes on the `<sou
 
 ```html
 <video controls>
-  <source src="videos/320/crystal320.mp4" type="video/mp4" media="all and (max-width: 480px)">
-  <source src="videos/320/crystal320.webm" type="video/webm" media="all and (max-width: 480px)">
-  <source src="videos/720/crystal720.mp4" type="video/mp4" media="all and (min-width: 481px)">
-  <source src="videos/720/crystal720.webm" type="video/webm" media="all and (min-width: 481px)">
+  <source
+    src="videos/320/crystal320.mp4"
+    type="video/mp4"
+    media="all and (max-width: 480px)" />
+  <source
+    src="videos/320/crystal320.webm"
+    type="video/webm"
+    media="all and (max-width: 480px)" />
+  <source
+    src="videos/720/crystal720.mp4"
+    type="video/mp4"
+    media="all and (min-width: 481px)" />
+  <source
+    src="videos/720/crystal720.webm"
+    type="video/webm"
+    media="all and (min-width: 481px)" />
 </video>
 ```
 
@@ -419,7 +426,7 @@ This allows your site to serve different video files based on the available spac
 
 ### \<img>
 
-HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://html.spec.whatwg.org/srcset/w3c-srcset/), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
+HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attributes), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
 
 This all sounds good. But those solutions are definitely not ready for production yet — both are in a very early stage of standardization, and have no support across browsers. Currently we have to rely on various polyfills and other solutions, none of which are perfect for all situations, so you need to decide which one is right for your particular situation. Some available solutions are as follows:
 
@@ -434,7 +441,7 @@ This all sounds good. But those solutions are definitely not ready for productio
 
 For some image requirements (not photographs, but icons and user interface elements are a good fit), a good solution is to use vector graphics. Because vector images are calculated based on mathematical algorithms rather than containing separate data on every pixel in the image, they tend to be smaller in file size, and are infinitely scalable when zoomed or viewed on high resolution devices (at least, in theory). Some ideas follow, which also help to keep the number of HTTP requests down — another key factor in mobile app performance:
 
-- You should try to use [CSS3](/en-US/docs/Web/CSS/CSS3) features to programmatically generate graphical effects where possible, rather than relying on image files. these include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms. Although they are not supported very well on older browsers such as Internet Explorer 6-8, this is not too much of a concern when you are creating an interface aimed at modern devices, and they also tend to gracefully degrade.
+- You should try to use [CSS](/en-US/docs/Web/CSS/) features to programmatically generate graphical effects where possible, rather than relying on image files. These include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms.
 - You could also try using [SVG](/en-US/docs/Web/SVG) to create interface elements. SVG produces vector graphics and is supported well across modern browsers, with polyfills available for older browser support.
 - Using [Web fonts](/en-US/docs/Web/CSS/@font-face) for displaying icons is an effective technique for keeping file size and HTTP requests down, and this is supported well across modern and older browsers.
 

@@ -1,6 +1,7 @@
 ---
 title: Gamepad.index
 slug: Web/API/Gamepad/index
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.index
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.index`** property of the {{domxref("Gamepad") }}
@@ -27,9 +29,9 @@ A {{jsxref("number") }}.
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function() {
-  var gp = navigator.getGamepads()[0];
-  gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
+window.addEventListener("gamepadconnected", () => {
+  const gp = navigator.getGamepads()[0];
+  gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}.`;
 });
 ```
 

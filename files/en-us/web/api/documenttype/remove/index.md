@@ -1,6 +1,7 @@
 ---
 title: DocumentType.remove()
 slug: Web/API/DocumentType/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DocumentType
@@ -8,6 +9,7 @@ tags:
   - Method
 browser-compat: api.DocumentType.remove
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.remove()`** method removes a document's `doctype`.
@@ -20,7 +22,7 @@ The **`DocumentType.remove()`** method removes a document's `doctype`.
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 

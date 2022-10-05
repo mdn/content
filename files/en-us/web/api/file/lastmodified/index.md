@@ -1,6 +1,7 @@
 ---
 title: File.lastModified
 slug: Web/API/File/lastModified
+page-type: web-api-instance-property
 tags:
   - API
   - File API
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.lastModified
 ---
+
 {{APIRef("File")}}
 
 The **`File.lastModified`** read-only property provides the
@@ -60,7 +62,7 @@ filepicker.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ### Dynamically created files
 
@@ -83,7 +85,7 @@ console.log(fileWithoutDate.lastModified); // returns current time
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `someFile.lastModified` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js
@@ -92,14 +94,14 @@ someFile.lastModified;
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 someFile.lastModified;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enabled `privacy.resistFingerprinting`, the

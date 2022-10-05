@@ -1,6 +1,7 @@
 ---
 title: PannerNode
 slug: Web/API/PannerNode
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.PannerNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `PannerNode` interface defines an audio-processing object that represents the location, direction, and behavior of an audio source signal in a simulated physical space. This {{domxref("AudioNode")}} uses right-hand Cartesian coordinates to describe the source's _position_ as a vector and its _orientation_ as a 3D directional cone.

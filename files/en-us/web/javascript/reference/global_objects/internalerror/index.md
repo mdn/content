@@ -6,9 +6,11 @@ tags:
   - InternalError
   - JavaScript
   - Object
+  - Non-standard
 browser-compat: javascript.builtins.InternalError
 ---
-{{JSRef}} {{non-standard_header}}
+
+{{JSRef}}{{Non-standard_Header}}
 
 The **`InternalError` object** indicates an error that occurred internally in the JavaScript engine.
 
@@ -21,7 +23,7 @@ Example cases are mostly when something is too large, e.g.:
 
 ## Constructor
 
-- {{jsxref("InternalError/InternalError", "InternalError()")}}
+- {{jsxref("InternalError/InternalError", "InternalError()")}} {{Non-standard_Inline}}
   - : Creates a new `InternalError` object.
 
 ## Instance properties
@@ -30,13 +32,15 @@ Example cases are mostly when something is too large, e.g.:
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}
+- {{jsxref("Error.prototype.cause", "InternalError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}} {{Non-standard_Inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}} {{Non-standard_Inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}} {{Non-standard_Inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}} {{Non-standard_Inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Examples
@@ -55,7 +59,7 @@ function loop(x) {
 loop(0);
 ```
 
-Setting this condition to an extremely high value, won't work:
+Setting this condition to an extremely high value, may not work:
 
 ```js example-bad
 function loop(x) {

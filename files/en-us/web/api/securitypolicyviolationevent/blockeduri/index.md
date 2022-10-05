@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.blockedURI
 slug: Web/API/SecurityPolicyViolationEvent/blockedURI
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
@@ -11,6 +12,7 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.blockedURI
 ---
+
 {{HTTPSidebar}}
 
 The **`blockedURI`** read-only property of the

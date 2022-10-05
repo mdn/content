@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.is2D
 slug: Web/API/CSSTransformValue/is2D
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -12,6 +13,7 @@ tags:
   - is2D
 browser-compat: api.CSSTransformValue.is2D
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`is2D`** property of the

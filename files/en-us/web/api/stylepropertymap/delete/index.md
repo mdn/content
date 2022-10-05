@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.delete()
 slug: Web/API/StylePropertyMap/delete
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -9,8 +10,10 @@ tags:
   - Reference
   - StylePropertyMap
   - delete()
+  - Experimental
 browser-compat: api.StylePropertyMap.delete
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the
@@ -19,7 +22,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(property)
 ```
 

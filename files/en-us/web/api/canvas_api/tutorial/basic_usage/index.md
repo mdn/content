@@ -1,6 +1,7 @@
 ---
 title: Basic usage of canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -8,6 +9,7 @@ tags:
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary("HTML")}} element itself. At the end of this page, you will know how to set up a canvas 2D context and have drawn a first example in your browser.
@@ -40,7 +42,7 @@ For example, we could provide a text description of the canvas content or provid
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="Photo of a clock" />
 </canvas>
 ```
 
@@ -50,7 +52,7 @@ Telling the user to use a different browser that supports canvas does not help u
 
 As a consequence of the way fallback is provided, unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`). If this tag is not present, the rest of the document would be considered the fallback content and wouldn't be displayed.
 
-If fallback content is not needed, a simple `<canvas id="foo" ...></canvas>` is fully compatible with all browsers that support canvas at all.
+If fallback content is not needed, a simple `<canvas id="foo" …></canvas>` is fully compatible with all browsers that support canvas at all.
 
 ## The rendering context
 
@@ -59,8 +61,8 @@ The {{HTMLElement("canvas")}} element creates a fixed-size drawing surface that 
 The canvas is initially blank. To display something, a script first needs to access the rendering context and draw on it. The {{HTMLElement("canvas")}} element has a method called {{domxref("HTMLCanvasElement.getContext", "getContext()")}}, used to obtain the rendering context and its drawing functions. `getContext()` takes one parameter, the type of context. For 2D graphics, such as those covered by this tutorial, you specify `"2d"` to get a {{domxref("CanvasRenderingContext2D")}}.
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('tutorial');
+const ctx = canvas.getContext('2d');
 ```
 
 The first line in the script retrieves the node in the DOM representing the {{HTMLElement("canvas")}} element by calling the {{domxref("document.getElementById()")}} method. Once you have the element node, you can access the drawing context using its `getContext()` method.
@@ -70,10 +72,10 @@ The first line in the script retrieves the node in the DOM representing the {{HT
 The fallback content is displayed in browsers which do not support {{HTMLElement("canvas")}}. Scripts can also check for support programmatically by testing for the presence of the `getContext()` method. Our code snippet from above becomes something like this:
 
 ```js
-var canvas = document.getElementById('tutorial');
+const canvas = document.getElementById('tutorial');
 
 if (canvas.getContext) {
-  var ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d');
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -88,20 +90,22 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Canvas tutorial</title>
     <script>
       function draw() {
-        var canvas = document.getElementById('tutorial');
+        const canvas = document.getElementById("tutorial");
         if (canvas.getContext) {
-          var ctx = canvas.getContext('2d');
+          const ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style>
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -122,27 +126,28 @@ To begin, let's take a look at a simple example that draws two intersecting rect
 
 ```html
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById('canvas');
-      if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas experiment</title>
+    <script type="application/javascript">
+      function draw() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillRect(10, 10, 50, 50);
+          ctx.fillStyle = "rgb(200, 0, 0)";
+          ctx.fillRect(10, 10, 50, 50);
 
-        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-        ctx.fillRect(30, 30, 50, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 50, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

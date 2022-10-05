@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.origin
 slug: Web/API/HTMLAreaElement/origin
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The

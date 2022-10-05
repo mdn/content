@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming.description
 slug: Web/API/PerformanceServerTiming/description
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,6 +9,7 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceServerTiming.description
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`description`** read-only property returns a

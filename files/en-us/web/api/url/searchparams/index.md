@@ -1,6 +1,7 @@
 ---
 title: URL.searchParams
 slug: Web/API/URL/searchParams
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URL.searchParams
 ---
+
 {{APIRef("URL API")}}
 
 The **`searchParams`** readonly property of the

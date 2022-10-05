@@ -1,6 +1,7 @@
 ---
 title: Element.ariaLabel
 slug: Web/API/Element/ariaLabel
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,13 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaLabel
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which defines a string value that labels the current element.
 
 ## Value
 
-A string.
+A string or `null`.
 
 ## Examples
 

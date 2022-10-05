@@ -1,6 +1,7 @@
 ---
 title: Element.slot
 slug: Web/API/Element/slot
+page-type: web-api-instance-property
 tags:
   - API
   - Element
@@ -10,6 +11,7 @@ tags:
   - slot
 browser-compat: api.Element.slot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`slot`** property of the {{domxref("Element")}} interface

@@ -9,6 +9,7 @@ tags:
   - js13kGames
   - progressive
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
 Now that we've seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)). We examine how to add offline functionality.
@@ -41,12 +42,10 @@ Enough theory — let's see some source code!
 
 We'll start by looking at the code that registers a new Service Worker, in the app.js file:
 
-> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
-
 ```js
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
-};
+}
 ```
 
 If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw\.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw\.js file itself.
@@ -170,7 +169,7 @@ That's it! Our app is caching its resources on install and serving them with fet
 There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:
 
 ```js
-var cacheName = 'js13kPWA-v1';
+const cacheName = 'js13kPWA-v1';
 ```
 
 When this updates to v2, we can then add all of our files (including our new files) to a new cache:
@@ -200,7 +199,7 @@ self.addEventListener('activate', (e) => {
     return Promise.all(keyList.map((key) => {
       if (key === cacheName) { return; }
       return caches.delete(key);
-    }))
+    }));
   }));
 });
 ```

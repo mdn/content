@@ -1,6 +1,7 @@
 ---
 title: ImageData()
 slug: Web/API/ImageData/ImageData
+page-type: web-api-constructor
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`ImageData()`** constructor returns a newly instantiated
@@ -20,7 +22,7 @@ This constructor is the preferred way of creating such an object in a
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageData(width, height)
 new ImageData(width, height, settings)
 
@@ -41,7 +43,7 @@ new ImageData(dataArray, width, height, settings)
 - `colorSpace`
   - : One of `"srgb"`, `"rec2020"`, or `"display-p3"`.
 - `dataArray`
-  - : An array containing the underlying pixel representation of the image, one of {{jsxref("Uint8ClampedArray")}}, {{jsxref("Uint16Array")}}, or {{jsxref("Float32Array")}}. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
+  - : A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
 
 ### Return value
 
@@ -85,9 +87,9 @@ specifies a `width` of `200` for the new object, so its
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const arr = new Uint8ClampedArray(40000);
+const arr = new Uint8ClampedArray(40_000);
 
-// Iterate through every pixel
+// Fill the array with the same RGBA values
 for (let i = 0; i < arr.length; i += 4) {
   arr[i + 0] = 0;    // R value
   arr[i + 1] = 190;  // G value

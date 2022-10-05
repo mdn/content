@@ -1,6 +1,7 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM Views
@@ -13,16 +14,17 @@ tags:
   - scrolling
 browser-compat: api.Element.scrollIntoView
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} interface's
-**`scrollIntoView()`** method scrolls the element's parent
-container such that the element on which `scrollIntoView()` is called is
+**`scrollIntoView()`** method scrolls the element's ancestor
+containers such that the element on which `scrollIntoView()` is called is
 visible to the user.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollIntoView()
 scrollIntoView(alignToTop)
 scrollIntoView(scrollIntoViewOptions)
@@ -66,7 +68,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var element = document.getElementById("box");
+const element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);

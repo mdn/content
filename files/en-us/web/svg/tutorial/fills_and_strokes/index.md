@@ -7,6 +7,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 There are several ways to color shapes (including specifying attributes on the object) using inline [CSS](/en-US/docs/Glossary/CSS), an embedded CSS section, or an external CSS file. Most [SVG](/en-US/docs/Glossary/SVG) you'll find around the web use inline CSS, but there are advantages and disadvantages associated with each type.
@@ -15,7 +16,7 @@ There are several ways to color shapes (including specifying attributes on the o
 
 ### Painting
 
-Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same css color naming schemes that you use in HTML, whether that's color names (that is `red`), rgb values (that is `rgb(255,0,0)`), hex values, rgba values, etc.
+Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same CSS color naming schemes that you use in HTML, whether that's color names (that is `red`), rgb values (that is `rgb(255,0,0)`), hex values, rgba values, etc.
 
 ```xml
  <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
@@ -87,7 +88,7 @@ Finally, you can also use dashed line types on a stroke by specifying the `strok
 
 The `stroke-dasharray` attribute takes a series of comma-separated numbers as its argument.
 
-> **Note:** Unlike {{SVGElement("path")}} elements, these numbers ***must*** be comma-separated (whitespace is ignored).
+> **Note:** Unlike {{SVGElement("path")}} elements, these numbers **must** be comma-separated (whitespace is ignored).
 
 The first number specifies a distance for the filled area, and the second a distance for the unfilled area. So in the above example, the second path fills 5 pixel units, with 5 blank units until the next dash of 5 units. You can specify more numbers if you would like a more complicated dash pattern. The first example specifies three numbers, in which case the renderer loops the numbers twice to create an even pattern. So the first path renders 5 filled, 10 empty, 5 filled, and then loops back to create 5 empty, 10 filled, 5 empty. The pattern then repeats.
 
@@ -95,9 +96,9 @@ There are additional `stroke` and `fill` properties available, including `fill-r
 
 ## Using CSS
 
-In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so `fill`, `stroke`, `stroke-dasharray`, etc... can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like `width`, `height`, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.
+In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so `fill`, `stroke`, `stroke-dasharray`, etc. can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like `width`, `height`, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.
 
-> **Note:** The [SVG specification](https://www.w3.org/TR/SVG/propidx.html) decides strictly between attributes that are *properties* and other attributes. The former can be modified with CSS, the latter not.
+> **Note:** The [SVG specification](https://www.w3.org/TR/SVG/propidx.html) decides strictly between attributes that are _properties_ and other attributes. The former can be modified with CSS, the latter not.
 
 CSS can be inserted inline with the element via the `style` attribute:
 
@@ -113,7 +114,7 @@ Or it can be moved to a special style section that you include. Instead of shovi
 <?xml version="1.0" standalone="no"?>
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
-    <style type="text/css"><![CDATA[
+    <style><![CDATA[
        #MyRect {
          stroke: black;
          fill: red;
@@ -127,10 +128,10 @@ Or it can be moved to a special style section that you include. Instead of shovi
 Moving styles to an area like this can make it easier to adjust properties on large groups of elements. You can also use things like the **`:hover` pseudo class** to create rollover effects:
 
 ```css
- #MyRect:hover {
-   stroke: black;
-   fill: blue;
- }
+#MyRect:hover {
+  stroke: black;
+  fill: blue;
+}
 ```
 
 You can also specify an external stylesheet for your CSS rules through [normal XML-stylesheet syntax](https://www.w3.org/TR/xml-stylesheet/):

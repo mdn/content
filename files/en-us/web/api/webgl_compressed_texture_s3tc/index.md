@@ -1,6 +1,7 @@
 ---
 title: WEBGL_compressed_texture_s3tc
 slug: Web/API/WEBGL_compressed_texture_s3tc
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_s3tc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_s3tc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [S3TC compressed texture formats](https://en.wikipedia.org/wiki/S3_Texture_Compression).
@@ -34,13 +36,13 @@ The compressed texture formats are exposed by four constants and can be used in 
 ## Examples
 
 ```js
-var ext = (
+const ext = (
   gl.getExtension('WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
 );
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA_S3TC_DXT5_EXT, 512, 512, 0, textureData);

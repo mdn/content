@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -11,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`transaction`** method of the {{domxref("IDBDatabase")}} interface immediately
@@ -22,7 +24,7 @@ object store.
 
 ## Syntax
 
-```js
+```js-nolint
 transaction(storeNames)
 transaction(storeNames, mode)
 transaction(storeNames, mode, options)
@@ -38,15 +40,15 @@ transaction(storeNames, mode, options)
     Therefore the following lines are equivalent:
 
     ```js
-    var transaction = db.transaction(['my-store-name']);
-    var transaction = db.transaction('my-store-name');
+    db.transaction(['my-store-name']);
+    db.transaction('my-store-name');
     ```
 
     If you need to access all object stores in the database, you can use the property
     {{domxref("IDBDatabase.objectStoreNames")}}:
 
     ```js
-    var transaction = db.transaction(db.objectStoreNames);
+    const transaction = db.transaction(db.objectStoreNames);
     ```
 
     Passing an empty array will throw an exception.
@@ -65,7 +67,7 @@ transaction(storeNames, mode, options)
     you would use the following:
 
     ```js
-    var transaction = db.transaction('my-store-name', "readwrite");
+    const transaction = db.transaction('my-store-name', "readwrite");
     ```
 
     As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
@@ -120,16 +122,15 @@ An {{domxref("IDBTransaction")}} object.
 
 In this example we open a database connection, then use transaction() to open a
 transaction on the database. For a complete example, see our
-[To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
-var db;
+let db;
 
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -143,20 +144,20 @@ DBOpenRequest.onsuccess = event => {
 };
 
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["toDoList"], "readwrite");
+const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
-transaction.oncomplete = event => {
+transaction.oncomplete = (event) => {
   note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
-transaction.onerror = event => {
+transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
 // you would then go on to do something to this database
 // via an object store
-var objectStore = transaction.objectStore("toDoList");
+const objectStore = transaction.objectStore("toDoList");
 // etc.
 ```
 
@@ -176,4 +177,4 @@ var objectStore = transaction.objectStore("toDoList");
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

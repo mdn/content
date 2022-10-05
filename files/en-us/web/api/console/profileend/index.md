@@ -1,6 +1,7 @@
 ---
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - web console
 browser-compat: api.console.profileEnd
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 > **Warning:** Calling this API immediately after console.profile() can cause it to not work. To
@@ -36,7 +38,7 @@ only that profile if you have multiple profiles being recorded.
 
 ## Syntax
 
-```js
+```js-nolint
 profileEnd(profileName)
 ```
 

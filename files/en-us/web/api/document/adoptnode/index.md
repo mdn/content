@@ -1,6 +1,7 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Document.adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.adoptNode()`** transfers a {{Glossary("node/dom",
@@ -22,7 +24,7 @@ current document. The node can then be inserted into the current document.
 
 ## Syntax
 
-```js
+```js-nolint
 adoptNode(externalNode)
 ```
 
@@ -49,7 +51,7 @@ const iframe = document.querySelector('iframe');
 const iframeImages = iframe.contentDocument.querySelectorAll('img');
 const newParent = document.getElementById('images');
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

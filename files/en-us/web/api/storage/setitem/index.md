@@ -1,6 +1,7 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`setItem()`** method of the {{domxref("Storage")}}
@@ -17,7 +19,7 @@ interface, when passed a key name and value, will add that key to the given
 
 ## Syntax
 
-```js
+```js-nolint
 setItem(keyName, keyValue)
 ```
 
@@ -64,5 +66,4 @@ function populateStorage() {
 
 - [Storage.getItem()](/en-US/docs/Web/API/Storage/getItem)
 - [Storage.removeItem()](/en-US/docs/Web/API/Storage/removeItem)
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

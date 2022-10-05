@@ -1,6 +1,7 @@
 ---
 title: GeolocationPositionError.message
 slug: Web/API/GeolocationPositionError/message
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -10,6 +11,7 @@ tags:
   - message
 browser-compat: api.GeolocationPositionError.message
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPositionError.message`** read-only property

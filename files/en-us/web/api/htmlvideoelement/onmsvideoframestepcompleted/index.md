@@ -1,9 +1,11 @@
 ---
 title: HTMLVideoElement.onMSVideoFrameStepCompleted
 slug: Web/API/HTMLVideoElement/onMSVideoFrameStepCompleted
+page-type: web-api-instance-property
 tags:
   - onMSVideoFrameStepCompleted
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

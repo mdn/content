@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.height
 slug: Web/API/MediaTrackSettings/height
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -15,6 +16,7 @@ tags:
   - height
 browser-compat: api.MediaTrackSettings.height
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`height`**
@@ -51,7 +53,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.height")}}
 - {{domxref("MediaTrackSettings")}}

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int32Array.Int32Array
 ---
+
 {{JSRef}}
 
 The **`Int32Array()`** typed array constructor creates an array
@@ -20,15 +21,18 @@ notation).
 
 ## Syntax
 
-```js
-new Int32Array(); // new in ES2017
-new Int32Array(length);
-new Int32Array(typedArray);
-new Int32Array(object);
-new Int32Array(buffer);
-new Int32Array(buffer, byteOffset);
-new Int32Array(buffer, byteOffset, length);
+```js-nolint
+new Int32Array()
+new Int32Array(length)
+new Int32Array(typedArray)
+new Int32Array(object)
+
+new Int32Array(buffer)
+new Int32Array(buffer, byteOffset)
+new Int32Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -70,22 +74,23 @@ console.log(int32.length); // 2
 console.log(int32.BYTES_PER_ELEMENT); // 4
 
 // From an array
-const arr = new Int32Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Int32Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-let x = new Int32Array([21, 31]);
 const y = new Int32Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-const buffer = new ArrayBuffer(16);
-const z = new Int32Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(32);
+const z = new Int32Array(buffer, 4, 4);
+console.log(z.byteOffset); // 4
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const int32_from_iterable = new Int32Array(iterable);
-// Int32Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const int32FromIterable = new Int32Array(iterable);
+console.log(int32FromIterable);
+// Int32Array [1, 2, 3]
 ```
 
 ## Specifications
@@ -95,23 +100,6 @@ const int32_from_iterable = new Int32Array(iterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Int32Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Int32Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Int32Array([1, 2, 3]);
-// TypeError: calling a builtin Int32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int32Array([1, 2, 3]);
-```
 
 ## See also
 

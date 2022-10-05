@@ -1,6 +1,7 @@
 ---
 title: Window.moveTo()
 slug: Web/API/Window/moveTo
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.moveTo
 ---
+
 {{APIRef}}
 
 The **`moveTo()`** method of the {{domxref("Window")}}
@@ -20,7 +22,7 @@ interface moves the current window to the specified coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(x, y)
 ```
 

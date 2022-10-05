@@ -1,6 +1,7 @@
 ---
 title: CSSOM View
 slug: Web/CSS/CSSOM_View
+page-type: css-module
 tags:
   - CSS
   - CSSOM
@@ -9,8 +10,9 @@ tags:
   - Layout
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/cssom-view/
+browser-compat: css.properties.scroll-behavior
 ---
+
 {{CSSRef}}
 
 **CSSOM View** is a module of CSS that lets you manipulate the visual view of a document, in particular its scrolling behavior.
@@ -32,6 +34,4 @@ spec-urls: https://drafts.csswg.org/cssom-view/
 
 ## Browser compatibility
 
-### `scroll-behavior` property
-
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

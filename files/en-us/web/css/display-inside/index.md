@@ -1,6 +1,7 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -9,7 +10,15 @@ tags:
   - Reference
   - display-inside
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
+browser-compat:
+  - css.properties.display.multi-keyword_values
+  - css.properties.display.flow-root
+  - css.properties.display.table_values
+  - css.properties.display.grid
+  - css.properties.display.flex
+  - css.properties.display.ruby_values
 ---
+
 {{CSSRef}}
 
 These keywords specify the element's inner {{CSSxRef("display")}} type, which defines the type of formatting context that lays out its contents (assuming it is a non-replaced element). These keywords are used as values of the `display` property, and can be used for legacy purposes as a single keyword, or as defined in the Level 3 specification alongside a value from the {{CSSxRef("&lt;display-outside&gt;")}} keywords.
@@ -39,6 +48,10 @@ Valid `<display-inside>` values:
 
 > **Note:** Browsers that support the two value syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`. This will result in expected behavior; for example if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block level box.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 In this example the parent box has been given `display: flow-root` and so establishes a new BFC and contains the floated item.
@@ -56,18 +69,18 @@ In this example the parent box has been given `display: flow-root` and so establ
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -81,31 +94,7 @@ In this example the parent box has been given `display: flow-root` and so establ
 
 ## Browser compatibility
 
-### Support of multiple keyword values
-
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
-
-- Chromium bug: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
-
-### Support of flow-root
-
-{{Compat("css.properties.display.flow-root", 10)}}
-
-### Support of table
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Support of grid
-
-{{Compat("css.properties.display.grid", 10)}}
-
-### Support of flex
-
-{{Compat("css.properties.display.flex", 10)}}
-
-### Support of ruby
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## See also
 

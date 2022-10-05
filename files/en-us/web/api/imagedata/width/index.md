@@ -1,6 +1,7 @@
 ---
 title: ImageData.width
 slug: Web/API/ImageData/width
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.width
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.width`** property returns the number

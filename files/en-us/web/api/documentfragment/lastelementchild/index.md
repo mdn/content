@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.lastElementChild
 slug: Web/API/DocumentFragment/lastElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.DocumentFragment.lastElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DocumentFragment.lastElementChild`** read-only property

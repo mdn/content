@@ -1,6 +1,7 @@
 ---
 title: Element.scroll()
 slug: Web/API/Element/scroll
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -9,6 +10,7 @@ tags:
   - Scroll
 browser-compat: api.Element.scroll
 ---
+
 {{APIRef}}
 
 The **`scroll()`** method of the {{domxref("Element")}}
@@ -17,7 +19,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 scroll(x-coord, y-coord)
 scroll(options)
 ```

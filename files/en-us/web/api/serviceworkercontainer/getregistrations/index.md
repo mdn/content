@@ -1,9 +1,9 @@
 ---
 title: ServiceWorkerContainer.getRegistrations()
 slug: Web/API/ServiceWorkerContainer/getRegistrations
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -11,6 +11,7 @@ tags:
   - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.getRegistrations
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getRegistrations()`** method of the
@@ -22,7 +23,7 @@ The **`getRegistrations()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getRegistrations()
 ```
 
@@ -38,7 +39,7 @@ A {{jsxref("Promise")}} that resolves to an array of
 ## Examples
 
 ```js
-navigator.serviceWorker.getRegistrations().then(function(registrations) {
+navigator.serviceWorker.getRegistrations().then((registrations) => {
   document.querySelector('#status').textContent = 'ServiceWorkerRegistrations found.';
 });
 ```

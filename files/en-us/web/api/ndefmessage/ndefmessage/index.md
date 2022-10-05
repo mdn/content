@@ -1,20 +1,23 @@
 ---
-title: NDEFMessage.NDEFMessage()
+title: NDEFMessage()
 slug: Web/API/NDEFMessage/NDEFMessage
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - NDEFMessage
+  - Experimental
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
-{{securecontext_header}}{{APIRef()}}
+
+{{SecureContext_Header}}{{APIRef}}{{SeeCompatTable}}
 
 The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 
 ## Syntax
 
-```js
+```js-nolint
 new NDEFMessage(records)
 ```
 
@@ -25,7 +28,7 @@ new NDEFMessage(records)
   - : An array of objects with the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+      - : Contains the data to be transmitted; one of a string, n {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}

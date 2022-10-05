@@ -1,6 +1,7 @@
 ---
 title: WebGL constants
 slug: Web/API/WebGL_API/Constants
+page-type: guide
 tags:
   - API
   - Reference
@@ -10,6 +11,7 @@ spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7
 ---
+
 {{WebGLSidebar}}
 
 The [WebGL API](/en-US/docs/Web/API/WebGL_API) provides several constants that are passed into or returned by functions. All constants are of type {{domxref("WebGL_API/Types", "GLenum")}}.
@@ -17,8 +19,8 @@ The [WebGL API](/en-US/docs/Web/API/WebGL_API) provides several constants that a
 Standard WebGL constants are installed on the {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} objects, so that you use them as `gl.CONSTANT_NAME`:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('myCanvas');
+const gl = canvas.getContext('webgl');
 
 gl.getParameter(gl.LINE_WIDTH);
 ```
@@ -26,8 +28,8 @@ gl.getParameter(gl.LINE_WIDTH);
 Some constants are also provided by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions). A [list](#constants_defined_in_webgl_extensions) is provided below.
 
 ```js
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
 The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
@@ -1200,7 +1202,7 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
       <td>0x0200</td>
       <td>
         Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will never pass. i.e. Nothing will be
+        specify depth or stencil tests will never pass, i.e., nothing will be
         drawn.
       </td>
     </tr>
@@ -1263,7 +1265,7 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
       <td>0x0207</td>
       <td>
         Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will always pass. i.e. Pixels will be
+        specify depth or stencil tests will always pass, i.e., pixels will be
         drawn in the order they are drawn.
       </td>
     </tr>
@@ -1900,7 +1902,7 @@ For more information, see {{domxref("WEBGL_compressed_texture_etc")}}.
 | `COMPRESSED_RGB_PVRTC_4BPPV1_IMG`  | 0x8C00 | RGB compression in 4-bit mode. One block for each 4×4 pixels.  |
 | `COMPRESSED_RGBA_PVRTC_4BPPV1_IMG` | 0x8C02 | RGBA compression in 4-bit mode. One block for each 4×4 pixels. |
 | `COMPRESSED_RGB_PVRTC_2BPPV1_IMG`  | 0x8C01 | RGB compression in 2-bit mode. One block for each 8×4 pixels.  |
-| `COMPRESSED_RGBA_PVRTC_2BPPV1_IMG` | 0x8C03 | RGBA compression in 2-bit mode. One block for each 8×4 pixe    |
+| `COMPRESSED_RGBA_PVRTC_2BPPV1_IMG` | 0x8C03 | RGBA compression in 2-bit mode. One block for each 8×4 pixels. |
 
 For more information, see {{domxref("WEBGL_compressed_texture_pvrtc")}}.
 

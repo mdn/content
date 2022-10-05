@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerId
 slug: Web/API/TaskAttributionTiming/containerId
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -8,9 +9,11 @@ tags:
   - Property
   - Reference
   - TaskAttributionTiming
+  - Experimental
 browser-compat: api.TaskAttributionTiming.containerId
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+
+{{APIRef("Long Tasks")}}{{SeeCompatTable}}
 
 The **`containerId`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the container's `id`

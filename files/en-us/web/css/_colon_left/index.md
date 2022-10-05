@@ -1,8 +1,9 @@
 ---
-title: ':left'
+title: ":left"
 slug: Web/CSS/:left
+page-type: css-pseudo-class
 tags:
-  - '@page'
+  - "@page"
   - CSS
   - Layout
   - Pseudo-class
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: css.selectors.left
 ---
+
 {{ CSSRef() }}
 
 The **`:left`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), represents all left-hand pages of a printed document.
@@ -28,7 +30,9 @@ Whether a given page is "left" or "right" is determined by the major writing dir
 
 ## Syntax
 
-{{csssyntax}}
+```
+:left
+```
 
 ## Examples
 

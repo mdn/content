@@ -1,6 +1,7 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLScriptElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** interface, which provides special properties and methods for manipulating the behavior and execution of `<script>` elements (beyond the inherited {{domxref("HTMLElement")}} interface).
@@ -41,9 +43,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     The `defer` attribute may be specified with the `async` attribute, so legacy browsers that only support `defer` (and not `async`) fall back to the `defer` behavior instead of the default blocking behavior.
 
-    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://html.spec.whatwg.org/multipage/scripting.html) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://html.spec.whatwg.org/multipage/syntax.html) and [end](https://html.spec.whatwg.org/multipage/syntax.html) tags in HTML, [in foreign content](https://html.spec.whatwg.org/multipage/syntax.html), and [in XML](https://html.spec.whatwg.org/multipage/xhtml.html); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://html.spec.whatwg.org/multipage/webappapis.html); and so on.
+    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://html.spec.whatwg.org/multipage/scripting.html) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://html.spec.whatwg.org/multipage/syntax.html#start-tags) and [end](https://html.spec.whatwg.org/multipage/syntax.html#end-tags) tags in HTML, [in foreign content](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements), and [in XML](https://html.spec.whatwg.org/multipage/xhtml.html); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://html.spec.whatwg.org/multipage/webappapis.html); and so on.
 
-- {{domxref("HTMLScriptElement.crossOrigin")}} {{experimental_inline}}
+- {{domxref("HTMLScriptElement.crossOrigin")}}
   - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
 - {{domxref("HTMLScriptElement.text")}}
 
@@ -51,10 +53,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     > **Note:** When inserted using the [`document.write()`](/en-US/docs/Web/API/Document/write) method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML) or [`outerHTML`](/en-US/docs/Web/API/Element/outerHTML), they do not execute at all.
 
-- {{domxref("HTMLScriptElement.fetchPriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}} {{Experimental_Inline}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLScriptElement.noModule")}}
-  - : A boolean value that if true, stops the script's execution in browsers that support [ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
+  - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
@@ -62,7 +64,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.supports()")}}
   - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
-     This method provides a simple and unified method for script-related feature detection.
+    This method provides a simple and unified method for script-related feature detection.
 
 ## Methods
 
@@ -78,11 +80,11 @@ For more details, see the [`defer`](#defer_property) and [`async`](#async_proper
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function prefixScript(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
@@ -94,11 +96,11 @@ This next function, instead of prepending the new scripts immediately before the
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
 }
 
 function affixScriptToHead(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.head.appendChild(newScript);
@@ -110,7 +112,7 @@ Sample usage:
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js\" has been correctly loaded."); });
+affixScriptToHead("myScript2.js", () => { alert("The script \"myScript2.js\" has been correctly loaded."); });
 ```
 
 ### Checking if a script type is supported

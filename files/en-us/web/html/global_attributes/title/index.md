@@ -15,13 +15,15 @@ The **`title`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-Some typical uses:
+The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
-- Labeling {{HTMLElement("iframe")}} elements for assistive technology
-- Providing a programmatically associated label for an {{HTMLElement("input")}} element as a fallback for a real {{HTMLElement("label")}}
-- Labeling controls in [data tables](/en-US/docs/Web/HTML/Element/table)
+The `title` attribute may also be used to label controls in [data tables](/en-US/docs/Web/HTML/Element/table).
 
-Additional semantics are attached to the `title` attributes of the {{HTMLElement("link")}}, {{HTMLElement("abbr")}}, {{HTMLElement("input")}}, and {{HTMLElement("menuitem")}} elements.
+The `title` attribute, when added to [`<link rel="stylesheet">`](/en-US/docs/Web/HTML/Element/link), creates an alternate stylesheet. When defining an alternative style sheet with `<link rel="alternate">` the attribute is required and must be set to a non-empty string.
+
+If included on the {{htmlelement('abbr')}} opening tag, the `title` must be a full expansion of the abbreviation or acronym. Instead of using `title`, when possible, provide an expansion of the abbreviation or acronym in plain text on first use, using the `<abbr>` to mark up the abbreviation. This enables all users know what name or term the abbreviation or acronym shortens while providing a hint to user agents on how to announce the content.
+
+While `title` can be used to provide a programmatically associated label for an {{HTMLElement("input")}} element, this is not good practice. Use a {{HTMLElement("label")}} instead.
 
 ## Multiline titles
 
@@ -30,9 +32,11 @@ The `title` attribute may contain several lines. Each `U+000A LINE FEED` (`LF`) 
 ### HTML
 
 ```html
-<p>Newlines in <code>title</code> should be taken into account,
-like <abbr title="This is a
-multiline title">example</abbr>.</p>
+<p>
+  Newlines in <code>title</code> should be taken into account, like
+  <span title="This is a
+multiline title" >example</span>.
+</p>
 ```
 
 ### Result

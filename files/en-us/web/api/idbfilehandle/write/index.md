@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.write()
 slug: Web/API/IDBFileHandle/write
+page-type: web-api-instance-method
 tags:
   - API
   - Files
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.write
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -24,7 +26,7 @@ that position by the number of written bytes.
 
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.trackId
 slug: Web/API/RTCInboundRtpStreamStats/trackId
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -18,6 +19,7 @@ tags:
   - trackId
 browser-compat: api.RTCInboundRtpStreamStats.trackId
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`trackId`** property of the

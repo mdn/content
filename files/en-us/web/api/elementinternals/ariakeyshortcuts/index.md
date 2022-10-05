@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaKeyShortcuts
 slug: Web/API/ElementInternals/ariaKeyShortcuts
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaKeyShortcuts
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaKeyShortcuts`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.

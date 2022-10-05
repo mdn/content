@@ -1,6 +1,7 @@
 ---
 title: SVGUnitTypes
 slug: Web/API/SVGUnitTypes
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGUnitTypes
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGUnitTypes`** interface defines a commonly used set of constants used for reflecting {{SVGAttr("gradientUnits")}}, {{SVGAttr("patternContentUnits")}} and other similar attributes.

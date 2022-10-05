@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.texImage2D()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a two-dimensional texture
@@ -17,10 +19,10 @@ image.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
 texImage2D(target, level, internalformat, width, height, border, format, type)
-texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels is instance of ArrayBufferView
+texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels a TypedArray or a DataView
 texImage2D(target, level, internalformat, format, type)
 texImage2D(target, level, internalformat, format, type, pixels)
 
@@ -54,7 +56,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture.
@@ -123,7 +125,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     </table>
 
     Other possible values in WebGL2 for the versions of `texImage2D` that
-    take an `ArrayBufferView` or a `GLintptr offset`
+    take a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}, or a `GLintptr offset`
 
     <table>
       <thead>
@@ -713,10 +715,11 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha is
       1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
+
     When using the {{domxref("WEBGL_depth_texture")}} extension:
 
-      - `gl.DEPTH_COMPONENT`
-      - `gl.DEPTH_STENCIL`
+    - `gl.DEPTH_COMPONENT`
+    - `gl.DEPTH_STENCIL`
 
     When using the {{domxref("EXT_sRGB")}} extension:
 
@@ -724,7 +727,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `ext.SRGB_ALPHA_EXT`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
-      following values are available additionally:
+    following values are available additionally:
 
     - `gl.R8`
     - `gl.R16F`
@@ -762,8 +765,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 - `format`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. In WebGL 1, this
     must be the same as `internalformat` (see above). in WebGL 2, the
-    combinations are listed in [this
-    table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
+    combinations are listed in [this table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
@@ -774,11 +776,12 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
+
     When using the {{domxref("WEBGL_depth_texture")}} extension:
 
-      - `gl.UNSIGNED_SHORT`
-      - `gl.UNSIGNED_INT`
-      - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the
+    - `gl.UNSIGNED_SHORT`
+    - `gl.UNSIGNED_INT`
+    - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the
         extension)
 
     - When using the {{domxref("OES_texture_float")}} extension:
@@ -790,7 +793,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `ext.HALF_FLOAT_OES` (constant provided by the extension)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.BYTE`
     - `gl.UNSIGNED_SHORT`
@@ -804,25 +807,19 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
     - `gl.UNSIGNED_INT_24_8`
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-        {{jsxref("null")}})
+      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `pixels`
 
   - : One of the following objects can be used as a pixel source for the texture:
 
-    - {{domxref("ArrayBufferView")}},
-
-      - A {{jsxref("Uint8Array")}} must be used if `type` is
-        `gl.UNSIGNED_BYTE`.
-      - A {{jsxref("Uint16Array")}} must be used if `type` is either
-        `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
-        `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` or
-        `ext.HALF_FLOAT_OES`.
-      - A {{jsxref("Uint32Array")}} must be used if `type` is
-        `gl.UNSIGNED_INT` or `ext.UNSIGNED_INT_24_8_WEBGL`.
-      - A {{jsxref("Float32Array")}} must be used if `type` is
-        `gl.FLOAT`.
-
+    - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
+    - {{jsxref("Uint16Array")}} (must be used if `type` is either
+      `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
+      `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` or
+      `ext.HALF_FLOAT_OES`)
+    - {{jsxref("Uint32Array")}} (must be used if `type` is `gl.UNSIGNED_INT` or `ext.UNSIGNED_INT_24_8_WEBGL`)
+    - {{jsxref("Float32Array")}} (must be used if `type` is `gl.FLOAT`)
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},
     - {{domxref("HTMLCanvasElement")}},

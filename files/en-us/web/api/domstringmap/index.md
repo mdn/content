@@ -1,6 +1,7 @@
 ---
 title: DOMStringMap
 slug: Web/API/DOMStringMap
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DOMStringMap
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`DOMStringMap`** interface is used for the {{domxref("HTMLElement.dataset")}}/{{domxref("SVGElement.dataset")}} attribute, to represent data for custom attributes added to elements.

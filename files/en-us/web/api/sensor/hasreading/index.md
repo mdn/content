@@ -1,6 +1,7 @@
 ---
 title: Sensor.hasReading
 slug: Web/API/Sensor/hasReading
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API
@@ -12,6 +13,7 @@ tags:
   - hasReading
 browser-compat: api.Sensor.hasReading
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`hasReading`** read-only

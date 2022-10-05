@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -8,14 +9,15 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.toJSON
 ---
+
 {{APIRef("Resource Timing API")}}
 
-The **`toJSON()`** method is a *serializer* that returns
+The **`toJSON()`** method is a _serializer_ that returns
 a JSON representation of the {{domxref("PerformanceResourceTiming")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -34,13 +36,13 @@ None.
 
 ```js
 // Get a resource performance entry
-var perfEntries = performance.getEntriesByType("resource");
-var entry = perfEntries[0];
+const perfEntries = performance.getEntriesByType("resource");
+const entry = perfEntries[0];
 
 // Get the JSON and log it
-var json = entry.toJSON();
-var s = JSON.stringify(json);
-console.log("PerformanceEntry.toJSON = " + s);
+const json = entry.toJSON();
+const s = JSON.stringify(json);
+console.log(`PerformanceEntry.toJSON = ${s}`);
 ```
 
 ## Specifications

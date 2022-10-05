@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
@@ -26,9 +28,9 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
   - : A string that reflects the {{htmlattrxref("height", "video")}} HTML attribute, which specifies the height of the display area, in CSS pixels.
 - {{domxref("HTMLVideoElement.poster")}}
   - : A string that reflects the {{htmlattrxref("poster", "video")}} HTML attribute, which specifies an image to show while no video data is available.
-- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
+- {{domxref("HTMLVideoElement.videoHeight")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic height of the resource in CSS pixels, or 0 if no media is available yet.
-- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
+- {{domxref("HTMLVideoElement.videoWidth")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic width of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.width")}}
   - : A string that reflects the {{htmlattrxref("width", "video")}} HTML attribute, which specifies the width of the display area, in CSS pixels.
@@ -39,17 +41,17 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
 
 ### Gecko-specific properties
 
-- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of video frames that have been parsed from the media resource.
-- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}} {{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of parsed video frames that have been decoded into images.
-- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of decoded frames that have been presented to the rendering pipeline for painting.
-- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of presented frames which were painted on the screen.
-- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `double` with the time which the last painted video frame was late by, in seconds.
-- {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a boolean indicating if there is some audio associated with the video.
 
 ### Microsoft Extensions
@@ -60,9 +62,9 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
   - : Gets or sets whether a video element is flipped horizontally in the display.
 - {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
   - : Inserts the specified video effect into the media pipeline.
-- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Indicates whether the video can be rendered more efficiently.
-- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Determines whether the system considers the loaded video source to be stereo 3-D or not. Value set to true indicates source is stereo 3D.
 - {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
   - : Controls whether the video frame is trimmed to fit the video display.
@@ -71,7 +73,7 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
+- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object that contains the current playback metrics. This information includes things like the number of dropped or corrupted frames, as well as the total number of frames.
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
   - : Requests that the user agent make video enters picture-in-picture mode

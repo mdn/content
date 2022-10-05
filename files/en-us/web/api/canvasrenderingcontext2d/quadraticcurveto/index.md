@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.quadraticCurveTo
 ---
+
 {{APIRef}}
 
 The
@@ -21,7 +23,7 @@ the quadratic Bézier curve.
 
 ## Syntax
 
-```js
+```js-nolint
 quadraticCurveTo(cpx, cpy, x, y)
 ```
 

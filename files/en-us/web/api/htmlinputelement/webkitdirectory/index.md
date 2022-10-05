@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -13,6 +14,7 @@ tags:
   - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The **`HTMLInputElement.webkitdirectory`** is a property
@@ -89,13 +91,11 @@ within the selected directory hierarchies is generated and displayed.
 ### JavaScript content
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
+document.getElementById("filepicker").addEventListener("change", (event) => {
   let output = document.getElementById("listing");
-  let files = event.target.files;
-
-  for (let i=0; i<files.length; i++) {
+  for (const file of event.target.files) {
     let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
+    item.textContent = file.webkitRelativePath;
     output.appendChild(item);
   };
 }, false);
@@ -103,7 +103,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 

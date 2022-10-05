@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMRectReadOnly()`** constructor creates a new
@@ -17,7 +19,7 @@ The **`DOMRectReadOnly()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMRectReadOnly(x, y, width, height)
 ```
 

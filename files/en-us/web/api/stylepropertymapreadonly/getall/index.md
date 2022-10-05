@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - getAll()
 browser-compat: api.StylePropertyMapReadOnly.getAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the
@@ -20,7 +22,7 @@ The **`getAll()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getAll(property)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SVGAltGlyphElement.glyphRef
 slug: Web/API/SVGAltGlyphElement/glyphRef
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,9 +12,8 @@ tags:
   - SVGAltGlyphRefElement
 browser-compat: api.SVGAltGlyphElement.glyphRef
 ---
-{{APIRef("SVGAltGlyphElement")}}
 
-{{Deprecated_header}}
+{{APIRef("SVGAltGlyphElement")}}{{Deprecated_Header}}
 
 The **`SVGAltGlyphElement.glyphRef`** property is a
 string representing a glyph identifier. It has the same meaning as the

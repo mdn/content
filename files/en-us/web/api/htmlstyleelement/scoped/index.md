@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement.scoped
 slug: Web/API/HTMLStyleElement/scoped
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -12,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLStyleElement.scoped
 ---
+
 {{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`HTMLStyleElement.scoped`** property is a boolean value indicating if the

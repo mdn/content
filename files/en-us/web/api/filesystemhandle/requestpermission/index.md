@@ -1,15 +1,18 @@
 ---
 title: FileSystemHandle.requestPermission()
 slug: Web/API/FileSystemHandle/requestPermission
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
   - File System Access API
   - FileSystemHandle
   - Method
+  - Experimental
 browser-compat: api.FileSystemHandle.requestPermission
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
@@ -17,8 +20,8 @@ file handle.
 
 ## Syntax
 
-```js
-var PermissionState = FileSystemHandle.requestPermission(FileSystemHandlePermissionDescriptor);
+```js-nolint
+requestPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters
@@ -81,5 +84,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

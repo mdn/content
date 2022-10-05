@@ -7,6 +7,7 @@ tags:
   - Errors
   - JavaScript
 ---
+
 {{JSSidebar("Errors")}}
 
 The JavaScript exception "can't access dead object" occurs when Firefox disallows
@@ -15,7 +16,7 @@ destroyed to improve in memory usage and to prevent memory leaks.
 
 ## Message
 
-```js
+```
 TypeError: can't access dead object
 ```
 

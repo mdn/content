@@ -1,6 +1,7 @@
 ---
 title: XPathNSResolver
 slug: Web/API/XPathNSResolver
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - XPathNSResolver
 browser-compat: api.XPathNSResolver
 ---
+
 {{APIRef("DOM XPath")}}
 
 The `XPathNSResolver` interface permits prefix strings in an {{Glossary("XPath")}} expression to be properly bound to namespace URI strings.

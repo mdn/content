@@ -6,15 +6,16 @@ tags:
   - Firefox 7
   - Gecko 7
 ---
+
 {{FirefoxSidebar}}
 
-Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers -- both of web content and of Firefox add-ons.
+Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers — both of web content and of Firefox add-ons.
 
 ## Changes for web developers
 
 ### HTML
 
-- The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since {{ gecko("2.0") }}.
+- The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since Gecko 2.0.
 - The {{ domxref("HTMLImageElement") }} `x` and `y` properties have been removed.
 - The {{ domxref("HTMLSelectElement") }} `add()` method `before` parameter is now optional.
 - The {{ HTMLElement("body") }} element's {{ htmlattrxref("background", "body") }} attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
@@ -22,15 +23,15 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 #### Canvas
 
-- As part of the [Azure project](https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
+- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
-- The [`isPointInPath()`](</en-US/docs/Web/API/CanvasRenderingContext2D#ispointinpath()>) method now correctly considers the transformation matrix when comparing the specified point to the current path.
+- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.
-- Calling [`drawImage()`](</en-US/docs/Web/API/CanvasRenderingContext2D#drawimage()>) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
-- Calling [`drawImage()`](</en-US/docs/Web/API/CanvasRenderingContext2D#drawimage()>) with non-finite coordinates no longer throws an exception.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with non-finite coordinates no longer throws an exception.
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
-- [Shadows](/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows) are now only drawn for `source-over` compositing operations.
+- [Shadows](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows) are now only drawn for `source-over` compositing operations.
 - You can now configure the fill rule used by canvas by setting the `mozFillRule` [attribute](/en-US/docs/Web/API/CanvasRenderingContext2D#attributes) on the context.
 - Support for the experimental `mozDash`, `mozDashOffset`, `mozCurrentTransform` and `mozCurrentTransformInverse` attributes has been added.
 - Support for the non-standard methods `mozDrawText()`, `mozMeasureText()`, `mozPathText()` and `mozTextAlongPath()` has been removed.
@@ -62,7 +63,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The `HTMLInsElement` and `HTMLDelElement` interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.
 - In a effort to conform to the upcoming [DOM4](https://dom.spec.whatwg.org/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
 - Added support for the {{ domxref("window.deviceorientation_event", "ondeviceorientation") }} and {{ domxref("window.devicemotion_event", "ondevicemotion") }} properties on {{ domxref("window") }} objects.
-- {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }} , and {{ domxref("window.moveBy") }} no longer apply to the main window.
+- {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }}, and {{ domxref("window.moveBy") }} no longer apply to the main window.
 
 ### JavaScript
 
@@ -100,12 +101,12 @@ These changes affect add-on developers as well as developers working on or with 
 
 #### AddonManager.jsm
 
-- The Add-on Manager has new methods for managing lists of add-ons that changed during applications startup: [`AddonManager.addStartupChange()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#addstartupchange()>), [`AddonManager.removeStartupChange()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#removestartupchange()>), and [`AddonManager.getStartupChanges()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#getstartupchanges()>).
+- The Add-on Manager has new methods for managing lists of add-ons that changed during applications startup: `AddonManager.addStartupChange()`, `AddonManager.removeStartupChange()`, and `AddonManager.getStartupChanges()`.
 
 ### XUL
 
 - `<tree>` elements can now persist the state of disclosure triangles if the nodes referenced by `datasources` all have unique IDs specified by "id" attributes.
-- `<panel>` elements can now be configured to [let the user drag them by clicking anywhere on their background](/en-US/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) by using the new `backdrag` attribute.
+- `<panel>` elements can now be configured to [let the user drag them by clicking anywhere on their background](/en-US/docs/XUL/PopupGuide/Panels#letting_panels_be_dragged_by_grabbing_the_background) by using the new `backdrag` attribute.
 
 ### XPCOM
 

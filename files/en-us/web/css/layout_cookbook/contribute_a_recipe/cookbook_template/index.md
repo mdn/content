@@ -1,6 +1,7 @@
 ---
 title: Cookbook template
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+page-type: guide
 tags:
   - CSS
   - Contribute
@@ -10,6 +11,7 @@ tags:
   - cookbook
   - recipes
 ---
+
 {{CSSRef}}
 
 > **Note:** This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.
@@ -45,13 +47,7 @@ _Include this is there are any specific things to watch out for in regard to acc
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-_Include the compat data for key properties you used, as in the example below which includes align-items._
-
-### align-items
-
-{{Compat("css.properties.align-items")}}
+_List the key properties you used in the `browser-compat` frontmatter metadata key. Then use the `\{{Compat}}` macro in this section to automatically generate a compatibility table for the listed properties._
 
 ## See also
 

@@ -4,9 +4,10 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
-A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the web site itself, such as those loaded using the {{HTMLElement("script")}} element).
+A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the website itself, such as those loaded using the {{HTMLElement("script")}} element).
 
 [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.
 
@@ -40,11 +41,11 @@ Content scripts can only access [a small subset of the WebExtension APIs](#webex
 You can load a content script into a web page in one of three ways:
 
 1. - At install time, into pages that match URL patterns.
-      - : Using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your `manifest.json`, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+     - : Using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your `manifest.json`, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 2. - At runtime, into pages that match URL patterns.
-      - : Using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
+     - : Using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
 3. - At runtime, into specific tabs.
-      - : In Manifest V2, using [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript), or Manifest V3, using {{WebExtAPIRef("scripting.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).)
+     - : In Manifest V2, using [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript), or Manifest V3, using {{WebExtAPIRef("scripting.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).)
 
 There is only one global scope _per frame, per extension_. This means that variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.
 
@@ -72,7 +73,7 @@ Consider a web page like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   </head>
@@ -98,7 +99,7 @@ document.body.appendChild(p);
 window.foo = "This global variable was added by a page script";
 
 // redefine the built-in window.confirm() function
-window.confirm = function() {
+window.confirm = () => {
   alert("The page script has also redefined 'confirm'");
 }
 ```
@@ -183,7 +184,9 @@ Content scripts can make requests using the normal [`window.XMLHttpRequest`](/en
 
 Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) key in `manifest.json`, then its content scripts get access that domain as well.
 
-This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin) and [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.
+> **Note:** When using Manifest V3, content scripts can perform cross-origin requests when the destination server opts in using [CORS](/en-US/docs/Web/HTTP/CORS); however, host permissions don't work in content scripts, but they still do in regular extension pages.
+
+This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side effect of not setting the [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin) and [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.
 
 > **Note:** In Firefox in Manifest V2, extensions that need to perform requests that behave as if they were sent by the content itself can use `content.XMLHttpRequest` and `content.fetch()` instead.
 >
@@ -191,7 +194,7 @@ This is accomplished by exposing more privileged XHR and fetch instances in the 
 >
 > This is not possible in Manifest V3, as `content.XMLHttpRequest` and `content.fetch()` are not available.
 
-> **Note:** In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
+> **Note:** In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches).
 
 ## Communicating with background scripts
 
@@ -266,7 +269,7 @@ If the click was on a link, it sends a message to the background page with the t
 window.addEventListener("click", notifyExtension);
 
 function notifyExtension(e) {
-  if (e.target.tagName != "A") {
+  if (e.target.tagName !== "A") {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
@@ -328,12 +331,12 @@ For example, as soon as it loads, the following content script:
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", () => {
   myPort.postMessage({greeting: "they clicked the page!"});
 });
 ```
@@ -357,14 +360,14 @@ let portFromCS;
 function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
-    portFromCS.postMessage({greeting: "In background script, received message from content script:" + m.greeting});
+  portFromCS.onMessage.addListener((m) => {
+    portFromCS.postMessage({greeting: `In background script, received message from content script: ${m.greeting}`});
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
@@ -380,13 +383,13 @@ let ports = []
 
 function connected(p) {
   ports[p.sender.tab.id] = p
-  //...
+  // …
 }
 
 browser.runtime.onConnect.addListener(connected)
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach( p => {
+browser.browserAction.onClicked.addListener(() => {
+  ports.forEach((p) => {
         p.postMessage({greeting: "they clicked the button!"})
     })
 });
@@ -398,19 +401,16 @@ The choice between one-off and connection-based messaging depends on how your ex
 
 The recommended best practices are:
 
-**Use one-off messages when…**
-
-- Only one response is expected to a message.
-- A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).
-
-**Use connection-based messaging when…**
-
-- Scripts engage in sessions where multiple messages are exchanged.
-- The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.
+- **Use one-off messages when…**
+  - Only one response is expected to a message.
+  - A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).
+- **Use connection-based messaging when…**
+  - Scripts engage in sessions where multiple messages are exchanged.
+  - The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.
 
 ## Communicating with the web page
 
-By default, content scripts don't get access to objects created by page scripts. However, they can communicate with page scripts using the DOM [`window.postMessage`](/en-US/docs/Web/API/Window/postMessage) and [`window.addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) APIs.
+By default, content scripts don't get access to the objects created by page scripts. However, they can communicate with page scripts using the DOM [`window.postMessage`](/en-US/docs/Web/API/Window/postMessage) and [`window.addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) APIs.
 
 For example:
 
@@ -432,11 +432,12 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &&
-      event.data &&
-      event.data.direction == "from-page-script") {
-    alert("Content script received message: \"" + event.data.message + "\"");
+window.addEventListener("message", (event) => {
+  if (
+    event.source === window &&
+    event?.data?.direction === "from-page-script"
+  ) {
+    alert(`Content script received message: "${event.data.message}"`);
   }
 });
 ```
@@ -450,10 +451,11 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 > ```js example-bad
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
->   if (event.source == window &&
->       event.data.direction   &&
->       event.data.direction == "from-page-script") {
+> window.addEventListener("message", (event) => {
+>   if (
+>     event.source === window &&
+>     event?.data?.direction === "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
@@ -494,7 +496,7 @@ This code just creates some variables `x` and `y` using `window.eval()` and `eva
 On receiving the message, the page script logs the same variables:
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", (event) => {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -531,7 +533,7 @@ The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInter
 >
 > let original = console.log;
 >
-> console.log = function() {
+> console.log = () => {
 >   original(true);
 > }
 > ```

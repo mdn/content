@@ -7,7 +7,7 @@ tags:
   - Constraint validation
   - Forms
   - required
-spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-required
+browser-compat: html.elements.attributes.required
 ---
 
 {{HTMLSidebar}}
@@ -18,7 +18,7 @@ The `required` attribute is supported by `{{HTMLElement("input/text","text")}}`,
 
 The attribute is not supported or relevant to {{HTMLElement("input/range","range")}} and {{HTMLElement("input/color","color")}}, as both have default values. It is also not supported on {{HTMLElement("input/hidden","hidden")}} as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including `image`.
 
-Note `color` and `range` don't support `required`, but type `color` defaults to `#000000`, and `range` defaults to the midpoint between `min` and `max` -- with `min` and `max` defaulting to 0 and 100 respectively in most browsers if not declared -- so always has a value.
+Note `color` and `range` don't support `required`, but type `color` defaults to `#000000`, and `range` defaults to the midpoint between `min` and `max` — with `min` and `max` defaulting to 0 and 100 respectively in most browsers if not declared — so always has a value.
 
 In the case of a same named group of {{HTMLElement("input/radio","radio")}} buttons, if a single radio button in the group has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute is applied. So to improve code maintenance, it is recommended to either include the `required` attribute in every same-named radio button in the group, or else in none.
 
@@ -49,14 +49,14 @@ Provide an indication to users informing them the form control is required. Ensu
 ```html
 <form>
   <div class="group">
-    <input type="text">
+    <input type="text" />
     <label>Normal</label>
   </div>
   <div class="group">
-    <input type="text" required="required">
+    <input type="text" required="required" />
     <label>Required</label>
   </div>
-  <input type="submit">
+  <input type="submit" />
 </form>
 ```
 
@@ -70,7 +70,7 @@ Provide an indication to users informing them the form control is required. Ensu
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.required")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getParameter()
 slug: Web/API/WebGLRenderingContext/getParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getParameter()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a value for the passed
@@ -16,7 +18,7 @@ parameter name.
 
 ## Syntax
 
-```js
+```js-nolint
 getParameter(pname)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SubmitEvent.submitter
 slug: Web/API/SubmitEvent/submitter
+page-type: web-api-instance-property
 tags:
   - API
   - Forms
@@ -14,6 +15,7 @@ tags:
   - submitter
 browser-compat: api.SubmitEvent.submitter
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`submitter`** property found on

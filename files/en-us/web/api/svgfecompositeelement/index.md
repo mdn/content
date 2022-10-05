@@ -1,6 +1,7 @@
 ---
 title: SVGFECompositeElement
 slug: Web/API/SVGFECompositeElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFECompositeElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFECompositeElement`** interface corresponds to the {{SVGElement("feComposite")}} element.

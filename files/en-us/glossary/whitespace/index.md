@@ -2,10 +2,10 @@
 title: Whitespace
 slug: Glossary/Whitespace
 tags:
-  - Glossary
   - Lexical Grammar
   - whitespace
 ---
+
 **Whitespace** refers to {{Glossary("Character", "characters")}} which are used to provide horizontal or vertical space between other characters. Whitespace is often used to separate tokens in {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}, and other computer languages.
 
 Whitespace characters and their usage vary among languages.
@@ -20,7 +20,7 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/#sec-white-space
 
 ## See also
 
-- {{interwiki("wikipedia", "Whitespace character")}} (Wikipedia)
+- [Whitespace character](https://en.wikipedia.org/wiki/Whitespace_character) (Wikipedia)
 - [How whitespace is handled by HTML, CSS, and in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
 - {{cssxref("white-space")}}
 - Specifications

@@ -1,7 +1,8 @@
 ---
-title: Controlling Ratios of Flex Items Along the Main Axis
+title: Controlling ratios of flex items along the main axis
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+page-type: guide
 tags:
   - Basis
   - CSS
@@ -15,6 +16,7 @@ tags:
   - shrink
   - space
 ---
+
 {{CSSRef}}
 
 In this guide we will be exploring the three properties that are applied to flex items, which enable us to control the size and flexibility of the items along the main axis — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}. Fully understanding how these properties work with growing and shrinking items is the real key to mastering flexbox.
@@ -131,7 +133,7 @@ Working from a `flex-basis` of `0` this means that the available space is distri
 
 Remember that you can use any positive value here. It is the ratio between one item and the others that matters. You can use large numbers, or decimals — it is up to you. To test that out change the values assigned in the above example to `.25`, `.25`, and `.50` — you should see the same result.
 
-## The `flex-shrink` property
+## The flex-shrink property
 
 The {{CSSxRef("flex-shrink")}} property specifies the **flex shrink factor**, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
 

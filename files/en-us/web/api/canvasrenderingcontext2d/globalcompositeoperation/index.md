@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
+page-type: web-api-instance-property
 tags:
   - API
   - Blending
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
 ---
+
 {{APIRef}}
 
 The
@@ -18,9 +20,7 @@ The
 property of the Canvas 2D API sets the type of compositing operation to apply when
 drawing new shapes.
 
-See also [Compositing and
-clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the [Canvas
-Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+See also [Compositing and clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 
@@ -47,15 +47,15 @@ rectangles that exclude themselves where they overlap.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.globalCompositeOperation = 'xor';
+ctx.globalCompositeOperation = "xor";
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(50, 50, 100, 100);
 ```
 
@@ -82,8 +82,7 @@ ctx.fillRect(50, 50, 100, 100);
 
 - An early Canvas specification draft specified the value `"darker"`.
   However, Firefox removed support for `"darker"` in version 4
-  ({{bug(571532)}}). See also [this
-  blog post](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
+  ({{bug(571532)}}). See also [this blog post](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
   similar affect to `"darker"`.
 
 ## See also

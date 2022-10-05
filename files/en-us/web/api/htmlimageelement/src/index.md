@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.src
 slug: Web/API/HTMLImageElement/src
+page-type: web-api-instance-property
 tags:
   - 1x
   - API
@@ -13,8 +14,10 @@ tags:
   - fallback
   - source
   - src
+  - Property
 browser-compat: api.HTMLImageElement.src
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property
@@ -22,14 +25,7 @@ The {{domxref("HTMLImageElement")}} property
     "img")}} attribute, specifies the image to display in the {{HTMLElement("img")}}
 element.
 
-## Syntax
-
-```js
-htmlImageElement.src = newSource;
-let src = htmlImageElement.src;
-```
-
-### Value
+## Value
 
 When providing only a single image, rather than a set of images from which the browser
 selects the best match for the viewport size and display pixel density, the
@@ -61,9 +57,10 @@ corresponding {{htmlattrxref("sizes", "img")}} content attribute) _and_
 #### HTML
 
 ```html
-<img src="grapefruit-slice-332-332.jpg"
-     width="160"
-     alt="Slices of grapefruit, looking yummy.">
+<img
+  src="grapefruit-slice-332-332.jpg"
+  width="160"
+  alt="Slices of grapefruit, looking yummy." />
 ```
 
 #### Result

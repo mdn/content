@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.name
 slug: Web/API/FileSystemHandle/name
+page-type: web-api-instance-property
 tags:
   - Directory
   - File
@@ -10,6 +11,7 @@ tags:
   - Read-only
 browser-compat: api.FileSystemHandle.name
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`name`** read-only property of the
@@ -49,5 +51,4 @@ async function getFile() {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

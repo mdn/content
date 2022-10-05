@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.codecId
 slug: Web/API/RTCRtpStreamStats/codecId
+page-type: web-api-instance-property
 tags:
   - API
   - Codec
@@ -19,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCRtpStreamStats.codecId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

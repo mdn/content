@@ -12,6 +12,7 @@ tags:
   - Header
 browser-compat: http.headers.Feature-Policy.document-domain
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header
@@ -22,7 +23,7 @@ to set {{domxref("document.domain")}} will fail and cause a `SecurityError`
 
 ## Syntax
 
-```
+```http
 Feature-Policy: document-domain <allowlist>;
 ```
 

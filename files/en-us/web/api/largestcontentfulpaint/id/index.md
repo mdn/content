@@ -1,15 +1,18 @@
 ---
 title: LargestContentfulPaint.id
 slug: Web/API/LargestContentfulPaint/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - id
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.id
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the ID of the element that is the largest contentful paint.
 

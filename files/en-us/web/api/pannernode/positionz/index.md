@@ -1,6 +1,7 @@
 ---
 title: PannerNode.positionZ
 slug: Web/API/PannerNode/positionZ
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -10,10 +11,10 @@ tags:
   - positionZ
 browser-compat: api.PannerNode.positionZ
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`positionZ`** property of the {{ domxref("PannerNode")
-    }} interface specifies the Z coordinate of the audio source's position in 3D Cartesian
+The **`positionZ`** property of the {{ domxref("PannerNode") }} interface specifies the Z coordinate of the audio source's position in 3D Cartesian
 coordinates, corresponding to the _depth_ axis (behind-in front of the
 listener). The complete vector is defined by the position of the audio source, given
 as ({{domxref("PannerNode.positionX", "positionX")}},
@@ -75,6 +76,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

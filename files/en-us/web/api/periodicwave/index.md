@@ -1,6 +1,7 @@
 ---
 title: PeriodicWave
 slug: Web/API/PeriodicWave
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - waveform
 browser-compat: api.PeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`PeriodicWave`** interface defines a periodic waveform that can be used to shape the output of an {{domxref("OscillatorNode")}}.
@@ -26,11 +28,11 @@ The **`PeriodicWave`** interface defines a periodic waveform that can be used to
 
 ## Properties
 
-_None; also, `PeriodicWave` doesn't inherit any properties._
+None; also, `PeriodicWave` doesn't inherit any properties.
 
 ## Methods
 
-_None; also, `PeriodicWave` doesn't inherit any methods._
+None; also, `PeriodicWave` doesn't inherit any methods.
 
 ## Example
 

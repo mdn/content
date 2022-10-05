@@ -1,6 +1,7 @@
 ---
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
+page-type: web-api-overview
 tags:
   - API
   - MediaDevices
@@ -13,6 +14,7 @@ tags:
   - getDisplayMedia
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
@@ -85,7 +87,7 @@ The following dictionaries are defined by the Screen Capture API.
 {{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Feature-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
 
 ```html
-<iframe allow="display-capture" src="/some-other-document.html">
+<iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
 The default allow list is `self`, which lets the any content within the document use Screen Capture.

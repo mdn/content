@@ -1,6 +1,7 @@
 ---
 title: SVGComponentTransferFunctionElement
 slug: Web/API/SVGComponentTransferFunctionElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGComponentTransferFunctionElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGComponentTransferFunctionElement`** interface defines a base interface used by the component transfer function interfaces.

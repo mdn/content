@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource.rtpTimestamp
 slug: Web/API/RTCRtpContributingSource/rtpTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - rtpTimestamp
 browser-compat: api.RTCRtpContributingSource.rtpTimestamp
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`rtpTimestamp`**

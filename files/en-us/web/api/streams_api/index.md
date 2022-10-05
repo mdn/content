@@ -1,6 +1,7 @@
 ---
 title: Streams API
 slug: Web/API/Streams_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -8,7 +9,11 @@ tags:
   - Landing
   - Reference
   - Streams
+browser-compat:
+  - api.ReadableStream
+  - api.WritableStream
 ---
+
 {{DefaultAPISidebar("Streams")}}
 
 The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.
@@ -33,7 +38,7 @@ More complicated uses involve creating your own stream using the {{domxref("Read
 
 You can also write data to streams using {{domxref("WritableStream")}}.
 
-> **Note:** You can find a lot more details about the theory and practice of streams in our articles — [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts), [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), and [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams).
+> **Note:** You can find a lot more details about the theory and practice of streams in our articles — [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts), [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), and [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams).
 
 ## Stream interfaces
 
@@ -72,7 +77,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 ### Extensions to other APIs
 
 - {{domxref("Request")}}
-  - : When a new `Request` object is constructed, you can pass it a {{domxref("ReadableStream")}} in the `body` property of its `RequestInit` dictionary.  This `Request` could then be passed to a {{domxref("fetch()")}} to commence fetching the stream.
+  - : When a new `Request` object is constructed, you can pass it a {{domxref("ReadableStream")}} in the `body` property of its `RequestInit` dictionary. This `Request` could then be passed to a {{domxref("fetch()")}} to commence fetching the stream.
 - {{domxref("Response.body")}}
   - : The response body returned by a successful [fetch request](/en-US/docs/Web/API/fetch) is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.
 
@@ -87,7 +92,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 
 ## Examples
 
-We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). The examples are as follows:
+We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams). The examples are as follows:
 
 - [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
 - [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
@@ -102,22 +107,15 @@ Examples from other developers:
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Streams Living Standard](https://streams.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### ReadableStream
-
-{{Compat("api.ReadableStream")}}
-
-### WritableStream
-
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## See also
 
 - [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts)
 - [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams)

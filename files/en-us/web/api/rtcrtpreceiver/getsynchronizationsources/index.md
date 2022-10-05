@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getSynchronizationSources()
 slug: Web/API/RTCRtpReceiver/getSynchronizationSources
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -12,6 +13,7 @@ tags:
   - getSynchronizationSources
 browser-compat: api.RTCRtpReceiver.getSynchronizationSources
 ---
+
 {{APIRef("WebRTC API")}}
 
 The **`getSynchronizationSources()`**
@@ -22,7 +24,7 @@ method of the {{domxref("RTCRtpReceiver")}} interface returns an array of
 
 ## Syntax
 
-```js
+```js-nolint
 getSynchronizationSources()
 ```
 
