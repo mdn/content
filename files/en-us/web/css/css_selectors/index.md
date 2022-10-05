@@ -21,14 +21,6 @@ CSS selectors can be grouped into the following categories based on the type of 
 
 ## Basic selectors
 
-- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
-
-  - : Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.
-
-    **Syntax:** `*` `ns|*` `*|*`
-
-    **Example:** `*` will match all the elements of the document.
-
 - [Type selector](/en-US/docs/Web/CSS/Type_selectors)
 
   - : Selects all elements that have the given node name.
@@ -36,7 +28,9 @@ CSS selectors can be grouped into the following categories based on the type of 
     **Syntax:** `elementname`
 
     **Example:** `input` will match any {{HTMLElement("input")}} element.
-
+    
+ > **Note:** the [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) is a special type selector that represents an element of any element type.
+    
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
 
   - : Selects all elements that have the given `class` attribute.
