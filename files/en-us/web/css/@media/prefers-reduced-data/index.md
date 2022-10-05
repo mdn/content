@@ -1,6 +1,7 @@
 ---
 title: prefers-reduced-data
 slug: Web/CSS/@media/prefers-reduced-data
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

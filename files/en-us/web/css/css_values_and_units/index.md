@@ -1,6 +1,7 @@
 ---
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
+page-type: guide
 tags:
   - CSS
   - Guide

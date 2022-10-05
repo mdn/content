@@ -1,6 +1,7 @@
 ---
 title: <alpha-value>
 slug: Web/CSS/alpha-value
+page-type: css-type
 tags:
   - Alpha
   - Alpha-value

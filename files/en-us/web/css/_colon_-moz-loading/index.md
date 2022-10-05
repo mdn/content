@@ -1,6 +1,7 @@
 ---
 title: ':-moz-loading'
 slug: Web/CSS/:-moz-loading
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

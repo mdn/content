@@ -1,6 +1,7 @@
 ---
 title: '::-moz-progress-bar'
 slug: Web/CSS/::-moz-progress-bar
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions

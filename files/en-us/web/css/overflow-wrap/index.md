@@ -1,6 +1,7 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
+page-type: css-property
 tags:
   - CSS
   - CSS Property

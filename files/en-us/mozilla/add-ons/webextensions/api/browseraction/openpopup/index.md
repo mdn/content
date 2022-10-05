@@ -46,7 +46,7 @@ Open the popup when the user selects a context menu item:
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

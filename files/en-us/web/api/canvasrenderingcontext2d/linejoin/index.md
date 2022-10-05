@@ -62,11 +62,11 @@ This example applies rounded line joins to a path.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 20;
-ctx.lineJoin = 'round';
+ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
@@ -89,10 +89,10 @@ The example below draws three different paths, demonstrating each of the three
 ```
 
 ```js
-const ctx = document.getElementById('canvas').getContext('2d');
+const ctx = document.getElementById("canvas").getContext("2d");
 ctx.lineWidth = 10;
 
-['round', 'bevel', 'miter'].forEach((join, i) => {
+["round", "bevel", "miter"].forEach((join, i) => {
   ctx.lineJoin = join;
   ctx.beginPath();
   ctx.moveTo(-5, 5 + i * 40);

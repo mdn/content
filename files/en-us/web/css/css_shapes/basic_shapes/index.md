@@ -1,6 +1,7 @@
 ---
 title: Basic shapes
 slug: Web/CSS/CSS_Shapes/Basic_Shapes
+page-type: guide
 tags:
   - CSS
   - CSS Shapes

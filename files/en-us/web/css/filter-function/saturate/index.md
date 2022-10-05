@@ -1,6 +1,7 @@
 ---
 title: saturate()
 slug: Web/CSS/filter-function/saturate
+page-type: css-function
 tags:
   - CSS
   - CSS Function

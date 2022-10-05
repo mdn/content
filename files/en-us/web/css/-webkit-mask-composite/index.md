@@ -1,8 +1,9 @@
 ---
-title: '-webkit-mask-composite'
+title: "-webkit-mask-composite"
 slug: Web/CSS/-webkit-mask-composite
+page-type: css-property
 tags:
-  - '-webkit-mask-composite'
+  - "-webkit-mask-composite"
   - CSS
   - CSS Masking
   - CSS Property

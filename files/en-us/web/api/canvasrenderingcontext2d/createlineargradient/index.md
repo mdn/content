@@ -77,18 +77,18 @@ context, and is rendered to a filled rectangle.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create a linear gradient
 // The start gradient point is at x=20, y=0
 // The end gradient point is at x=220, y=0
-const gradient = ctx.createLinearGradient(20,0, 220,0);
+const gradient = ctx.createLinearGradient(20, 0, 220, 0);
 
 // Add three color stops
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(.5, 'cyan');
-gradient.addColorStop(1, 'green');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(0.5, "cyan");
+gradient.addColorStop(1, "green");
 
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;

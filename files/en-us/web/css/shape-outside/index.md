@@ -1,6 +1,7 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
+page-type: css-property
 tags:
   - Boundaries
   - CSS

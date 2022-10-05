@@ -1,6 +1,7 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

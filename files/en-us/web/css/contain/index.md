@@ -1,6 +1,7 @@
 ---
 title: contain
 slug: Web/CSS/contain
+page-type: css-property
 tags:
   - CSS
   - CSS Containment

@@ -52,7 +52,7 @@ Timing the main loop to when the browser paints to the display allows you to run
 
 But do not immediately assume animations require frame-by-frame control. Simple animations can be easily performed, even GPU-accelerated, with CSS animations and other tools included in the browser. There are a lot of them and they will make your life easier.
 
-## Building a _better_ main loop in JavaScript
+## Building a better main loop in JavaScript
 
 There are two obvious issues with our previous main loop: `main()` pollutes the `{{ domxref("window") }}` object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
@@ -114,7 +114,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In JavaScript, you are using the browser's main loop and you are trying to do so effectively.
 
-## Building a _more_ _optimized_ main loop in JavaScript
+## Building a more optimized main loop in JavaScript
 
 Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to `window.requestAnimationFrame()`, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The [W3C spec for requestAnimationFrame](https://www.w3.org/TR/animation-timing/) does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.
 

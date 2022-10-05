@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.TypedArray.some
 
 The **`some()`** method tests whether some element in the typed
 array passes the test implemented by the provided function. This method has the same
-algorithm as {{jsxref("Array.prototype.some()")}}_._ _TypedArray_ is one
+algorithm as {{jsxref("Array.prototype.some()")}}. _TypedArray_ is one
 of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-some.html")}}

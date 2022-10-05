@@ -104,11 +104,11 @@ height of 124. It is drawn to the canvas at (21, 20), where it is given a width 
 and a height of 104.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const image = document.getElementById('source');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const image = document.getElementById("source");
 
-image.addEventListener('load', (e) => {
+image.addEventListener("load", (e) => {
   ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 });
 ```
@@ -139,14 +139,14 @@ than `element.width` and `element.height`. The same goes for
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 const image = new Image(60, 45); // Using optional size for image
 image.onload = drawImageActualSize; // Draw when image has loaded
 
 // Load an image of intrinsic size 300x227 in CSS pixels
-image.src = 'rhino.jpg';
+image.src = "rhino.jpg";
 
 function drawImageActualSize() {
   // Use the intrinsic size of image in CSS pixels for the canvas element

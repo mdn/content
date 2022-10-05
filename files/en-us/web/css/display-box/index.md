@@ -1,6 +1,7 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

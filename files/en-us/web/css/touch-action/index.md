@@ -1,6 +1,7 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
+page-type: css-property
 tags:
   - CSS
   - CSS Property

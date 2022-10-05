@@ -1,6 +1,7 @@
 ---
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Model
@@ -20,6 +21,8 @@ The **`overscroll-behavior`** CSS property sets what a browser does when reachin
 By default, mobile browsers tend to provide a "bounce" effect or even a page refresh when the top or bottom of a page (or other scroll area) is reached. You may also have noticed that when you have a dialog box with scrolling content on top of a page of scrolling content, once the dialog box's scroll boundary is reached, the underlying page will then start to scroll — this is called **scroll chaining**.
 
 In some cases these behaviors are not desirable. You can use `overscroll-behavior` to get rid of unwanted scroll chaining and the browser's Facebook/Twitter app-inspired "pull to refresh"-type behavior.
+
+Note that this property only applies to {{Glossary("Scroll_container", "scroll containers")}}. In particular, since an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) is not a scroll container, this property cannot be used to stop scroll chaining for iframes.
 
 ## Syntax
 

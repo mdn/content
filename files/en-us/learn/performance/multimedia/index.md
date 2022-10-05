@@ -100,7 +100,7 @@ And finally, should you want to include animated images into your page, then kno
 <picture>
   <source type="video/mp4" src="giphy.mp4" />
   <source type="image/webp" src="giphy.webp" />
-  <img src="giphy.gif" alt="" />
+  <img src="giphy.gif" alt="A GIF animation" />
 </picture>
 ```
 

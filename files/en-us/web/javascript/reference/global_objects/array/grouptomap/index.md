@@ -81,8 +81,16 @@ The callback function returns a value indicating the group of the associated ele
 The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `groupToMap()`.
 Each key has an associated array containing all the elements for which the callback returned the same value.
 
-The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
+Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
+
+`callbackFn` is called with the value of the current element, the current index, and the array itself.
+While groups often depend only on the current element, you can implement grouping strategies based on the values of other elements in the array.
+
+If a `thisArg` parameter is provided to `groupToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
+If `thisArg` is not provided, then {{jsxref("undefined")}} is used.
+
+The `group()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a map of arrays that contains the same elements as the ones from the original array. The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
 
 This method is useful when you need to group information that is related to a particular object that might potentially change over time.
 This is because even if the object is modified, it will continue to work as a key to the returned `Map`.
@@ -90,15 +98,6 @@ If you instead create a string representation for the object and use that as a g
 
 > **Note:** To access the groups in the returned `Map`, you must use the same object that was originally used as a key in the `Map` (although you may modify its properties).
 > You can't use another object that just happens to have the same name and properties.
-
-`callbackFn` is called with the value of the current element, the current index, and the array itself.
-While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
-
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
-
-If a `thisArg` parameter is provided to `groupToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
-If it is not provided, then {{jsxref("undefined")}} is used.
 
 ### Mutating the array in the callback
 
@@ -114,6 +113,8 @@ Therefore:
 > **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 ## Examples
+
+### Using groupToMap()
 
 First we define an array containing objects representing an inventory of different foodstuffs.
 Each food has a `type` and a `quantity`.
@@ -157,6 +158,15 @@ console.log(result.get(restock));
 const restock2 = { restock: true };
 console.log(result.get(restock2));
 // expected output: undefined
+```
+
+### Using groupToMap() on sparse arrays
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `groupToMap()` method iterates empty slots as if they have the value `undefined`.
+
+```js
+console.log([1, , 3].groupToMap((x) => x));
+// Map { 1 => [1], undefined => [undefined], 3 => [3] }
 ```
 
 ## Specifications

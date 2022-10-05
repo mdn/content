@@ -1,6 +1,7 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

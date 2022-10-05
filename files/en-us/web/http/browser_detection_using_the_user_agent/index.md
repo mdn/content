@@ -181,7 +181,7 @@ addEventListener(
   () => {
     orientationChanged = true;
   },
-  PASSIVE_LISTENER_OPTION,
+  PASSIVE_LISTENER_OPTION
 );
 
 addEventListener("resize", () =>
@@ -251,7 +251,7 @@ Most rendering engines put the version number in the _RenderingEngine/VersionNum
 
 ## OS
 
-The Operating System is given in most User Agent strings (although not web-focused platforms like Firefox OS), but the format varies a lot. It is a fixed string between two semi-colons, in the comment part of the User Agent. These strings are specific for each browser. They indicate the OS, but also often its version and information on the relying hardware (32 or 64 bits, or Intel/PPC for Mac).
+The Operating System is given in most User Agent strings (although not web-focused platforms like Firefox OS), but the format varies a lot. It is a fixed string between two semicolons, in the comment part of the User Agent. These strings are specific for each browser. They indicate the OS, but also often its version and information on the relying hardware (32 or 64 bits, or Intel/PPC for Mac).
 
 Like in all cases, these strings may change in the future, one should use them only in conjunction with the detection of already released browsers. A technological survey must be in place to adapt the script when new browser versions are coming out.
 

@@ -1,6 +1,7 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

@@ -1,6 +1,7 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation

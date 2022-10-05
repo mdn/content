@@ -1,6 +1,7 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
+page-type: css-property
 tags:
   - CSS
   - CSS Lists

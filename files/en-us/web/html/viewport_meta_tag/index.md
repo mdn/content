@@ -6,7 +6,7 @@ tags:
   - Responsiveness
   - Mobile
   - viewport
-spec-urls: https://drafts.csswg.org/css-device-adapt/#viewport-meta
+spec-urls: https://drafts.csswg.org/css-viewport/#viewport-meta
 ---
 
 {{HTMLSidebar}}

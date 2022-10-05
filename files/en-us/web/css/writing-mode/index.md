@@ -1,6 +1,7 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -179,7 +180,7 @@ The CSS that adjusts the directionality of the content looks like this:
 
 This image shows what the output should look like, in case your browser's support for `writing-mode` is incomplete:
 
-![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb css properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
+![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb CSS properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
 
 {{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}
 

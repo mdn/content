@@ -1,6 +1,7 @@
 ---
-title: ':picture-in-picture'
+title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
+page-type: css-pseudo-class
 tags:
   - CSS
   - Picture-in-Picture

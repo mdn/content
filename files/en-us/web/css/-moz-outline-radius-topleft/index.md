@@ -1,6 +1,7 @@
 ---
-title: '-moz-outline-radius-topleft'
+title: "-moz-outline-radius-topleft"
 slug: Web/CSS/-moz-outline-radius-topleft
+page-type: css-property
 tags:
   - CSS
   - CSS Property

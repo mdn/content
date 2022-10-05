@@ -1,6 +1,7 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
