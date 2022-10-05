@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Array.findLastIndex
 
 {{JSRef}}
 
-The **`findLastIndex()`** method returns the index of the last element in an array that satisfies the provided testing function.
+The **`findLastIndex()`** method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
