@@ -1,8 +1,9 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

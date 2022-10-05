@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: gridcell role'
+title: "ARIA: gridcell role"
 slug: Web/Accessibility/ARIA/Roles/gridcell_role
 tags:
   - ARIA

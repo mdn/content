@@ -1,6 +1,7 @@
 ---
 title: mask-border-width
 slug: Web/CSS/mask-border-width
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

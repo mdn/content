@@ -138,9 +138,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-{{deprecated_header}}
-
-Synchronous XHR requests often cause hangs on the web. But developers typically don't notice the problem because the hang only manifests with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now in deprecation state. The recommendation is that developers move away from the synchronous API and instead use asynchronous requests.
+> **Warning:** Synchronous XHR requests often cause hangs on the web, especially with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now deprecated and should be avoided in favor of asynchronous requests.
 
 All new XHR features such as `timeout` or `abort` are not allowed for synchronous XHR. Doing so will raise an `InvalidAccessError`.
 

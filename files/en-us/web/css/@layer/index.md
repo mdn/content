@@ -1,6 +1,7 @@
 ---
 title: "@layer"
 slug: Web/CSS/@layer
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

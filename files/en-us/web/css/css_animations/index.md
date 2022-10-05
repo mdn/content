@@ -1,6 +1,7 @@
 ---
 title: CSS Animations
 slug: Web/CSS/CSS_Animations
+page-type: css-module
 tags:
   - CSS
   - CSS Animations

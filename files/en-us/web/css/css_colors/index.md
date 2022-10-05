@@ -1,6 +1,7 @@
 ---
 title: CSS Colors
 slug: Web/CSS/CSS_Colors
+page-type: css-module
 tags:
   - CSS
   - CSS Colors

@@ -1,6 +1,7 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

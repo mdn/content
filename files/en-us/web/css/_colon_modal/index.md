@@ -1,6 +1,7 @@
 ---
-title: ':modal'
+title: ":modal"
 slug: Web/CSS/:modal
+page-type: css-pseudo-class
 tags:
   - CSS
   - Modal
@@ -38,8 +39,7 @@ This example styles a modal dialog that opens when the "Update details" button i
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label
-        >Favorite animal:
+      <label>Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>

@@ -90,21 +90,21 @@ a. Members will be invited to the following meetings:
 
 - Annual Product Strategy review meetings to take place between October and December of each calendar year;
 - Quarterly content strategy and prioritization review meetings ("Quarterly Reviews); and
-- Ad-hoc product review/check-in meetings, which can be initiated by Mozilla or any Member as needed ("Ad Hoc Meetings").
+- Ad hoc product review/check-in meetings, which can be initiated by Mozilla or any Member as needed ("Ad Hoc Meetings").
 
 b. Annual Product Strategy review meetings will review the previous year's progress and make recommendations for MDN's strategy and objectives for the following year.
 
 c. Annual Product Strategy review meetings can take place in Mozilla headquarters or worldwide office, the offices of a Member, or external locations, as determined by vote of the PAB. Virtual attendance will be accommodated for Members who are unable to attend in person.
 
-d. Quarterly Reviews and Ad-Hoc Meetings will primarily be held via video/conference call, although in-person attendance will be possible at the discretion of Members.
+d. Quarterly Reviews and Ad Hoc Meetings will primarily be held via video/conference call, although in-person attendance will be possible at the discretion of Members.
 
-e. Ad-Hoc Meeting dates will depend upon the work in development. Review points will have a specific emphasis such as coordination around product release dates and major features or new specs and standards reaching broad release that require more in-depth coordination and planning beyond the Quarterly Review.
+e. Ad Hoc Meeting dates will depend upon the work in development. Review points will have a specific emphasis such as coordination around product release dates and major features or new specs and standards reaching broad release that require more in-depth coordination and planning beyond the Quarterly Review.
 
 ## 7. Time Commitment and Costs
 
 a. Members are asked to make a commitment to the PAB for at least 12 months.
 
-b. Members are asked to commit the time to prepare for, attend (sometimes in person), and participate in regularly scheduled and ad-hoc PAB meetings.
+b. Members are asked to commit the time to prepare for, attend (sometimes in person), and participate in regularly scheduled and ad hoc PAB meetings.
 
 c. Costs for participant travel and living expenses or other involvement are to be paid by the individual board member or the sponsoring organization.
 

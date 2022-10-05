@@ -1,6 +1,7 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
+page-type: css-function
 tags:
   - CSS
   - CSS Function

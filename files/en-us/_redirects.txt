@@ -492,7 +492,7 @@
 /en-US/docs/CSS/Currentcolor	/en-US/docs/Web/CSS/color_value#currentcolor_keyword
 /en-US/docs/CSS/Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
 /en-US/docs/CSS/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
-/en-US/docs/CSS/FAQ	/en-US/docs/Web/CSS/FAQ
+/en-US/docs/CSS/FAQ	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Flexbox-redirect-1	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Flexbox-redirect-2	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
@@ -960,7 +960,7 @@
 /en-US/docs/CSS:Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/CSS:Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/CSS:Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
-/en-US/docs/CSS:FAQ	/en-US/docs/Web/CSS/FAQ
+/en-US/docs/CSS:FAQ	/en-US/docs/Web/CSS
 /en-US/docs/CSS:Getting_Started	/en-US/docs/Learn/CSS/First_steps
 /en-US/docs/CSS:Getting_Started:Boxes	/en-US/docs/Learn/CSS/Building_blocks
 /en-US/docs/CSS:Getting_Started:Cascading_and_inheritance	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -3596,6 +3596,7 @@
 /en-US/docs/Glossary/Content_type	/en-US/docs/Glossary/MIME_type
 /en-US/docs/Glossary/DTD	/en-US/docs/Glossary/Doctype
 /en-US/docs/Glossary/Distributed_DenialofService	/en-US/docs/Glossary/Distributed_Denial_of_Service
+/en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -3646,7 +3647,7 @@
 /en-US/docs/HTML/Canvas/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-/en-US/docs/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
@@ -11212,6 +11213,7 @@
 /en-US/docs/Web/CSS/Currentcolor	/en-US/docs/Web/CSS/color_value#currentcolor_keyword
 /en-US/docs/Web/CSS/Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
 /en-US/docs/Web/CSS/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
+/en-US/docs/Web/CSS/FAQ	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Filters_Effects	/en-US/docs/Web/CSS/Filter_Effects
 /en-US/docs/Web/CSS/Flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/General_sibling_combinator
@@ -11807,10 +11809,11 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
-/en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+/en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Element	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
 /en-US/docs/Web/Guide/HTML/Email_links	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links
 /en-US/docs/Web/Guide/HTML/Event_attributes	/en-US/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_—_don't_use_these
@@ -11867,7 +11870,7 @@
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-/en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
@@ -11938,6 +11941,7 @@
 /en-US/docs/Web/HTTP/Gecko_user_agent_string_reference	/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
 /en-US/docs/Web/HTTP/HTTP_response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Headers/Cache-Disposition	/en-US/docs/Web/HTTP/Headers/Content-Disposition
+/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/HTTP/Headers/Cookie2	/en-US/docs/Web/HTTP/Headers/Cookie
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/vr	/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking

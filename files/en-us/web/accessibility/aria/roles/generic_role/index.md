@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: generic role'
+title: "ARIA: generic role"
 slug: Web/Accessibility/ARIA/Roles/generic_role
 tags:
   - Accessibility

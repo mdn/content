@@ -1,6 +1,7 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

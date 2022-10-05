@@ -1,8 +1,9 @@
 ---
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference

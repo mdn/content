@@ -1,6 +1,7 @@
 ---
 title: polygon()
 slug: Web/CSS/basic-shape/polygon
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

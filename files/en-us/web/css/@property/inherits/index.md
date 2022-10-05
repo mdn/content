@@ -1,6 +1,7 @@
 ---
 title: inherits
 slug: Web/CSS/@property/inherits
+page-type: css-at-rule-descriptor
 tags:
   - CSS
   - Reference
@@ -66,10 +67,10 @@ Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

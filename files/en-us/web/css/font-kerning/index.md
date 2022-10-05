@@ -1,6 +1,7 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

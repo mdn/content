@@ -1,6 +1,7 @@
 ---
 title: overflow-inline
 slug: Web/CSS/overflow-inline
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model

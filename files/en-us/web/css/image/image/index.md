@@ -1,6 +1,7 @@
 ---
 title: image()
 slug: Web/CSS/image/image
+page-type: css-function
 tags:
   - CSS
   - CSS Function

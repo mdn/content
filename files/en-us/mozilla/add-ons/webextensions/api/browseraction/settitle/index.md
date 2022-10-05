@@ -64,9 +64,9 @@ This code switches the title between "this" and "that" each time the user clicks
 ```js
 function toggleTitle(title) {
   if (title === "this") {
-    browser.browserAction.setTitle({title: "that"});
+    browser.browserAction.setTitle({ title: "that" });
   } else {
-    browser.browserAction.setTitle({title: "this"});
+    browser.browserAction.setTitle({ title: "this" });
   }
 }
 

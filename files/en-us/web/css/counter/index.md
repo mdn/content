@@ -1,6 +1,7 @@
 ---
 title: counter()
 slug: Web/CSS/counter
+page-type: css-function
 tags:
   - CSS
   - CSS Counter
@@ -74,7 +75,7 @@ li::after {
 
 {{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}
 
-### _decimal-leading-zero_ compared to lower-alpha
+### decimal-leading-zero compared to lower-alpha
 
 #### HTML
 

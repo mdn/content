@@ -1,6 +1,7 @@
 ---
 title: Descendant combinator
 slug: Web/CSS/Descendant_combinator
+page-type: css-combinator
 tags:
   - CSS
   - Reference

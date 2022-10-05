@@ -1,6 +1,7 @@
 ---
 title: clear
 slug: Web/CSS/clear
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning
@@ -22,13 +23,11 @@ Vertical margins between two floated elements on the other hand will not collaps
 
 The floats that are relevant to be cleared are the earlier floats within the same [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
-> **Note:** If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called **clearfix**, and one way to do it is to add `clear` to a replaced {{cssxref("::after")}} [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) on it.
+> **Note:** If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, set the value of the element's [`display`](/en-US/docs/Web/CSS/display) property to [`flow-root`](/en-US/docs/Web/CSS/display#flow-root).
 >
 > ```css
-> #container::after {
->   content: "";
->   display: block;
->   clear: both;
+> #container {
+>   display: flow-root;
 > }
 > ```
 

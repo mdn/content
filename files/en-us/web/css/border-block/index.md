@@ -1,6 +1,7 @@
 ---
 title: border-block
 slug: Web/CSS/border-block
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property

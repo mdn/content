@@ -1,6 +1,7 @@
 ---
 title: justify-tracks
 slug: Web/CSS/justify-tracks
+page-type: css-property
 tags:
   - CSS
   - Experimental

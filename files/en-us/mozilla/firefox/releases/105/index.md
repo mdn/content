@@ -25,13 +25,18 @@ No notable changes.
 
 ### JavaScript
 
-No notable changes.
+- Range restrictions have been relaxed on `formatRange` and `selectRange` functions for [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), and [`Intl.PluralRules`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) objects. This change now allows negative ranges ({{bug(1780545)}}).
 
 ### APIs
 
 #### DOM
 
 - The [TextDecoderStream](/en-US/docs/Web/API/TextDecoderStream) and [TextEncoderStream](/en-US/docs/Web/API/TextEncoderStream) interfaces, part of the [Encoding API](/en-US/docs/Web/API/Encoding_API), are now supported ({{bug(1486949)}}).
+
+- The [OffscreenCanvas](/en-US/docs/Web/API/OffscreenCanvas) API provides a canvas that can be rendered off-screen in both window and [web worker](/en-US/docs/Web/API/OffscreenCanvas#asynchronous_display_of_frames_produced_by_an_offscreencanvas) contexts.
+  This allows `<canvas>` elements to be decoupled from the DOM. The [OffscreenCanvasRenderingContext2D](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) interface provides support for this and is now enabled by default ({{bug(1746110)}}).
+
+- The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) can now be used in worker threads ({{bug(1072107)}}).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -48,6 +53,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - Support for defining persistent scripts using {{WebExtAPIRef("scripting")}} has been added. A script is identified as persistent using the `persistAcrossSessions` property in {{WebExtAPIRef("scripting.RegisteredContentScript")}} ({{bug("1751436")}}).
+- An extension's resources can no longer be loaded by other extensions by default. To enable other extensions to load resources they must be listed in the extension's [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) manifest key ({{bug("1711168")}}).
 
 ## Older versions
 

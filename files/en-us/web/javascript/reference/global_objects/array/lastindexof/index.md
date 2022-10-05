@@ -50,9 +50,11 @@ The last index of the element in the array; **-1** if not found.
 using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
 (the same method used by the `===`, or triple-equals, operator).
 
+The `lastIndexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
 ## Examples
 
-### Using `lastIndexOf`
+### Using lastIndexOf()
 
 The following example uses `lastIndexOf` to locate values in an array.
 
@@ -90,6 +92,14 @@ Note that we have to handle the case `idx === 0` separately here because the
 element will always be found regardless of the `fromIndex` parameter if it is
 the first element of the array. This is different from the
 {{jsxref("Array.prototype.indexOf", "indexOf")}} method.
+
+### Using lastIndexOf() on sparse arrays
+
+You cannot use `lastIndexOf()` to search for empty slots in sparse arrays.
+
+```js
+console.log([1, , 3].lastIndexOf(undefined)); // -1
+```
 
 ## Specifications
 

@@ -81,13 +81,14 @@ Unless you're creating an HTML version of a productivity application, you should
 
 Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French (France), use the Shift key.
 
-#### **Don't** use HTML instead
+#### Don't use HTML instead
 
 The `aria-keyshortcuts` attribute is very similar to the [problematic](https://webaim.org/techniques/keyboard/accesskey#spec) HTML {{htmlattrxref('accesskey')}}, which generates a keyboard shortcut for the current element. When an `accesskey` is defined for an element, the browser defines the modifiers and does all the work of handling the shortcut with no scripting required. Every browser and operating system combination has their own modifier keys for the non-modifier set in the `accesskey` attribute. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations. With `aria-keyshortcuts`, the modifier keys are included in the attribute value list of key combinations and the functionality has to be scripted in.
 
 ```html
 <p>
-  Press the <strong><u>S</u></strong>tress reliever to relax!
+  Press the 
+  <strong><u>S</u></strong>tress reliever to relax!
 </p>
 <button accesskey="s">Stress reliever</button>
 ```

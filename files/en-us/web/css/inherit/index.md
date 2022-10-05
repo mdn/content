@@ -1,6 +1,7 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
+page-type: css-keyword
 tags:
   - CSS
   - CSS Cascade

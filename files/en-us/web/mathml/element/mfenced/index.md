@@ -30,12 +30,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ### The last separator is repeated (`,`)
 
-Sample rendering: ![{a;b;c,d,e}](mfenced01.png)
-
-Rendering in your browser: <math><mfenced close="}" open separators=";;,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
-
 ```html
-<math>
+<math display="block">
   <mfenced open="{" close="}" separators=";;,">
     <mi>a</mi>
     <mi>b</mi>
@@ -46,14 +42,16 @@ Rendering in your browser: <math><mfenced close="}" open separators=";;,"><mi>a<
 </math>
 ```
 
+Sample rendering: ![{a;b;c,d,e}](mfenced01.png)
+
+Rendering in your browser:
+
+{{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+
 ### All excess is ignored (`,`)
 
-Sample rendering: ![[a|b|c|d|e]](mfenced02.png)
-
-Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
-
 ```html
-<math>
+<math display="block">
   <mfenced open="[" close="]" separators="||||,">
     <mi>a</mi>
     <mi>b</mi>
@@ -63,6 +61,12 @@ Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>
   </mfenced>
 </math>
 ```
+
+Sample rendering: ![[a|b|c|d|e]](mfenced02.png)
+
+Rendering in your browser:
+
+{{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
 
 ## Specifications
 

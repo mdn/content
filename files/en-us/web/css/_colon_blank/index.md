@@ -1,8 +1,9 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
+page-type: css-pseudo-class
 tags:
-  - ':blank'
+  - ":blank"
   - CSS
   - CSS Selectors
   - Draft

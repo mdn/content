@@ -1,6 +1,7 @@
 ---
 title: inset-block-end
 slug: Web/CSS/inset-block-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

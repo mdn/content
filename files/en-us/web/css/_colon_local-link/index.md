@@ -1,6 +1,7 @@
 ---
-title: ':local-link'
+title: ":local-link"
 slug: Web/CSS/:local-link
+page-type: css-pseudo-class
 spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
 ---
 

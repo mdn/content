@@ -1,6 +1,7 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
+page-type: css-at-rule-descriptor
 tags:
   - "@counter-style"
   - At-rule descriptor

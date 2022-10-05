@@ -1,6 +1,7 @@
 ---
 title: font-variant-east-asian
 slug: Web/CSS/font-variant-east-asian
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

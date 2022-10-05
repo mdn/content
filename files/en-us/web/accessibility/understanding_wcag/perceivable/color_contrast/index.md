@@ -8,6 +8,8 @@ tags:
   - perceivable
 ---
 
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+
 The [color contrast](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) between background and foreground content (that is, usually text) should be great enough to ensure legibility.
 
 When designing readable interfaces for different vision capabilities, the WCAG guidelines recommend the following contrast ratios:
@@ -51,9 +53,16 @@ div {
 
 Both pieces of text have their default black color. The "good" `<div>` has a light purple background, which makes the text easy to read:
 
-<div class="hidden"><h4 id="example1">example1</h4><pre class="brush: html">    &#x3C;div class="good">
-      Good contrast
-    &#x3C;/div></pre><pre class="brush: css">div {
+### Good Contrast
+
+```html
+<div class="good">
+  Good contrast
+</div>
+```
+
+```css
+div {
   font-family: sans-serif;
   text-align: center;
   font-size: 2rem;
@@ -66,15 +75,23 @@ Both pieces of text have their default black color. The "good" `<div>` has a lig
 
 .good {
 background-color: #fae6fa;
-}</pre></div>
+}
+```
 
-{{EmbedLiveSample('example1', '100%', '100')}}
+{{EmbedLiveSample('Good_Contrast', '100%', '100')}}
 
 The "bad" `<div>` on the other hand has a very dark purple background, which makes the text much harder to read:
 
-<div class="hidden"><h4 id="example2">example2</h4><pre class="brush: html">    &#x3C;div class="bad">
-      Bad contrast
-    &#x3C;/div></pre><pre class="brush: css">div {
+### Bad Contrast
+
+```html
+<div class="bad">
+  Bad contrast
+</div>
+```
+
+```css
+div {
   font-family: sans-serif;
   text-align: center;
   font-size: 2rem;
@@ -87,9 +104,10 @@ The "bad" `<div>` on the other hand has a very dark purple background, which mak
 
 .bad {
 background-color: #400064;
-}</pre></div>
+}
+```
 
-{{EmbedLiveSample('example2', '100%', '100')}}
+{{EmbedLiveSample('Bad_Contrast', '100%', '100')}}
 
 ## Solution
 

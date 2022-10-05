@@ -1,6 +1,7 @@
 ---
 title: CSS Tutorials
 slug: Web/CSS/Tutorials
+page-type: landing-page
 tags:
   - CSS
   - Guide

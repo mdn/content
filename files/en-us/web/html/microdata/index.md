@@ -41,7 +41,7 @@ Commonly used vocabularies:
 - [`Thing`](https://schema.org/Thing)
 - [`Intangible`](https://schema.org/Intangible)
 
-Major search engine operators like Google, Microsoft, and Yahoo! rely on the [schema.org](https://schema.org/) vocabulary to improve search results. For some purposes, an ad-hoc vocabulary is adequate. For others, a vocabulary will need to be designed. Where possible, authors are encouraged to re-use existing vocabularies, as this makes content re-use easier.
+Major search engine operators like Google, Microsoft, and Yahoo! rely on the [schema.org](https://schema.org/) vocabulary to improve search results. For some purposes, an ad hoc vocabulary is adequate. For others, a vocabulary will need to be designed. Where possible, authors are encouraged to re-use existing vocabularies, as this makes content re-use easier.
 
 ## Localization
 

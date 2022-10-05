@@ -1,6 +1,7 @@
 ---
 title: ':-moz-focusring'
 slug: Web/CSS/:-moz-focusring
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

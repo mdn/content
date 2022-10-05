@@ -1,6 +1,7 @@
 ---
 title: resize
 slug: Web/CSS/resize
+page-type: css-property
 tags:
   - Basic User Interface
   - CSS

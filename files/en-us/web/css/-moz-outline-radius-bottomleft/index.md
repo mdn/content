@@ -1,6 +1,7 @@
 ---
-title: '-moz-outline-radius-bottomleft'
+title: "-moz-outline-radius-bottomleft"
 slug: Web/CSS/-moz-outline-radius-bottomleft
+page-type: css-property
 tags:
   - CSS
   - CSS Property

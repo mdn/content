@@ -82,7 +82,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell

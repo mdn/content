@@ -198,7 +198,7 @@ In this example we have two adjacent {{HTMLElement("div")}} elements, which each
 
 #### Preventing margin collapsing
 
-In this example we wrap the second `<div>` in an outer one, to create a new BFC and prevent margin callapsing.
+In this example we wrap the second `<div>` in an outer one, to create a new BFC and prevent margin collapsing.
 
 ```html
 <div class="blue"></div>
