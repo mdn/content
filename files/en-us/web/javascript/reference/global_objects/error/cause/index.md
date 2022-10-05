@@ -50,7 +50,7 @@ function makeRSA(p, q) {
   }
   if (!areCoprime(p, q)) {
     throw new Error('RSA key generation requires two co-prime integers.', {
-      cause: { code: 'NonCoprime', values: [p, q] },
+      cause: { code: 'NonCoprime', value: [p, q] },
     })
   }
   // rsa algorithm…
