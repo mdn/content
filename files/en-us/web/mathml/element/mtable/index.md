@@ -49,16 +49,16 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - {{ unimplemented_inline() }} rowspacing
   - : Specifies the space between table rows.
 - `width`
-  - : Specifies the width of the entire table. Accepts [length values](/en-US/docs/Web/MathML/Attribute/Values#lengths).
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the width of the entire table.
+
+> **Note:** For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 
 ### Alignment with row number
 
-Rendering: ![](mtable-1.png)
-
 ```html
-<math>
+<math display="block">
   <mi>X</mi>
   <mo>=</mo>
   <mtable frame="solid" rowlines="solid" align="axis 3">
@@ -77,6 +77,8 @@ Rendering: ![](mtable-1.png)
   </mtable>
 </math>
 ```
+
+{{ EmbedLiveSample('mtable_example', 700, 200, "", "") }}
 
 ## Specifications
 

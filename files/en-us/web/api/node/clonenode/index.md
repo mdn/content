@@ -50,7 +50,7 @@ cloneNode(deep)
     If `false`, only the node will be cloned.
     The subtree, including any text that the node contains, is not cloned.
 
-    Note that `deep` has no effect on empty elements,
+    Note that `deep` has no effect on {{glossary("void element", "void elements")}},
     such as the {{HTMLElement("img")}} and {{HTMLElement("input")}} elements.
 
 ### Return value

@@ -3,7 +3,6 @@ title: LTR (Left To Right)
 slug: Glossary/ltr
 tags:
   - Composing
-  - Glossary
   - Localization
 ---
 

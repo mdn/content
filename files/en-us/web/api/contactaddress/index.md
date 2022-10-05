@@ -30,16 +30,16 @@ _Inherits methods from its parent, {{domxref("PaymentAddress")}}_.
 The following example prompts the user to select contacts, then prints the first returned address to the console.
 
 ```js
-const props = ['address'];
-const opts = {multiple: true};
+const props = ["address"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, ops);
-      const contactAddress = contacts[0].address[0];
-      console.log(contactAddress)
+    const contacts = await navigator.contacts.select(props, ops);
+    const contactAddress = contacts[0].address[0];
+    console.log(contactAddress);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

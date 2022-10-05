@@ -1,6 +1,7 @@
 ---
 title: log()
 slug: Web/CSS/log
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -11,7 +12,6 @@ tags:
   - log
   - Experimental
 browser-compat: css.types.log
-spec-urls: https://www.w3.org/TR/css-values-4/#exponent-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -33,13 +33,13 @@ width: calc(100px * log(625, 5)); /* 400px */
 
 ### Parameters
 
-The `log(value, base?)` function accepts two comma-separated values as its parameters.
+The `log(value [, base]?)` function accepts two comma-separated values as its parameters.
 
 - `value`
-  - : A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be logarithmed.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be logarithmed.
 
 - `base`
-  - : Optional. A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not defined, the default logarithmic base `e` is used.
+  - : Optional. A calculation which resolves to a {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not defined, the default logarithmic base `e` is used.
 
 ### Return value
 

@@ -68,7 +68,7 @@ function reloadPageWithHash() {
 }
 ```
 
-### Example #4: Display the properties of the current URL in an alert dialog:
+### Example #4: Display the properties of the current URL in an alert dialog
 
 ```js
 function showLoc() {
@@ -82,7 +82,7 @@ function showLoc() {
 // in html: <button onclick="showLoc();">Show location properties</button>
 ```
 
-### Example #5: Send a string of data to the server by modifying the `search` property:
+### Example #5: Send a string of data to the server by modifying the `search` property
 
 ```js
 function sendData(data) {
@@ -95,7 +95,7 @@ function sendData(data) {
 The current URL with "?Some%20data" appended is sent to the server (if no action is
 taken by the server, the current document is reloaded with the modified search string).
 
-### Example #6: Using bookmarks without changing the `hash` property:
+### Example #6: Using bookmarks without changing the `hash` property
 
 ```html
 <!DOCTYPE html>
@@ -449,8 +449,8 @@ const showBookmark = (() => {
 
 ## See also
 
-- The interface of the returned value, {{domxref("Location")}}.
+- The interface of the returned value, {{domxref("Location")}}
 - A similar information, but attached to the document,
-  {{domxref("Document.location")}}.
+  {{domxref("Document.location")}}
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
 - {{domxref("Window/hashchange_event", "hashchange")}}

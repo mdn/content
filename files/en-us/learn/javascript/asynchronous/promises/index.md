@@ -32,7 +32,7 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 ## Using the fetch() API
 
-> **Note:** In this article we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
+> **Note:** In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
 >
 > 1. open a browser tab and visit <https://example.org>
 > 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
@@ -373,7 +373,7 @@ The `async` and `await` keywords make it easier to build an operation from a ser
 
 Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
 
-We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
+We didn't touch on all features of promises in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
 
 Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API), and many more.
 

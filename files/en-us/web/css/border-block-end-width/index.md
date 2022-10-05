@@ -1,6 +1,7 @@
 ---
 title: border-block-end-width
 slug: Web/CSS/border-block-end-width
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

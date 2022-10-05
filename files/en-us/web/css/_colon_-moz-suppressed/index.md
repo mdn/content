@@ -1,6 +1,7 @@
 ---
-title: ':-moz-suppressed'
+title: ":-moz-suppressed"
 slug: Web/CSS/:-moz-suppressed
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

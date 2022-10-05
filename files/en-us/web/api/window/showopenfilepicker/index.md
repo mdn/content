@@ -59,6 +59,10 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
   - : An AbortError is thrown if a user dismisses the prompt without making a selection or
     if a file selected is deemed too sensitive or dangerous to be exposed to the website.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 Here we set the options object for passing into the method. We'll allow a selection of

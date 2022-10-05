@@ -1,6 +1,7 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
+page-type: css-property
 tags:
   - CSS
   - CSS Background

@@ -1,6 +1,7 @@
 ---
 title: asin()
 slug: Web/CSS/asin
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -11,7 +12,6 @@ tags:
   - asin
   - Experimental
 browser-compat: css.types.asin
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -35,23 +35,36 @@ transform: rotate(asin(e / 3));
 The `asin(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying a number less than `-1` or greater than `1`, or `NaN`, the result is `NaN`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-1` and `1`.
+
+### Return value
+
+The inverse sine of an `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+
+- If `number` is less than `-1` or greater than `1`, the result is `NaN`.
+- If `number` is `0⁻`, the result is `0⁻`.
 
 ### Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Rotate elements
 
 The `asin()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
 
-```html hidden
-<div class="box"></div>
+#### HTML
+
+```html
 <div class="box box-1"></div>
 <div class="box box-2"></div>
 <div class="box box-3"></div>
 <div class="box box-4"></div>
+<div class="box box-5"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -69,25 +82,26 @@ div.box {
   height: 100px;
   background: linear-gradient(orange, red);
 }
-
 div.box-1 {
-  transform: rotate(asin(-0.2));
+  transform: rotate(asin(1));
 }
-
 div.box-2 {
-  transform: rotate(asin(2 * 0.125));
+  transform: rotate(asin(0.5));
 }
-
 div.box-3 {
-  transform: rotate(asin(pi / 5));
+  transform: rotate(asin(0));
 }
-
 div.box-4 {
-  transform: rotate(asin(e / 3));
+  transform: rotate(asin(-0.5));
+}
+div.box-5 {
+  transform: rotate(asin(-1));
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '200px')}}
+#### Result
+
+{{EmbedLiveSample('Rotate elements', '100%', '200px')}}
 
 ## Specifications
 

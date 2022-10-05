@@ -441,7 +441,7 @@ Use similar HTML as in the previous examples, we add the attribute with a value 
 
 {{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
 
-#### writing-mode: bt-lr;
+#### writing-mode: bt-lr
 
 The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects.
 

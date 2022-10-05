@@ -1,6 +1,7 @@
 ---
-title: ':nth-col'
+title: ":nth-col"
 slug: Web/CSS/:nth-col
+page-type: css-pseudo-class
 browser-compat: css.selectors.nth-col
 ---
 

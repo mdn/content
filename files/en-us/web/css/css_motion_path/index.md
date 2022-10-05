@@ -1,6 +1,7 @@
 ---
 title: CSS Motion Path
 slug: Web/CSS/CSS_Motion_Path
+page-type: css-module
 tags:
   - CSS
   - CSS Motion Path

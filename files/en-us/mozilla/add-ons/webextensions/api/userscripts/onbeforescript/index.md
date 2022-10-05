@@ -16,7 +16,9 @@ tags:
 browser-compat: webextensions.api.userScripts.onBeforeScript
 ---
 
-{{AddonSidebar}}The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
+{{AddonSidebar}}
+
+The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
 
 ## Syntax
 

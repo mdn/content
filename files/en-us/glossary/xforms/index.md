@@ -3,7 +3,6 @@ title: XForms
 slug: Glossary/XForms
 tags:
   - CodingScripting
-  - Glossary
   - Deprecated
   - XForms
 ---

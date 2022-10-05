@@ -1,6 +1,7 @@
 ---
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
+page-type: css-media-feature
 tags:
   - CSS
   - Reference

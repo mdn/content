@@ -3,7 +3,6 @@ title: IDL
 slug: Glossary/IDL
 tags:
   - CodingScripting
-  - Glossary
   - IDL
   - Interface description language
 ---

@@ -1,8 +1,9 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -21,20 +22,19 @@ The **`src`** CSS descriptor of the {{cssxref("@font-face")}} rule specifies the
 ```css
 /* <url> values */
 src: url(https://somewebsite.com/path/to/font.woff); /* Absolute URL */
-src: url(path/to/font.woff);                         /* Relative URL */
-src: url(path/to/font.woff) format("woff");          /* Explicit format */
-src: url('path/to/font.woff');                       /* Quoted URL */
-src: url(path/to/svgfont.svg#example);               /* Fragment identifying font */
+src: url(path/to/font.woff); /* Relative URL */
+src: url(path/to/font.woff) format("woff"); /* Explicit format */
+src: url("path/to/font.woff"); /* Quoted URL */
+src: url(path/to/svgfont.svg#example); /* Fragment identifying font */
 
 /* <font-face-name> values */
-src: local(font);      /* Unquoted name */
+src: local(font); /* Unquoted name */
 src: local(some font); /* Name containing space */
-src: local("font");    /* Quoted name */
+src: local("font"); /* Quoted name */
 
 /* Multiple items */
-src: local(font), url(path/to/font.svg) format("svg"),
-     url(path/to/font.woff) format("woff"),
-     url(path/to/font.otf) format("opentype");
+src: local(font), url(path/to/font.svg) format("svg"), url(path/to/font.woff)
+    format("woff"), url(path/to/font.otf) format("opentype");
 ```
 
 ### Values
@@ -75,15 +75,18 @@ As with other URLs in CSS, the URL may be relative, in which case it is resolved
   src: local(Example Font),
        url('examplefont.woff') format("woff"),
        url('examplefont.otf') format("opentype");
+      format("opentype");
 }
 
 /* a bold font face of the same family: */
 @font-face {
   font-family: examplefont;
-  src: local(Example Font Bold), /* full font name */
+src: local(Example Font Bold), /* full font name */
        local(Example Font-Bold), /* postscript name */
        url('examplefont.woff') format("woff"),
        url('examplefont.otf') format("opentype");
+      url("examplefont.woff") format("woff"),
+    url("examplefont.otf") format("opentype");
   font-weight: bold;
 }
 ```

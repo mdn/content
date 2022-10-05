@@ -10,34 +10,22 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 105 that will affect developers. Firefox 105 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [September 20, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 105 that affect developers. Firefox 105 was released on September 20, 2022.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
 - Embedded content, such as SVG definitions and content in an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), now respects the theme preferences of the elements in which it is embedded, rather than OS or browser preferences (which may be different).
   Specifically, embedded content now inherits the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedding element, and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media queries in the embedded content respect this value rather than the OS/browser level theme setting ({{bug(1779457)}}).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
+- Range restrictions have been relaxed on `formatRange` and `selectRange` functions for [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), and [`Intl.PluralRules`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) objects. This change now allows negative ranges ({{bug(1780545)}}).
 
 ### APIs
 
@@ -45,13 +33,10 @@ This article provides information about the changes in Firefox 105 that will aff
 
 - The [TextDecoderStream](/en-US/docs/Web/API/TextDecoderStream) and [TextEncoderStream](/en-US/docs/Web/API/TextEncoderStream) interfaces, part of the [Encoding API](/en-US/docs/Web/API/Encoding_API), are now supported ({{bug(1486949)}}).
 
-#### Media, WebRTC, and Web Audio
+- The [OffscreenCanvas](/en-US/docs/Web/API/OffscreenCanvas) API provides a canvas that can be rendered off-screen in both window and [web worker](/en-US/docs/Web/API/OffscreenCanvas#asynchronous_display_of_frames_produced_by_an_offscreencanvas) contexts.
+  This allows `<canvas>` elements to be decoupled from the DOM. The [OffscreenCanvasRenderingContext2D](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) interface provides support for this and is now enabled by default ({{bug(1746110)}}).
 
-#### Removals
-
-### WebAssembly
-
-#### Removals
+- The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) can now be used in worker threads ({{bug(1072107)}}).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -68,10 +53,7 @@ This article provides information about the changes in Firefox 105 that will aff
 ## Changes for add-on developers
 
 - Support for defining persistent scripts using {{WebExtAPIRef("scripting")}} has been added. A script is identified as persistent using the `persistAcrossSessions` property in {{WebExtAPIRef("scripting.RegisteredContentScript")}} ({{bug("1751436")}}).
-
-### Removals
-
-### Other
+- An extension's resources can no longer be loaded by other extensions by default. To enable other extensions to load resources they must be listed in the extension's [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) manifest key ({{bug("1711168")}}).
 
 ## Older versions
 

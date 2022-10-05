@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Scroll Snap

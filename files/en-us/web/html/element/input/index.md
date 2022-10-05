@@ -49,7 +49,7 @@ The available types are as follows:
       <td id="examplebutton">
         <pre class="brush: html hidden">
 &#x3C;input type="button" name="button" value="Button" /></pre>
-        {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplebutton",200,55)}}
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ The available types are as follows:
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
 &#x3C;input type="checkbox" name="checkbox"/></pre>
-        {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecheckbox",200,55)}}
       </td>
     </tr>
     <tr>
@@ -69,7 +69,7 @@ The available types are as follows:
       <td id="examplecolor">
         <pre class="brush: html hidden">
 &#x3C;input type="color" name="color"/></pre>
-        {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecolor",200,55)}}
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ The available types are as follows:
       <td id="exampledate">
         <pre class="brush: html hidden">
 &#x3C;input type="date" name="date"/></pre>
-        {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledate",200,55)}}
       </td>
     </tr>
     <tr>
@@ -96,7 +96,7 @@ The available types are as follows:
       <td id="exampledtl">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime-local" name="datetime-local"/></pre>
-        {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledtl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ The available types are as follows:
       <td id="exampleemail">
         <pre class="brush: html hidden">
 &#x3C;input type="email" name="email"/></pre>
-        {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleemail",200,55)}}
       </td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ The available types are as follows:
       <td id="examplefile">
         <pre class="brush: html hidden">
 &#x3C;input type="file" accept="image/*, text/*" name="file"/></pre>
-        {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplefile",'100%',55)}}
       </td>
     </tr>
     <tr>
@@ -134,7 +134,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
         >
-        {{EmbedLiveSample("examplehidden",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ The available types are as follows:
       <td id="exampleimage">
         <pre class="brush: html hidden">
 &#x3C;input type="image" name="image" src="" alt="image input"/></pre>
-        {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleimage",200,55)}}
       </td>
     </tr>
     <tr>
@@ -155,7 +155,7 @@ The available types are as follows:
       <td id="examplemonth">
         <pre class="brush: html hidden">
 &#x3C;input type="month" name="month"/></pre>
-        {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplemonth",200,55)}}
       </td>
     </tr>
     <tr>
@@ -168,7 +168,7 @@ The available types are as follows:
       <td id="examplenumber">
         <pre class="brush: html hidden">
 &#x3C;input type="number" name="number"/></pre>
-        {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplenumber",200,55)}}
       </td>
     </tr>
     <tr>
@@ -180,7 +180,7 @@ The available types are as follows:
       <td id="examplepassword">
         <pre class="brush: html hidden">
 &#x3C;input type="password" name="password"/></pre>
-        {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplepassword",200,55)}}
       </td>
     </tr>
     <tr>
@@ -192,7 +192,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="radio" name="radio"/></pre
         >
-        {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleradio",200,55)}}
       </td>
     </tr>
     <tr>
@@ -205,7 +205,7 @@ The available types are as follows:
       <td id="examplerange">
         <pre class="brush: html hidden">
 &#x3C;input type="range" name="range" min="0" max="25"/></pre>
-        {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplerange",200,55)}}
       </td>
     </tr>
     <tr>
@@ -217,7 +217,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="reset" name="reset"/></pre
         >
-        {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplereset",200,55)}}
       </td>
     </tr>
     <tr>
@@ -231,7 +231,7 @@ The available types are as follows:
       <td id="examplesearch">
         <pre class="brush: html hidden">
 &#x3C;input type="search" name="search"/></pre>
-        {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesearch",200,55)}}
       </td>
     </tr>
     <tr>
@@ -240,7 +240,7 @@ The available types are as follows:
       <td id="examplesubmit">
         <pre class="brush: html hidden">
 &#x3C;input type="submit" name="submit"/></pre>
-        {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesubmit",200,55)}}
       </td>
     </tr>
     <tr>
@@ -252,7 +252,7 @@ The available types are as follows:
       <td id="exampletel">
         <pre class="brush: html hidden">
 &#x3C;input type="tel" name="tel"/></pre>
-        {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletel",200,55)}}
       </td>
     </tr>
     <tr>
@@ -265,7 +265,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="text" name="text"/></pre
         >
-        {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletext",200,55)}}
       </td>
     </tr>
     <tr>
@@ -274,7 +274,7 @@ The available types are as follows:
       <td id="exampletime">
         <pre class="brush: html hidden">
 &#x3C;input type="time" name="time"/></pre>
-        {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletime",200,55)}}
       </td>
     </tr>
     <tr>
@@ -288,7 +288,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="url" name="url"/></pre
         >
-        {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleurl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -299,21 +299,21 @@ The available types are as follows:
       <td id="exampleweek">
         <pre class="brush: html hidden">
 &#x3C;input type="week" name="week"/></pre>
-        {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleweek",200,55)}}
       </td>
     </tr>
     <tr>
       <th colspan="3">Obsolete values</th>
     </tr>
     <tr>
-      <td>{{HTMLElement("input/datetime", "datetime")}}</td>
+      <td>`datetime`</td>
       <td>
         {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime" name="datetime"/></pre>
-        {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledatetime",200,75)}}
       </td>
     </tr>
   </tbody>
@@ -1204,7 +1204,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None, it is an {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

@@ -1,6 +1,7 @@
 ---
 title: Filter Effects
 slug: Web/CSS/Filter_Effects
+page-type: css-module
 tags:
   - CSS
   - Filter Effects

@@ -3,7 +3,6 @@ title: Object
 slug: Glossary/Object
 tags:
   - CodingScripting
-  - Glossary
   - Intro
   - Object
 ---

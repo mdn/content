@@ -4,7 +4,6 @@ slug: Glossary/Boolean
 tags:
   - Boolean
   - CodingScripting
-  - Glossary
   - JavaScript
   - Programming Languages
   - data types
@@ -39,5 +38,6 @@ The Boolean value is named after English mathematician [George Boole](https://en
 ## See also
 
 - [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) on Wikipedia
-- The JavaScript global object: {{jsxref("Boolean")}}
+- [Enumerated](/en-US/docs/Glossary/Enumerated)
+- [The JavaScript global object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

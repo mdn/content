@@ -1,6 +1,7 @@
 ---
 title: ':-moz-handler-crashed'
 slug: Web/CSS/:-moz-handler-crashed
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

@@ -1,6 +1,7 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model

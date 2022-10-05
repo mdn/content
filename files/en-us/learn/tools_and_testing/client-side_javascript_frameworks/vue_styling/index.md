@@ -146,7 +146,7 @@ body {
 Next, in your `src/main.js` file, import the `reset.css` file like so:
 
 ```js
-import './assets/reset.css';
+import "./assets/reset.css";
 ```
 
 This will cause the file to get picked up during the build step and automatically added to our site.

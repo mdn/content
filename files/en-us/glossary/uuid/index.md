@@ -2,7 +2,6 @@
 title: UUID
 slug: Glossary/UUID
 tags:
-  - Glossary
   - Infrastructure
 ---
 

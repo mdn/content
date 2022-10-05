@@ -678,9 +678,9 @@ See {{bug(1715546)}} for more details.
   </tbody>
 </table>
 
-### contains-intrinsic-size property
+### contain-intrinsic-size property
 
-The [`contains-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) property specifies the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) property specifies the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 This is needed when the [`contain: size`](/en-US/docs/Web/CSS/contain) or [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) properties are applied, so that the user agent can determine the size of the element without needing to render its child elements.
 ({{bug(1597529)}}).
 
@@ -932,47 +932,6 @@ This new API provides low-level support for performing computation and graphics 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webgpu.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### CSS Font Loading API
-
-The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) can now be used in worker threads.
-See {{bug(1072107)}}.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.font-loading-api.workers.enabled</code></td>
     </tr>
   </tbody>
 </table>

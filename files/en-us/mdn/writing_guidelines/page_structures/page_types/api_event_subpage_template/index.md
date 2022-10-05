@@ -21,7 +21,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >
 > ```md
 > ---
-> title: 'NameOfTheParentInterface: NameOfTheEvent event'
+> title: "NameOfTheParentInterface: NameOfTheEvent event"
 > slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
 > page-type: web-api-event
 > tags:
@@ -107,9 +107,9 @@ You could copy most of this from the property's summary on the corresponding API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('NameOfTheEvent', (event) => {});
+addEventListener("NameOfTheEvent", (event) => {});
 
-onNameOfTheEvent = (event) => { };
+onNameOfTheEvent = (event) => {};
 ```
 
 ## Event type
@@ -147,6 +147,8 @@ and
 which can provide more information.
 
 ## Examples
+
+Note that we use the plural "Examples" even if the page only contains one example.
 
 ### A descriptive heading
 

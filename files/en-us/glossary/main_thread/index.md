@@ -2,7 +2,6 @@
 title: Main thread
 slug: Glossary/Main_thread
 tags:
-  - Glossary
   - Reference
   - Web Performance
 ---

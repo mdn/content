@@ -6,6 +6,10 @@ tags:
   - Authoring
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 ## Guidelines and Regulations
 
 1. [<abbr>ARIA</abbr> Authoring Practices Guide (<abbr>APG</abbr>)](https://www.w3.org/WAI/ARIA/apg/)

@@ -2,7 +2,6 @@
 title: non-normative
 slug: Glossary/non-normative
 tags:
-  - Glossary
   - Infrastructure
   - Specification
   - Standardization

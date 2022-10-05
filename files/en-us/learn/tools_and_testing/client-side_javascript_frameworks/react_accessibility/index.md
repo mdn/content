@@ -104,8 +104,7 @@ The "Edit" button in your view template should read like this:
   type="button"
   className="btn"
   onClick={() => setEditing(true)}
-  ref={editButtonRef}
->
+  ref={editButtonRef}>
   Edit <span className="visually-hidden">{props.name}</span>
 </button>
 ```
@@ -187,10 +186,10 @@ In order to meet our refined criteria, we need to know not just the value of `is
 
 ```jsx
 if (wasNotEditingBefore && isEditingNow) {
-  focusOnEditField()
+  focusOnEditField();
 }
 if (wasEditingBefore && isNotEditingNow) {
-  focusOnEditButton()
+  focusOnEditButton();
 }
 ```
 

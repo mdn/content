@@ -131,7 +131,7 @@ For example, we could rewrite our previous example to use `@supports` — see [`
 }
 ```
 
-This at-rule block applies the CSS rule within only if the current browser supports both the `flex-flow: row` and `flex: 1` declarations. For each condition to work, you need to include a complete declaration (not just a property name) and NOT include the semi-colon on the end.
+This at-rule block applies the CSS rule within only if the current browser supports both the `flex-flow: row` and `flex: 1` declarations. For each condition to work, you need to include a complete declaration (not just a property name) and NOT include the semicolon on the end.
 
 `@supports` also has `OR` and `NOT` logic available — the other block applies the float layout if the flexbox properties are not available:
 
@@ -349,7 +349,6 @@ For example, load up our [`modernizr-css.html`](https://github.com/mdn/learning-
 
 ```
 Modernizr.flexbox
-Modernizr.websqldatabase
 Modernizr.xhr2
 Modernizr.fetch
 ```

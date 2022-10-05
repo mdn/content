@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: tree role'
+title: "ARIA: tree role"
 slug: Web/Accessibility/ARIA/Roles/tree_role
 tags:
   - Accessibility
@@ -148,7 +148,7 @@ For a vertically oriented `tree`, which is the default orientation:
 
 There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended.
 
-#### Recommended multi user select model:
+#### Recommended multi user select model
 
 <table>
 <tr>

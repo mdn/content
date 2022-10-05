@@ -102,5 +102,5 @@ navigator.mediaDevices.getUserMedia(constraints)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Returns a reference to a `MediaDevices` object that can be used to access devices.
-- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML video capture and playback using `MediaDevices` and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using `MediaDevices` and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML video capture and playback using `MediaDevices` and the MediaStream Recording API
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using `MediaDevices` and the MediaStream Recording API for video recording

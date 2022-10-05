@@ -2,7 +2,6 @@
 title: MitM
 slug: Glossary/MitM
 tags:
-  - Glossary
   - Security
 ---
 

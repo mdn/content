@@ -1,6 +1,7 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation

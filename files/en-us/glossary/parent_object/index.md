@@ -3,7 +3,6 @@ title: Parent object
 slug: Glossary/Parent_object
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

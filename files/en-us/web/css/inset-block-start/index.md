@@ -1,6 +1,7 @@
 ---
 title: inset-block-start
 slug: Web/CSS/inset-block-start
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

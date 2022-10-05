@@ -41,8 +41,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.colorManagement.mode.set({value: "full"}).
-  then(logResult);
+browser.browserSettings.colorManagement.mode
+  .set({ value: "full" })
+  .then(logResult);
 ```
 
 Get the native sRGB color management color mode:
@@ -52,8 +53,7 @@ function logResult(result) {
   console.log(`Current useNativeSRGB value: ${result.value}`);
 }
 
-browser.browserSettings.colorManagement.useNativeSRGB.get({}).
-  then(logResult);
+browser.browserSettings.colorManagement.useNativeSRGB.get({}).then(logResult);
 ```
 
 {{WebExtExamples}}

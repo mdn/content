@@ -1,6 +1,7 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Flexible Boxes

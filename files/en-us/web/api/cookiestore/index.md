@@ -41,20 +41,21 @@ In this example we set a cookie and write to the console feedback as to whether 
 
 ```js
 const day = 24 * 60 * 60 * 1000;
-cookieStore.set({
-  name: "cookie1",
-  value: "cookie1-value",
-  expires: Date.now() + day,
-  domain: "example.com"
-})
-.then(
-  () => {
-    console.log("It worked!");
-  },
-  (reason) => {
-    console.error("It failed: ", reason);
-  }
-);
+cookieStore
+  .set({
+    name: "cookie1",
+    value: "cookie1-value",
+    expires: Date.now() + day,
+    domain: "example.com",
+  })
+  .then(
+    () => {
+      console.log("It worked!");
+    },
+    (reason) => {
+      console.error("It failed: ", reason);
+    }
+  );
 ```
 
 ## Specifications

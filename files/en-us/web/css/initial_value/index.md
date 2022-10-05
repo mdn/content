@@ -1,6 +1,7 @@
 ---
 title: Initial value
 slug: Web/CSS/initial_value
+page-type: guide
 tags:
   - CSS
   - Guide

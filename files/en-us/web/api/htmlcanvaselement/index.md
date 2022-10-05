@@ -42,7 +42,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
   - : Returns a data-URL containing a representation of the image in the format specified by the `type` parameter (defaults to `png`). The returned image is in a resolution of 96dpi.
 - {{domxref("HTMLCanvasElement.toBlob()")}}
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent.
-- {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} {{experimental_inline}}
+- {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
   - : Transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main thread or on a worker.
 
 ## Events

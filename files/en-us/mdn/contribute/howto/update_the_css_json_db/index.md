@@ -9,7 +9,7 @@ tags:
 
 {{MDNSidebar}}
 
-Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad-hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/main/css). This article describes how to update this structure.
+Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/main/css). This article describes how to update this structure.
 
 ## Prerequisite resources
 

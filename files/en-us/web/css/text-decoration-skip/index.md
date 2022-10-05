@@ -1,6 +1,7 @@
 ---
 title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
+page-type: css-property
 tags:
   - CSS
   - CSS Property

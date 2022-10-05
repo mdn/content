@@ -72,7 +72,7 @@ For a full example, see our [simple worker example](https://github.com/mdn/dom-e
 
 This minimum example has `main` create an `ArrayBuffer` and transfer it to `myWorker`, then has `myWorker` transfer it back to `main`, with the size logged at each step.
 
-#### main.js code:
+#### main.js code
 
 ```js
 // create worker

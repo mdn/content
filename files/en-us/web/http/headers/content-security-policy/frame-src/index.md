@@ -1,5 +1,5 @@
 ---
-title: 'CSP: frame-src'
+title: "CSP: frame-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
 tags:
   - CSP
@@ -20,6 +20,9 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`frame-src`** directive specifies valid sources for nested
 browsing contexts loading using elements such as {{HTMLElement("frame")}} and
 {{HTMLElement("iframe")}}.
+
+> **Note:** **`frame-src`** allows you to specify where iframes in a page may be loaded from.
+> This differs from **`frame-ancestors`**, which allows you to specify what parent source may embed a page.
 
 <table class="properties">
   <tbody>
@@ -85,3 +88,4 @@ The following {{HTMLElement("iframe")}} is blocked and won't load:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}
+- {{CSP("frame-ancestors")}}

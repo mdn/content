@@ -1,6 +1,7 @@
 ---
 title: symbols()
 slug: Web/CSS/symbols
+page-type: css-function
 tags:
   - CSS
   - CSS Counter Styles

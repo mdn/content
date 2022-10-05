@@ -2,7 +2,6 @@
 title: Safe (HTTP Methods)
 slug: Glossary/Safe/HTTP
 tags:
-  - Glossary
   - WebMechanics
 ---
 

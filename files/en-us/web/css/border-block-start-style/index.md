@@ -1,6 +1,7 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/border-block-start-style
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

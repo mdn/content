@@ -14,7 +14,9 @@ tags:
 browser-compat: webextensions.api.storage.StorageChange
 ---
 
-{{AddonSidebar()}}`StorageChange` is an object representing a change to a storage area.
+{{AddonSidebar()}}
+
+`StorageChange` is an object representing a change to a storage area.
 
 ## Type
 

@@ -3,7 +3,6 @@ title: Element
 slug: Glossary/Element
 tags:
   - CodingScripting
-  - Glossary
   - HTML
 ---
 

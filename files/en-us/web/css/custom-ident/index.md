@@ -1,6 +1,7 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

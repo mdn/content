@@ -59,7 +59,7 @@ All basic text controls share some common behaviors:
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
 - They can benefit from spell checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
 
-> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
@@ -109,7 +109,7 @@ Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLEl
 
 ## Checkable items: checkboxes and radio buttons
 
-Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable item: the check box and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute to indicate whether the widget is checked by default or not.
+Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable item: the checkbox and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute to indicate whether the widget is checked by default or not.
 
 It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
@@ -117,9 +117,9 @@ It's worth noting that these widgets do not behave exactly like other form widge
 
 For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
 
-### Check box
+### Checkbox
 
-A check box is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
+A checkbox is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
@@ -165,10 +165,10 @@ Due to the on-off nature of checkboxes, the checkbox is considered a toggle butt
 A radio button is created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value `radio`:
 
 ```html
-<input type="radio" id="soup" name="meal" checked />
+<input type="radio" id="soup" name="meal" value="soup" checked />
 ```
 
-Several radio buttons can be tied together. If they share the same value for their {{htmlattrxref("name","input")}} attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all of the buttons without resetting the form.
+Several radio buttons can be tied together. If they share the same value for their {{htmlattrxref("name","input")}} attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all the buttons without resetting the form.
 
 ```html
 <fieldset>
@@ -207,6 +207,44 @@ The radio button isn't actually a button, despite its name; let's move on and lo
 
 Then we also have the {{htmlelement("button")}} element itself. This can take a `type` attribute of value `submit`, `reset`, or `button` to mimic the behavior of the three `<input>` types mentioned above. The main difference between the two is that actual `<button>` elements are much easier to style.
 
+```html
+  <input type="submit" value="Submit this form">
+  <input type="reset" value="Reset this form">
+  <input type="button" value="Do Nothing without JavaScript">
+
+  <button type="submit">Submit this form</button>
+  <button type="reset">Reset this form</button>
+  <button type="button">Do Nothing without JavaScript</button>
+```
+
+```html hidden
+<div class="buttondemo">
+<p>Using &lt;input>
+<p>
+  <input type="submit" value="Submit this form">
+  <input type="reset" value="Reset this form">
+  <input type="button" value="Do Nothing without JavaScript">
+</p>
+<p>Using &lt;button>
+<p>
+  <button type="submit">Submit this form</button>
+  <button type="reset">Reset this form</button>
+  <button type="button">Do Nothing without JavaScript</button>
+</p>
+</div>
+```
+
+```css hidden
+button, input {
+  display: none;
+}
+.buttondemo button, .buttondemo input {
+  all: revert;
+}
+```
+
+{{ EmbedLiveSample('Actual_buttons', '500', '250') }}
+
 > **Note:** The `image` input type also renders as a button. We'll cover that later too.
 
 > **Note:** You can find the examples from this section on GitHub as [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
@@ -237,7 +275,7 @@ Below you can find examples of each button `<input>` type, along with the equiva
 <input type="button" value="This is an anonymous button" />
 ```
 
-Buttons always behave the same whether you use a {{HTMLElement("button")}} element or an {{HTMLElement("input")}} element. As you can see from the examples, however, {{HTMLElement("button")}} elements let you use HTML in their content, which is inserted between the opening and closing `<button>` tags. {{HTMLElement("input")}} elements on the other hand are empty elements; their displayed content is inserted inside the `value` attribute, and therefore only accepts plain text as content.
+Buttons always behave the same whether you use a {{HTMLElement("button")}} element or an {{HTMLElement("input")}} element. As you can see from the examples, however, {{HTMLElement("button")}} elements let you use HTML in their content, which is inserted between the opening and closing `<button>` tags. {{HTMLElement("input")}} elements on the other hand are {{glossary("void element", "void elements")}}; their displayed content is inserted inside the `value` attribute, and therefore only accepts plain text as content.
 
 The following examples show default, focused, and disabled button input types — in Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10.
 
@@ -369,7 +407,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-This article has covered the older input types — the original set introduced in the early days of HTML that is well supported in all browsers. In the next section, we'll take a look at the more modern values of the `type` attribute.
+This article has covered the older input types — the original set introduced in the early days of HTML that is well-supported in all browsers. In the next section, we'll take a look at the more modern values of the `type` attribute.
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 

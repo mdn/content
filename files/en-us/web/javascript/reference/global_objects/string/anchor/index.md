@@ -15,14 +15,11 @@ browser-compat: javascript.builtins.String.anchor
 
 {{JSRef}} {{deprecated_header}}
 
-The **`anchor()`** method creates a string beginning with an
-`<a name="...">` start tag, then some text, and then an
-`</a>` end tag.
+The **`anchor()`** method creates a string that embeds a string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
 
-> **Warning:** Don't use this method. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) instead.
-> Also, the HTML specification no longer allows the
-> {{HTMLElement("a")}} element to have a `name` attribute, so this method
-> doesn't even create valid markup.
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
+>
+> The HTML specification no longer allows the {{HTMLElement("a")}} element to have a `name` attribute, so this method doesn't even create valid markup.
 
 ## Syntax
 
@@ -33,29 +30,20 @@ anchor(name)
 ### Parameters
 
 - `name`
-  - : A string representing a `name` value to put into the generated
-    `<a name="...">` start tag.
+  - : A string representing a `name` value to put into the generated `<a name="...">` start tag.
 
 ### Return value
 
-A string beginning with an `<a name="name">` start tag,
-then the text _str_, and then an `</a>` end tag.
-
-## Description
-
-Don't use this method. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) instead.
-Also, the HTML specification no longer allows the
-{{HTMLElement("a")}} element to have a `name` attribute, so this method
-doesn't even create valid markup.
+A string beginning with an `<a name="name">` start tag (double quotes in `name` are replaced with `&quot;`), then the text `str`, and then an `</a>` end tag.
 
 ## Examples
 
 ### Using anchor()
 
 ```js
-const myString = 'Table of Contents';
+const myString = "Table of Contents";
 
-document.body.innerHTML = myString.anchor('contents_anchor');
+document.body.innerHTML = myString.anchor("contents_anchor");
 ```
 
 will output the following HTML:

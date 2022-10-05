@@ -1,6 +1,7 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders

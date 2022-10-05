@@ -65,13 +65,13 @@ These basic pseudo-classes should be familiar to you now. More recently, the [CS
 - {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the `checked` attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the `selected` attribute set).
 
-There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
+There are many others too, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems, or not very well-supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
 
-> **Note:** A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple with regards to form validation, so it doesn't confuse things.
+> **Note:** A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple regarding the form validation, so it doesn't confuse things.
 
 ## Styling inputs based on whether they are required or not
 
-One of the most basic concepts with regards to client-side form validation is whether a form input is required (it has to be filled in before the form can be submitted) or optional.
+One of the most basic concepts regarding client-side form validation is whether a form input is required (it has to be filled in before the form can be submitted) or optional.
 
 {{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form will successfully submit. For example:
 
@@ -411,25 +411,33 @@ Now finally, we've used some JavaScript to toggle the disabling of the billing a
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', () => {
-  // Attach `change` event listener to checkbox
-  document.getElementById('billing-checkbox').addEventListener('change', toggleBilling);
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    // Attach `change` event listener to checkbox
+    document
+      .getElementById("billing-checkbox")
+      .addEventListener("change", toggleBilling);
+  },
+  false
+);
 
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
   // Select the billing text labels
-  const billingLabels = document.querySelectorAll('.billing-label');
+  const billingLabels = document.querySelectorAll(".billing-label");
 
   // Toggle the billing text fields and labels
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
-    if (billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
-      billingLabels[i].setAttribute('class', 'billing-label');
+    if (
+      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
+    ) {
+      billingLabels[i].setAttribute("class", "billing-label");
     } else {
-      billingLabels[i].setAttribute('class', 'billing-label disabled-label');
+      billingLabels[i].setAttribute("class", "billing-label disabled-label");
     }
   }
 }
@@ -610,7 +618,7 @@ The following are fairly well-supported in modern browsers:
 
 The following are also interesting, but as yet not well-supported in browsers:
 
-- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other empty elements like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
+- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other {{glossary("void element", "void elements")}} like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
 - The [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
 
 ## Test your skills!

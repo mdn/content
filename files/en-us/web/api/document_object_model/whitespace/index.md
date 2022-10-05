@@ -34,7 +34,7 @@ This source code contains a couple of line feeds after the `DOCTYPE` and a bunch
 
 This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
 
-### What _does_ happen to whitespace?
+### What does happen to whitespace?
 
 They don't just disappear, however.
 
@@ -63,7 +63,7 @@ Take the following document, for example:
 
 The DOM tree for this looks like so:
 
-![dom tree equivalent of the above HTML example](dom-string.png)
+![The DOM tree representing a simple HTML document](dom-string.png)
 
 Conserving whitespace characters in the DOM is useful in many ways, but there are certain places where this makes certain layouts more difficult to implement, and causes problems for developers who want to iterate through nodes in the DOM. We'll look at these, and some solutions, later on.
 

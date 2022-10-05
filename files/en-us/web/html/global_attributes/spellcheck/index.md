@@ -10,7 +10,7 @@ browser-compat: html.global_attributes.spellcheck
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute defines whether the element may be checked for spelling errors.
+The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that defines whether the element may be checked for spelling errors.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
 

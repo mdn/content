@@ -70,7 +70,16 @@ The summary paragraph — start by naming the interface, saying what API it is p
 - {{DOMxRef("NameOfTheInterface.NameOfTheInterface", "NameOfTheInterface()")}}
   - : Creates a new instance of the {{DOMxRef("NameOfTheInterface")}} object.
 
-## Properties
+## Static properties
+
+_Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+
+- {{DOMxRef("NameOfTheInterface.staticProperty1")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Include a brief description of the property and what it does here. Include one term and definition for each property. If the property is not readonly/experimental/deprecated, remove the relevant macro calls.
+- {{DOMxRef("NameOfTheInterface.staticProperty2")}}
+  - : etc.
+
+## Instance properties
 
 _Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
@@ -79,7 +88,16 @@ _Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInte
 - {{DOMxRef("NameOfTheInterface.property2")}}
   - : etc.
 
-## Methods
+## Static methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+
+- {{DOMxRef("NameOfTheInterface.staticMethod1()")}} {{Experimental_Inline}} {{Deprecated_Inline}}
+  - : Include a brief description of the method and what it does here. Include one term and definition for each method. If the method is not experimental/deprecated, remove the relevant macro calls.
+- {{DOMxRef("NameOfTheInterface.staticMethod2()")}}
+  - : etc.
+
+## Instance methods
 
 _Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
@@ -102,6 +120,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when…
 
 ## Examples
+
+Note that we use the plural "Examples" even if the page only contains one example.
 
 ### A descriptive heading
 

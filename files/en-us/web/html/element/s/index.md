@@ -88,7 +88,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```html
 <s>Today's Special: Salmon</s> SOLD OUT<br />
-<span class="sould-out">Today's Special: Salmon</span> SOLD OUT
+<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
 ```
 
 {{EmbedLiveSample("Examples")}}

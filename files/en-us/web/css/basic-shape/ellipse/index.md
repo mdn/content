@@ -1,6 +1,7 @@
 ---
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

@@ -4,7 +4,6 @@ slug: Glossary/Clickjacking
 tags:
   - Clickjacking
   - Interface-based attack
-  - Glossary
   - Security
   - vulnerability
   - exploit
