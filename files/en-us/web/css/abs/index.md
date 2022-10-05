@@ -68,7 +68,7 @@ div {
 
 ### Backwards compatible fallback
 
-If you need to support older browsers that lack the support of CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} functions to achieve the same result:
+In older browsers that lack the support for CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} function to achieve the same result, as shown below:
 
 ```css
 p {
@@ -76,7 +76,7 @@ p {
 }
 ```
 
-We use the {{CSSxRef("max")}} function to return the largest (most positive) value from a list of two values, either the `var(--lh)` or `-1 * var(--lh)`. Whether `--lh` is positive or negative, the calculated return value will always be positive, i.e. the absolute number.
+We use the {{CSSxRef("max")}} function to return the largest (most positive) value from a list of two values: `var(--lh)` or `-1 * var(--lh)`. Irrespective of whether `--lh` is positive or negative, the calculated return value will always be positive, that is, an absolute number.
 
 ## Specifications
 
