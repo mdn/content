@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet
 slug: Web/API/FontFaceSet
+page-type: web-api-interface
 tags:
   - API
   - CSS Font Loading API
@@ -10,27 +11,32 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status. It is available as {{domxref("Document.fonts")}}.
+The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status.
+
+This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in [web workers](/en-US/docs/Web/API/Web_Workers_API).
+
+{{InheritanceDiagram}}
 
 ## Properties
 
-- {{domxref("FontFaceSet.status")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.status")}} {{ReadOnlyInline}}
   - : Indicates the font-face's loading status. It will be one of `'loading'` or `'loaded'`.
-- {{domxref("FontFaceSet.ready")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.ready")}} {{ReadOnlyInline}}
   - : {{jsxref("Promise")}} which resolves once font loading and layout operations have completed.
-- {{domxref("FontFaceSet.size")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.size")}} {{ReadOnlyInline}}
   - : Returns the number of values in the `FontFaceSet`.
 
 ### Events
 
-- {{domxref("FontFaceSet.onloading")}}
-  - : An {{domxref("EventListener")}} called whenever an event of type `loading` is fired, indicating a font-face set has started loading.
-- {{domxref("FontFaceSet.onloadingdone")}}
-  - : An {{domxref("EventListener")}} called whenever an event of type `loadingdone` is fired, indicating that a font face set has finished loading.
-- {{domxref("FontFaceSet.onloadingerror")}}
-  - : An {{domxref("EventListener")}} called whenever an event of type `loadingerror` is fired, indicating that an error occurred whilst loading a font-face set.
+- {{domxref("FontFaceSet.loading_event", "loading")}}
+  - : Fires when a font-face set has started loading.
+- {{domxref("FontFaceSet.loadingdone_event", "loadingdone")}}
+  - : Fires when a font face set has finished loading.
+- {{domxref("FontFaceSet.loadingerror_event", "loadingerror")}}
+  - : Fires when an error occurred whilst loading a font-face set.
 
 ## Methods
 

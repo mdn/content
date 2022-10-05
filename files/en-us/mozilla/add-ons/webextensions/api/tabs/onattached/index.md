@@ -13,13 +13,14 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onAttached
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is attached to a window, for example because it was moved between windows.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onAttached.addListener(listener)
 browser.tabs.onAttached.removeListener(listener)
 browser.tabs.onAttached.hasListener(listener)
@@ -44,9 +45,6 @@ Events have three functions:
 
     - `tabId`
       - : `integer`. ID of the tab that was attached to a new window.
-
-    <!---->
-
     - `attachInfo`
       - : [`object`](#attachinfo). ID of the new window, and index of the tab within it.
 
@@ -65,9 +63,9 @@ Listen for attach events, and log the info:
 
 ```js
 function handleAttached(tabId, attachInfo) {
-  console.log("Tab: " + tabId + " attached");
-  console.log("New window: " + attachInfo.newWindowId);
-  console.log("New index: " + attachInfo.newPosition);
+  console.log(`Tab: ${tabId} attached`);
+  console.log(`New window: ${attachInfo.newWindowId}`);
+  console.log(`New index: ${attachInfo.newPosition}`);
 }
 
 browser.tabs.onAttached.addListener(handleAttached);
@@ -79,11 +77,12 @@ browser.tabs.onAttached.addListener(handleAttached);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onAttached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onAttached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,4 +109,4 @@ browser.tabs.onAttached.addListener(handleAttached);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

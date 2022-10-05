@@ -1,6 +1,7 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.z-index
 ---
+
 {{CSSRef}}
 
 The **`z-index`** CSS property sets the z-order of a [positioned](/en-US/docs/Web/CSS/position) element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
@@ -17,8 +19,8 @@ The **`z-index`** CSS property sets the z-order of a [positioned](/en-US/docs/We
 
 For a positioned box (that is, one with any `position` other than `static`), the `z-index` property specifies:
 
-1.  The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
-2.  Whether the box establishes a local stacking context.
+1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+2. Whether the box establishes a local stacking context.
 
 ## Syntax
 
@@ -36,6 +38,7 @@ z-index: -1; /* Negative values to lower the priority */
 z-index: inherit;
 z-index: initial;
 z-index: revert;
+z-index: revert-layer;
 z-index: unset;
 ```
 

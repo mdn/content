@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisVoice.name
 slug: Web/API/SpeechSynthesisVoice/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -12,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.name
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`name`** read-only property of the
@@ -20,21 +22,21 @@ represents the voice.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the name of the voice.
+A string representing the name of the voice.
 
 ## Examples
 
 ```js
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+for (const voice of voices) {
+  const option = document.createElement('option');
+  option.textContent = `${voice.name} (${voice.lang})`;
 
-  if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+  if (voice.default) {
+    option.textContent += ' — DEFAULT';
   }
 
-  option.setAttribute('data-lang', voices[i].lang);
-  option.setAttribute('data-name', voices[i].name);
+  option.setAttribute('data-lang', voice.lang);
+  option.setAttribute('data-name', voice.name);
   voiceSelect.appendChild(option);
 }
 ```

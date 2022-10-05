@@ -1,11 +1,13 @@
 ---
 title: User Timing API
 slug: Web/API/User_Timing_API
+page-type: web-api-overview
 tags:
   - Guide
   - Overview
   - Web Performance
 ---
+
 {{DefaultAPISidebar("User Timing API")}}
 
 The **`User Timing`** interface allows the developer to create application specific {{domxref("DOMHighResTimeStamp","timestamps")}} that are part of the browser's _performance timeline_. There are two types of _user_ defined timing event types: the "`mark`" {{domxref("PerformanceEntry.entryType","event type")}} and the "`measure`" {{domxref("PerformanceEntry.entryType","event type")}}.
@@ -76,7 +78,7 @@ To remove a specific measure from the performance timeline, call `performance.cl
 
 ## Interoperability
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, the `User Timing` methods are broadly implemented by desktop and mobile browsers (the only exceptions are  Desktop Safari and Mobile Safari, however [the Safari Technology Preview 24 has support](https://developer.apple.com/safari/technology-preview/release-notes/#r24)).
+As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, the `User Timing` methods are broadly implemented by desktop and mobile browsers (the only exceptions are Desktop Safari and Mobile Safari, however [the Safari Technology Preview 24 has support](https://developer.apple.com/safari/technology-preview/release-notes/#r24)).
 
 To test your browser's support for this API, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 

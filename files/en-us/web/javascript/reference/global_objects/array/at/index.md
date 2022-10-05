@@ -9,10 +9,10 @@ tags:
   - Reference
   - polyfill
   - at
-  - Experimental
   - Polyfill
 browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
@@ -23,7 +23,7 @@ This is not to suggest there is anything wrong with using the square bracket not
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 
@@ -92,7 +92,7 @@ console.log(atWay); // Logs: 'green'
 
 ## See also
 
-- A polyfill of `Array.prototype.at` is available in [`core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
 - [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("Array.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.

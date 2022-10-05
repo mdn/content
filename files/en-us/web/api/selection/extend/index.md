@@ -1,16 +1,17 @@
 ---
 title: Selection.extend()
 slug: Web/API/Selection/extend
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.extend
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+
+{{ ApiRef("DOM") }}
 
 The **`Selection.extend()`** method moves the focus of the
 selection to a specified point. The anchor of the selection does not move. The selection
@@ -18,8 +19,9 @@ will be from the anchor to the new focus, regardless of direction.
 
 ## Syntax
 
-```js
-sel.extend(node, offset)
+```js-nolint
+extend(node)
+extend(node, offset)
 ```
 
 ### Parameters
@@ -29,6 +31,10 @@ sel.extend(node, offset)
 - `offset` {{optional_inline}}
   - : The offset position within `node` where the focus will be moved to. If
     not specified, the default value `0` is used.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -1,13 +1,16 @@
 ---
 title: CSS Generated Content
 slug: Web/CSS/CSS_Generated_Content
+page-type: css-module
 tags:
   - CSS
   - CSS Generated Content
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-content/
 ---
+
 {{CSSRef}}
 
 **CSS Generated Content** is a module of CSS that defines how to add content to an element. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.
@@ -23,16 +26,9 @@ See the [how to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generat
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Content")}} | {{Spec2("CSS3 Content")}} |                    |
-| {{SpecName('CSS2.1')}}         | {{Spec2('CSS2.1')}}         | Initial definition |
+{{Specifications}}
 
 ## See also
 
 - [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
-- {{cssxref("content")}}
-- {{cssxref("quotes")}}
-- {{cssxref("::before")}}
-- {{cssxref("::after")}}
-- {{cssxref("::marker")}}
+- Pseudo-elements: {{cssxref("::before")}}, {{cssxref("::after")}}, {{cssxref("::marker")}}

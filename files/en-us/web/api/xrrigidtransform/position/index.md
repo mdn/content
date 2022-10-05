@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.position
 slug: Web/API/XRRigidTransform/position
+page-type: web-api-instance-property
 tags:
   - 3D
   - API
@@ -19,6 +20,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform.position
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRRigidTransform")}} property
@@ -33,7 +35,7 @@ transform matrix. The units are meters.
 
 > **Note:** The `w` component of the point is always 1.0.
 
-## Example
+## Examples
 
 To create a reference space which can be used to place an object at eye level (assuming
 eye level is 1.5 meters):
@@ -44,7 +46,7 @@ function onSessionStarted(xrSession) {
 
   gl = initGraphics(xrSession);
 
-  let glLayer = new XRWebGLLayer(xrSession, gl);
+  const glLayer = new XRWebGLLayer(xrSession, gl);
   xrSession.updateRenderState({ baseLayer: glLayer });
 
   if (immersiveSession) {
@@ -59,20 +61,16 @@ function onSessionStarted(xrSession) {
 }
 
 function refSpaceCreated(refSpace) {
-  if (immersiveSession) {
-    xrReferenceSpace = refSpace;
-  } else {
-    xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-      new XRRigidTransform({y: -1.5});
-    );
-  }
+  xrReferenceSpace = immersiveSession
+    ? refSpace
+    : refSpace.getOffsetReferenceSpace(new XRRigidTransform({ y: -1.5 }));
   xrSession.requestAnimationFrame(onFrame);
 }
 ```
 
 After setting up the graphics context for WebXR use, this begins by looking to see if a
 variable `immersiveSession` is `true`; if so, we first request a
-`bounded-floor` reference space. if that fails (probably because
+`bounded-floor` reference space. If that fails (probably because
 `bounded-floor` isn't supported), we try requesting a
 `local-floor` reference space.
 
@@ -81,7 +79,7 @@ reference space.
 
 In all cases, once the space has been obtained, it gets passed into the
 `refSpaceCreated()` function. For immersive spaces, the specified space is
-saved for future use. However, for inline sesions, we know we're in a space not
+saved for future use. However, for inline sessions, we know we're in a space not
 automatically adjusted for floor level, so we request an offset reference space to shift
 the viewer's height to 1.5 meters above the presumed floor level of 0 meters. That new
 reference space is used instead of the one initially received.

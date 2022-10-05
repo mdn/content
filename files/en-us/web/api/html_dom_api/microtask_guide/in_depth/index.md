@@ -1,6 +1,7 @@
 ---
 title: 'In depth: Microtasks and the JavaScript runtime environment'
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
+page-type: guide
 tags:
   - API
   - Advanced
@@ -11,13 +12,12 @@ tags:
   - queueMicrotask
   - runtime
 ---
-{{APIRef("HTML DOM")}}{{Draft("This page is very much a work in progress; it contains technical details that may be useful while considering using—and while using—microtasks, but it is not absolutely necessary for most people to know. Additionally, there may be errors here as this draft is just that rough. ~~Sheppy")}}
 
-When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand. That's what this section covers
+{{APIRef("HTML DOM")}}
 
-## Introduction
+When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand.
 
-JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
+JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
 
 As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.
 
@@ -59,7 +59,7 @@ function greetUser(user) {
     }
     return greeting;
   }
-  outputElem.innerHTML += localGreeting(user) + "<br>\r";
+  outputElem.innerHTML += `${localGreeting(user)}<br>\r`;
 }
 
 greetUser("Mike");
@@ -109,7 +109,7 @@ The event loop, then, drives everything that happens in the browser as it pertai
 There are three types of event loop:
 
 - Window event loop
-  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this as described elsewhere in this article XXXX ????).
+  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this, as described below).
 - Worker event loop
   - : A worker event loop is one which drives a worker; this includes all forms of workers, including basic [web workers](/en-US/docs/Web/API/Web_Workers_API), [shared workers](/en-US/docs/Web/API/SharedWorker), and [service workers](/en-US/docs/Web/API/Service_Worker_API). Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.
 - Worklet event loop
@@ -127,7 +127,7 @@ The specifics may vary from browser to browser, depending on how they're impleme
 
 #### Tasks vs microtasks
 
-A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}**.**
+A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}.
 
 The difference between the task queue and the microtask queue is simple but very important:
 
@@ -155,9 +155,6 @@ The microtask queue has been around for a while, but it's historically been used
 - [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("queueMicrotask()")}}
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-
-  - [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous)
   - [Graceful asynchronous programming with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [Choosing the right approach](/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

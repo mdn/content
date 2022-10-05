@@ -8,6 +8,7 @@ tags:
   - XML
   - XSLT
 ---
+
 [« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 The eXtensible Stylesheet Language/Transform is a very powerful language, and a complete discussion of it is well beyond the scope of this article, but a brief discussion of some basic concepts will be helpful in understanding the description of Netscape's capabilities that follows.
@@ -41,8 +42,8 @@ The eXtensible Stylesheet Language/Transform is a very powerful language, and a 
 - Potential conflicts in template matching are resolved by using a set of cascading precedence rules.
   - : In general, a more specific template rule takes precedence over a less specific one and, other things being equal, a template rule that appears later in the document takes precedence over one that appears earlier.
 - Stylesheets can be attached to an XML document via a processing instruction.
-  - : The simplest way to indicate which XSLT stylesheet should be used to process a particular XML document is to include a processing instruction in the XML document itself. For example, if the stylesheet is called inventory.xsl and resides in the same directory as the xml document, the processing instruction in the xml document would look like this:
+  - : The simplest way to indicate which XSLT stylesheet should be used to process a particular XML document is to include a processing instruction in the XML document itself. For example, if the stylesheet is called inventory.xsl and resides in the same directory as the XML document, the processing instruction in the XML document would look like this:
 - `<?xml-stylesheet type="text/xml" href="inventory.xsl"?>`
-  - : This must be placed in the prolog section of the xml document.
+  - : This must be placed in the prolog section of the XML document.
 
 To learn more about XSLT and XPath, see the [For Further Reading](/en-US/Transforming_XML_with_XSLT/For_Further_Reading) section at the end of this article.

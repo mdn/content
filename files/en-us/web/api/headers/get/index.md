@@ -1,9 +1,9 @@
 ---
 title: Headers.get()
 slug: Web/API/Headers/get
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Fetch
   - Headers
   - Method
@@ -11,6 +11,7 @@ tags:
   - get
 browser-compat: api.Headers.get
 ---
+
 {{APIRef("Fetch")}}
 
 The **`get()`** method of the {{domxref("Headers")}} interface
@@ -25,8 +26,8 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
-myHeaders.get(name);
+```js-nolint
+get(name)
 ```
 
 ### Parameters
@@ -36,17 +37,17 @@ myHeaders.get(name);
     `Headers` object. If the given name is not the name of an HTTP header, this
     method throws a {{jsxref("TypeError")}}. The name is case-insensitive.
 
-### Returns
+### Return value
 
 A {{jsxref("String")}} sequence representing the values of the retrieved header or
 `null` if this header is not set.
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 myHeaders.get('Not-Set'); // Returns null
 ```
 
@@ -64,8 +65,8 @@ the values, in the order they were added to the Headers object:
 ```js
 myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
-myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
+myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
+myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 
 ## Specifications

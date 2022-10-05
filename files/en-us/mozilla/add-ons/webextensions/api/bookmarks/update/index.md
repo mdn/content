@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.update
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.
@@ -23,8 +24,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var updating = browser.bookmarks.update(
+```js-nolint
+let updating = browser.bookmarks.update(
   id,                    // string
   changes                // object
 )
@@ -45,7 +46,7 @@ var updating = browser.bookmarks.update(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a single [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") object, representing the updated bookmark. If the bookmark item corresponding to the `id` parameter can't be found, the promise is rejected.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a single [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) object, representing the updated bookmark. If the bookmark item corresponding to the `id` parameter can't be found, the promise is rejected.
 
 ## Examples
 
@@ -57,23 +58,23 @@ function onFulfilled(bookmarkItem) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 function updateFolders(items) {
-  for (item of items) {
+  for (const item of items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
-      var updating = browser.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
-      });
-      updating.then(onFulfilled, onRejected);
+      browser.bookmarks
+        .update(item.id, {
+          title: "Mozilla Developer Network (MDN)",
+        })
+        .then(onFulfilled, onRejected);
     }
   }
 }
 
-var searching = browser.bookmarks.search({ title: "MDN" });
-searching.then(updateFolders, onRejected);
+browser.bookmarks.search({ title: "MDN" }).then(updateFolders, onRejected);
 ```
 
 {{WebExtExamples}}
@@ -82,11 +83,12 @@ searching.then(updateFolders, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +115,4 @@ searching.then(updateFolders, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,6 +1,7 @@
 ---
 title: console.dir()
 slug: Web/API/console/dir
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - web console
 browser-compat: api.console.dir
 ---
+
 {{APIRef("Console API")}}
 
 The method **`console.dir()`** displays an interactive list of the properties of
@@ -28,14 +30,18 @@ properties of the object.
 
 ## Syntax
 
-```js
-console.dir(object);
+```js-nolint
+dir(object)
 ```
 
 ### Parameters
 
 - `object`
   - : A JavaScript object whose properties should be output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -47,7 +53,5 @@ console.dir(object);
 
 ## See also
 
-- [MSDN: Using
-  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
-- [Chrome
-  Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
+- [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)

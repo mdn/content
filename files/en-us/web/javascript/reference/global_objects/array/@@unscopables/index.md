@@ -9,45 +9,50 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.@@unscopables
 ---
+
 {{JSRef}}
 
-The **`@@unscopable`** symbol property contains property names that were not included in the ECMAScript standard prior to the ES2015 version. These properties are excluded from [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement bindings.
+The **`@@unscopables`** data property contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 ## Description
 
-The default array properties that are excluded from `with` bindings are:
+The default `Array` properties that are ignored for `with` statement-binding purposes are:
 
-- {{jsxref("Array.prototype.at()", "at()")}}
-- {{jsxref("Array.prototype.copyWithin()", "copyWithin()")}}
-- {{jsxref("Array.prototype.entries()", "entries()")}}
-- {{jsxref("Array.prototype.fill()", "fill()")}}
-- {{jsxref("Array.prototype.find()", "find()")}}
-- {{jsxref("Array.prototype.findIndex()", "findIndex()")}}
-- {{jsxref("Array.prototype.includes()", "includes()")}}
-- {{jsxref("Array.prototype.keys()", "keys()")}}
-- {{jsxref("Array.prototype.values()", "values()")}}
+- [`at()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
+- [`copyWithin()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)
+- [`entries()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)
+- [`fill()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
+- [`find()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+- [`findLast()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
+- [`findLastIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
+- [`flat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+- [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
+- [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+- [`keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
+- [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
-See {{jsxref("Symbol.unscopables")}} for how to set `unscopables` for your own objects.
+`Array.prototype[@@unscopables]` is an empty object only containing all the above property names with the value `true`. Its prototype is `null`, so `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) won't accidentally be made unscopable, and a `toString()` within the `with` statement will continue to be called on the array.
+
+See {{jsxref("Symbol.unscopables")}} for how to set unscopable properties for your own objects.
 
 {{js_property_attributes(0,0,1)}}
 
-## Examples
+## Example
 
-### Use in with environments
-
-The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside `with` environments, "keys" would now be the method and not the variable. This is where now the built-in `@@unscopables` `Array.prototype[@@unscopables]` symbol property comes into play and prevents that some of the Array methods are being scoped into the `with` statement.
+Imagine the `keys.push('something')` call below is in code that was written prior to ECMAScript 2015.
 
 ```js
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
-
-Object.keys(Array.prototype[Symbol.unscopables]);
-// ["at", "copyWithin", "entries", "fill", "find", "findIndex",
-//  "includes", "keys", "values"]
 ```
+
+When ECMAScript 2015 introduced the {{jsxref("Array.prototype.keys()")}} method, if the `@@unscopables` data property had not also been introduced, that `keys.push('something')` call would break — because the JavaScript runtime would have interpreted `keys` as being the {{jsxref("Array.prototype.keys()")}} method, rather than the `keys` array defined in the example code.
+
+So the `@@unscopables` data property for `Array.prototype` causes the `Array` properties introduced in ECMAScript 2015 to be ignored for `with` statement-binding purposes — allowing code that was written prior to ECMAScript 2015 to continue working as expected, rather than breaking.
 
 ## Specifications
 

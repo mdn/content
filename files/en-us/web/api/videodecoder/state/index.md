@@ -1,17 +1,20 @@
 ---
 title: VideoDecoder.state
 slug: Web/API/VideoDecoder/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - state
   - VideoDecoder
+  - Experimental
 browser-compat: api.VideoDecoder.state
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`state`**  property of the {{domxref("VideoDecoder")}} interface returns the current state of the underlying codec.
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+
+The **`state`** property of the {{domxref("VideoDecoder")}} interface returns the current state of the underlying codec.
 
 ## Value
 
@@ -39,5 +42,3 @@ console.log(VideoDecoder.state);
 ## Browser compatibility
 
 {{Compat}}
-
-

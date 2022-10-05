@@ -1,6 +1,7 @@
 ---
 title: ExtendableCookieChangeEvent()
 slug: Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,30 +9,37 @@ tags:
   - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("ExtendableCookieChangeEvent")}} object which is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}}. This constructor is called by the browser when a change event occurs.
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-> **Note:** This event constructor is generally not needed for production web sites. It's primary use is for tests that require an instance of this event.
+The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("ExtendableCookieChangeEvent")}} object
+which is the event type passed to {{domxref("ServiceWorkerRegistration/cookiechange_event", "ServiceWorkerRegistration.oncookiechange()")}}.
+This constructor is called by the browser when a change event occurs.
+
+> **Note:** This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
 
 ## Syntax
 
-```js
-var extendableCookieChangeEvent = new ExtendableCookieChangeEvent(type, [eventInitDict]);
+```js-nolint
+new ExtendableCookieChangeEvent(type)
+new ExtendableCookieChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with the value `"changed"` or `"deleted"`.
-- `eventInitDict`{{Optional_Inline}}
-
-  - : An object containing:
-
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `cookiechange`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
     - `changed`
       - : An array containing a changed cookie.
     - `deleted`
       - : An array containing a deleted cookie.
+
+### Return value
+
+A new {{domxref("ExtendableCookieChangeEvent")}} object.
 
 ## Specifications
 

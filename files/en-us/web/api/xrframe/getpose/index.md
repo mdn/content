@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getPose()
 slug: Web/API/XRFrame/getPose
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -14,18 +15,20 @@ tags:
   - WebXR Device API
   - XRFrame
   - getPose
+  - Experimental
 browser-compat: api.XRFrame.getPose
 ---
-{{APIRef("WebXR Device API")}}
 
-The {{domxref("XRFrame")}} method **`getPose()`** returns the relative position and
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The {{domxref("XRFrame")}} method **`getPose()`** returns the relative position and
 orientation—the pose—of one {{domxref("XRSpace")}} to that of another space. With this, you can observe the motion of objects relative to each other and to fixed locations throughout the scene.
 
 For example, to get the position of a controller relative to the viewer's head, you would compare the controller's {{domxref("XRInputSource.gripSpace", "gripSpace")}} to the {{domxref("XRReferenceSpace")}} of type `viewer`.
 
 ## Syntax
 
-```js
+```js-nolint
 getPose(space, baseSpace)
 ```
 
@@ -40,8 +43,8 @@ getPose(space, baseSpace)
 
 ### Return value
 
-An {{domxref("XRPose")}} object specifying the position and orientation, relative to
-the {{domxref("XRSpace")}} indicated by `baseSpace`.
+An {{domxref("XRPose")}} object specifying the position and orientation, relative to
+the {{domxref("XRSpace")}} indicated by `baseSpace`.
 
 ## Specifications
 

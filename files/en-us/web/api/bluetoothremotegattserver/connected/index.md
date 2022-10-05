@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.connected
 slug: Web/API/BluetoothRemoteGATTServer/connected
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -11,18 +12,17 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTServer.connected
 ---
-{{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTServer.connected`** read-only
-property returns a boolean value that returns true while this script execution
-environment is connected to `this.device`. It can be false while the user
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+
+The **`BluetoothRemoteGATTServer.connected`** read-only
+property returns a boolean value that returns true while this script execution
+environment is connected to `this.device`. It can be false while the user
 agent is physically connected.
 
-## Syntax
+## Value
 
-```js
-var connected = BluetoothRemoteGATTServer.connected
-```
+A `boolean`.
 
 ## Specifications
 

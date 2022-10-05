@@ -9,7 +9,7 @@ tags:
   - Input Type
   - Reference
   - Search
-browser-compat: html.elements.input.input-search
+browser-compat: html.elements.input.type_search
 ---
 
 {{HTMLRef("Input_types")}}
@@ -21,9 +21,9 @@ browser-compat: html.elements.input.input-search
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value contained in
+        A string representing the value contained in
         the search field.
       </td>
     </tr>
@@ -52,6 +52,10 @@ browser-compat: html.elements.input.input-search
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -64,13 +68,13 @@ browser-compat: html.elements.input.input-search
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
+The {{htmlattrxref("value", "input")}} attribute contains a string representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
 
 ```js
 searchTerms = mySearch.value;
 ```
 
-If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value can be any text string or an empty string (`""`).
+If no validation constraints are in place for the input (see [Validation](#validation) for more details), the value can be any text string or an empty string (`""`).
 
 ## Additional attributes
 
@@ -100,7 +104,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-See the section {{anch("Specifying a pattern")}} for details and an example.
+See the section [Specifying a pattern](#specifying_a_pattern) for details and an example.
 
 ### placeholder
 
@@ -120,7 +124,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ### spellcheck
 
@@ -133,7 +137,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 - "" (empty string) or no value
   - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
-An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
+An input field can have spell checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
@@ -152,19 +156,17 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 
 ### incremental
 
-The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
+The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{domxref("HTMLInputElement/search_event", "search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
 
-If `incremental` is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
+If `incremental` is not specified, the {{domxref("HTMLInputElement/search_event", "search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
 
 The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
 ### mozactionhint
 
-A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.
+A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
-> **Note:** This [has been standardized](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.
-
-Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser decides, using this hint, what label to put on the enter key.
+This attribute has been deprecated: use the {{htmlattrxref("enterkeyhint")}} global attribute instead.
 
 ### results
 
@@ -181,7 +183,7 @@ The value must be a non-negative decimal number. If not provided, or an invalid 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q">
+    <input type="search" id="mySearch" name="q" />
     <button>Search</button>
   </div>
 </form>
@@ -199,11 +201,11 @@ This renders like so:
 
 The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired, in Chrome this action is also triggered when pressing escape. The following screenshot comes from Chrome:
 
-![](chrome-cross-icon.png)
+![Focused search input, with focus ring, with the text 'cats'. There is an x icon in the input abutting the right side.](chrome-cross-icon.png)
 
 In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:
 
-![](firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
+![An input in error state with a red focus ring. The user has entered the letter 'h'. A pop-up selection list is open directly under the input box with two options: hello and hermansje.](firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
 
 ### Setting placeholders
 
@@ -212,8 +214,11 @@ You can provide a useful placeholder inside your search input that could give a 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site...">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…" />
     <button>Search</button>
   </div>
 </form>
@@ -227,19 +232,22 @@ You can see how the placeholder is rendered below:
 
 One problem with search forms is their accessibility; a common design practice is not to provide a label for the search field (although there might be a magnifying glass icon or similar), as the purpose of a search form is normally fairly obvious for sighted users due to placement ([this example shows a typical pattern](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
 
-This could, however, cause confusion for screenreader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) features:
+This could, however, cause confusion for screen reader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) features:
 
-- A `role` attribute of value `search` on the `<form>` element will cause screenreaders to announce that the form is a search form.
-- If that isn't enough, you can use an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screenreader; it's used as a non-visual equivalent to `<label>`.
+- A `role` attribute of value `search` on the `<form>` element will cause screen readers to announce that the form is a search form.
+- If that isn't enough, you can use an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screen reader; it's used as a non-visual equivalent to `<label>`.
 
 Let's have a look at an example:
 
 ```html
 <form role="search">
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site..."
-     aria-label="Search through site content">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      aria-label="Search through site content" />
     <button>Search</button>
   </div>
 </form>
@@ -249,7 +257,7 @@ You can see how this is rendered below:
 
 {{EmbedLiveSample("Search_form_labels_and_accessibility", 600, 40)}}
 
-There is no visual difference from the previous example, but screenreader users have way more information available to them.
+There is no visual difference from the previous example, but screen reader users have way more information available to them.
 
 > **Note:** See [Signposts/Landmarks](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) for more information about such accessibility features.
 
@@ -260,8 +268,12 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." size="30">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      size="30" />
     <button>Search</button>
   </div>
 </form>
@@ -282,16 +294,16 @@ The result is this wider input box:
 There are useful pseudo-classes available for styling valid/invalid form elements: {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) next to inputs containing valid values, and a cross next to inputs containing invalid values.
 
 ```css
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -304,8 +316,12 @@ You can use the {{htmlattrxref("required", "input")}} attribute as an easy way o
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." required>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      required />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -317,16 +333,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -350,9 +366,15 @@ The example below requires that the entered value be 4–8 characters in length.
 <form>
   <div>
     <label for="mySearch">Search for user</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="User IDs are 4–8 characters in length" required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="User IDs are 4–8 characters in length"
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -364,16 +386,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -393,9 +415,14 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
 <form>
   <div>
     <label for="mySearch">Search for product by ID:</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="two letters followed by four numbers" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="two letters followed by four numbers"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -407,16 +434,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -426,7 +453,7 @@ This renders like so:
 
 ## Examples
 
-You can see a good example of a search form used in context at our [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+You can see a good example of a search form used in context at our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
 
 ## Specifications
 

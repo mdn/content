@@ -1,6 +1,7 @@
 ---
 title: CSS.paintWorklet (Static property)
 slug: Web/API/CSS/paintWorklet
+page-type: web-api-static-property
 tags:
   - API
   - CSS
@@ -14,20 +15,14 @@ tags:
   - paintWorklet
 browser-compat: api.CSS.paintWorklet
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`paintWorklet`** is a static,
-read-only property of the {{DOMxRef("CSS")}} interface that provides access to the
-{{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
+The static, read-only **`paintWorklet`** property of the {{DOMxRef("CSS")}} interface provides access to the
+{{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
 property expects a file.
 
-## Syntax
-
-```js
-var worklet = CSS.paintWorklet;
-```
-
-### Value
+## Value
 
 The {{DOMxRef('PaintWorklet')}} object.
 
@@ -37,11 +32,9 @@ The following example demonstrates loading a {{DOMxRef('PaintWorklet')}} from it
 file and does so by feature detection.
 
 ```js
-<script>
-  if ('paintWorklet' in CSS) {
-    CSS.paintWorklet.addModule('checkerboard.js');
-  }
-</script>
+if ("paintWorklet" in CSS) {
+  CSS.paintWorklet.addModule("checkerboard.js");
+}
 ```
 
 ## Specifications
@@ -55,5 +48,4 @@ file and does so by feature detection.
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Houdini)
-- [Houdini overview](/en-US/docs/Web/Houdini/learn)
+- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)

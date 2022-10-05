@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,17 +10,18 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.arc
 ---
+
 {{APIRef}}
 
 The
 **`CanvasRenderingContext2D.arc()`**
-method of the [Canvas 2D API
-](/en-US/docs/Web/API/CanvasRenderingContext2D)adds a circular arc to the current sub-path.
+method of the [Canvas 2D API](/en-US/docs/Web/API/CanvasRenderingContext2D) adds a circular arc to the current sub-path.
 
 ## Syntax
 
-```js
-void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
+```js-nolint
+arc(x, y, radius, startAngle, endAngle)
+arc(x, y, radius, startAngle, endAngle, counterclockwise)
 ```
 
 The `arc()` method creates a circular arc centered at `(x, y)`
@@ -43,6 +45,10 @@ at `endAngle`, and travels in the direction given by
   - : An optional boolean value. If `true`, draws the arc
     counter-clockwise between the start and end angles. The default is `false`
     (clockwise).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -96,7 +102,7 @@ for (let i = 0; i <= 3; i++) {
     let radius        = 20;                          // Arc radius
     let startAngle    = 0;                           // Starting point on circle
     let endAngle      = Math.PI + (Math.PI * j) / 2; // End point on circle
-    let counterclockwise = i % 2 == 1;                  // Draw counterclockwise
+    let counterclockwise = i % 2 === 1;                  // Draw counterclockwise
 
     ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 

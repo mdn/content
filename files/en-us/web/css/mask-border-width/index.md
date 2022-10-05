@@ -1,17 +1,18 @@
 ---
 title: mask-border-width
 slug: Web/CSS/mask-border-width
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - NeedsCompatTable
   - NeedsExample
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-border-width
 ---
+
 {{CSSRef}}
 
 The **`mask-border-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [mask border](/en-US/docs/Web/CSS/mask-border).
@@ -44,6 +45,7 @@ mask-border-width: 5% 2em 10% auto;
 mask-border-width: inherit;
 mask-border-width: initial;
 mask-border-width: revert;
+mask-border-width: revert-layer;
 mask-border-width: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.mapping
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.mapping`** property of the

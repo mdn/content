@@ -8,6 +8,7 @@ tags:
   - resources
   - urls
 ---
+
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 
 <table>
@@ -45,15 +46,17 @@ With {{Glossary("Hypertext")}} and {{Glossary("HTTP")}}, **_URL_** is one of the
 
 Here are some examples of URLs:
 
-    https://developer.mozilla.org
-    https://developer.mozilla.org/en-US/docs/Learn/
-    https://developer.mozilla.org/en-US/search?q=URL
+```
+https://developer.mozilla.org
+https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/en-US/search?q=URL
+```
 
 Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).
 
 A URL is composed of different parts, some mandatory and others optional. The most important parts are highlighted on the URL below (details are provided in the following sections):
 
-![full  url](mdn-url-all.png)
+![full URL](mdn-url-all.png)
 
 > **Note:** You might think of a URL like a regular postal mail address: the _scheme_ represents the postal service you want to use, the _domain name_ is the city or town, and the _port_ is like the zip code; the _path_ represents the building where your mail should be delivered; the _parameters_ represent extra information such as the number of the apartment in the building; and, finally, the _anchor_ represents the actual person to whom you've addressed your mail.
 
@@ -63,7 +66,7 @@ A URL is composed of different parts, some mandatory and others optional. The mo
 
 ![Scheme](mdn-url-protocol@x2_update.png)
 
-The first part of the URL is the _scheme_, which indicates the protocol that the browser must use to request the resouce (a protocol is a set method for exchanging or transferring data around a computer network). Usually for websites the protocol is HTTPS or HTTP (its unsecured version). Addressing web pages requires one of these two, but browsers also know how to handle other schemes such as `mailto:` (to open a mail client), so don't be surprised if you see other protocols.
+The first part of the URL is the _scheme_, which indicates the protocol that the browser must use to request the resource (a protocol is a set method for exchanging or transferring data around a computer network). Usually for websites the protocol is HTTPS or HTTP (its unsecured version). Addressing web pages requires one of these two, but browsers also know how to handle other schemes such as `mailto:` (to open a mail client), so don't be surprised if you see other protocols.
 
 ## Authority
 
@@ -107,17 +110,19 @@ The {{Glossary("HTML")}} language — [which will be discussed later on](/en-US/
 - to display media such as images (with the {{HTMLElement("img")}} element), videos (with the {{HTMLElement("video")}} element), sounds and music (with the {{HTMLElement("audio")}} element), etc.;
 - to display other HTML documents with the {{HTMLElement("iframe")}} element.
 
-> **Note:** When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
+> **Note:** When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
 
 Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.
 
 ## Absolute URLs vs relative URLs
 
-What we saw above is called an _absolute URL,_ but there is also something called a _relative URL_. Let's examine what that distinction means in more detail.
+What we saw above is called an _absolute URL_, but there is also something called a _relative URL_. The [URL standard](https://url.spec.whatwg.org/#absolute-url-string) defines both — though it uses the terms [_absolute URL string_](https://url.spec.whatwg.org/#absolute-url-string) and [_relative URL string_](https://url.spec.whatwg.org/#relative-url-string), to distinguish them from [URL objects](https://url.spec.whatwg.org/#url) (which are in-memory representations of URLs).
+
+Let's examine what the distinction between _absolute_ and _relative_ means in the context of URLs.
 
 The required parts of a URL depend to a great extent on the context in which the URL is used. In your browser's address bar, a URL doesn't have any context, so you must provide a full (or _absolute_) URL, like the ones we saw above. You don't need to include the protocol (the browser uses HTTP by default) or the port (which is only required when the targeted Web server is using some unusual port), but all the other parts of the URL are necessary.
 
-When a URL is used within a document, such as in an HTML page,  things are a bit different. Because the browser already has the document's own URL, it can use this information to fill in the missing parts of any URL available inside that document. We can differentiate between an _absolute URL_ and a _relative URL_ by looking only at the _path_ part of the URL. If the path part of the URL starts with the "`/`" character, the browser will fetch that resource from the top root of the server, without reference to the context given by the current document.
+When a URL is used within a document, such as in an HTML page, things are a bit different. Because the browser already has the document's own URL, it can use this information to fill in the missing parts of any URL available inside that document. We can differentiate between an _absolute URL_ and a _relative URL_ by looking only at the _path_ part of the URL. If the path part of the URL starts with the "`/`" character, the browser will fetch that resource from the top root of the server, without reference to the context given by the current document.
 
 Let's look at some examples to make this clearer.
 
@@ -170,8 +175,8 @@ To better understand the following examples, let's assume that the URLs are call
         <pre>Skills/Infrastructure/Understanding_URLs</pre>
         <p>
           Because that URL does not start with <code>/</code>, the browser will
-          attempt to find the document in a sub-directory of the one containing
-          the current resource. So in this example,  we really want to reach
+          attempt to find the document in a subdirectory of the one containing
+          the current resource. So in this example, we really want to reach
           this URL:
           https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs.
         </p>
@@ -206,4 +211,4 @@ Linguistic semantics are of course irrelevant to computers. You've probably ofte
 
 ## See also
 
-[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) — Data URLs, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.
+[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.

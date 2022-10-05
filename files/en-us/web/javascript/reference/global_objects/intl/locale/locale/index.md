@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** constructor is a
@@ -22,10 +23,12 @@ identifier.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Locale(tag)
 new Intl.Locale(tag, options)
 ```
+
+> **Note:** `Intl.Locale()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -39,11 +42,11 @@ new Intl.Locale(tag, options)
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes
+At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes
 a locale identifier string as its argument:
 
 ```js
-let us = new Intl.Locale('en-US');
+const us = new Intl.Locale('en-US');
 ```
 
 ### Using the Locale constructor with an options object
@@ -55,14 +58,9 @@ property of the configuration object to your desired hour cycle type, and then p
 into the constructor:
 
 ```js
-let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
 console.log(locale.hourCycle); // Prints "h12"
 ```
-
-## Polyfill
-
-[formatjs Intl.Locale
-polyfill](https://formatjs.io/docs/polyfills/intl-locale)
 
 ## Specifications
 
@@ -75,5 +73,5 @@ polyfill](https://formatjs.io/docs/polyfills/intl-locale)
 ## See also
 
 - {{jsxref("Intl.Collator")}}
-- [Unicode
-  locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [A polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)

@@ -41,7 +41,7 @@ See the article about the {{HTMLElement("ruby")}} element for more examples.
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        The end tag may be omitted if the <code>&#x3C;rt></code> element is
+        The end tag may be omitted if the <code>&#x3C;rt></code> element is
         immediately followed by an <code>&#x3C;rt></code> or
         {{HTMLElement("rp")}} element, or if there is no more content in
         the parent element

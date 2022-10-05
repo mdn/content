@@ -8,8 +8,9 @@ tags:
   - Reference
   - Security
   - header
-browser-compat: http.headers.csp.Content-Security-Policy
+browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows
@@ -35,7 +36,7 @@ For more information, see the introductory article on [Content Security Policy (
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: <policy-directive>; <policy-directive>
 ```
 
@@ -46,12 +47,11 @@ where `<policy-directive>` consists of:
 
 ### Fetch directives
 
-Fetch directives control the locations from which certain resource types may be loaded.
+{{Glossary("Fetch directive","Fetch directives")}} control the locations from which certain resource types may be loaded.
 
 - {{CSP("child-src")}}
 
-  - : Defines the valid sources for [web
-    workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
+  - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
     > **Warning:** Instead of **`child-src`**,
@@ -87,22 +87,22 @@ Fetch directives control the locations from which certain resource types may be 
     > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
     > possible).
 
-- {{CSP("prefetch-src")}}{{experimental_inline}}
+- {{CSP("prefetch-src")}} {{experimental_inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-  - : Specifies valid sources for JavaScript.
-- {{CSP("script-src-elem")}}{{experimental_inline}}
+  - : Specifies valid sources for JavaScript and WebAssembly resources.
+- {{CSP("script-src-elem")}}
   - : Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
-- {{CSP("script-src-attr")}}{{experimental_inline}}
+- {{CSP("script-src-attr")}}
   - : Specifies valid sources for JavaScript inline event handlers.
 - {{CSP("style-src")}}
   - : Specifies valid sources for stylesheets.
-- {{CSP("style-src-elem")}}{{experimental_inline}}
+- {{CSP("style-src-elem")}}
   - : Specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
     {{HTMLElement("link")}} elements with `rel="stylesheet"`.
-- {{CSP("style-src-attr")}}{{experimental_inline}}
+- {{CSP("style-src-attr")}}
   - : Specifies valid sources for inline styles applied to individual DOM elements.
-- {{CSP("worker-src")}}{{experimental_inline}}
+- {{CSP("worker-src")}}
   - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or
     {{domxref("ServiceWorker")}} scripts.
 
@@ -130,7 +130,7 @@ for example.
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
     {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
     {{HTMLElement("applet")}}.
-- {{CSP("navigate-to")}}{{experimental_inline}}
+- {{CSP("navigate-to")}} {{experimental_inline}}
   - : Restricts the URLs to which a document can initiate navigation by any means,
     including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
     {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
@@ -140,7 +140,7 @@ for example.
 Reporting directives control the reporting process of CSP violations. See also the
 {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 
-- {{CSP("report-uri")}}{{deprecated_inline}}
+- {{CSP("report-uri")}} {{deprecated_inline}}
 
   - : Instructs the user agent to report attempts to violate the Content Security Policy.
     These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
@@ -153,45 +153,47 @@ Reporting directives control the reporting process of CSP violations. See also t
     > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
     > you can specify both **`report-uri`** and {{CSP("report-to")}}:
     >
-    > ```html
-    > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname
+    > ```http
+    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
     > ```
     >
     > In browsers that support {{CSP("report-to")}},
     > the **`report-uri`** directive will be ignored.
 
-- {{CSP("report-to")}}{{experimental_inline}}
+- {{CSP("report-to")}}
   - : Fires a `SecurityPolicyViolationEvent`.
 
 ### Other directives
 
-- {{CSP("require-sri-for")}}{{experimental_inline}}
+- {{CSP("require-sri-for")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
-- {{CSP("require-trusted-types-for")}}{{experimental_inline}}
-  - : Enforces [Trusted
-    Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
-- {{CSP("trusted-types")}}{{experimental_inline}}
+- {{CSP("require-trusted-types-for")}} {{experimental_inline}}
+  - : Enforces [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
+- {{CSP("trusted-types")}} {{experimental_inline}}
   - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/)
     policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
     only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
   - : Instructs user agents to treat all of a site's insecure URLs (those served over
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
-    This directive is intended for web sites with large numbers of insecure legacy URLs
+    This directive is intended for websites with large numbers of insecure legacy URLs
     that need to be rewritten.
 
 ### Deprecated directives
 
-- {{CSP("block-all-mixed-content")}}{{deprecated_inline}}
+- {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("plugin-types")}}{{deprecated_inline}}
+- {{CSP("plugin-types")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Restricts the set of plugins that can be embedded into a document by limiting the
     types of resources which can be loaded.
-- {{CSP("referrer")}}{{deprecated_inline}}{{non-standard_inline}}
+- {{CSP("referrer")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Used to specify information in the [Referer](/en-US/docs/Web/HTTP/Headers/Referer) (sic) header for links away
     from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 
 ## Values
+
+An overview of the allowed values are listed below.
+For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources) and the documentation for individual directives.
 
 ### Keyword values
 
@@ -199,25 +201,26 @@ Reporting directives control the reporting process of CSP violations. See also t
   - : Won't allow loading of any resources.
 - `self`
   - : Only allow resources from the current origin.
-- `strict-dynamic` {{experimental_inline}}
-  - : TBD
-- `report-sample` {{experimental_inline}}
-  - : TBD
+- `strict-dynamic`
+  - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
+- `report-sample`
+  - : Require a sample of the violating code to be included in the violation report.
 
 ### Unsafe keyword values
 
 - `unsafe-inline`
   - : Allow use of inline resources.
 - `unsafe-eval`
-  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}}{{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
-- `unsafe-hashes` {{experimental_inline}}
-  - : TBD
+  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
+- `unsafe-hashes`
+  - : Allows enabling specific inline event handlers.
 - `unsafe-allow-redirects` {{experimental_inline}}
   - : TBD
 
 ### Hosts values
 
 - Host
+
   - Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`
   - Path parts in the CSP that end in `/` match any path they are a prefix of. e.g. `example.com/api/` will match URLs like `example.com/api/users/new`.
   - Other path parts in the CSP are matched exactly e.g. `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`
@@ -259,7 +262,7 @@ restrict_ the capabilities of the protected resource, which means that there wil
 be no connection allowed and, as the strictest policy, `connect-src 'none'`
 is enforced.
 
-```
+```http
 Content-Security-Policy: default-src 'self' http://example.com;
                           connect-src 'none';
 Content-Security-Policy: connect-src http://example.com/;
@@ -273,32 +276,31 @@ scripts, etc.) over https:
 
 ### Using the HTTP header
 
-```
+```http
 Content-Security-Policy: default-src https:
 ```
 
 ### Using the HTML meta element
 
-```
-<meta http-equiv="Content-Security-Policy" content="default-src https:">
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
 Example: Pre-existing site that uses too much inline code to fix but wants to ensure
 resources are loaded only over HTTPS and to disable plugins:
 
-```
+```http
 Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
 ```
 
 Example: Do not implement the above policy yet; instead just report violations that
 would have occurred:
 
-```
+```http
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-See [Mozilla
-Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
+See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
 
 ## Specifications
 

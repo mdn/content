@@ -1,6 +1,7 @@
 ---
 title: Breadcrumb Navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -8,7 +9,9 @@ tags:
   - Navigation
   - cookbook
   - flexbox
+browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 Breadcrumb navigation helps the user to understand their location in the website by providing a breadcrumb trail back to the start page.
@@ -25,15 +28,17 @@ The items typically display inline with a separator to indicate a hierarchy betw
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
-> **Note:** The example above uses two selectors to insert content before every `li` except the first one. This could also be achieved using one selector only:
+> **Note:** The example above uses two selectors to insert content before every `li` except the first one. This could also be achieved using one selector only:
 >
->     .breadcrumb li:not(:first-child)::before {
->       content: "→";
->     }
+> ```css
+> .breadcrumb li:not(:first-child)::before {
+>   content: "→";
+> }
+> ```
 >
-> This solution uses a more complex selector, but requires less rules. Feel free to choose the solution that you prefer.
+> This solution uses a more complicated selector, but requires fewer rules. Feel free to choose the solution that you prefer.
 
 ## Choices made
 
@@ -43,13 +48,11 @@ This pattern is laid out using a simple flex layout demonstrating how a line of 
 
 I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
+Beware that the arrows `→` added via `content` are also exposed to screen readers or braille displays.
+
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### Flexbox
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## See also
 

@@ -8,10 +8,11 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  - Experimental
 browser-compat: http.headers.Sec-CH-UA-Arch
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as ARM or x86.
 
@@ -33,7 +34,6 @@ This might be used by a server, for example, to select and offer the correct bin
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -43,8 +43,7 @@ Sec-CH-UA-Arch: <arch>
 ### Directives
 
 - `<arch>`
-  - : A string indicating the underlying platform architecture, such as: `"x86"`, `"ARM"`.
-
+  - : A string indicating the underlying platform architecture, such as: `"x86"`, `"ARM"`, `"[arm64-v8a, armeabi-v7a, armeabi]"`.
 
 ## Examples
 

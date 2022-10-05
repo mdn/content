@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
+page-type: css-property
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-box-image
 ---
+
 {{ CSSRef() }} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` sets the mask image for an element's border box.
@@ -22,12 +24,14 @@ browser-compat: css.properties.-webkit-mask-box-image
 
 ## Syntax
 
-    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
+-webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
 
 Where:
 
 - \<mask-box-image>
-  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
+  - : `{{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none`
 - \<top> \<right> \<bottom> \<left>
   - : `<length> | <percentage>`
 - \<x-repeat> \<y-repeat>
@@ -52,7 +56,7 @@ Where:
 - round
   - : The mask image is stretched somewhat and repeated such that there is no partial mask image at the end of the border box.
 - space
-  - : The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.
+  - : The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.
 
 ## Formal definition
 
@@ -68,7 +72,7 @@ Where:
 
 ```css
 .exampleone {
-  -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 ```
 
@@ -76,7 +80,7 @@ Where:
 
 ```css
 .exampletwo {
-  -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 
@@ -90,4 +94,4 @@ Not part of any standard.
 
 ## See also
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}
+{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }}, {{ cssxref("mask-clip") }}, {{ cssxref("mask-image") }}, {{ cssxref("-webkit-mask-composite") }}, {{ cssxref("mask-repeat") }}

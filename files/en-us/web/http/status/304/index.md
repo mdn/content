@@ -8,13 +8,14 @@ tags:
   - Status code
 browser-compat: http.status.304
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`304 Not Modified`** client redirection response
 code indicates that there is no need to retransmit the requested resources. It is an
 implicit redirection to a cached resource. This happens when the request method is
-{{glossary("Safe/HTTP", "safe")}}, like a {{HTTPMethod("GET")}} or a {{HTTPMethod("HEAD")}} request,
-or when the request is conditional and uses a {{HTTPHeader("If-None-Match")}} or a
+a {{glossary("Safe/HTTP", "safe")}} method, such as {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}},
+or when the request is conditional and uses an {{HTTPHeader("If-None-Match")}} or an
 {{HTTPHeader("If-Modified-Since")}} header.
 
 The equivalent {{HTTPStatus("200")}} `OK` response would have included the
@@ -22,7 +23,7 @@ headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, and
 {{HTTPHeader("Vary")}}.
 
-> **Note:** Many [developer tools' network panels](/en-US/docs/Tools/Network_Monitor)
+> **Note:** Many [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 > of browsers create extraneous requests leading to `304` responses, so that
 > access to the local cache is visible to developers.
 
@@ -40,7 +41,7 @@ headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 
 {{Compat}}
 
-## Compatibility Notes
+### Compatibility notes
 
 - Browser behavior differs if this response erroneously includes a body on persistent
   connections See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more

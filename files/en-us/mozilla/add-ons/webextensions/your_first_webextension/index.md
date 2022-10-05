@@ -7,6 +7,7 @@ tags:
   - Guide
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 > **Note:** If you're familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
@@ -17,7 +18,7 @@ The source code for this example is on GitHub: <https://github.com/mdn/webextens
 
 ## Writing the extension
 
-Create a new directory and navigate to it. For example, in your command line/terminal you do it like this:
+In a suitable location, such as in the `Documents` directory, create a new directory called `borderify` and navigate to it. You can do this using your computer's file explorer or [command line terminal](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). Understanding how to use the command line terminal is a handy skill, as it helps with your more advanced extension development. Using the terminal, you create the directory like this:
 
 ```bash
 mkdir borderify
@@ -26,7 +27,7 @@ cd borderify
 
 ### manifest.json
 
-Now create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
+Using a suitable [text editor](/en-US/docs/Learn/Common_questions/Available_text_editors), create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
 
 ```json
 {
@@ -74,7 +75,7 @@ The most interesting key here is [`content_scripts`](/en-US/docs/Mozilla/Add-ons
 
 The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager. Our manifest.json promised that we would have an icon at "icons/border-48.png".
 
-Create the "icons" directory directly under the "borderify" directory. Save an icon there named "border-48.png".  You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/borderify/icons/border-48.png), which is taken from the Google Material Design iconset, and is used under the terms of the [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) license.
+Create the "icons" directory directly under the "borderify" directory. Save an icon there named "border-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/borderify/icons/border-48.png), which is taken from the Google Material Design iconset, and is used under the terms of the [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
 If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
@@ -105,15 +106,17 @@ This script will be loaded into the pages that match the pattern given in the `c
 
 First, double check that you have the right files in the right places:
 
-    borderify/
-        icons/
-            border-48.png
-        borderify.js
-        manifest.json
+```
+borderify/
+    icons/
+        border-48.png
+    borderify.js
+    manifest.json
+```
 
 ### Installing
 
-In Firefox: Open the [about:debugging](/en-US/docs/Tools/about:debugging) page, click the This Firefox option, click the Load Temporary Add-on button, then select any file in your extension's directory.
+In Firefox: Open the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page, click the This Firefox option, click the Load Temporary Add-on button, then select any file in your extension's directory.
 
 The extension now installs, and remains installed until you restart Firefox.
 
@@ -125,7 +128,7 @@ Alternatively, you can run the extension from the command line using the [web-ex
 
 Now visit a page under "`mozilla.org`", and you should see the red border round the page.
 
-![Border displayed on mozilla.org](border_on_mozilla_org.png "Border displayed on mozilla.org")
+![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
 > **Note:** Don't try it on "`addons.mozilla.org`", though! Content scripts are currently blocked on that domain.
 

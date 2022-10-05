@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: webextensions.api.bookmarks.remove
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.remove()`** method removes a single bookmark or an empty bookmark folder.
@@ -23,8 +24,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var removingBookmark = browser.bookmarks.remove(
+```js-nolint
+let removingBookmark = browser.bookmarks.remove(
   id                 // string
 )
 ```
@@ -51,9 +52,9 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var bookmarkId = "abcdefghijkl";
+let bookmarkId = "abcdefghijkl";
 
-var removingBookmark = browser.bookmarks.remove(bookmarkId);
+let removingBookmark = browser.bookmarks.remove(bookmarkId);
 removingBookmark.then(onRemoved, onRejected);
 ```
 
@@ -63,11 +64,12 @@ removingBookmark.then(onRemoved, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-remove) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-remove) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +96,4 @@ removingBookmark.then(onRemoved, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

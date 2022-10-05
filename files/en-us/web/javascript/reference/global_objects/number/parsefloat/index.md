@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.parseFloat
 ---
+
 {{JSRef}}
 
 The **`Number.parseFloat()`** method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns {{jsxref("NaN")}}.
@@ -17,20 +18,20 @@ The **`Number.parseFloat()`** method parses an argument and returns a floating p
 
 ## Syntax
 
-```js
+```js-nolint
 Number.parseFloat(string)
 ```
 
 ### Parameters
 
 - `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one using the [`ToString`](https://tc39.es/ecma262/#sec-tostring) abstract operation. Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{glossary("whitespace")}} in this argument is ignored.
 
 ### Return value
 
-A floating point number parsed from the given `string`.
+A floating point number parsed from the given `string`.
 
-Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a number.
+Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a number.
 
 ## Examples
 
@@ -42,7 +43,7 @@ This method has the same functionality as the global {{jsxref("parseFloat", "par
 Number.parseFloat === parseFloat; // true
 ```
 
-This method is also part of ECMAScript 2015. (Its purpose is modularization of globals.)
+Its purpose is modularization of globals.
 
 See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 
@@ -56,7 +57,6 @@ See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 
 ## See also
 
-- A polyfill of `Number.parseFloat` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- - {{jsxref("Number")}}
-    - : The object this method belongs to.
+- [Polyfill of `Number.parseFloat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- {{jsxref("Number")}}: The object this method belongs to.
 - The global {{jsxref("parseFloat", "parseFloat()")}} method.

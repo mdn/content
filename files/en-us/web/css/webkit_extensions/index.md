@@ -1,6 +1,7 @@
 ---
 title: WebKit CSS extensions
 slug: Web/CSS/WebKit_Extensions
+page-type: css-property
 tags:
   - CSS
   - CSS:WebKit Extensions
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{CSSRef}}
 
 Applications based on WebKit or Blink, such as Safari and Chrome, support a number of special **WebKit extensions to [CSS](/en-US/docs/Web/CSS)**. These extensions are generally prefixed with `-webkit-`. Most `-webkit-` prefixed properties also work with an `-apple-` prefix. A few are prefixed with `-epub-`.
@@ -21,13 +23,11 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 
 - {{CSSxRef("-webkit-animation-trigger", "-webkit-animation-trigger")}}
 - {{CSSxRef("-webkit-app-region", "-webkit-app-region")}}
-- {{CSSxRef("appearance", "-webkit-appearance")}}\*
 - {{CSSxRef("-webkit-aspect-ratio", "-webkit-aspect-ratio")}}
 
 ### B
 
 - {{CSSxRef("-webkit-backdrop-filter", "-webkit-backdrop-filter")}}
-- {{CSSxRef("-webkit-background-composite", "-webkit-background-composite")}}
 - {{CSSxRef("border-block-end","-webkit-border-after")}}\*\*
 - {{CSSxRef("border-block-end-color","-webkit-border-after-color")}}\*\*
 - {{CSSxRef("border-block-end-style","-webkit-border-after-style")}}\*\*
@@ -91,15 +91,10 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 
 ### M
 
-- {{CSSxRef("-webkit-margin-after-collapse", "-webkit-margin-after-collapse")}}
 - {{CSSxRef("-webkit-margin-after", "-webkit-margin-after")}}
-- {{CSSxRef("-webkit-margin-before-collapse", "-webkit-margin-before-collapse")}}
 - {{CSSxRef("-webkit-margin-before", "-webkit-margin-before")}}
-- {{CSSxRef("-webkit-margin-bottom-collapse", "-webkit-margin-bottom-collapse")}}
-- {{CSSxRef("-webkit-margin-collapse", "-webkit-margin-collapse")}}
 - {{CSSxRef("margin-block-end", "-webkit-margin-end")}}\*\*
 - {{CSSxRef("margin-block-start", "-webkit-margin-start")}}\*\*
-- {{CSSxRef("-webkit-margin-top-collapse", "-webkit-margin-top-collapse")}}
 - {{CSSxRef("-webkit-marquee-direction", "-webkit-marquee-direction")}}
 - {{CSSxRef("-webkit-marquee-increment", "-webkit-marquee-increment")}}
 - {{CSSxRef("-webkit-marquee-repetition", "-webkit-marquee-repetition")}}
@@ -112,9 +107,11 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-mask-box-image-source", "-webkit-mask-box-image-source")}}
 - {{CSSxRef("-webkit-mask-box-image-width", "-webkit-mask-box-image-width")}}
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image")}}
-- {{CSSxRef("-webkit-mask-repeat-x", "-webkit-mask-repeat-x")}}
-- {{CSSxRef("-webkit-mask-repeat-y", "-webkit-mask-repeat-y")}}
+- {{CSSxRef("-webkit-mask-repeat-x", "-webkit-mask-repeat-x")}}\*\*\*
+- {{CSSxRef("-webkit-mask-repeat-y", "-webkit-mask-repeat-y")}}\*\*\*
 - {{CSSxRef("-webkit-mask-source-type", "-webkit-mask-source-type")}}
+- {{CSSxRef("-webkit-mask-position-x", "-webkit-mask-position-x")}}
+- {{CSSxRef("-webkit-mask-position-y", "-webkit-mask-position-y")}}
 - {{CSSxRef("-webkit-max-logical-height", "-webkit-max-logical-height")}}
 - {{CSSxRef("-webkit-max-logical-width", "-webkit-max-logical-width")}}
 - {{CSSxRef("-webkit-min-logical-height", "-webkit-min-logical-height")}}
@@ -132,7 +129,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("padding-inline-start","-webkit-padding-start")}}\*\*
 - {{CSSxRef("-webkit-perspective-origin-x", "-webkit-perspective-origin-x")}}
 - {{CSSxRef("-webkit-perspective-origin-y", "-webkit-perspective-origin-y")}}
-- {{CSSxRef("-webkit-print-color-adjust", "-webkit-print-color-adjust")}}
 
 ### R-S
 
@@ -142,7 +138,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 ### T
 
 - {{CSSxRef("-webkit-tap-highlight-color", "-webkit-tap-highlight-color")}}
-- {{CSSxRef("-webkit-text-combine", "-webkit-text-combine")}}
 - {{CSSxRef("-webkit-text-decoration-skip", "-webkit-text-decoration-skip")}}
 - {{CSSxRef("-webkit-text-decorations-in-effect", "-webkit-text-decorations-in-effect")}}
 - {{CSSxRef("-webkit-text-fill-color", "-webkit-text-fill-color")}}
@@ -161,17 +156,13 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-user-modify", "-webkit-user-modify")}}
 
 \* A few are on the standards, unprefixed track
-\*\* New syntax has been standardized. Property links to the new synax. Old prefixed syntax is still supported in some browsers.
+\*\* New syntax has been standardized. Property links to the new syntax. Old prefixed syntax is still supported in some browsers.
+\*\*\* WebKit supports without `-webkit` prefix, but not standard or on standards track
 
 ## WebKit-prefixed properties on the standards track
 
 - {{CSSxRef("appearance", "-webkit-appearance")}}
 - {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
-- {{CSSxRef("-webkit-mask-composite", "-webkit-mask-composite")}}
-- {{CSSxRef("-webkit-mask-position-x", "-webkit-mask-position-x")}}
-- {{CSSxRef("-webkit-mask-position-y", "-webkit-mask-position-y")}}
-- {{CSSxRef("-webkit-mask-repeat-x", "-webkit-mask-repeat-x")}}
-- {{CSSxRef("-webkit-mask-repeat-y", "-webkit-mask-repeat-y")}}
 
 ## Formerly proprietary properties that are now standard
 
@@ -191,6 +182,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("animation-name","-webkit-animation-name")}}
 - {{CSSxRef("animation-play-state","-webkit-animation-play-state")}}
 - {{CSSxRef("animation-timing-function","-webkit-animation-timing-function")}}
+- {{CSSxRef("appearance", "-webkit-appearance")}}
 
 ### B
 
@@ -282,6 +274,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("order","-webkit-order")}}
 - {{CSSxRef("perspective","-webkit-perspective")}}
 - {{CSSxRef("perspective-origin","-webkit-perspective-origin")}}
+- {{CSSxRef("print-color-adjust", "-webkit-print-color-adjust")}}
 - {{CSSxRef("ruby-position","-webkit-ruby-position")}}
 
 ### S
@@ -293,6 +286,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 
 ### T
 
+- {{CSSxRef("text-combine-upright", "-webkit-text-combine")}}
 - {{CSSxRef("text-decoration", "-epub-text-decoration")}}
 - {{CSSxRef("text-decoration-color", "-webkit-text-color-decoration")}}
 - {{CSSxRef("text-decoration-line", "-webkit-text-decoration-line")}}
@@ -334,7 +328,7 @@ The following properties are supported in at least one browser without a prefix,
 
 ## Supported in Firefox with `-webkit-` prefix
 
-The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see [Formerly proprietary properties that are now standard ](#formerly_proprietary_properties_that_are_now_standard)above.
+The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see [Formerly proprietary properties that are now standard](#formerly_proprietary_properties_that_are_now_standard) above.
 
 > **Note:** Due to the legacy code in a multitude of web sites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
 
@@ -427,7 +421,7 @@ The following properties are supported with the `-webkit-` prefix in Firefox. Ma
 
 - {{CSSxRef("user-select", "-webkit-user-select")}}
 
-\*Supported with `-moz-` and `-webkit-` prefix in Firefox, but not supported without a prefix. Microsoft Edge and IE Mobile support this property with the `-webkit-` prefix, rather than `-ms-` for interoperability reasons as well.
+\* Supported with `-moz-` and `-webkit-` prefix in Firefox, but not supported without a prefix. Microsoft Edge and IE Mobile support this property with the `-webkit-` prefix, rather than `-ms-` for interoperability reasons as well.
 \*\* These values are supported even though they are not standard and are not on track to becoming standard.
 \*\*\* Use flex-box properties instead.
 
@@ -436,15 +430,22 @@ The following properties are supported with the `-webkit-` prefix in Firefox. Ma
 The following properties were once supported with the -webkit- prefix but are no longer supported in evergreen browsers, with or without the `-webkit-` prefix.
 
 - `-webkit-alt*`
+- {{CSSxRef("-webkit-background-composite", "-webkit-background-composite")}}
+- `-webkit-border-fit`
 - `-webkit-color-correction`
 - `-webkit-flow-from`
 - `-webkit-flow-into`
 - `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
 - `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
 - `-webkit-hyphenate-charset`
-- `-webkit-image-set (See `{{CSSxRef("image/image-set()", "image-set")}})
+- `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})
 - `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
+- {{CSSxRef("-webkit-margin-collapse", "-webkit-margin-collapse")}}
+- {{CSSxRef("-webkit-margin-after-collapse", "-webkit-margin-after-collapse")}}
+- {{CSSxRef("-webkit-margin-before-collapse", "-webkit-margin-before-collapse")}}
+- {{CSSxRef("-webkit-margin-bottom-collapse", "-webkit-margin-bottom-collapse")}}
+- {{CSSxRef("-webkit-margin-top-collapse", "-webkit-margin-top-collapse")}}
 - {{CSSxRef("-webkit-overflow-scrolling", "-webkit-overflow-scrolling")}}
 - `-webkit-region-break-after`
 - `-webkit-region-break-before`
@@ -460,7 +461,7 @@ The following properties were once supported with the -webkit- prefix but are no
 ## Pseudo-classes
 
 - {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
-- {{CSSxRef(":any()", ":-webkit-any()")}}
+- {{CSSxRef(":any", ":-webkit-any()")}}
 - {{CSSxRef(":any-link", ":-webkit-any-link")}}\*
 - {{CSSxRef(":autofill",":-webkit-autofill")}}
 - {{CSSxRef(":autofill-strong-password",":-webkit-autofill-strong-password")}}

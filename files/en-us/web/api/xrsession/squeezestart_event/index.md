@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: squeezestart event'
 slug: Web/API/XRSession/squeezestart_event
+page-type: web-api-event
 tags:
   - API
   - AR
@@ -22,9 +23,11 @@ tags:
   - augmented
   - controllers
   - squeezestart
+  - Experimental
 browser-compat: api.XRSession.squeezestart_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) event **`squeezestart`** is sent to an {{domxref("XRSession")}} when the user begins a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) on one of its input sources.
 
@@ -35,14 +38,16 @@ Primary squeeze actions are actions which are meant to represent gripping or squ
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezestart', event => { })
+addEventListener('squeezestart', (event) => { })
 
-onsqueezestart = event => { }
+onsqueezestart = (event) => { }
 ```
 
 ## Event type
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("XRInputSourceEvent")}}
 
 ## Event properties
 
@@ -51,7 +56,7 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
   - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call {{domxref("XRFrame.getViewerPose", "XRFrame.getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
 - {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
+  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
 ## Description
 
@@ -61,11 +66,11 @@ Triggered when users begin squeezing the controller, making a hand gesture that 
 
 ### Use cases
 
-The `squeezestart` event is sent indicating that the user has begun a squeeze action.
+The `squeezestart` event is sent indicating that the user has begun a squeeze action.
 
-If the primary squeeze action ends successfully, the session is sent a {{domxref("XRSession.squeeze_event", "squeeze")}} event.
+If the primary squeeze action ends successfully, the session is sent a {{domxref("XRSession.squeeze_event", "squeeze")}} event.
 
-A {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
+A {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
 
 ## Examples
 
@@ -78,7 +83,7 @@ After checking to ensure that the received event is a `tracked-pointer` event (t
 If the target ray pose was fetched successfully, the code then uses the value of {{domxref("Event")}} property {{domxref("Event.type", "type")}} to route control to an appropriate function to handle the event which arrived:
 
 - For `squeezestart` events, a `myBeginTracking()` function is called with the target ray pose's {{domxref("XRRigidTransform.matrix", "matrix")}}. The `myBeginTracking()` function would presumably start the presentation of the object-dragging process, using the transform to perform a hit test, determining which object to pick up. `myBeginTracking()` returns an object representing the object the user has begun to drag.
-- Upon receiving a `squeeze` event, the `myDropObject()` function is called with the target object and the current target ray pose transform as inputs. This places the object into its new position in the world and triggers any effects that may arise from doing so (like scheduling an animation of a splash if dropped in water, etc).
+- Upon receiving a `squeeze` event, the `myDropObject()` function is called with the target object, and the current target ray pose transform as inputs. This places the object into its new position in the world and triggers any effects that may arise, like scheduling an animation of a splash if dropped in water, etc.
 - The `squeezeend` event results in a `myStopTracking()` function being called with the object being dragged and the final target ray pose's transform.
 
 ```js
@@ -90,7 +95,7 @@ function onSqueezeEvent(event) {
   let source = event.inputSource;
   let targetObj = null;
 
-  if (source.targetRayMode != "tracked-pointer") {
+  if (source.targetRayMode !== "tracked-pointer") {
     return;
   }
 

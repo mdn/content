@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.totalRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/totalRoundTripTime
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -15,11 +16,12 @@ tags:
   - WebRTC
   - WebRTC API
   - round-trip
-  - rount trip time
+  - round trip time
   - rtt
   - totalRoundTripTime
 browser-compat: api.RTCIceCandidatePairStats.totalRoundTripTime
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's
@@ -29,13 +31,7 @@ all such requests that have been made so far on the pair of candidates described
 this `RTCIceCandidatePairStats` object. This value includes both
 connectivity check and consent check requests.
 
-## Syntax
-
-```js
-totalRTT = rtcIceCandidatePairStats.totalRoundTripTime;
-```
-
-### Value
+## Value
 
 This floating-point value indicates the total number of seconds which have elapsed
 between sending out STUN connectivity and consent check requests and receiving their

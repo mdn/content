@@ -4,8 +4,9 @@ slug: Web/JavaScript/Guide
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
@@ -45,15 +46,15 @@ Overview: [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Con
 
 ## Loops and iteration
 
-Oveview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+Overview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 - [`for`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
 - [`while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
 - [`do...while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
 - [`continue`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
 - [`break`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
-- [`for..in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
-- [`for..of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [`for...in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+- [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 
 ## Functions
 
@@ -119,13 +120,14 @@ Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_O
 - [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
 - [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 
-## Details of the object model
+## Using classes
 
-Overview: [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+Overview: [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
 
-- [Prototype-based OOP](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages)
-- [Creating object hierarchies](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#creating_the_hierarchy)
-- [Inheritance](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#property_inheritance_revisited)
+- [Declaring a class](/en-US/docs/Web/JavaScript/Guide/Using_Classes#declaring_a_class)
+- [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_Classes#constructor)
+- [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
+- [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_Classes#why_classes)
 
 ## Promises
 

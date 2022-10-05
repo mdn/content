@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozGetDataAt()
 slug: Web/API/DataTransfer/mozGetDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozGetDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozGetDataAt()`** method is used to
 retrieve an item in the drag event's {{domxref("DataTransfer","data transfer")}} object,
@@ -24,44 +24,45 @@ range from zero to the number of items minus one.
 
 ## Syntax
 
-```js
-nsIVariant dataTransfer.mozGetDataAt([type], index);
+```js-nolint
+mozGetDataAt(index)
+mozGetDataAt(type, index)
 ```
 
-### Arguments
+### Parameters
 
-- _type_
-  - : A {{domxref("DOMString","string")}} representing the type of the drag data to
+- `type`
+  - : A string representing the type of the drag data to
     retrieve from the {{domxref("DataTransfer","drag data object")}}.
-- _index_
+- `index`
   - : A `unsigned long` representing the index of the data to retrieve.
 
 ### Return value
 
-- {{interface("nsIVariant")}}
+- `nsIVariant`
   - : The data item requested. If the specified item does not exist, `null` is
     returned.
 
-## Example
+## Examples
 
 This example shows the use of the `mozGetDataAt()` method in a
-{{event("drop")}} event handler.
+{{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(event)
 {
-  var dt = event.dataTransfer;
-  var count = dt.mozItemCount;
-  output("Items: " + count + "\n");
+  const dt = event.dataTransfer;
+  const count = dt.mozItemCount;
+  output(`Items: ${count}\n`);
 
-  for (var i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
-    var types = dt.mozTypesAt(i);
-    for (var t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
+  for (let i = 0; i < count; i++) {
+    output(` Item ${i}:\n`);
+    const types = dt.mozTypesAt(i);
+    for (let t = 0; t < types.length; t++) {
+      output(`  ${types[t]}: `);
       try {
-        var data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
+        const data = dt.mozGetDataAt(types[t], i);
+        output(`(${typeof data}) : <${data}>\n`);
       } catch (ex) {
         output("<>\n");
         dump(ex);

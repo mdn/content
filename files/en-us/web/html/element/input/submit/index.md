@@ -15,7 +15,7 @@ tags:
   - form
   - submit
   - submit button
-browser-compat: html.elements.input.input-submit
+browser-compat: html.elements.input.type_submit
 ---
 
 {{HTMLRef("Input_types")}}
@@ -25,8 +25,8 @@ browser-compat: html.elements.input.input-submit
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -35,13 +35,17 @@ browser-compat: html.elements.input.input-submit
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}} and
-        {{htmlattrxref("value", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>
@@ -52,12 +56,12 @@ browser-compat: html.elements.input.input-submit
 
 ## Value
 
-An `<input type="submit">` element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is displayed as the button's label. Buttons do not have a true value otherwise.
+An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
 
 ### Setting the value attribute
 
 ```html
-<input type="submit" value="Send Request">
+<input type="submit" value="Send Request" />
 ```
 
 {{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
@@ -67,7 +71,7 @@ An `<input type="submit">` element's {{htmlattrxref("value", "input")}} attribut
 If you don't specify a `value`, the button will have a default label, chosen by the user agent. This label is likely to be something along the lines of "Submit" or "Submit Query." Here's an example of a submit button with a default label in your browser:
 
 ```html
-<input type="submit">
+<input type="submit" />
 ```
 
 {{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
@@ -89,7 +93,7 @@ A string that identifies the encoding method to use when submitting the form dat
 - `application/x-www-form-urlencoded`
   - : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
-  - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of {{htmlattrxref("type", "input")}} `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
+  - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
@@ -147,10 +151,10 @@ We'll begin by creating a form with a simple submit button:
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Send">
+    <input type="submit" value="Send" />
   </div>
 </form>
 ```
@@ -165,9 +169,9 @@ Upon submitting, the data name/value pair gets sent to the server. In this insta
 
 ### Adding a submit keyboard shortcut
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination. In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See {{htmlattrxref("accesskey")}} for further details.
+In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination. In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) for further details.
 
 Here's the previous example with the <kbd>s</kbd> access key added:
 
@@ -175,11 +179,10 @@ Here's the previous example with the <kbd>s</kbd> access key added:
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Send"
-     accesskey="s">
+    <input type="submit" value="Send" accesskey="s" />
   </div>
 </form>
 ```
@@ -188,14 +191,14 @@ For example, in Firefox for Mac, pressing <kbd>Control</kbd>-<kbd>Option</kbd>-<
 
 {{EmbedLiveSample("Adding_a_submit_keyboard_shortcut", 650, 100)}}
 
-The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the {{htmlattrxref("title")}} attribute) can also help, although it's not a complete solution for accessibility purposes.
+The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute) can also help, although it's not a complete solution for accessibility purposes.
 
 ### Disabling and enabling a submit button
 
-To disable a submit button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute on it, like so:
 
 ```html
-<input type="submit" value="Send" disabled>
+<input type="submit" value="Send" disabled />
 ```
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.

@@ -1,6 +1,7 @@
 ---
 title: XRHitTestResult
 slug: Web/API/XRHitTestResult
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,11 +10,13 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRHitTestResult
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-The **`XRHitTestResult`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) contains a single result of a hit test. You can get an array of `XRHitTestResult` objects for a frame by calling {{domxref("XRFrame.getHitTestResults()")}}.
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+
+The **`XRHitTestResult`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) contains a single result of a hit test. You can get an array of `XRHitTestResult` objects for a frame by calling {{domxref("XRFrame.getHitTestResults()")}}.
 
 ## Properties
 
@@ -21,9 +24,9 @@ None.
 
 ## Methods
 
-- {{domxref("XRHitTestResult.createAnchor()")}}
+- {{domxref("XRHitTestResult.createAnchor()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRAnchor")}} created from the hit test result.
-- {{domxref("XRHitTestResult.getPose()")}}
+- {{domxref("XRHitTestResult.getPose()")}} {{Experimental_Inline}}
   - : Returns the {{domxref("XRPose")}} of the hit test result relative to the given base space.
 
 ## Examples
@@ -74,7 +77,7 @@ Once you find intersections on real-world surfaces using hit testing, you can cr
 hitTestResult.createAnchor().then((anchor) => {
   // add anchored objects to the scene
 }, (error) => {
-  console.error("Could not create anchor: " + error);
+  console.error(`Could not create anchor: ${error}`);
 });
 ```
 

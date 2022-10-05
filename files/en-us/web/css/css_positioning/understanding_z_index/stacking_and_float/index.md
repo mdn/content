@@ -1,6 +1,7 @@
 ---
 title: Stacking with floated blocks
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -9,24 +10,25 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
 For floated blocks, the stacking order is a bit different. Floating blocks are placed between non-positioned blocks and positioned blocks:
 
-1.  The background and borders of the root element
-2.  Descendant non-positioned blocks, in order of appearance in the HTML
-3.  _Floating blocks_
-4.  Descendant positioned elements, in order of appearance in the HTML
+1. The background and borders of the root element
+2. Descendant non-positioned blocks, in order of appearance in the HTML
+3. _Floating blocks_
+4. Descendant positioned elements, in order of appearance in the HTML
 
 See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
 Actually, as you can see in the example below, the background and border of the non-positioned block (DIV #4) is completely unaffected by floating blocks, but the content is affected. This happens according to standard float behavior. This behavior can be shown with an added rule to the above list:
 
-1.  The background and borders of the root element
-2.  Descendant non-positioned blocks, in order of appearance in the HTML
-3.  Floating blocks
-4.  _Descendant non-positioned inline elements_
-5.  Descendant positioned elements, in order of appearance in the HTML
+1. The background and borders of the root element
+2. Descendant non-positioned blocks, in order of appearance in the HTML
+3. Floating blocks
+4. _Descendant non-positioned inline elements_
+5. Descendant positioned elements, in order of appearance in the HTML
 
 {{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
 
@@ -37,25 +39,19 @@ Actually, as you can see in the example below, the background and border of the 
 ### HTML
 
 ```html
-<div id="abs1">
-  <b>DIV #1</b><br />position: absolute;</div>
+<div id="abs1"><strong>DIV #1</strong><br />position: absolute;</div>
 
-<div id="flo1">
-  <b>DIV #2</b><br />float: left;</div>
+<div id="flo1"><strong>DIV #2</strong><br />float: left;</div>
 
-<div id="flo2">
-  <b>DIV #3</b><br />float: right;</div>
+<div id="flo2"><strong>DIV #3</strong><br />float: right;</div>
 
 <br />
 
-<div id="sta1">
-  <b>DIV #4</b><br />no positioning</div>
+<div id="sta1"><strong>DIV #4</strong><br />no positioning</div>
 
-<div id="abs2">
-  <b>DIV #5</b><br />position: absolute;</div>
+<div id="abs2"><strong>DIV #5</strong><br />position: absolute;</div>
 
-<div id="rel1">
-  <b>DIV #6</b><br />position: relative;</div>
+<div id="rel1"><strong>DIV #6</strong><br />position: relative;</div>
 ```
 
 ### CSS
@@ -66,7 +62,7 @@ div {
   text-align: center;
 }
 
-b {
+strong {
   font-family: sans-serif;
 }
 
@@ -117,11 +113,11 @@ b {
 }
 
 #rel1 {
-  position: relative;
-  border: 1px dashed #996;
-  background-color: #cff;
-  margin: 0px 10px 0px 10px;
-  text-align: left;
+  position: relative;
+  border: 1px dashed #996;
+  background-color: #cff;
+  margin: 0px 10px 0px 10px;
+  text-align: left;
 }
 ```
 

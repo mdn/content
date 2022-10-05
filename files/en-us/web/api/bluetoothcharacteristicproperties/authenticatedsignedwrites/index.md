@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.authenticatedSignedWrites
 slug: Web/API/BluetoothCharacteristicProperties/authenticatedSignedWrites
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -13,20 +14,15 @@ tags:
   - authenticatedSignedWrites
 browser-compat: api.BluetoothCharacteristicProperties.authenticatedSignedWrites
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
-The **`authenticatedSignedWrites`** read-only
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+
+The **`authenticatedSignedWrites`** read-only
 property of the {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if signed writing to the characteristic
 value is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.authenticatedSignedWrites;
-```
-
-### Value
+## Value
 
 A boolean value.
 

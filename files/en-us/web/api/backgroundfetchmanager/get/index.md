@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.get()
 slug: Web/API/BackgroundFetchManager/get
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -12,14 +13,15 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.get
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
 
 ## Syntax
 
-```js
-let backgroundFetchRegistration = BackgroundFetchManager.get(id);
+```js-nolint
+get(id)
 ```
 
 ### Parameters
@@ -29,7 +31,7 @@ let backgroundFetchRegistration = BackgroundFetchManager.get(id);
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undeffined")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undefined")}}.
 
 ## Examples
 
@@ -37,9 +39,9 @@ The following examples shows how to use `get()` to retrieve a {{domxref("Backgro
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.get('my-fetch');
+  const bgFetch = await swReg.backgroundFetch.get("my-fetch");
 });
-my code block
+// my code block
 ```
 
 ## Specifications

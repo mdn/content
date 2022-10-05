@@ -1,11 +1,13 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
 browser-compat: api.Node.firstChild
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`firstChild`** property of the {{domxref("Node")}} interface
@@ -35,7 +37,7 @@ might interfere with using this property.
 </p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```
@@ -57,7 +59,7 @@ span element becomes the paragraph's first child.
 <p id="para-01"><span>First span</span></p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```

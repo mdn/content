@@ -1,6 +1,7 @@
 ---
 title: RTCIceParameters.password
 slug: Web/API/RTCIceParameters/password
+page-type: web-api-instance-property
 tags:
   - API
   - Candidates
@@ -15,6 +16,7 @@ tags:
   - password
 browser-compat: api.RTCIceParameters.password
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceParameters")}}**
@@ -23,15 +25,9 @@ password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment",
     "usernameFragment")}}, uniquely identifies an ICE session for its entire
 duration.
 
-## Syntax
+## Value
 
-```js
-password = RTCIceParameters.password;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the password that corresponds to the transport's
+A string containing the password that corresponds to the transport's
 `usernameFragment` string
 
 ## Specifications

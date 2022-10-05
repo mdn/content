@@ -1,6 +1,7 @@
 ---
 title: USBDevice.isochronousTransferOut()
 slug: Web/API/USBDevice/isochronousTransferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - isochronousTransferOut
+  - Experimental
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`isochronousTransferOut()`** method of the
@@ -21,18 +24,18 @@ transmitted to the USB device.
 
 ## Syntax
 
-```js
-var promise = USBDevice.isochronousTransferOut(endpointNumber, data, packetLengths)
+```js-nolint
+isochronousTransferOut(endpointNumber, data, packetLengths)
 ```
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- data
-  - : A {{domxref("TypedArray")}} containing the data to send to the device.
-- packetLengths
-  - : An array of lengths for the packets being transfered.
+- `data`
+  - : A {{domxref("TypedArray")}} containing the data to send to the device.
+- `packetLengths`
+  - : An array of lengths for the packets being transferred.
 
 ### Return value
 

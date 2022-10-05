@@ -1,17 +1,18 @@
 ---
-title: 'ARIA: section role'
+title: "ARIA: section role"
 slug: Web/Accessibility/ARIA/Roles/section_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
+spec-urls: https://w3c.github.io/aria/#section
 ---
 
 The **`section` role**, an abstract role, is superclass role for renderable structural containment components.
 
-> **Note:**  The `section` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It **should not be used** by web authors.
+> **Note:** The `section` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It **should not be used** by web authors.
 
 ## Description
 
@@ -24,10 +25,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#section","ARIA: section role")}}                                             | {{Spec2('ARIA')}}                         |
-
+{{Specifications}}
 
 ## See Also
 
@@ -67,12 +65,10 @@ Do not use.
 - [ARIA: `time` role](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
 - [ARIA: `tooltip` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
 
-
-
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

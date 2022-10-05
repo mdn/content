@@ -1,12 +1,14 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
   - Reference
 browser-compat: api.Event.cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`cancelable`** read-only property of the {{domxref("Event")}} interface indicates whether the event
@@ -17,10 +19,10 @@ If the event is _not_ cancelable, then its `cancelable` property will be
 
 Most browser-native events that can be canceled are the ones that result from the user
 interacting with the page. Canceling the {{domxref("Element/click_event", "click")}},
-{{domxref("Document/scroll_event", "scroll")}}, or
+{{domxref("Document/wheel_event", "wheel")}}, or
 {{domxref("Window/beforeunload_event", "beforeunload")}} events would prevent the user
-from clicking on something, scrolling the page, or navigating away from the page,
-respectively.
+from clicking on something, scrolling the page with the mouse wheel, or
+navigating away from the page, respectively.
 
 [Synthetic events](/en-US/docs/Web/API/Event/Event) created by other JavaScript
 code define if they can be canceled when they are created.
@@ -41,8 +43,7 @@ canceled.
 ## Example
 
 For example, browser vendors are proposing that the {{domxref("Document/wheel_event",
-  "wheel")}} event can only be canceled [the first time
-the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be
+  "wheel")}} event can only be canceled [the first time the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be
 canceled.
 
 ```js

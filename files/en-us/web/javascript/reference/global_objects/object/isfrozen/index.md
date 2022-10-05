@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isFrozen
 ---
+
 {{JSRef}}
 
 The **`Object.isFrozen()`** determines if an object is
@@ -17,7 +18,7 @@ The **`Object.isFrozen()`** determines if an object is
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isFrozen(obj)
 ```
 
@@ -47,12 +48,12 @@ Object.isFrozen({}); // === false
 
 // An empty object which is not extensible
 // is vacuously frozen.
-var vacuouslyFrozen = Object.preventExtensions({});
+const vacuouslyFrozen = Object.preventExtensions({});
 Object.isFrozen(vacuouslyFrozen); // === true
 
 // A new object with one property is also extensible,
 // ergo not frozen.
-var oneProp = { p: 42 };
+const oneProp = { p: 42 };
 Object.isFrozen(oneProp); // === false
 
 // Preventing extensions to the object still doesn't
@@ -61,14 +62,13 @@ Object.isFrozen(oneProp); // === false
 Object.preventExtensions(oneProp);
 Object.isFrozen(oneProp); // === false
 
-// ...but then deleting that property makes the object
-// vacuously frozen.
+// Deleting that property makes the object vacuously frozen.
 delete oneProp.p;
 Object.isFrozen(oneProp); // === true
 
 // A non-extensible object with a non-writable
 // but still configurable property is not frozen.
-var nonWritable = { e: 'plep' };
+const nonWritable = { e: 'plep' };
 Object.preventExtensions(nonWritable);
 Object.defineProperty(nonWritable, 'e', {
   writable: false
@@ -84,7 +84,7 @@ Object.isFrozen(nonWritable); // === true
 
 // A non-extensible object with a non-configurable
 // but still writable property also isn't frozen.
-var nonConfigurable = { release: 'the kraken!' };
+const nonConfigurable = { release: 'the kraken!' };
 Object.preventExtensions(nonConfigurable);
 Object.defineProperty(nonConfigurable, 'release', {
   configurable: false
@@ -100,12 +100,11 @@ Object.isFrozen(nonConfigurable); // === true
 
 // A non-extensible object with a configurable
 // accessor property isn't frozen.
-var accessor = { get food() { return 'yum'; } };
+const accessor = { get food() { return 'yum'; } };
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
-// ...but make that property non-configurable
-// and it becomes frozen.
+// When we make that property non-configurable it becomes frozen.
 Object.defineProperty(accessor, 'food', {
   configurable: false
 });
@@ -113,7 +112,7 @@ Object.isFrozen(accessor); // === true
 
 // But the easiest way for an object to be frozen
 // is if Object.freeze has been called on it.
-var frozen = { 1: 81 };
+const frozen = { 1: 81 };
 Object.isFrozen(frozen); // === false
 Object.freeze(frozen);
 Object.isFrozen(frozen); // === true
@@ -125,11 +124,9 @@ Object.isExtensible(frozen); // === false
 Object.isSealed(frozen); // === true
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a frozen ordinary object, return `true`.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, it will return `true` without any errors if a non-object argument is passed, since primitives are, by definition, immutable.
 
 ```js
 Object.isFrozen(1);

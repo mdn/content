@@ -80,10 +80,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Examples
 
+```css
+.sold-out {
+  text-decoration: line-through;
+}
+```
+
 ```html
-<s>Today's Special: Salmon</s> SOLD OUT<br>
-<span style="text-decoration:line-through;">Today's Special:
-  Salmon</span> SOLD OUT
+<s>Today's Special: Salmon</s> SOLD OUT<br />
+<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
 ```
 
 {{EmbedLiveSample("Examples")}}
@@ -115,7 +120,7 @@ s::after {
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Specifications

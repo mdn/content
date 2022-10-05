@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
+page-type: web-api-instance-method
 tags:
   - Audio
   - Media
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.RTCRtpSender.replaceTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSender")}} method
@@ -23,18 +25,18 @@ The {{domxref("RTCRtpSender")}} method
 as the sender's source with a new {{domxref("MediaStreamTrack")}}.
 
 The new
-track must be of the same media kind (audio, video, etc) and switching the track should
+track must be of the same media kind (audio, video, etc.) and switching the track should
 not require negotiation.
 
 Among the use cases for `replaceTrack()` is the common need to switch
 between the rear- and front-facing cameras on a phone. With `replaceTrack()`,
 you can have a track object for each camera and switch between the two as needed. See
-the example {{anch("Switching cameras")}} below.
+the example [Switching cameras](#switching_cameras) below.
 
 ## Syntax
 
-```js
-trackReplacedPromise = sender.replaceTrack(newTrack);
+```js-nolint
+replaceTrack(newTrack)
 ```
 
 ### Parameters
@@ -50,7 +52,7 @@ trackReplacedPromise = sender.replaceTrack(newTrack);
 A {{jsxref("Promise")}} which is fulfilled once the track has been successfully
 replaced. The promise is rejected if the track cannot be replaced for any reason; this
 is commonly because the change would require renegotiation of the codec, which is not
-allowed (see {{anch("Things that require negotiation")}}).
+allowed (see [Things that require negotiation](#things_that_require_negotiation)).
 
 If `newTrack` was omitted or was `null`,
 `replaceTrack()` stops the sender. No negotiation is required in this case.
@@ -68,7 +70,7 @@ rejection handler:
     would require negotiation.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the track on which this method was called is stopped rather than running.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the new track's `kind` doesn't match the original track.
 
 ## Usage notes
@@ -76,8 +78,8 @@ rejection handler:
 ### Things that trigger negotiation
 
 Not all track replacements require renegotiation. In fact, even changes that seem huge
-can be done without requiring negotation. Here are the changes that can trigger
-negotiaton:
+can be done without requiring negotiation. Here are the changes that can trigger
+negotiation:
 
 - The new track has a resolution which is outside the bounds of the current track;
   that is, the new track is either wider or taller than the current one.
@@ -85,7 +87,7 @@ negotiaton:
   exceeded.
 - The new track is a video track and its raw or pre-encoded state differs from that of
   the original track.
-- The new track is an audio track with a different number of channels fom the
+- The new track is an audio track with a different number of channels from the
   original.
 - Media sources that have built-in encoders — such as hardware encoders — may not be
   able to provide the negotiated codec. Software sources may not implement the
@@ -95,29 +97,29 @@ negotiaton:
 
 ### Switching video cameras
 
-    // example to change video camera, suppose selected value saved into window.selectedCamera
+```js
+// example to change video camera, suppose selected value saved into window.selectedCamera
 
-    navigator.mediaDevices
-      .getUserMedia({
-        video: {
-          deviceId: {
-            exact: window.selectedCamera
-          }
-        }
-      })
-      .then(function(stream) {
-        let videoTrack = stream.getVideoTracks()[0];
-        PCs.forEach(function(pc) {
-          var sender = pc.getSenders().find(function(s) {
-            return s.track.kind == videoTrack.kind;
-          });
-          console.log('found sender:', sender);
-          sender.replaceTrack(videoTrack);
-        });
-      })
-      .catch(function(err) {
-        console.error('Error happens:', err);
-      });
+navigator.mediaDevices
+  .getUserMedia({
+    video: {
+      deviceId: {
+        exact: window.selectedCamera
+      }
+    }
+  })
+  .then((stream) => {
+    const [videoTrack] = stream.getVideoTracks();
+    PCs.forEach((pc) => {
+      const sender = pc.getSenders().find((s) => s.track.kind === videoTrack.kind);
+      console.log('Found sender:', sender);
+      sender.replaceTrack(videoTrack);
+    });
+  })
+  .catch((err) => {
+    console.error(`Error happened: ${err}`);
+  });
+```
 
 ## Specifications
 

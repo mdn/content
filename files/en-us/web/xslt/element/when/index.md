@@ -7,15 +7,18 @@ tags:
   - XSLT
   - when
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:when>` element always appears within an `<xsl:choose>` element, acting like a case statement.
 
 ### Syntax
 
-    <xsl:when test=EXPRESSION>
-    	TEMPLATE
-    </xsl:when>
+```xml
+<xsl:when test=EXPRESSION>
+  TEMPLATE
+</xsl:when>
+```
 
 ### Required Attributes
 

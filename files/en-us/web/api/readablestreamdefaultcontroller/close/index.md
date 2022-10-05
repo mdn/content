@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController.close()
 slug: Web/API/ReadableStreamDefaultController/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - close
 browser-compat: api.ReadableStreamDefaultController.close
 ---
+
 {{APIRef("Streams")}}
 
 The **`close()`** method of the
@@ -23,8 +25,8 @@ rid of the stream and discard any enqueued chunks, you'd use
 
 ## Syntax
 
-```js
-readableStreamDefaultController.close();
+```js-nolint
+close()
 ```
 
 ### Parameters
@@ -33,18 +35,17 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 
 In the following simple example, a custom `ReadableStream` is created using
-a constructor (see our [Simple random
-stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
+a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
 random string of text every second and enqueues it into the stream. A
 `cancel()` function is also provided to stop the generation if
 {{domxref("ReadableStream.cancel()")}} is called for any reason.
@@ -68,7 +69,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();

@@ -1,15 +1,18 @@
 ---
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - Screen Wake Lock API
   - WakeLock
+  - Experimental
 browser-compat: api.WakeLock.request
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`request()`** method of the
 {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
@@ -18,18 +21,19 @@ locking.
 
 ## Syntax
 
-```js
-var wakeLock = navigator.wakeLock.request(type);
+```js-nolint
+request(type)
 ```
 
 ### Parameters
 
-- _type_
+- `type`
 
   - : Options are as follows:
 
-    - `'screen'`: Requests a screen wake lock. Prevents devices from
-      dimming or locking the screen.
+    - `'screen'`
+      - : Requests a screen wake lock. Prevents devices from
+        dimming or locking the screen.
 
 ### Return value
 

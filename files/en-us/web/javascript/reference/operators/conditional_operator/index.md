@@ -14,6 +14,7 @@ tags:
   - ternary
 browser-compat: javascript.operators.conditional
 ---
+
 {{jsSidebar("Operators")}}
 
 The **conditional (ternary) operator** is the only JavaScript operator that takes three operands:
@@ -24,7 +25,7 @@ This operator is frequently used as an alternative to an [`if...else`](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 condition ? exprIfTrue : exprIfFalse
 ```
 
@@ -33,7 +34,7 @@ condition ? exprIfTrue : exprIfFalse
 - `condition`
   - : An expression whose value is used as a condition.
 - `exprIfTrue`
-  - : An expression which is evaluated if the `condition` evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted to `true`).
+  - : An expression which is executed if the `condition` evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted to `true`).
 - `exprIfFalse`
   - : An expression which is executed if the `condition` is {{Glossary("falsy")}} (that is, has a value which can be converted to `false`).
 
@@ -47,8 +48,8 @@ If `condition` is any of these, the result of the conditional expression will be
 ### A simple example
 
 ```js
-var age = 26;
-var beverage = (age >= 21) ? "Beer" : "Juice";
+const age = 26;
+const beverage = age >= 21 ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
 ```
 
@@ -57,12 +58,12 @@ console.log(beverage); // "Beer"
 One common usage is to handle a value that may be `null`:
 
 ```js
-let greeting = person => {
-    let name = person ? person.name : `stranger`
-    return `Howdy, ${name}`
+const greeting = (person) => {
+  const name = person ? person.name : "stranger";
+  return `Howdy, ${name}`;
 }
 
-console.log(greeting({name: `Alice`}));  // "Howdy, Alice"
+console.log(greeting({ name: "Alice" }));  // "Howdy, Alice"
 console.log(greeting(null));             // "Howdy, stranger"
 ```
 
@@ -71,20 +72,27 @@ console.log(greeting(null));             // "Howdy, stranger"
 The ternary operator is right-associative, which means it can be "chained" in the following way, similar to an `if … else if … else if … else` chain:
 
 ```js
-function example(…) {
-    return condition1 ? value1
-         : condition2 ? value2
-         : condition3 ? value3
-         : value4;
+function example() {
+  return condition1 ? value1
+        : condition2 ? value2
+        : condition3 ? value3
+        : value4;
 }
+```
 
-// Equivalent to:
+This is equivalent to the following [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) chain.
 
-function example(…) {
-    if (condition1) { return value1; }
-    else if (condition2) { return value2; }
-    else if (condition3) { return value3; }
-    else { return value4; }
+```js
+function example() {
+  if (condition1) {
+    return value1;
+  } else if (condition2) {
+    return value2;
+  } else if (condition3) {
+    return value3;
+  } else {
+    return value4;
+  }
 }
 ```
 

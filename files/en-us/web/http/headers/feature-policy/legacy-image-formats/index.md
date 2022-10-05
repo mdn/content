@@ -2,7 +2,7 @@
 title: 'Feature-Policy: legacy-image-formats'
 slug: Web/HTTP/Headers/Feature-Policy/legacy-image-formats
 tags:
-  - Direcive
+  - Directive
   - Feature-Policy
   - HTTP
   - Reference
@@ -11,13 +11,14 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.legacy-image-formats
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `legacy-image-formats` directive controls whether the current document is allowed to display images in legacy formats.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: legacy-image-formats <allowlist>;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryEntry
 slug: Web/API/FileSystemDirectoryEntry
+page-type: web-api-interface
 tags:
   - API
   - File API
@@ -13,9 +14,12 @@ tags:
   - Reference
 browser-compat: api.FileSystemDirectoryEntry
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The **`FileSystemDirectoryEntry`** interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) represents a directory in a file system. It provides methods which make it possible to access and manipulate the files in a directory, as well as to access the entries within the directory.
+
+{{InheritanceDiagram}}
 
 ## Basic concepts
 
@@ -30,10 +34,10 @@ In the following code snippet, we create a directory called "Documents."
 window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
 window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
 
-...
+// …
 
 function onFs(fs){
-  fs.root.getDirectory('Documents', {create:true}, function(directoryEntry){
+  fs.root.getDirectory('Documents', {create:true}, (directoryEntry) => {
     //directoryEntry.isFile === false
     //directoryEntry.isDirectory === true
     //directoryEntry.name === 'Documents'
@@ -73,7 +77,7 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemFileEntry")}}

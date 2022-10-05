@@ -7,6 +7,7 @@ tags:
   - Input
   - Reference
   - Select
+browser-compat: html.elements.attribute.size
 ---
 
 {{HTMLSidebar}}
@@ -17,11 +18,13 @@ The `size` attribute has no impact on constraint validation.
 
 ## Examples
 
-By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, definining how many options are visible in the closed state.
+By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, defining how many options are visible in the closed state.
 
 ```html
-<label for="fruit">Enter a fruit</label> <input type="text" size="15" id="fruit">
-<label for="vegetable">Enter a vegetable</label> <input type="text" id="vegetable">
+<label for="fruit">Enter a fruit</label>
+<input type="text" size="15" id="fruit" />
+<label for="vegetable">Enter a vegetable</label>
+<input type="text" id="vegetable" />
 
 <select name="fruits" size="5">
   <option>banana</option>
@@ -32,11 +35,11 @@ By adding `size` on some input types, the width of the input can be controlled. 
 </select>
 
 <select name="vegetables" size="5">
-<option>carrot</option>
-<option>cucumber</option>
-<option>cauliflower</option>
-<option>celery</option>
-<option>collard greens</option>
+  <option>carrot</option>
+  <option>cucumber</option>
+  <option>cauliflower</option>
+  <option>celery</option>
+  <option>collard greens</option>
 </select>
 ```
 
@@ -44,14 +47,11 @@ By adding `size` on some input types, the width of the input can be controlled. 
 
 ## Specifications
 
-| Specification                                                               | Status                   |
-| --------------------------------------------------------------------------- | ------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}    | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.size")}}
+{{Compat}}
 
 ## See also
 

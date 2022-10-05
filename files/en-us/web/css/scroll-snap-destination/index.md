@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -8,9 +9,11 @@ tags:
   - Deprecated
   - Reference
   - recipe:css-property
+  - Non-standard
 browser-compat: css.properties.scroll-snap-destination
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-destination`** [CSS](/en-US/docs/Web/CSS) property defines the position in x and y coordinates within the scroll container's visual {{Glossary("viewport")}} which element snap points align with.
 
@@ -29,7 +32,7 @@ scroll-snap-destination: unset;
 ### Values
 
 - `<position>`
-  - : Specifies the offset of the snap destination from the start edge of the scroll container’s visual viewport. The first value gives the x coordinate of the snap destination, the second value its y coordinate.
+  - : Specifies the offset of the snap destination from the start edge of the scroll container's visual viewport. The first value gives the x coordinate of the snap destination, the second value its y coordinate.
 
 ## Formal definition
 
@@ -37,7 +40,10 @@ scroll-snap-destination: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+scroll-snap-destination =
+  <position>
+```
 
 ## Examples
 
@@ -50,27 +56,27 @@ scroll-snap-destination: unset;
   <div>
     <p>At coordinate (0, 0)</p>
     <div class="scrollContainer destination0">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 
   <div>
     <p>At coordinate (25, 0)</p>
     <div class="scrollContainer destination25">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 
   <div>
     <p>At coordinate (50, 0)</p>
     <div class="scrollContainer destination50">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 </div>
@@ -83,7 +89,7 @@ scroll-snap-destination: unset;
   display: flex;
 }
 
-#container > div:nth-child(-n+2) {
+#container > div:nth-child(-n + 2) {
   margin-right: 20px;
 }
 
@@ -119,11 +125,11 @@ scroll-snap-destination: unset;
 }
 
 .scrollContainer > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .scrollContainer > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 

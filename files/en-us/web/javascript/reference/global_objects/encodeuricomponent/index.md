@@ -8,6 +8,7 @@ tags:
   - URI
 browser-compat: javascript.builtins.encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`encodeURIComponent()`** function encodes a
@@ -20,14 +21,15 @@ characters).
 
 ## Syntax
 
-```js
-encodeURIComponent(uriComponent);
+```js-nolint
+encodeURIComponent(uriComponent)
 ```
 
 ### Parameters
 
 - `uriComponent`
   - : A string, number, boolean, null, undefined, or any object. Before encoding, the `uriComponent` gets converted to string.
+
 ### Return value
 
 A new string representing the provided _uriComponent_ encoded as a URI component.
@@ -42,14 +44,13 @@ Not Escaped:
     A-Z a-z 0-9 - _ . ! ~ * ' ( )
 ```
 
-`encodeURIComponent()` differs from **`encodeURI`**
-as follows:
+`encodeURIComponent()` differs from {{jsxref("encodeURI", "encodeURI()")}} as follows:
 
 ```js
-var set1 = ";,/?:@&=+$";  // Reserved Characters
-var set2 = "-_.!~*'()";   // Unescaped Characters
-var set3 = "#";           // Number Sign
-var set4 = "ABC abc 123"; // Alphanumeric Characters + Space
+const set1 = ";,/?:@&=+$"; // Reserved Characters
+const set2 = "-_.!~*'()"; // Unescaped Characters
+const set3 = "#"; // Number Sign
+const set4 = "ABC abc 123"; // Alphanumeric Characters + Space
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$
 console.log(encodeURI(set2)); // -_.!~*'()
@@ -67,13 +68,13 @@ which is not part of a high-low pair, e.g.,
 
 ```js
 // high-low pair OK
-console.log(encodeURIComponent('\uD800\uDFFF'));
+console.log(encodeURIComponent("\uD800\uDFFF"));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uD800'));
+console.log(encodeURIComponent("\uD800"));
 
 // lone low surrogate throws "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uDFFF'));
+console.log(encodeURIComponent("\uDFFF"));
 ```
 
 Use `encodeURIComponent()` on user-entered fields from forms
@@ -86,7 +87,7 @@ For example, if a user writes `Jack & Jill`, the text may get encoded as
 ampersand could be interpreted on the server as the start of a new field and jeopardize
 the integrity of the data.
 
-For [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
+For [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
 
 To be more stringent in adhering to {{rfc("3986")}} (which reserves !, ', (, ),
 and \*), even though these characters have no formalized URI delimiting uses, the
@@ -94,9 +95,10 @@ following can be safely used:
 
 ```js
 function fixedEncodeURIComponent(str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-    return '%' + c.charCodeAt(0).toString(16).toUpperCase();
-  });
+  return encodeURIComponent(str).replace(
+    /[!'()*]/g,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+  );
 }
 ```
 
@@ -109,34 +111,40 @@ The following example provides the special encoding required within UTF-8
 parameters (e.g., UTF-8 filenames):
 
 ```js
-var fileName = 'my file(2).txt';
-var header = "Content-Disposition: attachment; filename*=UTF-8''"
-             + encodeRFC5987ValueChars(fileName);
+const fileName = "my file(2).txt";
+const header =
+  `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(fileName)}`;
 
 console.log(header);
 // logs "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"
 
 function encodeRFC5987ValueChars(str) {
-    return encodeURIComponent(str).
-        // Note that although RFC3986 reserves "!", RFC5987 does not,
-        // so we do not need to escape it
-        replace(/['()]/g, escape). // i.e., %27 %28 %29
-        replace(/\*/g, '%2A').
-            // The following are not required for percent-encoding per RFC5987,
-            // so we can allow for a little better readability over the wire: |`^
-            replace(/%(?:7C|60|5E)/g, unescape);
+  return (
+    encodeURIComponent(str)
+      // Note that although RFC3986 reserves "!", RFC5987 does not,
+      // so we do not need to escape it
+      .replace(/['()]/g, escape) // i.e., %27 %28 %29
+      .replace(/\*/g, "%2A")
+      // The following are not required for percent-encoding per RFC5987,
+      // so we can allow for a little better readability over the wire: |`^
+      .replace(/%(?:7C|60|5E)/g, unescape)
+  );
 }
 
 // here is an alternative to the above function
 function encodeRFC5987ValueChars2(str) {
-  return encodeURIComponent(str).
-    // Note that although RFC3986 reserves "!", RFC5987 does not,
-    // so we do not need to escape it
-    replace(/['()*]/g, c => "%" + c.charCodeAt(0).toString(16)). // i.e., %27 %28 %29 %2a (Note that valid encoding of "*" is %2A
-                                                                 // which necessitates calling toUpperCase() to properly encode)
-    // The following are not required for percent-encoding per RFC5987,
-    // so we can allow for a little better readability over the wire: |`^
-    replace(/%(7C|60|5E)/g, (str, hex) => String.fromCharCode(parseInt(hex, 16)));
+  return (
+    encodeURIComponent(str)
+      // Note that although RFC3986 reserves "!", RFC5987 does not,
+      // so we do not need to escape it
+      .replace(/['()*]/g, (c) => `%${c.charCodeAt(0).toString(16)}`) // i.e., %27 %28 %29 %2a (Note that valid encoding of "*" is %2A
+      // which necessitates calling toUpperCase() to properly encode)
+      // The following are not required for percent-encoding per RFC5987,
+      // so we can allow for a little better readability over the wire: |`^
+      .replace(/%(7C|60|5E)/g, (str, hex) =>
+        String.fromCharCode(parseInt(hex, 16))
+      )
+  );
 }
 ```
 

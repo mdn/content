@@ -12,17 +12,18 @@ tags:
   - onRequestFinished
 browser-compat: webextensions.api.devtools.network.onRequestFinished
 ---
+
 {{AddonSidebar()}}
 
 Fired when a network request has finished and its details are available to the extension.
 
 The request is given as a [HAR entry object](http://www.softwareishard.com/blog/har-12-spec/#entries), which is also given an asynchronous `getContent()` method that gets the response body content.
 
-Note that although your extension can add a listener at any time, it will only start firing after the user has activated the browser's [network panel](/en-US/docs/Tools/Network_Monitor) at least once.
+Note that although your extension can add a listener at any time, it will only start firing after the user has activated the browser's [network panel](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) at least once.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)
@@ -61,7 +62,7 @@ function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
   request.getContent().then(([content, mimeType]) => {
     console.log("Content: ", content);
-    console.log("MIME type: ", mimeType);
+    console.log("MIME type: ", mimeType);
   });
 }
 
@@ -70,9 +71,10 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +101,4 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,6 +1,7 @@
 ---
 title: mask
 slug: Web/CSS/mask
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Masking
@@ -12,6 +13,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.mask
 ---
+
 {{CSSRef}}
 
 The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) hides an element (partially or fully) by masking or clipping the image at specific points.
@@ -53,11 +55,12 @@ mask: url(masks.svg#star) exclude;         /* Element within SVG graphic used as
 mask: inherit;
 mask: initial;
 mask: revert;
+mask: revert-layer;
 mask: unset;
 
 /* Multiple masks */
 mask: url(masks.svg#star) left / 16px repeat-y,    /* Element within SVG graphic is used as a mask on the left-hand side with a width of 16px */
-      url(masks.svg#circle) right / 16px repeat-y; /* Element within SVG graphic is used as a mask on the right-hand side with a width of 16px */
+      url(masks.svg#circle) right / 16px repeat-y; /* Element within SVG graphic is used as a mask on the right-hand side with a width of 16px */
 ```
 
 ### Values
@@ -113,5 +116,5 @@ mask: url(masks.svg#star) left / 16px repeat-y,    /* Element within SVG graphic
 
 - {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
 - [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Applying SVG effects to HTML content](/en-US/docs/Applying_SVG_effects_to_HTML_content)
-- [SVG](/en-US/docs/SVG)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG](/en-US/docs/Web/SVG)

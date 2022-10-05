@@ -1,6 +1,7 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMParser`** interface provides

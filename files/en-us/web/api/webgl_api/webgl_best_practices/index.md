@@ -1,6 +1,7 @@
 ---
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
+page-type: guide
 tags:
   - 2D
   - 3D
@@ -13,6 +14,7 @@ tags:
   - OpenGL
   - WebGL
 ---
+
 {{WebGLSidebar}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
@@ -37,9 +39,9 @@ These WebGL 1 extensions are universally supported, and can be relied upon to be
 - WEBGL_debug_renderer_info
 - WEBGL_lose_context
 
-_(see also: <https://jdashg.github.io/misc/webgl/webgl-feature-levels.html>)_
+_(see also: [WebGL feature levels and % support](https://kdashg.github.io/misc/webgl/webgl-feature-levels.html))_
 
-Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js>
+Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/kdashg/misc/blob/tip/webgl/webgl-v1.1.js>
 
 ## Understand system limits
 
@@ -47,18 +49,20 @@ Similarly to extensions, the limits of your system will be different than your c
 
 The minimum requirements for WebGL are quite low. In practice, effectively all systems support at least the following:
 
-        MAX_CUBE_MAP_TEXTURE_SIZE: 4096
-        MAX_RENDERBUFFER_SIZE: 4096
-        MAX_TEXTURE_SIZE: 4096
-        MAX_VIEWPORT_DIMS: [4096,4096]
-        MAX_VERTEX_TEXTURE_IMAGE_UNITS: 4
-        MAX_TEXTURE_IMAGE_UNITS: 8
-        MAX_COMBINED_TEXTURE_IMAGE_UNITS: 8
-        MAX_VERTEX_ATTRIBS: 16
-        MAX_VARYING_VECTORS: 8
-        MAX_VERTEX_UNIFORM_VECTORS: 128
-        MAX_FRAGMENT_UNIFORM_VECTORS: 64
-        ALIASED_POINT_SIZE_RANGE: [1,100]
+```
+MAX_CUBE_MAP_TEXTURE_SIZE: 4096
+MAX_RENDERBUFFER_SIZE: 4096
+MAX_TEXTURE_SIZE: 4096
+MAX_VIEWPORT_DIMS: [4096,4096]
+MAX_VERTEX_TEXTURE_IMAGE_UNITS: 4
+MAX_TEXTURE_IMAGE_UNITS: 8
+MAX_COMBINED_TEXTURE_IMAGE_UNITS: 8
+MAX_VERTEX_ATTRIBS: 16
+MAX_VARYING_VECTORS: 8
+MAX_VERTEX_UNIFORM_VECTORS: 128
+MAX_FRAGMENT_UNIFORM_VECTORS: 64
+ALIASED_POINT_SIZE_RANGE: [1,100]
+```
 
 Your desktop may support 16k textures, or maybe 16 texture units in the vertex shader, but most other systems don't, and content that works for you will not work for them!
 
@@ -88,8 +92,10 @@ Flush tells the implementation to push all pending commands out for execution, f
 
 For example, it is possible for the following to never complete without context loss:
 
-    sync = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
-    glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
+```js
+sync = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
+glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
+```
 
 WebGL doesn't have a SwapBuffers call by default, so a flush can help fill the gap, as well.
 
@@ -176,9 +182,9 @@ for (const [vs, fs, prog] of programs) {
   compileOnce(gl, fs);
   gl.linkProgram(prog);
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -200,9 +206,9 @@ for (const [vs, fs, prog] of programs) {
 }
 for (const [vs, fs, prog] of programs) {
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -256,17 +262,17 @@ Instead of:
 ```js
 gl.compileShader(vs);
 if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
-  console.error('vs compile failed: ' + gl.getShaderInfoLog(vs));
+  console.error(`vs compile failed: ${gl.getShaderInfoLog(vs)}`);
 }
 
 gl.compileShader(fs);
 if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
-  console.error('fs compile failed: ' + gl.getShaderInfoLog(fs));
+  console.error(`fs compile failed: ${gl.getShaderInfoLog(fs)}`);
 }
 
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
 }
 ```
 
@@ -277,9 +283,9 @@ gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-  console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-  console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+  console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+  console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
 }
 ```
 
@@ -293,16 +299,20 @@ If you have a float texture, iOS requires that you use `highp sampler2D foo;`, o
 
 The vertex language has the following predeclared globally scoped default precision statements:
 
-    precision highp float;
-    precision highp int;
-    precision lowp sampler2D;
-    precision lowp samplerCube;
+```
+precision highp float;
+precision highp int;
+precision lowp sampler2D;
+precision lowp samplerCube;
+```
 
 The fragment language has the following predeclared globally scoped default precision statements:
 
-    precision mediump int;
-    precision lowp sampler2D;
-    precision lowp samplerCube;
+```
+precision mediump int;
+precision lowp sampler2D;
+precision lowp samplerCube;
+```
 
 ### In WebGL 1, "highp float" support is optional in fragment shaders
 
@@ -316,11 +326,13 @@ If `highp float` is available, `GL_FRAGMENT_PRECISION_HIGH` will be defined as `
 
 A good pattern for "always give me the highest precision":
 
-    #ifdef GL_FRAGMENT_PRECISION_HIGH
-    precision highp float;
-    #else
-    precision mediump float;
-    #endif
+```
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+```
 
 ### ESSL100 minimum requirements (WebGL 1)
 
@@ -336,7 +348,7 @@ A good pattern for "always give me the highest precision":
 | `mediump` | int11 | (-2^10, 2^10) |
 | `lowp`    | int9  | (-2^8, 2^8)   |
 
-_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa_
+_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa._
 
 ### ESSL300 minimum requirements (WebGL 2)
 
@@ -394,7 +406,7 @@ A number of formats (particularly three-channel formats) are emulated. For examp
 
 ## Avoid alpha:false, which can be expensive
 
-Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://crbug.com/1045643) that all of these techniques have approximately equal performance impact on affected platforms.
+Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://bugs.chromium.org/p/chromium/issues/detail?id=1045643) that all of these techniques have approximately equal performance impact on affected platforms.
 
 Most applications, even those requiring alpha blending, can be structured to produce `1.0` for the alpha channel. The primary exception is any application requiring destination alpha in the blending function. If feasible, it is recommended to do this rather than using `alpha:false`.
 
@@ -427,81 +439,89 @@ Depth and stencil attachments and formats are actually inseparable on many devic
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
-Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Progams internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
+Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
 
 In WebGL:
 
-        ...
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        texImage2D(HTMLVideoElement)
-        drawArrays()
-        ...
+```
+    …
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    texImage2D(HTMLVideoElement)
+    drawArrays()
+    …
+```
 
 Behind the scenes in the browser:
 
-        ...
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        -texImage2D(HTMLVideoElement):
-            +useProgram(_internal_tex_tranform_prog)
-    <pipeline flush>
-            +bindFramebuffer(webgl_texture._internal_framebuffer)
-            +bindTexture(HTMLVideoElement._internal_video_tex)
-            +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
-            +bindTexture(webgl_texture)
-            +bindFramebuffer(target)
-            +useProgram(prog1)
-    <pipeline flush>
-        drawArrays()
-        ...
+```
+    …
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    -texImage2D(HTMLVideoElement):
+        +useProgram(_internal_tex_tranform_prog)
+<pipeline flush>
+        +bindFramebuffer(webgl_texture._internal_framebuffer)
+        +bindTexture(HTMLVideoElement._internal_video_tex)
+        +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
+        +bindTexture(webgl_texture)
+        +bindFramebuffer(target)
+        +useProgram(prog1)
+<pipeline flush>
+    drawArrays()
+    …
+```
 
 Prefer doing uploads before starting drawing, or at least between pipelines:
 
 In WebGL:
 
-        ...
-        bindTexture(webgl_texture)
-        texImage2D(HTMLVideoElement)
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        drawArrays()
-        ...
+```
+    …
+    bindTexture(webgl_texture)
+    texImage2D(HTMLVideoElement)
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    drawArrays()
+    …
+```
 
 Behind the scenes in the browser:
 
-        ...
-        bindTexture(webgl_texture)
-        -texImage2D(HTMLVideoElement):
-            +useProgram(_internal_tex_tranform_prog)
-    <pipeline flush>
-            +bindFramebuffer(webgl_texture._internal_framebuffer)
-            +bindTexture(HTMLVideoElement._internal_video_tex)
-            +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
-            +bindTexture(webgl_texture)
-            +bindFramebuffer(target)
-        useProgram(prog1)
-    <pipeline flush>
-        bindFramebuffer(target)
-        drawArrays()
-        bindTexture(webgl_texture)
-        drawArrays()
-        ...
+```
+    …
+    bindTexture(webgl_texture)
+    -texImage2D(HTMLVideoElement):
+        +useProgram(_internal_tex_tranform_prog)
+<pipeline flush>
+        +bindFramebuffer(webgl_texture._internal_framebuffer)
+        +bindTexture(HTMLVideoElement._internal_video_tex)
+        +drawArrays() // y-flip/colorspace-transform/alpha-(un)premultiply
+        +bindTexture(webgl_texture)
+        +bindFramebuffer(target)
+    useProgram(prog1)
+<pipeline flush>
+    bindFramebuffer(target)
+    drawArrays()
+    bindTexture(webgl_texture)
+    drawArrays()
+    …
+```
 
 ## Use texStorage to create textures
 
-The WebGL 2.0 `texImage*` API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.
+The WebGL 2.0 `texImage*` API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.
 
-Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
+Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
 
 So, prefer `texStorage`+`texSubImage` for textures in WebGL 2
 
@@ -511,24 +531,24 @@ Storing data that you won't use again can have high cost, particularly on tiled-
 
 ## Use non-blocking async data readback
 
-Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: <https://jdashg.github.io/misc/async-gpu-downloads.html>
+Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html)
 
 ```js
 function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }
       resolve();
     }
-    test());
+    test();
   });
 }
 
@@ -564,20 +584,20 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 ### `devicePixelRatio` and high-dpi rendering
 
-Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
+Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
 Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
 
-Demo: <https://jdashg.github.io/misc/webgl/device-pixel-presnap.html>
+Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
 
 ### ResizeObserver and 'device-pixel-content-box'
 
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
-   await new Promise(fn_resolve => {
-      const observer = new ResizeObserver(entries => {
+window.getDevicePixelSize = window.getDevicePixelSize || (async (elem) => {
+   await new Promise((fn_resolve) => {
+      const observer = new ResizeObserver((entries) => {
          for (const cur of entries) {
             const dev_size = cur.devicePixelContentBoxSize;
             const ret = {
@@ -588,11 +608,11 @@ window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
             observer.disconnect();
             return;
          }
-         throw 'device-pixel-content-box not observed for elem ' + elem;
+         throw `device-pixel-content-box not observed for elem ${elem}`;
       });
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });
-};
+});
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

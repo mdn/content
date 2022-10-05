@@ -1,6 +1,7 @@
 ---
 title: SVGAnimateElement
 slug: Web/API/SVGAnimateElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimateElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAnimateElement`** interface corresponds to the {{SVGElement("animate")}} element.

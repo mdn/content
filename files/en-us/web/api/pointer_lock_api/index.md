@@ -1,6 +1,7 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
@@ -8,10 +9,12 @@ tags:
   - Reference
   - mouse lock
   - pointer lock
+browser-compat: api.Element.requestPointerLock
 ---
+
 {{DefaultAPISidebar("Pointer Lock API")}}
 
-The **Pointer Lock API** (formerly called _Mouse Lock API_) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view. It is ideal for first person 3D games, for example.
+The **Pointer Lock API** (formerly called _Mouse Lock API_) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view. It is ideal for first-person 3D games, for example.
 
 More than that, the API is useful for any applications that require significant mouse input to control movements, rotate objects, and change entries, for example allowing users to control the viewing angle by moving the mouse around without any button clicking. The buttons are then freed up for other actions. Other examples include apps for viewing maps or satellite imagery.
 
@@ -19,7 +22,7 @@ Pointer lock lets you access mouse events even when the cursor goes past the bou
 
 ## Basic concepts
 
-Pointer lock is related to [mouse capture](/en-US/docs/Web/API/Element/setCapture "element.setCapture"). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
+Pointer lock is related to [mouse capture](/en-US/docs/Web/API/Element/setCapture). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
 
 - It is persistent: Pointer lock does not release the mouse until an explicit API call is made or the user uses a specific release gesture.
 - It is not limited by browser or screen boundaries.
@@ -52,7 +55,7 @@ The {{domxref("Document.pointerLockElement","pointerLockElement")}} property is 
 Here is an example of using `pointerLockElement`:
 
 ```js
-if(document.pointerLockElement === canvas ||
+if (document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
 } else {
@@ -60,7 +63,7 @@ if(document.pointerLockElement === canvas ||
 }
 ```
 
-The {{domxref("Document.exitPointerLock()")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{event("pointerlockchange")}} and {{event("pointerlockerror")}} events, which you'll see more about below.
+The {{domxref("Document.exitPointerLock()")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events, which you'll see more about below.
 
 ```js
 document.exitPointerLock = document.exitPointerLock    ||
@@ -72,7 +75,7 @@ document.exitPointerLock();
 
 ## pointerlockchange event
 
-When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the user pressing the ESC key, etc.—the {{event("pointerlockchange")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
+When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the user pressing the ESC key, etc.—the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
 
 ```js
 if ("onpointerlockchange" in document) {
@@ -82,7 +85,7 @@ if ("onpointerlockchange" in document) {
 }
 
 function lockChangeAlert() {
-  if(document.pointerLockElement === canvas ||
+  if (document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
     // Do something useful in response
@@ -95,7 +98,7 @@ function lockChangeAlert() {
 
 ## pointerlockerror event
 
-When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the {{event("pointerlockerror")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
+When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
 
 ```js
 document.addEventListener('pointerlockerror', lockError, false);
@@ -110,7 +113,7 @@ function lockError(e) {
 
 ## Extensions to mouse events
 
-The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes. Two new attributes to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent {{event("mousemove")}} events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
+The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes. Two new attributes to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent {{domxref("Element/mousemove_event", "mousemove")}} events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
 
 ### Locked state
 
@@ -124,7 +127,7 @@ When the mouse is unlocked, the system cursor can exit and re-enter the browser 
 
 ## Simple example walkthrough
 
-We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/master/pointer-lock)). The demo looks like this:
+We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock)). The demo looks like this:
 
 ![A red circle on top of a black background.](pointer-lock.png)
 
@@ -133,8 +136,8 @@ This demo uses JavaScript to draw a ball on top of an {{ htmlelement("canvas") }
 We set initial x and y positions on the canvas:
 
 ```js
-var x = 50;
-var y = 50;
+const x = 50;
+const y = 50;
 ```
 
 The pointer lock methods are currently prefixed, so next we'll fork them for the different browser implementations.
@@ -150,7 +153,7 @@ document.exitPointerLock = document.exitPointerLock ||
 Now we set up an event listener to run the `requestPointerLock()` method on the canvas when it is clicked, which initiates pointer lock.
 
 ```js
-canvas.onclick = function() {
+canvas.onclick = () => {
   canvas.requestPointerLock();
 }
 ```
@@ -180,12 +183,12 @@ function lockChangeAlert() {
 }
 ```
 
-The updatePosition() function updates the position of the ball on the canvas (`x` and `y`), and also includes `if()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
+The updatePosition() function updates the position of the ball on the canvas (`x` and `y`), and also includes `if ()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
 
 ```js
-var tracker = document.getElementById('tracker');
+const tracker = document.getElementById('tracker');
 
-var animation;
+let animation;
 function updatePosition(e) {
   x += e.movementX;
   y += e.movementY;
@@ -201,10 +204,10 @@ function updatePosition(e) {
   if (y < -RADIUS) {
     y = canvas.height + RADIUS;
   }
-  tracker.textContent = "X position: " + x + ", Y position: " + y;
+  tracker.textContent = `X position: ${x}, Y position: ${y}`;
 
   if (!animation) {
-    animation = requestAnimationFrame(function() {
+    animation = requestAnimationFrame(() => {
       animation = null;
       canvasDraw();
     });
@@ -229,19 +232,15 @@ function canvasDraw() {
 
 Pointer lock can only lock one iframe at a time. If you lock one iframe, you cannot try to lock another iframe and transfer the target to it; pointer lock will error out. To avoid this limitation, first unlock the locked iframe, and then lock the other.
 
-While iframes work by default, "sandboxed" iframes block Pointer lock. The ability to avoid this limitation, in the form of the attribute/value combination `<iframe sandbox="allow-pointer-lock">`, is expected to appear in Chrome soon.
+While iframes work by default, "sandboxed" iframes block Pointer lock. To avoid this limitation, use `<iframe sandbox="allow-pointer-lock">`.
 
 ## Specifications
 
-| Specification                                      |
-| -------------------------------------------------- |
-| [Pointer Lock](https://w3c.github.io/pointerlock/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Element.requestPointerLock`
-
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## See also
 

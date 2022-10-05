@@ -1,6 +1,7 @@
 ---
 title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
+page-type: landing-page
 tags:
   - API
   - API:Microsoft Extensions
@@ -8,6 +9,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{DefaultAPISidebar("Microsoft Extensions")}}
 
 Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) support a number of special Microsoft extensions to the otherwise standard [DOM APIs](/en-US/docs/Web/API). These extensions are prefixed with `MS` or `ms`.
@@ -17,11 +19,11 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 ## Touch APIs
 
 - {{DOMxRef("Element.msZoomTo()")}}
-- {{Event("msContentZoom")}}
+- {{domxref("Element/msContentZoom_event", "msContentZoom")}}
 - {{DOMxRef("MSManipulationEvent")}}
-- {{Event("MSManipulationStateChanged")}}
+- {{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}
 - {{DOMxRef("Touch.MsManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+- `MSPointerHover` {{Deprecated_Inline}}
 
 ## Media APIs
 
@@ -72,7 +74,7 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 - {{DOMxRef("msIsStaticHTML")}}
 - {{DOMxRef("Navigator.msLaunchUri()")}}
 - {{DOMxRef("msLaunchUriCallback")}}
-- `Element.msMatchesSelector()` {{Deprecated_Inline}}
+- `Element.msMatchesSelector()` {{Deprecated_Inline}}
 - {{DOMxRef("msProtocols")}}
 - {{DOMxRef("msPutPropertyEnabled")}}
 - {{DOMxRef("msWriteProfilerMark")}}

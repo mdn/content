@@ -8,6 +8,7 @@ tags:
   - Specifications
 browser-compat: javascript.builtins.Atomics
 ---
+
 {{JSRef}}
 
 The **`Atomics`** object provides atomic operations as static methods. They are used with {{jsxref("SharedArrayBuffer")}} and {{jsxref("ArrayBuffer")}} objects.
@@ -35,7 +36,7 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
 - {{jsxref("Atomics.exchange()")}}
   - : Stores a value at the specified index of the array. Returns the old value.
 - {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
-  - : An optimization primitive that can be used to determine whether to use locks or atomic operations. Returns `true` if an atomic operation on arrays of the given element size will be implemented using a hardware atomic operation (as opposed to a lock). Experts only.
+  - : An optimization primitive that can be used to determine whether to use locks or atomic operations. Returns `true` if an atomic operation on arrays of the given element size will be implemented using a hardware atomic operation (as opposed to a lock). Experts only.
 - {{jsxref("Atomics.load()")}}
   - : Returns the value at the specified index of the array.
 - {{jsxref("Atomics.notify()")}}
@@ -47,7 +48,9 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
 - {{jsxref("Atomics.sub()")}}
   - : Subtracts a value at the specified index of the array. Returns the old value at that index.
 - {{jsxref("Atomics.wait()")}}
-  - : Verifies that the specified index of the array still contains a value and sleeps awaiting or times out. Returns either "`ok`", "`not-equal`", or "`timed-out`". If waiting is not allowed in the calling agent then it throws an {{JSxref("Error")}} exception. (Most browsers will not allow `wait()` on the browser's main thread.)
+  - : Verifies that the specified index of the array still contains a value and sleeps awaiting or times out. Returns either `"ok"`, `"not-equal"`, or `"timed-out"`. If waiting is not allowed in the calling agent then it throws an exception. (Most browsers will not allow `wait()` on the browser's main thread.)
+- {{jsxref("Atomics.waitAsync()")}}
+  - : Waits asynchronously (i.e. without blocking, unlike `Atomics.wait`) on a shared memory location and returns a {{jsxref("Promise")}}.
 - {{jsxref("Atomics.xor()")}}
   - : Computes a bitwise XOR on the value at the specified index of the array with the provided value. Returns the old value at that index.
 
@@ -80,7 +83,7 @@ Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
 Atomics.or(ta, 0, 1); // 12
-Atomics.load(ta, 0);  // 13
+Atomics.load(ta, 0); // 13
 
 Atomics.store(ta, 0, 12); // 12
 
@@ -91,7 +94,7 @@ Atomics.xor(ta, 0, 1); // 10
 Atomics.load(ta, 0); // 11
 ```
 
-### Waiting and notifiying
+### Waiting and notifying
 
 Given a shared `Int32Array`:
 
@@ -128,6 +131,6 @@ Atomics.notify(int32, 0, 1);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– a simple library providing synchronization and work distribution abstractions.
-- [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
+- [Shared Memory – a brief tutorial](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

@@ -1,6 +1,7 @@
 ---
 title: AudioParam.defaultValue
 slug: Web/API/AudioParam/defaultValue
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam
@@ -10,6 +11,7 @@ tags:
   - defaultValue
 browser-compat: api.AudioParam.defaultValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`defaultValue`**
@@ -17,17 +19,11 @@ read-only property of the {{ domxref("AudioParam") }} interface represents the i
 value of the attributes as defined by the specific {{domxref("AudioNode")}} creating
 the `AudioParam`.
 
-## Syntax
-
-```js
-var defaultVal = audioParam.defaultValue;
-```
-
-### Value
+## Value
 
 A floating-point {{jsxref("Number")}}.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

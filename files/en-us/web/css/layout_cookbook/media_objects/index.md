@@ -1,6 +1,7 @@
 ---
 title: 'Recipe: Media objects'
 slug: Web/CSS/Layout_cookbook/Media_objects
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -10,12 +11,16 @@ tags:
   - fit-content
   - float
   - grid
+browser-compat:
+  - css.properties.grid-template-areas
+  - css.properties.float
 ---
+
 {{CSSRef}}
 
 The _Media Object_ is a pattern we see all over the web. [Named by Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) it refers to a two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet.
 
-![](media-object.png)
+![Example of a media object with profile image on the left side and lorem ipsum text to the right filling up 80% of the space](media-object.png)
 
 ## Requirements
 
@@ -33,7 +38,7 @@ Media Object pattern needs some or all of the following characteristics:
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects--download.html)
 
 ## Choices made
 
@@ -55,11 +60,11 @@ There are a number of possible fallbacks for this pattern, depending on the brow
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects-fallback--download.html)
 
-Once floated elements become grid items the float no longer applies so you don’t need to do anything special to clear the float.
+Once floated elements become grid items the float no longer applies so you don't need to do anything special to clear the float.
 
-What you will need to do is remove any margins applied to the item, and any widths which we don’t need in a grid context (we have the {{cssxref("gap")}} property to control it in grids, and the track takes control of the sizing).
+What you will need to do is remove any margins applied to the item, and any widths which we don't need in a grid context (we have the {{cssxref("gap")}} property to control it in grids, and the track takes control of the sizing).
 
 ## Relevant resources on MDN
 
@@ -71,12 +76,4 @@ What you will need to do is remove any margins applied to the item, and any widt
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### grid-template-areas
-
-{{Compat("css.properties.grid-template-areas")}}
-
-### float
-
-{{Compat("css.properties.float")}}
+{{Compat}}

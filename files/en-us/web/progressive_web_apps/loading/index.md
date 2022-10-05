@@ -8,9 +8,10 @@ tags:
   - js13kGames
   - progressive
 ---
+
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-In previous articles we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). In this article we will go even further and improve the performance of the app by progressively loading its resources.
+In previous articles we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). In this article we will go even further and improve the performance of the app by progressively loading its resources.
 
 ## First meaningful paint
 
@@ -20,7 +21,7 @@ This could be achieved by progressive loading — also known as [Lazy loading](h
 
 ## Bundling versus splitting
 
-Many visitors won't go through every single page of a website, yet the usual approach is to bundle every feature we have into one big file. A `bundle.js` file can be many megabytes, and a single `style.css` bundle can contain everything from basic CSS structure definitions to all the possible styles of every version of the site: mobile, tablet, desktop, print only, etc.
+Many visitors won't go through every single page of a website, yet the usual approach is to bundle every feature we have into one big file. A `bundle.js` file can be many megabytes, and a single `style.css` bundle can contain everything from basic CSS structure definitions to all the possible styles of every version of the site: mobile, tablet, desktop, print only, etc.
 
 It is faster to load all that information as one file rather than many small ones, but if the user doesn't need everything at the very beginning, we could load only what's crucial and then manage other resources when needed.
 
@@ -34,16 +35,31 @@ To fix that we can, for example, add `defer` to JavaScript files:
 <script src="app.js" defer></script>
 ```
 
-They will be downloaded and executed _after_ the document itself has been parsed, so it won't block rendering the HTML structure. We can also split css files and add media types to them:
+They will be downloaded and executed _after_ the document itself has been parsed, so it won't block rendering the HTML structure.
+
+Another technique is to load JavaScript modules using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) only when needed.
+
+For example, if a website has a search button, we can load the JavaScript for the search function after the user clicks on the search button:
+
+```js
+document.getElementById("open-search").addEventListener("click", async () => {
+  const searchModule = await import("/modules/search.js");
+  searchModule.loadAutoComplete();
+});
+```
+
+Once the user clicks on the button, the async click handler is called. The function waits till the module is loaded, then calls the `loadAutoComplete()` function exported from that module. The `search.js` module is therefore only downloaded, parsed, and executed when the interaction happens.
+
+We can also split CSS files and add media types to them:
 
 ```html
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="print.css" media="print" />
 ```
 
 This will tell the browser to load them only when the condition is met.
 
-In our js13kPWA demo app, the CSS is simple enough to leave it all in a single file with no specific rules as to how to load them. We could go even further and move everything from `style.css` to the `<style>` tag in the `<head>` of `index.html` — this would improve performance even more, but for the readability of the example we will skip that approach too.
+In our js13kPWA demo app, the CSS is simple enough to leave it all in a single file with no specific rules as to how to load them. We could go even further and move everything from `style.css` to the `<style>` tag in the `<head>` of `index.html` — this would improve performance even more, but for the readability of the example we will skip that approach too.
 
 ## Images
 
@@ -56,7 +72,7 @@ This can be optimized. First of all, you should use tools or services similar to
 Instead of having all the screenshots of games referenced in `<img>` element `src` attributes, which will force the browser to download them automatically, we can do it selectively via JavaScript. The js13kPWA app uses a placeholder image instead, which is small and lightweight, while the final paths to target images are stored in `data-src` attributes:
 
 ```html
-<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'>
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
 ```
 
 Those images will be loaded via JavaScript _after_ the site finishes building the HTML structure. The placeholder image is scaled the same way the original images are, so it will take up the same space and not cause the layout to repaint as the images load.
@@ -66,11 +82,11 @@ Those images will be loaded via JavaScript _after_ the site finishes building th
 The `app.js` file processes the `data-src` attributes like so:
 
 ```js
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
+  image.setAttribute("src", image.getAttribute("data-src"));
   image.onload = () => {
-    image.removeAttribute('data-src');
+    image.removeAttribute("data-src");
   };
 };
 ```
@@ -108,7 +124,19 @@ This will remove the blur effect within half a second, which looks good enough f
 
 The image loading mechanism discussed in the above section works OK — it loads the images after rendering the HTML structure, and applies a nice transition effect in the process. The problem is that it still loads _all_ the images at once, even though the user will only see the first two or three upon page load.
 
-This problem can be solved with the new [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) — using this we can ensure that images will be loaded only when they appear in the viewport.
+This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
+
+### The loading attribute on \<img>
+
+The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#attr-loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
+
+```html
+<img
+  src="data/img/placeholder.png"
+  data-src="data/img/SLUG.jpg"
+  alt="NAME"
+  loading="lazy" />
+```
 
 ### Intersection Observer
 
@@ -117,10 +145,10 @@ This is a progressive enhancement to the previously working example — [Interse
 Here's what the relevant code looks like:
 
 ```js
-if('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
-      if(item.isIntersecting) {
+      if (item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }
@@ -157,7 +185,7 @@ Remember about the progressive enhancement approach — offer a usable product n
 ## Final thoughts
 
 That's all for this tutorial series — we went through the [source code of the js13kPWA example app](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) and learned about the use of progressive web apps features including an [Introduction](/en-US/docs/Web/Progressive_web_apps/Introduction), [PWA structure](/en-US/docs/Web/Progressive_web_apps/App_structure), [offline availability with Service Workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [installable PWAs](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), and finally notifications.
-We also explained push with help from the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook).
+We also explained push with help from the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook).
 And in this article, we've looked into the concept of progressive loading, including an interesting example that makes use of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API).
 
 Feel free to experiment with the code, enhance your existing app with PWA features, or build something entirely new on your own. PWAs give a huge advantage over regular web apps.

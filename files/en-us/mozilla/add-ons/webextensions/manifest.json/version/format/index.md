@@ -6,6 +6,7 @@ tags:
   - Extensions
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A **version string** consists of one or more _version parts_, separated with dots.
@@ -36,7 +37,7 @@ When two version strings are compared, their version parts are compared left to 
 
 If at some point a version part of one version string is greater than the corresponding version part of another version string, then the first version string is greater than the other one.
 
-Otherwise, the version strings are equal. Note, that since missing version parts are treated as if they were `0`, the following version strings are equal: `1`, `1.0`, `1.0.`, `1.0.0`, and even `1.0...`
+Otherwise, the version strings are equal. Note that since missing version parts are treated as if they were `0`, the following version strings are equal: `1`, `1.0`, `1.0.`, `1.0.0`, and even `1.0..`.
 
 ### Comparing version parts
 
@@ -44,15 +45,17 @@ Version parts are also compared left to right, parts A and C are compared as num
 
 ## Examples
 
-    1.-1
-    < 1 == 1. == 1.0 == 1.0.0
-    < 1.1a < 1.1aa < 1.1ab < 1.1b < 1.1c
-    < 1.1pre == 1.1pre0 == 1.0+
-    < 1.1pre1a < 1.1pre1aa < 1.1pre1b < 1.1pre1
-    < 1.1pre2
-    < 1.1pre10
-    < 1.1.-1
-    < 1.1 == 1.1.0 == 1.1.00
-    < 1.10
-    < 1.* < 1.*.1
-    < 2.0
+```
+1.-1
+< 1 == 1. == 1.0 == 1.0.0
+< 1.1a < 1.1aa < 1.1ab < 1.1b < 1.1c
+< 1.1pre == 1.1pre0 == 1.0+
+< 1.1pre1a < 1.1pre1aa < 1.1pre1b < 1.1pre1
+< 1.1pre2
+< 1.1pre10
+< 1.1.-1
+< 1.1 == 1.1.0 == 1.1.00
+< 1.10
+< 1.* < 1.*.1
+< 2.0
+```

@@ -10,26 +10,20 @@ tags:
   - this
 browser-compat: javascript.operators.this
 ---
+
 {{jsSidebar("Operators")}}
 
 A **function's `this` keyword** behaves a little differently in
 JavaScript compared to other languages. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict
 mode.
 
-In most cases, the value of `this` is determined by how a function is called
-(runtime binding). It can't be set by assignment during execution, and it may be
-different each time the function is called. ES5 introduced the
-{{jsxref("Function.prototype.bind()", "bind()")}} method to {{jsxref('Operators/this',
-  "set the value of a function's <code>this</code> regardless of how it's called",
-  'The_bind_method', 1)}}, and ES2015 introduced [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) which don't provide their own `this` binding (it retains the
-`this` value of the enclosing lexical context).
+In most cases, the value of `this` is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. The {{jsxref("Function.prototype.bind()", "bind()")}} method can [set the value of a function's `this` regardless of how it's called](#the_bind_method), and [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) don't provide their own `this` binding (it retains the `this` value of the enclosing lexical context).
 
 {{EmbedInteractiveExample("pages/js/expressions-this.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 this
 ```
 
@@ -134,7 +128,7 @@ new Example(); // ['constructor', 'first', 'second']
 ### Derived classes
 
 Unlike base class constructors, derived constructors have no initial `this`
-binding. Calling  {{jsxref("Operators/super", "super()")}} creates a `this`
+binding. Calling {{jsxref("Operators/super", "super()")}} creates a `this`
 binding within the constructor and essentially has the effect of evaluating the
 following line of code, where Base is the inherited class:
 
@@ -170,17 +164,18 @@ new Bad(); // ReferenceError
 ### this in function contexts
 
 ```js
-// An object can be passed as the first argument to call or apply and this will be bound to it.
-var obj = {a: 'Custom'};
+// An object can be passed as the first argument to call
+// or apply and this will be bound to it.
+const obj = { a: 'Custom' };
 
-// We declare a variable and the variable is assigned to the global window as its property.
+// Variables declared with var become properties of the global object.
 var a = 'Global';
 
 function whatsThis() {
   return this.a;  // The value of this is dependent on how the function is called
 }
 
-whatsThis();          // 'Global' as this in the function isn't set, so it defaults to the global/window object
+whatsThis();          // 'Global' as this in the function isn't set, so it defaults to the global/window object in non–strict mode
 whatsThis.call(obj);  // 'Custom' as this in the function is set to obj
 whatsThis.apply(obj); // 'Custom' as this in the function is set to obj
 ```
@@ -192,7 +187,7 @@ function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a: 1, b: 3};
+const o = { a: 1, b: 3 };
 
 // The first parameter is the object to use as
 // 'this', subsequent parameters are passed as
@@ -223,7 +218,7 @@ bar.call('foo'); // [object String]
 bar.call(undefined); // [object global]
 ```
 
-### The `bind` method
+### The bind() method
 
 ECMAScript 5 introduced {{jsxref("Function.prototype.bind()")}}. Calling
 `f.bind(someObject)` creates a new function with the same body and scope as
@@ -236,25 +231,25 @@ function f() {
   return this.a;
 }
 
-var g = f.bind({a: 'azerty'});
+const g = f.bind({ a: 'azerty' });
 console.log(g()); // azerty
 
-var h = g.bind({a: 'yoo'}); // bind only works once!
+const h = g.bind({ a: 'yoo' }); // bind only works once!
 console.log(h()); // azerty
 
-var o = {a: 37, f: f, g: g, h: h};
+const o = { a: 37, f, g, h };
 console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
 ```
 
 ### Arrow functions
 
-In [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `this` retains the value of the enclosing lexical context's
-`this`. In global code, it will be set to the global object:
+In [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+`this` retains the value of the enclosing lexical context's `this`.
+In global code, it will be set to the global object:
 
 ```js
-var globalObject = this;
-var foo = (() => this);
+const globalObject = this;
+const foo = (() => this);
 console.log(foo() === globalObject); // true
 ```
 
@@ -265,15 +260,15 @@ console.log(foo() === globalObject); // true
 
 ```js
 // Call as a method of an object
-var obj = {func: foo};
+const obj = { func: foo };
 console.log(obj.func() === globalObject); // true
 
 // Attempt to set this using call
 console.log(foo.call(obj) === globalObject); // true
 
 // Attempt to set this using bind
-foo = foo.bind(obj);
-console.log(foo() === globalObject); // true
+const boundFoo = foo.bind(obj);
+console.log(boundFoo() === globalObject); // true
 ```
 
 No matter what, `foo`'s `this` is set to what it was when it was
@@ -288,26 +283,28 @@ lexical context.
 // this of its enclosing function. The value of bar can be set
 // in the call, which in turn sets the value of the
 // returned function.
-var obj = {
-  bar: function() {
-    var x = (() => this);
+// Note: the `bar()` syntax is equivalent to `bar: function ()`
+// in this context
+const obj = {
+  bar() {
+    const x = (() => this);
     return x;
   }
 };
 
 // Call bar as a method of obj, setting its this to obj
 // Assign a reference to the returned function to fn
-var fn = obj.bar();
+const fn = obj.bar();
 
 // Call fn without setting this, would normally default
 // to the global object or undefined in strict mode
 console.log(fn() === obj); // true
 
 // But caution if you reference the method of obj without calling it
-var fn2 = obj.bar;
+const fn2 = obj.bar;
 // Calling the arrow function's this from inside the bar method()
 // will now return window, because it follows the this from fn2.
-console.log(fn2()() == window); // true
+console.log(fn2()() === window); // true
 ```
 
 In the above, the function (call it anonymous function A) assigned to
@@ -330,9 +327,9 @@ In the following example, when `o.f()` is invoked, inside the function
 `this` is bound to the `o` object.
 
 ```js
-var o = {
+const o = {
   prop: 37,
-  f: function() {
+  f() {
     return this.prop;
   }
 };
@@ -347,7 +344,7 @@ defined the function first and later attached it to `o.f`. Doing so results
 in the same behavior:
 
 ```js
-var o = {prop: 37};
+const o = { prop: 37 };
 
 function independent() {
   return this.prop;
@@ -369,19 +366,23 @@ object is itself a member of `o` has no consequence; the most immediate
 reference is all that matters.
 
 ```js
-o.b = {g: independent, prop: 42};
+o.b = { g: independent, prop: 42 };
 console.log(o.b.g()); // 42
 ```
 
-#### `this` on the object's prototype chain
+#### this on the object's prototype chain
 
 The same notion holds true for methods defined somewhere on the object's prototype
 chain. If the method is on an object's prototype chain, `this` refers to the
 object the method was called on, as if the method were on the object.
 
 ```js
-var o = {f: function() { return this.a + this.b; }};
-var p = Object.create(o);
+const o = {
+  f() {
+    return this.a + this.b;
+  },
+};
+const p = Object.create(o);
 p.a = 1;
 p.b = 4;
 
@@ -397,7 +398,7 @@ that the lookup for `f` eventually finds a member with that name on
 its `this` refers to `p`. This is an interesting feature of
 JavaScript's prototype inheritance.
 
-#### `this` with a getter or setter
+#### this with a getter or setter
 
 Again, the same notion holds true when a function is invoked from a getter or a setter.
 A function used as getter or setter has its `this` bound to the object from
@@ -408,7 +409,7 @@ function sum() {
   return this.a + this.b + this.c;
 }
 
-var o = {
+const o = {
   a: 1,
   b: 2,
   c: 3,
@@ -418,7 +419,10 @@ var o = {
 };
 
 Object.defineProperty(o, 'sum', {
-    get: sum, enumerable: true, configurable: true});
+  get: sum,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.average, o.sum); // 2, 6
 ```
@@ -436,18 +440,18 @@ keyword), its `this` is bound to the new object being constructed.
 /*
  * Constructors work like this:
  *
- * function MyConstructor(){
+ * function MyConstructor() {
  *   // Actual function body code goes here.
- *   // Create properties on |this| as
- *   // desired by assigning to them.  E.g.,
+ *   // Create properties on `this` as
+ *   // desired by assigning to them, for example,
  *   this.fum = "nom";
  *   // et cetera...
  *
  *   // If the function has a return statement that
  *   // returns an object, that object will be the
- *   // result of the |new| expression.  Otherwise,
+ *   // result of the `new` expression. Otherwise,
  *   // the result of the expression is the object
- *   // currently bound to |this|
+ *   // currently bound to `this`
  *   // (i.e., the common case most usually seen).
  * }
  */
@@ -456,12 +460,12 @@ function C() {
   this.a = 37;
 }
 
-var o = new C();
+let o = new C();
 console.log(o.a); // 37
 
 function C2() {
   this.a = 37;
-  return {a: 38};
+  return { a: 38 };
 }
 
 o = new C2();
@@ -470,7 +474,7 @@ console.log(o.a); // 38
 
 In the last example (`C2`), because an object was returned during
 construction, the new object that `this` was bound to gets discarded. (This
-essentially makes the statement "`this.a = 37;`" dead code. It's not exactly
+essentially makes the statement `this.a = 37;` dead code. It's not exactly
 dead because it gets executed, but it can be eliminated with no outside effects.)
 
 ### As a DOM event handler
@@ -491,19 +495,19 @@ function bluify(e) {
 }
 
 // Get a list of every element in the document
-var elements = document.getElementsByTagName('*');
+const elements = document.getElementsByTagName('*');
 
 // Add bluify as a click listener so when the
 // element is clicked on, it turns blue
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', bluify, false);
+for (const element of elements) {
+  element.addEventListener('click', bluify, false);
 }
 ```
 
 ### In an inline event handler
 
-When the code is called from an inline [on-event handler](/en-US/docs/Web/Guide/Events/Event_handlers), its
-`this` is set to the DOM element on which the listener is placed:
+When the code is called from an inline [on-event handler](/en-US/docs/Web/Events/Event_handlers),
+its `this` is set to the DOM element on which the listener is placed:
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">
@@ -515,7 +519,7 @@ The above alert shows `button`. Note however that only the outer code has
 its `this` set this way:
 
 ```html
-<button onclick="alert((function() { return this; })());">
+<button onclick="alert((function () { return this; })());">
   Show inner this
 </button>
 ```
@@ -581,6 +585,5 @@ bird.sayBye();  // Bye from Ferrari
 ## See also
 
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [Gentle
-  explanation of 'this' keyword in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
+- [Gentle explanation of 'this' keyword in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
 - Getting the global context: {{jsxref("globalThis")}}

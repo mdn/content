@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 The **`propertyIsEnumerable()`** method returns a Boolean
@@ -19,7 +20,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 propertyIsEnumerable(prop)
 ```
 
@@ -42,7 +43,7 @@ inherited through the prototype chain. If the object does not have the specified
 property, this method returns `false`.
 
 > **Note:** Bear in mind that enumerable properties are looped over by
-> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
+> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
 > {{jsxref("Global_Objects/Symbol", "Symbol")}}s.
 
 ## Examples
@@ -53,8 +54,8 @@ The following example shows the use of `propertyIsEnumerable` on objects and
 arrays:
 
 ```js
-var o = {};
-var a = [];
+const o = {};
+const a = [];
 o.prop = 'is enumerable';
 a[0] = 'is enumerable';
 
@@ -68,7 +69,7 @@ The following example demonstrates the enumerability of user-defined vs. built-i
 properties:
 
 ```js
-var a = ['is enumerable'];
+const a = ['is enumerable'];
 
 a.propertyIsEnumerable(0);          // returns true
 a.propertyIsEnumerable('length');   // returns false
@@ -80,23 +81,23 @@ this.propertyIsEnumerable('Math');     // returns false
 ### Direct vs. inherited properties
 
 ```js
-var a = [];
+const a = [];
 a.propertyIsEnumerable('constructor');         // returns false
 
 function firstConstructor() {
   this.property = 'is not enumerable';
 }
 
-firstConstructor.prototype.firstMethod = function() {};
+firstConstructor.prototype.firstMethod = function () {};
 
 function secondConstructor() {
-  this.method = function() { return 'is enumerable'; };
+  this.method = function () { return 'is enumerable'; };
 }
 
 secondConstructor.prototype = new firstConstructor;
 secondConstructor.prototype.constructor = secondConstructor;
 
-var o = new secondConstructor();
+const o = new secondConstructor();
 o.arbitraryProperty = 'is enumerable';
 
 o.propertyIsEnumerable('arbitraryProperty');   // returns true
@@ -109,7 +110,7 @@ o.propertyIsEnumerable('property');            // returns true
 
 // These return false as they are on the prototype which
 // propertyIsEnumerable does not consider (even though the last two
-// are iteratable with for-in)
+// are iterable with for-in)
 o.propertyIsEnumerable('prototype');   // returns false (as of JS 1.8.1/FF3.6)
 o.propertyIsEnumerable('constructor'); // returns false
 o.propertyIsEnumerable('firstMethod'); // returns false
@@ -125,8 +126,7 @@ o.propertyIsEnumerable('firstMethod'); // returns false
 
 ## See also
 
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

@@ -1,6 +1,7 @@
 ---
-title: 'Performance: resourcetimingbufferfull event'
+title: "Performance: resourcetimingbufferfull event"
 slug: Web/API/Performance/resourcetimingbufferfull_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -11,32 +12,24 @@ tags:
   - onresourcetimingbufferfull
 browser-compat: api.Performance.resourcetimingbufferfull_event
 ---
+
 {{APIRef}}
 
 The `resourcetimingbufferfull` event is fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('resourcetimingbufferfull', (event) => { });
+
+onresourcetimingbufferfull = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -51,7 +44,10 @@ function init() {
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
 }
-<body onload="init()">
+```
+
+```html
+<body onload="init()"></body>
 ```
 
 Note that you could also set up the handler using the addEventListener() function:

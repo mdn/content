@@ -1,6 +1,7 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.key
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`key()`** method of the {{domxref("Storage")}} interface,
@@ -17,8 +19,8 @@ object. The order of keys is user-agent defined, so you should not rely on it.
 
 ## Syntax
 
-```js
-var aKeyName = storage.key(index);
+```js-nolint
+key(index)
 ```
 
 ### Parameters
@@ -29,7 +31,7 @@ var aKeyName = storage.key(index);
 
 ### Return value
 
-A {{domxref("DOMString")}} containing the name of the key. If the index does not exist,
+A string containing the name of the key. If the index does not exist,
 `null` is returned.
 
 ## Examples
@@ -38,7 +40,7 @@ The following function iterates over the local storage keys:
 
 ```js
 function forEachKey(callback) {
-  for (var i = 0; i < localStorage.length; i++) {
+  for (let i = 0; i < localStorage.length; i++) {
     callback(localStorage.key(i));
   }
 }
@@ -48,7 +50,7 @@ The following function iterates over the local storage keys and gets the value s
 each key:
 
 ```js
-for(var i =0; i < localStorage.length; i++){
+for (let i = 0; i < localStorage.length; i++) {
   console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
@@ -65,5 +67,4 @@ for(var i =0; i < localStorage.length; i++){
 
 ## See also
 
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

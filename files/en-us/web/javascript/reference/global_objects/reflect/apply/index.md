@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.apply
 ---
+
 {{JSRef}}
 
 The static **`Reflect.apply()`** method calls a target function
@@ -19,7 +20,7 @@ with arguments as specified.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.apply(target, thisArgument, argumentsList)
 ```
 
@@ -46,9 +47,8 @@ A {{jsxref("TypeError")}}, if the `target` is not callable.
 ## Description
 
 In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a
-function with a given `this` value and `arguments` provided as an
-array (or an [array-like
-object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+function with a given `this` value and `arguments` provided as an array
+(or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);
@@ -84,6 +84,6 @@ Reflect.apply(''.charAt, 'ponies', [3])
 
 ## See also
 
-- A polyfill of `Reflect.apply` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.apply` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Function.prototype.apply()")}}

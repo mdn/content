@@ -1,22 +1,25 @@
 ---
 title: AudioDecoder.decode()
 slug: Web/API/AudioDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - decode
   - AudioDecoder
+  - Experimental
 browser-compat: api.AudioDecoder.decode
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to decode a given chunk of audio.
 
 ## Syntax
 
-```js
-AudioDecoder.decode(chunk)
+```js-nolint
+decode(chunk)
 ```
 
 ### Parameters
@@ -24,9 +27,9 @@ AudioDecoder.decode(chunk)
 - `chunk`
   - : An {{domxref("EncodedAudioChunk")}} object representing a chunk of encoded audio.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -37,8 +40,6 @@ AudioDecoder.decode(chunk)
 
 ## Examples
 
-
-
 ## Specifications
 
 {{Specifications}}
@@ -46,4 +47,3 @@ AudioDecoder.decode(chunk)
 ## Browser compatibility
 
 {{Compat}}
-

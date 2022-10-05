@@ -14,6 +14,7 @@ tags:
   - effects
   - shapes
 ---
+
 {{LearnSidebar}}
 
 This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
@@ -44,7 +45,7 @@ This article acts as a box of tricks, providing an introduction to some interest
 
 {{cssxref("box-shadow")}} allows you to apply one or more drop shadows to an element's box. Like text shadows, box shadows are supported pretty well across browsers, including IE9+ and Edge. Users of older IE versions might just have to cope with no shadows, so just test your designs to make sure your content is legible without them.
 
-You can find the examples in this section at [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) too).
+You can find the examples in this section at [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html) too).
 
 ### A simple box shadow
 
@@ -52,7 +53,10 @@ Let's look at a simple example to get things started. First, some HTML:
 
 ```html
 <article class="simple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -67,11 +71,15 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -81,10 +89,10 @@ This gives us the following result:
 
 You'll see that we've got four items in the `box-shadow` property value:
 
-1.  The first length value is the **horizontal offset** — the distance to the right the shadow is offset from the original box (or left, if the value is negative).
-2.  The second length value is the **vertical offset** — the distance downwards that the shadow is offset from the original box (or upwards, if the value is negative).
-3.  The third length value is the **blur radius** — the amount of blurring applied to the shadow.
-4.  The color value is the **base color** of the shadow.
+1. The first length value is the **horizontal offset** — the distance to the right the shadow is offset from the original box (or left, if the value is negative).
+2. The second length value is the **vertical offset** — the distance downwards that the shadow is offset from the original box (or upwards, if the value is negative).
+3. The third length value is the **blur radius** — the amount of blurring applied to the shadow.
+4. The color value is the **base color** of the shadow.
 
 You can use any length and color units that would make sense to do so to define these values.
 
@@ -94,7 +102,10 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -107,16 +118,20 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow: 1px 1px 1px black,
+              2px 2px 1px black,
+              3px 3px 1px red,
+              4px 4px 1px red,
+              5px 5px 1px black,
+              6px 6px 1px black;
 }
 ```
 
@@ -144,19 +159,18 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow: 1px 1px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -172,21 +186,21 @@ When the button is pressed in, the active state causes the first box shadow to b
 
 ## Filters
 
-While you can't change the composure of an image using CSS, there are some creative things you can do. One very nice property, which can help you bring interest to your designs, is the  {{cssxref("filter")}} property. This property enables Photoshop-like filters right from CSS.
+While you can't change the composure of an image using CSS, there are some creative things you can do. One very nice property, which can help you bring interest to your designs, is the {{cssxref("filter")}} property. This property enables Photoshop-like filters right from CSS.
 
 In the example below we have used two different values for filter. The `first` is `blur()` — this function can be passed a value to indicate how much the image should be blurred.
 
-The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
+The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 900)}}
 
 **Play with the percentage and pixel parameters in the live example to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/filter) for many other options you could try.**
 
-You can apply filters to any element and not just images. Some of the filter options available do very similar things to other CSS features, for example `drop-shadow()` works in a very similar way and gives a similar effect to [`box-shadow`](/en-US/docs/Web/CSS/box-shadow "The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas.") or [`text-shadow`](/en-US/docs/Web/CSS/text-shadow "The text-shadow CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations.").  The really nice thing about filters however, is that they work on the exact shapes of the content inside the box, not just the box itself as one big chunk, so it is worth knowing the difference.
+You can apply filters to any element and not just images. Some of the filter options available do very similar things to other CSS features, for example `drop-shadow()` works in a very similar way and gives a similar effect to [`box-shadow`](/en-US/docs/Web/CSS/box-shadow) or [`text-shadow`](/en-US/docs/Web/CSS/text-shadow). The really nice thing about filters however, is that they work on the exact shapes of the content inside the box, not just the box itself as one big chunk, so it is worth knowing the difference.
 
 In this next example we are applying our filter to a box, and comparing it to a box shadow. As you can see, the drop-shadow filter follows the exact shape of the text and border dashes. The box shadow just follows the square of the box.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 700)}}
 
 ## Blend modes
 
@@ -197,7 +211,7 @@ There are two properties that use blend modes in CSS:
 - {{cssxref("background-blend-mode")}}, which blends together multiple background images and colors set on a single element.
 - {{cssxref("mix-blend-mode")}}, which blends together the element it is set on with elements it is overlapping — both background and content.
 
-You can find a lot more examples than are available here in our [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) example page (see [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.
+You can find a lot more examples than are available here in our [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) example page (see [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.
 
 > **Note:** Blend modes are also very new, and slightly less well supported than filters. There is no support as yet in Edge, and Safari only supports some of the blend mode options.
 
@@ -206,13 +220,11 @@ You can find a lot more examples than are available here in our [blend-modes.htm
 Again, let's look at some examples so we can understand this better. First, {{cssxref("background-blend-mode")}} — here we'll show a couple of simple {{htmlelement("div")}}s, so you can compare the original with the blended version:
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
-Now some CSS — we are adding to the `<div>` one background image and a green background color:
+Now some CSS — we are adding to the `<div>` one background image and a green background color:
 
 ```css
 div {
@@ -232,7 +244,7 @@ div {
 
 The result we get is this — you can see the original on the left, and the multiply blend mode on the right:
 
-{{ EmbedLiveSample('background-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('background-blend-mode', '100%', 300) }}
 
 ### mix-blend-mode
 
@@ -241,20 +253,14 @@ Now let's look at {{cssxref("mix-blend-mode")}}. Here we'll present the same two
 ```html
 <article>
   No mix blend mode
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Multiply mix
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 
@@ -299,11 +305,11 @@ article div:last-child {
 
 This gives us the following results:
 
-{{ EmbedLiveSample('mix-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('mix-blend-mode', '100%', 300) }}
 
 You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the `<div>` below it too.
 
-> **Note:** Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
+> **Note:** Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
 ## CSS shapes
 
@@ -315,9 +321,9 @@ In the image below we have a pleasingly round balloon. The actual file is rectan
 
 {{EmbedGHLiveSample("css-examples/learn/images/shapes.html", '100%', 1000)}}
 
-The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its centre point from the centre of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
+The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its center point from the center of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
 
-> **Note:** In Firefox you can use the DevTools [Shapes Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) to inspect Shapes.
+> **Note:** In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
 
 The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes) on MDN.
 
@@ -336,7 +342,7 @@ So why have other browsers implemented a `-webkit-` prefix? Mainly for browser c
 
 If you do want to use such features in your production work, make sure to test across browsers thoroughly and check that, where these features don't work, the site is still usable.
 
-> **Note:** For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> **Note:** For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Summary
 

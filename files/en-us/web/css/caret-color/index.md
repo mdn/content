@@ -1,6 +1,7 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -17,13 +18,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.caret-color
 ---
+
 {{CSSRef}}
 
 The **`caret-color`** CSS property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
-Note that the insertion caret is only one type of caret. For example, many browsers have a “navigation caret,” which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it’s a cursor).
+Note that the insertion caret is only one type of caret. For example, many browsers have a "navigation caret," which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it's a cursor).
 
 ## Syntax
 
@@ -43,6 +45,7 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 caret-color: inherit;
 caret-color: initial;
 caret-color: revert;
+caret-color: revert-layer;
 caret-color: unset;
 ```
 
@@ -72,10 +75,11 @@ caret-color: unset;
 #### HTML
 
 ```html
-<input value="This field uses a default caret." size="64"/>
-<input class="custom" value="I have a custom caret color!" size="64"/>
-<p contenteditable class="custom">This paragraph can be
-   edited, and its caret has a custom color as well!</p>
+<input value="This field uses a default caret." size="64" />
+<input class="custom" value="I have a custom caret color!" size="64" />
+<p contenteditable class="custom">
+  This paragraph can be edited, and its caret has a custom color as well!
+</p>
 ```
 
 #### CSS
@@ -84,7 +88,7 @@ caret-color: unset;
 input {
   caret-color: auto;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 input.custom {
@@ -113,6 +117,6 @@ p.custom {
 - The {{HTMLElement("input")}} element
 - The HTML {{htmlattrxref("contenteditable")}} attribute, which can be used to make any element's text editable
 - [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

@@ -1,25 +1,22 @@
 ---
 title: LargestContentfulPaint.renderTime
 slug: Web/API/LargestContentfulPaint/renderTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - renderTime
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.renderTime
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`renderTime`** read-only property of the {{domxref("LargestContentfulPaint")}} interface represents the time that the element was rendered to the screen.
 
-## Syntax
-
-```js
-let renderTime = LargestContentfulPaint.renderTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time in milliseconds that the element was rendered to the screen.
 

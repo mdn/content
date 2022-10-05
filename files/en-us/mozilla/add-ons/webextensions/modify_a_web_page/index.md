@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 One of the most common use cases for an extension is to modify a web page. For example, an extension might want to change the style applied to a page, hide particular DOM nodes, or inject extra DOM nodes into the page.
@@ -53,14 +54,14 @@ Next, create a file called "page-eater.js" inside the "modify-page" directory, a
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+let header = document.createElement('h1');
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
 Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/). The page should look like this:
 
-![developer.mozilla.org page "eaten" by the script](eaten_page.png )
+![developer.mozilla.org page "eaten" by the script](eaten_page.png)
 
 ## Modifying pages programmatically
 
@@ -92,7 +93,7 @@ Here, we've removed the `content_scripts` key, and added two new keys:
 - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): To inject scripts into pages we need permissions for the page we're modifying. The [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is a way to get this temporarily for the currently active tab. We also need the `contextMenus` permission to be able to add context menu items.
 - [`background`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): We're using this to load a persistent ["background script"](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) called `background.js`, in which we'll set up the context menu and inject the content script.
 
-Let's create this file. Create a new file called `background.js` in the `modify-page` directory, and give it the following contents:
+Let's create this file. Create a new file called `background.js` in the `modify-page` directory, and give it the following contents:
 
 ```js
 browser.contextMenus.create({
@@ -100,8 +101,8 @@ browser.contextMenus.create({
   title: "Eat this page"
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     browser.tabs.executeScript({
       file: "page-eater.js"
     });
@@ -180,7 +181,7 @@ Content scripts and background scripts can't directly access each other's state.
 
 Let's update our example to show how to send a message from the background script.
 
-First, edit `background.js` so that it has these contents:
+First, edit `background.js` so that it has these contents:
 
 ```js
 browser.contextMenus.create({
@@ -195,15 +196,15 @@ function messageTab(tabs) {
 }
 
 function onExecuted(result) {
-    let querying = browser.tabs.query({
-        active: true,
-        currentWindow: true
-    });
-    querying.then(messageTab);
+    let querying = browser.tabs.query({
+        active: true,
+        currentWindow: true
+    });
+    querying.then(messageTab);
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     let executing = browser.tabs.executeScript({
       file: "page-eater.js"
     });
@@ -214,7 +215,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 Now, after injecting `page-eater.js`, we use [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) to get the currently active tab, and then use [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) to send a message to the content scripts loaded into that tab. The message has the payload `{replacement: "Message from the extension!"}`.
 
-Next, update `page-eater.js` like this:
+Next, update `page-eater.js` like this:
 
 ```js
 function eatPageReceiver(request, sender, sendResponse) {
@@ -228,13 +229,13 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 Now, instead of just eating the page right away, the content script listens for a message using [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). When a message arrives, the content script runs essentially the same code as before, except that the replacement text is taken from `request.replacement`.
 
-Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) is an asynchronous function, and to ensure we send message only after listener has been added in `page-eater.js`, we use `onExecuted()` which will be called after `page-eater.js` executed.
+Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) is an asynchronous function, and to ensure we send message only after listener has been added in `page-eater.js`, we use `onExecuted()` which will be called after `page-eater.js` executed.
 
-> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](/en-US/docs/Tools/Browser_Console) to view `console.log` in background script.
+> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to view `console.log` in background script.
 >
-> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)  which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
+> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
 
-If we want send messages back from the content script to the background page,  we would use [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
+If we want send messages back from the content script to the background page, we would use [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
 
 ```js
 browser.runtime.sendMessage({

@@ -1,6 +1,7 @@
 ---
 title: Animation.reverse()
 slug: Web/API/Animation/reverse
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -13,14 +14,15 @@ tags:
   - web animations api
 browser-compat: api.Animation.reverse
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations")}}
 
 The **`Animation.reverse()`** method of the {{ domxref("Animation") }} Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse.
 
 ## Syntax
 
-```js
-animation.reverse();
+```js-nolint
+reverse()
 ```
 
 ### Parameters
@@ -29,33 +31,33 @@ None.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-In the [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to play backwards, causing her to get smaller. It is done by setting `aliceChange`'s {{ domxref("Animation.playbackRate") }} to `-1` like so:
+In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to play backwards, causing her to get smaller. It is done by setting `aliceChange`'s {{ domxref("Animation.playbackRate") }} to `-1` like so:
 
 ```js
-var shrinkAlice = function() {
+const shrinkAlice = () => {
   // play Alice's animation in reverse
   aliceChange.playbackRate = -1;
   aliceChange.play();
 
   // play the bottle's animation
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 But it could also have been done by calling `reverse()` on `aliceChange` like so:
 
 ```js
-var shrinkAlice = function() {
+const shrinkAlice = () => {
   // play Alice's animation in reverse
   aliceChange.reverse();
 
   // play the bottle's animation
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 ## Specifications

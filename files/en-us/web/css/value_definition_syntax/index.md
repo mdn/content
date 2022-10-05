@@ -1,12 +1,15 @@
 ---
 title: Value definition syntax
 slug: Web/CSS/Value_definition_syntax
+page-type: guide
 tags:
   - CSS
   - Guide
   - Reference
   - Syntax
+spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
+
 {{CSSRef}}
 
 **CSS value definition syntax**, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
@@ -21,9 +24,9 @@ The definition syntax describes which values are allowed and the interactions be
 
 A keyword with a predefined meaning appears literally, without quotation marks. For example: `auto`, `smaller` or `ease-in`.
 
-#### The specific case of `inherit`, `initial` and `unset`
+#### The specific case of `inherit`, `initial` and `unset`
 
-All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
+All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
 
 ### Literals
 
@@ -71,7 +74,7 @@ But not:
 Placing several keywords, literals or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
 
 ```css
-bold <length> , thin
+bold <length>, thin
 ```
 
 This example matches the following values:
@@ -154,7 +157,7 @@ But not:
 - `center 3%`, as only one of the components must be present.
 - `3em 4.5em`, as a component must be present at most one time.
 
-> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length> `but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
+> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
 
 ## Component value multipliers
 
@@ -257,6 +260,34 @@ But not:
 - `bold`, as `smaller` must appear at least one time.
 - `bold smaller smaller smaller`, as the different occurrence of `smaller` must be separated by commas.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
+
+The hash mark may optionally be followed by curly braces to indicate precisely how many times the repetition occurs.
+
+```css
+bold smaller#{1,3}
+```
+
+This example matches the following values:
+
+- `bold smaller`
+- `bold smaller, smaller`
+- `bold smaller, smaller, smaller`
+
+But not:
+
+- `bold smaller, smaller, smaller, smaller`, as `smaller` must appear at most three times.
+
+```css
+bold smaller#{2}
+```
+
+This example matches the following value:
+
+- `bold smaller, smaller`
+
+But not:
+
+- `bold smaller`, as `smaller` must appear exactly two times.
 
 ### Exclamation point (`!`)
 
@@ -381,12 +412,24 @@ But not:
 
 ## Specifications
 
-| Specification                                                                                                | Status                           | Comment                               |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------- |
-| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}                 | {{Spec2("CSS3 Values")}} | Adds the hash mark multiplier.        |
-| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}         | {{Spec2("CSS2.1")}}         | Adds the double ampersand combinator. |
-| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}         | Initial definition                    |
+{{Specifications}}
 
 ## See also
 
-- {{CSS_key_concepts}}
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

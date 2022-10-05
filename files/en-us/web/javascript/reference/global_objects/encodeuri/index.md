@@ -11,6 +11,7 @@ tags:
   - encodeURI
 browser-compat: javascript.builtins.encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`encodeURI()`** function encodes a {{glossary("URI")}} by
@@ -22,7 +23,7 @@ four escape sequences for characters composed of two "surrogate" characters).
 
 ## Syntax
 
-```js
+```js-nolint
 encodeURI(URI)
 ```
 
@@ -67,9 +68,9 @@ Not Escaped:
   "encodeURIComponent()")}} as follows:
 
 ```js
-var set1 = ";,/?:@&=+$#"; // Reserved Characters
-var set2 = "-_.!~*'()";   // Unreserved Marks
-var set3 = "ABC abc 123"; // Alphanumeric Characters + Space
+const set1 = ";,/?:@&=+$#"; // Reserved Characters
+const set2 = "-_.!~*'()";   // Unreserved Marks
+const set3 = "ABC abc 123"; // Alphanumeric Characters + Space
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$#
 console.log(encodeURI(set2)); // -_.!~*'()
@@ -82,8 +83,8 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encode
 
 Note that `encodeURI()` by itself _cannot_ form proper HTTP
 {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} requests, such as for
-{{domxref("XMLHttpRequest")}}, because "`&`", "`+`", and
-"`=`" are not encoded, which are treated as special characters in
+{{domxref("XMLHttpRequest")}}, because `&`, `+`, and
+`=` are not encoded, which are treated as special characters in
 `GET` and `POST` requests. `encodeURIComponent()`,
 however, does encode these characters.
 
@@ -111,7 +112,7 @@ which could be part of a URL (such as a host), the following code snippet may he
 
 ```js
 function fixedEncodeURI(str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
 }
 ```
 

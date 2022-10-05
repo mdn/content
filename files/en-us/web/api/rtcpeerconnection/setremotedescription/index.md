@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
+page-type: web-api-instance-method
 tags:
   - API
   - ICE
@@ -40,8 +41,8 @@ effect.
 
 ## Syntax
 
-```js
-aPromise = rtcPeerConnection.setRemoteDescription(sessionDescription);
+```js-nolint
+setRemoteDescription(sessionDescription)
 ```
 
 ### Parameters
@@ -61,17 +62,15 @@ The `sessionDescription` parameter is technically of type
 ```js
 myPeerConnection
   .setRemoteDescription(new RTCSessionDescription(description))
-  .then(function () {
-    return createMyStream();
-  });
+  .then(() => createMyStream());
 ```
 
 to be:
 
 ```js
-myPeerConnection.setRemoteDescription(description).then(function () {
-  return createMyStream();
-});
+myPeerConnection
+  .setRemoteDescription(description)
+  .then(() => createMyStream());
 ```
 
 Using
@@ -83,8 +82,7 @@ await myPeerConnection.setRemoteDescription(description);
 createMyStream();
 ```
 
-Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription",
-	"RTCSessionDescription()")}} constructor is deprecated.
+Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} constructor is deprecated.
 
 ### Return value
 
@@ -97,9 +95,7 @@ connection). The promise fulfillment handler receives no input parameters.
 > **Note:** The process of changing descriptions actually involves
 > intermediary steps handled by the WebRTC layer to ensure that an active connection
 > can be changed without losing the connection if the change does not succeed. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and
-
-    	current descriptions")}} for more details on this process.
+> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for more details on this process.
 
 ### Exceptions
 
@@ -125,7 +121,7 @@ by `setRemoteDescription()`:
     {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified `RTCSessionDescriptionInit` or
     `RTCSessionDescription` object is missing the
     {{domxref("RTCSessionDescription.type", "type")}} property, or no description
@@ -136,7 +132,7 @@ by `setRemoteDescription()`:
 When you call `setRemoteDescription()`, the ICE agent checks to make sure
 the {{domxref("RTCPeerConnection")}} is in either the `stable` or
 `have-remote-offer` {{domxref("RTCPeerConnection.signalingState",
-	"signalingState")}}. These states indicate that either an existing connection is being
+  "signalingState")}}. These states indicate that either an existing connection is being
 renegotiated or that an offer previously specified by an earlier call to
 `setRemoteDescription()` is to be replaced with the new offer. In either of
 those two cases, we're at the beginning of the negotiation process, and the offer is
@@ -180,7 +176,7 @@ pc.setRemoteDescription(sessionDescription, successCallback, errorCallback);
     once the description has been successfully set. At that time, the offer can be
     sent to a remote peer via the signaling server.
 - `errorCallback` {{deprecated_inline}}
-  - : A function matching the signautre `RTCPeerConnectionErrorCallback`
+  - : A function matching the signature `RTCPeerConnectionErrorCallback`
     which gets called if the description can't be set. It is passed a single
     {{domxref("DOMException")}} object explaining why the request failed.
 
@@ -201,11 +197,10 @@ When using the deprecated callback-based version of
   - : The {{domxref("RTCSessionDescription")}} specified by the
     `sessionDescription` parameter is invalid.
 
-## Example
+## Examples
 
 Here we see a function which handles an offer received from the remote peer. This code
-is derived from the example and tutorial in the article [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling); take a look at that for more details and a more in-depth
+is derived from the example and tutorial in the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling); take a look at that for more details and a more in-depth
 explanation of what's going on.
 
 ```js
@@ -214,20 +209,14 @@ function handleOffer(msg) {
 
   myPeerConnection
     .setRemoteDescription(msg.description)
-    .then(function () {
-      return navigator.mediaDevices.getUserMedia(mediaConstraints);
-    })
-    .then(function (stream) {
+    .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+    .then((stream) => {
       document.getElementById("local_video").srcObject = stream;
       return myPeerConnection.addStream(stream);
     })
-    .then(function () {
-      return myPeerConnection.createAnswer();
-    })
-    .then(function (answer) {
-      return myPeerConnection.setLocalDescription(answer);
-    })
-    .then(function () {
+    .then(() => myPeerConnection.createAnswer())
+    .then((answer) => myPeerConnection.setLocalDescription(answer))
+    .then(() => {
       // Send the answer to the remote peer using the signaling server
     })
     .catch(handleGetUserMediaError);

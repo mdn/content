@@ -1,13 +1,19 @@
 ---
 title: CSS Images
 slug: Web/CSS/CSS_Images
+page-type: css-module
 tags:
   - CSS
   - CSS Images
   - Guide
   - Overview
   - Reference
+spec-urls:
+  - https://drafts.csswg.org/css-images/
+  - https://compat.spec.whatwg.org/#css-%3Cimage%3E-type
+  - https://drafts.csswg.org/css-values/#urls
 ---
+
 {{CSSRef}}
 
 **CSS Images** is a module of CSS that defines what types of images can be used (the {{CSSxRef("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
@@ -49,11 +55,4 @@ tags:
 
 ## Specifications
 
-| Specification                                                                        | Status                           | Comment                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Images")}}                                                 | {{Spec2("CSS4 Images")}} | Added {{CSSxRef("image-resolution")}}, {{CSSxRef("conic-gradient")}}, and {{CSSxRef("_image", "image()")}}                                  |
-| {{SpecName("CSS3 Images")}}                                                 | {{Spec2("CSS3 Images")}} | Added {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("object-fit")}} and {{CSSxRef("object-position")}} |
-| {{SpecName("Compat", "#css-%3Cimage%3E-type", "CSS Gradients")}} | {{Spec2("Compat")}}         | Standardizes the `-webkit` prefixed gradient value functions                                                                                                                |
-| {{SpecName("CSS3 Values", "#urls", "&lt;url&gt;")}}                 | {{Spec2("CSS3 Values")}} |                                                                                                                                                                             |
-| {{Specname("CSS2.1", "syndata.html#uri", "&lt;uri&gt;")}}         | {{Spec2("CSS2.1")}}         |                                                                                                                                                                             |
-| {{SpecName("CSS1", "#url", "&lt;url&gt;")}}                             | {{Spec2("CSS1")}}         | Initial definition                                                                                                                                                          |
+{{Specifications}}

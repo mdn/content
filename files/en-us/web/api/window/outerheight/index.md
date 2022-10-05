@@ -1,6 +1,7 @@
 ---
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Window.outerHeight
 ---
+
 {{APIRef}}
 
 The **`Window.outerHeight`** read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.

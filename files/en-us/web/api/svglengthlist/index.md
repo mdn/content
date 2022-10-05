@@ -1,6 +1,7 @@
 ---
 title: SVGLengthList
 slug: Web/API/SVGLengthList
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGLengthList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG length list interface
@@ -17,14 +19,14 @@ The `SVGLengthList` defines a list of {{ domxref("SVGLength") }} objects.
 
 An `SVGLengthList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{Gecko("5.0") }},the `SVGLengthList` DOM interface is now indexable and can be accessed like arrays
+An `SVGLengthList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -84,7 +86,7 @@ An `SVGLengthList` object can be designated as read only, which means that attem
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGLengthList"
           >SVG 1.1 (2nd Edition)</a
@@ -96,9 +98,9 @@ An `SVGLengthList` object can be designated as read only, which means that attem
 
 ## Properties
 
-| Name                                          | Type          | Description                      |
-| --------------------------------------------- | ------------- | -------------------------------- |
-| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| Name                                 | Type          | Description                      |
+| ------------------------------------ | ------------- | -------------------------------- |
+| `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
 ## Methods
@@ -169,7 +171,7 @@ An `SVGLengthList` object can be designated as read only, which means that attem
         <p>
           Returns the specified item from the list. The returned item is the
           item itself and not a copy. Any changes made to the item are
-          immediately reflected in the list. The first item is number 0.
+          immediately reflected in the list. The first item is number 0.
         </p>
         <p><strong>Exceptions:</strong></p>
         <ul>

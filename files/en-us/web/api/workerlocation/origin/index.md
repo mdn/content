@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.origin
 slug: Web/API/WorkerLocation/origin
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,21 +10,20 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.origin
 ---
+
 {{ApiRef("WorkerLocation")}}
 
-The **`origin`** property of a {{domxref("WorkerLocation")}} object returns the worker’s {{domxref("URL.origin", "origin")}}.
+The **`origin`** property of a {{domxref("WorkerLocation")}} object returns the worker's {{domxref("URL.origin", "origin")}}.
 
-## Syntax
+## Value
 
-```js
-string = object.origin;
-```
+A string.
 
 ## Examples
 
 ```js
 // On this page, returns the origin
-var result = self.location.origin; // Returns:'https://developer.mozilla.org:443'
+const result = self.location.origin; // Returns:'https://developer.mozilla.org:443'
 ```
 
 ## Specifications

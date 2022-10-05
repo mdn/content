@@ -1,13 +1,14 @@
 ---
-title: 'aria-flowto'
+title: "aria-flowto"
 slug: Web/Accessibility/ARIA/Attributes/aria-flowto
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-flowto
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-flowto
 ---
 
 The global `aria-flowto` attribute identifies the next element (or elements) in an alternate reading order of content. This allows assistive technology to override the general default of reading in document source order at the user's discretion.
@@ -24,11 +25,10 @@ When `aria-flowto` has a single {{htmlattrdef('id')}} reference, it allows assis
 
 ## Values
 
- - `id`
-   - : Suggested next element in the reading order.
-  
- - `id` list
-   - : Space seperated list of ID values referencing the suggested elements the user may want to go to next in the alternate reading order of content.
+- `id`
+  - : Suggested next element in the reading order.
+- `id` list
+  - : Space separated list of ID values referencing the suggested elements the user may want to go to next in the alternate reading order of content.
 
 ## Associated roles
 
@@ -36,9 +36,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-flowto","ARIA: aria-flowto Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

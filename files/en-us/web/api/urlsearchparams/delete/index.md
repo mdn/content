@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,28 +10,29 @@ tags:
   - delete
 browser-compat: api.URLSearchParams.delete
 ---
+
 {{ApiRef("URL API")}}
 
 The **`delete()`** method of the {{domxref("URLSearchParams")}}
-interface deletes the given search parameter and all its associated values, from the
+interface deletes the given search parameter and all its associated values, from the
 list of all search parameters.
 
 {{availableinworkers}}
 
 ## Syntax
 
-```js
-URLSearchParams.delete(name)
+```js-nolint
+delete(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to be deleted.
 
 ### Return value
 
-Void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

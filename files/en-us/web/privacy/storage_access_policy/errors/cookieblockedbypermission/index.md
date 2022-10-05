@@ -8,11 +8,14 @@ tags:
   - storage access policy
   - tracking
 ---
+
 ## Message
 
 Firefox:
 
-    CookieBlockedByPermission=Request to access cookies or storage on “X” was blocked because of custom cookie permission.
+```
+CookieBlockedByPermission=Request to access cookies or storage on "X" was blocked because of custom cookie permission.
+```
 
 ## What went wrong?
 

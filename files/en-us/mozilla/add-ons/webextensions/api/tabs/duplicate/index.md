@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.duplicate
 ---
+
 {{AddonSidebar()}}
 
 Duplicates a tab, given its ID.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var duplicating = browser.tabs.duplicate(
+```js-nolint
+let duplicating = browser.tabs.duplicate(
   tabId,              // integer
   duplicateProperties // optional object
 )
@@ -64,13 +65,13 @@ function onError(error) {
 function duplicateFirstTab(tabs) {
   console.log(tabs);
   if (tabs.length > 0) {
-    var duplicating = browser.tabs.duplicate(tabs[0].id);
+    let duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
   }
 }
 
 // Query for all open tabs
-var querying = browser.tabs.query({});
+let querying = browser.tabs.query({});
 querying.then(duplicateFirstTab, onError);
 ```
 
@@ -80,11 +81,12 @@ querying.then(duplicateFirstTab, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-duplicate) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +113,4 @@ querying.then(duplicateFirstTab, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

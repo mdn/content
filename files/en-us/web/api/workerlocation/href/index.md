@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.href
 slug: Web/API/WorkerLocation/href
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,21 +10,20 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.href
 ---
+
 {{ApiRef("WorkerLocation")}}
 
-The **`href`** property of a {{domxref("WorkerLocation")}} object returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker’s location.
+The **`href`** property of a {{domxref("WorkerLocation")}} object returns a string containing the serialized {{domxref("URL")}} for the worker's location.
 
-## Syntax
+## Value
 
-```js
-string = location.href;
-```
+A string.
 
 ## Examples
 
 ```js
 // In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
-var result = location.href; // Returns 'https://developer.mozilla.org/en-US/docs/Web'
+const result = location.href; // Returns 'https://developer.mozilla.org/en-US/docs/Web'
 ```
 
 ## Specifications

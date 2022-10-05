@@ -1,16 +1,17 @@
 ---
 title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
+page-type: web-api-constructor
 tags:
   - API
   - ByteLengthQueuingStrategy
   - Constructor
-  - Experimental
   - Reference
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object
@@ -18,13 +19,13 @@ instance.
 
 ## Syntax
 
-```js
-var byteLengthQueuingStrategy = new ByteLengthQueuingStrategy({highWaterMark});
+```js-nolint
+new ByteLengthQueuingStrategy(highWaterMark)
 ```
 
 ### Parameters
 
-- {highWaterMark}
+- `highWaterMark`
   - : An object containing a `highWaterMark` property. This is a non-negative
     integer defining the total number of chunks that can be contained in the internal
     queue before backpressure is applied.
@@ -42,19 +43,22 @@ None.
 ```js
 const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    ...
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    ...
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
-var size = queuingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## Specifications

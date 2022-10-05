@@ -11,6 +11,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.class
 ---
+
 {{jsSidebar("Statements")}}
 
 The **class declaration** creates a new class
@@ -19,12 +20,11 @@ with a given name using prototype-based inheritance.
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
 You can also define a class using a {{jsxref("Operators/class", "class expression",
-    "", 1)}}. But unlike a class expression, a class declaration doesn't allow an existing
-class to be declared again and will throw a {{jsxref("SyntaxError")}} if attempted.
+    "", 1)}}, which allows redeclarations and omitting class names. Attempting to place **class declaration** in the same scope, under the same name, will throw a {{jsxref("SyntaxError")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 class name [extends otherName] {
   // class body
 }
@@ -35,8 +35,8 @@ class name [extends otherName] {
 The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
 `constructor` method is optional.
 
-Class declarations are not {{Glossary("Hoisting", "hoisted")}} (unlike [function
-declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+Class declarations are not {{Glossary("Hoisting", "hoisted")}}
+(unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Examples
 
@@ -53,8 +53,8 @@ keyword can be used.
 class Rectangle {
   constructor(height, width) {
     this.name = 'Rectangle';
-    this.height = height;   
-    this.width = width; 
+    this.height = height;
+    this.width = width;
   }
 }
 
@@ -62,7 +62,7 @@ class FilledRectangle extends Rectangle {
   constructor(height, width, color) {
     super(height, width);
     this.name = 'Filled rectangle';
-    this.color = color;  
+    this.color = color;
   }
 }
 ```
@@ -94,8 +94,6 @@ class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declare
 
 ## See also
 
-- [`function`
-  declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`class`
-  expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

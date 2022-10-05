@@ -7,15 +7,18 @@ tags:
   - XSLT
   - variable
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:variable>` element declares a global or local variable in a stylesheet and gives it a value. Because XSLT permits no side-effects, once the value of the variable has been established, it remains the same until the variable goes out of scope
 
 ### Syntax
 
-    <xsl:variable name=NAME select=EXPRESSION >
-    	TEMPLATE
-    </xsl:variable>
+```xml
+<xsl:variable name=NAME select=EXPRESSION >
+  TEMPLATE
+</xsl:variable>
+```
 
 ### Required Attributes
 

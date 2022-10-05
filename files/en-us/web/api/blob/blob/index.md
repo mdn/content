@@ -1,6 +1,7 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
+page-type: web-api-constructor
 tags:
   - API
   - Blob
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.Blob
 ---
+
 {{APIRef("File API")}}
 
 The **`Blob()`** constructor returns a
@@ -17,22 +19,23 @@ of the values given in the parameter `array`.
 
 ## Syntax
 
-```js
-var newBlob = new Blob(array, options);
+```js-nolint
+new Blob(array)
+new Blob(array, options)
 ```
 
 ### Parameters
 
 - `array`
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
-    {{domxref("Blob")}}, {{domxref("USVString")}} objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("Blob")}}. `USVString`
-    objects are encoded as UTF-8.
+
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
+    object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
+    {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
+    or a mix of any of such elements, that will be put inside the {{domxref("Blob")}}.
+    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
+
 - `options` {{optional_inline}}
-
-  - : An optional object of type {{domxref("BlobPropertyBag")}} which may specify any of
-    the following properties:
-
+  - : An object which may specify any of the following properties:
     - `type` {{optional_inline}}
       - : The {{Glossary("MIME type")}} of the data that will be stored into the blob. The
         default value is the empty string, (`""`).
@@ -46,11 +49,11 @@ var newBlob = new Blob(array, options);
 
 A new {{domxref("Blob")}} object containing the specified data.
 
-## Example
+## Examples
 
 ```js
-var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+const array = ['<q id="a"><span id="b">hey!</span></q>']; // an array consisting of a single string
+const blob = new Blob(array, { type: "text/html" }); // the blob
 ```
 
 ## Specifications
@@ -60,7 +63,3 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- The deprecated {{domxref("BlobBuilder")}} interface which this constructor replaces.

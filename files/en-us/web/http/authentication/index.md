@@ -8,6 +8,7 @@ tags:
   - HTTP
   - Security
 ---
+
 {{HTTPSidebar}}
 
 HTTP provides a general framework for access control and authentication.
@@ -23,7 +24,7 @@ The challenge and response flow works like this:
 2. A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
 3. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png "Sequence Diagram of Client-server HTTP Authentication")
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png)
 
 The general message flow above is the same for most (if not all) [authentication schemes](#authentication_schemes).
 The actual information in the headers and the way it is encoded does change!
@@ -90,7 +91,7 @@ Some common authentication schemes include:
 - **Bearer**
   - : See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources
 - **Digest**
-  - : See {{rfc(7616)}}. Firefox 93 and later support SHA-256 encryption. Previous versions only support MD5 hashing (not recommended).
+  - : See {{rfc(7616)}}. Firefox 93 and later support the SHA-256 algorithm. Previous versions only support MD5 hashing (not recommended).
 - **HOBA**
   - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
 - **Mutual**
@@ -109,7 +110,6 @@ Schemes can differ in security strength and in their availability in client or s
 The "Basic" authentication scheme offers very poor security, but is widely supported and easy to set up.
 It is introduced in more detail below.
 
-
 ## Basic authentication scheme
 
 The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transmits credentials as user ID/password pairs, encoded using base64.
@@ -124,7 +124,7 @@ To password-protect a directory on an Apache server, you will need a `.htaccess`
 
 The `.htaccess` file typically looks like this:
 
-```
+```plain
 AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
@@ -143,7 +143,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 For Nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
 The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
-```
+```plain
 location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;
@@ -154,12 +154,12 @@ location /status {
 
 Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
 
-```example-bad
+```plain example-bad
 https://username:password@www.example.com/
 ```
 
 **The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."
+In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."
 
 ## See also
 

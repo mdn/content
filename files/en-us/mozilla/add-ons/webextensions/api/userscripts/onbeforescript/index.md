@@ -15,11 +15,14 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.onBeforeScript
 ---
-{{AddonSidebar}}The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
+
+{{AddonSidebar}}
+
+The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.userScripts.onBeforeScript.addListener(listener)
 browser.userScripts.onBeforeScript.removeListener(listener)
 browser.userScripts.onBeforeScript.hasListener(listener)
@@ -51,7 +54,7 @@ Events have three functions:
         - `export`
           - : A method that converts a value to one that the user script code can access. This method is used in API methods exported to the user script to result or resolve non-primitive values. The exported objects can also provide methods that the user script code can access and call.
         - `global`
-          - :  An `object` that provides access to the sandbox for the user script.
+          - : An `object` that provides access to the sandbox for the user script.
         - `metadata`
           - : The `scriptMetadata` property set when the user script was registered using `userScripts.register`.
 
@@ -60,7 +63,7 @@ Events have three functions:
 An example of how the listener might be used:
 
 ```js
-browser.userScripts.onBeforeScript.addListener(function (script) {
+browser.userScripts.onBeforeScript.addListener((script) => {
 
   script // This is an API object that represents the user script
          // that is going to be executed.
@@ -73,16 +76,16 @@ browser.userScripts.onBeforeScript.addListener(function (script) {
   // (this method has to be called synchronously from the
   // listener, otherwise the user script may have executed).
   script.defineGlobals({
-    aGlobalPropertyAccessibleFromUserScriptCode: “prop value”,
+    aGlobalPropertyAccessibleFromUserScriptCode: "prop value",
 
     myCustomAPIMethod(param1, param2) {
       // Custom methods exported from the API script can use
       // the WebExtensions APIs available to content scripts.
-      browser.runtime.sendMessage(...);
-      ...
+      browser.runtime.sendMessage(/* … */);
+      // …
 
       return 123; // primitive values can be returned directly
-      ...
+      // …
 
       // Non primitive values have to be exported explicitly
       // using the export method provided by the script API
@@ -92,11 +95,11 @@ browser.userScripts.onBeforeScript.addListener(function (script) {
           nestedProp: "nestedValue",
         },
         // Explicitly exported objects can also provide methods.
-        objMethod() { ... }
+        objMethod() { /* … */ }
       })
     },
 
-    async myAsyncMethod(param1, param2, param2) {
+    async myAsyncMethod(param1, param2, param3) {
     // exported methods can also be declared as async
     },
   });

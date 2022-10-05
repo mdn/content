@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Vary
 ---
+
 {{HTTPSidebar}}
 
 The **`Vary`** HTTP response header describes the parts of the request message aside from the method and URL that influenced the content of the response it occurs in. Most often, this is used to create a cache key when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) is in use.
@@ -30,7 +31,7 @@ The same `Vary` header value should be used on all responses for a given URL, in
 
 ## Syntax
 
-```
+```http
 Vary: *
 Vary: <header-name>, <header-name>, ...
 ```
@@ -42,7 +43,6 @@ Vary: <header-name>, <header-name>, ...
 - \<header-name>
   - : A comma-separated list of request header names that could have influenced the generation of this response.
 
-
 ## Specifications
 
 {{Specifications}}
@@ -51,12 +51,12 @@ Vary: <header-name>, <header-name>, ...
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [Vary with care – Vary header problems in IE6-9](https://docs.microsoft.com/archive/blogs/ieinternals/vary-with-care)
 
 ## See also
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-using-vary-header)
 - [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)

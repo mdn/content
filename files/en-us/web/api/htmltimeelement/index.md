@@ -1,6 +1,7 @@
 ---
 title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTimeElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTimeElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("time")}} elements.
@@ -19,7 +21,7 @@ The **`HTMLTimeElement`** interface provides special properties (beyond the regu
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTimeElement.dateTime")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("datetime", "time") }} HTML attribute, containing a machine-readable form of the element's date and time value.
+  - : A string that reflects the {{ htmlattrxref("datetime", "time") }} HTML attribute, containing a machine-readable form of the element's date and time value.
 
 ## Methods
 

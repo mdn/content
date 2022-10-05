@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.send()
 slug: Web/API/RTCDataChannel/send
+page-type: web-api-instance-method
 tags:
   - API
   - Communication
@@ -15,6 +16,7 @@ tags:
   - send
 browser-compat: api.RTCDataChannel.send
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`send()`** method of the
@@ -29,25 +31,23 @@ the connection is closing or closed.
 > send. Specifications exist to define how to automatically fragment large messages, but
 > not all browsers implement them, and those that do have various additional
 > restrictions. This will get less complicated over time, but for now, if you have
-> questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels",
-    "Understanding message size limits")}}.
+> questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}}.
 
 ## Syntax
 
-```js
-RTCDataChannel.send(data);
+```js-nolint
+send(data)
 ```
 
 ### Parameters
 
 - `data`
-  - : The data to transmit across the connection. This may be a {{domxref("USVString")}},
-    a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, or an
-    {{domxref("ArrayBufferView")}}.
+  - : The data to transmit across the connection. This may be a string,
+    a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -58,7 +58,7 @@ RTCDataChannel.send(data);
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown when the specified `data` would need to be buffered, and there isn't room for
     it in the buffer. In this scenario, the underlying transport is immediately closed.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified `data` is too large for the other peer to receive. Since
     there are multiple techniques for breaking up large data into smaller pieces for
     transfer, it's possible to encounter scenarios in which the other peer does not
@@ -69,18 +69,18 @@ RTCDataChannel.send(data);
     {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding
     message size limits")}}.
 
-## Example
+## Examples
 
 In this example, a routine called `sendMessage()` is created; it accepts an
 object as input and sends to the remote peer, over the {{domxref("RTCDataChannel")}}, a
 JSON string with the specified object and a time stamp.
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("BackChannel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
-  let obj = {
+  const obj = {
     "message": msg,
     "timestamp": new Date()
   }

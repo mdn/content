@@ -1,6 +1,7 @@
 ---
 title: CSS Houdini
 slug: Web/CSS/CSS_Houdini
+page-type: guide
 tags:
   - CSS
   - Houdini
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{CSSRef}}
 
 **CSS Houdini** is a set of APIs that expose parts of the CSS engine. This makes it easier for developers to create extensions for CSS. These extensions might be to polyfill features that are not yet available in a browser, experiment with new ways of doing layout, or add creative borders or other effects.
@@ -35,7 +37,7 @@ Using {{cssxref("@property")}} however, we can declare the custom property with 
 
 ```css
 @property --background-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: blue;
 }
@@ -73,6 +75,6 @@ The {{CSSxRef("@property")}} at-rule allows you to register an advanced custom p
 
 ## External resources
 
-- [Interactive introduction to Houdini](http://houdini.glitch.me/)
+- [Interactive introduction to Houdini](https://houdini.glitch.me/)
 - [A Practical Overview of CSS Houdini](https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/)
 - [Smarter custom properties with Houdini's new API](https://web.dev/css-props-and-vals/)

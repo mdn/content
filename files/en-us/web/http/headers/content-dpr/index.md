@@ -9,10 +9,10 @@ tags:
   - Response header
   - Deprecated
   - Non-standard
-  - Exerimental
 browser-compat: http.headers.Content-DPR
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
+
+{{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
 
 The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Web/HTTP/Client_hints) was used to select an image resource.
 
@@ -44,11 +44,11 @@ If the `Content-DPR` header appears more than once in a message the last occurre
 
 > **Note:**
 >
-> - `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
+> - `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
 
 ## Syntax
 
-```
+```http
 Content-DPR: <number>
 ```
 

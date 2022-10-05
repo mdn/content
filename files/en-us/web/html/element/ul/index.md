@@ -86,13 +86,13 @@ The **`<ul>`** [HTML](/en-US/docs/Web/HTML) element represents an unordered list
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}}
+- {{ htmlattrdef("compact") }} {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
     > **Warning:** Do not use this attribute, as it has been deprecated: use [CSS](/en-US/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
-- {{ htmlattrdef("type") }} {{Deprecated_inline}}
+- {{ htmlattrdef("type") }} {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This attribute sets the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:
 
@@ -110,7 +110,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - The `<ul>` element is for grouping a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle, or a square. The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the {{ cssxref("list-style-type") }} property.
 - The `<ul>` and {{HTMLElement("ol")}} elements may be nested as deeply as desired. Moreover, the nested lists may alternate between `<ol>` and `<ul>` without restriction.
-- The {{ HTMLElement("ol") }} and `<ul>` elements both represent a list of items. They differ in that, with the {{ HTMLElement("ol") }} element, the order is meaningful. As a rule of thumb to determine which one to use, try changing the order of the list items; if the meaning is changed, the {{ HTMLElement("ol") }} element should be used, otherwise you can use `<ul>`.
+- The {{ HTMLElement("ol") }} and `<ul>` elements both represent a list of items. They differ in that, with the {{ HTMLElement("ol") }} element, the order is meaningful. To determine which one to use, try changing the order of the list items; if the meaning is changed, the {{ HTMLElement("ol") }} element should be used, otherwise you can use `<ul>`.
 
 ## Examples
 
@@ -133,22 +133,25 @@ The above HTML will output:
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
       <li>second item first subitem</li>
-      <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
+      <li>
+        second item second subitem
+        <!-- Same for the second nested unordered list! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Closing </li> tag for the li that
+      </li>
+      <!-- Closing </li> tag for the li that
                   contains the third unordered list -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>
@@ -163,14 +166,15 @@ The above HTML will output:
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>

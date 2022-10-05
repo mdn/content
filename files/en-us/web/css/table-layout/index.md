@@ -1,6 +1,7 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.table-layout
 ---
+
 {{CSSRef}}
 
 The **`table-layout`** CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
@@ -25,6 +27,8 @@ table-layout: fixed;
 /* Global values */
 table-layout: inherit;
 table-layout: initial;
+table-layout: revert;
+table-layout: revert-layer;
 table-layout: unset;
 ```
 
@@ -50,16 +54,28 @@ table-layout: unset;
 
 ### Fixed-width tables with text-overflow
 
-This example uses a fixed table layout, combined with the {{cssxref("width")}} property, to restrict the table's width. The {{cssxref("text-overflow")}} property is used to apply an ellipsis to words that are too long to fit. If the table layout were `auto`, the table would grow to accommodate its contents, despite the specified `width`.
+This example uses a fixed table layout, combined with the {{cssxref("width")}} property, to restrict the table's width. The {{cssxref("text-overflow")}} property is used to apply an ellipsis to words that are too long to fit. If the table layout were `auto`, the table would grow to accommodate its contents, despite the specified `width`.
 
 #### HTML
 
 ```html
 <table>
-  <tr><td>Ed</td><td>Wood</td></tr>
-  <tr><td>Albert</td><td>Schweitzer</td></tr>
-  <tr><td>Jane</td><td>Fonda</td></tr>
-  <tr><td>William</td><td>Shakespeare</td></tr>
+  <tr>
+    <td>Ed</td>
+    <td>Wood</td>
+  </tr>
+  <tr>
+    <td>Albert</td>
+    <td>Schweitzer</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Fonda</td>
+  </tr>
+  <tr>
+    <td>William</td>
+    <td>Shakespeare</td>
+  </tr>
 </table>
 ```
 
@@ -73,10 +89,10 @@ table {
 }
 
 td {
-  border: 1px solid blue;
+  border: 1px solid blue;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 ```
 

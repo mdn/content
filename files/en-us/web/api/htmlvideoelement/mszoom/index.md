@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msZoom
 slug: Web/API/HTMLVideoElement/msZoom
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -9,6 +10,7 @@ tags:
   - Reference
   - msZoom
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 **`msZoom`** is a read/write property which gets or sets
@@ -16,12 +18,6 @@ whether the video frame is trimmed, on the top and bottom or left and right, to 
 video display.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
-
-## Syntax
-
-```js
-HTMLVideoElement.msZoom;
-```
 
 ## Value
 
@@ -44,12 +40,12 @@ stream coming in is in 16:9 aspect ratio, the `msZoom` option can be used to
 render the 16:9 video in 4:3 aspect ratio. The rendered video will then take up the full
 space of the video object.
 
-## Example
+## Examples
 
 This examples gets a Video object and sets the `msZoom` property to true.
 
 ```js
-    var myVideo = document.getElementById("videoTag1");
+    const myVideo = document.getElementById("videoTag1");
        myVideo.msZoom = true;
        myVideo.play();
 ```
@@ -57,4 +53,4 @@ This examples gets a Video object and sets the `msZoom` property to true.
 ## See also
 
 - [HTMLVideoElement](/en-US/docs/Web/API/HTMLVideoElement)
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

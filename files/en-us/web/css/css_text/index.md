@@ -1,12 +1,17 @@
 ---
 title: CSS Text
 slug: Web/CSS/CSS_Text
+page-type: css-module
 tags:
   - CSS
   - CSS Text
   - Guide
   - Overview
+spec-urls:
+  - https://drafts.csswg.org/css-logical/
+  - https://drafts.csswg.org/css-text/
 ---
+
 {{CSSRef}}
 
 **CSS Text** is a module of CSS that defines how to perform text manipulation, like line breaking, justification and alignment, white space handling, and text transformation.
@@ -33,9 +38,4 @@ tags:
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment                                                                      |
-| ---------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties')}} | {{Spec2('CSS Logical Properties')}} | Updates some properties to be independent of the directionality of the text. |
-| {{SpecName('CSS3 Text')}}                     | {{Spec2('CSS3 Text')}}                     |                                                                              |
-| {{SpecName('CSS2.1', 'text.html')}}     | {{Spec2('CSS2.1')}}                         |                                                                              |
-| {{SpecName('CSS1')}}                         | {{Spec2('CSS1')}}                         | Initial definition                                                           |
+{{Specifications}}

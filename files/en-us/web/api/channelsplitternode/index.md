@@ -1,6 +1,7 @@
 ---
 title: ChannelSplitterNode
 slug: Web/API/ChannelSplitterNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -12,6 +13,7 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelSplitterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ChannelSplitterNode` interface, often used in conjunction with its opposite, {{domxref("ChannelMergerNode")}}, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
@@ -19,6 +21,8 @@ The `ChannelSplitterNode` interface, often used in conjunction with its opposite
 ![](webaudiosplitter.png)
 
 If your `ChannelSplitterNode` always has one single input, the amount of outputs is defined by a parameter on its constructor and the call to {{domxref("BaseAudioContext/createChannelSplitter", "AudioContext.createChannelSplitter()")}}. In the case that no value is given, it will default to `6`. If there are fewer channels in the input than there are outputs, supernumerary outputs are silent.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -34,14 +38,14 @@ If your `ChannelSplitterNode` always has one single input, the amount of outputs
       <th scope="row">Channel count mode</th>
       <td>
         <code>"explicit</code>" Older implementations, as per earlier versions
-        of the spec use <code>"max"</code>.
+        of the spec use <code>"max"</code>.
       </td>
     </tr>
     <tr>
       <th scope="row">Channel count</th>
       <td>
-        Fixed to the number of outputs. Older implementations, as per earlier
-        versions of the spec use <code>2 </code>(not used in the default count
+        Fixed to the number of outputs. Older implementations, as per earlier
+        versions of the spec use <code>2 </code>(not used in the default count
         mode).
       </td>
     </tr>

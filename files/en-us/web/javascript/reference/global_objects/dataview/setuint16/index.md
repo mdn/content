@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setUint16
 ---
+
 {{JSRef}}
 
 The **`setUint16()`** method stores an unsigned 16-bit integer
@@ -19,7 +20,7 @@ The **`setUint16()`** method stores an unsigned 16-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setUint16(byteOffset, value)
 setUint16(byteOffset, value, littleEndian)
 ```
@@ -50,8 +51,8 @@ setUint16(byteOffset, value, littleEndian)
 ### Using the setUint16 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setUint16(1, 3);
 dataview.getUint16(1); // 3
 ```

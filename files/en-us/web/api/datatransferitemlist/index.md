@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
+page-type: web-api-interface
 tags:
   - API
   - DataTransferItemList
@@ -11,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItemList
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList`** object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a _drag operation_, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a `DataTransferItemList`.
@@ -21,13 +23,13 @@ This interface has no constructor.
 
 ## Properties
 
-- {{domxref("DataTransferItemList.length")}} {{readonlyInline}}
+- {{domxref("DataTransferItemList.length")}} {{ReadOnlyInline}}
   - : An `unsigned long` that is the number of drag items in the list.
 
 ## Methods
 
 - {{domxref("DataTransferItemList.add()")}}
-  - : Adds an item (either a {{domxref("File")}} object or a {{domxref("DOMString","string")}}) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.
+  - : Adds an item (either a {{domxref("File")}} object or a string) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.
 - {{domxref("DataTransferItemList.remove()")}}
   - : Removes the drag item from the list at the given index.
 - {{domxref("DataTransferItemList.clear()")}}
@@ -42,52 +44,56 @@ This example shows how to use drag and drop.
 ### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   console.log("dragStart");
+
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
+
   // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
+  dataList.add("<p>Paragraph…</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  var data = ev.dataTransfer.items;
+
   // Loop through the dropped items and log their data
-  for (var i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === 'string' && item.type.match(/^text\/plain/)) {
       // This item is the target node
-      data[i].getAsString(function (s){
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
+    } else if (item.kind === 'string' && item.type.match(/^text\/html/)) {
       // Drag data item is HTML
-      data[i].getAsString(function (s){
-        console.log("... Drop: HTML = " + s);
+      item.getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if (item.kind === 'string' && item.type.match(/^text\/uri-list/)) {
       // Drag data item is URI
-      data[i].getAsString(function (s){
-        console.log("... Drop: URI = " + s);
+      item.getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }
 }
 
-function dragover_handler(ev) {
+function dragoverHandler(ev) {
   console.log("dragOver");
   ev.preventDefault();
+
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move"
 }
 
-function dragend_handler(ev) {
+function dragendHandler(ev) {
   console.log("dragEnd");
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
+
   // Clear any remaining drag data
   dataList.clear();
 }
@@ -97,10 +103,21 @@ function dragend_handler(ev) {
 
 ```html
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+  <p
+    id="source"
+    ondragstart="dragstartHandler(event);"
+    ondragend="dragendHandler(event);"
+    draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+<div
+  id="target"
+  ondrop="dropHandler(event);"
+  ondragover="dragoverHandler(event);">
+  Drop Zone
+</div>
 ```
 
 ### CSS

@@ -6,9 +6,11 @@ tags:
   - HTTP
   - X-DNS-Prefetch-Control
   - header
+  - Non-standard
 browser-compat: http.headers.X-DNS-Prefetch-Control
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{Non-standard_header}}
 
 The **`X-DNS-Prefetch-Control`** HTTP response header controls
 DNS prefetching, a feature by which browsers proactively perform domain name resolution
@@ -34,7 +36,7 @@ latency when the user clicks a link.
 
 ## Syntax
 
-```
+```http
 X-DNS-Prefetch-Control: on
 X-DNS-Prefetch-Control: off
 ```
@@ -84,7 +86,7 @@ individual documents, using the {{ htmlattrxref("http-equiv", "meta") }} attribu
 the {{ HTMLElement("meta") }} element, like this:
 
 ```html
-<meta http-equiv="x-dns-prefetch-control" content="off">
+<meta http-equiv="x-dns-prefetch-control" content="off" />
 ```
 
 You can reverse this setting by setting `content` to "`on`".
@@ -93,11 +95,10 @@ You can reverse this setting by setting `content` to "`on`".
 
 You can force the lookup of specific hostnames without providing specific anchors using
 that hostname by using the {{ htmlattrxref("rel","link") }} attribute on the {{
-  HTMLElement("link") }} element with a [link
-type](/en-US/docs/Web/HTML/Link_types) of `dns-prefetch`:
+  HTMLElement("link") }} element with a [link type](/en-US/docs/Web/HTML/Link_types) of `dns-prefetch`:
 
 ```html
-<link rel="dns-prefetch" href="https://www.mozilla.org/contribute/">
+<link rel="dns-prefetch" href="https://www.mozilla.org/contribute/" />
 ```
 
 In this example, the domain name `www.mozilla.org/contribute` will be pre-resolved.
@@ -106,7 +107,7 @@ Similarly, the link element can be used to resolve hostnames without providing a
 complete URL, but only, by preceding the hostname with two slashes:
 
 ```html
-<link rel="dns-prefetch" href="//www.mozilla.org/contribute/">
+<link rel="dns-prefetch" href="//www.mozilla.org/contribute/" />
 ```
 
 Forced prefetching of hostnames might be useful, for example, on the homepage of a site
@@ -122,4 +123,4 @@ affected.
 ## See also
 
 - [DNS Prefetching for Firefox (blog post)](https://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html)
-- [Google Chrome handles DNS prefetching control](https://dev.chromium.org/developers/design-documents/dns-prefetching)
+- [Google Chrome handles DNS prefetching control](https://www.chromium.org/developers/design-documents/dns-prefetching/)

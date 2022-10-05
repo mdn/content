@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.textAlign
 ---
+
 {{APIRef}}
 
 The
@@ -21,13 +23,7 @@ The alignment is relative to the `x` value of the
 `textAlign` is `"center"`, then the text's left edge will be at
 `x - (textWidth / 2)`.
 
-## Syntax
-
-```js
-ctx.textAlign = "left" || "right" || "center" || "start" || "end";
-```
-
-### Options
+## Value
 
 Possible values:
 

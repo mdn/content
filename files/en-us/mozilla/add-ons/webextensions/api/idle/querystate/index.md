@@ -13,6 +13,7 @@ tags:
   - queryState
 browser-compat: webextensions.api.idle.queryState
 ---
+
 {{AddonSidebar()}}
 
 Returns `"locked"` if the system is locked, `"idle"` if the user has not generated any input for a specified number of seconds, or `"active"` otherwise.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var querying = browser.idle.queryState(
+```js-nolint
+let querying = browser.idle.queryState(
   detectionIntervalInSeconds // integer
 )
 ```
@@ -34,7 +35,7 @@ var querying = browser.idle.queryState(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an {{WebExtAPIRef('idle.IdleState')}} string, indicating the current state.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an {{WebExtAPIRef('idle.IdleState')}} string, indicating the current state.
 
 ## Browser compatibility
 
@@ -42,7 +43,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-In this simple snippet, we call `queryState()` and then check if the returned `newState` is `idle` or `active`, logging a message as appropriate. Because we have specified  a `detectionIntervalInSeconds` of 15, an `idle` state will only be reported if there has been no user activity for at least 15 seconds
+In this simple snippet, we call `queryState()` and then check if the returned `newState` is `idle` or `active`, logging a message as appropriate. Because we have specified a `detectionIntervalInSeconds` of 15, an `idle` state will only be reported if there has been no user activity for at least 15 seconds
 
 ```js
 function onGot(newState) {
@@ -53,17 +54,18 @@ function onGot(newState) {
   }
 }
 
-var querying = browser.idle.queryState(15);
+let querying = browser.idle.queryState(15);
 querying.then(onGot);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/extensions/idle#method-queryState) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/idle/#method-queryState) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,4 +92,4 @@ querying.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

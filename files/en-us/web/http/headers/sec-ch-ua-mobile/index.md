@@ -8,10 +8,11 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  - Experimental
 browser-compat: http.headers.Sec-CH-UA-Mobile
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Mobile`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header indicates whether the browser is on a mobile device.
 It can also be used by a desktop browser to indicate a preference for a "mobile" user experience.
@@ -35,7 +36,6 @@ Unless blocked by a user agent permission policy, it is sent by default, without
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -48,7 +48,6 @@ Sec-CH-UA-Mobile: <boolean>
   - : `?1` indicates that the user-agent prefers a mobile experience (true).
     `?0` indicates that user-agent does not prefer a mobile experience (false).
 
-
 ## Examples
 
 As `Sec-CH-UA-Mobile` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints) it is typically sent in all requests.
@@ -60,6 +59,7 @@ Sec-CH-UA-Mobile: ?0
 ```
 
 A browser on a mobile device would usually send requests with the following header:
+
 ```http
 Sec-CH-UA-Mobile: ?1
 ```

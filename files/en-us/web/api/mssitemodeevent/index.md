@@ -1,16 +1,16 @@
 ---
 title: MSSiteModeEvent
 slug: Web/API/MSSiteModeEvent
+page-type: web-api-interface
 ---
-{{Non-standard_header()}}
+
+{{APIRef("UI Events")}}{{Non-standard_header()}}
 
 **`MSSiteModeEvent`** provides event properties that are specific to pinned site events.
 
 This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ### DOM Information
-
-_Inheritance Hierarchy_
 
 [Event](/en-US/docs/Web/API/Event)
 
@@ -151,10 +151,12 @@ Although this event inherits from the [Event](/en-US/docs/Web/API/Event) object,
 
 ## Example
 
-    declare var MSSiteModeEvent: {
-        prototype: MSSiteModeEvent;
-        new(): MSSiteModeEvent;
-    }
+```
+declare var MSSiteModeEvent: {
+    prototype: MSSiteModeEvent;
+    new(): MSSiteModeEvent;
+}
+```
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.cancel()
 slug: Web/API/ReadableStream/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - cancel
 browser-compat: api.ReadableStream.cancel
 ---
+
 {{APIRef("Streams")}}
 
 The **`cancel()`** method of the
@@ -24,55 +26,51 @@ still and not completely get rid of the stream, you'd use
 
 ## Syntax
 
-```js
-var promise = readableStream.cancel(reason);
+```js-nolint
+cancel()
+cancel(reason)
 ```
 
 ### Parameters
 
-- reason {{optional_inline}}
+- `reason` {{optional_inline}}
   - : A human-readable reason for the cancellation. The underlying source may or may not use it.
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
-parameter.
+A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` parameter.
 
 ### Exceptions
 
-- TypeError
-  - : The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is
-    locked.
+- {{jsxref("TypeError")}}
+  - : The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is locked.
 
 ## Examples
 
-In Jake Archibald's [cancelling a
-fetch](https://jsbin.com/gameboy/edit?js,console) example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each
-chunk is searched for the string "service workers". When the search terms is found,
-`cancel()` is used to cancel the stream — the job is finished so it is no
-longer needed.
+In Jake Archibald's [cancelling a fetch](https://jsbin.com/gameboy/edit?js,console) example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each
+chunk is searched for the string "service workers". When the search terms is found, `cancel()` is used to cancel the stream — the job is finished so it is no longer needed.
 
 ```js
-var searchTerm = "service workers";
+const searchTerm = "service workers";
 // Chars to show either side of the result in the match
-var contextBefore = 30;
-var contextAfter = 30;
-var caseInsensitive = true;
-var url = 'https://html.spec.whatwg.org/';
+const contextBefore = 30;
+const contextAfter = 30;
+const caseInsensitive = true;
+const url = 'https://html.spec.whatwg.org/';
 
 console.log(`Searching '${url}' for '${searchTerm}'`);
 
-fetch(url).then(response => {
+fetch(url).then((response) => {
   console.log('Received headers');
 
-  var decoder = new TextDecoder();
-  var reader = response.body.getReader();
-  var toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
-  var bufferSize = Math.max(toMatch.length - 1, contextBefore);
+  const decoder = new TextDecoder();
+  const reader = response.body.getReader();
+  const toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
+  const bufferSize = Math.max(toMatch.length - 1, contextBefore);
 
-  var bytesReceived = 0;
-  var buffer = '';
-  var matchFoundAt = -1;
+  let bytesReceived = 0;
+  let buffer = '';
+  let matchFoundAt = -1;
 
   return reader.read().then(function process(result) {
     if (result.done) {
@@ -92,8 +90,7 @@ fetch(url).then(response => {
 
     if (matchFoundAt === -1) {
       buffer = buffer.slice(-bufferSize);
-    }
-    else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
+    } else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
       console.log("Here's the match:")
       console.log(buffer.slice(
         Math.max(0, matchFoundAt - contextBefore),
@@ -102,16 +99,15 @@ fetch(url).then(response => {
       console.log("Cancelling fetch");
       reader.cancel();
       return;
-    }
-    else {
+    } else {
       console.log('Found match, but need more context…');
     }
 
     // keep reading
     return reader.read().then(process);
   });
-}).catch(err => {
-  console.log("Something went wrong. See devtools for details. Does the response lack CORS headers?");
+}).catch((err) => {
+  console.error("Something went wrong. See devtools for details. Does the response lack CORS headers?");
   throw err;
 });
 ```

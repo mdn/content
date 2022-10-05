@@ -1,6 +1,7 @@
 ---
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
+page-type: web-api-overview
 tags:
   - API
   - CSS
@@ -8,10 +9,12 @@ tags:
   - Houdini
   - Painting
   - Reference
+browser-compat: api.PaintWorkletGlobalScope
 ---
+
 {{DefaultAPISidebar("CSS Painting API")}}
 
-The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Houdini) umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.
+The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.
 
 ## Concepts and usage
 
@@ -30,7 +33,7 @@ The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can b
 ## Interfaces
 
 - {{domxref('PaintWorklet')}}
-  - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet "paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file.").
+  - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet).
 - {{domxref('PaintWorkletGlobalScope')}}
   - : The global execution context of the `paintWorklet`.
 - {{domxref('PaintRenderingContext2D')}}
@@ -47,7 +50,7 @@ The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can b
 
 The following example creates a list of items with a background image that rotates between three different colors and three widths. In a supporting browser you will see something like the image below.
 
-![The width and color of the background image changes based on the custom properties](Guide/boxbg.png)
+![The width and color of the background image changes based on the custom properties](guide/boxbg.png)
 
 To achieve this we'll define two custom CSS properties, `--boxColor` and `--widthSubtractor`.
 
@@ -86,24 +89,24 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
 
 ```html
 <ul>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3</li>
-    <li>item 4</li>
-    <li>item 5</li>
-    <li>item 6</li>
-    <li>item 7</li>
-    <li>item 8</li>
-    <li>item 9</li>
-    <li>item 10</li>
-    <li>item 11</li>
-    <li>item 12</li>
-    <li>item 13</li>
-    <li>item 14</li>
-    <li>item 15</li>
-    <li>item 16</li>
-    <li>item 17</li>
-    <li>item</li>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+  <li>item 5</li>
+  <li>item 6</li>
+  <li>item 7</li>
+  <li>item 8</li>
+  <li>item 9</li>
+  <li>item 10</li>
+  <li>item 11</li>
+  <li>item 12</li>
+  <li>item 13</li>
+  <li>item 14</li>
+  <li>item 15</li>
+  <li>item 16</li>
+  <li>item 17</li>
+  <li>item</li>
 </ul>
 ```
 
@@ -113,18 +116,18 @@ In our CSS, we define the `--boxColor` and `--widthSubtractor` custom properties
 
 ```css
 li {
-   background-image: paint(boxbg);
-   --boxColor: hsla(55, 90%, 60%, 1.0);
+  background-image: paint(boxbg);
+  --boxColor: hsla(55, 90%, 60%, 1);
 }
 
 li:nth-of-type(3n) {
-   --boxColor: hsla(155, 90%, 60%, 1.0);
-   --widthSubtractor: 20;
+  --boxColor: hsla(155, 90%, 60%, 1);
+  --widthSubtractor: 20;
 }
 
-li:nth-of-type(3n+1) {
-   --boxColor: hsla(255, 90%, 60%, 1.0);
-   --widthSubtractor: 40;
+li:nth-of-type(3n + 1) {
+  --boxColor: hsla(255, 90%, 60%, 1);
+  --widthSubtractor: 40;
 }
 ```
 
@@ -144,14 +147,14 @@ While you can't play with the worklet's script, you can alter the custom propert
 
 ## Specifications
 
-{{Specifications("api.PaintWorkletGlobalScope")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-See the browser compatibility data for each CSS Painting API Interface.
+{{Compat}}
 
 ## See also
 
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

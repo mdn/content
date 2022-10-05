@@ -10,18 +10,16 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.isExtensible
 ---
+
 {{JSRef}}
 
-The static
-**`Reflect.isExtensible()`** method determines if an object is
-extensible (whether it can have new properties added to it). It is similar to
-{{jsxref("Object.isExtensible()")}}, but with some [differences](#Difference_to_Object.isExtensible).
+The static **`Reflect.isExtensible()`** method determines if an object is extensible (whether it can have new properties added to it). It is similar to {{jsxref("Object.isExtensible()")}}, but with [some differences](#difference_with_object.isextensible).
 
 {{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.isExtensible(target)
 ```
 
@@ -38,12 +36,6 @@ A {{jsxref("Boolean")}} indicating whether or not the target is extensible.
 
 A {{jsxref("TypeError")}}, if `target` is not an {{jsxref("Object")}}.
 
-## Description
-
-The `Reflect.isExtensible` method allows you determine if an object is
-extensible (whether it can have new properties added to it). It is the same method as
-{{jsxref("Object.isExtensible()")}}.
-
 ## Examples
 
 ### Using Reflect.isExtensible()
@@ -52,28 +44,25 @@ See also {{jsxref("Object.isExtensible()")}}.
 
 ```js
 // New objects are extensible.
-let empty = {}
+const empty = {};
 Reflect.isExtensible(empty)  // === true
 
 // ...but that can be changed.
-Reflect.preventExtensions(empty)
+Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty)  // === false
 
 // Sealed objects are by definition non-extensible.
-let sealed = Object.seal({})
+const sealed = Object.seal({});
 Reflect.isExtensible(sealed)  // === false
 
 // Frozen objects are also by definition non-extensible.
-let frozen = Object.freeze({})
+const frozen = Object.freeze({});
 Reflect.isExtensible(frozen)  // === false
 ```
 
-### Difference to Object.isExtensible()
+### Difference with Object.isExtensible()
 
-If the `target` argument to this method is not an object (a
-primitive), then it will cause a {{jsxref("TypeError")}}. With
-{{jsxref("Object.isExtensible()")}}, a non-object first argument will be coerced to an
-object at first.
+If the `target` argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.isExtensible()")}}, a non-object `target` will return false without any errors.
 
 ```js
 Reflect.isExtensible(1)
@@ -93,6 +82,6 @@ Object.isExtensible(1)
 
 ## See also
 
-- A polyfill of `Reflect.isExtensible` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.isExtensible` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.isExtensible()")}}

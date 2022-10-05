@@ -9,10 +9,10 @@ tags:
   - Request header
   - Deprecated
   - Non-standard
-  - Exerimental
 browser-compat: http.headers.DPR
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 The **`DPR`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
@@ -47,7 +47,7 @@ If the `DPR` header appears more than once in a message the last occurrence is u
 
 ## Syntax
 
-```
+```http
 DPR: <number>
 ```
 
@@ -60,19 +60,19 @@ DPR: <number>
 
 A server must first opt in to receive the `DPR` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `DPR`.
 
-```
+```http
 Accept-CH: DPR
 ```
 
 Then on subsequent requests the client might send `DPR` header to the server:
 
-```
+```http
 DPR: 2.0
 ```
 
 If a request with the `DPR` header (as shown above) is for an image resource, then the server response must include the {{HTTPHeader("Content-DPR")}} header:
 
-```
+```http
 Content-DPR: 2.0
 ```
 

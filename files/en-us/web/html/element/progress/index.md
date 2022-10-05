@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML forms
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.progress
@@ -82,7 +81,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Note:** Unlike the {{htmlelement("meter")}} element, the minimum value is always 0, and the `min` attribute is not allowed for the `<progress>` element.
 
-> **Note:** The {{cssxref(":indeterminate")}} pseudo-class can be used to match against indeterminate progress bars. To change the progress bar to indeterminate after giving it a value you must remove the value attribute with {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}.
+> **Note:** The {{cssxref(":indeterminate")}} pseudo-class can be used to match against indeterminate progress bars. To change the progress bar to indeterminate after giving it a value you must remove the value attribute with {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}.
 
 ## Examples
 
@@ -94,43 +93,39 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 {{ EmbedLiveSample("Examples", 200, 50) }}
 
-On Windows 7, the resulting progress looks like this:
-
-![progress-firefox.JPG](progress-firefox.jpg)
-  
 ## Accessibility Concerns
-  
+
 ### Labelling
-  
+
 In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labelling attributes [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
-  
+
 > **Note:** Text placed between the element's tags is not an accessible label, it is only recommended as a fallback for old browsers that do not support this element.
 
 #### Example
-  
+
 ```html
-  <label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
-  
-  <!-- OR -->
-  
-  <label for="progress-bar">Uploading Document</label>
-  <progress id="progress-bar" value="70" max="100">
+<label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
+
+<!-- OR -->
+
+<label for="progress-bar">Uploading Document</label>
+<progress id="progress-bar" value="70" max="100">70 %</progress>
 ```
-    
+
 ### Describing a particular region
 
-If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria_busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
+If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
 
 #### Example
 
 ```html
-  <div aria-busy="true" aria-describedby="progress-bar">
-    <!-- content is for this region is loading -->
-  </div>
-  
-  <!-- ... -->
+<div aria-busy="true" aria-describedby="progress-bar">
+  <!-- content is for this region is loading -->
+</div>
 
-  <progress id="progress-bar" aria-label="Content loading..."></progress>
+<!-- ... -->
+
+<progress id="progress-bar" aria-label="Content loading…"></progress>
 ```
 
 ## Specifications
@@ -147,7 +142,6 @@ If the `<progress>` element is describing the loading progress of a section of a
 - {{ cssxref(":indeterminate") }}
 - {{ cssxref("-moz-orient") }}
 - {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
 - {{ cssxref("::-webkit-progress-inner-element") }}

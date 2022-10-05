@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 Next we'll implement our list of all book copies (`BookInstance`) in the library. This page needs to include the title of the `Book` associated with each `BookInstance` (linked to its detail page) along with other information in the `BookInstance` model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the `BookInstance` detail page.
 
 ## Controller
@@ -19,16 +20,19 @@ Find the exported `bookinstance_list()` controller method and replace it with th
 
 ```js
 // Display list of all BookInstances.
-exports.bookinstance_list = function(req, res, next) {
-
+exports.bookinstance_list = function (req, res, next) {
   BookInstance.find()
-    .populate('book')
+    .populate("book")
     .exec(function (err, list_bookinstances) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       // Successful, so render
-      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+      res.render("bookinstance_list", {
+        title: "Book Instance List",
+        bookinstance_list: list_bookinstances,
+      });
     });
-
 };
 ```
 
@@ -40,7 +44,7 @@ On success, the callback passed to the query renders the **bookinstance_list**(.
 
 Create **/views/bookinstance_list.pug** and copy in the text below.
 
-```js
+```pug
 extends layout
 
 block content
@@ -67,7 +71,7 @@ This view is much the same as all the others. It extends the layout, replacing t
 
 ## What does it look like?
 
-Run the application, open your browser to <http://localhost:3000/>, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
+Run the application, open your browser to `http://localhost:3000/`, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
 ![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 

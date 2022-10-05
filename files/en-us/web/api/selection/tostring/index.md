@@ -1,25 +1,30 @@
 ---
 title: Selection.toString()
 slug: Web/API/Selection/toString
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.toString
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+
+{{ ApiRef("DOM") }}
 
 The **`Selection.toString()`** method returns a string
 currently being represented by the selection object, i.e. the currently selected text.
 
 ## Syntax
 
-```js
-sel.toString()
+```js-nolint
+toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -34,7 +39,7 @@ a function the selection object is passed to requires a string:
 
 ```js
 alert(window.getSelection()) // What is called
-alert(window.getSelection().toString())  // What is actually being effectively called.
+alert(window.getSelection().toString()) // What is actually being effectively called.
 ```
 
 ## Specifications

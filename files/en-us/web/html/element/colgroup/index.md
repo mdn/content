@@ -31,7 +31,7 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
       <th scope="row">Permitted content</th>
       <td>
         If the {{htmlattrxref("span", "colgroup")}} attribute is
-        present: none, it is an {{Glossary("empty element")}}.<br />If
+        present: none.<br />If
         the attribute is not present: zero or more {{HTMLElement("col")}}
         element
       </td>
@@ -83,9 +83,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<colgroup>` element spans. If not present, its default value is `1`.
 
-    This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.
-
-    The `span` attribute is not permitted if there are one or more `<col>` elements within the `<colgroup>`.
+    The `span` attribute is not permitted if there are one or more {{HTMLElement("col")}} elements within the `<colgroup>`.
 
 ### Deprecated attributes
 
@@ -93,7 +91,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell
@@ -111,7 +109,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 

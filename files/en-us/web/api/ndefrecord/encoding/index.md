@@ -1,14 +1,17 @@
 ---
 title: NDEFRecord.encoding
 slug: Web/API/NDEFRecord/encoding
+page-type: web-api-instance-property
 tags:
   - Encoding
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.encoding
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`encoding`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the encoding of
@@ -16,13 +19,13 @@ a textual payload, or `null` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.encoding
 ```
 
 ### Value
 
-A {{DOMxRef("USVString")}} which can be one of the following: `"utf-8"`,
+A string which can be one of the following: `"utf-8"`,
 `"utf-16"`, `"utf-16le"`, or `"utf-16be"`.
 
 ## Specifications

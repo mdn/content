@@ -12,6 +12,7 @@ tags:
   - conditional rendering
   - filtering
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
@@ -45,13 +46,13 @@ As we near the end of our React journey (for now at least), we'll add the finish
 
 ## Editing the name of a task
 
-We don’t have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.js`. It’ll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
+We don't have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.js`. It'll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
 
 Add the `editTask()` function inside your App component, in the same place as the other functions:
 
-```js
+```jsx
 function editTask(id, newName) {
-  const editedTaskList = tasks.map(task => {
+  const editedTaskList = tasks.map((task) => {
   // if this task has the same ID as the edited task
     if (id === task.id) {
       //
@@ -65,8 +66,8 @@ function editTask(id, newName) {
 
 Pass `editTask` into our `<Todo />` components as a prop in the same way we did with `deleteTask`:
 
-```js
-const taskList = tasks.map(task => (
+```jsx
+const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -79,30 +80,30 @@ const taskList = tasks.map(task => (
 ));
 ```
 
-Now open `Todo.js`. We’re going to do some refactoring.
+Now open `Todo.js`. We're going to do some refactoring.
 
 ## A UI for editing
 
 In order to allow users to edit a task, we have to provide a user interface for them to do so. First, import `useState` into the `Todo` component like we did before with the `App` component, by updating the first import statement to this:
 
-```js
+```jsx
 import React, { useState } from "react";
 ```
 
-We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { … }` component definition:
+We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { }` component definition:
 
-```js
+```jsx
 const [isEditing, setEditing] = useState(false);
 ```
 
-Next, we're going to rethink the `<Todo />` component — from now on, we want it to display one of two possible “templates", rather than the single template it's used so far:
+Next, we're going to rethink the `<Todo />` component — from now on, we want it to display one of two possible "templates", rather than the single template it's used so far:
 
-- The "view" template, when we are just viewing a todo; this is what we’ve used in the tutorial thus far.
+- The "view" template, when we are just viewing a todo; this is what we've used in the tutorial thus far.
 - The "editing" template, when we are editing a todo. We're about to create this.
 
 Copy this block of code into the `Todo()` function, beneath your `useState()` hook but above the `return` statement:
 
-```js
+```jsx
 const editingTemplate = (
   <form className="stack-small">
     <div className="form-group">
@@ -160,7 +161,7 @@ In JSX, we can use a condition to change what is rendered by the browser. To wri
 
 In the case of our `<Todo />` component, our condition is "Is this task being edited?" Change the `return` statement inside `Todo()` so that it reads like so:
 
-```js
+```jsx
 return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 ```
 
@@ -172,7 +173,7 @@ At long last, we are ready to make our final core feature interactive. To start 
 
 Update the "Edit" button in the `viewTemplate` like so:
 
-```js
+```jsx
 <button type="button" className="btn" onClick={() => setEditing(true)}>
   Edit <span className="visually-hidden">{props.name}</span>
 </button>
@@ -182,7 +183,7 @@ Now we'll add the same `onClick` handler to the "Cancel" button in the `editingT
 
 Update the "Cancel" button in the `editingTemplate` like so:
 
-```js
+```jsx
 <button
   type="button"
   className="btn todo-cancel"
@@ -207,13 +208,13 @@ Much of what we're about to do will mirror the work we did in `Form.js`: as the 
 
 We'll start by making a new hook for storing and setting the new name. Still in `Todo.js`, put the following underneath the existing hook:
 
-```js
+```jsx
 const [newName, setNewName] = useState('');
 ```
 
 Next, create a `handleChange()` function that will set the new name; put this underneath the hooks but before the templates:
 
-```js
+```jsx
 function handleChange(e) {
   setNewName(e.target.value);
 }
@@ -221,7 +222,7 @@ function handleChange(e) {
 
 Now we'll update our `editingTemplate`'s `<input />` field, setting a `value` attribute of `newName`, and binding our `handleChange()` function to its `onChange` event. Update it as follows:
 
-```js
+```jsx
 <input
   id={props.id}
   className="todo-text"
@@ -231,9 +232,9 @@ Now we'll update our `editingTemplate`'s `<input />` field, setting a `value` at
 />
 ```
 
-Finally, we need to create a function to handle the edit form’s `onSubmit` event; add the following just below the previous function you added:
+Finally, we need to create a function to handle the edit form's `onSubmit` event; add the following just below the previous function you added:
 
-```js
+```jsx
 function handleSubmit(e) {
   e.preventDefault();
   props.editTask(props.id, newName);
@@ -244,9 +245,9 @@ function handleSubmit(e) {
 
 Remember that our `editTask()` callback prop needs the ID of the task we're editing as well as its new name.
 
-Bind this function to the form’s `submit` event by adding the following `onSubmit` handler to the `editingTemplate`'s `<form>`:
+Bind this function to the form's `submit` event by adding the following `onSubmit` handler to the `editingTemplate`'s `<form>`:
 
-```js
+```jsx
 <form className="stack-small" onSubmit={handleSubmit}>
 ```
 
@@ -263,7 +264,7 @@ Now that our main features are complete, we can think about our filter buttons. 
 
 Add a new hook to your `App()` function that reads and sets a filter. We want the default filter to be `All` because all of our tasks should be shown initially:
 
-```js
+```jsx
 const [filter, setFilter] = useState('All');
 ```
 
@@ -278,11 +279,11 @@ A JavaScript object would be a great way to relate names to behaviors: each key 
 
 At the top of `App.js`, beneath our imports but above our `App()` function, let's add an object called `FILTER_MAP`:
 
-```js
+```jsx
 const FILTER_MAP = {
   All: () => true,
-  Active: task => !task.completed,
-  Completed: task => task.completed
+  Active: (task) => !task.completed,
+  Completed: (task) => task.completed
 };
 ```
 
@@ -294,11 +295,11 @@ The values of `FILTER_MAP` are functions that we will use to filter the `tasks` 
 
 Beneath our previous addition, add the following — here we are using the [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) method to collect an array of `FILTER_NAMES`:
 
-```js
+```jsx
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 ```
 
-> **Note:** We are defining these constants outside our `App()` function because if they were defined inside it, they would be recalculated every time the `<App />` component re-renders, and we don’t want that. This information will never change no matter what our application does.
+> **Note:** We are defining these constants outside our `App()` function because if they were defined inside it, they would be recalculated every time the `<App />` component re-renders, and we don't want that. This information will never change no matter what our application does.
 
 ### Rendering the filters
 
@@ -306,15 +307,15 @@ Now that we have the `FILTER_NAMES` array, we can use it to render all three of 
 
 Add the following underneath your `taskList` constant declaration:
 
-```js
-const filterList = FILTER_NAMES.map(name => (
+```jsx
+const filterList = FILTER_NAMES.map((name) => (
   <FilterButton key={name} name={name}/>
 ));
 ```
 
 Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `filterList`. Replace the following:
 
-```js
+```jsx
 <FilterButton />
 <FilterButton />
 <FilterButton />
@@ -322,7 +323,7 @@ Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `
 
 With this:
 
-```js
+```jsx
 {filterList}
 ```
 
@@ -337,8 +338,8 @@ To make our filter buttons interactive, we should consider what props they need 
 
 Update your `filterList` constant as follows:
 
-```js
-const filterList = FILTER_NAMES.map(name => (
+```jsx
+const filterList = FILTER_NAMES.map((name) => (
   <FilterButton
     key={name}
     name={name}
@@ -352,11 +353,11 @@ In the same way as we did earlier with our `<Todo />` component, we now have to 
 
 - Replace `all` with `{props.name}`.
 - Set the value of `aria-pressed` to `{props.isPressed}`.
-- Add an `onClick` handler that calls `props.setFilter()` with the filter’s name.
+- Add an `onClick` handler that calls `props.setFilter()` with the filter's name.
 
 With all of that done, your `FilterButton()` function should read like this:
 
-```js
+```jsx
 function FilterButton(props) {
   return (
     <button
@@ -373,7 +374,7 @@ function FilterButton(props) {
 }
 ```
 
-Visit your browser again. You should see that the different buttons have been given their respective names. When you press a filter button, you should see its text take on a new outline — this tells you it has been selected. And if you look at your DevTool’s Page Inspector while clicking the buttons, you'll see the `aria-pressed` attribute values change accordingly.
+Visit your browser again. You should see that the different buttons have been given their respective names. When you press a filter button, you should see its text take on a new outline — this tells you it has been selected. And if you look at your DevTool's Page Inspector while clicking the buttons, you'll see the `aria-pressed` attribute values change accordingly.
 
 ![The three filter buttons of the app - all, active, and completed - with a focus highlight around completed](filter-buttons.png)
 
@@ -385,10 +386,10 @@ Right now, our `taskList` constant in `App()` maps over the tasks state and retu
 
 Update your `taskList` like so:
 
-```js
+```jsx
 const taskList = tasks
 .filter(FILTER_MAP[filter])
-.map(task => (
+.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -409,7 +410,7 @@ Choosing a filter in your browser will now remove the tasks that do not meet its
 
 ## Summary
 
-So that's it — our app is now functionally complete. However, now that we’ve implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
+So that's it — our app is now functionally complete. However, now that we've implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen reader users.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

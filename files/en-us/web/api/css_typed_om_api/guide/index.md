@@ -1,12 +1,14 @@
 ---
 title: Using the CSS Typed Object Model
 slug: Web/API/CSS_Typed_OM_API/Guide
+page-type: guide
 tags:
   - CSS
   - CSS Typed OM
   - Houdini
   - Learn
 ---
+
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
 
 The **[CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)** exposes CSS values as typed JavaScript objects to allow their performant manipulation.
@@ -29,7 +31,7 @@ We start with some HTML: a paragraph with a link, as well as a definition list t
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -39,26 +41,26 @@ We start with some HTML: a paragraph with a link, as well as a definition list t
 We add JavaScript to grab our unstyled link and return back a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
 
 ```js
-// get the element
+// Get the element
 const myElement = document.querySelector('a');
 
-// get the <dl> we'll be populating
+// Get the <dl> we'll be populating
 const stylesList = document.querySelector('#regurgitation');
 
 // Retrieve all computed styles with computedStyleMap()
 const defaultComputedStyles = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
+// Iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of defaultComputedStyles) {
-	// properties
-	const cssProperty = document.createElement('dt');
-	cssProperty.appendChild(document.createTextNode(prop));
-	stylesList.appendChild(cssProperty);
+  // properties
+  const cssProperty = document.createElement('dt');
+  cssProperty.appendChild(document.createTextNode(prop));
+  stylesList.appendChild(cssProperty);
 
-	// values
-	const cssValue = document.createElement('dd');
-	cssValue.appendChild(document.createTextNode(val));
-	stylesList.appendChild(cssValue);
+  // values
+  const cssValue = document.createElement('dd');
+  cssValue.appendChild(document.createTextNode(val));
+  stylesList.appendChild(cssValue);
 }
 ```
 
@@ -91,40 +93,41 @@ Instead of getting _all_ the properties, we create an array of properties of int
 
 ```html hidden
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
 
 ```js
-// get the element
+// Get the element
 const myElement = document.querySelector('a');
 
-// get the <dl> we'll be populating
+// Get the <dl> we'll be populating
 const stylesList = document.querySelector('#regurgitation');
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// array of properties we're interested in
+// Array of properties we're interested in
 const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 
 // iterate through our properties of interest
-for ( let i = 0; i < ofInterest.length; i++ ) {
-  	// properties
+for (const value of ofInterest) {
+  // Properties
   const cssProperty = document.createElement('dt');
-  cssProperty.appendChild(document.createTextNode(ofInterest[i]));
+  cssProperty.appendChild(document.createTextNode(value));
   stylesList.appendChild(cssProperty);
-  	// values
+
+  // Values
   const cssValue = document.createElement('dd');
-  cssValue.appendChild(document.createTextNode( allComputedStyles.get(ofInterest[i])));
-	stylesList.appendChild(cssValue);
+  cssValue.appendChild(document.createTextNode(allComputedStyles.get(value)));
+  stylesList.appendChild(cssValue);
 }
 ```
 
 {{EmbedLiveSample(".get_method_custom_properties", 120, 300)}}
 
-We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255, 0, 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red` , are properties. As such, they are accessible via `get()`.
+We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255, 0, 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
 
 You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the `bold` keyword.
 
@@ -157,43 +160,45 @@ Let's write a plain paragraph, apply no styles, and inspect a few of its CSS pro
 For each property of interest, we list the name of the property, use `.get(propertyName).value` to return the value, and, if the object returned by the `get()` is a `CSSUnitValue`, list the unit type we retrieve with `.get(propertyName).unit`.
 
 ```js
-// get the element we're inspecting
+// Get the element we're inspecting
 const myElement = document.querySelector('p');
 
-// get the table we'll be populating
+// Get the table we'll be populating
 const stylesTable = document.querySelector('#regurgitation');
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// array of properties we're interested in
+// Array of properties we're interested in
 const ofInterest = ['padding-top', 'margin-bottom', 'font-size', 'font-stretch',
-     'animation-duration', 'animation-iteration-count', 'width', 'height'];
-// iterate thru our properties of interest
-for ( let i = 0; i < ofInterest.length; i++ ) {
-      // create a row
-    const row = document.createElement( 'tr' );
+                    'animation-duration', 'animation-iteration-count', 'width', 'height'];
 
-      // add the name of the property
-    const cssProperty = document.createElement( 'td' );
-    cssProperty.appendChild( document.createTextNode( ofInterest[i] ) );
-    row.appendChild( cssProperty );
+// Iterate through our properties of interest
+for (const value of ofInterest) {
+  // Create a row
+  const row = document.createElement('tr');
 
-      // and the unitless value
-    const cssValue = document.createElement( 'td' );
-      // shrink long floats to 1 decimal point
-    let propVal = allComputedStyles.get( ofInterest[i] ).value;
-    propVal = ( propVal % 1 ) ? propVal.toFixed( 1 ) : propVal;
-    cssValue.appendChild(document.createTextNode( propVal ));
-    row.appendChild( cssValue );
+  // Add the name of the property
+  const cssProperty = document.createElement('td');
+  cssProperty.appendChild(document.createTextNode(value));
+  row.appendChild(cssProperty);
 
-      // and the type of unit
-    const cssUnit = document.createElement( 'td' );
-    cssUnit.appendChild( document.createTextNode( allComputedStyles.get( ofInterest[i] ).unit ));
-    row.appendChild( cssUnit );
+  // Add the unitless value
+  const cssValue = document.createElement('td');
 
-    //add the row to the table
-    stylesTable.appendChild( row );
+  // Shrink long floats to 1 decimal point
+  let propVal = allComputedStyles.get(value).value;
+  propVal = propVal % 1 ? propVal.toFixed(1) : propVal;
+  cssValue.appendChild(document.createTextNode(propVal));
+  row.appendChild(cssValue);
+
+  // Add the type of unit
+  const cssUnit = document.createElement('td');
+  cssUnit.appendChild(document.createTextNode(allComputedStyles.get(value).unit));
+  row.appendChild(cssUnit);
+
+  // Add the row to the table
+  stylesTable.appendChild(row);
 }
 ```
 
@@ -201,16 +206,16 @@ for ( let i = 0; i < ofInterest.length; i++ ) {
 
 For those of you using a non-supporting browser, the above output should look something like this:
 
-| Property                                             | Value | Unit        |
-| ---------------------------------------------------- | ----- | ----------- |
-| {{cssxref("padding-top")}}                 | 0     | `px`        |
-| {{cssxref("margin-bottom")}}                 | 16    | `px`        |
-| {{cssxref("font-size")}}                     | 16    | `px`        |
-| {{cssxref("font-stretch")}}                 | 100   | `%`         |
-| {{cssxref("animation-duration")}}         | 0     | `px`        |
+| Property                                 | Value | Unit        |
+| ---------------------------------------- | ----- | ----------- |
+| {{cssxref("padding-top")}}               | 0     | `px`        |
+| {{cssxref("margin-bottom")}}             | 16    | `px`        |
+| {{cssxref("font-size")}}                 | 16    | `px`        |
+| {{cssxref("font-stretch")}}              | 100   | `%`         |
+| {{cssxref("animation-duration")}}        | 0     | `px`        |
 | {{cssxref("animation-iteration-count")}} | 1     | _number_    |
-| {{cssxref("width")}}                         | auto  | _undefined_ |
-| {{cssxref("height")}}                         | auto  | _undefined_ |
+| {{cssxref("width")}}                     | auto  | _undefined_ |
+| {{cssxref("height")}}                    | auto  | _undefined_ |
 
 You'll note the {{cssxref('&lt;length&gt;')}} unit returned is `px`, the {{cssxref('&lt;percentage&gt;')}} unit returned is `percent`, the {{cssxref('&lt;time&gt;')}} unit is `s` for 'seconds', and the unitless {{cssxref('&lt;number&gt;')}} unit is `number`.
 
@@ -225,13 +230,7 @@ There are other types available:
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
 - A [custom property](/en-US/docs/Web/CSS/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
-You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects. For example, the parameters for a {{domxref('CSSPositionValue')}} is one to two `CSSUnitValues` or `CSSKeywordValues`, or one of each:
-
-```js
-let position = new CSSPositionValue(
-    new CSSKeywordValue("center"),
-    new CSSUnitValue(10, "px"));
-```
+You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects.
 
 ## CSSStyleValue
 
@@ -248,23 +247,24 @@ Let's examine a CSS example with several custom properties, transforms, `calc()`
 
 ```css
 :root {
-    --mainColor: hsl(198, 43%, 42%);
-    --black: hsl(0, 0%, 16%);
-    --white: hsl(0,0%,97%);
-    --unit: 1.2rem;
+  --mainColor: hsl(198, 43%, 42%);
+  --black: hsl(0, 0%, 16%);
+  --white: hsl(0, 0%, 97%);
+  --unit: 1.2rem;
 }
 
 button {
-	--mainColor: hsl(198, 100%, 66%);
-	display: inline-block;
-	padding: var(--unit) calc(var(--unit)*2);
-	width: calc(30% + 20px);
-	background: no-repeat 5% center url(magicwand.png) var(--mainColor);
-	border: 4px solid var(--mainColor);
-	border-radius: 2px;
-	font-size: calc(var(--unit)*2); color: var(--white);
-	cursor: pointer;
-	transform: scale(0.95);
+  --mainColor: hsl(198, 100%, 66%);
+  display: inline-block;
+  padding: var(--unit) calc(var(--unit) * 2);
+  width: calc(30% + 20px);
+  background: no-repeat 5% center url(magicwand.png) var(--mainColor);
+  border: 4px solid var(--mainColor);
+  border-radius: 2px;
+  font-size: calc(var(--unit) * 2);
+  color: var(--white);
+  cursor: pointer;
+  transform: scale(0.95);
 }
 ```
 
@@ -276,7 +276,7 @@ Let's add the class to a button (a button which does nothing).
 
 ```js hidden
 // get the element
-const button = document.querySelector( 'button' );
+const button = document.querySelector('button');
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = button.computedStyleMap();
@@ -284,36 +284,36 @@ const allComputedStyles = button.computedStyleMap();
 // CSSMathSum Example
 let btnWidth = allComputedStyles.get('width')
 
-console.log( btnWidth ); // CSSMathSum
-console.log( btnWidth.values ); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log( btnWidth.operator ); // 'sum'
+console.log(btnWidth); // CSSMathSum
+console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
+console.log(btnWidth.operator); // 'sum'
 
 // CSSTransformValue
 let transform = allComputedStyles.get('transform');
 
-console.log( transform );        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
-console.log( transform.length ); // 1
-console.log( transform[0] );     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log( transform[0].x );   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].y );   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].z );   // CSSUnitValue {value: 1, unit: "number"}
-console.log( transform.is2D );   // true
+console.log(transform);        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
+console.log(transform.length); // 1
+console.log(transform[0]);     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log(transform[0].x);   // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].y);   // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].z);   // CSSUnitValue {value: 1, unit: "number"}
+console.log(transform.is2D);   // true
 
 // CSSImageValue
 let bgImage = allComputedStyles.get('background-image');
 
-console.log( bgImage );             // CSSImageValue
-console.log( bgImage.toString() ); // url("magicwand.png")
+console.log(bgImage);             // CSSImageValue
+console.log(bgImage.toString()); // url("magicwand.png")
 
 // CSSUnparsedValue
 let unit = allComputedStyles.get('--unit');
 
-console.log( unit ) //
+console.log(unit);
 
-let parsedUnit = CSSNumericValue.parse( unit );
-console.log( parsedUnit );
-console.log( parsedUnit.unit );
-console.log( parsedUnit.value );
+let parsedUnit = CSSNumericValue.parse(unit);
+console.log(parsedUnit);
+console.log(parsedUnit.unit);
+console.log(parsedUnit.value);
 ```
 
 We grab our `StylePropertyMapReadOnly` with the following JavaScript:
@@ -330,35 +330,35 @@ The {{domxref('CSSUnparsedValue')}} represents [custom properties](/en-US/docs/W
 
 ```js
 // CSSUnparsedValue
-let unit = allComputedStyles.get('--unit');
+const unit = allComputedStyles.get('--unit');
 
-console.log( unit )    // CSSUnparsedValue {0: " 1.2rem", length: 1}
-console.log (unit[0] ) // " 1.2rem"
+console.log(unit);    // CSSUnparsedValue {0: " 1.2rem", length: 1}
+console.log(unit[0]); // " 1.2rem"
 ```
 
 When we invoke `get()`, a custom property of type `CSSUnparsedValue` is returned. Note the space before the `1.2rem`. To get a unit and value, we need a `CSSUnitValue`, which we can retrieve using the `CSSStyleValue.parse()` method on the `CSSUnparsedValue`.
 
 ```js
-let parsedUnit = CSSNumericValue.parse( unit );
-console.log( parsedUnit );        // CSSUnitValue {value: 1.2, unit: "rem"}
-console.log( parsedUnit.unit );   // "rem"
-console.log( parsedUnit.value );  // 1.2
+const parsedUnit = CSSNumericValue.parse(unit);
+console.log(parsedUnit);        // CSSUnitValue {value: 1.2, unit: "rem"}
+console.log(parsedUnit.unit);   // "rem"
+console.log(parsedUnit.value);  // 1.2
 ```
 
 ### CSSMathSum
 
-Although the [`<button>`](/en-US/docs/Web/HTML/Element/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_Display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](</en-US/docs/Web/CSS/calc()>) function to define the width.
+Although the [`<button>`](/en-US/docs/Web/HTML/Element/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_Display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/calc) function to define the width.
 
 When we `get()` the `width`, we get a [`CSSMathSum`](/en-US/docs/Web/API/CSSMathSum) returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 `CSSUnitValues`.
 
 The value of {{domxref('CSSMathValue.operator')}} is `sum`:
 
 ```js
-let btnWidth = allComputedStyles.get('width')
+const btnWidth = allComputedStyles.get('width');
 
-console.log( btnWidth );             // CSSMathSum
-console.log( btnWidth.values );      // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log( btnWidth.operator );    // 'sum'
+console.log(btnWidth);             // CSSMathSum
+console.log(btnWidth.values);      // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
+console.log(btnWidth.operator);    // 'sum'
 ```
 
 ### CSSTransformValue with CSSScale
@@ -366,35 +366,35 @@ console.log( btnWidth.operator );    // 'sum'
 The [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_Display) also enables transforming. In our CSS we have `transform: scale(0.95);`, which is a {{cssxref('transform')}} function.
 
 ```js
-let transform = allComputedStyles.get('transform');
+const transform = allComputedStyles.get('transform');
 
-console.log( transform );        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
-console.log( transform.length ); // 1
-console.log( transform[0] );     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log( transform[0].x );   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].y );      // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].z );   // CSSUnitValue {value: 1, unit: "number"}
-console.log( transform.is2D );   // true
+console.log(transform);        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
+console.log(transform.length); // 1
+console.log(transform[0]);     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log(transform[0].x);   // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].y);   // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].z);   // CSSUnitValue {value: 1, unit: "number"}
+console.log(transform.is2D);   // true
 ```
 
 When we `get()` the `transform` property, we get a {{domxref('CSSTransformValue')}}. We can query the length (or number) of transform functions with the .`length` property.
 
 Seen as we have a length of `1`, which represents a single transform function, we log the first object and get a `CSSScale` object. We get `CSSUnitValues` when we query the `x`, `y`, and `z` scaling. The readonly `CSSScale.is2D` property is `true` in this scenario.
 
-Had we added `translate()`, `skew()`, and `rotate()` transform functions, the length would have been `4`, each with their own `x`, `y`, `z` values, and each with an `.is2D` property. For example, had we included `transform: translate3d(1px, 1px, 3px)`, the `.get('transform')` would have returned a `CSSTranslate` with `CSSUnitValues` for `x`, `y`, and `z`, and the readonly .i`s2D` property would have been `false`.
+Had we added `translate()`, `skew()`, and `rotate()` transform functions, the length would have been `4`, each with their own `x`, `y`, `z` values, and each with an `.is2D` property. For example, had we included `transform: translate3d(1px, 1px, 3px)`, the `.get('transform')` would have returned a `CSSTranslate` with `CSSUnitValues` for `x`, `y`, and `z`, and the readonly `.is2D` property would have been `false`.
 
 ### CSSImageValue
 
 Our button has one background image: a magic wand.
 
 ```js
-let bgImage = allComputedStyles.get('background-image');
+const bgImage = allComputedStyles.get('background-image');
 
-console.log( bgImage );             // CSSImageValue
-console.log( bgImage.toString() );  // url("magicwand.png")
+console.log(bgImage);             // CSSImageValue
+console.log(bgImage.toString());  // url("magicwand.png")
 ```
 
-When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '`url("magicwand.png")'`.
+When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, `'url("magicwand.png")'`.
 
 Notice that the value returned is the absolute path to the image — this is returned even if the original `url()` value was relative. Had the background image been a gradient or multiple background images, `.get('background-image')` would have returned a `CSSStyleValue`. The `CSSImageValue` is returned only if there is a single image, and only if that single image declaration is a URL.
 

@@ -1,18 +1,20 @@
 ---
-title: Using Media Queries for Accessibility
+title: Using media queries for accessibility
 slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
+page-type: guide
 tags:
-  - '@media'
+  - "@media"
   - Accessibility
   - Animation
   - CSS
   - Guide
 ---
-**Media Queries** can also be used to help users with disabilities understand your website better.
+
+[**Media Queries**](/en-US/docs/Web/CSS/@media/) can be used to help users with disabilities better experience your website.
 
 ## Reduced Motion
 
-Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity. The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query enables providing an experience with fewer animations and transitions to users who have set their operating system's accessibility preferences to reduce motion.
 
 Also, this method of switching animation off according to the user's preference can also benefit users with low battery or low-end phones or computers.
 
@@ -37,7 +39,6 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 
 ```css
 .animation {
-  -webkit-animation: vibrate 0.3s linear infinite both;
   animation: vibrate 0.3s linear infinite both;
 }
 
@@ -48,11 +49,13 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 }
 ```
 
+The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
+
 ## High Contrast Mode
 
 {{CSSRef}}{{Non-standard_header}}
 
-The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
+The [`-ms-high-contrast`](/en-US/docs/Web/CSS/@media/-ms-high-contrast) CSS media feature is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
 
 This will help not only users with low vision and contrast sensitivity issues but also users that are working on a computer or phone with direct sunlight.
 
@@ -78,9 +81,17 @@ The following declarations will match applications that are being displayed in h
   /* All high contrast styling rules */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```
+
+## See also
+
+- [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

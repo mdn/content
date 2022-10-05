@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,7 +12,8 @@ tags:
   - Reference
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue()`** constructor creates a
 new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}}
@@ -20,25 +22,27 @@ would be represented by a `CSSNumericValue`.
 
 ## Syntax
 
-```js
-var CSSUnitValue = new CSSUnitValue()
+```js-nolint
+new CSSUnitValue()
 ```
 
 ### Parameters
 
-- value
+- `value`
   - : Returns a double indicating the number of units.
-- unit
-  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
+- `unit`
+  - : Returns a string indicating the type of unit.
 
 ## Examples
 
 The following shows a method of creating a {{domxref('CSSPositionValue')}} from
 individual `CSSUnitValue` constructors.
 
-    let pos = new CSSPositionValue(
-        new CSSUnitValue(5, "px"),
-        new CSSUnitValue(10, "px"));
+```js
+let pos = new CSSPositionValue(
+    new CSSUnitValue(5, "px"),
+    new CSSUnitValue(10, "px"));
+```
 
 ## Specifications
 

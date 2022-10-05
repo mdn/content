@@ -1,6 +1,7 @@
 ---
 title: SVG API
 slug: Web/API/SVG_API
+page-type: web-api-overview
 tags:
   - API
   - SVG
@@ -8,12 +9,15 @@ tags:
   - Overview
   - Reference
   - Web
+spec-urls: https://svgwg.org/svg2-draft/
 ---
+
 {{DefaultAPISidebar("SVG")}}
 
 SVG provides elements for circles, rectangles, and simple and complex curves. The elements' attribute values specify how these must be drawn. The **SVG API** is the subset of the **DOM** connecting these SVG elements and their attribute values to scripts or programming languages by representing them in memory. The SVG API thus provides methods that allow programmatic access to the SVG elements and their attribute values.
 
 The SVG API is a set of interfaces that have been categorized into the following broad categories:
+
 1. [The element interfaces](#svg_element_interfaces) provide access to the properties of SVG elements and methods to manipulate them.
 2. [The static data type](#svg_data_type_interfaces) interfaces provide access to element attribute values and methods to manipulate them.
 3. For attributes that can be animated, the [animated data type interfaces](#svg_data_type_interfaces) provide read only access to the current animated value of an attribute.
@@ -152,9 +156,7 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [Scalable Vector Graphics (SVG) Full 1.2 Specification](https://www.w3.org/TR/SVG12/) |
+{{Specifications}}
 
 ## See also
 

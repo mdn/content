@@ -7,13 +7,16 @@ tags:
   - XSLT
   - include
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:include>` element merges the contents of one stylesheet with another. Unlike the case of `<xsl:import>`, the contents of an included stylesheet have exactly the same precedence as the contents of the including stylesheet.
 
 ### Syntax
 
-    <xsl:include href=URI />
+```xml
+<xsl:include href=URI />
+```
 
 ### Required Attributes
 

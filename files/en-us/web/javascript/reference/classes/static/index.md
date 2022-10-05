@@ -9,6 +9,7 @@ tags:
   - Static
 browser-compat: javascript.classes.static
 ---
+
 {{jsSidebar("Classes")}}
 
 The **`static`** keyword defines a [static method or property](/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) for a class, or a [class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) (see the link for more information about this usage).
@@ -17,15 +18,14 @@ Instead, they're called on the class itself.
 
 Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-> **Note:** In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably. 
+> **Note:** In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably.
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
-
+{{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
 ## Syntax
 
-```js
-static methodName() { /* ... */ }
+```js-nolint
+static methodName() { /* … */ }
 static propertyName [= value];
 
 // Class static initialization block
@@ -40,9 +40,9 @@ static {
 
 The following example demonstrates several things:
 
-1.  How a static member (method or property) is defined on a class.
-2.  That a class with a static member can be sub-classed.
-3.  How a static member can and cannot be called.
+1. How a static member (method or property) is defined on a class.
+2. That a class with a static member can be sub-classed.
+3. How a static member can and cannot be called.
 
 ```js
 class Triple {
@@ -84,10 +84,10 @@ In order to call a static method or property within another static method of the
 class StaticMethodCall {
   static staticProperty = 'static property';
   static staticMethod() {
-    return 'Static method and ' + this.staticProperty + ' has been called';
+    return `Static method and ${this.staticProperty} has been called`;
   }
   static anotherStaticMethod() {
-    return this.staticMethod() + ' from another static method';
+    return `${this.staticMethod()} from another static method`;
   }
 }
 StaticMethodCall.staticMethod();
@@ -103,7 +103,7 @@ Static members are not directly accessible using the {{JSxRef("Operators/this", 
 non-static methods. You need to call them using the class name:
 `CLASSNAME.STATIC_METHOD_NAME()` /
 `CLASSNAME.STATIC_PROPERTY_NAME` or by calling the method as a property of
-the `constructor`: `this.constructor.STATIC_METHOD_NAME() `/
+the `constructor`: `this.constructor.STATIC_METHOD_NAME()` /
 `this.constructor.STATIC_PROPERTY_NAME`
 
 ```js

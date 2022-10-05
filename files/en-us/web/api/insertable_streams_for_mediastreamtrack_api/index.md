@@ -1,20 +1,22 @@
 ---
 title: Insertable Streams for MediaStreamTrack API
 slug: Web/API/Insertable_Streams_for_MediaStreamTrack_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
 ---
+
 {{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
 The **Insertable Streams for MediaStreamTrack API** provides a method of adding new components to a {{domxref("MediaStreamTrack")}}.
 
-##  Concepts and Usage
+## Concepts and Usage
 
 When processing video or audio, you sometimes want to insert additional elements or otherwise process the stream. For example, an application might include two tracks that need to be combined, such as a weather map and video of a presenter explaining the map. Or, you may want to do processing on a track to blur backgrounds, remove background noise, or introduce other elements (such as adding funny hats to people, and so on). This API provides a method to do this by giving direct access to the stream, thus allowing it to be manipulated.
 
-##  Interfaces
+## Interfaces
 
 - {{domxref("MediaStreamTrackGenerator")}}
   - : Creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.

@@ -1,15 +1,16 @@
 ---
 title: Drawing shapes with canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
+page-type: guide
 tags:
   - Canvas
   - Graphics
   - HTML
   - HTML Canvas
-  - HTML5
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Now that we have set up our [canvas environment](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage), we can get into the details of how to draw on the canvas. By the end of this article, you will have learned how to draw rectangles, triangles, lines, arcs and curves, providing familiarity with some of the basic shapes. Working with paths is essential when drawing objects onto the canvas and we will see how that can be done.
@@ -18,7 +19,7 @@ Now that we have set up our [canvas environment](/en-US/docs/Web/API/Canvas_API/
 
 Before we can start drawing, we need to talk about the canvas grid or **coordinate space**. Our HTML skeleton from the previous page had a canvas element 150 pixels wide and 150 pixels high.
 
-![](canvas_default_grid.png)
+![Canvas grid with a blue square demonstrating coordinates and axes.](canvas_default_grid.png)
 
 Normally 1 unit in the grid corresponds to 1 pixel on the canvas. The origin of this grid is positioned in the _top left_ corner at coordinate (0,0). All elements are placed relative to this origin. So the position of the top left corner of the blue square becomes x pixels from the left and y pixels from the top, at coordinate (x,y). Later in this tutorial we'll see how we can translate the origin to a different position, rotate the grid and even scale it, but for now we'll stick to the default.
 
@@ -42,18 +43,18 @@ Below is the `draw()` function from the previous page, but now it is making use 
 ### Rectangular shape example
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -74,11 +75,11 @@ Unlike the path functions we'll see in the next section, all three rectangle fun
 
 ## Drawing paths
 
-Now let's look at paths. A path is a list of points, connected by segments of lines that can be of different shapes, curved or not, of different width and of different color. A path, or even a subpath, can be closed. To make shapes using paths, we take some extra steps:
+Now let's look at paths. A path is a list of points, connected by segments of lines that can be of different shapes, curved or not, of different width and of different color. A path, or even a subpath, can be closed. To make shapes using paths, we take some extra steps:
 
-1.  First, you create the path.
-2.  Then you use [drawing commands](/en-US/docs/Web/API/CanvasRenderingContext2D#paths) to draw into the path.
-3.  Once the path has been created, you can stroke or fill the path to render it.
+1. First, you create the path.
+2. Then you use [drawing commands](/en-US/docs/Web/API/CanvasRenderingContext2D#paths) to draw into the path.
+3. Once the path has been created, you can stroke or fill the path to render it.
 
 Here are the functions used to perform these steps:
 
@@ -87,13 +88,13 @@ Here are the functions used to perform these steps:
 - [Path methods](/en-US/docs/Web/API/CanvasRenderingContext2D#paths)
   - : Methods to set different paths for objects.
 - {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
-  - : Adds a straight line to the path, going to the start of the current sub-path.
+  - : Adds a straight line to the path, going to the start of the current sub-path.
 - {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}
   - : Draws the shape by stroking its outline.
 - {{domxref("CanvasRenderingContext2D.fill", "fill()")}}
   - : Draws a solid shape by filling the path's content area.
 
-The first step to create a path is to call the `beginPath()`. Internally, paths are stored as a list of sub-paths (lines, arcs, etc) which together form a shape. Every time this method is called, the list is reset and we can start drawing new shapes.
+The first step to create a path is to call the `beginPath()`. Internally, paths are stored as a list of sub-paths (lines, arcs, etc.) which together form a shape. Every time this method is called, the list is reset and we can start drawing new shapes.
 
 > **Note:** When the current path is empty, such as immediately after calling `beginPath()`, or on a newly created canvas, the first path construction command is always treated as a `moveTo()`, regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.
 
@@ -108,18 +109,18 @@ The third, and an optional step, is to call `closePath()`. This method tries to 
 For example, the code for drawing a triangle would look something like this:
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="100" height="100"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="100" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -146,27 +147,27 @@ When the canvas is initialized or `beginPath()` is called, you typically will wa
 To try this for yourself, you can use the code snippet below. Just paste it into the `draw()` function we saw earlier.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-     var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
     ctx.stroke();
   }
 }
@@ -178,7 +179,7 @@ The result looks like this:
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
-> **Note:** To learn more about the `arc()` function, see the {{anch("Arcs")}} section below.
+> **Note:** To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
 
 ### Lines
 
@@ -192,18 +193,18 @@ This method takes two arguments, `x` and `y`, which are the coordinates of the l
 The example below draws two triangles, one filled and one outlined.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     // Filled triangle
     ctx.beginPath();
@@ -253,28 +254,28 @@ The statement for the `clockwise` parameter results in the first and third row b
 > **Note:** This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="200"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="200"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 3; j++) {
         ctx.beginPath();
-        var x = 25 + j * 50; // x coordinate
-        var y = 25 + i * 50; // y coordinate
-        var radius = 20; // Arc radius
-        var startAngle = 0; // Starting point on circle
-        var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
-        var counterclockwise = i % 2 !== 0; // clockwise or counterclockwise
+        const x = 25 + j * 50; // x coordinate
+        const y = 25 + i * 50; // y coordinate
+        const radius = 20; // Arc radius
+        const startAngle = 0; // Starting point on circle
+        const endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+        const counterclockwise = i % 2 !== 0; // clockwise or counterclockwise
 
         ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
@@ -293,7 +294,7 @@ function draw() {
 
 ### Bezier and quadratic curves
 
-The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bézier_curve), available in both cubic and quadratic varieties. These are generally used to draw complex organic shapes.
+The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bezier_curve), available in both cubic and quadratic varieties. These are generally used to draw complex organic shapes.
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Draws a quadratic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control point specified by `cp1x` and `cp1y`.
@@ -301,7 +302,7 @@ The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bézi
   - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (cp2x, cp2y).
 
 The difference between these is that a quadratic Bézier curve has a start and an end point (blue dots) and just one **control point** (indicated by the red dot) while a cubic Bézier curve uses two control points.
-![](canvas_curves.png)
+![Quadratic and Bezier curve comparison.](canvas_curves.png)
 
 The `x` and `y` parameters in both of these methods are the coordinates of the end point. `cp1x` and `cp1y` are the coordinates of the first control point, and `cp2x` and `cp2y` are the coordinates of the second control point.
 
@@ -314,20 +315,20 @@ There's nothing very difficult in these examples. In both cases we see a success
 This example uses multiple quadratic Bézier curves to render a speech balloon.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
-    // Quadratric curves example
+    // Quadratic curves example
     ctx.beginPath();
     ctx.moveTo(75, 25);
     ctx.quadraticCurveTo(25, 25, 25, 62.5);
@@ -348,18 +349,18 @@ function draw() {
 This example draws a heart using cubic Bézier curves.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     // Cubic curves example
     ctx.beginPath();
@@ -379,7 +380,7 @@ function draw() {
 
 ### Rectangles
 
-In addition to the three methods we saw in {{anch("Drawing rectangles")}}, which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
+In addition to the three methods we saw in [Drawing rectangles](#drawing_rectangles), which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
 
 - {{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}
   - : Draws a rectangle whose top-left corner is specified by (`x`, `y`) with the specified `width` and `height`.
@@ -391,18 +392,18 @@ Before this method is executed, the `moveTo()` method is automatically called wi
 So far, each example on this page has used only one type of path function per shape. However, there's no limitation to the number or types of paths you can use to create a shape. So in this final example, let's combine all of the path functions to make a set of very famous game characters.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -416,15 +417,15 @@ function draw() {
     ctx.lineTo(31, 37);
     ctx.fill();
 
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
 
-    for (i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++) {
       ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
 
-    for (i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
 
@@ -514,23 +515,23 @@ The `Path2D` API also adds a way to combine paths using the `addPath` method. Th
 In this example, we are creating a rectangle and a circle. Both are stored as a `Path2D` object, so that they are available for later usage. With the new `Path2D` API, several methods got updated to optionally accept a `Path2D` object to use instead of the current path. Here, `stroke` and `fill` are used with a path argument to draw both objects onto the canvas, for example.
 
 ```html hidden
-<html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+<html lang="en">
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
-    var rectangle = new Path2D();
+    const rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
 
-    var circle = new Path2D();
+    const circle = new Path2D();
     circle.arc(100, 35, 25, 0, 2 * Math.PI);
 
     ctx.stroke(rectangle);
@@ -548,7 +549,7 @@ Another powerful feature of the new canvas `Path2D` API is using [SVG path data]
 The path will move to point (`M10 10`) and then move horizontally 80 points to the right (`h 80`), then 80 points down (`v 80`), then 80 points to the left (`h -80`), and then back to the start (`z`). You can see this example on the [`Path2D` constructor](/en-US/docs/Web/API/Path2D/Path2D#using_svg_paths) page.
 
 ```js
-var p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+const p = new Path2D('M10 10 h 80 v 80 h -80 Z');
 ```
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

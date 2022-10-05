@@ -1,6 +1,7 @@
 ---
 title: border-top-color
 slug: Web/CSS/border-top-color
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-top-color
 ---
+
 {{CSSRef}}
 
 The **`border-top-color`** CSS property sets the color of an element's top [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-top")}}.
@@ -30,6 +32,7 @@ border-top-color: transparent;
 border-top-color: inherit;
 border-top-color: initial;
 border-top-color: revert;
+border-top-color: revert-layer;
 border-top-color: unset;
 ```
 
@@ -56,9 +59,10 @@ The `border-top-color` property is specified as a single value.
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 

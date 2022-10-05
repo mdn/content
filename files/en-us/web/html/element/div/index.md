@@ -33,7 +33,7 @@ As a "pure" container, the `<div>` element does not inherently represent anythin
       <td>
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >Flow content</a
-        >, palpable content.
+        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
@@ -102,8 +102,9 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 
 ```html
 <div>
-  <p>Any kind of content here. Such as
-  &lt;p&gt;, &lt;table&gt;. You name it!</p>
+  <p>
+    Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!
+  </p>
 </div>
 ```
 
@@ -119,8 +120,7 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 
 ```html
 <div class="shadowbox">
-  <p>Here's a very interesting note displayed in a
-  lovely shadowed box.</p>
+  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
 </div>
 ```
 

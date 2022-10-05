@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute
@@ -10,6 +11,7 @@ tags:
   - getAttributeNames
 browser-compat: api.Element.getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttributeNames()`** method of the
@@ -25,23 +27,31 @@ The names returned by **`getAttributeNames()`** are _qualified_ attribute names,
 
 ## Syntax
 
-```js
-let attributeNames = element.getAttributeNames();
+```js-nolint
+getAttributeNames()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 The following example shows how:
 
 - For an attribute which has a namespace prefix, `getAttributeNames()` returns that namespace prefix along with the attribute name.
 - For an attribute which has no namespace prefix, `getAttributeNames()` returns just the attribute name, as-is.
 
-It’s important to understand that:
+It's important to understand that:
 
-1.  An attribute can be present in the DOM with a namespace but lacking a namespace prefix.
-2.  For an attribute in the DOM that has a namespace but lacks a namespace prefix, `getAttributeNames()` will return just the attribute name, with no indication that the attribute is in a namespace.
+1. An attribute can be present in the DOM with a namespace but lacking a namespace prefix.
+2. For an attribute in the DOM that has a namespace but lacks a namespace prefix, `getAttributeNames()` will return just the attribute name, with no indication that the attribute is in a namespace.
 
-The example below includes such a “namespaced but without a namespace prefix” case.
+The example below includes such a "namespaced but without a namespace prefix" case.
 
 ```js
 const element = document.createElement('a')
@@ -54,8 +64,8 @@ element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'https://ex
 element.setAttributeNS('http://www.w3.org/1999/xlink', 'show', 'new')
 
 // Iterate over element's attributes
-for (let name of element.getAttributeNames()) {
-  let value = element.getAttribute(name);
+for (const name of element.getAttributeNames()) {
+  const value = element.getAttribute(name);
   console.log(name, value);
 }
 
@@ -63,22 +73,6 @@ for (let name of element.getAttributeNames()) {
 // href https://example.com
 // xlink:href https://example.com
 // show new
-```
-
-## Polyfill
-
-```js
-if (Element.prototype.getAttributeNames == undefined) {
-  Element.prototype.getAttributeNames = function () {
-    var attributes = this.attributes;
-    var length = attributes.length;
-    var result = new Array(length);
-    for (var i = 0; i < length; i++) {
-      result[i] = attributes[i].name;
-    }
-    return result;
-  };
-}
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: column-rule-color
 slug: Web/CSS/column-rule-color
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout
@@ -14,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-rule-color
 ---
+
 {{CSSRef}}
 
 The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the line drawn between columns in a multi-column layout.
@@ -33,6 +35,7 @@ column-rule-color: hsla(0, 100%, 50%, 0.6);
 column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: revert;
+column-rule-color: revert-layer;
 column-rule-color: unset;
 ```
 
@@ -58,10 +61,11 @@ The `column-rule-color` property is specified as a single `<color>` value.
 #### HTML
 
 ```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-color` property is used to change
-   the color of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+<p>
+  This is a bunch of text split into three columns. The `column-rule-color`
+  property is used to change the color of the line that is drawn between
+  columns. Don't you think that's wonderful?
+</p>
 ```
 
 #### CSS
@@ -90,4 +94,4 @@ p {
 
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

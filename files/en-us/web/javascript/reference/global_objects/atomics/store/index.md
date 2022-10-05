@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.store
 ---
+
 {{JSRef}}
 
 The static **`Atomics.store()`**
@@ -17,7 +18,7 @@ method stores a given value at the given position in the array and returns that 
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.store(typedArray, index, value)
 ```
 
@@ -50,8 +51,8 @@ The value that has been stored.
 ### Using store()
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+const sab = new SharedArrayBuffer(1024);
+const ta = new Uint8Array(sab);
 
 Atomics.store(ta, 0, 12); // 12
 ```

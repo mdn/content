@@ -12,9 +12,10 @@ tags:
   - header
 browser-compat: http.headers.Sec-WebSocket-Accept
 ---
+
 {{HTTPSidebar}}
 
-The **Sec-WebSocket-Accept** header is used in the websocket opening
+The **Sec-WebSocket-Accept** header is used in the websocket opening
 handshake. It would appear in the response headers. That is, this is header is sent from
 server to client to inform that server is willing to initiate a websocket connection.
 
@@ -33,7 +34,7 @@ server to client to inform that server is willing to initiate a websocket connec
 
 ## Syntax
 
-```
+```http
 Sec-WebSocket-Accept: <hashed key>
 ```
 
@@ -47,7 +48,7 @@ Sec-WebSocket-Accept: <hashed key>
 
 ## Examples
 
-```
+```http
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 

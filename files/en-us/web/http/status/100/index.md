@@ -7,6 +7,7 @@ tags:
   - Status code
 browser-compat: http.status.100
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`100 Continue`** informational status response code

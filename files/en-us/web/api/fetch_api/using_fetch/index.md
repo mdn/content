@@ -1,10 +1,10 @@
 ---
-title: Using Fetch
+title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
+page-type: guide
 tags:
   - API
   - BODY
-  - Experimental
   - Fetch
   - Guide
   - HTTP
@@ -12,35 +12,40 @@ tags:
   - Response
   - fetch POST & string body
   - request
+browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the [protocol](/en-US/docs/Glossary/Protocol), such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
 
 This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and extensions to HTTP.
 
 The `fetch` specification differs from `jQuery.ajax()` in the following significant ways:
 
-- The Promise returned from `fetch()` **won’t reject on HTTP error status** even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn’t in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.
-- `fetch()` **won’t send cross-origin cookies** unless you set the _credentials_ [init option](/en-US/docs/Web/API/fetch#parameters). (Since [April 2018](https://github.com/whatwg/fetch/pull/585). The spec changed the default credentials policy to `same-origin`. Firefox changed since 61.0b13.)
+- The Promise returned from `fetch()` **won't reject on HTTP error status** even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn't in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.
+- Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
+  - won't send cookies in cross-origin requests
+  - won't set any cookies sent back in cross-origin responses
+  - As of August 2018, the default credentials policy changed to same-origin. Firefox was also modified in version 61.0b13)
 
 A basic fetch request is really simple to set up. Have a look at the following code:
 
 ```js
 fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 ```
 
 Here we are fetching a JSON file across the network and printing it to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
 
 The {{domxref("Response")}} object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the {{domxref("Response")}} object, we use the {{domxref("Response.json()", "json()")}} method, which returns a second promise that resolves with the result of parsing the response body text as JSON.
 
-> **Note:** See the {{anch("Body")}} section for similar methods to extract other types of body content.
+> **Note:** See the [Body](#body) section for similar methods to extract other types of body content.
 
 Fetch requests are controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 
-### Supplying request options
+## Supplying request options
 
 The `fetch()` method can optionally accept a second parameter, an `init` object that allows you to control a number of different settings:
 
@@ -67,7 +72,7 @@ async function postData(url = '', data = {}) {
 }
 
 postData('https://example.com/answer', { answer: 42 })
-  .then(data => {
+  .then((data) => {
     console.log(data); // JSON data parsed by `data.json()` call
   });
 ```
@@ -79,7 +84,7 @@ Note that `mode: "no-cors"` only allows a limited set of headers in the request:
 - `Content-Language`
 - `Content-Type` with a value of `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`
 
-### Sending a request with credentials included
+## Sending a request with credentials included
 
 To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add `credentials: 'include'` to the `init` object you pass to the `fetch()` method.
 
@@ -103,7 +108,7 @@ fetch('https://example.com', {
 });
 ```
 
-To instead ensure browsers don’t include credentials in the request, use `credentials: 'omit'`.
+To instead ensure browsers don't include credentials in the request, use `credentials: 'omit'`.
 
 ```js
 fetch('https://example.com', {
@@ -111,7 +116,7 @@ fetch('https://example.com', {
 })
 ```
 
-### Uploading JSON data
+## Uploading JSON data
 
 Use {{domxref("fetch()")}} to POST JSON-encoded data.
 
@@ -125,16 +130,16 @@ fetch('https://example.com/profile', {
   },
   body: JSON.stringify(data),
 })
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 ```
 
-### Uploading a file
+## Uploading a file
 
 Files can be uploaded using an HTML `<input type="file" />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
 
@@ -149,16 +154,16 @@ fetch('https://example.com/profile/avatar', {
   method: 'PUT',
   body: formData
 })
-.then(response => response.json())
-.then(result => {
-  console.log('Success:', result);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((result) => {
+    console.log('Success:', result);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 ```
 
-### Uploading multiple files
+## Uploading multiple files
 
 Files can be uploaded using an HTML `<input type="file" multiple />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
 
@@ -167,24 +172,26 @@ const formData = new FormData();
 const photos = document.querySelector('input[type="file"][multiple]');
 
 formData.append('title', 'My Vegas Vacation');
-for (let i = 0; i < photos.files.length; i++) {
-  formData.append(`photos_${i}`, photos.files[i]);
+let i = 0;
+for (const photo of photos.files) {
+  formData.append(`photos_${i}`, photo);
+  i++;
 }
 
 fetch('https://example.com/posts', {
   method: 'POST',
   body: formData,
 })
-.then(response => response.json())
-.then(result => {
-  console.log('Success:', result);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((result) => {
+    console.log('Success:', result);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 ```
 
-### Processing a text file line by line
+## Processing a text file line by line
 
 The chunks that are read from a response are not broken neatly at line boundaries and are Uint8Arrays, not strings. If you want to fetch a text file and process it line by line, it is up to you to handle these complications. The following example shows one way to do this by creating a line iterator (for simplicity, it assumes the text is UTF-8, and doesn't handle fetch errors).
 
@@ -200,12 +207,10 @@ async function* makeTextFileLineIterator(fileURL) {
   let startIndex = 0;
   let result;
 
-  for (;;) {
+  while (true) {
     let result = re.exec(chunk);
     if (!result) {
-      if (readerDone) {
-        break;
-      }
+      if (readerDone) break;
       let remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
@@ -215,14 +220,15 @@ async function* makeTextFileLineIterator(fileURL) {
     yield chunk.substring(startIndex, result.index);
     startIndex = re.lastIndex;
   }
+
   if (startIndex < chunk.length) {
-    // last line didn't end in a newline char
+    // Last line didn't end in a newline char
     yield chunk.substr(startIndex);
   }
 }
 
 async function run() {
-  for await (let line of makeTextFileLineIterator(urlOfFile)) {
+  for await (const line of makeTextFileLineIterator(urlOfFile)) {
     processLine(line);
   }
 }
@@ -230,27 +236,27 @@ async function run() {
 run();
 ```
 
-### Checking that the fetch was successful
+## Checking that the fetch was successful
 
 A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful `fetch()` would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:
 
 ```js
 fetch('flowers.jpg')
-  .then(response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error('Network response was not OK');
     }
     return response.blob();
   })
-  .then(myBlob => {
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error('There has been a problem with your fetch operation:', error);
   });
 ```
 
-### Supplying your own request object
+## Supplying your own request object
 
 Instead of passing a path to the resource you want to request into the `fetch()` call, you can create a request object using the {{domxref("Request.Request","Request()")}} constructor, and pass that in as a `fetch()` method argument:
 
@@ -265,8 +271,8 @@ const myRequest = new Request('flowers.jpg', {
 });
 
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(myBlob => {
+  .then((response) => response.blob())
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   });
 ```
@@ -277,7 +283,9 @@ fetch(myRequest)
 const anotherRequest = new Request(myRequest, myInit);
 ```
 
-This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again while varying the `init` options if desired. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.
+This is pretty useful, as request and response bodies can only be used once.
+Making a copy like this allows you to effectively use the request/response again while varying the `init` options if desired.
+The copy must be made before the body is read.
 
 > **Note:** There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
 
@@ -335,17 +343,17 @@ A good use case for headers is checking whether the content type is correct befo
 
 ```js
 fetch(myRequest)
-  .then(response => {
+  .then((response) => {
      const contentType = response.headers.get('content-type');
      if (!contentType || !contentType.includes('application/json')) {
        throw new TypeError("Oops, we haven't got JSON!");
      }
      return response.json();
   })
-  .then(data => {
+  .then((data) => {
       /* process your data further */
   })
-  .catch(error => console.error(error));
+  .catch((error) => console.error(error));
 ```
 
 ### Guard
@@ -377,7 +385,7 @@ They can also be created programmatically via JavaScript, but this is only reall
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', function(event) {
+addEventListener('fetch', (event) => {
   // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {
@@ -396,9 +404,11 @@ The {{domxref("Response.Response","Response()")}} constructor takes two optional
 Both requests and responses may contain body data. A body is an instance of any of the following types:
 
 - {{jsxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array and friends)
-- {{domxref("Blob")}}/File
-- string
+- {{jsxref("TypedArray")}} (Uint8Array and friends)
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{jsxref("String")}}, or a string literal
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
 
@@ -436,19 +446,13 @@ if (window.fetch) {
 }
 ```
 
-## Polyfill
-
-To use Fetch in unsupported browsers, there is a [Fetch Polyfill](https://github.com/github/fetch) available that recreates the functionality for non-supporting browsers.
-
 ## Specifications
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## See also
 
@@ -456,4 +460,4 @@ To use Fetch in unsupported browsers, there is a [Fetch Polyfill](https://github
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on Github](https://github.com/mdn/fetch-examples/)
+- [Fetch examples on GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)

@@ -1,6 +1,7 @@
 ---
 title: WEBGL_multi_draw
 slug: Web/API/WEBGL_multi_draw
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw`** extension is part of the
@@ -37,7 +39,7 @@ When this extension is enabled:
     [`drawArrays`](/en-US/docs/Web/API/WebGLRenderingContext/drawArrays)).
 - [`ext.multiDrawElementsWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL)
   - : Renders multiple primitives from element array data (identical to multiple calls to
-    [`drawElements`](en-US/docs/Web/API/WebGLRenderingContext/drawElements)).
+    [`drawElements`](/en-US/docs/Web/API/WebGLRenderingContext/drawElements)).
 - [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL)
   - : Renders multiple primitives from array data (identical to multiple calls to
     [`drawArraysInstanced`](/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)).
@@ -59,10 +61,10 @@ as `gl_DrawID`. For non-`multi*` calls, the value of
 
 ```html
 <script type="x-shader/x-vertex">
-#extension GL_ANGLE_multi_draw : require
-void main() {
-  gl_Position = vec4(gl_DrawID, 0, 0, 1);
-}
+  #extension GL_ANGLE_multi_draw : require
+  void main() {
+    gl_Position = vec4(gl_DrawID, 0, 0, 1);
+  }
 </script>
 ```
 
@@ -85,16 +87,17 @@ and [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw
 
 ```js
 // multiDrawArrays variant
-// let firsts = new Int32Array(...);
-// let counts = new Int32Array(...);
+const firsts = new Int32Array(/* … */);
+const counts = new Int32Array(/* … */);
 ext.multiDrawArraysWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, firsts.length);
+```
 
+```js
 // multiDrawArraysInstanced variant
-// let firsts = new Int32Array(...);
-// let counts = new Int32Array(...);
-// let instanceCounts = new Int32Array(...);
-ext.multiDrawArraysInstancedWEBGL(
-  gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
+const firsts = new Int32Array(/* … */);
+const counts = new Int32Array(/* … */);
+const instanceCounts = new Int32Array(/* … */);
+ext.multiDrawArraysInstancedWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
 ```
 
 ### Drawing multiple elements
@@ -107,20 +110,17 @@ Assumes that the indices which have been previously uploaded to the
 
 ```js
 // multiDrawElements variant
-// let counts = new Int32Array(...);
-// let offsets = new Int32Array(...);
-ext.multiDrawElementsWEBGL(
-  gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
-}
+const counts = new Int32Array(/* … */);
+const offsets = new Int32Array(/* … */);
+ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
+```
 
+```js
 // multiDrawElementsInstanced variant
-// let counts = new Int32Array(...);
-// let offsets = new Int32Array(...);
-// let instanceCounts = new Int32Array(...);
-ext.multiDrawElementsInstancedWEBGL(
-    gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0,
-    counts.length);
-}
+const counts = new Int32Array(/* … */);
+const offsets = new Int32Array(/* … */);
+const instanceCounts = new Int32Array(/* … */);
+ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
 ```
 
 ## Specifications

@@ -13,6 +13,7 @@ tags:
   - deleteUrl
 browser-compat: webextensions.api.history.deleteUrl
 ---
+
 {{AddonSidebar()}}
 
 Removes all visits to the given URL from the browser history.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var deletingUrl = browser.history.deleteUrl(
+```js-nolint
+let deletingUrl = browser.history.deleteUrl(
   details         // object
 )
 ```
@@ -49,18 +50,18 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will 
 Remove all visits to "https\://example.org/" from history, then check that this URL no longer returned from {{WebExtAPIRef("history.search()")}}:
 
 ```js
-var urlToRemove = "https://example.org/";
+let urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
-    console.log(urlToRemove  + " was removed");
+    console.log(`${urlToRemove} was removed`);
   } else {
-    console.log(urlToRemove  + " was not removed");
+    console.log(`${urlToRemove} was not removed`);
   }
 }
 
 function onRemoved() {
-  var searching = browser.history.search({
+  let searching = browser.history.search({
     text: urlToRemove,
     startTime: 0
   });
@@ -68,7 +69,7 @@ function onRemoved() {
   searching.then(onGot);
 }
 
-var deletingUrl = browser.history.deleteUrl({url: urlToRemove});
+let deletingUrl = browser.history.deleteUrl({url: urlToRemove});
 
 deletingUrl.then(onRemoved);
 ```
@@ -78,7 +79,7 @@ Remove the last-visited page from history, with a listener to {{WebExtAPIRef("hi
 ```js
 function onRemoved(removeInfo) {
   if (removeInfo.urls.length) {
-    console.log("Removed: " + removeInfo.urls[0]);
+    console.log(`Removed: ${removeInfo.urls[0]}`);
   }
 }
 
@@ -86,12 +87,12 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 
 function onGot(results) {
   if (results.length) {
-    console.log("Removing: " + results[0].url);
+    console.log(`Removing: ${results[0].url}`);
     browser.history.deleteUrl({url: results[0].url});
   }
 }
 
-var searching = browser.history.search({
+let searching = browser.history.search({
   text: "",
   startTime: 0,
   maxResults: 1
@@ -102,11 +103,12 @@ searching.then(onGot);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-deleteUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,4 +135,4 @@ searching.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

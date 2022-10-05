@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.arcTo
 ---
+
 {{APIRef}}
 
 The
@@ -25,8 +27,8 @@ This method is commonly used for making rounded corners.
 
 ## Syntax
 
-```js
-void ctx.arcTo(x1, y1, x2, y2, radius);
+```js-nolint
+arcTo(x1, y1, x2, y2, radius)
 ```
 
 ### Parameters
@@ -41,6 +43,10 @@ void ctx.arcTo(x1, y1, x2, y2, radius);
   - : The y-axis coordinate of the second control point.
 - `radius`
   - : The arc's radius. Must be non-negative.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -123,13 +129,13 @@ the same, which produces a totally smooth corner.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const p0 = { x: 230, y: 20  }
-const p1 = { x: 90,  y: 130 }
-const p2 = { x: 20,  y: 20  }
+const p0 = { x: 230, y: 20  }
+const p1 = { x: 90,  y: 130 }
+const p2 = { x: 20,  y: 20  }
 
-const labelPoint = function (p) {
-  const offset = 15;
-  ctx.fillText('(' + p.x + ',' + p.y + ')', p.x + offset, p.y + offset);
+const labelPoint = (p) => {
+  const offset = 15;
+  ctx.fillText(`(${p.x},${p.y})`, p.x + offset, p.y + offset);
 }
 
 ctx.beginPath();
@@ -187,9 +193,9 @@ arc changes.
 
 ```html
 <div>
-  <label for="radius">Radius: </label>
-  <input name="radius"  type="range" id="radius" min=0 max=100 value=50>
-  <label for="radius"  id="radius-output">50</label>
+  <label for="radius">Radius: </label>
+  <input name="radius" type="range" id="radius" min="0" max="100" value="50" />
+  <label for="radius" id="radius-output">50</label>
 </div>
 <canvas id="canvas"></canvas>
 ```
@@ -198,61 +204,54 @@ arc changes.
 
 ```js
 const canvas = document.getElementById('canvas');
-const ctx    = canvas.getContext('2d');
+const ctx    = canvas.getContext('2d');
+let radius   = 100;
 
 const controlOut = document.getElementById('radius-output');
-const control    = document.getElementById('radius');
-      control.oninput = () => {
-          controlOut.textContent = r = control.value;
-      };
+const control    = document.getElementById('radius');
+control.oninput = () => {
+  controlOut.textContent = radius = control.value;
+};
 
 const mouse = { x: 0, y: 0 };
 
-let   r  = 100; // Radius
 const p0 = { x: 0, y: 50 };
-
 const p1 = { x: 100, y: 100 };
 const p2 = { x: 150, y: 50 };
 const p3 = { x: 200, y: 100 };
 
-const labelPoint = function (p, offset, i = 0){
-    const {x, y} = offset;
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.fillText(`${i}:(${p.x}, ${p.y})`, p.x + x, p.y + y);
+function labelPoint(p, offset, i = 0) {
+  const { x, y } = offset;
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillText(`${i}:(${p.x}, ${p.y})`, p.x + x, p.y + y);
 }
 
-const drawPoints = function (points){
-  for (let i = 0; i < points.length; i++) {
-    var p = points[i];
-    labelPoint(p, { x: 0, y: -20 } , i)
-  }
+function drawPoints(points) {
+  points.forEach((p, i) => {
+    labelPoint(p, { x: 0, y: -20 }, i)
+  });
 }
 
 // Draw arc
-const drawArc = function ([p0, p1, p2], r) {
-  ctx.beginPath();
-  ctx.moveTo(p0.x, p0.y);
-  ctx.arcTo(p1.x, p1.y, p2.x, p2.y, r);
-  ctx.lineTo(p2.x, p2.y);
-  ctx.stroke();
+function drawArc([p0, p1, p2], r) {
+  ctx.beginPath();
+  ctx.moveTo(p0.x, p0.y);
+  ctx.arcTo(p1.x, p1.y, p2.x, p2.y, r);
+  ctx.lineTo(p2.x, p2.y);
+  ctx.stroke();
 }
 
-let t0 = 0;
-let rr = 0; // the radius that changes over time
-let a  = 0; // angle
-let PI2 = Math.PI * 2;
-const loop = function (t) {
-  t0 = t / 1000;
-  a  = t0 % PI2;
-  rr = Math.abs(Math.cos(a) * r);
+function loop(t) {
+  const angle = (t / 1000) % (2 * Math.PI);
+  const rr = Math.abs(Math.cos(angle) * radius);
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  drawArc([p1, p2, p3], rr);
-  drawPoints([p1, p2, p3]);
-  requestAnimationFrame(loop);
+  drawArc([p1, p2, p3], rr);
+  drawPoints([p1, p2, p3]);
+  requestAnimationFrame(loop);
 }
 
 loop(0);

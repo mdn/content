@@ -11,6 +11,7 @@ tags:
   - options_page
 browser-compat: webextensions.manifest.options_page
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -22,6 +23,10 @@ browser-compat: webextensions.manifest.options_page
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -40,7 +45,7 @@ Use the `options_page` key to define an [options page](/en-US/docs/Mozilla/Add-o
 
 The options page contains settings for the extension. The user can access it from the browser's add-ons manager, and you can open it from within your extension using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
-Unlike options pages specified using the newer `options_ui` key, options pages specified using the deprecated `options_page` key don't receive browser styles and always open in a normal browser tab.
+Unlike options pages specified using the newer `options_ui` key, options pages specified using the deprecated `options_page` key don't receive browser styles and always open in a normal browser tab.
 
 ## Example
 

@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,10 +9,11 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.initiatorType
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`initiatorType`** read-only property is a
-{{domxref("DOMString","string")}} that represents the _type_ of resource that
+string that represents the _type_ of resource that
 initiated the performance event.
 
 The value of this string is as follows:
@@ -27,34 +29,25 @@ The value of this string is as follows:
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-resource.initiatorType;
-```
-
-### Return value
-
-A {{domxref("DOMString","string")}} representing the _type_ of resource that
+A string representing the _type_ of resource that
 initiated the performance event, as specified above.
 
-## Example
+## Examples
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_initiatorType(p[i]);
-  }
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printInitiatorType(entry);
+    });
 }
-function print_initiatorType(perfEntry) {
+
+function printInitiatorType(perfEntry) {
   // Print this performance entry object's initiatorType value
-  var value = "initiatorType" in perfEntry;
-  if (value)
-    console.log("... initiatorType = " + perfEntry.initiatorType);
-  else
-    console.log("... initiatorType = NOT supported");
+  console.log(`… initiatorType = ${perfEntry.initiatorType ?? "NOT supported"}`);
 }
 ```
 

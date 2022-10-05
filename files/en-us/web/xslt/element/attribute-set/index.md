@@ -7,15 +7,18 @@ tags:
   - XSLT
   - attribute-set
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:attribute-set>` element creates a named set of attributes, which can then be applied as whole to the output document, in a manner similar to named styles in CSS.
 
 ### Syntax
 
-    <xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES>
-    	<xsl:attribute>
-    </xsl:attribute-set>
+```xml
+<xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES>
+  <xsl:attribute>
+</xsl:attribute-set>
+```
 
 ### Required Attributes
 

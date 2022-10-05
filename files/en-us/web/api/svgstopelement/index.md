@@ -1,6 +1,7 @@
 ---
 title: SVGStopElement
 slug: Web/API/SVGStopElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStopElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStopElement`** interface corresponds to the {{SVGElement("stop")}} element.

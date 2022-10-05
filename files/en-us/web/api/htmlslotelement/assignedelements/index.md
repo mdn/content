@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.assignedElements()
 slug: Web/API/HTMLSlotElement/assignedElements
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLSlotElement
@@ -11,6 +12,7 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement.assignedElements
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assignedElements()`** method of the {{domxref("HTMLSlotElement")}}
@@ -21,9 +23,9 @@ If the `flatten` option is set to `true`, it returns a sequence of both the elem
 
 ## Syntax
 
-```js
-HTMLSlotElement.assignedElements()
-HTMLSlotElement.assignedElements(options)
+```js-nolint
+assignedElements()
+assignedElements(options)
 ```
 
 ### Parameters
@@ -33,7 +35,7 @@ HTMLSlotElement.assignedElements(options)
   - : An object that sets options for the nodes to be returned. The available options are:
 
     - `flatten`
-      - : A {{jsxref('Boolean')}} indicating whether to return the
+      - : A boolean value indicating whether to return the
         assigned elements of any available child `<slot>` elements
         (`true`) or not (`false`). Defaults to `false`.
 

@@ -1,6 +1,7 @@
 ---
 title: Gyroscope.z
 slug: Web/API/Gyroscope/z
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API
@@ -13,6 +14,7 @@ tags:
   - z
 browser-compat: api.Gyroscope.z
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`z`** read-only property of the
@@ -23,28 +25,22 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 with the policies set on your server. This is not something that would ever be shown to
 a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-## Syntax
-
-```js
-var z = gyroscope.z
-```
-
-### Value
+## Value
 
 A {{jsxref('Number')}}.
 
-## Example
+## Examples
 
-The gyroscope is typically read in the {{domxref('Sensor.onreading')}} event callback.
+The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback.
 In the example below this occurs sixty times a second.
 
 ```js
 let gyroscope = new Gyroscope({frequency: 60});
 
-gyroscope.addEventListener('reading', e => {
-  console.log("Angular velocity along the X-axis " + gyroscope.x);
-  console.log("Angular velocity along the Y-axis " + gyroscope.y);
-  console.log("Angular velocity along the Z-axis " + gyroscope.z);
+gyroscope.addEventListener('reading', (e) => {
+  console.log(`Angular velocity along the X-axis ${gyroscope.x}`);
+  console.log(`Angular velocity along the Y-axis ${gyroscope.y}`);
+  console.log(`Angular velocity along the Z-axis ${gyroscope.z}`);
 });
 gyroscope.start();
 ```

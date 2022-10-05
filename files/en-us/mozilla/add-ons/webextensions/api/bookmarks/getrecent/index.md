@@ -13,6 +13,7 @@ tags:
   - getRecent
 browser-compat: webextensions.api.bookmarks.getRecent
 ---
+
 {{AddonSidebar()}}
 
 The `bookmarks.getRecent()` method retrieves a specified number of the most recently added bookmarks as an array of {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} objects.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingRecent = browser.bookmarks.getRecent(
+```js-nolint
+let gettingRecent = browser.bookmarks.getRecent(
   numberOfItems          // integer
 )
 ```
@@ -34,7 +35,7 @@ var gettingRecent = browser.bookmarks.getRecent(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") objects.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) objects.
 
 ## Examples
 
@@ -42,7 +43,7 @@ This example logs the URL for the most recently added bookmark:
 
 ```js
 function onFulfilled(bookmarks) {
-  for (bookmark of bookmarks) {
+  for (const bookmark of bookmarks) {
     console.log(bookmark.url);
   }
 }
@@ -51,8 +52,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var gettingRecent = browser.bookmarks.getRecent(1);
-gettingRecent.then(onFulfilled, onRejected);
+browser.bookmarks.getRecent(1).then(onFulfilled, onRejected);
 ```
 
 {{WebExtExamples}}
@@ -61,11 +61,12 @@ gettingRecent.then(onFulfilled, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getRecent) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getRecent) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +93,4 @@ gettingRecent.then(onFulfilled, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

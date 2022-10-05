@@ -1,6 +1,7 @@
 ---
 title: TrustedScriptURL.toJSON()
 slug: Web/API/TrustedScriptURL/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,19 +10,24 @@ tags:
   - TrustedScriptURL
 browser-compat: api.TrustedScriptURL.toJSON
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toJSON()`** method of the {{domxref("TrustedScriptURL")}} interface returns a JSON representation of the stored data.
 
 ## Syntax
 
-```js
-var json = TrustedScriptURL.toJSON();
+```js-nolint
+toJSON()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.
+A string containing a JSON representation of the stored data.
 
 ## Examples
 

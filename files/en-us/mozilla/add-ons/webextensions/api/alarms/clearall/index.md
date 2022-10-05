@@ -13,6 +13,7 @@ tags:
   - clearAll
 browser-compat: webextensions.api.alarms.clearAll
 ---
+
 {{AddonSidebar()}}
 
 Cancels all active alarms.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var clearAlarms = browser.alarms.clearAll()
+```js-nolint
+let clearAlarms = browser.alarms.clearAll()
 ```
 
 ### Parameters
@@ -37,10 +38,10 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onClearedAll(wasCleared) {
-  console.log(wasCleared);  // true/false
+  console.log(wasCleared); // true/false
 }
 
-var clearAlarms = browser.alarms.clearAll();
+let clearAlarms = browser.alarms.clearAll();
 clearAlarms.then(onClearedAll);
 ```
 
@@ -50,6 +51,6 @@ clearAlarms.then(onClearedAll);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

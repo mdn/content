@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.aspectRatio
 slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -15,37 +16,26 @@ tags:
   - aspectRatio
 browser-compat: api.MediaTrackSupportedConstraints.aspectRatio
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-**`aspectRatio`** property is a read-only Boolean value which is
-present (and set to `true`) in the object returned by
-{{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
-{{Glossary("user agent")}} supports the `aspectRatio` constraint. If the
-constraint isn't supported, it's not included in the list, so this value will never be
-`false`.
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`aspectRatio`** property is a read-only Boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
+{{Glossary("user agent")}} supports the `aspectRatio` constraint.
+If the constraint isn't supported, it's not included in the list, so this value will never be `false`.
 
-You can access the supported constraints dictionary by calling
-`navigator.mediaDevices.getSupportedConstraints()`.
+You can access the supported constraints dictionary by calling `navigator.mediaDevices.getSupportedConstraints()`.
 
-## Syntax
-
-```js
-aspectConstraintSupported = supportedConstraintsDictionary.aspectRatio;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `aspectRatio` constraint. If the property
 isn't present, this property is missing from the supported constraints dictionary, and
 you'll get {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
@@ -55,18 +45,14 @@ you'll get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().aspectRatio) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().aspectRatio;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

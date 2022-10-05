@@ -1,6 +1,7 @@
 ---
 title: counter-reset
 slug: Web/CSS/counter-reset
+page-type: css-property
 tags:
   - CSS
   - CSS Counter
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.counter-reset
 ---
+
 {{CSSRef}}
 
 The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value.
@@ -25,7 +27,6 @@ A counter's value is increased or decreased using the {{cssxref("counter-increme
 In addition to author-created counters, the property can also reset the `list-item` counters used by ordered lists (as created using {{HTMLElement("ol")}} elements).
 These have the same behavior as author-created counters, except they are _automatically_ incremented/decremented by one with each list element.
 This behavior can be overridden using {{cssxref("counter-increment")}}.
-
 
 ## Syntax
 
@@ -52,6 +53,7 @@ counter-reset: none;
 counter-reset: inherit;
 counter-reset: initial;
 counter-reset: revert;
+counter-reset: revert-layer;
 counter-reset: unset;
 ```
 
@@ -105,8 +107,8 @@ h1 {
 h1 {
   counter-reset: reversed(chapter) reversed(section) 1 page;
   /* Sets the reversed flag on the chapter and section counters.
-     Sets the chapter and page counters to 0,
-     and the section counter to 1 */
+     Sets the chapter to the number of elements, the section counter to 1,
+     and the page counters to 0*/
 }
 ```
 
@@ -124,5 +126,5 @@ h1 {
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
+- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property

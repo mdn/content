@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isExtensible
 ---
+
 {{JSRef}}
 
 The **`Object.isExtensible()`** method determines if an object
@@ -18,7 +19,7 @@ is extensible (whether it can have new properties added to it).
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isExtensible(obj)
 ```
 
@@ -33,11 +34,7 @@ A {{jsxref("Boolean")}} indicating whether or not the given object is extensible
 
 ## Description
 
-Objects are extensible by default: they can have new properties added to them, and (in
-engines that support {{jsxref("Object.proto", "__proto__")}}) their
-`__proto__` property can be modified. An object can be marked as
-non-extensible using {{jsxref("Object.preventExtensions()")}},
-{{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}.
+Objects are extensible by default: they can have new properties added to them, and their `[[Prototype]]` can be re-assigned. An object can be marked as non-extensible using one of {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}}, or {{jsxref("Reflect.preventExtensions()")}}.
 
 ## Examples
 
@@ -45,27 +42,25 @@ non-extensible using {{jsxref("Object.preventExtensions()")}},
 
 ```js
 // New objects are extensible.
-var empty = {};
+const empty = {};
 Object.isExtensible(empty); // === true
 
-// ...but that can be changed.
+// They can be made un-extensible
 Object.preventExtensions(empty);
 Object.isExtensible(empty); // === false
 
 // Sealed objects are by definition non-extensible.
-var sealed = Object.seal({});
+const sealed = Object.seal({});
 Object.isExtensible(sealed); // === false
 
 // Frozen objects are also by definition non-extensible.
-var frozen = Object.freeze({});
+const frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a non-extensible ordinary object, return `false`.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, it will return `false` without any errors if a non-object argument is passed, since primitives are, by definition, immutable.
 
 ```js
 Object.isExtensible(1);

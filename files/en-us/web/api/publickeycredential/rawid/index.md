@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.rawId
 slug: Web/API/PublicKeyCredential/rawId
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,25 +11,19 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.rawId
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`rawId`** read-only property of the
 {{domxref("PublicKeyCredential")}} interface is an {{jsxref("ArrayBuffer")}} object
 containing the identifier of the credentials.
 
-The {{domxref("PublicKeyCredential.id")}} property is a [base64url
-encoded](/en-US/docs/Glossary/Base64) version of this identifier.
+The {{domxref("PublicKeyCredential.id")}} property is a [base64url encoded](/en-US/docs/Glossary/Base64) version of this identifier.
 
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-rawId = publicKeyCredential.rawId
-```
-
-### Value
+## Value
 
 A {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This
 identifier is expected to be globally unique and is appointed for the current
@@ -38,7 +33,7 @@ identifier is expected to be globally unique and is appointed for the current
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26) /* from the server */,
   rp: {
     name: "Example CORP",
@@ -58,10 +53,10 @@ var options = {
 };
 
 navigator.credentials.create({  publicKey: options })
-  .then(function (pubKeyCredential) {
-    var rawId = pubKeyCredential.rawId;
+  .then((pubKeyCredential) => {
+    const rawId = pubKeyCredential.rawId;
     // Do something with rawId
-}).catch(function (err) {
+}).catch((err) => {
   // Deal with any error
 });
 ```

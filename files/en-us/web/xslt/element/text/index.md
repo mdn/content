@@ -7,15 +7,18 @@ tags:
   - Text
   - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:text>` element writes literal text to the output tree. It may contain `#PCDATA`, literal text, and entity references.
 
 ### Syntax
 
-    <xsl:text disable-output-escaping="yes" | "no">
-    	TEXT
-    </xsl:text>
+```xml
+<xsl:text disable-output-escaping="yes" | "no">
+  TEXT
+</xsl:text>
+```
 
 ### Required Attributes
 

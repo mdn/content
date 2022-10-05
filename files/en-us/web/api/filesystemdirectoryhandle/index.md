@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle
 slug: Web/API/FileSystemDirectoryHandle
+page-type: web-api-interface
 tags:
   - Directories
   - Directory
@@ -11,9 +12,12 @@ tags:
   - working with directories
 browser-compat: api.FileSystemDirectoryHandle
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Access API')}} provides a handle to a file system directory. The interface is accessed via the {{domxref('window.showDirectoryPicker()')}} method.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -24,19 +28,21 @@ _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 - {{domxref('FileSystemDirectoryHandle.entries()')}}
-  - : Returns an {{jsxref('Array')}} of a given object's own enumerable property `[key, value]` pairs
+  - : Returns a new _async iterator_ of a given object's own enumerable property `[key, value]` pairs
 - {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
-  - : Returns a {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the directory the method is called.
+  - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the directory the method is called.
 - {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
-  - : Returns a {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name within the directory handle on which the method is called.
+  - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name within the directory handle on which the method is called.
 - {{domxref('FileSystemDirectoryHandle.keys()')}}
-  - : Returns a new _array iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
+  - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
 - {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
-  - : Attempts to remove an entry if the directory handle contains a file or directory called the name specified.
+  - : Attempts to asynchronously remove an entry if the directory handle contains a file or directory called the name specified.
 - {{domxref('FileSystemDirectoryHandle.resolve()')}}
-  - : Returns an {{jsxref('Array')}} of directory names from the parent handle to the specified child entry, with the name of the child entry as the last array item.
+  - : Returns a {{jsxref('Promise')}} fulfilled with an {{jsxref('Array')}} of directory names from the parent handle to the specified child entry, with the name of the child entry as the last array item.
 - {{domxref('FileSystemDirectoryHandle.values()')}}
-  - : Returns a new _array iterator_ containing the values for each index in the `FileSystemDirectoryHandle` object.
+  - : Returns a new _async iterator_ containing the values for each index in the `FileSystemDirectoryHandle` object.
+- [`FileSystemDirectoryHandle[@@asyncIterator]()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries)
+  - : Returns the `entries` function by default.
 
 ## Examples
 
@@ -74,6 +80,27 @@ async function returnPathDirectories(directoryHandle) {
       console.log(name);
     }
   }
+}
+```
+
+The following example scans recursively through a directory to return {{domxref('FileSystemFileHandle')}} objects for each file in that directory:
+
+```js
+async function* getFilesRecursively (entry) {
+  if (entry.kind === 'file') {
+    const file = await entry.getFile();
+    if (file !== null) {
+      file.relativePath = getRelativePath(entry);
+      yield file;
+    }
+  } else if (entry.kind === 'directory') {
+    for await (const handle of entry.values()) {
+      yield* getFilesRecursively(handle);
+    }
+  }
+}
+for await (const fileHandle of getFilesRecursively(directoryHandle)) {
+  console.log(fileHandle);
 }
 ```
 

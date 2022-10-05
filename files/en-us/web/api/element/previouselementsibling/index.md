@@ -1,6 +1,7 @@
 ---
 title: Element.previousElementSibling
 slug: Web/API/Element/previousElementSibling
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,22 +11,18 @@ tags:
   - Reference
 browser-compat: api.Element.previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.previousElementSibling`**
 read-only property returns the {{domxref("Element")}} immediately prior to the specified
 one in its parent's children list, or `null` if the specified element is the first one in the list.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = el.previousElementSibling;
+An {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```html
 <div id="div-01">Here is div-01</div>
@@ -35,24 +32,26 @@ element = el.previousElementSibling;
 <div id="div-03">Here is div-03</div>
 
 <script>
-  let el = document.getElementById('div-03').previousElementSibling;
-  document.write('<p>Siblings of div-03</p><ol>');
+  let el = document.getElementById("div-03").previousElementSibling;
+  document.write("<p>Siblings of div-03</p><ol>");
   while (el) {
-    document.write('<li>' + el.nodeName + '</li>');
+    document.write("<li>" + el.nodeName + "</li>");
     el = el.previousElementSibling;
   }
-  document.write('</ol>');
+  document.write("</ol>");
 </script>
 ```
 
 This example outputs the following into the page when it loads:
 
-    Siblings of div-03
+```
+Siblings of div-03
 
-       1. LI
-       2. LI
-       3. DIV
-       4. DIV
+   1. LI
+   2. LI
+   3. DIV
+   4. DIV
+```
 
 ## Specifications
 

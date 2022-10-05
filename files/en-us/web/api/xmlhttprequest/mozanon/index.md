@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.mozAnon
 slug: Web/API/XMLHttpRequest/mozAnon
+page-type: web-api-instance-property
 tags:
   - API
   - Authentication
@@ -12,6 +13,7 @@ tags:
   - XMLHttpRequest
   - mozAnon
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+
+{{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.mozAnon`** is a boolean. If true, the request will be sent without cookies or authentication headers.

@@ -1,6 +1,7 @@
 ---
 title: Using the Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
+page-type: guide
 tags:
   - Alice
   - Animations
@@ -18,6 +19,7 @@ tags:
   - reverse
   - web animations api
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.
@@ -75,7 +77,7 @@ Now let's try creating the same animation with the Web Animations API.
 The first thing we need is to create a [Keyframe Object](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) corresponding to our CSS [@keyframes](/en-US/docs/Web/CSS/@keyframes) block:
 
 ```js
-var aliceTumbling = [
+const aliceTumbling = [
   { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
   { color: '#431236', offset: 0.3 },
   { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
@@ -92,10 +94,10 @@ So to recap, the keys are equally spaced by default unless you specify an offset
 
 #### Representing timing properties
 
-We’ll also need to create an object of timing properties corresponding to the values in Alice’s animation:
+We'll also need to create an object of timing properties corresponding to the values in Alice's animation:
 
 ```js
-var aliceTiming = {
+const aliceTiming = {
   duration: 3000,
   iterations: Infinity
 }
@@ -160,7 +162,7 @@ In this game, Alice has an animation that causes her to go from small to big whi
 We'll talk more about Alice's animation later, but for now, let's look closer at the cupcake's animation:
 
 ```js
-var nommingCake = document.getElementById('eat-me_sprite').animate(
+const nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-80%)' }
@@ -186,7 +188,7 @@ nommingCake.play();
 Specifically, we want to link it to Alice's animation, so she gets bigger as the cupcake gets eaten. We can achieve this via the following function:
 
 ```js
-var growAlice = function() {
+const growAlice = () => {
 
   // Play Alice's animation.
   aliceChange.play();
@@ -215,7 +217,7 @@ In addition to pausing and playing, we can use the following Animation methods:
 Let's take a look at `playbackRate` first — a negative playbackRate will cause an animation to run in reverse. When Alice drinks from the bottle, she grows smaller. This is because the bottle changes her animation's playbackRate from 1 to -1:
 
 ```js
-var shrinkAlice = function() {
+const shrinkAlice = () => {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -231,20 +233,18 @@ In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking
 Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation's `playbackRate`. We use `updatePlaybackRate()` instead of setting the playbackRate directly since that produces a smooth update:
 
 ```js
-setInterval( function() {
-
+setInterval(() => {
   // Make sure the playback rate never falls below .4
   if (redQueen_alice.playbackRate > .4) {
     redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * .9);
   }
-
 }, 3000);
 ```
 
 But urging them on by clicking or tapping causes them to speed up by multiplying their playbackRate:
 
 ```js
-var goFaster = function() {
+const goFaster = () => {
   redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
 }
 
@@ -259,11 +259,9 @@ The background elements also have `playbackRate`s that are impacted when you cli
 Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That's impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("Document.getAnimations")}} method to loop over each animation on the page and halve their `playbackRate`s, like so:
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.updatePlaybackRate(animation.playbackRate * .5);
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.updatePlaybackRate(animation.playbackRate * 0.5);
+});
 ```
 
 With the Web Animations API, all you need to change is just one little property!
@@ -271,13 +269,18 @@ With the Web Animations API, all you need to change is just one little property!
 Another thing that's tough to do with CSS Animations alone is creating dependencies on values provided by other animations. For instance, in the Growing and Shrinking Alice game example, you might have noticed something odd about the cake's duration:
 
 ```js
-duration: aliceChange.effect.getComputedTiming().duration / 2
+document.getElementById('eat-me_sprite').animate(
+  [],
+  {
+    duration: aliceChange.effect.timing.duration / 2
+  }
+);
 ```
 
 To understand what's happening here, let's take a look at Alice's animation:
 
 ```js
-var aliceChange = document.getElementById('alice').animate(
+const aliceChange = document.getElementById('alice').animate(
   [
     { transform: 'translate(-50%, -50%) scale(.5)' },
     { transform: 'translate(-50%, -50%) scale(2)' }
@@ -306,12 +309,12 @@ But while working on this animation, we might change Alice's duration a lot. Wou
 aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;
 ```
 
-`effect` lets us access the animation’s keyframes and timing properties — `aliceChange.effect.getComputedTiming()` points to Alice’s timing object — this contains her [`duration`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect). We can divide her duration in half to get the midpoint for her animation’s timeline, setting her to be normal height. Now we can reverse and play her animation in either direction to make her grow smaller or larger!
+`effect` lets us access the animation's keyframes and timing properties — `aliceChange.effect.getComputedTiming()` points to Alice's timing object — this contains her [`duration`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect). We can divide her duration in half to get the midpoint for her animation's timeline, setting her to be normal height. Now we can reverse and play her animation in either direction to make her grow smaller or larger!
 
 And we can do the same thing when setting the cake and bottle durations:
 
 ```js
-var drinking = document.getElementById('liquid').animate(
+const drinking = document.getElementById('liquid').animate(
 [
   { height: '100%' },
   { height: '0' }
@@ -327,29 +330,29 @@ Now all three animations are linked to just one duration, which we can change ea
 We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's [`currentTime`](/en-US/docs/Web/API/Animation/currentTime) and dividing it by her `activeDuration`:
 
 ```js
-var endGame = function() {
+const endGame = () => {
 
   // get Alice's timeline's playhead location
-  var alicePlayhead = aliceChange.currentTime;
-  var aliceTimeline = aliceChange.effect.getComputedTiming().activeDuration;
+  const alicePlayhead = aliceChange.currentTime;
+  const aliceTimeline = aliceChange.effect.getComputedTiming().activeDuration;
 
   // stops Alice's and other animations
   stopPlayingAlice();
 
   // depending on which third it falls into
-  var aliceHeight = alicePlayhead / aliceTimeline;
+  const aliceHeight = alicePlayhead / aliceTimeline;
 
   if (aliceHeight <= .333){
     // Alice got smaller!
-    ...
+    // …
 
   } else if (aliceHeight >= .666) {
     // Alice got bigger!
-    ...
+    // …
 
   } else {
     // Alice didn't change significantly
-    ...
+    // …
 
   }
 }
@@ -361,17 +364,17 @@ var endGame = function() {
 
 CSS Animations and Transitions have their own event listeners, and these are also possible with the Web Animations API:
 
-- [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
-- [`oncancel`](/en-US/docs/Web/API/Animation/oncancel) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
+- [`onfinish`](/en-US/docs/Web/API/Animation/finish_event) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
+- [`oncancel`](/en-US/docs/Web/API/Animation/cancel_event) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
 
 Here we set the callbacks for the cake, bottle, and Alice to fire the `endGame` function:
 
 ```js
-// When the cake or bottle runs out...
+// When the cake or bottle runs out
 nommingCake.onfinish = endGame;
 drinking.onfinish = endGame;
 
-// ...or Alice reaches the end of her animation
+// Alice reaches the end of her animation
 aliceChange.onfinish = endGame;
 ```
 
@@ -383,6 +386,6 @@ These are the basic features of the Web Animations API, most of which are alread
 
 ## See also
 
-- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share
 - [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

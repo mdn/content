@@ -1,6 +1,7 @@
 ---
 title: XRAnchorSet
 slug: Web/API/XRAnchorSet
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,11 +10,13 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRAnchorSet
 ---
-{{APIRef("WebXR Device API")}}
 
-The **`XRAnchorSet`** interface exposes a collection of anchors. It is returned by {{domxref("XRFrame.trackedAnchors")}} and is a {{jsxref("Set")}}-like object.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The **`XRAnchorSet`** interface exposes a collection of anchors. It is returned by {{domxref("XRFrame.trackedAnchors")}} and is a {{jsxref("Set")}}-like object.
 
 ## Properties
 

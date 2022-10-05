@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - dataset
 browser-compat: api.HTMLElement.dataset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`dataset`** read-only property
@@ -37,8 +39,7 @@ they are read or written:
     when to capitalize the property's "camelCased" name.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
-attributes in our article [_Using data
-attributes_.](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
 
 ### Name conversion
 
@@ -47,25 +48,25 @@ attributes_.](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
   - : A custom data attribute name is transformed to a key for the {{
       domxref("DOMStringMap") }} entry by the following:
 
-    1.  Lowercase all ASCII capital letters (`A` to
-        `Z`);
-    2.  Remove the prefix `data-` (including the dash);
-    3.  For any dash (`U+002D`) followed by an ASCII lowercase letter
-        `a` to `z`, remove the dash and uppercase the letter;
-    4.  Other characters (including other dashes) are left unchanged.
+    1. Lowercase all ASCII capital letters (`A` to
+       `Z`);
+    2. Remove the prefix `data-` (including the dash);
+    3. For any dash (`U+002D`) followed by an ASCII lowercase letter
+       `a` to `z`, remove the dash and uppercase the letter;
+    4. Other characters (including other dashes) are left unchanged.
 
 - `camelCase` to `dash-style` conversion
 
   - : The opposite transformation, which maps a key to an attribute name, uses the
     following:
 
-    1.  **Restriction:** Before transformation, a dash _must not_ be
-        immediately followed by an ASCII lowercase letter `a` to
-        `z`;
-    2.  Add the `data-` prefix;
-    3.  Add a dash before any ASCII uppercase letter `A` to `Z`,
-        then lowercase the letter;
-    4.  Other characters are left unchanged.
+    1. **Restriction:** Before transformation, a dash _must not_ be
+       immediately followed by an ASCII lowercase letter `a` to
+       `z`;
+    2. Add the `data-` prefix;
+    3. Add a dash before any ASCII uppercase letter `A` to `Z`,
+       then lowercase the letter;
+    4. Other characters are left unchanged.
 
 For example, a `data-abc-def` attribute corresponds to
 `dataset.abcDef`.
@@ -73,37 +74,30 @@ For example, a `data-abc-def` attribute corresponds to
 ### Accessing values
 
 - Attributes can be set and read by the camelCase name/key as an object property of
-  the dataset: `element.dataset.keyname`
+  the dataset: `element.dataset.keyname`.
 - Attributes can also be set and read using bracket syntax:
-  `element.dataset['keyname']`
-- The [`in`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
-  `'keyname' in element.dataset`
+  `element.dataset['keyname']`.
+- The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
+  `'keyname' in element.dataset`.
 
 ### Setting values
 
 - When the attribute is set, its value is always converted to a string.
-
   For example: `element.dataset.example = null` is
   converted into `data-example="null"`.
 
-- To remove an attribute, you can use the [`delete`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`
+- To remove an attribute, you can use the [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
 
-## Syntax
-
-```js
-const dataAttrMap = element.dataset
-```
-
-### Value
+## Value
 
 A {{domxref("DOMStringMap")}}.
 
 ## Examples
 
 ```html
-<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>John Doe</div>
+<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
+  John Doe
+</div>
 ```
 
 ```js
@@ -116,14 +110,17 @@ const el = document.querySelector('#user');
 
 // set a data attribute
 el.dataset.dateOfBirth = '1960-10-03';
-// Result: el.dataset.dateOfBirth === '1960-10-03'
+// Result on JS: el.dataset.dateOfBirth === '1960-10-03'
+// Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
 
 delete el.dataset.dateOfBirth;
-// Result: el.dataset.dateOfBirth === undefined
+// Result on JS: el.dataset.dateOfBirth === undefined
+// Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
 
-if ('someDataAttr' in el.dataset === false) {
+if (!('someDataAttr' in el.dataset)) {
   el.dataset.someDataAttr = 'mydata';
-  // Result: 'someDataAttr' in el.dataset === true
+  // Result on JS: 'someDataAttr' in el.dataset === true
+  // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-some-data-attr="mydata">John Doe</div>
 }
 ```
 
@@ -138,6 +135,6 @@ if ('someDataAttr' in el.dataset === false) {
 ## See also
 
 - The HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) class
-  of global attributes.
+  of global attributes
 - [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

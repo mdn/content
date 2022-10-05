@@ -5,13 +5,16 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `not` function evaluates a boolean expression and returns the opposite value.
 
 ### Syntax
 
-    not(expression )
+```
+not( expression )
+```
 
 ### Arguments
 
@@ -27,17 +30,17 @@ True for an expression that evaluates to false; false for an expression that eva
 - This function should behave similarly to the [boolean()](/en-US/docs/Web/XPath/Functions/boolean) function except that it returns the opposite value.
 - You can test if an element doesn't have some attribute.
 
-<!---->
-
-    <xsl:for-each match="//a[not(@name and @name = 'badname')]">
-      <!-- iterates over any <a> element in the document, that
-           either has no 'name' attribute at all, or it has one,
-           but its value is not "badname". -->
-    </xsl:template>
+  ```xml
+  <xsl:for-each match="//a[not(@name and @name = 'badname')]">
+    <!-- iterates over any <a> element in the document, that
+          either has no 'name' attribute at all, or it has one,
+          but its value is not "badname". -->
+  </xsl:template>
+  ```
 
 ### Defined
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-not)
+[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-not)
 
 ### Gecko support
 

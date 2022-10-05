@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.status
 slug: Web/API/FontFaceSet/status
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.status
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`status`** read-only property of the {{domxref("FontFaceSet")}} interface returns the loading state of the fonts in the set.
@@ -35,5 +37,3 @@ console.log(document.fonts.status);
 ## Browser compatibility
 
 {{Compat}}
-
-

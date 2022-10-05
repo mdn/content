@@ -7,10 +7,10 @@ tags:
   - HTTP
   - header
   - microphone
-  - Experimental
 browser-compat: http.headers.Feature-Policy.microphone
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header
 `microphone` directive controls whether the current document is allowed to
@@ -20,7 +20,7 @@ returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a
 
 ## Syntax
 
-```
+```http
 Feature-Policy: microphone <allowlist>;
 ```
 
@@ -43,5 +43,4 @@ Default allow list for `microphone` is `'self'`.
 
 - {{HTTPHeader("Feature-Policy")}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature
-  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

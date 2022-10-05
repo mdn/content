@@ -18,7 +18,7 @@ The **`<big>`** [HTML](/en-US/docs/Web/HTML) deprecated element renders the encl
 
 ## Attributes
 
-This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/global attributes"), common to all elements.
+This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes), common to all elements.
 
 ## Examples
 
@@ -32,8 +32,8 @@ This example uses the obsolete `<big>` element to increase the size of some text
 
 ```html
 <p>
-  This is the first sentence. <big>This whole
-  sentence is in bigger letters.</big>
+  This is the first sentence.
+  <big>This whole sentence is in bigger letters.</big>
 </p>
 ```
 
@@ -57,8 +57,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 
 ```html
 <p>
-  This is the first sentence. <span class="bigger">This whole
-  sentence is in bigger letters.</span>
+  This is the first sentence.
+  <span class="bigger">This whole sentence is in bigger letters.</span>
 </p>
 ```
 

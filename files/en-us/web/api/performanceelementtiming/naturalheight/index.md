@@ -1,25 +1,22 @@
 ---
 title: PerformanceElementTiming.naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - naturalHeight
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.naturalHeight
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`naturalHeight`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic height of the image element.
 
-## Syntax
-
-```js
-var height = PerformanceElementTiming.naturalHeight;
-```
-
-### Value
+## Value
 
 An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, 0 for text.
 
@@ -28,12 +25,16 @@ An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the 
 In this example the image file has a width of 1000px and a height of 750px. Calling `entry.naturalHeight` returns `750`, that being the intrinsic height in pixels.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalHeight);
     }

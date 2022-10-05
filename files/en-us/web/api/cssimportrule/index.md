@@ -1,6 +1,7 @@
 ---
 title: CSSImportRule
 slug: Web/API/CSSImportRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -8,9 +9,10 @@ tags:
   - Reference
 browser-compat: api.CSSImportRule
 ---
+
 {{APIRef("CSSOM")}}
 
-The **`CSSImportRule`** interface represents an {{cssxref("@import")}} {{cssxref("at-rule")}}.
+The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
@@ -18,11 +20,11 @@ The **`CSSImportRule`** interface represents an {{cssxref("@import")}} {{cssxref
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-- {{domxref("CSSImportRule.href")}}{{readonlyinline}}
-  - : Returns the url specified by the {{cssxref("@import")}} rule.
+- {{domxref("CSSImportRule.href")}} {{ReadOnlyInline}}
+  - : Returns the URL specified by the {{cssxref("@import")}} rule.
 - {{domxref("CSSImportRule.media")}}
   - : Returns the value of the `media` attribute of the associated stylesheet.
-- {{domxref("CSSImportRule.stylesheet")}}{{readonlyinline}}
+- {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
   - : Returns the associated stylesheet.
 
 ## Methods

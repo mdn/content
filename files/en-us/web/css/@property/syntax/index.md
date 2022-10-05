@@ -1,30 +1,33 @@
 ---
 title: syntax
 slug: Web/CSS/@property/syntax
+page-type: css-at-rule-descriptor
 tags:
   - CSS
   - Reference
   - Web
   - Property
   - Houdini
+  - Experimental
 browser-compat: css.at-rules.property.syntax
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and describes the allowable syntax for the property.
+The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and describes the allowable syntax for the property.
 
 ## Syntax
 
 The following are all valid syntax strings:
 
 ```css
-syntax: '<color>'; /* accepts a color */
+syntax: "<color>"; /* accepts a color */
 
-syntax: '<length> | <percentage>'; /* accepts lengths or percentages but not calc expressions with a combination of the two */
+syntax: "<length> | <percentage>"; /* accepts lengths or percentages but not calc expressions with a combination of the two */
 
-syntax: 'small | medium | large'; /* accepts one of these values set as custom idents. */
+syntax: "small | medium | large"; /* accepts one of these values set as custom idents. */
 
-syntax: '*'; /* any valid token */
+syntax: "*"; /* any valid token */
 ```
 
 ## Values
@@ -44,7 +47,7 @@ A string with a supported syntax as defined by the specification. Supported synt
 - `"<image>"`
   - : Any valid {{cssxref("&lt;image&gt;")}} values.
 - `"<url>"`
-  - : Any valid {{cssxref("url()","url()")}} values.
+  - : Any valid {{cssxref("url","url()")}} values.
 - `"<integer>"`
   - : Any valid {{cssxref("&lt;integer&gt;")}} values.
 - `"<angle>"`
@@ -66,7 +69,9 @@ A string with a supported syntax as defined by the specification. Supported synt
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<string>
+```
 
 ## Examples
 
@@ -76,7 +81,7 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -86,10 +91,10 @@ Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -106,4 +111,4 @@ window.CSS.registerProperty({
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

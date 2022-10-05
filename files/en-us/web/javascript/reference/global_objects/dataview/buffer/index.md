@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.buffer
 ---
+
 {{JSRef}}
 
 The **`buffer`** accessor property represents the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by the `DataView` at construction time.
@@ -24,8 +25,8 @@ The `buffer` property is an accessor property whose set accessor function is `un
 ### Using the buffer property
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.buffer; // ArrayBuffer { byteLength: 8 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: page-break-after
 slug: Web/CSS/page-break-after
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.page-break-after
 ---
+
 {{CSSRef}}
 
 > **Warning:** This property has been replaced by the {{cssxref("break-after")}} property.
@@ -29,6 +31,7 @@ page-break-after: verso;
 page-break-after: inherit;
 page-break-after: initial;
 page-break-after: revert;
+page-break-after: revert-layer;
 page-break-after: unset;
 ```
 
@@ -45,9 +48,9 @@ This property applies to block elements that generate a box. It won't apply on a
 - `avoid`
   - : Avoid page breaks after the element.
 - `left`
-  - : Force page breaks after the element so that the next page is formatted as a left page.
+  - : Force page breaks after the element so that the next page is formatted as a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
-  - : Force page breaks after the element so that the next page is formatted as a right page.
+  - : Force page breaks after the element so that the next page is formatted as a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
 - `recto` {{experimental_inline}}
   - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
 - `verso` {{experimental_inline}}

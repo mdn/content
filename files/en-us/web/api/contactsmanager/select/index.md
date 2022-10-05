@@ -1,6 +1,7 @@
 ---
 title: ContactsManager.select()
 slug: Web/API/ContactsManager/select
+page-type: web-api-instance-method
 tags:
   - Contact Picker API
   - Contacts
@@ -8,9 +9,11 @@ tags:
   - Method
   - PWA
   - contact picker
+  - Experimental
 browser-compat: api.ContactsManager.select
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+
+{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`select()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when
@@ -20,13 +23,14 @@ resolve.
 
 ## Syntax
 
-```js
-var ContactInfo = ContactsManager.select(properties, options);
+```js-nolint
+select(properties)
+select(properties, options)
 ```
 
 ### Parameters
 
-- _properties_
+- `properties`
 
   - : An array of {{jsxref('String', 'strings')}} defining what information to retrieve
     from a contact. Allowed values are as follows:
@@ -41,8 +45,8 @@ var ContactInfo = ContactsManager.select(properties, options);
 
   - : Options are as follows:
 
-    - `multiple`: A Boolean that allows multiple contacts to be selected.
-      The default is `false`.
+    - `multiple`
+      - : A Boolean that allows multiple contacts to be selected. The default is `false`.
 
 ### Return value
 
@@ -65,7 +69,7 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
   - : Returned if the browsing context is not top-level or the contact picker is showing a flag. A flag denotes an already existing contact picker; only one picker can exist at any time.
 - `SecurityError` {{domxref("DOMException")}}
   - : Returned if the method is not triggered by user interaction.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if `properties` is empty, or if any of the specified properties are not
     supported.
 
@@ -81,15 +85,15 @@ present the user with a contact picker interface and handle the chosen results.
 `handleResults()` is a developer defined function.
 
 ```js
-const props = ['name', 'email', 'tel', 'address', 'icon'];
-const opts = {multiple: true};
+const props = ["name", "email", "tel", "address", "icon"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, opts);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(props, opts);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```
@@ -103,10 +107,10 @@ const supportedProperties = await navigator.contacts.getProperties();
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(supportedProperties);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(supportedProperties);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

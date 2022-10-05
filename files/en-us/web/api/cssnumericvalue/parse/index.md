@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.parse()
 slug: Web/API/CSSNumericValue/parse
+page-type: web-api-static-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,7 +13,8 @@ tags:
   - parse()
 browser-compat: api.CSSNumericValue.parse
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`parse()`** method of the
 {{domxref("CSSNumericValue")}} interface converts a value string into an object whose
@@ -20,13 +22,13 @@ members are value and the units.
 
 ## Syntax
 
-```js
-var cssNumericValue = CSSNumericValue.parse(cssText);
+```js-nolint
+parse(cssText)
 ```
 
 ### Parameters
 
-- cssText
+- `cssText`
   - : a string containing numeric and unit parts.
 
 ### Return value
@@ -35,7 +37,7 @@ A {{domxref('CSSNumericValue')}}.
 
 ### Exceptions
 
-- SyntaxError
+- `SyntaxError` {{domxref("DOMException")}}
   - : TBD
 
 ## Examples

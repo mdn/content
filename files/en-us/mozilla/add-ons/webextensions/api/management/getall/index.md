@@ -11,6 +11,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.getAll
 ---
+
 {{AddonSidebar()}}
 
 Retrieves an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.
@@ -23,8 +24,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingAll = browser.management.getAll()
+```js-nolint
+let gettingAll = browser.management.getAll()
 ```
 
 ### Parameters
@@ -45,24 +46,25 @@ Log the name of all installed add-ons:
 
 ```js
 function gotAll(infoArray) {
-  for (info of infoArray) {
-    if (info.type == "extension") {
-      console.log(info.name);
-    }
-  }
+  for (const info of infoArray) {
+    if (info.type === "extension") {
+      console.log(info.name);
+    }
+  }
 }
 
-var gettingAll = browser.management.getAll();
+let gettingAll = browser.management.getAll();
 gettingAll.then(gotAll);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#method-getAll) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-getAll) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -89,4 +91,4 @@ gettingAll.then(gotAll);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

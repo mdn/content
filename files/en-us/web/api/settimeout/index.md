@@ -1,20 +1,20 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
   - Intervals
   - JavaScript timers
-  - MakeBrowserAgnostic
   - Method
-  - NeedsMarkupWork
   - Reference
   - Timers
   - setTimeout
   - Polyfill
 browser-compat: api.setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`setTimeout()`** method sets a timer which executes a function or specified
@@ -22,15 +22,20 @@ piece of code once the timer expires.
 
 ## Syntax
 
-```js
-var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
-var timeoutID = setTimeout(function[, delay]);
-var timeoutID = setTimeout(code[, delay]);
+```js-nolint
+setTimeout(code)
+setTimeout(code, delay)
+
+setTimeout(functionRef)
+setTimeout(functionRef, delay)
+setTimeout(functionRef, delay, param1)
+setTimeout(functionRef, delay, param1, param2)
+setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
 
-- `function`
+- `functionRef`
   - : A {{jsxref("function")}} to be executed after the timer expires.
 - `code`
   - : An alternative syntax that allows you to include a string instead of a function,
@@ -38,14 +43,19 @@ var timeoutID = setTimeout(code[, delay]);
     recommended** for the same reasons that make using
     {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
+
   - : The time, in milliseconds that the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
-    is used, meaning execute "immediately", or more accurately, the next event cycle. Note
-    that in either case, the actual delay may be longer than intended; see
-    {{anch("reasons_for_delays_longer_than_specified", "Reasons for delays longer than specified")}} below.
-- `arg1, ..., argN` {{optional_inline}}
+    is used, meaning execute "immediately", or more accurately, the next event cycle.
+
+    Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified) below.
+
+    Also note that if the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
+
+- `param1`, …, `paramN` {{optional_inline}}
+
   - : Additional arguments which are passed through to the function specified by
-    `function`.
+    `functionRef`.
 
 ### Return value
 
@@ -65,6 +75,32 @@ Timeouts are cancelled using
 
 To call a function repeatedly (e.g., every _N_ milliseconds), consider using
 {{domxref("setInterval()")}}.
+
+### Non-number delay values are silently coerced into numbers
+
+If `setTimeout()` is called with [_delay_](#delay) value that's not a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number. For example, the following code incorrectly uses the string `"1000"` for the _delay_ value, rather than the number `1000` – but it nevertheless works, because when the code runs, the string is coerced into the number `1000`, and so the code executes 1 second later.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1000")
+```
+
+But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes immediately, with zero delay.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1 second")
+```
+
+Therefore, don't use strings for the _delay_ value but instead always use numbers:
+
+```js example-good
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, 1000)
+```
 
 ### Working with asynchronous functions
 
@@ -95,14 +131,13 @@ To create a progression in which one function only fires after the completion of
 ### The "this" problem
 
 When you pass a method to `setTimeout()`, it will be invoked with a `this` value that may differ from your
-expectation. The general issue is explained in detail in the [JavaScript
-reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+expectation. The general issue is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
 setting the `this` keyword for the called function apply, and if you have not
 set `this` in the call or with `bind`, it will default to
-the `window` (or `global`) object. It will not be the same as the
+the `window` (or `global`) object. It will not be the same as the
 `this` value for the function that called `setTimeout`.
 
 See the following example:
@@ -148,15 +183,19 @@ A common way to solve the problem is to use a wrapper function that sets
 `this` to the required value:
 
 ```js
-setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
-setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
+setTimeout(function () {
+  myArray.myMethod();
+}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
+setTimeout(function () {
+  myArray.myMethod('1');
+}, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 The wrapper function can be an arrow function:
 
 ```js
-setTimeout(() => {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
-setTimeout(() => {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
+setTimeout(() => {myArray.myMethod()}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
+setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 ##### Use bind()
@@ -187,12 +226,12 @@ setTimeout("console.log('Hello World!');", 500);
 
 ```js example-good
 // Do this instead
-setTimeout(function() {
+setTimeout(() => {
   console.log('Hello World!');
 }, 500);
 ```
 
-A string passed to `{{domxref("setTimeout()")}}` is evaluated in the global context, so local symbols in the context where `{{domxref("setTimeout()")}}` was called will not be available when the string is evaluated as code.
+A string passed to {{domxref("setTimeout()")}} is evaluated in the global context, so local symbols in the context where {{domxref("setTimeout()")}} was called will not be available when the string is evaluated as code.
 
 ### Reasons for delays longer than specified
 
@@ -201,7 +240,7 @@ This section describes the most common reasons.
 
 #### Nested timeouts
 
-As specified in the [HTML standard](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers),
+As specified in the [HTML standard](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers),
 browsers will enforce a minimum timeout of 4 milliseconds once a nested call to `setTimeout` has been scheduled 5 times.
 
 This can be seen in the following example, in which we nest a call to `setTimeout` with a delay of `0` milliseconds,
@@ -274,7 +313,7 @@ The specifics of this are browser-dependent:
 
 #### Throttling of tracking scripts
 
-Firefox enforces additional throttling for scripts that it recognises as tracking scripts.
+Firefox enforces additional throttling for scripts that it recognizes as tracking scripts.
 When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however,
 the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a
 document has first loaded.
@@ -298,8 +337,10 @@ console.log('After setTimeout');
 
 Will write to the console:
 
-    After setTimeout
-    foo has been called
+```
+After setTimeout
+foo has been called
+```
 
 This is because even though `setTimeout` was called with a delay of zero,
 it's placed on a queue and scheduled to run at the next opportunity; not immediately.
@@ -309,7 +350,7 @@ the resulting execution order may not be as expected.
 #### Deferral of timeouts during pageload
 
 Firefox will defer firing `setTimeout()` timers
-while the current tab is loading. Firing is deferred until the main thread is deemed
+while the current tab is loading. Firing is deferred until the main thread is deemed
 idle (similar to [window.requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)),
 or until the load event is fired.
 
@@ -339,7 +380,7 @@ timeout by pressing on the second button.
 #### HTML
 
 ```html
-<button onclick="delayedMessage();">Show an message after two seconds</button>
+<button onclick="delayedMessage();">Show a message after two seconds</button>
 <button onclick="clearMessage();">Cancel message before it happens</button>
 
 <div id="output"></div>
@@ -366,7 +407,7 @@ function clearMessage() {
 
 ```css hidden
 #output {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 ```
 
@@ -374,8 +415,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()`
-example](/en-US/docs/Web/API/clearTimeout#example).
+See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example).
 
 ## Specifications
 
@@ -387,7 +427,7 @@ example](/en-US/docs/Web/API/clearTimeout#example).
 
 ## See also
 
-- A polyfill of `setTimeout` which allows passing arguments to the callback is available in [`core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("clearTimeout")}}
 - {{domxref("setInterval()")}}
 - {{domxref("window.requestAnimationFrame")}}

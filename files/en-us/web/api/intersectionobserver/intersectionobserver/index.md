@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -11,6 +12,7 @@ tags:
   - Visible
 browser-compat: api.IntersectionObserver.IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The **`IntersectionObserver()`** constructor creates and returns a new {{domxref("IntersectionObserver")}} object.
@@ -23,7 +25,7 @@ If the threshold list is empty, it's set to the array `[0.0]`.
 
 ## Syntax
 
-```js
+```js-nolint
 new IntersectionObserver(callback)
 new IntersectionObserver(callback, options)
 ```
@@ -36,7 +38,7 @@ new IntersectionObserver(callback, options)
     The callback receives as input two parameters:
 
     - `entries`
-      - : An array of {{domxref("IntersectionObserverEntry")}} objects, each representing one threshold which was crossed, either becoming more or less visible than the percentage specified by that threshold.
+      - : An array of {{domxref("IntersectionObserverEntry")}} objects, each representing one threshold which was crossed, either becoming more or less visible than the percentage specified by that threshold.
     - `observer`
       - : The {{domxref("IntersectionObserver")}} for which the callback is being invoked.
 
@@ -50,11 +52,11 @@ new IntersectionObserver(callback, options)
       - : An {{domxref("Element")}} or {{domxref("Document")}} object which is an ancestor of the intended target, whose bounding rectangle will be considered the viewport.
         Any part of the target not visible in the visible area of the `root` is not considered visible.
     - `rootMargin`
-      - : A string which specifies a set of offsets to add to the root's {{Glossary('bounding_box')}} when calculating intersections, effectively shrinking
+      - : A string which specifies a set of offsets to add to the root's {{Glossary('bounding_box')}} when calculating intersections, effectively shrinking
         or growing the root for calculation purposes.
         The syntax is approximately the same as that for the CSS {{cssxref("margin")}} property;
         see [The intersection root and root margin](/en-US/docs/Web/API/Intersection_Observer_API#the_intersection_root_and_root_margin) for more information on how the margin works and the syntax.
-        The default is "0px 0px 0px 0px".
+        The default is "0px 0px 0px 0px".
     - `threshold`
       - : Either a single number or an array of numbers between 0.0 and 1.0, specifying a ratio of intersection area to total bounding box area for the observed target.
         A value of 0.0 means that even a single visible pixel counts as the target being visible.
@@ -70,12 +72,12 @@ Call its {{domxref("IntersectionObserver.observe", "observe()")}} method to begi
 
 ### Exceptions
 
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : The specified `rootMargin` is invalid.
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : One or more of the values in `threshold` is outside the range 0.0 to 1.0.
 
-## Example
+## Examples
 
 This example creates a new intersection observer which calls the function `myObserverCallback` every time the visible area of the element being observed changes by at least 10%.
 

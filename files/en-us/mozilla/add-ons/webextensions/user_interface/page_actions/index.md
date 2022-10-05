@@ -7,9 +7,10 @@ tags:
   - User Interface
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
-Commonly referred to as a [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.
+Commonly referred to as a [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.
 
 ![](address_bar_button.png)
 
@@ -19,14 +20,14 @@ The address bar button (or page action) is similar to the toolbar button (or bro
 
 The differences are:
 
-- **The button’s location:**
+- **The button's location:**
 
   - The page action is displayed inside the browser address bar.
   - The browser action is displayed outside the address bar, in the browser toolbar.
 
-- **The button’s visibility:**
+- **The button's visibility:**
 
-  - The page action is hidden by default (although this default can be changed via the `show_matches` and `hide_matches` [manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) properties), and you call [`pageAction.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show "Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab.") and [`pageAction.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide "Hides the page action for a given tab.") to show or hide it in specific tabs.
+  - The page action is hidden by default (although this default can be changed via the `show_matches` and `hide_matches` [manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) properties), and you call [`pageAction.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) to show or hide it in specific tabs.
   - The browser action is always displayed.
 
 Use a page action when the action relates to the current page. Use a browser action when the action relates to the browser as a whole or to many pages. For example:
@@ -75,11 +76,13 @@ The only mandatory key is `default_icon`.
 
 There are two ways to specify a page action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
 
-- **Without a popup:** When the user clicks the button, an event is dispatched to the extension, which the extension listens for using [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
-- ```js
+- **Without a popup:** When the user clicks the button, an event is dispatched to the extension, which the extension listens for using [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):
+
+  ```js
   browser.pageAction.onClicked.addListener(handleClick);
   ```
-- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup ](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)article for more details on creating and managing popups.
+
+- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) article for more details on creating and managing popups.
 
 Note that your extension can have just one page action.
 

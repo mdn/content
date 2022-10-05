@@ -8,9 +8,10 @@ tags:
   - Response header
 browser-compat: http.headers.Want-Digest
 ---
+
 {{HTTPSidebar}}
 
-The **`Want-Digest`** HTTP header is primarily used in a HTTP request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
+The **`Want-Digest`** HTTP header is primarily used in a request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
 
 The header contains identifiers for one or more digest algorithms that the sender wishes the server to use to create the digest.
 The request may use {{Glossary("quality values")}} to indicate its preference/order for particular digest algorithms.
@@ -120,8 +121,7 @@ Want-Digest: sha-256, sha-512
 
 ## Specifications
 
-{{Specifications("http.headers.Want-Digest")}}
-
+{{Specifications}}
 
 ## Browser compatibility
 

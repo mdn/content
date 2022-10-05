@@ -1,9 +1,9 @@
 ---
 title: Metadata.modificationTime
 slug: Web/API/Metadata/modificationTime
+page-type: web-api-instance-property
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - Files
   - Non-standard
@@ -12,9 +12,11 @@ tags:
   - Reference
   - metadata
   - modificationTime
+  - Experimental
 browser-compat: api.Metadata.modificationTime
 ---
-{{APIRef("File System API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The read-only **`modificationTime`**
 property of the {{domxref("Metadata")}} interface is a {{jsxref("Date")}} object which
@@ -24,17 +26,11 @@ modified if the metadata or the contents of the referenced file (or directory, o
 whatever other kind of file system entry might exist on the platform in use) has
 changed.
 
-## Syntax
-
-```js
-var modificationTime = Metadata.modificationTime;
-```
-
-### Value
+## Value
 
 A {{jsxref("Date")}} timestamp indicating when the file system entry was last changed.
 
-## Example
+## Examples
 
 This example tries to get a particular working file at `tmp/workfile.json`.
 Once that file has been found, its metadata is obtained and the file's modification
@@ -42,11 +38,11 @@ timestamp year is compared to the current year. If it was last modified in a yea
 least five prior to the current year, the file is removed and a new one is created.
 
 ```js
-workingDirectory.getFile("tmp/workfile.json", { create: true }, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
-    if ((new Date().getFullYear() - metadata.modificationTime.getFullYear()) >= 5) {
-      fileEntry.remove(function() {
-        workingDirectory.getFile("tmp/workfile.json", { create: true }, function(newEntry) {
+workingDirectory.getFile("tmp/workfile.json", { create: true }, (fileEntry) => {
+  fileEntry.getMetadata((metadata) => {
+    if (new Date().getFullYear() - metadata.modificationTime.getFullYear() >= 5) {
+      fileEntry.remove(() => {
+        workingDirectory.getFile("tmp/workfile.json", { create: true }, (newEntry) => {
           fileEntry = newEntry;
         });
       });
@@ -57,7 +53,7 @@ workingDirectory.getFile("tmp/workfile.json", { create: true }, function(fileEnt
 
 ## Specifications
 
-This API has no official W3C or WHATWG specification.
+This feature has been removed from all specification and is not in the process of being standardized.
 
 ## Browser compatibility
 
@@ -65,10 +61,8 @@ This API has no official W3C or WHATWG specification.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("Metadata")}}
 - {{domxref("FileSystemEntry.getMetadata()")}}
 - {{domxref("FileSystemFileEntry")}}

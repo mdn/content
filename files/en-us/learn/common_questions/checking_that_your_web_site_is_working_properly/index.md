@@ -11,7 +11,8 @@ tags:
   - WebMechanics
   - troubleshooting
 ---
-In this article we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
+
+In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
 <table>
   <tbody>
@@ -37,13 +38,13 @@ In this article we go over various troubleshooting steps for a website and so
 
 So you've published your website online? Very good! But are you sure it works properly?
 
-A distant web server often behaves quite differently from a local one, so it's a good idea to test your website once it's online. You might be surprised at how many problems come up: images don't show up, pages don't load or load slowly, and so on. Most of the time it's no big deal, just a simple mistake or an issue with your web hosting configuration.
+A distant web server often behaves quite differently from a local one, so it's a good idea to test your website once it's online. You might be surprised at how many problems come up: images don't show up, pages don't load or load slowly, and so on. Most of the time it's no big deal, just a simple mistake or an issue with your web hosting configuration.
 
 Let's see how to diagnose and solve those problems.
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Dig deeper
 
@@ -55,7 +56,7 @@ If you want to know whether your website works correctly, the first thing to do 
 
 Let's look at our personal website, `http://demozilla.examplehostingprovider.net/`. It's not showing the image we expected!
 
-![Oops, the ‘unicorn’ image is missing](image-missing.png)
+![Oops, the 'unicorn' image is missing](image-missing.png)
 
 Open Firefox's Network tool (**Tools ➤ Web Developer ➤ Network**) and reload the page:
 
@@ -90,9 +91,9 @@ So what went wrong?
 
 ![Le list of images in our project](demozilla-images-list.png)
 
-At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
+At first glance, the image we asked for seems to be in the right place but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
-![Deleting the ‘s’](code-correct.png)
+![Deleting the 's'](code-correct.png)
 
 Save, [push to the server](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server), and reload the page in your browser:
 
@@ -111,7 +112,7 @@ The most frequent errors that we find are these:
 
 #### Typos in the address
 
-We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an “l”:
+We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an "l":
 
 ![Address unreachable](cannot-find-server.png)
 
@@ -119,7 +120,7 @@ The address cannot be found. Indeed.
 
 #### 404 errors
 
-Many times the error just results just from a typo, but sometimes maybe you either forgot to upload a resource or you lost your network connection while you were uploading your resources. First check the spelling and accuracy of the file path, and if there's still a problem, upload your files again. That will likely fix the problem.
+Many times the error just results just from a typo, but sometimes maybe you either forgot to upload a resource or you lost your network connection while you were uploading your resources. First check the spelling and accuracy of the file path, and if there's still a problem, upload your files again. That will likely fix the problem.
 
 #### JavaScript errors
 
@@ -127,9 +128,9 @@ Someone (possibly you) added a script to the page and made a mistake. This will 
 
 Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the page:
 
-![A Javascript error is shown in the Console](js-error.png)
+![A JavaScript error is shown in the Console](js-error.png)
 
-In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series ](/en-US/docs/Learn/JavaScript)of articles).
+In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series](/en-US/docs/Learn/JavaScript) of articles).
 
 ### More things to check
 
@@ -137,7 +138,7 @@ We have listed a few simple ways to check that your website works properly, as w
 
 #### How's the performance?
 
-Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) can tell you a few interesting things:
+Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://github.com/marcelduran/yslow) can tell you a few interesting things:
 
 ![Yslow diagnostics](yslow-diagnostics.png)
 
@@ -147,28 +148,30 @@ Grades go from A to F. Our page is just small and meets most criteria. But we ca
 
 `ping` is a useful shell tool that tests the domain name you provide and tells you if the server's responding or not:
 
-    $ ping mozilla.org
-    PING mozilla.org (63.245.215.20): 56 data bytes
-    64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
-    64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
-    64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
-    64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
-    ^C
-    --- mozilla.org ping statistics ---
-    4 packets transmitted, 4 packets received, 0.0% packet loss
-    round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
+```
+$ ping mozilla.org
+PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
+64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
+64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
+64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
+^C
+--- mozilla.org ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
+```
 
-Just keep in mind a handy keyboard shortcut: **Ctrl+C**.  Ctrl+C sends an “interrupt” signal to the runtime and tells it to stop.  If you don't stop the runtime, `ping` will ping the server indefinitely.
+Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an "interrupt" signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
 
 ### A simple checklist
 
 - Check for 404s
-- Make sure all webpages are behaving as you expect
+- Make sure all webpages are behaving as you expect
 - Check your website in several browsers to make sure it renders consistently
 
 ## Next steps
 
-Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.
+Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.
 
-- Since people can come to your website from all over the world, you should consider making it [accessible to everybody](/en-US/docs/Learn/Common_questions/What_is_accessibility).
+- Since people can come to your website from all over the world, you should consider making it [accessible to everybody](/en-US/docs/Learn/Common_questions/What_is_accessibility).
 - Is the design of your website a bit too rough? It's time to [learn more about CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_works).

@@ -1,6 +1,7 @@
 ---
 title: Path2D()
 slug: Web/API/Path2D/Path2D
+page-type: web-api-constructor
 tags:
   - API
   - Canvas
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Path2D.Path2D
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D()`** constructor returns a newly instantiated
@@ -20,10 +22,10 @@ copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/
 
 ## Syntax
 
-```js
-new Path2D();
-new Path2D(path);
-new Path2D(d);
+```js-nolint
+new Path2D()
+new Path2D(path)
+new Path2D(d)
 ```
 
 ### Parameters

@@ -12,6 +12,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.getSecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 Use this function to get detailed information about the [TLS](/en-US/docs/Glossary/TLS) connection associated with a particular request.
@@ -20,12 +21,12 @@ You pass this function the `requestId` for the request in question, and some opt
 
 You can only call this function from inside the {{WebExtAPIRef("webRequest.onHeadersReceived")}} listener. The `requestId` can be found in the `details` object which is passed into the listener.
 
-You must also pass the "blocking" option to `webRequest.onHeadersReceived.addListener()`. So to use this API you must have the "webRequestBlocking" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), as well as the normal permissions needed for using `webRequest` listeners (the "webRequest" permission and the [host permission ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)for the host).
+You must also pass the "blocking" option to `webRequest.onHeadersReceived.addListener()`. So to use this API you must have the "webRequestBlocking" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), as well as the normal permissions needed for using `webRequest` listeners (the "webRequest" permission and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the host).
 
 ## Syntax
 
-```js
-var gettingInfo = browser.webRequest.getSecurityInfo(
+```js-nolint
+let gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
   options          // object
 )
@@ -40,7 +41,7 @@ var gettingInfo = browser.webRequest.getSecurityInfo(
   - : `object`. An object which may contain any of the following properties, all optional:
 
     - `certificateChain` {{optional_inline}}
-      - : `boolean`. If `true`, the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned will include the entire certificate chain up to and including the trust root. If `false`,  it will include only the server certificate. Defaults to `false`.
+      - : `boolean`. If `true`, the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned will include the entire certificate chain up to and including the trust root. If `false`, it will include only the server certificate. Defaults to `false`.
     - `rawDER` {{optional_inline}}
       - : `boolean`. If true, every {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} in the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} property will contain a property `rawDER`. This contains the DER-encoded ASN.1 that comprises the certificate data.
 
@@ -65,7 +66,7 @@ async function logSubject(details) {
       console.log(securityInfo.certificates[0].subject);
     }
   }
-  catch(error) {
+  catch (error) {
     console.error(error);
   }
 }
@@ -90,7 +91,7 @@ async function logRoot(details) {
       console.log(securityInfo.certificates[securityInfo.certificates.length - 1].issuer);
     }
   }
-  catch(error) {
+  catch (error) {
     console.error(error);
   }
 }

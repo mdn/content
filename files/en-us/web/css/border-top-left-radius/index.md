@@ -1,6 +1,7 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-top-left-radius
 ---
+
 {{CSSRef}}
 
 The **`border-top-left-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the top-left corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.
@@ -40,6 +42,7 @@ border-top-left-radius: inherit;
 border-top-left-radius: inherit;
 border-top-left-radius: initial;
 border-top-left-radius: revert;
+border-top-left-radius: revert-layer;
 border-top-left-radius: unset;
 ```
 

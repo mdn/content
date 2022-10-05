@@ -1,22 +1,26 @@
 ---
 title: BackgroundFetchRegistration.match()
 slug: Web/API/BackgroundFetchRegistration/match
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - match
   - BackgroundFetchRegistration
+  - Experimental
 browser-compat: api.BackgroundFetchRegistration.match
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 
 ## Syntax
 
-```js
-let record = BackgroundFetchRegistration.match(request, options);
+```js-nolint
+match(request)
+match(request, options)
 ```
 
 ### Parameters
@@ -60,12 +64,12 @@ the request or {{jsxref("undefined")}} if no match is found.
 
 ## Examples
 
-In this example we look for a record with the url "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
+In this example we look for a record with the URL "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

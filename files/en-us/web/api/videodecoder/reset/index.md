@@ -1,31 +1,34 @@
 ---
 title: VideoDecoder.reset()
 slug: Web/API/VideoDecoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - reset
   - VideoDecoder
+  - Experimental
 browser-compat: api.VideoDecoder.reset
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`reset()`** method of the {{domxref("VideoDecoder")}} interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 
 ## Syntax
 
-```js
-VideoDecoder.reset()
+```js-nolint
+reset()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -42,4 +45,3 @@ VideoDecoder.reset();
 ## Browser compatibility
 
 {{Compat}}
-

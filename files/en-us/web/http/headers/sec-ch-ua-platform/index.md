@@ -8,12 +8,13 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  - Experimental
 browser-compat: http.headers.Sec-CH-UA-Platform
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Platform`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the platform or operating system on which the user agent is running. 
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+
+The **`Sec-CH-UA-Platform`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the platform or operating system on which the user agent is running.
 For example: "Windows" or "Android".
 
 `Sec-CH-UA-Platform` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
@@ -35,7 +36,6 @@ Unless blocked by a user agent permission policy, it is sent by default (without
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -45,8 +45,7 @@ Sec-CH-UA-Platform: <platform>
 ### Directives
 
 - `<platform>`
-  - : One of the following strings: `"Android"`, `"Chrome OS"`, `"iOS"`, `"Linux"`, `"macOS"`, `"Windows"`, or `"Unknown"`.
-
+  - : One of the following strings: `"Android"`, `"Chrome OS"`, `"Chromium OS"`, `"iOS"`, `"Linux"`, `"macOS"`, `"Windows"`, or `"Unknown"`.
 
 ## Examples
 

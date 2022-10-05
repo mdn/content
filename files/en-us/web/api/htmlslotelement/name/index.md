@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.name
 slug: Web/API/HTMLSlotElement/name
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLSlotElement
@@ -10,34 +11,26 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement.name
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`name`** property of the {{domxref("HTMLSlotElement")}}
-interface returns or sets the slot name. A slot is a placeholder inside a web component
+interface returns or sets the slot name. A slot is a placeholder inside a web component
 that users can fill with their own markup.
 
-## Syntax
+## Value
 
-```js
-let name = htmlSlotElement.name
-htmlSlotElement.name = name
-```
-
-### Value
-
-A {{domxref('DOMString','string')}}.
+A string.
 
 ## Examples
 
-The following snippet is taken from our [slotchange
-example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see
-it live also](https://mdn.github.io/web-components-examples/slotchange/)).
+The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([See it live](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+slots[1].addEventListener('slotchange', (e) => {
+  let nodes = slots[1].assignedNodes();
+  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
 });
 ```
 

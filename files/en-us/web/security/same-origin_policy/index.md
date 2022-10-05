@@ -11,6 +11,7 @@ tags:
   - origin
   - secure
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The **same-origin policy** is a critical security mechanism that restricts how a document or script loaded by one {{Glossary("origin")}} can interact with a resource from another origin.
@@ -59,9 +60,9 @@ Note that the [URL specification](https://url.spec.whatwg.org/#origin) states th
 
 ## Changing origin
 
-> **Warning:** The approach described here (using the {{domxref("document.domain")}} setter) is deprecated because it undermines the security protections provided by the same origin policy, and complicates the origin model in browsers, leading to interoperability problems and security bugs.
+> **Warning:** The approach described here (using the {{domxref("document.domain")}} setter) is deprecated because it undermines the security protections provided by the same origin policy, and complicates the origin model in browsers, leading to interoperability problems and security bugs.
 
-A page may change its own origin, with some limitations. A script can set the value of {{domxref("document.domain")}} to its current domain or a superdomain of its current domain. If set to a superdomain of the current domain, the shorter superdomain is used for same-origin checks.
+A page may change its own origin, with some limitations. A script can set the value of {{domxref("document.domain")}} to its current domain or a superdomain of its current domain. If set to a superdomain of the current domain, the shorter superdomain is used for same-origin checks.
 
 For example, assume a script from the document at `http://store.company.com/dir/other.html` executes the following:
 
@@ -73,7 +74,7 @@ Afterward, the page can pass the same-origin check with `http://company.com/dir/
 
 The port number is checked separately by the browser. Any call to `document.domain`, including `document.domain = document.domain`, causes the port number to be overwritten with `null`. Therefore, one **cannot** make `company.com:8080` talk to `company.com` by only setting `document.domain = "company.com"` in the first. It has to be set in both so their port numbers are both `null`.
 
-The mechanism has some limitations. For example, it will throw a "`SecurityError`" [`DOMException`](/en-US/docs/Web/API/DOMException) if the [`document-domain`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain "The HTTP Feature-Policy header document-domain directive controls whether the current document is allowed to set document.domain. When this policy is enabled, attempting to set document.domain will fail and cause a SecurityError DOMException to be be thrown.") [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy "The HTTP Feature-Policy header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any <iframe> elements in the document.") is enabled or the document is in a sandboxed  [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe "The HTML Inline Frame element (<iframe>) represents a nested browsing context, embedding another HTML page into the current one."), and changing the origin in this way does not affect the origin checks used by many Web APIs (e.g. [`localStorage`](/en-US/docs/Web/API/Window/localStorage), [`indexedDB`](/en-US/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel), [`SharedWorker`](/en-US/docs/Web/API/SharedWorker)). A more exhaustive list of failure cases can be found in [Document.domain > Failures](/en-US/docs/Web/API/Document/domain#failures).
+The mechanism has some limitations. For example, it will throw a "`SecurityError`" [`DOMException`](/en-US/docs/Web/API/DOMException) if the [`document-domain`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain) [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy) is enabled or the document is in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), and changing the origin in this way does not affect the origin checks used by many Web APIs (e.g. [`localStorage`](/en-US/docs/Web/API/Window/localStorage), [`indexedDB`](/en-US/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel), [`SharedWorker`](/en-US/docs/Web/API/SharedWorker)). A more exhaustive list of failure cases can be found in [Document.domain > Failures](/en-US/docs/Web/API/Document/domain#failures).
 
 > **Note:** When using `document.domain` to allow a subdomain to access its parent, you need to set `document.domain` to the _same value_ in both the parent domain and the subdomain. This is necessary even if doing so is setting the parent domain back to its original value. Failure to do this may result in permission errors.
 
@@ -88,7 +89,7 @@ The same-origin policy controls interactions between two different origins, such
 Here are some examples of resources which may be embedded cross-origin:
 
 - JavaScript with `<script src="…"></script>`. Error details for syntax errors are only available for same-origin scripts.
-- CSS applied with `<link rel="stylesheet" href="…">`. Due to the [relaxed syntax rules](https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html) of CSS, cross-origin CSS requires a correct `Content-Type` header. Restrictions vary by browser: [Internet Explorer](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)?redirectedfrom=MSDN>), [Firefox](https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/), [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=9877) , [Safari](https://support.apple.com/kb/HT4070) (scroll down to CVE-2010-0051) and [Opera](https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/).
+- CSS applied with `<link rel="stylesheet" href="…">`. Due to the [relaxed syntax rules](https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html) of CSS, cross-origin CSS requires a correct `Content-Type` header. Restrictions vary by browser: [Internet Explorer](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)>), [Firefox](https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/), [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/en-us/HT4070) (scroll down to CVE-2010-0051) and [Opera](https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/).
 - Images displayed by {{htmlelement("img")}}.
 - Media played by {{htmlelement("video")}} and {{htmlelement("audio")}}.
 - External resources embedded with {{htmlelement("object")}} and {{htmlelement("embed")}}.
@@ -161,6 +162,6 @@ Access to data stored in the browser such as [Web Storage](/en-US/docs/Web/API/W
 ## See also
 
 - [Same Origin Policy at W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
-- [Same-origin policy at web.dev](https://web.dev/secure/same-origin-policy)
+- [Same-origin policy at web.dev](https://web.dev/same-origin-policy/)
 - {{httpheader("Cross-Origin-Resource-Policy")}}
 - {{httpheader("Cross-Origin-Embedder-Policy")}}

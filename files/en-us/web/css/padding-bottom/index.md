@@ -1,6 +1,7 @@
 ---
 title: padding-bottom
 slug: Web/CSS/padding-bottom
+page-type: css-property
 tags:
   - CSS
   - CSS Padding
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-bottom
 ---
+
 {{CSSRef}}
 
 The **`padding-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on the bottom of an element.
@@ -35,7 +37,8 @@ padding-bottom: 10%;
 /* Global values */
 padding-bottom: inherit;
 padding-bottom: initial;
-padding-botom: revert;
+padding-bottom: revert;
+padding-bottom: revert-layer;
 padding-bottom: unset;
 ```
 
@@ -46,7 +49,7 @@ The `padding-bottom` property is specified as a single value chosen from the lis
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the _width_ of the containing block. Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
 
 ## Formal definition
 
@@ -61,8 +64,12 @@ The `padding-bottom` property is specified as a single value chosen from the lis
 ### Setting padding bottom with pixels and percentages
 
 ```css
-.content { padding-bottom: 5%; }
-.sidebox { padding-bottom: 10px; }
+.content {
+  padding-bottom: 5%;
+}
+.sidebox {
+  padding-bottom: 10px;
+}
 ```
 
 ## Specifications

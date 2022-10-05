@@ -1,5 +1,5 @@
 ---
-title: 'Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’'
+title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
 tags:
   - CORS
@@ -14,6 +14,7 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
@@ -33,7 +34,7 @@ occurs.
 
 For example, if the response includes:
 
-```
+```http
 Access-Control-Allow-Methods: GET,HEAD,POST
 ```
 
@@ -41,7 +42,7 @@ Trying to use a {{HTTPMethod("PUT")}} request will fail with this error.
 
 Make sure your code only uses the permitted HTTP methods when accessing the service.
 
-> **Note:** If the server includes any unrecognized or undefined method names in its `Access-Control-Allow-methods` header, a different error occurs: [`Reason: invalid token ‘xyz' in CORS header ‘Access-Control-Allow-Methods’`](/en-US/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod).
+> **Note:** If the server includes any unrecognized or undefined method names in its `Access-Control-Allow-methods` header, a different error occurs: [`Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'`](/en-US/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod).
 
 ## See also
 

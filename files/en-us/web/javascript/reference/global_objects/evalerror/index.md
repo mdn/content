@@ -9,9 +9,12 @@ tags:
   - Reference
 browser-compat: javascript.builtins.EvalError
 ---
+
 {{JSRef}}
 
 The **`EvalError`** object indicates an error regarding the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not thrown by JavaScript anymore, however the `EvalError` object remains for compatibility.
+
+`EvalError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ## Constructor
 
@@ -21,16 +24,18 @@ The **`EvalError`** object indicates an error regarding the global {{jsxref("Glo
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "EvalError.prototype.message")}}
-  - : Error message. Although ECMA-262 specifies that {{jsxref("EvalError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "EvalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "EvalError.prototype.fileName")}}
+- {{jsxref("Error.prototype.cause", "EvalError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "EvalError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "EvalError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "EvalError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "EvalError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "EvalError.prototype.columnNumber")}} {{non-standard_inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "EvalError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "EvalError.prototype.stack")}} {{non-standard_inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Examples

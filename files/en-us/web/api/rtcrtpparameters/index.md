@@ -1,12 +1,13 @@
 ---
 title: RTCRtpParameters
 slug: Web/API/RTCRtpParameters
+page-type: web-api-interface
 tags:
   - API
   - Configuration
   - Dictionary
   - Media
-  - Negoatiation
+  - Negotiation
   - Options
   - RTCRtpParameters
   - RTP
@@ -17,6 +18,7 @@ tags:
   - parameters
 browser-compat: api.RTCRtpParameters
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCRtpParameters`** dictionary is the basic object describing the parameters of an {{Glossary("RTP")}} transport. It is extended separately for senders and receivers in the form of the {{domxref("RTCRtpSendParameters")}} and {{domxref("RTCRtpReceiveParameters")}} dictionaries.
@@ -31,7 +33,7 @@ To obtain the parameters of a sender or receiver, call its `getParameters()` met
 - {{domxref("RTCRtpParameters.codecs", "codecs")}}
   - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender or receiver will choose. This parameter cannot be changed once initially set.
 - {{domxref("RTCRtpParameters.headerExtensions", "headerExtensions")}}
-  - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver. Header extensions are described in {{RFC(3550, "5.3.1")}}. This parameter cannot be changed once initially set.
+  - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver. Header extensions are described in {{RFC(3550, "", "5.3.1")}}. This parameter cannot be changed once initially set.
 - {{domxref("RTCRtpParameters.rtcp", "rtcp")}}
   - : An {{domxref("RTCRtcpParameters")}} object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender or receiver. This parameter cannot be changed once initially set.
 

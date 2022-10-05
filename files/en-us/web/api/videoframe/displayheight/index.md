@@ -1,19 +1,22 @@
 ---
 title: VideoFrame.displayHeight
 slug: Web/API/VideoFrame/displayHeight
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - displayHeight
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.displayHeight
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
 
-The **`displayHeight`** property of the {{domxref("VideoFrame")}} interface returns the height of the `VideoFrame` after applying aspect ration adjustments.
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
-### Value
+The **`displayHeight`** property of the {{domxref("VideoFrame")}} interface returns the height of the `VideoFrame` after applying aspect ratio adjustments.
+
+## Value
 
 An integer.
 
@@ -32,5 +35,3 @@ console.log(VideoFrame.displayHeight);
 ## Browser compatibility
 
 {{Compat}}
-
-

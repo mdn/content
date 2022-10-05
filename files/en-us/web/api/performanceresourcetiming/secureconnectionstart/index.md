@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.secureConnectionStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`secureConnectionStart`** read-only property returns a
@@ -17,35 +19,30 @@ the property returns zero.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.secureConnectionStart;
-```
-
-### Return value
+## Value
 
 If the resource is fetched over a secure connection, a
 {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the handshake
 process to secure the current connection. If a secure connection is not used, this
 property returns zero.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printStartAndEndProperties(entry);
+    });
 }
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
+
+function printStartAndEndProperties(perfEntry) {
+  // Print timestamps of the *start and *end properties
   properties = ["connectStart", "connectEnd",
                 "domainLookupStart", "domainLookupEnd",
                 "fetchStart",
@@ -54,15 +51,9 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
-    }
+  for (const property of properties) {
+    // Log the property
+    console.log(`… ${property} = ${perfEntry[property] ?? "NOT supported"}`);
   }
 }
 ```

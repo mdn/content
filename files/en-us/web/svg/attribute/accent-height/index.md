@@ -8,13 +8,14 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.accent-height
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`accent-height`** attribute defines the distance from the origin to the top of accent characters, measured by a distance within the font coordinate system.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## font-face
 
@@ -41,24 +42,7 @@ For {{SVGElement("font-face")}}, `accent-height` defines the distance from the o
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontFaceElementAccentHeightAttribute", "accent-height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -66,5 +50,5 @@ For {{SVGElement("font-face")}}, `accent-height` defines the distance from the o
 
 ## See also
 
-*   {{SVGAttr("cap-height")}}
-*   {{SVGAttr("x-height")}}
+- {{SVGAttr("cap-height")}}
+- {{SVGAttr("x-height")}}

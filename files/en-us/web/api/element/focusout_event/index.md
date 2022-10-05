@@ -1,6 +1,7 @@
 ---
 title: 'Element: focusout event'
 slug: Web/API/Element/focusout_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -12,42 +13,35 @@ tags:
   - onfocusout
 browser-compat: api.Element.focusout_event
 ---
+
 {{APIRef}}
 
-The **`focusout`** event fires when an element is about to lose focus. The main difference between this event and {{domxref("Element/blur_event", "blur")}} is that `focusout` [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) while `blur` does not.
+The **`focusout`** event fires when an element has lost focus, after the {{domxref("Element/blur_event", "blur")}} event. The two events differ in that `focusout` bubbles, while `blur` does not.
 
-The opposite of `focusout` is {{domxref("Element/focusin_event", "focusin")}}.
+The opposite of `focusout` is the {{domxref("Element/focusin_event", "focusin")}} event, which fires when the element has received focus.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onfocusout", "onfocusout")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+The `focusout` event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+
+```js
+addEventListener('focusout', (event) => {});
+```
+
+## Event type
+
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## Event properties
+
+_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}_.
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : The element receiving focus, if any.
 
 ## Examples
 
@@ -57,8 +51,12 @@ The opposite of `focusout` is {{domxref("Element/focusin_event", "focusin")}}.
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -83,6 +81,8 @@ form.addEventListener('focusout', (event) => {
 ## Specifications
 
 {{Specifications}}
+
+**Note:** The _UI Events_ specification describes an [order of focus events](/en-US/docs/Web/API/FocusEvent#order_of_events) that's different from what current browsers implement.
 
 ## Browser compatibility
 

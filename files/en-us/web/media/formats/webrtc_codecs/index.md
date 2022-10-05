@@ -11,6 +11,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct web sites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
@@ -19,7 +20,7 @@ The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct 
 
 WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) and [H.264](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>)'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the [Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus) codec as well as [G.711](/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies)'s PCMA and PCMU formats.
 
-These two RFCs also lay out options that must be supported for each codec, as well as specific user comfort features such as echo cancelation. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
+These two RFCs also lay out options that must be supported for each codec, as well as specific user comfort features such as echo cancellation. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
 
 While compression is always a necessity when dealing with media on the web, it's of additional importance when videoconferencing in order to ensure that the participants are able to communicate without lag or interruptions. Of secondary importance is the need to keep the video and audio synchronized, so that the movements and any ancillary information (such as slides or a projection) are presented at the same time as the audio that corresponds.
 
@@ -50,12 +51,12 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
   </thead>
   <tbody>
     <tr>
-      <th scope="row">{{anch("VP8")}}</th>
+      <th scope="row"><a href="#vp8">VP8</a></th>
       <td>—</td>
       <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("AVC", "AVC / H.264")}}</th>
+      <th scope="row"><a href="#avc">AVC / H.264</a></th>
       <td>Constrained Baseline (CB)</td>
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
@@ -210,7 +211,7 @@ The audio codecs which {{RFC(7874)}} mandates that all WebRTC-compatible browser
 
 See below for more details about any WebRTC-specific considerations that exist for each codec listed above.
 
-It's useful to note that {{RFC(7874)}} defines more than a list of audio codecs that a WebRTC-compliant browser must support; it also provides recommendations and requirements for special audio features such as echo cancelation, noise reduction, and audio leveling.
+It's useful to note that {{RFC(7874)}} defines more than a list of audio codecs that a WebRTC-compliant browser must support; it also provides recommendations and requirements for special audio features such as echo cancellation, noise reduction, and audio leveling.
 
 > **Note:** The list above indicates the minimum required set of codecs that all WebRTC-compatible endpoints are required to implement. A given browser may also support other codecs; however, cross-platform and cross-device compatibility may be at risk if you use other codecs without carefully ensuring that support exists in all browsers your users might choose.
 
@@ -242,11 +243,11 @@ In addition to the mandatory audio codecs, some browsers support additional code
   </tbody>
 </table>
 
-**{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}** (**iLBC**) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC.
+**[Internet Low Bitrate Codec](https://en.wikipedia.org/wiki/Internet_Low_Bitrate_Codec)** (**iLBC**) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC.
 
-The **{{interwiki("wikipedia", "Internet Speech Audio Codec")}}** (**iSAC**) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream.
+The **[Internet Speech Audio Codec](https://en.wikipedia.org/wiki/Internet_Speech_Audio_Codec)** (**iSAC**) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream.
 
-**{{interwiki("wikipedia", "Comfort noise")}}** (**CN**) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.
+**[Comfort noise](https://en.wikipedia.org/wiki/Comfort_noise)** (**CN**) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.
 
 Comfort Noise is used with G.711, and may potentially be used with other codecs that don't have a built-in CN feature. Opus, for example, has its own CN capability; as such, using RFC 3389 CN with the Opus codec is not recommended.
 
@@ -276,9 +277,9 @@ The bit rate may be adjusted at any time. In order to avoid network congestion, 
 
 ### G.711
 
-G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both {{interwiki("wikipedia", "M-law", "µ-law")}} and {{interwiki("wikipedia", "A-law")}} encodings are allowed.
+G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both [µ-law](https://en.wikipedia.org/wiki/M-law) and [A-law](https://en.wikipedia.org/wiki/A-law) encodings are allowed.
 
-G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "4.5.14")}}.
+G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "", "4.5.14")}}.
 
 WebRTC requires that G.711 use 8-bit samples at the standard 64 kbps rate, even though G.711 supports some other variations. Neither G.711.0 (lossless compression), G.711.1 (wideband capability), nor any other extensions to the G.711 standard are mandated by WebRTC.
 
@@ -337,7 +338,7 @@ Once you have a list of the available codecs, you can alter it and then send the
 function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
-  transceivers.forEach(transceiver => {
+  transceivers.forEach((transceiver) => {
     const kind = transceiver.sender.track.kind;
     let sendCodecs = RTCRtpSender.getCapabilities(kind).codecs;
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
@@ -361,7 +362,7 @@ If the media is video, we call a method called `preferCodec()` for both the send
 
 Finally, we call the {{domxref("RTCRtpTransceiver")}}'s {{domxref("RTCRtpTransceiver.setCodecPreferences", "setCodecPreferences()")}} method to specify that the given send and receive codecs are allowed, in the newly rearranged order.
 
-That's done for each transceiver on the `RTCPeerConnection`; once all of the transceivers have been updated, we call the {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler, which will create a new offer, update the local description, send the offer along to the remote peer, and so on, thereby triggering the renegotiation of the connection.
+That's done for each transceiver on the `RTCPeerConnection`; once all of the transceivers have been updated, we call the {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}} event handler, which will create a new offer, update the local description, send the offer along to the remote peer, and so on, thereby triggering the renegotiation of the connection.
 
 The `preferCodec()` function called by the code above looks like this to move a specified codec to the top of the list (to be prioritized during negotiation):
 
@@ -371,7 +372,7 @@ function preferCodec(codecs, mimeType) {
   let sortedCodecs = [];
   let count = codecs.length;
 
-  codecs.forEach(codec => {
+  codecs.forEach((codec) => {
     if (codec.mimeType === mimeType) {
       sortedCodecs.push(codec);
     } else {
@@ -453,7 +454,7 @@ Before choosing a video codec, make sure you're aware of any licensing requireme
 
 Another factor to consider—especially on mobile platforms—is the impact a codec may have on battery life. If a codec is handled in hardware on a given platform, that codec is likely to allow for much better battery life and less heat production.
 
-For example, Safari for iOS and iPadOS introduced WebRTC with AVC as the only supported video codec. AVC has the advantage, on iOS and iPadOS, of being able to be encoded and  decoded in hardware. Safari 12.1 introduced support for VP8 within IRC, which improves interoperability, but at a cost—VP8 has no hardware support on iOS devices, so using it causes increased processor impact and reduced battery life.
+For example, Safari for iOS and iPadOS introduced WebRTC with AVC as the only supported video codec. AVC has the advantage, on iOS and iPadOS, of being able to be encoded and decoded in hardware. Safari 12.1 introduced support for VP8 within IRC, which improves interoperability, but at a cost—VP8 has no hardware support on iOS devices, so using it causes increased processor impact and reduced battery life.
 
 #### Performance
 

@@ -1,5 +1,5 @@
 ---
-title: HTML Tables
+title: HTML tables
 slug: Learn/HTML/Tables
 tags:
   - <td>
@@ -14,6 +14,7 @@ tags:
   - Module
   - Tables
 ---
+
 {{LearnSidebar}}
 
 A very common task in HTML is structuring tabular data, and it has a number of elements and attributes for just this purpose. Coupled with a little [CSS](/en-US/docs/Learn/CSS) for styling, HTML makes it easy to display tables of information on the web such as your school lesson plan, the timetable at your local swimming pool, or statistics about your favorite dinosaurs or football team. This module takes you through all you need to know about structuring tabular data using HTML.
@@ -40,7 +41,7 @@ This module contains the following articles, which will take you through all the
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
   - : This article gets you started with HTML tables, covering the very basics such as rows and cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-  - : This module looks at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
+  - : This article looks at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
 
 ## Assessments
 

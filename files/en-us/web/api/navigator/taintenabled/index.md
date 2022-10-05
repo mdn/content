@@ -1,6 +1,7 @@
 ---
 title: Navigator.taintEnabled()
 slug: Web/API/Navigator/taintEnabled
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.taintEnabled
 ---
+
 {{APIRef("HTML DOM")}} {{deprecated_header}}
 
 The **`Navigator.taintEnabled()`** method always returns
@@ -20,9 +22,17 @@ method only stays for maintaining compatibility with very old scripts.
 
 ## Syntax
 
-```js
-result = window.navigator.taintEnabled()
+```js-nolint
+taintEnabled()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

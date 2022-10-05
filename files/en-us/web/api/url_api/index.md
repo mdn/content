@@ -1,6 +1,7 @@
 ---
 title: URL API
 slug: Web/API/URL_API
+page-type: web-api-overview
 tags:
   - API
   - Address
@@ -13,7 +14,9 @@ tags:
   - URL API
   - Web
   - hostname
+browser-compat: api.URL
 ---
+
 {{DefaultAPISidebar("URL API")}}
 
 The URL API is a component of the URL standard, which defines what constitutes a valid {{Glossary("URL", "Uniform Resource Locator")}} and the API that accesses and manipulates URLs. The URL standard also defines concepts such as domains, hosts, and IP addresses, and also attempts to describe in a standard way the legacy `application/x-www-form-urlencoded` {{Glossary("MIME type")}} used to submit web forms' contents as a set of key/value pairs.
@@ -42,22 +45,22 @@ Most of the properties of `URL` are settable; you can write new values to them t
 
 ```js
 let myUsername = "someguy";
-let addr = new URL("https://mysite.com/login");
+let addr = new URL("https://example.com/login");
 addr.username = myUsername;
 ```
 
-Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "addr.href")}} is `https://someguy@mysite.com/login`. This is true for any of the writable properties.
+Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "addr.href")}} is `https://someguy@example.com/login`. This is true for any of the writable properties.
 
 ### Queries
 
-The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://mysite.com/login?user=someguy&page=news`, then the value of the `search` property is `?user=someguy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
+The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://example.com/login?user=someguy&page=news`, then the value of the `search` property is `?user=someguy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
 
 ```js
-let addr = new URL("https://mysite.com/login?user=someguy&page=news");
+let addr = new URL("https://example.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
-} catch(err) {
+} catch (err) {
   showErrorMessage(err);
 }
 ```
@@ -81,21 +84,21 @@ Note the call to {{domxref("URLSearchParams.sort()")}} to sort the parameter lis
 
 ```js
 function fillTableWithParameters(tbl) {
-  let url = new URL(document.location.href);
+  const url = new URL(document.location.href);
   url.searchParams.sort();
-  let keys = url.searchParams.keys();
+  const keys = url.searchParams.keys();
 
-  for (let key of keys) {
-    let val = url.searchParams.get(key);
-    let row = document.createElement("tr");
-    let cell = document.createElement("td");
-    cell.innerText = key;
-    row.appendChild(cell);
-    cell = document.createElement("td");
-    cell.innerText = val;
-    row.appendChild(cell);
+  for (const key of keys) {
+    const val = url.searchParams.get(key);
+    const row = document.createElement("tr");
+    const cell1 = document.createElement("td");
+    cell1.innerText = key;
+    row.appendChild(cell1);
+    const cell2 = document.createElement("td");
+    cell2.innerText = val;
+    row.appendChild(cell2);
     tbl.appendChild(row);
-  };
+  }
 }
 ```
 
@@ -103,15 +106,15 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [URL Living Standard](https://url.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - CSS {{cssxref("&lt;url&gt;")}} type
+- {{jsxref("encodeURI", "encodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}

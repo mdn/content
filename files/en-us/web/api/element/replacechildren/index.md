@@ -1,6 +1,7 @@
 ---
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,24 +12,31 @@ tags:
   - replaceChildren
 browser-compat: api.Element.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.replaceChildren()`** method replaces the
 existing children of a {{domxref("Node")}} with a specified new set of children. These
-can be {{domxref("DOMString")}} or {{domxref("Node")}} objects.
+can be string or {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-replaceChildren(...nodesOrDOMStrings)
+```js-nolint
+replaceChildren(param1)
+replaceChildren(param1, param2)
+replaceChildren(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace the
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to replace the
     `Element`'s existing children with. If no replacement objects are
     specified, then the `Element` is emptied of all child nodes.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -74,7 +82,7 @@ look something like this:
       <option>Falafel sandwiches</option>
       <option>Ice cream</option>
       <option>Jelly</option>
-      <option>Carrot sticks and houmous</option>
+      <option>Carrot sticks and hummus</option>
       <option>Margherita pizza</option>
       <option>Pepperoni pizza</option>
       <option>Vegan veggie pizza</option>
@@ -89,9 +97,7 @@ look something like this:
   <div>
     <label for="yes">Yes please!</label>
 
-    <select id="yes" multiple size="10">
-
-    </select>
+    <select id="yes" multiple size="10"></select>
   </div>
 </main>
 ```
@@ -108,7 +114,8 @@ div {
   margin-right: 20px;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 

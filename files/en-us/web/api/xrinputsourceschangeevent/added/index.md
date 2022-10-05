@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent.added
 slug: Web/API/XRInputSourcesChangeEvent/added
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -19,6 +20,7 @@ tags:
   - augmented
 browser-compat: api.XRInputSourcesChangeEvent.added
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}}
@@ -36,18 +38,18 @@ representing one input device added to the XR system.
 The example below creates a handler for the
 {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event that
 processes the lists of added and removed from the WebXR system. It looks for new and
-removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is
+removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is
 `tracked-pointer`.
 
 ```js
-xrSession.oninputsourcescchange = event => {
-  for (let input of event.added) {
-    if (input.targetRayMode == "tracked-pointer") {
+xrSession.oninputsourcescchange = (event) => {
+  for (const input of event.added) {
+    if (input.targetRayMode === "tracked-pointer") {
       addedPointerDevice(input);
     }
   }
-  for (let input of event.removed) {
-    if (input.targetRayMode == "tracked-pointer") {
+  for (const input of event.removed) {
+    if (input.targetRayMode === "tracked-pointer") {
       removedPointerDevice(input);
     }
   }

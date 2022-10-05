@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -10,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.OfflineAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard {{domxref("AudioContext")}}, an `OfflineAudioContext` doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an {{domxref("AudioBuffer")}}.
@@ -25,13 +27,8 @@ The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface 
 
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
-- {{domxref('OfflineAudioContext.length')}} {{readonlyinline}}
+- {{domxref('OfflineAudioContext.length')}} {{ReadOnlyInline}}
   - : An integer representing the size of the buffer in sample-frames.
-
-### Event handlers
-
-- {{domxref("OfflineAudioContext.oncomplete")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised, after the event-based version of {{domxref("OfflineAudioContext.startRendering()")}} is used.
 
 ## Methods
 
@@ -47,7 +44,7 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 - {{domxref("OfflineAudioContext.resume()")}}
   - : Resumes the progression of time in an audio context that has previously been suspended.
 
-> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
+> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
 
 ## Events
 
@@ -55,7 +52,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
   - : Fired when the rendering of an offline audio context is complete.
-    Also available using the [`oncomplete`](/en-US/docs/Web/API/OfflineAudioContext/oncomplete) event handler property.
 
 ## Examples
 
@@ -65,13 +61,13 @@ When the `startRendering()` promise resolves, rendering has completed and the ou
 
 At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise `AudioBuffer`. This is then played as part of a simple standard audio graph.
 
-> **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (see the [source code](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) too.)
+> **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) too.)
 
 ```js
 // define online and offline audio context
 
-var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const audioCtx = new AudioContext();
+const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -85,27 +81,27 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, (buffer) => {
       myBuffer = buffer;
       source.buffer = myBuffer;
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then(function(renderedBuffer) {
+      offlineCtx.startRendering().then((renderedBuffer) => {
         console.log('Rendering completed successfully');
-        var song = audioCtx.createBufferSource();
+        const song = audioCtx.createBufferSource();
         song.buffer = renderedBuffer;
 
         song.connect(audioCtx.destination);
 
-        play.onclick = function() {
+        play.onclick = () => {
           song.start();
         }
-      }).catch(function(err) {
-          console.log('Rendering failed: ' + err);
+      }).catch((err) => {
+          console.error(`Rendering failed: ${err}`);
           // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
       });
     });

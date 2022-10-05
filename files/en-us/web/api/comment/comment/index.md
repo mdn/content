@@ -1,11 +1,13 @@
 ---
 title: Comment()
 slug: Web/API/Comment/Comment
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference
 browser-compat: api.Comment.Comment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Comment()`** constructor returns a newly created
@@ -14,9 +16,9 @@ parameter as its textual content.
 
 ## Syntax
 
-```js
-new Comment();
-new Comment(aString);
+```js-nolint
+new Comment()
+new Comment(aString)
 ```
 
 ### Parameters

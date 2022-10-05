@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpaceEvent.transform
 slug: Web/API/XRReferenceSpaceEvent/transform
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -26,6 +27,7 @@ tags:
   - transform
 browser-compat: api.XRReferenceSpaceEvent.transform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRReferenceSpaceEvent")}} property
@@ -34,7 +36,7 @@ affected {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}}'s
 native origin after the changes the event represents are applied. The
 `transform` is defined using the old coordinate system, which allows it to be
 used to convert coordinates from the pre-event coordinate system to the post-event
-coordiante system.
+coordinate system.
 
 ## Value
 
@@ -60,8 +62,8 @@ a scene, updating each object's position by multiplying it with the event's give
 all the objects in an array called `objects` within it.
 
 ```js
-xrReferenceSpace.addEventListener("reset", event => {
-  for (let obj of scene.objects) {
+xrReferenceSpace.addEventListener("reset", (event) => {
+  for (const obj of scene.objects) {
     mat4.multiply(obj.transform, obj.transform, event.transform);
   }
 });

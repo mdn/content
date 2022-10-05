@@ -7,20 +7,23 @@ tags:
   - Template
   - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:template>` element defines an output producing template. This element must have either the match attribute or the name attribute set.
 
 ### Syntax
 
-    <xsl:template
-    	match=PATTERN
-    	name=NAME
-    	mode=NAME
-    	priority=NUMBER>
-    	<xsl:param> [optional]
-    	TEMPLATE
-    </xsl:template>
+```xml
+<xsl:template
+  match=PATTERN
+  name=NAME
+  mode=NAME
+  priority=NUMBER>
+  <xsl:param> [optional]
+  TEMPLATE
+</xsl:template>
+```
 
 ### Required Attributes
 

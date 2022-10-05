@@ -14,13 +14,14 @@ tags:
   - devtools.panelsElementsPanel
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged
 ---
+
 {{AddonSidebar()}}
 
 Fires when the user selects a different page element for inspection with the browser's developer tools, for example by selecting the "Inspect Element" context menu item in Firefox.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.removeListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)
@@ -63,4 +64,4 @@ browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedEl
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.

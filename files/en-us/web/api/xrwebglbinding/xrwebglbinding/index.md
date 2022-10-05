@@ -1,22 +1,25 @@
 ---
 title: XRWebGLBinding()
 slug: Web/API/XRWebGLBinding/XRWebGLBinding
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - WebXR
   - XR
+  - Experimental
 browser-compat: api.XRWebGLBinding.XRWebGLBinding
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRWebGLBinding()`** constructor creates and
 returns a new {{domxref("XRWebGLBinding")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRWebGLBinding(session, context)
 ```
 
@@ -32,7 +35,7 @@ new XRWebGLBinding(session, context)
 
 ### Return value
 
-A newly-created {{domxref("XRWebGLBinding")}}.
+A new {{domxref("XRWebGLBinding")}}.
 
 ### Exceptions
 
@@ -40,12 +43,11 @@ A newly-created {{domxref("XRWebGLBinding")}}.
   - : Thrown if the new `XRWebGLBinding` could not be created due to one of the following situations:
     - The {{domxref("XRSession")}} specified by `session` has already been
       stopped.
-    - The specified WebGL context, `context`, [has
-      been lost](/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#usage_notes) for any reason, such as a GPU switch or reset.
+    - The specified WebGL context, `context`, [has been lost](/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#usage_notes) for any reason, such as a GPU switch or reset.
     - The specified `session` is immersive but the `context` is
       not WebXR compatible.
 
-## Example
+## Examples
 
 ```js
 const canvasElement = document.querySelector(".output-canvas");

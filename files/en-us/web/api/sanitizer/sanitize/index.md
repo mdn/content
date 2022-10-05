@@ -1,13 +1,16 @@
 ---
 title: Sanitizer.sanitize()
 slug: Web/API/Sanitizer/sanitize
+page-type: web-api-instance-method
 tags:
   - HTML Sanitizer API
   - Method
   - sanitize
+  - Experimental
 browser-compat: api.Sanitizer.sanitize
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`sanitize()`** method of the {{domxref("Sanitizer")}} interface is used to sanitize a tree of DOM nodes, removing any unwanted elements or attributes.
 
@@ -22,14 +25,14 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 ## Syntax
 
-```js
+```js-nolint
 sanitize(input)
 ```
 
 ### Parameters
 
 - `input`
-  - : A  {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
+  - : A {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
 
 ### Return value
 
@@ -67,4 +70,3 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 - {{domxref('HTML Sanitizer API')}}
 - {{domxref("Element.setHTML()")}}
-

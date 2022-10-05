@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.disablePictureInPicture
 slug: Web/API/HTMLVideoElement/disablePictureInPicture
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -15,6 +16,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.disablePictureInPicture
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLVideoElement")}}
@@ -22,13 +24,7 @@ The {{domxref("HTMLVideoElement")}}
 attribute indicating whether the user agent should suggest the
 picture-in-picture feature to users, or request it automatically.
 
-## Syntax
-
-```js
-disablePictureInPicture = htmlVideoElement.disablePictureInPicture;
-```
-
-### Value
+## Value
 
 A boolean value that is `true` if the user agent should
 suggest that feature to users.

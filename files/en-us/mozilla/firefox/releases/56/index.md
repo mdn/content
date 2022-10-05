@@ -2,10 +2,11 @@
 title: Firefox 56 for developers
 slug: Mozilla/Firefox/Releases/56
 tags:
-  - '56'
+  - "56"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 56 was released on September 28, 2017. This article lists key changes that are useful for web developers.
@@ -15,12 +16,12 @@ Firefox 56 was released on September 28, 2017. This article lists key changes th
 ### Developer Tools
 
 - Display Negative Line Numbers in CSS Grid Inspector ({{bug(1369942)}}).
-- The new CSS Grid Layout Panel is now available, allowing much better CSS Grid debugging facilities ({{bug(1181227)}}). See [Powerful New Additions to the CSS Grid Inspector in Firefox Nightly](https://hacks.mozilla.org/2017/06/new-css-grid-layout-panel-in-firefox-nightly/) for more details.
+- The new CSS Grid Layout Panel is now available, allowing much better CSS Grid debugging facilities ({{bug(1181227)}}). See [Powerful New Additions to the CSS Grid Inspector in Firefox Nightly](https://hacks.mozilla.org/2017/06/new-css-grid-layout-panel-in-firefox-nightly/) for more details.
 
 ### HTML
 
 - Implemented the `labels` property for labelable form controls, for example {{domxref("HTMLInputElement.labels")}} ({{bug(556743)}}).
-- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Preloading_content) for more details ({{bug(1222633)}}). Note that currently Firefox only supports preloading of cacheable resources.
+- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload) for more details ({{bug(1222633)}}). Note that currently Firefox only supports preloading of cacheable resources.
 
 ### CSS
 
@@ -49,11 +50,11 @@ _No changes._
 - The 4ms clamping behavior of {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} has been updated to be more in line with other browsers, as described in [Timeouts throttled to >=4ms](/en-US/docs/Web/API/setTimeout#timeouts_throttled_to_%3e4ms) ({{bug(1378586)}}).
 - The [Page Visibility API's](/en-US/docs/Web/API/Page_Visibility_API) {{domxref("Document.onvisibilitychange")}} handler has been added ({{bug("1333912")}}).
 - The {{domxref("Window.showModalDialog()")}} method has been removed ({{bug(981796)}}).
-- The implementation of the {{domxref("HTMLFormElement.action")}}, {{domxref("HTMLInputElement.formAction")}}, and {{domxref("HTMLButtonElement.formAction")}} properties has been updated so that they return the correct form submission URL, as per spec ({{bug(1366361)}}).
+- The implementation of the {{domxref("HTMLFormElement.action")}}, {{domxref("HTMLInputElement.formAction")}}, and {{domxref("HTMLButtonElement.formAction")}} properties has been updated so that they return the correct form submission URL, as per spec ({{bug(1366361)}}).
 
 #### DOM events
 
-- {{domxref("GlobalEventHandlers.onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
+- `onwheel` is now available on {{domxref("HTMLElement.onwheel", "HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
 
 #### Media and WebRTC
 
@@ -63,7 +64,7 @@ _No changes._
 #### Canvas and WebGL
 
 - The {{domxref("CanvasRenderingContext2D.drawImage()")}} method has been updated so that smoothing occurs when downscaling even if `imageSmoothingEnabled` is `false`. This is not mandatory as per spec, but follows Chrome's behavior. See {{bug(1360415)}}.
-- An {{domxref("SVGImageElement")}} can now be used as a {{domxref("CanvasImageSource")}}, e.g. as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
+- An {{domxref("SVGImageElement")}} can now be used as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
 
 ### Security
 
@@ -71,12 +72,12 @@ _No changes._
 
 ### Plugins
 
-- Firefox for Android has removed all support for plugins ([bug 1381916](https://bugzilla.mozilla.org/show_bug.cgi?id=1381916)).
+- Firefox for Android has removed all support for plugins ([bug 1381916](https://bugzilla.mozilla.org/show_bug.cgi?id=1381916)).
 
 ### Other
 
 - Gecko now encodes URLs internally as [punycode](https://en.wikipedia.org/wiki/Punycode), to avoid URL encoding problems (see {{bug("945240")}}, also see discussion in {{bug("942074")}}).
-- Firefox on Windows and Mac OS X can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see {{bug(1355150)}} and {{bug(1355147)}}).
+- Firefox on Windows and macOS can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see {{bug(1355150)}} and {{bug(1355147)}}).
 
 ## Removals from the web platform
 
@@ -98,7 +99,7 @@ _No changes._
 ### WebExtensions
 
 - [browsingData.RemovalOptions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions) gets "hostnames" option for cookies
-- [browsingData.settings()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/settings) and [browsingData.removeCookies() ](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies)are now supported on Firefox for Android
+- [browsingData.settings()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/settings) and [browsingData.removeCookies()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies) are now supported on Firefox for Android
 - [browserSettings.cacheEnabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled)
 - [browser_style](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) usage is changed
 - [chrome_settings_overrides.search_provider.is_default](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)

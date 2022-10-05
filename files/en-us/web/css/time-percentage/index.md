@@ -1,6 +1,7 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/time-percentage
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -11,6 +12,7 @@ tags:
   - values
 browser-compat: css.types.time-percentage
 ---
+
 {{CSSRef}}
 
 The **`<time-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("time")}} or a {{Cssxref("percentage")}}.
@@ -19,11 +21,15 @@ The **`<time-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/W
 
 Refer to the documentation for {{Cssxref("time")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Use in calc()
 
-Where a `<time-percentage>` is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{Cssxref("calc()")}} expression.
+Where a `<time-percentage>` is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{Cssxref("calc", "calc()")}} expression.
 
 ### Valid percentages
 

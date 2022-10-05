@@ -1,18 +1,20 @@
 ---
 title: CSSPositionValue()
 slug: Web/API/CSSPositionValue/CSSPositionValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
   - CSSPositionValue
   - Constructor
-  - Experimental
   - Houdini
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.CSSPositionValue.CSSPositionValue
 ---
-{{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}
+
+{{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`CSSPositionValue()`** constructor
 creates a new {{domxref("CSSPositionValue")}} object which represents values for
@@ -20,20 +22,20 @@ properties that take a position, for example {{cssxref('object-position')}}.
 
 ## Syntax
 
-```js
-cvar cssPositionValue = new CSSPositionValue(x, y)
+```js-nolint
+new CSSPositionValue(x, y)
 ```
 
 ### Parameters
 
-- x
+- `x`
   - : A position along the web page's horizontal axis.
-- y
-  - : A position along the web page's vertical axix.
+- `y`
+  - : A position along the web page's vertical axis.
 
 ## Examples
 
-The following example positions a container `<div>` 5 pixels from the
+The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js

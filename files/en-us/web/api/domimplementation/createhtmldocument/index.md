@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}
 
 The
@@ -18,25 +20,33 @@ new HTML {{ domxref("Document") }}.
 
 ## Syntax
 
-```js
-const newDoc = document.implementation.createHTMLDocument(title)
+```js-nolint
+createHTMLDocument()
+createHTMLDocument(title)
 ```
 
 ### Parameters
 
-- `title`  {{optional_inline}} (except in IE)
-  - : A {{domxref("DOMString")}} containing the title to give the new HTML document.
+- `title` {{optional_inline}}
+  - : A string containing the title to give the new HTML document.
 
-## Example
+### Return value
 
-This example creates a new HTML document and inserts it into an {{
+A new HTML {{domxref("Document")}} object.
+
+## Examples
+
+This example creates a new HTML document and inserts it into an {{
   HTMLElement("iframe") }} in the current document.
 
 Here's the HTML for this example:
 
 ```html
 <body>
-  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <p>
+    Click <a href="javascript:makeDocument()">here</a> to create a new document
+    and insert it below.
+  </p>
   <iframe id="theFrame" src="about:blank" />
 </body>
 ```
@@ -53,7 +63,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -67,8 +77,8 @@ function makeDocument() {
 }
 ```
 
-The code in lines 4–12 handle creating the new HTML document and inserting some content
-into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
+The code in lines 4–12 handle creating the new HTML document and inserting some content
+into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
 whose {{ HTMLElement("title") }} is `"New Document"`. Lines 5 and 6 create a
 new paragraph element with some simple content, and then lines 8–12 handle inserting the
 new paragraph into the new document.
@@ -83,13 +93,15 @@ replaces the contents of the frame with the new document's contents.
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!doctype html>
-<html>
-<head>
-<title>title</title>
-</head>
-<body>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+  </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 

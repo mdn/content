@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
+page-type: web-api-instance-property
 tags:
   - API
   - Draft
@@ -12,25 +13,20 @@ tags:
   - Reference
 browser-compat: api.IntersectionObserver.thresholds
 ---
-{{APIRef("Intersection Observer API")}}{{draft}}
+
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
 **`thresholds`** property returns the list of intersection
 thresholds that was specified when the observer was instantiated with
 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}. If
-only one threshold ratio was provided when instanitating the object, this will be an
+only one threshold ratio was provided when instantiating the object, this will be an
 array containing that single value.
 
 See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to
 learn how thresholds work.
 
-## Syntax
-
-```js
-var thresholds = IntersectionObserver.thresholds;
-```
-
-### Value
+## Value
 
 An array of intersection thresholds, originally specified using the
 `threshold` property when instantiating the observer. If only one observer

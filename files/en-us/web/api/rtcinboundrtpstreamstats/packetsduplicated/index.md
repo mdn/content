@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.packetsDuplicated
 slug: Web/API/RTCInboundRtpStreamStats/packetsDuplicated
+page-type: web-api-instance-property
 tags:
   - API
   - Duplicate
@@ -18,6 +19,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.packetsDuplicated
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`packetsDuplicated`** property
@@ -26,19 +28,13 @@ of packets discarded because they were duplicates of previously-received
 packets.
 
 These packets are not counted by the
-{{domxref("RTCInboundRtpSreamStats.packetsDiscarded", "packetsDiscarded")}} property.
+{{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}} property.
 
-## Syntax
+## Value
 
-```js
-var packetsDuplicated = rtcInboundRtpStreamStats.packetsDuplicated;
-```
-
-### Value
-
-An integer value which specifies how many duplcate packets have been received by the
+An integer value which specifies how many duplicate packets have been received by the
 local end of this RTP stream so far. These duplicate packets are not included in the
-{{domxref("RTCInboundRtpSreamStats.packetsDiscarded", "packetsDiscarded")}} property.
+{{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}} property.
 
 ## Usage notes
 
@@ -49,7 +45,7 @@ received more than twice.
 
 You can get a more accurate tally of how many packets have been lost on the stream by
 adding `packetsDuplicated` to
-{{domxref("RTCInboundRtpSreamStats.packetsLost", "packetsLost")}}. The resulting value
+{{domxref("RTCInboundRtpStreamStats.packetsLost", "packetsLost")}}. The resulting value
 will be positive, although it will not match the count as computed in {{RFC(3660)}}.
 
 ## Specifications

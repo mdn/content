@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.autofocus
 slug: Web/API/HTMLSelectElement/autofocus
+page-type: web-api-instance-property
 tags:
   - API
   - HTML forms
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.autofocus
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.autofocus`** property has a value of either `true` or `false` that reflects the {{htmlattrxref("autofocus", "select")}} HTML
@@ -24,14 +26,11 @@ such element on the page, get the initial focus.
 > _the element is inserted_ in the document. Setting it after the insertion, that
 > is most of the time after the document load, has no visible effect.
 
-## Syntax
+## Value
 
-```js
-aBool = aSelectElement.autofocus; // Get the value of autofocus
-aSelectElement.autofocus = aBool; // Set the value of autofocus
-```
+A boolean value.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -46,7 +45,7 @@ aSelectElement.autofocus = aBool; // Set the value of autofocus
 
 ```js
 // Check if the autofocus attribute on the <select>
-var hasAutofocus = document.getElementById('mySelect').autofocus;
+const hasAutofocus = document.getElementById('mySelect').autofocus;
 ```
 
 ## Specifications

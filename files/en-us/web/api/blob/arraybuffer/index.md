@@ -1,17 +1,16 @@
 ---
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
-  - ArrayBuffer
   - Blob
   - File API
   - Method
   - Reference
-  - binary
-  - read
 browser-compat: api.Blob.arrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 The **`arrayBuffer()`** method in the {{domxref("Blob")}}
@@ -20,19 +19,15 @@ binary data contained in an {{jsxref("ArrayBuffer")}}.
 
 ## Syntax
 
-```js
-var bufferPromise = blob.arrayBuffer();
-
-blob.arrayBuffer().then(buffer => /* process the ArrayBuffer */);
-
-var buffer = await blob.arrayBuffer();
+```js-nolint
+arrayBuffer()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A promise that resolves with an {{jsxref("ArrayBuffer")}} that contains the blob's
 data in binary form.

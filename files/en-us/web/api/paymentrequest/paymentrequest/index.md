@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -12,23 +13,25 @@ tags:
   - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
-The **`PaymentRequest()`** constructor
-creates a new {{domxref("PaymentRequest")}} object which will be used to handle the
+The **`PaymentRequest()`** constructor
+creates a new {{domxref("PaymentRequest")}} object which will be used to handle the
 process of generating, validating, and submitting a payment request.
 
 ## Syntax
 
-```js
-var paymentRequest = new PaymentRequest(methodData, details, [options]);
+```js-nolint
+new PaymentRequest(methodData, details)
+new PaymentRequest(methodData, details, options)
 ```
 
 ### Parameters
 
 - `methodData`
 
-  - : Contains an array of identifiers for the payment methods the merchant web site
+  - : Contains an array of identifiers for the payment methods the merchant web site
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
 
@@ -36,7 +39,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
       - : For early implementations of the spec, this was a sequence of identifiers for
         payment methods that the merchant website accepts. Starting with more recent
         browsers, this parameter is more generic than credit cards, it is a single
-        {{domxref("DOMString")}}, and the meaning of the `data` parameter
+        string, and the meaning of the `data` parameter
         changes with the `supportedMethods`. For example, the Example Pay payment method
         is selected by specifying the string `https://example.com/pay` here.
     - `data`
@@ -77,7 +80,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
         - `total`
           - : A total amount for the payment request that overrides value in
             details.total. This is typically used when
-            `details.modifiers.additionalItems` adds a discount or a surchase
+            `details.modifiers.additionalItems` adds a discount or a purchase
             to the request.
 
 - `options` {{optional_inline}}
@@ -90,10 +93,10 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
         submit it with the payment request. The default is `false`.
     - `requestPayerEmail`
       - : A Boolean indicating whether the user agent should collect the payer's email
-        address and submit it with the payment request. The default is `false`.
+        address and submit it with the payment request. The default is `false`.
     - `requestPayerPhone`
       - : A Boolean indicating whether the user agent should collect the payer's phone
-        number and submit it with the payment request. The default is `false`.
+        number and submit it with the payment request. The default is `false`.
     - `requestShipping`
       - : A Boolean indicating whether the user agent should collect the payer's shipping
         address and submit it with the payment request. If you set this type to true, you
@@ -102,7 +105,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
     - `shippingType`
       - : Lets you specify how the user interface refers to shipping when the word
         'shipping' isn't appropriate for your use case. For example, in English speaking
-        countries you would say "pizza delivery" not "pizza shipping". Valid values are
+        countries you would say "pizza delivery" not "pizza shipping". Valid values are
         `"shipping"`, `"delivery"`, and `"pickup"`.
         Quotation marks must be included. The default value is `"shipping"`.
 
@@ -114,14 +117,14 @@ input parameters.
 ## Examples
 
 The following example shows minimal functionality and focuses instead on showing the
-complete context of instantiating a `PaymentRequest` object.
+complete context of instantiating a `PaymentRequest` object.
 
 ```js
-var supportedInstruments = [{
+const supportedInstruments = [{
  supportedMethods: 'https://example.com/pay'
 }];
 
-var details = {
+const details = {
   total: {label: 'Donation', amount: {currency: 'USD', value: '65.00'}},
   displayItems: [
     {
@@ -139,16 +142,16 @@ var details = {
   ]
 };
 
-var options = {requestShipping: true};
+const options = {requestShipping: true};
 
 try {
-  var request = new PaymentRequest(supportedInstruments, details, options);
+  const request = new PaymentRequest(supportedInstruments, details, options);
   // Add event listeners here.
   // Call show() to trigger the browser's payment flow.
-  request.show().then(function(instrumentResponse) {
+  request.show().then((instrumentResponse) => {
     // Do something with the response from the UI.
   })
-  .catch(function(err) {
+  .catch((err) => {
     // Do something with the error from request.show().
   });
 } catch (e) {

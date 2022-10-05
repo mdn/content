@@ -9,6 +9,7 @@ tags:
   - WeakMap
 browser-compat: javascript.builtins.WeakMap.set
 ---
+
 {{JSRef}}
 
 The **`set()`** method adds a new element with a specified key
@@ -18,7 +19,7 @@ and value to a `WeakMap` object.
 
 ## Syntax
 
-```js
+```js-nolint
 set(key, value)
 ```
 
@@ -40,8 +41,8 @@ The `WeakMap` object.
 ### Using the set() method
 
 ```js
-var wm = new WeakMap();
-var obj = {};
+const wm = new WeakMap();
+const obj = {};
 
 // Add new elements to the WeakMap
 wm.set(obj, 'foo').set(window, 'bar'); // chainable

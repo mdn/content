@@ -1,8 +1,9 @@
 ---
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -10,11 +11,12 @@ tags:
   - font-weight
 browser-compat: css.at-rules.font-face.font-weight
 ---
+
 {{CSSRef}}
 
 The **`font-weight`** CSS descriptor allows authors to specify font weights for the fonts specified in the {{cssxref("@font-face")}} rule. The {{cssxref("font-weight")}} property can separately be used to set how thick or thin characters in text should be displayed.
 
-For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-weight `descriptor to explicitly specify the font face's weights. The values for the CSS descriptor is same as that of its corresponding font property.
+For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-weight` descriptor to explicitly specify the font face's weights. The values for the CSS descriptor is same as that of its corresponding font property.
 
 There are generally limited weights available for a particular font family. When a specified weight doesn't exist, a nearby weight is used. Fonts lacking bold are often synthesized by the user agent. To prevent this, use {{cssxref('font-synthesis')}} property.
 
@@ -44,7 +46,7 @@ The `font-weight` property is described using any one of the values listed below
 
 In earlier versions of the `font-weight` specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts.
 
-CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000, inclusive, and introduces {{anch("Variable fonts")}}, which can make use of this much finer-grained range of font weights.
+CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000, inclusive, and introduces [Variable fonts](#variable_fonts), which can make use of this much finer-grained range of font weights.
 
 ### Common weight name mapping
 
@@ -81,7 +83,11 @@ People experiencing low vision conditions may have difficulty reading text set w
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<font-weight-absolute>{1,2}
+
+<font-weight-absolute> = normal | bold | <number [1,1000]>
+```
 
 ## Examples
 
@@ -92,8 +98,8 @@ The following finds a local Open Sans font or imports it, and allows using the f
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
   font-weight: 400;
 }
 ```

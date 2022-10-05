@@ -1,6 +1,7 @@
 ---
 title: console.timeLog()
 slug: Web/API/console/timeLog
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.timeLog
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling
@@ -22,8 +24,8 @@ details and examples.
 
 ## Syntax
 
-```js
-console.timeLog(label);
+```js-nolint
+timeLog(label)
 ```
 
 ### Parameters
@@ -31,25 +33,33 @@ console.timeLog(label);
 - `label`
   - : The name of the timer to log to the console.
 
-### Return
+### Return value
 
 If no label parameter included:
 
-    default: 1042ms
+```
+default: 1042ms
+```
 
 If an existing `label` is included:
 
-    timer name: 1242ms
+```
+timer name: 1242ms
+```
 
 ### Exceptions
 
 If there is no running timer, `timeLog()` returns the warning:
 
-    Timer “default” doesn’t exist.
+```
+Timer "default" doesn't exist.
+```
 
-If a label parameter is included, but there is no corresponding timer:
+If a label parameter is included, but there is no corresponding timer:
 
-     Timer “timer name” doesn’t exist.
+```
+Timer "timer name" doesn't exist.
+```
 
 ## Examples
 
@@ -57,7 +67,7 @@ If a label parameter is included, but there is no corresponding timer:
 console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
+alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 

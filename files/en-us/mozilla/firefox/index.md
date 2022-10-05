@@ -6,6 +6,7 @@ tags:
   - Landing
   - Mozilla
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/firefox/) is Mozilla's popular Web browser, available for multiple platforms including Windows, macOS, and Linux on the desktop and all Android and iOS mobile devices. With broad compatibility, the latest in Web technologies, and powerful development tools, Firefox is a great choice for both Web developers and end users.
@@ -23,7 +24,6 @@ Learn how to create add-ons for [Firefox](https://www.mozilla.org/firefox/), how
 - Developer release notes
   - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.
 
-
 ## Firefox channels
 
 Firefox is available in five **channels**.
@@ -32,7 +32,7 @@ Firefox is available in five **channels**.
 
 Each night we build Firefox from the latest code in [mozilla-central](https://hg.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
 
-[Download Firefox Nightly](https://nightly.mozilla.org/)
+[Download Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
 
 ### Firefox Developer Edition
 
@@ -56,7 +56,7 @@ After stabilizing for another four weeks in Beta, we're ready to ship the new fe
 
 Firefox ESR is the long-term support edition of Firefox for desktop for use by organizations including schools, universities, businesses and others who need extended support for mass deployments.
 
-[Download Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
+[Download Firefox ESR](https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr)
 
 ## Contents
 
@@ -64,5 +64,5 @@ Firefox ESR is the long-term support edition of Firefox for desktop for use by o
 
 ## See also
 
-- [Mailing list](https://mail.mozilla.org/listinfo/firefox-dev)
+- [Mailing list](https://groups.google.com/a/mozilla.org/g/firefox-dev)
 - [Release schedule](https://wiki.mozilla.org/Release_Management/Calendar)

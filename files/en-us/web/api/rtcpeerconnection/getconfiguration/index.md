@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getConfiguration()
 slug: Web/API/RTCPeerConnection/getConfiguration
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - getConfiguration
 browser-compat: api.RTCPeerConnection.getConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getConfiguration()`** method returns
@@ -24,8 +26,8 @@ identity information.
 
 ## Syntax
 
-```js
-var configuration = RTCPeerConnection.getConfiguration();
+```js-nolint
+getConfiguration()
 ```
 
 ### Parameters
@@ -36,7 +38,7 @@ This method takes no input parameters.
 
 An object describing the {{domxref("RTCPeerConnection")}}'s current configuration. See [`RTCPeerConnection()`](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) for more information on what options are allowed.
 
-## Example
+## Examples
 
 This example adds a new certificate to an active connection if it doesn't already have
 one in use.
@@ -44,13 +46,13 @@ one in use.
 ```js
 let configuration = myPeerConnection.getConfiguration();
 
-if ((configuration.certificates != undefined) && (!configuration.certificates.length)) {
+if (configuration.certificates?.length === 0) {
    RTCPeerConnection.generateCertificate({
       name: 'RSASSA-PKCS1-v1_5',
       hash: 'SHA-256',
       modulusLength: 2048,
       publicExponent: new Uint8Array([1, 0, 1])
-  }).then(function(cert) {
+  }).then((cert) => {
     configuration.certificates = [cert];
     myPeerConnection.setConfiguration(configuration);
   });
@@ -80,6 +82,5 @@ certificate to the connection.
 ## See also
 
 - {{domxref("RTCPeerConnection.setConfiguration()")}}
-- {{domxref("RTCPeerConnection.RTCPeerConnection")}}
+- {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
 - {{domxref("RTCPeerConnection")}}
-

@@ -1,6 +1,7 @@
 ---
 title: FederatedCredential.protocol
 slug: Web/API/FederatedCredential/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API
@@ -12,23 +13,18 @@ tags:
   - credential management
 browser-compat: api.FederatedCredential.protocol
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
 The **`protocol`** property of the
 {{domxref("FederatedCredential")}} interface returns a read-only
-{{domxref("DOMString")}} containing a credential's federated identity protocol. If this
-property is {{jsxref("null")}}, the protocol may be inferred from the
+string containing a credential's federated identity protocol. If this
+property is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the protocol may be inferred from the
 {{domxref("FederatedCredential.provider")}} property.
 
-## Syntax
+## Value
 
-```js
-var protocol = FederatedCredential.protocol
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing a credential's federated identity protocol (e.g.
+A string containing a credential's federated identity protocol (e.g.
 `openidconnect`).
 
 ## Examples

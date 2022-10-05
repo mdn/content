@@ -12,6 +12,7 @@ tags:
   - Mobile Development
   - Mobile first
 ---
+
 This article provides a guide to implementing a website layout that follows the principle of **mobile first**. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.
 
 ## First things first — mobile as a default
@@ -31,7 +32,7 @@ We have already mentioned the fact that mobiles generally have less memory, proc
 
 ### Control mechanisms
 
-Control mechanisms are another large constraint on mobile devices. Anyone who has ever tried to enter data into a form on a mobile device, or even just navigated around a complex site, knows this well. Therefore we should try to simplify things on mobile, keeping each view cut down to a single, simple purpose where possible, and reducing the amount of typing users are expected to do. The latter will please desktop users as well as mobile users!
+Control mechanisms are another large constraint on mobile devices. Anyone who has ever tried to enter data into a form on a mobile device, or even just navigated around a complex site, knows this well. Therefore we should try to simplify things on mobile, keeping each view cut down to a single, simple purpose where possible, and reducing the amount of typing users are expected to do. The latter will please desktop users as well as mobile users!
 
 ### Usage context
 
@@ -41,7 +42,7 @@ On top of everything else, you must consider the kinds of situations mobile devi
 
 When developing mobile app layouts, you often run into problems with navigation menus. The concept is the same regardless of the target device — you want to provide a mechanism for users to search for things and get to different views/pages of the application — but because mobile screens are so much smaller, a reasonable desktop navigation can spoil the experience by filling up most of the initial view of the app, covering up the content.
 
-There several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
+There are several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
 
 First of all, you can consider a different navigation mechanism on mobile. So, if you were planning to have a vertical navigation menu on desktop, you might replace this on mobile with a select menu containing the options, or even a single button that when pressed brings the navigation options up in an overlay.
 
@@ -55,7 +56,7 @@ To actually implement responsive/adaptive designs, you will need to enlist a cer
 
 ## A simple example
 
-To demonstrate the concepts, I wanted to cover in this article, I created a very simple app containing a nav menu, heading and single column of text. You can see my [mobile first example running live](https://chrisdavidmills.github.io/good-read/www/), or grab the code to [play with it on Github](https://github.com/chrisdavidmills/good-read). To make my simple example I created a sample app structure from a [Mozilla Mortar](https://github.com/mozilla/mortar) template. I installed the Volo automation tool by running the following on the command line
+To demonstrate the concepts, I wanted to cover in this article, I created a very simple app containing a nav menu, heading and single column of text. You can see my [mobile first example running live](https://chrisdavidmills.github.io/good-read/www/), or grab the code to [play with it on GitHub](https://github.com/chrisdavidmills/good-read). To make my simple example I created a sample app structure from a [Mozilla Mortar](https://github.com/mozilla/mortar) template. I installed the Volo automation tool by running the following on the command line
 
 ```bash
 sudo npm install -g volo
@@ -105,10 +106,9 @@ For this example app, the HTML structure is going to be very simple: I am just i
   </header>
 
   <div class="main">
-    <p>Lorem ipsum … </p>
+    <p>Lorem ipsum …</p>
     <a id="bottom" href="#top">Back to top</a>
   </div>
-
 </article>
 
 <button id="install-btn">Install</button>
@@ -144,9 +144,10 @@ One word of warning about this technique though - positioning doesn't work as ex
 The first one is to jump down from the top of the article to the navigation menu, and the second one is to jump back up to the top of the article again. I had to make sure both of these were NOT direct children of the `<article>`, otherwise the following would not work:
 
 ```css
-#bottom, #top {
+#bottom,
+#top {
   font-size: 0.8em;
-  position:absolute;
+  position: absolute;
   right: 1em;
   text-decoration: none;
 }
@@ -169,57 +170,62 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
 
 ```css
 @media (min-width: 480px) {
-  #bottom, #top {
-    display: none;
-  }
+  #bottom,
+  #top {
+    display: none;
+  }
 
-  article, nav {
-    display: block;
-  }
+  article,
+  nav {
+    display: block;
+  }
 
-  nav ul {
-    text-align: center;
-  }
+  nav ul {
+    text-align: center;
+  }
 
-  nav li {
-    display: inline;
-  }
+  nav li {
+    display: inline;
+  }
 
-  nav li a {
-    border-right: 1px solid #AD66D5;
-    border-bottom: none;
-    display: inline-block;
-    padding: 0 5px;
-    font-size: 1.6em;
-  }
+  nav li a {
+    border-right: 1px solid #ad66d5;
+    border-bottom: none;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1.6em;
+  }
 
-  nav li:last-child a {
-    border-right: none;
-  }
-
+  nav li:last-child a {
+    border-right: none;
+  }
 }
 
 @media (min-width: 600px) {
-  html {
-    background: #eee;
-    height: 100%;
-  }
+  html {
+    background: #eee;
+    height: 100%;
+  }
 
-  body {
-    width: 600px;
-    height: inherit;
-    margin: 0 auto;
-    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
-  }
+  body {
+    width: 600px;
+    height: inherit;
+    margin: 0 auto;
+    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(
+        to bottom,
+        #fff,
+        #eee
+      );
+  }
 
-  .main > p {
-    background: rgba(255,255,255,0.3);
-  }
+  .main > p {
+    background: rgba(255, 255, 255, 0.3);
+  }
 
-  nav li a {
-    padding: 0 10px;
-    font-size: 2em;
-  }
+  nav li a {
+    padding: 0 10px;
+    font-size: 2em;
+  }
 }
 ```
 
@@ -233,38 +239,38 @@ The second one sets the width of the content at 600px and centers it in the spac
 
 Feature detection involves doing tests (usually in JavaScript) to determine whether a browser supports a certain feature, and then serving CSS or JavaScript to suit that situation. This can be very useful for mobile first, as you may well want to hide bits of code from the "mobile version" and only include them for the "desktop version", or vice versa.
 
-You can write your own feature detects (Mark Pilgrim's [All-In-One Almost-Alphabetical Guide to Detecting Everything](http://diveintohtml5.info/everything.html) is a good start), but really it is much better to use a dedicated existing solution, such as [Modernizr](https://modernizr.com/). Modernizr is a good choice as it not only includes a feature detect for just about everything (CSS, HTML5, some other bits besides), it is also fairly reliable, and you can create your own custom version with only the feature detects you need in it, using the [Modernizr Download Builder](https://modernizr.com/download/). The full uncompressed Modernizr library is 42KB, but the version we are using in this demo is only 8KB.
+You can write your own feature detects (Mark Pilgrim's [All-In-One Almost-Alphabetical Guide to Detecting Everything](http://diveintohtml5.info/everything.html) is a good start), but really it is much better to use a dedicated existing solution, such as [Modernizr](https://modernizr.com/). Modernizr is a good choice as it not only includes a feature detect for just about everything (CSS, modern HTML features, some other bits besides), it is also fairly reliable, and you can create your own custom version with only the feature detects you need in it, using the [Modernizr Download Builder](https://modernizr.com/download/). The full uncompressed Modernizr library is 42KB, but the version we are using in this demo is only 8KB.
 
 I put Modernizr inside my `js/lib` directory, then included it by putting the following construct inside my HTML file:
 
-```js
-<script type="text/javascript" src="js/lib/modernizr.js"></script>
+```html
+<script src="js/lib/modernizr.js"></script>
 ```
 
 With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.
 
-```java
-if(!Modernizr.mq('only all')) {
-  require('respond');
+```js
+if (!Modernizr.mq("only all")) {
+  require("respond");
 }
 ```
 
 `matchMedia` is also very useful in many other ways. Imagine you wanted to include some kind of WebGL chart in the desktop version of the site requiring a WebGL library like Three but didn't want it included in the mobile version? You could create a block to only load the library in the case of narrow screen devices:
 
-```java
-if(window.matchMedia("(min-width: 481px)").matches) {
-  require('three');
+```js
+if (window.matchMedia("(min-width: 481px)").matches) {
+  require("three");
 }
 ```
 
 We can, therefore, save the bandwidth for browsers that don't need it.
 
-#### Modernizr CSS and JS
+#### Modernizr CSS and JavaScript
 
 Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
 
-```html
-<html class=" js no-rgba no-multiplebgs">
+```html-nolint
+<html class="js no-rgba no-multiplebgs">
 ```
 
 When these are present, we can serve alternative styling rules to provide sensible fallbacks using descendant selectors — see the following in my code.
@@ -284,10 +290,8 @@ This is not hugely pretty, but it does make the main content area more readable 
 Modernizr also puts its feature detect results in a JavaScript `Modenizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
 
 ```js
-if(Modernizr.rgba) {
-
+if (Modernizr.rgba) {
   // run code that depends on RGBA colors being supported.
-
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedBoolean
 slug: Web/API/SVGAnimatedBoolean
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedBoolean
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated boolean interface
@@ -20,7 +22,7 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -37,7 +39,7 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedBoolean"

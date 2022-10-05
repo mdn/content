@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.getYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`getYear()`** method returns the year in the specified
@@ -20,7 +21,7 @@ date according to local time. Because `getYear()` does not return full years
 
 ## Syntax
 
-```js
+```js-nolint
 getYear()
 ```
 
@@ -63,8 +64,8 @@ The `getYear()` method returns either a 2-digit or 4-digit year:
 The second statement assigns the value 95 to the variable `year`.
 
 ```js
-var Xmas = new Date('December 25, 1995 23:15:00');
-var year = Xmas.getYear(); // returns 95
+const xmas = new Date('December 25, 1995 23:15:00');
+const year = xmas.getYear(); // returns 95
 ```
 
 ### Years above 1999
@@ -72,8 +73,8 @@ var year = Xmas.getYear(); // returns 95
 The second statement assigns the value 100 to the variable `year`.
 
 ```js
-var Xmas = new Date('December 25, 2000 23:15:00');
-var year = Xmas.getYear(); // returns 100
+const xmas = new Date('December 25, 2000 23:15:00');
+const year = xmas.getYear(); // returns 100
 ```
 
 ### Years below 1900
@@ -81,8 +82,8 @@ var year = Xmas.getYear(); // returns 100
 The second statement assigns the value -100 to the variable `year`.
 
 ```js
-var Xmas = new Date('December 25, 1800 23:15:00');
-var year = Xmas.getYear(); // returns -100
+const xmas = new Date('December 25, 1800 23:15:00');
+const year = xmas.getYear(); // returns -100
 ```
 
 ### Setting and getting a year between 1900 and 1999
@@ -91,9 +92,9 @@ The third statement assigns the value 95 to the variable `year`,
 representing the year 1995.
 
 ```js
-var Xmas = new Date('December 25, 2015 23:15:00');
-Xmas.setYear(95);
-var year = Xmas.getYear(); // returns 95
+const xmas = new Date('December 25, 2015 23:15:00');
+xmas.setYear(95);
+const year = xmas.getYear(); // returns 95
 ```
 
 ## Specifications
@@ -106,7 +107,7 @@ var year = Xmas.getYear(); // returns 95
 
 ## See also
 
-- A polyfill of `Date.prototype.getYear` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [Polyfill of `Date.prototype.getYear` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setYear()")}}

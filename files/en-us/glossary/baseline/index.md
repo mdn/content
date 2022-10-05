@@ -3,11 +3,11 @@ title: Baseline
 slug: Glossary/baseline
 tags:
   - CSS
-  - Glossary
   - SVG
   - alignment
   - typography
 ---
+
 The **baseline** is a term used in European and West Asian typography meaning an imaginary line upon which the characters of a font rest.
 
 The descenders of characters like g and p extend below this line. {{Glossary("glyph", "Glyphs")}} with rounded lower and upper extents like C or 3 slightly extend below it.

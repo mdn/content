@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement.media
 slug: Web/API/HTMLStyleElement/media
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,43 +11,43 @@ tags:
   - Reference
 browser-compat: api.HTMLStyleElement.media
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement.media`** property specifies the
 intended destination medium for style information.
 
-## Syntax
+## Value
 
-```js
-medium = style.media
-style.media = medium
-```
+A string describing a single medium or a comma-separated list.
 
-### Parameters
-
-- `medium` is a string describing a single medium or a comma-separated
-  list.
-
-## Example
+## Examples
 
 ```html
-<!doctype html>
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Test page</title>
 
-<link id="LinkedStyle" rel="stylesheet" href="document.css" type="text/css" media="screen" />
-<style id="InlineStyle" rel="stylesheet" type="text/css" media="screen, print">
-p { color: blue; }
-</style>
-</head>
-<body>
-
-<script>
-alert('LinkedStyle: ' + document.getElementById('LinkedStyle').media); // 'screen'
-alert('InlineStyle: ' + document.getElementById('InlineStyle').media); // 'screen, print'
-</script>
-
-</body>
+    <link
+      id="LinkedStyle"
+      rel="stylesheet"
+      href="document.css"
+      media="screen" />
+    <style id="InlineStyle" rel="stylesheet" media="screen, print">
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      alert("LinkedStyle: " + document.getElementById("LinkedStyle").media); // 'screen'
+      alert("InlineStyle: " + document.getElementById("InlineStyle").media); // 'screen, print'
+    </script>
+  </body>
 </html>
 ```
 

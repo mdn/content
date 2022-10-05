@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
 ---
+
 {{APIRef}}
 
 The **`imageSmoothingEnabled`** property of the
@@ -24,17 +26,9 @@ images, the default resizing algorithm will blur the pixels. Set this property t
 > {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}
 > property.
 
-## Syntax
+## Value
 
-```js
-ctx.imageSmoothingEnabled = value;
-```
-
-### Options
-
-- `value`
-  - : A boolean value indicating whether to smooth scaled images or not. The
-    default value is `true`.
+A boolean value indicating whether to smooth scaled images or not. The default value is `true`.
 
 ## Examples
 
@@ -61,7 +55,7 @@ ctx.textAlign = 'center';
 
 const img = new Image();
 img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
-img.onload = function() {
+img.onload = () => {
   const w = img.width,
         h = img.height;
 

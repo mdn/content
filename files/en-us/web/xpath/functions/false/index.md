@@ -5,13 +5,16 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `false` function returns boolean false.
 
 ### Syntax
 
-    false()
+```
+false()
+```
 
 ### Returns
 
@@ -21,13 +24,15 @@ Boolean `false`.
 
 This function is useful part of a comparison:
 
-    <xsl:if test="boolean((1 &gt; 2) = false())">
-     The expression evaluates as true
-    </xsl:if>
+```xml
+<xsl:if test="boolean((1 &gt; 2) = false())">
+  The expression evaluates as true
+</xsl:if>
+```
 
 ### Defined
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-false)
+[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-false)
 
 ### Gecko support
 

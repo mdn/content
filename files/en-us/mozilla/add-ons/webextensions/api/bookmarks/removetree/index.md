@@ -13,6 +13,7 @@ tags:
   - removeTree
 browser-compat: webextensions.api.bookmarks.removeTree
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.removeTree()`** method recursively removes a bookmark folder and all of its contents.
@@ -23,8 +24,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var removingTree = browser.bookmarks.removeTree(
+```js-nolint
+let removingTree = browser.bookmarks.removeTree(
   id                // string
 )
 ```
@@ -55,12 +56,12 @@ function onRejected(error) {
 
 function removeMDN(searchResults) {
   if (searchResults.length) {
-    var removing = browser.bookmarks.removeTree(searchResults[0].id);
+    let removing = browser.bookmarks.removeTree(searchResults[0].id);
     removing.then(onRemoved, onRejected);
   }
 }
 
-var searchingBookmarks = browser.bookmarks.search({ title: "MDN" });
+let searchingBookmarks = browser.bookmarks.search({ title: "MDN" });
 searchingBookmarks.then(removeMDN, onRejected);
 ```
 
@@ -70,11 +71,12 @@ searchingBookmarks.then(removeMDN, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-removeTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-removeTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +103,4 @@ searchingBookmarks.then(removeMDN, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

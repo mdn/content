@@ -13,9 +13,10 @@ tags:
   - break
   - continue
   - for
-  - l10n:priority
+  - "l10n:priority"
   - while
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.
@@ -47,8 +48,7 @@ Loops are all about doing the same thing over and over again. Often, the code wi
 Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<button>Update</button>
-<canvas></canvas>
+<button>Update</button> <canvas></canvas>
 ```
 
 ```css hidden
@@ -77,28 +77,26 @@ button {
 
 Here's the JavaScript code that implements this example:
 
-
 ```js
 const btn = document.querySelector('button');
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const WIDTH = document.documentElement.clientWidth;
-const HEIGHT = document.documentElement.clientHeight;
-
-canvas.width = WIDTH;
-canvas.height = HEIGHT;
+document.addEventListener('DOMContentLoaded', () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+})
 
 function random(number) {
   return Math.floor(Math.random()*number);
 }
 
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
     ctx.fillStyle = 'rgba(255,0,0,0.5)';
-    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
 }
@@ -114,13 +112,12 @@ You don't have to understand all the code for now, but let's look at the part of
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+  ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
 ```
 
-- `random(x)`, defined earlier in the code, returns a whole number between `0` and `x-1`.
-- `WIDTH` and `HEIGHT` are the width and height of the inner browser window.
+- `random(x)`, defined earlier in the code, returns a whole number between `0` and `x-1`.
 
 You should get the basic idea — we are using a loop to run 100 iterations of this code, each one of which draws a circle in a random position on the page.
 The amount of code needed would be the same whether we were drawing 100 circles, 1000, or 10,000.
@@ -131,7 +128,7 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 ```js
 ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
-ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
 
@@ -223,7 +220,7 @@ console.log(filtered);
 ## The standard for loop
 
 In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times.
-In a case like that you should use the {{jsxref("statements/for","for")}} loop.
+In a case like that, you should use the {{jsxref("statements/for","for")}} loop.
 This has the following syntax:
 
 ```js
@@ -231,16 +228,17 @@ for (initializer; condition; final-expression) {
   // code to run
 }
 ```
+
 Here we have:
 
 1. The keyword `for`, followed by some parentheses.
-2. Inside the parentheses we have three items, separated by semi-colons:
+2. Inside the parentheses we have three items, separated by semicolons:
 
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
-   3. A **condition** — this defines when the loop should stop looping.
+   2. A **condition** — this defines when the loop should stop looping.
       This is generally an expression featuring a comparison operator, a test to see if the exit condition has been met.
-   5. A **final-expression** — this is always evaluated (or run) each time the loop has gone through a full iteration.
+   3. A **final-expression** — this is always evaluated (or run) each time the loop has gone through a full iteration.
       It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the point where the condition is no longer `true`.
 
 3. Some curly braces that contain a block of code — this code will be run each time the loop iterates.
@@ -263,7 +261,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\n...finished!';
+  results.textContent += '\nFinished!';
 }
 
 const calculateBtn = document.querySelector('#calculate');
@@ -271,7 +269,6 @@ const clearBtn = document.querySelector('#clear');
 
 calculateBtn.addEventListener('click', calculate);
 clearBtn.addEventListener('click', () => results.textContent = '');
-
 ```
 
 This gives us the following output:
@@ -290,8 +287,8 @@ Inside the loop, we calculate the square of the current value of `i`, that is: `
 
 1. During the first run, `i = 1`, so we will add `1 x 1 = 1`.
 2. During the second run, `i = 2`, so we will add `2 x 2 = 4`.
-3. ...and so on.
-4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `...finished!` message.
+3. And so on…
+4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `Finished!` message on a new line.
 
 ### Looping through collections with a for loop
 
@@ -318,13 +315,13 @@ for (let i = 0; i < cats.length; i++) {
 ```
 
 In this loop we're starting `i` at `0`, and stopping when `i` reaches the length of the array.
-Then inside the loop we're using `i` to access each item in the array in turn.
+Then inside the loop, we're using `i` to access each item in the array in turn.
 
 This works just fine, and in early versions of JavaScript, `for...of` didn't exist, so this was the standard way to iterate through an array.
 However, it offers more chances to introduce bugs into your code. For example:
 
-* you might start `i` at `1`, forgetting that the first array index is zero, not 1.
-* you might stop at `i <= cats.length`, forgetting that the last array index is at `length - 1`.
+- you might start `i` at `1`, forgetting that the first array index is zero, not 1.
+- you might stop at `i <= cats.length`, forgetting that the last array index is at `length - 1`.
 
 For reasons like this, it's usually best to use `for...of` if you can.
 
@@ -332,45 +329,45 @@ Sometimes you still need to use a `for` loop to iterate through an array.
 For example, in the code below we want to log a message listing our cats:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
 for (const cat of cats) {
-  myFavoriteCats = `${myFavoriteCats}${cat}, `
+  myFavoriteCats += `${cat}, `
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmin, "
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
 ```
 
 The final output sentence isn't very well-formed:
 
 ```
-My cats are called Pete, Biggles, Jasmin,
+My cats are called Pete, Biggles, Jasmine,
 ```
 
 We'd prefer it to handle the last cat differently, like this:
 
 ```
-My cats are called Pete, Biggles, and Jasmin.
+My cats are called Pete, Biggles, and Jasmine.
 ```
 
 But to do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {   // We are at the end of the array
-    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
+    myFavoriteCats += `and ${cats[i]}.`
   } else {
-    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `
   }
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 ## Exiting loops with break
@@ -378,14 +375,14 @@ console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmi
 If you want to exit a loop before all the iterations have been completed, you can use the [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement.
 We already met this in the previous article when we looked at [switch statements](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements) — when a case is met in a switch statement that matches the input expression, the `break` statement immediately exits the switch statement and moves on to the code after it.
 
-It's the same with loops — a `break` statement will immediately exit the loop and make the browser move on to any code that follows it.
+It's the same with loops — a `break` statement will immediately exit the loop and make the browser move on to any code that follows it.
 
 Say we wanted to search through an array of contacts and telephone numbers and return just the number we wanted to find?
 First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter a name to search for, a {{htmlelement("button")}} element to submit a search, and a {{htmlelement("p")}} element to display the results in:
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -407,7 +404,7 @@ btn.addEventListener('click', () => {
   for (const contact of contacts) {
     const splitContact = contact.split(':');
     if (splitContact[0].toLowerCase() === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
       break;
     }
   }
@@ -420,32 +417,32 @@ btn.addEventListener('click', () => {
 {{ EmbedLiveSample('Exiting_loops_with_break', '100%', 100) }}
 
 1. First of all, we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.
-2. Next, we attach an event listener to the button (`btn`) so that when it is pressed some code is run to perform the search and return the results.
+2. Next, we attach an event listener to the button (`btn`) so that when it is pressed some code is run to perform the search and return the results.
 3. We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
    Note that we also run the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method on the string, so that searches will be case-insensitive.
-5. Now on to the interesting part, the `for...of` loop:
+4. Now on to the interesting part, the `for...of` loop:
 
    1. Inside the loop, we first split the current contact at the colon character, and store the resulting two values in an array called `splitContact`.
    2. We then use a conditional statement to test whether `splitContact[0]` (the contact's name, again lower-cased with [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)) is equal to the inputted `searchName`.
       If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
 
-4. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
+5. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Skipping iterations with continue
 
-The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works in a similar manner to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
+The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works similarly to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
 Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
 
 The HTML is basically the same as the last example — a simple text input, and a paragraph for output.
 
 ```html
 <label for="number">Enter number: </label>
-<input id="number" type="text">
+<input id="number" type="text" />
 <button>Generate integer squares</button>
 
-<p>Output: </p>
+<p>Output:</p>
 ```
 
 The JavaScript is mostly the same too, although the loop itself is a bit different:
@@ -474,25 +471,27 @@ Here's the output:
 
 {{ EmbedLiveSample('Skipping_iterations_with_continue', '100%', 100) }}
 
-1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
-2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
+1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
+2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
-4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
+4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space at the end of the paragraph content.
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
-## while and do ... while
+## while and do...while
 
 `for` is not the only type of loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.
 
 First, let's have a look at the [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-    initializer
-    while (condition) {
-      // code to run
+```
+initializer
+while (condition) {
+  // code to run
 
-      final-expression
-    }
+  final-expression
+}
+```
 
 This works in a very similar way to the `for` loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run, rather than these two items being included inside the parentheses.
 The condition is included inside the parentheses, which are preceded by the `while` keyword rather than `for`.
@@ -504,7 +503,7 @@ The final-expression is then run after the code inside the loop has run (an iter
 Let's have a look again at our cats list example, but rewritten to use a while loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
@@ -520,19 +519,21 @@ while (i < cats.length) {
   i++;
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-    initializer
-    do {
-      // code to run
+```
+initializer
+do {
+  // code to run
 
-      final-expression
-    } while (condition)
+  final-expression
+} while (condition)
+```
 
 In this case, the initializer again comes first, before the loop starts. The keyword directly precedes the curly braces containing the code to run and the final expression.
 
@@ -541,7 +542,7 @@ The main difference between a `do...while` loop and a `while` loop is that _the 
 Let's rewrite our cat listing example again to use a `do...while` loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
@@ -557,12 +558,12 @@ do {
   i++;
 } while (i < cats.length);
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+> **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
-> **Warning:** With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
+> **Warning:** With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
 > If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
 ## Active learning: Launch countdown
@@ -586,19 +587,19 @@ Specifically, we want you to:
 
 - Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
 
-> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
+> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
 
 If you make a mistake, you can always reset the example with the "Reset" button.
 If you get really stuck, press "Show solution" to see a solution.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
 output.innerHTML = '';
@@ -611,8 +612,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -658,7 +659,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -674,18 +675,18 @@ output.innerHTML = '';
 let i = 10;
 
 while (i >= 0) {
- const para = document.createElement('p');
- if (i === 10) {
- para.textContent = \`Countdown \$\{i}\`;
- } else if (i === 0) {
-  para.textContent = 'Blast off!';
- } else {
- para.textContent = i;
- }
+  const para = document.createElement('p');
+  if (i === 10) {
+    para.textContent = \`Countdown \${i}\`;
+  } else if (i === 0) {
+    para.textContent = 'Blast off!';
+  } else {
+    para.textContent = i;
+  }
 
- output.appendChild(para);
+  output.appendChild(para);
 
- i--;
+  i--;
 }`;
 
 let solutionEntry = jsSolution;
@@ -710,11 +711,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -723,10 +724,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -752,8 +753,8 @@ Specifically, we want you to:
 
 We've already provided you with:
 
-- `refused.textContent +=` — the beginnings of a line that will concatenate something on to the end of `refused.textContent`.
-- `admitted.textContent +=` — the beginnings of a line that will concatenate something on to the end of `admitted.textContent`.
+- `refused.textContent +=` — the beginnings of a line that will concatenate something at the end of `refused.textContent`.
+- `admitted.textContent +=` — the beginnings of a line that will concatenate something at the end of `admitted.textContent`.
 
 Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one.
 Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end?
@@ -766,18 +767,20 @@ If you get really stuck, press "Show solution" to see a solution.
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
   <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="refused">Refuse: </p>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
 const admitted = document.querySelector('.admitted');
 const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: '
+refused.textContent = 'Refuse: ';
 
 // loop starts here
 
@@ -787,8 +790,8 @@ refused.textContent = 'Refuse: '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -834,7 +837,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -886,11 +889,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -899,10 +902,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -931,7 +934,6 @@ for (const item of array) {
   // code to run
 }
 ```
-
 
 `for`:
 
@@ -972,7 +974,7 @@ You've reached the end of this article, but can you remember the most important 
 ## Conclusion
 
 This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript.
-You should now be clear on why loops are a good mechanism for dealing with repetitive code and are raring to use them in your own examples!
+You should now be clear on why loops are a good mechanism for dealing with repetitive code and raring to use them in your own examples!
 
 If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
 

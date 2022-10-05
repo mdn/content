@@ -1,6 +1,7 @@
 ---
 title: font-variant-east-asian
 slug: Web/CSS/font-variant-east-asian
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -10,20 +11,25 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-east-asian
 ---
+
 {{CSSRef}}
 
 The **`font-variant-east-asian`** CSS property controls the use of alternate glyphs for East Asian scripts, like Japanese and Chinese.
 
+{{EmbedInteractiveExample("pages/css/font-variant-east-asian.html")}}
+
+## Syntax
+
 ```css
 font-variant-east-asian: normal;
 font-variant-east-asian: ruby;
-font-variant-east-asian: jis78;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis83;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis90;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis04;              /* <east-asian-variant-values> */
-font-variant-east-asian: simplified;         /* <east-asian-variant-values> */
-font-variant-east-asian: traditional;        /* <east-asian-variant-values> */
-font-variant-east-asian: full-width;         /* <east-asian-width-values> */
+font-variant-east-asian: jis78; /* <east-asian-variant-values> */
+font-variant-east-asian: jis83; /* <east-asian-variant-values> */
+font-variant-east-asian: jis90; /* <east-asian-variant-values> */
+font-variant-east-asian: jis04; /* <east-asian-variant-values> */
+font-variant-east-asian: simplified; /* <east-asian-variant-values> */
+font-variant-east-asian: traditional; /* <east-asian-variant-values> */
+font-variant-east-asian: full-width; /* <east-asian-width-values> */
 font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
 font-variant-east-asian: ruby full-width jis83;
 
@@ -31,10 +37,9 @@ font-variant-east-asian: ruby full-width jis83;
 font-variant-east-asian: inherit;
 font-variant-east-asian: initial;
 font-variant-east-asian: revert;
+font-variant-east-asian: revert-layer;
 font-variant-east-asian: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -80,37 +85,37 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 
 ```html
 <table>
-<thead></thead>
-<tbody style="border:0;">
-  <tr>
-    <th>normal/jis78:</th>
-    <td>麹町</td>
-    <td class="jis78">麹町</td>
-  </tr>
-  <tr>
-    <th>normal/ruby:</th>
-    <td>しんかんせん</td>
-    <td class="ruby">しんかんせん</td>
-  </tr>
-  <tr>
-    <th>normal/traditional:</th>
-    <td>大学</td>
-    <td class="traditional">大学</td>
-  </tr>
-</tbody>
+  <thead></thead>
+  <tbody style="border:0;">
+    <tr>
+      <th>normal/jis78:</th>
+      <td>麹町</td>
+      <td class="jis78">麹町</td>
+    </tr>
+    <tr>
+      <th>normal/ruby:</th>
+      <td>しんかんせん</td>
+      <td class="ruby">しんかんせん</td>
+    </tr>
+    <tr>
+      <th>normal/traditional:</th>
+      <td>大学</td>
+      <td class="traditional">大学</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### CSS
 
 ```css
-td{
-  font-family:"Yu Gothic";
-  font-size:20px;
+td {
+  font-family: "Yu Gothic";
+  font-size: 20px;
 }
-th{
-  color:grey;
-  padding-right:10px;
+th {
+  color: grey;
+  padding-right: 10px;
 }
 
 .ruby {
@@ -118,11 +123,11 @@ th{
 }
 
 .jis78 {
-  font-variant-east-asian: jis78;
+  font-variant-east-asian: jis78;
 }
 
-.traditional{
-  font-variant-east-asian: traditional;
+.traditional {
+  font-variant-east-asian: traditional;
 }
 ```
 

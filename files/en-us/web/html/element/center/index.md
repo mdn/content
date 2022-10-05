@@ -27,27 +27,33 @@ This element implements the {{domxref("HTMLElement")}} interface.
 ## Example 1
 
 ```html
-<center>This text will be centered.
-<p>So will this paragraph.</p></center>
+<center>
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</center>
 ```
 
 ## Example 2 (CSS alternative)
 
 ```html
-<div style="text-align:center">This text will be centered.
-<p>So will this paragraph.</p></div>
+<div style="text-align:center">
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</div>
 ```
 
 ## Example 3 (CSS alternative)
 
 ```html
-<p style="text-align:center">This line will be centered.<br>
-And so will this line.</p>
+<p style="text-align:center">
+  This line will be centered.<br />
+  And so will this line.
+</p>
 ```
 
 ## Note
 
-Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
+Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
 
 ## Specifications
 

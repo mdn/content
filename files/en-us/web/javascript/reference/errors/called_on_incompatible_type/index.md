@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "called on incompatible target (or object)" occurs when a
@@ -15,12 +16,13 @@ the type expected by the function.
 
 ## Message
 
-```js
-TypeError: 'this' is not a Set object (Edge)
+```
+TypeError: Method Set.prototype.add called on incompatible receiver undefined (V8-based)
+TypeError: Bind must be called on a function (V8-based)
 TypeError: Function.prototype.toString called on incompatible object (Firefox)
 TypeError: Function.prototype.bind called on incompatible target (Firefox)
-TypeError: Method Set.prototype.add called on incompatible receiver undefined (Chrome)
-TypeError: Bind must be called on a function (Chrome)
+TypeError: Type error (Safari)
+TypeError: undefined is not an object (Safari)
 ```
 
 ## Error type
@@ -48,11 +50,11 @@ force the `this` argument to the expected object.
 ### Invalid cases
 
 ```js example-bad
-var mySet = new Set;
+const mySet = new Set;
 ['bar', 'baz'].forEach(mySet.add);
 // mySet.add is a function, but "mySet" is not captured as this.
 
-var myFun = function () {
+const myFun = function () {
   console.log(this);
 };
 ['bar', 'baz'].forEach(myFun.bind);
@@ -62,14 +64,14 @@ var myFun = function () {
 ### Valid cases
 
 ```js example-good
-var mySet = new Set;
+const mySet = new Set;
 ['bar', 'baz'].forEach(mySet.add.bind(mySet));
 // This works due to binding "mySet" as this.
 
-var myFun = function () {
+const myFun = function () {
   console.log(this);
 };
-['bar', 'baz'].forEach(x => myFun.bind(x));
+['bar', 'baz'].forEach((x) => myFun.bind(x));
 // This works using the "bind" function. It creates a lambda forwarding the argument.
 ```
 

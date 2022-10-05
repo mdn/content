@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.prototype.resolvedOptions()`** method
@@ -20,7 +21,7 @@ options computed during initialization of this {{jsxref("Intl.PluralRules")}} ob
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 
@@ -39,9 +40,7 @@ The resulting object has the following properties:
     the key-value pairs that were requested and are supported for this locale are
     included in `locale`.
 - `pluralCategories`
-  - : An {{jsxref("Array")}} of plural categories used by the given locale, seleced from
-    the list "`zero`", "`one`", "`two`",
-    "`few`", "`many`" and "`other`".
+  - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from the list `"zero"`, `"one"`, `"two"`, `"few"`, `"many"` and `"other"`.
 - `type`
   - : The type used (`cardinal` or `ordinal`).
 
@@ -59,11 +58,11 @@ Only one of the following two groups of properties is included:
 
 ## Examples
 
-### Using the `resolvedOptions` method
+### Using the resolvedOptions() method
 
 ```js
-var de = new Intl.PluralRules('de-DE');
-var usedOptions = de.resolvedOptions();
+const de = new Intl.PluralRules('de-DE');
+const usedOptions = de.resolvedOptions();
 
 usedOptions.locale;                // "de-DE"
 usedOptions.maximumFractionDigits; // 3

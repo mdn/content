@@ -1,6 +1,7 @@
 ---
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
+page-type: web-api-interface
 tags:
   - API
   - Event Timing API
@@ -11,59 +12,64 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEventTiming
 ---
+
+{{APIRef}}
+
 The `PerformanceEventTiming` interface of the Event Timing API provides timing information for the event types listed below.
 
-- {{event("auxclick")}}
-- {{event("beforeinput")}}
-- {{event("click")}}
-- {{event("compositionend")}}
-- {{event("compositionstart")}}
-- {{event("compositionupdate")}}
-- {{event("contextmenu")}}
-- {{event("dblclick")}}
-- {{event("dragend")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragover")}}
-- {{event("dragstart")}}
-- {{event("drop")}}
-- {{event("input")}}
-- {{event("keydown")}}
-- {{event("keypress")}}
-- {{event("keyup")}}
-- {{event("mousedown")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("mouseout")}}
-- {{event("mouseover")}}
-- {{event("mouseup")}}
-- {{event("pointerover")}}
-- {{event("pointerenter")}}
-- {{event("pointerdown")}}
-- {{event("pointerup")}}
-- {{event("pointercancel")}}
-- {{event("pointerout")}}
-- {{event("pointerleave")}}
-- {{event("gotpointercapture")}}
-- {{event("lostpointercapture")}}
-- {{event("touchstart")}}
-- {{event("touchend")}}
-- {{event("touchcancel")}}
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/compositionend_event", "compositionend")}}
+- {{domxref("Element/compositionstart_event", "compositionstart")}}
+- {{domxref("Element/compositionupdate_event", "compositionupdate")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
+- {{domxref("HTMLElement/input_event", "input")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("HTMLElement/pointerover_event", "pointerover")}}
+- {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
+- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}
+- {{domxref("HTMLElement/pointerout_event", "pointerout")}}
+- {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
+- {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Element/touchstart_event", "touchstart")}}
+- {{domxref("Element/touchend_event", "touchend")}}
+- {{domxref("Element/touchcancel_event", "touchcancel")}}
+
+{{InheritanceDiagram}}
 
 ## Properties
 
-- **`{{domxref("PerformanceEventTiming.processingStart")}}`**
+- {{domxref("PerformanceEventTiming.processingStart")}}
   - : Returns the time at which event dispatch started.
-- **`{{domxref("PerformanceEventTiming.processingEnd")}}`**
+- {{domxref("PerformanceEventTiming.processingEnd")}}
   - : Returns the time at which the event dispatch ended.
-- **`{{domxref("PerformanceEventTiming.cancelable")}}`**
+- {{domxref("PerformanceEventTiming.cancelable")}}
   - : Returns the associated event's cancelable attribute.
-- **`{{domxref("PerformanceEventTiming.target")}}`**
+- {{domxref("PerformanceEventTiming.target")}}
   - : Returns the associated event's last target, if it is not removed.
 
 ## Methods
 
-- **`{{domxref("PerformanceEventTiming.toJSON()")}}`**
+- {{domxref("PerformanceEventTiming.toJSON()")}}
   - : Converts the PerformanceEventTiming object to JSON.
 
 ## Examples
@@ -71,8 +77,8 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 The following example shows how to use the API for all events:
 
 ```js
-const observer = new PerformanceObserver(function(list) {
-    const perfEntries = list.getEntries().forEach(entry => {
+const observer = new PerformanceObserver((list) => {
+    list.getEntries().forEach((entry) => {
         // Full duration
         const inputDuration = entry.duration;
         // Input delay (before processing event)
@@ -85,7 +91,7 @@ const observer = new PerformanceObserver(function(list) {
 observer.observe({entryTypes: ["event"]});
 ```
 
-We can also directly query the [first input delay](https://web.dev/fid). The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.
+We can also directly query the [first input delay](https://web.dev/fid/). The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.
 
 ```js
 // Keep track of whether (and when) the page was first hidden, see:

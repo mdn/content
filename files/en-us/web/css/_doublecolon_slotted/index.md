@@ -1,6 +1,7 @@
 ---
 title: '::slotted()'
 slug: Web/CSS/::slotted
+page-type: css-pseudo-element
 tags:
   - '::slotted'
   - CSS
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: css.selectors.slotted
 ---
+
 {{ CSSRef }}
 
 The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element that has been placed into a slot inside an HTML template (see [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) for more information).
@@ -20,24 +22,26 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 ```css
 /* Selects any element placed inside a slot */
 ::slotted(*) {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 /* Selects any <span> placed inside a slot */
 ::slotted(span) {
-  font-weight: bold;
+  font-weight: bold;
 }
 ```
 
 ## Syntax
 
-{{csssyntax}}
+```
+::slotted( <compound-selector> )
+```
 
 ## Examples
 
 ### Highlighting slotted elements
 
-The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
+The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/main/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
 
 In this demo we use a simple template with three slots:
 

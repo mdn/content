@@ -12,6 +12,7 @@ tags:
   - Components
   - Structure
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
@@ -55,7 +56,7 @@ Components are a central building block of Angular applications.
 This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.
 
 Each component is made up of a TypeScript class, HTML, and CSS.
-Typescript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
+TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
 
 ### Dynamically change the UI with \*ngIf and \*ngFor
 
@@ -84,19 +85,18 @@ To use `@Output()`, you raise an event in one component so that the other compon
 
 In the `app` directory, create a new file named `item.ts` with the following contents:
 
-```js
+```ts
 export interface Item {
   description: string;
   done: boolean;
 }
 ```
 
-The `Item` `interface` creates an `item` object model so that your application understands what an `item` is.
-For this to-do list, an `item` is an object that has a description and can be done.
+You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent), but it is a good time to know and record your knowledge of what an `item` is. The `Item` `interface` creates an `item` object model so that your application will understand what an `item` is. For this to-do list, an `item` is an object that has a description and can be done.
 
 ## Add logic to AppComponent
 
-Now that your application knows what an `item` is, you can give it some items by adding them to the TypeScript file, `app.component.ts`.
+Now that you know what an `item` is, you can give your application some items by adding them to the TypeScript file, `app.component.ts`.
 In `app.component.ts`, replace the contents with the following:
 
 ```js
@@ -124,7 +124,7 @@ export class AppComponent {
     if (this.filter === 'all') {
       return this.allItems;
     }
-    return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
+    return this.allItems.filter((item) => this.filter === 'done' ? item.done : !item.done);
   }
 
 }
@@ -173,13 +173,15 @@ The double curly braces that contain `item.description` instructs Angular to pop
 
 In the browser, you should see the list of items as follows:
 
-    My To Do List
-    What would you like to do today?
+```
+My To Do List
+What would you like to do today?
 
-    * eat
-    * sleep
-    * play
-    * laugh
+* eat
+* sleep
+* play
+* laugh
+```
 
 ## Add items to the list
 
@@ -187,7 +189,7 @@ A to-do list needs a way to add items.
 
 In `app.component.ts`, add the following method to the class:
 
-```js
+```ts
 addItem(description: string) {
   this.allItems.unshift({
     description,
@@ -204,7 +206,7 @@ To use the `addItem()` method, edit the HTML in the `AppComponent` template.
 
 In `app.component.html`, replace the `<h2>` with the following:
 
-```js
+```html
 <label for="addItemInput">What would you like to do today?</label>
 
 <input
@@ -212,15 +214,14 @@ In `app.component.html`, replace the `<h2>` with the following:
   placeholder="add an item"
   (keyup.enter)="addItem(newItem.value); newItem.value = ''"
   class="lg-text-input"
-  id="addItemInput"
-/>
+  id="addItemInput" />
 
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```
 
 When the user types a new item in the `<input>` and presses **Enter**, the `addItem()` method adds the value to the `items` array.
 Pressing the **Enter** key also resets the value of `<input>` to an empty string.
-Alternatively, the user can click the **Add** button which calls the same`addItem()` method.
+Alternatively, the user can click the **Add** button which calls the same `addItem()` method.
 
 ## Summary
 

@@ -1,9 +1,9 @@
 ---
 title: FileSystemEntry.getMetadata()
 slug: Web/API/FileSystemEntry/getMetadata
+page-type: web-api-instance-method
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - FileSystemEntry
   - Files
@@ -14,7 +14,8 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.getMetadata
 ---
-{{APIRef("File System API")}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`getMetadata()`** obtains a
@@ -23,8 +24,9 @@ its modification date and time and its size.
 
 ## Syntax
 
-```js
-FileSystemEntry.getMetadata(successCallback[, errorCallback]);
+```js-nolint
+getMetadata(successCallback)
+getMetadata(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -40,7 +42,7 @@ FileSystemEntry.getMetadata(successCallback[, errorCallback]);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -49,16 +51,16 @@ FileSystemEntry.getMetadata(successCallback[, errorCallback]);
 - `FileError.SECURITY_ERR`
   - : Security restrictions prohibit obtaining the requested metadata.
 
-## Example
+## Examples
 
 This example checks the size of a log file in a temporary folder and, if it exceeds a
 megabyte, moves it into a different directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
+workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
+  fileEntry.getMetadata((metadata) => {
     if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, function(dirEntry) {
+      workingDirectory.getDirectory("log", {}, (dirEntry) => {
         fileEntry.moveTo(dirEntry);
       }, handleError);
     }
@@ -72,7 +74,5 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

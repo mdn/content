@@ -1,25 +1,22 @@
 ---
 title: LargestContentfulPaint.loadTime
 slug: Web/API/LargestContentfulPaint/loadTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - loadTime
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.loadTime
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`loadTime`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the time that the element was loaded.
 
-## Syntax
-
-```js
-let loadTime = LargestContentfulPaint.loadTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time in milliseconds that the element was loaded.
 

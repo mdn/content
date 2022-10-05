@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.frame
 slug: Web/API/HTMLTableElement/frame
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -13,22 +14,16 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.frame
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The {{domxref("HTMLTableElement")}} interface's **`frame`**
 property is a string that indicates which of the table's exterior borders should be
 drawn.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.frame = frameSides;
-var frameSides = HTMLTableElement.frame;
-```
-
-### Parameters
-
-`frameSides` is a string whose value is one of the following values:
+One of the following:
 
 - `void`
   - : No sides. This is the default.
@@ -49,11 +44,11 @@ var frameSides = HTMLTableElement.frame;
 - `"border"`
   - : All four sides
 
-## Example
+## Examples
 
 ```js
 // Set the frame of TableA to 'border'
-var t = document.getElementById('TableA');
+const t = document.getElementById('TableA');
 t.frame  = "border";
 t.border = "2px";
 ```

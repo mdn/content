@@ -1,6 +1,7 @@
 ---
 title: Document.children
 slug: Web/API/Document/children
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - children
 browser-compat: api.Document.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}
@@ -19,16 +21,7 @@ For HTML documents, this is usually only the root `<html>` element.
 
 See {{domxref("Element.children")}} for child elements of specific HTML elements within the document.
 
-## Syntax
-
-```js
-// Getter
-collection = document.children;
-
-// No setter; read-only property
-```
-
-### Return value
+## Value
 
 An {{ domxref("HTMLCollection") }} which is a live, ordered collection of the DOM
 elements which are children of the current document. You can access the
@@ -39,7 +32,7 @@ JavaScript array-style notation.
 If the document has no element children, then `children` is an empty list with a
 `length` of `0`.
 
-## Example
+## Examples
 
 ```js
 document.children;

@@ -1,6 +1,7 @@
 ---
 title: AbsoluteOrientationSensor
 slug: Web/API/AbsoluteOrientationSensor
+page-type: web-api-interface
 tags:
   - API
   - AbsoluteOrientationSensor
@@ -14,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.AbsoluteOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`AbsoluteOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation in relation to the Earth's reference coordinate system.
@@ -22,6 +24,8 @@ To use this sensor, the user must grant permission to the `'accelerometer'`, `'g
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("AbsoluteOrientationSensor.AbsoluteOrientationSensor", "AbsoluteOrientationSensor()")}}
@@ -29,15 +33,15 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 ## Properties
 
-_No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
-
-### Event handlers
-
-_No specific event handlers; inherits methods from its ancestor, {{domxref('Sensor')}}._
+_No specific properties; inherits properties from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
 ## Methods
 
 _No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
+
+## Events
+
+_No specific events; inherits methods from its ancestor, {{domxref('Sensor')}}._
 
 ## Examples
 
@@ -46,15 +50,15 @@ _No specific methods; inherits methods from its ancestors {{domxref('Orientation
 The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `AbsoluteOrientationSensor` with a frequency of 60 times a second. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
 ```js
-const options = { frequency: 60, referenceFrame: 'device' };
+const options = { frequency: 60, referenceFrame: "device" };
 const sensor = new AbsoluteOrientationSensor(options);
 
-sensor.addEventListener('reading', () => {
+sensor.addEventListener("reading", () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error => {
-  if (event.error.name == 'NotReadableError') {
+sensor.addEventListener("error", (error) => {
+  if (event.error.name === "NotReadableError") {
     console.log("Sensor is not available.");
   }
 });
@@ -67,17 +71,18 @@ Using orientation sensors requires requesting permissions for multiple device se
 
 ```js
 const sensor = new AbsoluteOrientationSensor();
-Promise.all([navigator.permissions.query({ name: "accelerometer" }),
-             navigator.permissions.query({ name: "magnetometer" }),
-             navigator.permissions.query({ name: "gyroscope" })])
-       .then(results => {
-         if (results.every(result => result.state === "granted")) {
-           sensor.start();
-           ...
-         } else {
-           console.log("No permissions to use AbsoluteOrientationSensor.");
-         }
-   });
+Promise.all([
+  navigator.permissions.query({ name: "accelerometer" }),
+  navigator.permissions.query({ name: "magnetometer" }),
+  navigator.permissions.query({ name: "gyroscope" }),
+]).then((results) => {
+  if (results.every((result) => result.state === "granted")) {
+    sensor.start();
+    // …
+  } else {
+    console.log("No permissions to use AbsoluteOrientationSensor.");
+  }
+});
 ```
 
 ## Specifications

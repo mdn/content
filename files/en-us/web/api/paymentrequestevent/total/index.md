@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.total
 slug: Web/API/PaymentRequestEvent/total
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request API
@@ -9,22 +10,18 @@ tags:
   - Reference
   - payment
   - total
+  - Experimental
 browser-compat: api.PaymentRequestEvent.total
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`total`** readonly property of the
 {{domxref("PaymentRequestEvent")}} interface returns a
-{{domxref('PaymentCurrencyAmount')}} object containing the total amount being requested
+{{domxref('PaymentCurrencyAmount')}} object containing the total amount being requested
 for payment.
 
-## Syntax
-
-```js
-var paymentCurrencyAmount = paymentRequestEvent.total
-```
-
-### Value
+## Value
 
 A {{domxref('PaymentCurrencyAmount')}} object.
 

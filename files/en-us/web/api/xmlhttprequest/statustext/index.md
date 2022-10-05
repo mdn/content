@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -11,28 +12,33 @@ tags:
   - XMLHttpRequest Status
 browser-compat: api.XMLHttpRequest.statusText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
-The read-only **`XMLHttpRequest.statusText`** property returns a [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") containing the response's status message as returned by the HTTP server. Unlike [`XMLHTTPRequest.status`](/en-US/docs/Web/API/XMLHTTPRequest/status "The XMLHttpRequest.status property returns an unsigned short with the status of the response of the request. These are the standard HTTP status codes. For example, status is 200 denotes a successful request. Before the request is complete, the value of status will be 0.") which indicates a numerical status code, this property contains the _text_ of the response status, such as "OK" or "Not Found". If the request's [`readyState`](/en-US/docs/Web/API/XMLHttpRequest/readyState) is in `UNSENT` or `OPENED` state, the value of `statusText` will be an empty string.
+The read-only **`XMLHttpRequest.statusText`** property returns a string containing the response's status message as returned by the HTTP server. Unlike [`XMLHTTPRequest.status`](/en-US/docs/Web/API/XMLHttpRequest/status) which indicates a numerical status code, this property contains the _text_ of the response status, such as "OK" or "Not Found". If the request's [`readyState`](/en-US/docs/Web/API/XMLHttpRequest/readyState) is in `UNSENT` or `OPENED` state, the value of `statusText` will be an empty string.
 
 If the server response doesn't explicitly specify a status text, `statusText` will assume the default value "OK".
 
-> **Note:** Responses over an HTTP/2 connection will always have a empty string as status message as HTTP/2 does not support them.
+> **Note:** Responses over an HTTP/2 connection will always have a empty string as status message as HTTP/2 does not support them.
 
-## Example
+## Value
+
+A string.
+
+## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('0 UNSENT', xhr.statusText);
 
 xhr.open('GET', '/server', true);
 console.log('1 OPENED', xhr.statusText);
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
   console.log('3 LOADING', xhr.statusText);
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
   console.log('4 DONE', xhr.statusText);
 };
 
@@ -58,6 +64,6 @@ xhr.send(null);
 
 ## See also
 
-- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- List of [HTTP status](/en-US/docs/Web/HTTP/Status)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [WHATWG Fetch Living Standard](https://fetch.spec.whatwg.org/#concept-response-status-message)

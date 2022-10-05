@@ -10,6 +10,7 @@ tags:
   - Mobile
   - NeedsActiveLearning
 ---
+
 This article provides basic tips to help you design websites for any kind of user.
 
 <table class="standard-table">
@@ -40,7 +41,7 @@ When you're building a website, one top issue to consider is [Universal Design](
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Dig deeper
 
@@ -50,13 +51,13 @@ To keep your text readable, use a text color that contrasts well with the backgr
 
 The {{Glossary("W3C")}} defines a good color mix with an algorithm that calculates luminosity ratio between foreground and background. The calculation may seem pretty complicated, but we can rely on tools to do the job for us.
 
-Let's download and install the Paciello Group's [Color Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/).
+Let's download and install the Paciello Group's [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/).
 
 > **Note:** Alternatively you can find a number of contrast checkers online, such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). We suggest a local checker because it comes packaged with an on-screen color picker to find out a color value.
 
 For instance, let's test the colors on this page and see how we fare in the color Contrast Analyser:
 
-![Color contrast on this page: excellent!](colour-contrast.png)
+![Color contrast on this page: excellent!](color-contrast.png)
 
 The luminosity contrast ratio between text and background is 8.30:1, which exceeds the minimum standard (4.5:1) and should enable many visually-impaired people to read this page.
 
@@ -68,7 +69,11 @@ You can specify font size on a website either through relative units or absolute
 
 Absolute units are not proportionally calculated but refer to a size set in stone, so to speak, and are expressed most of the time in pixels (`px`). For instance, if in your CSS you declare this:
 
-    body { font-size:16px; }
+```css
+body {
+  font-size: 16px;
+}
+```
 
 … you are telling the browser that whatever happens, the font size must be 16 pixels. Modern browsers get around this rule by pretending that you're asking for "16 pixels when the user sets a zoom factor of 100%".
 
@@ -83,7 +88,7 @@ Relative units are expressed in `em`, `%` and `rem`:
 - Percent-based sizes: `%`
   - : This unit tells your browser that an element's font size must be N% of the previous element whose font size was expressed. If no parent can be found, the default font size within the browser is considered as the base size for the calculation (usually the equivalent of 16 pixels).
 - Em-based sizes: `em`
-  - : This unit is calculated the same way as percents, except that you compute in portions of 1 and not portions of 100. It is said that "em" is the width of a capital “M” in the alphabet (roughly speaking, an “M” fits into a square).
+  - : This unit is calculated the same way as percents, except that you compute in portions of 1 and not portions of 100. It is said that "em" is the width of a capital "M" in the alphabet (roughly speaking, an "M" fits into a square).
 - Rem-based sizes: `rem`
   - : This unit is proportional to the root element's font size and is expressed as portions of 1, like `em`.
 
@@ -91,40 +96,74 @@ Suppose we wanted a base font size of 16px and an h1 (main heading) at the equiv
 
 Here is the HTML we're using:
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Font size experiment</title>
-    </head>
-    <body>
-
-        <h1>This is our main heading
-            <span class="subheading">This is our subheading</span>
-        </h1>
-
-    </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Font size experiment</title>
+  </head>
+  <body>
+    <h1>
+      This is our main heading
+      <span class="subheading">This is our subheading</span>
+    </h1>
+  </body>
+</html>
+```
 
 A percent-based CSS will look like this:
 
-    body { font-size:100%; } /* 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-    h1 { font-size:200%; } /* twice the size of the body, thus 32 pixels */
-    span.subheading { font-size:50%; } /* half the size of the h1, thus 16 pixels to come back to the original size */
+```css
+body {
+  /* 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+  font-size: 100%;
+}
+h1 {
+  /* twice the size of the body, thus 32 pixels */
+  font-size: 200%;
+}
+span.subheading {
+  /* half the size of the h1, thus 16 pixels to come back to the original size */
+  font-size: 50%;
+}
+```
 
 The same problem expressed with ems:
 
-    body { font-size:1em; } /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-    h1 { font-size:2em; } /* twice the size of the body, thus 32 pixels */
-    span.subheading { font-size:0.5em; } /* half the size of the h1, thus 16 pixels to come back to the original size */
+```css
+body {
+  /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+  font-size: 1em;
+}
+h1 {
+  /* twice the size of the body, thus 32 pixels */
+  font-size: 2em;
+}
+span.subheading {
+  /* half the size of the h1, thus 16 pixels to come back to the original size */
+  font-size: 0.5em;
+}
+```
 
 As you can see, the math quickly gets daunting when you have to keep track of the parent, the parent's parent, the parent's parent's parent, and so on. (Most designs are done in pixel-based software, so the math has to be done by the person coding the CSS).
 
 Enter `rem`. This unit is relative to the root element's size and not to any other parent. The CSS can be rewritten thus:
 
-    body { font-size:1em; } /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-    h1 { font-size:2rem; } /* twice the size of the body, thus 32 pixels */
-    span.subheading { font-size:1rem; } /* original size */
+```css
+body {
+  /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+  font-size: 1em;
+}
+h1 {
+  /* twice the size of the body, thus 32 pixels */
+  font-size: 2rem;
+}
+span.subheading {
+  /* original size */
+  font-size: 1rem;
+}
+```
 
 Easier, isn't it? This works as of [Internet Explorer 9 and in every other current browser](https://caniuse.com/#search=rem), so please feel free to use this unit.
 
@@ -149,28 +188,33 @@ Of course the problem doesn't go away when we switch to the Web. The reader's ey
 
 To achieve this, you can specify a size for your text's container. Let's consider this HTML:
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Font size experiment</title>
-    </head>
-    <body>
-
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Font size experiment</title>
+  </head>
+  <body>
     <div class="container">
-        <h1>This is our main heading
-            <span class="subheading">This is our subheading</span>
-        </h1>
+      <h1>
+        This is our main heading
+        <span class="subheading">This is our subheading</span>
+      </h1>
 
-        <p>[lengthy text that spans many lines]</p>
+      <p>[lengthy text that spans many lines]</p>
     </div>
-
-    </body>
-    </html>
+  </body>
+</html>
+```
 
 We have a `div` with class `container`. We can style the `div` either to set its width (using the `width` property) or its maximum width so that it never gets too large (using the `max-width` property). If you want an elastic/responsive website, and you don't know what the browser's default width is, you can use the `max-width` property to allow up to 70 characters per line and no more:
 
-    div.container { max-width:70em; }
+```css
+div.container {
+  max-width: 70em;
+}
+```
 
 ### Alternative content for images, audio, and video
 
@@ -208,5 +252,5 @@ You must also provide alternatives to multimedia content.
 
 Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local:
 
-- **Installed software.** [ImageOptim](https://imageoptim.com/) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (all platforms), [PNGcrush](http://pmt.sourceforge.net/pngcrush/) (DOS, Unix/Linux)
-- **Online tools.** Yahoo's [smushit!](http://smush.it/), Dynamic drive's [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) (which can convert automatically from one format to another if it's more bandwidth-efficient)
+- **Installed software.** [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (all platforms), [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux)
+- **Online tools.** Dynamic drive's [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) (which can convert automatically from one format to another if it's more bandwidth-efficient)

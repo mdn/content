@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.address
 slug: Web/API/RTCIceCandidateStats/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -19,6 +20,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidateStats.address
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`address`** property of the
@@ -30,13 +32,7 @@ well.
 When a domain name is specified, the first IP address selected for that
 address is used, even if the domain name maps to multiple IP addresses.
 
-## Syntax
-
-```js
-candidateAddress = rtcIceCandidateStats.address;
-```
-
-### Value
+## Value
 
 Either an IPv4 or IPv6 address or a fully-qualified domain name, which corresponds to
 the candidate.
@@ -47,7 +43,7 @@ the candidate.
   characters, it is interpreted as an IPv6 address.
 - Otherwise, the `address` is presumed to be a fully-qualified domain name,
   which is resolved first using an AAAA record (assuming IPv6 is available), then using
-  an A record (if no result is found or the device onlu supports IPv4). If multiple IP
+  an A record (if no result is found or the device only supports IPv4). If multiple IP
   addresses are returned in response to the query, the {{Glossary("user agent")}}
   selects one, which is then used for the duration of ICE processing.
 

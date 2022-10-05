@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -12,6 +13,7 @@ tags:
   - readEntries
 browser-compat: api.FileSystemDirectoryReader.readEntries
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryReader")}} interface's **`readEntries()`** method retrieves the directory entries
@@ -22,9 +24,9 @@ Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which rep
 
 ## Syntax
 
-```js
-readEntries(successCallback);
-readEntries(successCallback, errorCallback);
+```js-nolint
+readEntries(successCallback)
+readEntries(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -44,9 +46,9 @@ readEntries(successCallback, errorCallback);
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example) for example code that uses this method.
 
@@ -58,12 +60,12 @@ See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem
 
 {{Compat}}
 
-On Chrome 77, `readEntries()` will only return the first 100 `FileSystemEntry` instances. In order to obtain all of the
-instances, `readEntries()` must be called multiple times.
+On Chrome 77, `readEntries()` will only return the first 100 `FileSystemEntry` instances. In order to obtain all of the
+instances, `readEntries()` must be called multiple times.
 
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystem")}}

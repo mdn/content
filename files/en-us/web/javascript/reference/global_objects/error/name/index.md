@@ -7,6 +7,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.name
 ---
+
 {{JSRef}}
 
 The **`name`** property represents a name for the type of error. The initial value is "Error".
@@ -20,7 +21,7 @@ By default, {{jsxref("Error")}} instances are given the name "Error". The `name`
 ### Throwing a custom error
 
 ```js
-var e = new Error('Malformed input'); // e.name is 'Error'
+const e = new Error('Malformed input'); // e.name is 'Error'
 
 e.name = 'ParseError';
 throw e;

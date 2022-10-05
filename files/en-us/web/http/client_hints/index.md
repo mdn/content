@@ -7,14 +7,15 @@ tags:
   - HTTP
   - Performance
 ---
-**Client Hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
+
+**Client Hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
 The server can determine which resources to send, based on the information that the client chooses to provide.
 
 The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web/HTTP/Headers#client_hints) and [summarized below](#hint_types).
 
 ## Overview
 
-A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in receiving.
+A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in receiving.
 When a client that supports client hints receives the `Accept-CH` header it can choose to append some or all of the listed client hint headers in its subsequent requests.
 
 For example, following `Accept-CH` in a response below, the client could append {{HTTPHeader("Width")}}, {{HTTPHeader("Downlink")}} and {{HTTPHeader("Sec-CH-UA")}} headers to all subsequent requests.
@@ -29,8 +30,9 @@ It is also relatively "privacy-preserving", in that it is up to the client to de
 There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client event if not requested.
 
 > **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
+>
 > ```html
-> <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA">
+> <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
 > ```
 
 ## Caching and Client Hints
@@ -42,7 +44,7 @@ This ensures that a different resource is cached for every different value of th
 Vary: Accept, Width, ECT
 ```
 
-You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncachable. (A new cache entry is created for every unique value.)
+You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncacheable. (A new cache entry is created for every unique value.)
 This applies in particular to network client hints like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 For more information see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
 
@@ -53,7 +55,7 @@ The user agent appends the requested client hint headers, or at least the subset
 
 In other words, the request for a specific set of hints does not expire until the browser is shut down.
 
-A server can replace the set of client hints it is interested in recieving by resending the `Accept-CH` response header with a new list.
+A server can replace the set of client hints it is interested in receiving by resending the `Accept-CH` response header with a new list.
 For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
 ## Low entropy hints
@@ -68,7 +70,6 @@ The high entropy hints are those that have the potential to give away more infor
 The decision might be based on user preferences, a permission request, or the permission policy.
 All client hints that are not low entropy hints are considered high entropy hints.
 
-
 ## Hint types
 
 ### User-agent client hints
@@ -76,7 +77,7 @@ All client hints that are not low entropy hints are considered high entropy hint
 User agent (UA) client hint headers allow a server to vary responses based on the user agent (browser), operating system, and device.
 Headers include: {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Arch")}}, {{HTTPHeader("Sec-CH-UA-Bitness")}}, {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}, {{HTTPHeader("Sec-CH-UA-Full-Version")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Model")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}, and {{HTTPHeader("Sec-CH-UA-Platform-Version")}}.
 
-Client hints are available to web page Javascript via the [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
+Client hints are available to web page JavaScript via the [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
 > **Note:** Servers currently get most of the same information by parsing the {{HTTPHeader("User-Agent")}} header.
 > For historical reasons this header contains a lot of largely irrelevant information, and information that might be used to identify a _particular user_.

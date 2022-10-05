@@ -1,6 +1,7 @@
 ---
 title: SVGSwitchElement
 slug: Web/API/SVGSwitchElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGSwitchElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSwitchElement`** interface corresponds to the {{SVGElement("switch")}} element.

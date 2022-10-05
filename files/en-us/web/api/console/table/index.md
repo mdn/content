@@ -1,6 +1,7 @@
 ---
 title: console.table()
 slug: Web/API/console/table
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.table
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.table()`** method displays tabular data as a table.
@@ -44,11 +46,11 @@ console.table(["apples", "oranges", "bananas"]);
 // an object whose properties are strings
 
 function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+  this.firstName = firstName;
+  this.lastName = lastName;
 }
 
-var me = new Person("John", "Smith");
+const me = new Person("John", "Smith");
 
 console.table(me);
 ```
@@ -63,7 +65,11 @@ objects, then their elements or properties are enumerated in the row, one per co
 ```js
 // an array of arrays
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+const people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 
@@ -77,9 +83,9 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+const john = new Person("John", "Smith");
+const jane = new Person("Jane", "Doe");
+const emily = new Person("Emily", "Jones");
 
 console.table([john, jane, emily]);
 ```
@@ -92,7 +98,7 @@ name.
 ```js
 // an object whose properties are objects
 
-var family = {};
+const family = {};
 
 family.mother = new Person("Jane", "Smith");
 family.father = new Person("John", "Smith");
@@ -116,9 +122,9 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+const john = new Person("John", "Smith");
+const jane = new Person("Jane", "Doe");
+const emily = new Person("Emily", "Jones");
 
 console.table([john, jane, emily], ["firstName"]);
 ```
@@ -131,9 +137,9 @@ You can sort the table by a particular column by clicking on that column's label
 
 ## Syntax
 
-```js
-console.table(data);
-console.table(data, columns);
+```js-nolint
+table(data)
+table(data, columns)
 ```
 
 ### Parameters
@@ -142,6 +148,10 @@ console.table(data, columns);
   - : The data to display. This must be either an array or an object.
 - `columns`
   - : An array containing the names of columns to include in the output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Range.cloneRange()
 slug: Web/API/Range/cloneRange
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.cloneRange
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Range.cloneRange()`** method returns a
@@ -19,11 +21,19 @@ The returned clone is copied by value, not reference, so a change in either
 
 ## Syntax
 
-```js
-clone = range.cloneRange();
+```js-nolint
+cloneRange()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Range")}} object.
+
+## Examples
 
 ```js
 range = document.createRange();

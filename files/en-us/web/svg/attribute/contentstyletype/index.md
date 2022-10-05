@@ -7,11 +7,12 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.svg.contentStyleType
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`contentStyleType`** attribute specifies the style sheet language for the given document fragment on the {{SVGElement("svg")}} element.
 
-This language is used for all instances of style that do not specify their own styling language, such as the {{SVGAttr("style")}} attribute that is available on many elements. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt).
+This language is used for all instances of style that do not specify their own styling language, such as the {{SVGAttr("style")}} attribute that is available on many elements. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt).
 
 ## Usage notes
 
@@ -23,7 +24,7 @@ This language is used for all instances of style that do not specify their own s
         One of the content types specified in the
         <a
           class="external external-icon"
-          href="http://www.ietf.org/rfc/rfc2046.txt"
+          href="https://www.ietf.org/rfc/rfc2046.txt"
           rel="noopener"
           >Media Types</a
         >
@@ -46,24 +47,7 @@ The use of `contentStyleType` is therefore deprecated.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "script.html#ContentScriptTypeAttribute", "contentScriptType")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -71,6 +55,6 @@ The use of `contentStyleType` is therefore deprecated.
 
 ## See also
 
-*   [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt)
-*   {{SVGElement("style")}} element
-*   {{SVGAttr("style")}} attribute
+- [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt)
+- {{SVGElement("style")}} element
+- {{SVGAttr("style")}} attribute

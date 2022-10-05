@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setOrientation()
 slug: Web/API/PannerNode/setOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -8,9 +9,13 @@ tags:
   - Reference
   - Web Audio API
   - setOrientation
+  - Deprecated
 browser-compat: api.PannerNode.setOrientation
 ---
-{{ APIRef("Web Audio API") }} {{Deprecated_Header}}
+
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
+
+> **Note:** The suggested replacement for this deprecated method is to instead set the [`orientationX`](/en-US/docs/Web/API/PannerNode/orientationX), [`orientationY`](/en-US/docs/Web/API/PannerNode/orientationY), and [`orientationZ`](/en-US/docs/Web/API/PannerNode/orientationZ) attributes directly.
 
 The `setOrientation()` method of the {{ domxref("PannerNode") }} Interface defines the direction the audio source is playing in.
 
@@ -20,28 +25,26 @@ The three parameters `x`, `y` and `z` are unitless and describe a direction vect
 
 ## Syntax
 
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.setOrientation(1,0,0);
+```js-nolint
+setOrientation(x, y, z)
 ```
 
-### Returns
+### Parameters
 
-{{jsxref('undefined')}}.
+- `x`
+  - : The x value of the panner's direction vector in 3D space.
+- `y`
+  - : The y value of the panner's direction vector in 3D space.
+- `z`
+  - : The z value of the panner's direction vector in 3D space.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
-
-- x
-  - : The x value of the panner's direction vector in 3D space.
-- y
-  - : The y value of the panner's direction vector in 3D space.
-- z
-  - : The z value of the panner's direction vector in 3D space.
 
 ## Specifications
 

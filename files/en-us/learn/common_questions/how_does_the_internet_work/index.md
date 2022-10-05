@@ -6,6 +6,7 @@ tags:
   - Tutorial
   - WebMechanics
 ---
+
 {{LearnSidebar}}
 
 This article discusses what the Internet is and how it works.
@@ -41,13 +42,13 @@ The **Internet** is the backbone of the Web, the technical infrastructure that m
 ## Active Learning
 
 - [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc): A 5 minute video to understand the very basics of Internet by Aaron Titus.
-- [How does the Internet work?](https://www.youtube.com/watch?v=x3c1ih2NJEg) Detailed well visualized 8 minute video.
+- [How does the Internet work?](https://www.youtube.com/watch?v=x3c1ih2NJEg) Detailed well visualized 9 minute video.
 
 ## Deeper dive
 
 ### A simple network
 
-When two computers need to communicate, you have to link them, either physically (usually with an [Ethernet cable](https://en.wikipedia.org/wiki/Ethernet_crossover_cable)) or wirelessly (for example with [WiFi](https://en.wikipedia.org/wiki/WiFi) or [Bluetooth](https://en.wikipedia.org/wiki/Bluetooth) systems). All modern computers can sustain any of those connections.
+When two computers need to communicate, you have to link them, either physically (usually with an [Ethernet cable](https://en.wikipedia.org/wiki/Ethernet_crossover_cable)) or wirelessly (for example with [Wi-Fi](https://en.wikipedia.org/wiki/WiFi) or [Bluetooth](https://en.wikipedia.org/wiki/Bluetooth) systems). All modern computers can sustain any of those connections.
 
 > **Note:** For the rest of this article, we will only talk about physical cables, but wireless networks work the same.
 
@@ -105,7 +106,7 @@ They are typically used to safely and securely share information with clients an
 Often their functions are similar to those provided by an intranet: information and file sharing, collaboration tools, discussion boards, etc.
 
 Both intranets and extranets run on the same kind of infrastructure as the Internet, and use the same protocols.
-They can therefore be accessed by authorised members from different physical locations.
+They can therefore be accessed by authorized members from different physical locations.
 
 ![Graphical Representation of how Extranet and Intranet work](internet-schema-8.png)
 

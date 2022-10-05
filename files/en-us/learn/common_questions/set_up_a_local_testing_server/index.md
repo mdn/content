@@ -14,6 +14,7 @@ tags:
   - server-side
   - servers
 ---
+
 This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 
 <table>
@@ -39,9 +40,9 @@ This article explains how to set up a simple local testing server on your machin
 
 ## Local files vs. remote files
 
-Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open..._ and navigating to the HTML file. There are many ways to achieve this.
+Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file. There are many ways to achieve this.
 
-If the web address path starts with `file://` followed by the path to the file on your local hard drive, a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with `http://` or `https://`, to show that the file has been received via HTTP.
+If the web address path starts with `file://` followed by the path to the file on your local hard drive, a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with `http://` or `https://`, to show that the file has been received via HTTP.
 
 ## The problem with testing local files
 
@@ -61,57 +62,57 @@ One of the easiest ways to do this for our purposes is to use Python's `http.ser
 
 To do this:
 
-1.  Install Python. If you are using Linux or macOS, it should be available on your system already. If you are a Windows user, you can get an installer from the Python homepage and follow the instructions to install it:
+1. Install Python. If you are using Linux or macOS, it should be available on your system already. If you are a Windows user, you can get an installer from the Python homepage and follow the instructions to install it:
 
-    - Go to [python.org](https://www.python.org/)
-    - Under the Download section, click the link for Python "3.xxx".
-    - At the bottom of the page, click the _Windows Installer_ link to download the installer file.
-    - When it has downloaded, run it.
-    - On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
-    - Click _Install_, then click _Close_ when the installation has finished.
+   - Go to [python.org](https://www.python.org/)
+   - Under the Download section, click the link for Python "3.xxx".
+   - At the bottom of the page, click the _Windows Installer_ link to download the installer file.
+   - When it has downloaded, run it.
+   - On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
+   - Click _Install_, then click _Close_ when the installation has finished.
 
-2.  Open your command prompt (Windows) / terminal (macOS/ Linux). To check if Python is installed, enter the following command:
+2. Open your command prompt (Windows) / terminal (macOS/ Linux). To check if Python is installed, enter the following command:
 
-    ```bash
-    python -V
-    # If the above fails, try:
-    python3 -V
-    # Or, if the "py" command is available, try:
-    py -V
-    ```
+   ```bash
+   python -V
+   # If the above fails, try:
+   python3 -V
+   # Or, if the "py" command is available, try:
+   py -V
+   ```
 
-3.  This should return a version number. If this is OK, navigate to the directory that your example is inside, using the `cd` command.
+3. This should return a version number. If this is OK, navigate to the directory that your example is inside, using the `cd` command.
 
-    ```bash
-    # include the directory name to enter it, for example
-    cd Desktop
-    # use two dots to jump up one directory level if you need to
-    cd ..
-    ```
+   ```bash
+   # include the directory name to enter it, for example
+   cd Desktop
+   # use two dots to jump up one directory level if you need to
+   cd ..
+   ```
 
-4.  Enter the command to start up the server in that directory:
+4. Enter the command to start up the server in that directory:
 
-    ```bash
-    # If Python version returned above is 3.X
-    # On Windows, try "python -m http.server" or "py -3 -m http.server"
-    python3 -m http.server
-    # If Python version returned above is 2.X
-    python -m SimpleHTTPServer
-    ```
+   ```bash
+   # If Python version returned above is 3.X
+   # On Windows, try "python -m http.server" or "py -3 -m http.server"
+   python3 -m http.server
+   # If Python version returned above is 2.X
+   python -m SimpleHTTPServer
+   ```
 
-5.  By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
+5. By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
 
-> **Note:** If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800` (Python 3.x) or `python -m SimpleHTTPServer 7800` (Python 2.x). You can then access your content at `localhost:7800`.
+> **Note:** If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800` (Python 3.x) or `python -m SimpleHTTPServer 7800` (Python 2.x). You can then access your content at `localhost:7800`.
 
 ## Running server-side languages locally
 
-Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, but it is merely a _static_ file server; it doesn't know how to run code written in languages such as Python, PHP or JavaScript. To handle them, you'll need something more — exactly what you'll need depends on the server-side language you are trying to run. Here are a few examples:
+Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, but it is merely a _static_ file server; it doesn't know how to run code written in languages such as Python, PHP or JavaScript. To handle them, you'll need something more — exactly what you'll need depends on the server-side language you are trying to run. Here are a few examples:
 
 - To run Python server-side code, you'll need to use a Python web framework. There are many popular Python web frameworks, such as Django (a [guide](/en-US/docs/Learn/Server-side/Django) is available), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
 - To run Node.js (JavaScript) server-side code, you'll need to use raw node or a framework built on top of it. Express is a good choice — see [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs).
-- To run PHP server-side code, launch [PHP's built-in development server](https://php.net/manual/en/features.commandline.webserver.php):
+- To run PHP server-side code, launch [PHP's built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
   ```bash
-  $ cd path/to/your/php/code
-  $ php -S localhost:8000
+  cd path/to/your/php/code
+  php -S localhost:8000
   ```

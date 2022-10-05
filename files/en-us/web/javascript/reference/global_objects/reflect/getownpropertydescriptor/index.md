@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The static
@@ -22,7 +23,7 @@ otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ```
 
@@ -90,6 +91,6 @@ Object.getOwnPropertyDescriptor('foo', 0)
 
 ## See also
 
-- A polyfill of `Reflect.getOwnPropertyDescriptor` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.getOwnPropertyDescriptor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

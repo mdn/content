@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,9 +11,8 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.hasFeature
 ---
-{{ApiRef("DOM")}}
 
-{{Deprecated_Header}}
+{{ApiRef("DOM")}}{{Deprecated_Header}}
 
 The
 **`DOMImplementation.hasFeature()`** method returns a
@@ -25,17 +25,21 @@ The latest version of the spec settled to force this method to always return
 
 ## Syntax
 
-```js
-const flag = document.implementation.hasFeature(feature, version);
+```js-nolint
+hasFeature(feature, version)
 ```
 
 ### Parameters
 
 - `feature`
-  - : A {{domxref("DOMString")}} representing the feature name.
+  - : A string representing the feature name.
 - `version`
-  - : A {{domxref("DOMString")}} representing the version of the specification defining
+  - : A string representing the version of the specification defining
     the feature.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

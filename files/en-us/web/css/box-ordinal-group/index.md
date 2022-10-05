@@ -1,17 +1,20 @@
 ---
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
+page-type: css-property
 tags:
   - CSS
   - CSS Property
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.box-ordinal-group
 ---
-{{CSSRef}}{{Non-standard_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
+{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 The **`box-ordinal-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to an ordinal group.
 
@@ -38,7 +41,10 @@ The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;int
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+box-ordinal-group =
+  <integer>
+```
 
 ## Examples
 
@@ -48,15 +54,15 @@ In an older version of the spec, `box-ordinal-group` was included to allow you t
 
 ```css
 article:nth-child(1) {
-  -webkit-box-ordinal-group: 2
-  -moz-box-ordinal-group: 2
-  box-ordinal-group: 2
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
 }
 
 article:nth-child(2) {
-  -webkit-box-ordinal-group: 1
-  -moz-box-ordinal-group: 1
-  box-ordinal-group: 1
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  box-ordinal-group: 1;
 }
 ```
 

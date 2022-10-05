@@ -10,6 +10,9 @@ tags:
   - Reference
   - minlength
   - textarea
+browser-compat:
+  - html.elements.input.minlength
+  - html.elements.textarea.minlength
 ---
 
 {{HTMLSidebar}}
@@ -23,7 +26,8 @@ The input will fail constraint validation if the length of the text value of the
 By adding `minlength="5"`, the value must either be empty or five characters or longer to be valid.
 
 ```html
-<label for="fruit">Enter a fruit name that is at least 5 letters long</label> <input type="text" minlength="5" id="fruit">
+<label for="fruit">Enter a fruit name that is at least 5 letters long</label>
+<input type="text" minlength="5" id="fruit" />
 ```
 
 We can use pseudoclasses to style the element based on whether the value is valid. The value will be valid as long as it is either null (empty) or five or more characters long. _Lime_ is invalid, _lemon is valid_.
@@ -44,32 +48,11 @@ input:invalid:focus {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'minlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'minlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## See also
 

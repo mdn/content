@@ -1,13 +1,34 @@
 ---
 title: How to file ARIA-related bugs
-slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs 
+slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
 tags:
   - ARIA
   - Bugzilla
 ---
-The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
-> **Note:** When finding a bug, please also update the relevant compatibility tables in the [examples page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases).
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
+    <li class="toggle">
+      <details><summary>ARIA states and properties</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details><summary>WAI-ARIA Roles</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
+      </details>
+    </li>
+  </ol>
+</section>
+
+The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
 ### Screen Readers
 
@@ -38,9 +59,7 @@ The state of ARIA technology has always depended on the community. If you notice
   </tbody>
   </table>
 
-
 ### Browsers
-
 
 <table style="width: 100%;">
  <thead>
@@ -79,7 +98,7 @@ The state of ARIA technology has always depended on the community. If you notice
   <tr>
    <td>Opera</td>
    <td><a href="https://bugs.opera.com/wizard/">File Opera bugs</a></td>
-   <td><span>Use [ARIA] in the summary field</span></td>
+   <td>Use [ARIA] in the summary field</td>
   </tr>
  </tbody>
 </table>

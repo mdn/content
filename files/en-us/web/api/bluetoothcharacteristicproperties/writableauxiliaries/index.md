@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.writableAuxiliaries
 slug: Web/API/BluetoothCharacteristicProperties/writableAuxiliaries
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -13,20 +14,15 @@ tags:
   - writableAuxiliaries
 browser-compat: api.BluetoothCharacteristicProperties.writableAuxiliaries
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`writableAuxiliaries`** read-only
 property of the {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if reliable writes to the characteristic
 descriptor is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.writableAuxiliaries;
-```
-
-### Value
+## Value
 
 A boolean value.
 

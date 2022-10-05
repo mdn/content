@@ -1,6 +1,7 @@
 ---
 title: SVGTransform
 slug: Web/API/SVGTransform
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTransform
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG transform interface
@@ -21,7 +23,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -73,7 +75,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a href="https://www.w3.org/TR/SVG11/coords.html#InterfaceSVGTransform"
           >SVG 1.1 (2nd Edition)</a
@@ -147,7 +149,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
   <tbody>
     <tr>
       <td><code>type</code></td>
-      <td>unsigned short</td>
+      <td>unsigned short</td>
       <td>
         The type of the value as specified by one of the SVG_TRANSFORM_*
         constants defined on this interface.

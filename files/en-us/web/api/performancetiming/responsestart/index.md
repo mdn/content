@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.responseStart
 slug: Web/API/PerformanceTiming/responseStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.responseStart
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
@@ -24,11 +26,9 @@ read-only property returns an `unsigned long long` representing the moment in
 time (in milliseconds since the UNIX epoch) when the browser received the first byte of
 the response from the server, cache, or local resource.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.responseStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

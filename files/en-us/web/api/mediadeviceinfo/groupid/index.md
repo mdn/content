@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.groupId
 slug: Web/API/MediaDeviceInfo/groupId
+page-type: web-api-instance-property
 tags:
   - API
   - Device
@@ -12,25 +13,20 @@ tags:
   - output
 browser-compat: api.MediaDeviceInfo.groupId
 ---
+
 {{APIRef("Media Capture")}}
 
-The **`groupId`** readonly property of
-the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}} that
+The **`groupId`** readonly property of
+the {{domxref("MediaDeviceInfo")}} interface returns a string that
 is a group identifier.
 
 Two devices have the same group identifier if they
 belong to the same physical device; for example, a monitor with both a built-in camera
 and microphone.
 
-## Syntax
+## Value
 
-```js
-var groupID = mediaDeviceInfo.groupId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which uniquely identifies the group of related devices to
+A string which uniquely identifies the group of related devices to
 which this device belongs.
 
 ## Specifications
@@ -45,12 +41,12 @@ devices together for presentation purposes, or to make it easy for the user to c
 use the built-in camera and microphone on the same display at the same time.
 
 ```js
-const getDeviceGroup = mainDevInfo => {
+const getDeviceGroup = (mainDevInfo) => {
   let devList = [];
 
   navigator.mediaDevices.enumerateDevices()
-  .then(devices => {
-    devices.forEach(device => {
+  .then((devices) => {
+    devices.forEach((device) => {
       if (device.groupId === mainDevInfo.groupId) {
         devList.push(device);
       }
@@ -85,12 +81,12 @@ This version of the example puts the passed-in device at the top of the result l
 then adds any other members of the group that are found:
 
 ```js
-const getDeviceGroup = mainDevInfo => {
+const getDeviceGroup = (mainDevInfo) => {
   let devList = [mainDevInfo];
 
   navigator.mediaDevices.enumerateDevices()
-  .then(devices => {
-    devices.forEach(device => {
+  .then((devices) => {
+    devices.forEach((device) => {
       if ((device.groupId === mainDevInfo.groupId) &&
           (device.deviceId !== mainDevInfo.deviceId)) {
         devList.push(device);

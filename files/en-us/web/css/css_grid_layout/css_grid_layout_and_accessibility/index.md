@@ -1,23 +1,25 @@
 ---
-title: CSS Grid Layout and Accessibility
+title: Grid layout and accessibility
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
+page-type: guide
 tags:
   - Accessibility
   - CSS
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
-Those of us who have been doing web development for more years than we care to remember might consider that CSS Grid is a little bit like using “tables for layout”. Back in the early days of web design, the way we constructed page layout was to use HTML tables, then fragment our design into the cells of those tables in order to create a layout. This had some advantages over the “CSS Positioning” that came afterwards, in that we could take advantage of the alignment and full height columns offered by table display. The biggest downside however was that it tied our design to the mark-up, often creating accessibility issues as it did so. In order to lay the design out in the table we often broke up the content in ways that made no sense at all when read out by a screen reader for example.
+Those of us who have been doing web development for more years than we care to remember might consider that CSS Grid is a little bit like using "tables for layout". Back in the early days of web design, the way we constructed page layout was to use HTML tables, then fragment our design into the cells of those tables in order to create a layout. This had some advantages over the "CSS Positioning" that came afterwards, in that we could take advantage of the alignment and full height columns offered by table display. The biggest downside however was that it tied our design to the markup, often creating accessibility issues as it did so. In order to lay the design out in the table we often broke up the content in ways that made no sense at all when read out by a screen reader for example.
 
 In moving to CSS we often spoke about CSS for layout enabling a separation of content and markup and presentation. The ultimate aim being that we could create a semantic and well structured document, then apply CSS to create the layout we desired. Sites such as the [CSS Zen Garden](http://www.csszengarden.com/) showcased this ability. The CSS Zen Garden challenged us to take identical markup and create a unique design using CSS.
 
-[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) does not have the same issues that tables did, our grid structure is defined in CSS rather than in the mark-up. If we need to add an element we can use something with no semantic meaning. On paper grid helps us properly fulfill that promise of content separated from mark-up, however is it possible to go too far with this idea? Is it possible that we could _create_ an accessibility issue through our use of grids?
+[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) does not have the same issues that tables did, our grid structure is defined in CSS rather than in the markup. If we need to add an element we can use something with no semantic meaning. On paper grid helps us properly fulfill that promise of content separated from markup, however is it possible to go too far with this idea? Is it possible that we could _create_ an accessibility issue through our use of grids?
 
 ## Re-ordering content in CSS Grid Layout
 
-We’ve already seen in these guides that grid gives us power to re-order the content of our page in various ways. We can use the {{cssxref("order")}} property, which will change how items auto-place. We can use `grid-auto-flow: dense` which will take items visually out of DOM order. We can also position items using line-based placement of grid template areas, without considering their location in the source.
+We've already seen in these guides that grid gives us power to re-order the content of our page in various ways. We can use the {{cssxref("order")}} property, which will change how items auto-place. We can use `grid-auto-flow: dense` which will take items visually out of DOM order. We can also position items using line-based placement of grid template areas, without considering their location in the source.
 
 The [specification](https://drafts.csswg.org/css-grid/#order-accessibility) includes a section that covers Reordering and Accessibility. In the introduction to that section are details of what the specification expects browsers to do when the content is visually reordered using Grid Layout.
 
@@ -38,20 +40,22 @@ Any time you reorder things with grid layout – or with flexbox – you only pe
 In this example I have used grid to lay out a set of boxes that contain links. I have used the line-based placement properties to position box 1 on the second row of the grid. Visually it now appears as the fourth item in the list. However, if I tab from link to link the tab order still begins with box 1, as it comes first in the source.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -99,7 +103,7 @@ Another issue to be aware of in CSS Grid Layout and to a lesser extent in CSS Fl
 
 The [subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) value of `grid-template-columns` and `grid-template-rows` will solve this problem once widely implemented. It will allow the grid to be inherited by grid items and passed down the tree.
 
-Given that interoperable support for subgrid is limited, there is a definite temptation when developing a site using CSS Grid Layout to flatten out the markup, to remove semantic elements in order to make it simpler to create a layout. An example would be where some content was semantically marked up as a list but you decide to use a set of {{HTMLElement("div")}} elements instead as then you can have the element to be a direct child of a container set to `display: grid`. Be aware of this temptation and find ways to develop your design without stripping out the markup. Starting out with a well-structured document is a very good way to avoid the problem, as you will be aware that you are removing semantic elements in order to make the layout work if you actually have to go into the document and do so!
+Given that interoperable support for subgrid is limited, there is a definite temptation when developing a site using CSS Grid Layout to flatten out the markup, to remove semantic elements in order to make it simpler to create a layout. An example would be where some content was semantically marked up as a list but you decide to use a set of {{HTMLElement("div")}} elements instead as then you can have the element to be a direct child of a container set to `display: grid`. Be aware of this temptation and find ways to develop your design without stripping out the markup. Starting out with a well-structured document is a very good way to avoid the problem, as you will be aware that you are removing semantic elements in order to make the layout work if you actually have to go into the document and do so!
 
 ## Further reading
 
@@ -107,4 +111,4 @@ There is not a lot of existing material regarding accessibility and CSS Grid Lay
 
 The concept of visual display following document source order is detailed in the _WCAG Techniques for Success Criteria – [Technique C27](https://www.w3.org/TR/WCAG20-TECHS/C27.html)_.
 
-As a way to start thinking about these issues, as you use CSS Grid Layout I would suggest reading _[Flexbox & the Keyboard Navigation Disconnect](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)_ from Léonie Watson. Also [the video of Léonie’s presentation from ffconf](https://www.youtube.com/watch?v=spxT2CmHoPk) is helpful to understand more about how screen readers work with the visual representation of things in CSS. Adrian Roselli has also posted regarding [tab order in various browsers](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) – although this was prior to grid support being fully implemented in Firefox.
+As a way to start thinking about these issues, as you use CSS Grid Layout I would suggest reading _[Flexbox & the Keyboard Navigation Disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)_ from Léonie Watson. Also [the video of Léonie's presentation from ffconf](https://www.youtube.com/watch?v=spxT2CmHoPk) is helpful to understand more about how screen readers work with the visual representation of things in CSS. Adrian Roselli has also posted regarding [tab order in various browsers](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) – although this was prior to grid support being fully implemented in Firefox.

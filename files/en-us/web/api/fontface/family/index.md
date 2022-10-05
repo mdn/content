@@ -1,6 +1,7 @@
 ---
 title: FontFace.family
 slug: Web/API/FontFace/family
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -12,25 +13,21 @@ tags:
   - family
 browser-compat: api.FontFace.family
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`FontFace.family`** property
-allows the author to get or set the font family of a {{domxref("FontFace")}} object.
-This is equivalent to the {{cssxref("@font-face/font-family", "font-family")}}
-descriptor of {{cssxref("@font-face")}}.
+The **`FontFace.family`** property allows the author to get or set the font family of a {{domxref("FontFace")}} object.
 
-## Syntax
+The value is used for name matching against a particular font face when styling elements using the [`font-family`](/en-US/docs/Web/CSS/font-family) property.
+Any name may be used, and this overrides any name specified in the underlying font data.
 
-```js
-instanceOfFontFace.family = 'font family name';
-let fontFace = instanceOfFontFace.family; // "font family name"
-```
+This property is equivalent to the {{cssxref("@font-face/font-family", "font-family")}} descriptor of {{cssxref("@font-face")}}.
 
-### Value
+## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
-## Example
+## Examples
 
 ```js
 let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)');

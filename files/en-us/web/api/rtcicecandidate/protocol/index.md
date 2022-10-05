@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.protocol
 slug: Web/API/RTCIceCandidate/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -14,6 +15,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`protocol`** property is a string
@@ -24,15 +26,9 @@ You can't specify the value of `protocol` directly in the options object, but it
 
 `protocol` is `null` by default if not specified properly in the SDP, but this is an error condition and will result in a thrown exception when you call {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-## Syntax
+## Value
 
-```js
-var protocol = RTCIceCandidate.protocol;
-```
-
-### Value
-
-A {{domxref("DOMString")}} that indicates what network protocol the candidate uses:
+A string that indicates what network protocol the candidate uses:
 
 - `tcp`
   - : The candidate, if selected, would use {{Glossary("TCP")}} as the transport protocol for its data. The {{domxref("RTCIceCandidate.tcpType", "tcpType")}} property provides additional information about the kind of TCP candidate represented by the object.
@@ -46,21 +42,24 @@ A {{domxref("DOMString")}} that indicates what network protocol the candidate us
 
 Here's an example candidate a-line from an ICE transaction:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 The third field, `"udp"`, is the protocol type, indicating that the
 candidate would use the UDP transport protocol.
 
-## Example
+## Examples
 
 This code snippet examines the value of `protocol` to decide if it should
 look at the value of {{domxref("RTCIceCandidate.tcpType", "tcpType")}} to see if it's a
 **simultaneous-open** (**S-O**) candidate.
 
 ```js
-if (candidate.protocol == "tcp") {
-  if (candidate.tcpType == "so") {
+if (candidate.protocol === "tcp") {
+  if (candidate.tcpType === "so") {
     adjustForSimultaneousOpen(candidate);
+  }
 }
 ```
 

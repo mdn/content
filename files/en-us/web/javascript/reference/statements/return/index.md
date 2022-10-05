@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.return
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`return`** statement ends function execution and
@@ -16,8 +17,8 @@ specifies a value to be returned to the function caller.
 
 ## Syntax
 
-```js
-return [expression]; 
+```js-nolint
+return [expression]
 ```
 
 - `expression`
@@ -33,9 +34,9 @@ where `x` is a number.
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
-var demo = square(3);
+const demo = square(3);
 // demo will equal 9
 ```
 
@@ -53,11 +54,11 @@ return x + y / 3;
 
 ### Automatic Semicolon Insertion
 
-The `return` statement is affected by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). No line terminator is allowed between the
-`return` keyword and the expression.
+The `return` statement is affected by
+[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion).
+No line terminator is allowed between the `return` keyword and the expression.
 
-```js
+```js example-bad
 return
 a + b;
 ```
@@ -78,7 +79,7 @@ To avoid this problem (to prevent ASI), you could use parentheses:
 
 ```js
 return (
-  a + b
+  a + b
 );
 ```
 
@@ -90,14 +91,14 @@ A function immediately stops at the point where `return` is called.
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // infinite loop
-    console.log(count + 'A'); // until 5
-      if (count === 5) {
-        return;
-      }
-      console.log(count + 'B');  // until 4
+  for (let count = 1; ; count++) {  // infinite loop
+    console.log(`${count}A`); // until 5
+    if (count === 5) {
+      return;
     }
-  console.log(count + 'C');  // never appears
+    console.log(`${count}B`);  // until 4
+  }
+  console.log(`${count}C`);  // never appears
 }
 
 counter();
@@ -123,7 +124,7 @@ function magic() {
   return function calc(x) { return x * 42; };
 }
 
-var answer = magic();
+const answer = magic();
 answer(1337); // 56154
 ```
 
@@ -137,5 +138,5 @@ answer(1337); // 56154
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)

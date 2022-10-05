@@ -1,6 +1,7 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.letter-spacing
 ---
+
 {{CSSRef}}
 
 The **`letter-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal spacing behavior between text characters. This value is added to the natural spacing between characters while rendering the text. Positive values of `letter-spacing` causes characters to spread farther apart, while negative values of `letter-spacing` bring characters closer together.
@@ -25,11 +27,13 @@ letter-spacing: normal;
 /* <length> values */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Global values */
 letter-spacing: inherit;
 letter-spacing: initial;
+letter-spacing: revert;
+letter-spacing: revert-layer;
 letter-spacing: unset;
 ```
 
@@ -80,11 +84,21 @@ Some written languages should not have any letter spacing applied. For instance,
 #### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 #### Result

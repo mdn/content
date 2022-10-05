@@ -7,7 +7,9 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-5
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`431 Request Header Fields Too Large`** response status code
@@ -35,9 +37,7 @@ Servers will often produce this status if:
 
 ## Specifications
 
-| Specification                                                                    | Title                        |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
+{{Specifications}}
 
 ## See also
 

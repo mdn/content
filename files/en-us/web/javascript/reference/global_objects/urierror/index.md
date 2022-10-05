@@ -9,9 +9,12 @@ tags:
   - URIError
 browser-compat: javascript.builtins.URIError
 ---
+
 {{JSRef}}
 
 The **`URIError`** object represents an error when a global URI handling function was used in a wrong way.
+
+`URIError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ## Constructor
 
@@ -21,16 +24,18 @@ The **`URIError`** object represents an error when a global URI handling functio
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : Error message. Although ECMA-262 specifies that {{jsxref("URIError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}
+- {{jsxref("Error.prototype.cause", "URIError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}} {{non-standard_inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}} {{non-standard_inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Examples

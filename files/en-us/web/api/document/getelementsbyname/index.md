@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 The **`getElementsByName()`** method
@@ -18,16 +20,20 @@ elements with a given `name` attribute in the document.
 
 ## Syntax
 
-```js
-var elements = document.getElementsByName(name);
+```js-nolint
+getElementsByName(name)
 ```
 
-- _elements_ is a live {{domxref("NodeList")}} Collection, meaning it
-  automatically updates as new elements with the same `name` are added
-  to/removed from the document.
-- _name_ is the value of the `name` attribute of the element(s).
+### Parameters
 
-## Example
+- `name`
+  - : The value of the `name` attribute of the element(s) we are looking for.
+
+### Return value
+
+A live {{domxref("NodeList")}} collection, meaning it automatically updates as new elements with the same `name` are added to, or removed from, the document.
+
+## Examples
 
 ```html
 <!DOCTYPE html>
@@ -43,7 +49,7 @@ var elements = document.getElementsByName(name);
 ```
 
 ```js
-var up_names = document.getElementsByName("up");
+const up_names = document.getElementsByName("up");
 console.log(up_names[0].tagName); // displays "INPUT"
 ```
 

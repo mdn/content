@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - reset
 browser-compat: api.HTMLMediaElement.load
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}} method
@@ -35,8 +37,8 @@ causing the changes to take effect.
 
 ## Syntax
 
-```js
-mediaElement.load();
+```js-nolint
+load()
 ```
 
 ### Parameters
@@ -45,7 +47,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -67,23 +69,23 @@ Appropriate events will be sent to the media element itself as the load process
 proceeds:
 
 - If the element is already in the process of loading media, that load process is
-  aborted and the **{{event("abort")}}** event is sent.
+  aborted and the **{{domxref("HTMLMediaElement/abort_event", "abort")}}** event is sent.
 - If the element has already been initialized with media, the
-  **{{event("emptied")}}** event is sent.
+  **{{domxref("HTMLMediaElement/emptied_event", "emptied")}}** event is sent.
 - If resetting the playback position to the beginning of the media actually changes
   the playback position (that is, it was not already at the beginning), a
-  **{{event("timeupdate")}}** event is sent.
+  **{{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}}** event is sent.
 - Once media has been selected and loading is ready to begin, the
-  **{{event("loadstart")}}** event is delivered.
+  **{{domxref("HTMLMediaElement/loadstart_event", "loadstart")}}** event is delivered.
 - From this point onward, events are sent just like any media load.
 
-## Example
+## Examples
 
 This example finds a {{HTMLElement("video")}} element in the document and resets it by
 calling `load()`.
 
 ```js
-var mediaElem = document.querySelector("video");
+const mediaElem = document.querySelector("video");
 mediaElem.load();
 ```
 

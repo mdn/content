@@ -8,13 +8,13 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  - Experimental
 browser-compat: http.headers.Sec-CH-UA-Platform-Version
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Platform-Version`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the version of the operating system on which the user agent is running. 
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
+The **`Sec-CH-UA-Platform-Version`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the version of the operating system on which the user agent is running.
 
 <table class="properties">
   <tbody>
@@ -32,7 +32,6 @@ The **`Sec-CH-UA-Platform-Version`** [user agent client hint](/en-US/docs/Web/HT
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -42,10 +41,11 @@ Sec-CH-UA-Platform-Version: <version>
 ### Directives
 
 - `<version>`
-  - : The version string typically contains the operating system version in a string, consisting of dot-separated major, minor and patch version numbers.
-     For example, `"11.0.0"`
 
-     The version string on Linux is always empty.
+  - : The version string typically contains the operating system version in a string, consisting of dot-separated major, minor and patch version numbers.
+    For example, `"11.0.0"`
+
+    The version string on Linux is always empty.
 
 ## Examples
 

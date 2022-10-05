@@ -1,36 +1,29 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
+page-type: web-api-instance-property
 tags:
   - API
-  - Battery API
   - Property
   - Reference
 browser-compat: api.BatteryManager.chargingTime
 ---
-{{deprecated_header}}
 
 {{APIRef("Battery API")}}
 
-Indicates the amount of time, in seconds, that remain until the battery is fully
-charged.
+The **`BatteryManager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged or `0` if the battery is already fully charged. If the battery is currently
+discharging, its value is
+[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity). When its value changes, the [`chargingtimechange`](/en-US/docs/Web/API/BatteryManager/chargingtimechange_event) event is fired.
 
-> **Note:** Even if the time returned is precise to the second, browsers round them to a higher
-> interval (typically to the closest 15 minutes) for privacy reasons.
+> **Note:** Even if the time returned is precise to the second,
+> browsers round them to a higher interval
+> (typically to the closest 15 minutes) for privacy reasons.
 
-## Syntax
+## Value
 
-```js
-var time = battery.chargingTime
-```
+A number.
 
-On return, `time` is the remaining time in seconds until the
-`battery`, which is a {{domxref("BatteryManager")}} object, is fully
-charged, or 0 if the battery is already fully charged. If the battery is currently
-discharging, this value is
-[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
-
-## Example
+## Examples
 
 ### HTML Content
 
@@ -41,15 +34,16 @@ discharging, this value is
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
+  const time = battery.chargingTime;
 
-   var time = battery.chargingTime;
-
-   document.querySelector('#chargingTime').textContent = battery.chargingTime;
+  document.querySelector(
+    "#chargingTime"
+  ).textContent = `Time to fully charge the battery: ${time}s`;
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 

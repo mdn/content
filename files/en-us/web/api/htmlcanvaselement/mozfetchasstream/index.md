@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.mozFetchAsStream()
 slug: Web/API/HTMLCanvasElement/mozFetchAsStream
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -8,9 +9,11 @@ tags:
   - Method
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLCanvasElement.mozFetchAsStream
 ---
-{{APIRef("Canvas API")}} {{deprecated_header}}
+
+{{APIRef("Canvas API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLCanvasElement.mozFetchAsStream()`** internal method
 used to create a new input stream that, when ready, would provide the contents of the
@@ -18,21 +21,22 @@ canvas as image data. However, this non-standard and internal method has been re
 
 ## Syntax
 
-```js
-void canvas.mozFetchAsStream(callback, type);
+```js-nolint
+mozFetchAsStream(callback)
+mozFetchAsStream(callback, type)
 ```
 
 ### Parameters
 
 - `callback`
-  - : An {{interface("nsIInputStreamCallback")}}.
+  - : An `nsIInputStreamCallback`.
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} indicating the image format. The default type is
+  - : A string indicating the image format. The default type is
     `image/png`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -43,9 +47,9 @@ WinXP cannot convert from PNG to ICO. It saves to the desktop it uses
 FileUtils.jsm. Also uses NetUtil.jsm
 
 ```js
-var canvas = document.getElementById('canvas');
-var d = canvas.width;
-ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const d = canvas.width;
+const ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
@@ -54,8 +58,8 @@ ctx.closePath();
 ctx.fillStyle = 'yellow';
 ctx.fill();
 
-var netutilCallback = function() {
-    return function(result) {
+const netutilCallback = () => {
+    return (result) => {
        if (!Components.isSuccessCode(result)) {
           alert('FAILED to create icon');
        } else {
@@ -64,10 +68,10 @@ var netutilCallback = function() {
     };
 }
 
-var mfasCallback = function(iconName) {
-    return function(inStream) {
-       var file = FileUtils.getFile('Desk', [iconName + '.ico']);
-       var outStream = FileUtils.openFileOutputStream(file);
+const mfasCallback = (iconName) => {
+    return (inStream) => {
+       const file = FileUtils.getFile('Desk', [`${iconName}.ico`]);
+       const outStream = FileUtils.openFileOutputStream(file);
        Cu.import('resource://gre/modules/NetUtil.jsm');
        NetUtil.asyncCopy(inStream, outStream, netutilCallback());
     }

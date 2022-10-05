@@ -1,6 +1,7 @@
 ---
 title: Response.redirect()
 slug: Web/API/Response/redirect
+page-type: web-api-static-method
 tags:
   - API
   - Fetch
@@ -10,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.redirect
 ---
+
 {{APIRef("Fetch")}}
 
 The **`redirect()`** method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
@@ -20,8 +22,9 @@ The **`redirect()`** method of the {{domxref("Response")}} interface returns a `
 
 ## Syntax
 
-```js
-var response = Response.redirect(url, status);
+```js-nolint
+redirect(url)
+redirect(url, status)
 ```
 
 ### Parameters
@@ -42,7 +45,7 @@ A {{domxref("Response")}} object.
 - {{jsxref("TypeError")}}
   - : The specified URL is invalid.
 
-## Example
+## Examples
 
 ```js
 Response.redirect('https://www.example.com', 302);

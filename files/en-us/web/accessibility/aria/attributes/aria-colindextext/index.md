@@ -1,12 +1,13 @@
 ---
-title: 'aria-colindextext'
+title: aria-colindextext
 slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-colindextext
+spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
 
 The `aria-colindextext` attribute defines a human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
@@ -27,7 +28,7 @@ In the following HTML snippet, our table has 8 columns, but we are only displayi
       <th aria-colindex="7" scope="col">Zip</th>
     </tr>
   </thead>
-  ...
+  …
 </table>
 ```
 
@@ -37,13 +38,25 @@ This table is not very complex. Had this been a 100+ column spreadsheet or a gri
 <table aria-colcount="128">
   <thead>
     <tr>
-      <th aria-colindex="1" aria-colindextext="NYSE stock symbol" scope="col">NYSE</th>
-      <th aria-colindex="110" aria-colindextext="Value at start of 2021" scope="col">01/21</th>
-      <th aria-colindex="122" aria-colindextext="Value at start of 2022" scope="col">01/22</th>
+      <th aria-colindex="1" aria-colindextext="NYSE stock symbol" scope="col">
+        NYSE
+      </th>
+      <th
+        aria-colindex="110"
+        aria-colindextext="Value at start of 2021"
+        scope="col">
+        01/21
+      </th>
+      <th
+        aria-colindex="122"
+        aria-colindextext="Value at start of 2022"
+        scope="col">
+        01/22
+      </th>
       <th aria-colindex="124" scope="col">Recommendation</th>
     </tr>
   </thead>
-  ...
+  …
 </table>
 ```
 
@@ -51,7 +64,7 @@ In the above example, the table has 128 columns of which only 4 columns are show
 
 Only use `aria-colindextext` when the provided or calculated value of `aria-colindex` is not meaningful or does not reflect the displayed index. Whenever you include `aria-colindextext`, also keep the `aria-colindex` as some assistive technologies rely on the numeric column index for the purpose of keeping track of the user's position and in providing alternative table navigation.
 
-> **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role).
+> **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
 
 See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext).
 
@@ -63,22 +76,22 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 ## ARIAMixin API
 
 - {{domxref("Element.ariaColIndexText")}}
-  - : The  [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
+  - : The [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
 
 ## Associated roles
 
 Used in roles:
- - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role)
+
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 
 Inherits into roles:
- - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
- - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
+
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-colindextext","ARIA: aria-colindextext Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
@@ -86,6 +99,6 @@ Inherits into roles:
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 - [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
 - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-- [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role)
-- [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
-- [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
+- [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)

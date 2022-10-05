@@ -1,6 +1,7 @@
 ---
 title: XMLSerializer.serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -16,6 +17,7 @@ tags:
   - serializeToString
 browser-compat: api.XMLSerializer.serializeToString
 ---
+
 {{APIRef("DOM Parsing")}}
 
 The {{domxref("XMLSerializer")}} method
@@ -24,8 +26,8 @@ specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 
 ## Syntax
 
-```js
-xmlString = anXMLSerializer.serializeToString(rootNode);
+```js-nolint
+serializeToString(rootNode)
 ```
 
 ### Parameters
@@ -36,11 +38,11 @@ xmlString = anXMLSerializer.serializeToString(rootNode);
 
 ### Return value
 
-A {{domxref("DOMString")}} containing the XML representation of the specified DOM tree.
+A string containing the XML representation of the specified DOM tree.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the specified `rootNode` is not a compatible node type. The root node
     must be either {{domxref("Node")}} or {{domxref("Attr")}}.
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -70,7 +72,7 @@ The following types are also permitted as descendants of the root node, in addit
 - {{domxref("ProcessingInstruction")}}
 - {{domxref("Attr")}}
 
-If any other type is encountered, a `TypeError` exception is thrown.
+If any other type is encountered, a {{jsxref("TypeError")}} exception is thrown.
 
 ### Notes on the resulting XML
 
@@ -97,8 +99,7 @@ There are some things worth noting about the XML output by
 
 ## See also
 
-- [Parsing and serializing
-  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - Serializing to HTML: {{domxref("Element.innerHTML")}} and
   {{domxref("Element.outerHTML")}}
 - Parsing HTML or XML to create a DOM tree: {{domxref("DOMParser")}}

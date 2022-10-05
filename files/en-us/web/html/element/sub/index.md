@@ -88,12 +88,12 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<sub>` element should be used only for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
-For example, using `<sub>` to style the name of a company which uses altered baselines in their {{interwiki("wikipedia", "wordmark")}} would not be appropriate; instead, CSS should be used (likely the {{cssxref("vertical-align")}} property, such as `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
+For example, using `<sub>` to style the name of a company which uses altered baselines in their [wordmark](https://en.wikipedia.org/wiki/Wordmark) would not be appropriate; instead, CSS should be used (likely the {{cssxref("vertical-align")}} property, such as `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
 
-Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
+Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
-- Marking up footnote numbers. See {{anch("Footnote numbers")}} for an example.
-- Marking up the subscript in mathematical variable numbers (although you may also consider using a [MathML](/en-US/docs/Web/MathML) formula for this). See {{anch("Variable subscripts")}}.
+- Marking up footnote numbers. See [Footnote numbers](#footnote_numbers) for an example.
+- Marking up the subscript in mathematical variable numbers (although you may also consider using a [MathML](/en-US/docs/Web/MathML) formula for this). See [Variable subscripts](#variable_subscripts).
 - Denoting the number of atoms of a given element within a chemical formula (such as every developer's best friend, C
 
   <sub>8</sub>
@@ -110,7 +110,7 @@ Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
   <sub>2</sub>
 
-  , otherwise known as "caffeine"). See {{anch("Chemical formulas")}}.
+  , otherwise known as "caffeine"). See [Chemical formulas](#chemical_formulas).
 
 ## Examples
 
@@ -119,9 +119,10 @@ Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 Traditional footnotes are denoted using numbers which are rendered in subscript. This is a common use case for `<sub>`:
 
 ```html
-<p>According to the computations by Nakamura, Johnson, and
-Mason<sub>1</sub> this will result in the complete annihilation
-of both particles.</p>
+<p>
+  According to the computations by Nakamura, Johnson, and Mason<sub>1</sub> this
+  will result in the complete annihilation of both particles.
+</p>
 ```
 
 The resulting output looks like this:
@@ -133,8 +134,10 @@ The resulting output looks like this:
 In mathematics, families of variables related to the same concept (such as distances along the same axis) are represented using the same variable name with a subscript following. For example:
 
 ```html
-<p>The horizontal coordinates' positions along the X-axis are
-represented as <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var>.</p>
+<p>
+  The horizontal coordinates' positions along the X-axis are represented as
+  <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.
+</p>
 ```
 
 The resulting output:
@@ -148,9 +151,11 @@ When writing a chemical formula, such as H<sub>2</sub>0, the number of atoms of 
 Another example:
 
 ```html
-<p>Almost every developer's favorite molecule is
-C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is
-commonly known as "caffeine."</p>
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is commonly known
+  as "caffeine."
+</p>
 ```
 
 The output:

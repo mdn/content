@@ -1,9 +1,11 @@
 ---
 title: HTMLVideoElement.onMSVideoOptimalLayoutChanged
 slug: Web/API/HTMLVideoElement/onMSVideoOptimalLayoutChanged
+page-type: web-api-instance-property
 tags:
   - onMSVideoOptimalLayoutChanged
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

@@ -1,6 +1,7 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.Document
 ---
+
 {{APIRef}}
 
 The **`Document`** constructor creates a new
@@ -17,9 +19,13 @@ an entry point into the page's content.
 
 ## Syntax
 
-```js
-new Document();
+```js-nolint
+new Document()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

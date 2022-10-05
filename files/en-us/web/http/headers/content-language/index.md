@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Language
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Language`** {{Glossary("representation header")}} is used to **describe the language(s) intended for the audience**, so users can differentiate it according to their own preferred language.
@@ -46,7 +47,7 @@ If no `Content-Language` is specified, the default is that the content is intend
 
 ## Syntax
 
-```
+```http
 Content-Language: de-DE
 Content-Language: en-US
 Content-Language: de-DE, en-CA
@@ -57,7 +58,7 @@ Content-Language: de-DE, en-CA
 - `language-tag`
   - : Multiple language tags are separated by a comma. Each language tag is a sequence of one or more case-insensitive subtags, each separated by a hyphen character ("`-`", `%x2D`). In most cases, a language tag consists of a primary language subtag that identifies a broad family of related languages (e.g., "`en`" = English) and is optionally followed by a series of subtags that refine or narrow that language's range (e.g., "`en-CA`" = the variety of English as communicated in Canada).
 
-> **Note:** Language tags are formaly defined in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646), which rely on the [ISO 639](https://en.wikipedia.org/wiki/ISO_639) standard (quite often the [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) for [language codes](https://en.wikipedia.org/wiki/Language_code) to be used.
+> **Note:** Language tags are formally defined in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646), which rely on the [ISO 639](https://en.wikipedia.org/wiki/ISO_639) standard (quite often the [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) for [language codes](https://en.wikipedia.org/wiki/Language_code) to be used.
 
 ## Examples
 
@@ -66,21 +67,21 @@ Content-Language: de-DE, en-CA
 The global [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute is used on HTML elements to indicate the language of an entire [HTML](/en-US/docs/Web/HTML) document or parts of it.
 
 ```html
-<html lang="de">
+<html lang="de">…</html>
 ```
 
 Do **not** use this meta element like this for stating a document language:
 
 ```html example-bad
 <!-- /!\ This is bad practice -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### Indicating a target audience for a resource
 
 The `Content-Language` header is used to specify the **page's intended audience** and can indicate that this is more than one language.
 
-```
+```http
 Content-Language: de, en
 ```
 

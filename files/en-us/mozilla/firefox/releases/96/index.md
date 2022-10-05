@@ -2,14 +2,15 @@
 title: Firefox 96 for developers
 slug: Mozilla/Firefox/Releases/96
 tags:
-  - '96'
+  - "96"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 96 that will affect developers. Firefox 96 was released on January 11, 2022.
+This article provides information about the changes in Firefox 96 that affect developers. Firefox 96 was released on January 11, 2022.
 
 ## Changes for web developers
 
@@ -19,7 +20,7 @@ No notable changes
 
 ### CSS
 
-- The [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb()) function for use as a [CSS color value](/en-US/docs/Web/CSS/color_value) has been implemented. The `hwb()` functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency. ({{bug(1352755)}}).
+- The [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) function for use as a [CSS color value](/en-US/docs/Web/CSS/color_value) has been implemented. The `hwb()` functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency. ({{bug(1352755)}}).
 
 - Firefox now provides support for the {{CSSxRef("color-scheme")}} property. This allows an element to indicate which color schemes it can comfortably be rendered in. Common options include "light" and "dark", or "day mode" and "night mode". ({{bug(1576289)}}).
 
@@ -45,13 +46,11 @@ No notable changes.
   ({{bug(1666203)}}).
 - The [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) is enabled by default, allowing web apps running in multiple tabs or workers to coordinate the use of resources. ({{bug(1740044)}}).
 
-
 #### Canvas
 
 - Image encoder support has been added for the [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) image format.
   This allows canvas elements to export their content as webp data when using the methods: {{domxref("HTMLCanvasElement.toDataURL()")}}, {{domxref("HTMLCanvasElement.toBlob()")}}, and {{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}.
   ({{bug(1511670)}}).
-
 
 #### DOM
 
@@ -70,6 +69,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
+- Added {{WebExtAPIRef("runtime.getFrameId")}} that gets the frame ID of any window global or frame element from a content script ({{bug(1733104)}}).
 
 ## Older versions
 

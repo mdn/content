@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 The **`Map`** object holds key-value pairs and remembers the original insertion
@@ -21,28 +22,20 @@ either a key or a value.
 
 ## Description
 
-A `Map` object iterates its elements in insertion order — a
-{{jsxref("Statements/for...of", "for...of")}} loop returns an
-array of `[key, value]` for each iteration.
+`Map` objects are collections of key-value pairs. A key in the `Map` **may only occur once**; it is unique in the `Map`'s collection. A `Map` object is iterated by key-value pairs — a {{jsxref("Statements/for...of", "for...of")}} loop returns a 2-member array of `[key, value]` for each iteration. Iteration happens in _insertion order_, which corresponds to the order in which each key-value pair was first inserted into the map by the [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) method (that is, there wasn't a key with the same value already in the map when `set()` was called).
+
+The specification requires maps to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
 ### Key equality
 
-- Key equality is based on the
-  [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)
-  algorithm.
-- {{jsxref("NaN")}} is considered the same as `NaN` (even though
-  `NaN !== NaN`) and all other values are considered equal according to the
-  semantics of the `===` operator.
-- In the current ECMAScript specification, `-0` and `+0` are considered equal,
-  although this was not so in earlier drafts. See _"Value equality for -0 and
-  0"_ in the [Browser compatibility](#browser_compatibility) table for details.
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Objects vs. Maps
 
 {{jsxref("Object")}} is similar to `Map`—both let you set keys to
 values, retrieve those values, delete keys, and detect whether something is
 stored at a key. For this reason (and because there were no built-in
-alternatives), `Object` has been used as `Map` historically.
+alternatives), `Object` has been used as `Map` historically.
 
 However, there are important differences that make `Map` preferable in some
 cases:
@@ -69,7 +62,7 @@ cases:
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> As of ES5, this can be bypassed by using
+            <strong>Note:</strong> This can be bypassed by using
             {{jsxref("Object.create", "Object.create(null)")}},
             but this is seldom done.
           </p>
@@ -150,7 +143,7 @@ cases:
       </td>
       <td>
         <p>
-          <code>Object</code> does not implement an <a
+          <code>Object</code> does not implement an <a
             href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol"
             >iteration protocol</a
           >, and so objects are not directly iterable using the JavaScript
@@ -164,10 +157,10 @@ cases:
           <ul>
             <li>
               An object can implement the iteration protocol, or you can get an
-              iterable for an object using <a
+              iterable for an object using <a
                 href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                 ><code>Object.keys</code></a
-              > or <a
+              > or <a
                 href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
                 ><code>Object.entries</code></a
               >.
@@ -235,11 +228,11 @@ considerable confusion.
 Therefore, this appears to work in a way:
 
 ```js example-bad
-const wrongMap = new Map()
-wrongMap['bla'] = 'blaa'
-wrongMap['bla2'] = 'blaaa2'
+const wrongMap = new Map();
+wrongMap['bla'] = 'blaa';
+wrongMap['bla2'] = 'blaaa2';
 
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 But that way of setting a property does not interact with the Map data
@@ -286,67 +279,53 @@ console.log(contacts.size) // 1
 
 - {{jsxref("Map.prototype.clear()")}}
   - : Removes all key-value pairs from the `Map` object.
-- {{jsxref("Map.delete", "Map.prototype.delete(<var>key</var>)")}}
+- {{jsxref("Map.prototype.delete()")}}
   - : Returns `true` if an element in the `Map` object existed and has been
-    removed, or `false` if the element does not exist. `Map.prototype.has(key)`
+    removed, or `false` if the element does not exist. `map.has(key)`
     will return `false` afterwards.
-- {{jsxref("Map.get", "Map.prototype.get(<var>key</var>)")}}
-  - : Returns the value associated to the `key`, or `undefined` if there is
-    none.
-- {{jsxref("Map.has", "Map.prototype.has(<var>key</var>)")}}
-  - : Returns a boolean asserting whether a value has been associated to the
-    `key` in the `Map` object or not.
-- {{jsxref("Map.set", "Map.prototype.set(<var>key</var>, <var>value</var>)")}}
-  - : Sets the `value` for the `key` in the `Map` object. Returns the `Map`
-    object.
-
-### Iteration methods
-
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-  - : Returns a new Iterator object that contains **an array of `[key, value]`**
-    for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.get()")}}
+  - : Returns the value associated to the passed key, or `undefined` if there is none.
+- {{jsxref("Map.prototype.has()")}}
+  - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
+- {{jsxref("Map.prototype.set()")}}
+  - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
+- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
+  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.keys()")}}
-  - : Returns a new Iterator object that contains the **keys** for each element
-    in the `Map` object in insertion order.
+  - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.values()")}}
-  - : Returns a new Iterator object that contains the **values** for each
-    element in the `Map` object in insertion order.
+  - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.entries()")}}
-  - : Returns a new Iterator object that contains **an array of `[key, value]`**
-    for each element in the `Map` object in insertion order.
-- {{jsxref("Map.forEach", "Map.prototype.forEach(<var>callbackFn</var>[,
-    <var>thisArg</var>])")}}
-  - : Calls `callbackFn` once for each key-value pair present in the `Map`
-    object, in insertion order. If a `thisArg` parameter is provided to
-    `forEach`, it will be used as the `this` value for each callback.
+  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.forEach()")}}
+  - : Calls `callbackFn` once for each key-value pair present in the `Map` object, in insertion order. If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
 
 ## Examples
 
 ### Using the Map object
 
 ```js
-const myMap = new Map()
+const myMap = new Map();
 
-const keyString = 'a string'
-const keyObj    = {}
-const keyFunc   = function() {}
+const keyString = 'a string';
+const keyObj = {};
+const keyFunc = function() {};
 
 // setting the values
-myMap.set(keyString, "value associated with 'a string'")
-myMap.set(keyObj, 'value associated with keyObj')
-myMap.set(keyFunc, 'value associated with keyFunc')
+myMap.set(keyString, "value associated with 'a string'");
+myMap.set(keyObj, 'value associated with keyObj');
+myMap.set(keyFunc, 'value associated with keyFunc');
 
-myMap.size              // 3
+console.log(myMap.size); // 3
 
 // getting the values
-myMap.get(keyString)    // "value associated with 'a string'"
-myMap.get(keyObj)       // "value associated with keyObj"
-myMap.get(keyFunc)      // "value associated with keyFunc"
+console.log(myMap.get(keyString)); // "value associated with 'a string'"
+console.log(myMap.get(keyObj)); // "value associated with keyObj"
+console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
-myMap.get('a string')    // "value associated with 'a string'"
-                         // because keyString === 'a string'
-myMap.get({})            // undefined, because keyObj !== {}
-myMap.get(function() {}) // undefined, because keyFunc !== function () {}
+console.log(myMap.get('a string')); // "value associated with 'a string'", because keyString === 'a string'
+console.log(myMap.get({})); // undefined, because keyObj !== {}
+console.log(myMap.get(function() {})); // undefined, because keyFunc !== function () {}
 ```
 
 ### Using NaN as Map keys
@@ -356,46 +335,46 @@ not equal to itself (`NaN !== NaN` is true), the following example works because
 `NaN`s are indistinguishable from each other:
 
 ```js
-const myMap = new Map()
-myMap.set(NaN, 'not a number')
+const myMap = new Map();
+myMap.set(NaN, 'not a number');
 
-myMap.get(NaN)
+myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo')
-myMap.get(otherNaN)
+const otherNaN = Number('foo');
+myMap.get(otherNaN);
 // "not a number"
 ```
 
-### Iterating Map with for..of
+### Iterating Map with for...of
 
-Maps can be iterated using a `for..of` loop:
+Maps can be iterated using a `for...of` loop:
 
 ```js
-const myMap = new Map()
-myMap.set(0, 'zero')
-myMap.set(1, 'one')
+const myMap = new Map();
+myMap.set(0, 'zero');
+myMap.set(1, 'one');
 
 for (const [key, value] of myMap) {
-  console.log(key + ' = ' + value)
+  console.log(`${key} = ${value}`);
 }
 // 0 = zero
 // 1 = one
 
 for (const key of myMap.keys()) {
-  console.log(key)
+  console.log(key);
 }
 // 0
 // 1
 
 for (const value of myMap.values()) {
-  console.log(value)
+  console.log(value);
 }
 // zero
 // one
 
 for (const [key, value] of myMap.entries()) {
-  console.log(key + ' = ' + value)
+  console.log(`${key} = ${value}`);
 }
 // 0 = zero
 // 1 = one
@@ -407,9 +386,9 @@ Maps can be iterated using the
 {{jsxref("Map.prototype.forEach", "forEach()")}} method:
 
 ```js
-myMap.forEach(function(value, key) {
-  console.log(key + ' = ' + value)
-})
+myMap.forEach((value, key) => {
+  console.log(`${key} = ${value}`);
+});
 // 0 = zero
 // 1 = one
 ```
@@ -417,21 +396,21 @@ myMap.forEach(function(value, key) {
 ### Relation with Array objects
 
 ```js
-const kvArray = [['key1', 'value1'], ['key2', 'value2']]
+const kvArray = [['key1', 'value1'], ['key2', 'value2']];
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
-const myMap = new Map(kvArray)
+const myMap = new Map(kvArray);
 
-myMap.get('key1') // returns "value1"
+console.log(myMap.get('key1')); // "value1"
 
 // Use Array.from() to transform a map into a 2D key-value Array
-console.log(Array.from(myMap)) // Will show you exactly the same Array as kvArray
+console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
 
 // A succinct way to do the same, using the spread syntax
-console.log([...myMap])
+console.log([...myMap]);
 
 // Or use the keys() or values() iterators, and convert them to an array
-console.log(Array.from(myMap.keys())) // ["key1", "key2"]
+console.log(Array.from(myMap.keys())); // ["key1", "key2"]
 ```
 
 ### Cloning and merging Maps
@@ -440,13 +419,13 @@ Just like `Array`s, `Map`s can be cloned:
 
 ```js
 const original = new Map([
-  [1, 'one']
-])
+  [1, 'one'],
+]);
 
-const clone = new Map(original)
+const clone = new Map(original);
 
-console.log(clone.get(1))       // one
-console.log(original === clone) // false (useful for shallow comparison)
+console.log(clone.get(1)); // one
+console.log(original === clone); // false (useful for shallow comparison)
 ```
 
 > **Note:** Keep in mind that _the data itself_ is not cloned.
@@ -458,20 +437,20 @@ const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-])
+]);
 
 const second = new Map([
   [1, 'uno'],
-  [2, 'dos']
-])
+  [2, 'dos'],
+]);
 
 // Merge two maps. The last repeated key wins.
-// Spread operator essentially converts a Map to an Array
-const merged = new Map([...first, ...second])
+// Spread syntax essentially converts a Map to an Array
+const merged = new Map([...first, ...second]);
 
-console.log(merged.get(1)) // uno
-console.log(merged.get(2)) // dos
-console.log(merged.get(3)) // three
+console.log(merged.get(1)); // uno
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
 ```
 
 Maps can be merged with Arrays, too:
@@ -481,19 +460,19 @@ const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-])
+]);
 
 const second = new Map([
   [1, 'uno'],
-  [2, 'dos']
-])
+  [2, 'dos'],
+]);
 
 // Merge maps with an array. The last repeated key wins.
-const merged = new Map([...first, ...second, [1, 'eins']])
+const merged = new Map([...first, ...second, [1, 'eins']]);
 
-console.log(merged.get(1)) // eins
-console.log(merged.get(2)) // dos
-console.log(merged.get(3)) // three
+console.log(merged.get(1)); // eins
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
 ```
 
 ## Specifications

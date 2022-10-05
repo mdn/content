@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue.parse()
 slug: Web/API/CSSStyleValue/parse
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - parse()
 browser-compat: api.CSSStyleValue.parse
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`parse()`** method of the {{domxref("CSSStyleValue")}}
@@ -20,15 +22,15 @@ value as a {{domxref('CSSStyleValue')}} object.
 
 ## Syntax
 
-```js
-CSSStyleValue.parse(property, cssText)
+```js-nolint
+parse(property, cssText)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : A CSS property to set.
-- cssText
+- `cssText`
   - : A comma-separated string containing one or more values to apply to the provided
     property.
 
@@ -36,7 +38,7 @@ CSSStyleValue.parse(property, cssText)
 
 A `CSSStyleValue` object containing the first supplied value.
 
-## Example
+## Examples
 
 The code below parses a set of declarations for the `transform` property.
 The second code block shows the structure of the returned object as it would be rendered
@@ -48,7 +50,7 @@ const css = CSSStyleValue.parse(
 ```
 
 ```css
-CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
+CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
 ```
 
 ## Specifications

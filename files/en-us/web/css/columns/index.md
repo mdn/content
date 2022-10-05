@@ -1,6 +1,7 @@
 ---
 title: columns
 slug: Web/CSS/columns
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Multi-column Layout
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.columns
 ---
+
 {{CSSRef}}
 
 The **`columns`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
@@ -41,6 +43,7 @@ columns: auto auto;
 columns: inherit;
 columns: initial;
 columns: revert;
+columns: revert-layer;
 columns: unset;
 ```
 
@@ -69,9 +72,8 @@ The `columns` property may be specified as one or two of the values listed below
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `columns` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `columns`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 

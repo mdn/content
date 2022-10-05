@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.validity
 slug: Web/API/HTMLObjectElement/validity
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,19 +12,14 @@ tags:
   - validity
 browser-compat: api.HTMLObjectElement.validity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`validity`** read-only property of the
 {{domxref("HTMLObjectElement")}} interface returns a {{domxref("ValidityState")}} with
 the validity states that this element is in.
 
-## Syntax
-
-```js
-var ValidityState = HTMLObjectElement.validity;
-```
-
-### Value
+## Value
 
 A {{domxref("ValidityState")}} object.
 

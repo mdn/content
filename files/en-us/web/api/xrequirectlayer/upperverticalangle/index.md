@@ -1,6 +1,7 @@
 ---
 title: XREquirectLayer.upperVerticalAngle
 slug: Web/API/XREquirectLayer/upperVerticalAngle
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XREquirectLayer.upperVerticalAngle
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`upperVerticalAngle`** property of the {{domxref("XREquirectLayer")}} interface represents the upper vertical angle in radians for the sphere.
 
@@ -33,7 +36,7 @@ const equirectLayer = xrGlBinding.createEquirectLayer({
   viewPixelHeight: 600,
   centralHorizontalAngle: 2 * Math.PI,
   upperVerticalAngle: Math.PI / 2.0,
-  upperVerticalAngle: -Math.PI / 2.0,
+  lowerVerticalAngle: -Math.PI / 2.0,
   radius: 0
 });
 

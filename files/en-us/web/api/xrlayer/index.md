@@ -1,6 +1,7 @@
 ---
 title: XRLayer
 slug: Web/API/XRLayer
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,11 +10,16 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRLayer
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-The **`XRLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is the base class for WebXR layer types. It inherits methods from {{domxref("EventTarget")}}.
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+
+The **`XRLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is the base class for WebXR layer types. It inherits methods from {{domxref("EventTarget")}}.
+
+{{InheritanceDiagram}}
+
 ## Interfaces based on `XRLayer`
 
 Below is a list of interfaces based on the <code>XRLayer</code> interface.
@@ -23,7 +29,7 @@ Below is a list of interfaces based on the <code>XRLayer</code> interface.
 
 ## Methods
 
-*Inherits methods from its parent, {{domxref("EventTarget")}}*.
+_Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 ## Specifications
 

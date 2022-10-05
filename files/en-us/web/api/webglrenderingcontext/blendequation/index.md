@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.blendEquation()
 slug: Web/API/WebGLRenderingContext/blendEquation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendEquation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendEquation()`** method of the
@@ -20,8 +22,8 @@ The blend equation determines how a new pixel is combined with a pixel already i
 
 ## Syntax
 
-```js
-void gl.blendEquation(mode);
+```js-nolint
+blendEquation(mode)
 ```
 
 ### Parameters
@@ -31,21 +33,20 @@ void gl.blendEquation(mode);
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how source and destination colors are combined.
     Must be either:
 
-    - `gl.FUNC_ADD`: source + destination,
-    - `gl.FUNC_SUBTRACT`: source - destination,
+    - `gl.FUNC_ADD`: source + destination (default value)
+    - `gl.FUNC_SUBTRACT`: source - destination
     - `gl.FUNC_REVERSE_SUBTRACT`: destination - source
-    - When using the {{domxref("EXT_blend_minmax")}} extension:
 
-      - `ext.MIN_EXT`: Minimum of source and destination,
-      - `ext.MAX_EXT`: Maximum of source and destination.
+    When using the {{domxref("EXT_blend_minmax")}} extension:
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    - `ext.MIN_EXT`: Minimum of source and destination
+    - `ext.MAX_EXT`: Maximum of source and destination
 
-      - `gl.MIN`: Minimum of source and destination,
-      - `gl.MAX`: Maximum of source and destination.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
 
-    **default value**: `gl.FUNC_ADD`
+    - `gl.MIN`: Minimum of source and destination
+    - `gl.MAX`: Maximum of source and destination
 
 ### Exception
 
@@ -54,7 +55,7 @@ If _mode_ is not one of the three possible values, a
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

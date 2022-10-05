@@ -5,17 +5,20 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `number` function converts an object to a number and returns the number.
 
 ### Syntax
 
-    number( [object] )
+```
+number( [object] )
+```
 
 ### Arguments
 
-- _`object`_(optional)
+- `object` (optional)
   - : The object to be converted to a number. If this argument is omitted, the current context node will be used.
 
 ### Returns
@@ -31,7 +34,7 @@ The resulting number after converting the object.
 
 ### Defined
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-number)
+[XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-number)
 
 ### Gecko support
 

@@ -1,6 +1,7 @@
 ---
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,6 +16,7 @@ tags:
   - innerHeight
 browser-compat: api.Window.innerHeight
 ---
+
 {{APIRef}}
 
 The read-only **`innerHeight`** property of the
@@ -25,13 +27,7 @@ The value of `innerHeight` is taken from the height of the window's
 {{Glossary("layout viewport")}}. The width can be obtained using the
 {{domxref("Window.innerWidth", "innerWidth")}} property.
 
-## Syntax
-
-```js
-let intViewportHeight = window.innerHeight;
-```
-
-### Value
+## Value
 
 An integer value indicating the window's layout viewport height in pixels. The property
 is read only and has no default value.
@@ -49,24 +45,22 @@ the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
 Both `innerHeight` and `innerWidth` are available on any window
 or any object that behaves like a window, such as a tab or frame.
 
-## Example
+## Examples
 
 ### Assuming a frameset
 
 ```js
-var intFrameHeight = window.innerHeight; // or
+console.log(window.innerHeight); // or
 
-var intFrameHeight = self.innerHeight;
-// will return the height of the frame viewport within the frameset
+console.log(self.innerHeight);
+// will log the height of the frame viewport within the frameset
 
-var intFramesetHeight = parent.innerHeight;
-// will return the height of the viewport of the closest frameset
+console.log(parent.innerHeight);
+// will log the height of the viewport of the closest frameset
 
-var intOuterFramesetHeight = top.innerHeight;
-// will return the height of the viewport of the outermost frameset
+console.log(top.innerHeight);
+// will log the height of the viewport of the outermost frameset
 ```
-
-{{todo("link to an interactive demo here")}}
 
 To change the size of a window, see {{domxref("window.resizeBy()")}} and
 {{domxref("window.resizeTo()")}}.
@@ -80,6 +74,36 @@ The following figure shows the difference between `outerHeight` and
 `innerHeight`.
 
 ![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+
+## Demo
+
+### HTML
+
+```html
+<p>Resize the browser window to fire the <code>resize</code> event.</p>
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
+```
+
+### JavaScript
+
+```js
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function resizeListener() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+window.addEventListener("resize", resizeListener);
+```
+
+### Result
+
+{{EmbedLiveSample('Demo')}}
+
+You can also {{LiveSampleLink('Demo', 'view the results of the demo code in a separate page')}}.
 
 ## Specifications
 

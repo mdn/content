@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a
@@ -18,13 +19,13 @@ The **`valueOf()`** method returns the primitive value of a
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 
 ### Return value
 
-The primitive value of the given {{jsxref("Boolean")}} object
+The primitive value of the given {{jsxref("Boolean")}} object.
 
 ## Description
 

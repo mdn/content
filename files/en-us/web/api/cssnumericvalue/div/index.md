@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.div()
 slug: Web/API/CSSNumericValue/div
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,7 +13,8 @@ tags:
   - div()
 browser-compat: api.CSSNumericValue.div
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`div()`** method of the
 {{domxref("CSSNumericValue")}} interface divides the `CSSNumericValue` by the
@@ -20,14 +22,14 @@ supplied value.
 
 ## Syntax
 
-```js
-var cssNumericValue = CSSNumericValue.div(number);
+```js-nolint
+div(number)
 ```
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
@@ -35,8 +37,8 @@ A {{domxref('CSSMathProduct')}}.
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

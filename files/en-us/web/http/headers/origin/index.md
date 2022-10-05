@@ -9,6 +9,7 @@ tags:
   - origin
 browser-compat: http.headers.Origin
 ---
+
 {{HTTPSidebar}}
 
 The **`Origin`** request header indicates the {{glossary("origin")}} (scheme, hostname, and port) that _caused_ the request.
@@ -29,7 +30,7 @@ For example, if a user agent needs to request resources included in a page, or f
 
 ## Syntax
 
-```
+```http
 Origin: null
 Origin: <scheme>://<hostname>
 Origin: <scheme>://<hostname>:<port>
@@ -38,6 +39,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
+
   - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
 
 - `<scheme>`
@@ -55,26 +57,29 @@ The `Origin` header is similar to the {{HTTPHeader("Referer")}} header, but does
 It is used to provide the "security context" for the origin request, except in cases where the origin information would be sensitive or unnecessary.
 
 Broadly speaking, user agents add the {{httpheader("Origin")}} request header to:
+
 - {{Glossary("CORS", "cross origin")}} requests.
 - [same-origin](/en-US/docs/Web/Security/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
 
 There are some exceptions to the above rules; for example, if a cross-origin {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request is made in [no-cors mode](/en-US/docs/Web/API/Request/mode#value), the `Origin` header will not be added.
 
 The `Origin` header value may be `null` in a number of cases, including (non-exhaustively):
+
 - Origins whose scheme is not one of `http`, `https`, `ftp`, `ws`, `wss`, or `gopher` (including `blob`, `file` and `data`).
 - Cross-origin images and media data, including that in `<img>`, `<video>` and `<audio>` elements.
-- Documents created programmatically using `createDocument()`, generated from a `data:` url, or that do not have a creator browsing context. 
+- Documents created programmatically using `createDocument()`, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
-- iframes with a sandbox attribute that doesn’t contain the value `allow-same-origin`.
+- iframes with a sandbox attribute that doesn't contain the value `allow-same-origin`.
 - Responses that are network errors.
 
-> **Note:** There is a more detailed listing of case that may return `null` on Stack Overflow here: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/).
+> **Note:** There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
 
 ## Examples
 
 ```http
 Origin: https://developer.mozilla.org
 ```
+
 ```http
 Origin: http://developer.mozilla.org:80
 ```
@@ -92,4 +97,4 @@ Origin: http://developer.mozilla.org:80
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
-- [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/) (Stack Overflow)
+- [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) (Stack Overflow)

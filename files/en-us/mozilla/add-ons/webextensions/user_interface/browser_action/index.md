@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 tags:
   - WebExtension
 ---
+
 {{AddonSidebar}}
 
 Commonly referred to as a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), this user interface option is a button added to the browser toolbar. Users click the button to interact with your extension.
@@ -27,7 +28,7 @@ You define the browser action's properties using the [`browser_action`](/en-US/d
 
 The only mandatory key is `default_icon`.
 
-There are two ways to specify a browser action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups). If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
+There are two ways to specify a browser action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups). If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);
@@ -47,5 +48,5 @@ For details on how to create icons to use with your browser action, see [Iconogr
 
 The [`webextensions-examples`](https://github.com/mdn/webextensions-examples) repository on GitHub contains two examples of extensions that implement browser actions:
 
-- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) uses a browser action without a popup
+- [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it) uses a browser action without a popup
 - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup

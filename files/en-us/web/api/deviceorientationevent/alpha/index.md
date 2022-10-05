@@ -1,6 +1,7 @@
 ---
 title: DeviceOrientationEvent.alpha
 slug: Web/API/DeviceOrientationEvent/alpha
+page-type: web-api-instance-property
 tags:
   - API
   - DeviceOrientation API
@@ -11,17 +12,16 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.alpha
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 Returns the rotation of the device around the Z axis; that is, the number of degrees by
-which the device is being twisted around the center of the screen. See [Orientation and motion data
-explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained") for details.
+which the device is being twisted around the center of the screen.
+See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details.
 
-## Syntax
+## Value
 
-```js
-var alpha = instanceOfDeviceOrientationEvent.alpha;
-```
+A number.
 
 ## Specifications
 
@@ -34,8 +34,7 @@ var alpha = instanceOfDeviceOrientationEvent.alpha;
 ## See also
 
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation "Detecting device orientation")
-- [Orientation and motion data
-  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
-- {{ domxref("window.ondeviceorientation") }}
-- {{ event("deviceorientation") }}
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}

@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -12,6 +13,7 @@ tags:
   - sound
 browser-compat: api.BaseAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `BaseAudioContext` interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use `BaseAudioContext` directly — you'd use its features via one of these two inheriting interfaces.
@@ -22,30 +24,30 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 
 ## Properties
 
-- {{domxref("BaseAudioContext.audioWorklet")}} {{experimental_inline}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxref("BaseAudioContext.audioWorklet")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns the {{domxref("AudioWorklet")}} object, which can be used to create and manage {{domxref("AudioNode")}}s in which JavaScript code implementing the {{domxref("AudioWorkletProcessor")}} interface are run in the background to process audio data.
-- {{domxref("BaseAudioContext.currentTime")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.currentTime")}} {{ReadOnlyInline}}
   - : Returns a double representing an ever-increasing hardware time in seconds used for scheduling. It starts at `0`.
-- {{domxref("BaseAudioContext.destination")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.destination")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AudioDestinationNode")}} representing the final destination of all audio in the context. It can be thought of as the audio-rendering device.
-- {{domxref("BaseAudioContext.listener")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.listener")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("AudioListener")}} object, used for 3D spatialization.
-- {{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float representing the sample rate (in samples per second) used by all nodes in this context. The sample-rate of an {{domxref("AudioContext")}} cannot be changed.
-- {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.state")}} {{ReadOnlyInline}}
   - : Returns the current state of the `AudioContext`.
 
-### Event handlers
+### Events
 
-- {{domxref("BaseAudioContext.onstatechange")}}
-  - : An event handler that runs when an event of type {{event("statechange")}} has fired. This occurs when the `AudioContext`'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
+- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
+  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
 
 ## Methods
 
 _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 - {{domxref("BaseAudioContext.createAnalyser()")}}
-  - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualisations.
+  - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualizations.
 - {{domxref("BaseAudioContext.createBiquadFilter()")}}
   - : Creates a {{domxref("BiquadFilterNode")}}, which represents a second order filter configurable as several different common filter types: high-pass, low-pass, band-pass, etc
 - {{domxref("BaseAudioContext.createBuffer()")}}
@@ -71,7 +73,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 - {{domxref("BaseAudioContext.createOscillator()")}}
   - : Creates an {{domxref("OscillatorNode")}}, a source representing a periodic waveform. It basically generates a tone.
 - {{domxref("BaseAudioContext.createPanner()")}}
-  - : Creates a {{domxref("PannerNode")}}, which is used to spatialise an incoming audio stream in 3D space.
+  - : Creates a {{domxref("PannerNode")}}, which is used to spatialize an incoming audio stream in 3D space.
 - {{domxref("BaseAudioContext.createPeriodicWave()")}}
   - : Creates a {{domxref("PeriodicWave")}}, used to define a periodic waveform that can be used to determine the output of an {{ domxref("OscillatorNode") }}.
 - {{domxref("BaseAudioContext.createScriptProcessor()")}} {{deprecated_inline}}

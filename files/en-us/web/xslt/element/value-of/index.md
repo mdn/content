@@ -7,13 +7,16 @@ tags:
   - XSLT
   - value-of
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:value-of>` element evaluates an XPath expression, converts it to a string, and writes that string to the result tree.
 
 ### Syntax
 
-    <xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
+```xml
+<xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
+```
 
 ### Required Attributes
 

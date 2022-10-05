@@ -1,6 +1,7 @@
 ---
 title: CryptoKey
 slug: Web/API/CryptoKey
+page-type: web-api-interface
 tags:
   - API
   - Code
@@ -15,11 +16,12 @@ tags:
   - Web Crypto API
 browser-compat: api.CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`CryptoKey`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents a cryptographic {{glossary("key")}} obtained from one of the {{domxref("SubtleCrypto")}} methods {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, or {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.
 
-For security reasons, the `CryptoKey` interface can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+For security reasons, the `CryptoKey` interface can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ## Properties
 
@@ -33,10 +35,10 @@ For security reasons, the `CryptoKey` interface can only be used in a [secure
 
 - `CryptoKey.extractable`
 
-  - : A boolean value indicating whether or not the key may be extracted using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey "The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format.") or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey 'The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.').
+  - : A boolean value indicating whether or not the key may be extracted using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 
     - `true`: The key may be extracted.
-    - `false` The key may not be extracted. [`exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey "The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format.") or [`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey 'The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.') will throw an exception if used to extract this key.
+    - `false` The key may not be extracted. [`exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey) will throw an exception if used to extract this key.
 
 - `CryptoKey.algorithm`
 
@@ -87,5 +89,5 @@ The examples for `SubtleCrypto` methods often use `CryptoKey` objects. For examp
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
 - [Web security](/en-US/docs/Web/Security)
-- [Privacy, permissions, and incormation security](/en-US/docs/Web/Privacy)
+- [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
 - {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.

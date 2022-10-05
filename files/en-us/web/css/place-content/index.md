@@ -1,6 +1,7 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Alignment
@@ -10,6 +11,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.place-content
 ---
+
 {{CSSRef}}
 
 The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e. the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
@@ -50,6 +52,7 @@ place-content: stretch space-evenly;
 place-content: inherit;
 place-content: initial;
 place-content: revert;
+place-content: revert-layer;
 place-content: unset;
 ```
 
@@ -72,13 +75,13 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 - `center`
   - : The items are packed flush to each other toward the center of the alignment container.
 - `left`
-  - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+  - : The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
 - `right`
-  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
 - `space-between`
   - : The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.
 - `baseline`, `first baseline`, `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `space-around`
   - : The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.
@@ -108,9 +111,9 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 ```html
 <div id="container">
   <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
+  <div class="small">Lorem<br />ipsum</div>
   <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>ipsum</div>
+  <div class="large">Lorem<br />ipsum</div>
   <div class="large"></div>
   <div class="large"></div>
 </div>
@@ -123,11 +126,13 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="vertical-lr">vertical-lr</option>
   <option value="sideways-rl">sideways-rl</option>
   <option value="sideways-lr">sideways-lr</option>
-</select><code>;</code><br/>
+</select><code>;</code><br />
+
 <code>direction:</code><select id="direction">
   <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option>
-</select><code>;</code><br/>
+  <option value="rtl">rtl</option></select
+><code>;</code><br />
+
 <code>place-content:</code><select id="alignContentAlignment">
   <option value="normal">normal</option>
   <option value="first baseline">first baseline</option>
@@ -145,7 +150,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="safe">safe</option>
   <option value="unsafe">unsafe</option>
 </select>
-  <select id="justifyContentAlignment">
+<select id="justifyContentAlignment">
   <option value="normal">normal</option>
   <option value="space-between">space-between</option>
   <option value="space-around">space-around</option>
@@ -159,27 +164,28 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="left">left</option>
   <option value="right">right</option>
   <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option>
-</select><code>;</code>
+  <option value="unsafe">unsafe</option></select><code>;</code>
 ```
 
 ```js hidden
-var update = function () {
-   document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
+function update() {
+  document.getElementById("container").style.placeContent = `${document.getElementById("alignContentAlignment").value} `
+    + `${document.getElementById("justifyContentAlignment").value}`;
 }
 
-var alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
+const alignContentAlignment = document.getElementById("alignContentAlignment");
+alignContentAlignment.addEventListener("change", update);
 
-var justifyContentAlignment = document.getElementById("justifyContentAlignment");
+const justifyContentAlignment = document.getElementById("justifyContentAlignment");
 justifyContentAlignment.addEventListener("change", update);
 
-var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
+const writingM = document.getElementById("writingMode");
+writingM.addEventListener("change", (evt) => {
    document.getElementById("container").style.writingMode = evt.target.value;
 });
-var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
+
+const direction = document.getElementById("direction");
+direction.addEventListener("change", (evt) => {
    document.getElementById("container").style.direction = evt.target.value;
 });
 ```
@@ -189,7 +195,7 @@ direction.addEventListener("change", function (evt) {
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;

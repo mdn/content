@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.protocol
 slug: Web/API/RTCIceCandidateStats/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -17,19 +18,14 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidateStats.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
-**`protocol`**  property specifies the protocol the specified
+**`protocol`** property specifies the protocol the specified
 candidate would use for communication with the remote peer.
 
-## Syntax
-
-```js
-protocol = rtcIceCandidateStats.protocol;
-```
-
-### Value
+## Value
 
 The value is one of the following string:
 

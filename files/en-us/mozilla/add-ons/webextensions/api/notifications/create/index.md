@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.create
 ---
+
 {{AddonSidebar()}}
 
 Creates and displays a notification.
@@ -27,8 +28,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var creating = browser.notifications.create(
+```js-nolint
+let creating = browser.notifications.create(
   id,                   // optional string
   options               // NotificationOptions
 )
@@ -36,8 +37,8 @@ var creating = browser.notifications.create(
 
 ### Parameters
 
-- `id`{{optional_inline}}
-  - : `string`. This is used to refer to this notification in {{WebExtAPIRef("notifications.update()")}}, {{WebExtAPIRef("notifications.clear()")}}, and event listeners. If you omit this argument or pass an empty string, then a new ID will be generated for this notification. If the ID you provide matches the ID of an existing notification from this extension, then the other notification will be cleared.
+- `id` {{optional_inline}}
+  - : `string`. This is used to refer to this notification in {{WebExtAPIRef("notifications.update()")}}, {{WebExtAPIRef("notifications.clear()")}}, and event listeners. If you omit this argument or pass an empty string, then a new ID will be generated for this notification. If the ID you provide matches the ID of an existing notification from this extension, then the other notification will be cleared.
 - `options`
   - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Defines the notification's content and behavior.
 
@@ -50,7 +51,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example displays a notification periodically, using {{WebExtAPIRef("alarms", "alarm")}}. Clicking the browser action dismisses the notification. You need the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications).
 
 ```js
-var cakeNotification = "cake-notification"
+let cakeNotification = "cake-notification";
 
 /*
 
@@ -61,21 +62,21 @@ Note that in Chrome, alarms cannot be set for less
 than a minute.
 
 */
-var CAKE_INTERVAL = 0.1;
+let CAKE_INTERVAL = 0.1;
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener((alarm) => {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.runtime.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake"
+    type: "basic",
+    iconUrl: browser.runtime.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
-  var clearing = browser.notifications.clear(cakeNotification);
+browser.browserAction.onClicked.addListener(() => {
+  const clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
   });
@@ -88,6 +89,6 @@ browser.browserAction.onClicked.addListener(()=> {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/#method-create) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

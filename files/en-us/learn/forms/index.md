@@ -11,6 +11,7 @@ tags:
   - Learn
   - Web
 ---
+
 {{LearnSidebar}}
 
 This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons it's not always obvious how to use them to their full potential. In the articles listed below, we'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
@@ -26,7 +27,7 @@ This module provides a series of articles that will help you master the essentia
 
 ## Prerequisites
 
-Before starting this module, you should at least work through our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML). At this point you should find the {{anch("Introductory guides")}} easy to understand, and also be able to make use of our [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls) guide.
+Before starting this module, you should at least work through our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML). At this point you should find the [Introductory guides](#introductory_guides) easy to understand, and also be able to make use of our [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls) guide.
 
 Mastering forms however requires more than just HTML knowledge — you also need to learn some specific techniques to style form controls, and some scripting knowledge is required to handle things like validation and creating custom form controls. Therefore, before you look at the other sections listed below we'd recommend that you go away and learn some [CSS](/en-US/docs/Learn/CSS) and [JavaScript](/en-US/docs/Learn/JavaScript) first.
 

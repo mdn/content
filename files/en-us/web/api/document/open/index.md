@@ -1,6 +1,7 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - open
 browser-compat: api.Document.open
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.open()`** method opens a document for
@@ -23,8 +25,8 @@ This does come with some side effects. For example:
 
 ## Syntax
 
-```js
-document.open();
+```js-nolint
+open()
 ```
 
 ### Parameters
@@ -53,19 +55,14 @@ document.close();
 An automatic `document.open()` call happens when
 {{domxref("document.write()")}} is called after the page has loaded.
 
-### Gecko-specific notes
+### Content Security
 
-Starting with Gecko 1.9, this method is subject to the same same-origin policy as other
-properties, and does not work if doing so would change the document's origin.
-
-Starting with Gecko 1.9.2, `document.open()` uses the [principal](/docs/Security_check_basics) of the document whose URI it uses,
-instead of fetching the principal off the stack. As a result, you can no longer call
-{{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en-US/docs/wrappedJSObject). See [Security check basics](/en-US/docs/Security_check_basics) for more about principals.
+This method is subject to the same [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) as other properties, and does not work if doing so would change the document's origin.
 
 ## Three-argument document.open()
 
 There is a lesser-known and little-used three-argument version of
-`document.open()` , which is an alias of {{domxref("Window.open()")}} (see
+`document.open()`, which is an alias of {{domxref("Window.open()")}} (see
 its page for full details).
 
 This call, for example opens github.com in a new window, with its opener set to
@@ -91,7 +88,7 @@ entry of the document being written to.
 
 This form is now obsolete; it won't throw an error, but instead just forwards to
 `document.open()` (i.e. is the equivalent of just running it with no
-arguments).  The history-replacement behavior now always happens.
+arguments). The history-replacement behavior now always happens.
 
 ## Specifications
 

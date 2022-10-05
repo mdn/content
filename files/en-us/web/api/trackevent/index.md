@@ -1,6 +1,7 @@
 ---
 title: TrackEvent
 slug: Web/API/TrackEvent
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -12,9 +13,10 @@ tags:
   - Video
 browser-compat: api.TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are {{event("addtrack")}} and {{event("removetrack")}}.
+The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.
 
 It's important not to confuse `TrackEvent` with the {{domxref("RTCTrackEvent")}} interface, which is used for tracks which are part of an {{domxref("RTCPeerConnection")}}.
 
@@ -23,6 +25,8 @@ Events based on `TrackEvent` are always sent to one of the media track list type
 - Events involving video tracks are always sent to the {{domxref("VideoTrackList")}} found in {{domxref("HTMLMediaElement.videoTracks")}}
 - Events involving audio tracks are always sent to the {{domxref("AudioTrackList")}} specified in {{domxref("HTMLMediaElement.audioTracks")}}
 - Events affecting text tracks are sent to the {{domxref("TextTrackList")}} object indicated by {{domxref("HTMLMediaElement.textTracks")}}.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -42,10 +46,10 @@ _`TrackEvent` has no methods of its own; however, it is based on {{domxref("Even
 
 ## Example
 
-This example sets up a function, `handleTrackEvent()`, which is called for any {{event("addtrack")}} or {{event("removetrack")}} event on the first {{HTMLElement("video")}} element found in the document.
+This example sets up a function, `handleTrackEvent()`, which is called for any `addtrack` or `removetrack` event on the first {{HTMLElement("video")}} element found in the document.
 
 ```js
-var videoElem = document.querySelector("video");
+const videoElem = document.querySelector("video");
 
 videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent, false);
@@ -55,9 +59,9 @@ videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
 
 function handleTrackEvent(event) {
-  var trackKind;
+  let trackKind;
 
-  if (event.target instanceof(VideoTrackList)) {
+  if (event.target instanceof VideoTrackList) {
     trackKind = "video";
   } else if (event.target instanceof(AudioTrackList)) {
     trackKind = "audio";
@@ -69,10 +73,10 @@ function handleTrackEvent(event) {
 
   switch(event.type) {
     case "addtrack":
-      console.log("Added a " + trackKind + " track");
+      console.log(`Added a ${trackKind} track`);
       break;
     case "removetrack":
-      console.log("Removed a " + trackKind + " track");
+      console.log(`Removed a ${trackKind} track`);
       break;
   }
 }

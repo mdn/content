@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.height
 slug: Web/API/HTMLImageElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -14,6 +15,7 @@ tags:
   - size
 browser-compat: api.HTMLImageElement.height
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`height`** property of the
@@ -22,14 +24,7 @@ drawn, in {{Glossary("CSS pixels")}} if the image is being drawn or rendered to 
 visual medium such as the screen or a printer; otherwise, it's the natural, pixel
 density corrected height of the image.
 
-## Syntax
-
-```js
-htmlImageElement.height = newHeight;
-let height = htmlImageElement.height;
-```
-
-### Value
+## Value
 
 An integer value indicating the height of the image. The terms in which the height is
 defined depends on whether the image is being rendered to a visual medium or not.
@@ -40,7 +35,7 @@ defined depends on whether the image is being rendered to a visual medium or not
   adjusted for the display density as indicated by
   {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}}.
 
-## Example
+## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
 {{htmlattrxref("srcset", "img")}} attribute. One is 200px wide and the other is 400px
@@ -54,11 +49,14 @@ otherwise, it's drawn at 300px.
 
 ```html
 <p>Image height: <span class="size">?</span>px (resize to update)</p>
-<img src="/files/17373/clock-demo-200px.png"
-      alt="Clock"
-      srcset="/files/17373/clock-demo-200px.png 200w,
-          /files/17374/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 200px, 300px">
+<img
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  alt="Clock"
+  srcset="
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+  "
+  sizes="(max-width: 400px) 200px, 300px" />
 ```
 
 ### JavaScript
@@ -67,10 +65,10 @@ The JavaScript code looks at the `height` to determine the height of the
 image given the width at which it's currently drawn.
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateHeight = event => { output.innerText = clockImage.height; };
+const updateHeight = (event) => { output.innerText = clockImage.height; };
 
 window.addEventListener("load", updateHeight);
 window.addEventListener("resize", updateHeight);
@@ -78,9 +76,9 @@ window.addEventListener("resize", updateHeight);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
-This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
+This example may be easier to try out {{LiveSampleLink('Examples', 'in its own window')}}.
 
 ## Specifications
 

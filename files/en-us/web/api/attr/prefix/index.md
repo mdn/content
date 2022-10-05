@@ -1,18 +1,19 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Attr.prefix
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`prefix`** property of the {{domxref("Attr")}} returns the namespace prefix of the attribute, or `null` if no prefix is specified.
 
 The prefix is always in lower case, whatever case is used at the attribute creation.
-
 
 > **Note:** Only XML supports namespaces. HTML does not. That means that the prefix of an attribute of an HTML element will always be `null`.
 
@@ -20,7 +21,7 @@ Also, only the `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:hre
 
 ## Value
 
-A {{jsxref("String")}} containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
+A string containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
 
 ## Example
 
@@ -30,36 +31,36 @@ A {{jsxref("String")}} containing the prefix of the namespace the attribute belo
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
 <label xml:lang="en-US" class="struct"></label>
 
-<button>Click me for &lt;svg&gt;…</button>
-<button>Click me for &lt;label&gt;…</button>
-<br><br>
-Prefix of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Prefix of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript Content
 
 ```js
-const elements = document.getElementsByClassName("struct");
-const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
 
-function handleEvent(element) {
-  return function(e) {
-    attribute = element.attributes[0];
-    result.value = attribute.prefix;
-  }
-}
-
-let i=0;
-for (let button of buttons) {
-  button.addEventListener('click', handleEvent(elements[i]));
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.prefix;
+  });
   i++;
 }
 ```
 
 {{ EmbedLiveSample('Example','100%',100) }}
-
-
 
 ## Specifications
 

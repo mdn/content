@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onReplaced
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is replaced with another tab due to prerendering or instant.
@@ -21,7 +22,7 @@ This event may not be relevant for or supported by browsers other than Chrome.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onReplaced.addListener(listener)
 browser.tabs.onReplaced.removeListener(listener)
 browser.tabs.onReplaced.hasListener(listener)
@@ -46,9 +47,6 @@ Events have three functions:
 
     - `addedTabId`
       - : `integer`. ID of the replacement tab.
-
-    <!---->
-
     - `removedTabId`
       - : `integer`. ID of the tab that was replaced.
 
@@ -58,8 +56,8 @@ Listen for replacement events, and log the associated info:
 
 ```js
 function handleReplaced(addedTabId, removedTabId) {
-  console.log("New tab: " + addedTabId);
-  console.log("Old tab: " + removedTabId);
+  console.log(`New tab: ${addedTabId}`);
+  console.log(`Old tab: ${removedTabId}`);
 }
 
 browser.tabs.onReplaced.addListener(handleReplaced);
@@ -71,11 +69,12 @@ browser.tabs.onReplaced.addListener(handleReplaced);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onReplaced) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onReplaced) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +101,4 @@ browser.tabs.onReplaced.addListener(handleReplaced);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

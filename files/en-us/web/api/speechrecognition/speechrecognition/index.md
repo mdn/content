@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognition()
 slug: Web/API/SpeechRecognition/SpeechRecognition
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -11,6 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognition()`** constructor creates a new
@@ -18,7 +20,7 @@ The **`SpeechRecognition()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechRecognition()
 ```
 
@@ -28,13 +30,12 @@ None.
 
 ## Examples
 
-This code is excerpted from our [Speech
-color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
-var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
+const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const recognition = new SpeechRecognition();
+const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 //recognition.continuous = false;
@@ -42,7 +43,7 @@ recognition.lang = 'en-US';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-...
+// ...
 ```
 
 ## Specifications

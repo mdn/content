@@ -1,14 +1,17 @@
 ---
 title: ReportBody
 slug: Web/API/ReportBody
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
+  - Experimental
   - ReportBody
 browser-compat: api.ReportBody
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} represents the body of a report. Individual report types inherit from this interface, adding specific attributes relevant to the particular report.
 
@@ -22,7 +25,7 @@ An instance of `ReportBody` is returned as the value of {{domxref("Report.body")
 
 ## Methods
 
-- {{domxref("ReportBody.toJSON()")}}
+- {{domxref("ReportBody.toJSON()")}} {{experimental_inline}}
   - : A _serializer_ which returns a JSON representation of the `ReportBody` object.
 
 ## Examples
@@ -30,13 +33,12 @@ An instance of `ReportBody` is returned as the value of {{domxref("Report.body")
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports. The {{domxref("InterventionReportBody")}} interface inherits from `ReportBody`.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   console.log(firstReport.type); // intervention
 }, options);
 ```

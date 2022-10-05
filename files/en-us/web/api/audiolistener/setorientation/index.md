@@ -1,6 +1,7 @@
 ---
 title: AudioListener.setOrientation()
 slug: Web/API/AudioListener/setOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - AudioListener
@@ -8,8 +9,10 @@ tags:
   - Reference
   - Web Audio API
   - setOrientation
+  - Deprecated
 browser-compat: api.AudioListener.setOrientation
 ---
+
 {{ APIRef("Web Audio API") }}{{deprecated_header}}
 
 The `setOrientation()` method of the {{ domxref("AudioListener") }} interface defines the orientation of the listener.
@@ -23,34 +26,36 @@ The two vectors must be separated by an angle of 90° — in linear analysis ter
 
 ## Syntax
 
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.setOrientation(0,0,-1,0,1,0);
+```js-nolint
+setOrientation(x, y, z, xUp, yUp, zUp)
 ```
 
-### Returns
+### Parameters
 
-{{jsxref('undefined')}}.
+- `x`
+  - : The x value of the front vector of the listener.
+- `y`
+  - : The y value of the front vector of the listener.
+- `z`
+  - : The z value of the front vector of the listener.
+- `xUp`
+  - : The x value of the up vector of the listener.
+- `yUp`
+  - : The y value of the up vector of the listener.
+- `zUp`
+  - : The z value of the up vector of the listener.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-## Parameters
+## Specifications
 
-- x
-  - : The x value of the front vector of the listener.
-- y
-  - : The y value of the front vector of the listener.
-- z
-  - : The z value of the front vector of the listener.
-- xUp
-  - : The x value of the up vector of the listener.
-- yUp
-  - : The y value of the up vector of the listener.
-- zUp
-  - : The z value of the up vector of the listener.
+{{Specifications}}
 
 ## Browser compatibility
 

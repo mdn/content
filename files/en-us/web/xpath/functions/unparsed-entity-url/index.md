@@ -5,13 +5,16 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `unparsed-entity-url()` function returns the URI of the unparsed entity with the given name. This is non-XML data referenced in the DTD of the source document.
 
 ### Syntax
 
-    string unparsed-entity-url(string)
+```
+string unparsed-entity-url(string)
+```
 
 ### Arguments
 
@@ -23,7 +26,7 @@ The URI of the unparsed entity retrieved from the DTD, if it exists. Otherwise a
 
 ### Defined
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-unparsed-entity-uri)
+[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-unparsed-entity-uri)
 
 ### Gecko support
 

@@ -9,29 +9,18 @@ tags:
   - Intermediate
   - Web
 ---
+
 {{LearnSidebar}}
 
-All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari or old versions of Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
+All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari and Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
 
-Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. And HTML5 {{htmlelement('input')}} types don't fail when not supported: they fall back to `type=text`.
+Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. If a browser doesn't support an HTML {{htmlelement('input')}} type, it doesn't fail: it just uses the default value of `type=text`.
 
 ## Learn about the issues
 
-To understand common patterns, it helps to read browser documentation. If you are reading this on [MDN](/), you are at the right place to start. Just check the support of the elements (or DOM interface) you want to use. MDN has compatibility tables available for most elements, properties and APIs that can be used in a web page. There are other resources that can be amazingly helpful:
+To understand common patterns, it helps to read documentation. If you are reading this on [MDN](/), you are at the right place to start. Just check the support of the elements (or DOM interfaces) you want to use. MDN has compatibility tables available for most elements, properties and APIs that can be used in a web page.
 
-### Browser vendor documentation
-
-- Mozilla: You're in the right place, just browse MDN
-- Microsoft: [Internet Explorer Standards Support Documentation](https://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx)
-- WebKit: Because there are several different editions of this engine, things are a little trickier.
-
-  - [The WebKit blog](https://www.webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.
-  - [Chrome platform status site](https://www.chromestatus.com/features) is also important.
-  - As well as [the Apple web site.](https://developer.apple.com/technologies/safari/)
-
-## Make things simple
-
-Because [HTML forms](/en-US/docs/Learn/Forms) involves complex interaction, there is one rule of thumb: keep it simple, also known as the "[KISS principal](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
+Because [HTML forms](/en-US/docs/Learn/Forms) involves complex interaction, there is one important rule: keep it simple, also known as the "[KISS principal](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
 
 ### Graceful degradation is web developer's best friend
 
@@ -41,12 +30,12 @@ Let's see some examples related to HTML forms.
 
 #### HTML input types
 
-The input types added in HTML5 are all useable, even in ancient browsers, because the way they degrade is highly predictable. If a browser does not know the value of the {{htmlattrxref("type","input")}} attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
+All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the {{htmlattrxref("type","input")}} attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
 
 ```html
 <label for="myColor">
-  Pick a color
-  <input type="color" id="myColor" name="color">
+  Pick a color
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -87,7 +76,7 @@ There are two ways to define buttons within HTML forms:
 The {{HTMLElement("input")}} element can make things a little difficult if you want to apply some CSS by using the element selector:
 
 ```html
-<input type="button" value="click me">
+<input type="button" value="click me" />
 ```
 
 If we remove the border on all inputs, can we restore the default appearance on input buttons only?
@@ -96,7 +85,7 @@ If we remove the border on all inputs, can we restore the default appearance on 
 input {
   /* This rule turns off the default rendering for the input types that have a border,
      including buttons defined with an input element */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* This does NOT restore the default rendering */
@@ -137,7 +126,7 @@ One of the big issues with HTML Forms is styling form widgets with CSS. Form con
 
 It's generally a good idea to not alter the default appearance of form control because altering one CSS property value may alter some input types but not others. For example, if you declare `input { font-size: 2rem; }`, it will impact `number`, `date`, and `text`, but not `color` or `range`. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, `[value] { background-color: #ccc; }` may have been used to target every {{HTMLElement("input")}} with a `value` attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers. You can declare {{cssxref('appearance', 'appearance: none;')}} to remove the browser styles, but that generally defeats the purpose: as you lose all styling, removing the default look and feel your visitors are used to.
 
-To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls) article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls). But in that case, do not hesitate to [charge your client for such foolishness](https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/).
+To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls) article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls). But in that case, do not hesitate to [charge your client for such foolishness](https://www.smashingmagazine.com/2011/11/but-the-client-wants-ie-6-support/).
 
 ## Feature detection and polyfills
 
@@ -149,10 +138,11 @@ Before styling a replaced form control widget, you can check to see if the brows
 
 ```css
 @supports (appearance: none) {
- input[type="search"] {
-   appearance: none;
-   /* restyle the search input */
- }
+  input[type="search"] {
+    appearance: none;
+    /* restyle the search input */
+  }
+}
 ```
 
 The {{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of `none`, remove default platform-native based styling.
@@ -176,25 +166,25 @@ Here is an example:
 
 ```js
 Modernizr.load({
-  // This tests if your browser supports the HTML5 form validation API
-  test : Modernizr.formvalidation,
+  // This tests if your browser supports the Form validation API
+  test: Modernizr.formvalidation,
 
   // If the browser does not support it, the following polyfill is loaded
-  nope : form-validation-API-polyfill.js,
+  nope: "form-validation-API-polyfill.js",
 
   // In any case, your core App file that depends on that API is loaded
-  both : app.js,
+  both: "app.js",
 
   // Once both files are loaded, this function is called in order to initialize the App.
-  complete : function () {
+  complete() {
     app.init();
-  }
+  },
 });
 ```
 
 The Modernizr team conveniently maintains [a list of great polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Just pick what you need.
 
-> **Note:** Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please [read the Modernizr documentation](https://modernizr.com/docs/).
+> **Note:** Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please [read the Modernizr documentation](https://modernizr.com/docs/).
 
 ### Pay attention to performance
 

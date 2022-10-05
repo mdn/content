@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -13,6 +14,7 @@ tags:
   - setLineDash
 browser-compat: api.CanvasRenderingContext2D.setLineDash
 ---
+
 {{APIRef}}
 
 The **`setLineDash()`** method of the Canvas 2D API's
@@ -25,8 +27,8 @@ and gaps which describe the pattern.
 
 ## Syntax
 
-```js
-ctx.setLineDash(segments);
+```js-nolint
+setLineDash(segments)
 ```
 
 ### Parameters
@@ -41,7 +43,7 @@ ctx.setLineDash(segments);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -59,8 +61,8 @@ solid line.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Dashed line
 ctx.beginPath();
@@ -106,8 +108,8 @@ function drawDashedLine(pattern) {
   y += 20;
 }
 
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let y = 15;
 
 drawDashedLine([]);
@@ -116,7 +118,7 @@ drawDashedLine([10, 10]);
 drawDashedLine([20, 5]);
 drawDashedLine([15, 3, 3, 3]);
 drawDashedLine([20, 3, 3, 3, 3, 3, 3, 3]);
-drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
+drawDashedLine([12, 3, 3]); // Equals [12, 3, 3, 12, 3, 3]
 ```
 
 #### Result

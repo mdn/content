@@ -5,7 +5,9 @@ tags:
   - Deprecated
   - SVG
   - SVG Attribute
+spec-urls: https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`baseProfile`** attribute describes the minimum SVG language profile that the author believes is necessary to correctly render the content. The attribute does not specify any processing restrictions; It can be considered metadata.
@@ -16,7 +18,7 @@ Each SVG profile should define the text that is appropriate for this attribute.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("svg")}}
+- {{SVGElement("svg")}}
 
 ## Context notes
 
@@ -50,21 +52,4 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#SVGElementBaseProfileAttribute", "baseProfile")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

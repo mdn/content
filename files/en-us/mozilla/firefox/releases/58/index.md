@@ -2,10 +2,11 @@
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 tags:
-  - '58'
+  - "58"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.
@@ -14,10 +15,10 @@ This article provides information about the changes in Firefox 58 that will affe
 
 ### Developer Tools
 
-- The [Shape Path Editor](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) has been enabled by default for shapes generated via {{cssxref("clip-path")}} ({{bug(1405339)}}).
-- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) now has a button to [pause/play recording of network traffic](/en-US/docs/Tools/Network_Monitor#pausing_and_resume_network_traffic_recording) ({{bug(1005755)}}).
-- In the [Network Monitor](/en-US/docs/Tools/Network_Monitor) the "Flash" filter button is no longer available, and Flash requests are included in the "Others" filter ({{bug(1413540)}}).
-- The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the Devtools ({{bug(1305777)}}). See [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) for information on the new tools.
+- The [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) has been enabled by default for shapes generated via {{cssxref("clip-path")}} ({{bug(1405339)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now has a button to [pause/play recording of network traffic](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#pausing-and-resume-network-traffic-recording) ({{bug(1005755)}}).
+- In the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) the "Flash" filter button is no longer available, and Flash requests are included in the "Others" filter ({{bug(1413540)}}).
+- The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the Devtools ({{bug(1305777)}}). See [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) for information on the new tools.
 - The option to view MDN docs from the CSS pane of the page inspector has been removed ({{bug(1382171)}}) (was disabled since 55, {{bug(1352801)}}).
 
 ### HTML
@@ -52,7 +53,7 @@ _No changes._
 
 - Errors reported via error objects in certain APIs — for example in the `error` property of {{domxref("FileReader")}}, {{domxref("IDBRequest")}}, and {{domxref("IDBTransaction")}}, and when requests made via certain methods of {{domxref("RTCPeerConnection")}} are unsuccessful — are now represented by {{domxref("DOMException")}} instances. {{domxref("DOMError")}} is now deprecated, having been removed from the DOM4 spec ({{bug(1120178)}}).
 - The {{domxref("PerformanceResourceTiming.workerStart")}} property is now supported ({{bug(1191943)}}).
-- Budget-based background timeout throttling has been implemented — see [Policies in place to aid background page performance](/en-US/docs/Web/API/Page_Visibility_API#policies_in_place_to_aid_background_page_performance) for more details ({{bug(1377766)}}).
+- Budget-based background timeout throttling has been implemented — see [Policies in place to aid background page performance](/en-US/docs/Web/API/Page_Visibility_API#policies_in_place_to_aid_background_page_performance) for more details ({{bug(1377766)}}).
 
 #### DOM events
 
@@ -92,7 +93,7 @@ _No changes._
 ### Other
 
 - "Add to home screen" is now supported in Firefox for Android, part of the [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) effort ({{bug(1212648)}}).
-- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — {{jsxref("WebAssembly.compileStreaming()")}} and {{jsxref("WebAssembly.installStreaming()")}} {{bug(1347644)}}.
+- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) and [`WebAssembly.installStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/installStreaming) {{bug(1347644)}}.
 
 ## Removals from the web platform
 
@@ -143,7 +144,7 @@ _No changes._
 - The non-standard {{jsxref("Date.prototype.toLocaleFormat()")}} method has been removed ({{bug(818634)}}). See [Warning: Date.prototype.toLocaleFormat is deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat) for more information and migration help.
 - The non-standard and deprecated {{jsxref("Object.prototype.watch()")}} and {{jsxref("Object.prototype.unwatch", "unwatch()")}} methods have been removed and will no longer work ({{bug(638054)}}). Consider using [setters and getters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) or [proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) instead.
 - The [legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol), the [`StopIteration`](/en-US/docs/Archive/Web/StopIteration) object, the [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) and the non-standard {{jsxref("Function.prototype.isGenerator()")}} method have been removed. Use the ES2015 [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and standards-compliant [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) instead ({{bug(1083482)}}, {{bug(1413867)}}, {{bug(1119777)}}).
-- The non-standard [Array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) and[ Generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) have been removed ({{bug(1414340)}}).
+- The non-standard [Array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) and [Generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) have been removed ({{bug(1414340)}}).
 
 ### APIs
 

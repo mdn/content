@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.service
 slug: Web/API/BluetoothRemoteGATTCharacteristic/service
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -12,18 +13,13 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTCharacteristic.service
 ---
-{{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.service`** read-only
-property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-## Syntax
+The **`BluetoothRemoteGATTCharacteristic.service`** read-only
+property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
 
-```js
-var bluetoothRemoteGATTServiceInstance = BluetoothRemoteGATTCharacteristic.service
-```
-
-### Returns
+## Value
 
 An instance {{domxref("BluetoothRemoteGATTService")}}.
 

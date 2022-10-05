@@ -1,6 +1,7 @@
 ---
-title: ident
+title: <ident>
 slug: Web/CSS/ident
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,7 +11,10 @@ tags:
   - Reference
   - Web
   - ident
+spec-urls:
+  - https://drafts.csswg.org/css-values/#css-identifier
 ---
+
 {{CSSRef}}
 
 The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}.
@@ -33,31 +37,28 @@ Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they ar
 ### Valid identifiers
 
 ```plain example-good
-nono79      	A mix of alphanumeric characters and numbers
-ground-level	A mix of alphanumeric characters and a dash
--test       	A dash followed by alphanumeric characters
---toto      	A custom-property like identifier
-_internal   	An underscore followed by alphanumeric characters
-\22 toto    	A Unicode character followed by a sequence of alphanumeric characters
-bili\.bob   	A correctly escaped period
+nono79        A mix of alphanumeric characters and numbers
+ground-level  A mix of alphanumeric characters and a dash
+-test         A dash followed by alphanumeric characters
+--toto        A custom-property like identifier
+_internal     An underscore followed by alphanumeric characters
+\22 toto      A Unicode character followed by a sequence of alphanumeric characters
+bili\.bob     A correctly escaped period
 ```
 
 ### Invalid identifiers
 
 ```plain example-bad
-34rem   	It must not start with a decimal digit.
--12rad  	It must not start with a dash followed by a decimal digit.
-bili.bob	Only alphanumeric characters, _, and - needn't be escaped.
-'bilibob'	This would be a {{CSSxRef("&lt;string&gt;")}}.
-"bilibob"	This would be a {{CSSxRef("&lt;string&gt;")}}.
+34rem     It must not start with a decimal digit.
+-12rad    It must not start with a dash followed by a decimal digit.
+bili.bob  Only alphanumeric characters, _, and - needn't be escaped.
+'bilibob' This would be a {{CSSxRef("&lt;string&gt;")}}.
+"bilibob" This would be a {{CSSxRef("&lt;string&gt;")}}.
 ```
 
 ## Specifications
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSS4 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS4 Values')}} |         |
-| {{SpecName('CSS3 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS3 Values')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

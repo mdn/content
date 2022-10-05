@@ -5,22 +5,25 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `round` function returns a number that is the nearest integer to the given number.
 
 ### Syntax
 
-    round(decimal )
+```
+round( decimal )
+```
 
 ### Arguments
 
-- _`decimal`_
+- `decimal`
   - : The decimal number to be rounded.
 
 ### Returns
 
-The nearest integer less then, greater than, or equal to*`decimal`*.
+The nearest integer less then, greater than, or equal to `decimal`.
 
 ### Notes
 
@@ -28,7 +31,7 @@ The nearest integer less then, greater than, or equal to*`decimal`*.
 
 ### Defined
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-round)
+[XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-round)
 
 ### Gecko support
 

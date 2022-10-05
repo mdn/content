@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.NodeIterator.detach
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 The **`NodeIterator.detach()`** method is a no-op, kept for
@@ -21,21 +23,30 @@ iterates, releasing any resources used by the set and setting the iterator's sta
 
 ## Syntax
 
-```js
-nodeIterator.detach();
+```js-nolint
+detach()
 ```
 
-## Example
+### Parameters
 
-    var nodeIterator = document.createNodeIterator(
-        document.body,
-        NodeFilter.SHOW_ELEMENT,
-        { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-        false
-    );
-    nodeIterator.detach(); // detaches the iterator
+None.
 
-    nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
+
+```js
+const nodeIterator = document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+);
+nodeIterator.detach(); // detaches the iterator
+
+nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception
+```
 
 ## Specifications
 

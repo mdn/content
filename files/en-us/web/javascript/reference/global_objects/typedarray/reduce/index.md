@@ -11,19 +11,20 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduce
 ---
+
 {{JSRef}}
 
 The **`reduce()`** method applies a function against an
 accumulator and each value of the typed array (from left-to-right) has to reduce it to a
 single value. This method has the same algorithm as
-{{jsxref("Array.prototype.reduce()")}}. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+{{jsxref("Array.prototype.reduce()")}}. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduce((accumulator, currentValue) => { /* ... */ } )
 reduce((accumulator, currentValue, index) => { /* ... */ } )
@@ -45,7 +46,9 @@ reduce(function(accumulator, currentValue, index, array) { /* ... */ }, initialV
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking four arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `accumulator`
       - : The value previously returned in the last invocation of the callback, or
@@ -94,17 +97,9 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
-  return a + b;
-});
-// total == 6
+const total = new Uint8Array([0, 1, 2, 3]).reduce((a, b) => a + b);
+// total === 6
 ```
-
-## Polyfill
-
-This method uses the same algorithm as {{jsxref("Array.prototype.reduce()")}}, so the
-same polyfill can be used here: replace `Array.prototype.reduce` with
-`TypedArray.prototype.reduce`.
 
 ## Specifications
 
@@ -116,6 +111,6 @@ same polyfill can be used here: replace `Array.prototype.reduce` with
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.reduce` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}

@@ -7,15 +7,18 @@ tags:
   - XSLT
   - call-template
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:call-template>` element invokes a named template.
 
 ### Syntax
 
-    <xsl:call-template name=NAME>
-    	<xsl:with-param> [optional]
-    </xsl:call-template>
+```xml
+<xsl:call-template name=NAME>
+  <xsl:with-param> [optional]
+</xsl:call-template>
+```
 
 ### Required Attribute
 

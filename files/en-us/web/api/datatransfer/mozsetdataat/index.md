@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozSetDataAt()
 slug: Web/API/DataTransfer/mozSetDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozSetDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{deprecated_header}}{{Non-standard_header()}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSetDataAt()`** method is used to add
 data to a specific index in the drag event's {{domxref("DataTransfer","data transfer")}}
@@ -29,42 +29,43 @@ Data should be added in order of preference, with the most specific format added
 and the least specific format added last. If data of the given format already exists, it
 is replaced in the same position as the old data.
 
-The data should be either a {{domxref("DOMString","string")}}, a boolean value
-or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.
+The data should be either a string, a boolean value
+or number type (which will be converted into a string) or an `nsISupports`.
 
 > **Note:** This method is Firefox-specific.
 
 ## Syntax
 
-```js
-void dataTransfer.mozSetDataAt([type], data, index);
+```js-nolint
+mozSetDataAt(data, index)
+mozSetDataAt(type, data, index)
 ```
 
-### Arguments
+### Parameters
 
-- _type_
-  - : A {{domxref("DOMString","string")}} representing the type of the drag data to add to
+- `type`
+  - : A string representing the type of the drag data to add to
     the {{domxref("DataTransfer","drag data object")}}.
-- _data_
-  - : A {{ interface("nsIVariant") }} representing the data to add to the
+- `data`
+  - : A `nsIVariant` representing the data to add to the
     {{domxref("DataTransfer","drag data object")}}.
-- _index_
+- `index`
   - : A `unsigned long` representing the index of the data to add.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example shows the use of the `mozSetDataAt()` method in a
-{{event("dragstart")}} handler.
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} handler.
 
 ```js
 function dragstart_handler(event)
 {
-  var dt = event.dataTransfer;
-  var idx = dt.mozItemCount;
+  const dt = event.dataTransfer;
+  const idx = dt.mozItemCount;
   // Add two new items to the drag transfer
   if (idx >= 0) {
     dt.mozSetDataAt("text/uri-list","http://www.example.com/", idx);

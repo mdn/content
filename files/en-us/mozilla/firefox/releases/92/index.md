@@ -2,11 +2,12 @@
 title: Firefox 92 for developers
 slug: Mozilla/Firefox/Releases/92
 tags:
-  - '92'
+  - "92"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 92 that will affect developers. Firefox 92 was released on September 7, 2021.
@@ -30,6 +31,8 @@ No changes
 ### JavaScript
 
 - {{jsxref("Object.hasOwn()")}} can be used to test whether a property was defined on an object or inherited ({{bug(1721149)}}).
+- The default 5MB storage quota is now available to each origin. The quota previously applied to an entire domain group (also known as eTLD+1 domain; e.g., `*.wikipedia.org`). ({{bug(1064466)}}).
+- Storage quotas for {{domxref("Window.localStorage")}} are now shared with [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) and {{domxref("Cache", "Cache API")}} ({{bug(742822)}}).
 
 ### HTTP
 

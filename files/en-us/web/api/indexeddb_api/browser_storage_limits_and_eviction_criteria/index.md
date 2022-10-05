@@ -1,6 +1,7 @@
 ---
 title: Browser storage limits and eviction criteria
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
+page-type: guide
 tags:
   - Database
   - IndexedDB
@@ -10,11 +11,10 @@ tags:
   - eviction
   - limit
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 There are a number of web technologies that store data of one kind or another on the client-side (i.e., on your local disk). The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. This article describes how browsers determine what local content to purge and when in order to free up needed local storage space.
-
-> **Note:** The information below should be fairly accurate for most modern browsers, but browser specifics are called out where known. Opera and Chrome should behave the same in all cases. [Opera Mini](http://www.opera.com/mobile/mini) (still presto-based, server-side rendering) doesn't store any data on the client.
 
 ## What technologies use browser data storage?
 
@@ -31,7 +31,7 @@ In Firefox, the following technologies make use of browser data storage to store
 
 The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.
 
-In Chrome/Opera, the Quota Management API handles quota management for [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), WebSQL, and [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
+In Chrome/Opera, the Quota Management API handles quota management for [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), Web SQL (deprecated), and [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
 ## Different types of data storage
 
@@ -40,7 +40,7 @@ Even in the same browser, using the same storage method, there are different cla
 Storage comes in two types:
 
 - Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example, in Firefox you can choose to delete all stored data or only stored data from selected origins by going to _Preferences_ and using the options under _Privacy & Security > Cookies & Site Data_).
-- Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least recently used ({{anch("LRU policy")}}) when {{anch("Storage limits")}} are reached.
+- Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least-recently-used ([LRU policy](#lru_policy)) when [Storage limits](#storage_limits) are reached.
 
 In Firefox, when persistent storage is used, the user is given a UI popup to alert them that this data will persist, and asks if they are happy with that. Temporary data storage does not elicit any user prompts.
 
@@ -55,13 +55,13 @@ Each storage type represents a separate repository. Here's the actual mapping to
 - `<profile>/storage/temporary` — temporary data storage repository
 - `<profile>/storage/default` — default data storage repository
 
-> **Note:** After introducing [Storage API](/en-US/docs/Web/API/Storage_API), the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under \<profile>/storage/default.
+> **Note:** After introducing [Storage API](/en-US/docs/Web/API/Storage_API), the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under \<profile>/storage/default.
 
-> **Note:** In Firefox, you can find your profile folder by entering `about:support` in the URL bar, and pressing the _Show in..._ button (e.g., _Show in Finder_ on Mac OS X) next to the _Profile Folder_ title.
+> **Note:** In Firefox, you can find your profile folder by entering `about:support` in the URL bar, and pressing the _Show in…_ button (e.g., _Show in Finder_ on macOS) next to the _Profile Folder_ title.
 
 > **Note:** If you are looking around in your Profile at the data stored, you might see a fourth folder: `persistent`. Basically, the `persistent` folder was renamed to `permanent` a while ago to keep upgrades/migration simpler.
 
-> **Note:** Users shouldn’t add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
+> **Note:** Users shouldn't add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
 
 ## Storage limits
 
@@ -97,5 +97,5 @@ We track the "last access time" for each origin using temporary storage. Once th
 
 ## See also
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") A detailed analysis of client-side storage on mobile browsers.
-- [Storage for the web](https://web.dev/storage-for-the-web/) (https://web.dev/)
+- [Working with quota on mobile browsers](https://web.dev/storage-for-the-web/), by [Eiji Kitamura](https://blog.agektmr.com). A detailed analysis of client-side storage on mobile browsers.
+- [Storage for the web](https://web.dev/storage-for-the-web/)

@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserverEntryList.getEntries()
 slug: Web/API/PerformanceObserverEntryList/getEntries
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`getEntries()`** method of the
@@ -24,24 +26,16 @@ interfaces.
 
 ## Syntax
 
-General syntax:
-
-```js
-entries = list.getEntries();
-entries = list.getEntries(PerformanceEntryFilterOptions);
-```
-
-Specific usage:
-
-```js
-entries = list.getEntries({name: "entry_name", entryType: "mark"});
+```js-nolint
+getEntries()
+getEntries(performanceEntryFilterOptions)
 ```
 
 ### Parameters
 
-- `PerformanceEntryFilterOptions`{{optional_inline}}
+- `performanceEntryFilterOptions` {{optional_inline}}
 
-  - : Is a `PerformanceEntryFilterOptions` dictionary, having the following
+  - : A `PerformanceEntryFilterOptions` object, having the following
     fields:
 
     - `"name"`, the name of a performance entry.
@@ -61,49 +55,44 @@ entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects th
 the filter are found, an empty list is returned. If no argument is given, all entries
 are returned.
 
-## Example
+## Examples
 
 ```js
 function print_perf_entry(pe) {
-  console.log("name: "        + pe.name      +
-              "; entryType: " + pe.entryType +
-              "; startTime: " + pe.startTime +
-              "; duration: "  + pe.duration);
+  console.log(`name: ${pe.name}`);
+  console.log(`entryType: ${pe.entryType}`);
+  console.log(`startTime: ${pe.startTime}`);
+  console.log(`duration: ${pe.duration}`);
 }
 
 // Create observer for all performance event types
-var observe_all = new PerformanceObserver(function(list, obs) {
-  var perfEntries;
-
+const observe_all = new PerformanceObserver((list, obs) => {
   // Print all entries
-  perfEntries = list.getEntries();
-  for (var i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+  let perfEntries = list.getEntries();
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 
   // Print entries named "Begin" with type "mark"
   perfEntries = list.getEntriesByName("Begin", "mark");
-  for (var i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 
   // Print entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
-  for (var i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 });
-// subscribe to all performance event types
-observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
-var observe_frame = new PerformanceObserver(function(list, obs) {
-  var perfEntries = list.getEntries();
-  // Should only have 'frame' entries
-  for (var i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+// Subscribe to all performance event types
+observe_all.observe({
+  entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'],
 });
-// subscribe to frame event only
+
+const observe_frame = new PerformanceObserver((list, obs) => {
+  const perfEntries = list.getEntries();
+
+  // Should only have 'frame' entries
+  perfEntries.forEach((entry) => print_perf_entry(entry));
+});
+
+// Subscribe to frame event only
 observe_frame.observe({entryTypes: ['frame']});
 ```
 

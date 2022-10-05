@@ -5,9 +5,11 @@ tags:
   - protocol_handlers
   - Manifest
   - Web
-  - Non-standard
+  - Experimental
+browser-compat: html.manifest.protocol_handlers
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{Non-standard_Header}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
@@ -81,8 +83,8 @@ Protocol handlers objects may contain the following values:
 
 ## Specifications
 
-This feature is not part of any specification. It has been proposed to be added to the [Manifest](https://w3c.github.io/manifest/) specification [\[1\]](https://github.com/w3c/manifest/issues/846) [\[2\]](https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/URLProtocolHandler/explainer.md).
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.manifest.protocol_handlers")}}
+{{Compat}}

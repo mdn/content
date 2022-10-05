@@ -34,7 +34,7 @@ This element is used only within a {{HTMLElement("map")}} element.
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None, it is an {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -77,7 +77,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     This attribute must not be used if `shape` is set to `default`.
 
     - `rect`: the value is `x1,y1,x2,y2`.
-      The value specifies the coordinates of the top-left and bottom-right corner of the rectangle.`
+      The value specifies the coordinates of the top-left and bottom-right corner of the rectangle.
       For example, in `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` the coordinates are `0,0` and `253,27`, indicating the top-left and bottom-right corners of the rectangle, respectively.
     - `circle`: the value is `x,y,radius`. Value specifies the coordinates of the circle center and the radius.
       For example: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
@@ -86,7 +86,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     The values are numbers of CSS pixels.
 
-
 - {{htmlattrdef("download")}}
   - : This attribute, if present, indicates that the author intends the hyperlink to be used for downloading a resource.
     See {{HTMLElement("a")}} for a full description of the {{htmlattrxref("download", "a")}} attribute.
@@ -94,7 +93,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : The hyperlink target for the area.
     Its value is a valid URL.
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
-- {{htmlattrdef("hreflang")}}
+- {{htmlattrdef("hreflang")}} {{Deprecated_Inline}}
   - : Indicates the language of the linked resource. Allowed values are defined by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 - {{htmlattrdef("ping")}}
@@ -145,7 +144,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Indicates that no hyperlink exists for the associated area.
 
-    > **Note:** Since HTML5, omitting the `href` attribute is sufficient.
+    > **Note:** The `nohref` attribute is not necessary, as omitting the `href` attribute is sufficient.
 
 - {{htmlattrdef("type")}} {{deprecated_inline}}
   - : Hint for the type of the referenced resource. Ignored by browsers.
@@ -154,10 +153,21 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
-  <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="left.html"
+    alt="Click to go Left" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="right.html"
+    alt="Click to go Right" />
 </map>
-<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
+<img
+  usemap="#primary"
+  src="https://via.placeholder.com/350x150"
+  alt="350 x 150 pic" />
 ```
 
 ### Result

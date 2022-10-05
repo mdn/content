@@ -1,6 +1,7 @@
 ---
 title: Request.formData()
 slug: Web/API/Request/formData
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Request.formData
 ---
+
 {{APIRef("Fetch")}}
 
 The **`formData()`** method of the {{domxref("Request")}} interface
@@ -17,10 +19,8 @@ reads the request body and returns it as a promise that resolves with a {{domxre
 
 ## Syntax
 
-```js
-request.formData().then(function(formdata) {
-  // do something with your formdata
-});
+```js-nolint
+formData()
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ const request = new Request('/myEndpoint', {
   body: formData
 });
 
-request.formData().then(function(data) {
+request.formData().then((data) => {
   // do something with the formdata sent in the request
 });
 ```

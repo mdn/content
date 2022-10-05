@@ -1,6 +1,7 @@
 ---
 title: AudioParam.value
 slug: Web/API/AudioParam/value
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam
@@ -12,25 +13,19 @@ tags:
   - value
 browser-compat: api.AudioParam.value
 ---
+
 {{APIRef("Web Audio API")}}
 
 The [Web Audio API's](/en-US/docs/Web/API/Web_Audio_API)
 {{domxref("AudioParam")}} interface property **`value`** gets
 or sets the value of this {{domxref("AudioParam")}} at the current time. Initially, the value is set to {{domxref("AudioParam.defaultValue")}}.
 
-Setting `value` has the same effect as
-calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
+Setting `value` has the same effect as
+calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
 `AudioContext`'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
 property.
 
-## Syntax
-
-```js
-var curValue = audioParam.value;
-audioParam.value = newValue;
-```
-
-### Value
+## Value
 
 A floating-point {{jsxref("Number")}} indicating the parameter's value as of the
 current time. This value will be between the values specified by the
@@ -49,24 +44,26 @@ not always exactly equal what you set it to.
 Consider this example:
 
 ```js
-const source = new AudioBufferSourceNode(...);
+const source = new AudioBufferSourceNode(/* … */);
 const rate = 5.3;
-source.playbackRate.value = rate;
-console.log(source.playbackRate.value === rate);
+source.playbackRate.value = rate;
+console.log(source.playbackRate.value === rate);
 ```
 
-The log output will be `false`, because the playback rate parameter,
+The log output will be `false`, because the playback rate parameter,
 `rate`, was converted to the 32-bit floating-point number closest to 5.3,
-which yields 5.300000190734863. One solution is to use the {{jsxref("Math.fround()")}}
+which yields 5.300000190734863. One solution is to use the {{jsxref("Math.fround()")}}
 method, which returns the single-precision value equivalent to the 64-bit JavaScript
 value specified—when setting `value`, like this:
 
-    const source = new AudioBufferSourceNode(...);
-    const rate = Math.fround(5.3);
-    source.playbackRate.value = rate;
-    console.log(source.playbackRate.value === rate);
+```js
+const source = new AudioBufferSourceNode(/* … */);
+const rate = Math.fround(5.3);
+source.playbackRate.value = rate;
+console.log(source.playbackRate.value === rate);
+```
 
-In this case, the log output will be `true`.
+In this case, the log output will be `true`.
 
 ### Value of a property which is changing over time
 
@@ -102,7 +99,7 @@ the value of a parameter:
 Thus, the `value` of a parameter is maintained to accurately reflect the
 state of the parameter over time.
 
-## Example
+## Examples
 
 This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 
@@ -125,8 +122,7 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
 When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to
 version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.
 Starting with version 64, the value is changed instantly to bring it in line with the
-Web Audio spec. See [Chrome Platform
-Status](https://www.chromestatus.com/feature/5287995770929152) for details.
+Web Audio spec. See [Chrome Platform Status](https://chromestatus.com/feature/5287995770929152) for details.
 
 ## See also
 

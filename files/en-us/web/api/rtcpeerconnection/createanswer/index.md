@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -13,6 +14,7 @@ tags:
   - createAnswer
 browser-compat: api.RTCPeerConnection.createAnswer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createAnswer()`** method on the
@@ -26,10 +28,12 @@ the negotiation process.
 
 ## Syntax
 
-```js
-aPromise = RTCPeerConnection.createAnswer([options]);
+```js-nolint
+createAnswer()
+createAnswer(options)
 
-RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{deprecated_inline}}
+createAnswer(successCallback, failureCallback)
+createAnswer(successCallback, failureCallback, options)
 ```
 
 ### Parameters
@@ -69,14 +73,13 @@ A {{jsxref("Promise")}} whose fulfillment handler is called with an object confo
 to the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP answer
 to be delivered to the other peer.
 
-## Example
+## Examples
 
-Here is a segment of code taken from the code that goes with the article [Signaling and video
-calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer
+Here is a segment of code taken from the code that goes with the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer
 to another peer across the signaling channel.
 
 > **Note:** Keep in mind that this is part of the signaling process, the transport layer for
-> which is an implementation detail that's entirely up to you. In this case, a [WebSocket](/en-US/docs/Web/API/WebSocket_API) connection is used to send a
+> which is an implementation detail that's entirely up to you. In this case, a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection is used to send a
 > {{Glossary("JSON")}} message with a `type` field with the value
 > "video-answer" to the other peer, carrying the answer to the device which sent the
 > offer to connect. The contents of the object being passed to the
@@ -84,10 +87,8 @@ to another peer across the signaling channel.
 > fulfillment handler, depend entirely on your design
 
 ```js
-pc.createAnswer().then(function(answer) {
-  return pc.setLocalDescription(answer);
-})
-.then(function() {
+pc.createAnswer().then((answer) => pc.setLocalDescription(answer))
+.then(() => {
   // Send the answer to the remote peer through the signaling server.
 })
 .catch(handleGetUserMediaError);

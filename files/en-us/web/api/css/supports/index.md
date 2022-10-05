@@ -1,6 +1,7 @@
 ---
 title: CSS.supports()
 slug: Web/API/CSS/supports
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -10,6 +11,7 @@ tags:
   - supports
 browser-compat: api.CSS.supports
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSS.supports()`** method returns a boolean value
@@ -17,9 +19,9 @@ indicating if the browser supports a given CSS feature, or not.
 
 ## Syntax
 
-```js
-CSS.supports(propertyName, value);
-CSS.supports(supportCondition);
+```js-nolint
+supports(propertyName, value)
+supports(supportCondition)
 ```
 
 ### Parameters
@@ -28,15 +30,15 @@ There are two distinct sets of parameters. The first one allows to test the supp
 a pair _property-value_:
 
 - `propertyName`
-  - : A {{domxref("DOMString")}} containing the name of the CSS property to check.
+  - : A string containing the name of the CSS property to check.
 - `value`
-  - : A {{domxref("DOMString")}} containing the value of the CSS property to check.
+  - : A string containing the value of the CSS property to check.
 
 The second syntax takes one parameter matching the condition of
 {{cssxref("@supports")}}:
 
 - `supportCondition`
-  - : A {{domxref("DOMString")}} containing the condition to check.
+  - : A string containing the condition to check.
 
 ### Return value
 
@@ -49,8 +51,7 @@ result = CSS.supports("text-decoration-style", "blink");
 result = CSS.supports("display: flex");
 result = CSS.supports("(--foo: red)");
 
-result = CSS.supports(`(transform-style: preserve) or (-moz-transform-style: preserve) or
-                       (-o-transform-style: preserve) or (-webkit-transform-style: preserve)`);
+result = CSS.supports("(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)");
 
 // result is true or false
 ```

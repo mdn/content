@@ -1,6 +1,7 @@
 ---
 title: VTTCue.region
 slug: Web/API/VTTCue/region
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,18 +10,12 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.region
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`region`** property of the {{domxref("VTTCue")}} interface returns and sets the {{domxref("VTTRegion")}} that this cue belongs to.
 
-## Syntax
-
-```js
-let region = VTTCue.region;
-VTTCue.region = a;
-```
-
-### Value
+## Value
 
 A {{domxref("VTTRegion")}} object.
 

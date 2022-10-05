@@ -1,6 +1,7 @@
 ---
 title: XRViewerPose
 slug: Web/API/XRViewerPose
+page-type: web-api-interface
 tags:
   - 3D
   - API
@@ -19,11 +20,14 @@ tags:
   - augmented
 browser-compat: api.XRViewerPose
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The WebXR Device API interface **`XRViewerPose`** represents the pose (the position and orientation) of a viewer's point of view on the scene. Each `XRViewerPose` can have multiple views to represent, for example, the slight separation between the left and right eye.
 
 This view can represent anything from the point-of-view of a user's XR headset to the viewpoint represented by a player's movement of an avatar using mouse and keyboard, presented on the screen, to a virtual camera capturing the scene for a spectator.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -53,18 +57,18 @@ returned, the frame is rendered by clearing the backbuffer and then rendering ea
 the views in the pose; these are most likely the views for the left and right eyes.
 
 ```js
-let pose = frame.getViewerPose(xrReferenceSpace);
+const pose = frame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
-  let glLayer = xrSession.renderState.baseLayer;
+  const glLayer = xrSession.renderState.baseLayer;
 
   gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
   gl.clearColor(0, 0, 0, 1);
   gl.clearDepth(1);
   gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_BUFFER_BIT);
 
-  for (let view of pose.views) {
-    let viewport = glLayer.getViewport(view);
+  for (const view of pose.views) {
+    const viewport = glLayer.getViewport(view);
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
     /* render the scene for the eye view.eye */
@@ -73,7 +77,7 @@ if (pose) {
 ```
 
 Passing each `view` to {{domxref("XRWebGLLayer.getViewport", "getViewport()")}} returns the WebGL viewport to apply in order to cause the rendered
-output to be positioned correctly in the framebuffer for renderijng to the corresponding eye on the output device.
+output to be positioned correctly in the framebuffer for rendering to the corresponding eye on the output device.
 
 This code is derived from {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion", "Drawing a
   frame")}}. You can see more context and see much more on that page.

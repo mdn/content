@@ -11,8 +11,9 @@ tags:
   - Security
   - media-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.media-src
+browser-compat: http.headers.Content-Security-Policy.media-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -43,14 +44,16 @@ media using the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements.
 
 One or more sources can be allowed for the `media-src` policy:
 
-```
+```http
 Content-Security-Policy: media-src <source>;
 Content-Security-Policy: media-src <source> <source>;
 ```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 
@@ -58,7 +61,7 @@ Content-Security-Policy: media-src <source> <source>;
 
 Given this CSP header:
 
-```
+```http
 Content-Security-Policy: media-src https://example.com/
 ```
 
@@ -69,7 +72,7 @@ The following {{HTMLElement("audio")}}, {{HTMLElement("video")}} and
 <audio src="https://not-example.com/audio"></audio>
 
 <video src="https://not-example.com/video">
-  <track kind="subtitles" src="https://not-example.com/subtitles">
+  <track kind="subtitles" src="https://not-example.com/subtitles" />
 </video>
 ```
 

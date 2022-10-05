@@ -5,13 +5,14 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{XsltRef()}}
 
 The `boolean` function evaluates an expression and returns true or false.
 
 ## Syntax
 
-```js
+```js-nolint
 boolean( expression )
 ```
 
@@ -33,7 +34,7 @@ Boolean `true` or `false` after evaluating `expression`.
 
 ## Defined
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-boolean)
+[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-boolean)
 
 ## Gecko support
 

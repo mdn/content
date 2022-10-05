@@ -1,15 +1,19 @@
 ---
 title: MediaStreamTrackAudioSourceNode
 slug: Web/API/MediaStreamTrackAudioSourceNode
+page-type: web-api-interface
 browser-compat: api.MediaStreamTrackAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaStreamTrackAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which represents a source of audio data taken from a specific {{domxref("MediaStreamTrack")}} obtained through the [WebRTC](/en-US/docs/Web/API/WebRTC_API) or [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API) APIs.
 
-The audio itself might be input from a microphone or other audio sampling device, or might be received through a {{domxref("RTCPeerConnection")}}, among other posible options.
+The audio itself might be input from a microphone or other audio sampling device, or might be received through a {{domxref("RTCPeerConnection")}}, among other possible options.
 
 A `MediaStreamTrackAudioSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method. This interface is similar to {{domxref("MediaStreamAudioSourceNode")}}, except it lets you specifically state the track to use, rather than assuming the first audio track on a stream.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>

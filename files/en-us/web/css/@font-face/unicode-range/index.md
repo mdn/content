@@ -1,17 +1,18 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
+page-type: css-at-rule-descriptor
 tags:
   - At-rule descriptor
   - CSS
   - CSS Fonts
   - CSS Property
-  - Experimental
   - Layout
   - Reference
   - Web
 browser-compat: css.at-rules.font-face.unicode-range
 ---
+
 {{CSSRef}}
 
 The **`unicode-range`** CSS descriptor sets the specific range of characters to be used from a font defined by {{cssxref("@font-face")}} and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.
@@ -20,10 +21,10 @@ The **`unicode-range`** CSS descriptor sets the specific range of characters to 
 
 ```css
 /* <unicode-range> values */
-unicode-range: U+26;               /* single codepoint */
+unicode-range: U+26; /* single codepoint */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;        /* codepoint range */
-unicode-range: U+4??;              /* wildcard range */
+unicode-range: U+0025-00FF; /* codepoint range */
+unicode-range: U+4??; /* wildcard range */
 unicode-range: U+0025-00FF, U+4??; /* multiple values */
 ```
 
@@ -46,7 +47,9 @@ The purpose of this descriptor is to allow the font resources to be segmented so
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<unicode-range>#
+```
 
 ## Examples
 
@@ -66,8 +69,8 @@ In the CSS we are in effect defining a completely separate {{cssxref("@font-face
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 

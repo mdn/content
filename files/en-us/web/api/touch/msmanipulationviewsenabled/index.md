@@ -1,9 +1,11 @@
 ---
 title: Touch.msManipulationViewsEnabled
 slug: Web/API/Touch/MsManipulationViewsEnabled
+page-type: web-api-instance-property
 tags:
   - msManipulationViesEnabled
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
@@ -20,9 +22,11 @@ Returns _true_ if manipulation features are support available, such as _touch pa
 
 Using a JSON file:
 
-    {
-    msManipulationViewsEnabled: true,
-    }
+```json
+{
+  "msManipulationViewsEnabled": true,
+}
+```
 
 ## See also
 

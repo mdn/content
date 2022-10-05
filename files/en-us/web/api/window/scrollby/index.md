@@ -1,6 +1,7 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Window.scrollBy
 ---
+
 {{ APIRef() }}
 
 The **`Window.scrollBy()`** method scrolls the document in the
@@ -15,9 +17,9 @@ window by the given amount.
 
 ## Syntax
 
-```js
-window.scrollBy(x-coord, y-coord);
-window.scrollBy(options)
+```js-nolint
+scrollBy(x-coord, y-coord)
+scrollBy(options)
 ```
 
 ### Parameters
@@ -36,23 +38,33 @@ window.scrollBy(options)
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 To scroll down one page:
 
-    window.scrollBy(0, window.innerHeight);
+```js
+window.scrollBy(0, window.innerHeight);
+```
 
 To scroll up:
 
-    window.scrollBy(0, -window.innerHeight);
+```js
+window.scrollBy(0, -window.innerHeight);
+```
 
 Using `options`:
 
-    window.scrollBy({
-      top: 100,
-      left: 100,
-      behavior: 'smooth'
-    });
+```js
+window.scrollBy({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+```
 
 ## Notes
 

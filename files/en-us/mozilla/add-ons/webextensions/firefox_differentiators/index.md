@@ -10,11 +10,12 @@ tags:
   - Themes
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Firefox is a great place to begin your browser extension development. To start, you get the highest compliance with the proposed browser extension API including use of the `browser.*` namespace and promises for handling asynchronous events. Then, there is a highly supportive community of extension developers, ready to assist you.
 
-Firefox also offers some unique features that you can use to build more secure, easy to use, and more visually appealing extensions. Just take a look at what’s available:
+Firefox also offers some unique features that you can use to build more secure, easy to use, and more visually appealing extensions. Just take a look at what's available:
 
 <table class="standard-table">
   <tbody>
@@ -144,7 +145,7 @@ Firefox also offers some unique features that you can use to build more secure, 
     <tr>
       <td>
         <p>
-          Enable users to reliably add your extension’s features to new pages
+          Enable users to reliably add your extension's features to new pages
           and sites, with the ability to
           <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts"
             >register and unregister content scripts at runtime</a
@@ -153,7 +154,7 @@ Firefox also offers some unique features that you can use to build more secure, 
       </td>
       <td>
         <img
-          alt="Illustration of example code used to inject a  content script on demand"
+          alt="Illustration of example code used to inject a content script on demand"
           src="script_inject.png"
         />
       </td>
@@ -213,4 +214,4 @@ Firefox also offers some unique features that you can use to build more secure, 
   </tbody>
 </table>
 
-Icons from [icon8](https://www.icons8.com)
+Icons from [icon8](https://icons8.com/)

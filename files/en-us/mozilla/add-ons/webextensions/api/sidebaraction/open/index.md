@@ -11,7 +11,10 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.open
 ---
-{{AddonSidebar()}}Open the sidebar in the active window.
+
+{{AddonSidebar()}}
+
+Open the sidebar in the active window.
 
 You can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
@@ -19,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.open()
 ```
 

@@ -15,9 +15,10 @@ tags:
   - Web
   - formats
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
+At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
 
 For that reason, the `codecs` parameter can be added to the MIME type describing media content. With it, container-specific information can be provided. This information may include things like the profile of the video codec, the type used for the audio tracks, and so forth.
 
@@ -25,14 +26,14 @@ This guide briefly examines the syntax of the media type `codecs` parameter and 
 
 ## General syntax
 
-A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc), then a slash character (`/`), then the container format used to contain the media:
+A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the container format used to contain the media:
 
 - `audio/mpeg`
   - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.
 - `video/ogg`
   - : A video file using the [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) file type.
 - `video/mp4`
-  - : A video file using the [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file type.
+  - : A video file using the [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file type.
 - `video/quicktime`
   - : A video file in Apple's [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) format. As noted elsewhere, this format was once commonly used on the web but no longer is, since it required a plugin to use.
 
@@ -45,7 +46,7 @@ To do so, append a semicolon (`;`) followed by `codecs=` and then the string des
 - `video/webm; codecs="vp8, vorbis"`
   - : A [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) file containing [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) video and/or [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) audio.
 - `video/mp4; codecs="avc1.4d002a"`
-  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
+  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
 
 As is the case with any MIME type parameter, `codecs` must be changed to `codecs*` (note the asterisk character, `*`) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.
 
@@ -55,22 +56,24 @@ As is the case with any MIME type parameter, `codecs` must be changed to `codecs
 
 The containers below support extended codec options in their `codecs` parameters:
 
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "3GP")}}
-- {{anch("AV1")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "ISO BMFF")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "MPEG-4")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "QuickTime")}}
-- {{anch("WebM")}}
+- [3GP](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [AV1](#av1)
+- [ISO BMFF](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [MPEG-4](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [QuickTime](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [WebM](#webm)
 
 Several of the links above go to the same section; that's because those media types are all based on ISO Base Media File Format (ISO BMFF), so they share the same syntax.
 
 ### AV1
 
-The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
+The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff/) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
 
 ```plain
-av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
+av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]
 ```
+
+> **Note:** Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
 
 This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.
 
@@ -115,7 +118,7 @@ This codec parameter string's components are described in more detail in the tab
               <td>2</td>
               <td>
                 "Professional" profile adds support for 4:2:2 chroma subsampling
-                and 12 bit per component color.
+                and 12-bit per component color.
               </td>
             </tr>
           </tbody>
@@ -125,21 +128,14 @@ This codec parameter string's components are described in more detail in the tab
     <tr>
       <td><code>LL</code></td>
       <td>
-        The two-digit level number, which is converted to the X.Y format level
-        format, where <code>X = 2 + (LL >> 2)</code> and
-        <code>Y = LL &#x26; 3</code>. See
-        <a href="https://aomediacodec.github.io/av1-spec/#levels"
-          >Appendix A, section 3</a
-        >
-        in the AV1 Specification for details.
+        The two-digit level number, which is converted to the X.Y format level format, where <code>X = 2 + (LL >> 2)</code> and <code>Y = LL &#x26; 3</code>.
+        See <a href="https://aomediacodec.github.io/av1-spec/#levels">Appendix A, section 3</a> in the AV1 Specification for details.
       </td>
     </tr>
     <tr>
       <td><code>T</code></td>
       <td>
-        The one-character tier indicator. For the Main tier (<code
-          >seq_tier</code
-        >
+        The one-character tier indicator. For the Main tier (<code>seq_tier</code>
         equals 0), this character is the letter <code>M</code>. For the High
         tier (<code>seq_tier</code> is 1), this character is the letter
         <code>H</code>. The High tier is only available for level 4.0 and up.
@@ -218,9 +214,9 @@ This codec parameter string's components are described in more detail in the tab
           The third digit in <code>CCC</code> indicates the chroma sample
           position, with a value of 0 indicating that the position is unknown
           and must be separately provided during decoding; a value of 1
-          indicating that the sample position is horizontally colocated with the
+          indicating that the sample position is horizontally collocated with the
           (0, 0) luma sample; and a value of 2 indicating that the sample
-          position is colocated with (0, 0) luma.
+          position is collocated with (0, 0) luma.
         </p>
         <p>The default value is <code>110</code> (4:2:0 chroma subsampling).</p>
       </td>
@@ -283,7 +279,7 @@ All fields from `M` (monochrome flag) onward are optional; you may stop includin
 
 ### ISO Base Media File Format: MP4, QuickTime, and 3GP
 
-All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
+All media types based upon the [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_Base_Media_File_Format) (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
 
 | MIME type         | Description                                                                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -292,7 +288,7 @@ All media types based upon the {{interwiki("wikipedia", "ISO Base Media File For
 | `audio/3gp2`      | 3GP2 audio ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
 | `video/3gp2`      | 3GP2 video ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
 | `audio/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `video/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
+| `video/mp4`       | MP4 video ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
 | `application/mp4` | Non-audiovisual media encapsulated in MPEG-4                                                                                                         |
 
 Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
@@ -304,12 +300,12 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see {{anch("MPEG-4 audio")}}.
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1.oo[.PPCCLL]` (AVC video)
 
-  - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See {{anch("AVC profiles")}} for the possible values of `PP`.
+  - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
 
@@ -325,7 +321,7 @@ The following are the AVC profiles and their profile numbers for use in the `cod
 | **Baseline Profile (BP)** Similar to CBP but with more data loss protections and recovery capabilities. This is not as widely used as it was before CBP was introduced. All CBP streams are considered to also be BP streams.                                                                                                                                                                                                                                                                                                                              | `42`         | `00`             |
 | **Extended Profile (XP)** Designed for streaming video over the network, with high compression capability and further improvements to data robustness and stream switching.                                                                                                                                                                                                                                                                                                                                                                                | `58`         | `00`             |
 | **Main Profile (MP)** The profile used for standard-definition digital television being broadcast in MPEG-4 format. _Not_ used for high-definition television broadcasts. This profile's importance has faded since the introduction of the High Profile—which was added for HDTV use—in 2004.                                                                                                                                                                                                                                                             | `4D`         | `00`             |
-| **High Profile (HiP)** Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for  Blu-Ray video.                                                                                                                                                                                                                                                                                                                                                                                       | `64`         | `00`             |
+| **High Profile (HiP)** Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for Blu-Ray video.                                                                                                                                                                                                                                                                                                                                                                                       | `64`         | `00`             |
 | **Progressive High Profile (PHiP)** Essentially High Profile without support for field coding.                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `64`         | `08`             |
 | **Constrained High Profile** PHiP, but without support for bi-predictive slices ("B-slices").                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `64`         | `0C`             |
 | **High 10 Profile (Hi10P)** High Profile, but with support for up to 10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `6E`         | `00`             |
@@ -335,10 +331,10 @@ The following are the AVC profiles and their profile numbers for use in the `cod
 | **High 4:2:2 Intra Profile** The Hi422 Profile with all-intra-frame use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `7A`         | `10`             |
 | **High 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to use only intra frames.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | `F4`         | `10`             |
 | **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                                                                 | `44`         | `00`             |
-| **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the {{interwiki("wikipedia", "SVC")}} Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
+| **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the [SVC](https://en.wikipedia.org/wiki/SVC) Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
 | **Scalable Constrained Baseline Profile** Primarily used for real-time communication applications. Not yet supported by WebRTC, but an extension to the WebRTC API [to allow SVC](https://github.com/w3c/webrtc-svc) is in development.                                                                                                                                                                                                                                                                                                                    | `53`         | `04`             |
 | **Scalable High Profile** Meant mostly for use in broadcast and streaming applications. The base (or highest quality) layer must conform to the AVC High Profile.                                                                                                                                                                                                                                                                                                                                                                                          | `56`         | `00`             |
-| **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communticions.                                                                                                                                                                                                                                                                                                                                                                                                                                   | `56`         | `04`             |
+| **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communication.                                                                                                                                                                                                                                                                                                                                                                                                                                   | `56`         | `04`             |
 | **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                                                             | `56`         | `20`             |
 | **Stereo High Profile** The Stereo High Profile provides stereoscopic video using two renderings of the scene (left eye and right eye). Otherwise, provides the same features as the High profile.                                                                                                                                                                                                                                                                                                                                                         | `80`         | `00`             |
 | **Multiview High Profile** Supports two or more views using both temporal and MVC inter-view prediction. _Does not support_ field pictures or macroblock-adaptive frame-field coding.                                                                                                                                                                                                                                                                                                                                                                      | `76`         | `00`             |
@@ -360,7 +356,7 @@ Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the ful
 
 > **Note:** The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
 
-The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object ypes provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
+The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object types provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
 
 <table class="standard-table">
   <caption>
@@ -425,7 +421,7 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
       <td>Main, Scalable, Speech, LD</td>
     </tr>
     <tr>
-      <td><code>10</code> – <code>11</code></td>
+      <td><code>10</code> – <code>11</code></td>
       <td><em>Reserved</em></td>
       <td></td>
     </tr>
@@ -481,7 +477,7 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
     </tr>
     <tr>
       <td><code>22</code></td>
-      <td>ER BSAC (Error Reslient Bit-Sliced Arithmetic Coding)</td>
+      <td>ER BSAC (Error Resilient Bit-Sliced Arithmetic Coding)</td>
       <td>Mobile Internetworking</td>
     </tr>
     <tr>
@@ -638,15 +634,16 @@ The strings `vp8.0` and `vp9.0` also work, but are not recommended.
 
 #### ISO Base Media File Format syntax
 
-As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
+As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4/), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
 
 In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
 
 ```plain
-cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]
+cccc.PP.LL.DD
+cccc.PP.LL.DD.CC.cp.tc.mc.FF
 ```
 
-The first five components are required; everything from `cp` (color primaries) onward is optional; you can stop including components at any point from then onward. Each of these components is described in the following table. Following the table are some examples.
+The first four components are required; everything from `CC` (chroma subsampling) onward is optional, but all or nothing. Each of these components is described in the following table. Following the table are some examples.
 
 <table class="standard-table">
   <caption>
@@ -789,7 +786,7 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>01</code></td>
               <td>
-                4:2:0 chroma subsampling with the samples colocated with luma
+                4:2:0 chroma subsampling with the samples collocated with luma
                 (0, 0)
               </td>
             </tr>
@@ -898,7 +895,7 @@ The first five components are required; everything from `cp` (color primaries) o
               <td><code>09</code></td>
               <td>
                 BT.2020; BT.2100. Used for ultra-high definition (4K) High
-                Dynamic Range (HDR) video, these have a very wide color gamut
+                Dynamic Range (HDR) video, these have a very wide color {{glossary("gamut")}}
                 and support 10-bit and 12-bit color component depths.
               </td>
             </tr>
@@ -928,7 +925,7 @@ The first five components are required; everything from `cp` (color primaries) o
               </td>
             </tr>
             <tr>
-              <td><code>13</code> – <code>21</code></td>
+              <td><code>13</code> – <code>21</code></td>
               <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
             </tr>
             <tr>
@@ -936,7 +933,7 @@ The first five components are required; everything from `cp` (color primaries) o
               <td>EBU Tech 3213-E</td>
             </tr>
             <tr>
-              <td><code>23</code> – <code>255</code></td>
+              <td><code>23</code> – <code>255</code></td>
               <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
             </tr>
           </tbody>
@@ -972,7 +969,7 @@ The first five components are required; everything from `cp` (color primaries) o
       <td><code>FF</code></td>
       <td>
         Indicates whether to restrict the black level and color range of each
-        color component to the legal range. For 8 bit color samples, the legal
+        color component to the legal range. For 8-bit color samples, the legal
         range is 16-235. A value of <code>00</code> indicates that these
         limitations should be enforced, while a value of <code>01</code> allows
         the full range of possible values for each component, even if the

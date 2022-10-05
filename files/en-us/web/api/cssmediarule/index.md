@@ -1,6 +1,7 @@
 ---
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSMediaRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSMediaRule`** interface represents a single CSS {{cssxref("@media")}} rule.
@@ -18,7 +20,7 @@ The **`CSSMediaRule`** interface represents a single CSS {{cssxref("@media")}} r
 
 _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-- {{domxref("CSSMediaRule.media")}} {{readonlyinline}}
+- {{domxref("CSSMediaRule.media")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.
 
 ## Methods

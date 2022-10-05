@@ -5,13 +5,16 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `normalize-space` function strips leading and trailing white-space from a string, replaces sequences of whitespace characters by a single space, and returns the resulting string.
 
 ### Syntax
 
-    normalize-space( [string] )
+```
+normalize-space( [string] )
+```
 
 ### Arguments
 
@@ -24,7 +27,7 @@ The normalized string.
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-normalize-space)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-normalize-space)
 
 ### Gecko support
 

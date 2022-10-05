@@ -1,6 +1,7 @@
 ---
 title: '::target-text'
 slug: Web/CSS/::target-text
+page-type: css-pseudo-element
 tags:
   - '::target-text'
   - CSS
@@ -8,21 +9,25 @@ tags:
   - Reference
   - Selector
   - Web
+  - Experimental
 browser-compat: css.selectors.target-text
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the text that has been scrolled to if the browser supports scroll-to-text fragments. It allows authors to choose how to highlight that section of text.
 
 ```css
 ::target-text {
-  background-color: pink;
+  background-color: pink;
 }
 ```
 
 ## Syntax
 
-{{csssyntax}}
+```
+::target-text
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.component
 slug: Web/API/RTCIceCandidate/component
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -17,6 +18,7 @@ tags:
   - component
 browser-compat: api.RTCIceCandidate.component
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`component`** property
@@ -27,13 +29,7 @@ an RTCP candidate.
 If a candidate represents both RTP and RTCP multiplexed together, it is reported as an
 RTP candidate.
 
-## Syntax
-
-```js
-var component = RTCIceCandidate.component;
-```
-
-### Value
+## Value
 
 A string which is one of the following:
 
@@ -46,24 +42,26 @@ A string which is one of the following:
 
 Consider this {{Glossary("SDP")}} attribute line (a-line):
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 This is an ICE candidate a-line, whose {{domxref("RTCIceCandidate.foundation",
   "foundation")}} is 4234997325. The next field on the a-line, `"1"`, is the
 component ID. A value of `"1"` indicates RTP, which is recorded in the
 `component` property as `"rtp"`. If this value were instead
 `"2"`, the a-line would be describing an RTCP candidate, and
-`compoment` would be `"rtcp"`.
+`component` would be `"rtcp"`.
 
-## Example
+## Examples
 
 This code snippet examines a candidate's component type and dispatches the candidate to
 different handlers depending on the value.
 
 ```js
-if (candidate.component == "rtp") {
+if (candidate.component === "rtp") {
   handleRTPCandidate(candidate);
-} else if (candidate.component == "rtcp") {
+} else if (candidate.component === "rtcp") {
   handleRTCPCandidate(candidate);
 } else {
   handleUnknownCandidate(candidate);

@@ -5,8 +5,10 @@ tags:
   - Error
   - Errors
   - InternalError
+  - RangeError
   - JavaScript
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "too much recursion" or "Maximum call stack size exceeded"
@@ -14,15 +16,15 @@ occurs when there are too many function calls, or a function is missing a base c
 
 ## Message
 
-```js
-Error: Out of stack space (Edge)
-InternalError: too much recursion (Firefox)
+```
 RangeError: Maximum call stack size exceeded (Chrome)
+InternalError: too much recursion (Firefox)
+RangeError: Maximum call stack size exceeded. (Safari)
 ```
 
 ## Error type
 
-{{jsxref("InternalError")}}.
+{{jsxref("InternalError")}} in Firefox; {{jsxref("RangeError")}} in Chrome and Safari.
 
 ## What went wrong?
 
@@ -62,14 +64,13 @@ loop(0);
 // InternalError: too much recursion
 ```
 
-This recursive function is missing a base case. As there is no exit condition, the
+This recursive function is missing a base case. As there is no exit condition, the
 function will call itself infinitely.
 
 ```js example-bad
 function loop(x) {
- // The base case is missing
-
-loop(x + 1); // Recursive call
+  // The base case is missing
+  loop(x + 1); // Recursive call
 }
 
 loop(0);
@@ -80,11 +81,11 @@ loop(0);
 ### Class error: too much recursion
 
 ```js example-bad
-class Person{
-	constructor(){}
-	set name(name){
-		this.name = name; // Recursive call
-	}
+class Person {
+  constructor() {}
+  set name(name) {
+    this.name = name; // Recursive call
+  }
 }
 
 const tony = new Person();
@@ -94,37 +95,31 @@ tony.name = "Tonisha"; // InternalError: too much recursion
 When a value is assigned to the property name (this.name = name;) JavaScript needs to
 set that property. When this happens, the setter function is triggered.
 
-```js example-bad
-set name(name){
-	this.name = name; // Recursive call
-}
-```
-
-> **Note:** In this example when the setter is triggered, it is told to do the same thing
-> again: _to set the same property that it is meant to handle._ This causes
-> the function to call itself, again and again, making it infinitely recursive.
+In this example when the setter is triggered, it is told to do the same thing again: _to set the same property that it is meant to handle._ This causes the function to call itself, again and again, making it infinitely recursive.
 
 This issue also appears if the same variable is used in the getter.
 
 ```js example-bad
-get name(){
-	return this.name; // Recursive call
+class Person {
+  get name() {
+    return this.name; // Recursive call
+  }
 }
 ```
 
 To avoid this problem, make sure that the property being assigned to inside the setter
-function is different from the one that initially triggered the setter.The same goes
+function is different from the one that initially triggered the setter. The same goes
 for the getter.
 
 ```js
-class Person{
-	constructor(){}
-	set name(name){
-		this._name = name;
-	}
-	get name(){
-		return this._name;
-	}
+class Person {
+  constructor() {}
+  set name(name) {
+    this._name = name;
+  }
+  get name() {
+    return this._name;
+  }
 }
 const tony = new Person();
 tony.name = "Tonisha";
@@ -134,5 +129,4 @@ console.log(tony);
 ## See also
 
 - {{Glossary("Recursion")}}
-- [Recursive
-  functions](/en-US/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/en-US/docs/Web/JavaScript/Guide/Functions#recursion)

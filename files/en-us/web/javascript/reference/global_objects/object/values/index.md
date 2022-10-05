@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
+
 {{JSRef}}
 
 The **`Object.values()`** method
@@ -21,7 +22,7 @@ chain as well.)
 
 ## Syntax
 
-```js
+```js-nolint
 Object.values(obj)
 ```
 
@@ -39,13 +40,6 @@ An array containing the given object's own enumerable property values.
 `Object.values()` returns an array whose elements are the enumerable
 property values found on the object. The ordering of the properties is the same as that
 given by looping over the property values of the object manually.
-
-## Polyfill
-
-To add compatible `Object.values` support in older environments that do not
-natively support it, you can find a Polyfill in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries)
-or in the [es-shims/Object.values](https://github.com/es-shims/Object.values)
-repositories.
 
 ## Examples
 
@@ -65,9 +59,9 @@ const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
 console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
 
 // getFoo is property which isn't enumerable
-const my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 'bar';
-console.log(Object.values(my_obj)); // ['bar']
+const myObj = Object.create({}, { getFoo: { value() { return this.foo; } } });
+myObj.foo = 'bar';
+console.log(Object.values(myObj)); // ['bar']
 
 // non-object argument will be coerced to an object
 console.log(Object.values('foo')); // ['f', 'o', 'o']
@@ -83,9 +77,8 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 ## See also
 
-- A polyfill of `Object.values` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Polyfill of `Object.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

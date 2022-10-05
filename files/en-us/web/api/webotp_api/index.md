@@ -1,12 +1,15 @@
 ---
 title: WebOTP API
 slug: Web/API/WebOTP_API
+page-type: web-api-overview
 tags:
   - API
   - WebOTP
   - Overview
   - Reference
+spec-urls: https://wicg.github.io/web-otp/
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
 The **WebOTP API** provides a method for verifying that a phone number belongs to the user, by generating a one-time password on receipt of a specially formatted SMS message.
@@ -29,29 +32,29 @@ In this example, when an SMS message arrives, and the user grants permission, an
 [Try the demo using a phone here](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
 ```html
-<input type="text" autocomplete="one-time-code" inputmode="numeric">
+<input type="text" autocomplete="one-time-code" inputmode="numeric" />
 ```
 
 ```js
 if ('OTPCredential' in window) {
-  window.addEventListener('DOMContentLoaded', e => {
+  window.addEventListener('DOMContentLoaded', (e) => {
     const input = document.querySelector('input[autocomplete="one-time-code"]');
     if (!input) return;
     const ac = new AbortController();
     const form = input.closest('form');
     if (form) {
-      form.addEventListener('submit', e => {
+      form.addEventListener('submit', (e) => {
         ac.abort();
       });
     }
     navigator.credentials.get({
       otp: { transport:['sms'] },
       signal: ac.signal
-    }).then(otp => {
+    }).then((otp) => {
       input.value = otp.code;
       if (form) form.submit();
-    }).catch(err => {
-      console.log(err);
+    }).catch((err) => {
+      console.error(err);
     });
   });
 }
@@ -59,9 +62,7 @@ if ('OTPCredential' in window) {
 
 ## Specifications
 
-| Specification                                 |
-| --------------------------------------------- |
-| [WebOTP API](https://wicg.github.io/web-otp/) |
+{{Specifications}}
 
 ## See also
 

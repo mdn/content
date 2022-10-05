@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentEditable`** property of
@@ -25,12 +27,9 @@ This enumerated attribute can have the following values:
 You can use the {{domxref("HTMLElement.isContentEditable")}} property to test the
 computed boolean value of this property.
 
-## Syntax
+## Value
 
-```js
-editable = element.contentEditable
-element.contentEditable = 'true'
-```
+A string.
 
 ## Specifications
 
@@ -39,13 +38,6 @@ element.contentEditable = 'true'
 ## Browser compatibility
 
 {{Compat}}
-
-In Internet Explorer, `contenteditable` cannot be applied to the
-{{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}},
-{{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}},
-{{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements
-directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
-can be placed inside the individual table cells.
 
 ## See also
 

@@ -13,20 +13,21 @@ tags:
   - setExpression
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---
+
 {{AddonSidebar()}}
 
 Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.
 
 The expression's execution context is the same as that for [`inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval).
 
-JSON objects and DOM nodes are displayed as an expandable tree, as in the [JSON viewer](/en-US/docs/Tools/JSON_viewer) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
+JSON objects and DOM nodes are displayed as an expandable tree, as in the [JSON viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
-var evaluating = browser.devtools.panels.setExpression(
+```js-nolint
+let evaluating = browser.devtools.panels.setExpression(
   expression,       // string
   rootTitle         // string
 )
@@ -55,7 +56,7 @@ This code creates a sidebar pane that displays the [`tagName`](/en-US/docs/Web/A
 function onCreated(sidebarPane) {
 
   browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
-    const exp = "$0 && $0.tagName";
+    const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });
@@ -67,9 +68,10 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +98,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
