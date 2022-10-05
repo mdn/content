@@ -52,7 +52,7 @@ If we give each `<article>` the `contain` property with a value of `content`, wh
 
 We have told it by way of the `contain` property that each article is independent.
 
-The `content` value is shorthand for `contain: layout paint`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
+The `content` value is shorthand for `contain: layout paint style`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
 This information is something that is usually known, and in fact quite obvious, to the web developer creating the page. However browsers cannot guess at your intent and cannot assume that an article will be entirely self-contained. Therefore this property gives you a nice way to explain to the browser this fact, and allow it to make performance optimizations based on that knowledge.
 
