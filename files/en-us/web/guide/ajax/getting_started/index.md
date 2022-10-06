@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting started
 slug: Web/Guide/AJAX/Getting_Started
 tags:
   - AJAX

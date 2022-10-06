@@ -11,7 +11,7 @@ browser-compat: mathml.elements.msup
 
 {{MathMLRef}}
 
-The MathML `<msup>` element is used to attach a superscript to an expression.
+The **`<msup>`** [MathML](/en-US/docs/Web/MathML) element is used to attach a superscript to an expression.
 
 It uses the following syntax: `<msup> base superscript </msup>`.
 
