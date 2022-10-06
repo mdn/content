@@ -129,8 +129,6 @@ function perfEntryToJSON() {
 
 ## Performance Observers
 
-{{SeeCompatTable}}
-
 The _performance observer_ interfaces allow an application to register an _observer_ for specific performance event types, and when one of those event types is recorded, the application is _notified_ of the event via the observer's callback function that was specified at the time, the observer was created. When the observer (callback) is invoked the callback's parameters include a _{{domxref("PerformanceObserverEntryList","performance observer entry list")}}_ that only contains _observed_ {{domxref("PerformanceEntry","performance entries")}}. That is, the list only contains entries for the event types that were specified when the observer's {{domxref("PerformanceObserver.observe","observe()")}} method was invoked.
 
 The following example shows how to register two observers: the first one registers for several event types and the second observer only registers for one event type.
@@ -181,13 +179,6 @@ function printPerfEntry(pe) {
 ```
 
 The {{domxref("PerformanceObserverEntryList","performance observer entry list")}} interface has the same three `getEntries*()` methods as the {{domxref("Performance")}} interface and these methods are used to retrieve _observed_ performance entries within the observer callback. These methods have been used in the above stated example.
-
-## Specifications
-
-The interfaces described in this document are defined in the **Performance Timeline** standard which has two levels:
-
-- [Performance Timeline Level 2](https://w3c.github.io/performance-timeline/); Editors Draft; Work In Progress. This version introduces _performance observers_ (and the {{domxref("PerformanceObserver")}} and {{domxref("PerformanceObserverEntryList")}} interfaces).
-- [Performance Timeline](https://www.w3.org/TR/performance-timeline/); W3C Recommendation 12 December 2013
 
 ## See also
 
