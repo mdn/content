@@ -18,9 +18,6 @@ The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web
 
 Rather than require authors to manually type out several digits of these constants, a few of them are provided directly by CSS.
 
-- `e` is the base of the natural logarithm, approximately equal to `2.7182818284590452354`.
-- `pi` is the ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
-
 > **Note:** These keywords are only usable within a calculation, such as `calc(pow(e, pi) - pi)`, or `min(pi, 5, e)`. If used outside of a calculation, they're treated like any other keyword: `animation-name: pi`; refers to an animation named "pi"; `line-height: e`; is invalid (not similar to `line-height: 2.7`, but `line-height: calc(e);` is).
 
 When a calculation or a subtree of a calculation becomes infinite or NaN, representing it with a numeric value is no longer possible. To aid in serialization of these degenerate values, the additional math constants `infinity` (with the value `+∞`), `-infinity` (with the value `−∞`), and `NaN` (with the value `NaN`) are defined.
@@ -32,6 +29,20 @@ As usual for CSS keywords, these are ASCII case-insensitive. Thus, `calc(InFiNiT
 ## Syntax
 
 The `<calc-constant>` type defines a number of numeric constants that can be used in CSS math functions.
+
+### Values
+
+- `e`
+  - : The base of the natural logarithm, approximately equal to `2.7182818284590452354`.
+
+- `pi`
+  - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
+
+- `infinity` & `-infinity`
+  - : An infinite length, used to indicate the largest/smallest possible value.
+  
+- `Nan`
+  - : A value representing Not-A-Number.
 
 ### Formal syntax
 
