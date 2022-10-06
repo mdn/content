@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mtr
 
 {{MathMLRef}}
 
-The MathML `<mtr>` element represents a row in a table or a matrix. It may only appear in a {{ MathMLElement("mtable") }} element. This element is similar to the {{ HTMLElement("tr") }} element of [HTML](/en-US/docs/Web/HTML).
+The **`<mtr>`** [MathML](/en-US/docs/Web/MathML) element represents a row in a table or a matrix. It may only appear in a {{ MathMLElement("mtable") }} element. This element is similar to the {{ HTMLElement("tr") }} element of [HTML](/en-US/docs/Web/HTML).
 
 ## Attributes
 
