@@ -31,7 +31,7 @@ As usual for CSS keywords, these are ASCII case-insensitive. Thus, `calc(InFiNiT
 
 ## Syntax
 
-The syntax of `<calc-constant>` extends the syntax of {{CSSxRef("&lt;calc-value&gt;")}}.
+The `<calc-constant>` type defines a number of numeric constants that can be used in CSS math functions.
 
 ### Formal syntax
 
