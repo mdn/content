@@ -40,7 +40,7 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
 
 - `infinity` & `-infinity`
   - : An infinite length, used to indicate the largest/smallest possible value.
-  
+
 - `Nan`
   - : A value representing Not-A-Number.
 
