@@ -1,5 +1,5 @@
 ---
-title: Performance Timeline
+title: Performance Timeline API
 slug: Web/API/Performance_Timeline
 page-type: web-api-overview
 tags:
