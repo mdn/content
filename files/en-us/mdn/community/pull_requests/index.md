@@ -133,6 +133,3 @@ When deploys succeed, it can take up to 24 hours for the CDN to invalidate cache
 
 For embedded browser compatibility data tables, the [browser-compat-data](https://github.com/mdn/browser-compat-data) project is built and deployed every Tuesday.
 You can expect to see merged changes on MDN Web Docs the following Wednesday.
-
-There are tools to see the state of deployed content such as [whatsdeployed.io](https://whatsdeployed.io/s/DLi/mdn/content) which let you see if your changes have been deployed.
-The same tool can also be used to [see if `translated-content` is live](https://whatsdeployed.io/s/16d/mdn/translated-content) after merging a pull request in the [`translated-content` repository](https://github.com/mdn/translated-content).
