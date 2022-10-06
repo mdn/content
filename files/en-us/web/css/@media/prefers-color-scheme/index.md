@@ -17,8 +17,11 @@ browser-compat: css.at-rules.media.prefers-color-scheme
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested a light or dark color theme.
 The user might indicate this preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
-Using `prefers-color-scheme` in embedded elements allows you to style a component based on the `color-scheme` of the parent element when acceptable from security standpoint.
+Using `prefers-color-scheme` in embedded elements allows you to style a component based on the `color-scheme` of the parent element.
 This applies to both same and cross-origin SVG and iframe elements and prevents cases where OS and browser preferences for color schemes are conflicting.
+
+SVG elements must be referenced in [secure animated mode](https://svgwg.org/specs/integration/#secure-animated-mode) to use `prefers-color-scheme`.
+SVGs are in secure animated mode when referenced by `<img>` elements, used to define font glyphs, and loaded as resources for `mask`, `pattern`, gradient, or other resource elements.
 
 ## Syntax
 
