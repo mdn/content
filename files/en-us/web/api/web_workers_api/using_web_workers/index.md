@@ -767,7 +767,7 @@ The web page creates a `<div>` element with the ID `result`, which gets used to 
 
 Finally, a message is sent to the worker to start it.
 
-[Try this example live](https://mdn.github.io/fibonacci-worker/).
+[Try this example live](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/).
 
 ### Dividing tasks among multiple workers
 
