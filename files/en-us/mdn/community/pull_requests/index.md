@@ -128,15 +128,11 @@ Don't:
 ## Deployment timeline
 
 After your pull request is merged to [`mdn/content`](https://github.com/mdn/content), it can take up to 48 hours before your changes are live on the [production site](https://developer.mozilla.org/), but it's usually quicker.
+The site build runs every 24 hours at around 19:00 US/Eastern time, and is deployed immediately after.
+When deploys succeed, it can take up to 24 hours for the CDN to invalidate caches and serve new content.
 
-- The site build runs every 24 hours at around 19:00 US/Eastern time, and is deployed immediately after.
-- Once deployment has occurred, it can take up to 24 hours for the CDN to invalidate caches and serve new content.
-
-To view your changes on other MDN repositories, you can expect the following timelines:
-
-- [browser-compat-data](https://github.com/mdn/browser-compat-data) is built and released every Tuesday. You can expect to see your merged changes on MDN Web Docs on Wednesday.
-- [data](https://github.com/mdn/data) - TODO
-- [interactive-examples](https://github.com/mdn/interactive-examples) - TODO
+For embedded browser compatibility data tables, the [browser-compat-data](https://github.com/mdn/browser-compat-data) project is built and deployed every Tuesday.
+You can expect to see merged changes on MDN Web Docs the following Wednesday.
 
 There are tools to see the state of deployed content such as [whatsdeployed.io](https://whatsdeployed.io/s/DLi/mdn/content) which let you see if your changes have been deployed.
 The same tool can also be used to [see if `translated-content` is live](https://whatsdeployed.io/s/16d/mdn/translated-content) after merging a pull request in the [`translated-content` repository](https://github.com/mdn/translated-content).
