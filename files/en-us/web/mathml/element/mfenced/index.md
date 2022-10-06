@@ -7,10 +7,11 @@ tags:
   - MathML Reference
   - MathML:Element
   - MathML:General Layout Schemata
+  - Non-standard
 browser-compat: mathml.elements.mfenced
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}
+{{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression.
 
@@ -71,7 +72,7 @@ Rendering in your browser:
 
 ## Specifications
 
-{{Specifications}}
+The `<mfenced>` element is not defined in any browser-oriented specification but you can find a description in [MathML 4](https://w3c.github.io/mathml/#presm_mfenced).
 
 ## Browser compatibility
 

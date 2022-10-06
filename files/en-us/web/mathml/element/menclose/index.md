@@ -6,10 +6,11 @@ tags:
   - MathML Reference
   - MathML:Element
   - MathML:General Layout Schemata
+  - Non-standard
 browser-compat: mathml.elements.menclose
 ---
 
-{{MathMLRef}}
+{{MathMLRef}}{{Non-standard_Header}}
 
 The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its content inside an enclosing notation specified by the `notation` attribute.
 
@@ -56,7 +57,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Specifications
 
-{{Specifications}}
+The `<mfenced>` element is not defined in any browser-oriented specification but you can find a description in [MathML 4](https://w3c.github.io/mathml/#presm_mfenced).
 
 ## Browser compatibility
 
