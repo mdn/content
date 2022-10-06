@@ -8,6 +8,8 @@ tags:
   - latency
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 **Latency** is the time it takes for a packet of data to travel from source to a destination. In terms of performance optimization, it's important to optimize to reduce causes of latency and to test site performance emulating high latency to optimize for users with lousy connections. This article explains what latency is, how it impacts performance, how to measure latency, and how to reduce it.
 
 ## What is Latency?
@@ -51,13 +53,13 @@ When a request is in a queue, waiting for a network connection it is considered 
 
 **DNS resolution** is the time it took to do the {{glossary('DNS lookup')}}. The greater the number of [hostnames](/en-US/docs/Web/API/URL/hostname), the more DNS lookups need to be done.
 
-**Connecting** is the time it takes for a {{glossary('TCP handshake')}} to complete. Like DNS, the greater the number of server connections needed, the more time is spend creating server connections.
+**Connecting** is the time it takes for a {{glossary('TCP handshake')}} to complete. Like DNS, the greater the number of server connections needed, the more time is spent creating server connections.
 
 The **{{glossary('TLS')}} handshake** is how long it took to set up a secure connection. While a TLS handshake does take longer to connect than an insecure connection, the additional time needed for a secure connection is worth it.
 
 **Sending** is the time taken to send the HTTP request to the server.
 
-**Waiting** is disk latency, the time it took for the server to complete its response. Disk latency used to be the main area of performance concern. However server performance has improved as computer memory, or CPU, has improved. Depending on the complexity of what is needed from the server, this can still be an issue.
+**Waiting** is disk latency, the time it took for the server to complete its response. Disk latency used to be the main area of performance concern. However, server performance has improved as computer memory, or CPU, has improved. Depending on the complexity of what is needed from the server, this can still be an issue.
 
 **Receiving** is the time it takes to download the asset. The receiving time is determined by a combination of the network capacity and the asset file size. If the image been cached, this would have been nearly instantaneous. Had we throttled, receiving could have been 43seconds!
 
