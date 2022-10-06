@@ -61,8 +61,8 @@ Allowed values are:
 
 - `block`
   - : (Default) Scrollbar in the block axis of the scroll container.
-      The block axis is the direction perpendicular to the flow of text within a line.
-      For horizontal writing modes like standard English this is the same as `vertical`, while for vertical writing modes it is the same as `horizontal`.
+    The block axis is the direction perpendicular to the flow of text within a line.
+    For horizontal writing modes like standard English this is the same as `vertical`, while for vertical writing modes it is the same as `horizontal`.
 - `inline`
   - : Scrollbar the inline axis of the scroll container.
     The inline axis is the direction parallel to the flow of text in a line.
@@ -93,6 +93,7 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 ```html
 <div id="container">
   <div id="square"></div>
+  <div id="stretcher"></div>
 </div>
 ```
 
@@ -101,8 +102,11 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 ```css
 #container {
   height: 300px;
+  overflow-y: scroll;
   scroll-timeline-name: squareTimeline;
   /* scroll-timeline-axis: vertical; */
+
+  position: relative;
 }
 
 #square {
@@ -114,6 +118,9 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
   animation-duration: 3s;
   animation-direction: alternate;
   animation-timeline: squareTimeline;
+
+  position: absolute;
+  bottom: 0;
 }
 
 @keyframes rotateAnimation {
@@ -124,13 +131,17 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
     transform: rotate(360deg);
   }
 }
+
+#stretcher {
+  height: 600px;
+}
 ```
 
 #### Result
 
 Scroll to see the animation.
 
-{{EmbedLiveSample("Setting a scroll timeline")}}
+{{EmbedLiveSample("Setting a scroll timeline", "100%", "320px")}}
 
 ## Specifications
 
