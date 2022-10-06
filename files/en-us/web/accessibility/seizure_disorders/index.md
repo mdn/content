@@ -17,6 +17,11 @@ tags:
   - seizures
   - web animation
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 This article introduces concepts behind making web content accessible for those with vestibular disorders, and how to measure and prevent content leading to seizures and/or other physical reactions.
 
 ## Overview
@@ -78,7 +83,7 @@ Certain colors, and/or combinations of colors, also matter. ["Certain Colors Mor
 - A **general flash** is defined as a pair of opposing changes in [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of 10% or more of the maximum relative luminance where the relative luminance of the darker image is below 0.80, and where "a pair of opposing changes" is an increase followed by a decrease, or a decrease followed by an increase;
 - A **red flash** is defined as any pair of opposing transitions involving a saturated red.
 
-These standards are based on earlier research. In 2004, The Epilepsy Foundation of America convened a workshop developed a [consensus](https://pubmed.ncbi.nlm.nih.gov/16146438/) on photosensitive seizures, stating _"A flash is a potential hazard if it has luminance at least 20 cd/m<sup>2</sup> , occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances)."_ The transition to or from a saturated red is important and constitutes a risk on its own: "_Irrespective of luminance, a transition to or from a saturated red is also considered a risk._"
+These standards are based on earlier research. In 2004, The Epilepsy Foundation of America convened a workshop developed a [consensus](https://pubmed.ncbi.nlm.nih.gov/16146438/) on photosensitive seizures, stating _"A flash is a potential hazard if it has luminance at least 20 cd/m<sup>2</sup>, occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances)."_ The transition to or from a saturated red is important and constitutes a risk on its own: "_Irrespective of luminance, a transition to or from a saturated red is also considered a risk._"
 
 ### Size and distance
 
@@ -199,7 +204,7 @@ By not indexing the page, the likelihood that users will stumble upon it via sea
 <html lang="en">
   <head>
     <title>…</title>
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow" />
   </head>
 </html>
 ```
@@ -246,8 +251,8 @@ A {{HTMLElement('video')}} element with no attributes will not play automaticall
 
 ```html
 <video controls>
-  <source src="video.mp4" type="video/mp4">
-  <source src="video.ogg" type="video/ogg">
+  <source src="video.mp4" type="video/mp4" />
+  <source src="video.ogg" type="video/ogg" />
   Your browser does not support the video tag.
 </video>
 ```
@@ -264,8 +269,8 @@ To ensure that a video has controls that a user can access, ensure that you add 
 
 ```html
 <video controls>
-  <source src="myVideo.mp4" type="video/mp4">
-  <source src="myVideo.webm" type="video/webm">
+  <source src="myVideo.mp4" type="video/mp4" />
+  <source src="myVideo.webm" type="video/webm" />
   <p>
     Your browser doesn't support HTML video. Here is a
     <a href="myVideo.mp4">link to the video</a> instead.
@@ -281,9 +286,12 @@ Taking that same example and applying it to audio:
 
 ```html
 <audio controls>
-  <source src="myAudio.ogg" type="audio/ogg">
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <p>Your browser does not support the audio element. Here is a <a href="myAudio.mp3">link to the audio</a> instead.</p>
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <p>
+    Your browser does not support the audio element. Here is a
+    <a href="myAudio.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 ```
 
@@ -343,7 +351,7 @@ document.getAnimations().forEach((animation) => {
 
 One of the easiest ways is to start with an image that is already in existence, using it as an image source, and then animating it. Remember, you can use GIFs, JPGs, PNGs, SVGs and other file types here as an image source, as long as they are allowed file types—and sizes—in your environment. SVGs are often not allowed, due to security concerns. The MDN document, [Basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations), provides outstanding examples of this, using multiple image sources for the sun, earth, and moon, and using several canvas methods to control the speed and animation of the earth as it orbits around the sun, and the moon as it orbits around the earth. Use the codepen available with this tutorial to adjust `ctx.rotate` in the code to see how the animation is affected when changes are made.
 
-#### If you absolutely, positively _must_ use a flashing animation…
+#### If you absolutely, positively must use a flashing animation…
 
 Make sure it has a control on it. Make sure it is turned off when the viewer first encounters it, and that a user must opt-in to see the animation.
 
@@ -380,7 +388,10 @@ JavaScript is also an option for reducing contrast dynamically. Here's a code ex
 
 ```html
 <body>
-  <input type="button" value="Set paragraph background color" onclick="set_background()">
+  <input
+    type="button"
+    value="Set paragraph background color"
+    onclick="set_background()" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -405,7 +416,7 @@ function set_background() {
 
 #### Avoid fully saturated reds for flashing content
 
-As mentioned earlier in this document, the Epilepsy Foundation of America convened a workshop in August 2004 to begin to develop an expert consensus on photosensitive seizures. Among their results was the understanding that _"A flash is a potential hazard if it has luminance at least 20 cd/m2 , occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances). A transition to or from saturated red also is considered a risk."_ They also note in that same consensus: _"Irrespective of luminance, a transition to or from a saturated red is also considered a risk."_
+As mentioned earlier in this document, the Epilepsy Foundation of America convened a workshop in August 2004 to begin to develop an expert consensus on photosensitive seizures. Among their results was the understanding that _"A flash is a potential hazard if it has luminance at least 20 cd/m2, occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances). A transition to or from saturated red also is considered a risk."_ They also note in that same consensus: _"Irrespective of luminance, a transition to or from a saturated red is also considered a risk."_
 
 ### Provide alternative CSS styles
 
@@ -426,9 +437,15 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 ```html
 <head>
   <title>Home Page</title>
-  <link href="main.css" rel="stylesheet" title="Default Style">
-  <link href="alternate1.css" rel="alternate stylesheet" title="Alternate One">
-  <link href="alternate2.css" rel="alternate stylesheet" title="Alternate Two">
+  <link href="main.css" rel="stylesheet" title="Default Style" />
+  <link
+    href="alternate1.css"
+    rel="alternate stylesheet"
+    title="Alternate One" />
+  <link
+    href="alternate2.css"
+    rel="alternate stylesheet"
+    title="Alternate Two" />
 </head>
 ```
 
@@ -466,8 +483,10 @@ In setting up media queries, you are enabling controls by the user; these contro
 Support for `prefers-reduced-motion` in modern browsers is growing.
 
 ```css
-@media screen and (prefers-reduced-motion: reduce) { }
-@media screen and (prefers-reduced-motion) { }
+@media screen and (prefers-reduced-motion: reduce) {
+}
+@media screen and (prefers-reduced-motion) {
+}
 ```
 
 To see a great example of how to use the code `prefers-reduced-motion`, visit the MDN document, [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion), or see the example below from the section on ["New in Chrome 74"](https://developer.chrome.com/blog/new-in-chrome-74/).
@@ -636,7 +655,7 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/#relativeluminancedef) definition of relative luminance
 - [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
 
-## Contributors:
+## Contributors
 
 Heartfelt thanks to Teal; Wayne Dick of the [Low Vision Task Force of the W3C](https://www.w3.org/WAI/GL/task-forces/low-vision-a11y-tf/); Tom Jewett and Eric Eggert from [Knowbility](https://knowbility.org/); Jim Allan of the [Diagram Center](https://diagramcenter.org/); and Dr. Selim R. Benbadis, Director, [Comprehensive Epilepsy Program and Clinical Neurophysiology Laboratory at USF and TGH in Tampa, Florida](https://health.usf.edu/medicine/neurology/epilepsy) for their great, great assistance and discussions on this topic.
 

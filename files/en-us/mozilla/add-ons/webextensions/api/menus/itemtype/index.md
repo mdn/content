@@ -13,6 +13,7 @@ tags:
   - itemtype
 browser-compat: webextensions.api.menus.ItemType
 ---
+
 {{AddonSidebar()}}
 
 The type of menu item.

@@ -5,7 +5,6 @@ tags:
   - CSP
   - Content-Security-Policy
   - Directive
-  - Flash
   - HTTP
   - Java
   - Plugin
@@ -15,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -68,21 +68,7 @@ To disallow all plugins, the {{CSP("object-src")}} directive should be set to
 is only used if you are allowing plugins with `object-src` at all.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
-```
-
-### Allowing Flash content
-
-The content security policy
-
-```http
-Content-Security-Policy: plugin-types application/x-shockwave-flash
-```
-
-will allow to load flash objects:
-
-```html
-<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
 ### Allowing Java applets

@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.executeScript
 ---
+
 {{AddonSidebar()}}
 
 Injects JavaScript code into a page.
@@ -43,7 +44,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let executing = browser.tabs.executeScript(
   tabId,                 // optional integer
   details                // object

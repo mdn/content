@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method determines whether a typed array
@@ -23,7 +24,7 @@ appropriate. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```

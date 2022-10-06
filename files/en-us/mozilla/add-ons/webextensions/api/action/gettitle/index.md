@@ -13,6 +13,7 @@ tags:
   - getTitle
 browser-compat: webextensions.api.action.getTitle
 ---
+
 {{AddonSidebar()}}
 
 Gets the browser action's title.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingTitle = browser.action.getTitle(
   details               // object
 )
@@ -58,9 +59,9 @@ This code switches the title between "this" and "that" each time the user clicks
 ```js
 function toggleTitle(title) {
   if (title === "this") {
-    browser.action.setTitle({title: "that"});
+    browser.action.setTitle({ title: "that" });
   } else {
-    browser.action.setTitle({title: "this"});
+    browser.action.setTitle({ title: "this" });
   }
 }
 

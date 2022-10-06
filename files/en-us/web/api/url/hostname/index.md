@@ -10,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.hostname
 ---
+
 {{ApiRef("URL API")}}
 
 The **`hostname`** property of the {{domxref("URL")}} interface

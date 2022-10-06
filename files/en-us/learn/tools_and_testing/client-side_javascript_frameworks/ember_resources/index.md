@@ -10,6 +10,7 @@ tags:
   - client-side
   - resources
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -88,15 +89,15 @@ alternative is to any fully-featured front-end data client is [The Fetch API](/e
 Using the design patterns provided by the framework, a `Route` using `fetch()` would look something like this:
 
 ```js
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
 export default class MyRoute extends Route {
   async model() {
-    let response = await fetch('some/url/to/json/data');
+    let response = await fetch("some/url/to/json/data");
     let json = await response.json();
 
     return {
-      data: json
+      data: json,
     };
   }
 }
@@ -130,9 +131,9 @@ More concretely, using `mut` allows for template-only settings functions to be d
 Whereas, without `mut`, a component class would be needed:
 
 ```js
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+import { action } from "@ember/object";
 
 export default class Example extends Component {
   @tracked someData = false;

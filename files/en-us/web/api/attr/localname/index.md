@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Attr.localName
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`localName`** property of the {{domxref("Attr")}} interface returns the _local part_ of the _qualified name_ of an attribute, that is the name of the attribute, stripped from any namespace in front of it. For example, if the qualified name is `xml:lang`, the returned local name is `lang`, if the element supports that namespace.

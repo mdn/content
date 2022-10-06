@@ -11,6 +11,7 @@ tags:
   - workerStart
 browser-compat: api.PerformanceResourceTiming.workerStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`workerStart`** read-only property of the

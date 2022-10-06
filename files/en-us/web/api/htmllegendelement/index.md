@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLegendElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLegendElement`** is an interface allowing to access properties of the {{HTMLElement("legend")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.

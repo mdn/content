@@ -14,6 +14,7 @@ tags:
   - Video
 browser-compat: api.MediaMetadata.title
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`title`** property of the

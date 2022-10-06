@@ -10,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.search
 ---
+
 {{ApiRef("URL API")}}
 
 The **`search`** property of the {{domxref("URL")}} interface

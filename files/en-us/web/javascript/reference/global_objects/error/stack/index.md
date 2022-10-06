@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Error.stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **`stack`** property of {{jsxref("Error")}} objects offer a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
@@ -30,27 +31,27 @@ Different browsers set this value at different times. For example, Firefox sets 
 The following HTML markup demonstrates the use of `stack` property.
 
 ```html
-<!DOCTYPE HTML>
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<meta charset="UTF-8" />
 <title>Stack Trace Example</title>
 <body>
-<script>
-function trace() {
-  try {
-    throw new Error('myError');
-  }
-  catch (e) {
-    alert(e.stack);
-  }
-}
-function b() {
-  trace();
-}
-function a() {
-  b(3, 4, '\n\n', undefined, {});
-}
-a('first call, firstarg');
-</script>
+  <script>
+    function trace() {
+      try {
+        throw new Error("myError");
+      } catch (e) {
+        alert(e.stack);
+      }
+    }
+    function b() {
+      trace();
+    }
+    function a() {
+      b(3, 4, "\n\n", undefined, {});
+    }
+    a("first call, firstarg");
+  </script>
+</body>
 ```
 
 Assuming the above markup is saved as `C:\example.html` on a Windows file system it produces an alert message box with the following text:

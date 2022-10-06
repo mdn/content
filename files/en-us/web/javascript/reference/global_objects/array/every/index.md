@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether
@@ -20,7 +21,7 @@ returns a Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* … */ } )
 every((element, index) => { /* … */ } )
@@ -70,12 +71,7 @@ element is found, the `every` method immediately returns `false`.
 Otherwise, if `callbackFn` returns a {{Glossary("truthy")}} value
 for all elements, `every` returns `true`.
 
-> **Note:** Calling this method on an empty array will return
-> `true` for any condition!
-
-`callbackFn` is invoked only for array indexes which have assigned
-values. It is not invoked for indexes which have been deleted, or which have never been
-assigned values.
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 `callbackFn` is invoked with three arguments: the value of the
 element, the index of the element, and the Array object being traversed.
@@ -126,13 +122,13 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```
 
-### Using arrow functions
+### Using every() on sparse arrays
 
-[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+`every()` will not run its predicate on empty slots.
 
 ```js
-[12, 5, 8, 130, 44].every((x) => x >= 10);   // false
-[12, 54, 18, 130, 44].every((x) => x >= 10); // true
+console.log([1, , 3].every((x) => x !== undefined)); // true
+console.log([2, , 2].every((x) => x === 2)); // true
 ```
 
 ### Affecting Initial Array (modifying, appending, and deleting)

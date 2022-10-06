@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 The Web Audio API's `AudioParam` interface represents an audio-related parameter, usually a parameter of an {{domxref("AudioNode")}} (such as {{ domxref("GainNode.gain") }}).

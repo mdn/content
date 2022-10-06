@@ -13,6 +13,7 @@ tags:
   - statusCode
 browser-compat: api.SecurityPolicyViolationEvent.statusCode
 ---
+
 {{HTTPSidebar}}
 
 The **`statusCode`** read-only property of the

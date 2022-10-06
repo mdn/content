@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: webextensions.api.bookmarks.remove
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.remove()`** method removes a single bookmark or an empty bookmark folder.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removingBookmark = browser.bookmarks.remove(
   id                 // string
 )

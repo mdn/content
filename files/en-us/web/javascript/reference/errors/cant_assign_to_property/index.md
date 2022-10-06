@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript strict mode exception "can't assign to property" occurs when attempting

@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.secureConnectionStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`secureConnectionStart`** read-only property returns a

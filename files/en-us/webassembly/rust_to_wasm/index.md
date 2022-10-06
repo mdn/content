@@ -7,6 +7,7 @@ tags:
   - rust
   - wasm
 ---
+
 {{WebAssemblySidebar}}
 
 If you have some Rust code, you can compile it into [WebAssembly](/en-US/docs/WebAssembly) (wasm). This tutorial takes you through all you need to know to compile a Rust project to wasm and use it in an existing web app.
@@ -212,16 +213,15 @@ Let's start by creating a file named `index.html` in the root of the project, an
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
     <script type="module">
-      import init, {greet} from "./pkg/hello_wasm.js";
-      init()
-        .then(() => {
-          greet("WebAssembly")
-        });
+      import init, { greet } from "./pkg/hello_wasm.js";
+      init().then(() => {
+        greet("WebAssembly");
+      });
     </script>
   </body>
 </html>
@@ -239,7 +239,7 @@ Load `index.html` from the web server (if you used the Python3 example: `http://
 
 If you want to use the WebAssembly module with npm, we'll need to make a few changes.
 
-Let's start by recompiling out Rust with the target bundler option:
+Let's start by recompiling our Rust with the target bundler option:
 
 ```bash
 wasm-pack build --target bundler
@@ -294,14 +294,14 @@ Create a new file, `package.json`, and put the following code in it:
 Next, we need to configure Webpack. Create `webpack.config.js` and put the following in it:
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
@@ -321,7 +321,7 @@ Finally, we need to modify the HTML file; open the `index.html` file and replace
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>

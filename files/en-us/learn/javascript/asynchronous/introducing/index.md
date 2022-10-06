@@ -82,7 +82,7 @@ The program below uses a very inefficient algorithm to generate multiple large p
 
 ```html
 <label for="quota">Number of primes:</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 
 <button id="generate">Generate primes</button>
 <button id="reload">Reload</button>
@@ -140,7 +140,7 @@ You'll find that while our `generatePrimes()` function is running, our program i
 
 ```html hidden
 <label for="quota">Number of primes:</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 
 <button id="generate">Generate primes</button>
 <button id="reload">Reload</button>

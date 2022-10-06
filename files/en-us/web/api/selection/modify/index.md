@@ -12,6 +12,7 @@ tags:
   - Selection
 browser-compat: api.Selection.modify
 ---
+
 {{APIRef("DOM")}}
 
 The **`Selection.modify()`** method applies a change to the
@@ -19,7 +20,7 @@ current selection or cursor position, using simple textual commands.
 
 ## Syntax
 
-```js
+```js-nolint
 modify(alter, direction, granularity)
 ```
 
@@ -63,8 +64,16 @@ click the button to expand the selection.
 ### HTML
 
 ```html
-<p>Click somewhere in this example. Then click the button below to expand the selection. Watch what happens!</p>
-<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+<p>
+  Click somewhere in this example. Then click the button below to expand the
+  selection. Watch what happens!
+</p>
+<p>
+  Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+  cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+  maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+  repellendus.
+</p>
 
 <label for="granularity">Granularity:</label>
 <select id="granularity">
@@ -79,7 +88,7 @@ click the button to expand the selection.
   <option value="documentboundary">Document Boundary</option>
 </select>
 
-<br><br>
+<br /><br />
 
 <button>Extend selection</button>
 ```

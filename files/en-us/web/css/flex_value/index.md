@@ -1,6 +1,7 @@
 ---
 title: <flex>
 slug: Web/CSS/flex_value
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.types.flex
 ---
+
 {{CSSRef}}
 
 The **`<flex>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a flexible length within a grid container. It is used in {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and other related properties.

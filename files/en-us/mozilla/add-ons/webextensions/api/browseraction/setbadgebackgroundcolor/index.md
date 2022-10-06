@@ -13,6 +13,7 @@ tags:
   - setBadgeBackgroundColor
 browser-compat: webextensions.api.browserAction.setBadgeBackgroundColor
 ---
+
 {{AddonSidebar()}}
 
 Sets the background color for the badge. Tabs without a specific badge background color will inherit the global badge background color, which defaults to `[217, 0, 0, 255]` in Firefox.
@@ -23,7 +24,7 @@ Other browsers always use a white text color, so setting a dark background may b
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.setBadgeBackgroundColor(
   details // object
 )
@@ -64,24 +65,24 @@ The default color in Firefox is: `[217, 0, 0, 255]`.
 A background color that starts off as red, and turns green when the browser action is clicked:
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeBackgroundColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeBackgroundColor({ color: "red" });
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.setBadgeBackgroundColor({color: "green"});
+  browser.browserAction.setBadgeBackgroundColor({ color: "green" });
 });
 ```
 
 Set the badge background color only for the active tab:
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeBackgroundColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeBackgroundColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener((tab)=> {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setBadgeBackgroundColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```

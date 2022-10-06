@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
+
 {{AddonSidebar()}}
 
 Gets a URL to the HTML document that defines the sidebar's contents.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingPanel = browser.sidebarAction.getPanel(
   details               // object
 )

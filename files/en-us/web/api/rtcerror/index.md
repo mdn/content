@@ -17,6 +17,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCError
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCError`** interface describes an error which has occurred while handling [WebRTC](/en-US/docs/Web/API/WebRTC_API) operations. It's based upon the standard {{domxref("DOMException")}} interface that describes general DOM errors.

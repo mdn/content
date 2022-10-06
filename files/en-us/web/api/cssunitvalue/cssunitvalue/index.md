@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue()`** constructor creates a
@@ -21,7 +22,7 @@ would be represented by a `CSSNumericValue`.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSUnitValue()
 ```
 

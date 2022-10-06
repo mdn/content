@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.History.back
 ---
+
 {{APIRef("History API")}}
 
 The **`History.back()`** method causes
@@ -26,7 +27,7 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 
 ## Syntax
 
-```js
+```js-nolint
 back()
 ```
 

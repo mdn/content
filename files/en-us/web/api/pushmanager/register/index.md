@@ -10,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.register
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 The **`register`** method is used to ask the system to request
@@ -19,7 +20,7 @@ a new endpoint for notifications.
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 ```
 

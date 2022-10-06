@@ -5,6 +5,7 @@ tags:
   - Mobile
   - Web Development
 ---
+
 The "separate sites" approach to mobile Web development involves creating different sites for mobile and desktop Web users. This approach has positive and negative aspects.
 
 ## The good

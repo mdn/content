@@ -18,9 +18,9 @@ returns the item in the map matching the index.
 
 ## Syntax
 
-```js
-item(index);
-[index];
+```js-nolint
+item(index)
+[index]
 ```
 
 ### Parameters

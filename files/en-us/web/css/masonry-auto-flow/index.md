@@ -1,6 +1,7 @@
 ---
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
+page-type: css-property
 tags:
   - CSS
   - Experimental
@@ -93,7 +94,7 @@ This property may take one of two forms:
 
 #item1 {
   background-color: lime;
-  height: 2em
+  height: 2em;
 }
 
 #item2 {

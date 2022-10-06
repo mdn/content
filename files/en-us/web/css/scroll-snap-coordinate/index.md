@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
+page-type: css-property
 tags:
   - CSS
   - CSS Property

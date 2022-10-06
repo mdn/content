@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.printPreview
 ---
+
 {{AddonSidebar()}}
 
 Opens print preview for the active tab.
@@ -24,7 +25,7 @@ window.addEventListener("afterprint", resumeFunction, false);
 
 ## Syntax
 
-```js
+```js-nolint
 let openingPreview = browser.tabs.printPreview()
 ```
 

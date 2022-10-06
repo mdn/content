@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`CustomEvent`** interface represents events initialized by an application for any purpose.
@@ -32,7 +33,7 @@ _This interface inherits properties from its parent, {{domxref("Event")}}._
 _This interface inherits methods from its parent, {{domxref("Event")}}._
 
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : Initializes a `CustomEvent` object. If the event has already being dispatched, this method does nothing.
+  - : Initializes a `CustomEvent` object. If the event has already been dispatched, this method does nothing.
 
 ## Specifications
 

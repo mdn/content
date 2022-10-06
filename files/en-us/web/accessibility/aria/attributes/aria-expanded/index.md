@@ -9,6 +9,7 @@ tags:
   - aria-expanded
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
+
 The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.
 
 ## Description
@@ -45,8 +46,12 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 
 ```html
 <label for="username">Username</label>
-<input id="username" name="username" aria-describedby="username-desc">
-<button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username" type="button">
+<input id="username" name="username" aria-describedby="username-desc" />
+<button
+  aria-expanded="false"
+  aria-controls="username-desc"
+  aria-label="Help about username"
+  type="button">
   <span aria-hidden="true">?</span>
 </button>
 <p id="username-desc" hidden>
@@ -67,9 +72,11 @@ A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid
 ## Values
 
 - `false`
+
   - : The grouping element this element owns or controls is collapsed.
 
 - `true`
+
   - : The grouping element this element owns or controls is expanded.
 
 - `undefined` (default)

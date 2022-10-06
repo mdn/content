@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.extension.ViewType
 ---
+
 {{AddonSidebar()}}
 
 The type of extension view.

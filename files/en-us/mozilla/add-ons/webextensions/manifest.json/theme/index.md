@@ -13,6 +13,7 @@ tags:
   - theme manifest
 browser-compat: webextensions.manifest.theme
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -52,7 +53,7 @@ Use the theme key to define a static theme to apply to Firefox.
 
 > **Note:** If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
-> **Note:** Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
+> **Note:** Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
 
 > **Note:** A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
 
@@ -221,7 +222,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
 
 ### colors
 
-These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63).  How these properties affect the Firefox UI is shown here:
+These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63). How these properties affect the Firefox UI is shown here:
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -380,7 +381,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -410,7 +411,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -619,7 +620,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background.  The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -700,7 +701,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item.  The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -724,7 +725,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item.  The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -750,7 +751,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar.  The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1493,10 +1494,10 @@ Multiple images can be used to fill the header. Before Firefox version 60, use a
 ```json
  "theme": {
    "images": {
-     "additional_backgrounds": [ "images/left.png" , "images/middle.png", "images/right.png"]
+     "additional_backgrounds": [ "images/left.png", "images/middle.png", "images/right.png"]
    },
    "properties": {
-     "additional_backgrounds_alignment": [ "left top" , "top", "right top"]
+     "additional_backgrounds_alignment": [ "left top", "top", "right top"]
    },
    "colors": {
      "frame": "blue",

@@ -14,6 +14,7 @@ tags:
   - Video
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
+
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The **`OverconstrainedError`** constructor
@@ -25,7 +26,7 @@ applied.
 
 ## Syntax
 
-```js
+```js-nolint
 new OverconstrainedError()
 ```
 

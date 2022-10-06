@@ -11,6 +11,7 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver.disconnect
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`disconnect()`** method of the
@@ -25,7 +26,7 @@ callback will return any reports. The associated observer will no longer be acti
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

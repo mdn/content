@@ -11,6 +11,7 @@ tags:
   - Selectors
   - id
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 In {{Glossary("CSS")}}, selectors are used to target the {{glossary("HTML")}} elements on our web pages that we want to style. There are a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements to style. In this article and its sub-articles we'll run through the different types in great detail, seeing how they work.
@@ -69,7 +70,8 @@ h1 {
 I could also combine these into a selector list, by adding a comma between them.
 
 ```css
-h1, .special {
+h1,
+.special {
   color: blue;
 }
 ```
@@ -91,7 +93,7 @@ When you group selectors in this way, if any selector is syntactically invalid, 
 
 In the following example, the invalid class selector rule will be ignored, whereas the `h1` would still be styled.
 
-```css
+```css-nolint
 h1 {
   color: blue;
 }
@@ -103,7 +105,7 @@ h1 {
 
 When combined however, neither the `h1` nor the class will be styled as the entire rule is deemed invalid.
 
-```css
+```css-nolint
 h1, ..special {
   color: blue;
 }
@@ -118,19 +120,22 @@ There are a few different groupings of selectors, and knowing which type of sele
 This group includes selectors that target an HTML element such as an `<h1>`.
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 It also includes selectors which target a class:
 
 ```css
-.box { }
+.box {
+}
 ```
 
 or, an ID:
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### Attribute selectors
@@ -138,13 +143,16 @@ or, an ID:
 This group of selectors gives you different ways to select elements based on the presence of a certain attribute on an element:
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 Or even make a selection based on the presence of an attribute with a particular value:
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Pseudo-classes and pseudo-elements
@@ -152,13 +160,15 @@ a[href="https://example.com"] { }
 This group of selectors includes pseudo-classes, which style certain states of an element. The `:hover` pseudo-class for example selects an element only when it is being hovered over by the mouse pointer:
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 It also includes pseudo-elements, which select a certain part of an element rather than the element itself. For example, `::first-line` always selects the first line of text inside an element (a `<p>` in the below case), acting as if a `<span>` was wrapped around the first formatted line and then selected.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### Combinators
@@ -166,7 +176,8 @@ p::first-line { }
 The final group of selectors combine other selectors in order to target elements within our documents. The following, for example, selects paragraphs that are direct children of `<article>` elements using the child combinator (`>`):
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## Summary

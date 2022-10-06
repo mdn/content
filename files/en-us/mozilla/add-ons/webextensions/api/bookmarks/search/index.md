@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.search
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.search()`** function searches for bookmark tree nodes matching the given query.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let searching = browser.bookmarks.search(
   query                  // string or object
 )

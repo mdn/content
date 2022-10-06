@@ -4,13 +4,13 @@ slug: Glossary/State_machine
 tags:
   - CodingScripting
   - Finite
-  - Glossary
   - Input
   - Mealy
   - Moore
   - State Machine
   - Turing Machine
 ---
+
 A state machine is a mathematical abstraction used to design algorithms. A state machine reads a set of inputs and changes to a different state based on those inputs.
 
 A state is a description of the status of a system waiting to execute a transition. A transition is a set of actions to execute when a condition is fulfilled or an event received. In a state diagram, circles represent each possible state and arrows represent transitions between states.

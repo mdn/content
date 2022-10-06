@@ -1,6 +1,7 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
+page-type: css-property
 tags:
   - CSS
   - CSS Mobile Text Size Adjustment
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`text-size-adjust`** [CSS](/en-US/docs/Web/API/CSS) property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.

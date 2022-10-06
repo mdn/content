@@ -10,14 +10,15 @@ tags:
   - persisted()
 browser-compat: api.StorageManager.persisted
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`persisted()`** method of the {{domxref("StorageManager")}} interface returns a {{jsxref('Promise')}} that resolves to `true` if box mode is persistent for your site's storage.
 
 ## Syntax
 
-```js
-navigator.storage.persisted()
+```js-nolint
+persisted()
 ```
 
 ### Parameters

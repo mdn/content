@@ -12,6 +12,7 @@ tags:
   - removePluginData
 browser-compat: webextensions.api.browsingData.removePluginData
 ---
+
 {{AddonSidebar()}}
 
 Clears data stored by browser plugins.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removePluginData(
   removalOptions            // RemovalOptions object
 )
@@ -57,10 +58,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removePluginData({since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removePluginData({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove all data stored by plugins:
@@ -74,8 +76,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removePluginData({}).
-then(onRemoved, onError);
+browser.browsingData.removePluginData({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility

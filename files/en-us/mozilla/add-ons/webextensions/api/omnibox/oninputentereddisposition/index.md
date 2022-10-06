@@ -12,6 +12,7 @@ tags:
   - omnibox
 browser-compat: webextensions.api.omnibox.OnInputEnteredDisposition
 ---
+
 {{AddonSidebar()}}
 
 The **`omnibox.OnInputEnteredDisposition`** type describes how the extension should handle a user selection from the suggestions in the address bar's drop-down list.

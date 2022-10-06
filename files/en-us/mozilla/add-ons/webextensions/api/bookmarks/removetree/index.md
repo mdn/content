@@ -13,6 +13,7 @@ tags:
   - removeTree
 browser-compat: webextensions.api.bookmarks.removeTree
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.removeTree()`** method recursively removes a bookmark folder and all of its contents.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removingTree = browser.bookmarks.removeTree(
   id                // string
 )

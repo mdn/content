@@ -11,10 +11,11 @@ tags:
   - Variables
   - declaring
   - initializing
-  - l10n:priority
+  - "l10n:priority"
   - loose typing
   - strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.
@@ -109,7 +110,7 @@ let myAge;
 
 Here we're creating two variables called `myName` and `myAge`. Try typing these lines into your web browser's console. After that, try creating a variable (or two) with your own name choices.
 
-> **Note:** In JavaScript, all code instructions should end with a semi-colon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
+> **Note:** In JavaScript, all code instructions should end with a semicolon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
 
 You can test whether these values now exist in the execution environment by typing just the variable's name, e.g.
 

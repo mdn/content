@@ -15,6 +15,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.error
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.error`** is the

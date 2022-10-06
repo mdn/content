@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CanvasRenderingContext2D.letterSpacing
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.letterSpacing`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies the spacing between letters when drawing text.
@@ -39,20 +40,20 @@ The spacing is also displayed for each case, using the value of the property.
 ### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '30px serif';
+ctx.font = "30px serif";
 
 // Default letter spacing
 ctx.fillText(`Hello world (default: ${ctx.letterSpacing})`, 10, 40);
 
 // Custom letter spacing: 10px
-ctx.letterSpacing = '10px';
+ctx.letterSpacing = "10px";
 ctx.fillText(`Hello world (${ctx.letterSpacing})`, 10, 90);
 
 // Custom letter spacing: 20px
-ctx.letterSpacing = '20px';
+ctx.letterSpacing = "20px";
 ctx.fillText(`Hello world (${ctx.letterSpacing})`, 10, 140);
 ```
 

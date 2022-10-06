@@ -9,15 +9,17 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder.decode
 ---
+
 {{APIRef("Encoding API")}}
 
-The **`TextDecode.decode()`** method returns a
-string containing the text, given in parameters, decoded with the
-specific method for that {{domxref("TextDecoder")}} object.
+The **`TextDecoder.decode()`** method returns a string containing text decoded from the buffer passed as a parameter.
+
+The decoding method is defined in the current {{domxref("TextDecoder")}} object.
+This includes the expected encoding of the data, and how decoding errors are handled.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 decode(buffer)
 decode(buffer, options)
@@ -26,17 +28,20 @@ decode(buffer, options)
 ### Parameters
 
 - `buffer` {{Optional_Inline}}
-  - : Is an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer),
-    a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object
-    containing the text to decode.
+  - : Is an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object containing the encoded text to decode.
 - `options` {{Optional_Inline}}
 
   - : An object with the property:
 
     - `stream`
-      - : A boolean flag indicating that additional data will follow in
-        subsequent calls to decode(). Set to true if processing the data in chunks, and
-        false for the final chunk or if the data is not chunked. It defaults to false.
+      - : A boolean flag indicating that additional data will follow in subsequent calls to `decode()`.
+        Set to `true` if processing the data in chunks, and `false` for the final chunk or if the data is not chunked.
+        It defaults to `false`.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if there is a decoding error when the property {{DOMxRef("TextDecoder.fatal")}} is `true`.
 
 ### Return value
 
@@ -57,12 +62,12 @@ This example encodes and decodes the euro symbol, €.
 
 ```js
 const encoder = new TextEncoder();
-const array = encoder.encode('€'); // Uint8Array(3) [226, 130, 172]
-document.getElementById('encoded-value').textContent = array;
+const array = encoder.encode("€"); // Uint8Array(3) [226, 130, 172]
+document.getElementById("encoded-value").textContent = array;
 
 const decoder = new TextDecoder();
 const str = decoder.decode(array); // String "€"
-document.getElementById('decoded-value').textContent = str;
+document.getElementById("decoded-value").textContent = str;
 ```
 
 ### Result

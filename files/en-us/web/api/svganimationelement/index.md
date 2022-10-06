@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimationElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAnimationElement`** interface is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.

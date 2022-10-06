@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `translate` function evaluates a string and a set of characters to translate and returns the translated string.
@@ -57,7 +58,7 @@ Example
 Output
 
 ```
-The quick red fdx.
+The quick red fox.
 ```
 
 - If `XYZ` contains more characters than `abc`, the extra characters are ignored.

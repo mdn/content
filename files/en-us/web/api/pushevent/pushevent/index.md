@@ -12,6 +12,7 @@ tags:
   - Service Workers
 browser-compat: api.PushEvent.PushEvent
 ---
+
 {{APIRef("Push API")}}
 
 The **`PushEvent()`** constructor creates a new
@@ -20,7 +21,7 @@ service worker context.
 
 ## Syntax
 
-```js
+```js-nolint
 new PushEvent(type)
 new PushEvent(type, options)
 ```

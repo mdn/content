@@ -9,6 +9,7 @@ tags:
   - ResizeObserverSize
 browser-compat: api.ResizeObserverSize
 ---
+
 {{DefaultAPISidebar("Resize Observer API")}}
 
 The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.

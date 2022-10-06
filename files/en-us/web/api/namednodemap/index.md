@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.NamedNodeMap
 ---
+
 {{APIRef("DOM")}}
 
 The **`NamedNodeMap`** interface represents a collection of {{domxref("Attr")}} objects. Objects inside a `NamedNodeMap` are not in any particular order, unlike {{domxref("NodeList")}}, although they may be accessed by an index as in an array.

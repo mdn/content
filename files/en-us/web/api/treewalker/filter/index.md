@@ -9,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.filter
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.filter`** read-only property returns a

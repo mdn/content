@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exceptions thrown by {{jsxref("JSON.parse()")}} occur when string failed

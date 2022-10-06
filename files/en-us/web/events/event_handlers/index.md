@@ -6,6 +6,7 @@ tags:
   - DOM
   - DOM Beginner
 ---
+
 Events are signals fired inside the browser window that notify of changes in the browser or operating system environment. Programmers can create _event handler_ code that will run when an event fires, allowing web pages to respond appropriately to change.
 
 This page provides a very brief "reminder" of how to work with events and event handlers. New developers should instead read [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events).

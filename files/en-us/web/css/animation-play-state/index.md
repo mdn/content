@@ -1,6 +1,7 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
+page-type: css-property
 tags:
   - CSS
   - CSS Animations
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-play-state
 ---
+
 {{CSSRef}}
 
 The **`animation-play-state`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation is running or paused.
@@ -112,3 +114,4 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
+- Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

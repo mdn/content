@@ -10,6 +10,7 @@ tags:
   - nginx
 browser-compat: http.headers.X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking) attacks, by ensuring that their content is not embedded into other sites.

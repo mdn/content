@@ -2,12 +2,12 @@
 title: Page load time
 slug: Glossary/Page_load_time
 tags:
-  - Glossary
   - Timings
   - Web Performance
   - metrics
   - page load time
 ---
+
 **Page load time** is the time it takes for a page to load, measured from [navigation start](/en-US/docs/Web/API/PerformanceTiming/navigationStart) to the [start of the load event](/en-US/docs/Web/API/PerformanceTiming/loadEventStart).
 
 ```js

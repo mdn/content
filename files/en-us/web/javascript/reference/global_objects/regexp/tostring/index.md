@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the regular expression.
@@ -18,7 +19,7 @@ The **`toString()`** method returns a string representing the regular expression
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

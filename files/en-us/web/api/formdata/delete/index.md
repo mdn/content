@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key and its value(s) from a `FormData` object.
@@ -18,7 +19,7 @@ The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key
 
 ## Syntax
 
-```js
+```js-nolint
 delete(name)
 ```
 

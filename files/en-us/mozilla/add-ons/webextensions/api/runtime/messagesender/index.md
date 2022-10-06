@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.MessageSender
 ---
+
 {{AddonSidebar()}}
 
 An object containing information about the sender of a message or connection request; this is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.

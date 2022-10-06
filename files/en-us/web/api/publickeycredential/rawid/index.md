@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.rawId
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`rawId`** read-only property of the

@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.AudioDecoder
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} decodes chunks of audio.

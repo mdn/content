@@ -11,6 +11,7 @@ tags:
   - eviction
   - limit
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 There are a number of web technologies that store data of one kind or another on the client-side (i.e., on your local disk). The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. This article describes how browsers determine what local content to purge and when in order to free up needed local storage space.
@@ -30,7 +31,7 @@ In Firefox, the following technologies make use of browser data storage to store
 
 The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.
 
-In Chrome/Opera, the Quota Management API handles quota management for [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), WebSQL, and [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
+In Chrome/Opera, the Quota Management API handles quota management for [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), Web SQL (deprecated), and [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
 ## Different types of data storage
 

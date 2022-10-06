@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.Content-Location
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Location`** header indicates an alternate
@@ -86,7 +87,7 @@ Content-Type: text/markdown
 I made this through `example.com`'s API. I hope it worked.
 ```
 
-The site returns the published post in the response body. The server specifies  _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
+The site returns the published post in the response body. The server specifies _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
 
 ```http
 HTTP/1.1 201 Created
@@ -108,13 +109,13 @@ money to another user of a site.
 <form action="/send-payment" method="post">
   <p>
     <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
     <label>How much?
-      <input type="number" name="amount">
+      <input type="number" name="amount" />
     </label>
   </p>
 

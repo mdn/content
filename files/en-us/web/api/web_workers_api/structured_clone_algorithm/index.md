@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Reference
 ---
+
 {{DefaultAPISidebar("Web Workers API") }}
 
 The **structured clone algorithm** copies complex JavaScript objects.
@@ -29,99 +30,55 @@ It clones by recursing through the input object while maintaining a map of previ
 
 ## Supported types
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Object type</th>
-      <th scope="col">Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/JavaScript/Data_structures#primitive_values">All primitive types</a>
-      </td>
-      <td>However, not symbols.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Boolean")}} objects</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("String")}} objects</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Date")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp")}}</td>
-      <td><code>lastIndex</code> is not preserved.</td>
-    </tr>
-    <tr>
-      <td>{{domxref("Blob")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{domxref("File")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{domxref("FileList")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("ArrayBuffer")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("TypedArray")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("DataView")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{domxref("ImageBitmap")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{domxref("ImageData")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Array")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Object")}}</td>
-      <td><strong>Only</strong> plain objects (e.g. from object literals)</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Map")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{domxref("DOMException")}}</td>
-      <td>Browsers must serialize the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}}.
-      Other attributes may also be serialized/cloned.</td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Native <code>Error</code> types</a></td>
-      <td>
-        <p>The error name must be one of: {{jsxref("Error")}}, {{JSxRef("EvalError")}}, {{JSxRef("RangeError")}}, {{JSxRef("ReferenceError")}}, {{JSxRef("SyntaxError")}}, {{JSxRef("TypeError")}}, {{JSxRef("URIError")}} (or will be set to "Error").</p>
-        <p>Browsers must serialize the properties <code>name</code> and <code>message</code>, and are expected to serialize other "interesting" properties of the errors such as <code>stack</code>, <code>cause</code>, etc.</p>
-        <p>{{JSxRef("AggregateError")}} support is expected to be added to the specification in <a href="https://github.com/whatwg/html/pull/5749">whatwg/html#5749</a> (and is already supported in some browsers).</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+### JavaScript types
+
+- {{jsxref("Array")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("Boolean")}}
+- {{jsxref("DataView")}}
+- {{jsxref("Date")}}
+- {{jsxref("Error")}} types (but see [Error types](#error_types) below).
+- {{jsxref("Map")}}
+- {{jsxref("Object")}} objects: but only plain objects (e.g. from object literals).
+- [Primitive types](/en-US/docs/Web/JavaScript/Data_structures#primitive_values), except `symbol`.
+- {{jsxref("RegExp")}}: but note that `lastIndex` is not preserved.
+- {{jsxref("Set")}}
+- {{jsxref("String")}}
+- {{jsxref("TypedArray")}}
+
+#### Error types
+
+For `Error` types, the error name must be one of: {{jsxref("Error")}}, {{JSxRef("EvalError")}}, {{JSxRef("RangeError")}}, {{JSxRef("ReferenceError")}}, {{JSxRef("SyntaxError")}}, {{JSxRef("TypeError")}}, {{JSxRef("URIError")}} (or will be set to "Error").
+
+Browsers must serialize the properties `name` and `message`, and are expected to serialize other "interesting" properties of the errors such as `stack`, `cause`, etc.
+
+{{JSxRef("AggregateError")}} support is expected to be added to the specification in [whatwg/html#5749](https://github.com/whatwg/html/pull/5749) (and is already supported in some browsers).
+
+### Web/API types
+
+- {{domxref("AudioData")}}
+- {{domxref("Blob")}}
+- {{domxref("CropTarget")}}
+- {{domxref("CryptoKey")}}
+- {{domxref("DOMException")}}: browsers must serialize the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}}. Other attributes may also be serialized/cloned.
+- {{domxref("DOMMatrix")}}
+- {{domxref("DOMMatrixReadOnly")}}
+- {{domxref("DOMPoint")}}
+- {{domxref("DOMPointReadOnly")}}
+- {{domxref("DOMQuad")}}
+- {{domxref("DOMRect")}}
+- {{domxref("DOMRectReadOnly")}}
+- {{domxref("File")}}
+- {{domxref("FileList")}}
+- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxref("FileSystemFileHandle")}}
+- {{domxref("FileSystemHandle")}}
+- {{domxref("GPUCompilationInfo")}}
+- {{domxref("GPUCompilationMessage")}}
+- {{domxref("ImageBitmap")}}
+- {{domxref("ImageData")}}
+- {{domxref("RTCCertificate")}}
+- {{domxref("VideoFrame")}}
 
 ## See also
 

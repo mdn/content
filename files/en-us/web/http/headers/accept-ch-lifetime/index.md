@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Accept-CH-Lifetime
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}{{Non-standard_header}}
 
 > **Warning:** The header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08).

@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/36
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -125,7 +126,10 @@ _No change._
 - Implemented global `require` function to access sdk modules anywhere ({{bug(1070927)}}), using:
 
   ```js
-  var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
+  var { require } = Cu.import(
+    "resource://gre/modules/commonjs/toolkit/require.js",
+    {}
+  );
   ```
 
 #### Details

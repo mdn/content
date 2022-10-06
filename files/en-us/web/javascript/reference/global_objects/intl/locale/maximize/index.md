@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.maximize
 ---
+
 {{JSRef}}
 
 The
@@ -24,7 +25,7 @@ existing values.
 
 ## Syntax
 
-```js
+```js-nolint
 maximize()
 ```
 

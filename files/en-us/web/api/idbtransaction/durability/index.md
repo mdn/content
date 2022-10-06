@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction.durability
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
 The **`durability`** read-only property of the
@@ -41,7 +42,7 @@ Any of the following literal {{jsxref('String', 'strings')}}:
 
 ## Examples
 
-For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Specifications
 

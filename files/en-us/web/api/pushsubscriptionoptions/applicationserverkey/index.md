@@ -10,6 +10,7 @@ tags:
   - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions.applicationServerKey
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 The **`applicationServerKey`** read-only property of the {{domxref("PushSubscriptionOptions")}} interface contains the public key used by the push server.

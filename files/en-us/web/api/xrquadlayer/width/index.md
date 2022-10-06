@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRQuadLayer.width
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`width`** property of the {{domxref("XRQuadLayer")}} interface represents the width of the layer in meters.

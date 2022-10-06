@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLButtonElement`** interface provides properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("button")}} elements.

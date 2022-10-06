@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.readPixels
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.readPixels()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) reads a block of pixels from a
@@ -17,7 +18,7 @@ specified rectangle of the current color framebuffer into a {{jsxref("TypedArray
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1:
 readPixels(x, y, width, height, format, type, pixels)
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientHeight`** read-only property is zero for
@@ -33,7 +34,7 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![How clientHeight property determines the inner height of an element considering the height and padding](dimensions-client.png)
 
 ## Specifications
 

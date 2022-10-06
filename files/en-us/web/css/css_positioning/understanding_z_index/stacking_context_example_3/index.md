@@ -1,12 +1,14 @@
 ---
 title: Stacking context example 3
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
+page-type: guide
 tags:
   - Advanced
   - CSS
   - Guide
   - Understanding_CSS_z-index
 ---
+
 {{CSSRef}}
 
 « [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)

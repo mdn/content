@@ -85,8 +85,8 @@ Loose equality is _symmetric_: `A == B` always has identical semantics to `B == 
 4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
    - If they are of the same type, compare them using step 1.
    - If one of the operands is a Symbol but the other is not, return `false`.
-   - If one of the operands is a Boolean but the other is not, convert the boolean to a number: `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
-   - Number to String: convert the string to a Number using the same algorithm as the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor. Conversion failure would result in `NaN`, which will guarantee the equality to be `false`.
+   - If one of the operands is a Boolean but the other is not, [convert the boolean to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion): `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
+   - Number to String: [convert the string to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Conversion failure results in `NaN`, which will guarantee the equality to be `false`.
    - Number to BigInt: compare by their numeric value. If the number is ±Infinity or `NaN`, return `false`.
    - String to BigInt: convert the string to a BigInt using the same algorithm as the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor. If conversion fails, return `false`.
 
@@ -215,23 +215,20 @@ Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken int
 
 ### Caveat: Object.is() and NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
 const b2f = (x) => new Float64Array(x.buffer)[0];
 // Get a byte representation of NaN
 const n = f2b(NaN);
+// Change the first bit, which is the sign bit and doesn't matter for NaN
 n[0] = 1;
 const nan2 = b2f(n);
-nan2;
-// > NaN
-Object.is(nan2, NaN);
-// > true
-f2b(NaN);
-// > Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
-f2b(nan2);
-// > Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)
+console.log(nan2); // NaN
+console.log(Object.is(nan2, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
 ## See also

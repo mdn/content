@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isFrozen
 ---
+
 {{JSRef}}
 
 The **`Object.isFrozen()`** determines if an object is
@@ -17,7 +18,7 @@ The **`Object.isFrozen()`** determines if an object is
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isFrozen(obj)
 ```
 

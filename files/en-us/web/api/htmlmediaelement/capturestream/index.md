@@ -15,6 +15,7 @@ tags:
   - captureStream
 browser-compat: api.HTMLMediaElement.captureStream
 ---
+
 {{APIRef("HTML Media Capture")}}
 
 The **`captureStream()`** property of the
@@ -26,7 +27,7 @@ This can be used, for example, as a source for a [WebRTC](/en-US/docs/Web/API/We
 
 ## Syntax
 
-```js
+```js-nolint
 captureStream()
 ```
 

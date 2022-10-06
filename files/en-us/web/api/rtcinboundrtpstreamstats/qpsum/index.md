@@ -18,6 +18,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.qpSum
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`qpSum`** property of the

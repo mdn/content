@@ -1,6 +1,7 @@
 ---
-title: '@document'
+title: "@document"
 slug: Web/CSS/@document
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -9,12 +10,14 @@ tags:
   - Non-standard
 browser-compat: css.at-rules.document
 ---
+
 {{CSSRef}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.
 
 ```css
-@document url("https://www.example.com/") {
+@document url("https://www.example.com/")
+{
   h1 {
     color: green;
   }

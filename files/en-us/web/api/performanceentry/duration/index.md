@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.duration
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`duration`** property returns a

@@ -1,6 +1,7 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -9,6 +10,7 @@ tags:
   - Web
 browser-compat: css.at-rules.charset
 ---
+
 {{ CSSRef }}
 
 The **`@charset`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) specifies the character encoding used in the style sheet. It must be the first element in the style sheet and not be preceded by any character; as it is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements), it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules). If several `@charset` at-rules are defined, only the first one is used, and it cannot be used inside a `style` attribute on an HTML element or inside the {{ HTMLElement("style") }} element where the character set of the HTML page is relevant.

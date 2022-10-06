@@ -9,6 +9,7 @@ tags:
   - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 The **`PushSubscriptionOptions`** interface of the {{domxref('Push API','','',' ')}} represents the options associated with a push subscription.

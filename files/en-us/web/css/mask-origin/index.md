@@ -1,6 +1,7 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-origin
 ---
+
 {{CSSRef}}
 
 The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAreaElement`** interface provides special properties and methods (beyond those of the regular object {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HtmlElement("area")}} elements.

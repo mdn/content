@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
@@ -19,7 +20,7 @@ that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 
@@ -100,7 +101,7 @@ function readFile(file) {
 ```
 
 ```html
-<input type="file" onchange="readFile(this.files[0])">
+<input type="file" onchange="readFile(this.files[0])" />
 ```
 
 ## Specifications

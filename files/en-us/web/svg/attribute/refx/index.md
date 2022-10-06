@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefXAttribute
   - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefXAttribute
 ---
+
 {{SVGRef}}
 
 The **`refX`** attribute defines the x coordinate of an element's reference point.

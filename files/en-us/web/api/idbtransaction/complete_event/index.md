@@ -9,6 +9,7 @@ tags:
   - complete
 browser-compat: api.IDBTransaction.complete_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`complete`** event of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is fired when the transaction successfully completed.

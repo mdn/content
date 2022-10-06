@@ -1,6 +1,7 @@
 ---
-title: '-moz-force-broken-image-icon'
+title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
+page-type: css-property
 tags:
   - CSS
   - NeedsCompatTable
@@ -10,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.-moz-force-broken-image-icon
 ---
+
 {{Non-standard_header}}{{CSSRef}}{{Deprecated_Header}}
 
 The **`-moz-force-broken-image-icon`** extended CSS property can be used to force the broken image icon to be shown even when a broken image has an `alt` attribute.
@@ -36,7 +38,7 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 ### HTML
 
 ```html
-<img src='/broken/image/link.png' alt='Broken image link'>
+<img src="/broken/image/link.png" alt="Broken image link" />
 ```
 
 ### CSS

@@ -13,13 +13,14 @@ tags:
   - onRemoved
 browser-compat: webextensions.api.bookmarks.onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onRemoved.addListener(listener)
 browser.bookmarks.onRemoved.removeListener(listener)
 browser.bookmarks.onRemoved.hasListener(listener)

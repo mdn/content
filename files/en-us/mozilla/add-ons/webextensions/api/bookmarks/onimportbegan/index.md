@@ -13,6 +13,7 @@ tags:
   - onImportBegan
 browser-compat: webextensions.api.bookmarks.onImportBegan
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has started importing a set of bookmarks.
@@ -21,7 +22,7 @@ While a set of bookmarks is being imported, {{WebExtAPIRef("bookmarks.onCreated"
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onImportBegan.addListener(listener)
 browser.bookmarks.onImportBegan.removeListener(listener)
 browser.bookmarks.onImportBegan.hasListener(listener)

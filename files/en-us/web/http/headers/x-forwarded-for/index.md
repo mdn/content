@@ -9,6 +9,7 @@ tags:
   - Request header
   - header
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Forwarded-For`** (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
@@ -127,14 +128,14 @@ When choosing the first _trustworthy_ `X-Forwarded-For` client IP address, addit
 configuration is required. There are two common methods:
 
 - **Trusted proxy count**: The count of reverse proxies between the internet and the
-   server is configured. The `X-Forwarded-For` IP list is searched from the rightmost by
-   that count minus one. (For example, if there is only one reverse proxy, that proxy will
-   add the client's IP address, so the rightmost address should be used. If there are
-   three reverse proxies, the last two IP addresses will be internal.)
+  server is configured. The `X-Forwarded-For` IP list is searched from the rightmost by
+  that count minus one. (For example, if there is only one reverse proxy, that proxy will
+  add the client's IP address, so the rightmost address should be used. If there are
+  three reverse proxies, the last two IP addresses will be internal.)
 - **Trusted proxy list**: The IPs or IP ranges of the trusted reverse proxies are
-   configured. The `X-Forwarded-For` IP list is searched from the rightmost, skipping all
-   addresses that are on the trusted proxy list. The first non-matching address is the
-   target address.
+  configured. The `X-Forwarded-For` IP list is searched from the rightmost, skipping all
+  addresses that are on the trusted proxy list. The first non-matching address is the
+  target address.
 
 The first trustworthy `X-Forwarded-For` IP address may belong to an untrusted intermediate
 proxy rather than the actual client computer, but it is the only IP suitable for security

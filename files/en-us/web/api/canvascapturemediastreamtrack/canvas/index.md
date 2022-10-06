@@ -13,6 +13,7 @@ tags:
   - Web
 browser-compat: api.CanvasCaptureMediaStreamTrack.canvas
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**

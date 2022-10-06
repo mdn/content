@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEPointLightElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEPointLightElement`** interface corresponds to the {{SVGElement("fePointLight")}} element.

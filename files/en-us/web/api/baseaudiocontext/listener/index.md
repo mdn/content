@@ -13,6 +13,7 @@ tags:
   - spatialization
 browser-compat: api.BaseAudioContext.listener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `listener` property of the {{ domxref("BaseAudioContext") }} interface

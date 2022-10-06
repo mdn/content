@@ -5,6 +5,29 @@ tags:
   - ARIA
   - Accessibility
 ---
+
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
+    <li class="toggle">
+      <details><summary>ARIA states and properties</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details><summary>WAI-ARIA Roles</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
+      </details>
+    </li>
+  </ol>
+</section>
+
 ## Live Regions
 
 This is just a guide. Live region markup is a complex area which is somewhat open to interpretation. The following is intended to provide implementation guidance that respects screen readers developers' need to try different things. The intention is to strike a balance between providing useful guidance on how to use the markup's intended meaning while supporting live regions as an area for screen readers to innovate and compete.

@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastMatch
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **lastMatch** property is a static and read-only property of regular expressions that contains the last matched characters. `RegExp.$&` is an alias for this property.

@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.storage.StorageArea
 ---
+
 {{AddonSidebar()}}
 
 StorageArea is an object representing a storage area.

@@ -1314,22 +1314,6 @@
       "ajinkya_p"
     ]
   },
-  "Glossary/Boot2Gecko": {
-    "modified": "2019-03-23T23:09:40.840Z",
-    "contributors": ["Andrew_Pfeiffer", "Jeremie", "klez", "chrisdavidmills"]
-  },
-  "Glossary/Bootstrap": {
-    "modified": "2020-05-23T17:08:33.612Z",
-    "contributors": [
-      "iigmir",
-      "roshan0708",
-      "mfuji09",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "feifeili18",
-      "Igor-Sangin"
-    ]
-  },
   "Glossary/Breadcrumb": {
     "modified": "2019-06-12T15:21:56.948Z",
     "contributors": ["chrisdavidmills", "robMhen", "estelle"]
@@ -2151,22 +2135,6 @@
       "mfluehr",
       "xgqfrms-GitHub",
       "Jeremie",
-      "Andrew_Pfeiffer",
-      "klez",
-      "teoli"
-    ]
-  },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T23:13:31.023Z",
-    "contributors": [
-      "yisibl",
-      "sideshowbarker",
-      "rudijuri",
-      "chrisdavidmills",
-      "joshcartme",
-      "ThatGlennD",
-      "jtojnar",
-      "cvrebert",
       "Andrew_Pfeiffer",
       "klez",
       "teoli"
@@ -5201,6 +5169,22 @@
     "modified": "2019-03-23T22:58:50.586Z",
     "contributors": ["hbloomer", "klez", "chrisdavidmills", "ravi_pro"]
   },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T23:13:31.023Z",
+    "contributors": [
+      "yisibl",
+      "sideshowbarker",
+      "rudijuri",
+      "chrisdavidmills",
+      "joshcartme",
+      "ThatGlennD",
+      "jtojnar",
+      "cvrebert",
+      "Andrew_Pfeiffer",
+      "klez",
+      "teoli"
+    ]
+  },
   "Glossary/W3C": {
     "modified": "2020-10-05T12:31:52.600Z",
     "contributors": [
@@ -5654,21 +5638,6 @@
       "asmatascy",
       "Jeremie",
       "klez"
-    ]
-  },
-  "Glossary/jQuery": {
-    "modified": "2020-05-09T23:42:24.101Z",
-    "contributors": [
-      "sideshowbarker",
-      "RainSlide",
-      "vecr25",
-      "wbamberg",
-      "acediallo",
-      "xfq",
-      "iigmir",
-      "faroukcharkas",
-      "Sparks",
-      "6stringbeliever"
     ]
   },
   "Glossary/jpeg": {
@@ -27975,6 +27944,71 @@
     "modified": "2020-11-30T19:13:18.132Z",
     "contributors": ["peterbe", "bershanskiy"]
   },
+  "Web/API/Device_orientation_events/Detecting_device_orientation": {
+    "modified": "2020-12-12T15:14:52.846Z",
+    "contributors": [
+      "bershanskiy",
+      "rakuco",
+      "MasterOdin",
+      "henchies",
+      "fscholz",
+      "dylanpyle",
+      "psimyn",
+      "rileym7",
+      "cthorner",
+      "Sheppy",
+      "newyork-anthonyng",
+      "timdream",
+      "erikadoyle",
+      "Sebastianz",
+      "mocas0",
+      "andregarzia",
+      "kscarfone",
+      "chrisdavidmills",
+      "SpencerG",
+      "teoli",
+      "Jeremie",
+      "Maroosko",
+      "Seta00",
+      "jrubenoff",
+      "ethertank",
+      "justinpotts",
+      "FredB",
+      "Maheswaran.Shenthuran",
+      "ziyunfei",
+      "kohei.yoshino",
+      "tallowen",
+      "louisremi",
+      "cgack",
+      "paul.irish",
+      "inma_610",
+      "fryn"
+    ]
+  },
+  "Web/API/Device_orientation_events/Orientation_and_motion_data_explained": {
+    "modified": "2020-01-18T20:53:28.435Z",
+    "contributors": [
+      "gerfolder",
+      "sideshowbarker",
+      "jdashg",
+      "dphenderson",
+      "Jeremie",
+      "Sheppy",
+      "kohei.yoshino"
+    ]
+  },
+  "Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms": {
+    "modified": "2020-12-08T08:00:07.314Z",
+    "contributors": [
+      "rakuco",
+      "chrisdavidmills",
+      "jswisher",
+      "cxoon",
+      "Jeremie",
+      "Sheppy",
+      "louisremi"
+    ]
+  },
   "Web/API/DirectoryEntrySync": {
     "modified": "2020-10-15T21:08:18.522Z",
     "contributors": ["connorshea", "teoli", "kscarfone", "Sheppy", "grendel"]
@@ -30599,22 +30633,6 @@
       "Ehsan",
       "spencer-brown",
       "Nickolay",
-      "teoli"
-    ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2020-10-15T21:39:05.806Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "irenesmith",
-      "mfluehr",
-      "erikadoyle",
-      "Ehsan",
-      "wirmar",
-      "Nickolay",
-      "Sebastianz",
       "teoli"
     ]
   },
@@ -41189,10 +41207,6 @@
       "markg"
     ]
   },
-  "Web/API/HTMLMediaElement/onerror": {
-    "modified": "2020-10-15T21:52:40.332Z",
-    "contributors": ["mfluehr", "fscholz", "Sheppy"]
-  },
   "Web/API/HTMLMediaElement/pause": {
     "modified": "2020-10-15T21:51:31.814Z",
     "contributors": ["chrisdavidmills", "fscholz", "Jedipedia", "sgiles"]
@@ -51158,6 +51172,22 @@
       "Waldo",
       "Callek",
       "JesseW"
+    ]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2020-10-15T21:39:05.806Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "chrisdavidmills",
+      "irenesmith",
+      "mfluehr",
+      "erikadoyle",
+      "Ehsan",
+      "wirmar",
+      "Nickolay",
+      "Sebastianz",
+      "teoli"
     ]
   },
   "Web/API/Node/textContent": {
@@ -80916,30 +80946,6 @@
       "Wjjohnst"
     ]
   },
-  "Web/CSS/FAQ": {
-    "modified": "2020-07-07T20:11:10.027Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "mocoker",
-      "mahdiiwp",
-      "david_ross",
-      "CarloMartini",
-      "wananshine",
-      "kamrulkamal",
-      "jswisher",
-      "paul.bignier",
-      "quentin.lamamy",
-      "ethertank",
-      "Sheppy",
-      "masondesu",
-      "Dria",
-      "Nickolay",
-      "Callek",
-      "Cosmic"
-    ]
-  },
   "Web/CSS/Filter_Effects": {
     "modified": "2020-12-02T11:05:43.361Z",
     "contributors": ["peterbe", "wbamberg", "fscholz", "mfluehr"]
@@ -94373,47 +94379,6 @@
       "hamishwillee"
     ]
   },
-  "Web/Events/Detecting_device_orientation": {
-    "modified": "2020-12-12T15:14:52.846Z",
-    "contributors": [
-      "bershanskiy",
-      "rakuco",
-      "MasterOdin",
-      "henchies",
-      "fscholz",
-      "dylanpyle",
-      "psimyn",
-      "rileym7",
-      "cthorner",
-      "Sheppy",
-      "newyork-anthonyng",
-      "timdream",
-      "erikadoyle",
-      "Sebastianz",
-      "mocas0",
-      "andregarzia",
-      "kscarfone",
-      "chrisdavidmills",
-      "SpencerG",
-      "teoli",
-      "Jeremie",
-      "Maroosko",
-      "Seta00",
-      "jrubenoff",
-      "ethertank",
-      "justinpotts",
-      "FredB",
-      "Maheswaran.Shenthuran",
-      "ziyunfei",
-      "kohei.yoshino",
-      "tallowen",
-      "louisremi",
-      "cgack",
-      "paul.irish",
-      "inma_610",
-      "fryn"
-    ]
-  },
   "Web/Events/Event_handlers": {
     "modified": "2020-08-24T04:12:31.453Z",
     "contributors": [
@@ -94442,30 +94407,6 @@
       "chrisAnderson",
       "Jeremie",
       "Bzbarsky"
-    ]
-  },
-  "Web/Events/Orientation_and_motion_data_explained": {
-    "modified": "2020-01-18T20:53:28.435Z",
-    "contributors": [
-      "gerfolder",
-      "sideshowbarker",
-      "jdashg",
-      "dphenderson",
-      "Jeremie",
-      "Sheppy",
-      "kohei.yoshino"
-    ]
-  },
-  "Web/Events/Using_device_orientation_with_3D_transforms": {
-    "modified": "2020-12-08T08:00:07.314Z",
-    "contributors": [
-      "rakuco",
-      "chrisdavidmills",
-      "jswisher",
-      "cxoon",
-      "Jeremie",
-      "Sheppy",
-      "louisremi"
     ]
   },
   "Web/Guide": {
@@ -95015,46 +94956,6 @@
       "xaky",
       "fscholz",
       "jswisher"
-    ]
-  },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2020-11-28T20:50:53.577Z",
-    "contributors": [
-      "brandoncc",
-      "chrisdavidmills",
-      "tamias",
-      "ExE-Boss",
-      "Azeirah",
-      "Jzege",
-      "Masayuki",
-      "clunday",
-      "Sheppy",
-      "billymail",
-      "Emads3",
-      "Poteitow",
-      "s9w",
-      "stiegenaufgang",
-      "mnoorenberghe",
-      "Jeremie",
-      "kscarfone",
-      "mzakes",
-      "hoanganzglobal",
-      "teoli",
-      "fastclemmy",
-      "ethertank",
-      "bokepz10",
-      "andrewpyszkowski",
-      "chanchhaya14@gmail.com",
-      "dante777",
-      "ziyunfei",
-      "flowdock",
-      "lmorchard",
-      "RAMilewski",
-      "sailplaneTW",
-      "Jesdisciple",
-      "gurdiga",
-      "Shz",
-      "xaky"
     ]
   },
   "Web/Guide/HTML/HTML5/Constraint_validation": {
@@ -103665,10 +103566,6 @@
   "Web/HTTP/Headers/Content-Security-Policy/media-src": {
     "modified": "2020-10-15T21:50:29.782Z",
     "contributors": ["mfuji09", "Sheppy", "vrana", "fscholz", "teoli"]
-  },
-  "Web/HTTP/Headers/Content-Security-Policy/navigate-to": {
-    "modified": "2020-10-15T22:21:27.572Z",
-    "contributors": ["bershanskiy"]
   },
   "Web/HTTP/Headers/Content-Security-Policy/object-src": {
     "modified": "2020-10-15T21:50:32.476Z",
@@ -120069,18 +119966,6 @@
       "lth"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes": {
-    "modified": "2020-07-15T09:52:43.293Z",
-    "contributors": [
-      "fscholz",
-      "ExE-Boss",
-      "Annevk",
-      "chicoxyzzy",
-      "webenot",
-      "LeonFrempong",
-      "lukewagner"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer": {
     "modified": "2020-11-14T11:48:01.093Z",
     "contributors": ["mfuji09", "fscholz", "wbamberg"]
@@ -122819,262 +122704,6 @@
       "kdex",
       "realityking",
       "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2020-10-15T21:51:43.349Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "wbamberg",
-      "sideshowbarker",
-      "emilbayes",
-      "apurv-pandey",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError": {
-    "modified": "2020-10-15T21:51:47.191Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "ukyo",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError": {
-    "modified": "2020-10-15T22:27:16.736Z",
-    "contributors": ["fscholz", "wbamberg"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Global": {
-    "modified": "2020-12-11T06:30:22.237Z",
-    "contributors": [
-      "bershanskiy",
-      "fscholz",
-      "wbamberg",
-      "chrisdavidmills",
-      "sideshowbarker",
-      "jpmedley"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global": {
-    "modified": "2020-12-11T06:28:32.977Z",
-    "contributors": ["bershanskiy", "fscholz"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
-    "modified": "2020-10-15T21:51:45.430Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "fscholz",
-      "mfuji09",
-      "sideshowbarker",
-      "SphinxKnight",
-      "cunzaizhuyi",
-      "ukyo",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance": {
-    "modified": "2020-10-15T22:27:23.122Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "mfuji09", "fscholz"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports": {
-    "modified": "2020-10-15T21:51:47.093Z",
-    "contributors": ["fscholz", "mfuji09", "sideshowbarker", "chrisdavidmills"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError": {
-    "modified": "2020-10-15T21:51:48.473Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "ukyo",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError": {
-    "modified": "2020-10-15T22:27:14.353Z",
-    "contributors": ["fscholz", "wbamberg"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory": {
-    "modified": "2020-12-03T13:47:41.979Z",
-    "contributors": [
-      "DesmondWillowbrook",
-      "fscholz",
-      "chrisdavidmills",
-      "mfuji09",
-      "sideshowbarker",
-      "Zhang-Junzhi",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory": {
-    "modified": "2020-10-15T22:27:22.819Z",
-    "contributors": ["lukewagner", "chrisdavidmills", "fscholz", "mfuji09"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer": {
-    "modified": "2020-10-15T21:51:49.592Z",
-    "contributors": ["fscholz", "mfuji09", "sideshowbarker", "chrisdavidmills"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow": {
-    "modified": "2020-10-15T21:51:47.051Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module": {
-    "modified": "2020-12-06T05:19:13.781Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "wbamberg",
-      "fscholz",
-      "sideshowbarker",
-      "MarkusStange",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module": {
-    "modified": "2020-10-15T22:27:22.788Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "fscholz"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections": {
-    "modified": "2020-10-15T21:51:48.277Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "lukewagner",
-      "svodnik"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports": {
-    "modified": "2020-10-15T21:51:45.300Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "sideshowbarker",
-      "Hywan",
-      "chrisdavidmills",
-      "denimX",
-      "lukewagner",
-      "svodnik"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports": {
-    "modified": "2020-10-15T21:51:45.626Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "ukyo",
-      "lukewagner",
-      "svodnik"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError": {
-    "modified": "2020-10-15T21:51:48.054Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "ukyo",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RunTimeError": {
-    "modified": "2020-10-15T22:27:14.920Z",
-    "contributors": ["fscholz", "wbamberg"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T21:51:46.257Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "baptistemanson",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table": {
-    "modified": "2020-10-15T22:27:22.286Z",
-    "contributors": ["fscholz"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get": {
-    "modified": "2020-10-15T21:51:47.366Z",
-    "contributors": ["fscholz", "sideshowbarker", "chrisdavidmills"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow": {
-    "modified": "2020-10-15T21:51:47.624Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length": {
-    "modified": "2020-10-15T21:51:48.365Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "ukyo",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set": {
-    "modified": "2020-10-15T21:51:48.539Z",
-    "contributors": ["fscholz", "mfuji09", "sideshowbarker", "chrisdavidmills"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compile": {
-    "modified": "2020-10-15T21:51:47.482Z",
-    "contributors": [
-      "chharvey",
-      "fscholz",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming": {
-    "modified": "2020-10-15T21:58:23.274Z",
-    "contributors": ["fscholz", "wbamberg", "chrisdavidmills"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate": {
-    "modified": "2020-12-06T05:01:39.378Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "wbamberg",
-      "sideshowbarker",
-      "MarkusStange",
-      "Gryff",
-      "chrisdavidmills",
-      "scooter-dangle",
-      "lukewagner"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming": {
-    "modified": "2020-10-15T21:58:22.787Z",
-    "contributors": ["fscholz", "wbamberg", "chrisdavidmills", "AnimusPEXUS"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/validate": {
-    "modified": "2020-10-15T21:51:47.232Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "mfluehr",
-      "chrisdavidmills",
-      "lukewagner"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
@@ -126524,57 +126153,6 @@
   "Web/JavaScript/Reference/Trailing_commas": {
     "modified": "2020-10-15T21:51:43.555Z",
     "contributors": ["fscholz", "wbamberg", "fkling42", "Sheppy"]
-  },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-09-13T02:19:59.158Z",
-    "contributors": [
-      "veganaiZe",
-      "fscholz",
-      "jswisher",
-      "chrisdavidmills",
-      "Joelkaba",
-      "ricardodelavega",
-      "utkarshbhatt12",
-      "SphinxKnight",
-      "sonymoon",
-      "kdex",
-      "iskitz",
-      "mamptecnocrata",
-      "Matthisk",
-      "jhnstn",
-      "msalamon",
-      "xfq",
-      "Delapouite",
-      "aloha",
-      "tracker1",
-      "Sheppy",
-      "ziyunfei",
-      "shirayuki",
-      "julienw",
-      "venesa",
-      "jbuck",
-      "SiPlus",
-      "MatrixFrog",
-      "vipsoft",
-      "satyr",
-      "jls",
-      "user01",
-      "sortiz",
-      "Sephr",
-      "kbrosnan",
-      "Shantirao",
-      "Mgjbot",
-      "Brettz9",
-      "Rudolf.noe",
-      "Sevenspade",
-      "Indiejade",
-      "Varmaa",
-      "Uncle billy",
-      "Taken",
-      "Nickolay",
-      "Azer",
-      "Hamstersoup"
-    ]
   },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:04:01.905Z",
@@ -133539,6 +133117,262 @@
   "WebAssembly/Exported_functions": {
     "modified": "2019-03-23T22:19:25.918Z",
     "contributors": ["chrisdavidmills", "WesleydeSouza", "kingysu"]
+  },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2020-10-15T21:51:43.349Z",
+    "contributors": [
+      "fscholz",
+      "chrisdavidmills",
+      "wbamberg",
+      "sideshowbarker",
+      "emilbayes",
+      "apurv-pandey",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/CompileError": {
+    "modified": "2020-10-15T21:51:47.191Z",
+    "contributors": [
+      "fscholz",
+      "wbamberg",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "ukyo",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/CompileError/CompileError": {
+    "modified": "2020-10-15T22:27:16.736Z",
+    "contributors": ["fscholz", "wbamberg"]
+  },
+  "WebAssembly/JavaScript_interface/Global": {
+    "modified": "2020-12-11T06:30:22.237Z",
+    "contributors": [
+      "bershanskiy",
+      "fscholz",
+      "wbamberg",
+      "chrisdavidmills",
+      "sideshowbarker",
+      "jpmedley"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Global/Global": {
+    "modified": "2020-12-11T06:28:32.977Z",
+    "contributors": ["bershanskiy", "fscholz"]
+  },
+  "WebAssembly/JavaScript_interface/Instance": {
+    "modified": "2020-10-15T21:51:45.430Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "fscholz",
+      "mfuji09",
+      "sideshowbarker",
+      "SphinxKnight",
+      "cunzaizhuyi",
+      "ukyo",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Instance/Instance": {
+    "modified": "2020-10-15T22:27:23.122Z",
+    "contributors": ["chrisdavidmills", "wbamberg", "mfuji09", "fscholz"]
+  },
+  "WebAssembly/JavaScript_interface/Instance/exports": {
+    "modified": "2020-10-15T21:51:47.093Z",
+    "contributors": ["fscholz", "mfuji09", "sideshowbarker", "chrisdavidmills"]
+  },
+  "WebAssembly/JavaScript_interface/LinkError": {
+    "modified": "2020-10-15T21:51:48.473Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "ukyo",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/LinkError/LinkError": {
+    "modified": "2020-10-15T22:27:14.353Z",
+    "contributors": ["fscholz", "wbamberg"]
+  },
+  "WebAssembly/JavaScript_interface/Memory": {
+    "modified": "2020-12-03T13:47:41.979Z",
+    "contributors": [
+      "DesmondWillowbrook",
+      "fscholz",
+      "chrisdavidmills",
+      "mfuji09",
+      "sideshowbarker",
+      "Zhang-Junzhi",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Memory/Memory": {
+    "modified": "2020-10-15T22:27:22.819Z",
+    "contributors": ["lukewagner", "chrisdavidmills", "fscholz", "mfuji09"]
+  },
+  "WebAssembly/JavaScript_interface/Memory/buffer": {
+    "modified": "2020-10-15T21:51:49.592Z",
+    "contributors": ["fscholz", "mfuji09", "sideshowbarker", "chrisdavidmills"]
+  },
+  "WebAssembly/JavaScript_interface/Memory/grow": {
+    "modified": "2020-10-15T21:51:47.051Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Module": {
+    "modified": "2020-12-06T05:19:13.781Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "wbamberg",
+      "fscholz",
+      "sideshowbarker",
+      "MarkusStange",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Module/Module": {
+    "modified": "2020-10-15T22:27:22.788Z",
+    "contributors": ["chrisdavidmills", "wbamberg", "fscholz"]
+  },
+  "WebAssembly/JavaScript_interface/Module/customSections": {
+    "modified": "2020-10-15T21:51:48.277Z",
+    "contributors": [
+      "fscholz",
+      "wbamberg",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "lukewagner",
+      "svodnik"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Module/exports": {
+    "modified": "2020-10-15T21:51:45.300Z",
+    "contributors": [
+      "fscholz",
+      "wbamberg",
+      "sideshowbarker",
+      "Hywan",
+      "chrisdavidmills",
+      "denimX",
+      "lukewagner",
+      "svodnik"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Module/imports": {
+    "modified": "2020-10-15T21:51:45.626Z",
+    "contributors": [
+      "fscholz",
+      "wbamberg",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "ukyo",
+      "lukewagner",
+      "svodnik"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/RuntimeError": {
+    "modified": "2020-10-15T21:51:48.054Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "ukyo",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/RuntimeError/RuntimeError": {
+    "modified": "2020-10-15T22:27:14.920Z",
+    "contributors": ["fscholz", "wbamberg"]
+  },
+  "WebAssembly/JavaScript_interface/Table": {
+    "modified": "2020-10-15T21:51:46.257Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "baptistemanson",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Table/Table": {
+    "modified": "2020-10-15T22:27:22.286Z",
+    "contributors": ["fscholz"]
+  },
+  "WebAssembly/JavaScript_interface/Table/get": {
+    "modified": "2020-10-15T21:51:47.366Z",
+    "contributors": ["fscholz", "sideshowbarker", "chrisdavidmills"]
+  },
+  "WebAssembly/JavaScript_interface/Table/grow": {
+    "modified": "2020-10-15T21:51:47.624Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Table/length": {
+    "modified": "2020-10-15T21:51:48.365Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "ukyo",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/Table/set": {
+    "modified": "2020-10-15T21:51:48.539Z",
+    "contributors": ["fscholz", "mfuji09", "sideshowbarker", "chrisdavidmills"]
+  },
+  "WebAssembly/JavaScript_interface/compile": {
+    "modified": "2020-10-15T21:51:47.482Z",
+    "contributors": [
+      "chharvey",
+      "fscholz",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/compileStreaming": {
+    "modified": "2020-10-15T21:58:23.274Z",
+    "contributors": ["fscholz", "wbamberg", "chrisdavidmills"]
+  },
+  "WebAssembly/JavaScript_interface/instantiate": {
+    "modified": "2020-12-06T05:01:39.378Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "wbamberg",
+      "sideshowbarker",
+      "MarkusStange",
+      "Gryff",
+      "chrisdavidmills",
+      "scooter-dangle",
+      "lukewagner"
+    ]
+  },
+  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+    "modified": "2020-10-15T21:58:22.787Z",
+    "contributors": ["fscholz", "wbamberg", "chrisdavidmills", "AnimusPEXUS"]
+  },
+  "WebAssembly/JavaScript_interface/validate": {
+    "modified": "2020-10-15T21:51:47.232Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "mfluehr",
+      "chrisdavidmills",
+      "lukewagner"
+    ]
   },
   "WebAssembly/Loading_and_running": {
     "modified": "2020-11-15T12:25:58.103Z",

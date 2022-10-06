@@ -10,6 +10,7 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.exit_event
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`exit`** event fires when a cue stops being active.

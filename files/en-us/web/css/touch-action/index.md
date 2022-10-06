@@ -1,6 +1,7 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.touch-action
 ---
+
 {{CSSRef}}
 
 The **`touch-action`** CSS property sets how an element's region can be manipulated by a touchscreen user (for example, by zooming features built into the browser).

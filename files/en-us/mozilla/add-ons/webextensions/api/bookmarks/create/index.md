@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified `parentId`. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} parameter.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let createBookmark = browser.bookmarks.create(
   bookmark                  // CreateDetails object
 )
@@ -51,7 +52,7 @@ function onCreated(node) {
 
 let createBookmark = browser.bookmarks.create({
   title: "bookmarks.create() on MDN",
-  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
+  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
 });
 
 createBookmark.then(onCreated);

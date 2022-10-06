@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.enctype
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.enctype`** property is the [MIME type](https://en.wikipedia.org/wiki/Mime_type) of content that is used

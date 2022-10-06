@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MediaList
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`MediaList`** interface represents the media queries of a stylesheet, e.g. those set using a {{htmlelement("link")}} element's `media` attribute.

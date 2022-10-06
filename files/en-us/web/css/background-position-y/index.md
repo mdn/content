@@ -1,6 +1,7 @@
 ---
 title: background-position-y
 slug: Web/CSS/background-position-y
+page-type: css-property
 tags:
   - CSS
   - CSS Background
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-position-y
 ---
+
 {{CSSRef}}
 
 The **`background-position-y`** [CSS](/en-US/docs/Web/CSS) property sets the initial vertical position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.

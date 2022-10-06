@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
+
 {{AddonSidebar()}}
 
 Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.
@@ -23,13 +24,13 @@ If you use `"blocking"`, you must have the ["webRequestBlocking" API permission]
 
 It is possible for extensions to make conflicting requests. If two extensions listen to `onHeadersReceived` for the same request and return `responseHeaders` to set the same header (for example, `Set-Cookie`) not present in the original response, only one of the changes will succeed.
 
-However, the `Content-Security-Policy` header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict.  For example, if one extension sets `img-src: example.com`, and another extension sets `img-src: example.org`, the result is `img-src: 'none'`.  Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.
+However, the `Content-Security-Policy` header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict. For example, if one extension sets `img-src: example.com`, and another extension sets `img-src: example.org`, the result is `img-src: 'none'`. Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.
 
 If you want to see the headers that are processed by the system, without the risk that another extension will alter them, use {{WebExtAPIRef("webRequest.onResponseStarted")}}, although you can't modify headers on this event.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onHeadersReceived.addListener(
   listener,             // function
   filter,               //  object
@@ -59,7 +60,7 @@ Events have three functions:
     - `details`
       - : [`object`](#details_2). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a  `BlockingResponse`.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `BlockingResponse`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to this listener.

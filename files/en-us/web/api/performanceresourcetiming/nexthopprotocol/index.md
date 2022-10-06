@@ -10,6 +10,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`nextHopProtocol`** read-only

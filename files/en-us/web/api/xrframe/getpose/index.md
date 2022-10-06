@@ -18,6 +18,7 @@ tags:
   - Experimental
 browser-compat: api.XRFrame.getPose
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRFrame")}} method **`getPose()`** returns the relative position and
@@ -27,7 +28,7 @@ For example, to get the position of a controller relative to the viewer's head, 
 
 ## Syntax
 
-```js
+```js-nolint
 getPose(space, baseSpace)
 ```
 

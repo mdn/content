@@ -11,6 +11,7 @@ tags:
   - Unicode
 browser-compat: javascript.builtins.String.normalize
 ---
+
 {{JSRef}}
 
 The **`normalize()`** method returns the Unicode Normalization
@@ -20,7 +21,7 @@ Form of the string.
 
 ## Syntax
 
-```js
+```js-nolint
 normalize()
 normalize(form)
 ```

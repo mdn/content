@@ -1,6 +1,7 @@
 ---
 title: box-direction
 slug: Web/CSS/box-direction
+page-type: css-property
 tags:
   - CSS
   - Non-standard

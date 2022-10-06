@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications
 ---
+
 {{AddonSidebar}}
 
 Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.

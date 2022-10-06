@@ -8,6 +8,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.BYTES_PER_ELEMENT
 ---
+
 {{JSRef}}
 
 The **`TypedArray.BYTES_PER_ELEMENT`** property represents the size in bytes of each element in a typed array.

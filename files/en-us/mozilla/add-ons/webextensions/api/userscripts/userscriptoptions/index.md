@@ -12,6 +12,7 @@ tags:
   - WebExtensions
   - userScripts
 ---
+
 {{AddonSidebar}}
 
 The UserScriptOptions object represents the content scripts to register. It has similar syntax to the contentScript options supported by browser.contentScripts.register. The differences are:

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segments.containing
 ---
+
 {{JSRef}}
 
 The **`Intl.Segments.prototype.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
@@ -17,7 +18,7 @@ The **`Intl.Segments.prototype.containing()`** method returns an object describi
 
 ## Syntax
 
-```js
+```js-nolint
 containing(codeUnitIndex)
 ```
 
@@ -37,7 +38,7 @@ An object describing the segment of the original string with the following prope
 - `input`
   - : The complete input string that was segmented.
 - `isWordLike`
-  - : A boolean value only if `granularity` is `"word"`; otherwise, `undefined`.  If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, `false`.
+  - : A boolean value only if `granularity` is `"word"`; otherwise, `undefined`. If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, `false`.
 
 ## Examples
 

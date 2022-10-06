@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.name
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`name`** property of the

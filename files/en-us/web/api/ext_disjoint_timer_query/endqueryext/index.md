@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.endQueryEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.endQueryEXT()`** method of the
@@ -17,7 +18,7 @@ The **`EXT_disjoint_timer_query.endQueryEXT()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 endQueryEXT(target)
 ```
 

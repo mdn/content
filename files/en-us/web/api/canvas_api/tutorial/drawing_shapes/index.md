@@ -10,6 +10,7 @@ tags:
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Now that we have set up our [canvas environment](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage), we can get into the details of how to draw on the canvas. By the end of this article, you will have learned how to draw rectangles, triangles, lines, arcs and curves, providing familiarity with some of the basic shapes. Working with paths is essential when drawing objects onto the canvas and we will see how that can be done.
@@ -18,7 +19,7 @@ Now that we have set up our [canvas environment](/en-US/docs/Web/API/Canvas_API/
 
 Before we can start drawing, we need to talk about the canvas grid or **coordinate space**. Our HTML skeleton from the previous page had a canvas element 150 pixels wide and 150 pixels high.
 
-![](canvas_default_grid.png)
+![Canvas grid with a blue square demonstrating coordinates and axes.](canvas_default_grid.png)
 
 Normally 1 unit in the grid corresponds to 1 pixel on the canvas. The origin of this grid is positioned in the _top left_ corner at coordinate (0,0). All elements are placed relative to this origin. So the position of the top left corner of the blue square becomes x pixels from the left and y pixels from the top, at coordinate (x,y). Later in this tutorial we'll see how we can translate the origin to a different position, rotate the grid and even scale it, but for now we'll stick to the default.
 
@@ -301,7 +302,7 @@ The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bezie
   - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (cp2x, cp2y).
 
 The difference between these is that a quadratic Bézier curve has a start and an end point (blue dots) and just one **control point** (indicated by the red dot) while a cubic Bézier curve uses two control points.
-![](canvas_curves.png)
+![Quadratic and Bezier curve comparison.](canvas_curves.png)
 
 The `x` and `y` parameters in both of these methods are the coordinates of the end point. `cp1x` and `cp1y` are the coordinates of the first control point, and `cp2x` and `cp2y` are the coordinates of the second control point.
 
@@ -420,11 +421,11 @@ function draw() {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
 
-    for (i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++) {
       ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
 
-    for (i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
 

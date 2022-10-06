@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.text
 ---
+
 {{APIRef("Fetch")}}
 
 The **`text()`** method of the {{domxref("Request")}} interface
@@ -19,7 +20,7 @@ The response is _always_ decoded using UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

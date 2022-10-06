@@ -16,6 +16,7 @@ tags:
   - img
   - scr
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.
@@ -51,20 +52,22 @@ In the beginning, the Web was just text, and it was really quite boring. Fortuna
 
 ## How do we put an image on a webpage?
 
-In order to put a simple image on a webpage, we use the {{htmlelement("img")}} element. This is an {{glossary("empty element")}} (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — `src` (sometimes spoken as its full title, _source_). The `src` attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as `href` attribute values in {{htmlelement("a")}} elements.
+In order to put a simple image on a web page, we use the {{htmlelement("img")}} element. This is a {{Glossary("void element")}} (meaning, it cannot have any child content and cannot have an end tag) that requires two attributes to be useful: `src` and `alt`. The `src` attribute contains a URL pointing to the image you want to embed in the page. As with the`href` attribute for {{htmlelement("a")}} elements, the `src` attribute can be a relative URL or an absolute URL. Without a `src` attribute, an `img` element has no image to load.
+
+The [`alt` attribute is described below](#Alternative_text).
 
 > **Note:** You should read [A quick primer on URLs and paths](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths) to refresh your memory on relative and absolute URLs before continuing.
 
 So for example, if your image is called `dinosaur.jpg`, and it sits in the same directory as your HTML page, you could embed the image like so:
 
 ```html
-<img src="dinosaur.jpg" alt="Dinosaur">
+<img src="dinosaur.jpg" alt="Dinosaur" />
 ```
 
 If the image was in an `images` subdirectory, which was inside the same directory as the HTML page, then you'd embed it like this:
 
 ```html
-<img src="images/dinosaur.jpg" alt="Dinosaur">
+<img src="images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
 And so on.
@@ -74,7 +77,7 @@ And so on.
 You could embed the image using its absolute URL, for example:
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur">
+<img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
 But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.
@@ -100,9 +103,10 @@ Our above code would give us the following result:
 The next attribute we'll look at is `alt`. Its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of a slow internet connection. For example, our above code could be modified like so:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 The easiest way to test your `alt` text is to purposely misspell your filename. If for example our image name was spelled `dinosooooor.jpg`, the browser wouldn't display the image, and would display the alt text instead:
@@ -133,11 +137,12 @@ Essentially, the key is to deliver a usable experience, even when the images can
 You can use the `width` and `height` attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341">
+  width="400"
+  height="341" />
 ```
 
 This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:
@@ -155,12 +160,13 @@ However, you shouldn't alter the size of your images using HTML attributes. If y
 As [with links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#adding_supporting_information_with_%3ctitle%3e), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341"
-     title="A T-Rex on display in the Manchester University Museum">
+  width="400"
+  height="341"
+  title="A T-Rex on display in the Manchester University Museum" />
 ```
 
 This gives us a tooltip on mouse hover, just like link titles:
@@ -192,19 +198,20 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 <img>
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -318,11 +325,12 @@ Speaking of captions, there are a number of ways that you could add a caption to
 
 ```html
 <div class="figure">
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341" />
 
   <p>A T-Rex on display in the Manchester University Museum.</p>
 </div>
@@ -334,13 +342,16 @@ A better solution, is to use the HTML {{htmlelement("figure")}} and {{htmlelemen
 
 ```html
 <figure>
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341" />
 
-  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+  <figcaption>
+    A T-Rex on display in the Manchester University Museum.
+  </figcaption>
 </figure>
 ```
 
@@ -368,18 +379,21 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="min-height: 100px; width: 95%"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 

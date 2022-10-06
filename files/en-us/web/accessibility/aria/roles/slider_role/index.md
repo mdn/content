@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: slider role'
+title: "ARIA: slider role"
 slug: Web/Accessibility/ARIA/Roles/slider_role
 tags:
   - Accessibility
@@ -12,6 +12,7 @@ tags:
   - slider role
 spec-urls: https://w3c.github.io/aria/#slider
 ---
+
 The `slider` role defines an input where the user selects a value from within a given range.
 
 ## Description
@@ -43,7 +44,7 @@ The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueno
 
 For `slider`, unless using the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) element, the `aria-valuenow` value must be updated programmatically when the user updates the value.
 
-The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider.  As the minimum, maximum, and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` attribute should shift from xx-small thru to XX-large as the `aria-valuenow` increases.
+The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider. As the minimum, maximum, and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` attribute should shift from xx-small thru to XX-large as the `aria-valuenow` increases.
 
 The `aria-valuetext` value must be updated as the `value` or `aria-valuenow` is updated. While there is no equivalent HTML attribute for `<input type="range">`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. ARIA attributes are supported on semantic HTML elements.
 
@@ -114,19 +115,20 @@ In the example below, we create a vertical thermometer with which the user can s
 
 ```html
 <div>
-  <div id="temperatureLabel">
-    Temperature
-  </div>
+  <div id="temperatureLabel">Temperature</div>
   <div id="temperatureValue">20°C</div>
   <div id="temperatureSlider">
-    <div id="temperatureSliderThumb"
-       role="slider" aria-labelledby="temperatureLabel"
-       aria-orientation="vertical"
-       tabindex="0"
-       aria-valuemin="15.0" aria-valuemax="25.0"
-       aria-valuenow="20.0" aria-valuetext="20 degrees Celsius"
-       style="top: calc((25 - 20)*2rem - 0.5rem)">
-    </div>
+    <div
+      id="temperatureSliderThumb"
+      role="slider"
+      aria-labelledby="temperatureLabel"
+      aria-orientation="vertical"
+      tabindex="0"
+      aria-valuemin="15.0"
+      aria-valuemax="25.0"
+      aria-valuenow="20.0"
+      aria-valuetext="20 degrees Celsius"
+      style="top: calc((25 - 20)*2rem - 0.5rem)"></div>
   </div>
 </div>
 ```
@@ -156,13 +158,16 @@ For this example to work, we have to write a script to handle all keyboard and p
 Using semantic HTML, this could have been written as:
 
 ```html
-<label for="temperature">
-    Temperature
-</label>
+<label for="temperature"> Temperature </label>
 <output id="temperatureValue">20°C</output>
-<input type="range" id="temperatureSlider"
-  min="15" max="25" step="0.1"
-  value="20" aria-valuetext="20 degrees celsius"
+<input
+  type="range"
+  id="temperatureSlider"
+  min="15"
+  max="25"
+  step="0.1"
+  value="20"
+  aria-valuetext="20 degrees celsius"
   style="transform: rotate(-90deg);" />
 ```
 
@@ -172,14 +177,14 @@ There are a few ways to make a range input vertical. In this example, we used [C
 
 ## Keyboard interactions
 
-| Key(s) | Action |
-| ---- | ---- |
-| Right and Up arrows | Increase the selected value by one step |
-| Left and Down arrows | Decrease the selected value by one step|
-| Page Up | (Optional) increase the value by a set amount greater than one step |
-| Page Down | (Optional) decrease the value by a set amount greater than one step |
-| Home | Set the slider to the minimum value. |
-| End | Set the slider to the maximum value. |
+| Key(s)               | Action                                                              |
+| -------------------- | ------------------------------------------------------------------- |
+| Right and Up arrows  | Increase the selected value by one step                             |
+| Left and Down arrows | Decrease the selected value by one step                             |
+| Page Up              | (Optional) increase the value by a set amount greater than one step |
+| Page Down            | (Optional) decrease the value by a set amount greater than one step |
+| Home                 | Set the slider to the minimum value.                                |
+| End                  | Set the slider to the maximum value.                                |
 
 For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in slider value should be by an amount larger than the step changes made by up and down arrows.
 
@@ -217,6 +222,6 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

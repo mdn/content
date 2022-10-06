@@ -24,7 +24,7 @@ The **`Math.min()`** function returns the smallest of the numbers given as input
 
 ## Syntax
 
-```js
+```js-nolint
 Math.min()
 Math.min(value0)
 Math.min(value0, value1)

@@ -23,6 +23,7 @@ tags:
   - mp4
   - sound
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Even modest quality, high-fidelity stereo sound can use a substantial amount of disk space. For web developers, an even bigger concern is the network bandwidth needed in order to transfer audio, whether for streaming or to download it for use during gameplay. The processing of audio data to encode and decode it is handled by an audio **{{Glossary("codec")}}** (**CO**der/**DEC**oder). In this article, we look at audio codecs used on the web to compress and decompress audio, what their capabilities and use cases are, and offer guidance when choosing audio codecs to use for your content.
@@ -1519,7 +1520,7 @@ A few popular options:
 - [Handbrake](https://handbrake.fr/)
   - : A highly popular open source front-end to FFmpeg which adds a graphical user interface that makes it much easier to control the wide variety of options FFmpeg offers while encoding audio and/or video. Binaries are available for macOS, Linux, and Windows.
 - [Audacity](https://www.audacityteam.org/)
-  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format.  Available for macOS, Linux, and Windows.
+  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format. Available for macOS, Linux, and Windows.
 - [LAME](https://lame.sourceforge.io/)
   - : A high quality open source MP3 encoder with support for CBR, ABR, and VBR encoding as well as a variety of other options. Distributed only in source form by the LAME project, but can be installed using [Homebrew](https://brew.sh/) or similar tools.
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Navigator.language`** read-only property returns

@@ -7,6 +7,7 @@ tags:
   - Reference
   - Tutorial
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
 
 Painting an unstyled page, and then repainting it once styles are parsed would be bad user experience. For this reason, CSS is render blocking, unless the browser knows the CSS is not currently needed. The browser can paint the page once it has downloaded the CSS and built the CSS object model. Browsers follow a specific rendering path: paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees. To optimize the CSSOM construction, remove unnecessary styles, minify, compress and cache it, and split CSS not required at page load into additional files to reduce CSS render blocking.
@@ -17,13 +18,16 @@ CSS can scope styles to particular conditions with media queries. Media queries 
 
 ```html
 <!-- Loading and parsing styles.css is render-blocking -->
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 
-<!-- Loading and parsing print.css is not render-blocking  -->
-<link rel="stylesheet" href="print.css" media="print"> 
+<!-- Loading and parsing print.css is not render-blocking -->
+<link rel="stylesheet" href="print.css" media="print" />
 
 <!-- Loading and parsing mobile.css is not render-blocking on large screens -->
-<link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"> 
+<link
+  rel="stylesheet"
+  href="mobile.css"
+  media="screen and (max-width: 480px)" />
 ```
 
 By default the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
@@ -49,7 +53,7 @@ Applied to the [@font-face](/en-US/docs/Web/CSS/@font-face) rule, the [font-disp
 ```css
 @font-face {
   font-family: someFont;
-  src: url(/path/to/fonts/someFont.woff) format('woff');
+  src: url(/path/to/fonts/someFont.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

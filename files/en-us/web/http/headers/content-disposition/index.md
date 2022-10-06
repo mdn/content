@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 In a regular HTTP response, the **`Content-Disposition`** response header is a header indicating if the content is expected to be displayed _inline_ in the browser, that is, as a Web page or as part of a Web page, or as an _attachment_, that is downloaded and saved locally.
@@ -50,7 +51,7 @@ Content-Disposition: attachment; filename="filename.jpg"
 
 ### As a header for a multipart body
 
-A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign. Multiple parameters are separated by a semi-colon (`';'`).
+A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign. Multiple parameters are separated by a semicolon (`';'`).
 
 ```http
 Content-Disposition: form-data; name="fieldName"

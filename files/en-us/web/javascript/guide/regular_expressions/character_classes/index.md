@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
   - character classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.

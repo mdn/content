@@ -27,6 +27,7 @@ tags:
   - transform
 browser-compat: api.XRReferenceSpaceEvent.transform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRReferenceSpaceEvent")}} property

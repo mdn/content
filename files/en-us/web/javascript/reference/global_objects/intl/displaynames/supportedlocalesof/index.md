@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames.supportedLocalesOf()`** method returns
@@ -19,7 +20,7 @@ without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.DisplayNames.supportedLocalesOf(locales)
 Intl.DisplayNames.supportedLocalesOf(locales, options)
 ```

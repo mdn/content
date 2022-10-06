@@ -1,11 +1,13 @@
 ---
 title: Realizing common layouts using grids
 slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
 To round off this set of guides to CSS Grid Layout, we're going to walk through a few different layouts, which demonstrate some of the different techniques you can use when designing with grid layout. We will look at an example using [grid-template-areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas), a typical 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to achieve the result you want with grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
@@ -18,28 +20,30 @@ Many websites are a variation of this type of layout, with content, sidebars, a 
 
 We're going to create this layout using the _named template areas_ that we learned about in the guide _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_.
 
-The mark-up is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
+The markup is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
 
 ```css hidden
-* {box-sizing: border-box;}
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    font: 1.2em Helvetica, arial, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font: 1.2em Helvetica, arial, sans-serif;
+}
 
-  .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
@@ -54,7 +58,12 @@ The mark-up is a container with elements inside for a header, footer, main conte
   </nav>
   <article class="content">
     <h1>Main article area</h1>
-    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
   </article>
   <aside class="side">Sidebar</aside>
   <div class="ad">Advertising</div>
@@ -132,11 +141,11 @@ We can now add a final breakpoint to move to a three-column layout.
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -179,9 +188,13 @@ To demonstrate how this grid system works I have four child elements inside my w
 ```html
 <div class="wrapper">
   <div class="item1">Start column line 1, span 3 column tracks.</div>
-  <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+  <div class="item2">
+    Start column line 6, span 4 column tracks. 2 row tracks.
+  </div>
   <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
-  <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
+  <div class="item4">
+    Start at column line 3, span to the end of the grid (-1).
+  </div>
 </div>
 ```
 
@@ -192,7 +205,7 @@ We can then place these on the grid using the named lines, and also the span key
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -220,25 +233,27 @@ There are some key differences with how a grid layout works over the grid system
 To see how this layout method works in practice, we can create the same layout that we created with {{cssxref("grid-template-areas")}}, this time using the 12-column grid system. Let's start with the same markup as used for the grid template areas example.
 
 ```css hidden
-* {box-sizing: border-box;}
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    font: 1.2em Helvetica, arial, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font: 1.2em Helvetica, arial, sans-serif;
+}
 
-  .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
@@ -253,7 +268,12 @@ To see how this layout method works in practice, we can create the same layout t
   </nav>
   <article class="content">
     <h1>Main article area</h1>
-    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
   </article>
   <aside class="side">Sidebar</aside>
   <div class="ad">Advertising</div>
@@ -295,7 +315,8 @@ The ad panel is below the sidebar, so starts at grid row line 4. Then we have th
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -402,23 +423,29 @@ The markup for my listing is an unordered list of items. Each item contains a he
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font: 1.2em Helvetica, arial, sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 ```
 
 We are going to create a grid with a flexible number of flexible columns. I want them never to become smaller than 200 pixels, and then to share any available remaining space equally – so we always get equal width column tracks. We achieve this with the `minmax()` function in our repeat notation for track sizing.
@@ -474,50 +501,58 @@ We can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow"
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font: 1.2em Helvetica, arial, sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
 .listing li {
   border: 1px solid #ffe066;
@@ -543,7 +578,7 @@ We can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow"
   display: grid;
   gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;

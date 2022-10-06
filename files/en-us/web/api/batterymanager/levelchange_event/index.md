@@ -1,5 +1,5 @@
 ---
-title: 'BatteryManager: levelchange event'
+title: "BatteryManager: levelchange event"
 slug: Web/API/BatteryManager/levelchange_event
 page-type: web-api-event
 tags:
@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.levelchange_event
 ---
+
 {{APIRef("Battery API")}}
 
 The **`levelchange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.level","level")}} property is updated.
@@ -16,10 +17,10 @@ The **`levelchange`** event of the [Battery Status API](/en-US/docs/Web/API/Batt
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('levelchange', (event) => { });
+```js-nolint
+addEventListener("levelchange", (event) => { })
 
-onlevelchange = (event) => { };
+onlevelchange = (event) => { }
 ```
 
 ## Event type
@@ -40,14 +41,16 @@ _A generic {{domxref("Event")}}._
 ```js
 navigator.getBattery().then((battery) => {
   battery.onlevelchange = () => {
-    document.querySelector('#level').textContent = battery.level;
+    document.querySelector("#level").textContent = battery.level;
 
     if (battery.charging) {
-      document.querySelector('#stateBattery').textContent =
-        `Charging time: ${battery.chargingTime / 60}`;
+      document.querySelector("#stateBattery").textContent = `Charging time: ${
+        battery.chargingTime / 60
+      }`;
     } else {
-      document.querySelector('#stateBattery').textContent =
-        `Discharging time: ${battery.dischargingTime / 60}`;
+      document.querySelector(
+        "#stateBattery"
+      ).textContent = `Discharging time: ${battery.dischargingTime / 60}`;
     }
   };
 });

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.ect
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The **`ECT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field indicates the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, `4g`.

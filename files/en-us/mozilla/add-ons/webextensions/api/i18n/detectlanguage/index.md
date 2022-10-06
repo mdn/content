@@ -13,6 +13,7 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n.detectLanguage
 ---
+
 {{AddonSidebar()}}
 
 Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
@@ -23,7 +24,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ## Syntax
 
-```js
+```js-nolint
 let detectingLanguages = browser.i18n.detectLanguage(
   text                  // string
 )

@@ -13,6 +13,7 @@ tags:
   - polyfill
 browser-compat: api.Window.cancelIdleCallback
 ---
+
 {{APIRef}}
 
 ## Summary
@@ -22,7 +23,7 @@ previously scheduled with {{domxref("window.requestIdleCallback()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 cancelIdleCallback(handle)
 ```
 

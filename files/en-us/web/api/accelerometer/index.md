@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.Accelerometer
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Accelerometer`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the acceleration applied to the device along all three axes.
@@ -54,8 +55,8 @@ _`Accelerometer` doesn't have own events. However, it inherits events from its p
 Acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
-let acl = new Accelerometer({frequency: 60});
-acl.addEventListener('reading', () => {
+const acl = new Accelerometer({ frequency: 60 });
+acl.addEventListener("reading", () => {
   console.log(`Acceleration along the X-axis ${acl.x}`);
   console.log(`Acceleration along the Y-axis ${acl.y}`);
   console.log(`Acceleration along the Z-axis ${acl.z}`);

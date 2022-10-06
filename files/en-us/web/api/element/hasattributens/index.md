@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.Element.hasAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `hasAttributeNS` returns a boolean value indicating whether the current element has the specified attribute.
 
 ## Syntax
 
-```js
+```js-nolint
 hasAttributeNS(namespace,localName)
 ```
 

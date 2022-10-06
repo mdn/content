@@ -10,6 +10,7 @@ tags:
   - add to home screen
   - icon
 ---
+
 Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, i.e. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
 
 ## Why A2HS?
@@ -114,7 +115,7 @@ In terms of how to design the icon, you should follow the same best practices yo
 To finish setting up your manifest, you need to reference it from the HTML of your application's home page:
 
 ```html
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest" />
 ```
 
 Browsers that support A2HS will know where to look for your manifest once this is in place.
@@ -155,35 +156,35 @@ At the bottom of our [`index.js` file](https://github.com/mdn/pwa-examples/blob/
 
 ```js
 let deferredPrompt;
-const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+const addBtn = document.querySelector(".add-button");
+addBtn.style.display = "none";
 ```
 
 We hide the button initially because the PWA will not be available for install until it follows the A2HS criteria. When this happens, supporting browsers will fire a `beforeinstallprompt` event. We can then use a handler like the one below to handle the installation:
 
 ```js
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI to notify the user they can add to home screen
-  addBtn.style.display = 'block';
+  addBtn.style.display = "block";
 
-  addBtn.addEventListener('click', (e) => {
+  addBtn.addEventListener("click", (e) => {
     // hide our user interface that shows our A2HS button
-    addBtn.style.display = 'none';
+    addBtn.style.display = "none";
     // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted the A2HS prompt");
+      } else {
+        console.log("User dismissed the A2HS prompt");
+      }
+      deferredPrompt = null;
+    });
   });
 });
 ```

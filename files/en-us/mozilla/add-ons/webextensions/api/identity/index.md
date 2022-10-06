@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.identity
 ---
+
 {{AddonSidebar}}
 
 Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code or access token, which an extension can then use to access user data from a service that supports OAuth2 access (such as Google or Facebook).

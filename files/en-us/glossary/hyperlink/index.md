@@ -3,10 +3,10 @@ title: Hyperlink
 slug: Glossary/Hyperlink
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - Navigation
 ---
+
 Hyperlinks connect webpages or data items to one another. In HTML, {{HTMLElement("a")}} elements define hyperlinks from a spot on a webpage (like a text string or image) to another spot on some other webpage (or even on the same page).
 
 ## See also

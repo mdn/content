@@ -11,6 +11,7 @@ tags:
   - package repository
   - yarn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 In this article we'll look at package managers in some detail to understand how we can use them in our own projects — to install project tool dependencies, keep them up-to-date, and more.
@@ -199,7 +200,7 @@ So now we need to add an `index.html` file to our working directory. Create `ind
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
@@ -234,9 +235,9 @@ Now for some page content. Let's say we want to show human-readable relative dat
 In the `index.js` file, add the following code and save it:
 
 ```js
-import { formatDistanceToNow } from 'date-fns'
+import { formatDistanceToNow } from "date-fns";
 
-const date = '1996-09-13 10:00:00';
+const date = "1996-09-13 10:00:00";
 document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 ```
 

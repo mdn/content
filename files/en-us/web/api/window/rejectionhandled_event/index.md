@@ -18,6 +18,7 @@ tags:
   - rejectionhandled
 browser-compat: api.Window.rejectionhandled_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`rejectionhandled`** event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a JavaScript {{jsxref("Promise")}} is rejected but after the promise rejection has been handled.

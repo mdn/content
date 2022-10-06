@@ -11,6 +11,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.discard
 ---
+
 {{AddonSidebar()}}
 
 Discards one or more tabs.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let discarding = browser.tabs.discard(
   tabIds          // integer or integer array
 )

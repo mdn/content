@@ -17,6 +17,7 @@ tags:
   - VideoPlaybackQuality
 browser-compat: api.VideoPlaybackQuality
 ---
+
 {{APIRef("HTML DOM")}}
 
 A **`VideoPlaybackQuality`** object is returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method and contains metrics that can be used to determine the playback quality of a video.

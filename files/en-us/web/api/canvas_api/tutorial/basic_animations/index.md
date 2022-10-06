@@ -9,6 +9,7 @@ tags:
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Since we're using JavaScript to control {{HTMLElement("canvas")}} elements, it's also very easy to make (interactive) animations. In this chapter we will take a look at how to do some basic animations.
@@ -20,13 +21,13 @@ Probably the biggest limitation is, that once a shape gets drawn, it stays that 
 These are the steps you need to take to draw a frame:
 
 1. **Clear the canvas**
-    Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
+   Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
 2. **Save the canvas state**
-    If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
+   If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
 3. **Draw animated shapes**
-    The step where you do the actual frame rendering.
+   The step where you do the actual frame rendering.
 4. **Restore the canvas state**
-    If you've saved the state, restore it before drawing a new frame.
+   If you've saved the state, restore it before drawing a new frame.
 
 ## Controlling an animation
 
@@ -155,7 +156,7 @@ function clock() {
   // Minute marks
   ctx.save();
   ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
+  for (let i = 0; i < 60; i++) {
     if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
@@ -319,7 +320,7 @@ function draw() {
   }
 
   // Draw image
-  ctx.drawImage(img, x, y,imgW, imgH);
+  ctx.drawImage(img, x, y, imgW, imgH);
 
   // Amount to move
   x += dx;

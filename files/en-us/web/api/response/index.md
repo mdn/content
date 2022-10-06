@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.

@@ -17,6 +17,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.align
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _obsolete_ **`align`**

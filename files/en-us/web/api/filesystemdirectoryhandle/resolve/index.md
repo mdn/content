@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`resolve()`** method of the
@@ -19,8 +20,8 @@ the child entry as the last array item.
 
 ## Syntax
 
-```js
-const pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
+```js-nolint
+resolve(possibleDescendant)
 ```
 
 ### Parameters

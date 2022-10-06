@@ -1,5 +1,5 @@
 ---
-title: For Further Reading
+title: For further reading
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 tags:
   - NeedsContent
@@ -8,6 +8,7 @@ tags:
   - XML
   - XSLT
 ---
+
 [« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 ## Print

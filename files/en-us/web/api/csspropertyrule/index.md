@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSPropertyRule
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
 The **`CSSPropertyRule`** interface of the {{domxref('CSS_Properties_and_Values_API','','',' ')}} represents a single CSS {{cssxref("@property")}} rule.

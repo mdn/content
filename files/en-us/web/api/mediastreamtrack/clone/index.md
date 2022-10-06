@@ -12,6 +12,7 @@ tags:
   - clone
 browser-compat: api.MediaStreamTrack.clone
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`clone()`** method of the {{domxref("MediaStreamTrack")}}
@@ -21,7 +22,7 @@ interface creates a duplicate of the `MediaStreamTrack`. This new
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

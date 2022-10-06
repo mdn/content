@@ -1,16 +1,17 @@
 ---
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
+page-type: css-property
 tags:
   - CSS
   - CSS Overflow
   - CSS Property
   - Reference
   - recipe:css-property
-  - Experimental
 browser-compat: css.properties.overflow-clip-margin
 ---
-{{CSSRef}}{{SeeCompatTable}}
+
+{{CSSRef}}
 
 The **`overflow-clip-margin`** [CSS](/en-US/docs/Web/CSS) property determines how far outside its bounds an element with [`overflow: clip`](/en-US/docs/Web/CSS/overflow) may be painted before being clipped.
 
@@ -46,7 +47,11 @@ The `overflow-clip-margin` property is specified as a length, negative values ar
 
 ```html
 <div class="box">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur.
 </div>
 ```
 
@@ -55,7 +60,7 @@ The `overflow-clip-margin` property is specified as a length, negative values ar
 ```css
 .box {
   border: 3px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
   overflow: clip;
   overflow-clip-margin: 20px;

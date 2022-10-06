@@ -2,9 +2,10 @@
 title: Firefox 17 for developers
 slug: Mozilla/Firefox/Releases/17
 tags:
-  - '17'
+  - "17"
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 17 shipped on November 20, 2012. This article lists key changes that are useful for not only web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -91,11 +92,11 @@ The Gecko part of the user agent string changed. The build date (which hadn't be
 
 #### New interfaces
 
-_None._
+None.
 
 #### Removed interfaces
 
-_None removed._
+None removed.
 
 ## See also
 

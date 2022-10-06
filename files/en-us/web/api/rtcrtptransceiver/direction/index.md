@@ -15,6 +15,7 @@ tags:
   - direction
 browser-compat: api.RTCRtpTransceiver.direction
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpTransceiver")}} property

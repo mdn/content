@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMRectReadOnly`** interface specifies the standard properties used by {{domxref("DOMRect")}} to define a rectangle whose properties are immutable.

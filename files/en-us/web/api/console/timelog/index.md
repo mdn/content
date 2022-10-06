@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.timeLog
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling
@@ -23,7 +24,7 @@ details and examples.
 
 ## Syntax
 
-```js
+```js-nolint
 timeLog(label)
 ```
 

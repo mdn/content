@@ -12,6 +12,7 @@ tags:
   - unobserve
 browser-compat: api.IntersectionObserver.unobserve
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} method
@@ -21,7 +22,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 unobserve(target)
 ```
 

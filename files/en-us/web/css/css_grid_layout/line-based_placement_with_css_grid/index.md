@@ -1,11 +1,13 @@
 ---
 title: Grid layout using line-based placement
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
+page-type: guide
 tags:
   - CSS
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
 In the [article covering the basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), we started to look at how to position items on a grid using line numbers. In this article we will fully explore how this fundamental feature of the specification works.
@@ -21,37 +23,39 @@ Inside our grid container we have four child elements. If we do not place these 
 ![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -63,10 +67,10 @@ We can use line-based placement to control where these items sit on the grid. We
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 ```
 
@@ -75,59 +79,61 @@ As you position some items, other items on the grid will continue to be laid out
 Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is the ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
-   grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 ```
 
@@ -138,51 +144,53 @@ Addressing each item individually we can place all four items spanning row and c
 We have quite a lot of code here to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 / 2;
-   grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 / 4;
-   grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 / 3;
-   grid-row: 1 /  2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
 }
 ```
 
@@ -197,54 +205,56 @@ In the above examples, we specified every end row and column line, in order to d
 This means that our initial, long-hand, example would look like this:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
 }
 ```
 
@@ -255,51 +265,53 @@ This means that our initial, long-hand, example would look like this:
 Our shorthand would look like the following code, with no forward slash and second value for the items spanning one track only.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 ```
 
@@ -315,47 +327,49 @@ We can take things a step further and define each area with a single property â€
 - grid-column-end
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
-   grid-area: 1 / 3 / 3 / 4;
+  grid-area: 1 / 3 / 3 / 4;
 }
 .box3 {
-   grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .box4 {
-   grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 2 / 4 / 4;
 }
 ```
 
@@ -379,59 +393,61 @@ We can also count backwards from the block and inline end of the grid, for Engli
 In this next example, we have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: -1;
-   grid-column-end: -2;
-   grid-row-start: -1;
-   grid-row-end: -4;
+  grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -1;
+  grid-row-end: -4;
 }
 .box2 {
-   grid-column-start: -3;
-   grid-column-end: -4;
-   grid-row-start: -1;
-   grid-row-end: -3;
+  grid-column-start: -3;
+  grid-column-end: -4;
+  grid-row-start: -1;
+  grid-row-end: -3;
 }
 .box3 {
-   grid-column-start: -2;
-   grid-column-end: -3;
-   grid-row-start: -1;
-   grid-row-end: -2;
+  grid-column-start: -2;
+  grid-column-end: -3;
+  grid-row-start: -1;
+  grid-row-end: -2;
 }
 .box4 {
-   grid-column-start: -2;
-   grid-column-end: -4;
-   grid-row-start: -3;
-   grid-row-end: -4;
+  grid-column-start: -2;
+  grid-column-end: -4;
+  grid-row-start: -3;
+  grid-row-end: -4;
 }
 ```
 
@@ -443,7 +459,7 @@ Being able to address the start and end lines of the grid is useful as you can t
 
 ```css
 .item {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 ```
 
@@ -458,58 +474,60 @@ The CSS Grid Specification includes the ability to add gutters between column an
 Gaps only appear between tracks of the grid, they do not add space to the top and bottom, left or right of the container. We can add gaps to our earlier example by using these properties on the grid container.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1 ;
-    grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-    grid-column: 3 ;
-    grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-    grid-column: 2 ;
-    grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / 4;
-    grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    column-gap: 20px;
-    row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  column-gap: 20px;
+  row-gap: 1em;
 }
 ```
 
@@ -521,10 +539,10 @@ The two properties can also be expressed as a shorthand, {{cssxref("gap")}}. If 
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    gap: 1em 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: 1em 20px;
 }
 ```
 
@@ -535,51 +553,53 @@ In terms of line-based positioning of items, the gap acts as if the line has gai
 In addition to specifying the start and end lines by number, you can specify a start line and then the number of tracks you would like the area to span.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1;
-    grid-row: 1 / span 3;
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 .box2 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 .box3 {
-    grid-column: 2;
-    grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / span 2;
-    grid-row: 3;
+  grid-column: 2 / span 2;
+  grid-row: 3;
 }
 ```
 
@@ -589,9 +609,9 @@ You can also use the `span` keyword in the value of `grid-row-start`/`grid-row-e
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 3;
 }
 ```
 
@@ -599,9 +619,9 @@ In the second example, we specify the end row line we want the item to finish at
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: span 3;
-    grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: span 3;
+  grid-row-end: 4;
 }
 ```
 

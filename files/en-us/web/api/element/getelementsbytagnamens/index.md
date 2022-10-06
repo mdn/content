@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getElementsByTagNameNS()`** method returns a
@@ -19,7 +20,7 @@ that its search is restricted to descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagNameNS(namespaceURI, localName)
 ```
 

@@ -23,7 +23,7 @@ The **`for await...of` statement** creates a loop iterating over [async iterable
 
 ## Syntax
 
-```js
+```js-nolint
 for await (variable of iterable)
   statement
 ```

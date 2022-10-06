@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.entries
 ---
+
 {{JSRef}}
 
 The **`Object.entries()`** method returns an array of a given
@@ -28,7 +29,7 @@ the array should be sorted first, like
 
 ## Syntax
 
-```js
+```js-nolint
 Object.entries(obj)
 ```
 

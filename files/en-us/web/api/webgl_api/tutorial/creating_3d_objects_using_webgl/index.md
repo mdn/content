@@ -11,6 +11,7 @@ tags:
   - WebGL
   - rendering
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Let's take our square plane into three dimensions by adding five more faces to create a cube. To do this efficiently, we're going to switch from drawing using the vertices directly by calling the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method to using the vertex array as a table, and referencing individual vertices in that table to define the positions of each face's vertices, by calling {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
@@ -99,11 +100,12 @@ We also need to build an array of colors for each of the 24 vertices. This code 
 
   // Convert the array of colors into a table for all the vertices.
 
-  const colors = [];
+  var colors = [];
 
-  for (const c of faceColors) 
+  for (var j = 0; j < faceColors.length; ++j) {
+    const c = faceColors[j];
     // Repeat each color four times for the four vertices of the face
-    colors.push(c, c, c, c);
+    colors = colors.concat(c, c, c, c);
   }
 
   const colorBuffer = gl.createBuffer();

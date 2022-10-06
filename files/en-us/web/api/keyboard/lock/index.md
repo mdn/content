@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Keyboard.lock
 ---
+
 {{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
@@ -23,7 +24,7 @@ system.
 
 ## Syntax
 
-```js
+```js-nolint
 lock()
 lock(keyCodes)
 ```
@@ -37,6 +38,10 @@ lock(keyCodes)
 ### Return value
 
 A {{jsxref('Promise')}}.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

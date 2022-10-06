@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLScriptElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** interface, which provides special properties and methods for manipulating the behavior and execution of `<script>` elements (beyond the inherited {{domxref("HTMLElement")}} interface).
@@ -42,7 +43,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     The `defer` attribute may be specified with the `async` attribute, so legacy browsers that only support `defer` (and not `async`) fall back to the `defer` behavior instead of the default blocking behavior.
 
-    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://html.spec.whatwg.org/multipage/scripting.html) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://html.spec.whatwg.org/multipage/syntax.html) and [end](https://html.spec.whatwg.org/multipage/syntax.html) tags in HTML, [in foreign content](https://html.spec.whatwg.org/multipage/syntax.html), and [in XML](https://html.spec.whatwg.org/multipage/xhtml.html); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://html.spec.whatwg.org/multipage/webappapis.html); and so on.
+    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://html.spec.whatwg.org/multipage/scripting.html) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://html.spec.whatwg.org/multipage/syntax.html#start-tags) and [end](https://html.spec.whatwg.org/multipage/syntax.html#end-tags) tags in HTML, [in foreign content](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements), and [in XML](https://html.spec.whatwg.org/multipage/xhtml.html); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://html.spec.whatwg.org/multipage/webappapis.html); and so on.
 
 - {{domxref("HTMLScriptElement.crossOrigin")}}
   - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
@@ -63,7 +64,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.supports()")}}
   - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
-     This method provides a simple and unified method for script-related feature detection.
+    This method provides a simple and unified method for script-related feature detection.
 
 ## Methods
 

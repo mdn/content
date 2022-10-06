@@ -8,6 +8,7 @@ tags:
   - Learn
   - client-side
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
@@ -96,18 +97,18 @@ Building HTML elements and rendering them in the browser at the appropriate time
 ```js
 const state = [
   {
-    id: 'todo-0',
-    name: 'Learn some frameworks!'
-  }
-]
+    id: "todo-0",
+    name: "Learn some frameworks!",
+  },
+];
 ```
 
 How do we show one of those tasks to our user? We want to represent each task as a list item – an HTML [`<li>`](/en-US/docs/Web/HTML/Element/li) element inside of an unordered list element (a [`<ul>`](/en-US/docs/Web/HTML/Element/ul)). How do we make it? That could look something like this:
 
 ```js
 function buildTodoItemEl(id, name) {
-  const item = document.createElement('li');
-  const span = document.createElement('span');
+  const item = document.createElement("li");
+  const span = document.createElement("span");
   const textContent = document.createTextNode(name);
 
   span.appendChild(textContent);
@@ -126,10 +127,10 @@ The tenth line of previous snippet references another build function: `buildDele
 
 ```js
 function buildDeleteButtonEl(id) {
-  const button = document.createElement('button');
-  const textContent = document.createTextNode('Delete');
+  const button = document.createElement("button");
+  const textContent = document.createTextNode("Delete");
 
-  button.setAttribute('type', 'button');
+  button.setAttribute("type", "button");
   button.appendChild(textContent);
 
   return button;

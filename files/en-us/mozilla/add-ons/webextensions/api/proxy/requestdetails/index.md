@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.proxy.RequestDetails
 ---
+
 {{AddonSidebar()}}
 
 Contains information about a web request. An instance of this object is passed into the {{WebExtAPIRef("proxy.onRequest")}} listener.

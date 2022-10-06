@@ -20,6 +20,7 @@ tags:
   - Polyfill
 browser-compat: api.URL
 ---
+
 {{APIRef("URL API")}}
 
 The **`URL`** interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.

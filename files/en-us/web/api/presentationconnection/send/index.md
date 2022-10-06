@@ -14,6 +14,7 @@ tags:
   - send
 browser-compat: api.PresentationConnection.send
 ---
+
 {{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **`send()`** method of the
@@ -22,7 +23,7 @@ send binary or text data to a presenting browsing context.
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 ```
 

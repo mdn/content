@@ -14,6 +14,7 @@ tags:
   - keys
 browser-compat: api.KeyboardLayoutMap.keys
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`keys`** read-only property of

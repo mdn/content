@@ -28,7 +28,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node.baseU
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None, it is an {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -94,15 +94,15 @@ For example, given `<base href="https://example.com">` and this link: `<a href="
 [Open Graph](https://ogp.me/) tags do not acknowledge `<base>`, and should always have full absolute URLs. For example:
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Examples
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Specifications

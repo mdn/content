@@ -9,6 +9,7 @@ tags:
   - HTML
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 Until now we have created our own [shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and [applied styles](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images. These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!
@@ -35,7 +36,7 @@ The canvas API is able to use any of the following data types as an image source
 - {{domxref("ImageBitmap")}}
   - : A bitmap image, eventually cropped. Such type are used to extract part of an image, a _sprite_, from a larger image
 - {{domxref("OffscreenCanvas")}}
-  - : A special kind of `<canvas>` that is not displayed and is prepared without being display. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
+  - : A special kind of `<canvas>` that is not displayed and is prepared without being displayed. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
 - {{domxref("VideoFrame")}}
   - : An image representing one single frame of a video.
 
@@ -203,7 +204,7 @@ The third and last variant of the `drawImage()` method has eight parameters in a
 
 To really understand what this does, it may help to look at this image:
 
-![](canvas_drawimage.jpg)
+![The rectangular source image top left coordinates are sx and sy with a width and height of sWidth and sHeight respectively. The source image is translated to the destination canvas where the top-left corner coordinates are dx and dy, maintaining its aspect ratio, with a width and height of dWidth and dHeight respectively.](canvas_drawimage.jpg)
 
 The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.
 
@@ -218,8 +219,8 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
     <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227">
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
     </div>
   </body>
 </html>
@@ -258,19 +259,19 @@ The code below should be self-explanatory. We loop through the {{domxref("docume
   <body onload="draw();">
     <table>
       <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
     </table>
-    <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
   </body>
 </html>
 ```
@@ -279,7 +280,7 @@ And here's some CSS to make things look nice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 

@@ -6,6 +6,7 @@ tags:
   - Firefox 5
   - Gecko 5.0
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provides links to information about the changes that affect developers in this release.
@@ -123,7 +124,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### JavaScript API (SpiderMonkey)
 
-- [`JS_DoubleToInt32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) and [`JS_DoubleToUint32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) have been added, for converting [`jsdouble`](/en-US/docs/SpiderMonkey/JSAPI_Reference/jsdouble) values into C integers and unsigned integers.
+- [`JS_DoubleToInt32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) and [`JS_DoubleToUint32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToUint32) have been added, for converting [`jsdouble`](/en-US/docs/SpiderMonkey/JSAPI_Reference/jsdouble) values into C integers and unsigned integers.
 
 ### Build system changes
 

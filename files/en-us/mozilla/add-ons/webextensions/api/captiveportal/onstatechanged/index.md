@@ -11,13 +11,14 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.onStateChanged
 ---
+
 {{AddonSidebar()}}
 
 Fires when the captive portal state changes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.captivePortal.onStateChanged.addListener(callback)
 browser.captivePortal.onStateChanged.removeListener(listener)
 browser.captivePortal.onStateChanged.hasListener(listener)
@@ -52,7 +53,7 @@ function handlePortalStatus(portalstatusInfo) {
   console.log(`The portal status is now: ${portalstatusInfo.details}`);
 }
 
-browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
+browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
 ```
 
 {{WebExtExamples}}

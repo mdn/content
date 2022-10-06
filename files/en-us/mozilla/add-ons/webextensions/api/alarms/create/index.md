@@ -13,13 +13,14 @@ tags:
   - alarms
 browser-compat: webextensions.api.alarms.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new alarm for the current browser session. An alarm may fire once or multiple times. An alarm is cleared after it fires for the last time.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.alarms.create(
   name,              // optional string
   alarmInfo          // optional object
@@ -59,7 +60,7 @@ Create a one-time delay-based alarm with "" for the name:
 const delayInMinutes = 5;
 
 browser.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -71,7 +72,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -83,7 +84,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 

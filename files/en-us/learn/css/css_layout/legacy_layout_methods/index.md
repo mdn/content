@@ -11,6 +11,7 @@ tags:
   - grid system
   - legacy
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
@@ -60,12 +61,31 @@ First of all, we need some content to put into our columns. Replace whatever is 
 <h1>2 column layout example</h1>
 <div>
   <h2>First column</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Second column</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -330,24 +350,24 @@ Anyway, back to our grids! Any column that spans more than one column of our gri
 
 ```css
 .col.span4 {
-  width: calc((6.25%*4) + (2.08333333%*3));
+  width: calc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
 Try replacing your bottom block of rules with the following, then reload it in the browser to see if you get the same result:
 
 ```css
-.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
-.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
-.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
-.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
-.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
-.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
-.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
-.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
-.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
-.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
-.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+.col.span2 { width: calc((6.25% * 2) + 2.08333333%); }
+.col.span3 { width: calc((6.25% * 3) + (2.08333333%*2)); }
+.col.span4 { width: calc((6.25% * 4) + (2.08333333%*3)); }
+.col.span5 { width: calc((6.25% * 5) + (2.08333333%*4)); }
+.col.span6 { width: calc((6.25% * 6) + (2.08333333%*5)); }
+.col.span7 { width: calc((6.25% * 7) + (2.08333333%*6)); }
+.col.span8 { width: calc((6.25% * 8) + (2.08333333%*7)); }
+.col.span9 { width: calc((6.25% * 9) + (2.08333333%*8)); }
+.col.span10 { width: calc((6.25% * 10) + (2.08333333%*9)); }
+.col.span11 { width: calc((6.25% * 11) + (2.08333333%*10)); }
+.col.span12 { width: calc((6.25% * 12) + (2.08333333%*11)); }
 ```
 
 > **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
@@ -362,7 +382,7 @@ These are not the only approach. You could instead decide on your grid and then 
 
 ```css
 .content {
-  width: calc((6.25%*8) + (2.08333333%*7));
+  width: calc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
@@ -380,7 +400,7 @@ Let's create a class in our CSS that will offset a container element by one colu
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333%*2));
+  margin-left: calc(6.25% + (2.08333333% * 2));
 }
 ```
 
@@ -446,7 +466,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255,150,150);
+  background: rgb(255, 150, 150);
 }
 ```
 
@@ -481,8 +501,8 @@ Make a copy of our [html-skeleton.html](https://github.com/mdn/learning-area/blo
 Include the skeleton and normalize CSS in the HTML page, by adding the following to its head:
 
 ```html
-<link href="normalize.css" rel="stylesheet">
-<link href="skeleton.css" rel="stylesheet">
+<link href="normalize.css" rel="stylesheet" />
+<link href="skeleton.css" rel="stylesheet" />
 ```
 
 Skeleton includes more than a grid system — it also contains CSS for typography and other page elements that you can use as a starting point. We'll leave these at the defaults for now, however — it's the grid we are really interested in here.
@@ -566,7 +586,9 @@ Try saving your HTML file and loading it in your browser to see the effect.
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 
 ```css
-.three.columns { width: 22%; }
+.three.columns {
+  width: 22%;
+}
 ```
 
 All Skeleton (or any other grid framework) is doing is setting up predefined classes that you can use by adding them to your markup. It's exactly the same as if you did the work of calculating these percentages yourself.

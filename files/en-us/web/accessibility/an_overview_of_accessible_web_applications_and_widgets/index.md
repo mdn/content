@@ -8,6 +8,11 @@ tags:
   - Web apps
   - Widget
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 Most JavaScript libraries offer a library of client-side widgets that mimic the behavior of familiar desktop interfaces. Sliders, menu bars, file list views, and more can be built with a combination of JavaScript, CSS, and HTML. Since the HTML4 specification doesn't provide built-in tags that semantically describe these kinds of widgets, developers typically resort to using generic elements such as {{HTMLElement('div')}} and {{HTMLElement('span')}}. While this results in a widget that looks like its desktop counterpart, there usually isn't enough semantic information in the markup to be usable by an assistive technology.
 
 ## The problem
@@ -70,9 +75,15 @@ _Example 3: Markup for the tabs widget with ARIA attributes added._
 
 <div>
   <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Quiz content goes here</div>
+  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
+    Chapter 1 content goes here
+  </div>
+  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
+    Chapter 2 content goes here
+  </div>
+  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
+    Quiz content goes here
+  </div>
 </div>
 ```
 
@@ -107,14 +118,18 @@ In this example, the HTML for the tooltip has the form shown. Line 9 sets the **
 
 ```html
 <div class="text">
-    <label id="tp1-label" for="first">First Name:</label>
-    <input type="text" id="first" name="first" size="20"
-           aria-labelledby="tp1-label"
-           aria-describedby="tp1"
-           aria-required="false" />
-    <div id="tp1" class="tooltip"
-         role="tooltip"
-         aria-hidden="true">Your first name is optional</div>
+  <label id="tp1-label" for="first">First Name:</label>
+  <input
+    type="text"
+    id="first"
+    name="first"
+    size="20"
+    aria-labelledby="tp1-label"
+    aria-describedby="tp1"
+    aria-required="false" />
+  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
+    Your first name is optional
+  </div>
 </div>
 ```
 
@@ -130,7 +145,7 @@ The JavaScript to update the **`aria-hidden`** property has the form shown in th
 
 ```js
 function showTip(el) {
-  el.setAttribute('aria-hidden', 'false');
+  el.setAttribute("aria-hidden", "false");
 }
 ```
 

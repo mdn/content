@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.depthFar
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`depthFar`** property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the far plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the furthest viewable boundary of the scene.

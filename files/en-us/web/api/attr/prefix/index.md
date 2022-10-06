@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Attr.prefix
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`prefix`** property of the {{domxref("Attr")}} returns the namespace prefix of the attribute, or `null` if no prefix is specified.

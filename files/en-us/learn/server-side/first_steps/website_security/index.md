@@ -12,6 +12,7 @@ tags:
   - Web security
   - Website Security
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Website security requires vigilance in all aspects of website design and usage. This introductory article won't make you a website security guru, but it will help you understand where threats come from, and what you can do to harden your web application against the most common attacks.
@@ -79,7 +80,7 @@ This vulnerability is present if user input that is passed to an underlying SQL 
 statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
-If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying the text in bold for the `userName`.
+If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying `a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't` for the `userName`.
 
 ```sql
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';

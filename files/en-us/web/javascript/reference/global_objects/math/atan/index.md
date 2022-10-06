@@ -19,7 +19,7 @@ The **`Math.atan()`** function returns the inverse tangent (in radians) of a num
 
 ## Syntax
 
-```js
+```js-nolint
 Math.atan(x)
 ```
 

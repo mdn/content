@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableSectionElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableSectionElement`** interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table.

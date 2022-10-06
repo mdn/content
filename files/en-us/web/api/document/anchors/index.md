@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.anchors
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`anchors`** read-only property of the
@@ -42,7 +43,7 @@ on the page:
         const toc = document.getElementById("toc");
         for (const anchor of document.anchors) {
           const li = document.createElement("li");
-          const newAnchor = document.createElement('a');
+          const newAnchor = document.createElement("a");
           newAnchor.href = "#" + anchor.name;
           newAnchor.textContent = anchor.text;
           li.appendChild(newAnchor);

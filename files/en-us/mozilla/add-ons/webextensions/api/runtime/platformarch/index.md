@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.PlatformArch
 ---
+
 {{AddonSidebar()}}
 
 The machine's processor architecture.

@@ -10,6 +10,7 @@ tags:
   - Specifications
   - Syntax
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **{{Glossary("CSS")}}** (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is with a simple syntax example and also covers some key terms about the language.
@@ -70,8 +71,8 @@ For example, you can decide to have the main heading on your page to be shown as
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -86,12 +87,12 @@ A CSS stylesheet will contain many such rules, written one after the other.
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

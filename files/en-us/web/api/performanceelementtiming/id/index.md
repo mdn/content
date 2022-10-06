@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.PerformanceElementTiming.id
 ---
+
 {{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{htmlattrxref("id")}} of the associated element.
@@ -24,7 +25,11 @@ A string.
 In this example calling `entry.id` will log to the console `myImage`, this being the {{htmlattrxref("id")}} of the image element.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

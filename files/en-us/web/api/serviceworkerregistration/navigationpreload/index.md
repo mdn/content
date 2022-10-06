@@ -10,6 +10,7 @@ tags:
   - Workers
 browser-compat: api.ServiceWorkerRegistration.navigationPreload
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`navigationPreload`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.

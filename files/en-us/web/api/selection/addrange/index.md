@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.addRange
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.addRange()`** method adds a
@@ -17,7 +18,7 @@ The **`Selection.addRange()`** method adds a
 
 ## Syntax
 
-```js
+```js-nolint
 addRange(range)
 ```
 
@@ -39,7 +40,10 @@ None ({{jsxref("undefined")}}).
 ### HTML
 
 ```html
-<p>I <strong>insist</strong> that you <strong>try</strong> selecting the <strong>strong words</strong>.</p>
+<p>
+  I <strong>insist</strong> that you <strong>try</strong> selecting the
+  <strong>strong words</strong>.
+</p>
 <button>Select strong words</button>
 ```
 

@@ -14,6 +14,7 @@ tags:
   - drag and drop
 browser-compat: api.HTMLElement.drag_event
 ---
+
 {{APIRef}}
 
 The `drag` event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
@@ -49,9 +50,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```
@@ -82,7 +81,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 

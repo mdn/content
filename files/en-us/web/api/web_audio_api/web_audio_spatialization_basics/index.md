@@ -7,6 +7,7 @@ tags:
   - Web Audio API
   - panning
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 As if its extensive variety of sound processing (and other) options wasn't enough, the Web Audio API also includes facilities to allow you to emulate the difference in sound as a listener moves around a sound source, for example panning as you move around a sound source inside a 3D game.

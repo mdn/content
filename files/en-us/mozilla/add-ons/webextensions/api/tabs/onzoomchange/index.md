@@ -13,13 +13,14 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onZoomChange
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is zoomed.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onZoomChange.addListener(listener)
 browser.tabs.onZoomChange.removeListener(listener)
 browser.tabs.onZoomChange.hasListener(listener)

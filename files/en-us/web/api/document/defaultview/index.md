@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.defaultView
 ---
+
 {{ApiRef}}
 
 In browsers, **`document.defaultView`** returns the

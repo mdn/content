@@ -11,13 +11,14 @@ tags:
   - InterventionReportBody
 browser-compat: api.InterventionReportBody.toJSON
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("InterventionReportBody")}} interface is a _serializer_, and returns a JSON representation of the `InterventionReportBody` object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

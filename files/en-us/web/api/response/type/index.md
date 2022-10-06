@@ -11,6 +11,7 @@ tags:
   - Type
 browser-compat: api.Response.type
 ---
+
 {{APIRef("Fetch")}}
 
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.

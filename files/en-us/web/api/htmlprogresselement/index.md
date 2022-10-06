@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLProgressElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLProgressElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("progress")}} elements.
@@ -30,7 +31,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Methods
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Specifications
 

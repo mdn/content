@@ -12,6 +12,7 @@ tags:
   - refs
   - Vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 We are nearly done with Vue. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility. We'll look at using **Vue refs** to handle this — an advanced feature that allows you to have direct access to the underlying DOM nodes below the virtual DOM, or direct access from one component to the internal DOM structure of a child component.
@@ -55,22 +56,22 @@ To understand what's currently happening:
 
 1. Reload your page, then press
 
-    <kbd>Tab</kbd>
+   <kbd>Tab</kbd>
 
-    . You should see a focus outline on the input for adding new to-do items.
+   . You should see a focus outline on the input for adding new to-do items.
 
 2. Press
 
-    <kbd>Tab</kbd>
+   <kbd>Tab</kbd>
 
-    again. The focus should move to the "Add" button.
+   again. The focus should move to the "Add" button.
 
 3. Hit it again, and it'll be on the first checkbox. One more time, and focus should be on the first "Edit" button.
 4. Activate the "Edit" button by pressing
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    . The checkbox will be replaced with our edit component, but the focus outline will be gone.
+   . The checkbox will be replaced with our edit component, but the focus outline will be gone.
 
 This behavior can be jarring. In addition, what happens when you press <kbd>Tab</kbd> again varies depending on the browser you're using. Similarly, if you save or cancel your edit, focus will disappear again as you move back to the non-edit view.
 
@@ -91,7 +92,11 @@ To use a ref in a component, you add a `ref` attribute to the element that you w
 So, let's attach a ref to our "Edit" button in `ToDoItem.vue`. Update it like this:
 
 ```html
-<button type="button" class="btn" ref="editButton" @click="toggleToItemEditForm">
+<button
+  type="button"
+  class="btn"
+  ref="editButton"
+  @click="toggleToItemEditForm">
   Edit
   <span class="visually-hidden">\{{label}}</span>
 </button>
@@ -182,7 +187,12 @@ Now that we've gone over the lifecycle methods, let's use one to trigger focus w
 In `ToDoItemEditForm.vue`, attach `ref="labelInput"` to the `<input>` element, like so:
 
 ```html
-<input :id="id" ref="labelInput" type="text" autocomplete="off" v-model.lazy.trim="newName" />
+<input
+  :id="id"
+  ref="labelInput"
+  type="text"
+  autocomplete="off"
+  v-model.lazy.trim="newName" />
 ```
 
 Next, add a `mounted()` property just inside your component object — **note that this should not be put inside the `methods` property, but rather at the same hierarchy level as `props`, `data()`, and `methods`.** Lifecycle methods are special methods that sit on their own, not alongside the user-defined methods. This should take no inputs. Note that you cannot use an arrow function here since we need access to `this` to access our `labelInput` ref.
@@ -217,7 +227,7 @@ First, we need to add a ref to our list heading. We also need to add a `tabindex
 Inside `App.vue`, update your `<h2>` as follows:
 
 ```html
- <h2 id="list-summary" ref="listSummary" tabindex="-1">\{{listSummary}}</h2>
+<h2 id="list-summary" ref="listSummary" tabindex="-1">\{{listSummary}}</h2>
 ```
 
 > **Note:** [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is a really powerful tool for handling certain accessibility problems. However, it should be used with caution. Over-using `tabindex="-1"` can cause problems for all sorts of users, so only use it exactly where you need to. You should also almost never use `tabindex` > = `0`, as it can cause problems for users since it can make the DOM flow and the tab-order mismatch, and/or add non-interactive elements to the tab order. This can be confusing to users, especially those using screen readers and other assistive technology.

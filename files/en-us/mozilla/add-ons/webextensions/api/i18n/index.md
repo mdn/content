@@ -12,6 +12,7 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n
 ---
+
 {{AddonSidebar}}
 
 Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header).

@@ -12,6 +12,7 @@ tags:
   - speech
   - synthesis
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}
 The Web Speech API provides two distinct areas of functionality — speech recognition, and speech synthesis (also known as text to speech, or tts) — which open up interesting new possibilities for accessibility, and control mechanisms. This article provides a simple introduction to both areas, along with demos.
 
@@ -68,13 +69,13 @@ const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechReco
 The next part of our code defines the grammar we want our app to recognize. The following variable is defined to hold our grammar:
 
 ```js
-const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
+const colors = [ 'aqua', 'azure', 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
 const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(' | ')};`
 ```
 
 The grammar format used is [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:
 
-- The lines are separated by semi-colons, just like in JavaScript.
+- The lines are separated by semicolons, just like in JavaScript.
 - The first line — `#JSGF V1.0;` — states the format and version used. This always needs to be included first.
 - The second line indicates a type of term that we want to recognize. `public` declares that it is a public rule, the string in angle brackets defines the recognized name for this term (`color`), and the list of items that follow the equals sign are the alternative values that will be recognized and accepted as appropriate values for the term. Note how each is separated by a pipe character.
 - You can have as many terms defined as you want on separate lines following the above structure, and include fairly complex grammar definitions. For this basic demo, we are just keeping things simple.
@@ -201,23 +202,26 @@ The HTML and CSS are again pretty trivial, containing a title, some instructions
 ```html
 <h1>Speech synthesizer</h1>
 
-<p>Enter some text in the input below and press return to hear it. change voices using the dropdown menu.</p>
+<p>
+  Enter some text in the input below and press return to hear it. change voices
+  using the dropdown menu.
+</p>
 
 <form>
-  <input type="text" class="txt">
+  <input type="text" class="txt" />
   <div>
-    <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+    <label for="rate">Rate</label
+    ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
     <div class="rate-value">1</div>
     <div class="clearfix"></div>
   </div>
   <div>
-    <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+    <label for="pitch">Pitch</label
+    ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
     <div class="pitch-value">1</div>
     <div class="clearfix"></div>
   </div>
-  <select>
-
-  </select>
+  <select></select>
 </form>
 ```
 

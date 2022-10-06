@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.update
 ---
+
 {{AddonSidebar()}}
 
 Updates a notification, given its ID.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.notifications.update(
   id,                            // string
   options                        // NotificationOptions

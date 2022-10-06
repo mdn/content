@@ -9,6 +9,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace
 ---
+
 {{APIRef("WebCodecs API")}}
 
 The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}} represents the color space of a video.

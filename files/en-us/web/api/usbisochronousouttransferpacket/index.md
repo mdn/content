@@ -13,6 +13,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBIsochronousOutTransferPacket
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The `USBIsochronousOutTransferPacket` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) is part of the response from a call to the `isochronousTransferOut()` method of the `USBDevice` interface. It represents the status of an individual packet from a request to transfer data from the USB host to the USB device over an isochronous endpoint.

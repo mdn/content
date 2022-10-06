@@ -22,7 +22,7 @@ node.
 
 ## Syntax
 
-```js
+```js-nolint
 selectNodeContents(referenceNode)
 ```
 

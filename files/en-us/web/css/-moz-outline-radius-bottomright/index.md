@@ -1,6 +1,7 @@
 ---
-title: '-moz-outline-radius-bottomright'
+title: "-moz-outline-radius-bottomright"
 slug: Web/CSS/-moz-outline-radius-bottomright
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -12,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.-moz-outline-radius-bottomright
 ---
+
 {{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 In Mozilla applications, the **`-moz-outline-radius-bottomright`** [CSS](/en-US/docs/Web/CSS) property can be used to round the bottom-right corner of an element's {{cssxref("outline")}}.

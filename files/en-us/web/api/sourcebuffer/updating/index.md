@@ -14,6 +14,7 @@ tags:
   - Video
 browser-compat: api.SourceBuffer.updating
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`updating`** read-only property of the

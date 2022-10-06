@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 ---
+
 {{APIRef}}
 
 The
@@ -20,7 +21,7 @@ specified element is focused.
 
 ## Syntax
 
-```js
+```js-nolint
 drawFocusIfNeeded(element)
 drawFocusIfNeeded(path, element)
 ```

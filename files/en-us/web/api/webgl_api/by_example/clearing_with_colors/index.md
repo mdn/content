@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}
 
 An example showing how to clear a WebGL rendering context to a solid color.
@@ -30,22 +31,21 @@ Finally, we note that color in WebGL is usually in {{Glossary("RGBA")}} format, 
 <p>A very simple WebGL program that shows some color.</p>
 <!-- Text within a canvas element is displayed
     only if canvas is not supported. -->
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 

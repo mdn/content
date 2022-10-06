@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.publickey-credentials-get
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `publickey-credentials-get` directive controls whether the current document is allowed to access the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve public-key credentials; i.e., via {{DOMxRef("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.

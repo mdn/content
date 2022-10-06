@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.width
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`width`** read-only property of the

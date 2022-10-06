@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.Touch.clientY
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`Touch.clientY`** read-only property returns the Y
