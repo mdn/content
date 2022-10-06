@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mspace
 
 {{MathMLRef}}
 
-The MathML `<mspace>` element is used to display a blank space, whose size is set by its attributes.
+The **`<mspace>`** [MathML](/en-US/docs/Web/MathML) element is used to display a blank space, whose size is set by its attributes.
 
 ## Attributes
 

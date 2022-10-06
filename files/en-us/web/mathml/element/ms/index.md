@@ -11,7 +11,7 @@ browser-compat: mathml.elements.ms
 
 {{MathMLRef}}
 
-The MathML `<ms>` element represents a _string literal_ meant to be interpreted by programming languages and computer algebra systems.
+The **`<ms>`** [MathML](/en-US/docs/Web/MathML) element represents a **string** literal meant to be interpreted by programming languages and computer algebra systems.
 
 ## Attributes
 
