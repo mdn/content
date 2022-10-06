@@ -35,6 +35,8 @@ check(font, text)
 
 A {{jsxref("Boolean")}} value that is `true` if the font list is available.
 
+The method returns `true` if the font list contains system or non-existing fonts. This prevents user tracking by locally installed fonts.
+
 ## Examples
 
 In the following example, the first line will print `true` if the Courier font is available at `12px`. The second line will print `true` if the font `MyFont` contains the "ß" character.
@@ -43,6 +45,12 @@ In the following example, the first line will print `true` if the Courier font i
 console.log(document.fonts.check("12px courier"));
 
 console.log(document.fonts.check("12px MyFont", "ß"));
+```
+
+The use of a non-existing font in the font specification results in a return value of `true`. The following example line will print `true`.
+
+```js
+console.log(document.fonts.check("12px NonExistingFont"));
 ```
 
 ## Specifications
