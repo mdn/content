@@ -14,7 +14,7 @@ browser-compat: css.types.calc-constant
 
 {{CSSRef}}
 
-The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-known constants such as `e` and `π`.
+The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `π`.
 
 Rather than require authors to manually type out several digits of these constants, a few of them are provided directly by CSS.
 
@@ -22,7 +22,7 @@ Rather than require authors to manually type out several digits of these constan
 
 When a calculation or a subtree of a calculation becomes infinite or NaN, representing it with a numeric value is no longer possible. To aid in serialization of these degenerate values, the additional math constants `infinity` (with the value `+∞`), `-infinity` (with the value `−∞`), and `NaN` (with the value `NaN`) are defined.
 
-As usual for CSS keywords, these are ASCII case-insensitive. Thus, `calc(InFiNiTy)` is perfectly valid. However, `NaN` must be serialized with this canonical casing.
+As usual for CSS keywords, most CSS constants are ASCII case-insensitive. Thus, `calc(InFiNiTy)` is perfectly valid. There is an exception: `NaN` must be written exactly as `NaN`, with the "Not a Number" canonical casing.
 
 > **Note:** While not technically numbers, these keywords act as numeric values, similar to `e` and `pi`. Thus to get an infinite length, for example, requires an expression like `calc(infinity * 1px)`.
 
@@ -41,8 +41,8 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
 - `infinity` & `-infinity`
   - : An infinite length, used to indicate the largest/smallest possible value.
 
-- `Nan`
-  - : A value representing Not-A-Number.
+- `NaN`
+  - : A value representing Not-a-Number.
 
 ### Formal syntax
 
