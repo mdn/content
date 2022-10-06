@@ -14,6 +14,8 @@ tags:
 spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
 
 Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation.
@@ -65,7 +67,7 @@ See also: [Element Link](/en-US/docs/Web/HTML/Element/link)
 
 ### Images and iframes
 
-Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring user interaction (an example being scroll) in order to view them.
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them.
 
 **Loading attribute**
 The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.

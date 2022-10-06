@@ -8,11 +8,10 @@ tags:
   - Method
   - OffscreenCanvas
   - Reference
-  - Experimental
 browser-compat: api.OffscreenCanvas.getContext
 ---
 
-{{APIRef("Canvas API")}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported.
 

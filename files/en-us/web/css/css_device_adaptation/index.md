@@ -9,10 +9,11 @@ tags:
   - Overview
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: css.at-rules.viewport
 ---
 
-{{CSSRef}}{{Deprecated_Header}}
+{{CSSRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 **CSS Device Adaptation** is a module of CSS that lets you define the size, zoom factor, and orientation of the viewport.
 

@@ -34,6 +34,8 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
 
+> **Note:** Some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+
 ## Specifications
 
 {{Specifications}}

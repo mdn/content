@@ -160,7 +160,7 @@ The language you use can also affect accessibility. In general, you should use c
 
 - Don't use dashes if you can avoid it. Instead of writing 5–7, write 5 to 7.
 - Expand abbreviations — instead of writing Jan, write January.
-- Expand acronyms, at least once or twice, then use the [<abbr>](/en-US/docs/Web/HTML/Element/abbr) tag to describe them.
+- Expand acronyms, at least once or twice, then use the [`<abbr>`](/en-US/docs/Web/HTML/Element/abbr) tag to describe them.
 
 ### Page layouts
 

@@ -1,5 +1,5 @@
 ---
-title: Community Guidelines
+title: Community guidelines
 slug: MDN/Community
 page-type: mdn-community-guide
 tags:
