@@ -44,6 +44,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
 
 ## Description
 > **Note:** This documentation lists out features yet to be implemented across UAs, but they are stated in the official documentation. At the time of this writing, the only CSS property shown to have visible on both the at-rule and its pseudo-classes is the `margin` property.
+
 You can't change all CSS properties with **`@page`**. You can only change the margin of the document. Attempts to change any other CSS properties will be ignored.
 
 The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
@@ -60,7 +61,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 Where the `<page-body>` includes:
 
 - page-properties
-- page-margin properties 
+- page-margin properties
 
 and `<pseudo-selector>` represents these pseudo-classes:
 
@@ -68,7 +69,6 @@ and `<pseudo-selector>` represents these pseudo-classes:
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}
-
 
 > **Note:** The **`@page`** at-rule can only contain **page-properties** and **margin at-rules**, and the **margin at-rules** can only contain **page-margin properties**
 
@@ -210,6 +210,7 @@ Other margin-at rules include:
       <page-margin-properties> 
     };
 ```
+
 #### page-margin properties
 
 | Feature     | CSS properties             |
@@ -363,6 +364,7 @@ JavaScript
       window.print();
     });
 ```
+
 Print out the page below to see the output of this example:
 {{ EmbedLiveSample('Examples', '100%', 520) }}
 
