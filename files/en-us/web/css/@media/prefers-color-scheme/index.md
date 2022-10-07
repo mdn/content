@@ -101,7 +101,7 @@ A script is used to specify the source of the image elements, this would normall
 
 On browsers that support this feature (such as Firefox), you should see three circles, with one drawn in a different color.
 The first circle inherits the `color-scheme` from the browser or OS and can be toggled using this page's theme switcher.
-The second and third circle inherit the `color-scheme` from the embedding element and so the `@media` query allows to specify styles of the embedded content based on the parent element's `color-scheme`.
+The second and third circles inherit the `color-scheme` from the embedding element and so the `@media` query allows to specify styles of the embedded content based on the parent element's `color-scheme`.
 
 ```html
 <div>
