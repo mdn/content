@@ -68,7 +68,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 - {{Cssxref(":right")}}
 
 
-> Note: The **`@page`** at-rule can only contain **page-properties** and **margin at-rules**, and the **margin at-rules** can only contain **page-margin properties**
+> **Note:** The **`@page`** at-rule can only contain **page-properties** and **margin at-rules**, and the **margin at-rules** can only contain **page-margin properties**
 
 ### page-properties
 
