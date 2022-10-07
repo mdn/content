@@ -322,7 +322,7 @@ Relevant CSS code:
 JavaScript
 
 ```js
-    let button = document.querySelector("button")
+    let button = document.querySelector("button");
     
     button.addEventListener('click', () => {
       window.print();
