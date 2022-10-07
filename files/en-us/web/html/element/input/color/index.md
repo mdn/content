@@ -80,7 +80,7 @@ Inputs of type `color` are simple, due to the limited number of attributes they 
 You can update the simple example above to set a default value, so that the color well is pre-filled with the default color and the color picker (if any) will also default to that color:
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
@@ -127,18 +127,21 @@ Let's create an example which does a little more with the color input by trackin
 The HTML is fairly straightforward — a couple of paragraphs of descriptive material with an {{HTMLElement("input")}} of type `color` with the ID `colorWell`, which we'll use to change the color of the paragraphs' text.
 
 ```html
-<p>An example demonstrating the use of the <code>&lt;input type="color"&gt;</code>
-   control.</p>
+<p>
+  An example demonstrating the use of the
+  <code>&lt;input type="color"&gt;</code> control.
+</p>
 
 <label for="colorWell">Color:</label>
-<input type="color" value="#ff0000" id="colorWell">
+<input type="color" value="#ff0000" id="colorWell" />
 
-<p>Watch the paragraph colors change when you adjust the color picker.
-   As you make changes in the color picker, the first paragraph's
-   color changes, as a preview (this uses the <code>input</code>
-   event). When you close the color picker, the <code>change</code>
-   event fires, and we detect that to change every paragraph to
-   the selected color.</p>
+<p>
+  Watch the paragraph colors change when you adjust the color picker. As you
+  make changes in the color picker, the first paragraph's color changes, as a
+  preview (this uses the <code>input</code> event). When you close the color
+  picker, the <code>change</code> event fires, and we detect that to change
+  every paragraph to the selected color.
+</p>
 ```
 
 ### JavaScript
@@ -146,8 +149,8 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
 First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color well to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
 
 ```js
-var colorWell;
-var defaultColor = "#0000ff";
+let colorWell;
+const defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
 ```
@@ -176,8 +179,7 @@ We provide two functions that deal with color changes. The `updateFirst()` funct
 
 ```js
 function updateFirst(event) {
-  var p = document.querySelector("p");
-
+  const p = document.querySelector("p");
   if (p) {
     p.style.color = event.target.value;
   }

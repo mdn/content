@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawingBufferWidth
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLRenderingContext.drawingBufferWidth`**

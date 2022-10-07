@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - cancelAnimationFrame()
+  - Non-standard
 browser-compat: api.VRDisplay.cancelAnimationFrame
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.cancelAnimationFrame")}} that unregisters callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}}.
 
@@ -22,7 +24,7 @@ The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(handle)
 ```
 
@@ -43,17 +45,17 @@ canvas.height = window.innerHeight;
 drawScene();
 
 // WebVR: Check to see if WebVR is supported
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
       btn.addEventListener('click', () => {
-        if(btn.textContent === 'Start VR display') {
+        if (btn.textContent === 'Start VR display') {
           vrDisplay.requestPresent([{ source: canvas }]).then(() => {
             console.log('Presenting to WebVR display');
 
@@ -97,7 +99,7 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

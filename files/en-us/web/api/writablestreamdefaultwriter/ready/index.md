@@ -13,7 +13,8 @@ tags:
   - WritableStreamDefaultWriter
 browser-compat: api.WritableStreamDefaultWriter.ready
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`ready`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns a {{jsxref("Promise")}}

@@ -8,9 +8,10 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.msup
 ---
+
 {{MathMLRef}}
 
-The MathML `<msup>` element is used to attach a superscript to an expression.
+The **`<msup>`** [MathML](/en-US/docs/Web/MathML) element is used to attach a superscript to an expression.
 
 It uses the following syntax: `<msup> base superscript </msup>`.
 
@@ -18,26 +19,25 @@ It uses the following syntax: `<msup> base superscript </msup>`.
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- `superscriptshift` {{deprecated_inline}}
-  - : The minimum space by which to shift the superscript up from the baseline of the expression, as a [length value.](/en-US/docs/Web/MathML/Attribute/Values#lengths)
-    This attribute is deprecated and will be removed in the future.
-
 ## Examples
 
-Sample rendering: ![x1](msup.png)
-
-Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math>
-
+<math display="block">
   <msup>
     <mi>X</mi>
     <mn>2</mn>
   </msup>
-
 </math>
 ```
+
+{{ EmbedLiveSample('msup_example', 700, 200, "", "") }}
 
 ## Specifications
 

@@ -10,20 +10,22 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.DataView.DataView
 ---
+
 {{JSRef}}
 
-The **`DataView()`** constructor is used to create
-{{jsxref("DataView")}} objects.
+The **`DataView()`** constructor is used to create {{jsxref("DataView")}} objects.
 
 {{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new DataView(buffer)
 new DataView(buffer, byteOffset)
 new DataView(buffer, byteOffset, byteLength)
 ```
+
+> **Note:** `DataView()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -39,13 +41,7 @@ new DataView(buffer, byteOffset, byteLength)
 
 ### Return value
 
-A new `DataView` object representing the specified data buffer. (That
-probably wasn't a very helpful description.)
-
-You can think of the returned object as an "interpreter" of the array buffer of bytes —
-it knows how to convert numbers to fit within the buffer correctly, both when reading
-and writing to it. This means handling integer and float conversion, endianness, and
-other details of representing numbers in binary form.
+A new {{jsxref("DataView")}} object representing the specified data buffer.
 
 ### Exceptions
 

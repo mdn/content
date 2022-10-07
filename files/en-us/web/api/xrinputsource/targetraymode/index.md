@@ -22,6 +22,7 @@ tags:
   - targetRayMode
 browser-compat: api.XRInputSource.targetRayMode
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}}
@@ -65,8 +66,8 @@ The code should continue to perform tasks such as drawing controllers or any obj
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.getInputSources()) {
-    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
+  for (const source of session.getInputSources()) {
+    const targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 
     if (targetRayPose) {
       if (source.targetRayMode === "tracked-pointer") {

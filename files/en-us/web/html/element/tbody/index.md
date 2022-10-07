@@ -81,7 +81,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("align") }} {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell
@@ -180,7 +180,8 @@ table {
 First, the table's overall style attributes are set, configuring the thickness, style, and color of the table's exterior borders and using {{cssxref("border-collapse")}} to ensure that the border lines are shared among adjacent cells rather than each having its own borders with space in between. {{cssxref("font")}} is used to establish an initial font for the table.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -284,7 +285,8 @@ table {
   font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;

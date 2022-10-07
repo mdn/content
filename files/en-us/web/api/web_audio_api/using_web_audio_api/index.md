@@ -14,6 +14,7 @@ tags:
   - basics
   - sound
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Let's take a look at getting started with the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.
@@ -93,7 +94,7 @@ Since our scripts are playing audio in response to a user input event (a click o
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -160,12 +161,12 @@ This will make our audio graph look like this:
 
 ![an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination](graph2.jpg)
 
-The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in Javascript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
+The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in JavaScript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
 
 Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
 
 ```html
-<input type="range" id="volume" min="0" max="2" value="1" step="0.01">
+<input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
 > **Note:** Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.
@@ -210,7 +211,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 Here our values range from -1 (far left) and 1 (far right). Again let's use a range type input to vary this parameter:
 
 ```html
-<input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+<input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
 ```
 
 We use the values from that input to adjust our panner values in the same way as we did before:

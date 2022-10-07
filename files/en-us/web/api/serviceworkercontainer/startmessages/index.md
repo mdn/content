@@ -4,13 +4,13 @@ slug: Web/API/ServiceWorkerContainer/startMessages
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Reference
   - Service Workers
   - ServiceWorkerContainer
   - startMessages
 browser-compat: api.ServiceWorkerContainer.startMessages
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`startMessages()`** method of
@@ -36,8 +36,8 @@ want to start processing the messages right away.
 
 ## Syntax
 
-```js
-serviceWorkerContainer.startMessages();
+```js-nolint
+startMessages()
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ None.
 ## Examples
 
 ```js
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('/sw.js')
            .then(() => { console.log('Service Worker Registered'); });

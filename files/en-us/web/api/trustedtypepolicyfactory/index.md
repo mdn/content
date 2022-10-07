@@ -9,6 +9,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`TrustedTypePolicyFactory`** interface of the {{domxref('Trusted Types API')}} creates policies and allows the verification of Trusted Type objects against created policies.

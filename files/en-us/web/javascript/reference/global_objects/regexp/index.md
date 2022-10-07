@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp
 ---
+
 {{JSRef}}
 
 The **`RegExp`** object is used for matching text with a pattern.
@@ -32,10 +33,10 @@ const re = /ab+c/i; // literal notation
 // OR
 const re = new RegExp('ab+c', 'i'); // constructor with string pattern as first argument
 // OR
-const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
+const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument
 ```
 
-Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/en-us/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
+Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
 
 The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
 
@@ -43,7 +44,7 @@ Use a string as the first argument to the `RegExp()` constructor when you want t
 
 ### Flags in constructor
 
-Starting with ECMAScript 6, `new RegExp(/ab+c/, 'i')` no longer throws a {{jsxref("TypeError")}} (`"can't supply flags when constructing one RegExp from another"`) when the first argument is a `RegExp` and the second `flags` argument is present. A new `RegExp` from the arguments is created instead.
+The expression `new RegExp(/ab+c/, flags)` will create a new `RegExp` using the source of the first parameter and the flags provided by the second.
 
 When using the constructor function, the normal string escape rules (preceding special characters with `\` when included in a string) are necessary.
 
@@ -53,6 +54,44 @@ For example, the following are equivalent:
 const re = /\w+/;
 // OR
 const re = new RegExp('\\w+');
+```
+
+### Special handling for regexes
+
+> **Note:** Whether something is a "regex" can be [duck-typed](https://en.wikipedia.org/wiki/Duck_typing). It doesn't have to be a `RegExp`!
+
+Some built-in methods would treat regexes specially. They decide whether `x` is a regex through [multiple steps](https://tc39.es/ecma262/#sec-isregexp):
+
+1. `x` must be an object (not a primitive).
+2. If [`x[Symbol.match]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) is not `undefined`, check if it's [truthy](/en-US/docs/Glossary/Truthy).
+3. Otherwise, if `x[Symbol.match]` is `undefined`, check if `x` had been created with the `RegExp` constructor. (This step should rarely happen, since if `x` is a `RegExp` object that have not been tampered with, it should have a `Symbol.match` property.)
+
+Note that in most cases, it would go through the `Symbol.match` check, which means:
+
+- An actual `RegExp` object whose `Symbol.match` property's value is [falsy](/en-US/docs/Glossary/Falsy) but not `undefined` (even with everything else intact, like [`exec`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) and [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)) can be used as if it's not a regex.
+- A non-`RegExp` object with a `Symbol.match` property will be treated as if it's a regex.
+
+This choice was made because `@@match` is the most indicative property that something is intended to be used for matching. (`exec` could also be used, but because it's not a symbol property, there would be too many false positives.) The places that treat regexes specially include:
+
+- [`String.prototype.endsWith()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith), [`startsWith()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith), and [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) throw a {{jsxref("TypeError")}} if the first argument is a regex.
+- [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) and [`replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) check whether the [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) flag is set if the first argument is a regex before invoking its [`@@matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) or [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method.
+- The [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor directly returns the `pattern` argument only if `pattern` is a regex (among a few other conditions). If `pattern` is a regex, it would also interrogate `pattern`'s `source` and `flags` properties instead of coercing `pattern` to a string.
+
+For example, [`String.prototype.endsWith()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith) would coerce all inputs to strings, but it would throw if the argument is a regex, because it's only designed to match strings, and using a regex is likely a developer mistake.
+
+```js
+"foobar".endsWith({ toString: () => "bar" }); // true
+"foobar".endsWith(/bar/); // TypeError: First argument to String.prototype.endsWith must not be a regular expression
+```
+
+You can get around the check by setting `@@match` to a [falsy](/en-US/docs/Glossary/Falsy) value that's not `undefined`. This would mean that the regex cannot be used for `String.prototype.match()` (since without `@@match`, `match()` would construct a new `RegExp` object with the two enclosing slashes added by [`re.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString)), but it can be used for virtually everything else.
+
+```js
+const re = /bar/g;
+re[Symbol.match] = false;
+"/bar/g".endsWith(re); // true
+re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
+"bar & bar".replace(re, "foo"); // 'foo & foo'
 ```
 
 ### Perl-like RegExp properties
@@ -68,6 +107,18 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 - {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
   - : The constructor function that is used to create derived objects.
+- {{JSxRef("RegExp.n", "RegExp.$1-$9")}}
+  - : The legacy read-only static properties that contain parenthesized substring matches.
+- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the last string against which a regular expression was successfully matched.
+- {{JSxRef("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the last matched characters.
+- {{JSxRef("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{Non-standard_Inline}}
+  - : A static property that contains the last parenthesized substring match.
+- {{JSxRef("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the substring preceding the most recent match.
+- {{JSxRef("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the substring following the most recent match.
 
 ## Instance properties
 
@@ -89,7 +140,7 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
   - : Whether or not the search is sticky.
 - {{JSxRef("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
-- {{jsxref("RegExp.lastIndex", "RegExp: lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
   - : The index at which to start the next match.
 
 ## Instance methods
@@ -211,9 +262,9 @@ console.log(regex.lastIndex); // logs '15'
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`.
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
-### Extracting sub-domain name from URL
+### Extracting subdomain name from URL
 
 ```js
 const url = "http://xxx.domain.com";

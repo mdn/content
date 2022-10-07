@@ -4,7 +4,6 @@ slug: Web/API/PaymentRequest/shippingAddress
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentRequest
@@ -12,8 +11,11 @@ tags:
   - Reference
   - Secure context
   - shippingAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentRequest.shippingAddress
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`shippingAddress`** read-only property of

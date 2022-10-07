@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionEvent/resultIndex
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionEvent
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionEvent.resultIndex
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`resultIndex`** read-only property of the
 {{domxref("SpeechRecognitionEvent")}} interface returns the lowest index value result in

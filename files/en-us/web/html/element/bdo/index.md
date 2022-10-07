@@ -112,8 +112,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ```html
 <!-- Switch text direction -->
 <p>This text will go left to right.</p>
-<p><bdo dir="rtl">This text will go right
-to left.</bdo></p>
+<p><bdo dir="rtl">This text will go right to left.</bdo></p>
 ```
 
 ### Result

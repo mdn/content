@@ -4,7 +4,6 @@ slug: Web/API/PushManager/subscribe
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - PushManager
   - Reference
@@ -12,7 +11,8 @@ tags:
   - subscribe
 browser-compat: api.PushManager.subscribe
 ---
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+
+{{ApiRef("Push API")}}
 
 The **`subscribe()`** method of the {{domxref("PushManager")}}
 interface subscribes to a push service.
@@ -23,7 +23,7 @@ the current service worker does not have an existing subscription.
 
 ## Syntax
 
-```js
+```js-nolint
 subscribe(options)
 ```
 

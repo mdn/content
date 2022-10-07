@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnectionIceErrorEvent
 ---
+
 {{DefaultAPISidebar("WebRTC API")}}
 
 The **`RTCPeerConnectionIceErrorEvent`** interface—based upon the {{domxref("Event")}} interface—provides details pertaining to an {{Glossary("ICE")}} error announced by sending an {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} event to the {{domxref("RTCPeerConnection")}} object.

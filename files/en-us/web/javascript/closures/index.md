@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Reference
 ---
+
 {{jsSidebar("Intermediate")}}
 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
@@ -367,13 +368,13 @@ console.log(getX()); // 2
 
 ## Creating closures in loops: A common mistake
 
-Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
+Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js

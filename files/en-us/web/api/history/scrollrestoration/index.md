@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.scrollRestoration
 ---
+
 {{APIRef("History API")}}
 
 The **`scrollRestoration`** property of {{DOMxRef("History")}}
@@ -19,7 +20,7 @@ on history navigation.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `auto`
   - : The location on the page to which the user has scrolled will be restored.

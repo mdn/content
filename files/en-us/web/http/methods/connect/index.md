@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.CONNECT
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `CONNECT` method** starts two-way communications
@@ -14,7 +15,7 @@ with the requested resource. It can be used to open a tunnel.
 
 For example, the `CONNECT` method can be used to access websites that use
 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). The client asks an HTTP {{Glossary("Proxy
-  server")}} to tunnel the [TCP](</en-US/docs/Glossary/TCP>) connection to
+  server")}} to tunnel the [TCP](/en-US/docs/Glossary/TCP) connection to
 the desired destination. The server then proceeds to make the connection on behalf of
 the client. Once the connection has been established by the server, the
 {{Glossary("Proxy server")}} continues to proxy the TCP stream to and
@@ -55,7 +56,7 @@ from the client.
 
 ## Syntax
 
-```
+```http
 CONNECT www.example.com:443 HTTP/1.1
 ```
 
@@ -64,7 +65,7 @@ CONNECT www.example.com:443 HTTP/1.1
 Some proxy servers might need authority to create a tunnel. See also the
 {{HTTPHeader("Proxy-Authorization")}} header.
 
-```
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=

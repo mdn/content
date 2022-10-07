@@ -9,10 +9,10 @@ tags:
   - Response header
   - Deprecated
   - Non-standard
-  - Experimental
 browser-compat: http.headers.Accept-CH-Lifetime
 ---
-{{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}
+
+{{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}{{Non-standard_header}}
 
 > **Warning:** The header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08).
 
@@ -45,13 +45,13 @@ include in subsequent requests.
 
 ## Syntax
 
-```
+```http
 Accept-CH-Lifetime: <age>
 ```
 
 ## Examples
 
-```
+```http
 Accept-CH: Viewport-Width
 Accept-CH-Lifetime: 86400
 ```

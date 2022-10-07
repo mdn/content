@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Function.name
 ---
+
 {{JSRef}}
 
 A {{jsxref("Function")}} object's read-only **`name`** property indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
@@ -223,7 +224,7 @@ new Foo().getNames();
 You can use `obj.constructor.name` to check the "class" of an object.
 
 ```js
-function Foo() {}  // ES2015 Syntax: class Foo {}
+function Foo() {}  // Or: class Foo {}
 
 const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"

@@ -15,6 +15,7 @@ tags:
   - Property
 browser-compat: api.HTMLImageElement.isMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property **`isMap`** is a

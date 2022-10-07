@@ -67,7 +67,7 @@ The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-l
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("manifest")}} {{deprecated_inline}}
+- {{htmlattrdef("manifest")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Specifies the {{glossary("URI")}} of a resource manifest indicating resources that should be cached locally.
 - {{htmlattrdef("version")}} {{deprecated_inline}}
   - : Specifies the version of the HTML {{glossary("Doctype", "Document Type Definition")}} that governs the current document. This attribute is not needed, because it is redundant with the version information in the document type declaration.
@@ -79,8 +79,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>…</head>
-  <body>…</body>
+  <head>
+    <!-- … -->
+  </head>
+  <body>
+    <!-- … -->
+  </body>
 </html>
 ```
 

@@ -7,10 +7,10 @@ tags:
   - Graphics
   - Guide
   - HTML
-  - HTML5
   - Intermediate
   - Web
 ---
+
 {{CanvasSidebar}}
 
 This tutorial describes how to use the [**`<canvas>`**](/en-US/docs/Web/HTML/Element/canvas) element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.

@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.integrity
 ---
+
 {{APIRef("Fetch")}}
 
 The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.

@@ -11,9 +11,10 @@ tags:
   - self
 browser-compat: api.WorkerGlobalScope.self
 ---
+
 {{APIRef("Web Workers API")}}
 
-The **`self`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, or {{domxref("ServiceWorkerGlobalScope")}}.
+The **`self`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, or {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Value
 

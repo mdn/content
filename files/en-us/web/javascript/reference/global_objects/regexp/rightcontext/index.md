@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.rightContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **rightContext** property is a static and read-only property of regular expressions that contains the substring following the most recent match. `RegExp.$'` is an alias for this property.

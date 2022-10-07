@@ -9,6 +9,7 @@ tags:
   - Unicode
 browser-compat: javascript.builtins.String.charCodeAt
 ---
+
 {{JSRef}}
 
 The **`charCodeAt()`** method returns
@@ -26,7 +27,7 @@ surrogate pair_ for the code point. If you want the entire code point value, use
 
 ## Syntax
 
-```js
+```js-nolint
 charCodeAt(index)
 ```
 
@@ -134,8 +135,7 @@ function knownCharCodeAt(str, idx) {
     const li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
-    }
-    else {
+    } else {
       break;
     }
   }

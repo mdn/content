@@ -9,6 +9,7 @@ tags:
   - WeakRef
 browser-compat: javascript.builtins.WeakRef.deref
 ---
+
 {{JSRef}}
 
 The `deref` method returns the {{jsxref("WeakRef")}} instance's target
@@ -16,7 +17,7 @@ object, or `undefined` if the target object has been garbage-collected.
 
 ## Syntax
 
-```js
+```js-nolint
 deref()
 ```
 

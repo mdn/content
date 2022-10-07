@@ -11,6 +11,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.generator_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function*`** keyword can be used to define a generator
@@ -20,7 +21,7 @@ function inside an expression.
 
 ## Syntax
 
-```js
+```js-nolint
 function* (param0) {
   statements
 }
@@ -59,7 +60,7 @@ A `function*` expression is very similar to and has almost the same syntax
 as a {{jsxref('Statements/function*', 'function* statement', "", 1)}}. The main
 difference between a `function*` expression and a `function*`
 statement is the _function name_, which can be omitted in `function*`
-expressions to create *anonymous* generator functions. See also the chapter
+expressions to create _anonymous_ generator functions. See also the chapter
 about {{jsxref("Functions", "functions")}} for more information.
 
 ## Examples

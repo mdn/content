@@ -111,7 +111,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
 
-- {{htmlattrdef("fetchpriority")}}
+- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
 
   - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
 
@@ -125,7 +125,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{htmlattrdef("integrity")}}
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - {{htmlattrdef("nomodule")}}
-  - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
+  - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - {{htmlattrdef("nonce")}}
   - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - {{htmlattrdef("referrerpolicy")}}
@@ -149,7 +149,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:
 
-    - **Omitted or a JavaScript MIME type:** This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+    - **Omitted or a JavaScript MIME type:** This indicates the script is JavaScript. The HTML specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
     - **`module`:** Causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The `charset` and `defer` attributes have no effect.
       For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide.
       Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
@@ -163,12 +163,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("charset")}} {{Deprecated_inline}}
   - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
-- {{htmlattrdef("language")}} {{Deprecated_inline}}
+- {{htmlattrdef("language")}} {{Deprecated_inline}} {{Non-standard_Inline}}
   - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
 ## Notes
 
-Scripts without {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} or `type="module"` attributes, as well as inline scripts without the `type="module"` attribute, are fetched and executed immediately, before the browser continues to parse the page.
+Scripts without {{HTMLAttrxRef("async", "script")}}, {{HTMLAttrxRef("defer", "script")}} or `type="module"` attributes, as well as inline scripts without the `type="module"` attribute, are fetched and executed immediately, before the browser continues to parse the page.
 
 The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{domxref("Element/error_event", "error")}} is sent to the element, if not a {{domxref("Element/load_event", "load")}} event is sent.
 
@@ -205,7 +205,13 @@ You can also use the `<script>` element to embed data in HTML with server-side r
 
 ```html
 <!-- Generated by the server -->
-<script id="data" type="application/json">{"userId":1234,"userName":"John Doe","memberSince":"2000-01-01T00:00:00.000Z"}</script>
+<script id="data" type="application/json">
+  {
+    "userId": 1234,
+    "userName": "John Doe",
+    "memberSince": "2000-01-01T00:00:00.000Z"
+  }
+</script>
 
 <!-- Static -->
 <script>

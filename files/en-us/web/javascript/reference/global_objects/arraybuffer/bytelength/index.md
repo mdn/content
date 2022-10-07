@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.ArrayBuffer.byteLength
 ---
+
 {{JSRef}}
 
 The **`byteLength`** accessor property represents the length of an {{jsxref("ArrayBuffer")}} in bytes.

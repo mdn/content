@@ -6,6 +6,7 @@ tags:
   - Property
   - Non-standard
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
@@ -18,8 +19,8 @@ Starting with Internet Explorer 10, input type=password fields will automaticall
 
 ## Syntax
 
-```html
-document.msCapsLockWarningOff = true;
+```js-nolint
+document.msCapsLockWarningOff = true
 ```
 
 ## Value
@@ -37,26 +38,28 @@ Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
 ## Example 2
 
 ```html
-<html>
-<head>
+<html lang="en">
+  <head>
     <title>msCapsLockWarningOff example</title>
     <script>
-
-        function capsOff() {
-                  if(!document.msCapsLockWarningOff) {
-                document.msCapsLockWarningOff = true;
-                document.getElementById("caps").innerHTML = "Warning off";
-            } else {
-                document.msCapsLockWarningOff = false;
-                document.getElementById("caps").innerHTML = "Warning on";
-            }
+      function capsOff() {
+        if (!document.msCapsLockWarningOff) {
+          document.msCapsLockWarningOff = true;
+          document.getElementById("caps").innerHTML = "Warning off";
+        } else {
+          document.msCapsLockWarningOff = false;
+          document.getElementById("caps").innerHTML = "Warning on";
         }
-
+      }
     </script>
-</head>
-<body>
-<label>Type a password: <input type="password" name="password"/></label><br />
-<button id="caps" onclick="capsOff();">Warning off</button>
-</body>
+  </head>
+  <body>
+    <div>
+      <label>Type a password: <input type="password" name="password" /></label>
+    </div>
+    <div>
+      <button id="caps" onclick="capsOff();">Warning off</button>
+    </div>
+  </body>
 </html>
 ```

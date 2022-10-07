@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerRegistration/showNotification
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - NeedsExample
   - Reference
@@ -14,6 +13,7 @@ tags:
   - showNotification
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `showNotification()` method of the
@@ -24,7 +24,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 showNotification(title)
 showNotification(title, options)
 ```
@@ -39,6 +39,7 @@ showNotification(title, options)
     properties:
 
     - `actions` {{experimental_inline}}
+
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
         - `action`
@@ -64,7 +65,7 @@ showNotification(title, options)
       - : Arbitrary data that you want to be associated with the
         notification. This can be of any data type.
     - `dir`
-      - : The direction of the notification; it can be `auto`,  `ltr` or `rtl`.
+      - : The direction of the notification; it can be `auto`, `ltr` or `rtl`.
     - `icon`
       - : a string containing the URL of an image to
         be used as an icon by the notification.
@@ -78,8 +79,8 @@ showNotification(title, options)
     - `renotify` {{experimental_inline}}
       - : A boolean that indicates whether to suppress vibrations
         and audible alerts when reusing a `tag` value.
-        If *options*'s `renotify` is true
-        and *options*'s `tag` is the empty string a TypeError will be
+        If _options_'s `renotify` is true
+        and _options_'s `tag` is the empty string a TypeError will be
         thrown. The default is `false`.
     - `requireInteraction` {{experimental_inline}}
       - : Indicates that on devices with sufficiently
@@ -89,8 +90,8 @@ showNotification(title, options)
         is `false`.
     - `silent`
       - : When set indicates that no sounds or vibrations should be
-        made. If *options*'s `silent` is true
-        and *options*'s `vibrate` is present a TypeError exception
+        made. If _options_'s `silent` is true
+        and _options_'s `vibrate` is present a TypeError exception
         will be thrown. The default value is `false`.
     - `tag`
       - : An ID for a given notification that allows you to find,

@@ -18,6 +18,7 @@ browser-compat:
   - api.PerformanceLongTaskTiming
   - api.TaskAttributionTiming
 ---
+
 {{DefaultAPISidebar("Long Tasks")}}
 
 ## Motivation
@@ -55,14 +56,15 @@ A list of containers that the task occurred within. For tasks that don't occur w
 ## Usage
 
 ```js
-const observer = new PerformanceObserver(function(list) {
+const observer = new PerformanceObserver((list) => {
     const perfEntries = list.getEntries();
-    for (let i = 0; i < perfEntries.length; i++) {
-        // Process long task notifications:
-        // report back for analytics and monitoring
-    }
+    perfEntries.forEach((entry) => {
+      // Process long task notifications:
+      // report back for analytics and monitoring
+    });
 });
-// register observer for long task notifications
+
+// Register observer for long task notifications
 observer.observe({entryTypes: ["longtask"]});
 // Long script execution after this will result in queueing
 // and receiving "longtask" entries in the observer.

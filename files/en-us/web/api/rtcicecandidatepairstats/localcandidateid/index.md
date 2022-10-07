@@ -20,6 +20,7 @@ tags:
   - localCandidateId
 browser-compat: api.RTCIceCandidatePairStats.localCandidateId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

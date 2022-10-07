@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.pause
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.pause()`** method will pause playback
@@ -18,7 +19,7 @@ of the media, if the media is already in a paused state this method will have no
 
 ## Syntax
 
-```js
+```js-nolint
 pause()
 ```
 

@@ -8,6 +8,7 @@ tags:
   - WebVTT
 browser-compat: api.VTTRegion
 ---
+
 {{APIRef("WebVTT")}}
 
 The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.

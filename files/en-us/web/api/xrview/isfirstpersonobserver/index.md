@@ -14,9 +14,11 @@ tags:
   - XR
   - XRView
   - Augmented Reality
+  - Experimental
 browser-compat: api.XRView.isFirstPersonObserver
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRView")}} interface's read-only **`isFirstPersonObserver`** property is a boolean indicating if the `XRView` is a first-person observer view.
 

@@ -1,6 +1,7 @@
 ---
 title: direction
 slug: Web/CSS/direction
+page-type: css-property
 tags:
   - BiDi
   - CSS
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.direction
 ---
+
 {{CSSRef}}
 
 The **`direction`** CSS property sets the direction of text, table columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
@@ -70,11 +72,13 @@ blockquote {
 
 ```html
 <blockquote>
-<p>This paragraph is in English but incorrectly goes right to left.<p>
+  <p>This paragraph is in English but incorrectly goes right to left.</p>
+  <p></p>
 </blockquote>
 
 <blockquote>
-<p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.<p>
+  <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
+  <p></p>
 </blockquote>
 ```
 

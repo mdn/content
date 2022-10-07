@@ -8,6 +8,9 @@ tags:
   - Guide
   - Performance
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
 
 ## What is performance?
@@ -161,9 +164,9 @@ As old-school, accessibility-aware Web developers we love click events since the
 
 #### Keep your interface simple
 
-One big performance issue we found in HTML5 apps was that moving lots of [DOM](/en-US/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
+One big performance issue we found in HTML apps was that moving lots of [DOM](/en-US/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
 
-When, for example, you have a long list of elements (let's say tweets), don't move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn't mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren't visible. The same trick applies in games to sprites: if they aren't currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.
+When, for example, you have a long list of elements (let's say tweets), don't move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn't mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren't visible. The same trick applies in games to sprites: if they aren't currently on the screen, there is no need to poll them. Instead, re-use elements that scroll off-screen as new ones coming in.
 
 ## General application performance analysis
 
@@ -175,7 +178,7 @@ If your page contains JavaScript code that is taking a long time to run, the [Ja
 
 ![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
-The [Built-in Gecko Profiler](/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
+The [Built-in Gecko Profiler](https://firefox-source-docs.mozilla.org/tools/profiler/index.html) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
 
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 

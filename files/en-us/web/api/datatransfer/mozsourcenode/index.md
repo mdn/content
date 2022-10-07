@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.DataTransfer.mozSourceNode
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSourceNode`** property is used to
@@ -21,7 +22,7 @@ returned.
 
 > **Note:** This property is Firefox-specific.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 
@@ -38,10 +39,11 @@ function dragend_handler(event)
 {
   const dragData = event.dataTransfer;
   const node = dragData.mozSourceNode;
-  if (node)
+  if (node) {
     console.log(`mozSourceNode = ${dragData.mozSourceNode}`);
-  else
+  } else {
     console.log("mozSourceNode is null");
+  }
 }
 ```
 

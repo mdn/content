@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetWidth`** read-only property returns

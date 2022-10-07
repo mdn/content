@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.has
 ---
+
 {{JSRef}}
 
 The static **`Reflect.has()`** method works like the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
@@ -19,7 +20,7 @@ as a function.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.has(target, propertyKey)
 ```
 
@@ -59,7 +60,7 @@ Reflect.has({x: 0}, 'toString')
 
 // Proxy with .has() handler method
 obj = new Proxy({}, {
-  has(t, k) { return k.startsWith('door')  }
+  has(t, k) { return k.startsWith('door') }
 });
 Reflect.has(obj, 'doorbell')  // true
 Reflect.has(obj, 'dormitory')  // false

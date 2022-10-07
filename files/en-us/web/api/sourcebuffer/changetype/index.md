@@ -10,13 +10,13 @@ tags:
   - Media Source
   - Media Source Extensions
   - Method
-  - Non-standard
   - SourceBuffer
   - Video
   - changeType
 browser-compat: api.SourceBuffer.changeType
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{Non-standard_Header}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`changeType()`** method of the
 {{domxref("SourceBuffer")}} interface sets the MIME type that future calls to
@@ -30,7 +30,7 @@ constraints change.
 
 ## Syntax
 
-```js
+```js-nolint
 changeType(type)
 ```
 

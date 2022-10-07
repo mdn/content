@@ -28,7 +28,7 @@ which will be transmitted to the other peer.>
 
 ## Syntax
 
-```js
+```js-nolint
 addTrack(track)
 addTrack(track, stream0)
 addTrack(track, stream0, stream1)

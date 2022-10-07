@@ -5,12 +5,12 @@ page-type: web-api-instance-property
 tags:
   - API
   - Event
-  - Experimental
   - FocusEvent
   - Property
   - Reference
 browser-compat: api.FocusEvent.relatedTarget
 ---
+
 {{ apiref("DOM Events") }}
 
 The **`FocusEvent.relatedTarget`** read-only property is the

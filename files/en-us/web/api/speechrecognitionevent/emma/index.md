@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionEvent/emma
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionEvent
@@ -12,9 +11,12 @@ tags:
   - emma
   - recognition
   - speech
+  - Deprecated
+  - Non-standard
 browser-compat: api.SpeechRecognitionEvent.emma
 ---
-{{APIRef("Web Speech API")}}{{deprecated_header}}
+
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`emma`** read-only property of the
 {{domxref("SpeechRecognitionEvent")}} interface returns an Extensible

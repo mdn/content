@@ -8,9 +8,11 @@ tags:
   - Reference
   - brands
   - NavigatorUAData
+  - Experimental
 browser-compat: api.NavigatorUAData.brands
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
+
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`brands`** read-only property of the {{domxref("NavigatorUAData")}} interface returns an array of brand information.
 

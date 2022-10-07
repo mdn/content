@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLButtonElement`** interface provides properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("button")}} elements.
@@ -26,7 +27,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A boolean value indicating whether or not the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLButtonElement.disabled")}}
   - : A boolean value indicating whether or not the control is disabled, meaning that it does not accept any clicks.
-- {{domxref("HTMLButtonElement.form")}} {{readonlyInline}}
+- {{domxref("HTMLButtonElement.form")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLFormElement")}} reflecting the form that this button is associated with. If the button is a descendant of a form element, then this attribute is a reference to that form's associated `HTMLFormElement`.
     If the button is not a descendant of a form element, then the attribute can be a reference to any `HTMLFormElement` element in the same document it is related to, or the `null` value if none matches.
 - {{domxref("HTMLButtonElement.formAction")}}
@@ -39,7 +40,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A boolean value indicating that the form is not to be validated when it is submitted. If specified, this attribute overrides the {{htmlattrxref("novalidate", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formTarget")}}
   - : A string reflecting a name or keyword indicating where to display the response that is received after submitting the form. If specified, this attribute overrides the {{htmlattrxref("target", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
-- {{domxref("HTMLButtonElement.labels")}} {{readonlyInline}}
+- {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} that represents a list of {{HTMLElement("label")}} elements that are labels for this button.
 - {{domxref("HTMLButtonElement.menu")}} {{experimental_inline}}
   - : A {{domxref("HTMLMenuElement")}} representing the menu element to be displayed if the button is clicked and is of `type="menu"`.
@@ -56,18 +57,18 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
     - `button`: The button does nothing.
     - `menu`: The button displays a menu. {{experimental_inline}}
 
-- {{domxref("HTMLButtonElement.willValidate")}} {{readonlyInline}}
+- {{domxref("HTMLButtonElement.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the button is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation, including: its `type` property is `reset` or `button`; it has a {{HTMLElement("datalist")}} ancestor; or the `disabled` property is set to `true`.
-- {{domxref("HTMLButtonElement.validationMessage")}} {{readonlyInline}}
+- {{domxref("HTMLButtonElement.validationMessage")}} {{ReadOnlyInline}}
   - : A string representing the localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
-- {{domxref("HTMLButtonElement.validity")}} {{readonlyInline}}
+- {{domxref("HTMLButtonElement.validity")}} {{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} representing the validity states that this button is in.
 - {{domxref("HTMLButtonElement.value")}}
   - : A string representing the current form control value of the button.
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}_
+_Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Specifications
 

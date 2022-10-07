@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.suspend_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `suspend` event is fired when media data loading has been suspended.
@@ -90,7 +91,4 @@ video.onsuspend = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-
-<!---->
-
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

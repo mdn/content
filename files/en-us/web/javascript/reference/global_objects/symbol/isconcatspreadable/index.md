@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.isConcatSpreadable
 ---
+
 {{JSRef}}
 
 The **`Symbol.isConcatSpreadable`** well-known symbol is used to configure if an object should be flattened to its array elements when using the {{jsxref("Array.prototype.concat()")}} method.

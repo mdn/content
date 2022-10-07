@@ -1,6 +1,7 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.matrix
 ---
+
 {{CSSRef}}
 
 The **`matrix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a homogeneous 2D transformation matrix. Its result is

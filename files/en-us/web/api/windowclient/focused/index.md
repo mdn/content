@@ -4,7 +4,6 @@ slug: Web/API/WindowClient/focused
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Service Workers
@@ -13,6 +12,7 @@ tags:
   - focused
 browser-compat: api.WindowClient.focused
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`focused`** read-only property of the

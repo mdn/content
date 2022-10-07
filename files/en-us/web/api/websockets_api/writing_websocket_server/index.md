@@ -3,14 +3,13 @@ title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 page-type: guide
 tags:
-  - HTML5
+  - HTML
   - NeedsMarkupWork
   - Tutorial
   - WebSockets
 ---
-{{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
+{{DefaultAPISidebar("Websockets API")}}
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
@@ -18,7 +17,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the `System.Net.Sockets` namespace.
 
 > **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
@@ -32,7 +31,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` specifies the IP of the listener, and `port` specifies the port.
 
-> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`_._
+> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`.
 
 Methods:
 
@@ -300,9 +299,9 @@ class Server {
                     offset = 10;
                 }
 
-                if (msglen == 0)
+                if (msglen == 0) {
                     Console.WriteLine("msglen == 0");
-                else if (mask) {
+                } else if (mask) {
                     byte[] decoded = new byte[msglen];
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
@@ -325,63 +324,76 @@ class Server {
 ### client.html
 
 ```html
-<!doctype html>
-<style>
-    textarea { vertical-align: bottom; }
-    #output { overflow: auto; }
-    #output > p { overflow-wrap: break-word; }
-    #output span { color: blue; }
-    #output span.error { color: red; }
-</style>
-<h2>WebSocket Test</h2>
-<textarea cols=60 rows=6></textarea>
-<button>send</button>
-<div id=output></div>
-<script>
-  // http://www.websocket.org/echo.html
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    textarea {
+      vertical-align: bottom;
+    }
+    #output {
+      overflow: auto;
+    }
+    #output > p {
+      overflow-wrap: break-word;
+    }
+    #output span {
+      color: blue;
+    }
+    #output span.error {
+      color: red;
+    }
+  </style>
+  <body>
+    <h2>WebSocket Test</h2>
+    <textarea cols="60" rows="6"></textarea>
+    <button>send</button>
+    <div id="output"></div>
+  </body>
+  <script>
+    // http://www.websocket.org/echo.html
+    const button = document.querySelector("button");
+    const output = document.querySelector("#output");
+    const textarea = document.querySelector("textarea");
+    const wsUri = "ws://127.0.0.1/";
+    const websocket = new WebSocket(wsUri);
 
-  const button = document.querySelector("button");
-  const output = document.querySelector("#output");
-  const textarea = document.querySelector("textarea");
-  const wsUri = "ws://127.0.0.1/";
-  const websocket = new WebSocket(wsUri);
+    button.addEventListener("click", onClickButton);
 
-  button.addEventListener("click", onClickButton);
+    websocket.onopen = (e) => {
+      writeToScreen("CONNECTED");
+      doSend("WebSocket rocks");
+    };
 
-  websocket.onopen = (e) => {
-    writeToScreen("CONNECTED");
-    doSend("WebSocket rocks");
-  };
+    websocket.onclose = (e) => {
+      writeToScreen("DISCONNECTED");
+    };
 
-  websocket.onclose = (e) => {
-    writeToScreen("DISCONNECTED");
-  };
+    websocket.onmessage = (e) => {
+      writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
+    };
 
-  websocket.onmessage = (e) => {
-    writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
-  };
+    websocket.onerror = (e) => {
+      writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
+    };
 
-  websocket.onerror = (e) => {
-    writeToScreen(`<span class=error>ERROR:</span> ${e.data}`);
-  };
+    function doSend(message) {
+      writeToScreen(`SENT: ${message}`);
+      websocket.send(message);
+    }
 
-  function doSend(message) {
-    writeToScreen(`SENT: ${message}`);
-    websocket.send(message);
-  }
+    function writeToScreen(message) {
+      output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+    }
 
-  function writeToScreen(message) {
-    output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
-  }
+    function onClickButton() {
+      const text = textarea.value;
 
-  function onClickButton() {
-    const text = textarea.value;
-
-    text && doSend(text);
-    textarea.value = "";
-    textarea.focus();
-  }
-</script>
+      text && doSend(text);
+      textarea.value = "";
+      textarea.focus();
+    }
+  </script>
+</html>
 ```
 
 ## Related

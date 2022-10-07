@@ -1,5 +1,5 @@
 ---
-title: Web Performance
+title: Web performance
 slug: Web/Performance
 tags:
   - API
@@ -16,6 +16,9 @@ tags:
   - Web
   - Web Performance
 ---
+
+{{QuickLinksWithSubPages}}
+
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
 
 The longer it takes for a site to respond, the more users will abandon the site. It is important to minimize the loading and response times and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
@@ -39,7 +42,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - [Web performance basics](/en-US/docs/Learn/Performance/Web_Performance_Basics)
   - : In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-  - : Some attributes and the source order of your mark-up can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
+  - : Some attributes and the source order of your markup can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
 - [Multimedia: images and video](/en-US/docs/Learn/Performance/Multimedia)
   - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. Additional tips like removing audio tracks from background videos can improve performance even further. In this article we discuss the impact video, audio, and image content has on performance, and the methods to ensure that impact is as minimal as possible.
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)

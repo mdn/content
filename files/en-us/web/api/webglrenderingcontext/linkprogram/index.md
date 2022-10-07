@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.linkProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} interface's
@@ -19,7 +20,7 @@ program's fragment and vertex shaders.
 
 ## Syntax
 
-```js
+```js-nolint
 linkProgram(program)
 ```
 

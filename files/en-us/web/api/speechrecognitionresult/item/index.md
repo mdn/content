@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResult/item
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Getter
   - Method
   - Reference
@@ -15,7 +14,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult.item
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+
+{{APIRef("Web Speech API")}}
 
 The **`item`** getter of the
 {{domxref("SpeechRecognitionResult")}} interface is a standard getter that allows
@@ -24,7 +24,7 @@ array syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -39,7 +39,7 @@ A {{domxref("SpeechRecognitionAlternative")}} object.
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

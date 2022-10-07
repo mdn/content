@@ -7,6 +7,7 @@ tags:
   - asm.js
   - async
 ---
+
 {{GamesSidebar}}
 
 Every medium or large game should compile [asm.js](/en-US/docs/Games/Tools/asm.js) code as part of an async script to give the browser the maximum flexibility to optimize the compilation process. In Gecko, async compilation allows the JavaScript engine to compile the asm.js off the main thread when the game is loading and cache the generated machine code so that the game doesn't need to be compiled on subsequent loads (starting in Firefox 28). To see the difference, toggle `javascript.options.parallel_parsing` in `about:config`.
@@ -22,7 +23,7 @@ Getting async compilation is easy: when writing your JavaScript, just use the `a
 or, to do the same thing via script:
 
 ```js
-const script = document.createElement('script');
+const script = document.createElement("script");
 script.src = "file.js";
 document.body.appendChild(script);
 ```
@@ -34,14 +35,16 @@ document.body.appendChild(script);
 Two common situations in which a script is \*not\* async (as [defined by the HTML spec](https://html.spec.whatwg.org/multipage/scripting.html)) are:
 
 ```html
-<script async>code</script>
+<script async>
+  code();
+</script>
 ```
 
 and
 
 ```js
-const script = document.createElement('script');
-script.textContent = "code";
+const script = document.createElement("script");
+script.textContent = "code()";
 document.body.appendChild(script);
 ```
 
@@ -51,7 +54,7 @@ What if your code is in a JS string? Instead of using `eval` or `innerHTML`, bot
 
 ```js
 const blob = new Blob([codeString]);
-const script = document.createElement('script');
+const script = document.createElement("script");
 const url = URL.createObjectURL(blob);
 script.onload = script.onerror = () => URL.revokeObjectURL(url);
 script.src = url;

@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 MDN Web Doc's content is available free of charge and is available under various open-source licenses.
@@ -26,7 +27,7 @@ In the above example, "Mozilla Contributors" links to the history of the cited p
 
 ### Code samples
 
-Code samples added on or after August 20, 2010 are in the [public domain](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)). No licensing notice is necessary but if you need one, you can use: "Any copyright is dedicated to the Public Domain: https://creativecommons.org/publicdomain/zero/1.0/"
+Code samples added on or after August 20, 2010 are in the [public domain CC0](https://creativecommons.org/publicdomain/zero/1.0/). No licensing notice is necessary but if you need one, you can use: `Any copyright is dedicated to the Public Domain: https://creativecommons.org/publicdomain/zero/1.0/`
 
 Code samples added before August 20, 2010 are available under the [MIT license](https://opensource.org/licenses/mit-license.php); you should insert the following attribution information into the MIT template: "© \<date of last wiki page revision> \<name of person who put it in the wiki>".
 
@@ -44,7 +45,7 @@ If you have any questions or concerns about anything discussed here, please cont
 
 ### Logos, trademarks, service marks, and wordmarks
 
-The rights in the logos, trademarks, and service marks of the Mozilla Foundation, as well as the look and feel of this website, are not licensed under the Creative Commons license, and to the extent they are works of authorship (like logos and graphic design), they are not included in the work that is licensed under those terms. If you use the text of documents and wish to also use any of these rights, or if you have any other questions about complying with our licensing terms for this collection, you should contact the Mozilla Foundation here: [licensing@mozilla.org](mailto:licensing@mozilla.org "mailto:licensing@mozilla.org").
+The rights in the logos, trademarks, and service marks of the Mozilla Foundation, as well as the look and feel of this website, are not licensed under the Creative Commons license, and to the extent they are works of authorship (like logos and graphic design), they are not included in the work that is licensed under those terms. If you use the text of documents and wish to also use any of these rights, or if you have any other questions about complying with our licensing terms for this collection, you should contact the Mozilla Foundation here: [licensing@mozilla.org](mailto:licensing@mozilla.org).
 
 ## Using content from elsewhere on MDN Web Docs
 

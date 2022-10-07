@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.EventSource
 ---
+
 {{APIRef("Server Sent Events")}}
 
 The **`EventSource`** interface is web content's interface to [server-sent events](/en-US/docs/Web/API/Server-sent_events).
@@ -36,11 +37,11 @@ Unlike [WebSockets](/en-US/docs/Web/API/WebSockets_API), server-sent events are 
 
 _This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+- {{domxref("EventSource.readyState")}} {{ReadOnlyInline}}
   - : A number representing the state of the connection. Possible values are `CONNECTING` (`0`), `OPEN` (`1`), or `CLOSED` (`2`).
-- {{domxref("EventSource.url")}} {{readonlyinline}}
+- {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : A string representing the URL of the source.
-- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
+- {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 
 ## Methods
@@ -59,7 +60,7 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 - {{domxref("EventSource/open_event", "open")}}
   - : Fired when a connection to an event source has opened.
 
-Additionally, the event source itself may send messages with an event field, which will create ad-hoc events keyed to that value.
+Additionally, the event source itself may send messages with an event field, which will create ad hoc events keyed to that value.
 
 ## Examples
 
@@ -79,42 +80,43 @@ evtSource.onmessage = (e) => {
 
 Each received event causes our `EventSource` object's `onmessage` event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 To listen to named events, you'll require a listener for each type of event sent.
 
 ```js
-  const sse = new EventSource('/api/v1/sse');
+const sse = new EventSource('/api/v1/sse');
 
-  /* This will listen only for events
-   * similar to the following:
-   *
-   * event: notice
-   * data: useful data
-   * id: someid
-   *
-   */
-  sse.addEventListener("notice", (e) => {
-    console.log(e.data)
-  })
+/*
+ * This will listen only for events
+ * similar to the following:
+ *
+ * event: notice
+ * data: useful data
+ * id: someid
+ */
+sse.addEventListener("notice", (e) => {
+  console.log(e.data)
+})
 
-  /* Similarly, this will listen for events
-   * with the field `event: update`
-   */
-  sse.addEventListener("update", (e) => {
-    console.log(e.data)
-  })
+/*
+ * Similarly, this will listen for events
+ * with the field `event: update`
+ */
+sse.addEventListener("update", (e) => {
+  console.log(e.data)
+})
 
-  /* The event "message" is a special case, as it
-   * will capture events without an event field
-   * as well as events that have the specific type
-   * `event: message` It will not trigger on any
-   * other event type.
-   */
-  sse.addEventListener("message", (e) => {
-    console.log(e.data)
-  })
-
+/*
+ * The event "message" is a special case, as it
+ * will capture events without an event field
+ * as well as events that have the specific type
+ * `event: message` It will not trigger on any
+ * other event type.
+ */
+sse.addEventListener("message", (e) => {
+  console.log(e.data)
+});
 ```
 
 ## Specifications

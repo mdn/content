@@ -15,6 +15,7 @@ tags:
   - Web
   - formats
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
@@ -25,7 +26,7 @@ This guide briefly examines the syntax of the media type `codecs` parameter and 
 
 ## General syntax
 
-A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc), then a slash character (`/`), then the container format used to contain the media:
+A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the container format used to contain the media:
 
 - `audio/mpeg`
   - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.

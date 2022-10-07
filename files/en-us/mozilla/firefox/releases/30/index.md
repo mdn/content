@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox for Developers
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -68,7 +69,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0` ,  `1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})
+- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0 , 1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})
 
 ### Older versions
 

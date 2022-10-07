@@ -8,9 +8,10 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mroot
 ---
+
 {{MathMLRef}}
 
-The MathML `<mroot>` element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
+The **`<mroot>`** [MathML](/en-US/docs/Web/MathML) element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
 
 ## Attributes
 
@@ -18,20 +19,23 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ## Examples
 
-Sample Rendering: ![x](mroot.png)
-
-Rendering in your browser: <math><mroot><mi>x</mi> <mn>3</mn></mroot></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math>
-
- <mroot>
+<math display="block">
+  <mroot>
     <mi>x</mi>
     <mn>3</mn>
- </mroot>
-
+  </mroot>
 </math>
 ```
+
+{{ EmbedLiveSample('mroot_example', 700, 200, "", "") }}
 
 ## Specifications
 

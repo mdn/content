@@ -4,6 +4,7 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 tags:
   - XSLT
 ---
+
 ## Resources
 
 - [Using the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)

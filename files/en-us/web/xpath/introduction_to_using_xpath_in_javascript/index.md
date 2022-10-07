@@ -12,6 +12,7 @@ tags:
   - XPath
   - XSLT
 ---
+
 This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
 
 The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document/evaluate) function of the [document](/en-US/docs/Web/API/Document) object.
@@ -184,7 +185,7 @@ When the result type in the `resultType` parameter is specified as `ANY_TYPE`, t
 
 It could be any of the simple types (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **but**, if the returned result type is a node-set then it will **only** be an `UNORDERED_NODE_ITERATOR_TYPE`.
 
-To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix. None Yet =====Any_Type Example===== \<pre> \</pre>
+To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix.
 
 ## Examples
 
@@ -195,7 +196,7 @@ The following code is intended to be placed in any JavaScript fragment within or
 To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is '`//h2`'. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
 
 ```js
-var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null);
+const headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null);
 ```
 
 Notice that, since HTML does not have namespaces, we have passed `null` for the `namespaceResolver` parameter.
@@ -322,7 +323,7 @@ If one wishes to provide flexibility in namespaces (as they are intended) by not
 
 While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en-US/docs/Web/XPath/Functions/local-name) in combination with [`namespace-uri()`](/en-US/docs/Web/XPath/Functions/namespace-uri) instead of [`name()`](/en-US/docs/Web/XPath/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
 
-For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
+For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
 This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes/attribute)).
 

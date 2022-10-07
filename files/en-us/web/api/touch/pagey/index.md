@@ -10,6 +10,7 @@ tags:
   - touch
 browser-compat: api.Touch.pageY
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`Touch.pageY`** read-only property returns the Y

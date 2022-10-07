@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.autoplay
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header
@@ -25,7 +26,7 @@ For more details on autoplay and autoplay blocking, see the article [Autoplay gu
 
 ## Syntax
 
-```
+```http
 Feature-Policy: autoplay <allowlist>;
 ```
 

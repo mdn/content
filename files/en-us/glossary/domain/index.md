@@ -4,10 +4,10 @@ slug: Glossary/Domain
 tags:
   - Browser
   - Domain
-  - Glossary
   - Infrastructure
   - Networking
 ---
+
 A domain is an authority within the internet that controls its own resources. Its "domain name" is a way to address this authority as part of the hierarchy in a {{Glossary("URL")}} - usually the most memorable part of it, for instance a brand name.
 
 A fully qualified domain name (FQDN) contains all necessary parts to look up this authority by name unambiguously using the {{Glossary("DNS")}} system of the internet.

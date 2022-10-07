@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.restore
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +23,7 @@ For more information about the [drawing state](/en-US/docs/Web/API/CanvasRenderi
 
 ## Syntax
 
-```js
+```js-nolint
 restore()
 ```
 
@@ -51,13 +52,13 @@ default state later.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Save the default state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // Restore the default state

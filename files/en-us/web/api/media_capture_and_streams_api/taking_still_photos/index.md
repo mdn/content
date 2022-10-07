@@ -14,6 +14,7 @@ tags:
   - getusermedia
   - webcam
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 This article shows how to use [`navigator.mediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
@@ -42,10 +43,9 @@ Next, we have a {{HTMLElement("canvas")}} element into which the captured frames
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
 ```html
-<canvas id="canvas">
-</canvas>
+<canvas id="canvas"> </canvas>
 <div class="output">
-  <img id="photo" alt="The screen capture will appear in this box.">
+  <img id="photo" alt="The screen capture will appear in this box." />
 </div>
 ```
 
@@ -60,7 +60,7 @@ Now let's take a look at the [JavaScript code](#javascript). We'll break it up i
 We start by wrapping the whole script in an anonymous function to avoid global variables, then setting up various variables we'll be using.
 
 ```js
-(function() {
+(() => {
   const width = 320;    // We will scale the photo width to this
   const height = 0;     // This will be computed based on the input stream
 
@@ -111,13 +111,13 @@ The next task is to get the media stream:
 
 ```js
     navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-    .then(function(stream) {
+      .then((stream) => {
         video.srcObject = stream;
         video.play();
-    })
-    .catch((err) => {
+      })
+      .catch((err) => {
         console.error(`An error occurred: ${err}`);
-    });
+      });
 ```
 
 Here, we're calling {{domxref("MediaDevices.getUserMedia()")}} and requesting a video stream (without audio). It returns a promise which we attach success and failure callbacks to.
@@ -133,9 +133,9 @@ The error callback is called if opening the stream doesn't work. This will happe
 After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{domxref("HTMLMediaElement/canplay_event", "canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
 
 ```js
-    video.addEventListener('canplay', function(ev){
+    video.addEventListener('canplay', (ev) => {
       if (!streaming) {
-        height = video.videoHeight / (video.videoWidth/width);
+        height = video.videoHeight / video.videoWidth * width;
 
         video.setAttribute('width', width);
         video.setAttribute('height', height);
@@ -157,7 +157,7 @@ Finally, the `width` and `height` of both the video and the canvas are set to ma
 To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
 
 ```js
-    startbutton.addEventListener('click', function(ev){
+    startbutton.addEventListener('click', (ev) => {
       takepicture();
       ev.preventDefault();
     }, false);
@@ -231,23 +231,26 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 ```html
 <div class="contentarea">
-  <h1>
-    MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo
-  </h1>
+  <h1>MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo</h1>
   <p>
-   This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
+    This example demonstrates how to set up a media stream using your built-in
+    webcam, fetch an image from that stream, and create a PNG using that image.
   </p>
   <div class="camera">
     <video id="video">Video stream not available.</video>
     <button id="startbutton">Take photo</button>
   </div>
-  <canvas id="canvas">
-  </canvas>
+  <canvas id="canvas"> </canvas>
   <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
+    <img id="photo" alt="The screen capture will appear in this box." />
   </div>
   <p>
-    Visit our article <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos"> Taking still photos with WebRTC</a> to learn more about the technologies used here.
+    Visit our article
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">
+      Taking still photos with WebRTC</a
+    >
+    to learn more about the technologies used here.
   </p>
 </div>
 ```
@@ -258,44 +261,44 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 #video {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width:320px;
-  height:240px;
+  width: 320px;
+  height: 240px;
 }
 
 #photo {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width:320px;
-  height:240px;
+  width: 320px;
+  height: 240px;
 }
 
 #canvas {
-  display:none;
+  display: none;
 }
 
 .camera {
   width: 340px;
-  display:inline-block;
+  display: inline-block;
 }
 
 .output {
   width: 340px;
-  display:inline-block;
+  display: inline-block;
   vertical-align: top;
 }
 
 #startbutton {
-  display:block;
-  position:relative;
-  margin-left:auto;
-  margin-right:auto;
-  bottom:32px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 32px;
   background-color: rgba(0, 150, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   font-family: "Lucida Grande", "Arial", sans-serif;
-  color: rgba(255, 255, 255, 1.0);
+  color: rgba(255, 255, 255, 1);
 }
 
 .contentarea {
@@ -308,13 +311,13 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 ### JavaScript
 
 ```js
-(function() {
+(() => {
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  let width = 320;    // We will scale the photo width to this
-  let height = 0;     // This will be computed based on the input stream
+  const width = 320; // We will scale the photo width to this
+  let height = 0; // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
@@ -352,15 +355,15 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     startbutton = document.getElementById('startbutton');
 
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
-    .then(function(stream) {
-      video.srcObject = stream;
-      video.play();
-    })
-    .catch((err) => {
-      console.error(`An error occurred: ${err}`);
-    });
+      .then((stream) => {
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch((err) => {
+        console.error(`An error occurred: ${err}`);
+      });
 
-    video.addEventListener('canplay', function(ev){
+    video.addEventListener('canplay', (ev) => {
       if (!streaming) {
         height = video.videoHeight / (video.videoWidth/width);
 
@@ -379,7 +382,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       }
     }, false);
 
-    startbutton.addEventListener('click', function(ev){
+    startbutton.addEventListener('click', (ev) => {
       takepicture();
       ev.preventDefault();
     }, false);
@@ -423,7 +426,6 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // once loading is complete.
   window.addEventListener('load', startup, false);
 })();
-
 ```
 
 ### Result

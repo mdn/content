@@ -4,7 +4,6 @@ slug: Web/API/PushSubscription/toJSON
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Push
   - Push API
@@ -15,7 +14,8 @@ tags:
   - toJSON
 browser-compat: api.PushSubscription.toJSON
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+
+{{APIRef("Push API")}}
 
 The `toJSON()` method of the {{domxref("PushSubscription")}} interface is a
 standard serializer: it returns a JSON representation of the subscription properties,
@@ -23,7 +23,7 @@ providing a useful shortcut.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

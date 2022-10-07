@@ -6,9 +6,10 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
-In contrast to the macros listed in [Commonly-used macros](/en-US/docs/MDN/Structures/Macros/Commonly-used_macros), the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.
+In contrast to the macros listed in [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.
 
 ## Special contexts
 
@@ -29,7 +30,7 @@ We have an assortment of macros that can be used to automatically generate the c
 
 ### Quicklinks
 
-We have one macro specifically designed to create [quicklinks](/en-US/docs/MDN/Structures/Quicklinks):
+We have one macro specifically designed to create [quicklinks](/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks):
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.
 

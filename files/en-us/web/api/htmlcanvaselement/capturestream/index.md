@@ -4,7 +4,6 @@ slug: Web/API/HTMLCanvasElement/captureStream
 page-type: web-api-instance-method
 tags:
   - Canvas
-  - Experimental
   - Frame Capture
   - HTMLCanvasElement
   - Interface
@@ -16,6 +15,7 @@ tags:
   - captureStream
 browser-compat: api.HTMLCanvasElement.captureStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("HTMLCanvasElement")}} **`captureStream()`** method returns a {{domxref("MediaStream")}}
@@ -23,7 +23,7 @@ which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-
 
 ## Syntax
 
-```js
+```js-nolint
 captureStream(frameRate)
 ```
 
@@ -45,6 +45,7 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
+
   - : Thrown if the value of `frameRate` is negative.
 
 - `SecurityError` {{domxref("DOMException")}}

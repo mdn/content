@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.initEvent
 ---
+
 {{ ApiRef("DOM") }}{{deprecated_header}}
 
 The **`Event.initEvent()`** method is used to initialize the
@@ -25,19 +26,19 @@ Once dispatched, it doesn't do anything anymore.
 
 ## Syntax
 
-```js
-event.initEvent(type, bubbles, cancelable);
+```js-nolint
+event.initEvent(type, bubbles, cancelable)
 ```
 
 ### Parameters
 
-- _`type`_
+- `type`
   - : A string defining the type of event.
-- _`bubbles`_
+- `bubbles`
   - : A boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.
-- _`cancelable`_
+- `cancelable`
   - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
 

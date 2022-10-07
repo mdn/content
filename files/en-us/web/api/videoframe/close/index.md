@@ -8,15 +8,17 @@ tags:
   - Reference
   - close
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.close
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`close()`** method of the {{domxref("VideoFrame")}} interface clears all states and releases the reference to the media resource.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

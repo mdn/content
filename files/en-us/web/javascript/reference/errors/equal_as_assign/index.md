@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "test for equality (==) mistyped as assignment (=)?" occurs when
@@ -58,7 +59,7 @@ Otherwise, you probably meant to use a comparison operator (e.g. `==` or
 `===`):
 
 ```js
-if (x == y) {
+if (x === y) {
   // do the right thing
 }
 ```

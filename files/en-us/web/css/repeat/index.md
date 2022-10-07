@@ -1,6 +1,7 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: css.properties.grid-template-columns.repeat
 ---
+
 {{CSSRef}}
 
 The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
@@ -52,8 +54,6 @@ repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ```
 
-## Syntax
-
 The `repeat()` function takes two arguments:
 
 - **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.
@@ -75,8 +75,9 @@ Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `
 
 ```css example-bad
 .wrapper {
-  grid-template-columns:  repeat(auto-fill, 10px)
-                          repeat(2, minmax(min-content, max-content));
+  grid-template-columns:
+    repeat(auto-fill, 10px)
+    repeat(2, minmax(min-content, max-content));
 }
 ```
 
@@ -113,11 +114,13 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `auto-fill`
   - : If the grid container has a definite or maximal size in the relevant axis, then the number of repetitions is the largest possible positive integer that does not cause the grid to overflow its grid container. Treating each track as its maximal track sizing function (each independent value used to define `grid-template-rows` or `grid-template-columns`), if that is definite. Otherwise, as its minimum track sizing function, and taking grid-gap into account. If any number of repetitions would overflow, then the repetition is `1`. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.
 - `auto-fit`
+
   - : Behaves the same as `auto-fill`, except that after placing the grid items any empty repeated tracks are collapsed. An empty track is one with no in-flow grid items placed into or spanning across it. (This can result in all tracks being collapsed, if they're all empty.)
 
     A collapsed track is treated as having a single fixed track sizing function of `0px`, and the gutters on either side of it collapse.
 
     For the purpose of finding the number of auto-repeated tracks, the user agent floors the track size to a user agent specified value (e.g., `1px`), to avoid division by zero.
+
 - `max-content`
   - : Represents the largest max-content contribution of the grid items occupying the grid track.
 - `min-content`
@@ -131,21 +134,11 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 
 ```html
 <div id="container">
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    Inflexible item of 100 pixels width.
-  </div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>Inflexible item of 100 pixels width.</div>
 </div>
 ```
 

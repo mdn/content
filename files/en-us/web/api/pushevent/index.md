@@ -14,7 +14,8 @@ tags:
   - Workers
 browser-compat: api.PushEvent
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}
 
 The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) represents a push message that has been received. This event is sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref("ServiceWorker")}}. It contains the information sent from an application server to a {{domxref("PushSubscription")}}.
 
@@ -29,7 +30,7 @@ The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) re
 
 _Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
 
-- {{domxref("PushEvent.data")}} {{readonlyinline}}
+- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
 ## Methods

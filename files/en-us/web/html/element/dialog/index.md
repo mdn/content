@@ -81,17 +81,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("open")}}
   - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
-      It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute.
+    It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute.
 
 ## Accessibility considerations
 
 To ensure accessibility for users of Safari versions below 15.4, consider using a polyfill such as [a11y-dialog](https://a11y-dialog.netlify.app/) as earlier implementations of the `<dialog>` element had [usability issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html).
 
-When implementing a dialog, it is important to consider the most appropriate place to set user focus. Explicitly indicating the initial focus placement by use of the [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set to the element deemed the best initial focus placement for any particular dialog.  When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, then if necessary authors may decide focusing the `<dialog>` element itself would provide the best initial focus placement.
+When implementing a dialog, it is important to consider the most appropriate place to set user focus. Explicitly indicating the initial focus placement by use of the [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set to the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, then if necessary authors may decide focusing the `<dialog>` element itself would provide the best initial focus placement.
 
-Ensure a mechanism is provided to allow users to close a dialog. The most robust way to ensure all users can close a dialog is to include an explicit button to do so. For instance, a confirmation, cancel or close button as appropriate. Additionally, for those using a device with a keyboard, the <kbd>Escape</kbd> key is commonly expected to close modal dialogs as well. By default, a `<dialog>` invoked by the `showModal()` method will allow for its dismissal by the <kbd>Escape</kbd>.  A non-modal dialog does not dismiss via the <kbd>Escape</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. If multiple modal dialogs are open, <kbd>Escape</kbd> should only close the last shown dialog.
+Ensure a mechanism is provided to allow users to close a dialog. The most robust way to ensure all users can close a dialog is to include an explicit button to do so. For instance, a confirmation, cancel or close button as appropriate. Additionally, for those using a device with a keyboard, the <kbd>Escape</kbd> key is commonly expected to close modal dialogs as well. By default, a `<dialog>` invoked by the `showModal()` method will allow for its dismissal by the <kbd>Escape</kbd>. A non-modal dialog does not dismiss via the <kbd>Escape</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. If multiple modal dialogs are open, <kbd>Escape</kbd> should only close the last shown dialog.
 
-The `<dialog>` element is exposed by browsers similarly to custom dialogs using the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method will have an implicit [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), where as `<dialog>` elements invoked by the `show()` method, or rendered by use of the `open` attribute or changing the default `display` of a `<dialog>` will be exposed as `[aria-modal="false"]`.  It is recommended to use the appropriate `showModal()` or `show()` method to render dialogs.
+The `<dialog>` element is exposed by browsers similarly to custom dialogs using the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method will have an implicit [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), where as `<dialog>` elements invoked by the `show()` method, or rendered by use of the `open` attribute or changing the default `display` of a `<dialog>` will be exposed as `[aria-modal="false"]`. It is recommended to use the appropriate `showModal()` or `show()` method to render dialogs.
 
 Ensure your dialog implementation doesn't break expected default behaviors and follows proper labeling recommendations.
 
@@ -125,14 +125,16 @@ This example opens a modal dialog that contains a form, when the "Update details
 <!-- Simple modal dialog containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <p><label>Favorite animal:
-      <select>
-        <option value="default">Choose…</option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select>
-    </label></p>
+    <p>
+      <label>Favorite animal:
+        <select>
+          <option value="default">Choose…</option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </label>
+    </p>
     <div>
       <button value="cancel">Cancel</button>
       <button id="confirmBtn" value="default">Confirm</button>
@@ -177,7 +179,7 @@ selectEl.addEventListener('change', (e) => {
 });
 // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
 favDialog.addEventListener('close', () => {
-  outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
+  outputBox.value = `${favDialog.returnValue} button clicked - ${(new Date()).toString()}`;
 });
 ```
 

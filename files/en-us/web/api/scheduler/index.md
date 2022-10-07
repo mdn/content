@@ -6,10 +6,10 @@ tags:
   - Interface
   - Reference
   - Scheduler
-  - Experimental
 browser-compat: api.Scheduler
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`Scheduler`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides the {{domxref('Scheduler.postTask()')}} method that can be used for adding prioritized tasks to be scheduled.
 

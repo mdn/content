@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSPseudoElement
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CSSPseudoElement`** interface represents a pseudo-element that may be the target of an event or animated using the {{DOMxRef('Web Animations API', '', '', 'true')}}. Instances of this interface may be obtained by calling {{DOMxRef('Element.pseudo()')}}.
@@ -19,9 +20,9 @@ The **`CSSPseudoElement`** interface represents a pseudo-element that may be the
 
 ## Properties
 
-- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{readOnlyInline}}
+- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
-- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{readOnlyInline}}
+- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the pseudo-element selector as a string.
 
 ## Methods

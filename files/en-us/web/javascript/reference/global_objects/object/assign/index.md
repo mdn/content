@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.assign
 ---
+
 {{JSRef}}
 
 The **`Object.assign()`** method
@@ -22,7 +23,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.assign(target, ...sources)
 ```
 
@@ -101,10 +102,10 @@ console.log(obj2); // { a: 2, b: { c: 3 } }
 
 // Deep Clone
 const obj3 = { a: 0, b: { c: 0 } };
-const obj4 = JSON.parse(JSON.stringify(obj1));
+const obj4 = JSON.parse(JSON.stringify(obj3));
 obj3.a = 4;
 obj3.b.c = 4;
-console.log(obj3); // { a: 0, b: { c: 0 } }
+console.log(obj4); // { a: 0, b: { c: 0 } }
 ```
 
 ### Merging objects

@@ -1,6 +1,7 @@
 ---
 title: appearance
 slug: Web/CSS/appearance
+page-type: css-property
 tags:
   - '-moz-appearance'
   - '-webkit-appearance'
@@ -12,6 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.appearance
 ---
+
 {{CSSRef}}
 
 The **`appearance`** CSS property is used to control native appearance of UI controls, that are based on operating system's theme.
@@ -263,9 +265,9 @@ The following values may be operational on historical browser versions using **`
 
 ```css
 .exampleone {
--webkit-appearance: menulist-button;
-   -moz-appearance: menulist-button;
-        appearance: menulist-button;
+  -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-button;
+  appearance: menulist-button;
 }
 ```
 
@@ -307,5 +309,4 @@ The following values may be operational on historical browser versions using **`
 
 ## See also
 
-- [Definition of `appearance` in CSS 3 Basic User Interface](https://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidate Recommendation from 2004-05-11).
-- [Dropped CSS3 features from the UI spec.4](https://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [Definition of `appearance` in CSS Basic User Interface Module Level 4](https://drafts.csswg.org/css-ui/#appearance-switching)

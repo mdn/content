@@ -1,6 +1,7 @@
 ---
 title: Media queries
 slug: Web/CSS/Media_Queries
+page-type: css-module
 tags:
   - CSS
   - Guide
@@ -12,11 +13,12 @@ spec-urls:
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/css-conditional/
 ---
+
 {{CSSRef}}
 
 **Media queries** let you adapt your site or app depending on the presence or value of various device characteristics and parameters.
 
-They are a key component of [responsive design](/en-US/docs/Web/Progressive_web_apps). For example, a media query can shrink the font size on small devices, increase the padding between paragraphs when a page is viewed in portrait mode, or bump up the size of buttons on touchscreens.
+They are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design). For example, a media query can shrink the font size on small devices, increase the padding between paragraphs when a page is viewed in portrait mode, or bump up the size of buttons on touchscreens.
 
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query. Use {{cssxref("@import")}} to conditionally apply an entire style sheet.
 
@@ -47,7 +49,7 @@ You can learn more about programmatically using media queries in [Testing media 
   - : Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - : Describes how to use media queries in your JavaScript code to determine the state of a device, and to set up listeners that notify your code when the results of media queries change (such as when the user rotates the screen or resizes the browser).
-- [Using Media Queries for Accessibility](/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+- [Using media queries for accessibility](/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
   - : Learn how Media Queries can help users understand your website better.
 
 ## Specifications

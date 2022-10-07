@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.try_catch
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`try...catch`** statement is comprised of a `try` block and either a `catch` block, a `finally` block, or both. The code in the `try` block is executed first, and if it throws an exception, the code in the `catch` block will be executed. The code in the `finally` block will always be executed before control flow exits the entire construct.
@@ -16,7 +17,7 @@ The **`try...catch`** statement is comprised of a `try` block and either a `catc
 
 ## Syntax
 
-```js
+```js-nolint
 try {
   tryStatements
 } catch (exceptionVar) {
@@ -37,7 +38,7 @@ try {
 
 ## Description
 
-The `try` statement always starts with a `try` block. Then, a `catch` block, a `finally` block, or both must be present. This gives us three forms for the `try` statement:
+The `try` statement always starts with a `try` block. Then, a `catch` block or a `finally` block must be present. It's also possible to have both `catch` and `finally` blocks. This gives us three forms for the `try` statement:
 
 - `try...catch`
 - `try...finally`
@@ -128,7 +129,7 @@ try {
 ### The exception identifier
 
 When an exception is thrown in the `try`-block,
-_`exception_var`_ (i.e., the `e` in `catch (e)`)
+`exception_var` (i.e., the `e` in `catch (e)`)
 holds the exception value. You can use this identifier to get information about the
 exception that was thrown. This identifier is only available in the
 `catch`-block's {{Glossary("Scope", "scope")}}. If you don't need the

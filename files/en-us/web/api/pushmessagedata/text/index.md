@@ -4,7 +4,6 @@ slug: Web/API/PushMessageData/text
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Plain text
   - Push
@@ -14,13 +13,14 @@ tags:
   - Text
 browser-compat: api.PushMessageData.text
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}
 
 The **`text()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as a plain text string.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

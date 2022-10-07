@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - CSP
-  - Experimental
   - HTTP
   - Property
   - Reference
@@ -14,7 +13,8 @@ tags:
   - columnNumber
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber
 ---
-{{HTTPSidebar}}"
+
+{{HTTPSidebar}}
 
 The **`columnNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the column number in the

@@ -22,6 +22,7 @@ tags:
   - augmented
 browser-compat: api.XRSessionEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRSessionEvent`** interface describes an event which indicates the change of the state of an {{domxref("XRSession")}}. These events occur, for example, when the session ends or the visibility of its context changes.

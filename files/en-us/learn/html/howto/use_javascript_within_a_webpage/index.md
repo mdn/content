@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - OpenPractices
 ---
+
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 
 <table>
@@ -54,9 +55,9 @@ You may also add JavaScript code between `<script>` tags rather than providing a
 
 ```html
 <script>
-window.addEventListener('load', function () {
-  console.log('This function is executed once the page is fully loaded');
-});
+  window.addEventListener("load", () => {
+    console.log("This function is executed once the page is fully loaded");
+  });
 </script>
 ```
 

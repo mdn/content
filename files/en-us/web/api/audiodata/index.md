@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.AudioData
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`AudioData`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) represents an audio sample.
@@ -28,7 +29,7 @@ An `AudioData` object contains a reference to an attached **media resource**. Th
 
 ### Planes and audio format
 
-To return the sample format of an `AudioData` use the {{domxref("AudioData.format")}} property. The format may be described as **interleaved** or **planar**. In interleaved formats, the audio samples from the different channels are laid out in a single buffer, described as a **plane**. This plane contains a number of elements equal to {{domxref("AudioData.numberOfFrames")}} * {{domxref("AudioData.numberOfChannels")}}.
+To return the sample format of an `AudioData` use the {{domxref("AudioData.format")}} property. The format may be described as **interleaved** or **planar**. In interleaved formats, the audio samples from the different channels are laid out in a single buffer, described as a **plane**. This plane contains a number of elements equal to {{domxref("AudioData.numberOfFrames")}} \* {{domxref("AudioData.numberOfChannels")}}.
 
 In planar format, the number of planes is equal to {{domxref("AudioData.numberOfChannels")}}, and each plane is a buffer containing a number of elements equal to {{domxref("AudioData.numberOfFrames")}}.
 

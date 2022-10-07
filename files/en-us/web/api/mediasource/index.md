@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Audio
-  - Experimental
   - Extensions
   - Interface
   - MSE
@@ -16,7 +15,8 @@ tags:
   - Video
 browser-compat: api.MediaSource
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API) represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.
 
@@ -29,11 +29,11 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 
 ## Properties
 
-- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
+- {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
-- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
-- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+- {{domxref("MediaSource.activeSourceBuffers")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
+- {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
@@ -69,7 +69,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 ## Examples
 
-The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
 const video = document.querySelector('video');
@@ -78,25 +78,25 @@ const assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+let mediaSource;
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  const mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
+  mediaSource = getMediaSource();
+  console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
 } else {
   console.error('Unsupported MIME type or codec: ', mimeCodec);
 }
 
-function sourceOpen (_) {
-  //console.log(this.readyState); // open
-  const mediaSource = this;
+function sourceOpen() {
+  console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener('updateend', () => {
       mediaSource.endOfStream();
       video.play();
-      //console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
@@ -107,7 +107,7 @@ function fetchAB (url, cb) {
   const xhr = new XMLHttpRequest;
   xhr.open('get', url);
   xhr.responseType = 'arraybuffer';
-  xhr.onload = function () {
+  xhr.onload = () => {
     cb(xhr.response);
   };
   xhr.send();

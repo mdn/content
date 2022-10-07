@@ -89,7 +89,7 @@ You can set a default value for the input by including a value inside the {{html
 
 ```html
 <label for="week">What week would you like to start?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('Value', 600, 60)}}
@@ -99,7 +99,7 @@ One thing to note is that the displayed format may differ from the actual `value
 You can also get and set the value in JavaScript using the input element's {{domxref("HTMLInputElement.value", "value")}} property, for example:
 
 ```js
-var weekControl = document.querySelector('input[type="week"]');
+const weekControl = document.querySelector('input[type="week"]');
 weekControl.value = '2017-W45';
 ```
 
@@ -150,7 +150,7 @@ The simplest use of `<input type="week">` involves a basic `<input>` and {{htmle
 ```html
 <form>
   <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week">
+  <input id="week" type="week" name="week" />
 </form>
 ```
 
@@ -175,8 +175,7 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 ```html
 <form>
   <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52">
+  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
   <span class="validity"></span>
 </form>
 ```
@@ -199,15 +198,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -224,12 +223,17 @@ Let's look at an example; here we've set minimum and maximum weeks, and also mad
 <form>
   <div>
     <label for="week">What week would you like to start?</label>
-    <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2017-W52"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -250,7 +254,7 @@ As mentioned above, the major problem with using week inputs right now is browse
 
 Mobile platforms such as Android and iOS make really good use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the `week` picker on Chrome for Android looks like this:
 
-![A modal popup. The header reads 'set week'. There are two columns: the left has 36 in the middle at full opacity, with 35 above it and  37 below being semi-opaque. On the right side, 2017 is fully opaque. There are no other options. Three text links or buttons on the bottom include 'clear' on the 'left' and 'cancel' and 'set' on the right.](week-chrome-android.png)
+![A modal popup. The header reads 'set week'. There are two columns: the left has 36 in the middle at full opacity, with 35 above it and 37 below being semi-opaque. On the right side, 2017 is fully opaque. There are no other options. Three text links or buttons on the bottom include 'clear' on the 'left' and 'cancel' and 'set' on the right.](week-chrome-android.png)
 
 Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
@@ -275,8 +279,13 @@ The HTML looks like so:
 <form>
   <div class="nativeWeekPicker">
     <label for="week">What week would you like to start?</label>
-    <input id="week" type="week" name="week"
-           min="2017-W01" max="2018-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2018-W52"
+      required />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">What week would you like to start?</p>
@@ -284,8 +293,7 @@ The HTML looks like so:
     <div>
       <span>
         <label for="week">Week:</label>
-        <select id="fallbackWeek" name="week">
-        </select>
+        <select id="fallbackWeek" name="week"></select>
       </span>
       <span>
         <label for="year">Year:</label>
@@ -315,15 +323,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -331,20 +339,20 @@ input:valid+span:after {
 The other part of the code that may be of interest is the feature detection code. To detect whether the browser supports `<input type="week">`, we create a new {{htmlelement("input")}} element, try setting its `type` to `week`, then immediately check what its `type` is set to. Non-supporting browsers will return `text`, because the `week` type falls back to type `text`. If `<input type="week">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}s) instead.
 
 ```js
-// define variables
-var nativePicker = document.querySelector('.nativeWeekPicker');
-var fallbackPicker = document.querySelector('.fallbackWeekPicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+// Get UI elements
+const nativePicker = document.querySelector('.nativeWeekPicker');
+const fallbackPicker = document.querySelector('.fallbackWeekPicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector('#year');
+const weekSelect = document.querySelector('#fallbackWeek');
 
-// hide fallback initially
+// Hide fallback initially
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
 
 try {
   test.type = 'week';
@@ -352,9 +360,9 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
+// If it does, run the code inside the if () {} block
+if ( test.type === 'text') {
+  // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
   fallbackLabel.style.display = 'block';
@@ -365,9 +373,9 @@ if(test.type === 'text') {
 
 function populateWeeks() {
   // Populate the week select with 52 weeks
-  for (var i = 1; i <= 52; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 1; i <= 52; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }

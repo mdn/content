@@ -12,7 +12,8 @@ tags:
   - escape()
 browser-compat: api.CSS.escape
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+
+{{APIRef("CSSOM")}}
 
 The **`CSS.escape()`** static method returns a
 string containing the escaped string passed as parameter, mostly for
@@ -20,7 +21,7 @@ use as part of a CSS selector.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 
@@ -31,7 +32,7 @@ escape(str)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The escaped string.
 
 ## Examples
 

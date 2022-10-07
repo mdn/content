@@ -6,6 +6,9 @@ tags:
   - Synthetic monitoring
   - Web Performance
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 **Synthetic monitoring** and **real user monitoring (RUM)** are two approaches for monitoring and providing insight into web performance. RUM and synthetic monitoring provide for different views of performance and have benefits, good use cases and shortfalls. RUM is generally best suited for understanding long-term trends whereas synthetic monitoring is very well suited to regression testing and mitigating shorter-term performance issues during development. In this article we define and compare these two performance monitoring approaches.
 
 ## Synthetic Monitoring
@@ -30,7 +33,7 @@ By leveraging RUM, a business can better understand its users and identify the a
 
 Synthetic is well suited for catching regressions during development life cycles, especially with {{glossary('network throttling')}}. It is fairly easy, inexpensive, and great for spot-checking performance during development as an effective way to measure the effect of code changes, but it doesn't reflect what real users are experiencing and provides only a narrow view of performance.
 
-RUM, on the other hand, provides real metrics from real users using the site or application.  While this is more expensive and likely less convenient, it provides vital user experience data.
+RUM, on the other hand, provides real metrics from real users using the site or application. While this is more expensive and likely less convenient, it provides vital user experience data.
 
 ## Performance APIs
 

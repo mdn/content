@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 There are a number of types of pages that are used repeatedly on MDN.
@@ -45,7 +46,13 @@ If the work is more significant, then you should consider a few factors when pri
 - How low quality is the information?
 - How popular is the feature? How sought after is the information?
 
-If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+
+## The page-type front matter key
+
+We have defined a front matter key `page-type` to clearly identify the type of MDN pages. The templates linked below indicate which `page-type` values you should set for each page type.
+
+For the complete list of page types see [The page-type front matter key](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key).
 
 ## API landing page
 
@@ -64,7 +71,7 @@ In such a case, it would make more sense in terms of repetition and findability 
 
 ### Templates
 
-- [API landing page template](/en-US/docs/MDN/Structures/Page_types/API_landing_page_template)
+- [API landing page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template)
 
 ## API reference page
 
@@ -80,7 +87,7 @@ It is more granular than an API landing page, which typically links to multiple 
 
 ### Templates
 
-- [API reference page template](/en-US/docs/MDN/Structures/Page_types/API_reference_page_template)
+- [API reference page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
 
 ## API reference subpage
 
@@ -96,10 +103,10 @@ It documents a single interface member in detail.
 
 ### Templates
 
-- [API method subpage template](/en-US/docs/MDN/Structures/Page_types/API_method_subpage_template)
-- [API property subpage template](/en-US/docs/MDN/Structures/Page_types/API_property_subpage_template)
-- [API constructor subpage template](/en-US/docs/MDN/Structures/Page_types/API_constructor_subpage_template)
-- [API event subpage template](/en-US/docs/MDN/Structures/Page_types/API_event_subpage_template)
+- [API method subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template)
+- [API property subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template)
+- [API constructor subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template)
+- [API event subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
 
 ## HTML element reference page
 
@@ -111,7 +118,7 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 
 ### Templates
 
-- [HTML element page template](/en-US/docs/MDN/Structures/Page_types/HTML_element_page_template)
+- [HTML element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
 
 ## SVG element reference page
 
@@ -123,7 +130,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 ### Templates
 
-- [SVG element page template](/en-US/docs/MDN/Structures/Page_types/SVG_element_page_template)
+- [SVG element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
 ## CSS feature reference page
 
@@ -137,8 +144,8 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 ### Templates
 
-- [CSS property page template](/en-US/docs/MDN/Structures/Page_types/CSS_property_page_template)
-- [CSS selector page template](/en-US/docs/MDN/Structures/Page_types/CSS_selector_page_template)
+- [CSS property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)
+- [CSS selector page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template)
 
 ## HTTP header reference page
 
@@ -151,7 +158,7 @@ It also provides examples, browser compatibility information, and other importan
 
 ### Templates
 
-- [HTTP header page template](/en-US/docs/MDN/Structures/Page_types/HTTP_header_page_template)
+- [HTTP header page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
 
 ## Conceptual page
 
@@ -170,7 +177,7 @@ An extended discussion of a topic might be spread across multiple conceptual pag
 A **glossary page** contains a brief explanation of a term, topic, or concept.
 The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences.
 This can be followed by links to further information in the **Learn more** section.
-If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) for more details.
+If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) for more details.
 
 ### Examples
 
@@ -180,7 +187,7 @@ If the page grows to more than a screenful or so, it's too long and should be co
 
 ### Templates
 
-- [Glossary page template](/en-US/docs/MDN/Structures/Page_types/Glossary_page_template)
+- [Glossary page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template)
 
 ## Landing page
 

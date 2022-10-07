@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean
 ---
+
 {{JSRef}}
 
 The **`Boolean`** object is an object wrapper for a boolean value.
@@ -64,7 +65,7 @@ if ([]) { console.log("[] is truthy")}         // logs "[] is truthy"
 if ([] == false) { console.log("[] == false")} // logs "[] == false"
 ```
 
-The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the *value* of `[]` to `false`. And to get the *value* of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and *that* is what's actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that's what explains the behavior in the example.
+The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the _value_ of `[]` to `false`. And to get the _value_ of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and _that_ is what's actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that's what explains the behavior in the example.
 
 ## Constructor
 

@@ -8,7 +8,8 @@ tags:
   - Status code
 browser-compat: http.status.425
 ---
-{{SeeCompatTable}}{{HTTPSidebar}}
+
+{{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`425 Too Early`**
 response status code indicates that the server is unwilling to risk processing a request

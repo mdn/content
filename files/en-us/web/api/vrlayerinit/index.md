@@ -13,6 +13,7 @@ tags:
   - Virtual Reality
   - WebVR
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 The **`VRLayerInit`** dictionary of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a content layer (an {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}) that you want to present in a VR display.
@@ -36,7 +37,7 @@ You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}
 // currently returns an empty array
 let layers = vrDisplay.getLayers();
 
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {

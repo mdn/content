@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
@@ -25,9 +26,9 @@ Some common built-in browser functions that cause problems are:
 | `getElementsByClassName()` | `getElementByClassName()` |
 | `getElementById()`         | `getElementsById()`       |
 
-### Semi-colon position
+### Semicolon position
 
-You need to make sure you don't place any semi-colons incorrectly. For example:
+You need to make sure you don't place any semicolons incorrectly. For example:
 
 | Correct                     | Wrong                       |
 | --------------------------- | --------------------------- |
@@ -41,8 +42,8 @@ One of the most common errors is to declare the function, but not call it anywhe
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 This code won't do anything unless you call it with the following statement:
@@ -73,9 +74,9 @@ With [Objects](/en-US/docs/Learn/JavaScript/Objects), however, you need to take 
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## Basic definitions
@@ -85,9 +86,6 @@ const myObject = {
 - [What are strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings)
 - [What is an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array)
 - [What is a loop?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-
-<!---->
-
 - [What is a function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
 - [What is an event?](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [What is an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#object_basics)

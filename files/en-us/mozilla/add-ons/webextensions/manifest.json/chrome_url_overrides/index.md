@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.chrome_url_overrides
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

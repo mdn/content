@@ -13,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSTranslate.x
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`x`** property of the

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Window.name
 ---
+
 {{APIRef}}
 
 The `Window.name` property
@@ -46,10 +47,9 @@ is the recommended mechanism.
 
 ```html
 <script>
-    // Open a tab with a specific browsing context name
-    const otherTab = window.open("url1", "_blank");
-    if (otherTab)
-        otherTab.name = "other-tab";
+  // Open a tab with a specific browsing context name
+  const otherTab = window.open("url1", "_blank");
+  if (otherTab) otherTab.name = "other-tab";
 </script>
 <a href="url2" target="other-tab">This link will be opened in the other tab.</a>
 ```

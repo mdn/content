@@ -1,6 +1,7 @@
 ---
-title: ':out-of-range'
+title: ":out-of-range"
 slug: Web/CSS/:out-of-range
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -11,17 +12,12 @@ tags:
   - UI Selector
 browser-compat: css.selectors.out-of-range
 ---
+
 {{CSSRef}}
 
 The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
 
-```css
-/* Selects any <input>, but only when it has a range
-   specified, and its value is outside that range */
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-out-of-range.html", "tabbed-shorter")}}
 
 This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
 
@@ -39,10 +35,17 @@ This pseudo-class is useful for giving the user a visual indication that a field
 
 ```html
 <form action="" id="form1">
- <p>Values between 1 and 10 are valid.</p>
+  <p>Values between 1 and 10 are valid.</p>
   <ul>
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 to 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="value1">Your value is </label>
     </li>
   </ul>
@@ -71,11 +74,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'okay.';
+  content: "okay.";
 }
 
 input:out-of-range + label::after {
-  content: 'out of range!';
+  content: "out of range!";
 }
 ```
 

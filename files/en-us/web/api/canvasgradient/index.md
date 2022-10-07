@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasGradient
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`CanvasGradient`** interface represents an [opaque object](https://en.wikipedia.org/wiki/Opaque_data_type) describing a gradient. It is returned by the methods {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}, {{domxref("CanvasRenderingContext2D.createConicGradient()")}} or {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}.

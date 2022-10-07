@@ -13,6 +13,7 @@ tags:
   - web console
 browser-compat: api.console.groupCollapsed
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.groupCollapsed()`** method creates a new inline group in the Web Console. Unlike {{domxref("console.group()")}},
@@ -28,7 +29,7 @@ examples.
 
 ## Syntax
 
-```js
+```js-nolint
 groupCollapsed()
 groupCollapsed(label)
 ```

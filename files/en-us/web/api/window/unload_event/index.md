@@ -1,5 +1,5 @@
 ---
-title: 'Window: unload event'
+title: "Window: unload event"
 slug: Web/API/Window/unload_event
 page-type: web-api-event
 tags:
@@ -9,6 +9,7 @@ tags:
   - events
 browser-compat: api.Window.unload_event
 ---
+
 {{APIRef}}
 
 > **Warning:** Developers should avoid using this event. See "Usage notes" below.
@@ -72,15 +73,16 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>Parent Frame</title>
     <script>
-      window.addEventListener('beforeunload', (event) => {
-        console.log('I am the 1st one.');
+      window.addEventListener("beforeunload", (event) => {
+        console.log("I am the 1st one.");
       });
-      window.addEventListener('unload', (event) => {
-        console.log('I am the 3rd one.');
+      window.addEventListener("unload", (event) => {
+        console.log("I am the 3rd one.");
       });
     </script>
   </head>
@@ -94,20 +96,21 @@ Below, the content of `child-frame.html`:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>Child Frame</title>
     <script>
-      window.addEventListener('beforeunload', (event) => {
-        console.log('I am the 2nd one.');
+      window.addEventListener("beforeunload", (event) => {
+        console.log("I am the 2nd one.");
       });
-      window.addEventListener('unload', (event) => {
-        console.log('I am the 4th and last one…');
+      window.addEventListener("unload", (event) => {
+        console.log("I am the 4th and last one…");
       });
     </script>
   </head>
   <body>
-      ☻
+    ☻
   </body>
 </html>
 ```

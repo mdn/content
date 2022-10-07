@@ -1,6 +1,7 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function
 ---
+
 {{CSSRef}}
 
 The **`<transform-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a transformation that affects an element's appearance. Transformation [functions](/en-US/docs/Web/CSS/CSS_Functions) can rotate, resize, distort, or move an element in 2D or 3D space. It is used in the {{cssxref("transform")}} property.
@@ -86,7 +88,7 @@ Various coordinate models can be used to describe an HTML element's size and sha
 
 In the Cartesian coordinate system, a two-dimensional point is described using two values: an x coordinate (abscissa) and a y coordinate (ordinate). This is represented by the vector notation `(x, y)`.
 
-![](coord_in_r2.png)
+![A cartesian plane showing the negative Y and positive X axis starting from origin with three points P1, P2 and P3 with corresponding X and Y values](coord_in_r2.png)
 
 In CSS (and most computer graphics), the origin `(0, 0)` represents the _top-left_ corner of any element. Positive coordinates are down and to the right of the origin, while negative ones are up and to the left. Thus, a point that's 2 units to the right and 5 units down would be `(2, 5)`, while a point 3 units to the left and 12 units up would be `(-3, -12)`.
 
@@ -192,32 +194,32 @@ main {
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
