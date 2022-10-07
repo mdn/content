@@ -10,7 +10,7 @@ tags:
 
 This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
 
-> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, documentation is focused on a subset of the language that is relevant for browsers. See the [MathML Full](https://w3c.github.io/mathml/) specification if you want details about other MathML elements.
+> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification. However, legacy features that are still implemented by some browsers are also documented. You can find further details for these and other features in [MathML 4](https://w3c.github.io/mathml/).
 
 ## MathML elements A to Z
 

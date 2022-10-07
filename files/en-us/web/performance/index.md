@@ -1,5 +1,5 @@
 ---
-title: Web Performance
+title: Web performance
 slug: Web/Performance
 tags:
   - API
