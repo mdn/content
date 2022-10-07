@@ -15,7 +15,7 @@ browser-compat: css.at-rules.scroll-timeline
 {{CSSRef}}{{Deprecated_header}}
 
 > **Warning:** This non-standard feature was added/removed from a draft specification.
-> It has been replaced by [scroll-timeline](/en-US/docs/Web/CSS/scroll-timeline)
+> It has been replaced by [scroll-timeline](/en-US/docs/Web/CSS/scroll-timeline).
 
 The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an [`AnimationTimeline`](/en-US/docs/Web/API/AnimationTimeline) whose time values are determined by scrolling progress within a scroll container and not by minutes or seconds. Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
 

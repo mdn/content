@@ -122,7 +122,7 @@ The CSS below defines a square that rotates in alternate directions according to
 }
 ```
 
-The "stretcher" CSS simply sets the block height to 600px, which forces container element to overflow and create scroll bars.
+The "stretcher" CSS simply sets the block height to 600px, which forces the container element to overflow and create scroll bars.
 Without this element there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
 
 ```css
