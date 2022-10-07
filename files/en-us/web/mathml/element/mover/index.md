@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mover
 
 {{MathMLRef}}
 
-The MathML `<mover>` element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
+The **`<mover>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
 
 ## Attributes
 
