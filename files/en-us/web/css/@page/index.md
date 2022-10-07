@@ -103,7 +103,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | border                |
 | counter properties    | counter-reset         |
 |                       | counter-increment     |
-| color                 |                       |
+| color                 |     color                  |
 | font properties       | font-family           |
 |                       | font-size             |
 |                       | font-style            |
