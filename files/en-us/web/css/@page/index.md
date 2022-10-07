@@ -213,6 +213,7 @@ Other margin-at rules include:
 ```
 
 #### page-margin properties
+The page-margin properties are the set of CSS properties can be set in any individual margin at-rule. They include:
 
 | Feature     | CSS properties             |
 | --------------------- | --------------------- |
