@@ -340,8 +340,12 @@ async function fetchProducts() {
   }
 }
 
-const promise = fetchProducts();
+let promise = fetchProducts();
 promise.then((data) => console.log(data[0].name));
+
+// or if within an async function or a Javascript module, you can replace the above two lines with the following:
+promise = await fetchProducts();
+console.log(promise[0].name);
 ```
 
 Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
