@@ -238,8 +238,8 @@ Other margin-at rules include:
 |                       | border                |
 | counter properties    | counter-reset         |
 |                       | counter-increment     |
-| content               |                       |
-| color                 |                       |
+| content               |         content              |
+| color                 |        color               |
 | font properties       | font-family           |
 |                       | font-size             |
 |                       | font-style            |
