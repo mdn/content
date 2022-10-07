@@ -14,7 +14,7 @@ browser-compat: css.at-rules.page
 
 {{CSSRef}}
 
-The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a printed page property. It targets and modifies the page’s dimensions, page orientation, and margins. The **`@page`** at-rule can be used to target all pages in a print-out, or even specific ones using its various pseudo-classes.
+The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a printed page property. It targets and modifies the page's dimensions, page orientation, and margins. The **`@page`** at-rule can be used to target all pages in a print-out, or even specific ones using its various pseudo-classes.
 
 ## Syntax
 
