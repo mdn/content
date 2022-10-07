@@ -307,7 +307,7 @@ These are some of the common types of audio filter you can apply:
 - High Shelf: Allows all frequencies through, but adds a boost (or attenuation) to the higher frequencies.
 - Peaking: Allows all frequencies through, but adds a boost (or attenuation) to a range of frequencies.
 - Notch: Allows all frequencies through, except for a set of frequencies.
-- Allpass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
+- All Pass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
 
 > **Note:** See {{domxref("BiquadFilterNode")}} for more information.
 
