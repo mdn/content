@@ -81,6 +81,8 @@ its `this` value. The `this` value ultimately observable by
 
 The `map()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this`.
 
+The `map()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 The range of elements processed by `map` is set before the first invocation
 of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes
 outside the range, will not be visited by `callbackFn`.
@@ -146,18 +148,22 @@ const doubles = numbers.map((num) => num * 2);
 // numbers is still [1, 4, 9]
 ```
 
-### Using map generically
+### Calling map() on non-array objects
 
-This example shows how to use map on a {{jsxref("String")}} to get an array of numbers representing the string's characters in UTF-16 code units:
+The `map()` method reads the `length` property of `this` and then accesses each integer index.
 
 ```js
-const map = Array.prototype.map;
-const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
-
-// charCodes now equals [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
+// [ 4, 9, 16 ]
 ```
 
-### Using map generically querySelectorAll
+### Using map() generically on a NodeList
 
 This example shows how to iterate through a collection of objects collected by
 `querySelectorAll`. This is because `querySelectorAll` returns a

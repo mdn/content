@@ -43,12 +43,13 @@ A new {{jsxref("Array")}} instance.
 
 ## Description
 
-The `concat` method creates a new array. The array will first be populated by the elements in the
-object on which it is called. Then, for each argument, its value will be concatenated into the array — for normal objects or primitives, the argument itself will become an element of the final array; for arrays or array-like objects with the property [`Symbol.isConcatSpreadable`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) set to a truthy value, each element of the argument will be independently added to the final array. The `concat` method does not recurse into nested array arguments.
+The `concat` method creates a new array. The array will first be populated by the elements in the object on which it is called. Then, for each argument, its value will be concatenated into the array — for normal objects or primitives, the argument itself will become an element of the final array; for arrays or array-like objects with the property [`Symbol.isConcatSpreadable`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) set to a truthy value, each element of the argument will be independently added to the final array. The `concat` method does not recurse into nested array arguments.
 
 The `concat()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` or any of the arrays provided as arguments but instead returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) that contains the same elements as the ones from the original arrays.
 
 The `concat()` method preserves empty slots if any of the source arrays is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
+The `concat()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). The `this` value is treated in the same way as the other arguments (except it will be converted to an object first), which means plain objects will be directly prepended to the resulting array, while array-like objects with truthy `@@isConcatSpreadable` will be spread into the resulting array.
 
 ## Examples
 
@@ -131,6 +132,17 @@ If any of the source arrays is sparse, the resulting array will also be sparse:
 ```js
 console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
 console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 6]
+```
+
+### Calling concat() on non-array objects
+
+If the `this` value is not an array, it is converted to an object and then treated in the same way as the arguments for `concat()`. In this case the return value is always a plain new array.
+
+```js
+console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
+console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
+const arrayLike = { [Symbol.isConcatSpreadable]: true, length: 2, 0: 1, 1: 2 };
+console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ```
 
 ## Specifications

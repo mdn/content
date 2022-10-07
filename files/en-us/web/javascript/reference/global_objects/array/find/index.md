@@ -91,6 +91,8 @@ Therefore:
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
+The `find()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Find an object in an array by one of its properties
@@ -181,6 +183,22 @@ array.find((value, index) => {
 // Visited index 4 with value undefined
 // Visited index 5 with value undefined
 // Visited index 6 with value 6
+```
+
+### Calling find() on non-array objects
+
+The `find()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)),
+); // 7.3
 ```
 
 ## Specifications
