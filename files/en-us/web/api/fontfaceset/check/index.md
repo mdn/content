@@ -35,7 +35,7 @@ check(font, text)
 
 A {{jsxref("Boolean")}} value that is `true` if the font list is available.
 
-The method returns `true` if the font list contains system or non-existing fonts. This prevents user tracking by locally installed fonts.
+The method returns `true` if the font list contains system or nonexistent fonts. This prevents websites from identifying users by the fonts they have installed.
 
 ## Examples
 
