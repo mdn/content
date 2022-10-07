@@ -97,7 +97,7 @@ The following CSS is used to style the elements above:
 ### Color scheme inheritance
 
 The following example shows how to use `prefers-color-scheme` with the `color-scheme` property inherited from a parent element.
-A script is used to specify the source of the image elements, this would normally be done in HTML as `<img src="circle.svg" />`.
+A script is used to specify the source of the image elements, this would normally be done in HTML as `<img src="circle.svg" alt="circle" />`.
 
 On browsers that support this feature (such as Firefox), you should see three circles, with one drawn in a different color.
 The first circle inherits the `color-scheme` from the browser or OS and can be toggled using this page's theme switcher.
