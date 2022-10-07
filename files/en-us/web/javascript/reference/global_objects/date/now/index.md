@@ -26,7 +26,7 @@ Date.now()
 
 ### Return value
 
-A {{jsxref("Number")}} representing the milliseconds elapsed since the UNIX epoch.
+A number representing the milliseconds elapsed since the ECMAScript epoch.
 
 ## Examples
 
