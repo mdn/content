@@ -227,7 +227,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
    />
    ```
 
-2. Next we'll add a function to remove a to-do from our `todos` array. At the bottom of the `Todos.svelte`'s `<script>` section, add the `removeTodo()` function like so:
+2. Next we'll add a function to remove a to-do from our `todos` array. At the bottom of the `<script>` section of `Todos.svelte`, add the `removeTodo()` function like so:
 
    ```js
    function removeTodo(todo) {

@@ -148,7 +148,7 @@ We'll begin by creating our `FilterButton.svelte`.
    import FilterButton from './FilterButton.svelte'
    ```
 
-4. Now replace the `filters`'s `<div>` with a call to the `FilterButton` component, which takes the current filter as a prop. The below line is all you need:
+4. Now replace the `<div class="filters...` element with a call to the `FilterButton` component, which takes the current filter as a prop. The below line is all you need:
 
    ```html
    <FilterButton {filter} />
@@ -204,7 +204,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
    As usual, Svelte provides us with a nice shorthand: `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
 
-2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify your `FilterButton`'s `<script>` like this:
+2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify the `<script>` element of your  `FilterButton` like this:
 
    ```html
    <script>

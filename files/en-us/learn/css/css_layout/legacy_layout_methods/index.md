@@ -551,7 +551,7 @@ You can take a look in the skeleton.css file to see the CSS that is used when we
 }
 ```
 
-Elements can only be part of the grid if they are inside a row, so as with our earlier example we need an additional `<div>` or other element with a class of `row` nested between the `content`'s `<div>` and our actual content container `<div>`s. We've done this already as well.
+Elements can only be part of the grid if they are inside a row, so as with our earlier example we need an additional `<div>` or other element with a class of `row` nested between the content `<div>` elements and the container `<div>`. We've done this already as well.
 
 Now let's lay out the container boxes. Skeleton is based on a 12 column grid. The top line boxes all need classes of `one column` to make them span one column.
 

@@ -148,7 +148,7 @@ When a user clicks the **Cancel** button, `editable` toggles to `false`, which r
 When `editable` is `false`, Angular puts `<div>` with the **Edit** and **Delete** buttons back in the DOM.
 
 Clicking the **Save** button calls the `saveItem()` method.
-The `saveItem()` method takes the value from the `#editedItem`'s `<input>` and changes the item's `description` to `editedItem.value` string.
+The `saveItem()` method takes the value from the `#editedItem` element and changes the item's `description` to `editedItem.value` string.
 
 ## Prepare the AppComponent
 
