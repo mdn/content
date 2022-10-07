@@ -141,7 +141,7 @@ You'll find more about this in the [Basic native form controls](/en-US/docs/Lear
 Last but not least, note the syntax of `<input>` vs. `<textarea></textarea>`.
 This is one of the oddities of HTML.
 The `<input>` tag is a {{glossary("void element")}}, meaning that it doesn't need a closing tag.
-{{HTMLElement("textarea")}} is not an void element, meaning it should be closed with the proper ending tag.
+{{HTMLElement("textarea")}} is not a void element, meaning it should be closed with the proper ending tag.
 This has an impact on a specific feature of forms: the way you define the default value.
 To define the default value of an {{HTMLElement("input")}} element you have to use the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute like this:
 
