@@ -72,8 +72,9 @@ and `<pseudo-selector>` represents these pseudo-classes:
 
 ### page-properties
 
-| bidi properties       | direction             |
+| Feature     | CSS properties             |
 | --------------------- | --------------------- |
+| bidi properties       | direction             |
 | background properties | background-color      |
 |                       | background-image      |
 |                       | background-repeat     |
