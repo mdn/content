@@ -24,7 +24,7 @@ Proxy.revocable(target, handler)
 - `target`
   - : A target object to wrap with `Proxy`. It can be any sort of object, including a native array, a function, or even another proxy.
 - `handler`
-  - : An object whose properties are functions define the behavior of `proxy` when an operation is performed on it.
+  - : An object whose properties are functions defining the behavior of `proxy` when an operation is performed on it.
 
 ### Return value
 
