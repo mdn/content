@@ -116,7 +116,7 @@ canvasCtx.beginPath();
 Determine the width of each segment of the line to be drawn by dividing the canvas width by the array length (equal to the FrequencyBinCount, as defined earlier on), then define an x variable to define the position to move to for drawing each segment of the line.
 
 ```js
-const sliceWidth = (WIDTH * 1.0) / bufferLength;
+const sliceWidth = WIDTH / bufferLength;
 let x = 0;
 ```
 
