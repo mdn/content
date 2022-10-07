@@ -38,47 +38,47 @@ Functions can take multiple arguments, which are formatted similarly to CSS prop
 These functions are used when the {{cssxref("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) is used as a value of {{cssxref("transform")}}.
 
 - {{cssxref("transform-function/matrix", "matrix()")}}
-  - : Describes a homogeneous 2D transformation matrix.
+  - : A transform function that describes a homogeneous 2D transformation matrix.
 - {{cssxref("transform-function/matrix3d", "matrix3d()")}}
-  - : Describes a 3D transformation as a 4×4 homogeneous matrix.
+  - : A transform function that describes a 3D transformation as a 4×4 homogeneous matrix.
 - {{cssxref("transform-function/perspective", "perspective()")}}
-  - : Sets the distance between the user and the z=0 plane.
+  - : A transform function that sets the distance between the user and the z=0 plane.
 - {{cssxref("transform-function/rotate", "rotate()")}}
-  - : Rotates an element around a fixed point on the 2D plane.
+  - : A transform function that rotates an element around a fixed point on the 2D plane.
 - {{cssxref("transform-function/rotate3d", "rotate3d()")}}
-  - : Rotates an element around a fixed axis in 3D space.
+  - : A transform function that rotates an element around a fixed axis in 3D space.
 - {{cssxref("transform-function/rotateX", "rotateX()")}}
-  - : Rotates an element around the horizontal axis.
+  - : A transform function that rotates an element around the horizontal axis.
 - {{cssxref("transform-function/rotateY", "rotateY()")}}
-  - : Rotates an element around the vertical axis.
+  - : A transform function that rotates an element around the vertical axis.
 - {{cssxref("transform-function/rotateZ", "rotateZ()")}}
-  - : Rotates an element around the z-axis.
+  - : A transform function that rotates an element around the z-axis.
 - {{cssxref("transform-function/scale", "scale()")}}
-  - : Scales an element up or down on the 2D plane.
+  - : A transform function that scales an element up or down on the 2D plane.
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
-  - : Scales an element up or down in 3D space.
+  - : A transform function that scales an element up or down in 3D space.
 - {{cssxref("transform-function/scaleX", "scaleX()")}}
-  - : Scales an element up or down horizontally.
+  - : A transform function that scales an element up or down horizontally.
 - {{cssxref("transform-function/scaleY", "scaleY()")}}
-  - : Scales an element up or down vertically.
+  - : A transform function that scales an element up or down vertically.
 - {{cssxref("transform-function/scaleZ", "scaleZ()")}}
-  - : Scales an element up or down along the z-axis.
+  - : A transform function that scales an element up or down along the z-axis.
 - {{cssxref("transform-function/skew", "skew()")}}
-  - : Skews an element on the 2D plane.
+  - : A transform function that skews an element on the 2D plane.
 - {{cssxref("transform-function/skewX", "skewX()")}}
-  - : Skews an element in the horizontal direction.
+  - : A transform function that skews an element in the horizontal direction.
 - {{cssxref("transform-function/skewY", "skewY()")}}
-  - : Skews an element in the vertical direction.
+  - : A transform function that skews an element in the vertical direction.
 - {{cssxref("transform-function/translate", "translate()")}}
-  - : Translates an element on the 2D plane.
+  - : A transform function that translates an element on the 2D plane.
 - {{cssxref("transform-function/translate3d", "translate3d()")}}
-  - : Translates an element in 3D space.
+  - : A transform function that translates an element in 3D space.
 - {{cssxref("transform-function/translateX", "translateX()")}}
-  - : Translates an element horizontally.
+  - : A transform function that translates an element horizontally.
 - {{cssxref("transform-function/translateY", "translateY()")}}
-  - : Translates an element vertically.
+  - : A transform function that translates an element vertically.
 - {{cssxref("transform-function/translateZ", "translateZ()")}}
-  - : Translates an element along the z-axis.
+  - : A transform function that translates an element along the z-axis.
 
 ## Math functions
 
@@ -92,11 +92,11 @@ The math functions allow CSS numeric values to be written as mathematical expres
 ### Comparison functions
 
 - {{cssxref("min", "min()")}}
-  - : A comparison function that represents the smallest of a list of values.
+  - : A comparison function that returns the smallest of a list of values.
 - {{cssxref("max", "max()")}}
-  - : A comparison function that represents the largest of a list of values.
+  - : A comparison function that returns the largest of a list of values.
 - {{cssxref("clamp", "clamp()")}}
-  - : A comparison function that takes a minimum, central, and maximum value and represents its central calculation.
+  - : A comparison function that takes a minimum, central, and maximum value and returns its central calculation.
 
 ### Stepped value functions
 
@@ -140,34 +140,34 @@ The math functions allow CSS numeric values to be written as mathematical expres
 ### Sign-related functions
 
 - {{cssxref("abs", "abs()")}} {{Experimental_Inline}}
-  - : Takes a calculation and returns the absolute value.
+  - : A function that returns the absolute value of a number.
 - {{cssxref("sign_function", "sign()")}} {{Experimental_Inline}}
-  - : Takes a calculation and returns the sign (positive or negative) of the number.
+  - : A function that returns the sign (positive or negative) of the number.
 
 ## Filter functions
 
 The **`<filter-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 - {{cssxref("filter-function/blur", "blur()")}}
-  - : Blurs the image.
+  - : A filter function that blurs the image.
 - {{cssxref("filter-function/brightness", "brightness()")}}
-  - : Makes the image brighter or darker.
+  - : A filter function that brightens or darkens an image.
 - {{cssxref("filter-function/contrast", "contrast()")}}
-  - : Increases or decreases the image's contrast.
+  - : A filter function that increases or decreases the image's contrast.
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : Applies a drop shadow behind the image.
+  - : A filter function that applies a drop shadow behind an image.
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - : Converts the image to grayscale.
+  - : A filter function that converts the image to grayscale.
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - : Changes the overall hue of the image.
+  - : A filter function that changes the overall hue of the image.
 - {{cssxref("filter-function/invert", "invert()")}}
-  - : Inverts the colors of the image.
+  - : A filter function that inverts the colors of the image.
 - {{cssxref("filter-function/opacity", "opacity()")}}
-  - : Makes the image transparent.
+  - : A filter function that makes the image transparent.
 - {{cssxref("filter-function/saturate", "saturate()")}}
-  - : Super-saturates or desaturates the input image.
+  - : A filter function that super-saturates or de-saturates an image.
 - {{cssxref("filter-function/sepia", "sepia()")}}
-  - : Converts the image to sepia.
+  - : A filter function that converts the image to sepia.
 
 ## Color functions
 
@@ -232,67 +232,67 @@ These functions may be used wherever an {{cssxref("&lt;image&gt;")}} is valid as
 The counter functions are generally used with the {{cssxref("content")}} property, although in theory may be used wherever a {{cssxref("&lt;string&gt;")}} is supported.
 
 - {{cssxref("counter", "counter()")}}
-  - : Returns a string representing the current value of the named counter, if there is one.
+  - : A counter function that returns a string representing the current value of the named counter, if there is one.
 - {{cssxref("counters", "counters()")}}
-  - : Enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any.
+  - : A counter function that enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any.
 - {{cssxref("symbols", "symbols()")}}
-  - : Lets you define counter styles inline, directly as the value of a property.
+  - : A counter function that defines the counter styles inline, directly as the value of a property.
 
 ## Font functions
 
 The {{cssxref("font-variant-alternates")}} property controls the use of alternate glyphs, the following functions are values for this property.
 
 - {{cssxref("font-variant-alternates/stylistic", "stylistic()")}}
-  - : This function enables stylistic alternates for individual characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `salt`, like `salt 2`.
+  - : A font function that enables stylistic alternates for individual characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `salt`, like `salt 2`.
 - {{cssxref("font-variant-alternates/styleset", "styleset()")}}
-  - : This function enables stylistic alternatives for sets of characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ssXY`, like `ss02`.
+  - : A font function that enables stylistic alternatives for sets of characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ssXY`, like `ss02`.
 - {{cssxref("font-variant-alternates/character-variant", "character-variant()")}}
-  - : This function enables specific stylistic alternatives for characters. It is similar to `styleset()`, but doesn't create coherent glyphs for a set of characters; individual characters will have independent and not necessarily coherent styles. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `cvXY`, like `cv02`.
+  - : A font function that enables specific stylistic alternatives for characters. It is similar to `styleset()`, but doesn't create coherent glyphs for a set of characters; individual characters will have independent and not necessarily coherent styles. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `cvXY`, like `cv02`.
 - {{cssxref("font-variant-alternates/swash", "swash()")}}
-  - : This function enables [swash](https://en.wikipedia.org/wiki/Swash_%28typography%29) glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values `swsh` and `cswh`, like `swsh 2` and `cswh 2`.
+  - : A font function that enables [swash](https://en.wikipedia.org/wiki/Swash_%28typography%29) glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values `swsh` and `cswh`, like `swsh 2` and `cswh 2`.
 - {{cssxref("font-variant-alternates/ornaments", "ornaments()")}}
-  - : This function enables ornaments, like [fleurons](https://en.wikipedia.org/wiki/Fleuron_%28typography%29) and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ornm`, like `ornm 2`.
+  - : A font function that enables ornaments, like [fleurons](https://en.wikipedia.org/wiki/Fleuron_%28typography%29) and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ornm`, like `ornm 2`.
 - {{cssxref("font-variant-alternates/annotation", "annotation()")}}
-  - : This function enables annotations, like circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, like `nalt 2`.
+  - : A font function that enables annotations, like circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, like `nalt 2`.
 
 ## Shape functions
 
 The following functions may be used as values for the {{cssxref("&lt;basic-shape&gt;")}} data type, which is used in the {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, and {{cssxref("shape-outside")}} properties.
 
 - {{cssxref("basic-shape/circle","circle()")}}
-  - : Defines a circle.
+  - : A shape function that defines a circle.
 - {{cssxref("basic-shape/ellipse","ellipse()")}}
-  - : Defines an ellipse.
+  - : A shape function that defines an ellipse.
 - {{cssxref("basic-shape/inset","inset()")}}
-  - : Defines an inset rectangle.
+  - : A shape function that defines an inset rectangle.
 - {{cssxref("basic-shape/polygon","polygon()")}}
-  - : Defines a polygon.
+  - : A shape function that defines a polygon.
 - {{cssxref("path", "path()")}}
-  - : Accepts an SVG path string to enable a shape to be drawn.
+  - : A shape function that accepts an SVG path string to enable a shape to be drawn.
 
 ## Reference functions
 
 The following functions are used as a value of properties to reference a value defined elsewhere.
 
 - {{cssxref("attr", "attr()")}}
-  - : Used to retrieve the value of an attribute of the selected element and use it in the stylesheet.
+  - : A function that retrieves the value of an attribute of the selected element and use it in a stylesheet.
 - {{cssxref("env", "env()")}}
-  - : Used to insert the value of a user-agent defined environment variable.
+  - : A function that inserts the value of a user-agent defined environment variable.
 - {{cssxref("url", "url()")}}
-  - : Used to include a file.
+  - : A function that includes a file from a URL.
 - {{cssxref("var", "var()")}}
-  - : Used to insert a value of a custom property instead of any part of a value of another property.
+  - : A function that inserts a value of a custom property instead of any part of a value of another property.
 
 ## CSS grid functions
 
 The following functions are used to define a CSS grid.
 
 - {{cssxref("fit-content", "fit-content()")}}
-  - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
+  - : A grid function that clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 - {{cssxref("minmax", "minmax()")}}
-  - : Defines a size range greater than or equal to _min_ and less than or equal to _max_.
+  - : A grid function that defines a size range greater than or equal to _min_ and less than or equal to _max_.
 - {{cssxref("repeat", "repeat()")}}
-  - : Represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern.
+  - : A grid function that represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern.
 
 ## Specifications
 
