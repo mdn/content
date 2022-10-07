@@ -1,5 +1,5 @@
 ---
-title: Performance Timeline
+title: Performance Timeline API
 slug: Web/API/Performance_Timeline
 page-type: web-api-overview
 tags:
@@ -45,29 +45,15 @@ This interface includes a {{domxref("PerformanceEntry.toJSON","toJSON()")}} meth
 
 ## Performance observers
 
-{{SeeCompatTable}}
-
 The _performance observer_ interfaces allow an application to register an _observer_ for specific performance event types, and when one of those event types is recorded, the application is _notified_ of the event via the observer's callback function that was specified when the observer was created.
 
 When the observer (callback) is invoked, the callback's parameters include a _{{domxref("PerformanceObserverEntryList","performance observer entry list")}}_ that contains only _observed_ {{domxref("PerformanceEntry","performance entries")}}. That is, the list contains entries only for the event types that were specified when the observer's {{domxref("PerformanceObserver.observe","observe()")}} method was invoked. The {{domxref("PerformanceObserverEntryList","performance observer entry list")}} interface has the same three `getEntries*()` methods as the {{domxref("Performance")}} interface. However, note there is one key difference with these methods; the {{domxref("PerformanceObserverEntryList","performance observer entry list")}} versions are used to retrieve _observed_ performance entries within the observer callback.
 
 Besides the {{domxref("PerformanceObserver","PerformanceObserver's")}} interface's {{domxref("PerformanceObserver.observe","observe()")}} method (which is used to register the {{domxref("PerformanceEntry.entryType","entry types")}} to _observe_), the {{domxref("PerformanceObserver")}} interface also has a {{domxref("PerformanceObserver.disconnect","disconnect()")}} method that stops an observer from receiving further events.
 
-Performance observers were added to the `Level 2` version of the standard and were not widely implemented.
-
 ## Specifications
 
 {{Specifications}}
-
-## Implementation status
-
-A summary of the interfaces' implementation status is provided below, including a link to more detailed information.
-
-- Performance interface extensions: As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
-- PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's [Browser Compatibility](/en-US/docs/Web/API/PerformanceEntry#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
-- Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's [Browser Compatibility](/en-US/docs/Web/API/PerformanceObserver#browser_compatibility) table, this interface has no shipping implementations.
-
-To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
 ## See also
 
