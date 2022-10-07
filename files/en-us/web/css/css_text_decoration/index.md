@@ -41,7 +41,7 @@ spec-urls: https://drafts.csswg.org/css-text-decor/
 }
 
 .over {
-  text-decoration: wavy overline lime;
+  text-decoration: wavy overline line;
 }
 
 .line {
