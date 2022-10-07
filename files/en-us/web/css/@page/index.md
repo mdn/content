@@ -143,9 +143,12 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | min-width             |
 |                       | max-width             |
 
+
 ### margin-at rules
-The margin-at rules are used inside of the `@page` at-rule and they target specific sections of a page document and make changes based on the properties or content set in the block of code i.e 
-```
+
+The margin-at rules are used inside of the `@page` at-rule and they target specific sections of a page document and make changes based on the properties or content set in the block of code:
+
+```css
     @page {
       @top-left{
         <page-margin-properties>
