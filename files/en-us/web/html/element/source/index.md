@@ -30,7 +30,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("void element")}}.</td>
+      <td>None, it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
