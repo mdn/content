@@ -47,10 +47,11 @@ console.log(document.fonts.check("12px courier"));
 console.log(document.fonts.check("12px MyFont", "ß"));
 ```
 
-The use of a non-existing font in the font specification results in a return value of `true`. The following example line will print `true`.
+If the font given in the font specification does not exist, this function returns `true`:
 
 ```js
 console.log(document.fonts.check("12px NonExistingFont"));
+// true
 ```
 
 ## Specifications
