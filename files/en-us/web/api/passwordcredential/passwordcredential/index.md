@@ -58,7 +58,9 @@ Starting with the form element.
 
 ```html
 <form id="form" method="post">
+  <label for="id">Username:</label>
   <input type="text" name="id" autocomplete="username" />
+  <label for="password">Password:</label>
   <input type="password" name="password" autocomplete="current-password" />
   <input type="hidden" name="csrf_token" value="*****" />
 </form>

@@ -1,6 +1,7 @@
 ---
 title: contain
 slug: Web/CSS/contain
+page-type: css-property
 tags:
   - CSS
   - CSS Containment
@@ -25,7 +26,7 @@ Changes within an element with containment applied are not propagated outside of
 
 This property is useful on pages that contain a lot of widgets that are all independent, as it can be used to prevent each widget's internals from having side effects outside of the widget's bounding-box.
 
-> **Note:** If applied (with value: `paint`, `strict` or `content`), this property creates:
+> **Note:** If applied (with value: `layout`, `paint`, `strict` or `content`), this property creates:
 >
 > 1. A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
 > 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).

@@ -1,6 +1,7 @@
 ---
 title: ':-moz-window-inactive'
 slug: Web/CSS/:-moz-window-inactive
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

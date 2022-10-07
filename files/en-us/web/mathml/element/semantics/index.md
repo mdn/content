@@ -10,7 +10,7 @@ browser-compat: mathml.elements.semantics
 
 {{MathMLRef}}
 
-The `<semantics>` element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:
+The **`<semantics>`** [MathML](/en-US/docs/Web/MathML) element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:
 
 - a first child which is a MathML expression to be annotated.
 - subsequent `<annotation>` or `<annotation-xml>` elements, the latter being reserved for XML formats such as [OpenMath](https://en.wikipedia.org/wiki/OpenMath).
@@ -44,7 +44,7 @@ By default, only the first child of the `<semantics>` element is rendered while 
 ## Example
 
 ```html
-<math>
+<math display="block">
   <semantics>
     <!-- The first child is the MathML expression rendered by default. -->
     <mrow>
@@ -79,6 +79,8 @@ By default, only the first child of the `<semantics>` element is rendered while 
   </semantics>
 </math>
 ```
+
+{{ EmbedLiveSample('semantics_example', 700, 200, "", "") }}
 
 ## Specifications
 

@@ -25,13 +25,18 @@ BigInt.asUintN(bits, bigint)
 ### Parameters
 
 - `bits`
-  - : The amount of bits available for the integer size.
+  - : The amount of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
 - `bigint`
   - : The BigInt value to clamp to fit into the supplied bits.
 
-### Returns
+### Return value
 
 The value of `bigint` modulo 2^`bits`, as an unsigned integer.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `bits` is negative or greater than 2<sup>53</sup> - 1.
 
 ## Description
 
@@ -44,6 +49,8 @@ The `BigInt.asUintN` method clamps a `BigInt` value to the given number of bits,
 ```
 
 > **Note:** `BigInt` values are always encoded as two's complement in binary.
+
+Unlike similar language APIs such as {{jsxref("Number.prototype.toExponential()")}}, `asUintN` is a static property of {{jsxref("BigInt")}}, so you always use it as `BigInt.asUintN()`, rather than as a method of a BigInt value. Exposing `asUintN()` as a "standard library function" allows [interop with asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
 ## Examples
 

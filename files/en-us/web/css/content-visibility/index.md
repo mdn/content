@@ -1,6 +1,7 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
+page-type: css-property
 tags:
   - CSS
   - CSS Containment

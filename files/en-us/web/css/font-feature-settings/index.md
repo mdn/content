@@ -1,6 +1,7 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

@@ -195,7 +195,7 @@ There are a variety of CSS writing styles you can use, but we prefer the expande
 In addition, keep these specifics in mind:
 
 - Include a space between the selector(s) and the opening curly brace.
-- Always include a semi-colon at the end of the last declaration, even though it isn't strictly necessary.
+- Always include a semicolon at the end of the last declaration, even though it isn't strictly necessary.
 - Put the closing curly brace on a new line.
 - In each declaration, put a space after the separating colon, but not before.
 - Use two spaces for code indentation.

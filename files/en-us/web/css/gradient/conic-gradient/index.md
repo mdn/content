@@ -1,6 +1,7 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function

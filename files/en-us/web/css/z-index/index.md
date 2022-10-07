@@ -1,6 +1,7 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning

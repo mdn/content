@@ -1,6 +1,7 @@
 ---
 title: CSS Functional Notation
 slug: Web/CSS/CSS_Functions
+page-type: guide
 tags:
   - CSS
   - CSS Data Type
@@ -276,7 +277,7 @@ The following functions are used as a value of properties to reference a value d
 - {{cssxref("attr", "attr()")}}
   - : Used to retrieve the value of an attribute of the selected element and use it in the stylesheet.
 - {{cssxref("env", "env()")}}
-  - : Used to insert the value of a user agent-defined environment variable.
+  - : Used to insert the value of a user-agent defined environment variable.
 - {{cssxref("url", "url()")}}
   - : Used to include a file.
 - {{cssxref("var", "var()")}}

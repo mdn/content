@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-inline-start
 slug: Web/CSS/scroll-margin-inline-start
+page-type: css-property
 tags:
   - CSS
   - CSS Property

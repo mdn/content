@@ -1,6 +1,7 @@
 ---
 title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

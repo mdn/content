@@ -1,6 +1,7 @@
 ---
 title: "@scroll-timeline"
 slug: Web/CSS/@scroll-timeline
+page-type: css-at-rule
 tags:
   - Animations
   - Scroll

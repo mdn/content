@@ -1,6 +1,7 @@
 ---
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
+page-type: css-module
 tags:
   - CSS
   - CSS Containment
@@ -51,7 +52,7 @@ If we give each `<article>` the `contain` property with a value of `content`, wh
 
 We have told it by way of the `contain` property that each article is independent.
 
-The `content` value is shorthand for `contain: layout paint`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
+The `content` value is shorthand for `contain: layout paint style`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
 This information is something that is usually known, and in fact quite obvious, to the web developer creating the page. However browsers cannot guess at your intent and cannot assume that an article will be entirely self-contained. Therefore this property gives you a nice way to explain to the browser this fact, and allow it to make performance optimizations based on that knowledge.
 
@@ -124,11 +125,10 @@ There are two special values of contain:
 
 We encountered the first in the example above. Using `contain: content` turns on `layout` and `paint` containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply `size` containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.
 
-To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint`, or perhaps the following to also add `style` containment in browsers that support it:
+To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint style`:
 
 ```css
 contain: strict;
-contain: strict style;
 ```
 
 ## Reference

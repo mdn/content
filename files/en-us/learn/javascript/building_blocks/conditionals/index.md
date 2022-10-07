@@ -309,7 +309,7 @@ Here we've got:
 2. An expression or value inside the parentheses.
 3. The keyword `case`, followed by a choice that the expression/value could be, followed by a colon.
 4. Some code to run if the choice matches the expression.
-5. A `break` statement, followed by a semi-colon. If the previous choice matches the expression/value, the browser stops executing the code block here, and moves on to any code that appears below the switch statement.
+5. A `break` statement, followed by a semicolon. If the previous choice matches the expression/value, the browser stops executing the code block here, and moves on to any code that appears below the switch statement.
 6. As many other cases (bullets 3–5) as you like.
 7. The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5), except that `default` does not have a choice after it, and you don't need the `break` statement as there is nothing to run after this in the block anyway. This is the default option that runs if none of the choices match.
 

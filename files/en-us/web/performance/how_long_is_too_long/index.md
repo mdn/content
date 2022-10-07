@@ -8,6 +8,8 @@ tags:
   - Web Performance
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 There are no clear set rules as to what constitutes a slow pace when loading pages, but there are specific guidelines for indicating content will load (1 second), idling (50ms), animating (16.7ms) and responding to user input (50 to 200ms).
 
 ## Load goal

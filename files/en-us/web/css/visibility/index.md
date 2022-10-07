@@ -1,6 +1,7 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model

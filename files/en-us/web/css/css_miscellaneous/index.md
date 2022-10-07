@@ -1,6 +1,7 @@
 ---
 title: CSS Miscellaneous
 slug: Web/CSS/CSS_Miscellaneous
+page-type: css-module
 tags:
   - CSS
   - Guide

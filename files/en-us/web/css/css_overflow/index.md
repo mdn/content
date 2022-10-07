@@ -1,6 +1,7 @@
 ---
 title: CSS Overflow
 slug: Web/CSS/CSS_Overflow
+page-type: css-module
 tags:
   - CSS
   - Guide

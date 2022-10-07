@@ -1,6 +1,7 @@
 ---
 title: ":focus"
 slug: Web/CSS/:focus
+page-type: css-pseudo-class
 tags:
   - ":focus"
   - CSS

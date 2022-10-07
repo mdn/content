@@ -1,12 +1,21 @@
 ---
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
+page-type: css-shorthand-property
+tags:
+  - CSS
+  - CSS Property
+  - Reference
+  - experimental
+  - contain-intrinsic-size
+  - recipe:css-shorthand-property
+  - Experimental
 browser-compat: css.properties.contain-intrinsic-size
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
-The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that will be used for layout when it is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
 ## Constituent properties
 
@@ -74,6 +83,97 @@ The remembered value is not used if the child elements are being rendered (if si
 
 {{csssyntax}}
 
+## Examples
+
+### Setting the intrinsic size
+
+This example provides a button that can be used to apply and remove `contain-intrinsic-size`, and another button that toggles the `content-visibility` though `visible`, `auto` and `hidden`.
+
+#### CSS
+
+```css
+.intrinsic_size_on {
+  contain-intrinsic-size: auto 40px auto 130px;
+}
+.hidden {
+  content-visibility: hidden;
+}
+.visible {
+  content-visibility: visible;
+}
+.auto {
+  content-visibility: auto;
+}
+#contained_element {
+  border: 2px solid green;
+  width: 120px;
+}
+.child_element {
+  border: 1px solid red;
+  background: blue;
+  height: 50px;
+  width: 150px;
+}
+```
+
+#### JavaScript
+
+The code below adds and removes classes to the containing element, which in turn set the properties for different `content-visibility` settings and add/remove `contain-intrinsic-size`.
+
+```js
+const containedElement = document.querySelector("#contained_element");
+const buttonIntrinsic = document.getElementById("intrinsic_size");
+const buttonVisibility = document.getElementById("visibility");
+
+buttonIntrinsic.addEventListener("click", () => {
+  containedElement.classList.toggle("intrinsic_size_on");
+  if (containedElement.classList.contains("intrinsic_size_on")) {
+    buttonIntrinsic.innerText = "Intrinsic Size: On";
+  } else {
+    buttonIntrinsic.innerText = "Intrinsic Size: Off";
+  }
+});
+
+buttonVisibility.addEventListener("click", () => {
+  if (containedElement.classList.contains("hidden")) {
+    buttonVisibility.innerText = "Visible";
+    containedElement.classList.add("visible");
+    containedElement.classList.remove("hidden");
+    containedElement.classList.remove("auto");
+  } else if (containedElement.classList.contains("visible")) {
+    buttonVisibility.innerText = "Auto";
+    containedElement.classList.add("auto");
+    containedElement.classList.remove("visible");
+    containedElement.classList.remove("hidden");
+  } else {
+    buttonVisibility.innerText = "Hidden";
+    containedElement.classList.add("hidden");
+    containedElement.classList.remove("visible");
+    containedElement.classList.remove("auto");
+  }
+});
+```
+
+#### HTML
+
+The HTML defines two buttons, a container element that is subject to containment via the `content-visibility` property.
+
+```html
+<button id="intrinsic_size">Intrinsic size: On</button>
+<button id="visibility">Visible</button>
+<div id="contained_element" class="visible intrinsic_size_on">
+  <div class="child_element"></div>
+</div>
+```
+
+#### Result
+
+Toggle the buttons to add/remove the `contain-intrinsic-size` property and to cycle through the `content-visibility` values.
+Note that when the content is visible or auto changing `contain-intrinsic-size` makes no difference.
+However if the content is hidden, removing `contain-intrinsic-size` collapses the parent element as though its child element had no size.
+
+{{EmbedLiveSample('Setting the intrinsic size', '100%', 170)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -85,3 +185,5 @@ The remembered value is not used if the child elements are being rendered (if si
 ## See also
 
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+- {{CSSxRef("contain-intrinsic-block-size")}}
+- {{CSSxRef("contain-intrinsic-inline-size")}}

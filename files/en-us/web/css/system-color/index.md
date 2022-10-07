@@ -1,20 +1,28 @@
 ---
-title: System color keywords
-slug: Web/CSS/color_value/system_color_keywords
+title: <system-color>
+slug: Web/CSS/system-color
+page-type: css-type
 tags:
   - Reference
   - color
+browser-compat: css.types.color.system-color
 ---
 
 {{CSSRef}}
 
-In _forced colors mode_ (detectable with the [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query), most colors are restricted into a user- and browser-defined palette. These **system colors** are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers.
+The **`<system-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) usually reflects the default color choices used for the different parts of a web page.
 
-The keywords in the following list are defined by the CSS Color Module Level 4 specification.
+However, user agents can provide an accessibility feature called _forced colors mode_, in which colors are restricted into a user- and user agent-defined palette, overriding the author's choice of colors in certain properties. In forced colors mode, `<system-color>` exposes the chosen colors, so that the rest of the page can integrate with them. An example of forced colors mode is [high contrast mode on Windows](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/).
 
-> **Note:** Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
+In forced colors mode, authors should use colors from the `<system-color>` type for all properties that are _not_ in the set of properties whose colors are overridden. This ensures that the page consistently uses the same color palette across all properties.
+
+Authors can detect forced colors mode using the [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) media feature.
+
+A `<system-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/color_value) can be used.
 
 ## Syntax
+
+Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
 
 - `ActiveText`
   - : Text of active links
@@ -47,7 +55,7 @@ The keywords in the following list are defined by the CSS Color Module Level 4 s
 - `VisitedText`
   - : Text of visited links
 
-## Deprecated system color keywords
+### Deprecated system color keywords
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated for use on public web pages.
 
@@ -98,7 +106,7 @@ The following keywords were defined in earlier versions of the CSS Color Module.
 - `WindowText` {{deprecated_inline}}
   - : Text in windows. Should be used with the `Window` background color.
 
-## Firefox non-standard system color extensions
+### Firefox non-standard system color extensions
 
 Firefox also supports some non-standard extensions to the system color keyword set.
 
@@ -151,6 +159,48 @@ Firefox also supports some non-standard extensions to the system color keyword s
 - `-moz-win-accentcolortext` {{non-standard_inline}}
   - : Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.
 
+## Examples
+
+### Using system colors
+
+In this example we have a button that normally gets its contrast using the {{cssxref("box-shadow")}} property. In forced colors mode, `box-shadow` is forced to `none`, so the example uses the `forced-colors` media feature to ensure there is a border of the appropriate color (`ButtonBorder` in this case).
+
+#### HTML
+
+```html
+<button class="button">Press me!</button>
+```
+
+#### CSS
+
+```css
+.button {
+  border: 0;
+  padding: 10px;
+  box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
+}
+
+@media (forced-colors: active) {
+  .button {
+    /* Use a border instead, since box-shadow
+    is forced to 'none' in forced-colors mode */
+    border: 2px ButtonBorder solid;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using system colors")}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) data type these keywords belong to.
+- [`<color>`](/en-US/docs/Web/CSS/color_value): the data type these keywords belong to.

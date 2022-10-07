@@ -1,6 +1,7 @@
 ---
 title: skewY()
 slug: Web/CSS/transform-function/skewY
+page-type: css-function
 tags:
   - CSS
   - CSS Function

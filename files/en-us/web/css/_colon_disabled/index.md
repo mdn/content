@@ -1,6 +1,7 @@
 ---
 title: ":disabled"
 slug: Web/CSS/:disabled
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

@@ -1,6 +1,7 @@
 ---
 title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

@@ -1,6 +1,7 @@
 ---
 title: outline-width
 slug: Web/CSS/outline-width
+page-type: css-property
 tags:
   - CSS
   - CSS Outline

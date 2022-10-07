@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Array.findLastIndex
 
 {{JSRef}}
 
-The **`findLastIndex()`** method returns the index of the last element in an array that satisfies the provided testing function.
+The **`findLastIndex()`** method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
@@ -109,8 +109,8 @@ function isPrime(element) {
   return true;
 }
 
-console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
-console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
+console.log([4, 6, 8, 12].findLastIndex(isPrime)); // -1, not found
+console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
 ```
 
 ### Using findLastIndex() on sparse arrays

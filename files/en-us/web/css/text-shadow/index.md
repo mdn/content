@@ -1,6 +1,7 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
+page-type: css-property
 tags:
   - CSS
   - CSS Property

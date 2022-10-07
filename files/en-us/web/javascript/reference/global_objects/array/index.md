@@ -257,7 +257,7 @@ console.log(removedItems);
 // ["Strawberry", "Mango", "Cherry"]
 ```
 
-### Truncate an array down to just its first _N_ items
+### Truncate an array down to just its first N items
 
 This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to truncate the `fruits` array down to just its first 2 items.
 

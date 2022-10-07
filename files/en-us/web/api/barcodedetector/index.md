@@ -21,7 +21,12 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
 - {{domxref('BarcodeDetector.BarcodeDetector', 'BarcodeDetector.BarcodeDetector()')}} {{Experimental_Inline}}
   - : Creates and returns a `BarcodeDetector` object, with optional `barcodeDetectorOptions`
 
-## Methods
+## Static methods
+
+- {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}} {{Experimental_Inline}}
+  - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
+
+## Instance methods
 
 - {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}}
 
@@ -31,9 +36,6 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
     - `cornerPoints`: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.
     - `format`: The detected barcode format. (For a full list of formats see the \[landing page])
     - `rawValue`: A string decoded from the barcode data.
-
-- {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}} {{Experimental_Inline}}
-  - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
 ## Examples
 

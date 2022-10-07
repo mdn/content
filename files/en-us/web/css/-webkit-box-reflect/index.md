@@ -1,6 +1,7 @@
 ---
 title: "-webkit-box-reflect"
 slug: Web/CSS/-webkit-box-reflect
+page-type: css-property
 tags:
   - "-webkit-box-reflect"
   - CSS

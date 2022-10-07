@@ -1,6 +1,7 @@
 ---
 title: ":empty"
 slug: Web/CSS/:empty
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

@@ -40,7 +40,7 @@ The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opp
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        It is an {{Glossary("empty element")}}; it must have a start
+        It is a {{Glossary("void element")}}; it must have a start
         tag, but must not have an end tag.
       </td>
     </tr>

@@ -1,6 +1,7 @@
 ---
 title: ':-moz-handler-blocked'
 slug: Web/CSS/:-moz-handler-blocked
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

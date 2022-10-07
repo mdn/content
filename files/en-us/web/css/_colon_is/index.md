@@ -1,6 +1,7 @@
 ---
 title: ":is()"
 slug: Web/CSS/:is
+page-type: css-pseudo-class
 tags:
   - ":is"
   - CSS

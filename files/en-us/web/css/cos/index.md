@@ -1,6 +1,7 @@
 ---
 title: cos()
 slug: Web/CSS/cos
+page-type: css-function
 tags:
   - CSS
   - CSS Function

@@ -1,6 +1,7 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
+page-type: css-media-feature
 tags:
   - CSS
   - Reference

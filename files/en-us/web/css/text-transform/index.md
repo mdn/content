@@ -1,6 +1,7 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -235,9 +235,9 @@ Now for some page content. Let's say we want to show human-readable relative dat
 In the `index.js` file, add the following code and save it:
 
 ```js
-import { formatDistanceToNow } from 'date-fns'
+import { formatDistanceToNow } from "date-fns";
 
-const date = '1996-09-13 10:00:00';
+const date = "1996-09-13 10:00:00";
 document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 ```
 

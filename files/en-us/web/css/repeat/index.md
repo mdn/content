@@ -1,6 +1,7 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
+page-type: css-function
 tags:
   - CSS
   - CSS Function

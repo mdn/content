@@ -11,7 +11,7 @@ browser-compat: mathml.elements.msubsup
 
 {{MathMLRef}}
 
-The MathML `<msubsup>` element is used to attach both a subscript and a superscript, together, to an expression.
+The **`<msubsup>`** [MathML](/en-US/docs/Web/MathML) element is used to attach both a subscript and a superscript, together, to an expression.
 
 It uses the following syntax: `<msubsup> base subscript superscript </msubsup>`.
 
@@ -21,12 +21,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-Sample rendering: ![x1](msubsup.png)
-
-Rendering in your browser: <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup></math>
-
 ```html
-<math displaystyle="true">
+<math display="block">
   <msubsup>
     <mo>&#x222B;<!--Integral --></mo>
     <mn>0</mn>
@@ -34,6 +30,8 @@ Rendering in your browser: <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msub
   </msubsup>
 </math>
 ```
+
+{{ EmbedLiveSample('msubsup_example', 700, 200, "", "") }}
 
 ## Specifications
 

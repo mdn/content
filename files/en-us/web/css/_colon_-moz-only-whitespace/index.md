@@ -1,6 +1,7 @@
 ---
 title: ":-moz-only-whitespace"
 slug: Web/CSS/:-moz-only-whitespace
+page-type: css-pseudo-class
 tags:
   - ":-moz-only-whitespace"
   - CSS
