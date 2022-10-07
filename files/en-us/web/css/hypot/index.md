@@ -36,11 +36,11 @@ width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
 The `hypot(x [, ...]#)` function accepts one or more comma-separated calculations as its parameters.
 
 - `x`, `x2`, ..., `xN`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}, or {{cssxref("&lt;percentage&gt;")}.
+  - : A calculation which resolves to a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{CSSxRef("&lt;percentage&gt;")}}.
 
 ### Return value
 
-Returns a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}, or {{cssxref("&lt;percentage&gt;")} (based on the inputs) which is the square root of the sum of squares of its parametrs.
+Returns a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{CSSxRef("&lt;percentage&gt;")}} (based on the inputs) which is the square root of the sum of squares of its parametrs.
 
 - If any of the inputs are `infinite`, the result is `+∞`.
 - If a single parameter provided, the result is the absolute value of its input. `hypot(2em)` and `hypot(-2em)` both resolve to `2em`.
