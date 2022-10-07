@@ -128,7 +128,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | padding-bottom        |
 |                       | padding-left          |
 |                       | padding               |
-| quotes                |                       |
+| quotes                |           quotes            |
 | text properties       | letter-spacing        |
 |                       | text-align            |
 |                       | text-decoration       |
