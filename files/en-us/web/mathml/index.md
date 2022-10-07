@@ -20,7 +20,7 @@ browser-compat: mathml.elements.math
 
 Below you will find links to documentation, examples, and tools to work with MathML. MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification but, due to an erratic standardization history, legacy MathML features may still show up in existing implementations and web content.
 
-> **Note:** It is highly recommended that developers and authors switch to that MathML Core, perhaps relying on other web technologies to cover missing use cases. The Math WG is maintaining a set of [MathML polyfills](https://github.com/mathml-refresh/mathml-polyfills) to facilitate that transition.
+> **Note:** It is highly recommended that developers and authors switch to MathML Core, perhaps relying on other web technologies to cover missing use cases. The Math WG is maintaining a set of [MathML polyfills](https://github.com/mathml-refresh/mathml-polyfills) to facilitate that transition.
 
 ## MathML reference
 
