@@ -311,7 +311,8 @@ HTML:
     </body>
 ```
 Relevant CSS code:
-```
+
+```css
     @page {
       size: landscape;
       margin: 20%;
