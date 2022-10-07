@@ -21,6 +21,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
 ```css
 /* Targets all the pages */
 @page {
+  size: 8.5in 9in;
   margin-top: 4in;
 }
 
@@ -31,6 +32,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
 
 /* Targets all odd-numbered pages */
 @page :right {
+  size: 11in;
   margin-top: 4in;
 }
 ```
@@ -205,8 +207,9 @@ Other margin-at rules include:
 ```
 #### page-margin properties
 
-| bidi properties       | direction             |
+| Feature     | CSS properties             |
 | --------------------- | --------------------- |
+| bidi properties       | direction             |
 | background properties | background-color      |
 |                       | background-image      |
 |                       | background-repeat     |
@@ -310,13 +313,41 @@ HTML:
       <button>Print Webpage</button>
     </body>
 ```
-Relevant CSS code:
+CSS:
 
 ```css
-    @page {
-      size: landscape;
-      margin: 20%;
-    }
+@page {
+  size: landscape;
+  margin: 20%;
+}
+
+body{
+  font-family: 'Helvetica';
+  background-color: rgb(110 110 119);
+}
+
+article{  
+  width: 100%;
+}
+
+section {
+  display: grid;
+  background-color: white;
+  border-radius: 0.6rem;
+  margin-block-end: 1.5rem;
+  justify-items: center;
+  padding: 1rem;
+  width: 50%;
+  page-break-after: always;
+  break-after: page;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+section{
+  page-break-after: always;
+  break-after: page;
+}
 ```
 
 JavaScript
@@ -329,7 +360,7 @@ JavaScript
     });
 ```
 Print out the page below to see the output of this example:
-%[https://codepen.io/sunkanmii-the-styleful/pen/dyezNry]
+{{EmbedLiveSample('@page example')}}
 
 ### @page pseudo-class examples
 
