@@ -44,7 +44,7 @@ slice(start, end)
 
 - `end` {{optional_inline}}
 
-  - : The index of the first element to exclude from the returned array. `slice`
+  - : The index of the element **before** which extraction should stop. `slice`
     extracts up to but not including `end`. For example,
     `slice(1,4)` extracts the second element through the fourth element
     (elements indexed 1, 2, and 3).
