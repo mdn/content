@@ -264,7 +264,7 @@ Other margin-at rules include:
 |                       | padding-bottom        |
 |                       | padding-left          |
 |                       | padding               |
-| quotes                |                       |
+| quotes                |        quotes               |
 | text properties       | letter-spacing        |
 |                       | text-align            |
 |                       | text-decoration       |
@@ -272,13 +272,12 @@ Other margin-at rules include:
 |                       | text-transform        |
 |                       | white-space           |
 |                       | word-spacing          |
-| vertical-align        |                       |
-| visibility            |                       |
+| vertical alignment        |          vertical-align             |
+| visibility            |        visibility               |
 | width properties      | width                 |
 |                       | min-width             |
 |                       | max-width             |
-| z-index               |                       |
-
+| z-index               |         z-index              |
 
 ## Examples
 ### @page example
