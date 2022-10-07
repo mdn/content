@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mo
 
 {{MathMLRef}}
 
-The MathML `<mo>` element represents an operator in a broad sense. Besides operators in strict mathematical meaning, this element also includes "operators" like parentheses, separators like comma and semicolon, or "absolute value" bars.
+The **`<mo>`** [MathML](/en-US/docs/Web/MathML) element represents an **operator** in a broad sense. Besides operators in strict mathematical meaning, this element also includes "operators" like parentheses, separators like comma and semicolon, or "absolute value" bars.
 
 ## Attributes
 

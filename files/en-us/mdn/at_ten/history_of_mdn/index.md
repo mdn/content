@@ -1,5 +1,5 @@
 ---
-title: The History of MDN
+title: The history of MDN
 slug: MDN/At_ten/History_of_MDN
 tags:
   - History

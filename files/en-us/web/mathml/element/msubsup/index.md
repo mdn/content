@@ -11,7 +11,7 @@ browser-compat: mathml.elements.msubsup
 
 {{MathMLRef}}
 
-The MathML `<msubsup>` element is used to attach both a subscript and a superscript, together, to an expression.
+The **`<msubsup>`** [MathML](/en-US/docs/Web/MathML) element is used to attach both a subscript and a superscript, together, to an expression.
 
 It uses the following syntax: `<msubsup> base subscript superscript </msubsup>`.
 

@@ -11,7 +11,7 @@ browser-compat: mathml.elements.msub
 
 {{MathMLRef}}
 
-The MathML `<msub>` element is used to attach a subscript to an expression.
+The **`<msub>`** [MathML](/en-US/docs/Web/MathML) element is used to attach a subscript to an expression.
 
 It uses the following syntax: `<msub> base subscript </msub>`.
 

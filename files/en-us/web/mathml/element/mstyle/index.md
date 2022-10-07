@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mstyle
 
 {{MathMLRef}}
 
-The MathML `<mstyle>` element is used to change the style of its children.
+The **`<mstyle>`** [MathML](/en-US/docs/Web/MathML) element is used to change the style of its children.
 
 > **Note:** Historically, this element accepted almost all the MathML attributes and it was used to override the default attribute values of its descendants. It was later restricted to only a few relevant styling attributes that were used in existing web pages. Nowadays, these styling attributes are [common to all MathML elements](/en-US/docs/Web/MathML/Global_attributes) and so `<mstyle>` is really just equivalent to an [`<mrow>`](/en-US/docs/Web/MathML/Element/mrow) element. However, `<mstyle>` may still be relevant for compatibility with MathML implementations outside browsers.
 
