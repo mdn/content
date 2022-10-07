@@ -33,7 +33,7 @@ width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
 
 ### Parameters
 
-The `hypot(x [, ...]?)` function accepts one or more comma-separated calculations as its parameters.
+The `hypot(x [, ...]#)` function accepts one or more comma-separated calculations as its parameters.
 
 - `x`, `x2`, ..., `xN`
   - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}, or {{cssxref("&lt;percentage&gt;")}.
@@ -63,4 +63,3 @@ Returns a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}, or {{c
 - {{CSSxRef("sqrt")}}
 - {{CSSxRef("log")}}
 - {{CSSxRef("exp")}}
-- 
