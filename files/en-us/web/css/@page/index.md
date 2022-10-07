@@ -43,6 +43,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
   - : Specifies the target size and orientation of the page box's containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 
 ## Description
+
 > **Note:** This documentation lists out features yet to be implemented across UAs, but they are stated in the official documentation. At the time of this writing, the only CSS property shown to have visible on both the at-rule and its pseudo-classes is the `margin` property.
 
 You can't change all CSS properties with **`@page`**. You can only change the margin of the document. Attempts to change any other CSS properties will be ignored.
