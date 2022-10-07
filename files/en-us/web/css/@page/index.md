@@ -319,8 +319,9 @@ Relevant CSS code:
     }
 ```
 
-JS:
-```
+JavaScript
+
+```js
     let button = document.querySelector("button")
     
     button.addEventListener('click', () => {
