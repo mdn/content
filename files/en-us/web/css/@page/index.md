@@ -105,7 +105,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | border                |
 | counter properties    | counter-reset         |
 |                       | counter-increment     |
-| color                 |     color                  |
+| color                 | color                 |
 | font properties       | font-family           |
 |                       | font-size             |
 |                       | font-style            |
@@ -115,7 +115,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 | height properties     | height                |
 |                       | min-height            |
 |                       | max-height            |
-| line height           |          line-height             |
+| line height           | line-height           |
 | margin properties     | margin-top            |
 |                       | margin-right          |
 |                       | margin-bottom         |
@@ -130,7 +130,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | padding-bottom        |
 |                       | padding-left          |
 |                       | padding               |
-| quotes                |           quotes            |
+| quotes                | quotes            |
 | text properties       | letter-spacing        |
 |                       | text-align            |
 |                       | text-decoration       |
@@ -138,7 +138,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | text-transform        |
 |                       | white-space           |
 |                       | word-spacing          |
-| visibility            |       visibility                |
+| visibility            | visibility                |
 | width properties      | width                 |
 |                       | min-width             |
 |                       | max-width             |
@@ -238,8 +238,8 @@ Other margin-at rules include:
 |                       | border                |
 | counter properties    | counter-reset         |
 |                       | counter-increment     |
-| content               |         content              |
-| color                 |        color               |
+| content               | content              |
+| color                 | color               |
 | font properties       | font-family           |
 |                       | font-size             |
 |                       | font-style            |
@@ -249,7 +249,7 @@ Other margin-at rules include:
 | height properties     | height                |
 |                       | min-height            |
 |                       | max-height            |
-| line height           |        line-height               |
+| line height           | line-height               |
 | margin properties     | margin-top            |
 |                       | margin-right          |
 |                       | margin-bottom         |
@@ -264,7 +264,7 @@ Other margin-at rules include:
 |                       | padding-bottom        |
 |                       | padding-left          |
 |                       | padding               |
-| quotes                |        quotes               |
+| quotes                | quotes               |
 | text properties       | letter-spacing        |
 |                       | text-align            |
 |                       | text-decoration       |
@@ -272,46 +272,45 @@ Other margin-at rules include:
 |                       | text-transform        |
 |                       | white-space           |
 |                       | word-spacing          |
-| vertical alignment        |          vertical-align             |
-| visibility            |        visibility               |
+| vertical alignment    | vertical-align             |
+| visibility            | visibility               |
 | width properties      | width                 |
 |                       | min-width             |
 |                       | max-width             |
-| z-index               |         z-index              |
+| z-index               | z-index              |
 
 ## Examples
-### @page example
+
 The example below prints out 5 sections different sections in `landscape` size, and adds a 20% margin to each of them in the print-out.
 
 HTML:
+```html
+<article>
+  <section>
+    <h2>Header</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+  </section>
+  <section>
+    <h2>Header</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+  </section>
+  <section>
+    <h2>Header</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+  </section>
+  <section>
+    <h2>Header</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+  </section>
+  <section>
+    <h2>Header</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+  </section>
+</article>
+
+<button>Print Webpage</button>
 ```
-    <body>  
-      <article>
-        <section>
-          <h2>Header</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
-        </section>
-        <section>
-          <h2>Header</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
-        </section>
-        <section>
-          <h2>Header</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
-        </section>
-        <section>
-          <h2>Header</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
-        </section>
-        <section>
-          <h2>Header</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
-        </section>
-      </article>
-      
-      <button>Print Webpage</button>
-    </body>
-```
+
 CSS:
 
 ```css
@@ -359,7 +358,7 @@ JavaScript
     });
 ```
 Print out the page below to see the output of this example:
-{{EmbedLiveSample('@page example')}}
+{{ EmbedLiveSample('Examples', '100%', 520) }}
 
 ### @page pseudo-class examples
 
