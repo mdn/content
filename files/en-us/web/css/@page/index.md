@@ -249,7 +249,7 @@ Other margin-at rules include:
 | height properties     | height                |
 |                       | min-height            |
 |                       | max-height            |
-| line-height           |                       |
+| line height           |        line-height               |
 | margin properties     | margin-top            |
 |                       | margin-right          |
 |                       | margin-bottom         |
