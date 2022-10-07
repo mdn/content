@@ -38,7 +38,7 @@ try {
 
 ## Description
 
-The `try` statement always starts with a `try` block. Then, a `catch` block, a `finally` block, or both must be present. This gives us three forms for the `try` statement:
+The `try` statement always starts with a `try` block. Then, a `catch` block or a `finally` block must be present. It's also possible to have both `catch` and `finally` blocks. This gives us three forms for the `try` statement:
 
 - `try...catch`
 - `try...finally`

@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mphantom
 
 {{MathMLRef}}
 
-The MathML `<mphantom>` element is rendered invisibly, but dimensions (such as height, width, and baseline position) are still kept.
+The **`<mphantom>`** [MathML](/en-US/docs/Web/MathML) element is rendered invisibly, but dimensions (such as height, width, and baseline position) are still kept.
 
 ## Attributes
 

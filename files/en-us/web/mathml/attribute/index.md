@@ -272,7 +272,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>mathsize</code></td>
       <td><a href="/en-US/docs/Web/MathML/Global_attributes">All MathML elements</a></td>
       <td>
-        A <a href="/en-US/docs/Web/CSS/font-size">font-size</a> for the element.
+        A <a href="/en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> used as a <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> for the element.
       </td>
     </tr>
     <tr>

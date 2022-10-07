@@ -213,7 +213,7 @@ The following methods can be used to manipulate paths of objects.
 
 Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("DOMMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-- {{domxref("CanvasRenderingContext2D.getTransform()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.getTransform()")}}
   - : Retrieves the current transformation matrix being applied to the context.
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
