@@ -289,6 +289,7 @@ Other margin-at rules include:
 The example below prints out 5 sections different sections in `landscape` size, and adds a 20% margin to each of them in the print-out.
 
 HTML:
+
 ```html
 <article>
   <section>
