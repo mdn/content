@@ -102,7 +102,7 @@ document.querySelector("#image").addEventListener("change", (evt) => {
 });
 ```
 
-Given the anynchronous nature of {{domxref("FileReader")}}, you could use a Promise-based approach. Here's an example for a [file input](/en-US/docs/Web/HTML/Element/input/file) with attribute `multiple` that returns a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
+Given the anynchronous nature of {{domxref("FileReader")}}, you could use a Promise-based approach. Here's an example for a [file input](/en-US/docs/Web/HTML/Element/input/file) with attribute `multiple` that returns a {{jsxref("Promise")}}.
 
 ```js
 // Given this HTMLInputElement:
