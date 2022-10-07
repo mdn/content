@@ -145,9 +145,9 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | max-width             |
 
 
-### margin-at rules
+### margin at-rules
 
-The margin-at rules are used inside of the `@page` at-rule and they target specific sections of a page document and make changes based on the properties or content set in the block of code:
+The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page and make changes based on the properties or content set in the block of code:
 
 ```css
     @page {
