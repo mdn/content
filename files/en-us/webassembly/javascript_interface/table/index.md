@@ -60,7 +60,7 @@ Finally, we load and instantiate a wasm module (table2.wasm) using the [`WebAsse
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
-  function (obj) {
+  (obj) => {
     console.log(tbl.length);
     console.log(tbl.get(0)());
     console.log(tbl.get(1)());

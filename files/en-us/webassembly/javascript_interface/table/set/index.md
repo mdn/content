@@ -81,7 +81,7 @@ a simple value):
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
-  function (obj) {
+  (obj) => {
     console.log(tbl.length);
     console.log(tbl.get(0)());
     console.log(tbl.get(1)());
