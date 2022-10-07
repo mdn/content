@@ -57,7 +57,7 @@ console.log(popped); // 'sturgeon'
 
 ### Calling pop() on non-array objects
 
-The `pop()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `length - 1` is returned and [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+The `pop()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `length - 1` is returned and [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
 ```js
 const arrayLike = {

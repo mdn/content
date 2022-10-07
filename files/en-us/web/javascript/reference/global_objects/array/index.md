@@ -734,11 +734,23 @@ const arrayLike = {
 console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 ```
 
+#### Normalization of the length property
+
 The `length` property is [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), truncated to an integer, and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
 
 ```js
 Array.prototype.flat.call({}); // []
 ```
+
+Some array methods set the `length` property of the array object. They always set the value after normalization, so `length` always ends as an integer.
+
+```js
+const a = { length: 0.7 };
+Array.prototype.push.call(a);
+console.log(a.length); // 0
+```
+
+#### Array-like objects
 
 The term [_array-like object_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) refers to any object that doesn't throw during the `length` conversion process described above. In practice, such object is expected to actually have a `length` property and to have indexed elements in the range `0` to `length - 1`. (If it doesn't have all indices, it will be functionally equivalent to a [sparse array](#array_methods_and_empty_slots).)
 

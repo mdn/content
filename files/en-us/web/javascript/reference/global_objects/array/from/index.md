@@ -65,7 +65,7 @@ More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.fr
 
 The `length` property of the `from()` method is `1`.
 
-The `Array.from()` method is a generic factory method. For example, if a subclass of `Array` inherits the `from()` method, the inherited `from()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array. When an iterable is passed as `arrayLike`, the constructor is called with no arguments; when an array-like object is passed, the constructor is called with the normalized length of the array-like object. The final `length` will be set again when iteration finishes. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
+The `Array.from()` method is a generic factory method. For example, if a subclass of `Array` inherits the `from()` method, the inherited `from()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array. When an iterable is passed as `arrayLike`, the constructor is called with no arguments; when an array-like object is passed, the constructor is called with the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) of the array-like object. The final `length` will be set again when iteration finishes. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
 
 ## Examples
 
