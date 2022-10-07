@@ -136,7 +136,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | text-transform        |
 |                       | white-space           |
 |                       | word-spacing          |
-| visibility            |                       |
+| visibility            |       visibility                |
 | width properties      | width                 |
 |                       | min-width             |
 |                       | max-width             |
