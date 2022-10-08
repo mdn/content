@@ -466,6 +466,5 @@ for (const [key, val] of Objects.entries()) {
 // "bar" 2
 ```
 
-
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
   "Web/JavaScript/Guide/Functions")}}
