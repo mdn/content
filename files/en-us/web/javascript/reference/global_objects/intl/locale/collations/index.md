@@ -19,7 +19,7 @@ The **`Intl.Locale.prototype.collations`** property is an accessor property that
 
 ## Description
 
-Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The array of `collations`  returned helps to make it easier for JavaScript programmers to access the collation types used by a particular locale.
+Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The array returned by `collations` helps to make it easier for JavaScript programmers to access the collation types used by a particular locale.
 
 Below is a table with the available collation types, adapted from the [Unicode collation specification](https://github.com/unicode-org/cldr/blob/2dd06669d833823e26872f249aa304bc9d9d2a90/common/bcp47/collation.xml).
 
