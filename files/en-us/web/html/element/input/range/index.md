@@ -193,7 +193,8 @@ According to the specification, you can label hash marks by giving the `<option>
 #### HTML
 
 ```html
-<input type="range" list="tickmarks" />
+<label for="temp">Choose a comfortable temperature:</label><br />
+<input type="range" id="temp" name="temp" list="tickmarks" />
 
 <datalist id="tickmarks">
   <option value="0"></option>
