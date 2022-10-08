@@ -1,10 +1,9 @@
 ---
 title: font-variant
-slug: Web/CSS/@font-face/font-variant
+slug: Web/CSS/font-variant
 page-type: css-shorthand-property
 browser-compat: css.at-rules.font-face.font-variant
 ---
-
 {{CSSRef}}
 
 The **`font-variant`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the font variants for the fonts specified in the {{cssxref("@font-face")}} rule.

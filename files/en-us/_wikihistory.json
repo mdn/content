@@ -78058,10 +78058,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/@font-face/font-variant": {
-    "modified": "2020-11-09T06:32:04.280Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
   "Web/CSS/@font-face/font-variation-settings": {
     "modified": "2020-10-15T22:02:38.640Z",
     "contributors": ["wbamberg", "estelle", "mfluehr", "chrisdavidmills"]
@@ -87263,34 +87259,8 @@
     ]
   },
   "Web/CSS/font-variant": {
-    "modified": "2020-10-16T14:45:56.791Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy",
-      "sideshowbarker",
-      "ddbeck",
-      "fscholz",
-      "mfluehr",
-      "captainbarbosa",
-      "arronei",
-      "erikadoyle",
-      "kiding",
-      "duncanmcdonald",
-      "Sebastianz",
-      "teoli",
-      "achal",
-      "kscarfone",
-      "bigbossSNK",
-      "ethertank",
-      "FredB",
-      "grendel",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "BijuGC",
-      "Fredchat"
-    ]
+    "modified": "2020-11-09T06:32:04.280Z",
+    "contributors": ["chrisdavidmills", "rachelandrew"]
   },
   "Web/CSS/font-variant-alternates": {
     "modified": "2020-10-15T21:29:33.833Z",
