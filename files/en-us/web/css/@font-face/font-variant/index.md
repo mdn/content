@@ -1,7 +1,7 @@
 ---
 title: font-variant
 slug: Web/CSS/@font-face/font-variant
-page-type: css-at-rule-descriptor
+page-type: css-shorthand-property
 browser-compat: css.at-rules.font-face.font-variant
 ---
 
