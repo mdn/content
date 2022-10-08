@@ -37,7 +37,7 @@ The [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is of the five [li
 
 The most important thing to know about the `alert` role is that it's for content that is dynamically displayed, not for content that appears on page load. It is perfect for situations such as when a user fills out a form and JavaScript is used to add an error message - the alert would immediately read out the message. It should not be used on HTML that the user hasn't interacted with. For example, if a page loads with multiple visible alerts scattered throughout, the alert role should not be used, as the messages were not dynamically triggered.
 
-As with all other [live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), alerts will only be announced when the content of the element with `role="alert"` is *updated*. Make sure that the element with the role is present in the page's markup first - this will "prime" the browser and screen reader to keep watching the element for changes. After this, any changes to the content will be announced. Do not try to dynamically add/generate an element with `role="alert"` that is already populated with the alert message you want announced - this generally does *not* lead to an announcement, as it is not a content change.
+As with all other [live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), alerts will only be announced when the content of the element with `role="alert"` is _updated_. Make sure that the element with the role is present in the page's markup first - this will "prime" the browser and screen reader to keep watching the element for changes. After this, any changes to the content will be announced. Do not try to dynamically add/generate an element with `role="alert"` that is already populated with the alert message you want announced - this generally does _not_ lead to an announcement, as it is not a content change.
 
 As the `alert` role reads out any content that has changed, it should be used with caution. Alerts, by definition, are disruptive. Several alerts at once, and unnecessary alerts, create bad user experiences.
 
@@ -47,7 +47,7 @@ Following are four ways of creating alerts:
 
 ### Example 1: Making ready-made content inside an element with an alert role visible
 
-If the content *inside* the element with `role="alert"` is initially hidden using CSS, making it visible will cause the alert to fire. This means that an existing alert container element can be "reused" multiple times.
+If the content _inside_ the element with `role="alert"` is initially hidden using CSS, making it visible will cause the alert to fire. This means that an existing alert container element can be "reused" multiple times.
 
 ```css
 .hidden {
@@ -68,7 +68,7 @@ document.getElementById("expirationWarning").firstChild.classList.remove("hidden
 
 ### Example 2: Dynamically changing the content inside an element with an alert role
 
-Using JavaScript, you can dynamically change the content *inside* the element with `role="alert"`. Note that if you need to fire the same alert multiple times (i.e. the content you're dynamically inserting is the same as before), this generally won't be seen as a change and will *not* lead to an announcement. For this reason, it's usually best to briefly "clear" the contents of the alert container before then injecting the alert message.
+Using JavaScript, you can dynamically change the content _inside_ the element with `role="alert"`. Note that if you need to fire the same alert multiple times (i.e. the content you're dynamically inserting is the same as before), this generally won't be seen as a change and will _not_ lead to an announcement. For this reason, it's usually best to briefly "clear" the contents of the alert container before then injecting the alert message.
 
 ```html
 <div id="alertContainer" role="alert"></div>
