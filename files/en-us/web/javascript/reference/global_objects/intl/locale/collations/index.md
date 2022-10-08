@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.Locale.collations
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.collations`** property is an accessor property that returns an array of one or more  [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for the `Locale`.
+The **`Intl.Locale.prototype.collations`** property is an accessor property that returns an array of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for the `Locale`.
 
 ## Description
 
