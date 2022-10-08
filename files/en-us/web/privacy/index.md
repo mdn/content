@@ -16,6 +16,8 @@ tags:
   - personal
 ---
 
+{{QuicklinksWithSubPages}}
+
 As users use the web for more and more of their daily tasks, more of their private or personally-identifying information they share, ideally only with sites they trust. Cooperation among web content, the web browser, and the web server is needed to achieve as much privacy and information security as possible. In this article, we examine how to create web content that minimizes the risk of users' personal information or imagery being obtained unexpectedly by third parties.
 
 ## Security and privacy defined
@@ -51,7 +53,7 @@ Before we go into any depth about the various security and privacy features avai
 
 Modern browsers take steps to help prevent fingerprinting-based attacks by either not allowing information to be accessed or, where the information must be made available, by introducing variations that prevent it from being used for identification purposes.
 
-For example, if a web site queries a user's browser for the elapsed time, a comparison of that time to the time as reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers in order to make them less useful for identifying the user's system.
+For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time as reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers in order to make them less useful for identifying the user's system.
 
 ## New privacy technology
 

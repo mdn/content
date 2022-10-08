@@ -143,6 +143,8 @@ look like this:
 
 The value returned by `reduceRight` this time would be, of course, `20`.
 
+The `reduceRight()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Sum up all values within an array
@@ -255,6 +257,21 @@ console.log(compose(inc, double)(2)); // 5
 ```js
 console.log([1, 2, , 4].reduceRight((a, b) => a + b)); // 7
 console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
+```
+
+### Calling reduceRight() on non-array objects
+
+The `reduceRight()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+// -1, which is 4 - 3 - 2
 ```
 
 ## Specifications
