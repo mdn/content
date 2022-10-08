@@ -188,8 +188,6 @@ This example lets the user select any value between 0 and π without any restric
 
 To add hash marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of hash marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
 
-According to the specification, you can label hash marks by giving the `<option>` elements `label` attributes. However, no browsers currently have good support for labeling hash marks on a range control.
-
 #### HTML
 
 ```html
@@ -208,6 +206,50 @@ According to the specification, you can label hash marks by giving the `<option>
 #### Result
 
 {{EmbedLiveSample("Adding hash marks")}}
+
+### Adding labels
+
+You can label hash marks by giving the `<option>` elements `label` attributes. However, you must use CSS to show the labels and to position them correctly. Here's one way you could do this.
+
+#### HTML
+
+```html
+<label for="temp">Choose a comfortable temperature:</label><br />
+<input type="range" id="temp" name="temp" list="tickmarks" />
+
+<datalist id="tickmarks">
+  <option value="0" label="very cold!"></option>
+  <option value="25" label="cool"></option>
+  <option value="50" label="medium"></option>
+  <option value="75" label="getting warm!"></option>
+  <option value="100" label="hot!"></option>
+</datalist>
+```
+
+#### CSS
+
+```css
+datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 200px;
+}
+
+option {
+  padding: 0;
+}
+
+input[type="range"] {
+  width: 200px;
+  margin: 0;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Adding labels")}}
 
 ### Creating vertical range controls
 
