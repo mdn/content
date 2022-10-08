@@ -18,7 +18,7 @@ SEO methods fall into three broad classes:
 
 - technical
   - : Tag the content using semantic {{Glossary("HTML")}}. When exploring the website, crawlers should only find the content you want indexed.
-- copywriting
+- copywriting (Content Based)
   - : Write content using your visitors' vocabulary. Use text as well as images so that crawlers can understand the subject.
 - popularity
   - : You get most traffic when other established sites link to your site.
