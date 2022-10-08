@@ -454,14 +454,16 @@ for (const i of arr) {
 }
 ```
 
-The {{jsxref("statements/for...of","for...of")}} statement can also be used with [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to loop over objects using iterators like [`Object.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries):
-```
-const obj = {foo: 1, bar: 2}
+The {{jsxref("Statements/for...of","for...of")}} statement can also be used with [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to loop over objects using iterators like {{jsxref("Object.entries()")}}:
+
+```js
+const obj = { foo: 1, bar: 2 };
 
 for (const [key, val] of Objects.entries()) {
-  console.log(key); // logs "foo", "bar"
-  console.log(val); // logs "1", "2"
+  console.log(key, val);
 }
+// "foo" 1
+// "bar" 2
 ```
 
 
