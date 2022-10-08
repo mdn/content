@@ -94,7 +94,7 @@ console.log(locale.collations); // Prints ["zhuyin"]
 
 ### Obtaining supported collation types
 
-List supported `collation types` for a given `Locale`.
+List supported `collation` types for a given `Locale`.
 
 ```js
 const locale = new Intl.Locale("zh")
