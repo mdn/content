@@ -13,11 +13,10 @@ browser-compat: css.properties.grid-row
 
 {{CSSRef}}
 
-The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+
 
 {{EmbedInteractiveExample("pages/css/grid-row.html")}}
-
-If two \<grid-line> values are specified, the `grid-row-start` longhand is set to the value before the slash, and the `grid-row-end` longhand is set to the value after the slash.
 
 ## Constituent properties
 
@@ -57,6 +56,17 @@ grid-row: revert-layer;
 grid-row: unset;
 ```
 
+This property is specified as one or two `<grid-line>` values.
+
+If two `<grid-line>` values are given they are separated by "/". The `grid-row-start` longhand is set to the value before the slash, and the `grid-row-end` longhand is set to the value after the slash.
+
+Each `<grid-line>` value can be specified as:
+
+- either the `auto` keyword
+- or a `<custom-ident>` value
+- or an `<integer>` value
+- or both `<custom-ident>` and `<integer>`, separated by a space
+- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
 ### Values
 
 - `auto`
