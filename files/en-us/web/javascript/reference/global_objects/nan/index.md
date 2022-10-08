@@ -32,7 +32,7 @@ There are five different types of operations that return `NaN`:
 
 `NaN` and its behaviors are not invented by JavaScript. Its semantics in floating point arithmetic (including that `NaN !== NaN`) are specified by [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). `NaN`'s behaviors include:
 
-- If `NaN` is involved in any mathematical operation, the result is also usually `NaN`. (See [counterexample](#silently-escaping-nan) below.)
+- If `NaN` is involved in a mathematical operation, the result is usually also `NaN`. (See [counter-example](#silently_escaping_nan) below.)
 - When `NaN` is one of the operands of any relational comparison (`>`, `<`, `>=`, `<=`), the result is always `false`.
 - `NaN` compares unequal (via [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality), [`!=`](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality), [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), and [`!==`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)) to any other value — including to another `NaN` value.
 
@@ -106,7 +106,7 @@ console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ### Silently escaping NaN
 
-In some cases simply testing for NaN at the end of a calculation is not enough to rule out the possibility that a previous calculation resulted in a NaN.
+In some cases, simply testing for `NaN` at the end of a calculation is not enough to rule out the possibility that a previous calculation resulted in a `NaN`.
 
 ```js
 NaN ** 0 === 1; // true
