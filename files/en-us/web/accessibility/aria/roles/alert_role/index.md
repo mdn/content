@@ -83,7 +83,7 @@ document.getElementById('alertContainer').innerHTML ="Your session will expire i
 
 ### Example 3: Visually hidden alert container for screen reader notifications
 
-It's possible to visually hide the alert container itself, and use it to provide updates/notifications explicitly for screen readers. This can be useful in situations where important content on the page has been updated, but where the change would not be immediately obvious to a screen reader user.
+It's possible to visually hide the alert container itself, and use it to provide updates/notifications explicitly for screen readers. This can be useful in situations where important content on the page has been updated, but where the change would not be immediately obvious to a screen-reader user.
 
 However, make sure that the container is not hidden using `display:none`, as this will hide it even from assistive technologies, meaning that they won't be notified of any changes. Instead, use something like the [`.visually-hidden` styles](https://www.a11yproject.com/posts/how-to-hide-content/).
 
