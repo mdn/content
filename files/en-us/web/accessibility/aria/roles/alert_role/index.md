@@ -43,7 +43,7 @@ As the `alert` role reads out any content that has changed, it should be used wi
 
 ## Examples
 
-Following are common examples of alerts and how to implement them:
+The following are common examples of alerts and how to implement them:
 
 ### Example 1: Making ready-made content inside an element with an alert role visible
 
