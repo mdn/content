@@ -7,12 +7,12 @@ browser-compat: css.properties.scroll-timeline
 
 {{CSSRef}}
 
-The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines a name that can be used to identify the source element of a scroll-timeline, along with the scrollbar axis that should provide the timeline.
+The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines a name that can be used to identify the source element of a scroll timeline, along with the scrollbar axis that should provide the timeline.
 
 The name can be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration; indicated the element and hence the scroll bar that will be used to control the progress of the animation.
 Note that if the element does not display a scrollbar in the axis dimension, then no timeline will be created.
 
-The `scroll-timeline` property is equivalent to setting both [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) and [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis) in a single declaration.
+The `scroll-timeline` property is equivalent to setting both [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) and [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis) properties in a single declaration.
 
 ## Constituent properties
 
@@ -24,13 +24,13 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* scroll-timeline-name and scroll-timeline-axis */
+/* values for both scroll-timeline-name and scroll-timeline-axis */
 scroll-timeline: custom_name_for_timeline block;
 scroll-timeline: custom_name_for_timeline inline;
 scroll-timeline: custom_name_for_timeline vertical;
 scroll-timeline: custom_name_for_timeline horizontal;
 
-/* none and scroll-timeline-axis */
+/* none keyword for scroll-timeline-name and value for scroll-timeline-axis */
 scroll-timeline: none block;
 scroll-timeline: none inline;
 scroll-timeline: none vertical;
@@ -84,7 +84,7 @@ Allowed values are:
 
 ## Examples
 
-A scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with id `container`.
+In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the id `container`.
 This is then applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
 
 ### HTML
@@ -152,7 +152,7 @@ Without this element there would be no scrollbar, and hence no scroll timeline t
 
 ### Result
 
-Scroll to see the animation.
+Scroll the vertical bar to see the animation.
 
 {{EmbedLiveSample("Setting a scroll timeline", "100%", "320px")}}
 

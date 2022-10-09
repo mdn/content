@@ -16,11 +16,11 @@ browser-compat: css.properties.animation-timeline
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the name of the timeline that defines the progress of the animation.
 
-For an animation that depends on the position of a scroll bar this name will be defined in a {{cssxref("scroll-timeline-name")}} or {{cssxref("scroll-timeline")}} property applied to the element that contains the scrollbar.
+For an animation that depends on the position of a scrollbar, this name will be defined by the {{cssxref("scroll-timeline-name")}} or {{cssxref("scroll-timeline")}} property that is applied to the element that contains the scrollbar.
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
-The animation timeline can also be set using the {{cssxref("animation")}} shorthand property.
+The animation timeline can also be set by using the {{cssxref("animation")}} shorthand property.
 
 ## Syntax
 
@@ -62,7 +62,7 @@ animation-timeline: unset;
 
 {{csssyntax}}
 
-## Exampless
+## Examples
 
 ### Setting a scroll timeline
 
@@ -84,7 +84,7 @@ The HTML for the example is shown below.
 
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline-name` property (we could also set which scrollbar axis to use with `scroll-timeline-axis`, but there will be only one scrollbar here, and it will be used by default).
 
-The height of the container is set to 300px and we also set the container to create a vertical scrollbar it it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
+The height of the container is set to 300px and we also set the container to create a vertical scrollbar if it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
 
 ```css
 #container {

@@ -10,17 +10,17 @@ browser-compat: css.properties.scroll-timeline-name
 The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property defines a name that can be used to identify an element as the source of a scroll timeline for an animation.
 
 The name can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration to link the animation to the position of a scrollbar on the indicated element.
-By default the scrollbar in the "block" direction provides the timeline (this is the vertical scrollbar in left-to-write writing modes).
+By default, the scrollbar in the "block" direction provides the timeline (this is the vertical scrollbar in left-to-right writing mode).
 The scrollbar that is used can be set by applying [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis) on the same element as the `scroll-timeline-name`.
 Note that if the element does not display a scrollbar in the axis dimension, then no timeline will be created.
 
-The `scroll-timeline-name` (and `scroll-timeline-axis`) can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline-name) shorthand property.
+The `scroll-timeline-name` (and `scroll-timeline-axis`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline-name) shorthand property.
 
 ## Syntax
 
 ```css
-scroll-timeline: none;
-scroll-timeline: custom_name_for_timeline;
+scroll-timeline-name: none;
+scroll-timeline-name: custom_name_for_timeline;
 ```
 
 ### Values
@@ -43,7 +43,7 @@ Allowed values for `<scroll-timeline-name>` are:
 
 ## Examples
 
-A scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with id `container`.
+In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the id `container`.
 This is then applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
 
 ### HTML
@@ -62,7 +62,7 @@ The HTML for the example is shown below.
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline-name` property.
 Here we choose not to set the scrollbar axis as the vertical axis will be used by default.
 
-The height of the container is set to 300px and we also set the container to create a vertical scrollbar it it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
+The height of the container is set to 300px and we also set the container to create a vertical scrollbar if it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
 
 ```css
 #container {
@@ -100,8 +100,8 @@ The CSS below defines a square that rotates in alternate directions according to
 }
 ```
 
-The "stretcher" CSS simply sets the block height to 600px, which forces the container element to overflow and create scroll bars.
-Without this element there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
+The "stretcher" CSS below sets the block height to 600px, which forces the container element to overflow and create scroll bars.
+Without this element, there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
 
 ```css
 #stretcher {
@@ -111,7 +111,7 @@ Without this element there would be no scrollbar, and hence no scroll timeline t
 
 ### Result
 
-Scroll to see the animation.
+Scroll the vertical bar to see the animation.
 
 {{EmbedLiveSample("Setting a scroll timeline", "100%", "320px")}}
 
