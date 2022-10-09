@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-timeline-name
 
 {{CSSRef}}
 
-The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property defines a name that can be used to identify an element as the source of a scroll-timeline for an animation.
+The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property defines a name that can be used to identify an element as the source of a scroll timeline for an animation.
 
 The name can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration to link the animation to the position of a scrollbar on the indicated element.
 By default the scrollbar in the "block" direction provides the timeline (this is the vertical scrollbar in left-to-write writing modes).
