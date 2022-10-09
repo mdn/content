@@ -86,10 +86,10 @@ Installing _Node_ and _npm_ on Windows and macOS is straightforward because you 
 
 ### Ubuntu 20.04
 
-The easiest way to install the most recent LTS version of Node 16.x is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
+The easiest way to install the most recent LTS version of Node is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
