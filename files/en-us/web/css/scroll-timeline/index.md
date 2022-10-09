@@ -9,7 +9,7 @@ browser-compat: css.properties.scroll-timeline
 
 The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines a name that can be used to identify the source element of a scroll timeline, along with the scrollbar axis that should provide the timeline.
 
-The name can be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration; indicated the element and hence the scroll bar that will be used to control the progress of the animation.
+The name can be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration in order to indicate the element, and hence the scrollbar, that will be used to control the progress of the animation.
 Note that if the element does not display a scrollbar in the axis dimension, then no timeline will be created.
 
 The `scroll-timeline` property is equivalent to setting both [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) and [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis) properties in a single declaration.
