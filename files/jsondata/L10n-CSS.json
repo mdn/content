@@ -14,7 +14,8 @@
     "ja": "アット規則",
     "pt-BR": "Regras @",
     "ru": "@-правила",
-    "zh-CN": "@ 规则"
+    "zh-CN": "@ 规则",
+    "es": "Reglas"
   },
   "types": {
     "en-US": "Data types",
@@ -22,7 +23,8 @@
     "ja": "データ型",
     "pt-BR": "Tipos de dados",
     "ru": "Типы данных",
-    "zh-CN": "数据类型"
+    "zh-CN": "数据类型",
+    "es": "Tipos de datos"
   },
   "missing": {
     "en-US": "Value not found in DB!",
@@ -30,7 +32,8 @@
     "ja": "DB に値が見つかりません！",
     "pt-BR": "Valor não encontrado na Database",
     "ru": "Значение не найдено в базе данных!",
-    "zh-CN": "在数据库中找不到该值！"
+    "zh-CN": "在数据库中找不到该值！",
+    "es": "¡Valor no encontrado en la base de datos!"
   },
   "info_in_preview_not_available": {
     "en-US": "CSS info in preview not available",
@@ -38,7 +41,8 @@
     "ja": "プレビューでは CSS info は利用できません",
     "pt-BR": "CSS info não disponível em visualização",
     "ru": "CSS info недоступно в предпросмотре",
-    "zh-CN": "CSS info 在预览中不可用"
+    "zh-CN": "CSS info 在预览中不可用",
+    "es": "La información de CSS en la vista previa no está disponible"
   },
   "tag_selectors": {
     "en-US": "Selectors",
@@ -46,7 +50,8 @@
     "ja": "セレクター",
     "pt-BR": "Seletores",
     "ru": "Селекторы",
-    "zh-CN": "选择器"
+    "zh-CN": "选择器",
+    "es": "Selectores"
   },
   "Basic Selectors": {
     "en-US": "Basic Selectors",
@@ -54,7 +59,8 @@
     "ja": "基本セレクター",
     "pt-BR": "Seletores Básicos",
     "ru": "Базовые селекторы",
-    "zh-CN": "基本选择器"
+    "zh-CN": "基本选择器",
+    "es": "Selectores básicos"
   },
   "Combinators": {
     "en-US": "Combinators",
@@ -62,7 +68,8 @@
     "ja": "結合子",
     "pt-BR": "Combinadores",
     "ru": "Комбинаторы",
-    "zh-CN": "组合器"
+    "zh-CN": "组合器",
+    "es": "Combinadores"
   },
   "Pseudo-classes": {
     "en-US": "Pseudo-classes",
@@ -70,7 +77,8 @@
     "ja": "擬似クラス",
     "pt-BR": "Pseudo-classes",
     "ru": "Псевдоклассы",
-    "zh-CN": "伪类"
+    "zh-CN": "伪类",
+    "es": "Pseudo-clases"
   },
   "Pseudo-elements": {
     "en-US": "Pseudo-elements",
@@ -78,6 +86,7 @@
     "ja": "擬似要素",
     "pt-BR": "Pseudo-elementos",
     "ru": "Псевдоэлементы",
-    "zh-CN": "伪元素"
+    "zh-CN": "伪元素",
+    "es": "Pseudo-elementos"
   }
 }
