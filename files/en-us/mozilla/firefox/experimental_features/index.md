@@ -434,7 +434,7 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 
 A scroll-linked animation is one in which the animation depends on the scroll position of a scrollbar instead of time, or some other dimension.
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular container can be used as the source for a scroll-linked animation.
-The scroll timeline can then be associated with a particular [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the `animation-timeline` property to the `scroll-timeline-name`.
+The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the `animation-timeline` property to the `scroll-timeline-name`.
 For more information, see {{bug(1676791)}} and {{bug(1754897)}}.
 
 <table>
