@@ -103,7 +103,7 @@ The HTML for the example is shown below.
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline` property.
 It also sets the scrollbar to use for the timeline as "vertical" (though this was not actually needed as it would have been used by default).
 
-The height of the container is set to 300px and we also set the container to create a vertical scrollbar it it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
+The height of the container is set to 300px and we also set the container to create a vertical scrollbar if it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
 
 ```css
 #container {
