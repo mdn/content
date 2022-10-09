@@ -190,6 +190,18 @@ function hasPerson(name) {
 hasPerson("hasOwnProperty"); // false
 ```
 
+Also, you can use {{jsxref("Object.prototype.hasOwnProperty()")}}.
+
+```js
+const ages = { alice: 18, bob: 27 };
+
+function hasPerson(name) {
+  return ages.hasOwnProperty(name);
+}
+
+hasPerson("alice"); // true
+```
+
 Alternatively, you should consider using a [null prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype) or a {{jsxref("Map")}} for storing `ages`, to avoid other bugs.
 
 ```js example-good
