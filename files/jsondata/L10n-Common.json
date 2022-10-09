@@ -1,7 +1,7 @@
 {
   "summary": {
     "en-US": "The documentation about this has not yet been written; please consider contributing!",
-    "es": "La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !",
+    "es": "La documentación acerca de este tema no ha sido escrita todavía. ¡Por favor considera contribuir!",
     "fr": "Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant&nbsp;!",
     "pt-BR": "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!",
     "ru": "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!",
@@ -37,7 +37,8 @@
     "pt-BR": "Handlers de Eventos",
     "zh-TW": "事件處理器",
     "zh-CN": "事件处理器",
-    "ru": "Обработчики событий"
+    "ru": "Обработчики событий",
+    "es": "Manejador de eventos"
   },
 
   "Constructor": {
@@ -173,6 +174,7 @@
     "fr": "[Page qui reste à écrire]",
     "ja": "[ページがまだ書かれていません]",
     "pt-BR": "[Página ainda não foi escrita]",
-    "zh-CN": "[页面尚未撰写]"
+    "zh-CN": "[页面尚未撰写]",
+    "es": "[Página aún no escrita]",
   }
 }
