@@ -149,10 +149,10 @@ The HTML file looks like this:
 
   <body>
     <div id="popup-content">
-      <div class="button beast">Frog</div>
-      <div class="button beast">Turtle</div>
-      <div class="button beast">Snake</div>
-      <div class="button reset">Reset</div>
+      <button class="button beast">Frog</button>
+      <button class="button beast">Turtle</button>
+      <button class="button beast">Snake</button>
+      <button class="button reset">Reset</button>
     </div>
     <div id="error-content" class="hidden">
       <p>Can't beastify this web page.</p>
@@ -182,6 +182,9 @@ body {
 }
 
 .button {
+  border: none;
+  display: block;
+  width: 100%;
   margin: 3% auto;
   padding: 4px;
   text-align: center;
