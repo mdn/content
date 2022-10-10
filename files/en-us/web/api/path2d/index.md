@@ -20,7 +20,7 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare a path that c
 - {{domxref("Path2D.Path2D", "Path2D()")}}
   - : `Path2D` constructor. Creates a new `Path2D` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("Path2D.addPath()")}}
   - : Adds a path to the current path.
