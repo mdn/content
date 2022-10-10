@@ -37,21 +37,21 @@ See the article [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API
 
 _The Fullscreen API has no interfaces of its own. Instead, it augments several other interfaces to add the methods, properties, and event handlers needed to provide fullscreen functionality. These are listed in the following sections._
 
-## Methods
+## Instance methods
 
 The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces to allow turning off and on fullscreen mode.
 
-### Methods on the Document interface
+### Instance methods on the Document interface
 
 - {{DOMxRef("Document.exitFullscreen()")}}
   - : Requests that the {{Glossary("user agent")}} switch from fullscreen mode back to windowed mode. Returns a {{jsxref("Promise")}} which is resolved once fullscreen mode has been completely shut off.
 
-### Methods on the Element interface
+### Instance methods on the Element interface
 
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Asks the user agent to place the specified element (and, by extension, its descendants) into fullscreen mode, removing all of the browser's UI elements as well as all other applications from the screen. Returns a {{jsxref("Promise")}} which is resolved once fullscreen mode has been activated.
 
-## Properties
+## Instance properties
 
 _The {{DOMxRef("Document")}} interface provides properties that can be used to determine if fullscreen mode is supported and available, and if fullscreen mode is currently active, which element is using the screen._
 

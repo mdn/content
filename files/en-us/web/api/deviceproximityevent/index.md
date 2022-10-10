@@ -18,7 +18,7 @@ browser-compat: api.DeviceProximityEvent
 
 The **`DeviceProximityEvent`** interface provides information about the distance of a nearby physical object using the proximity sensor of a device.
 
-## Properties
+## Instance properties
 
 - `DeviceProximityEvent.max` {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The maximum sensing distance the sensor is able to report, in centimeters.

@@ -15,7 +15,7 @@ The **`ErrorEvent`** interface represents events providing information related t
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
@@ -35,7 +35,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
   - : Creates an `ErrorEvent` event with the given parameters.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent {{domxref("Event")}}_.
 
