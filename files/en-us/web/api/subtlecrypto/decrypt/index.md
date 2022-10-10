@@ -31,10 +31,27 @@ decrypt(algorithm, key, data)
 - `algorithm`
   - : An object specifying the [algorithm](#supported_algorithms) to be used, and any extra parameters as required.
     The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
-    - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
-    - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
-    - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}} object.
-    - To use [AES-GCM](#aes-gcm), pass an {{domxref("AesGcmParams")}} object.
+
+    - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
+
+      - `name`
+        - : A string. This should be set to `RSA-OAEP`.
+      - `label` {{optional_inline}}
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
+          A digest of the label is part of the input to the encryption operation.
+
+          Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
+
+    - To use [AES-CTR](#aes-ctr), [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm), pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+
+      - `name`
+        - : A string indicating the name of the algorithm: `AES-CTR`, `AES-CBC`, `AES-GCM`.
+      - `iv`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+          The initialization vector.
+          Must be 16 bytes, unpredictable, and preferably cryptographically random.
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key to be used for decryption.
     If using RSA-OAEP, this is the `privateKey` property of the {{domxref("CryptoKeyPair")}} object.

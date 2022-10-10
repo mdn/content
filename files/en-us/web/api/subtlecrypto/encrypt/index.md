@@ -14,13 +14,10 @@ browser-compat: api.SubtleCrypto.encrypt
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`encrypt()`** method of the {{domxref("SubtleCrypto")}}
-interface encrypts data.
+The **`encrypt()`** method of the {{domxref("SubtleCrypto")}} interface encrypts data.
 
-It takes as its arguments a {{glossary("key")}} to encrypt with, some
-algorithm-specific parameters, and the data to encrypt (also known as "plaintext"). It
-returns a {{jsxref("Promise")}} which will be fulfilled with the encrypted data (also
-known as "ciphertext").
+It takes as its arguments a {{glossary("key")}} to encrypt with, some algorithm-specific parameters, and the data to encrypt (also known as "plaintext").
+It returns a {{jsxref("Promise")}} which will be fulfilled with the encrypted data (also known as "ciphertext").
 
 ## Syntax
 
@@ -33,10 +30,26 @@ encrypt(algorithm, key, data)
 - `algorithm`
 
   - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
-    - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
-    - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
-    - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}} object.
-    - To use [AES-GCM](#aes-gcm), pass an {{domxref("AesGcmParams")}} object.
+
+    - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
+
+      - `name`
+        - : A string. This should be set to `RSA-OAEP`.
+      - `label` {{optional_inline}}
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
+          A digest of the label is part of the input to the encryption operation.
+
+          Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
+
+    - To use [AES-CTR](#aes-ctr), [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm), pass an object with the properties given: <!-- AesGcmParams dictionary in the spec -->
+
+      - `name`
+        - : A string indicating the name of the algorithm: `AES-CTR`, `AES-CBC`, `AES-GCM`.
+      - `iv`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+          The initialization vector.
+          Must be 16 bytes, unpredictable, and preferably cryptographically random.
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key to be used for encryption.
@@ -46,46 +59,36 @@ encrypt(algorithm, key, data)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with an
-{{jsxref("ArrayBuffer")}} containing the "ciphertext".
+A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the "ciphertext".
 
 ### Exceptions
 
 The promise is rejected when the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the requested operation is not valid for the provided key (e.g. invalid
-    encryption algorithm, or invalid key for the specified encryption algorithm*)*.
+  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm*)*.
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm
-    parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).
+  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).
 
 ## Supported algorithms
 
-The Web Crypto API provides four algorithms that support the `encrypt()` and
-`decrypt()` operations.
+The Web Crypto API provides four algorithms that support the `encrypt()` and `decrypt()` operations.
 
-One of these algorithms — RSA-OAEP — is a {{Glossary("public-key cryptography",
-  "public-key cryptosystem")}}.
+One of these algorithms — RSA-OAEP — is a {{Glossary("public-key cryptography", "public-key cryptosystem")}}.
 
-The other three encryption algorithms here are all {{Glossary("Symmetric-key
-  cryptography", "symmetric algorithms")}}, and they're all based on the same underlying
-cipher, AES (Advanced Encryption Standard). The difference between them is the
-{{Glossary("Block cipher mode of operation", "mode")}}. The Web Crypto API supports
-three different AES modes:
+The other three encryption algorithms here are all {{Glossary("Symmetric-key cryptography", "symmetric algorithms")}}, and they're all based on the same underlying cipher, AES (Advanced Encryption Standard).
+The difference between them is the {{Glossary("Block cipher mode of operation", "mode")}}.
+The Web Crypto API supports three different AES modes:
 
 - CTR (Counter Mode)
 - CBC (Cipher Block Chaining)
 - GCM (Galois/Counter Mode)
 
-It's strongly recommended to use _authenticated encryption_, which includes
-checks that the ciphertext has not been modified by an attacker. Authentication helps
-protect against _chosen-ciphertext_ attacks, in which an attacker can ask the
-system to decrypt arbitrary messages, and use the result to deduce information about the
-secret key. While it's possible to add authentication to CTR and CBC modes, they do not
-provide it by default and when implementing it manually one can easily make minor, but
-serious mistakes. GCM does provide built-in authentication, and for this reason it's
-often recommended over the other two AES modes.
+It's strongly recommended to use _authenticated encryption_, which includes checks that the ciphertext has not been modified by an attacker.
+Authentication helps protect against _chosen-ciphertext_ attacks, in which an attacker can ask the system to decrypt arbitrary messages, and use the result to deduce information about the
+secret key.
+While it's possible to add authentication to CTR and CBC modes, they do not provide it by default and when implementing it manually one can easily make minor, but serious mistakes.
+GCM does provide built-in authentication, and for this reason it's often recommended over the other two AES modes.
 
 ### RSA-OAEP
 
@@ -103,9 +106,7 @@ This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-3
 
 This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final).
 
-One major difference between this mode and the others is that GCM is an "authenticated"
-mode, which means that it includes checks that the ciphertext has not been modified by
-an attacker.
+One major difference between this mode and the others is that GCM is an "authenticated" mode, which means that it includes checks that the ciphertext has not been modified by an attacker.
 
 ## Examples
 
@@ -138,8 +139,8 @@ function encryptMessage(publicKey) {
 
 ### AES-CTR
 
-This code fetches the contents of a text box, encodes it for encryption, and encrypts
-it using AES in CTR mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
+This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in CTR mode.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
 
 ```js
 function getMessageEncoding() {
@@ -195,8 +196,8 @@ console.log(encrypted_content);
 
 ### AES-CBC
 
-This code fetches the contents of a text box, encodes it for encryption, and encrypts
-it using AES in CBC mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
+This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in CBC mode.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
 
 ```js
 function getMessageEncoding() {
@@ -223,8 +224,8 @@ function encryptMessage(key) {
 
 ### AES-GCM
 
-This code fetches the contents of a text box, encodes it for encryption, and encrypts
-it using AES in GCM mode. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
+This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in GCM mode.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
 
 ```js
 function getMessageEncoding() {

@@ -14,24 +14,17 @@ browser-compat: api.SubtleCrypto.wrapKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`wrapKey()`** method of the {{domxref("SubtleCrypto")}}
-interface "wraps" a key. This means that it exports the key in an external, portable
-format, then encrypts the exported key. Wrapping a key helps protect it in untrusted
-environments, such as inside an otherwise unprotected data store or in transmission over
-an unprotected network.
+The **`wrapKey()`** method of the {{domxref("SubtleCrypto")}} interface "wraps" a key.
+This means that it exports the key in an external, portable format, then encrypts the exported key.
+Wrapping a key helps protect it in untrusted environments, such as inside an otherwise unprotected data store or in transmission over an unprotected network.
 
-As with {{DOMxRef("SubtleCrypto.exportKey()")}},
-you specify an [export format](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats)
-for the key. To export a key, it must have {{DOMxRef("CryptoKey.extractable")}}
-set to `true`.
+As with {{DOMxRef("SubtleCrypto.exportKey()")}}, you specify an [export format](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) for the key.
+To export a key, it must have {{DOMxRef("CryptoKey.extractable")}} set to `true`.
 
-But because `wrapKey()` also encrypts the key to be imported, you also need
-to pass in the key that must be used to encrypt it. This is sometimes called the
-"wrapping key".
+But because `wrapKey()` also encrypts the key to be imported, you also need to pass in the key that must be used to encrypt it.
+This is sometimes called the "wrapping key".
 
-The inverse of `wrapKey()` is {{domxref("SubtleCrypto.unwrapKey()")}}: while
-`wrapKey` is composed of export + encrypt, `unwrapKey` is composed
-of import + decrypt.
+The inverse of `wrapKey()` is {{domxref("SubtleCrypto.unwrapKey()")}}: while `wrapKey` is composed of export + encrypt, `unwrapKey` is composed of import + decrypt.
 
 ## Syntax
 
@@ -56,18 +49,29 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
 - `wrappingkey`
   - : The {{domxref("CryptoKey")}} used to encrypt the exported key. The key must have the `wrapKey` usage set.
 - `wrapAlgo`
-  - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
-    to be used to encrypt the exported key, and any required extra parameters:
-    - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
-      pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams) object.
-    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
-      pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams) object.
-    - To use [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams) object.
-    - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
-      pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams) object.
-    - To use [AES-KW](#aes-kw),
-      pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
+  - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) to be used to encrypt the exported key, and any required extra parameters:
+
+    - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
+
+      - `name`
+        - : A string. This should be set to `RSA-OAEP`.
+      - `label` {{optional_inline}}
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
+          A digest of the label is part of the input to the encryption operation.
+
+          Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
+
+    - To use [AES-CTR](#aes-ctr), [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm), pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+
+      - `name`
+        - : A string indicating the name of the algorithm: `AES-CTR`, `AES-CBC`, `AES-GCM`.
+      - `iv`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+          The initialization vector.
+          Must be 16 bytes, unpredictable, and preferably cryptographically random.
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+
+    - To use [AES-KW](#aes-kw), pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
 
 ### Return value
 
