@@ -25,7 +25,7 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 - {{domxref("SpeechGrammar.SpeechGrammar()", "SpeechGrammar()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
   - : Creates a new `SpeechGrammar` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("SpeechGrammar.src")}} {{Experimental_Inline}}
   - : Sets and returns a string containing the grammar from within in the `SpeechGrammar` object instance.

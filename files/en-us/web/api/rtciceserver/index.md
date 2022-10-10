@@ -16,7 +16,7 @@ browser-compat: api.RTCIceServer
 
 The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) of an {{domxref("RTCPeerConnection")}}, in the `iceServers` array.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCIceServer.credential", "credential")}} {{optional_inline}}
   - : The credential to use when logging into the server. This is only used if the `RTCIceServer` represents a TURN server.

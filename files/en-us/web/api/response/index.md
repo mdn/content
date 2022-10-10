@@ -23,7 +23,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.Response","Response()")}}
   - : Creates a new `Response` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("Response.body")}} {{ReadOnlyInline}}
   - : A {{domxref("ReadableStream")}} of the body contents.
@@ -46,7 +46,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.url")}} {{ReadOnlyInline}}
   - : The URL of the response.
 
-## Methods
+## Instance methods
 
 - {{domxref("Response.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.

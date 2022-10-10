@@ -11,7 +11,7 @@ The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/d
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`SpeechRecognitionErrorEvent` also inherits properties from its parent interface, {{domxref("Event")}}._
 

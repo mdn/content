@@ -19,11 +19,11 @@ The **`SVGAltGlyphItemElement`** interface corresponds to the {{SVGElement("altG
 
 > **Warning:** This interface was removed in the SVG 2 specification.
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
