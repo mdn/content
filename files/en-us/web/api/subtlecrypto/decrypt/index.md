@@ -29,6 +29,7 @@ decrypt(algorithm, key, data)
 ### Parameters
 
 - `algorithm`
+
   - : An object specifying the [algorithm](#supported_algorithms) to be used, and any extra parameters as required.
     The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
 
@@ -37,6 +38,7 @@ decrypt(algorithm, key, data)
       - `name`
         - : A string. This should be set to `RSA-OAEP`.
       - `label` {{optional_inline}}
+
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
           A digest of the label is part of the input to the encryption operation.
 
@@ -92,7 +94,7 @@ function decryptMessage(privateKey, ciphertext) {
   return window.crypto.subtle.decrypt(
     { name: "RSA-OAEP" },
     privateKey,
-    ciphertext,
+    ciphertext
   );
 }
 ```
@@ -107,7 +109,7 @@ function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
     { name: "AES-CTR", counter, length: 64 },
     key,
-    ciphertext,
+    ciphertext
   );
 }
 ```
@@ -119,11 +121,7 @@ This code decrypts `ciphertext` using AES in CBC mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    { name: "AES-CBC", iv },
-    key,
-    ciphertext,
-  );
+  return window.crypto.subtle.decrypt({ name: "AES-CBC", iv }, key, ciphertext);
 }
 ```
 
@@ -134,11 +132,7 @@ This code decrypts `ciphertext` using AES in GCM mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    { name: "AES-GCM", iv },
-    key,
-    ciphertext,
-  );
+  return window.crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, ciphertext);
 }
 ```
 

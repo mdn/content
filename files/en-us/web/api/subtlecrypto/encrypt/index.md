@@ -36,6 +36,7 @@ encrypt(algorithm, key, data)
       - `name`
         - : A string. This should be set to `RSA-OAEP`.
       - `label` {{optional_inline}}
+
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
           A digest of the label is part of the input to the encryption operation.
 
@@ -129,7 +130,7 @@ function encryptMessage(publicKey) {
   let encoded = getMessageEncoding();
   return window.crypto.subtle.encrypt(
     {
-      name: "RSA-OAEP"
+      name: "RSA-OAEP",
     },
     publicKey,
     encoded
@@ -158,7 +159,7 @@ function encryptMessage(key) {
     {
       name: "AES-CTR",
       counter,
-      length: 64
+      length: 64,
     },
     key,
     encoded
@@ -178,7 +179,7 @@ const key_encoded = await crypto.subtle.importKey(
   key.buffer,
   "AES-CTR",
   false,
-  ["encrypt", "decrypt"],
+  ["encrypt", "decrypt"]
 );
 const encrypted_content = await window.crypto.subtle.encrypt(
   {
@@ -187,7 +188,7 @@ const encrypted_content = await window.crypto.subtle.encrypt(
     length: 128,
   },
   key_encoded,
-  data,
+  data
 );
 
 // Uint8Array
@@ -217,7 +218,7 @@ function encryptMessage(key) {
       iv: iv,
     },
     key,
-    encoded,
+    encoded
   );
 }
 ```
@@ -242,7 +243,7 @@ function encryptMessage(key) {
   return window.crypto.subtle.encrypt(
     { name: "AES-GCM", iv: iv },
     key,
-    encoded,
+    encoded
   );
 }
 ```
