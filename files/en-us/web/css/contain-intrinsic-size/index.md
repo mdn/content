@@ -106,7 +106,7 @@ This example provides selection lists that can be used to modify `contain-intrin
 
 #### JavaScript
 
-The code below adds and removes styles to the containing element based on the selected options.
+The code below adds styles to, and removes styles from, the containing element based on the selected options.
 
 ```js
 const containedElement = document.querySelector("#contained_element");
