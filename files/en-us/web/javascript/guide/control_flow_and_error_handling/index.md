@@ -64,7 +64,7 @@ Here, `{ x++; }` is the block statement.
 > {
 >   var x = 2;
 > }
-> console.log(x); // Logs 2
+> console.log(x); // 2
 > ```
 >
 > This outputs `2` because the `var x` statement within the block is in the same scope as the `var x` statement before the block. (In C or Java, the equivalent code would have output `1`.)
