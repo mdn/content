@@ -234,7 +234,7 @@ while ((r = re.exec("123 456"))) {
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
 // [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
-//   ... and no more match.
+//  …and no more match.
 ```
 
 With the global flag `g`, all 6 digits would be matched, not just 3.

@@ -96,8 +96,8 @@ In basic use without specifying a locale, a formatted string in the default loca
 with default options is returned.
 
 ```js
-console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
-// Expected output: 'us'
+console.log((new Intl.DisplayNames([], { type: 'language' })).of('US'));
+// 'us'
 ```
 
 ### Using type `dateTimeField`

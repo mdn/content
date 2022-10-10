@@ -311,7 +311,7 @@ which are much faster and safer:
 ```js
 const obj = { a: 20, b: 30 };
 const propName = getPropName();  // returns "a" or "b"
-const result = obj[propName];  //  obj[ "a" ] is the same as obj.a
+const result = obj[propName];  // obj["a"] is the same as obj.a
 ```
 
 You can even use this method to access descendant properties. Using `eval()`

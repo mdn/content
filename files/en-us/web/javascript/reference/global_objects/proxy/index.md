@@ -367,22 +367,14 @@ const products = new Proxy({
   }
 });
 
-console.log(products.browsers);
-//  ['Internet Explorer', 'Netscape']
+console.log(products.browsers); // ['Internet Explorer', 'Netscape']
 
-products.browsers = 'Firefox';
-//  pass a string (by mistake)
-
-console.log(products.browsers);
-//  ['Firefox'] <- no problem, the value is an array
+products.browsers = 'Firefox'; // pass a string (by mistake)
+console.log(products.browsers); // ['Firefox']; no problem, the value is an array
 
 products.latestBrowser = 'Chrome';
-
-console.log(products.browsers);
-//  ['Firefox', 'Chrome']
-
-console.log(products.latestBrowser);
-//  'Chrome'
+console.log(products.browsers); // ['Firefox', 'Chrome']
+console.log(products.latestBrowser); // 'Chrome'
 ```
 
 ### Finding an array item object by its property

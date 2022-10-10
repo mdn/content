@@ -67,7 +67,7 @@ to use the logical OR operator
 ```js
 let foo;
 
-//  foo is never assigned any value so it is still undefined
+// foo is never assigned any value so it is still undefined
 const someDummyText = foo || 'Hello!';
 ```
 

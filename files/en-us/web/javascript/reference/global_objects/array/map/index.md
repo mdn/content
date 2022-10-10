@@ -126,12 +126,13 @@ const kvArray = [
 
 const reformattedArray = kvArray.map(({ key, value}) => ({ [key]: value }));
 
-// reformattedArray is now [{1: 10}, {2: 20}, {3: 30}],
-
-// kvArray is still:
-// [{key: 1, value: 10},
-//  {key: 2, value: 20},
-//  {key: 3, value: 30}]
+console.log(reformattedArray); // [{ 1: 10 }, { 2: 20 }, { 3: 30 }]
+console.log(kvArray);
+// [
+//   { key: 1, value: 10 },
+//   { key: 2, value: 20 },
+//   { key: 3, value: 30 }
+// ]
 ```
 
 ### Mapping an array of numbers using a function containing an argument
@@ -144,8 +145,8 @@ of the array as `map` loops through the original array.
 const numbers = [1, 4, 9];
 const doubles = numbers.map((num) => num * 2);
 
-// doubles is now   [2, 8, 18]
-// numbers is still [1, 4, 9]
+console.log(doubles); // [2, 8, 18]
+console.log(numbers); // [1, 4, 9]
 ```
 
 ### Calling map() on non-array objects

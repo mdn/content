@@ -55,11 +55,11 @@ class PrivateCounter {
 }
 
 const total = new PrivateCounter(7);
-console.log(total.current);  // expected output: 7
-total.increase();            // #count now = 8
-total.increase(5);           // #count now = 13
-console.log(total.current);  // expected output: 13
-total.reset();               // #count now = 7
+console.log(total.current); // 7
+total.increase(); // #count now = 8
+total.increase(5); // #count now = 13
+console.log(total.current); // 13
+total.reset(); // #count now = 7
 ```
 
 The "hash mark" (`#`) is what marks a field as being private. It also prevents private fields and property names from ever being in conflict: private names **must** start with `#`, whereas property names can **never** start that way.

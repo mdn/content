@@ -375,13 +375,12 @@ for (const zoneName of timezoneNames) {
   console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
-// expected output:
-// "short: 12/16/2021, PST"
-// "long: 12/16/2021, Pacific Standard Time"
-// "shortOffset: 12/16/2021, GMT-8"
-// "longOffset: 12/16/2021, GMT-08:00"
-// "shortGeneric: 12/16/2021, PT"
-// "longGeneric: 12/16/2021, Pacific Time"
+// short: 12/16/2021, PST
+// long: 12/16/2021, Pacific Standard Time
+// shortOffset: 12/16/2021, GMT-8
+// longOffset: 12/16/2021, GMT-08:00
+// shortGeneric: 12/16/2021, PT
+// longGeneric: 12/16/2021, Pacific Time
 ```
 
 ## Specifications

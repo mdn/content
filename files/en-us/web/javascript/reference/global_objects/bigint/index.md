@@ -136,10 +136,10 @@ BigInt values and Number values may be mixed in arrays and sorted:
 
 ```js
 const mixed = [4n, 6, -12n, 10, 4, 0, 0n]
-//  [4n, 6, -12n, 10, 4, 0, 0n]
+// [4n, 6, -12n, 10, 4, 0, 0n]
 
 mixed.sort() // default sorting behavior
-//  [ -12n, 0, 0n, 10, 4n, 4, 6 ]
+// [ -12n, 0, 0n, 10, 4n, 4, 6 ]
 
 mixed.sort((a, b) => a - b)
 // won't work since subtraction will not work with mixed types
@@ -147,7 +147,7 @@ mixed.sort((a, b) => a - b)
 
 // sort with an appropriate numeric comparator
 mixed.sort((a, b) => (a < b) ? -1 : ((a > b) ? 1 : 0))
-//  [ -12n, 0, 0n, 4n, 4, 6, 10 ]
+// [ -12n, 0, 0n, 4n, 4, 6, 10 ]
 ```
 
 Note that comparisons with `Object`-wrapped BigInt values act as with other objects, only indicating equality when the same object instance is compared:

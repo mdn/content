@@ -47,8 +47,7 @@ JavaScript calls the `toString` method automatically when an array is to be repr
 ```js
 const array1 = [1, 2, 'a', '1a'];
 
-console.log(array1.toString());
-// expected output: "1,2,a,1a"
+console.log(array1.toString()); // "1,2,a,1a"
 ```
 
 ### Using toString() on sparse arrays

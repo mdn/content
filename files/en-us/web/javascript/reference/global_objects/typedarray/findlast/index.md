@@ -105,7 +105,7 @@ function isPrime(element) {
 }
 
 let uint8 = new Uint8Array([4, 6, 8, 12]);
-console.log(uint8.findLast(isPrime)); //  undefined (no primes in array)
+console.log(uint8.findLast(isPrime)); // undefined (no primes in array)
 uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLast(isPrime)); // 11
 ```

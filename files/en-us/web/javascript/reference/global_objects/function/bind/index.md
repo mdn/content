@@ -181,7 +181,7 @@ class LateBloomer {
 
 const flower = new LateBloomer();
 flower.bloom();
-//  after 1 second, calls 'flower.declare()'
+// After 1 second, calls 'flower.declare()'
 ```
 
 You can also use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for this purpose.
@@ -232,8 +232,8 @@ The corollary is that you need not do anything special to create a bound functio
 const emptyObj = {};
 const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
-//  Can still be called as a normal function
-//  (although usually this is undesired)
+// Can still be called as a normal function
+// (although usually this is undesired)
 YAxisPoint(13);
 
 // The modifications to `this` is now observable from the outside
@@ -280,7 +280,7 @@ With `bind()`, this can be simplified.
 In the following piece of code, `slice()` is a bound function to the {{jsxref("Function.prototype.call()")}}, with the `this` value set to {{jsxref("Array.prototype.slice()")}}. This means that additional `call()` calls can be eliminated:
 
 ```js
-//  same as "slice" in the previous example
+// Same as "slice" in the previous example
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
