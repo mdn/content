@@ -22,7 +22,7 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("BaseAudioContext.audioWorklet")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns the {{domxref("AudioWorklet")}} object, which can be used to create and manage {{domxref("AudioNode")}}s in which JavaScript code implementing the {{domxref("AudioWorkletProcessor")}} interface are run in the background to process audio data.
@@ -37,12 +37,7 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 - {{domxref("BaseAudioContext.state")}} {{ReadOnlyInline}}
   - : Returns the current state of the `AudioContext`.
 
-### Events
-
-- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
-  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
-
-## Methods
+## Instance methods
 
 _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
@@ -84,6 +79,11 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
   - : Creates a {{domxref("WaveShaperNode")}}, which is used to implement non-linear distortion effects.
 - {{domxref("BaseAudioContext.decodeAudioData()")}}
   - : Asynchronously decodes audio file data contained in an {{jsxref("ArrayBuffer")}}. In this case, the `ArrayBuffer` is usually loaded from an {{domxref("XMLHttpRequest")}}'s `response` attribute after setting the `responseType` to `arraybuffer`. This method only works on complete files, not fragments of audio files.
+
+## Events
+
+- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
+  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
 
 ## Examples
 

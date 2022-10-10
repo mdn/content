@@ -21,14 +21,14 @@ Part of the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_AP
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits the properties of its parent, {{domxref("MediaStreamTrack")}}._
 
 - {{domxref("CanvasCaptureMediaStreamTrack.canvas")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("HTMLCanvasElement")}} object whose surface is captured in real-time.
 
-## Methods
+## Instance methods
 
 _This interface inherits the methods of its parent, {{domxref("MediaStreamTrack")}}._
 
