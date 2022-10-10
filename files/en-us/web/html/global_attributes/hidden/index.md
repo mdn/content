@@ -10,9 +10,15 @@ browser-compat: html.global_attributes.hidden
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. Browsers won't render elements with the `hidden` attribute set.
+The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. Browsers won't render elements with the `hidden` attribute set.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
+
+The attribute takes the following value:
+
+- `hidden` or an empty string, which indicates that the element is hidden.
+
+If the attribute is given without a value, like `<label hidden>Hidden Label</label>`, or has an invalid value, like `<label hidden="oops">Hidden Label</label>`, its value is treated as an empty string, and will be hidden. If the attribute is not included, the element is not hidden.
 
 The `hidden` attribute must not be used to hide content just from one presentation. If something is marked hidden, it is hidden from all presentations, including, for instance, screen readers.
 

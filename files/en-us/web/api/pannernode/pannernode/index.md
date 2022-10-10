@@ -51,8 +51,8 @@ new PannerNode(context, options)
       - : The {{domxref("PannerNode.refDistance")}} you want the {{domxref("PannerNode")}} to have. The default is `1`, and negative values are not allowed.
     - `maxDistance`
       - : The {{domxref("PannerNode.maxDistance")}} you want the {{domxref("PannerNode")}} to have. The default is `10000`, and non-positive values are not allowed.
-    - `rollOffFactor`
-      - : The {{domxref("PannerNode.rollOffFactor")}} you want the {{domxref("PannerNode")}} to have. The default is `1`, and negative values are not allowed.
+    - `rolloffFactor`
+      - : The {{domxref("PannerNode.rolloffFactor")}} you want the {{domxref("PannerNode")}} to have. The default is `1`, and negative values are not allowed.
     - `coneInnerAngle`
       - : The {{domxref("PannerNode.coneInnerAngle")}} you want the {{domxref("PannerNode")}} to have (the default is `360`.)
     - `coneOuterAngle`
