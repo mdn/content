@@ -25,11 +25,11 @@ This interface replaces one method from {{domxref("HTMLCollection")}}, on which 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits the properties of its parent, {{domxref("HTMLCollection")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits the methods of its parent, {{domxref("HTMLCollection")}}._
 

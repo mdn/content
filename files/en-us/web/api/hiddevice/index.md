@@ -17,7 +17,7 @@ The **`HIDDevice`** interface of the {{domxref('WebHID API')}} represents a HID 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 This interface also inherits properties from {{domxref("EventTarget")}}.
 
@@ -37,7 +37,7 @@ This interface also inherits properties from {{domxref("EventTarget")}}.
 - {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}}
   - : Fires when a report is sent from the device.
 
-## Methods
+## Instance methods
 
 This interface also inherits methods from {{domxref("EventTarget")}}.
 
