@@ -32,6 +32,8 @@ Cookies are not sent on normal cross-site subrequests (for example to load image
 This is the default cookie value if `SameSite` has not been explicitly specified in recent browser versions (see the "SameSite: Defaults to Lax" feature in the Browser Compatibility).
 
 > **Note:** `Lax` replaced `None` as the default value in order to ensure that users have reasonably robust defense against some classes of cross-site request forgery ({{Glossary("CSRF")}}) attacks.
+>
+> In order to mitigate breakages due to the new default value, browsers may implement an intervention such that the cookies can be sent with top-level cross-site unsafe requests if they are less than 2 minutes old. Implemented by [Chrome](https://www.chromium.org/updates/same-site#20191101) and [Firefox](https://phabricator.services.mozilla.com/D63081), this behavior ["Lax-Allowing-Unsafe"](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-10#section-5.4.7.2) should be considered as a temporary, transitional measure.
 
 ### `Strict`
 
