@@ -18,7 +18,7 @@ The **`HTMLFrameSetElement`** interface provides special properties (beyond thos
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -27,7 +27,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
   - : A string structured as a comma-separated list specifying the height of each column inside a frameset.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

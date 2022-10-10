@@ -28,11 +28,11 @@ This element is based on, and inherits properties and methods from, the {{domxre
 - {{domxref("HTMLAudioElement.Audio", "Audio()")}}
   - : Creates and returns a new `HTMLAudioElement` object, optionally starting the process of loading an audio file into it if the file URL is given.
 
-## Properties
+## Instance properties
 
 _No specific properties; inherits properties from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. It offers no methods of its own._
 

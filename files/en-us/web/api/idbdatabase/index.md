@@ -26,7 +26,7 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBDatabase.name")}} {{ReadOnlyInline}}
   - : A string that contains the name of the connected database.
@@ -35,7 +35,7 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 - {{domxref("IDBDatabase.objectStoreNames")}} {{ReadOnlyInline}}
   - : A {{ domxref("DOMStringList") }} that contains a list of the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
-## Methods
+## Instance methods
 
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 

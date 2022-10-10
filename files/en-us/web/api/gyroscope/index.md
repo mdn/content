@@ -30,7 +30,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("Gyroscope.Gyroscope", "Gyroscope()")}}
   - : Creates a new `Gyroscope` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('Gyroscope.x')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's x axis.
@@ -39,7 +39,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref('Gyroscope.z')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's z axis.
 
-## Methods
+## Instance methods
 
 _`Gyroscope` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
