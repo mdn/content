@@ -209,9 +209,9 @@ export {
   C,
 };
 
-  export { A, B, C, };
+export { A, B, C, };
 
-export { A as B, C as D, E as F, }; // Renaming exports
+export { A as B, C as D, E as F, };
 ```
 
 ### Trailing commas in dynamic import
@@ -231,10 +231,9 @@ import(
 > **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
 
 ```js
-  //{ DecimalDigits[~Sep], DecimalDigits[~Sep] }
-  x{n,}
-  x{n,m}
-  x{n,m}?
+/x{2}/; // Exactly 2 occurrences of "x"; equivalent to /xx/
+/x{2,}/; // At least 2 occurrences of "x"; equivalent to /xx+/
+/x{2,4}/; // 2 to 4 occurrences of "x"; equivalent to /xxx?x?/
 ```
 
 ## Specifications
