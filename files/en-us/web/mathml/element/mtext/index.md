@@ -11,9 +11,9 @@ browser-compat: mathml.elements.mtext
 
 {{MathMLRef}}
 
-The MathML \<mtext> element is used to render arbitrary text with _no_ notational meaning, such as comments or annotations.
+The **`<mtext>`** [MathML](/en-US/docs/Web/MathML) element is used to render arbitrary text with _no_ notational meaning, such as comments or annotations.
 
-To display text _with_ notational meaning, use {{ MathMLElement("mi") }} and {{ MathMLElement("mo") }} instead.
+To display text _with_ notational meaning, use {{ MathMLElement("mi") }}, {{ MathMLElement("mn") }}, {{ MathMLElement("mo") }} or {{ MathMLElement("ms") }} instead.
 
 ## Attributes
 
@@ -22,12 +22,16 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 ## Examples
 
 ```html
-<math>
+<math display="block">
   <mtext>Theorem of Pythagoras</mtext>
+</math>
 
+<math display="block">
   <mtext>/* comment here */</mtext>
 </math>
 ```
+
+{{ EmbedLiveSample('mtext_example', 700, 200, "", "") }}
 
 ## Specifications
 

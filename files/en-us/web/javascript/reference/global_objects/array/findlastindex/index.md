@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Array.findLastIndex
 
 {{JSRef}}
 
-The **`findLastIndex()`** method returns the index of the last element in an array that satisfies the provided testing function.
+The **`findLastIndex()`** method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
@@ -52,7 +52,7 @@ findLastIndex(function(element, index, array) { /* … */ }, thisArg)
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array `findIndex()` was called upon.
+      - : The array `findLastIndex()` was called upon.
 
     The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
     The index of this element is then returned by `findLastIndex()`.
@@ -71,8 +71,7 @@ The `findLastIndex()` method executes the `callbackFn` function once for each el
 `findLastIndex()` then returns the index of that element and stops iterating through the array.
 If `callbackFn` never returns a truthy value, `findLastIndex()` returns `-1`.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 If a `thisArg` parameter is provided to `findLastIndex()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
@@ -88,6 +87,8 @@ Therefore:
 - Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+
+The `findLastIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -108,22 +109,32 @@ function isPrime(element) {
   return true;
 }
 
-console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
-console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
+console.log([4, 6, 8, 12].findLastIndex(isPrime)); // -1, not found
+console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
 ```
 
-### Find index using arrow function
+### Using findLastIndex() on sparse arrays
 
-The following example finds the index of a fruit using an arrow function.
-Note that the result would be the same as if using {{jsxref("Array/findIndex", "findIndex()")}}.
+You can search for `undefined` in a sparse array and get the index of an empty slot.
 
 ```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
+```
 
-const index = fruits.findLastIndex((fruit) => fruit === "blueberries");
+### Calling findLastIndex() on non-array objects
 
-console.log(index); // 3
-console.log(fruits[index]); // blueberries
+The `findLastIndex()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
+); // 2
 ```
 
 ## Specifications

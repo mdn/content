@@ -1,6 +1,7 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -15,12 +16,7 @@ browser-compat: css.selectors.required
 
 The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the {{ htmlattrxref("required", "input") }} attribute set on it.
 
-```css
-/* Selects any required <input> */
-input:required {
-  border: 1px dashed red;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
 
 This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
 

@@ -38,9 +38,7 @@ The {{jsxref("Array/pop", "pop()")}} method has similar behavior to `shift()`, b
 
 The `shift()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with the first element removed, you can use [`arr.slice(1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) instead.
 
-`Array.prototype.shift()` is intentionally generic; this method can be called on objects resembling arrays. Objects which do not contain a
-`length` property reflecting the last in a series of consecutive, zero-based
-numerical properties may not behave in any meaningful manner.
+The `shift()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
@@ -70,12 +68,34 @@ The shift() method is often used in condition inside while loop. In the followin
 example every iteration will remove the next element from an array, until it is empty:
 
 ```js
-const names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+const names = ["Andrew", "Edward", "Paul", "Chris", "John"];
 
 while (typeof (i = names.shift()) !== 'undefined') {
   console.log(i);
 }
 // Andrew, Edward, Paul, Chris, John
+```
+
+### Calling shift() on non-array objects
+
+The `shift()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `0` is returned, and the rest of the properties are shifted left by one. The `length` property is decremented by one.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+};
+console.log(Array.prototype.shift.call(arrayLike));
+// undefined, because it is an empty slot
+console.log(arrayLike);
+// { '1': 4, length: 2, unrelated: 'foo' }
+
+const plainObj = {};
+// There's no length property, so the length is 0
+Array.prototype.shift.call(plainObj);
+console.log(plainObj);
+// { length: 0 }
 ```
 
 ## Specifications

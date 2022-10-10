@@ -6,6 +6,10 @@ tags:
   - Developing Mozilla
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 The implementation of text and embedded objects in Mozilla is clever but confusing. Here is a bit of history and an explanation.
 
 Mozilla exposes a document containment hierarchy with text and embedded objects. Sometimes the embedded object is really just another text container with more embedded objects.
@@ -67,19 +71,19 @@ Here are some notes on the classes we use:
 
 ## How does an AT deal with text
 
-### (A) To get the embedded object for an embedded object char:
+### (A) To get the embedded object for an embedded object char
 
 1. `linkIndex = IAHyperText::getLinkIndex(offset)`
 2. `IAHyperLink\*object = IAHyperText::getLink(linkIndex)`
 3. `IAccessible\* accessible = QI/QS(object)`
 
-### (B) To get the offset in the parent text for a given embedded object:
+### (B) To get the offset in the parent text for a given embedded object
 
 1. `QI/QA` to `IAHyperLink`
 2. If not successful, then it is not embedded in text, so it's position in parent should be determined just by `IA2::indexInParent`, which will return its child offset within the parent. Examples of objects not embedded in text are the child options in list boxes and combo boxes.
 3. otherwise, use `IAHyperLink::getStartIndex()` to find the index in parent. In Firefox, the results of getEndIndex will always be the startIndex + 1, because links are always just represented by a single embedded object character
 
-### (C) To get the next char fom a given offset in an accessible text:
+### (C) To get the next char from a given offset in an accessible text
 
 1. If current `char` is `0` (end of string), then we are on a hard line break: get next node (typical depth first search), and set the current offset = 0
 2. `IAText::ch = getCharacterAtOffset(++offset);`
@@ -91,7 +95,7 @@ Here are some notes on the classes we use:
 
 5. done
 
-### (D) To get the next word or line:
+### (D) To get the next word or line
 
 1. Look one character ahead.
 2. If the next character does not exist, proceed to the next accessible in depth first search order and recurse on the first character until a non-embed is found.
@@ -113,11 +117,11 @@ Navigating to the next word follows a similar pattern. Navigating previous requi
 
 See [http://svn.gnome.org/viewcvs/lsr/tru...py?view=markup](http://svn.gnome.org/viewcvs/lsr/trunk/src/Adapters/ATSPI/HypertextAdapter.py?view=markup) for a BSD implementation.
 
-### (E) To grab a subtree of content:
+### (E) To grab a subtree of content
 
 Although under Windows text content is still exposed in leaf nodes of `ROLE_TEXT`, it is no longer necessary to visit those nodes. Therefore for parent nodes that support the HyperText interface, it is more performant to grab the text from the AccessibleText interface and then only visit the link children. The HyperLink interface can be used to grab the children. Using this technique is about twice as fast as visiting all nodes in the tree, according to tests run by the developers of NVDA.
 
-### (F) To get the line of text at the caret:
+### (F) To get the line of text at the caret
 
 Many editors, including the Mozilla editor, have a strange issue with caret offsets. The caret can sometimes visually appear at the end of a line, but logically it is on the first character on the next line. You can test this in a given editor by pressing the End key on a line, to see whether the caret is shown past the End of the line. To doublecheck, hit the Delete key and see if it removes the first char of the next line.
 

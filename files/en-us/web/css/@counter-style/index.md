@@ -1,6 +1,7 @@
 ---
-title: '@counter-style'
+title: "@counter-style"
 slug: Web/CSS/@counter-style
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

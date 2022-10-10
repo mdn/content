@@ -1,6 +1,7 @@
 ---
 title: ":enabled"
 slug: Web/CSS/:enabled
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -15,12 +16,7 @@ browser-compat: css.selectors.enabled
 
 The **`:enabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.
 
-```css
-/* Selects any enabled <input> */
-input:enabled {
-  color: blue;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-enabled.html", "tabbed-standard")}}
 
 ## Syntax
 

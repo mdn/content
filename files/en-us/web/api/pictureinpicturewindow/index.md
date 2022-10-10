@@ -22,7 +22,7 @@ An object with this interface is obtained using the {{domxref("HTMLVideoElement.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `PictureInPictureWindow` interface doesn't inherit any properties._
 
@@ -31,7 +31,7 @@ _The `PictureInPictureWindow` interface doesn't inherit any properties._
 - {{domxref("PictureInPictureWindow.height")}} {{ReadOnlyInline}}
   - : Determines the height of the floating video window.
 
-## Methods
+## Instance methods
 
 _The `PictureInPictureWindow` interface doesn't inherit any methods._
 

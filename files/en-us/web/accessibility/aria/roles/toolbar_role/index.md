@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: toolbar role'
+title: "ARIA: toolbar role"
 slug: Web/Accessibility/ARIA/Roles/toolbar_role
 tags:
   - Accessibility

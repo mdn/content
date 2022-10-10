@@ -1,6 +1,7 @@
 ---
 title: initial-letter
 slug: Web/CSS/initial-letter
+page-type: css-property
 tags:
   - CSS
   - CSS Inline

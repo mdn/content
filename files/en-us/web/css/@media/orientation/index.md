@@ -1,8 +1,9 @@
 ---
 title: orientation
 slug: Web/CSS/@media/orientation
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - NeedsBrowserCompatibility
@@ -30,7 +31,13 @@ The `orientation` feature is specified as a keyword value chosen from the list b
 
 ## Examples
 
-### HTML
+### Portrait orientation
+
+In this example we have three boxes in the HTML, and use the `orientation` media feature to switch between a row layout (in landscape) and a column layout (in portrait).
+
+The example output is embedded in an {{HTMLElement("iframe")}} whose height is greater than its width, so the boxes get a column layout.
+
+#### HTML
 
 ```html
 <div>Box 1</div>
@@ -38,7 +45,7 @@ The `orientation` feature is specified as a keyword value chosen from the list b
 <div>Box 3</div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 body {
@@ -47,6 +54,10 @@ body {
 
 div {
   background: yellow;
+  width: 200px;
+  height: 200px;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 @media (orientation: landscape) {
@@ -62,9 +73,53 @@ div {
 }
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Portrait orientation", "", "800")}}
+
+### Landscape orientation
+
+This example has exactly the same code as the previous example: it has three boxes in the HTML, and uses the `orientation` media feature to switch between a row layout (in landscape) and a column layout (in portrait).
+
+However, in this example, the example output is embedded in an {{HTMLElement("iframe")}} whose height is less than its width, so the boxes get a row layout.
+
+#### HTML
+
+```html
+<div>Box 1</div>
+<div>Box 2</div>
+<div>Box 3</div>
+```
+
+#### CSS
+
+```css
+body {
+  display: flex;
+}
+
+div {
+  background: yellow;
+  width: 200px;
+  height: 200px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+}
+```
+
+{{EmbedLiveSample("Landscape orientation", "", "300")}}
 
 ## Specifications
 

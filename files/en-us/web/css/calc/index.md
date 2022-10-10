@@ -1,6 +1,7 @@
 ---
 title: calc()
 slug: Web/CSS/calc
+page-type: css-function
 tags:
   - CSS
   - CSS Function

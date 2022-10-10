@@ -56,7 +56,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PerformanceEventTiming.processingStart")}}
   - : Returns the time at which event dispatch started.
@@ -67,7 +67,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{domxref("PerformanceEventTiming.target")}}
   - : Returns the associated event's last target, if it is not removed.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceEventTiming.toJSON()")}}
   - : Converts the PerformanceEventTiming object to JSON.

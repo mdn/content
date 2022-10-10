@@ -11,7 +11,7 @@ tags:
 
 This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
-### Node-specific _evaluator_ function
+### Node-specific evaluator function
 
 The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
 
@@ -90,7 +90,7 @@ results = evaluateXPath(people, "/people/person[2]");
 results = evaluateXPath(people, "//person[address/@city='denver']");
 
 // get all the addresses that have "south" in the street name
-results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
+results = evaluateXPath(people, "//address[contains(@street, 'south')]");
 console.log(results.length);
 ```
 

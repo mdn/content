@@ -82,7 +82,7 @@ async function fileHash(file) {
 
 async function hashTheseFiles(e) {
   let outHTML = ''
-  // iterate ove reach file in file select input
+  // iterate over each file in file select input
   for (const file of this.files) {
 
     // calculate it's hash and list it in the output element.
@@ -172,7 +172,7 @@ async function fileHash(file) {
   const arrayBufferToHash = await newBlob.arrayBuffer();
 
   // Finally we perform the hash this time as SHA1 which is what Git uses.
-  // Then we return it as a string. to be displayed.
+  // Then we return it as a string to be displayed.
   return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
 }
 

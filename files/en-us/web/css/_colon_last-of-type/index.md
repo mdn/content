@@ -1,6 +1,7 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

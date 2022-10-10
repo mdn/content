@@ -1,6 +1,7 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -16,9 +17,7 @@ browser-compat: css.types.clamp
 
 {{CSSRef}}
 
-The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a value between an upper and lower bound. `clamp()` enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. The `clamp()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
-
-`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max()")}}(MIN, {{CSSxRef("min", "min()")}}(VAL, MAX))`.
+The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
 
 {{EmbedInteractiveExample("pages/css/function-clamp.html")}}
 
@@ -26,24 +25,46 @@ Note that using `clamp()` for font sizes, as in these examples, allows you to se
 
 ## Syntax
 
-The `clamp()` function takes three comma separated expressions as its parameters, in the order of minimum value, preferred value, and maximum value.
+```css
+/* Static values */
+width: clamp(200px, 40%,  400px);
+width: clamp(20rem, 30vw, 70rem);
+width: clamp(10vw,  20em, 100vw);
 
-The minimum value is the smallest (most negative) value. This is the lower bound in the range of allowed values. If the preferred value is less than this value, the minimum value will be used.
+/* Calculated values */
+width: clamp(min(10vw, 20rem), 300px, max(90vw, 55rem));
+width: clamp(100px, calc(30% / 2rem + 10px), 900px);
+```
 
-The preferred value is the expression whose value will be used as long as the result is between the minimum and maximum values.
+### Parameters
 
-The maximum value is the largest (most positive) expression value to which the value of the property will be assigned if the preferred value is greater than this upper bound.
+The `clamp(min, val, max)` function accepts three comma-separated expressions as its parameters.
+
+- `min`
+  - : The minimum value is the smallest (most negative) value. This is the lower bound in the range of allowed values. If the preferred value is less than this value, the minimum value will be used.
+
+- `val`
+  - : The preferred value is the expression whose value will be used as long as the result is between the minimum and maximum values.
+
+- `max`
+  - : The maximum value is the largest (most positive) expression value to which the value of the property will be assigned if the preferred value is greater than this upper bound.
 
 The expressions can be math functions (see {{CSSxRef("calc", "calc()")}} for more information), literal values, other expressions that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min", "min()")}} and {{CSSxRef("max", "max()")}} functions. For math expressions, you can use addition, subtraction, multiplication, and division without using the `calc()` function itself. You may also use parentheses to establish computation order when needed.
 
 You can use different units for each value in your expressions and different units in any math function making up any of the arguments.
 
-### Notes
+Keep the following aspects in mind while working with the function:
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as simple parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
-- The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
+- The expression can be values combining the addition ( `+` ), subtraction ( `-` ), multiplication ( `*` ) and division ( `/` ) operators, using standard operator precedence rules. Make sure to put a space on each side of the `+` and `-` operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
 - Oftentimes you will want to use {{CSSxRef("min", "min()")}} and {{CSSxRef("max", "max()")}} within a `clamp()` function.
+
+### Return value
+
+`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))`.
+
+Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}}.
 
 ### Formal syntax
 

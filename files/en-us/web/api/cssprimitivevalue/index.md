@@ -30,7 +30,7 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
@@ -67,7 +67,7 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
     | `CSS_UNKNOWN`    | The value is not a recognized CSS2 value. The value can only be obtained by using the {{DOMxRef("CSSValue.cssText", "cssText")}} attribute.                                  |
     | `CSS_URI`        | The value is a {{CSSxRef("url", "url()")}}. The value can be obtained by using the `getStringValue()` method.                                                                |
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}} {{Deprecated_Inline}}
   - : This method is used to get the [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) value. If this CSS value doesn't contain a counter value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Counter")}} interface.

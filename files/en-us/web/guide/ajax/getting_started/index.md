@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting started
 slug: Web/Guide/AJAX/Getting_Started
 tags:
   - AJAX
@@ -31,10 +31,14 @@ To make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, y
 const httpRequest = new XMLHttpRequest();
 ```
 
-After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object and naming it after the function to call when the request changes state, like this:
+After making a request, you will receive a response back. At this stage, you need to tell the `XMLHttpRequest` object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object to the function called when the request changes state, like this:
 
 ```js
-httpRequest.onreadystatechange = nameOfTheFunction;
+function handler() {
+  // Process the server response here.
+}
+
+httpRequest.onreadystatechange = handler;
 ```
 
 Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:
@@ -187,7 +191,7 @@ function alertContents() {
 
 ## Step 4 – Working with the XML response
 
-In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property , which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
+In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property, which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
 
 First off, let's create a valid XML document that we'll request later on. The document (`test.xml`) contains the following:
 

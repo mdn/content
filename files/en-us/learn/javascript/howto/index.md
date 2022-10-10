@@ -26,9 +26,9 @@ Some common built-in browser functions that cause problems are:
 | `getElementsByClassName()` | `getElementByClassName()` |
 | `getElementById()`         | `getElementsById()`       |
 
-### Semi-colon position
+### Semicolon position
 
-You need to make sure you don't place any semi-colons incorrectly. For example:
+You need to make sure you don't place any semicolons incorrectly. For example:
 
 | Correct                     | Wrong                       |
 | --------------------------- | --------------------------- |
@@ -42,8 +42,8 @@ One of the most common errors is to declare the function, but not call it anywhe
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 This code won't do anything unless you call it with the following statement:
@@ -74,9 +74,9 @@ With [Objects](/en-US/docs/Learn/JavaScript/Objects), however, you need to take 
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## Basic definitions

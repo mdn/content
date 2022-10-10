@@ -81,7 +81,8 @@ Semantic HTML (where the elements are used for their correct purpose) is accessi
 The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:
 
 ```html example-bad
-<font size="7">My heading</font> <br /><br />
+<font size="7">My heading</font>
+<br /><br />
 This is the first section of my document.
 <br /><br />
 I'll add another paragraph here too.
@@ -175,8 +176,9 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 3. Use some interesting tactics to fake button behavior. Take for example our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"` (see WebAIM's [tabindex article](https://webaim.org/techniques/keyboard/tabindex) for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
 
    ```js
-   document.onkeydown = function(e) {
-     if (e.keyCode === 13) { // The Enter/Return key
+   document.onkeydown = (e) => {
+     if (e.keyCode === 13) {
+       // The Enter/Return key
        document.activeElement.onclick(e);
      }
    };

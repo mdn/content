@@ -7,6 +7,8 @@ tags:
   - tracking protection
 ---
 
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 Firefox includes a new storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies, which have been available in Firefox for many years. This policy protects against cross-site tracking while minimizing the site breakage associated with traditional cookie blocking. This article explains how the policy works and how you can test it.
 
 ## Testing in Firefox
@@ -72,7 +74,7 @@ Browser caches:
 Network connections:
 
 - [TLS sessions](https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption) will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.
-- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from tracker.example on news.example will not reuse an HTTP connection with a request for content from tracker.example on shopping.example or with requests that occur when tracker.example is visited directly (i.e., as a first party).
+- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
 
 HTTP Referrers
 

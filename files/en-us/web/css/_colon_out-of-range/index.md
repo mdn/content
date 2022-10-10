@@ -1,6 +1,7 @@
 ---
-title: ':out-of-range'
+title: ":out-of-range"
 slug: Web/CSS/:out-of-range
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -16,13 +17,7 @@ browser-compat: css.selectors.out-of-range
 
 The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
 
-```css
-/* Selects any <input>, but only when it has a range
-   specified, and its value is outside that range */
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-out-of-range.html", "tabbed-shorter")}}
 
 This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
 

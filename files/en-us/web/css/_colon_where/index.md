@@ -1,8 +1,9 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
+page-type: css-pseudo-class
 tags:
-  - ':where'
+  - ":where"
   - CSS
   - NeedsBrowserCompatibility
   - NeedsContent
@@ -19,22 +20,7 @@ browser-compat: css.selectors.where
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-```css
-/* Selects any paragraph inside a header, main
-   or footer element that is being hovered */
-:where(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-/* The above is equivalent to the following */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
 
 The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 

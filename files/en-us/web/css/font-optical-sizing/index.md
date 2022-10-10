@@ -1,6 +1,7 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

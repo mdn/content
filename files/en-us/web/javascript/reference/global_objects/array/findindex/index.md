@@ -71,7 +71,7 @@ The `findIndex()` method executes the `callbackFn` function once for every index
 If such an element is found, `findIndex()` immediately returns the element's index.
 If `callbackFn` never returns a truthy value (or the array's `length` is `0`), `findIndex()` returns `-1`.
 
-> **Note:** Unlike other array methods such as {{jsxref("Array/some", "some()")}}, `callbackFn` is run even for indexes with unassigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 `callbackFn` is invoked with three arguments:
 
@@ -90,6 +90,8 @@ visits the element's index.
 Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+
+The `findIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -114,17 +116,28 @@ console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
 ```
 
-### Find index using arrow function
+### Using findIndex() on sparse arrays
 
-The following example finds the index of a fruit using an arrow function:
+You can search for `undefined` in a sparse array and get the index of an empty slot.
 
 ```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+console.log([1, , 3].findIndex((x) => x === undefined)); // 1
+```
 
-const index = fruits.findIndex((fruit) => fruit === "blueberries");
+### Calling findIndex() on non-array objects
 
-console.log(index); // 3
-console.log(fruits[index]); // blueberries
+The `findIndex()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
+); // 1
 ```
 
 ## Specifications

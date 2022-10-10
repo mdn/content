@@ -1,6 +1,7 @@
 ---
 title: "@scroll-timeline"
 slug: Web/CSS/@scroll-timeline
+page-type: css-at-rule
 tags:
   - Animations
   - Scroll
@@ -11,7 +12,10 @@ tags:
 browser-compat: css.at-rules.scroll-timeline
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_header}}
+{{CSSRef}}{{Deprecated_header}}
+
+> **Warning:** This non-standard feature was added/removed from a draft specification.
+> It has been replaced by [scroll-timeline](/en-US/docs/Web/CSS/scroll-timeline).
 
 The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an [`AnimationTimeline`](/en-US/docs/Web/API/AnimationTimeline) whose time values are determined by scrolling progress within a scroll container and not by minutes or seconds. Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
 
@@ -168,11 +172,13 @@ We create an `@scroll-timeline` called `squareTimeline`, setting the `source` as
 
 ## Specifications
 
-This feature was in a draft specification and has been removed from it. It is no longer on track to become a standard.
+This feature was in a draft specification and has been removed from it.
+It is no longer on track to become a standard.
 
 ## Browser compatibility
 
-No released browser ever implemented this feature.
+This was originally implemented on Chrome, and Firefox (behind a preference).
+It has been removed from Firefox 107, and will soon also be removed from Chrome.
 
 ## See also
 

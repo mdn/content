@@ -1,6 +1,7 @@
 ---
 title: Variable fonts guide
 slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+page-type: guide
 tags:
   - CSS
   - Fonts
@@ -171,7 +172,7 @@ The syntax for loading variable fonts is very similar to any other web font, wit
 
 The basic syntax is the same, but the font technology can be specified, and allowable ranges for descriptors like `font-weight` and `font-stretch` can be supplied, rather than named according to the font file being loaded.
 
-#### Example for a standard upright (Roman) font:
+#### Example for a standard upright (Roman) font
 
 ```css
 @font-face {
@@ -183,7 +184,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
-#### Example for a font that includes both upright and italics:
+#### Example for a font that includes both upright and italics
 
 ```css
 @font-face {
@@ -197,7 +198,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 
 > **Note:** there is no set specific value for the upper-end degree measurement in this case; they indicate that there is an axis so the browser can know to render upright or italic (remember that italics are only on or off)
 
-#### Example for a font that contains only italics and no upright characters:
+#### Example for a font that contains only italics and no upright characters
 
 ```css
 @font-face {
@@ -209,7 +210,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
-#### Example for a font that contains an oblique (slant) axis:
+#### Example for a font that contains an oblique (slant) axis
 
 ```css
 @font-face {

@@ -1,6 +1,7 @@
 ---
 title: color-contrast()
 slug: Web/CSS/color_value/color-contrast
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

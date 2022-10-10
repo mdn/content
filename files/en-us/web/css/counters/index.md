@@ -1,6 +1,7 @@
 ---
 title: counters()
 slug: Web/CSS/counters
+page-type: css-function
 tags:
   - CSS
   - CSS Counter
@@ -13,6 +14,10 @@ browser-compat: css.types.counters
 {{CSSRef}}
 
 The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The `counters()` function has two forms: `counters(name, string)` or `counters(name, string, style)`. It is generally used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can be used, theoretically, anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to `decimal` if no style is specified.
+
+{{EmbedInteractiveExample("pages/tabbed/function-counters.html", "tabbed-standard")}}
+
+## Syntax
 
 ```css
 /* Simple usage  - style defaults to decimal */
@@ -27,8 +32,6 @@ A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no vi
 > **Note:** The `counters()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
 >
 > Check the [Browser compatibility table](#browser_compatibility) carefully before using this in production.
-
-## Syntax
 
 ### Values
 

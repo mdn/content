@@ -3,7 +3,6 @@ title: First-class Function
 slug: Glossary/First-class_Function
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 
@@ -55,7 +54,7 @@ function sayHello() {
 
 In this example, we are returning a function from another function - _We can return a function because functions in JavaScript are treated as values._
 
-> **Note:** A function that returns a function is called a _higher-order function_.
+> **Note:** A function that returns a function or takes other functions as arguments is called a _higher-order function_.
 
 ## See also
 

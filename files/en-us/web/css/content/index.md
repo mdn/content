@@ -1,6 +1,7 @@
 ---
 title: content
 slug: Web/CSS/content
+page-type: css-property
 tags:
   - CSS
   - CSS Counter
@@ -14,6 +15,10 @@ browser-compat: css.properties.content
 {{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Keywords that cannot be combined with other values */
@@ -56,8 +61,6 @@ content: revert;
 content: revert-layer;
 content: unset;
 ```
-
-## Syntax
 
 ### Values
 

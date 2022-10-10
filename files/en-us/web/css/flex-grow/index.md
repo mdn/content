@@ -1,6 +1,7 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

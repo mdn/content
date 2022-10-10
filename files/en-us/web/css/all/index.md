@@ -1,6 +1,7 @@
 ---
 title: all
 slug: Web/CSS/all
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Cascade
@@ -128,8 +129,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: initial;
 }
 ```
@@ -156,8 +155,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: inherit;
 }
 ```
@@ -184,8 +181,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: unset;
 }
 ```
@@ -212,8 +207,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: revert;
 }
 ```
@@ -240,8 +233,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: revert-layer;
 }
 ```

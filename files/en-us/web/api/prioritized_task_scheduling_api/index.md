@@ -14,7 +14,7 @@ browser-compat: api.Scheduler
 
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
 
-The [task priorities](#task-priorities) are very course-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.
+The [task priorities](#task-priorities) are very coarse-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.
 Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories define by the API
 
 The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
@@ -67,7 +67,7 @@ The options are:
 - `priority` This allows you to specify a particular immutable priority.
   Once set, the priority cannot be changed.
 - `signal` This allows you to specify a signal, which may be either a {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}
-  The signal is associated with a controller, which can be used to used to abort the task.
+  The signal is associated with a controller, which can be used to abort the task.
   A {{domxref("TaskSignal")}} can also be used to set and change the task priority if the [task is mutable](#mutable_and_immutable_task_priority).
 - `delay` This allows you to specify the delay before the task is added for scheduling, in milliseconds.
 

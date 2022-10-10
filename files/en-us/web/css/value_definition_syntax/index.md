@@ -1,6 +1,7 @@
 ---
 title: Value definition syntax
 slug: Web/CSS/Value_definition_syntax
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -73,7 +74,7 @@ But not:
 Placing several keywords, literals or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
 
 ```css
-bold <length> , thin
+bold <length>, thin
 ```
 
 This example matches the following values:

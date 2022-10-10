@@ -3,7 +3,6 @@ title: document environment
 slug: Glossary/document_environment
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

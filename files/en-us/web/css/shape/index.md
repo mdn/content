@@ -1,6 +1,7 @@
 ---
 title: <shape>
 slug: Web/CSS/shape
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

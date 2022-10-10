@@ -19,7 +19,7 @@ Enables extensions to interact with the browser's {{Glossary("Developer Tools")}
 
 To use this API you need to have the `"devtools"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) specified in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. This permission can not be optional.
 
-## Interfaces
+## Properties
 
 - {{WebExtAPIRef("devtools.inspectedWindow")}}
   - : Interact with the window that Developer tools are attached to (inspected window). This includes obtaining the tab ID for the inspected page, evaluate the code in the context of the inspected window, reload the page, or obtain the list of resources within the page.

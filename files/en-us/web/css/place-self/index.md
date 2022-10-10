@@ -1,6 +1,7 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Alignment
@@ -126,6 +127,7 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 80px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
 }
 
@@ -152,10 +154,6 @@ article,
 span {
   padding: 10px;
   border-radius: 7px;
-}
-
-article {
-  margin: 20px;
 }
 ```
 

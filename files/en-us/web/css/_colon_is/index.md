@@ -1,8 +1,9 @@
 ---
-title: ':is() (:matches(), :any())'
+title: ":is()"
 slug: Web/CSS/:is
+page-type: css-pseudo-class
 tags:
-  - ':is'
+  - ":is"
   - CSS
   - Pseudo-class
   - Reference
@@ -14,26 +15,11 @@ browser-compat: css.selectors.is
 
 {{CSSRef}}
 
-> **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
-
 The **`:is()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
 
-```css
-/* Selects any paragraph inside a header, main
-   or footer element that is being hovered */
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
+> **Note:** Originally named `:matches()` (and `:any()`), this selector was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-/* The above is equivalent to the following */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
 
 Pseudo-elements are not valid in the selector list for `:is()`.
 
@@ -65,93 +51,6 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
 
 ## Examples
-
-### Cross-browser example
-
-```html
-<header>
-  <p>This is my header paragraph</p>
-</header>
-
-<main>
-  <ul>
-    <li>
-      <p>This is my first</p>
-      <p>list item</p>
-    </li>
-    <li>
-      <p>This is my second</p>
-      <p>list item</p>
-    </li>
-  </ul>
-</main>
-
-<footer>
-  <p>This is my footer paragraph</p>
-</footer>
-```
-
-```css
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
-```js
-let matchedItems;
-
-try {
-  matchedItems = document.querySelectorAll(":is(header, main, footer) p");
-} catch (e) {
-  try {
-    matchedItems = document.querySelectorAll(
-      ":matches(header, main, footer) p"
-    );
-  } catch (e) {
-    try {
-      matchedItems = document.querySelectorAll(
-        ":-webkit-any(header, main, footer) p"
-      );
-    } catch (e) {
-      try {
-        matchedItems = document.querySelectorAll(
-          ":-moz-any(header, main, footer) p"
-        );
-      } catch (e) {
-        console.log(
-          "Your browser doesn't support :is(), :matches(), or :any()"
-        );
-      }
-    }
-  }
-}
-
-matchedItems.forEach(applyHandler);
-
-function applyHandler(elem) {
-  elem.addEventListener("click", (e) => {
-    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
-  });
-}
-```
-
-{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}
 
 ### Simplifying list selectors
 

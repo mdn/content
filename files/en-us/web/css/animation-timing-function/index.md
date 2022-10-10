@@ -1,6 +1,7 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
+page-type: css-property
 tags:
   - CSS
   - CSS Animations
@@ -257,3 +258,4 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
 - [cubic-bezier.com](https://cubic-bezier.com)
+- Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

@@ -1,6 +1,7 @@
 ---
 title: tan()
 slug: Web/CSS/tan
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -11,7 +12,6 @@ tags:
   - tan
   - Experimental
 browser-compat: css.types.tan
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -22,17 +22,17 @@ The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 ```css
 /* Single <angle> values */
-width: calc(tan(45deg) * 100px);
-width: calc(tan(0.125turn) * 100px);
-width: calc(tan(0.785398163rad) * 100px);
+width: calc(100px * tan(45deg));
+width: calc(100px * tan(0.125turn));
+width: calc(100px * tan(0.785398163rad));
 
 /* Single <number> values */
-width: calc(tan(0.5773502) * 100px);
-width: calc(tan(1.732 – 1) * 100px);
+width: calc(100px * tan(0.5773502));
+width: calc(100px * tan(1.732 – 1));
 
 /* Other values */
-width: calc(tan(pi / 3) * 100px);
-width: calc(tan(e) * 100px);
+width: calc(100px * tan(pi / 3));
+width: calc(100px * tan(e));
 ```
 
 ### Parameter
@@ -40,19 +40,33 @@ width: calc(tan(e) * 100px);
 The `tan(angle)` function accepts only one value as its parameter.
 
 - `angle`
-  - : A {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying `infinity`, `-infinity`, or `NaN`, the result is `NaN`. When specifying one of the asymptote values (such as `90deg`, `270deg`, etc), the result must be `infinity` for `90deg` and all values a multiple of `360deg` from that (such as `-270deg` or `450deg`), and `−infinity` for `-90deg` and all values a multiple of `360deg` from that (such as `-450deg` or `270deg`).
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}.
+
+### Return value
+
+The tangent of an `angle` will always return a number between `−∞` and `+∞`.
+
+- If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
+- If `angle` is `0⁻`, the result is `0⁻`.
+- If `angle` is one of the asymptote values (such as `90deg`, `270deg`, etc), the result must be `∞` for `90deg` and all values a multiple of `360deg` from that (such as `-270deg` or `450deg`), and `−∞` for `-90deg` and all values a multiple of `360deg` from that (such as `-450deg` or `270deg`).
 
 ### Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Draw parallelograms
 
 The `tan()` function can be used draw a parallelogram.
 
-```html hidden
+#### HTML
+
+```html
 <div class="parallelogram"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -83,7 +97,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '250px')}}
+#### Result
+
+{{EmbedLiveSample('Draw parallelograms', '100%', '250px')}}
 
 ## Specifications
 

@@ -20,7 +20,7 @@ browser-compat: html.global_attributes.inputmode
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`inputmode`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that hints at the type of data that might be entered by the user while editing the element or its contents.
+The **`inputmode`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that hints at the type of data that might be entered by the user while editing the element or its contents.
 This allows a browser to display an appropriate virtual keyboard.
 
 It is used primarily on {{HTMLElement("input")}} elements, but is usable on any element in {{HTMLAttrxRef("contenteditable")}} mode.

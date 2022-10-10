@@ -453,7 +453,7 @@ h1 {
   font-size: 1.5em;
 }
 
-/* Handle specific elements nested in the DOM  */
+/* Handle specific elements nested in the DOM */
 div p,
 #id:first-line {
   background-color: red;
@@ -526,35 +526,15 @@ div p + p {
 
 The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.
 
-```css
-body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
-  padding: 1em;
-  margin: 0 auto;
-  max-width: 33em;
-}
-@media (min-width: 70em) {
-  body {
-    font-size: 130%;
-  }
-}
+```css-nolint
+body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+@media (min-width: 70em) { body { font-size: 130%;}}
 
-h1 {
-  font-size: 1.5em;
-}
+h1 {font-size: 1.5em;}
 
-div p,
-#id:first-line {
-  background-color: red;
-  border-radius: 3px;
-}
-div p {
-  margin: 0;
-  padding: 1em;
-}
-div p + p {
-  padding-top: 0;
-}
+div p, #id:first-line {background-color: red; border-radius: 3px;}
+div p {margin: 0; padding: 1em;}
+div p + p {padding-top: 0;}
 ```
 
 For your own projects, you will format your code according to personal preference. For team projects, you may find that a team or project has its own style guide.

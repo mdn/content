@@ -2,7 +2,6 @@
 title: CIA
 slug: Glossary/CIA
 tags:
-  - Glossary
   - Security
 ---
 

@@ -3,7 +3,6 @@ title: Global scope
 slug: Glossary/Global_scope
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

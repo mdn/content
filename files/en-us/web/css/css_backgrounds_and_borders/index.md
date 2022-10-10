@@ -1,6 +1,7 @@
 ---
 title: CSS Backgrounds and Borders
 slug: Web/CSS/CSS_Backgrounds_and_Borders
+page-type: css-module
 tags:
   - CSS
   - CSS Backgrounds and Borders

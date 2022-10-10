@@ -1,6 +1,7 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

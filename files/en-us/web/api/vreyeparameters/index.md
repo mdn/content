@@ -25,7 +25,7 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 
 > **Warning:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("VREyeParameters.offset")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.

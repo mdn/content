@@ -52,7 +52,7 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>||Working with elements||</title>
+    <title>Working with elements</title>
   </head>
   <body>
     <div id="div1">The text above has been created dynamically.</div>
@@ -65,7 +65,7 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // create a new div element
   const newDiv = document.createElement("div");
 
@@ -102,13 +102,13 @@ class ExpandingList extends HTMLUListElement {
 }
 
 // Define the new element
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 If we wanted to create an instance of this element programmatically, we'd use a call along the following lines:
 
 ```js
-let expandingList = document.createElement('ul', { is : 'expanding-list' })
+let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
 The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.

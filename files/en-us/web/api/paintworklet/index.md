@@ -26,7 +26,7 @@ To avoid leaking visited links, this feature is currently disabled in Chrome-bas
 - The CSS Painting API [Privacy Considerations section](https://drafts.css-houdini.org/css-paint-api/#privacy-considerations)
 - The CSS Painting API spec issue ["CSS Paint API leaks browsing history"](https://github.com/w3c/css-houdini-drafts/issues/791)
 
-## Properties
+## Instance properties
 
 - {{domxref('PaintWorklet.devicePixelRatio')}}
   - : Returns the current device's ratio of physical pixels to logical pixels.
@@ -35,7 +35,7 @@ To avoid leaking visited links, this feature is currently disabled in Chrome-bas
 
 None.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from {{domxref('Worklet')}}._
 

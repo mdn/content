@@ -1,6 +1,7 @@
 ---
 title: Universal selectors
 slug: Web/CSS/Universal_selectors
+page-type: css-selector
 tags:
   - CSS
   - Reference
@@ -20,7 +21,7 @@ The CSS **universal selector** (`*`) matches elements of any type.
 }
 ```
 
-Universal selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
+The universal selector is a special [type selector](/en-US/docs/Web/CSS/Type_selectors) and can therefore be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 - `ns|*` - matches all elements in namespace _ns_
 - `*|*` - matches all elements

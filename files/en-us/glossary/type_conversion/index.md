@@ -3,7 +3,6 @@ title: Type conversion
 slug: Glossary/Type_Conversion
 tags:
   - CodingScripting
-  - Glossary
   - Type casting
   - Type conversion
 ---

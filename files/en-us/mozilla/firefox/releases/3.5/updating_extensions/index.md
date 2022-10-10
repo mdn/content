@@ -58,12 +58,13 @@ See [Submitting an add-on to AMO](/en-US/docs/Submitting_an_add-on_to_AMO) for a
 Prior to Firefox 3.5, accessing the Places database directly using the [Storage API](/en-US/docs/Storage) required a little bit of trickery:
 
 ```js
-var places = Components.classes["@mozilla.org/file/directory_service;1"].
-                        getService(Components.interfaces.nsIProperties).
-                        get("ProfD", Components.interfaces.nsIFile);
+var places = Components.classes["@mozilla.org/file/directory_service;1"]
+  .getService(Components.interfaces.nsIProperties)
+  .get("ProfD", Components.interfaces.nsIFile);
 places.append("places.sqlite");
-var db = Components.classes["@mozilla.org/storage/service;1"].
-                    getService(Components.interfaces.mozIStorageService).openDatabase(places);
+var db = Components.classes["@mozilla.org/storage/service;1"]
+  .getService(Components.interfaces.mozIStorageService)
+  .openDatabase(places);
 ```
 
 This builds a path to the `places.sqlite` database file manually, then opens the file for Storage access.
@@ -71,8 +72,9 @@ This builds a path to the `places.sqlite` database file manually, then opens the
 Firefox 3.5 adds a dedicated service that offers a convenient way to access the Places database; the above technique does not work in Firefox 3.5 or later.
 
 ```js
-var db = Components.classes["@mozilla.org/browser/nav-history-service;1"].
-                    getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
+var db = Components.classes[
+  "@mozilla.org/browser/nav-history-service;1"
+].getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 ```
 
 ## Search textboxes
@@ -128,16 +130,17 @@ From JavaScript, you do it like this:
 ```js
 var loadContext;
 try {
-    loadContext = aRequest.QueryInterface(Components.interfaces.nsIChannel) // aRequest is equivalent to aSubject from observe
-                          .notificationCallbacks
-                          .getInterface(Components.interfaces.nsILoadContext);
+  loadContext = aRequest
+    .QueryInterface(Components.interfaces.nsIChannel) // aRequest is equivalent to aSubject from observe
+    .notificationCallbacks.getInterface(Components.interfaces.nsILoadContext);
 } catch (ex) {
-    try {
-        loadContext = aRequest.loadGroup.notificationCallbacks
-                              .getInterface(Components.interfaces.nsILoadContext);
-    } catch (ex) {
-        loadContext = null;
-    }
+  try {
+    loadContext = aRequest.loadGroup.notificationCallbacks.getInterface(
+      Components.interfaces.nsILoadContext
+    );
+  } catch (ex) {
+    loadContext = null;
+  }
 }
 // you can now use |loadContext.associatedWindow| to get the Window object
 ```
@@ -147,20 +150,20 @@ Another JavaScript example if the above does not work:
 ```js
 // SOURCE: http://stackoverflow.com/questions/10719606/is-it-possible-to-know-the-target-domwindow-for-an-httprequest
 
-function getWindowForRequest(request){
-  if (request instanceof Components.interfaces.nsIRequest){
+function getWindowForRequest(request) {
+  if (request instanceof Components.interfaces.nsIRequest) {
     try {
-      if (request.notificationCallbacks){
-        return request.notificationCallbacks
-                      .getInterface(Components.interfaces.nsILoadContext)
-                      .associatedWindow;
+      if (request.notificationCallbacks) {
+        return request.notificationCallbacks.getInterface(
+          Components.interfaces.nsILoadContext
+        ).associatedWindow;
       }
     } catch (e) {}
     try {
-      if (request.loadGroup && request.loadGroup.notificationCallbacks){
-        return request.loadGroup.notificationCallbacks
-                      .getInterface(Components.interfaces.nsILoadContext)
-                      .associatedWindow;
+      if (request.loadGroup && request.loadGroup.notificationCallbacks) {
+        return request.loadGroup.notificationCallbacks.getInterface(
+          Components.interfaces.nsILoadContext
+        ).associatedWindow;
       }
     } catch (e) {}
   }
@@ -194,7 +197,7 @@ If your extension is using `xpcnativewrappers=no` (which it shouldn't be doing i
 
 Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs. See [Listening to events on all tabs](/en-US/Listening_to_events_on_all_tabs) for details.
 
-## For Theme developers:
+## For Theme developers
 
 - Check [Theme changes in Firefox 3.1](/en-US/Theme_changes_in_Firefox_3.1).
 - Go to the Mozillazine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc.), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).

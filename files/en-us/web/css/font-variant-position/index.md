@@ -1,6 +1,7 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

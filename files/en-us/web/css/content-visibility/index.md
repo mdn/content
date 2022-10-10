@@ -1,6 +1,7 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
+page-type: css-property
 tags:
   - CSS
   - CSS Containment
@@ -106,4 +107,5 @@ The following example shows that it is possible to manage visibility in script. 
 
 ## See also
 
+- [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)

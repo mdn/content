@@ -1,6 +1,7 @@
 ---
 title: Using CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -17,7 +18,7 @@ Animations that involve transitioning between two states are often called _impli
 
 ![A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](transitionsprinciple.png)
 
-CSS transitions let you decide which properties to animate (by _listing them explicitly_), when the animation will start (by setting a _delay)_, how long the transition will last (by setting a _duration_), and how the transition will run (by defining a _timing function_, e.g. linearly or quick at the beginning, slow at the end).
+CSS transitions let you decide which properties to animate (by _listing them explicitly_), when the animation will start (by setting a _delay)_, how long the transition will last (by setting a _duration_), and how the transition will run (by defining a _timing function_, e.g., linearly or quick at the beginning, slow at the end).
 
 ## Which CSS properties can be transitioned?
 
@@ -262,5 +263,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## See also
 
-- The {{domxref("TransitionEvent")}} interface and the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event.
+- The {{domxref("TransitionEvent")}} interface and the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

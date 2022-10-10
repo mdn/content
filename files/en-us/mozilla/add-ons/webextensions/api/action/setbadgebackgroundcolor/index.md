@@ -61,24 +61,24 @@ browser.action.setBadgeBackgroundColor(
 A background color that starts off as red, and turns green when the browser action is clicked:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeBackgroundColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeBackgroundColor({ color: "red" });
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setBadgeBackgroundColor({color: "green"});
+  browser.action.setBadgeBackgroundColor({ color: "green" });
 });
 ```
 
 Set the badge background color only for the active tab:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeBackgroundColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeBackgroundColor({ color: "red" });
 
-browser.action.onClicked.addListener((tab)=> {
+browser.action.onClicked.addListener((tab) => {
   browser.action.setBadgeBackgroundColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```

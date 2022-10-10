@@ -239,7 +239,7 @@ Load `index.html` from the web server (if you used the Python3 example: `http://
 
 If you want to use the WebAssembly module with npm, we'll need to make a few changes.
 
-Let's start by recompiling out Rust with the target bundler option:
+Let's start by recompiling our Rust with the target bundler option:
 
 ```bash
 wasm-pack build --target bundler

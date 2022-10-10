@@ -1,6 +1,7 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
+page-type: css-property
 tags:
   - CSS
   - CSS Background
@@ -34,9 +35,9 @@ background-color: indigo;
 background-color: #bbff00; /* Fully opaque */
 background-color: #bf0; /* Fully opaque shorthand */
 background-color: #11ffee00; /* Fully transparent */
-background-color: #1fe0; /* Fully transparent shorthand  */
+background-color: #1fe0; /* Fully transparent shorthand */
 background-color: #11ffeeff; /* Fully opaque */
-background-color: #1fef; /* Fully opaque shorthand  */
+background-color: #1fef; /* Fully opaque shorthand */
 
 /* RGB value */
 background-color: rgb(255, 255, 128); /* Fully opaque */

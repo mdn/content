@@ -1,6 +1,7 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

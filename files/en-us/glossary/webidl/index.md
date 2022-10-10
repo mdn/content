@@ -3,7 +3,6 @@ title: WebIDL
 slug: Glossary/WebIDL
 tags:
   - CodingScripting
-  - Glossary
   - WebIDL
 ---
 

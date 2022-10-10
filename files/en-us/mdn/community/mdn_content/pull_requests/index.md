@@ -1,5 +1,5 @@
 ---
-title: Pull Request Etiquette and Process for MDN Content
+title: Pull request etiquette and process for MDN Web Docs
 slug: MDN/Community/MDN_content/Pull_requests
 page-type: mdn-community-guide
 tags:
@@ -35,7 +35,7 @@ Regardless of how content changes are done, they will be submitted as pull reque
 
 These guidelines apply to anyone opening a PR to make a change on MDN Web Docs.
 
-- **Open issue or discussion before opening PR**: If your PR would contain any kind of significant complexity (for example, it contains technical changes and isn't just a typo fix, grammatical improvement, or a formatting/structural change), please open an [issue](https://github.com/mdn/content/issues/new/choose) or [discussion](https://github.com/mdn/mdn-community) to describe why you're making the change, how the change would improve the content, and anything else we need to know about the change. Specifically for content suggestions or feature proposals, we have a [well documented](../../issues/content-suggestions-feature-proposals/) process to follow.
+- **Open issue or discussion before opening PR**: If your PR would contain any kind of significant complexity (for example, it contains technical changes and isn't just a typo fix, grammatical improvement, or a formatting/structural change), please open an [issue](https://github.com/mdn/content/issues/new/choose) or [discussion](https://github.com/mdn/mdn-community) to describe why you're making the change, how the change would improve the content, and anything else we need to know about the change. Specifically for content suggestions or feature proposals, we have a [well documented](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals) process to follow.
 - **Keep the PR short (1 issue per PR)**: Each PR should contain a single logical change or a related set of changes that make sense to submit together. If a PR becomes too large or contains too many unrelated changes, it becomes too difficult to review, and may begin to look suspicious (it is easier to hide malicious changes in a large PR. In such cases, the reviewer has the right to close your PR, and ask that you submit a separate PR for each logical set of changes that belong together. It is also good practice to reference the relevant issue in your PR description using [GitHub's special syntax](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue). This helps maintenance as GitHub will automatically close linked issues once the PR is merged.
 - **PR to update grammar**: PRs should not contain large amounts of grammar updates. Seemingly insignificant changes can change the meaning of technical content, so these need a careful review. Keep in mind that MDN Web Docs contains technical documentation; you should not report basic improvements in the grammar but only cases where the grammar is clearly incorrect.
 - **PR to update a demo repository**: For PRs that update API usage, there needs to be an accompanying PR on the mdn/content repository to update the corresponding relevant documentation. Such a PR can be rejected if there is no corresponding content PR.
@@ -43,7 +43,7 @@ These guidelines apply to anyone opening a PR to make a change on MDN Web Docs.
 
 ### Guidelines for after submitting a pull request
 
-We have general guidelines for what to do and expect after a PR has been opened. Please [refer to these guidelines](../../pull-requests/).
+We have general guidelines for what to do and expect after a PR has been opened. Please [refer to these guidelines](/en-US/docs/MDN/Community/Pull_requests).
 
 ### Guidelines for pull request review assignments
 

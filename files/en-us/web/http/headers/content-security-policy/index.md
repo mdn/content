@@ -168,9 +168,9 @@ Reporting directives control the reporting process of CSP violations. See also t
 - {{CSP("require-sri-for")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
 - {{CSP("require-trusted-types-for")}} {{experimental_inline}}
-  - : Enforces [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
+  - : Enforces [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/) at the DOM XSS injection sinks.
 - {{CSP("trusted-types")}} {{experimental_inline}}
-  - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/)
+  - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/)
     policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
     only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}

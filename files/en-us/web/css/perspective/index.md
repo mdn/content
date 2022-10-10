@@ -1,6 +1,7 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
+page-type: css-property
 tags:
   - 3D
   - CSS

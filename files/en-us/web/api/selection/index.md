@@ -16,9 +16,9 @@ A **`Selection`** object represents the range of text selected by the user or th
 
 A user may make a selection from left to right (in document order) or right to left (reverse of document order). The **_anchor_** is where the user began the selection and the **_focus_** is where the user ends the selection. If you make a selection with a desktop mouse, the anchor is placed where you pressed the mouse button, and the focus is placed where you released the mouse button.
 
-> **Note:** _Anchor_ and _focus_ should not be confused with the _start_ and _end_ positions of a selection. The anchor can be placed before the focus or vice-versa, depending on the direction you made your selection.
+> **Note:** _Anchor_ and _focus_ should not be confused with the _start_ and _end_ positions of a selection. The anchor can be placed before the focus or vice versa, depending on the direction you made your selection.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("Selection.anchorNode")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Node")}} in which the selection begins. Can return `null` if selection never existed in the document (e.g., an iframe that was never clicked on).
@@ -35,7 +35,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.type")}} {{ReadOnlyInline}}
   - : Returns a string describing the type of the current selection.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("Selection.addRange()")}}
   - : A {{DOMxRef("Range")}} object that will be added to the selection.
@@ -162,6 +162,6 @@ Other key terms used in this section.
 ## See also
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}
+- Selection-related events: {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Node/selectstart_event", "selectstart")}}
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus")}}, and {{DOMxRef("HTMLElement.blur")}}

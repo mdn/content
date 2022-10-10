@@ -26,6 +26,10 @@ tags:
   - seizure disorders
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 When designing visual and readable content with the aim of accessibility for all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:
 
 - luminance, which is a linear measure of light,
@@ -117,30 +121,53 @@ Today, the proliferation of easily available web fonts of all sizes and weights 
 
 The W3.org defines the sRGB colorspace as the [default for web content](https://www.w3.org/TR/css-color-3/#SRGB). The MDN page on [\<color>](/en-US/docs/Web/CSS/color_value) says "_The [CSS](/en-US/docs/Web/CSS) [color data type](/en-US/docs/Web/CSS/CSS_Types) represents a color in the [sRGB colorspace](https://en.wikipedia.org/wiki/SRGB)._"
 
-### CSS Color Level 3 notations:
+### CSS Color Level 3 notations
 
 These are examples of the CSS notations used to define a color. Here the example color for each is magenta:
 
 ```css
 /* by name (from a defined set of names) */
-div { color: magenta; }
+div {
+  color: magenta;
+}
 
 /* by HSL representation of the sRGB value */
-div { color: hsl(300, 100%, 50%); }
-div { color: hsla(300, 100%, 50%, 50%); }
+div {
+  color: hsl(300, 100%, 50%);
+}
+div {
+  color: hsla(300, 100%, 50%, 50%);
+}
 
 /* by sRGB value as a percentage */
-div { color: rgb(100%, 0%, 100%); }
-div { color: rgba(100%, 0%, 100%, 50%); }
+div {
+  color: rgb(100%, 0%, 100%);
+}
+div {
+  color: rgba(100%, 0%, 100%, 50%);
+}
 
 /* by sRGB integer values */
-div { color: rgb(255, 0, 255); }
-div { color: rgba(255, 0, 255, 0.5); }
+div {
+  color: rgb(255, 0, 255);
+}
+div {
+  color: rgba(255, 0, 255, 0.5);
+}
 
 /* by sRGB value in hex */
-div { color: #f0f; }            /* #rgb, a shorthand for #rrggbb */
-div { color: #ff00ff; }         /* #rrggbb */
-div { color: #ff00ff80; }       /* #rrggbbaa */
+div {
+  /* #rgb, a shorthand for #rrggbb */
+  color: #f0f;
+}
+div {
+  /* #rrggbb */
+  color: #ff00ff;
+}
+div {
+  /* #rrggbbaa */
+  color: #ff00ff80;
+}
 ```
 
 The first example is using one of the defined color names. The list of basic color keywords is: `aqua`, `black`, `blue`, `fuchsia`, `gray`, `green`, `lime`, `maroon`, `navy`, `olive`, `purple`, `red`, `silver`, `teal`, `white`, and `yellow`. Some color names have aliases, for instance, `cyan` and `aqua` are the same color, as is `fuchsia` and `magenta`, and `grey` and `gray`. There are over [a hundred and forty more](https://www.w3.org/TR/css-color-3/#svg-color) names that came from the SVG specification that are supported by most browsers.
@@ -316,7 +343,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - **Some colors can affect our perception of time:** [Color and time perception: Evidence for temporal overestimation of blue stimuli](https://pubmed.ncbi.nlm.nih.gov/29374198/)
 - **Blue also has a significant effect on brightness and glare:** [Blue and glare & brightness](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **Red tinted glasses can provide increased happiness or joy:** [Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing](https://pubmed.ncbi.nlm.nih.gov/31244627/)
-- **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, S,Macknik
+- **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, Stephen L. Macknik
 - **Red Environment:** [Studies have shown that a red environment stimulates cognition](https://pubmed.ncbi.nlm.nih.gov/20649469/), but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.
 
 ### Flashing and Seizures

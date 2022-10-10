@@ -1,6 +1,7 @@
 ---
-title: ':in-range'
+title: ":in-range"
 slug: Web/CSS/:in-range
+page-type: css-pseudo-class
 tags:
   - CSS
   - Pseudo-class
@@ -14,13 +15,7 @@ browser-compat: css.selectors.in-range
 
 The **`:in-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is within the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
 
-```css
-/* Selects any <input>, but only when it has a range
-   specified, and its value is inside that range */
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-in-range.html", "tabbed-shorter")}}
 
 This pseudo-class is useful for giving the user a visual indication that a field's current value is within the permitted limits.
 

@@ -86,10 +86,10 @@ This example skews a rectangle both vertically (`.2`) and horizontally
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.setTransform(1, .2, .8, 1, 0, 0);
+ctx.setTransform(1, 0.2, 0.8, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
 ```
 
@@ -126,11 +126,11 @@ canvas {
 #### JavaScript
 
 ```js
-const canvases = document.querySelectorAll('canvas');
-const ctx1 = canvases[0].getContext('2d');
-const ctx2 = canvases[1].getContext('2d');
+const canvases = document.querySelectorAll("canvas");
+const ctx1 = canvases[0].getContext("2d");
+const ctx2 = canvases[1].getContext("2d");
 
-ctx1.setTransform(1, .2, .8, 1, 0, 0);
+ctx1.setTransform(1, 0.2, 0.8, 1, 0, 0);
 ctx1.fillRect(25, 25, 50, 50);
 
 let storedTransform = ctx1.getTransform();

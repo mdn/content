@@ -1,6 +1,7 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
+page-type: css-function
 tags:
   - CSS
   - CSS Function

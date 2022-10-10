@@ -2,7 +2,6 @@
 title: Scrollport
 slug: Glossary/Scrollport
 tags:
-  - Glossary
   - scrollport
 ---
 

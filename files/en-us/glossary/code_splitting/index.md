@@ -2,7 +2,6 @@
 title: Code splitting
 slug: Glossary/Code_splitting
 tags:
-  - Glossary
   - Reference
   - Web Performance
   - code splitting

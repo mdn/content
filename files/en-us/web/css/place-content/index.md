@@ -1,6 +1,7 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Alignment
@@ -173,7 +174,7 @@ function update() {
 }
 
 const alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
+alignContentAlignment.addEventListener("change", update);
 
 const justifyContentAlignment = document.getElementById("justifyContentAlignment");
 justifyContentAlignment.addEventListener("change", update);

@@ -1,6 +1,7 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

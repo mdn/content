@@ -74,7 +74,7 @@ Then, copy and paste the following commands into your terminal to delete some un
 # Move into the src directory of your project
 cd src
 # Delete a few files
-rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
+rm -- App.test.js App.css logo.svg reportWebVitals.js setupTests.js
 # Move back up to the root of the project
 cd ..
 ```
@@ -92,7 +92,7 @@ As a starting point for this project, we're going to provide two things: An `App
 
 Copy the following snippet to your clipboard, then paste it into `App.js` so that it replaces the existing `App()` function:
 
-```js
+```jsx
 function App(props) {
   return (
     <div className="todoapp stack-large">
@@ -243,7 +243,7 @@ The `aria-labelledby` attribute tells assistive technologies that we're treating
 
 Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
-```html
+```jsx
 <input id="todo-0" type="checkbox" defaultChecked={true} />
 <label className="todo-label" htmlFor="todo-0">
   Eat

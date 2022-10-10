@@ -3,7 +3,6 @@ title: Ruby
 slug: Glossary/Ruby
 tags:
   - CodingScripting
-  - Glossary
   - Ruby
 ---
 

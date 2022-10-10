@@ -1,6 +1,7 @@
 ---
 title: Using CSS transforms
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
+page-type: guide
 tags:
   - 3D
   - Advanced

@@ -213,7 +213,7 @@ There is a right and wrong way to do nesting. In the example above, we opened th
 
 The following is an example of the _wrong_ way to do nesting:
 
-```html example-bad
+```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
@@ -246,22 +246,20 @@ Consider the following example:
 
 > **Note:** Find useful reference pages that include lists of block and inline elements. See [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements) and [Inline elements](/en-US/docs/Web/HTML/Inline_elements).
 
-### Empty elements
+### Void elements
 
-Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. For example, the {{htmlelement("img")}} element embeds an image file onto a page:
+Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called {{glossary("void element", "void elements")}}. For example, the {{htmlelement("img")}} element embeds an image file onto a page:
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" />
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" />
 ```
 
 This would output the following:
 
-{{ EmbedLiveSample('Empty_elements', 700, 300, "", "") }}
+{{ EmbedLiveSample('Void_elements', 700, 300, "", "") }}
 
-> **Note:** Empty elements are sometimes called _void elements_.
-
-> **Note:** In HTML, there is no requirement to add a `/` at the end of an empty element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax and you may do this when you want your HTML to be valid XML.
+> **Note:** In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 
@@ -454,11 +452,11 @@ If you look at code for a lot of other sites, you might come across a number of 
 
 However, as soon as we add the `title` attribute in this way, there are problems:
 
-```html example-bad
+```html-nolint example-bad
 <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
 ```
 
-As written above, the browser misinterprets the markup, mistaking the `title` attribute for three attributes: a title attribute with the value _The_, and two Boolean attributes, `Mozilla` and `homepage`. Obviously, this is not intended! It will cause errors or unexpected behavior, as you can see in the live example below. Try hovering over the link to view the title text!
+As written above, the browser misinterprets the markup, mistaking the `title` attribute for three attributes: a title attribute with the value `The`, and two Boolean attributes, `Mozilla` and `homepage`. Obviously, this is not intended! It will cause errors or unexpected behavior, as you can see in the live example below. Try hovering over the link to view the title text!
 
 {{ EmbedLiveSample('Omitting_quotes_around_attribute_values', 700, 100, "", "") }}
 
@@ -469,14 +467,14 @@ Always include the attribute quotes. It avoids such problems, and results in mor
 In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
 
 ```html
-<a href="https://www.example.com">A link to my example.</a>
+<a href='https://www.example.com'>A link to my example.</a>
 
 <a href="https://www.example.com">A link to my example.</a>
 ```
 
 Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing quotes that will go wrong:
 
-```html example-bad
+```html-nolint example-bad
 <a href="https://www.example.com'>A link to my example.</a>
 ```
 
@@ -488,7 +486,7 @@ However, if you use one type of quote, you can include the other type of quote _
 
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
 
-```html example-bad
+```html-nolint example-bad
 <a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
 ```
 

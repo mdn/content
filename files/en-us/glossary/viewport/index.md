@@ -3,7 +3,6 @@ title: Viewport
 slug: Glossary/Viewport
 tags:
   - CodingScripting
-  - Glossary
   - Layout
   - viewport
 ---

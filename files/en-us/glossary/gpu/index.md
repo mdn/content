@@ -2,7 +2,6 @@
 title: GPU
 slug: Glossary/GPU
 tags:
-  - Glossary
   - Graphics
   - Infrastructure
 ---

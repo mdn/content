@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
+page-type: css-property
 tags:
   - CSS
   - CSS Property

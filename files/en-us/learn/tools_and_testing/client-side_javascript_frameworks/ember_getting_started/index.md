@@ -181,15 +181,15 @@ Installing shared assets, as we're about to do, isn't normally a required step f
 
    ```js
    let app = new EmberApp(defaults, {
-       // Add options here
-     });
+     // Add options here
+   });
    ```
 
 5. Add the following lines underneath it before saving the file:
 
    ```js
-     app.import('node_modules/todomvc-common/base.css');
-     app.import('node_modules/todomvc-app-css/index.css');
+   app.import("node_modules/todomvc-common/base.css");
+   app.import("node_modules/todomvc-app-css/index.css");
    ```
 
    For more information on what `ember-cli-build.js` does, and for other ways in which you can customize your build / pipeline, the Ember Guides have a page on [Addons and Dependencies](https://guides.emberjs.com/release/addons-and-dependencies/).

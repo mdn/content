@@ -22,7 +22,7 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 - {{domxref("PublicKeyCredential")}}
 - {{domxref("FederatedCredential")}}
 
-## Properties
+## Instance properties
 
 - {{domxref("Credential.id")}} {{ReadOnlyInline}}
   - : Returns a string containing the credential's identifier. This might be any one of a GUID, username, or email address.
@@ -33,7 +33,7 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 
@@ -43,7 +43,7 @@ None.
 let pwdCredential = new PasswordCredential({
   id: "example-username", // Username/ID
   name: "John Doe", // Display name
-  password: "correct horse battery staple" // Password
+  password: "correct horse battery staple", // Password
 });
 
 console.assert(pwdCredential.type === "password");

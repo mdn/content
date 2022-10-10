@@ -1,8 +1,9 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

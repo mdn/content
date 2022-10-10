@@ -22,7 +22,7 @@ The **`TransitionEvent`** interface represents events providing information rela
 - {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}
   - : Creates a `TransitionEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
@@ -44,9 +44,9 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("HTMLElement.transitionstart_event", "transitionstart")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
 
-## Methods
+## Instance methods
 
-_Also inherits properties from its parent {{domxref("Event")}}_.
+_Also inherits methods from its parent {{domxref("Event")}}_.
 
 - {{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Initializes a `TransitionEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent('TransitionEvent')")}} method.

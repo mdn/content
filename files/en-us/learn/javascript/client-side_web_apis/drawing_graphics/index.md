@@ -105,7 +105,7 @@ Let's start by creating our own canvas that we draw future experiments on to.
 3. Now open "script.js" and add the following lines of JavaScript:
 
    ```js
-   const canvas = document.querySelector('.myCanvas');
+   const canvas = document.querySelector(".myCanvas");
    const width = canvas.width = window.innerWidth;
    const height = canvas.height = window.innerHeight;
    ```
@@ -123,7 +123,7 @@ We need to do one final thing before we can consider our canvas template finishe
 In this case we want a 2d canvas, so add the following JavaScript line below the others in "script.js":
 
 ```js
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 ```
 
 > **Note:** other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
@@ -133,7 +133,7 @@ So that's it — our canvas is now primed and ready for drawing on! The `ctx` va
 Let's do one last thing before we move on. We'll color the canvas background black to give you a first taste of the canvas API. Add the following lines at the bottom of your JavaScript:
 
 ```js
-ctx.fillStyle = 'rgb(0, 0, 0)';
+ctx.fillStyle = "rgb(0, 0, 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
@@ -157,7 +157,7 @@ Let's start with some simple rectangles.
 2. Next, add the following lines to the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.fillStyle = "rgb(255, 0, 0)";
    ctx.fillRect(50, 50, 100, 150);
    ```
 
@@ -166,7 +166,7 @@ Let's start with some simple rectangles.
 3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = 'rgb(0, 255, 0)';
+   ctx.fillStyle = "rgb(0, 255, 0)";
    ctx.fillRect(75, 75, 100, 100);
    ```
 
@@ -175,7 +175,7 @@ Let's start with some simple rectangles.
 4. Note that you can draw semi-transparent graphics by specifying a semi-transparent color, for example by using `rgba()`. The `a` value defines what's called the "alpha channel, " or the amount of transparency the color has. The higher its value, the more it will obscure whatever's behind it. Add the following to your code:
 
    ```js
-   ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
+   ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
    ctx.fillRect(25, 100, 175, 50);
    ```
 
@@ -188,7 +188,7 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 1. Add the following to the previous example, again below the previous JavaScript lines:
 
    ```js
-   ctx.strokeStyle = 'rgb(255, 255, 255)';
+   ctx.strokeStyle = "rgb(255, 255, 255)";
    ctx.strokeRect(25, 25, 175, 200);
    ```
 
@@ -221,7 +221,7 @@ We'll be using some common methods and properties across all of the below sectio
 A typical, simple path-drawing operation would look something like so:
 
 ```js
-ctx.fillStyle = 'rgb(255, 0, 0)';
+ctx.fillStyle = "rgb(255, 0, 0)";
 ctx.beginPath();
 ctx.moveTo(50, 50);
 // draw your path
@@ -243,7 +243,7 @@ Let's draw an equilateral triangle on the canvas.
 2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
 
    ```js
-   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.fillStyle = "rgb(255, 0, 0)";
    ctx.beginPath();
    ctx.moveTo(50, 50);
    ```
@@ -283,7 +283,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 1. Let's add an arc to our canvas — add the following to the bottom of your code:
 
    ```js
-   ctx.fillStyle = 'rgb(0, 0, 255)';
+   ctx.fillStyle = "rgb(0, 0, 255)";
    ctx.beginPath();
    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
    ctx.fill();
@@ -296,7 +296,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 2. Let's try adding another arc:
 
    ```js
-   ctx.fillStyle = 'yellow';
+   ctx.fillStyle = "yellow";
    ctx.beginPath();
    ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
    ctx.lineTo(200, 106);
@@ -332,14 +332,14 @@ There are also a number of properties to help control text rendering such as {{d
 Try adding the following block to the bottom of your JavaScript:
 
 ```js
-ctx.strokeStyle = 'white';
+ctx.strokeStyle = "white";
 ctx.lineWidth = 1;
-ctx.font = '36px arial';
-ctx.strokeText('Canvas text', 50, 50);
+ctx.font = "36px arial";
+ctx.strokeText("Canvas text", 50, 50);
 
-ctx.fillStyle = 'red';
-ctx.font = '48px georgia';
-ctx.fillText('Canvas text', 50, 150);
+ctx.fillStyle = "red";
+ctx.font = "48px georgia";
+ctx.fillText("Canvas text", 50, 150);
 ```
 
 Here we draw two lines of text, one outline and the other stroke. The final example should look like so:
@@ -362,7 +362,7 @@ It is possible to render external images onto your canvas. These can be simple i
 
    ```js
    const image = new Image();
-   image.src = 'firefox.png';
+   image.src = "firefox.png";
    ```
 
    Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
@@ -370,7 +370,7 @@ It is possible to render external images onto your canvas. These can be simple i
 3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `load` event, which will only be fired when the image has finished loading. Add the following block below the previous one:
 
    ```js
-   image.addEventListener('load', () => ctx.drawImage(image, 20, 20));
+   image.addEventListener("load", () => ctx.drawImage(image, 20, 20));
    ```
 
    If you load your example in the browser now, you should see the image embedded in the canvas.
@@ -407,7 +407,7 @@ Let's build a simple example.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
 
    ```js
-   ctx.translate(width/2, height/2);
+   ctx.translate(width / 2, height / 2);
    ```
 
    This causes the coordinate origin (0, 0) to be moved to the center of the canvas, rather than being at the top left corner. This is very useful in many situations, like this one, where we want our design to be drawn relative to the center of the canvas.
@@ -420,15 +420,13 @@ Let's build a simple example.
    }
 
    function rand(min, max) {
-     return Math.floor(Math.random() * (max-min+1)) + (min);
+     return Math.floor(Math.random() * (max - min + 1)) + min;
    }
 
    let length = 250;
    let moveOffset = 20;
 
-   for (let i = 0; i < length; i++) {
-
-   }
+   for (let i = 0; i < length; i++) {}
    ```
 
    Here we are implementing the same `degToRad()` function we saw in the triangle example above, a `rand()` function that returns a random number between given lower and upper bounds, `length` and `moveOffset` variables (which we'll find out more about later), and an empty `for` loop.
@@ -436,13 +434,13 @@ Let's build a simple example.
 4. The idea here is that we'll draw something on the canvas inside the `for` loop, and iterate on it each time so we can create something interesting. Add the following code inside your `for` loop:
 
    ```js
-   ctx.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
+   ctx.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
    ctx.beginPath();
-   ctx.moveTo(moveOffset,moveOffset);
-   ctx.lineTo(moveOffset+length,moveOffset);
-   const triHeight = length/2 * Math.tan(degToRad(60));
-   ctx.lineTo(moveOffset+(length/2),moveOffset+triHeight);
-   ctx.lineTo(moveOffset,moveOffset);
+   ctx.moveTo(moveOffset, moveOffset);
+   ctx.lineTo(moveOffset + length, moveOffset);
+   const triHeight = length / 2 * Math.tan(degToRad(60));
+   ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
+   ctx.lineTo(moveOffset, moveOffset);
    ctx.fill();
 
    length--;
@@ -487,16 +485,16 @@ To see how it works, let's quickly look again at our Bouncing Balls example ([se
 
 ```js
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
-   for (const ball of balls) {
-     ball.draw();
-     ball.update();
-     ball.collisionDetect();
-   }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
 
-   requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 
 loop();
@@ -526,14 +524,14 @@ Now let's create our own simple animation — we'll get a character from a certa
 2. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
 
    ```js
-   ctx.translate(width/2, height/2);
+   ctx.translate(width / 2, height / 2);
    ```
 
 3. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
    ```js
    const image = new Image();
-   image.src = 'walk-right.png';
+   image.src = "walk-right.png";
    image.onload = draw;
    ```
 
@@ -553,21 +551,19 @@ Now let's create our own simple animation — we'll get a character from a certa
 5. Now let's insert an empty `draw()` function at the bottom of the code, ready for filling up with some code:
 
    ```js
-   function draw() {
-
-   }
+   function draw() {}
    ```
 
 6. The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
 
    ```js
-   ctx.fillRect(-(width/2), -(height/2), width, height);
+   ctx.fillRect(-(width / 2), -(height / 2), width, height);
    ```
 
 7. Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:
 
    ```js
-   ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
+   ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
    ```
 
    As you can see:
@@ -581,13 +577,13 @@ Now let's create our own simple animation — we'll get a character from a certa
 8. Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
 
    ```js
-     if (posX % 13 === 0) {
-       if (sprite === 5) {
-         sprite = 0;
-       } else {
-         sprite++;
-       }
+   if (posX % 13 === 0) {
+     if (sprite === 5) {
+       sprite = 0;
+     } else {
+       sprite++;
      }
+   }
    ```
 
    We are wrapping the whole block in `if (posX % 13 === 0) { }`. We use the modulo (`%`) operator (also known as the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)) to check whether the `posX` value can be exactly divided by 13 with no remainder. If so, we move on to the next sprite by incrementing `sprite` (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!
@@ -597,13 +593,13 @@ Now let's create our own simple animation — we'll get a character from a certa
 9. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
    ```js
-     if (posX > width/2) {
-       let newStartPos = -((width/2) + 102);
-       posX = Math.ceil(newStartPos);
-       console.log(posX);
-     } else {
-       posX += 2;
-     }
+   if (posX > width / 2) {
+     let newStartPos = -(width / 2 + 102);
+     posX = Math.ceil(newStartPos);
+     console.log(posX);
+   } else {
+     posX += 2;
+   }
    ```
 
    We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
@@ -638,22 +634,22 @@ let curY;
 let pressed = false;
 
 // update mouse pointer coordinates
-document.addEventListener('mousemove', (e) => {
+document.addEventListener("mousemove", (e) => {
   curX = e.pageX;
   curY = e.pageY;
 });
 
-canvas.addEventListener('mousedown', () => pressed = true);
+canvas.addEventListener("mousedown", () => pressed = true);
 
-canvas.addEventListener('mouseup', () => pressed = false);
+canvas.addEventListener("mouseup", () => pressed = false);
 ```
 
 When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:
 
 ```js
-clearBtn.addEventListener('click', () => {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
+clearBtn.addEventListener("click", () => {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
 });
 ```
 
@@ -664,7 +660,14 @@ function draw() {
   if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false
+    );
     ctx.fill();
   }
 
@@ -706,7 +709,12 @@ Let's look at a simple example of how to create something with a WebGL library. 
 5. Next, we need a **camera** so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:
 
    ```js
-   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+   const camera = new THREE.PerspectiveCamera(
+     75,
+     window.innerWidth / window.innerHeight,
+     0.1,
+     1000
+   );
    camera.position.z = 5;
    ```
 
@@ -736,12 +744,12 @@ Let's look at a simple example of how to create something with a WebGL library. 
 
    const loader = new THREE.TextureLoader();
 
-   loader.load('metal003.png', (texture) => {
+   loader.load("metal003.png", (texture) => {
      texture.wrapS = THREE.RepeatWrapping;
      texture.wrapT = THREE.RepeatWrapping;
      texture.repeat.set(2, 2);
 
-     const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
+     const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
      const material = new THREE.MeshLambertMaterial({ map: texture });
      cube = new THREE.Mesh(geometry, material);
      scene.add(cube);
@@ -760,10 +768,10 @@ Let's look at a simple example of how to create something with a WebGL library. 
 8. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
 
    ```js
-   const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
+   const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
    scene.add(light);
 
-   const spotLight = new THREE.SpotLight('rgb(255,255,255)');
+   const spotLight = new THREE.SpotLight("rgb(255,255,255)");
    spotLight.position.set(100, 1000, 1000);
    spotLight.castShadow = true;
    scene.add(spotLight);
@@ -809,7 +817,7 @@ Here we have covered only the real basics of canvas — there is so much more to
 ## Examples
 
 - [Violent theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
-- [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
+- [Voice change-o-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 

@@ -362,7 +362,7 @@ CSS now has native [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_prop
 
 If we created a variable called `$base-color`, as in the first line below, we could then use it through the stylesheet anywhere that required that color.
 
-```css
+```scss
 $base-color: #c6538c;
 
 .alert {
@@ -384,8 +384,8 @@ I mentioned above that one way to organize CSS is to break down stylesheets into
 
 So, for example, with [partials](https://sass-lang.com/documentation/at-rules/use#partials), you could have several style files inside a directory, say `foundation/_code.scss`, `foundation/_lists.scss`, `foundation/_footer.scss`, `foundation/_links.scss`, etc. You could then use the Sass `@use` role to load them into other stylesheets:
 
-```css
-// foundation/_index.sass
+```scss
+// foundation/_index.scss
 @use "code";
 @use "lists";
 @use "footer";
@@ -394,8 +394,8 @@ So, for example, with [partials](https://sass-lang.com/documentation/at-rules/us
 
 If the partials are all loaded into an index file, as implied above, you can then load that entire directory into another stylesheet in one go:
 
-```css
-// style.sass
+```scss
+// style.scss
 @use "foundation";
 ```
 

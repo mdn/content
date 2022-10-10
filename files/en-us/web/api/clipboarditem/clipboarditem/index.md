@@ -49,16 +49,16 @@ The below example requests a png image using the {{domxref("Fetch API")}}, and i
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = '/myimage.png';
+    const imgURL = "/myimage.png";
     const data = await fetch(imgURL);
     const blob = await data.blob();
 
     await navigator.clipboard.write([
       new ClipboardItem({
-        [blob.type]: blob
-      })
+        [blob.type]: blob,
+      }),
     ]);
-    console.log('Fetched image copied.');
+    console.log("Fetched image copied.");
   } catch (err) {
     console.error(err.name, err.message);
   }

@@ -74,7 +74,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 3. If we look at line 86 in our code editor, we'll find this line:
 
    ```js
-   guessSubmit.addeventListener('click', checkGuess);
+   guessSubmit.addeventListener("click", checkGuess);
    ```
 
 4. The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn _name-of-feature_" with your favorite search engine. Here's a shortcut to save you some time in this instance: [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
@@ -95,31 +95,31 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 4. Have a look at line 78, and you'll see the following code:
 
    ```js
-   lowOrHi.textContent = 'Last guess was too high!';
+   lowOrHi.textContent = "Last guess was too high!";
    ```
 
-5. This line is trying to set the `textContent` property of the `lowOrHi` constant to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find in the JavaScript is on line 48:
+5. This line is trying to set the `textContent` property of the `lowOrHi` constant to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find in the JavaScript is on line 49:
 
    ```js
-   const lowOrHi = document.querySelector('lowOrHi');
+   const lowOrHi = document.querySelector("lowOrHi");
    ```
 
-6. At this point we are trying to make the variable contain a reference to an element in the document's HTML. Let's check whether the value is `null` after this line has been run. Add the following code on line 49:
+6. At this point we are trying to make the variable contain a reference to an element in the document's HTML. Let's check whether the value is `null` after this line has been run. Add the following code on line 50:
 
    ```js
    console.log(lowOrHi);
    ```
 
-   > **Note:** [`console.log()`](/en-US/docs/Web/API/console/log) is a really useful debugging function that prints a value to the console. So it will print the value of `lowOrHi` to the console as soon as we have tried to set it in line 48.
+   > **Note:** [`console.log()`](/en-US/docs/Web/API/console/log) is a really useful debugging function that prints a value to the console. So it will print the value of `lowOrHi` to the console as soon as we have tried to set it in line 49.
 
-7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 48.
-8. Let's think about what the problem could be. Line 48 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
+7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 49.
+8. Let's think about what the problem could be. Line 49 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 
    ```html
    <p class="lowOrHi"></p>
    ```
 
-9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 48 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 48.
+9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 49 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 49.
 10. Try saving and refreshing again, and your `console.log()` statement should return the `<p>` element we want. Phew! Another error fixed! You can delete your `console.log()` line now, or keep it to reference later on — your choice.
 
 > **Note:** See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
@@ -136,7 +136,7 @@ At this point, the game should play through fine, however after playing through 
 
 There's definitely a problem in the game logic somewhere — the game is not returning an error; it just isn't playing right.
 
-1. Search for the `randomNumber` variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 44:
+1. Search for the `randomNumber` variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 45:
 
    ```js
    let randomNumber = Math.floor(Math.random()) + 1;
@@ -161,25 +161,25 @@ There's definitely a problem in the game logic somewhere — the game is not ret
 To fix this, let's consider how this line is working. First, we invoke [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), which generates a random decimal number between 0 and 1, e.g. 0.5675493843.
 
 ```js
-Math.random()
+Math.random();
 ```
 
 Next, we pass the result of invoking `Math.random()` through [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), which rounds the number passed to it down to the nearest whole number. We then add 1 to that result:
 
 ```js
-Math.floor(Math.random()) + 1
+Math.floor(Math.random()) + 1;
 ```
 
 Rounding a random decimal number between 0 and 1 down will always return 0, so adding 1 to it will always return 1. We need to multiply the random number by 100 before we round it down. The following would give us a random number between 0 and 99:
 
 ```js
-Math.floor(Math.random()*100);
+Math.floor(Math.random() * 100);
 ```
 
 Hence us wanting to add 1, to give us a random number between 1 and 100:
 
 ```js
-Math.floor(Math.random()*100) + 1;
+Math.floor(Math.random() * 100) + 1;
 ```
 
 Try updating both lines like this, then save and refresh — the game should now play like we are intending it to!

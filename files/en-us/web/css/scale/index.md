@@ -1,6 +1,7 @@
 ---
 title: scale
 slug: Web/CSS/scale
+page-type: css-property
 tags:
   - CSS
   - CSS Property

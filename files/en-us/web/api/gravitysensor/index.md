@@ -29,11 +29,11 @@ To use this sensor, the user must grant permission to the `'accelerometer'` devi
 - {{domxref("GravitySensor.GravitySensor", "GravitySensor()")}}
   - : Creates a new `GravitySensor` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestors, {{domxref('Accelerometer')}}, {{domxref('Sensor')}}, and {{domxref('EventTarget')}}._
 
-## Methods
+## Instance methods
 
 _`GravitySensor` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 

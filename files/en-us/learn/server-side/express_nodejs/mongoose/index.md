@@ -129,7 +129,8 @@ Installing _Mongoose_ adds all its dependencies, including the MongoDB database 
 
 ### Connecting to MongoDB
 
-_Mongoose_ requires a connection to a MongoDB database. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
+_Mongoose_ requires a connection to a MongoDB database.
+You can `require()` and connect to a locally hosted database with `mongoose.connect()` as shown below (for the tutorial we'll instead connect to an internet-hosted database).
 
 ```js
 // Import the mongoose module
@@ -687,7 +688,7 @@ const BookSchema = new Schema({
 // Virtual for book's URL
 BookSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
-  return "/catalog/book/" + this._id;
+  return `/catalog/book/${this._id}`;
 });
 
 // Export model

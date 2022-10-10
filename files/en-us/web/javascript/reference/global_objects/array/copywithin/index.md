@@ -67,13 +67,15 @@ applies to the {{jsxref("TypedArray/copyWithin", "TypedArray")}} method of the s
 name. The sequence is copied and pasted as one operation; pasted sequence will have the
 copied values even when the copy and paste region overlap.
 
-The `copyWithin()` method is a mutating method. It does not alter the length of `this`, but it will change the content of `this` and create new properties, if necessary.
+The `copyWithin()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter the length of `this`, but it will change the content of `this` and create new properties or delete existing properties, if necessary.
 
-`Array.prototype.copyWithin()` is intentionally generic. It does not require that its `this` value be an {{jsxref("Array")}} object.
+The `copyWithin()` method preserves empty slots. If the region to be copied from is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots' corresponding new indices are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and also become empty slots.
+
+The `copyWithin()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
-### Using copyWithin
+### Using copyWithin()
 
 ```js
 console.log([1, 2, 3, 4, 5].copyWithin(-2));
@@ -87,9 +89,30 @@ console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
 
 console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
 // [1, 2, 3, 3, 4]
+```
 
-console.log([].copyWithin.call({length: 5, 3: 1}, 0, 3));
-// {0: 1, 3: 1, length: 5}
+### Using copyWithin() on sparse arrays
+
+`copyWithin()` will propagate empty slots.
+
+```js
+console.log([1, , 3].copyWithin(2, 1, 2)); // [1, empty, empty]
+```
+
+### Calling copyWithin() on non-array objects
+
+The `copyWithin()` method reads the `length` property of `this` and then manipulates the integer indices involved.
+
+```js
+const arrayLike = {
+  length: 5,
+  3: 1,
+};
+console.log(Array.prototype.copyWithin.call(arrayLike, 0, 3));
+// { '0': 1, '3': 1, length: 5 }
+console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
+// { '0': 1, length: 5 }
+// The '3' property is deleted because the copied source is an empty slot
 ```
 
 ## Specifications

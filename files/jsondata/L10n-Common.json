@@ -5,7 +5,7 @@
     "fr": "Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant&nbsp;!",
     "pt-BR": "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!",
     "ru": "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!",
-    "zh-CN": "此页面仍未被本地化, 期待您的翻译!",
+    "zh-CN": "此文档尚未被撰写，期待你的贡献!",
     "ja": "この項目についての文書はまだ書かれていません。書いてみませんか？"
   },
 
@@ -36,7 +36,7 @@
     "ko": "이벤트 핸들러",
     "pt-BR": "Handlers de Eventos",
     "zh-TW": "事件處理器",
-    "zh-CN": "事件句柄",
+    "zh-CN": "事件处理器",
     "ru": "Обработчики событий"
   },
 
@@ -46,7 +46,8 @@
     "pt-BR": "Construtor",
     "fr": "Constructeur",
     "ja": "コンストラクター",
-    "ru": "Конструктор"
+    "ru": "Конструктор",
+    "zh-CN": "构造函数"
   },
 
   "Inheritance": {
@@ -65,7 +66,8 @@
     "pt-BR": "Implementado por:",
     "fr": "Implémenté par&nbsp;:",
     "ja": "実装先:",
-    "ru": "Выполняется:"
+    "ru": "Выполняется:",
+    "zh-CN": "实现于："
   },
 
   "Related_pages": {
@@ -74,7 +76,8 @@
     "pt-BR": "Páginas relacionadas a $1",
     "fr": "Pages liées à $1",
     "ru": "Похожие страницы для $1",
-    "ja": "$1 に関連するページ"
+    "ja": "$1 に関連するページ",
+    "zh-CN": "$1 的相关页面"
   },
 
   "Related_pages_wo_group": {
@@ -83,7 +86,8 @@
     "pt-BR": "Páginas relacionadas:",
     "fr": "Pages similaires&nbsp;:",
     "ru": "Похожие страницы:",
-    "ja": "関連するページ"
+    "ja": "関連するページ",
+    "zh-CN": "相关页面："
   },
 
   "Reference": {
@@ -109,7 +113,7 @@
     "es": "[Traducir]",
     "fr": "[Traduire]",
     "pt-BR": "[Traduzir]",
-    "zh-CN": "[我来译!]",
+    "zh-CN": "[我来译！]",
     "ru": "[Перевести]",
     "ja": "[翻訳する]"
   },
@@ -119,7 +123,7 @@
     "es": "Nuestros voluntarios aún no han traducido este artículo al Español. ¡Únete a nosotros y ayuda a traducirlo!",
     "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire&nbsp;!",
     "pt-BR": "Nossos voluntários ainda não traduziram este artigo para sua linguagem. Junte-se a nós e nos ajude a traduzir!",
-    "zh-CN": "此页面仍未被本地化, 期待您的翻译!",
+    "zh-CN": "此页面仍未被本地化，期待你的翻译!",
     "ru": "Наши волонтёры ещё не перевели данную статью на Русский. Присоединяйтесь к нам и помогите закончить эту работу!",
     "ja": "まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？"
   },
@@ -130,7 +134,8 @@
     "fr": "Guides",
     "pt-BR": "Guias",
     "ru": "Руководства",
-    "ja": "ガイド"
+    "ja": "ガイド",
+    "zh-CN": "指南"
   },
 
   "Events": {
@@ -139,7 +144,8 @@
     "fr": "Événements",
     "pt-BR": "Eventos",
     "ru": "События",
-    "ja": "イベント"
+    "ja": "イベント",
+    "zh-CN": "事件"
   },
 
   "Interfaces": {
@@ -148,7 +154,8 @@
     "fr": "Interfaces",
     "pt-BR": "Interfaces",
     "ru": "Интерфейсы",
-    "ja": "インターフェイス"
+    "ja": "インターフェイス",
+    "zh-CN": "接口"
   },
 
   "listSeparator": {
@@ -157,13 +164,15 @@
     "fr": ", ",
     "ja": " 、 ",
     "pt-BR": ", ",
-    "ru": ", "
+    "ru": ", ",
+    "zh-CN": "、"
   },
 
   "MissingPage": {
     "en-US": "[Page not yet written]",
     "fr": "[Page qui reste à écrire]",
     "ja": "[ページがまだ書かれていません]",
-    "pt-BR": "[Página ainda não foi escrita]"
+    "pt-BR": "[Página ainda não foi escrita]",
+    "zh-CN": "[页面尚未撰写]"
   }
 }

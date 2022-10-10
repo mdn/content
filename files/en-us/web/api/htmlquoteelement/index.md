@@ -16,16 +16,16 @@ The **`HTMLQuoteElement`** interface provides special properties and methods (be
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLQuoteElement.cite")}}
   - : A string reflecting the {{htmlattrxref("cite", "blockquote")}} HTML attribute, containing a URL for the source of the quotation.
 
-## Methods
+## Instance methods
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Specifications
 

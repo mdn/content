@@ -3,7 +3,6 @@ title: WebM
 slug: Glossary/webm
 tags:
   - Composing
-  - Glossary
   - Infrastructure
   - WebM
 ---

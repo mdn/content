@@ -2,7 +2,7 @@
 title: Firefox 99 for developers
 slug: Mozilla/Firefox/Releases/99
 tags:
-  - '99'
+  - "99"
   - Firefox
   - Mozilla
   - Release

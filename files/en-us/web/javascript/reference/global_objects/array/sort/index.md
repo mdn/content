@@ -60,6 +60,8 @@ units order. For example, "banana" comes before "cherry". In a numeric sort, 9 c
 before 80, but because numbers are converted to strings, "80" comes before "9" in the
 Unicode order. All `undefined` elements are sorted to the end of the array.
 
+The `sort()` method preserves empty slots. If the source array is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots are moved to the end of the array, and always come after all the `undefined`.
+
 > **Note:** In UTF-16, Unicode characters above `\uFFFF` are
 > encoded as two surrogate code units, of the range
 > `\uD800`-`\uDFFF`. The value of each code unit is taken
@@ -115,54 +117,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-The `sort` method can be conveniently used with [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
-
-```js
-const numbers = [4, 2, 5, 1, 3];
-numbers.sort(function (a, b) {
-  return a - b;
-});
-console.log(numbers);
-// [1, 2, 3, 4, 5]
-
-// OR
-
-const numbers2 = [4, 2, 5, 1, 3];
-numbers2.sort((a, b) => a - b);
-console.log(numbers2);
-// [1, 2, 3, 4, 5]
-```
-
-Arrays of objects can be sorted by comparing the value of one of their properties.
-
-```js
-const items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
-];
-
-// sort by value
-items.sort((a, b) => a.value - b.value);
-
-// sort by name
-items.sort((a, b) => {
-  const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-  const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
-
-  // names must be equal
-  return 0;
-});
-```
+The `reverse()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
@@ -196,6 +151,39 @@ numericStringArray.sort(compareNumbers); // ['9', '80', '700']
 mixedNumericArray.join(); // '80,9,700,40,1,5,200'
 mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
 mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
+```
+
+### Sorting array of objects
+
+Arrays of objects can be sorted by comparing the value of one of their properties.
+
+```js
+const items = [
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic', value: 13 },
+  { name: 'Zeros', value: 37 }
+];
+
+// sort by value
+items.sort((a, b) => a.value - b.value);
+
+// sort by name
+items.sort((a, b) => {
+  const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+});
 ```
 
 ### Sorting non-ASCII characters
@@ -339,6 +327,30 @@ arr.sort(compareFn);
 Then V8 and JavaScriptCore sorts it descendingly, as `[9, 5, 4, 3, 1, 1]`, while SpiderMonkey returns it as-is: `[3, 1, 4, 1, 5, 9]`.
 
 Due to this implementation inconsistency, you are always advised to make your comparator well-formed by following the five constraints.
+
+### Using sort() on sparse arrays
+
+Empty slots are moved to the end of the array.
+
+```js
+console.log(["a", "c", , "b"].sort()); // ['a', 'b', 'c', empty]
+console.log([, undefined, "a", "b"].sort()); // ["a", "b", undefined, empty]
+```
+
+### Calling sort() on non-array objects
+
+The `sort()` method reads the `length` property of `this`. It then collects all existing integer-keyed properties in the range of `0` to `length - 1`, sorts them, and writes them back. If there are missing properties in the range, the corresponding trailing properties are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete), as if the non-existent properties are sorted towards the end.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+console.log(Array.prototype.sort.call(arrayLike));
+// { '0': 4, '1': 5, length: 3, unrelated: 'foo' }
+```
 
 ## Specifications
 

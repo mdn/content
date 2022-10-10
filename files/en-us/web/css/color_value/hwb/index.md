@@ -1,6 +1,7 @@
 ---
 title: hwb()
 slug: Web/CSS/color_value/hwb
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

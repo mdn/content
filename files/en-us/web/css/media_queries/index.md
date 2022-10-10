@@ -1,6 +1,7 @@
 ---
 title: Media queries
 slug: Web/CSS/Media_Queries
+page-type: css-module
 tags:
   - CSS
   - Guide
@@ -17,7 +18,7 @@ spec-urls:
 
 **Media queries** let you adapt your site or app depending on the presence or value of various device characteristics and parameters.
 
-They are a key component of [responsive design](/en-US/docs/Web/Progressive_web_apps). For example, a media query can shrink the font size on small devices, increase the padding between paragraphs when a page is viewed in portrait mode, or bump up the size of buttons on touchscreens.
+They are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design). For example, a media query can shrink the font size on small devices, increase the padding between paragraphs when a page is viewed in portrait mode, or bump up the size of buttons on touchscreens.
 
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query. Use {{cssxref("@import")}} to conditionally apply an entire style sheet.
 

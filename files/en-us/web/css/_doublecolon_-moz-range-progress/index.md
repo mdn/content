@@ -1,6 +1,7 @@
 ---
 title: '::-moz-range-progress'
 slug: Web/CSS/::-moz-range-progress
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions

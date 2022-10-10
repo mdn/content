@@ -1,6 +1,7 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

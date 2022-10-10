@@ -3,7 +3,6 @@ title: Domain sharding
 slug: Glossary/Domain_sharding
 tags:
   - DNS
-  - Glossary
   - HTTP
   - Reference
   - Web Performance

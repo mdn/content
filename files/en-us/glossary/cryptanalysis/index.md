@@ -3,7 +3,6 @@ title: Cryptanalysis
 slug: Glossary/Cryptanalysis
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---

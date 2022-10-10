@@ -1,6 +1,7 @@
 ---
 title: Realizing common layouts using grids
 slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grids
@@ -19,7 +20,7 @@ Many websites are a variation of this type of layout, with content, sidebars, a 
 
 We're going to create this layout using the _named template areas_ that we learned about in the guide _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_.
 
-The mark-up is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
+The markup is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
 
 ```css hidden
 * {
