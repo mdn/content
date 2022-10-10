@@ -19,7 +19,7 @@ The **`AbortSignal`** interface represents a signal object that allows you to co
 
 ## Instance properties
 
-_The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
+_The AbortSignal interface may also inherit properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
@@ -35,7 +35,7 @@ _The AbortSignal interface also inherits properties from its parent interface, {
 
 ## Instance methods
 
-_The **`AbortSignal`** interface inherits methods from its parent interface, {{domxref("EventTarget")}}._
+_The **`AbortSignal`** interface may also inherit methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.throwIfAborted()")}}
   - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
