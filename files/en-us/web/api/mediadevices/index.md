@@ -27,11 +27,11 @@ The **`MediaDevices`** interface provides access to connected media input device
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

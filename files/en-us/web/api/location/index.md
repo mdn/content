@@ -110,7 +110,7 @@ document.body.addEventListener('click', (evt) => {
 
 {{EmbedLiveSample('Location anatomy', '85ch', '160px')}}
 
-## Properties
+## Instance properties
 
 - {{domxref("Location.ancestorOrigins")}}
   - : A static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
@@ -133,7 +133,7 @@ document.body.addEventListener('click', (evt) => {
 - {{domxref("Location.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the canonical form of the origin of the specific location.
 
-## Methods
+## Instance methods
 
 - {{domxref("Location.assign()")}}
   - : Loads the resource at the URL provided in parameter.
