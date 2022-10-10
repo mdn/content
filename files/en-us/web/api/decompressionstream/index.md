@@ -19,7 +19,7 @@ The **`DecompressionStream`** interface of the {{domxref('Compression Streams AP
 - {{domxref("DecompressionStream.DecompressionStream", "DecompressionStream()")}}
   - : Creates a new `DecompressionStream`
 
-## Properties
+## Instance properties
 
 - {{domxref("DecompressionStream.readable")}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.

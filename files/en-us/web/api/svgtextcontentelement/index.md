@@ -44,7 +44,7 @@ The **`SVGTextContentElement`** interface is implemented by elements that suppor
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
@@ -53,7 +53,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} reflecting the {{SVGAttr("lengthAdjust")}} attribute of the given element. The numeric type values represent one of the constant values above.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 

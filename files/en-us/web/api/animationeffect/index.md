@@ -16,7 +16,7 @@ browser-compat: api.AnimationEffect
 
 The `AnimationEffect` interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) defines current and future _animation effects_ like {{domxref("KeyframeEffect")}}, which can be passed to {{domxref("Animation")}} objects for playing, and {{domxref("KeyframeEffect")}} (which is used by [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) and [Transitions](/en-US/docs/Web/CSS/CSS_Transitions)).
 
-## Methods
+## Instance methods
 
 - {{domxref("AnimationEffect.getTiming()")}}
   - : Returns the object associated with the animation containing all the animation's timing values.

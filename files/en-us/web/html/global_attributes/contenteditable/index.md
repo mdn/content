@@ -42,7 +42,6 @@ You can set the color used to draw the text insertion {{Glossary("caret")}} with
 
 ## See also
 
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
 - The CSS {{cssxref("caret-color")}} property

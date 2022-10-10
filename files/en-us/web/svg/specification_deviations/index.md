@@ -1,5 +1,5 @@
 ---
-title: Specification Deviations
+title: Specification deviations
 slug: Web/SVG/Specification_Deviations
 tags:
   - SVG

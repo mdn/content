@@ -18,7 +18,9 @@ browser-compat: mathml.elements.math
 
 [MathML Core](https://w3c.github.io/mathml-core/) is a subset with increased implementation details based on rules from [LaTeX](https://en.wikipedia.org/wiki/LaTeX) and the [Open Font Format](https://docs.microsoft.com/typography/opentype/spec/math). It is tailored for browsers and designed specifically to work well with other web standards including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript).
 
-Below you will find links to documentation, examples, and tools to work with MathML. Although many of these still use the [MathML Full](https://w3c.github.io/mathml/) specification as a reference, transition towards [MathML Core](https://w3c.github.io/mathml-core/) is in progress. It is highly recommended that developers and authors switch to that specification, perhaps relying on other web technologies to cover missing use cases from the legacy specification.
+Below you will find links to documentation, examples, and tools to work with MathML. MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification but, due to an erratic standardization history, legacy MathML features may still show up in existing implementations and web content.
+
+> **Note:** It is highly recommended that developers and authors switch to MathML Core, perhaps relying on other web technologies to cover missing use cases. The Math WG is maintaining a set of [MathML polyfills](https://github.com/mathml-refresh/mathml-polyfills) to facilitate that transition.
 
 ## MathML reference
 

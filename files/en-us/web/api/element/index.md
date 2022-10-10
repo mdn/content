@@ -23,7 +23,7 @@ Languages outside the realm of the Web platform, like XUL through the `XULElemen
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}._
 
@@ -94,7 +94,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
   - : Returns a string with the name of the tag for the given element.
 
-### Properties included from ARIA
+### Instance properties included from ARIA
 
 _The `Element` interface includes the following properties, defined on the `ARIAMixin` mixin._
 
@@ -179,7 +179,7 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 - {{domxref("Element.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
-## Methods
+## Instance methods
 
 _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}._
 

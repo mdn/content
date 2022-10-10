@@ -26,7 +26,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("ServiceWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
@@ -60,7 +60,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
   - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
 
-## Methods
+## Instance methods
 
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
   - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.

@@ -79,6 +79,8 @@ The range of elements processed by `filter()` is set before the first invocation
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
+The `filter()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Filtering out all small values
@@ -175,6 +177,22 @@ console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
 ```js
 console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
 console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
+```
+
+### Calling filter() on non-array objects
+
+The `filter()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(
+  Array.prototype.filter.call(arrayLike, (x) => x <= "b"),
+); // [ 'a', 'b' ]
 ```
 
 ### Affecting Initial Array (modifying, appending and deleting)

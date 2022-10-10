@@ -29,7 +29,7 @@ The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{domxref("EventTarget")}}._
 
@@ -44,7 +44,7 @@ _Also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("IDBRequest.transaction")}} {{ReadOnlyInline}}
   - : The transaction for the request. This property can be null for certain requests, for example those returned from {{domxref("IDBFactory.open")}} unless an upgrade is needed. (You're just connecting to a database, so there is no transaction to return).
 
-## Methods
+## Instance methods
 
 _No methods, but inherits methods from {{domxref("EventTarget")}}._
 

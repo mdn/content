@@ -26,7 +26,7 @@ This interface inherits from the {{domxref("Event")}} interface.
 - {{domxref("BeforeInstallPromptEvent.BeforeInstallPromptEvent","BeforeInstallPromptEvent()")}}{{Non-standard_Inline}} {{Experimental_Inline}}
   - : Creates a new `BeforeInstallPromptEvent` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("Event")}}._
 
@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("BeforeInstallPromptEvent.userChoice")}} {{ReadOnlyInline}}{{Non-standard_Inline}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to a string containing either "accepted" or "dismissed".
 
-## Methods
+## Instance methods
 
 - {{domxref("BeforeInstallPromptEvent.prompt()")}} {{Experimental_Inline}}
   - : Allows a developer to show the install prompt at a time of their own choosing. This method returns a {{jsxref("Promise")}}.

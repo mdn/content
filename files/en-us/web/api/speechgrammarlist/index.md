@@ -25,12 +25,12 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 - {{domxref("SpeechGrammarList.SpeechGrammarList", "SpeechGrammarList()")}} {{Experimental_Inline}}
   - : Creates a new `SpeechGrammarList` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("SpeechGrammarList.length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of {{domxref("SpeechGrammar")}} objects contained in the `SpeechGrammarList`.
 
-## Methods
+## Instance methods
 
 - {{domxref("SpeechGrammarList.item()")}} {{Experimental_Inline}}
   - : Standard getter — allows individual {{domxref("SpeechGrammar")}} objects to be retrieved from the `SpeechGrammarList` using array syntax.

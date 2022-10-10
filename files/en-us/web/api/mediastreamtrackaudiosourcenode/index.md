@@ -42,11 +42,11 @@ A `MediaStreamTrackAudioSourceNode` has no inputs and exactly one output, and is
 - {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "new MediaStreamTrackAudioSourceNode()")}}
   - : Creates a new `MediaStreamTrackAudioSourceNode` object instance with the specified options.
 
-## Properties
+## Instance properties
 
 _The `MediaStreamTrackAudioSourceNode` interface has no properties of its own; however, it inherits the properties of its parent, {{domxref("AudioNode")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 

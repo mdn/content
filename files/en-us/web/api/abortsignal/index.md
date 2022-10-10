@@ -17,21 +17,14 @@ The **`AbortSignal`** interface represents a signal object that allows you to co
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
+_The AbortSignal interface may also inherit properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
 - {{domxref("AbortSignal.reason")}} {{ReadOnlyInline}}
   - : A JavaScript value providing the abort reason, once the signal has aborted.
-
-## Methods
-
-_The **`AbortSignal`** interface inherits methods from its parent interface, {{domxref("EventTarget")}}._
-
-- {{domxref("AbortSignal.throwIfAborted()")}}
-  - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
 ## Static methods
 
@@ -39,6 +32,13 @@ _The **`AbortSignal`** interface inherits methods from its parent interface, {{d
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
 - {{domxref("AbortSignal.timeout()")}}
   - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
+
+## Instance methods
+
+_The **`AbortSignal`** interface may also inherit methods from its parent interface, {{domxref("EventTarget")}}._
+
+- {{domxref("AbortSignal.throwIfAborted()")}}
+  - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
 ## Events
 

@@ -52,14 +52,14 @@ The {{domxref("StereoPannerNode.pan", "pan")}} property takes a unitless value b
 - {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
   - : Creates a new instance of a `StereoPannerNode` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("StereoPannerNode.pan")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of panning to apply.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
