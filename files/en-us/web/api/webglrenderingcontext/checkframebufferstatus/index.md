@@ -39,8 +39,7 @@ checkFramebufferStatus(target)
 
     - `gl.DRAW_FRAMEBUFFER`
       - : Equivalent to `gl.FRAMEBUFFER`.
-        Used as a destination for drawing, rendering, clearing, and writing
-        operations.
+        Used as a destination for drawing, rendering, clearing, and writing operations.
     - `gl.READ_FRAMEBUFFER`
       - : Used as a source for reading operations.
 
