@@ -160,7 +160,7 @@ Add the following line near the top of the `app.component.ts` file to import the
 import { Item } from "./item";
 ```
 
-Then, configure the AppComponent first by adding the following to the same file's class:
+Then, configure the AppComponent by adding the following to the same file's class:
 
 ```js
 remove(item: Item) {
