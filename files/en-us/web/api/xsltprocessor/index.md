@@ -24,7 +24,7 @@ transformation to documents.
 - {{domxref("XSLTProcessor.XSLTProcessor", "XSLTProcessor()")}}
   - : Create a new `XSLTProcessor`.
 
-## Methods
+## Instance methods
 
 - {{domxref("XSLTProcessor.importStylesheet()")}}
   - : Imports the XSLT stylesheet. If the given node is a document node, you can pass in a
@@ -66,7 +66,7 @@ transformation to documents.
 - {{domxref("XSLTProcessor.reset()")}}
   - : Removes all parameters and stylesheets from the `XSLTProcessor`.
 
-## Properties
+## Instance properties
 
 _This are no properties for this interface._
 
