@@ -127,7 +127,7 @@ Don't:
 
 ## Deployment timeline
 
-After your pull request is merged to [`mdn/content`](https://github.com/mdn/content), it can take up to 48 hours before your changes are live on the [production site](https://developer.mozilla.org/), but it's usually quicker.
+After your pull request is merged to [`mdn/content`](https://github.com/mdn/content), it can take up to 48 hours before your changes are live on the [production site](/), but it's usually quicker.
 The site build runs every 24 hours at around 19:00 US/Eastern time, and is deployed immediately after.
 When deploys succeed, it can take up to 24 hours for the CDN to invalidate caches and serve new content.
 
