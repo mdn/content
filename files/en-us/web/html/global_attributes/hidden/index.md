@@ -16,7 +16,7 @@ The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a
 
 The attribute takes the following value:
 
- - `hidden` or an empty string, which indicates that the element is hidden.
+- `hidden` or an empty string, which indicates that the element is hidden.
 
 If the attribute is given without a value, like `<label hidden>Hidden Label</label>` or has an invalid value, like `<label hidden="oops">Hidden Label</label>`, its value is treated as an empty string, and will be hidden. If the attribute is not included, the element is not hidden.
 
