@@ -52,6 +52,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A [color](/en-US/docs/Web/CSS/color) for the element.
 
 - [`mathsize`](/en-US/docs/Web/MathML/Global_attributes/mathsize)
+
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
 - [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
@@ -63,6 +64,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 
 - [`scriptlevel`](/en-US/docs/Web/MathML/Global_attributes/scriptlevel)
+
   - : Specifies a [math-depth](/en-US/docs/Web/CSS/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Global_attributes/scriptlevel#values) for accepted values and mapping.
 
 - [`style`](/en-US/docs/Web/HTML/Global_attributes/style)

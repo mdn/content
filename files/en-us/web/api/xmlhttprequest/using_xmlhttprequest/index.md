@@ -544,10 +544,10 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name: 
+          <label>First name:
             <input type="text" name="firstname" />
           </label><br />
-          <label>Last name: 
+          <label>Last name:
             <input type="text" name="lastname" />
           </label>
         </p>
@@ -567,7 +567,7 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>Your name: 
+          <label>Your name:
             <input type="text" name="user" />
           </label>
         </p>

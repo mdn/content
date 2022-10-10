@@ -72,6 +72,7 @@ These resources are created by forward-thinking companies and web developers who
   - : Target HTML elements, including based on element state, with CSS.
 
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
+
   - : Understanding the browser algorithm to determine which CSS declarations get applied to an element when there are competing declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
 
 - [Cascade & Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
