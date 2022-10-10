@@ -156,7 +156,7 @@ In the next section, you will add code that relies on communication between the 
 
 Add the following line near the top of the `app.component.ts` file to import the `Item`:
 
-```
+```ts
 import { Item } from "./item";
 ```
 
