@@ -1,5 +1,5 @@
 ---
-title: Community Discussions
+title: Community discussions
 slug: MDN/Community/Discussions
 page-type: mdn-community-guide
 tags:

@@ -45,7 +45,7 @@ new WebAssembly.Memory(memoryDescriptor)
 
 ### Exceptions
 
-- If `memoryDescriptor` is an object, a {{jsxref("TypeError")}} is thrown.
+- If `memoryDescriptor` is not an object, a {{jsxref("TypeError")}} is thrown.
 - If `initial` is not specified, a {{jsxref("TypeError")}} is thrown.
 - If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
 - If `shared` is present and `true`, yet `maximum` is not specified, a {{jsxref("TypeError")}} is thrown.

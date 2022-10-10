@@ -19,7 +19,7 @@ Modern web user input goes beyond simple mouse and keyboard: think of touchscree
 
 The following diagram illustrates the typical workflow for implementing user input mechanisms:
 
-![](user-input-and-controls.png)
+![Flowchart of user input and controls workflow. The first step is to decide what input mechanism you're using, and the second step is to implement controls.](user-input-and-controls.png)
 
 First of all, you need to decide which input mechanisms you want to cover in your application out of mouse, keyboard, finger touch and so on. Once you decided the input mechanisms, you can control them using tools offered by the web platform or JavaScript libraries.
 

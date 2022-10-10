@@ -75,7 +75,7 @@ In this step, put all your code inside a {{htmlelement('map')}} element. `<map>`
 
 Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>` element corresponds to a single hotspot. To keep keyboard navigation intuitive, make sure the source order of `<area>` elements corresponds to the visual order of hotspots.
 
-`<area>` elements are empty elements, but do require four attributes:
+`<area>` elements are {{glossary("void element", "void elements")}}, but do require four attributes:
 
 - {{htmlattrxref('shape','area')}}
 

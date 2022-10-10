@@ -13,11 +13,13 @@ browser-compat: api.TextDecoder.encoding
 
 {{APIRef("Encoding API")}}
 
-The **`TextDecoder.encoding`** read-only property
-returns a string containing the name of the decoding algorithm used by
-the specific decoder.
+The **`TextDecoder.encoding`** read-only property returns a string containing the name of the decoding algorithm used by the specific decoder object.
 
-It can be one of the following values:
+The encoding is set by the [constructor](/en-US/docs/Web/API/TextDecoder/TextDecoder) `label` parameter, and defaults to `utf-8`.
+
+## Value
+
+A lower-cased ASCII string, which can be one of the following values:
 
 - The recommended encoding for the Web: `'utf-8'`.
 - The legacy single-byte encodings:
@@ -66,14 +68,8 @@ It can be one of the following values:
   ['utf-16be'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
   ['utf-16le'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
   and `'x-user-defined'`.
-- A special encoding, `'replacement'`, which only emits an error and an
-  `EOF` code point. It is used to prevent attacks that mismatch encodings
-  between the client and server. It can happen with `ISO-2022-CN` and
-  `ISO-2022-CN-ext`.
-
-## Value
-
-A string.
+- A special encoding, `'replacement'`, which only emits an error and an `EOF` code point.
+  It is used to prevent attacks that mismatch encodings between the client and server. It can happen with `ISO-2022-CN` and `ISO-2022-CN-ext`.
 
 ## Specifications
 
