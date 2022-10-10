@@ -14,7 +14,7 @@ The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
 
-The attribute must take one of the following values:
+The attribute takes the following value:
 
  - `hidden` or an empty string, which indicates that the element is hidden.
 
