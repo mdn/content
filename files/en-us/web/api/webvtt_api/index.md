@@ -537,7 +537,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     <v Bob>text</v>
     ```
 
-## Methods and properties
+## Instance methods and properties
 
 The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
 
