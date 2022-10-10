@@ -178,8 +178,8 @@ The HTML defines two buttons, a container element that is subject to containment
 
 #### Result
 
-Change the selections to compare the results with different style settings.
-Note that when the content is visible or auto changing `contain-intrinsic-size` makes no difference.
+Use the selectors to apply the given styles to the containing `div` element.
+Note that when the `content-visibility` is `visible` or `auto`, changing `contain-intrinsic-size` makes no difference.
 However if the content is hidden, having a `contain-intrinsic-size` of `none` collapses the parent element as though its child element had no size.
 
 {{EmbedLiveSample('Setting the intrinsic size', '100%', 170)}}
