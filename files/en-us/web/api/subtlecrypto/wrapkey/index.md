@@ -63,15 +63,17 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
 
           Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
 
-    - To use [AES-CTR](#aes-ctr), [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm), pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+    - To use [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
 
       - `name`
-        - : A string indicating the name of the algorithm: `AES-CTR`, `AES-CBC`, `AES-GCM`.
+        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
       - `iv`
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
           The initialization vector.
           Must be 16 bytes, unpredictable, and preferably cryptographically random.
           However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+
+    - To use [AES-CTR](#aes-ctr), pass an object with the properties in the [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams) dictionary.
 
     - To use [AES-KW](#aes-kw), pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
 
