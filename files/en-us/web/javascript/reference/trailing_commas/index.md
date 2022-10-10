@@ -213,6 +213,18 @@ export { A, B, C, };
 export { A as B, C as D, E as F, };
 ```
 
+### Trailing commas in dynamic import
+
+Trailing commas are only allowed in [dynamic imports](/en-US/docs/Web/JavaScript/Reference/Operators/import) if the runtime also implements the second `options` parameter.
+
+```js
+import("D",);
+import(
+  "D",
+  { assert: { type: "json" } },
+);
+```
+
 ### Quantifier prefix
 
 > **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".

@@ -574,6 +574,7 @@ This rule is a complement to the previous rule, specifically for the case where 
 - `yield <here> * expr`
 - `(param) <here> => {}`
 - `async <here> function`, `async <here> prop()`, `async <here> function*`, `async <here> *prop()`, `async <here> (param) <here> => {}`
+- `import { something } from "module" <here> assert {}`
 
 Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
@@ -636,7 +637,20 @@ class A {
 }
 ```
 
-And therefore will be a syntax error around `{`.
+And therefore will be a syntax error around `{`. Similarly, computed class fields start with `[` and may be merged with the previous line.
+
+```js example-bad
+class A {
+  a = 1
+  [1 + 1] = 2
+}
+
+// seen as:
+
+class A {
+  a = 1[1 + 1] = 2
+}
+```
 
 There are the following rules-of-thumb for dealing with ASI, if you want to enforce semicolon-less style:
 

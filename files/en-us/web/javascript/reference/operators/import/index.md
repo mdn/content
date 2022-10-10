@@ -22,14 +22,21 @@ Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/
 
 ```js-nolint
 import(moduleName)
+import(moduleName, options)
 ```
 
 The `import()` call is a syntax that closely resembles a function call, but `import` itself is a keyword, not a function. You cannot alias it like `const myImport = import`, which will throw a {{jsxref("SyntaxError")}}.
+
+[Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) are only allowed if the runtime also supports `options`. Check [browser compatibility](#browser_compatibility).
 
 ### Parameters
 
 - `moduleName`
   - : The module to import from. The evaluation of the specifier is host-specified, but always follows the same algorithm as static [import declarations](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+- `options`
+  - : An object containing import options, which correspond to the appendices of the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement. The follow keys are recognized:
+    - `assert`
+      - : The [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assertions).
 
 ### Return value
 
@@ -49,6 +56,12 @@ The import declaration syntax (`import something from "somewhere"`) is static an
 Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
 
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations, but the asynchronous dynamic import syntax will always be available, allowing you to import modules into non-module environments.
+
+The `options` parameter allows different kinds of import options, for example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assertions):
+
+```js
+import("./data.json", { assert: { type: "json" } });
+```
 
 ## Examples
 
