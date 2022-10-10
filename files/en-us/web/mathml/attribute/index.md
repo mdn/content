@@ -407,6 +407,28 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       </td>
     </tr>
     <tr>
+      <td><code>subscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("msub") }},
+        {{ MathMLElement("msubsup") }},
+        {{ MathMLElement("mmultiscripts") }}
+      </td>
+      <td>
+        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the minimum amount to shift the baseline of the subscript down.
+      </td>
+    </tr>
+    <tr>
+      <td><code>superscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("msup") }},
+        {{ MathMLElement("msubsup") }},
+        {{ MathMLElement("mmultiscripts") }}
+      </td>
+      <td>
+        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the minimum amount to shift the baseline of the superscript up.
+      </td>
+    </tr>
+    <tr>
       <td><code>symmetric</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
