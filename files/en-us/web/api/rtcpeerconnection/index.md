@@ -31,13 +31,7 @@ The **`RTCPeerConnection`** interface represents a WebRTC connection between the
   - : Returns a newly-created `RTCPeerConnection`,
     which represents a connection between the local device and a remote peer.
 
-## Static methods
-
-- {{DOMxRef("RTCPeerConnection.generateCertificate", "generateCertificate()")}}
-  - : Creates an X.509 certificate and its corresponding private key,
-    returning a {{jsxref("Promise")}} that resolves with the new {{DOMxRef("RTCCertificate")}} once it is generated.
-
-## Properties
+## Instance properties
 
 _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
@@ -120,7 +114,13 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
     `stable`, `have-local-offer`, `have-remote-offer`,
     `have-local-pranswer`, `have-remote-pranswer`, or `closed`.
 
-## Methods
+## Static methods
+
+- {{DOMxRef("RTCPeerConnection.generateCertificate", "generateCertificate()")}}
+  - : Creates an X.509 certificate and its corresponding private key,
+    returning a {{jsxref("Promise")}} that resolves with the new {{DOMxRef("RTCCertificate")}} once it is generated.
+
+## Instance methods
 
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
