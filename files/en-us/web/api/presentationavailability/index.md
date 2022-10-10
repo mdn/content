@@ -22,7 +22,7 @@ The `onchange` attribute is an [event handler](https://www.w3.org/TR/presentatio
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PresentationAvailability.value")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean value indicating whether the given presentation display is available. The `value` attribute _MUST_ return the last value it was set to.
@@ -32,7 +32,7 @@ The `onchange` attribute is an [event handler](https://www.w3.org/TR/presentatio
 - {{domxref("PresentationAvailability.change_event", "change")}} {{Experimental_Inline}}
   - : Indicates that the availability of the presentation display has changed.
 
-## Methods
+## Instance methods
 
 None.
 

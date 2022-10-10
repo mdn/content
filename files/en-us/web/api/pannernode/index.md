@@ -51,7 +51,7 @@ A `PannerNode` always has exactly one input and one output: the input can be _mo
 - {{domxref("PannerNode.PannerNode", "PannerNode()")}}
   - : Creates a new `PannerNode` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -86,7 +86,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("PannerNode.rolloffFactor")}}
   - : A double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
