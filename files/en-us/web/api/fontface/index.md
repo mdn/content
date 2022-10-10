@@ -25,7 +25,7 @@ For URL font sources it allows authors to trigger when the remote font is fetche
 - {{domxref("FontFace.FontFace", "FontFace()")}}
   - : Constructs and returns a new `FontFace` object, built from an external resource described by a URL or from an {{jsxref("ArrayBuffer")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("FontFace.ascentOverride")}}
   - : A string that retrieves or sets the _ascent metric_ of the font. It is equivalent to the {{cssxref("@font-face/ascent-override", "ascent-override")}} descriptor.

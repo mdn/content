@@ -24,7 +24,7 @@ This is the event type for `fetch` events dispatched on the {{domxref("ServiceWo
 - {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
   - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to `fetch` event callbacks.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
@@ -39,7 +39,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 - {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
   - : The {{domxref("Request")}} the browser intends to make.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

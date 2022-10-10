@@ -14,14 +14,14 @@ The **`DOMTokenList`** interface represents a set of space-separated tokens. Suc
 
 A `DOMTokenList` is indexed beginning with `0` as with JavaScript {{jsxref("Array")}} objects. `DOMTokenList` is always case-sensitive.
 
-## Properties
+## Instance properties
 
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : An `integer` representing the number of objects stored in the object.
 - {{domxref("DOMTokenList.value")}}
   - : A {{Glossary("stringifier")}} property that returns the value of the list as a string.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMTokenList.item()")}}
   - : Returns the item in the list by its index, or `null` if the index is greater than or equal to the list's `length`.
