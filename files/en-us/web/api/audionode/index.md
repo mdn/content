@@ -73,7 +73,7 @@ You are free to use either constructors or factory methods, or mix both, however
 
 _Brief history:_ The first version of the Web Audio spec only defined the factory methods. After a [design review in October 2013](https://github.com/WebAudio/web-audio-api/issues/250), it was decided to add constructors because they have numerous benefits over factory methods. The constructors were added to the spec from August to October 2016. Factory methods continue to be included in the spec and are not deprecated.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioNode.context")}} {{ReadOnlyInline}}
   - : Returns the associated {{domxref("BaseAudioContext")}}, that is the object representing the processing graph the node is participating in.
@@ -89,7 +89,7 @@ _Brief history:_ The first version of the Web Audio spec only defined the factor
   - : Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
     The possible values are `"speakers"` or `"discrete"`.
 
-## Methods
+## Instance methods
 
 _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
