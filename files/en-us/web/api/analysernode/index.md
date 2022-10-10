@@ -51,7 +51,7 @@ An `AnalyserNode` has exactly one input and one output. The node works even if t
 - {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}
   - : Creates a new instance of an `AnalyserNode` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -66,7 +66,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("AnalyserNode.smoothingTimeConstant")}}
   - : A double value representing the averaging constant with the last analysis frame — basically, it makes the transition between values over time smoother.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
