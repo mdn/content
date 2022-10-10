@@ -2,10 +2,17 @@
 title: scroll-timeline-name
 slug: Web/CSS/scroll-timeline-name
 page-type: css-property
+tags:
+  - CSS
+  - CSS Animations
+  - CSS Property
+  - Reference
+  - recipe:css-property
+  - Experimental
 browser-compat: css.properties.scroll-timeline-name
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property defines a name that can be used to identify an element as the source of a scroll-timeline for an animation.
 

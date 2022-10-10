@@ -2,10 +2,17 @@
 title: scroll-timeline-axis
 slug: Web/CSS/scroll-timeline-axis
 page-type: css-property
+tags:
+  - CSS
+  - CSS Animations
+  - CSS Property
+  - Reference
+  - recipe:css-property
+  - Experimental
 browser-compat: css.properties.scroll-timeline-axis
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property can be used to specify which scrollbar provides the timeline for a scroll-timeline animation.
 

@@ -2,10 +2,17 @@
 title: scroll-timeline
 slug: Web/CSS/scroll-timeline
 page-type: css-shorthand-property
+tags:
+  - CSS
+  - CSS Animations
+  - CSS Property
+  - Reference
+  - recipe:css-property
+  - Experimental
 browser-compat: css.properties.scroll-timeline
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines a name that can be used to identify the source element of a scroll-timeline, along with the scrollbar axis that should provide the timeline.
 
