@@ -109,7 +109,7 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
         <ul>
           <li><code>'self'</code></li>
           <li><code>'none'</code></li>
-          <li><code>'wasm-unsafe-eval'/code></li>
+          <li><code>'wasm-unsafe-eval'</code></li>
         </ul>
       </td>
     </tr>
