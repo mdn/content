@@ -9,6 +9,8 @@ tags:
   - Web
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article introduces the basic concepts behind web accessibility.
 
 <table class="standard-table">

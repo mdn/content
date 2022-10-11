@@ -28,14 +28,14 @@ This is typically used when the XR system is capable of tracking the user's phys
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _In addition to the properties of {{domxref("XRReferenceSpace")}}, `XRBoundedReferenceSpace` includes the following:_
 
 - {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An array of {{domxref("DOMPointReadOnly")}} objects, each of which defines a vertex in the polygon defining the boundaries within which the user will be required to remain. These vertices _must_ be sorted such that they move _clockwise_ around the viewer's position.
 
-## Methods
+## Instance methods
 
 _`XRBoundedReferenceSpace` inherits the methods of its parent interface, {{domxref("XRReferenceSpace")}}. It has no further methods._
 

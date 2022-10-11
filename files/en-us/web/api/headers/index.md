@@ -33,7 +33,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 - {{domxref("Headers.Headers()", "Headers()")}}
   - : Creates a new `Headers` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("Headers.append()")}}
   - : Appends a new value onto an existing header inside a `Headers` object, or adds the header if it does not already exist.

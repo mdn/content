@@ -18,7 +18,7 @@ browser-compat: api.UserProximityEvent
 
 The **`UserProximityEvent`** indicates whether a nearby physical object is present by using the proximity sensor of a device.
 
-## Properties
+## Instance properties
 
 - `UserProximityEvent.near` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indicates if the device has sensed a nearby physical object.

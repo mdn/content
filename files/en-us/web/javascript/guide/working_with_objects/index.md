@@ -428,8 +428,8 @@ function sayHi() {
 Manager.sayHi = sayHi;
 Intern.sayHi = sayHi;
 
-Manager.sayHi(); // Hello, my name is John'
-Intern.sayHi(); // Hello, my name is Ben'
+Manager.sayHi(); // Hello, my name is John
+Intern.sayHi(); // Hello, my name is Ben
 ```
 
 The `this` refers to the object that it is in. You can create a new function called `howOldAmI()` which logs a sentence saying how old the person is.

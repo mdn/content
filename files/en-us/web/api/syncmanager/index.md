@@ -16,11 +16,11 @@ browser-compat: api.SyncManager
 
 The **`SyncManager`** interface of the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API) provides an interface for registering and listing sync registrations.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("SyncManager.register")}} {{Experimental_Inline}}
   - : Create a new sync registration and return a {{jsxref("Promise")}}.

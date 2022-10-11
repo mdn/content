@@ -58,7 +58,7 @@ The {{domxref('PerformanceResourceTiming.initiatorType','initiatorType')}} prope
 
 If the current context is a {{domxref("Worker","worker")}}, the {{domxref('PerformanceResourceTiming.workerStart','workerStart')}} property can be used to obtain a {{domxref("DOMHighResTimeStamp")}} when the worker was started.
 
-## Methods
+## Instance methods
 
 The Resource Timing API includes two methods that extend the {{domxref("Performance")}} interface. The {{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} method removes all "`resource`" type performance entries from the browser's _resource_ performance entry buffer. The {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} method sets the resource performance entry buffer size to the specified number of resource {{domxref("PerformanceEntry","performance entries")}}.
 

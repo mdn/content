@@ -59,6 +59,21 @@ Following the behavior of `join()`, `toString()` treats empty slots the same as 
 console.log([1, , 3].toString()); // '1,,3'
 ```
 
+### Calling toString() on non-array objects
+
+Same as `join()`, `toString()` is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods) and only reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 1,
+  1: 2,
+  2: 3,
+};
+console.log(Array.prototype.toString.call(arrayLike));
+// 1,2,3
+```
+
 ## Specifications
 
 {{Specifications}}

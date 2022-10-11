@@ -19,7 +19,7 @@ This interface doesn't allow to manipulate the CSS it contains (in most case). T
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -34,7 +34,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{deprecated_inline}}
   - : A boolean value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

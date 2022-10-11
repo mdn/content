@@ -18,7 +18,7 @@ The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) elem
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("Element")}}._
 
@@ -83,7 +83,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.translate")}}
   - : A boolean value representing the translation.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("Element")}}._
 

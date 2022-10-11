@@ -18,7 +18,7 @@ The **`PerformanceLongTaskTiming`** interface of the [Long Tasks API](/en-US/doc
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PerformanceLongTaskTiming.attribution")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a sequence of {{domxref('TaskAttributionTiming')}} instances.
