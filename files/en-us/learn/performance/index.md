@@ -56,7 +56,7 @@ This topic contains the following guides. The following is a suggested order for
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
   - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
 - [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-  - : There are many things a developer can do to improve performance, but how fast is enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing managements, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
+  - : There are many things a developer can do to improve performance, but how fast is fast enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing management, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
 
 ## See also
 
