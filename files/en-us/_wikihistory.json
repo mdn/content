@@ -77979,10 +77979,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/@font-face/font-variant": {
-    "modified": "2020-11-09T06:32:04.280Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
   "Web/CSS/@font-face/font-variation-settings": {
     "modified": "2020-10-15T22:02:38.640Z",
     "contributors": ["wbamberg", "estelle", "mfluehr", "chrisdavidmills"]
