@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-meter-inner-element'
 slug: Web/CSS/::-webkit-meter-inner-element
+page-type: css-pseudo-element
 tags:
   - '-webkit-meter-inner-element'
   - CSS

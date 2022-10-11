@@ -2,7 +2,6 @@
 title: Character set
 slug: Glossary/character_set
 tags:
-  - Glossary
   - character encoding
   - character set
 ---

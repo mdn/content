@@ -19,7 +19,7 @@ A `BackgroundFetchRegistration` instance is returned by the {{domxref("Backgroun
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
 
@@ -55,7 +55,7 @@ The following properties are available synchronously, as convenience properties 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
 
-## Methods
+## Instance methods
 
 - {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}} {{Experimental_Inline}}
   - : Aborts the background fetch. Returns a {{jsxref("Promise")}} that resolves with `true` if the fetch was successfully aborted.
@@ -82,15 +82,21 @@ The following code creates a `BackGroundFetchRegistration` as `bgFetch`, with an
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
-    title: 'Episode 5: Interesting things.',
-    icons: [{
-      sizes: '300x300',
-      src: '/ep-5-icon.png',
-      type: 'image/png',
-    }],
-    downloadTotal: 60 * 1024 * 1024,
-  });
+  const bgFetch = await swReg.backgroundFetch.fetch(
+    "my-fetch",
+    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+    {
+      title: "Episode 5: Interesting things.",
+      icons: [
+        {
+          sizes: "300x300",
+          src: "/ep-5-icon.png",
+          type: "image/png",
+        },
+      ],
+      downloadTotal: 60 * 1024 * 1024,
+    }
+  );
 });
 ```
 
@@ -103,9 +109,9 @@ console.log(bgFetch.id); // "my-fetch"
 The {{domxref("BackgroundFetchRegistration.match","match()")}} method can be used to find a particular {{domxref("BackgroundFetchRecord")}} from those that are part of the registration.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

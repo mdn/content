@@ -1,6 +1,7 @@
 ---
 title: The stacking context
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -39,7 +40,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](https://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
 
-Within a stacking context, child elements are stacked according to the same rules previously explained. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
+Within a stacking context, child elements are stacked according to the same rules explained just above. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
 In summary:
 

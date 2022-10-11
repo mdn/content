@@ -36,7 +36,11 @@ None.
 In this example calling `entry.toJSON()` returns a JSON representation of the `PerformanceElementTiming` object, with the information about the image element.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

@@ -8,6 +8,8 @@ tags:
   - redirect tracking protection
 ---
 
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 Firefox 79 includes protection against redirect tracking. This document describes how the protections work.
 
 ## Redirect tracking defined
@@ -73,7 +75,9 @@ Different log levels can be set via the `privacy.purge_trackers.logging.level` p
 For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the [Browser Console command line](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html#browser-console-command-line). Note that this is different from the normal [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) you might use to debug a website, and requires the `devtools.chrome.enabled` pref to be set to `true` to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:
 
 ```js
-await Components.classes["@mozilla.org/purge-tracker-service;1"].getService(Components.interfaces.nsIPurgeTrackerService).purgeTrackingCookieJars()
+await Components.classes["@mozilla.org/purge-tracker-service;1"]
+  .getService(Components.interfaces.nsIPurgeTrackerService)
+  .purgeTrackingCookieJars();
 ```
 
 The time until user interaction permissions expire can be set to a lower amount using the `privacy.userInteraction.expiration` pref. Note that you will have to set this pref before visiting the sites you want to test — it will not apply retroactively.

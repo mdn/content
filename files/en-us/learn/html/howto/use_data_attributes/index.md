@@ -11,7 +11,7 @@ tags:
 
 {{LearnSidebar}}
 
-[HTML5](/en-US/docs/Glossary/HTML5) is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
+HTML is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
 
 ## HTML syntax
 
@@ -23,7 +23,7 @@ The syntax is simple. Any attribute on any element whose attribute name starts w
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-…
+  …
 </article>
 ```
 
@@ -34,13 +34,13 @@ Reading the values of these attributes out in [JavaScript](/en-US/docs/Web/JavaS
 To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that dashes are converted to camelCase).
 
 ```js
-const article = document.querySelector('#electric-cars');
+const article = document.querySelector("#electric-cars");
 // The following would also work:
 // const article = document.getElementById("electric-cars")
 
-article.dataset.columns // "3"
-article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"
+article.dataset.columns; // "3"
+article.dataset.indexNumber; // "12314"
+article.dataset.parent; // "cars"
 ```
 
 Each property is a string and can be read and written. In the above case setting `article.dataset.columns = 5` would change that attribute to `"5"`.

@@ -29,7 +29,7 @@ The **`RTCError`** interface describes an error which has occurred while handlin
 - {{domxref("RTCError.RTCError", "RTCError()")}}
   - : Creates and returns a new `RTCError` object initialized with the different parameters and, optionally, a string to use as the value of the error's {{domxref("DOMException.message", "message")}} property.
 
-## Properties
+## Instance properties
 
 _In addition to the properties defined by the parent interface, {{domxref("DOMException")}}, `RTCError` includes the following properties:_
 

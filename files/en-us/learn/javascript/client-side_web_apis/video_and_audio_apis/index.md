@@ -49,9 +49,12 @@ The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to e
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -88,8 +91,8 @@ Open the HTML index file. You'll see a number of features; the HTML is dominated
 ```html
 <div class="player">
   <video controls>
-    <source src="video/sintel-short.mp4" type="video/mp4">
-    <source src="video/sintel-short.webm" type="video/webm">
+    <source src="video/sintel-short.mp4" type="video/mp4" />
+    <source src="video/sintel-short.webm" type="video/webm" />
     <!-- fallback content here -->
   </video>
   <div class="controls">

@@ -79,11 +79,11 @@ A {{jsxref("Promise")}} that resolves with an object containing the first cookie
 In this example we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
 
 ```js
-let cookie = cookieStore.get('cookie1');
+let cookie = cookieStore.get("cookie1");
 if (cookie) {
-    console.log(cookie);
+  console.log(cookie);
 } else {
-    console.log('Cookie not found');
+  console.log("Cookie not found");
 }
 ```
 

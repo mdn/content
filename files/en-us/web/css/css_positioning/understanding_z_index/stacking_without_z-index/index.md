@@ -1,6 +1,7 @@
 ---
 title: Stacking without the z-index property
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -32,15 +33,20 @@ In the example below, elements #1 through #4 are positioned elements. Element #5
 
 ```html
 <div id="abs1" class="absolute">
-  <strong>DIV #1</strong><br />position: absolute;</div>
+  <strong>DIV #1</strong><br />position: absolute;
+</div>
 <div id="rel1" class="relative">
-  <strong>DIV #2</strong><br />position: relative;</div>
+  <strong>DIV #2</strong><br />position: relative;
+</div>
 <div id="rel2" class="relative">
-  <strong>DIV #3</strong><br />position: relative;</div>
+  <strong>DIV #3</strong><br />position: relative;
+</div>
 <div id="abs2" class="absolute">
-  <strong>DIV #4</strong><br />position: absolute;</div>
+  <strong>DIV #4</strong><br />position: absolute;
+</div>
 <div id="sta1" class="static">
-  <strong>DIV #5</strong><br />position: static;</div>
+  <strong>DIV #5</strong><br />position: static;
+</div>
 ```
 
 ### CSS

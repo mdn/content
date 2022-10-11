@@ -54,7 +54,7 @@ The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>]
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -87,7 +87,7 @@ The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>]
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedAngle` interface do not provide any specific methods.
 

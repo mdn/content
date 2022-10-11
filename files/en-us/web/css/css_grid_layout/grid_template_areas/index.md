@@ -1,6 +1,7 @@
 ---
 title: Grid template areas
 slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+page-type: guide
 tags:
   - CSS
   - CSS Grids
@@ -89,10 +90,10 @@ Having defined these names I then create my layout. This time, instead of placin
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -155,10 +156,10 @@ We have completely filled our grid with areas in this example, leaving no white 
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -223,10 +224,10 @@ The area that you create by chaining the area names must be rectangular, at this
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -313,10 +314,10 @@ We can then redefine that layout inside media queries to go to our two columns l
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -346,8 +347,6 @@ We give the image area a grid area name of `img` and the text area `content`, th
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
@@ -367,10 +366,11 @@ We give the image area a grid area name of `img` and the text area `content`, th
 
 ```html
 <div class="media">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 
@@ -390,8 +390,6 @@ We might want to be able to display our box with the image the other way around.
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
@@ -416,10 +414,11 @@ We might want to be able to display our box with the image the other way around.
 
 ```html
 <div class="media flipped">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 

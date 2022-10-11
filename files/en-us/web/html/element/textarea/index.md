@@ -134,8 +134,7 @@ textarea:valid {
 The following example shows a very simple textarea, with a set numbers of rows and columns and some default content.
 
 ```html
-<textarea name="textarea"
-   rows="10" cols="50">Write something here</textarea>
+<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
 {{ EmbedLiveSample('Basic_example','600','150') }}
@@ -145,9 +144,9 @@ The following example shows a very simple textarea, with a set numbers of rows a
 This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   minlength="10" maxlength="20">Write something here</textarea>
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
+Write something here…
+</textarea>
 ```
 
 {{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
@@ -159,9 +158,11 @@ Note that `minlength` doesn't stop the user from removing characters so that the
 This example has a placeholder set. Notice how it disappears when you start typing into the box.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   placeholder="Comment text."></textarea>
+<textarea
+  name="textarea"
+  rows="5"
+  cols="30"
+  placeholder="Comment text."></textarea>
 ```
 
 {{ EmbedLiveSample('Example using "placeholder"','600','80') }}
@@ -175,12 +176,12 @@ This example shows two `<textarea>`s — one of which is `disabled`, and one of 
 > **Note:** In browsers other than Firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   disabled>I am a disabled textarea</textarea>
-<textarea name="textarea"
-   rows="5" cols="30"
-   readonly>I am a readonly textarea</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+I am a disabled textarea.
+</textarea>
+<textarea name="textarea" rows="5" cols="30" readonly>
+I am a read-only textarea.
+</textarea>
 ```
 
 {{ EmbedLiveSample('Disabled_and_readonly','600','80') }}

@@ -13,7 +13,9 @@ browser-compat: mathml.elements.mfenced
 
 {{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The deprecated MathML `<mfenced>` element used to provide the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression. It has been removed from the latest MathML standard and modern browsers no longer support it. Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead.
+The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression.
+
+> **Note:** Historically, the `<mfenced>` element was defined as a shorthand for writing fenced expressions and equivalent to an expanded form involving {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements. Nowadays, it is recommended to use that equivalent form instead.
 
 ## Attributes
 
@@ -30,12 +32,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ### The last separator is repeated (`,`)
 
-Sample rendering: ![{a;b;c,d,e}](mfenced01.png)
-
-Rendering in your browser: <math><mfenced close="}" open separators=";;,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
-
 ```html
-<math>
+<math display="block">
   <mfenced open="{" close="}" separators=";;,">
     <mi>a</mi>
     <mi>b</mi>
@@ -46,14 +44,16 @@ Rendering in your browser: <math><mfenced close="}" open separators=";;,"><mi>a<
 </math>
 ```
 
+Sample rendering: ![{a;b;c,d,e}](mfenced01.png)
+
+Rendering in your browser:
+
+{{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+
 ### All excess is ignored (`,`)
 
-Sample rendering: ![[a|b|c|d|e]](mfenced02.png)
-
-Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
-
 ```html
-<math>
+<math display="block">
   <mfenced open="[" close="]" separators="||||,">
     <mi>a</mi>
     <mi>b</mi>
@@ -64,9 +64,15 @@ Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>
 </math>
 ```
 
+Sample rendering: ![[a|b|c|d|e]](mfenced02.png)
+
+Rendering in your browser:
+
+{{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+
 ## Specifications
 
-The \<mfenced> element is no longer part of the [latest MathML standard](https://github.com/w3c/mathml/issues/2). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead, or, for backwards compatibility, see [mathml-polyfills/mfenced.](https://github.com/mathml-refresh/mathml-polyfills/tree/main/mfenced)
+The `<mfenced>` element is not defined in any browser-oriented specification but you can find a description in [MathML 4](https://w3c.github.io/mathml/#presm_mfenced).
 
 ## Browser compatibility
 

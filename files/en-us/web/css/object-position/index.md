@@ -1,6 +1,7 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
+page-type: css-property
 tags:
   - CSS
   - CSS Images
@@ -9,7 +10,7 @@ tags:
   - Position
   - Reference
   - Replaced Elements
-  - css layout
+  - CSS layout
   - object-position
   - recipe:css-property
 browser-compat: css.properties.object-position
@@ -78,8 +79,8 @@ object-position: unset;
 Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
 #### CSS

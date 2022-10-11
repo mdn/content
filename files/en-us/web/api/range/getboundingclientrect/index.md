@@ -41,7 +41,12 @@ None ({{jsxref("undefined")}}).
 
 ```html
 <div id="highlight"></div>
-<p>This example positions a "highlight" rectangle behind the contents of a range. The range's content <em>starts here</em> and continues on until it <em>ends here</em>. The bounding client rectangle contains everything selected in the range.</p>
+<p>
+  This example positions a "highlight" rectangle behind the contents of a range.
+  The range's content <em>starts here</em> and continues on until it
+  <em>ends here</em>. The bounding client rectangle contains everything selected
+  in the range.
+</p>
 ```
 
 ### CSS

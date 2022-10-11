@@ -15,12 +15,12 @@ The `StyleSheetList` interface represents a list of {{domxref("CSSStyleSheet")}}
 
 It is an array-like object but can't be iterated over using {{jsxref("Array")}} methods. However it can be iterated over in a standard {{jsxref("Statements/for", "for")}} loop over its indices, or converted to an {{jsxref("Array")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("StyleSheetList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.
 
-## Methods
+## Instance methods
 
 - {{domxref("StyleSheetList.item()")}}
   - : Returns the {{domxref("CSSStyleSheet")}} object at the index passed in, or `null` if no item exists for that index.

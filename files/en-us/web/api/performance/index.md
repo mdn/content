@@ -18,11 +18,11 @@ The **`Performance`** interface provides access to performance-related informati
 
 An object of this type can be obtained by calling the {{domxref("window.performance")}} read-only attribute.
 
-> **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/performance_property) , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
+> **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/performance_property), except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `Performance` interface doesn't inherit any properties._
 
@@ -43,7 +43,7 @@ _The `Performance` interface doesn't inherit any properties._
 - {{domxref("Performance.timeOrigin")}} {{ReadOnlyInline}}
   - : Returns the high resolution timestamp of the start time of the performance measurement.
 
-## Methods
+## Instance methods
 
 _The `Performance` interface doesn't inherit any methods._
 

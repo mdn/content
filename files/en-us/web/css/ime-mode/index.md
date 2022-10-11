@@ -1,6 +1,7 @@
 ---
 title: ime-mode
 slug: Web/CSS/ime-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -80,7 +81,11 @@ ime-mode =
 This example disables input method support for a form field. In the past, this was commonly used on fields that entered data into databases which didn't support extended character sets.
 
 ```html
-<input type="text" name="name" value="initial value" style="ime-mode: disabled">
+<input
+  type="text"
+  name="name"
+  value="initial value"
+  style="ime-mode: disabled" />
 ```
 
 > **Note:** You shouldn't rely on disabling IME to prevent extended characters from passing through your form. Even with IME disabled, users can still paste extended characters into your form's fields.

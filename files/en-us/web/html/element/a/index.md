@@ -1,5 +1,5 @@
 ---
-title: '<a>: The Anchor element'
+title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 tags:
   - Content
@@ -87,7 +87,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
     - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`.
 
 - {{HTMLAttrDef("type")}}
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
@@ -221,9 +221,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com"> Mozilla </a>
 ```
 
 #### Result
@@ -255,9 +253,7 @@ a {
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">
-  Jump to the heading below
-</a></p>
+<p><a href="#Section_further_down"> Jump to the heading below </a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -293,14 +289,15 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
 
 #### Example painting app with save link
 
 ##### HTML
 
 ```html
-<p>Paint by holding down the mouse button and moving it.
+<p>
+  Paint by holding down the mouse button and moving it.
   <a href="" download="my_painting.png">Download my painting</a>
 </p>
 
@@ -415,9 +412,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 Annual Report (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
 If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
@@ -425,12 +420,12 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg">
+  <img alt="(opens in new tab)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg">
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -447,12 +442,10 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 <body>
   <a href="#content" class="skip-link">Skip to main content</a>
 
-  <header>
-    …
-  </header>
+  <header>…</header>
 
-  <main id="content"> </main> <!-- The skip link jumps to here -->
-
+  <main id="content"></main>
+  <!-- The skip link jumps to here -->
 </body>
 ```
 

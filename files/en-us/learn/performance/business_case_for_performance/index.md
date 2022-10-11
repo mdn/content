@@ -42,7 +42,7 @@ Setting a web performance budget can help you make sure the team stays on track 
 
 Defining and promoting a budget helps performance proponent advocates for good user experience against competing interests, such as marketing, sales, or even other developers that may want to add videos, 3rd party scripts, or even frameworks. [Performance budgets](/en-US/docs/Web/Performance/Performance_budgets) help developer teams protect optimal performance for users while enabling the business to tap into new markets and deliver custom experiences.
 
-### **K**ey **P**erformance **I**ndicators
+### Key Performance Indicators
 
 Setting key performance indicators (KPI) as objectives can highlight performance objectives that are also business objectives. KPIs can be both a set of important business metrics in measuring the impact of user experience and performance on the business's top line, and a way of demonstrating the benefits of prioritizing performance. Here are some KPIs to consider:
 

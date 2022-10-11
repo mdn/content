@@ -4,7 +4,6 @@ slug: Glossary/Guard
 tags:
   - API
   - CodingScripting
-  - Glossary
   - guard
 ---
 

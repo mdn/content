@@ -102,7 +102,7 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 ```
 
 The first input is a checkbox so users can check off items when an item is complete.
-The double curly braces, `\{{}}`, in the `<input>` and `<label>` for the checkbox signifies Angular's interpolation.
+The double curly braces, `\{{}}`, in the `<label>` for the checkbox signifies Angular's interpolation.
 Angular uses `\{{item.description}}` to retrieve the description of the current `item` from the `items` array.
 The next section explains how components share data in detail.
 
@@ -152,11 +152,18 @@ The `saveItem()` method takes the value from the `#editedItem` `<input>` and cha
 
 ## Prepare the AppComponent
 
-In the next section, you will add code that relies on communication the `AppComponent` and the `ItemComponent`.
-Configure the AppComponent first by adding the following to `app.component.ts`:
+In the next section, you will add code that relies on communication between the `AppComponent` and the `ItemComponent`.
+
+Add the following line near the top of the `app.component.ts` file to import the `Item`:
+
+```ts
+import { Item } from "./item";
+```
+
+Then, configure the AppComponent by adding the following to the same file's class:
 
 ```js
-remove(item) {
+remove(item: Item) {
   this.allItems.splice(this.allItems.indexOf(item), 1);
 }
 ```
@@ -172,7 +179,7 @@ To use the `ItemComponent` UI, you must add logic to the component such as funct
 In `item.component.ts`, edit the JavaScript imports as follows:
 
 ```js
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Item } from "../item";
 ```
 
@@ -186,11 +193,11 @@ export class ItemComponent {
 
   editable = false;
 
-  @Input() item: Item;
-  @Input() newItem: string;
+  @Input() item!: Item;
+  @Input() newItem!: string;
   @Output() remove = new EventEmitter<Item>();
 
-  saveItem(description) {
+  saveItem(description: string) {
     if (!description) return;
     this.editable = false;
     this.item.description = description;
@@ -206,10 +213,12 @@ When you use a property in the template, you must also declare it in the class.
 An `@Input()` serves as a doorway for data to come into the component, and an `@Output()` acts as a doorway for data to go out of the component.
 An `@Output()` has to be of type `EventEmitter`, so that a component can raise an event when there's data ready to share with another component.
 
+> **Note**: The `!` in the class's property declaration is called a [definite assignment assertion](https://www.typescriptlang.org/docs/handbook/2/classes.html#--strictpropertyinitialization). This operator tells Typescript that the `item` and `newItem` inputs are always initialized and not `undefined`, even when TypeScript cannot tell from the constructor's definition. If this operator is not included in your code and you have strict TypeScript compilation settings, the app will fail to compile.
+
 Use `@Input()` to specify that the value of a property can come from outside of the component.
 Use `@Output()` in conjunction with `EventEmitter` to specify that the value of a property can leave the component so that another component can receive that data.
 
-The `saveItem()` method takes as an argument a `description`.
+The `saveItem()` method takes as an argument a `description` of type `string`.
 The `description` is the text that the user enters into the HTML `<input>` when editing an item in the list.
 This `description` is the same string from the `<input>` with the `#editedItem` template variable.
 
@@ -246,8 +255,8 @@ Replace the current unordered list in `app.component.html` with the following up
 <ng-template #elseBlock>items</ng-template></h2>
 
 <ul>
-  <li *ngFor="let item of items">
-    <app-item (remove)="remove(item)" [item]="item"></app-item>
+  <li *ngFor="let i of items">
+    <app-item (remove)="remove(i)" [item]="i"></app-item>
   </li>
 </ul>
 ```
@@ -269,7 +278,7 @@ For any number of items in the array, Angular would create that many `<li>` elem
 You can use an `*ngFor` on other elements, too, such as `<div>`, `<span>`, or `<p>`, to name a few.
 
 The `AppComponent` has a `remove()` method for removing the item, which is bound to the `remove` property in the `ItemComponent`.
-The `item` property in the square brackets, `[]`, binds the value of `item` between the `AppComponent` and the `ItemComponent`.
+The `item` property in the square brackets, `[]`, binds the value of `i` between the `AppComponent` and the `ItemComponent`.
 
 Now you should be able to edit and delete items from the list.
 When you add or delete items, the count of the items should also change.

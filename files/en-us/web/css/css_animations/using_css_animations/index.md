@@ -1,6 +1,7 @@
 ---
 title: Using CSS animations
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -146,9 +147,11 @@ The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this c
 The second (and final) keyframe occurs at 100% (using the alias `to`). The left margin is set to 0% and the width of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 > **Note:** Reload page to see the animation.
@@ -195,9 +198,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 This tells the browser that 75% of the way through the animation sequence, the header should have its left margin at 25% and the width should be 150%.
@@ -235,9 +240,11 @@ Adding it to the existing code:
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Repeating_the_animation","100%","250")}}
@@ -272,9 +279,11 @@ And the rest of the code:
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Making_the_animation_move_back_and_forth","100%","250")}}
@@ -369,11 +378,10 @@ Just for the sake of completeness, here's the HTML that displays the page conten
   elements move across the page.
 </p>
 <p>
-  In addition, we output some text each time an animation event fires,
-  so you can see them in action.
+  In addition, we output some text each time an animation event fires, so you
+  can see them in action.
 </p>
-<ul id="output">
-</ul>
+<ul id="output"></ul>
 ```
 
 And here's the live output.

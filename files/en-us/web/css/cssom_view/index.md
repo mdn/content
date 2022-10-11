@@ -1,6 +1,7 @@
 ---
 title: CSSOM View
 slug: Web/CSS/CSSOM_View
+page-type: css-module
 tags:
   - CSS
   - CSSOM

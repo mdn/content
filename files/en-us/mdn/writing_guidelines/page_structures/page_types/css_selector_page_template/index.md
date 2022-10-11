@@ -23,6 +23,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > ---
 > title: :NameOfTheSelector
 > slug: Web/CSS/:NameOfTheSelector
+> page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
 > tags:
 >   - CSS
 >   - Reference
@@ -40,6 +41,8 @@ browser-compat: css.selectors.NameOfTheSelector
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
 >     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
+> - **page-type**
+>   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_Selectors#combinators), or a [basic selector](/en-US/docs/Web/CSS/CSS_Selectors#basic_selectors).
 > - **tags**
 >
 >   - : Always include the following tags: **CSS**, **Reference**, _NameOfTheSelector_ (e.g. **:hover**).
@@ -97,6 +100,8 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 ## Examples
 
+Note that we use the plural "Examples" even if the page only contains one example.
+
 ### A descriptive heading
 
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
@@ -113,9 +118,11 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ## Examples
 >
 > ### Using the fetch API
+>
 > Example of Fetch
 >
 > ### More examples
+>
 > Links to more examples on other pages
 > ```
 >
@@ -124,10 +131,9 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
 > ```md
->  ## Examples
+> ## Examples
 >
->  For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
 > ```
 
 ## Accessibility concerns

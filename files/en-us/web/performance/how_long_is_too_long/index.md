@@ -8,11 +8,13 @@ tags:
   - Web Performance
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 There are no clear set rules as to what constitutes a slow pace when loading pages, but there are specific guidelines for indicating content will load (1 second), idling (50ms), animating (16.7ms) and responding to user input (50 to 200ms).
 
 ## Load goal
 
-The  'Under a second' is often touted as optimal for load, but what does that mean? A second should be considered a rule in the maximum amount of time to indicate to a user that the request for new content was made and will load, such as the browser displaying the page title and the background color of the page displaying.
+The 'Under a second' is often touted as optimal for load, but what does that mean? A second should be considered a rule in the maximum amount of time to indicate to a user that the request for new content was made and will load, such as the browser displaying the page title and the background color of the page displaying.
 
 The first asset retrieved from a request is usually an HTML document, which then makes calls for additional assets. As noted in the description of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), when received, browsers immediately start processing the HTML, rendering the content as it is received rather than waiting for additional assets to load.
 

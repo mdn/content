@@ -87,8 +87,10 @@ There is no pattern validation available; however, the following forms of automa
 The {{htmlattrxref("value", "input")}} attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
-defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
-               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+defaultValue =
+  rangeElem.max < rangeElem.min
+    ? rangeElem.min
+    : rangeElem.min + (rangeElem.max - rangeElem.min) / 2;
 ```
 
 If an attempt is made to set the value lower than the minimum, it is set to the minimum. Similarly, an attempt to set the value higher than the maximum results in it being set to the maximum.
@@ -153,7 +155,7 @@ By default, the minimum is 0 and the maximum is 100. If that's not what you want
 For example, to ask the user for a value between -10 and 10, you can use:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}
@@ -165,7 +167,7 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 #### Setting the step attribute
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
@@ -175,163 +177,79 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the {{htmlattrxref("step", "input")}} attribute:
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 40)}}
 
 This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected.
 
-### Adding hash marks and labels
+### Adding hash marks
 
-The HTML specification gives browsers some flexibility on how to present the range control. Nowhere is this flexibility more apparent than in the area of hash marks and, to a lesser degree, labels. The specification describes how to add custom points to the range control using the {{htmlattrxref("list", "input")}} attribute and a {{HTMLElement("datalist")}} element, but does not have any requirements or even recommendations for standardized hash or tick marks along the length of the control.
+To add hash marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of hash marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
 
-#### Range control mockups
+#### HTML
 
-Since browsers have this flexibility, and to date none support all of the features HTML defines for range controls, here are some mockups to show you what you might get on macOS in a browser which supports them.
+```html
+<label for="temp">Choose a comfortable temperature:</label><br />
+<input type="range" id="temp" name="temp" list="tickmarks" />
 
-##### An unadorned range control
+<datalist id="tickmarks">
+  <option value="0"></option>
+  <option value="25"></option>
+  <option value="50"></option>
+  <option value="75"></option>
+  <option value="100"></option>
+</datalist>
+```
 
-This is what you get if you don't specify a {{htmlattrxref("list", "input")}} attribute, or if the browser doesn't support it.
+#### Result
 
-<table class="fullwidth standard-table">
-  <tbody>
-    <tr>
-      <th>HTML</th>
-      <th>Examples</th>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        <pre class="brush: html">&#x3C;input type="range"></pre>
-      </td>
-      <th>Screenshot</th>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="Screenshot of a plain slider control on macOS"
-          src="macslider-plain.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <th>Live</th>
-    </tr>
-    <tr>
-      <td>
-        {{EmbedLiveSample("An_unadorned_range_control",200,55,"","", "nobutton")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{EmbedLiveSample("Adding hash marks")}}
 
-##### A range control with hash marks
+### Adding labels
 
-This range control is using a `list` attribute specifying the ID of a {{HTMLElement("datalist")}} which defines a series of hash marks on the control. There are eleven of them, so that there's one at 0% as well as at each 10% mark. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
+You can label hash marks by giving the `<option>` elements `label` attributes. However, you must use CSS to show the labels and to position them correctly. Here's one way you could do this.
 
-<table class="fullwidth standard-table">
-  <tbody>
-    <tr>
-      <th>HTML</th>
-      <th>Examples</th>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        <pre class="brush: html">
-&#x3C;input type="range" list="tickmarks">
+#### HTML
 
-&#x3C;datalist id="tickmarks">
-&#x3C;option value="0">&#x3C;/option>
-&#x3C;option value="10">&#x3C;/option>
-&#x3C;option value="20">&#x3C;/option>
-&#x3C;option value="30">&#x3C;/option>
-&#x3C;option value="40">&#x3C;/option>
-&#x3C;option value="50">&#x3C;/option>
-&#x3C;option value="60">&#x3C;/option>
-&#x3C;option value="70">&#x3C;/option>
-&#x3C;option value="80">&#x3C;/option>
-&#x3C;option value="90">&#x3C;/option>
-&#x3C;option value="100">&#x3C;/option>
-&#x3C;/datalist>
+```html
+<label for="temp">Choose a comfortable temperature:</label><br />
+<input type="range" id="temp" name="temp" list="tickmarks" />
 
-</pre
-        >
-      </td>
-      <th>Screenshot</th>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="Screenshot of a plain slider control on macOS"
-          src="macslider-ticks.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <th>Live</th>
-    </tr>
-    <tr>
-      <td>
-        {{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<datalist id="tickmarks">
+  <option value="0" label="very cold!"></option>
+  <option value="25" label="cool"></option>
+  <option value="50" label="medium"></option>
+  <option value="75" label="getting warm!"></option>
+  <option value="100" label="hot!"></option>
+</datalist>
+```
 
-##### A range control with hash marks and labels
+#### CSS
 
-You can add labels to your range control by adding the {{htmlattrxref("label", "option")}} attribute to the {{HTMLElement("option")}} elements corresponding to the tick marks you wish to have labels for.
+```css
+datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 200px;
+}
 
-<table class="fullwidth standard-table">
-  <tbody>
-    <tr>
-      <th>HTML</th>
-      <th>Examples</th>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        <pre class="brush: html">
-&#x3C;input type="range" list="tickmarks">
+option {
+  padding: 0;
+}
 
-&#x3C;datalist id="tickmarks">
-&#x3C;option value="0" label="0%">&#x3C;/option>
-&#x3C;option value="10">&#x3C;/option>
-&#x3C;option value="20">&#x3C;/option>
-&#x3C;option value="30">&#x3C;/option>
-&#x3C;option value="40">&#x3C;/option>
-&#x3C;option value="50" label="50%">&#x3C;/option>
-&#x3C;option value="60">&#x3C;/option>
-&#x3C;option value="70">&#x3C;/option>
-&#x3C;option value="80">&#x3C;/option>
-&#x3C;option value="90">&#x3C;/option>
-&#x3C;option value="100" label="100%">&#x3C;/option>
-&#x3C;/datalist>
+input[type="range"] {
+  width: 200px;
+  margin: 0;
+}
+```
 
-</pre
-        >
-      </td>
-      <th>Screenshot</th>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="Screenshot of a plain slider control on macOS"
-          src="macslider-labels.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <th>Live</th>
-    </tr>
-    <tr>
-      <td>
-        {{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Result
 
-> **Note:** Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the {{htmlelement("datalist")}} tag has to be styled with CSS as its {{cssxref("display")}} property is set to `none` by default, hiding the labels.
+{{EmbedLiveSample("Adding labels")}}
 
 ### Creating vertical range controls
 
@@ -344,7 +262,7 @@ In the meantime, we can make the range vertical by rotating it using CSS transfo
 Consider this range control:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Horizontal_range_control", 200, 200, "orientation_sample1.png")}}
@@ -363,7 +281,7 @@ According to the specification, making it vertical requires adding CSS to change
 ```
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200, "orientation_sample2.png")}}
@@ -378,7 +296,7 @@ The HTML needs to be updated to wrap the {{HTMLElement("input")}} in a {{HTMLEle
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -416,7 +334,7 @@ The {{cssxref('appearance')}} property has a non-standard value of `slider-verti
 We use the same HTML as in the previous examples:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 We target just the inputs with a type of range:
@@ -436,19 +354,19 @@ In Firefox only, there is a non-standard `orient` property.
 Use similar HTML as in the previous examples, we add the attribute with a value of `vertical`:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 {{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
 
-#### writing-mode: bt-lr;
+#### writing-mode: bt-lr
 
 The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects.
 
 We use the same HTML as in the previous examples:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right:
@@ -468,7 +386,7 @@ As each of the above examples works in different browsers, you can put all of th
 We keep the `orient` attribute with a value of `vertical` for Firefox:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `-webkit-appearance: slider-vertical` for all -webkit-based browsers:

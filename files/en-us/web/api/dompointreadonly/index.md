@@ -46,7 +46,7 @@ const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
 - {{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}
   - : Creates a new `DOMPointReadOnly` object given the values of its coordinates and perspective. To create a point using an object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("DOMPointReadOnly.x")}} {{ReadOnlyInline}}
   - : The point's horizontal coordinate, `x`.
@@ -62,7 +62,7 @@ const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
 - {{domxref("DOMPointReadOnly.fromPoint()")}}
   - : A static method that creates a new `DOMPointReadOnly` object given the coordinates provided in the specified object.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}
   - : Applies a matrix transform specified as an object to the `DOMPointReadOnly` object.

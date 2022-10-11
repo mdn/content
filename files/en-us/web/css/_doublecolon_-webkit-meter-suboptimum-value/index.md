@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-meter-suboptimum-value'
 slug: Web/CSS/::-webkit-meter-suboptimum-value
+page-type: css-pseudo-element
 tags:
   - '-webkit-meter-suboptimum-value'
   - CSS
@@ -28,7 +29,7 @@ This example will only work in browsers based on WebKit or Blink.
 ### HTML
 
 ```html
-<meter min="0" max="10" low="3" high="7" value="2" >Score out of 10</meter>
+<meter min="0" max="10" low="3" high="7" value="2">Score out of 10</meter>
 ```
 
 ### CSS

@@ -19,7 +19,7 @@ The **`BluetoothCharacteristicProperties`** interface of the [Web Bluetooth API]
 
 This interface is returned by calling {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("BluetoothCharacteristicProperties.authenticatedSignedWrites","authenticatedSignedWrites")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a `boolean` that is `true` if signed writing to the characteristic value is permitted.
@@ -46,15 +46,18 @@ The following example shows how tell if a GATT characteristic supports value cha
 
 ```js
 let device = await navigator.bluetooth.requestDevice({
-  filters: [{services: ['heart_rate']}]
+  filters: [{ services: ["heart_rate"] }],
 });
 let gatt = await device.gatt.connect();
-let service = await gatt.getPrimaryService('heart_rate');
-let characteristic = await service.getCharacteristic('heart_rate_measurement');
+let service = await gatt.getPrimaryService("heart_rate");
+let characteristic = await service.getCharacteristic("heart_rate_measurement");
 if (characteristic.properties.notify) {
-  characteristic.addEventListener('characteristicvaluechanged', async (event) => {
-    console.log(`Received heart rate measurement: ${event.target.value}`);
-  });
+  characteristic.addEventListener(
+    "characteristicvaluechanged",
+    async (event) => {
+      console.log(`Received heart rate measurement: ${event.target.value}`);
+    }
+  );
   await characteristic.startNotifications();
 }
 ```

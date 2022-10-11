@@ -11,6 +11,8 @@ tags:
   - Transitions
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Animations are critical for a pleasurable user experience on many applications. There are many ways to implement web animations, such as CSS {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} or JavaScript-based animations (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). In this article, we analyze the performance differences between CSS-based and JavaScript-based animation.
 
 ## CSS transitions and animations
@@ -40,10 +42,10 @@ In this section we'll walk you through a performance test, using Firefox, to see
 
 Before going through the example, please enable FPS tools first to see the current frame rate:
 
-1. In the URL bar, enter _about:config_; click the _I'll be careful, I promise!_ button to enter the config screen.
+1. In the URL bar, enter _about:config_; click the `I'll be careful, I promise!` button to enter the config screen.
     ![Warning screen that changing settings can be risky, with a button to accept risks.](pic1.png)
 2. In the search bar, search for the `layers.acceleration.draw-fps` preference.
-3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes at the upper left corner of the Firefox window. The first box represents FPS.
+3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes in the upper left corner of the Firefox window. The first box represents FPS.
     ![Entering the search term filters the options. Only the layers.acceleration.draw-fps preference is showing and is set to true. Three numbers (001, 001, and 108) are appearing in the upper left corner of the browser, overlaying its UI.](pic2.png)
 
 ### Running the performance test

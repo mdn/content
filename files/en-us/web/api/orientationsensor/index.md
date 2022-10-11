@@ -30,12 +30,12 @@ Below is a list of interfaces based on the OrientationSensor interface.
 - {{domxref('AbsoluteOrientationSensor')}}
 - {{domxref('RelativeOrientationSensor')}}
 
-## Properties
+## Instance properties
 
 - {{domxref("OrientationSensor.quaternion")}}
   - : Returns a four element {{jsxref('Array')}} whose elements contain the components of the unit quaternion representing the device's orientation.
 
-## Methods
+## Instance methods
 
 - {{domxref("OrientationSensor.populateMatrix()")}}
   - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation matrix is shown below.

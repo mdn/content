@@ -1,5 +1,5 @@
 ---
-title: Responsive Navigation Patterns
+title: Responsive navigation patterns
 slug: Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns
 tags:
   - Guide
@@ -17,13 +17,13 @@ In this pattern, as the screen width is reduced, the top navigation items rearra
 
 You could rank the item priorities to ensure the most important items always appear in the top navigation.
 
-### Pros:
+### Pros
 
 - **one button in header** maximizes space for content on a small screen
 - **important items stay visible**in most screen sizes and you decide the item priorities
 - **legibility of navigation items is maintained** with adequate spacing, by automatically hiding items that don't fit
 
-### Cons:
+### Cons
 
 - **navigation items might be less discoverable** because some items are hidden in the drop-down or toggle menu
 - **users may not notice the button** contains a navigation menu in the smallest screen size
@@ -43,13 +43,13 @@ Similar to the first pattern, the top navigation items rearrange for smaller wid
 
 In the smallest screen, several items stay on the bottom of the screen, and the rest of the items are hidden. The user can flip the menu open and select from the rest of the navigation items. You could select the items that remain on the bottom.
 
-### Pros:
+### Pros
 
 - **expandable menu is easy to discover**
 - **important items are always visible** and you decide the item priorities
 - **legibility of navigation items is maintained** with adequate spacing, by automatically hiding items that don't fit
 
-### Cons:
+### Cons
 
 - **one more step** is needed to access the navigation items that are hidden
 - **navigation items might be less discoverable** because some items are hidden
@@ -67,13 +67,13 @@ In the smallest screen, several items stay on the bottom of the screen, and the 
 
 The main navigation is always on the left except in the smallest screen size, where the navigation menu is hidden in a button by default. In the smallest screen, when the user taps the button, the navigation menu slides into view and displays the navigation items.
 
-### Pros:
+### Pros
 
 - **potentially displays more navigation items** in a left navigation compared to a top navigation
 - **most items are always visible** except in the smallest screen size
 - **one button in header** maximizes space for content on a small screen
 
-### Cons:
+### Cons
 
 - **navigation items might be less discoverable** because some items are hidden in the drop-down or toggle menu
 - **users may not notice the button** contains a navigation menu in the smallest screen size

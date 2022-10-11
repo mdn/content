@@ -1,6 +1,7 @@
 ---
 title: Realizing common layouts using grids
 slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grids
@@ -19,7 +20,7 @@ Many websites are a variation of this type of layout, with content, sidebars, a 
 
 We're going to create this layout using the _named template areas_ that we learned about in the guide _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_.
 
-The mark-up is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
+The markup is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
 
 ```css hidden
 * {
@@ -57,7 +58,12 @@ nav ul {
   </nav>
   <article class="content">
     <h1>Main article area</h1>
-    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
   </article>
   <aside class="side">Sidebar</aside>
   <div class="ad">Advertising</div>
@@ -182,9 +188,13 @@ To demonstrate how this grid system works I have four child elements inside my w
 ```html
 <div class="wrapper">
   <div class="item1">Start column line 1, span 3 column tracks.</div>
-  <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+  <div class="item2">
+    Start column line 6, span 4 column tracks. 2 row tracks.
+  </div>
   <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
-  <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
+  <div class="item4">
+    Start at column line 3, span to the end of the grid (-1).
+  </div>
 </div>
 ```
 
@@ -258,7 +268,12 @@ nav ul {
   </nav>
   <article class="content">
     <h1>Main article area</h1>
-    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
   </article>
   <aside class="side">Sidebar</aside>
   <div class="ad">Advertising</div>
@@ -486,29 +501,31 @@ We can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow"
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 

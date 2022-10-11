@@ -4,7 +4,6 @@ slug: Glossary/DNS
 tags:
   - DNS
   - Domain Name System
-  - Glossary
   - Infrastructure
 ---
 

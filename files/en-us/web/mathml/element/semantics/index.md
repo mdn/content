@@ -10,14 +10,14 @@ browser-compat: mathml.elements.semantics
 
 {{MathMLRef}}
 
-The `<semantics>` element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:
+The **`<semantics>`** [MathML](/en-US/docs/Web/MathML) element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:
 
 - a first child which is a MathML expression to be annotated.
 - subsequent `<annotation>` or `<annotation-xml>` elements, the latter being reserved for XML formats such as [OpenMath](https://en.wikipedia.org/wiki/OpenMath).
 
 By default, only the first child of the `<semantics>` element is rendered while the others have their [display](/en-US/docs/Web/CSS/display) set to `none`.
 
-> **Note:** Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See [MathML Full](https://w3c.github.io/mathml/) for the distinction between Presentation and Content MathML.
+> **Note:** Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See [MathML 4](https://w3c.github.io/mathml/) for the distinction between Presentation and Content MathML.
 >
 >
 > - If no other rules apply: By default only the first child is rendered, which is supposed to be Presentation MathML.
@@ -44,9 +44,8 @@ By default, only the first child of the `<semantics>` element is rendered while 
 ## Example
 
 ```html
-<math>
+<math display="block">
   <semantics>
-
     <!-- The first child is the MathML expression rendered by default. -->
     <mrow>
       <msup>
@@ -61,9 +60,9 @@ By default, only the first child of the `<semantics>` element is rendered while 
          express the meaning of mathematical formulas. -->
     <annotation-xml encoding="MathML-Content">
       <apply>
-        <plus/>
+        <plus />
         <apply>
-          <power/>
+          <power />
           <ci>x</ci>
           <cn type="integer">2</cn>
         </apply>
@@ -72,17 +71,16 @@ By default, only the first child of the `<semantics>` element is rendered while 
     </annotation-xml>
 
     <!-- Annotate with a PNG image of the formula. -->
-    <annotation encoding="image/png" src="some/path/formula.png"/>
+    <annotation encoding="image/png" src="some/path/formula.png" />
 
     <!-- Annotate with LaTeX, a lightweight markup language to write
          mathematical formulas. -->
-    <annotation encoding="application/x-tex">
-      x^{2} + y
-    </annotation>
-
+    <annotation encoding="application/x-tex"> x^{2} + y </annotation>
   </semantics>
 </math>
 ```
+
+{{ EmbedLiveSample('semantics_example', 700, 200, "", "") }}
 
 ## Specifications
 

@@ -41,7 +41,7 @@ A 128-bit UUID.
 In the following example the UUID representing the characteristic named `apparent_wind_direction` is returned and printed to the console.
 
 ```js
-let result = BluetoothUUID.getCharacteristic('apparent_wind_direction');
+let result = BluetoothUUID.getCharacteristic("apparent_wind_direction");
 console.log(result); // "00002a73-0000-1000-8000-00805f9b34fb"
 ```
 

@@ -19,7 +19,7 @@ browser-compat: api.PerformanceMeasure
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 This interface defines:
 
@@ -38,7 +38,7 @@ In addition, it extends the following {{domxref("PerformanceEntry")}} properties
 - {{domxref("PerformanceEntry.duration")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).
 
-## Methods
+## Instance methods
 
 This interface has no methods.
 

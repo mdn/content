@@ -1,6 +1,7 @@
 ---
-title: ':user-invalid (:-moz-ui-invalid)'
+title: ":user-invalid (:-moz-ui-invalid)"
 slug: Web/CSS/:user-invalid
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS Selectors
@@ -35,7 +36,7 @@ Try typing something other than an email address to see it in action.
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" required>
+  <input id="email" name="email" type="email" required />
   <span></span>
 </form>
 ```

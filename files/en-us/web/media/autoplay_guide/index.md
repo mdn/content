@@ -31,7 +31,7 @@ The term **autoplay** refers to any feature that causes audio to begin to play w
 That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:
 
 ```html
-<audio src="/music.mp3" autoplay>
+<audio src="/music.mp3" autoplay></audio>
 ```
 
 and
@@ -80,7 +80,7 @@ An {{HTMLElement("audio")}} element using the `autoplay` attribute might look li
 
 ```html
 <audio id="musicplayer" autoplay>
-  <source src="/music/chapter1.mp3">
+  <source src="/music/chapter1.mp3" />
 </audio>
 ```
 
@@ -95,7 +95,7 @@ The `play` event is sent both when the media is resumed after being paused _and_
 Consider this HTML for a media element:
 
 ```html
-<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)">
+<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"></video>
 ```
 
 Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.play_event", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
@@ -147,16 +147,18 @@ You might use code like this to accomplish the job:
 let startPlayPromise = videoElem.play();
 
 if (startPlayPromise !== undefined) {
-  startPlayPromise.then(() => {
-    // Start whatever you need to do only after playback
-    // has begun.
-  }).catch((error) => {
-    if (error.name === "NotAllowedError") {
-      showPlayButton(videoElem);
-    } else {
-      // Handle a load or playback error
-    }
-  });
+  startPlayPromise
+    .then(() => {
+      // Start whatever you need to do only after playback
+      // has begun.
+    })
+    .catch((error) => {
+      if (error.name === "NotAllowedError") {
+        showPlayButton(videoElem);
+      } else {
+        // Handle a load or playback error
+      }
+    });
 }
 ```
 
@@ -172,12 +174,13 @@ If you want to start playing the video after the first interaction with the page
 
 ```js
 let playAttempt = setInterval(() => {
-  videoElem.play()
+  videoElem
+    .play()
     .then(() => {
       clearInterval(playAttempt);
     })
     .catch((error) => {
-      console.log('Unable to play the video, User has not interacted yet.');
+      console.log("Unable to play the video, User has not interacted yet.");
     });
 }, 3000);
 ```
@@ -207,9 +210,7 @@ Feature-Policy: autoplay 'self'
 To do the same for an {{HTMLElement("iframe")}}:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay 'src'"> </iframe>
 ```
 
 ### Example: Allowing autoplay and fullscreen mode
@@ -223,9 +224,7 @@ Feature-Policy: autoplay 'self'; fullscreen
 The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'; fullscreen">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay 'src'; fullscreen"> </iframe>
 ```
 
 ### Example: Allowing autoplay from specific sources
@@ -239,9 +238,11 @@ Feature-Policy: autoplay 'self' https://example.media
 An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:
 
 ```html
-<iframe width="300" height="200"
-        src="mediaplayer.html"
-        allow="autoplay 'src' https://example.media">
+<iframe
+  width="300"
+  height="200"
+  src="mediaplayer.html"
+  allow="autoplay 'src' https://example.media">
 </iframe>
 ```
 
@@ -256,9 +257,7 @@ Feature-Policy: autoplay 'none'
 Using the `<iframe>`'s `allow` attribute:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'none'">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay 'none'"> </iframe>
 ```
 
 ## Best practices
@@ -270,7 +269,12 @@ Tips and recommended best practices to help you make the most of working with au
 A common use case for autoplay is to automatically begin to play a video clip that goes along with an article, an advertisement, or a preview of the page's main functionality. To autoplay videos like these, you have two options: don't have an audio track, or have an audio track but configure the {{HTMLElement("video")}} element to mute the audio by default, like this:
 
 ```html
-<video src="/videos/awesomevid.webm" controls autoplay playsinline muted>
+<video
+  src="/videos/awesomevid.webm"
+  controls
+  autoplay
+  playsinline
+  muted></video>
 ```
 
 This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the {{htmlattrxref("muted", "video")}} attribute is included, and the {{htmlattrxref("playsinline", "video")}} attribute that is required for autoplay in Safari, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.

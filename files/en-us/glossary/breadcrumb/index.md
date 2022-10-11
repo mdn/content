@@ -3,7 +3,6 @@ title: Breadcrumb
 slug: Glossary/Breadcrumb
 tags:
   - Accessibility
-  - Glossary
   - Navigation
   - Search
   - Site map

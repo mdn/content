@@ -1,6 +1,7 @@
 ---
 title: "::before (:before)"
 slug: Web/CSS/::before
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout
@@ -137,12 +138,16 @@ li.done::before {
 #### JavaScript
 
 ```js
-const list = document.querySelector('ul');
-list.addEventListener('click', (ev) => {
-  if (ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+const list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  (ev) => {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false
+);
 ```
 
 Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
@@ -162,7 +167,7 @@ As this is CSS; not HTML, you can **not** use markup entities in content values.
   <li>Crack Eggs into bowl</li>
   <li>Add Milk</li>
   <li>Add Flour</li>
-  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li aria-current="step">Mix thoroughly into a smooth batter</li>
   <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
   <li>Fry until the top of the pancake loses its gloss</li>
   <li>Flip it over and fry for a couple more minutes</li>

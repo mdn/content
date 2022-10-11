@@ -3,7 +3,6 @@ title: Smoke Test
 slug: Glossary/Smoke_Test
 tags:
   - Composing
-  - Glossary
   - Intro
   - QA
   - Testing

@@ -21,7 +21,7 @@ The **`EyeDropper`** interface represents an instance of an eyedropper tool that
 - {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
   - : Returns a new `EyeDropper` instance.
 
-## Methods
+## Instance methods
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 
@@ -37,8 +37,7 @@ This example shows how to open an eyedropper tool and wait for the user to eithe
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button>
-<span id="result"></span>
+<button id="start-button">Open the eyedropper</button> <span id="result"></span>
 ```
 
 #### JavaScript
@@ -74,8 +73,7 @@ This example shows that the eyedropper mode can also be aborted before the user 
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button>
-<span id="result"></span>
+<button id="start-button">Open the eyedropper</button> <span id="result"></span>
 ```
 
 #### JavaScript

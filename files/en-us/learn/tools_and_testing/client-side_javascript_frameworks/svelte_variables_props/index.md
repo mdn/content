@@ -92,12 +92,12 @@ The state of our component will be represented by these three top-level variable
    ```html
    <script>
      let todos = [
-       { id: 1, name: 'Create a Svelte starter app', completed: true },
-       { id: 2, name: 'Create your first component', completed: true },
-       { id: 3, name: 'Complete the rest of the tutorial', completed: false }
-     ]
-     let totalTodos = todos.length
-     let completedTodos = todos.filter((todo) => todo.completed).length
+       { id: 1, name: "Create a Svelte starter app", completed: true },
+       { id: 2, name: "Create your first component", completed: true },
+       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+     ];
+     let totalTodos = todos.length;
+     let completedTodos = todos.filter((todo) => todo.completed).length;
    </script>
    ```
 
@@ -144,26 +144,27 @@ Let's give it a try.
    <!-- To-dos -->
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each todos as todo (todo.id)}
-       <li class="todo">
-         <div class="stack-small">
-           <div class="c-cb">
-             <input type="checkbox" id="todo-{todo.id}" checked={todo.completed}/>
-             <label for="todo-{todo.id}" class="todo-label">
-               {todo.name}
-             </label>
-           </div>
-           <div class="btn-group">
-             <button type="button" class="btn">
-               Edit <span class="visually-hidden">{todo.name}</span>
-             </button>
-             <button type="button" class="btn btn__danger">
-               Delete <span class="visually-hidden">{todo.name}</span>
-             </button>
-           </div>
+     <li class="todo">
+       <div class="stack-small">
+         <div class="c-cb">
+           <input
+             type="checkbox"
+             id="todo-{todo.id}"
+             checked={todo.completed} />
+           <label for="todo-{todo.id}" class="todo-label"> {todo.name} </label>
          </div>
-       </li>
+         <div class="btn-group">
+           <button type="button" class="btn">
+             Edit <span class="visually-hidden">{todo.name}</span>
+           </button>
+           <button type="button" class="btn btn__danger">
+             Delete <span class="visually-hidden">{todo.name}</span>
+           </button>
+         </div>
+       </div>
+     </li>
      {:else}
-       <li>Nothing to do here!</li>
+     <li>Nothing to do here!</li>
      {/each}
    </ul>
    ```
@@ -193,13 +194,13 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 
    ```html
    <script>
-     import Todos from './components/Todos.svelte'
+     import Todos from "./components/Todos.svelte";
 
      let todos = [
-       { id: 1, name: 'Create a Svelte starter app', completed: true },
-       { id: 2, name: 'Create your first component', completed: true },
-       { id: 3, name: 'Complete the rest of the tutorial', completed: false }
-     ]
+       { id: 1, name: "Create a Svelte starter app", completed: true },
+       { id: 2, name: "Create your first component", completed: true },
+       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+     ];
    </script>
 
    <Todos todos={todos} />
@@ -307,7 +308,12 @@ Now on to the next major task for this article — let's add some functionality 
    So, let's implement this. Update the `todo-0` input like so:
 
    ```html
-   <input bind:value={newTodoName} type="text" id="todo-0" autocomplete="off" class="input input__lg" />
+   <input
+     bind:value={newTodoName}
+     type="text"
+     id="todo-0"
+     autocomplete="off"
+     class="input input__lg" />
    ```
 
 3. An easy way to test that this works is to add a reactive statement to log the contents of `newTodoName`. Add this snippet at the end of the `<script>` section:

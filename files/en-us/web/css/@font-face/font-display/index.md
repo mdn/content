@@ -1,8 +1,9 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

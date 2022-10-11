@@ -1,6 +1,7 @@
 ---
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout
@@ -54,10 +55,16 @@ In this example we will use the `::first-letter` pseudo-element to create a simp
 
 ```html
 <h2>My heading</h2>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est.
+</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
 ```
 
 #### CSS
@@ -91,7 +98,10 @@ This example illustrates the effect of `::first-letter` on special punctuation a
 #### HTML
 
 ```html
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
 <p>-The beginning of a special punctuation mark.</p>
 <p>_The beginning of a special punctuation mark.</p>
 <p>"The beginning of a special punctuation mark.</p>

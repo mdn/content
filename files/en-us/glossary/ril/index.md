@@ -4,7 +4,6 @@ slug: Glossary/RIL
 tags:
   - B2G
   - Firefox OS
-  - Glossary
   - Infrastructure
   - Intro
   - Mobile

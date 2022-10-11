@@ -1,8 +1,9 @@
 ---
 title: height
 slug: Web/CSS/@media/height
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

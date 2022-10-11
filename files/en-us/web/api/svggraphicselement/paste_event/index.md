@@ -1,5 +1,5 @@
 ---
-title: 'SVGGraphicsElement: paste event'
+title: "SVGGraphicsElement: paste event"
 slug: Web/API/SVGGraphicsElement/paste_event
 page-type: web-api-event
 tags:
@@ -45,11 +45,17 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 140 30" width="600" height="320" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject x="5" y="-10" width="90" height="20">
-        <input xmlns="http://www.w3.org/1999/xhtml" value="Copy this text"/>
-    </foreignObject>
-    <text x="5" y="30" id="element-to-paste-text" tabindex="1">Paste it here</text>
+<svg
+  viewBox="0 0 140 30"
+  width="600"
+  height="320"
+  xmlns="http://www.w3.org/2000/svg">
+  <foreignObject x="5" y="-10" width="90" height="20">
+    <input xmlns="http://www.w3.org/1999/xhtml" value="Copy this text" />
+  </foreignObject>
+  <text x="5" y="30" id="element-to-paste-text" tabindex="1">
+    Paste it here
+  </text>
 </svg>
 ```
 

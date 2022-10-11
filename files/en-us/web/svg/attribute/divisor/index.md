@@ -31,16 +31,22 @@ svg {
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="convolveMatrix1" x="0" y="0" width="100%" height="100%">
-    <feConvolveMatrix kernelMatrix="1 2 0 0 0 0 0 0 -1" divisor="1"/>
+    <feConvolveMatrix kernelMatrix="1 2 0 0 0 0 0 0 -1" divisor="1" />
   </filter>
   <filter id="convolveMatrix2" x="0" y="0" width="100%" height="100%">
-    <feConvolveMatrix kernelMatrix="1 2 0 0 0 0 0 0 -1" divisor="8"/>
+    <feConvolveMatrix kernelMatrix="1 2 0 0 0 0 0 0 -1" divisor="8" />
   </filter>
 
-  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix1);"/>
-  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix2); transform:translateX(220px);"/>
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#convolveMatrix1);" />
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#convolveMatrix2); transform:translateX(220px);" />
 </svg>
 ```
 

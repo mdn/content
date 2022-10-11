@@ -1,6 +1,7 @@
 ---
 title: contain
 slug: Web/CSS/contain
+page-type: css-property
 tags:
   - CSS
   - CSS Containment
@@ -25,7 +26,7 @@ Changes within an element with containment applied are not propagated outside of
 
 This property is useful on pages that contain a lot of widgets that are all independent, as it can be used to prevent each widget's internals from having side effects outside of the widget's bounding-box.
 
-> **Note:** If applied (with value: `paint`, `strict` or `content`), this property creates:
+> **Note:** If applied (with value: `layout`, `paint`, `strict` or `content`), this property creates:
 >
 > 1. A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
 > 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
@@ -103,7 +104,7 @@ The markup below consists of two articles, each with content:
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -134,11 +135,11 @@ In the previous example, if we insert another image at the bottom of the first a
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -167,11 +168,11 @@ If we give each `article` the `contain` property with a value of `content`, when
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -230,15 +231,12 @@ CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/co
 
 ```html
 <span class="open-quote">
-   outer
+  outer
   <span style="contain: style;">
-    <span class="open-quote">
-    inner
-    </span>
+    <span class="open-quote"> inner </span>
   </span>
 </span>
 <span class="close-quote">close</span>
-
 ```
 
 ```css

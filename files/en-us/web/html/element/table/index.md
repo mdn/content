@@ -89,7 +89,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("align")}} {{Deprecated_inline}}
 
-  - : This enumerated attribute indicates how the table must be aligned inside the containing document. It may have the following values:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the table must be aligned inside the containing document. It may have the following values:
 
     - `left`: the table is displayed on the left side of the document;
     - `center`: the table is displayed in the center of the document;
@@ -230,8 +230,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 <p>Table with colgroup and col</p>
 <table>
   <colgroup>
-    <col style="background-color: #0f0">
-    <col span="2">
+    <col style="background-color: #0f0" />
+    <col span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -247,7 +247,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 <p>Simple table with caption</p>
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -302,11 +304,11 @@ HTMLTableSectionElement.prototype.sort = function (cb) {
   Array.from(this.rows)
     .sort(cb)
     .forEach((e) => this.appendChild(this.removeChild(e)));
-}
+};
 
-document.querySelector('table').tBodies[0].sort(
-  (a, b) => a.textContent.localeCompare(b.textContent),
-);
+document
+  .querySelector("table")
+  .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
 ```
 
 ##### Result
@@ -349,7 +351,7 @@ The following example adds an event handler to every `<th>` element of every `<t
 ##### JavaScript
 
 ```js
-const allTables = document.querySelectorAll('table');
+const allTables = document.querySelectorAll("table");
 
 for (const table of allTables) {
   const tBody = table.tBodies[0];
@@ -359,7 +361,7 @@ for (const table of allTables) {
   for (const th of headerCells) {
     const cellIndex = th.cellIndex;
 
-    th.addEventListener('click', () => {
+    th.addEventListener("click", () => {
       rows.sort((tr1, tr2) => {
         const tr1Text = tr1.cells[cellIndex].textContent;
         const tr2Text = tr2.cells[cellIndex].textContent;
@@ -629,7 +631,9 @@ The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in
 
 ```html
 <table>
-  <caption>Color names and values</caption>
+  <caption>
+    Color names and values
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Name</th>

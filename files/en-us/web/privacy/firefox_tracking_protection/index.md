@@ -8,6 +8,8 @@ tags:
   - tracking
 ---
 
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 ## What is tracking protection?
 
 Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
@@ -54,15 +56,17 @@ More subtly, if other parts of your site depend on trackers being loaded, then t
 For example, you should not use Google Analytics in the following way:
 
 ```html example-bad
-<a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);">
+<a
+  href="http://www.example.com"
+  onclick="trackLink('http://www.example.com', event);">
   Visit example.com
 </a>
 
 <script>
   function trackLink(url, event) {
     event.preventDefault();
-    ga('send', 'event', 'outbound', 'click', url, {
-      transport: 'beacon',
+    ga("send", "event", "outbound", "click", url, {
+      transport: "beacon",
       hitCallback() {
         document.location = url;
       },
@@ -74,7 +78,9 @@ For example, you should not use Google Analytics in the following way:
 Instead, you should account for the case when Google Analytics is missing by checking to see if the ga object has initialized:
 
 ```html example-good
-<a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);">
+<a
+  href="http://www.example.com"
+  onclick="trackLink('http://www.example.com', event);">
   Visit example.com
 </a>
 
@@ -82,8 +88,8 @@ Instead, you should account for the case when Google Analytics is missing by che
   function trackLink(url, event) {
     event.preventDefault();
     if (window.ga && ga.loaded) {
-      ga('send', 'event', 'outbound', 'click', url, {
-        transport: 'beacon',
+      ga("send", "event", "outbound", "click", url, {
+        transport: "beacon",
         hitCallback() {
           document.location = url;
         },

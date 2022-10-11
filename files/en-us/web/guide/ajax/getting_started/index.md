@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting started
 slug: Web/Guide/AJAX/Getting_Started
 tags:
   - AJAX
@@ -31,10 +31,14 @@ To make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, y
 const httpRequest = new XMLHttpRequest();
 ```
 
-After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object and naming it after the function to call when the request changes state, like this:
+After making a request, you will receive a response back. At this stage, you need to tell the `XMLHttpRequest` object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object to the function called when the request changes state, like this:
 
 ```js
-httpRequest.onreadystatechange = nameOfTheFunction;
+function handler() {
+  // Process the server response here.
+}
+
+httpRequest.onreadystatechange = handler;
 ```
 
 Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:
@@ -123,32 +127,34 @@ Let's put it all together with a simple HTTP request. Our JavaScript will reques
 <button id="ajaxButton" type="button">Make a request</button>
 
 <script>
-(() => {
-  let httpRequest;
-  document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+  (() => {
+    let httpRequest;
+    document
+      .getElementById("ajaxButton")
+      .addEventListener("click", makeRequest);
 
-  function makeRequest() {
-    httpRequest = new XMLHttpRequest();
+    function makeRequest() {
+      httpRequest = new XMLHttpRequest();
 
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
+      if (!httpRequest) {
+        alert("Giving up :( Cannot create an XMLHTTP instance");
+        return false;
+      }
+      httpRequest.onreadystatechange = alertContents;
+      httpRequest.open("GET", "test.html");
+      httpRequest.send();
     }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'test.html');
-    httpRequest.send();
-  }
 
-  function alertContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
+    function alertContents() {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          alert(httpRequest.responseText);
+        } else {
+          alert("There was a problem with the request.");
+        }
       }
     }
-  }
-})();
+  })();
 </script>
 ```
 
@@ -185,15 +191,13 @@ function alertContents() {
 
 ## Step 4 – Working with the XML response
 
-In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property , which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
+In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property, which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
 
 First off, let's create a valid XML document that we'll request later on. The document (`test.xml`) contains the following:
 
 ```html
 <?xml version="1.0" ?>
-<root>
-    I'm a test.
-</root>
+<root> I'm a test. </root>
 ```
 
 Next, in `makeRequest()`, we need to replace `test.html` with the XML file we just created:
@@ -303,38 +307,35 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>XHR log time</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
     <p id="writeData" class="data">Off-Line</p>
     <p id="lastStamp">No Data yet</p>
 
     <script>
-
-      const fullData = document.getElementById('writeData');
-      const lastData = document.getElementById('lastStamp');
+      const fullData = document.getElementById("writeData");
+      const lastData = document.getElementById("lastStamp");
 
       function fetchData() {
-        console.log('Fetching updated data.');
+        console.log("Fetching updated data.");
         const xhr = new XMLHttpRequest();
         xhr.open("GET", "time-log.txt", true);
         xhr.onload = () => {
           updateDisplay(xhr.response);
-        }
+        };
         xhr.send();
       }
 
       function updateDisplay(text) {
         fullData.textContent = text;
 
-        const timeArray = text.split('\n');
+        const timeArray = text.split("\n");
 
         // included because some file systems always include a blank line at the end of text files.
-        if (timeArray[timeArray.length - 1] === '') {
+        if (timeArray[timeArray.length - 1] === "") {
           timeArray.pop();
         }
 

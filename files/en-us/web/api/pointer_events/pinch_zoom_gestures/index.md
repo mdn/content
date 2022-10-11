@@ -157,14 +157,16 @@ To prevent the browser's default touch behavior from overriding this application
 
 ```html
 <body onload="init();" style="touch-action:none">
- <div id="target">Touch and Hold with 2 pointers, then pinch in or out.<br/>
+  <div id="target">
+    Touch and Hold with 2 pointers, then pinch in or out.<br />
     The background color will change to pink if the pinch is opening (Zoom In)
-    or changes to lightblue if the pinch is closing (Zoom out).</div>
- <!-- UI for logging/debugging -->
- <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
- <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
- <p></p>
- <output></output>
+    or changes to lightblue if the pinch is closing (Zoom out).
+  </div>
+  <!-- UI for logging/debugging -->
+  <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
+  <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
+  <p></p>
+  <output></output>
 </body>
 ```
 

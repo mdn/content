@@ -30,10 +30,8 @@ svg {
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <circle cx="5" cy="5" r="4">
     <desc>
-      I'm a circle and that description is here to
-      demonstrate how I can be described, but is it
-      really necessary to describe a simple circle
-      like me?
+      I'm a circle and that description is here to demonstrate how I can be
+      described, but is it really necessary to describe a simple circle like me?
     </desc>
   </circle>
 </svg>

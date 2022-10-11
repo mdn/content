@@ -1,6 +1,7 @@
 ---
 title: font
 slug: Web/CSS/font
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Fonts
@@ -135,97 +136,248 @@ p {
 
 ```html hidden
 <p>
-    Change the radio buttons below to see the generated shorthand and its effect.
+  Change the radio buttons below to see the generated shorthand and its effect.
 </p>
 <form action="createShortHand()">
-    <div class="cf">
-        <div class="setPropCont">
-            font-style<br/>
-            <input type="radio" id="font-style-none" name="font_style" checked="" value="" onchange="setCss()"> <label for="font-style-none">none</label><br/>
-            <input type="radio" id="font-style-normal" name="font_style" value="normal" onchange="setCss()"> <label for="font-style-normal">normal</label><br/>
-            <input type="radio" id="font-style-italic" name="font_style" value="italic" onchange="setCss()"> <label for="font-style-italic">italic</label><br/>
-            <input type="radio" id="font-style-oblique" name="font_style" value="oblique" onchange="setCss()"> <label for="font-style-oblique">oblique</label>
-        </div>
-
-        <div class="setPropCont">
-            font-variant<br>
-            <input type="radio" id="font-variant-none" name="font_variant" checked="" value=" " onchange="setCss()"> <label for="font-variant-none">none</label><br/>
-            <input type="radio" id="font-variant-normal" name="font_variant" value="normal" onchange="setCss()"> <label for="font-variant-normal">normal</label><br/>
-            <input type="radio" id="font-variant-small-caps" name="font_variant" value="small-caps" onchange="setCss()"> <label for="font-variant-small-caps">small-caps</label>
-        </div>
-
-        <div class="setPropCont">
-            font-weight<br/>
-            <input type="radio" id="font-weight-none" name="font_weight" value="" onchange="setCss()"> <label for="font-weight-none">none</label><br/>
-            <input type="radio" id="font-weight-normal" checked="" name="font_weight" value="400" onchange="setCss()"> <label for="font-weight-normal">normal</label><br/>
-            <input type="radio" id="font-weight-bold" name="font_weight" value="700" onchange="setCss()"> <label for="font-weight-bold">bold</label>
-        </div>
-
-        <div class="setPropCont">
-            font-size<br/>
-            <input type="radio" id="font-size-12px" name="font_size" value="12px" onchange="setCss()"> <label for="font-size-12px">12px</label><br/>
-            <input type="radio" id="font-size-16px" name="font_size" value="16px" checked="" onchange="setCss()"> <label for="font-size-16px">16px</label><br/>
-            <input type="radio" id="font-size-24px" name="font_size" value="24px" onchange="setCss()"> <label for="font-size-24px">24px</label>
-        </div>
-
-        <div class="setPropCont">
-            line-height<br/>
-            <input type="radio" id="line-height-none" name="line_height" checked="" value="" onchange="setCss()"> <label for="line-height-none">none</label><br/>
-            <input type="radio" id="line-height-1.2" name="line_height" value="/1.2" onchange="setCss()"> <label for="line-height-1.2">1.2</label><br/>
-            <input type="radio" id="line-height-3" name="line_height" value="/3" onchange="setCss()"> <label for="line-height-3">3</label>
-        </div><br/>
-
-        <div class="setPropCont fontfamily">
-            font-family<br/>
-            <input type="radio" id="font-family-courier" name="font_family" checked="" value="courier" onchange="setCss(5,'courier')"> <label for="font-family-courier">courier</label><br/>            <input type="radio" id="font-family-serif" name="font_family" value="serif" onchange="setCss()"> <label for="font-family-serif">serif</label><br />
-            <input type="radio" id="font-family-sans-serif" name="font_family" value="sans-serif" onchange="setCss()"> <label for="font-family-sans-serif">sans-serif</label><br />            <input type="radio" id="font-family-arial" name="font_family" value="arial" onchange="setCss()"> <label for="font-family-arial">Arial</label><br />
-            <input type="radio" id="font-family-monospace" name="font_family" value="monospace" onchange="setCss()"> <label for="font-family-monospace">monospace</label><br />            <input type="radio" id="font-family-cursive" name="font_family" value="cursive" onchange="setCss()"> <label for="font-family-cursive">cursive</label><br />
-            <input type="radio" id="font-family-fantasy" name="font_family" value="fantasy" onchange="setCss()"> <label for="font-family-fantasy">fantasy</label><br />            <input type="radio" id="font-family-system-ui" name="font_family" value="system-ui" onchange="setCss()"> <label for="font-family-system-ui">system-ui</label><br />
-        </div>
+  <div class="cf">
+    <div class="setPropCont">
+      font-style<br />
+      <input
+        type="radio"
+        id="font-style-none"
+        name="font_style"
+        checked=""
+        value=""
+        onchange="setCss()" />
+      <label for="font-style-none">none</label><br />
+      <input
+        type="radio"
+        id="font-style-normal"
+        name="font_style"
+        value="normal"
+        onchange="setCss()" />
+      <label for="font-style-normal">normal</label><br />
+      <input
+        type="radio"
+        id="font-style-italic"
+        name="font_style"
+        value="italic"
+        onchange="setCss()" />
+      <label for="font-style-italic">italic</label><br />
+      <input
+        type="radio"
+        id="font-style-oblique"
+        name="font_style"
+        value="oblique"
+        onchange="setCss()" />
+      <label for="font-style-oblique">oblique</label>
     </div>
 
-    <div class="cf propInputs">
-        <div class="propInputCont tar">
-            font :
-        </div>
-        <div class="propInputCont">
-            <input type="text" class="curCss" id="input_font_style"><br/>
-            font-style <br/>
-            optional
-
-        </div>
-        <div class="propInputCont">
-            <input type="text" class="curCss" id="input_font_variant"> <br/>
-            font-variant <br/>
-            optional
-        </div>
-        <div class="propInputCont">
-            <input type="text" class="curCss" id="input_font_weight"> <br/>
-            font-weight <br/>
-            optional
-        </div>
-        <div class="propInputCont">
-            <input type="text" class="curCss mandatory" id="input_font_size"> <br/>
-            font-size <br/>
-            mandatory
-        </div>
-        <div class="propInputCont">
-            <input type="text" class="curCss" id="input_line_height"> <br/>
-            line-height <br/>
-            optional
-        </div>
-        <div class="propInputCont">
-            <input type="text" class="curCss mandatory" id="input_font_family"> <br/>
-            font-family <br/>
-            mandatory
-        </div>
+    <div class="setPropCont">
+      font-variant<br />
+      <input
+        type="radio"
+        id="font-variant-none"
+        name="font_variant"
+        checked=""
+        value=" "
+        onchange="setCss()" />
+      <label for="font-variant-none">none</label><br />
+      <input
+        type="radio"
+        id="font-variant-normal"
+        name="font_variant"
+        value="normal"
+        onchange="setCss()" />
+      <label for="font-variant-normal">normal</label><br />
+      <input
+        type="radio"
+        id="font-variant-small-caps"
+        name="font_variant"
+        value="small-caps"
+        onchange="setCss()" />
+      <label for="font-variant-small-caps">small-caps</label>
     </div>
+
+    <div class="setPropCont">
+      font-weight<br />
+      <input
+        type="radio"
+        id="font-weight-none"
+        name="font_weight"
+        value=""
+        onchange="setCss()" />
+      <label for="font-weight-none">none</label><br />
+      <input
+        type="radio"
+        id="font-weight-normal"
+        checked=""
+        name="font_weight"
+        value="400"
+        onchange="setCss()" />
+      <label for="font-weight-normal">normal</label><br />
+      <input
+        type="radio"
+        id="font-weight-bold"
+        name="font_weight"
+        value="700"
+        onchange="setCss()" />
+      <label for="font-weight-bold">bold</label>
+    </div>
+
+    <div class="setPropCont">
+      font-size<br />
+      <input
+        type="radio"
+        id="font-size-12px"
+        name="font_size"
+        value="12px"
+        onchange="setCss()" />
+      <label for="font-size-12px">12px</label><br />
+      <input
+        type="radio"
+        id="font-size-16px"
+        name="font_size"
+        value="16px"
+        checked=""
+        onchange="setCss()" />
+      <label for="font-size-16px">16px</label><br />
+      <input
+        type="radio"
+        id="font-size-24px"
+        name="font_size"
+        value="24px"
+        onchange="setCss()" />
+      <label for="font-size-24px">24px</label>
+    </div>
+
+    <div class="setPropCont">
+      line-height<br />
+      <input
+        type="radio"
+        id="line-height-none"
+        name="line_height"
+        checked=""
+        value=""
+        onchange="setCss()" />
+      <label for="line-height-none">none</label><br />
+      <input
+        type="radio"
+        id="line-height-1.2"
+        name="line_height"
+        value="/1.2"
+        onchange="setCss()" />
+      <label for="line-height-1.2">1.2</label><br />
+      <input
+        type="radio"
+        id="line-height-3"
+        name="line_height"
+        value="/3"
+        onchange="setCss()" />
+      <label for="line-height-3">3</label>
+    </div>
+    <br />
+
+    <div class="setPropCont fontfamily">
+      font-family<br />
+      <input
+        type="radio"
+        id="font-family-courier"
+        name="font_family"
+        checked=""
+        value="courier"
+        onchange="setCss(5,'courier')" />
+      <label for="font-family-courier">courier</label><br />
+      <input
+        type="radio"
+        id="font-family-serif"
+        name="font_family"
+        value="serif"
+        onchange="setCss()" />
+      <label for="font-family-serif">serif</label><br />
+      <input
+        type="radio"
+        id="font-family-sans-serif"
+        name="font_family"
+        value="sans-serif"
+        onchange="setCss()" />
+      <label for="font-family-sans-serif">sans-serif</label><br />
+      <input
+        type="radio"
+        id="font-family-arial"
+        name="font_family"
+        value="arial"
+        onchange="setCss()" />
+      <label for="font-family-arial">Arial</label><br />
+      <input
+        type="radio"
+        id="font-family-monospace"
+        name="font_family"
+        value="monospace"
+        onchange="setCss()" />
+      <label for="font-family-monospace">monospace</label><br />
+      <input
+        type="radio"
+        id="font-family-cursive"
+        name="font_family"
+        value="cursive"
+        onchange="setCss()" />
+      <label for="font-family-cursive">cursive</label><br />
+      <input
+        type="radio"
+        id="font-family-fantasy"
+        name="font_family"
+        value="fantasy"
+        onchange="setCss()" />
+      <label for="font-family-fantasy">fantasy</label><br />
+      <input
+        type="radio"
+        id="font-family-system-ui"
+        name="font_family"
+        value="system-ui"
+        onchange="setCss()" />
+      <label for="font-family-system-ui">system-ui</label><br />
+    </div>
+  </div>
+
+  <div class="cf propInputs">
+    <div class="propInputCont tar">font :</div>
+    <div class="propInputCont">
+      <input type="text" class="curCss" id="input_font_style" /><br />
+      font-style <br />
+      optional
+    </div>
+    <div class="propInputCont">
+      <input type="text" class="curCss" id="input_font_variant" /> <br />
+      font-variant <br />
+      optional
+    </div>
+    <div class="propInputCont">
+      <input type="text" class="curCss" id="input_font_weight" /> <br />
+      font-weight <br />
+      optional
+    </div>
+    <div class="propInputCont">
+      <input type="text" class="curCss mandatory" id="input_font_size" /> <br />
+      font-size <br />
+      mandatory
+    </div>
+    <div class="propInputCont">
+      <input type="text" class="curCss" id="input_line_height" /> <br />
+      line-height <br />
+      optional
+    </div>
+    <div class="propInputCont">
+      <input type="text" class="curCss mandatory" id="input_font_family" />
+      <br />
+      font-family <br />
+      mandatory
+    </div>
+  </div>
 </form>
 
-<div class="fontShortHand">
-    This is some sample text.
-</div>
-<br/><br/><br/><br/><br/><br/>
+<div class="fontShortHand">This is some sample text.</div>
+<br /><br /><br /><br /><br /><br />
 ```
 
 ```css hidden

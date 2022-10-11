@@ -2,7 +2,6 @@
 title: Browser
 slug: Glossary/Browser
 tags:
-  - Glossary
   - Navigation
 ---
 

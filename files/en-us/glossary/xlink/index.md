@@ -3,7 +3,6 @@ title: XLink
 slug: Glossary/XLink
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 XLink is a W3C standard which is used to describe links between XML and XML or other documents. Some its behaviors are left to the implementation to determine how to handle.

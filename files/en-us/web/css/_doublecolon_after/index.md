@@ -1,6 +1,7 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout
@@ -97,9 +98,15 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation">
+    text
+  </span>
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering">
+    tooltips
+  </span>.
 </p>
 ```
 

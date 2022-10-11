@@ -3,7 +3,6 @@ title: Cross Axis
 slug: Glossary/Cross_Axis
 tags:
   - CSS
-  - Glossary
   - cross axis
   - flexbox
 ---

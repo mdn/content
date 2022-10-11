@@ -9,6 +9,8 @@ tags:
   - urls
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 
 <table>
@@ -201,7 +203,7 @@ To better understand the following examples, let's assume that the URLs are call
 
 ## Semantic URLs
 
-Despite their very technical flavor, URLs represent a human-readable entry point for a Web site. They can be memorized, and anyone can enter them into a browser's address bar. People are at the core of the Web, and so it is considered best practice to build what is called [_semantic URLs_](https://en.wikipedia.org/wiki/Semantic_URL). Semantic URLs use words with inherent meaning that can be understood by anyone, regardless of their technical know-how.
+Despite their very technical flavor, URLs represent a human-readable entry point for a website. They can be memorized, and anyone can enter them into a browser's address bar. People are at the core of the Web, and so it is considered best practice to build what is called [_semantic URLs_](https://en.wikipedia.org/wiki/Semantic_URL). Semantic URLs use words with inherent meaning that can be understood by anyone, regardless of their technical know-how.
 
 Linguistic semantics are of course irrelevant to computers. You've probably often seen URLs that look like mashups of random characters. But there are many advantages to creating human-readable URLs:
 
@@ -211,4 +213,4 @@ Linguistic semantics are of course irrelevant to computers. You've probably ofte
 
 ## See also
 
-[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) — Data URLs, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.
+[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.

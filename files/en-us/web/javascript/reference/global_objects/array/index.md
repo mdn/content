@@ -128,7 +128,7 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array.prototype.values()")}}
   - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
 - [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
-  - : Returns the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) function by default.
+  - : An alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## Examples
 
@@ -257,7 +257,7 @@ console.log(removedItems);
 // ["Strawberry", "Mango", "Cherry"]
 ```
 
-### Truncate an array down to just its first _N_ items
+### Truncate an array down to just its first N items
 
 This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to truncate the `fruits` array down to just its first 2 items.
 
@@ -461,7 +461,7 @@ Here we have a simple inventory array that contains "food" objects that have a `
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables' },
-  { name: 'bananas',  type: 'fruit' },
+  { name: 'bananas', type: 'fruit' },
   { name: 'goat', type: 'meat' },
   { name: 'cherries', type: 'fruit' },
   { name: 'fish', type: 'meat' },
@@ -562,6 +562,27 @@ Results in
 9  512  162
 ```
 
+### Creating an array using the result of a match
+
+The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}}.
+
+For example:
+
+```js
+// Match one d followed by one or more b's followed by one d
+// Remember matched b's and the following d
+// Ignore case
+
+const myRe = /d(b+)(d)/i;
+const execResult = myRe.exec('cdbBdbsbz');
+
+console.log(execResult.input); // 'cdbBdbsbz'
+console.log(execResult.index); // 1
+console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
+```
+
+For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
+
 ## Notes
 
 `Array` objects cannot use arbitrary strings as element indexes (as in an [associative array](https://en.wikipedia.org/wiki/Associative_array)) but must use nonnegative integers (or their respective string form). Setting or accessing via non-integers will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's [object property collection](/en-US/docs/Web/JavaScript/Data_structures#properties). The array's object properties and list of array elements are separate, and the array's [traversal and mutation operations](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) cannot be applied to these named properties.
@@ -625,26 +646,123 @@ console.log(fruits.length);       // 2
 
 This is explained further on the {{jsxref("Array/length")}} page.
 
-### Creating an array using the result of a match
+### Array methods and empty slots
 
-The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}}.
+Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave inconsistently between array methods. Generally, the older methods will skip empty slots, while newer ones treat them as `undefined`.
 
-For example:
+Among methods that iterate through multiple elements, the following do an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check before accessing the index and do not conflate empty slots with `undefined`:
+
+- {{jsxref("Array/concat", "concat()")}}
+- {{jsxref("Array/copyWithin", "copyWithin()")}}
+- {{jsxref("Array/every", "every()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/flat", "flat()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/forEach", "forEach()")}}
+- {{jsxref("Array/indexOf", "indexOf()")}}
+- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/reduce", "reduce()")}}
+- {{jsxref("Array/reduceRight", "reduceRight()")}}
+- {{jsxref("Array/reverse", "reverse()")}}
+- {{jsxref("Array/slice", "slice()")}}
+- {{jsxref("Array/some", "some()")}}
+- {{jsxref("Array/sort", "sort()")}}
+- {{jsxref("Array/splice", "splice()")}}
+
+For exactly how they treat empty slots, see the page for each method.
+
+These methods treat empty slots as if they are `undefined`:
+
+- {{jsxref("Array/entries", "entries()")}}
+- {{jsxref("Array/fill", "fill()")}}
+- {{jsxref("Array/find", "find()")}}
+- {{jsxref("Array/findIndex", "findIndex()")}}
+- {{jsxref("Array/findLast", "findLast()")}}
+- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
+- {{jsxref("Array/group", "group()")}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}}
+- {{jsxref("Array/includes", "includes()")}}
+- {{jsxref("Array/join", "join()")}}
+- {{jsxref("Array/keys", "keys()")}}
+- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
+- {{jsxref("Array/values", "values()")}}
+
+### Copying methods and mutating methods
+
+Some methods do not mutate the existing array that the method was called on, but instead return a new array. They do so by first accessing [`this.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to determine the constructor to use for the new array. The newly constructed array is then populated with elements. The copy always happens [_shallowly_](/en-US/docs/Glossary/Shallow_copy) — the method never copies anything beyond the initially created array. Elements of the original array(s) are copied into the new array as follows:
+
+- Objects: the object reference is copied into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.
+- Primitive types such as strings, numbers and booleans (not {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, and {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): their values are copied into the new array.
+
+Other methods mutate the array that the method was called on, in which case their return value differs depending on the method: sometimes a reference to the same array, sometimes the length of the new array.
+
+The following methods create new arrays with `@@species`:
+
+- {{jsxref("Array/concat", "concat()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/flat", "flat()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/slice", "slice()")}}
+- {{jsxref("Array/splice", "splice()")}} (to construct the array of removed elements that's returned)
+
+Note that {{jsxref("Array/group", "group()")}} and {{jsxref("Array/groupToMap", "groupToMap()")}} do not use `@@species` to create new arrays for each group entry, but always use the plain `Array` constructor. Conceptually, they are not copying methods either.
+
+The following methods mutate the original array:
+
+- {{jsxref("Array/copyWithin", "copyWithin()")}}
+- {{jsxref("Array/fill", "fill()")}}
+- {{jsxref("Array/pop", "pop()")}}
+- {{jsxref("Array/push", "push()")}}
+- {{jsxref("Array/reverse", "reverse()")}}
+- {{jsxref("Array/shift", "shift()")}}
+- {{jsxref("Array/sort", "sort()")}}
+- {{jsxref("Array/splice", "splice()")}}
+- {{jsxref("Array/unshift", "unshift()")}}
+
+### Generic array methods
+
+Array methods are always generic — they don't access any internal data of the array object. They only access the array elements through the `length` property and the indexed elements. This means that they can be called on array-like objects as well.
 
 ```js
-// Match one d followed by one or more b's followed by one d
-// Remember matched b's and the following d
-// Ignore case
-
-const myRe = /d(b+)(d)/i;
-const execResult = myRe.exec('cdbBdbsbz');
-
-console.log(execResult.input); // 'cdbBdbsbz'
-console.log(execResult.index); // 1
-console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
+const arrayLike = {
+  0: "a",
+  1: "b",
+  length: 2,
+};
+console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 ```
 
-For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
+#### Normalization of the length property
+
+The `length` property is [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), truncated to an integer, and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
+
+```js
+Array.prototype.flat.call({}); // []
+```
+
+Some array methods set the `length` property of the array object. They always set the value after normalization, so `length` always ends as an integer.
+
+```js
+const a = { length: 0.7 };
+Array.prototype.push.call(a);
+console.log(a.length); // 0
+```
+
+#### Array-like objects
+
+The term [_array-like object_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) refers to any object that doesn't throw during the `length` conversion process described above. In practice, such object is expected to actually have a `length` property and to have indexed elements in the range `0` to `length - 1`. (If it doesn't have all indices, it will be functionally equivalent to a [sparse array](#array_methods_and_empty_slots).)
+
+Many DOM objects are array-like — for example, [`NodeList`](/en-US/docs/Web/API/NodeList) and [`HTMLCollection`](/en-US/docs/Web/API/HTMLCollection). The [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is also array-like. You can call array methods on them even if they don't have these methods themselves.
+
+```js
+function f() {
+  console.log(Array.prototype.join.call(arguments, "+"));
+}
+
+f("a", "b"); // 'a+b'
+```
 
 ## Specifications
 

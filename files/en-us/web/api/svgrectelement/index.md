@@ -17,7 +17,7 @@ The `SVGRectElement` interface provides access to the properties of {{SVGElement
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
@@ -34,7 +34,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGeometry
 - {{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("ry")}} attribute of the given {{SVGElement("rect")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
@@ -48,8 +48,11 @@ This example sets the fill color of an `SVGRectElement` to a random value whenev
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <rect width="300" height="100" id="myrect"
-      style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+  <rect
+    width="300"
+    height="100"
+    id="myrect"
+    style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
   <text x="60" y="40" fill="white" font-size="40">Click Me</text>
 </svg>
 ```

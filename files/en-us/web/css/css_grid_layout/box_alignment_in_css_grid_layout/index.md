@@ -1,6 +1,7 @@
 ---
 title: Box alignment in grid layout
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
+page-type: guide
 tags:
   - Alignment in Grids
   - Boxes
@@ -311,7 +312,7 @@ By combining the align and justify properties we can easily center an item insid
 
 ```html
 <div class="wrapper">
- <div class="item1">Item 1</div>
+  <div class="item1">Item 1</div>
 </div>
 ```
 

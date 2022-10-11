@@ -2,7 +2,6 @@
 title: Node.js
 slug: Glossary/Node.js
 tags:
-  - Glossary
   - Infrastructure
   - JavaScript
   - node.js

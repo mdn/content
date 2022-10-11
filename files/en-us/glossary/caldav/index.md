@@ -3,7 +3,6 @@ title: CalDAV
 slug: Glossary/CalDAV
 tags:
   - CalDAV
-  - Glossary
   - Infrastructure
 ---
 

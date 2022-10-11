@@ -1,6 +1,7 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -67,7 +68,7 @@ The `empty-cells` property is specified as one of the keyword values listed belo
     <td></td>
   </tr>
 </table>
-<br>
+<br />
 <table class="table_2">
   <tr>
     <td>Moe</td>

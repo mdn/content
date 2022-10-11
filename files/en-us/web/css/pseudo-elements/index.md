@@ -1,6 +1,7 @@
 ---
 title: Pseudo-elements
 slug: Web/CSS/Pseudo-elements
+page-type: landing-page
 tags:
   - CSS
   - Guide

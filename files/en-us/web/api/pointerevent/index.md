@@ -28,7 +28,7 @@ A pointer's _hit test_ is the process a browser uses to determine the target ele
 - {{domxref("PointerEvent.PointerEvent", "PointerEvent()")}}
   - : Creates a synthetic—and untrusted—`PointerEvent`.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
@@ -49,11 +49,11 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef('PointerEvent.getCoalescedEvents()')}}
   - : Returns a sequence of all `PointerEvent` instances that were coalesced into the dispatched {{domxref("HTMLElement/pointermove_event", "pointermove")}} event.

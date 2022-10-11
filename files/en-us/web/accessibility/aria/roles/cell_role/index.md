@@ -62,7 +62,7 @@ A cell can contain a number of property attributes clarifying the cell's positio
 #### Subclass roles
 
 - [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-  - : A cell in a row within a `grid` or `treegrid.`
+  - : A cell in a row within a `grid` or `treegrid`.
 - [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
   - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) element with a column scope. Unlike a plain cell, the `columnheader` role establishes a relationship between it and all cells in the corresponding column.
 - [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)

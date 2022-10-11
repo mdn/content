@@ -1,6 +1,7 @@
 ---
 title: revert
 slug: Web/CSS/revert
+page-type: css-keyword
 tags:
   - CSS
   - CSS Cascade
@@ -77,9 +78,7 @@ Reverting all values is useful in a situation where you've made several style ch
 ```html
 <h3>This will have custom styles</h3>
 <p>Just some text</p>
-<h3 style="all: revert">
-  This should be reverted to browser/user defaults.
-</h3>
+<h3 style="all: revert">This should be reverted to browser/user defaults.</h3>
 <p>Just some text</p>
 ```
 

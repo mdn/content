@@ -39,7 +39,7 @@ In this example, we use `item()` to select the first item in the `FileList`.
 #### HTML
 
 ```html
-<input type="file">
+<input type="file" />
 <div class="output"></div>
 ```
 

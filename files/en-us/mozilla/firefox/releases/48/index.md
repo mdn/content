@@ -2,7 +2,7 @@
 title: Firefox 48 for developers
 slug: Mozilla/Firefox/Releases/48
 tags:
-  - '48'
+  - "48"
   - Firefox
   - Mozilla
   - Release

@@ -83,22 +83,37 @@ if (a < b) { // true
 }
 ```
 
-A similar result can be achieved using the {{jsxref("String.prototype.localeCompare()",
-  "localeCompare()")}} method inherited by `String` instances.
-
-Note that `a === b` compares the strings in `a` and
-`b` for being equal in the usual case-sensitive way. If you wish
-to compare without regard to upper or lower case characters, use a function similar to
-this:
+Note that all comparison operators, including [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) and [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality), compare strings case-sensitively. A common way to compare strings case-insensitively is to convert both to the same case (upper or lower) before comparing them.
 
 ```js
-function isEqual(str1, str2) {
+function areEqualCaseInsensitive(str1, str2) {
   return str1.toUpperCase() === str2.toUpperCase();
 }
 ```
 
-Upper case is used instead of lower case in this function, due to problems with certain
-UTF-8 character conversions.
+The choice of whether to transform by [`toUpperCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) or [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) is mostly arbitrary, and neither one is fully robust when extending beyond the Latin alphabet. For example, the German lowercase letter `ß` and `ss` are both transformed to `SS` by `toUpperCase()`, while the Turkish letter `ı` would be falsely reported as unequal to `I` by `toLowerCase()` unless specifically using [`toLocaleLowerCase("tr")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase).
+
+```js
+const areEqualInUpperCase = (str1, str2) =>
+  str1.toUpperCase() === str2.toUpperCase();
+const areEqualInLowerCase = (str1, str2) =>
+  str1.toLowerCase() === str2.toLowerCase();
+
+areEqualInUpperCase("ß", "ss"); // true; should be false
+areEqualInLowerCase("ı", "I"); // false; should be true
+```
+
+A locale-aware and robust solution for testing case-insensitive equality is to use the {{jsxref("Intl.Collator")}} API or the string's [`localeCompare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) method — they share the same interface — with the [`sensitivity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#sensitivity) option set to `"accent"` or `"base"`.
+
+```js
+const areEqual = (str1, str2, locale = "en-US") =>
+  str1.localeCompare(str2, locale, { sensitivity: "accent" }) === 0;
+
+areEqual("ß", "ss", "de"); // false
+areEqual("ı", "I", "tr"); // true
+```
+
+The `localeCompare()` method enables string comparison in a similar fashion as `strcmp()` — it allows sorting strings in a locale-aware manner.
 
 ### String primitives and String objects
 
@@ -152,7 +167,7 @@ console.log(eval(s2.valueOf()))  // returns the number 4
 
 ### String coercion
 
-Many built-in operations that expect strings would first coerce their arguments to strings (which is largely why `String` objects behave similarly to string primitives). [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
+Many built-in operations that expect strings first coerce their arguments to strings (which is largely why `String` objects behave similarly to string primitives). [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
 
 - Strings are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `"undefined"`.
@@ -378,8 +393,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 > **Warning:** Deprecated. Avoid these methods.
 >
-> They are of limited use, as they provide only a subset of the available HTML tags
-> and attributes.
+> They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
@@ -407,6 +421,18 @@ You must be careful which level of characters you are iterating on. For example,
   - : {{HTMLElement("sub")}}
 - {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sup")}}
+
+Note that these methods do not check if the string itself contains HTML tags, so it's possible to create invalid HTML:
+
+```js
+"</b>".bold(); // <b></b></b>
+```
+
+The only escaping they do is to replace `"` in the attribute value (for {{jsxref("String/anchor", "anchor()")}}, {{jsxref("String/fontcolor", "fontcolor()")}}, {{jsxref("String/fontsize", "fontsize()")}}, and {{jsxref("String/link", "link()")}}) with `&quot;`.
+
+```js
+"foo".anchor('"Hello"'); // <a name="&quot;Hello&quot;">foo</a>
+```
 
 ## Examples
 

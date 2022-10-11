@@ -27,11 +27,11 @@ The **`ResizeObserver`** interface reports changes to the dimensions of an {{dom
 - {{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}
   - : Creates and returns a new `ResizeObserver` object.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref('ResizeObserver.disconnect()')}}
   - : Unobserves all observed {{domxref('Element')}} targets of a particular observer.

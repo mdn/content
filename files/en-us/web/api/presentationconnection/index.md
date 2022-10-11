@@ -18,7 +18,7 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PresentationConnection.binaryType")}} {{Experimental_Inline}}
   - : Returns either blob or arrayBuffer. When a `PresentationConnection` object is created, its [`binaryType`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection-binarytype) IDL attribute _MUST_ be set to the string " [`arraybuffer`](https://www.w3.org/TR/presentation-api/#dom-binarytype-arraybuffer)".
@@ -40,7 +40,7 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs
 - {{domxref("PresentationConnection.onterminated")}}
   - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("PresentationConnection.close()")}} {{Experimental_Inline}}
   - : Closes the current connection and sends a {{domxref("PresentationConnectionCloseEvent")}} to {{DOMxRef("PresentationConnection.onclosed")}}.

@@ -3,7 +3,6 @@ title: Ciphertext
 slug: Glossary/Ciphertext
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---

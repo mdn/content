@@ -1,6 +1,7 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -66,7 +67,11 @@ text-align-last: unset;
 ### Justifying the last line
 
 ```html hidden
-<p>Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.</p>
+<p>
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+</p>
 ```
 
 #### CSS

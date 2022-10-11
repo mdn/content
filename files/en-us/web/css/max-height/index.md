@@ -1,6 +1,7 @@
 ---
 title: max-height
 slug: Web/CSS/max-height
+page-type: css-property
 tags:
   - CSS
   - CSS Property

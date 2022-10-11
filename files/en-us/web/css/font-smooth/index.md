@@ -1,6 +1,7 @@
 ---
 title: font-smooth
 slug: Web/CSS/font-smooth
+page-type: css-property
 tags:
   - CSS
   - CSS Property

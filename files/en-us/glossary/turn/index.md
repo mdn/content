@@ -2,7 +2,6 @@
 title: TURN
 slug: Glossary/TURN
 tags:
-  - Glossary
   - Infrastructure
   - TURN
   - WebMechanics

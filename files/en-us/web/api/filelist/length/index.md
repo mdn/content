@@ -28,7 +28,7 @@ In this example, we use `length` to find the number of items in the `FileList`.
 #### HTML
 
 ```html
-<input type="file" multiple>
+<input type="file" multiple />
 <div class="output"></div>
 ```
 

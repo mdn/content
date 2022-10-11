@@ -1,6 +1,7 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
+page-type: css-property
 tags:
   - CSS
   - CSS Background
@@ -139,8 +140,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 #### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 #### CSS

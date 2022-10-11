@@ -81,17 +81,17 @@ The `group()` method executes the `callbackFn` function once for each index of t
 A new property and array is created in the result object for each unique group name that is returned by the callback.
 Each element is added to the array in the property that corresponds to its group.
 
-Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 `callbackFn` is called with the value of the current element, the current index, and the array itself.
 While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
-
 If a `thisArg` parameter is provided to `group()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
+
+The `group()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns an object of arrays that contains the same elements as the ones from the original array. Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+
+The `group()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ### Mutating the array in the callback
 
@@ -108,13 +108,15 @@ Therefore:
 
 ## Examples
 
+### Using group()
+
 First we define an array containing objects representing an inventory of different foodstuffs.
 Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables', quantity: 5 },
-  { name: 'bananas',  type: 'fruit', quantity: 0 },
+  { name: 'bananas', type: 'fruit', quantity: 0 },
   { name: 'goat', type: 'meat', quantity: 23 },
   { name: 'cherries', type: 'fruit', quantity: 5 },
   { name: 'fish', type: 'meat', quantity: 22 }
@@ -156,7 +158,7 @@ function myCallback({ quantity }) {
   return quantity > 5 ? 'ok' : 'restock';
 }
 
-result = inventory.group(myCallback);
+const result2 = inventory.group(myCallback);
 
 /* Result is:
 {
@@ -171,6 +173,29 @@ result = inventory.group(myCallback);
   ]
 }
 */
+```
+
+### Using group() on sparse arrays
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `group()` method iterates empty slots as if they have the value `undefined`.
+
+```js
+console.log([1, , 3].group((x) => x)); // { 1: [1], undefined: [undefined], 3: [3] }
+```
+
+### Calling group() on non-array objects
+
+The `group()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.group.call(arrayLike, (x) => x % 2));
+// { 0: [2, 4], 1: [3] }
 ```
 
 ## Specifications

@@ -16,7 +16,7 @@ The main steps to drag and drop are to define a _drop zone_ (i.e. a target eleme
 
 Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
 
-## Define the drop _zone_
+## Define the drop zone
 
 The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an `ondrop` event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
 
@@ -29,7 +29,10 @@ The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event 
 Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","ondragover")}} event handler:
 
 ```html
-<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+<div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
   <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```

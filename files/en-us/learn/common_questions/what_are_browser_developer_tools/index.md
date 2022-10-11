@@ -12,6 +12,8 @@ tags:
   - Learn
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
 
 > **Note:** Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) article series. You should have this open as you follow the steps below.
@@ -184,33 +186,39 @@ This will give you a window like the following:
 To see what happens, try entering the following snippets of code into the console one by one (and then pressing Enter):
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 ```js
-document.querySelector('html').style.backgroundColor = 'purple';
+document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement('img');
-myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myWordmark.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 Now try entering the following incorrect versions of the code and see what you get.
 
-```js example-bad
-alert('hello!);
+```js-nolint example-bad
+alert("hello!);
 ```
 
 ```js example-bad
-document.cheeseSelector('html').style.backgroundColor = 'purple';
+document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js example-bad
-const myWordmark = document.createElement('img');
-myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!

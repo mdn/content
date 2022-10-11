@@ -1,6 +1,7 @@
 ---
 title: outline
 slug: Web/CSS/outline
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Outline

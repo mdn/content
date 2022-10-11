@@ -1,6 +1,7 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -2,7 +2,7 @@
 title: Firefox 104 for developers
 slug: Mozilla/Firefox/Releases/104
 tags:
-  - '104'
+  - "104"
   - Firefox
   - Mozilla
   - Release
@@ -61,7 +61,7 @@ No notable changes.
 #### Removals
 
 - The `options` argument to the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory/open) method has been removed.
-  This this option provided a non-standard, and Firefox-only way to make the indicated database persistent.
+  This option provided a non-standard, and Firefox-only way to make the indicated database persistent.
   The option was previously deprecated, and users that need this functionality should already have migrated to {{domxref("StorageManager.persist()")}}.
   (See {{bug(1354500)}} for more details.)
 

@@ -19,7 +19,7 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 - {{domxref("CookieStore.delete()")}} {{Experimental_Inline}}
   - : The `delete()` method deletes a cookie with the given name or options object, it returns a {{jsxref("Promise")}} that resolves when the deletion completes.
@@ -41,20 +41,21 @@ In this example we set a cookie and write to the console feedback as to whether 
 
 ```js
 const day = 24 * 60 * 60 * 1000;
-cookieStore.set({
-  name: "cookie1",
-  value: "cookie1-value",
-  expires: Date.now() + day,
-  domain: "example.com"
-})
-.then(
-  () => {
-    console.log("It worked!");
-  },
-  (reason) => {
-    console.error("It failed: ", reason);
-  }
-);
+cookieStore
+  .set({
+    name: "cookie1",
+    value: "cookie1-value",
+    expires: Date.now() + day,
+    domain: "example.com",
+  })
+  .then(
+    () => {
+      console.log("It worked!");
+    },
+    (reason) => {
+      console.error("It failed: ", reason);
+    }
+  );
 ```
 
 ## Specifications

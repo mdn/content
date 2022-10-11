@@ -1,6 +1,7 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -106,7 +107,7 @@ ruby {
 
 ```html
 <ruby>
-  <rb>A<rb>B<rb>C</rb>
+  <rb>A</rb><rb>B</rb><rb>C</rb>
   <rtc>Above</rtc>
   <rtc>Below</rtc>
 </ruby>

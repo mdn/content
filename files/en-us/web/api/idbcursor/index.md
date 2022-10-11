@@ -24,7 +24,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 > **Note:** {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
 
@@ -39,7 +39,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 - {{domxref("IDBCursor.request")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBRequest")}} that was used to obtain the cursor.
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBCursor.advance()")}}
   - : Sets the number of times a cursor should move its position forward.
@@ -103,4 +103,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

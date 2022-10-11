@@ -39,7 +39,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}} {{Experimental_Inline}}
   - : Creates a new `VideoFrame` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("VideoFrame.format")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the pixel format of the `VideoFrame`.
@@ -62,7 +62,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
 
-## Methods
+## Instance methods
 
 - {{domxref("VideoFrame.allocationSize()")}} {{Experimental_Inline}}
   - : Returns the number of bytes required to hold the `VideoFrame` as filtered by options passed into the method.

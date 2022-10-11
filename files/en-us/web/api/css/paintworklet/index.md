@@ -32,8 +32,8 @@ The following example demonstrates loading a {{DOMxRef('PaintWorklet')}} from it
 file and does so by feature detection.
 
 ```js
-if ('paintWorklet' in CSS) {
-  CSS.paintWorklet.addModule('checkerboard.js');
+if ("paintWorklet" in CSS) {
+  CSS.paintWorklet.addModule("checkerboard.js");
 }
 ```
 

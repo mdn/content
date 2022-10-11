@@ -52,22 +52,22 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ```html
 <div class="example">
-
-    <div class="file-select">
-        <label for="avatar">Choose a profile picture:</label>
-        <input type="file"
-               id="avatar" name="avatar"
-               accept="image/png, image/jpeg">
-    </div>
-
-    <img src="" class="preview" height="200" alt="Image preview">
-
-    <div class="event-log">
-        <label for="eventLog">Event log:</label>
-        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
-    </div>
-
+  <div class="file-select">
+    <label for="avatar">Choose a profile picture:</label>
+    <input
+      type="file"
+      id="avatar"
+      name="avatar"
+      accept="image/png, image/jpeg" />
   </div>
+
+  <img src="" class="preview" height="200" alt="Image preview" />
+
+  <div class="event-log">
+    <label for="eventLog">Event log:</label>
+    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  </div>
+</div>
 ```
 
 ```css hidden
@@ -81,6 +81,7 @@ img.preview {
   border: 1px solid black;
   margin: 0.2rem;
   padding: 0.2rem;
+  resize: none;
 }
 
 .example {
@@ -104,10 +105,6 @@ img.preview {
 
 .event-log > label {
   display: block;
-}
-
-.event-log-contents {
-  resize: none;
 }
 ```
 

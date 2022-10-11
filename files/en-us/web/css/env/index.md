@@ -1,6 +1,7 @@
 ---
 title: env()
 slug: Web/CSS/env
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -16,7 +17,7 @@ browser-compat: css.properties.custom-property.env
 
 {{CSSRef}}
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a user agent-defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
 
 In addition, unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (e.g. in [Media query rules](/en-US/docs/Web/CSS/@media)). As the spec evolves, it may also be usable in other places such as selectors.
 
@@ -135,11 +136,10 @@ The below example makes use of the optional second parameter of `env()`, which a
 
 ```html
 <p>
-  If the <code>env()</code> function is supported in your browser,
-  this paragraph's text will have 50px of padding between it and
-  the left border — but not the top, right and bottom.
-  This is because the accompanying CSS is the equivalent of
-  <code>padding: 0 0 0 50px</code>, because, unlike other CSS
+  If the <code>env()</code> function is supported in your browser, this
+  paragraph's text will have 50px of padding between it and the left border —
+  but not the top, right and bottom. This is because the accompanying CSS is the
+  equivalent of <code>padding: 0 0 0 50px</code>, because, unlike other CSS
   properties, user agent property names are case-sensitive.
 </p>
 ```

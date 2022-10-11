@@ -1,6 +1,7 @@
 ---
 title: margin-trim
 slug: Web/CSS/margin-trim
+page-type: css-property
 tags:
   - CSS
   - CSS Property

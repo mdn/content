@@ -3,7 +3,6 @@ title: Cipher suite
 slug: Glossary/Cipher_suite
 tags:
   - Cryptography
-  - Glossary
   - Security
 ---
 

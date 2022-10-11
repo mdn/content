@@ -82,18 +82,20 @@ The most important quick win in semantic HTML is to use a structure of headings 
 
 ```html example-bad
 <font size="7">My heading</font>
-<br><br>
+<br /><br />
 This is the first section of my document.
-<br><br>
+<br /><br />
 I'll add another paragraph here too.
-<br><br>
+<br /><br />
 <font size="5">My subheading</font>
-<br><br>
-This is the first subsection of my document. I'd love people to be able to find this content!
-<br><br>
+<br /><br />
+This is the first subsection of my document. I'd love people to be able to find
+this content!
+<br /><br />
 <font size="5">My 2nd subheading</font>
-<br><br>
-This is the second subsection of my content. I think it is more interesting than the last one.
+<br /><br />
+This is the second subsection of my content. I think it is more interesting than
+the last one.
 ```
 
 ```html example-good
@@ -105,11 +107,17 @@ This is the second subsection of my content. I think it is more interesting than
 
 <h2>My subheading</h2>
 
-<p>This is the first subsection of my document. I'd love people to be able to find this content!</p>
+<p>
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
+</p>
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content. I think it is more interesting than the last one.</p>
+<p>
+  This is the second subsection of my content. I think it is more interesting
+  than the last one.
+</p>
 ```
 
 In addition, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with.
@@ -168,8 +176,9 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 3. Use some interesting tactics to fake button behavior. Take for example our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"` (see WebAIM's [tabindex article](https://webaim.org/techniques/keyboard/tabindex) for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
 
    ```js
-   document.onkeydown = function(e) {
-     if (e.keyCode === 13) { // The Enter/Return key
+   document.onkeydown = (e) => {
+     if (e.keyCode === 13) {
+       // The Enter/Return key
        document.activeElement.onclick(e);
      }
    };

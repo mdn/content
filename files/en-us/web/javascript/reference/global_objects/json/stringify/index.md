@@ -88,7 +88,7 @@ As a function, it takes two parameters: the `key` and the `value` being stringif
 
 The `replacer` function is called for the initial object being stringified as well, in which case the `key` is an empty string (`""`). It is then called for each property on the object or array being stringified. Array indices will be provided in its string form as `key`. The current property value will be replaced with the `replacer`'s return value for stringification. This means:
 
-- If you return a {{JSxRef("Number")}}, {{JSxRef("String")}}, {{JSxRef("Boolean")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the stringified version of that value is used as the property's value.
+- If you return a number, string, boolean, or `null`, that value is directly serialized and used as the property's value. (Returning a BigInt will throw as well.)
 - If you return a {{JSxRef("Function")}}, {{JSxRef("Symbol")}}, or {{JSxRef("undefined")}}, the property is not included in the output.
 - If you return any other object, the object is recursively stringified, calling the `replacer` function on each property.
 
@@ -96,9 +96,9 @@ The `replacer` function is called for the initial object being stringified as we
 
 Typically, array elements' index would never shift (even when the element is an invalid value like a function, it will become `null` instead of omitted). Using the `replacer` function allows you to control the order of the array elements by returning a different array.
 
-### The space argument
+### The space parameter
 
-The `space` argument may be used to control spacing in the final string.
+The `space` parameter may be used to control spacing in the final string.
 
 - If it is a number, successive levels in the stringification will each be indented by this many space characters.
 - If it is a string, successive levels will be indented by this string.
@@ -185,7 +185,7 @@ JSON.stringify(
   Object.create(null, {
     x: { value: "x", enumerable: false },
     y: { value: "y", enumerable: true },
-  })
+  }),
 );
 // '{"y":"y"}'
 

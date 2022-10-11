@@ -1,6 +1,7 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -72,7 +73,7 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 
 <div class="checkbox">
   <label for="preserve"><code>preserve-3d</code></label>
-  <input type="checkbox" id="preserve" checked>
+  <input type="checkbox" id="preserve" checked />
 </div>
 ```
 

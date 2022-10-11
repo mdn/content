@@ -28,11 +28,11 @@ This element is based on, and inherits properties and methods from, the {{domxre
 - {{domxref("HTMLAudioElement.Audio", "Audio()")}}
   - : Creates and returns a new `HTMLAudioElement` object, optionally starting the process of loading an audio file into it if the file URL is given.
 
-## Properties
+## Instance properties
 
 _No specific properties; inherits properties from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. It offers no methods of its own._
 
@@ -41,7 +41,7 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{d
 _The following methods are non-standard and should not be used._
 
 - {{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.
+  - : Returns the number of samples from the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.
 - {{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.
 - {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{deprecated_inline}}

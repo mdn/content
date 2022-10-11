@@ -2,7 +2,6 @@
 title: Apple Safari
 slug: Glossary/Apple_Safari
 tags:
-  - Glossary
   - Navigation
   - WebMechanics
 ---

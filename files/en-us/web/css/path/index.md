@@ -1,6 +1,7 @@
 ---
 title: path()
 slug: Web/CSS/path
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -79,7 +80,7 @@ svg {
 
 ```html
 <svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
- <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
+  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
 </svg>
 ```
 

@@ -28,14 +28,23 @@ First of all the {{ htmlelement("video") }} element is defined, contained within
 
 ```html
 <figure id="videoContainer">
-   <video id="video" controls preload="metadata" poster="img/poster.jpg">
-      <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-      <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-      <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
-      <!-- Offer download -->
-      <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
-   </video>
-   <figcaption>&copy; Blender Foundation | <a href="http://mango.blender.org">mango.blender.org</a></figcaption>
+  <video id="video" controls preload="metadata" poster="img/poster.jpg">
+    <source
+      src="video/tears-of-steel-battle-clip-medium.mp4"
+      type="video/mp4" />
+    <source
+      src="video/tears-of-steel-battle-clip-medium.webm"
+      type="video/webm" />
+    <source
+      src="video/tears-of-steel-battle-clip-medium.ogg"
+      type="video/ogg" />
+    <!-- Offer download -->
+    <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
+  </video>
+  <figcaption>
+    &copy; Blender Foundation |
+    <a href="http://mango.blender.org">mango.blender.org</a>
+  </figcaption>
 </figure>
 ```
 
@@ -66,17 +75,17 @@ Once again the HTML is quite straightforward, using an unordered list with `list
 
 ```html
 <ul id="video-controls" class="controls">
-   <li><button id="playpause" type="button">Play/Pause</button></li>
-   <li><button id="stop" type="button">Stop</button></li>
-   <li class="progress">
-      <progress id="progress" value="0" min="0">
-         <span id="progress-bar"></span>
-      </progress>
-   </li>
-   <li><button id="mute" type="button">Mute/Unmute</button></li>
-   <li><button id="volinc" type="button">Vol+</button></li>
-   <li><button id="voldec" type="button">Vol-</button></li>
-   <li><button id="fs" type="button">Fullscreen</button></li>
+  <li><button id="playpause" type="button">Play/Pause</button></li>
+  <li><button id="stop" type="button">Stop</button></li>
+  <li class="progress">
+    <progress id="progress" value="0" min="0">
+      <span id="progress-bar"></span>
+    </progress>
+  </li>
+  <li><button id="mute" type="button">Mute/Unmute</button></li>
+  <li><button id="volinc" type="button">Vol+</button></li>
+  <li><button id="voldec" type="button">Vol-</button></li>
+  <li><button id="fs" type="button">Fullscreen</button></li>
 </ul>
 ```
 

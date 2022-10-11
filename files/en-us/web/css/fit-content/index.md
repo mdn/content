@@ -1,6 +1,7 @@
 ---
 title: fit-content
 slug: Web/CSS/fit-content
+page-type: css-keyword
 tags:
   - CSS
   - Keyword
@@ -35,7 +36,10 @@ block-size: fit-content;
 <div class="container">
   <div class="item">Item</div>
   <div class="item">Item with more text in it.</div>
-  <div class="item">Item with more text in it, hopefully we have added enough text so the text will start to wrap.</div>
+  <div class="item">
+    Item with more text in it, hopefully we have added enough text so the text
+    will start to wrap.
+  </div>
 </div>
 ```
 

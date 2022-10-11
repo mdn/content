@@ -42,7 +42,7 @@ For example, we could provide a text description of the canvas content or provid
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt="" />
+  <img src="images/clock.png" width="150" height="150" alt="Photo of a clock" />
 </canvas>
 ```
 

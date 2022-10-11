@@ -16,7 +16,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("RemotePlayback.state")}} {{ReadOnlyInline}}
 
@@ -29,7 +29,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
     - `"disconnected"`
       - : The remote playback has not been initiated, has failed to initiate, or has been stopped.
 
-## Methods
+## Instance methods
 
 - {{domxref("RemotePlayback.watchAvailability()")}}
   - : A {{jsxref("Promise")}} that resolves with a `callbackId` of an available remote playback device.
@@ -53,7 +53,8 @@ The following example demonstrates a player with custom controls that support re
 
 ```html
 <video id="videoElement" src="https://example.org/media.ext">
-<button id="deviceBtn" style="display: none;">Pick device</button>
+  <button id="deviceBtn" style="display: none;">Pick device</button>
+</video>
 ```
 
 The {{domxref("RemotePlayback.watchAvailability()")}} method is used to watch for available remote playback devices. If a device is available, use the callback to show the button.

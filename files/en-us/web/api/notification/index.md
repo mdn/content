@@ -24,9 +24,7 @@ These notifications' appearance and specific functionality vary across platforms
 - {{domxref("Notification.Notification", "Notification()")}}
   - : Creates a new instance of the `Notification` object.
 
-## Properties
-
-### Static properties
+## Static properties
 
 These properties are available only on the `Notification` object itself.
 
@@ -41,7 +39,7 @@ These properties are available only on the `Notification` object itself.
 - {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
-### Instance properties
+## Instance properties
 
 These properties are available only on instances of the `Notification` object.
 
@@ -76,16 +74,14 @@ These properties are available only on instances of the `Notification` object.
 - {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies a vibration pattern for devices with vibration hardware to emit.
 
-## Methods
-
-### Static methods
+## Static methods
 
 These methods are available only on the `Notification` object itself.
 
 - {{domxref("Notification.requestPermission()")}}
   - : Requests permission from the user to display notifications.
 
-### Instance methods
+## Instance methods
 
 These properties are available only on an instance of the `Notification` object or through its [`prototype`](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 
@@ -139,7 +135,7 @@ function notifyMe() {
 }
 ```
 
-We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see a example in action, check out our [To-do list example](https://github.com/mdn/to-do-notifications/tree/gh-pages) (also see [the app running live](https://mdn.github.io/to-do-notifications/).)
+We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see a example in action, check out our [To-do list example](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (also see [the app running live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 > **Note:** In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
 

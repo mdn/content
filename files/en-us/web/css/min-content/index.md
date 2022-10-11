@@ -1,6 +1,7 @@
 ---
 title: min-content
 slug: Web/CSS/min-content
+page-type: css-keyword
 tags:
   - CSS
   - Keyword
@@ -67,9 +68,7 @@ min-content: unset;
 ```html
 <div id="container">
   <div>Item</div>
-  <div>
-    Item with more text in it.
-  </div>
+  <div>Item with more text in it.</div>
   <div>Flexible item</div>
 </div>
 ```

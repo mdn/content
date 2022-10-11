@@ -161,8 +161,7 @@ The following MathML formula contains a more complex expression, nesting fractio
     <title>My page with scripted elements</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">
@@ -234,7 +233,7 @@ math {
 
 ```js hidden
 const scriptedElements = Array.from(
-  document.querySelectorAll("msub, msup, msubsup, munder, mover, munderover"),
+  document.querySelectorAll("msub, msup, msubsup, munder, mover, munderover")
 );
 const outputDiv = document.getElementById("output");
 function clearHighlight() {
@@ -248,7 +247,7 @@ scriptedElements.forEach((scripted) => {
     scripted.classList.add("highlight");
     outputDiv.insertAdjacentHTML(
       "beforeend",
-      `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`,
+      `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`
     );
   });
 });
@@ -276,8 +275,7 @@ Let's first perform the substitutions <math> <mi>β</mi> <mo>≔</mo> <mrow> <ms
     <title>My page with horizontal stretchy operators</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">
@@ -383,8 +381,7 @@ So far our example has actually been rendered with the [`display="block"`](/en-U
     <title>My page with moved limits and small largeop</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math>

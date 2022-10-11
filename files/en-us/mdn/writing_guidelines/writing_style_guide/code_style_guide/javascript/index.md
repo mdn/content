@@ -223,7 +223,7 @@ When writing code, you usually omit parameters you don't need. But in some code 
 To do so, use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
 
 ```js
-array.forEach((value, /* index, array */) => {
+array.forEach((value /* , index, array */) => {
   // …
 });
 ```
@@ -786,7 +786,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
 
-  ```js example-bad
+  ```js-nolint example-bad
   let var1, var2;
   let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
   ```

@@ -1,6 +1,7 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

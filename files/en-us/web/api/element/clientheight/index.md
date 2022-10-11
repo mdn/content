@@ -34,7 +34,7 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![How clientHeight property determines the inner height of an element considering the height and padding](dimensions-client.png)
 
 ## Specifications
 

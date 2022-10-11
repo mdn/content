@@ -53,11 +53,17 @@ svg {
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="200" height="100" stroke="black"
-      stroke-width="5" fill="transparent" />
+  <rect
+    x="10"
+    y="10"
+    width="200"
+    height="100"
+    stroke="black"
+    stroke-width="5"
+    fill="transparent" />
   <g stroke="seagreen" stroke-width="5" fill="skyblue">
     <rect x="20" y="20" width="80" height="80" visibility="visible" />
-    <rect x="120" y="20" width="80" height="80" visibility="hidden"/>
+    <rect x="120" y="20" width="80" height="80" visibility="hidden" />
   </g>
 </svg>
 ```
@@ -71,15 +77,20 @@ The following example toggles the CSS `visibility` of the SVG image path.
 #### HTML
 
 ```html
-<button id="nav-toggle-button" >
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="button-icon">
+<button id="nav-toggle-button">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    class="button-icon">
     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" class="invisible" />
+    <path
+      d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      class="invisible" />
     <path d="M0 0h24v24H0z" fill="none" />
   </svg>
-  <span>
-    click me
-  </span>
+  <span> click me </span>
 </button>
 ```
 
@@ -105,8 +116,12 @@ button {
 ```js
 const button = document.querySelector("button");
 button.addEventListener("click", (evt) => {
-  button.querySelector("svg > path:nth-of-type(1)").classList.toggle("invisible");
-  button.querySelector("svg > path:nth-of-type(2)").classList.toggle("invisible");
+  button
+    .querySelector("svg > path:nth-of-type(1)")
+    .classList.toggle("invisible");
+  button
+    .querySelector("svg > path:nth-of-type(2)")
+    .classList.toggle("invisible");
 });
 ```
 

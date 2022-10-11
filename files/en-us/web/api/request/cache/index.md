@@ -22,8 +22,8 @@ A `RequestCache` value. The available values are:
 
 - `default` — The browser looks for a matching request in its HTTP cache.
 
-  - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Caching#freshness), it will be returned from the cache.
-  - If there is a match but it is stale, the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+  - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
+  - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
   - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
 - `no-store` — The browser fetches the resource from the remote server without first looking in the cache, _and will not_ update the cache with the downloaded resource.
@@ -66,7 +66,7 @@ fetch("some.json", { cache: "reload" })
 fetch("some.json", { cache: "no-cache" })
   .then((response) => { /* consume the response */ });
 
-// Download a resource with economics in mind!  Prefer a cached
+// Download a resource with economics in mind! Prefer a cached
 // albeit stale response to conserve as much bandwidth as possible.
 fetch("some.json", { cache: "force-cache" })
   .then((response) => { /* consume the response */ });

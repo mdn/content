@@ -4,7 +4,6 @@ slug: Glossary/RTF
 tags:
   - Composing
   - Format
-  - Glossary
   - RTF
   - Rich Text Format
 ---

@@ -1,6 +1,7 @@
 ---
 title: column-span
 slug: Web/CSS/column-span
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout
@@ -62,13 +63,25 @@ In this example, the heading is made to span across all the columns of the artic
 <article>
   <h2>Header spanning all of the columns</h2>
   <p>
-     The h2 should span all the columns. The rest
-     of the text should be distributed among the columns.
+    The h2 should span all the columns. The rest of the text should be
+    distributed among the columns.
   </p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
 </article>
 ```
 

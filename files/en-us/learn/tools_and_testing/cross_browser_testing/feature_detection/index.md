@@ -131,7 +131,7 @@ For example, we could rewrite our previous example to use `@supports` — see [`
 }
 ```
 
-This at-rule block applies the CSS rule within only if the current browser supports both the `flex-flow: row` and `flex: 1` declarations. For each condition to work, you need to include a complete declaration (not just a property name) and NOT include the semi-colon on the end.
+This at-rule block applies the CSS rule within only if the current browser supports both the `flex-flow: row` and `flex: 1` declarations. For each condition to work, you need to include a complete declaration (not just a property name) and NOT include the semicolon on the end.
 
 `@supports` also has `OR` and `NOT` logic available — the other block applies the float layout if the flexbox properties are not available:
 
@@ -235,7 +235,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
-```css
+```html
 <link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
 ```
 
@@ -269,7 +269,7 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 2. Update your {{htmlelement("link")}} element in your HTML so it points to the correct CSS file (you should also update your {{htmlelement("title")}} element to something more suitable!):
 
    ```html
-   <link href="modernizr-css.css" rel="stylesheet">
+   <link href="modernizr-css.css" rel="stylesheet" />
    ```
 
 3. Above this `<link>` element, add a {{htmlelement("script")}} element to apply the Modernizr library to the page, as shown below. This needs to be applied to the page before any CSS (or JavaScript) that might make use of it.
@@ -281,14 +281,15 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 4. Now edit your opening `<html>` tag, so that it looks like this:
 
    ```html
-   <html class="no-js">
+   <html class="no-js">…</html>
    ```
 
 At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
 
 ```html
-<html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
-blob-constructor cookies cors (and loads of more values)">
+<html
+  class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
+blob-constructor cookies cors (and loads of more values)">…</html>
 ```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, `<html>` would be given a class name of `no-flexbox`. If it did support modern flexbox, it would get a class name of `flexbox`. If you search through the class list, you'll also see others relating to flexbox, like:
@@ -348,7 +349,6 @@ For example, load up our [`modernizr-css.html`](https://github.com/mdn/learning-
 
 ```
 Modernizr.flexbox
-Modernizr.websqldatabase
 Modernizr.xhr2
 Modernizr.fetch
 ```

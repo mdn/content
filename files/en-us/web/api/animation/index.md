@@ -24,7 +24,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.Animation()", "Animation()")}}
   - : Creates a new `Animation` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("Animation.currentTime")}}
   - : The current time value of the animation in milliseconds, whether running or paused. If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive or hasn't been played yet, its value is `null`.
@@ -49,7 +49,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.timeline")}}
   - : Gets or sets the {{domxref("AnimationTimeline", "timeline")}} associated with this animation.
 
-## Methods
+## Instance methods
 
 - {{domxref("Animation.cancel()")}}
   - : Clears all {{domxref("KeyframeEffect", "keyframeEffects")}} caused by this animation and aborts its playback.
@@ -72,7 +72,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 
 - {{domxref("Animation.cancel_event", "cancel")}}
   - : Fires when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state.
-- {{domxref("Animation.finish_event" , "finish")}}
+- {{domxref("Animation.finish_event", "finish")}}
   - : Fires when the animation finishes playing.
 - {{domxref("animation.remove_event", "remove")}}
   - : Fires when the animation is removed (i.e., put into an `active` replace state).

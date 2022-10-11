@@ -28,14 +28,14 @@ The {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}}
 - {{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}} {{Experimental_Inline}}
   - : Creates and returns a new `ContentIndexEvent` object whose type and other options are configured as specified.
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("ExtendableEvent")}}._
 
 - {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref('String')}} which identifies the deleted content index via it's `id`.
 
-## Methods
+## Instance methods
 
 _While `ContentIndexEvent` offers no methods of its own, it inherits any specified by its parent interface, {{domxref("ExtendableEvent")}}._
 
@@ -44,11 +44,10 @@ _While `ContentIndexEvent` offers no methods of its own, it inherits any specifi
 This example shows the [service worker](/en-US/docs/Web/API/ServiceWorker) script listening for the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event and logs the removed content index id.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
+self.addEventListener("contentdelete", (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
-
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
+page-type: css-property
 tags:
   - CSS
   - CSS Background
@@ -77,13 +78,9 @@ Note that the star image is partially transparent and is layered over the cat im
 
 ```html
 <div>
-  <p class="catsandstars">
-    This paragraph is full of cats<br />and stars.
-  </p>
+  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
   <p>This paragraph is not.</p>
-  <p class="catsandstars">
-    Here are more cats for you.<br />Look at them!
-  </p>
+  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
   <p>And no more.</p>
 </div>
 ```

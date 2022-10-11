@@ -1,6 +1,7 @@
 ---
 title: Grid layout and accessibility
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
+page-type: guide
 tags:
   - Accessibility
   - CSS
@@ -10,11 +11,11 @@ tags:
 
 {{CSSRef}}
 
-Those of us who have been doing web development for more years than we care to remember might consider that CSS Grid is a little bit like using "tables for layout". Back in the early days of web design, the way we constructed page layout was to use HTML tables, then fragment our design into the cells of those tables in order to create a layout. This had some advantages over the "CSS Positioning" that came afterwards, in that we could take advantage of the alignment and full height columns offered by table display. The biggest downside however was that it tied our design to the mark-up, often creating accessibility issues as it did so. In order to lay the design out in the table we often broke up the content in ways that made no sense at all when read out by a screen reader for example.
+Those of us who have been doing web development for more years than we care to remember might consider that CSS Grid is a little bit like using "tables for layout". Back in the early days of web design, the way we constructed page layout was to use HTML tables, then fragment our design into the cells of those tables in order to create a layout. This had some advantages over the "CSS Positioning" that came afterwards, in that we could take advantage of the alignment and full height columns offered by table display. The biggest downside however was that it tied our design to the markup, often creating accessibility issues as it did so. In order to lay the design out in the table we often broke up the content in ways that made no sense at all when read out by a screen reader for example.
 
 In moving to CSS we often spoke about CSS for layout enabling a separation of content and markup and presentation. The ultimate aim being that we could create a semantic and well structured document, then apply CSS to create the layout we desired. Sites such as the [CSS Zen Garden](http://www.csszengarden.com/) showcased this ability. The CSS Zen Garden challenged us to take identical markup and create a unique design using CSS.
 
-[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) does not have the same issues that tables did, our grid structure is defined in CSS rather than in the mark-up. If we need to add an element we can use something with no semantic meaning. On paper grid helps us properly fulfill that promise of content separated from mark-up, however is it possible to go too far with this idea? Is it possible that we could _create_ an accessibility issue through our use of grids?
+[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) does not have the same issues that tables did, our grid structure is defined in CSS rather than in the markup. If we need to add an element we can use something with no semantic meaning. On paper grid helps us properly fulfill that promise of content separated from markup, however is it possible to go too far with this idea? Is it possible that we could _create_ an accessibility issue through our use of grids?
 
 ## Re-ordering content in CSS Grid Layout
 

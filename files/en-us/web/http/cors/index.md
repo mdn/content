@@ -54,7 +54,11 @@ We present three scenarios that demonstrate how Cross-Origin Resource Sharing wo
 
 ### Simple requests
 
-Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the [Fetch](https://fetch.spec.whatwg.org/) spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
+Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_ from the obsolete [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology), though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn't use that term.
+
+The motivation is that the {{HTMLElement("form")}} element from HTML 4.0 (which predates cross-site {{domxref("XMLHttpRequest")}} and {{domxref("fetch")}}) can submit simple requests to any origin, so anyone writing a server must already be protecting against {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Under this assumption, the server doesn't have to opt-in (by responding to a preflight request) to receive any request that looks like a form submission, since the threat of CSRF is no worse than that of form submission. However, the server still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _share_ the response with the script.
+
+A _simple request_ is one that **meets all the following conditions**:
 
 - One of the allowed methods:
 
@@ -93,9 +97,9 @@ For example, suppose web content at `https://foo.example` wishes to invoke conte
 
 ```js
 const xhr = new XMLHttpRequest();
-const url = 'https://bar.other/resources/public-data/';
+const url = "https://bar.other/resources/public-data/";
 
-xhr.open('GET', url);
+xhr.open("GET", url);
 xhr.onreadystatechange = someHandler;
 xhr.send();
 ```
@@ -156,11 +160,11 @@ The following is an example of a request that will be preflighted:
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://bar.other/resources/post-here/');
-xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'text/xml');
+xhr.open("POST", "https://bar.other/resources/post-here/");
+xhr.setRequestHeader("X-PINGOTHER", "pingpong");
+xhr.setRequestHeader("Content-Type", "text/xml");
 xhr.onreadystatechange = handler;
-xhr.send('<person><name>Arun</name></person>');
+xhr.send("<person><name>Arun</name></person>");
 ```
 
 The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `text/xml`, and since a custom header is set, this request is preflighted.
@@ -284,11 +288,11 @@ In this example, content originally loaded from `https://foo.example` makes a si
 
 ```js
 const invocation = new XMLHttpRequest();
-const url = 'https://bar.other/resources/credentialed-content/';
+const url = "https://bar.other/resources/credentialed-content/";
 
 function callOtherDomain() {
   if (invocation) {
-    invocation.open('GET', url, true);
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();

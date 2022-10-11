@@ -66,19 +66,19 @@ The {{htmlattrxref("action","form")}} attribute defines where the data gets sent
 In this example, the data is sent to an absolute URL — `https://example.com`:
 
 ```html
-<form action="https://example.com">
+<form action="https://example.com">…</form>
 ```
 
 Here, we use a relative URL — the data is sent to a different URL on the same origin:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else">…</form>
 ```
 
 When specified with no attributes, as below, the {{HTMLElement("form")}} data is sent to the same page that the form is present on:
 
 ```html
-<form>
+<form>…</form>
 ```
 
 > **Note:** It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the {{htmlattrxref("action","form")}} attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.
@@ -103,11 +103,11 @@ Consider the following form:
 <form action="http://www.foo.com" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -143,11 +143,11 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 <form action="http://www.foo.com" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -239,7 +239,7 @@ if __name__ == "__main__":
 
 The two templates referenced in the above code are as follows (these need to be in a subdirectory called `templates` in the same directory as the `python-example.py` file, if you try to run the example yourself):
 
-- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in the [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja](https://jinja.palletsprojects.com) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja](https://jinja.palletsprojects.com) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): This template just contains a line that renders the two bits of data passed to it when it is rendered. This is done via the `hello()` function seen above, which runs when the `/hello` URL is navigated to.
 
 > **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point you should be able to run the example using `python3 python-example.py`, then navigating to `localhost:5042` in your browser.
@@ -278,7 +278,7 @@ For example:
 <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Send the file</button>

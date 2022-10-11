@@ -1,6 +1,7 @@
 ---
 title: CSS Functional Notation
 slug: Web/CSS/CSS_Functions
+page-type: guide
 tags:
   - CSS
   - CSS Data Type
@@ -100,11 +101,11 @@ The math functions allow CSS numeric values to be written as mathematical expres
 ### Stepped value functions
 
 - {{cssxref("round", "round()")}} {{Experimental_Inline}}
-  - : Contains an optional rounding strategy, and two calculations A and B, and returns the value of A, rounded according to the rounding strategy, to the nearest integer multiple of B either above or below A.
+  - : A stepped value function that returns a rounded number based on a rounding strategy.
 - {{cssxref("mod", "mod()")}} {{Experimental_Inline}}
-  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
+  - : A function that divides one number by another and returns the modulus (with the same sign as the divisor).
 - {{cssxref("rem", "rem()")}} {{Experimental_Inline}}
-  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
+  - : A function that divides one number by another and returns the remainder (with the same sign as the dividend).
 
 ### Trigonometric functions
 
@@ -126,22 +127,22 @@ The math functions allow CSS numeric values to be written as mathematical expres
 ### Exponential functions
 
 - {{cssxref("pow", "pow()")}} {{Experimental_Inline}}
-  - : Contains two comma-separated calculations A and B, both of which must resolve as a {{cssxref("&lt;number&gt;")}}, and returns the result of raising A to the power of B, returning the value as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns a base raised to the power of a number.
 - {{cssxref("sqrt", "sqrt()")}} {{Experimental_Inline}}
-  - : Contains a single calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the square root of the value as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns the square root of a number.
 - {{cssxref("hypot", "hypot()")}} {{Experimental_Inline}}
-  - : Contains one or more comma-separated calculations, and returns the length of an N-dimensional vector with components equal to each of the calculations.
+  - : An exponential function that returns the square root of the sum of squares of its arguments.
 - {{cssxref("log", "log()")}} {{Experimental_Inline}}
-  - : Contains one or two calculations (representing the value to be logarithmed, and the base of the logarithm, defaulting to e), which must both resolve as a {{cssxref("&lt;number&gt;")}}, and returns the logarithm base B of the value A, as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns the logarithm of a number.
 - {{cssxref("exp", "exp()")}} {{Experimental_Inline}}
-  - : Contains one calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the same value as pow(e, A) as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns `e` raised to the power of a number.
 
 ### Sign-related functions
 
 - {{cssxref("abs", "abs()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns the absolute value.
 - {{cssxref("sign_function", "sign()")}} {{Experimental_Inline}}
-  - : Takes a calculation and returns -1 if the numeric value is negative, \+1 if the numeric value is positive, 0⁺ if the numeric value is 0⁺, and 0⁻ if the numeric value is 0⁻.
+  - : Takes a calculation and returns the sign (positive or negative) of the number.
 
 ## Filter functions
 
@@ -276,15 +277,15 @@ The following functions are used as a value of properties to reference a value d
 - {{cssxref("attr", "attr()")}}
   - : Used to retrieve the value of an attribute of the selected element and use it in the stylesheet.
 - {{cssxref("env", "env()")}}
-  - : Used to insert the value of a user agent-defined environment variable.
+  - : Used to insert the value of a user-agent defined environment variable.
 - {{cssxref("url", "url()")}}
   - : Used to include a file.
 - {{cssxref("var", "var()")}}
   - : Used to insert a value of a custom property instead of any part of a value of another property.
 
-## CSS grid functions
+## Grid functions
 
-The following functions are used to define a CSS grid.
+The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 - {{cssxref("fit-content", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.

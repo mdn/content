@@ -1,6 +1,7 @@
 ---
 title: General sibling combinator
 slug: Web/CSS/General_sibling_combinator
+page-type: css-combinator
 tags:
   - CSS
   - Reference
@@ -46,9 +47,9 @@ p ~ span {
 <span>And here is a red span!</span>
 <span>And this is a red span!</span>
 <code>More code…</code>
-<div> How are you? </div>
-<p> Whatever it may be, keep smiling. </p>
-<h1> Dream big </h1>
+<div>How are you?</div>
+<p>Whatever it may be, keep smiling.</p>
+<h1>Dream big</h1>
 <span>And yet again this is a red span!</span>
 ```
 

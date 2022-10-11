@@ -1,6 +1,7 @@
 ---
 title: font-language-override
 slug: Web/CSS/font-language-override
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -63,7 +64,9 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 
 ```html
 <p class="para1">Default language setting.</p>
-<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+<p class="para2">
+  This is a string with the <code>font-language-override</code> set to Danish.
+</p>
 ```
 
 #### CSS

@@ -24,12 +24,12 @@ The **`PerformanceObserver`** interface is used to _observe_ performance measure
 - {{domxref("PerformanceObserver.PerformanceObserver","PerformanceObserver()")}}
   - : Creates and returns a new `PerformanceObserver` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("PerformanceObserver.supportedEntryTypes")}} {{ReadOnlyInline}}
   - : Returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceObserver.observe","PerformanceObserver.observe()")}}
   - : Specifies the set of {{domxref("PerformanceEntry.entryType","entry types")}} to observe. The performance observer's callback function will be invoked when a {{domxref("PerformanceEntry","performance entry")}} is recorded for one of the specified `entryTypes`

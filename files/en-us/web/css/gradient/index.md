@@ -1,6 +1,7 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -111,7 +112,7 @@ Simple repeating linear and radial gradient examples.
 
 ```html hidden
 <div class="linear-repeat">Repeating linear gradient</div>
-<br>
+<br />
 <div class="radial-repeat">Repeating radial gradient</div>
 ```
 

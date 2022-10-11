@@ -1,6 +1,7 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Alignment
@@ -110,9 +111,9 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 ```html
 <div id="container">
   <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
+  <div class="small">Lorem<br />ipsum</div>
   <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>ipsum</div>
+  <div class="large">Lorem<br />ipsum</div>
   <div class="large"></div>
   <div class="large"></div>
 </div>
@@ -125,11 +126,13 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="vertical-lr">vertical-lr</option>
   <option value="sideways-rl">sideways-rl</option>
   <option value="sideways-lr">sideways-lr</option>
-</select><code>;</code><br/>
+</select><code>;</code><br />
+
 <code>direction:</code><select id="direction">
   <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option>
-</select><code>;</code><br/>
+  <option value="rtl">rtl</option></select
+><code>;</code><br />
+
 <code>place-content:</code><select id="alignContentAlignment">
   <option value="normal">normal</option>
   <option value="first baseline">first baseline</option>
@@ -147,7 +150,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="safe">safe</option>
   <option value="unsafe">unsafe</option>
 </select>
-  <select id="justifyContentAlignment">
+<select id="justifyContentAlignment">
   <option value="normal">normal</option>
   <option value="space-between">space-between</option>
   <option value="space-around">space-around</option>
@@ -161,8 +164,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="left">left</option>
   <option value="right">right</option>
   <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option>
-</select><code>;</code>
+  <option value="unsafe">unsafe</option></select><code>;</code>
 ```
 
 ```js hidden
@@ -172,7 +174,7 @@ function update() {
 }
 
 const alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
+alignContentAlignment.addEventListener("change", update);
 
 const justifyContentAlignment = document.getElementById("justifyContentAlignment");
 justifyContentAlignment.addEventListener("change", update);

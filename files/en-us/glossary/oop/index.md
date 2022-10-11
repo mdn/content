@@ -4,7 +4,6 @@ slug: Glossary/OOP
 tags:
   - Beginner
   - CodingScripting
-  - Glossary
 ---
 
 **OOP** (Object-Oriented Programming) is an approach in programming in which data is encapsulated within **{{glossary("object","objects")}}** and the object itself is operated on, rather than its component parts.

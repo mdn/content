@@ -24,7 +24,7 @@ property console. It's exposed as {{domxref("Window.console")}}, and can be refe
 `console`. For example:
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 This page documents the [Methods](#methods) available on the `console` object and
@@ -32,7 +32,7 @@ gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
-## Methods
+## Instance methods
 
 - {{domxref("console.assert()")}}
   - : Log a message and stack trace to console if the first argument is `false`.
@@ -138,8 +138,8 @@ When passing a string to one of the `console` object's methods that accepts a st
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
 ```js
-for (let i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+for (let i = 0; i < 5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
 }
 ```
 
@@ -158,7 +158,10 @@ Hello, Bob. You've called me 5 times.
 You can use the `%c` directive to apply a CSS style to console output:
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px"
+);
 ```
 
 The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.
@@ -168,7 +171,12 @@ The text before the directive will not be affected, but the text after the direc
 You may use `%c` multiple times:
 
 ```js
-console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");
+console.log(
+  "Multiple styles: %cred %corange",
+  "color: red",
+  "color: orange",
+  "Additional unformatted message"
+);
 ```
 
 The properties usable along with the `%c` syntax are as follows (at least, in Firefox — they may differ in other browsers):

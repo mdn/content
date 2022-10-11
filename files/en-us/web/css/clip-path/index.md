@@ -1,6 +1,7 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -116,7 +117,8 @@ The `clip-path` property is specified as one or a combination of the values list
 <svg class="defs">
   <defs>
     <clipPath id="myPath" clipPathUnits="objectBoundingBox">
-      <path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
+      <path
+        d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
     </clipPath>
   </defs>
 </svg>
@@ -125,14 +127,14 @@ The `clip-path` property is specified as one or a combination of the values list
   <div class="col">
     <div class="note">clip-path: none</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="none">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="none">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="none">
@@ -145,7 +147,8 @@ The `clip-path` property is specified as one or a combination of the values list
       </div>
     </div>
 
-    <div class="note">clip-path: url(#myPath)<br><br>
+    <div class="note">
+      clip-path: url(#myPath)<br /><br />
       Assuming the following clipPath definition:
       <pre>
 &lt;svg&gt;
@@ -156,17 +159,18 @@ The `clip-path` property is specified as one or a combination of the values list
       A 0.25,0.25,1,1,1,1,0.3
       C 1,0.7,0.5,1,0.5,1 Z" /&gt;
   &lt;/clipPath&gt;
-&lt;/svg&gt;</pre>
+&lt;/svg&gt;</pre
+      >
     </div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="svg">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="svg">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg">
@@ -179,17 +183,19 @@ The `clip-path` property is specified as one or a combination of the values list
       </div>
     </div>
 
-    <div class="note">clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z')
+    <div class="note">
+      clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45
+      Q135,90,75,130 Q15,90,15,45 Z')
     </div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="svg2">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="svg2">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg2">
@@ -204,14 +210,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: circle(25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape1">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape1">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape1">
@@ -226,14 +232,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape2">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape2">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape2">
@@ -248,14 +254,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: fill-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape3">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape3">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape3">
@@ -270,14 +276,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: stroke-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape4">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape4">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape4">
@@ -292,14 +298,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: view-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape5">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape5">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape5">
@@ -314,14 +320,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: margin-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape6">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape6">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape6">
@@ -336,14 +342,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: border-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape7">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape7">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape7">
@@ -358,14 +364,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: padding-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape8">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape8">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape8">
@@ -380,14 +386,14 @@ The `clip-path` property is specified as one or a combination of the values list
 
     <div class="note">clip-path: content-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape9">
-            I LOVE<br><em>clipping</em>
-          </p>
+          <p class="shape9">I LOVE<br /><em>clipping</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
+      <div class="cell">
+        <span>SVG</span>
         <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape9">
@@ -552,15 +558,14 @@ svg text.em {
 #### HTML
 
 ```html
-<img id="clipped" src="mdn.svg"
-    alt="MDN logo">
+<img id="clipped" src="mdn.svg" alt="MDN logo" />
 <svg height="0" width="0">
   <defs>
     <clipPath id="cross">
-      <rect y="110" x="137" width="90" height="90"/>
-      <rect x="0" y="110" width="90" height="90"/>
-      <rect x="137" y="0" width="90" height="90"/>
-      <rect x="0" y="0" width="90" height="90"/>
+      <rect y="110" x="137" width="90" height="90" />
+      <rect x="0" y="110" width="90" height="90" />
+      <rect x="137" y="0" width="90" height="90" />
+      <rect x="0" y="0" width="90" height="90" />
     </clipPath>
   </defs>
 </svg>
@@ -570,7 +575,9 @@ svg text.em {
   <option value="circle(100px at 110px 100px)">circle</option>
   <option value="url(#cross)" selected>cross</option>
   <option value="inset(20px round 20px)">inset</option>
-  <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">path</option>
+  <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
+    path
+  </option>
 </select>
 ```
 

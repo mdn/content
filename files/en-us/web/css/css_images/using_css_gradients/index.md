@@ -1,6 +1,7 @@
 ---
 title: Using CSS gradients
 slug: Web/CSS/CSS_Images/Using_CSS_gradients
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -292,7 +293,8 @@ In both examples, the gradient is written twice: the first is the CSS Images Lev
 By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the {{Glossary("interpolation")}}, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to highlight the difference the color hint can make:
 
 ```html hidden
-<div class="colorhint-gradient"></div> <div class="regular-progression"></div>
+<div class="colorhint-gradient"></div>
+<div class="regular-progression"></div>
 ```
 
 ```css hidden

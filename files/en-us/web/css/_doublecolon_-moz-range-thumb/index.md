@@ -1,6 +1,7 @@
 ---
 title: '::-moz-range-thumb'
 slug: Web/CSS/::-moz-range-thumb
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -28,7 +29,7 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS

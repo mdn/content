@@ -3,7 +3,6 @@ title: Truthy
 slug: Glossary/Truthy
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

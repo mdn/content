@@ -74,7 +74,7 @@ Then, copy and paste the following commands into your terminal to delete some un
 # Move into the src directory of your project
 cd src
 # Delete a few files
-rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
+rm -- App.test.js App.css logo.svg reportWebVitals.js setupTests.js
 # Move back up to the root of the project
 cd ..
 ```
@@ -92,7 +92,7 @@ As a starting point for this project, we're going to provide two things: An `App
 
 Copy the following snippet to your clipboard, then paste it into `App.js` so that it replaces the existing `App()` function:
 
-```js
+```jsx
 function App(props) {
   return (
     <div className="todoapp stack-large">
@@ -234,8 +234,7 @@ Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">…</ul>
 ```
 
 The `role` attribute helps assistive technology explain what kind of element a tag represents. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out [Scott O'Hara's article, "Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
@@ -244,7 +243,7 @@ The `aria-labelledby` attribute tells assistive technologies that we're treating
 
 Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
-```html
+```jsx
 <input id="todo-0" type="checkbox" defaultChecked={true} />
 <label className="todo-label" htmlFor="todo-0">
   Eat

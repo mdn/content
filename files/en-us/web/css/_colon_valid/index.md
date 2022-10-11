@@ -1,6 +1,7 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -34,7 +35,7 @@ In this example, we use structures like this, which include extra `<span>`s to g
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```

@@ -3,7 +3,6 @@ title: Encryption
 slug: Glossary/Encryption
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---

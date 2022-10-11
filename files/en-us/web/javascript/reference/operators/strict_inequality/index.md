@@ -32,9 +32,9 @@ It is the negation of the
 so the following two lines will always give the same result:
 
 ```js
-x !== y
+x !== y;
 
-!(x === y)
+!(x === y);
 ```
 
 For details of the comparison algorithm, see the page for the
@@ -52,41 +52,39 @@ operands of different types to be different:
 ### Comparing operands of the same type
 
 ```js
-console.log("hello" !== "hello");   // false
-console.log("hello" !== "hola");    // true
+"hello" !== "hello"; // false
+"hello" !== "hola"; // true
 
-console.log(3 !== 3);               // false
-console.log(3 !== 4);               // true
+3 !== 3; // false
+3 !== 4; // true
 
-console.log(true !== true);         // false
-console.log(true !== false);        // true
+true !== true; // false
+true !== false; // true
 
-console.log(null !== null);         // false
+null !== null; // false
 ```
 
 ### Comparing operands of different types
 
 ```js
-console.log("3" !== 3);           // true
-
-console.log(true !== 1);          // true
-
-console.log(null !== undefined);  // true
+"3" !== 3; // true
+true !== 1; // true
+null !== undefined; // true
 ```
 
 ### Comparing objects
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  key: "value",
+};
 
 const object2 = {
-  name: "hello"
-}
+  key: "value",
+};
 
-console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false
+console.log(object1 !== object2); // true
+console.log(object1 !== object1); // false
 ```
 
 ## Specifications

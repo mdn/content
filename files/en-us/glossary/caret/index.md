@@ -3,7 +3,6 @@ title: caret
 slug: Glossary/caret
 tags:
   - Cursor
-  - Glossary
   - Input
   - caret
   - insertion point

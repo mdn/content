@@ -17,7 +17,7 @@ The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -40,7 +40,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGStyleElement.disabled")}}
   - : A boolean value indicating whether or not the associated stylesheet is disabled.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
@@ -55,8 +55,10 @@ To dynamically create an SVG style element (`SVGStyleElement`), you need to use 
 Given the following SVG element:
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <circle cx="50" cy="50" r="25" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="25" />
 </svg>
 ```
 
@@ -83,7 +85,9 @@ These include: {{domxref("Document.getElementsByTagName()")}}, {{domxref("Docume
 For example, consider the HTML below that defines an SVG file with a style element.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id">
     circle {
       fill: gold;
@@ -126,7 +130,9 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 ```html
 <button>Disable</button>
 <textarea id="log" rows="6" cols="90"></textarea>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id" media="all and (min-width: 600px)">
     circle {
       fill: gold;

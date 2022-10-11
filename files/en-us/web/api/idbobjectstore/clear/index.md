@@ -54,8 +54,8 @@ operation are fired.
 
 In the following code snippet, we open a read/write transaction on our database and
 clear all the current data out of the object store using `clear()`. For a
-full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view example live](https://mdn.github.io/to-do-notifications/).)
+full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
+([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -68,7 +68,7 @@ DBOpenRequest.onsuccess = (event) => {
   // This is used a lot below
   db = DBOpenRequest.result;
 
-  // Clear all the data form the object store
+  // Clear all the data from the object store
   clearData();
 };
 
@@ -114,4 +114,4 @@ function clearData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

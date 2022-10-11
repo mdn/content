@@ -1,6 +1,7 @@
 ---
-title: gap (grid-gap)
+title: gap
 slug: Web/CSS/gap
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -18,6 +19,8 @@ browser-compat: css.properties.gap
 The **`gap`** [CSS](/en-US/docs/Web/CSS) property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
+
+Note that `grid-gap` is an alias for this property.
 
 ## Syntax
 
@@ -157,9 +160,8 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS <code>gap</code> property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 

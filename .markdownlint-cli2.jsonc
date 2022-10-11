@@ -20,7 +20,9 @@
     "MD025": {
       "front_matter_title": "^\\s*title\\s*[:=]"
     },
-    "MD026": false,
+    "MD026": {
+      "punctuation": ".,;:"
+    },
     // Consectutive Notes/Callouts currently don't conform with this rule
     "MD028": false,
     // Force orderd numbering to catch accidental list ending from indenting
@@ -32,7 +34,6 @@
         "a",
         "abbr",
         "annotation",
-        "base",
         "br",
         "caption",
         "code",
@@ -40,7 +41,6 @@
         "colgroup",
         "dd",
         "details",
-        "dfn",
         "div",
         "dl",
         "dt",
@@ -82,6 +82,7 @@
         "ol",
         "p",
         "pre",
+        "q",
         "section",
         "semantics",
         "strong",
@@ -156,10 +157,17 @@
           "searchPattern": "/  +$/gm",
           "replace": "",
           "skipCode": false
+        },
+        {
+          "name": "double-spaces",
+          "message": "Avoid double spaces",
+          "searchPattern": "/([^\\s>])  ([^\\s|])/g",
+          "replace": "$1 $2",
+          "skipCode": true
         }
       ]
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules"]
+  "ignores": ["node_modules", ".github"]
 }

@@ -56,7 +56,7 @@ let cookies = cookieStore.getAll();
 if (cookies) {
   console.log(cookies);
 } else {
-  console.log('Cookie not found');
+  console.log("Cookie not found");
 }
 ```
 

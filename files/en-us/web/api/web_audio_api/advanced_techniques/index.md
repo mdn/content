@@ -427,7 +427,7 @@ const durControl = document.querySelector("#duration");
 durControl.addEventListener(
   "input",
   (ev) => {
-    noiseDuration = parseInt(ev.target.value, 10);
+    noiseDuration = parseFloat(ev.target.value);
   },
   false
 );

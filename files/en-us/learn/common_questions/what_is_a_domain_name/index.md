@@ -10,6 +10,8 @@ tags:
   - Web
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 <table>
   <tbody>
     <tr>
@@ -40,7 +42,7 @@ Domain names are a key part of the Internet infrastructure. They provide a human
 
 Any Internet-connected computer can be reached through a public {{Glossary("IP")}} address, either an IPv4 address (e.g. `173.194.121.32`) or an IPv6 address (e.g., `2027:0da8:8b73:0000:0000:8a2e:0370:1337`).
 
-Computers can handle such addresses easily, but people have a hard time finding out who's running the server or what service the website offers. IP addresses are hard to remember and might change over time.
+Computers can handle such addresses easily, but people have a hard time finding out who is running the server or what service the website offers. IP addresses are hard to remember and might change over time.
 
 To solve all those problems we use human-readable addresses called domain names.
 
@@ -72,7 +74,7 @@ Each of those parts provides specific information about the whole domain name.
 
     The label located right before the TLD is also called a _Secondary Level Domain_ (SLD).
 
-    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a valid domain name. For any domain you control (e.g. [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](https://developer.mozilla.org), [iot.mozilla.org](https://iot.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org).
+    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a valid domain name. For any domain you control (e.g. [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](/), [iot.mozilla.org](https://iot.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org).
 
 ### Buying a domain name
 
@@ -162,6 +164,6 @@ As we already saw, when you want to display a webpage in your browser it's easie
 Okay, we talked a lot about processes and architecture. Time to move on.
 
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn/Common_questions/Common_web_layouts).
-- It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a web site](/en-US/docs/Learn/Common_questions/How_much_does_it_cost).
+- It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn/Common_questions/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
 - You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS works.

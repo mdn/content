@@ -31,12 +31,12 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("AmbientLightSensor.AmbientLightSensor()", "AmbientLightSensor()")}} {{Experimental_Inline}}
   - : Creates a new `AmbientLightSensor` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('AmbientLightSensor.illuminance')}} {{Experimental_Inline}}
   - : Returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
-## Methods
+## Instance methods
 
 _`AmbientLightSensor` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
@@ -47,12 +47,12 @@ _`AmbientLightSensor` doesn't have own events. However, it inherits events from 
 ## Example
 
 ```js
-if ('AmbientLightSensor' in window) {
+if ("AmbientLightSensor" in window) {
   const sensor = new AmbientLightSensor();
-  sensor.addEventListener('reading', (event) => {
-    console.log('Current light level:', sensor.illuminance);
+  sensor.addEventListener("reading", (event) => {
+    console.log("Current light level:", sensor.illuminance);
   });
-  sensor.addEventListener('error', (event) => {
+  sensor.addEventListener("error", (event) => {
     console.log(event.error.name, event.error.message);
   });
   sensor.start();

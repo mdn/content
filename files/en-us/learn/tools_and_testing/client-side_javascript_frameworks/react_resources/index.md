@@ -45,9 +45,9 @@ Although this tutorial doesn't use this approach, many React applications define
 
 `create-react-app` makes it possible to import CSS files into JavaScript modules, so that CSS is only sent to your user when the corresponding component is rendered. For this app, we could have for example written a dedicated `Form.css` file to house the styles of those respective components, then imported the styles into their respective modules like this:
 
-```js
-import Form from './Form';
-import './Form.css'
+```jsx
+import Form from "./Form";
+import "./Form.css";
 ```
 
 This approach makes it easy to identify and manage the CSS that belongs to a specific component. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to limit the amount of irrelevant code that's sent to your user. You'll likely have app-wide styles and specific component styles that built on top of those.

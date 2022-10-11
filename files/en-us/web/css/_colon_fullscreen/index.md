@@ -1,6 +1,7 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
+page-type: css-pseudo-class
 tags:
   - CSS
   - Fullscreen
@@ -38,9 +39,11 @@ The page's HTML looks like this:
 ```html
 <h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+<p>
+  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle fullscreen mode on and off,
-  entirely using CSS.</p>
+  entirely using CSS.
+</p>
 
 <button id="fs-toggle">Toggle Fullscreen</button>
 ```

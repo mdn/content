@@ -1,6 +1,7 @@
 ---
 title: lab()
 slug: Web/CSS/color_value/lab
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

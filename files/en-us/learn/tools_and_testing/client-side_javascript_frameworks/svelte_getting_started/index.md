@@ -201,7 +201,10 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 
 <style>
@@ -246,7 +249,10 @@ In the markup section you can insert any HTML you like, and in addition you can 
 ```html
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -316,18 +322,21 @@ Try updating your `<script>` and markup sections like so:
   export let name;
 
   function toggleName() {
-    if (name === 'world') {
-      name = 'Svelte'
+    if (name === "world") {
+      name = "Svelte";
     } else {
-      name = 'world'
+      name = "world";
     }
   }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <button on:click={toggleName}>Toggle name</button>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <button on:click="{toggleName}">Toggle name</button>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -342,13 +351,13 @@ Note the use of `:` in `on:click`. That's Svelte's syntax for listening to DOM e
 Let's open `src/main.js`, which is where the `App` component is being imported and used. This file is the entry point for our app, and it initially looks like this:
 
 ```js
-import App from './App.svelte';
+import App from "./App.svelte";
 
 const app = new App({
   target: document.body,
   props: {
-    name: 'world'
-  }
+    name: "world",
+  },
 });
 
 export default app;
@@ -372,21 +381,20 @@ Finally the file `public/index.html` includes the generated `bundle.css` and `bu
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Svelte app</title>
+    <title>Svelte app</title>
 
-  <link rel='icon' type='image/png' href='/favicon.png'>
-  <link rel='stylesheet' href='/global.css'>
-  <link rel='stylesheet' href='/build/bundle.css'>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/build/bundle.css" />
 
-  <script defer src='/build/bundle.js'></script>
-</head>
+    <script defer src="/build/bundle.js"></script>
+  </head>
 
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

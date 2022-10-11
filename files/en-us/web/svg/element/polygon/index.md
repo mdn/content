@@ -31,8 +31,7 @@ svg {
   <polygon points="0,100 50,25 50,75 100,0" />
 
   <!-- Example of the same polygon shape with stroke and no fill -->
-  <polygon points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 

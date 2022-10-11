@@ -1,6 +1,7 @@
 ---
 title: border-top-color
 slug: Web/CSS/border-top-color
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -58,9 +59,10 @@ The `border-top-color` property is specified as a single value.
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 

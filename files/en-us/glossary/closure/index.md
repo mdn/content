@@ -3,7 +3,6 @@ title: Closure
 slug: Glossary/Closure
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 The binding which defines the **{{glossary("scope")}}** of execution. In {{glossary("JavaScript")}}, **{{glossary("function","functions")}}** create a closure context.

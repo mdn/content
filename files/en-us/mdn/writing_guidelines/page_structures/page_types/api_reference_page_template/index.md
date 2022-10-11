@@ -70,7 +70,16 @@ The summary paragraph — start by naming the interface, saying what API it is p
 - {{DOMxRef("NameOfTheInterface.NameOfTheInterface", "NameOfTheInterface()")}}
   - : Creates a new instance of the {{DOMxRef("NameOfTheInterface")}} object.
 
-## Properties
+## Static properties
+
+_Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+
+- {{DOMxRef("NameOfTheInterface.staticProperty1")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Include a brief description of the property and what it does here. Include one term and definition for each property. If the property is not readonly/experimental/deprecated, remove the relevant macro calls.
+- {{DOMxRef("NameOfTheInterface.staticProperty2")}}
+  - : etc.
+
+## Instance properties
 
 _Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
@@ -79,7 +88,16 @@ _Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInte
 - {{DOMxRef("NameOfTheInterface.property2")}}
   - : etc.
 
-## Methods
+## Static methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+
+- {{DOMxRef("NameOfTheInterface.staticMethod1()")}} {{Experimental_Inline}} {{Deprecated_Inline}}
+  - : Include a brief description of the method and what it does here. Include one term and definition for each method. If the method is not experimental/deprecated, remove the relevant macro calls.
+- {{DOMxRef("NameOfTheInterface.staticMethod2()")}}
+  - : etc.
+
+## Instance methods
 
 _Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
@@ -103,6 +121,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
+Note that we use the plural "Examples" even if the page only contains one example.
+
 ### A descriptive heading
 
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
@@ -119,9 +139,11 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ## Examples
 >
 > ### Using the fetch API
+>
 > Example of Fetch
 >
 > ### More examples
+>
 > Links to more examples on other pages
 > ```
 >
@@ -130,10 +152,9 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
 > ```md
->  ## Examples
+> ## Examples
 >
->  For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
 > ```
 
 ## Specifications

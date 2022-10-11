@@ -20,7 +20,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("ImageDecoder.ImageDecoder", "ImageDecoder()")}} {{Experimental_Inline}}
   - : Creates a new `ImageDecoder` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageDecoder.complete")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean value indicating whether encoded data is completely buffered.
@@ -31,7 +31,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("ImageDecoder.type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string reflecting the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) configured during construction.
 
-## Methods
+## Instance methods
 
 - {{domxref("ImageDecoder.close()")}} {{Experimental_Inline}}
   - : Ends all pending work and releases system resources.

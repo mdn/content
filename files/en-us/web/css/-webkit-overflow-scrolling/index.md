@@ -1,6 +1,7 @@
 ---
 title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
+page-type: css-property
 tags:
   - CSS
   - CSS Property

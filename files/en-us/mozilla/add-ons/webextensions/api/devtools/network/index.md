@@ -5,6 +5,7 @@ tags:
   - API
   - Add-ons
   - Extensions
+  - Property
   - Reference
   - WebExtensions
   - devtools.network
