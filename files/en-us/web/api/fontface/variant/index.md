@@ -18,7 +18,7 @@ browser-compat: api.FontFace.variant
 
 The **`variant`** property of the
 {{domxref("FontFace")}} interface programmatically retrieves or sets font variant
-values. 
+values.
 
 ## Value
 
