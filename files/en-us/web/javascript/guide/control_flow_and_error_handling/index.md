@@ -334,7 +334,7 @@ block is skipped. The `finally` block executes after the `try` and
 The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
-(`0`–`11`), an exception is thrown with the value
+(`1`–`12`), an exception is thrown with the value
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
