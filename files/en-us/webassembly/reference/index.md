@@ -1,5 +1,5 @@
 ---
-title: WebAssembly language reference
+title: WebAssembly instruction reference
 slug: WebAssembly/Reference
 tags:
   - WebAssembly
