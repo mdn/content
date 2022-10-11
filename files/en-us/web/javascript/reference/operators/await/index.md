@@ -23,7 +23,7 @@ await expression
 ### Parameters
 
 - `expression`
-  - : A {{jsxref("Promise")}}, [thenable object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), or any value to wait for.
+  - : A {{jsxref("Promise")}}, a [thenable object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), or any value to wait for.
 
 ### Return value
 
