@@ -15,7 +15,7 @@ browser-compat: api.Permissions
 
 The Permissions interface of the [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the core Permission API functionality, such as methods for querying and revoking permissions
 
-## Methods
+## Instance methods
 
 - {{domxref("Permissions.query","Permissions.query()")}}
   - : Returns the user permission status for a given API.

@@ -36,7 +36,7 @@ The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, ca
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, both the start tag and the end tag are mandatory.</td>
+      <td>None; both the start tag and the end tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

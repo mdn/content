@@ -21,7 +21,7 @@ The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
 - {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}
   - : Returns a new `NDEFReader` object.
 
-## Methods
+## Instance methods
 
 _The `NDEFReader` interface inherits the methods of {{domxref("EventTarget")}}, its parent interface._
 

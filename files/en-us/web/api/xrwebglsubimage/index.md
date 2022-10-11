@@ -20,7 +20,7 @@ The **`XRWebGLSubImage`** interface is used during rendering of WebGL layers.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("XRSubImage")}}._
 

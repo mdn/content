@@ -40,12 +40,12 @@ In other cases, the `NodeList` is _static,_ where any changes in the DOM do not 
 
 It's good to keep this distinction in mind when you choose how to iterate over the items in the `NodeList`, and whether you should cache the list's `length`.
 
-## Properties
+## Instance properties
 
 - {{domxref("NodeList.length")}}
   - : The number of nodes in the `NodeList`.
 
-## Methods
+## Instance methods
 
 - {{domxref("NodeList.item()")}}
 

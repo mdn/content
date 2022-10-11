@@ -14,7 +14,7 @@ browser-compat: api.TextMetrics
 
 The **`TextMetrics`** interface represents the dimensions of a piece of text in the canvas; a `TextMetrics` instance can be retrieved using the {{domxref("CanvasRenderingContext2D.measureText()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("TextMetrics.width")}} {{ReadOnlyInline}}
   - : A `double` giving the calculated width of a segment of inline text in CSS pixels. It takes into account the current font of the context.

@@ -21,11 +21,11 @@ The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) th
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 _Inherits methods from {{domxref('CSSStyleValue')}}._
 

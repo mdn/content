@@ -24,9 +24,7 @@ These notifications' appearance and specific functionality vary across platforms
 - {{domxref("Notification.Notification", "Notification()")}}
   - : Creates a new instance of the `Notification` object.
 
-## Properties
-
-### Static properties
+## Static properties
 
 These properties are available only on the `Notification` object itself.
 
@@ -41,7 +39,7 @@ These properties are available only on the `Notification` object itself.
 - {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
-### Instance properties
+## Instance properties
 
 These properties are available only on instances of the `Notification` object.
 
@@ -76,16 +74,14 @@ These properties are available only on instances of the `Notification` object.
 - {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies a vibration pattern for devices with vibration hardware to emit.
 
-## Methods
-
-### Static methods
+## Static methods
 
 These methods are available only on the `Notification` object itself.
 
 - {{domxref("Notification.requestPermission()")}}
   - : Requests permission from the user to display notifications.
 
-### Instance methods
+## Instance methods
 
 These properties are available only on an instance of the `Notification` object or through its [`prototype`](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 

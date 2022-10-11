@@ -87,23 +87,11 @@ The remembered value is not used if the child elements are being rendered (if si
 
 ### Setting the intrinsic size
 
-This example provides a button that can be used to apply and remove `contain-intrinsic-size`, and another button that toggles the `content-visibility` though `visible`, `auto` and `hidden`.
+This example provides selection lists that can be used to modify `contain-intrinsic-size`, `content-visibility` and `contain` on an element in order to observe the effect of the different settings.
 
 #### CSS
 
 ```css
-.intrinsic_size_on {
-  contain-intrinsic-size: auto 40px auto 130px;
-}
-.hidden {
-  content-visibility: hidden;
-}
-.visible {
-  content-visibility: visible;
-}
-.auto {
-  content-visibility: auto;
-}
 #contained_element {
   border: 2px solid green;
   width: 120px;
@@ -118,39 +106,42 @@ This example provides a button that can be used to apply and remove `contain-int
 
 #### JavaScript
 
-The code below adds and removes classes to the containing element, which in turn set the properties for different `content-visibility` settings and add/remove `contain-intrinsic-size`.
+The code below adds styles to, and removes styles from, the containing element based on the selected options.
 
 ```js
 const containedElement = document.querySelector("#contained_element");
-const buttonIntrinsic = document.getElementById("intrinsic_size");
-const buttonVisibility = document.getElementById("visibility");
+const intrinsicSizeSelector = document.querySelector(
+  "#contain_intrinsic_size_selector"
+);
+const containSelector = document.querySelector("#contain_selector");
+const contentVisibilitySelector = document.querySelector(
+  "#content_visibility_selector"
+);
 
-buttonIntrinsic.addEventListener("click", () => {
-  containedElement.classList.toggle("intrinsic_size_on");
-  if (containedElement.classList.contains("intrinsic_size_on")) {
-    buttonIntrinsic.innerText = "Intrinsic Size: On";
-  } else {
-    buttonIntrinsic.innerText = "Intrinsic Size: Off";
-  }
+containedElement.style["contain-intrinsic-size"] =
+  intrinsicSizeSelector.options[intrinsicSizeSelector.selectedIndex].text;
+containedElement.style["contain"] =
+  containSelector.options[containSelector.selectedIndex].text;
+containedElement.style["content-visibility"] =
+  contentVisibilitySelector.options[
+    contentVisibilitySelector.selectedIndex
+  ].text;
+
+intrinsicSizeSelector.addEventListener("change", () => {
+  containedElement.style["contain-intrinsic-size"] =
+    intrinsicSizeSelector.options[intrinsicSizeSelector.selectedIndex].text;
 });
 
-buttonVisibility.addEventListener("click", () => {
-  if (containedElement.classList.contains("hidden")) {
-    buttonVisibility.innerText = "Visible";
-    containedElement.classList.add("visible");
-    containedElement.classList.remove("hidden");
-    containedElement.classList.remove("auto");
-  } else if (containedElement.classList.contains("visible")) {
-    buttonVisibility.innerText = "Auto";
-    containedElement.classList.add("auto");
-    containedElement.classList.remove("visible");
-    containedElement.classList.remove("hidden");
-  } else {
-    buttonVisibility.innerText = "Hidden";
-    containedElement.classList.add("hidden");
-    containedElement.classList.remove("visible");
-    containedElement.classList.remove("auto");
-  }
+containSelector.addEventListener("change", () => {
+  containedElement.style["contain"] =
+    containSelector.options[containSelector.selectedIndex].text;
+});
+
+contentVisibilitySelector.addEventListener("change", () => {
+  containedElement.style["content-visibility"] =
+    contentVisibilitySelector.options[
+      contentVisibilitySelector.selectedIndex
+    ].text;
 });
 ```
 
@@ -159,18 +150,39 @@ buttonVisibility.addEventListener("click", () => {
 The HTML defines two buttons, a container element that is subject to containment via the `content-visibility` property.
 
 ```html
-<button id="intrinsic_size">Intrinsic size: On</button>
-<button id="visibility">Visible</button>
-<div id="contained_element" class="visible intrinsic_size_on">
+<p>
+<label for="contain_intrinsic_size_selector">contain-intrinsic-size:</label>
+<select id="contain_intrinsic_size_selector">
+  <option>none</option>
+  <option>40px 130px</option>
+  <option>auto 40px auto 130px</option>
+</select>;<br/>
+
+<label for="contain_selector">contain:</label>
+<select id="contain_selector">
+  <option>none</option>
+  <option>size</option>
+  <option>strict</option>
+</select>;<br/>
+
+<label for="content_visibility_selector">content-visibility:</label>
+<select id="content_visibility_selector">
+  <option>visible</option>
+  <option>auto</option>
+  <option>hidden</option>
+</select>;
+</p>
+
+<div id="contained_element">
   <div class="child_element"></div>
 </div>
 ```
 
 #### Result
 
-Toggle the buttons to add/remove the `contain-intrinsic-size` property and to cycle through the `content-visibility` values.
-Note that when the content is visible or auto changing `contain-intrinsic-size` makes no difference.
-However if the content is hidden, removing `contain-intrinsic-size` collapses the parent element as though its child element had no size.
+Use the selectors to apply the given styles to the containing `div` element.
+Note that when `content-visibility` is `visible` or `auto`, changing `contain-intrinsic-size` makes no difference.
+However if the content is hidden, having a `contain-intrinsic-size` of `none` collapses the parent element as though its child element had no size.
 
 {{EmbedLiveSample('Setting the intrinsic size', '100%', 170)}}
 

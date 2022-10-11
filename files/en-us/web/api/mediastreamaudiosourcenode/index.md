@@ -60,14 +60,14 @@ The number of channels output by the node matches the number of tracks found in 
 - {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "new MediaStreamAudioSourceNode()")}}
   - : Creates a new `MediaStreamAudioSourceNode` object instance with the specified options.
 
-## Properties
+## Instance properties
 
 _In addition to the following properties, `MediaStreamAudioSourceNode` inherits the properties of its parent, {{domxref("AudioNode")}}._
 
 - {{domxref("MediaStreamAudioSourceNode.mediaStream", "mediaStream")}} {{ReadOnlyInline}}
   - : The {{domxref("MediaStream")}} used when constructing this `MediaStreamAudioSourceNode`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 

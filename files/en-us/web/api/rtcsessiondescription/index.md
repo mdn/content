@@ -20,7 +20,7 @@ The **`RTCSessionDescription`** interface describes one end of a connection—or
 
 The process of negotiating a connection between two peers involves exchanging `RTCSessionDescription` objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.
 
-## Properties
+## Instance properties
 
 _The `RTCSessionDescription` interface doesn't inherit any properties._
 
@@ -29,7 +29,7 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
   - : A string containing the {{Glossary("SDP")}} describing the session.
 
-## Methods
+## Instance methods
 
 _The `RTCSessionDescription` doesn't inherit any methods._
 

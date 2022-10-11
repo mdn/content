@@ -19,14 +19,14 @@ The **`SpeechSynthesisErrorEvent`** interface of the [Web Speech API](/en-US/doc
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("SpeechSynthesisErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns an error code indicating what has gone wrong with a speech synthesis attempt.
 
-## Methods
+## Instance methods
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits methods from its parent interface, {{domxref("Event")}}._
 

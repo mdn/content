@@ -21,7 +21,7 @@ The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath"
 
 It is implemented by the {{domxref("Document")}} interface.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("XPathEvaluator.createExpression()")}}
   - : Creates a parsed XPath expression with resolved namespaces.

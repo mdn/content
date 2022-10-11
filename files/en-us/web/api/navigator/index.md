@@ -19,7 +19,7 @@ The **`Navigator`** interface represents the state and the identity of the user 
 
 A `Navigator` object can be retrieved using the read-only {{domxref("window.navigator")}} property.
 
-## Properties
+## Instance properties
 
 _Doesn't inherit any properties._
 
@@ -128,7 +128,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Always returns the empty string.
 
-## Methods
+## Instance methods
 
 _Doesn't inherit any method._
 

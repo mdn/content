@@ -21,7 +21,7 @@ An application can register a {{domxref("PerformanceObserver")}} for "`paint`" {
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties (for "`paint`" {{domxref ("PerformanceEntry.entryType","performance entry types")}}) by qualifying and constraining the properties as follows:
 
@@ -34,7 +34,7 @@ This interface has no properties but it extends the following {{domxref("Perform
 - {{domxref("PerformanceEntry.duration")}}
   - : Returns 0.
 
-## Methods
+## Instance methods
 
 This interface has no methods.
 
