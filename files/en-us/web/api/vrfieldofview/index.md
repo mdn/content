@@ -21,7 +21,7 @@ The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_A
 
 > **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Properties
+## Instance properties
 
 - {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees upwards that the field of view extends in.

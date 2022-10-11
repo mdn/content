@@ -18,11 +18,11 @@ browser-compat: api.XRHitTestResult
 
 The **`XRHitTestResult`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) contains a single result of a hit test. You can get an array of `XRHitTestResult` objects for a frame by calling {{domxref("XRFrame.getHitTestResults()")}}.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRHitTestResult.createAnchor()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRAnchor")}} created from the hit test result.

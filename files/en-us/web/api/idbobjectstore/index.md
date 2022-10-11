@@ -17,7 +17,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBObjectStore.indexNames")}} {{ReadOnlyInline}}
   - : A list of the names of [indexes](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) on objects in this object store.
@@ -30,7 +30,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 - {{domxref("IDBObjectStore.autoIncrement")}} {{ReadOnlyInline}}
   - : The value of the auto increment flag for this object store.
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBObjectStore.add()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for adding new records to an object store.

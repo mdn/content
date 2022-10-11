@@ -20,7 +20,7 @@ The **`SpeechRecognitionEvent`** interface of the [Web Speech API](/en-US/docs/W
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`SpeechRecognitionEvent` also inherits properties from its parent interface, {{domxref("Event")}}._
 

@@ -26,14 +26,14 @@ Below is a list of interfaces based on the FileSystemHandle interface.
 - {{domxref("FileSystemDirectoryHandle")}}
   - : Provides a handle to a directory entry.
 
-## Properties
+## Instance properties
 
 - {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
   - : Returns the type of entry. This is `'file'` if the associated entry is a file or `'directory'`.
 - {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
   - : Returns the name of the associated entry.
 
-## Methods
+## Instance methods
 
 - {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
   - : Compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.

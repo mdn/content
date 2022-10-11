@@ -16,7 +16,7 @@ browser-compat: api.ReportingObserverOptions
 
 The `ReportingObserverOptions` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows options to be set in the constructor when creating a {{domxref("ReportingObserver")}}.
 
-## Properties
+## Instance properties
 
 - `types`
   - : An array of strings representing the types of report to be collected by this observer. Available types include `deprecation`, `intervention`, and `crash`.

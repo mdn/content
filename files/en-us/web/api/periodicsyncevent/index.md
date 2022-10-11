@@ -28,12 +28,12 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.p
 - {{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}} {{Experimental_Inline}}
   - : Creates a new `PeriodicSyncEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to {{domxref('ServiceWorkerGlobalScope.periodicsync_event', 'onperiodicsync')}} callback.
 
-## Properties
+## Instance properties
 
 - {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
-## Methods
+## Instance methods
 
 Inherits methods from its parent {{domxref('ExtendableEvent')}}.
 

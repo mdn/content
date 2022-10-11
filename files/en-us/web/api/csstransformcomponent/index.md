@@ -18,12 +18,12 @@ browser-compat: api.CSSTransformComponent
 
 The **`CSSTransformComponent`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.
 
-## Properties
+## Instance properties
 
 - {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicting whether the transform is 2D or 3D.
 
-## Methods
+## Instance methods
 
 - {{domxref("CSSTransformComponent.toMatrix()")}} {{Experimental_Inline}}
   - : Returns a new {{domxref('DOMMatrix')}} object.

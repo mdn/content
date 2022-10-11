@@ -80,7 +80,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("Event.Event", "Event()")}}
   - : Creates an `Event` object, returning it to the caller.
 
-## Properties
+## Instance properties
 
 - {{domxref("Event.bubbles")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether or not the event bubbles up through the DOM.
@@ -118,7 +118,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("Event.srcElement")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : An alias (from old versions of Microsoft Internet Explorer) for {{domxref("Event.target")}}. Use {{domxref("Event.target")}} instead.
 
-## Methods
+## Instance methods
 
 - {{domxref("Event.composedPath()")}}
   - : Returns the event's path (an array of objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with its {{domxref("ShadowRoot.mode")}} closed.

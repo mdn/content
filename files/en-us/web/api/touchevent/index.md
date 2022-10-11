@@ -25,7 +25,7 @@ Touches are represented by the {{domxref("Touch")}} object; each touch is descri
 - {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
   - : Creates a `TouchEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its parent, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 

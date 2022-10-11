@@ -28,7 +28,7 @@ A pointer's _hit test_ is the process a browser uses to determine the target ele
 - {{domxref("PointerEvent.PointerEvent", "PointerEvent()")}}
   - : Creates a synthetic—and untrusted—`PointerEvent`.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
@@ -53,7 +53,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef('PointerEvent.getCoalescedEvents()')}}
   - : Returns a sequence of all `PointerEvent` instances that were coalesced into the dispatched {{domxref("HTMLElement/pointermove_event", "pointermove")}} event.

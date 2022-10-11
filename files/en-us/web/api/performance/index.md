@@ -22,7 +22,7 @@ An object of this type can be obtained by calling the {{domxref("window.performa
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `Performance` interface doesn't inherit any properties._
 
@@ -43,7 +43,7 @@ _The `Performance` interface doesn't inherit any properties._
 - {{domxref("Performance.timeOrigin")}} {{ReadOnlyInline}}
   - : Returns the high resolution timestamp of the start time of the performance measurement.
 
-## Methods
+## Instance methods
 
 _The `Performance` interface doesn't inherit any methods._
 
