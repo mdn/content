@@ -43,7 +43,7 @@ Up to now you've been working in a development environment, using the Django dev
 - Choose an environment for hosting any static files.
 - Set up a production-level infrastructure for serving your website.
 
-This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Django app ready for production, and a working example of how to install the LocalLibrary website onto the [Heroku](https://www.heroku.com/) cloud hosting service.
+This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Django app ready for production, and a working example of how to install the LocalLibrary website onto the [Railway](https://railway.app/) cloud hosting service.
 
 ## What is a production environment?
 
@@ -68,7 +68,7 @@ Other hosting providers support Django as part of a _Platform as a Service_ (Paa
 
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.
 
-> **Note:** If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of webserver, application server, reverse proxy, etc. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
+> **Note:** If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of webserver, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
 
 ## Choosing a hosting provider
 
@@ -86,9 +86,9 @@ Some of the things to consider when choosing a host:
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
-The good news when you're starting out is that there are quite a few sites that provide "evaluation", "developer", or "hobbyist" computing environments for "free". These are always fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period. They are however great for testing low traffic sites in a real environment, and can provide an easy migration to paying for more resources when your site gets busier. Popular choices in this category include [Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), etc.
+The good news when you're starting out is that there are quite a few sites that provide "evaluation", "developer", or "hobbyist" computing environments for "free". These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period. They are however great for testing low traffic sites in a real environment, and can provide an easy migration to paying for more resources when your site gets busier. Popular choices in this category include [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), etc.
 
-Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that offer a relatively inexpensive basic computing tier (in the $5 to $10USD per month range).
+Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that offer a relatively inexpensive basic computing tier (in the $5 to $10USD per month range).
 
 > **Note:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
 
@@ -135,9 +135,9 @@ Then comment out the existing `DEBUG` setting and add the new line shown below.
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ```
 
-The value of the `DEBUG` will be `True` by default, but will only be `False` if the value of the `DJANGO_DEBUG` environment variable is set to `False`. Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the `DEBUG` variable to `False` is to actually set it to the string `False`
+The value of the `DEBUG` will be `True` by default, but will only be `False` if the value of the `DJANGO_DEBUG` environment variable is set to `False`. Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the `DEBUG` variable to `False` is to actually set it to the string `False`.
 
-You can set the environment variable to False by issuing the following command:
+You can set the environment variable to False on Linux by issuing the following command:
 
 ```bash
 export DJANGO_DEBUG=False
@@ -149,13 +149,13 @@ A full checklist of settings you might want to change is provided in [Deployment
 python3 manage.py check --deploy
 ```
 
-## Example: Installing LocalLibrary on Heroku
+## Example: Installing LocalLibrary on Railway
 
-This section provides a practical demonstration of how to install _LocalLibrary_ on the [Heroku PaaS cloud](https://www.heroku.com/).
+This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
 
-### Why Heroku?
+### Why Railway?
 
-Heroku is one of the longest running and popular cloud-based PaaS services. It originally supported only Ruby apps, but now can be used to host apps from many programming environments, including Django!
+[Heroku](https://www.heroku.com/)roku is one of the longest running and popular cloud-based PaaS services. It originally supported only Ruby apps, but now can be used to host apps from many programming environments, including Django!
 
 We are choosing to use Heroku for several reasons:
 
