@@ -62,7 +62,7 @@ Web browsers may implement the _hidden_ state using `display: none`, in which ca
 
 In the _hidden until found_ state, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation. When these features cause a scroll to an element in a _hidden until found_ subtree, the browser will:
 
-- fire a `beforematch` event on the hidden element
+- fire a [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event on the hidden element
 - remove the `hidden` attribute from the element
 - scroll to the element
 
@@ -165,5 +165,6 @@ To run the example again, click "Reload".
 ## See also
 
 - {{DOMxRef("HTMLElement.hidden")}}
-- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+- The [`beforematch](/en-US/docs/Web/API/Element/beforematch_event) event
