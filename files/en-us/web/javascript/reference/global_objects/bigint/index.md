@@ -205,7 +205,7 @@ Many built-in operations that expect BigInts first coerce their arguments to Big
 - BigInts are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
 - `true` turns into `1n`; `false` turns into `0n`.
-- Strings are converted by parsing them as if they contain an integer literal. Parsing failure results in a {{jsxref("SyntaxError")}}. The syntax is a subset of [string numeric literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), where decimal points or exponent indicators are not allowed.
+- Strings are converted by parsing them as if they contain an integer literal. Any parsing failure results in a {{jsxref("SyntaxError")}}. The syntax is a subset of [string numeric literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), where decimal points or exponent indicators are not allowed.
 - [Numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
 - Objects are first converted to a primitive by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a BigInt.
