@@ -125,10 +125,11 @@ Don't:
 
 - Try to cram multiple fixes into a single pull request. It makes it a lot harder to review, and raises suspicions (some people might think you are trying to hide some malicious code in between the valid changes).
 
-## Opening a pull request
+## Deployment timeline
 
-## Reviewing a pull request
+After your pull request is merged to [`mdn/content`](https://github.com/mdn/content), it can take up to 48 hours before your changes are live on the [production site](https://developer.mozilla.org/), but it's usually quicker.
+The site build runs every 24 hours at around 19:00 US/Eastern time, and is deployed immediately after.
+When deploys succeed, it can take up to 24 hours for the CDN to invalidate caches and serve new content.
 
-## Pull requests we accept
-
-## Idle pull requests
+For embedded browser compatibility data tables, the [browser-compat-data](https://github.com/mdn/browser-compat-data) project is built and deployed every Tuesday.
+You can expect to see merged changes on MDN Web Docs the following Wednesday.

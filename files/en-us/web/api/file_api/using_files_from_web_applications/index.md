@@ -127,7 +127,7 @@ The following example shows a possible use of the `size` property:
                   units[exponent]
                 } (${numberOfBytes} bytes)`;
 
-          document.getElementById("fileNum").textContent = fileList.length;
+          document.getElementById("fileNum").textContent = uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
         false
@@ -346,7 +346,7 @@ function handleFiles() {
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
       img.onload = () => {
-        URL.revokeObjectURL(this.src);
+        URL.revokeObjectURL(img.src);
       }
       li.appendChild(img);
       const info = document.createElement("span");
