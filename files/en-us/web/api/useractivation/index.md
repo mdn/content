@@ -6,6 +6,7 @@ tags:
   - API
   - Interface
   - Reference
+  - Experimental
 browser-compat: api.UserActivation
 ---
 
