@@ -144,7 +144,7 @@ Let's consider this example:
 <!--div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username">
-  <label for="username"><span aria-label="required">*</abbr></label>
+  <label for="username"><span aria-label="required">*</label>
 </div-->
 
 <!-- would be better done like this: -->

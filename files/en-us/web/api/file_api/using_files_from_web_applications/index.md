@@ -266,7 +266,7 @@ function handleFiles(files) {
     preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
 
     const reader = new FileReader();
-    reader.onload = (e) => { aImg.src = e.target.result; };
+    reader.onload = (e) => { img.src = e.target.result; };
     reader.readAsDataURL(file);
   }
 }
