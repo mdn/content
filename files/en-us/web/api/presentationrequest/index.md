@@ -25,7 +25,7 @@ When a `PresentationRequest` is constructed, the given `urls` _MUST_ be used as 
 - {{domxref("PresentationRequest.PresentationRequest","PresentationRequest()")}} {{Experimental_Inline}}
   - : Creates a `PresentationRequest`.
 
-## Properties
+## Instance properties
 
 None
 
@@ -34,7 +34,7 @@ None
 - {{domxref("PresentationRequest.onconnectionavailable")}} {{Experimental_Inline}}
   - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
 
-## Methods
+## Instance methods
 
 - {{domxref("PresentationRequest.start()")}} {{Experimental_Inline}}
   - : Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("PresentationConnection")}} after the user agent prompts the user to select a display and grant permission to use that display.

@@ -38,7 +38,7 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 - {{domxref("AudioData.AudioData", "AudioData()")}} {{Experimental_Inline}}
   - : Creates a new `AudioData` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioData.format")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the sample format of the audio.
@@ -53,7 +53,7 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 - {{domxref("AudioData.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the timestamp of the audio in microseconds.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioData.allocationSize()")}} {{Experimental_Inline}}
   - : Returns the number of bytes required to hold the sample as filtered by options passed into the method.

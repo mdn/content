@@ -28,7 +28,7 @@ The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web
 - {{domxref("IDBVersionChangeEvent.IDBVersionChangeEvent", "IDBVersionChangeEvent()")}}
   - : Creates and returns a new `IDBVersionChangeEvent` object which is used to represent when a version of the database has changed.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
@@ -37,7 +37,7 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
 - {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
-### Methods
+## Instance methods
 
 _No specific method, but inherits methods from its parent, {{domxref("Event")}} interface._
 

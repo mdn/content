@@ -43,14 +43,7 @@ The `push()` method appends values to an array.
 
 The `push()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with elements appended to the end, you can use [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of `concat()`.
 
-`Array.prototype.push()` is intentionally generic. This method can be called on
-objects resembling arrays. The `push` method relies on a `length`
-property to determine where to start inserting the given values. If the
-`length` property cannot be converted into a number, the index used is 0.
-This includes the possibility of `length` being nonexistent, in which case
-`length` will also be created.
-
-Although {{jsxref("Global_Objects/String", "strings", "", 1)}} are native Array-like objects, they are not suitable in applications of this method, as strings are immutable.
+The `push()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
@@ -84,6 +77,27 @@ console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
 Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.
+
+### Calling push() on non-array objects
+
+The `push()` method reads the `length` property of `this`. It then sets each index of `this` starting at `length` with the arguments passed to `push()`. Finally, it sets the `length` to the previous length plus the number of pushed elements.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+};
+Array.prototype.push.call(arrayLike, 1, 2);
+console.log(arrayLike);
+// { '2': 4, '3': 1, '4': 2, length: 5, unrelated: 'foo' }
+
+const plainObj = {};
+// There's no length property, so the length is 0
+Array.prototype.push.call(plainObj, 1, 2);
+console.log(plainObj);
+// { '0': 1, '1': 2, length: 2 }
+```
 
 ### Using an object in an array-like fashion
 

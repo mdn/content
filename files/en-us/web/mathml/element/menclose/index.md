@@ -6,11 +6,10 @@ tags:
   - MathML Reference
   - MathML:Element
   - MathML:General Layout Schemata
-  - Non-standard
 browser-compat: mathml.elements.menclose
 ---
 
-{{MathMLRef}}{{Non-standard_Header}}
+{{MathMLRef}}
 
 The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its content inside an enclosing notation specified by the `notation` attribute.
 

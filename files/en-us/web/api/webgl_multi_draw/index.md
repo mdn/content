@@ -32,7 +32,7 @@ When this extension is enabled:
 >
 > This extension enables the {{domxref("ANGLE_instanced_arrays")}} extension implicitly.
 
-## Methods
+## Instance methods
 
 - [`ext.multiDrawArraysWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL)
   - : Renders multiple primitives from array data (identical to multiple calls to

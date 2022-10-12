@@ -27,7 +27,7 @@ The **`XRPermissionStatus`** interface defines the object returned by calling {{
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, `XRPermissionStatus` includes the properties defined by its parent interface, {{domxref("PermissionStatus")}}._
 

@@ -18,7 +18,7 @@ The **`TaskAttributionTiming`** interface of the [Long Tasks API](/en-US/docs/We
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref('TaskAttributionTiming.containerType')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the type of frame container, one of `iframe`, `embed`, or `object`.

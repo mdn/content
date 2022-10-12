@@ -17,7 +17,7 @@ The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} pr
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 - {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
 

@@ -17,14 +17,14 @@ The **`MediaList`** interface represents the media queries of a stylesheet, e.g.
 
 > **Note:** `MediaList` is a live list; updating the list using properties or methods listed below will immediately update the behavior of the document.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaList.mediaText")}}
   - : A {{Glossary("stringifier")}} that returns a string representing the `MediaList` as text, and also allows you to set a new `MediaList`.
 - {{domxref("MediaList.length")}} {{ReadOnlyInline}}
   - : Returns the number of media queries in the `MediaList`.
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaList.appendMedium()")}}
   - : Adds a media query to the `MediaList`.

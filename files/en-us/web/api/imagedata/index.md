@@ -23,10 +23,12 @@ It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constr
 - {{domxref("ImageData.ImageData", "ImageData()")}}
   - : Creates an `ImageData` object from a given {{jsxref("Uint8ClampedArray")}} and the size of the image it contains. If no array is given, it creates an image of a transparent black rectangle. Note that this is the most common way to create such an object in workers as {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} is not available there.
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageData.data")}} {{ReadOnlyInline}}
   - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (inclusive).
+- {{domxref("ImageData.colorSpace")}} {{ReadOnlyInline}}
+  - : A string indicating the color space of the image data.
 - {{domxref("ImageData.height")}} {{ReadOnlyInline}}
   - : An `unsigned long` representing the actual height, in pixels, of the `ImageData`.
 - {{domxref("ImageData.width")}} {{ReadOnlyInline}}

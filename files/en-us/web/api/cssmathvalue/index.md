@@ -30,18 +30,22 @@ Below is a list of interfaces based on the CSSMathValue interface.
 - {{domxref('CSSMathProduct')}}
 - {{domxref('CSSMathSum')}}
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMathValue.operator')}} {{Experimental_Inline}}
   - : Indicates the operator that the current subtype represents.
 
-### Event handlers
+## Static methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+
+## Event handlers
 
 No
-
-## Methods
-
-None.
 
 ## Examples
 

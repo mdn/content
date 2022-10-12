@@ -70,6 +70,8 @@ followed by a call to
 [`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 of depth 1.
 
+The `flatMap()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. However, the value returned from `callbackFn` must be an array if it is to be flattened.
+
 ### Alternative
 
 #### Pre-allocate and explicitly iterate
@@ -162,6 +164,31 @@ The `callbackFn` won't be called for empty slots in the source array because `ma
 ```js
 console.log([1, 2, , 4, 5].flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 4, 8, 5, 10]
 console.log([1, 2, 3, 4].flatMap(x => [, x * 2])); // [2, 4, 6, 8]
+```
+
+### Calling flatMap() on non-array objects
+
+The `flatMap()` method reads the `length` property of `this` and then accesses each integer index. If the return value of the callback function is not an array, it is always directly appended to the result array.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 1,
+  1: 2,
+  2: 3,
+};
+console.log(Array.prototype.flatMap.call(arrayLike, (x) => [x, x * 2]));
+// [1, 2, 2, 4, 3, 6]
+
+// Array-like objects returned from the callback won't be flattened
+console.log(
+  Array.prototype.flatMap.call(arrayLike, (x) => ({
+    length: 1,
+    0: x,
+  })),
+);
+// [ 1, 2, 2, 4, 3, 6 ]
+// [ { '0': 1, length: 2 }, { '0': 2, length: 2 }, { '0': 3, length: 2 } ]
 ```
 
 ## Specifications

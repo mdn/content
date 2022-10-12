@@ -20,7 +20,7 @@ The `LargestContentfulPaint` interface of the {{domxref("Largest Contentful Pain
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("PerformanceEntry")}}._
 
@@ -37,7 +37,7 @@ _This interface also inherits properties from {{domxref("PerformanceEntry")}}._
 - {{domxref("LargestContentfulPaint.url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : If the element is an image, the request url of the image.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 

@@ -39,7 +39,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `frame`
   - : Specifies borders of the entire table. Possible values are: `none` (default), `solid` and `dashed`.
 - `framespacing`
-  - : Specifies additional space added between the table and frame. The first value specifies the spacing on the right and left; the second value specifies the spacing above and below. Possible values are  [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage).
+  - : Specifies additional space added between the table and frame. The first value specifies the spacing on the right and left; the second value specifies the spacing above and below. Possible values are [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage).
 - `rowalign`
   - : Specifies the vertical alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. `rowalign="top bottom axis"`). Possible values are: `axis`, `baseline` (default), `bottom`, `center` and `top`.
 - `rowlines`

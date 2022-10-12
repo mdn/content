@@ -117,6 +117,8 @@ function compareNumbers(a, b) {
 }
 ```
 
+The `reverse()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
+
 ## Examples
 
 ### Creating, displaying, and sorting an array
@@ -333,6 +335,21 @@ Empty slots are moved to the end of the array.
 ```js
 console.log(["a", "c", , "b"].sort()); // ['a', 'b', 'c', empty]
 console.log([, undefined, "a", "b"].sort()); // ["a", "b", undefined, empty]
+```
+
+### Calling sort() on non-array objects
+
+The `sort()` method reads the `length` property of `this`. It then collects all existing integer-keyed properties in the range of `0` to `length - 1`, sorts them, and writes them back. If there are missing properties in the range, the corresponding trailing properties are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete), as if the non-existent properties are sorted towards the end.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+console.log(Array.prototype.sort.call(arrayLike));
+// { '0': 4, '1': 5, length: 3, unrelated: 'foo' }
 ```
 
 ## Specifications
