@@ -15,7 +15,6 @@ browser-compat: css.properties.grid-row
 
 The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
-
 {{EmbedInteractiveExample("pages/css/grid-row.html")}}
 
 ## Constituent properties
@@ -67,6 +66,7 @@ Each `<grid-line>` value can be specified as:
 - or an `<integer>` value
 - or both `<custom-ident>` and `<integer>`, separated by a space
 - or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
+
 ### Values
 
 - `auto`

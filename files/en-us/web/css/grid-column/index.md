@@ -15,7 +15,6 @@ browser-compat: css.properties.grid-column
 
 The **`grid-column`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid column")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
-
 {{EmbedInteractiveExample("pages/css/grid-column.html")}}
 
 ## Constituent properties
