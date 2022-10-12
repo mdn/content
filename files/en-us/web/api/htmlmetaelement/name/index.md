@@ -22,7 +22,7 @@ A string.
 
 ## Examples
 
-Reading the name for when a meta element has a `keywords` name:
+Reading the metadata name for the first meta element in a document:
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web technologies">
