@@ -29,6 +29,22 @@
     "ja": "プロパティ"
   },
 
+  "Static_methods": {
+    "en-US": "Static methods"
+  },
+
+  "Static_properties": {
+    "en-US": "Static properties"
+  },
+
+  "Instance_methods": {
+    "en-US": "Instance methods"
+  },
+
+  "Instance_properties": {
+    "en-US": "Instance properties"
+  },
+
   "Event_handlers": {
     "en-US": "Event handlers",
     "fr": "Gestionnaires d'évènements",
