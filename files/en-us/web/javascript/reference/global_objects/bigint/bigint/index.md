@@ -43,11 +43,13 @@ A {{jsxref("BigInt")}} value. Number values must be integers and are converted t
 
 ## Examples
 
-### Creating a new BigInt
+### Using BigInt() to convert a number to a BigInt
+
+`BigInt()` is the only case where a number can be converted to a BigInt without throwing, because it's very explicit. However, only integers are allowed.
 
 ```js
-BigInt(123);
-// 123n
+BigInt(123); // 123n
+BigInt(123.3); // RangeError: The number 123.3 cannot be converted to a BigInt because it is not an integer
 ```
 
 ### Using string values
