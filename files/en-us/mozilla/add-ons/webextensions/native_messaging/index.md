@@ -276,7 +276,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
 
         // If the data we have read so far is >= to the size advertised in the header,
         // it means we have all of the data sent.
-        // We add 4 here because that's the size of the bytes that old the payloadSize
+        // We add 4 here because that's the size of the bytes that hold the payloadSize
         if (stringData.length >= (payloadSize + 4)) {
             // Remove the header
             const contentWithoutSize = stringData.slice(4, (payloadSize + 4));

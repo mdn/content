@@ -26,7 +26,7 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 - {{domxref("WebSocket.WebSocket", "WebSocket()")}}
   - : Returns a newly created `WebSocket` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("WebSocket.binaryType")}}
   - : The binary data type used by the connection.
@@ -41,7 +41,7 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 - {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
   - : The absolute URL of the WebSocket.
 
-## Methods
+## Instance methods
 
 - {{domxref("WebSocket.close()")}}
   - : Closes the connection.

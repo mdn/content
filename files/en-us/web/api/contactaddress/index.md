@@ -17,11 +17,11 @@ The **`ContactAddress`** interface of the {{domxref('contact_picker_api','Contac
 
 It may be useful to refer to the Universal Postal Union website's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("PaymentAddress")}}_.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("PaymentAddress")}}_.
 

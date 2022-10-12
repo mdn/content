@@ -27,7 +27,7 @@ Events are fired when font loading starts ([`loading`](/en-US/docs/Web/API/FontF
 - {{domxref("FontFaceSetLoadEvent.FontFaceSetLoadEvent","FontFaceSetLoadEvent()")}}
   - : Creates a new `FontFaceSetLoadEvent` object.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
@@ -35,7 +35,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
   - : Returns an array of {{domxref("FontFace")}} instances.
     Depending on the event, the array will contain font faces that are loading (`loading`), have successfully loaded (`loadingdone`), or have failed to load (`loadingerror`).
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("Event")}}_.
 

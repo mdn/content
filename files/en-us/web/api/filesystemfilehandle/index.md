@@ -20,11 +20,11 @@ Note that read and write operations depend on file-access permissions that do no
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 

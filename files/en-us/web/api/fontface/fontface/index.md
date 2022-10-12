@@ -60,8 +60,6 @@ new FontFace(family, source, descriptors)
       - : With an allowable value for {{cssxref("@font-face/font-style")}}.
     - `unicodeRange`
       - : With an allowable value for {{cssxref("@font-face/unicode-range")}}.
-    - `variant`
-      - : With an allowable value for {{cssxref("@font-face/font-variant")}}.
     - `variationSettings`
       - : With an allowable value for {{cssxref("@font-face/font-variation-settings")}}.
     - `weight`

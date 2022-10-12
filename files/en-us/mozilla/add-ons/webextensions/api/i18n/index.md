@@ -22,7 +22,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 ## Types
 
 - {{WebExtAPIRef("i18n.LanguageCode")}}
-  - : A [language tag](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) such as `"en-US"` or "`fr`".
+  - : A [language tag](https://www.rfc-editor.org/rfc/rfc9110.html#name-language-tags) such as `"en-US"` or "`fr`".
 
 ## Functions
 

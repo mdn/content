@@ -75,7 +75,7 @@ Once we have an established connection to a web server, the browser sends an ini
   <head>
     <meta charset="UTF-8" />
     <title>My simple page</title>
-    <link rel="stylesheet" src="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="myscript.js"></script>
   </head>
   <body>
@@ -132,7 +132,7 @@ When the parser finds non-blocking resources, such as an image, the browser will
 While the browser builds the DOM tree, this process occupies the main thread. As this happens, the _preload scanner_ will parse through the content available and request high priority resources like CSS, JavaScript, and web fonts. Thanks to the preload scanner, we don't have to wait until the parser finds a reference to an external resource to request it. It will retrieve resources in the background so that by the time the main HTML parser reaches requested assets, they may already be in flight, or have been downloaded. The optimizations the preload scanner provides reduce blockages.
 
 ```html
-<link rel="stylesheet" src="styles.css" />
+<link rel="stylesheet" href="styles.css" />
 <script src="myscript.js" async></script>
 <img src="myimage.jpg" alt="image description" />
 <script src="anotherscript.js" async></script>

@@ -29,14 +29,14 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 - {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}}
   - : `OffscreenCanvas` constructor. Creates a new `OffscreenCanvas` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("OffscreenCanvas.height")}}
   - : The height of the offscreen canvas.
 - {{domxref("OffscreenCanvas.width")}}
   - : The width of the offscreen canvas.
 
-## Methods
+## Instance methods
 
 - {{domxref("OffscreenCanvas.getContext()")}}
   - : Returns a rendering context for the offscreen canvas.

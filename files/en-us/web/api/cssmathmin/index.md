@@ -24,14 +24,18 @@ The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 - {{domxref("CSSMathMin.CSSMathMin", "CSSMathMin()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathMin` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMathMin.values')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Methods
+## Static methods
 
-None.
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
 
 ## Examples
 

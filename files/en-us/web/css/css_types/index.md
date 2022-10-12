@@ -133,6 +133,19 @@ The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the 
 - {{cssxref("&lt;position&gt;")}}
   - : Defines the position of an object area. Accepts a keyword value such as `top` or `left`, or a `<length-percentage>`.
 
+## Calculation data types
+
+These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Functions#math_functions) calculations.
+
+- {{cssxref("&lt;calc-sum&gt;")}}
+  - : A calculation which is a sequence of calculation values interspersed with addition (`+`) and subtraction (`-`) operators. This data type requires both values to have units.
+- {{cssxref("&lt;calc-product&gt;")}}
+  - : A calculation which is a sequence of calculation values interspersed with multiplication (`*`) and division (`/`) operators. When multiplying, one value must be unitless. When dividing, the second value must be unitless.
+- {{cssxref("&lt;calc-value&gt;")}}
+  - : Defines accepted values for calculations, values such as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;calc-constant&gt;")}} or nested {{cssxref("&lt;calc-sum&gt;")}} calculations.
+- {{cssxref("&lt;calc-constant&gt;")}}
+  - : Defines a number of CSS keywords representing numeric constants such as `e` and `π`, that can be used in CSS math functions.
+
 ## Specifications
 
 {{Specifications}}

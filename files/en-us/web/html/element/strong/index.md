@@ -49,7 +49,7 @@ The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its conte
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, must have both a start tag and an end tag.</td>
+      <td>None; must have both a start tag and an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

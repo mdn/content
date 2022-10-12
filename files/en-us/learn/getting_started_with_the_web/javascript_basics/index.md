@@ -339,28 +339,11 @@ document.querySelector("html").addEventListener("click", function () {
 });
 ```
 
-There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
+There are a number of ways to attach an event handler to an element.
+Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
 
-Note that
-
-```js
-document.querySelector("html").addEventListener("click", function () {
-  alert("Ouch! Stop poking me!");
-});
-```
-
-is equivalent to
-
-```js
-let myHTML = document.querySelector("html");
-myHTML.addEventListener("click", function () {
-  alert("Ouch! Stop poking me!");
-});
-```
-
-It's just shorter.
-
-The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
+The function we just passed to `addEventListener()` here is called an _anonymous function_, because it doesn't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_.
+An arrow function uses `() =>` instead of `function ()`:
 
 ```js
 document.querySelector("html").addEventListener("click", () => {

@@ -19,7 +19,7 @@ JavaScript files should be served with the `application/javascript` [MIME type](
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -66,7 +66,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
     This method provides a simple and unified method for script-related feature detection.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

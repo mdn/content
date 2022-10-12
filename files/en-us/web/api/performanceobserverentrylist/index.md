@@ -16,7 +16,7 @@ The **`PerformanceObserverEntryList`** interface is a list of {{domxref("Perform
 
 Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceObserverEntryList.getEntries","PerformanceObserverEntryList.getEntries()")}}
   - : Returns a list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects based on the given _filter_.

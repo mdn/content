@@ -20,7 +20,7 @@ The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' '
 - {{domxref("EncodedVideoChunk.EncodedVideoChunk", "EncodedVideoChunk()")}} {{Experimental_Inline}}
   - : Creates a new `EncodedVideoChunk` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("EncodedVideoChunk.type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string indicating whether this chunk of data is a key chunk.
@@ -31,7 +31,7 @@ The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' '
 - {{domxref("EncodedVideoChunk.byteLength")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer representing the length of the video in bytes.
 
-## Methods
+## Instance methods
 
 - {{domxref("EncodedVideoChunk.copyTo()")}} {{Experimental_Inline}}
   - : Copies the encoded video data.

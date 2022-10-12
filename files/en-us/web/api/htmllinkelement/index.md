@@ -17,7 +17,7 @@ The **`HTMLLinkElement`** interface represents reference information for externa
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -61,7 +61,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}
   - : A string representing the name of the target frame to which the resource applies.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

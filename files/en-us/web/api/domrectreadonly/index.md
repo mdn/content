@@ -23,7 +23,7 @@ The **`DOMRectReadOnly`** interface specifies the standard properties used by {{
 - {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
   - : Defined to create a new `DOMRectReadOnly` object. Note that this constructor cannot be called by 3rd party JavaScript; doing so returns an `"Illegal constructor"` {{jsxref('TypeError')}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("DOMRectReadOnly.x")}} {{ReadOnlyInline}}
   - : The x coordinate of the `DOMRect`'s origin.

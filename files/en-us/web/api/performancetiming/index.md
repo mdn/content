@@ -23,7 +23,7 @@ browser-compat: api.PerformanceTiming
 
 The **`PerformanceTiming`** interface is a legacy interface kept for backwards compatibility and contains properties that offer performance timing information for various events which occur during the loading and use of the current page. You get a `PerformanceTiming` object describing your page using the {{domxref("Performance.timing", "window.performance.timing")}} property.
 
-## Properties
+## Instance properties
 
 _The `PerformanceTiming` interface doesn't inherit any properties._
 
@@ -76,7 +76,7 @@ These properties are listed in the order in which they occur during the navigati
 - {{domxref("PerformanceTiming.loadEventEnd")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : When the {{domxref("Window/load_event", "load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0.`
 
-## Methods
+## Instance methods
 
 _The `PerformanceTiming`_ _interface doesn't inherit any methods._
 

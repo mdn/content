@@ -74,7 +74,7 @@ To use all the nice things we get with the Web Audio API, we need to grab the so
 
 ```js
 // get the audio element
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
@@ -114,31 +114,39 @@ Now we can add the play and pause functionality.
 
 ```js
 // Select our play button
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', () => {
-  // Check if context is in suspended state (autoplay policy)
-  if (audioContext.state === 'suspended') {
-    audioContext.resume();
-  }
+playButton.addEventListener(
+  "click",
+  () => {
+    // Check if context is in suspended state (autoplay policy)
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
+    }
 
-  // Play or pause track depending on state
-  if (playButton.dataset.playing === 'false') {
-    audioElement.play();
-    playButton.dataset.playing = 'true';
-  } else if (playButton.dataset.playing === 'true') {
-    audioElement.pause();
-    playButton.dataset.playing = 'false';
-  }
-}, false);
+    // Play or pause track depending on state
+    if (playButton.dataset.playing === "false") {
+      audioElement.play();
+      playButton.dataset.playing = "true";
+    } else if (playButton.dataset.playing === "true") {
+      audioElement.pause();
+      playButton.dataset.playing = "false";
+    }
+  },
+  false
+);
 ```
 
 We also need to take into account what to do when the track finishes playing. Our `HTMLMediaElement` fires an `ended` event once it's finished playing, so we can listen for that and run code accordingly:
 
 ```js
-audioElement.addEventListener('ended', () => {
-  playButton.dataset.playing = 'false';
-}, false);
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false
+);
 ```
 
 ## Modifying sound
@@ -174,11 +182,15 @@ Let's give the user control to do this — we'll use a [range input](/en-US/docs
 So let's grab this input's value and update the gain value when the input node has its value changed by the user:
 
 ```js
-const volumeControl = document.querySelector('#volume');
+const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener('input', () => {
-  gainNode.gain.value = volumeControl.value;
-}, false);
+volumeControl.addEventListener(
+  "input",
+  () => {
+    gainNode.gain.value = volumeControl.value;
+  },
+  false
+);
 ```
 
 > **Note:** The values of node objects (e.g. `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
@@ -217,11 +229,15 @@ Here our values range from -1 (far left) and 1 (far right). Again let's use a ra
 We use the values from that input to adjust our panner values in the same way as we did before:
 
 ```js
-const pannerControl = document.querySelector('#panner');
+const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener('input', () => {
-  panner.pan.value = pannerControl.value;
-}, false);
+pannerControl.addEventListener(
+  "input",
+  () => {
+    panner.pan.value = pannerControl.value;
+  },
+  false
+);
 ```
 
 Let's adjust our audio graph again, to connect all the nodes together:
@@ -242,7 +258,7 @@ This makes up quite a few basics that you would need to start to add audio to yo
 
 There are other examples available to learn more about the Web Audio API.
 
-The [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) is a fun voice manipulator and sound visualization web app that allows you to choose different effects and visualizations. The application is fairly rudimentary, but it demonstrates the simultaneous use of multiple Web Audio API features. ([run the Voice-change-O-matic live](https://mdn.github.io/voice-change-o-matic/)).
+The [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) is a fun voice manipulator and sound visualization web app that allows you to choose different effects and visualizations. The application is fairly rudimentary, but it demonstrates the simultaneous use of multiple Web Audio API features. ([run the Voice-change-O-matic live](https://mdn.github.io/webaudio-examples/voice-change-o-matic/)).
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
