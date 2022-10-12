@@ -31,7 +31,7 @@ This event is sent by the WebRTC layer to the web site or application, so you wi
 - {{domxref("RTCTrackEvent.RTCTrackEvent", "RTCTrackEvent()")}}
   - : Creates and returns a new `RTCTrackEvent` object, initialized with properties taken from the specified {{domxref("RTCTrackEventInit")}} dictionary. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
 
-## Properties
+## Instance properties
 
 _Since `RTCTrackEvent` is based on {{domxref("Event")}}, its properties are also available._
 

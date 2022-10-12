@@ -18,12 +18,12 @@ browser-compat: api.XRAnchor
 
 The **`XRAnchor`** interface creates anchors which keep track of the pose that is fixed relative to the real world. With anchors, you can specify poses in the world that need to be updated to correctly reflect the evolving understanding of the world, such that the poses remain aligned with the same place in the physical world. That helps to build an illusion that the placed objects are really present in the user's environment.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRAnchor.anchorSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an {{domxref("XRSpace")}} object to locate the anchor relative to other `XRSpace` objects.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRAnchor.delete()")}} {{Experimental_Inline}}
   - : Removes the anchor.

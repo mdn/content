@@ -20,7 +20,7 @@ The **`HTMLTableCellElement`** interface provides special properties and methods
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -49,7 +49,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
     - The empty string (`""`)
       - : The header cell has no predefined scope; the user agent will establish the scope based on contextual clues.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

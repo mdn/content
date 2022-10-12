@@ -27,7 +27,7 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 - {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}}
   - : Creates a new `MediaRecorder` object, given a {{domxref("MediaStream")}} to record. Options are available to do things like set the container's MIME type (such as `"video/webm"` or `"video/mp4"`) and the bit rates of the audio and video tracks or a single overall bit rate.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaRecorder.mimeType")}} {{ReadOnlyInline}}
   - : Returns the MIME type that was selected as the recording container for the `MediaRecorder` object when it was created.
@@ -40,7 +40,7 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 - {{domxref("MediaRecorder.audioBitsPerSecond")}} {{ReadOnlyInline}}
   - : Returns the audio encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaRecorder.pause()")}}
   - : Pauses the recording of media.

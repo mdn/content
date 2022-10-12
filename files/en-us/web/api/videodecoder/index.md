@@ -20,14 +20,14 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("VideoDecoder.VideoDecoder", "VideoDecoder()")}} {{Experimental_Inline}}
   - : Creates a new `VideoDecoder` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("VideoDecoder.decodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of decode queue requests.
 - {{domxref("VideoDecoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Indicates whether the underlying codec is configured for decoding.
 
-## Methods
+## Instance methods
 
 - {{domxref("VideoDecoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the video decoder for decoding chunks.

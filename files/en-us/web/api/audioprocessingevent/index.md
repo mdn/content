@@ -25,7 +25,7 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` re
 - `AudioProcessingEvent()` {{Deprecated_Inline}}
   - : Creates a new `AudioProcessingEvent` object.
 
-## Properties
+## Instance properties
 
 _Also implements the properties inherited from its parent, {{domxref("Event")}}_.
 

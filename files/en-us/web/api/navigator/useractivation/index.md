@@ -6,6 +6,7 @@ tags:
   - API
   - Property
   - Reference
+  - Experimental
 browser-compat: api.Navigator.userActivation
 ---
 

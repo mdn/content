@@ -20,12 +20,12 @@ The **`HTMLCollection`** interface represents a generic collection (array-like o
 
 An `HTMLCollection` in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (e.g., using {{jsxref("Array/from", "Array.from")}}) to iterate over if adding, moving, or removing nodes.
 
-## Properties
+## Instance properties
 
 - {{domxref("HTMLCollection.length")}} {{ReadOnlyInline}}
   - : Returns the number of items in the collection.
 
-## Methods
+## Instance methods
 
 - {{domxref("HTMLCollection.item()")}}
 

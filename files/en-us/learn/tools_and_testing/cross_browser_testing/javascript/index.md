@@ -335,7 +335,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
-5. ```js
+   ```js
    const myImage = document.querySelector('.my-image');
 
    fetch('flowers.jpg').then((response) => {
@@ -346,7 +346,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
    });
    ```
 
-6. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch), you should still see the flower image appear — cool!
+5. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch), you should still see the flower image appear — cool!
    ![heading reading fetch basic example with a photo of purple flowers](fetch-image.jpg)
 
 > **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).

@@ -47,7 +47,7 @@ A key is in a key range if the following conditions are true:
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBKeyRange.lower")}} {{ReadOnlyInline}}
   - : Lower bound of the key range.
@@ -58,9 +58,7 @@ A key is in a key range if the following conditions are true:
 - {{domxref("IDBKeyRange.upperOpen")}} {{ReadOnlyInline}}
   - : Returns false if the upper-bound value is included in the key range.
 
-## Methods
-
-### Static methods
+## Static methods
 
 - {{domxref("IDBKeyRange.bound()")}}
   - : Creates a new key range with upper and lower bounds.
@@ -71,7 +69,7 @@ A key is in a key range if the following conditions are true:
 - {{domxref("IDBKeyRange.upperBound()")}}
   - : Creates a new upper-bound key range.
 
-### Instance methods
+## Instance methods
 
 - {{domxref("IDBKeyRange.includes()")}}
   - : Returns a boolean indicating whether a specified key is inside the key range.

@@ -17,7 +17,7 @@ browser-compat: api.USBDevice
 
 The **`USBDevice`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides access to metadata about a paired USB device and methods for controlling it.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBDevice.configuration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("USBConfiguration")}} object for the currently selected interface for a paired USB device.
@@ -54,7 +54,7 @@ The **`USBDevice`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API
 - {{domxref("USBDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The official usg.org-assigned vendor ID.
 
-## Methods
+## Instance methods
 
 - {{domxref("USBDevice.claimInterface()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the requested interface is claimed for exclusive access.

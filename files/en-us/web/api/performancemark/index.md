@@ -19,7 +19,7 @@ browser-compat: api.PerformanceMark
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
@@ -32,7 +32,7 @@ This interface has no properties but it extends the following {{domxref("Perform
 - {{domxref("PerformanceEntry.duration")}}
   - : Returns "`0`". (A mark has no _duration_.)
 
-## Methods
+## Instance methods
 
 This interface has no methods.
 

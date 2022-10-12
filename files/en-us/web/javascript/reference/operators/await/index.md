@@ -23,15 +23,15 @@ await expression
 ### Parameters
 
 - `expression`
-  - : A {{jsxref("Promise")}} or any value to wait for.
+  - : A {{jsxref("Promise")}}, a [thenable object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), or any value to wait for.
 
 ### Return value
 
-The fulfillment value of the promise, or the expression itself's value itself if it's not a `Promise`.
+The fulfillment value of the promise or thenable object, or the expression itself's value if it's not thenable.
 
 ### Exceptions
 
-Throws the rejection reason if the promise is rejected.
+Throws the rejection reason if the promise or thenable object is rejected.
 
 ## Description
 
@@ -70,29 +70,47 @@ f1();
 
 ### Thenable objects
 
-[Thenable objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) will be fulfilled just the same.
+[Thenable objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are resolved just the same as actual `Promise` objects.
 
 ```js
-async function f2() {
+async function f() {
   const thenable = {
     then(resolve, _reject) {
       resolve("resolved!");
     },
   };
-  console.log(await thenable); // resolved!
+  console.log(await thenable); // "resolved!"
 }
 
-f2();
+f();
+```
+
+They can also be rejected:
+
+```js
+async function f() {
+  const thenable = {
+    then(resolve, reject) {
+      reject(new Error("rejected!"));
+    },
+  };
+  await thenable; // Throws Error: rejected!
+}
+
+f();
 ```
 
 ### Conversion to promise
 
-If the value is not a `Promise`, it converts the value to a resolved `Promise`, and waits for it.
+If the value is not a `Promise`, it converts the value to a resolved `Promise`, and waits for it. The awaited value's identity doesn't change as long as it doesn't have a `then` property that's callable.
 
 ```js
 async function f3() {
   const y = await 20;
   console.log(y); // 20
+
+  const obj = {};
+  console.log(await obj === obj); // true
 }
 
 f3();
@@ -140,7 +158,7 @@ export default await colors;
 
 ### Control flow effects of await
 
-When an `await` is encountered in code (either in an async function or in a module), execution of all code following this is immediately paused and pushed into the [microtask queue](/en-US/docs/Web/JavaScript/EventLoop). The main thread is then freed for the next task in the event loop. This happens even if the awaited value is an already-resolved promise or not a promise. For example, consider the following code:
+When an `await` is encountered in code (either in an async function or in a module), the awaited expression is executed, while all code that depends on the expression's value is paused and pushed into the [microtask queue](/en-US/docs/Web/JavaScript/EventLoop). The main thread is then freed for the next task in the event loop. This happens even if the awaited value is an already-resolved promise or not a promise. For example, consider the following code:
 
 ```js
 async function foo(name) {

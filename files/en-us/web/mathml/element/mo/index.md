@@ -18,7 +18,7 @@ The **`<mo>`** [MathML](/en-US/docs/Web/MathML) element represents an **operator
 In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes), this element accepts the following attributes [whose default values depend on the operator's form and content](https://w3c.github.io/mathml-core/#algorithm-for-determining-the-properties-of-an-embellished-operator):
 
 - `accent`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator should be treated as an accent when used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover)  (i.e. drawn bigger and closer to the base expression).
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator should be treated as an accent when used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) (i.e. drawn bigger and closer to the base expression).
 
 - `fence`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.
