@@ -23,7 +23,7 @@ The **`TextDecoder`** interface represents a decoder for a specific text encodin
 - {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
   - : Returns a newly constructed `TextDecoder` that will generate a code point stream with the decoding method specified in parameters.
 
-## Properties
+## Instance properties
 
 _The `TextDecoder` interface doesn't inherit any properties._
 
@@ -34,7 +34,7 @@ _The `TextDecoder` interface doesn't inherit any properties._
 - {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
 
-## Methods
+## Instance methods
 
 _The `TextDecoder` interface doesn't inherit any methods_.
 

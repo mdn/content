@@ -305,9 +305,9 @@ The following functions are used as a value of properties to reference a value d
 - {{CSSxRef("var")}}
   - : A function that inserts a value of a custom property instead of any part of a value of another property.
 
-## CSS grid functions
+## Grid functions
 
-The following functions are used to define a CSS grid.
+The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 - {{CSSxRef("fit-content", "fit-content()")}}
   - : A grid function that clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.

@@ -28,7 +28,7 @@ As the global execution context is shared across the current `BaseAudioContext`,
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioWorkletGlobalScope.currentFrame", "currentFrame")}} {{ReadOnlyInline}}
   - : Returns an integer that represents the ever-increasing current sample-frame of the audio block being processed. It is incremented by 128 (the size of a render quantum) after the processing of each audio block.
@@ -37,7 +37,7 @@ As the global execution context is shared across the current `BaseAudioContext`,
 - {{domxref("AudioWorkletGlobalScope.sampleRate", "sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float that represents the sample rate of the associated {{domxref("BaseAudioContext")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioWorkletGlobalScope.registerProcessor", "registerProcessor()")}}
   - : Registers a class derived from the {{domxref('AudioWorkletProcessor')}} interface. The class can then be used by creating an {{domxref("AudioWorkletNode")}}, providing its registered name.

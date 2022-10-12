@@ -20,11 +20,11 @@ The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/W
 - {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
   - : Creates a new `ByteLengthQueuingStrategy` object instance.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
   - : Returns the given chunk's `byteLength` property.

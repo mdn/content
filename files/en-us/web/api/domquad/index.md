@@ -20,12 +20,12 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 - {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}}
   - : Creates a new `DOMQuad` object.
 
-## Properties
+## Instance properties
 
 - p1,p2,p3,p4 {{ReadOnlyInline}}
   - : are {{domxref("DOMPoint")}} objects for each of the `DOMQuad` object's four corners.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMQuad.fromRect()")}}
   - : Returns a new `DOMQuad` object based on the passed set of coordinates.

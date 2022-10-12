@@ -20,7 +20,7 @@ The **`HTMLFormElement`** interface represents a {{HTMLElement("form")}} element
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -47,7 +47,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 
 Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g. a form with an input named `action` will have its `action` property return that input instead of the form's {{ htmlattrxref("action", "form") }} HTML attribute).
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 

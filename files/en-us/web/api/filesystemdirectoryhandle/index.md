@@ -19,11 +19,11 @@ The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Acce
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 

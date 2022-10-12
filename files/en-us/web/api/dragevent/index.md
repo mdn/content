@@ -18,7 +18,7 @@ This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref(
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : The data that is transferred during a drag and drop interaction.
