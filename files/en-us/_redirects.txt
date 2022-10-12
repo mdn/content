@@ -10201,6 +10201,8 @@
 /en-US/docs/Web/API/XRWebGLLayerInit/framebufferscalefactor	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/ignoredepthvalues	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLSubImage/textureHeight	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight
+/en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error

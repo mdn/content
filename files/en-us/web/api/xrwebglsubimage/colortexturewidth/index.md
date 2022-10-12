@@ -1,6 +1,6 @@
 ---
-title: XRWebGLSubImage.textureWidth
-slug: Web/API/XRWebGLSubImage/textureWidth
+title: XRWebGLSubImage.colorTextureWidth
+slug: Web/API/XRWebGLSubImage/colorTextureWidth
 page-type: web-api-instance-property
 tags:
   - API
@@ -12,12 +12,12 @@ tags:
   - WebXR Device API
   - XR
   - Experimental
-browser-compat: api.XRWebGLSubImage.textureWidth
+browser-compat: api.XRWebGLSubImage.colorTextureWidth
 ---
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The read-only **`textureWidth`** property of the {{domxref("XRWebGLSubImage")}} interface is a number representing the width in pixels of the GL attachment.
+The read-only **`colorTextureWidth`** property of the {{domxref("XRWebGLSubImage")}} interface is a number representing the width in pixels of the GL attachment.
 
 ## Value
 
