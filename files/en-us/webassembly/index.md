@@ -43,7 +43,7 @@ And what's even better is that it is being developed as a web standard via the [
 
 ## API reference
 
-- [WebAssembly language reference](/en-US/docs/WebAssembly/Reference)
+- [WebAssembly instruction reference](/en-US/docs/WebAssembly/Reference)
   - : Reference documentation with interactive samples for the set of WebAssembly operators.
 - [WebAssembly JavaScript interface](/en-US/docs/WebAssembly/JavaScript_interface)
   - : This object acts as the namespace for all WebAssembly related functionality.
