@@ -8,157 +8,141 @@
     "zh-CN": "此文档尚未被撰写，期待你的贡献!",
     "ja": "この項目についての文書はまだ書かれていません。書いてみませんか？"
   },
-
   "Methods": {
     "en-US": "Methods",
-    "fr": "Méthodes",
     "es": "Métodos",
+    "fr": "Méthodes",
+    "ja": "メソッド",
     "pt-BR": "Métodos",
     "ru": "Методы",
-    "zh-CN": "方法",
-    "ja": "メソッド"
+    "zh-CN": "方法"
   },
-
   "Properties": {
     "en-US": "Properties",
-    "fr": "Propriétés",
     "es": "Propiedades",
+    "fr": "Propriétés",
+    "ja": "プロパティ",
     "pt-BR": "Propriedades",
     "ru": "Свойства",
-    "zh-CN": "属性",
-    "ja": "プロパティ"
+    "zh-CN": "属性"
   },
-
   "Event_handlers": {
     "en-US": "Event handlers",
+    "es": "Manejador de eventos",
     "fr": "Gestionnaires d'évènements",
     "ja": "イベントハンドラー",
     "ko": "이벤트 핸들러",
     "pt-BR": "Handlers de Eventos",
-    "zh-TW": "事件處理器",
-    "zh-CN": "事件处理器",
     "ru": "Обработчики событий",
-    "es": "Manejador de eventos"
+    "zh-CN": "事件处理器",
+    "zh-TW": "事件處理器"
   },
-
   "Constructor": {
     "en-US": "Constructor",
     "es": "Constructor",
-    "pt-BR": "Construtor",
     "fr": "Constructeur",
     "ja": "コンストラクター",
+    "pt-BR": "Construtor",
     "ru": "Конструктор",
     "zh-CN": "构造函数"
   },
-
   "Inheritance": {
     "en-US": "Inheritance:",
     "es": "Herencia",
-    "pt-BR": "Herança:",
     "fr": "Héritage&nbsp;:",
+    "ja": "継承",
+    "pt-BR": "Herança:",
     "ru": "Наследование:",
-    "zh-CN": "继承",
-    "ja": "継承"
+    "zh-CN": "继承"
   },
-
   "Implemented_by": {
     "en-US": "Implemented by:",
     "es": "Implementado por:",
-    "pt-BR": "Implementado por:",
     "fr": "Implémenté par&nbsp;:",
     "ja": "実装先:",
+    "pt-BR": "Implementado por:",
     "ru": "Выполняется:",
     "zh-CN": "实现于："
   },
-
   "Related_pages": {
     "en-US": "Related pages for $1",
     "es": "Páginas relacionadas a $1",
-    "pt-BR": "Páginas relacionadas a $1",
     "fr": "Pages liées à $1",
-    "ru": "Похожие страницы для $1",
     "ja": "$1 に関連するページ",
+    "pt-BR": "Páginas relacionadas a $1",
+    "ru": "Похожие страницы для $1",
     "zh-CN": "$1 的相关页面"
   },
-
   "Related_pages_wo_group": {
     "en-US": "Related pages:",
     "es": "Páginas relacionadas:",
-    "pt-BR": "Páginas relacionadas:",
     "fr": "Pages similaires&nbsp;:",
-    "ru": "Похожие страницы:",
     "ja": "関連するページ",
+    "pt-BR": "Páginas relacionadas:",
+    "ru": "Похожие страницы:",
     "zh-CN": "相关页面："
   },
-
   "Reference": {
     "en-US": "Reference",
     "es": "Referencia",
     "fr": "Référence",
     "ja": "リファレンス",
     "pt-BR": "Referência",
-    "zh-CN": "参考",
-    "ru": "Руководство"
+    "ru": "Руководство",
+    "zh-CN": "参考"
   },
-
   "section": {
     "en-US": "section",
     "fr": "section",
+    "ja": "セクション",
     "pt-BR": "sessão",
-    "ru": "секция",
-    "ja": "セクション"
+    "ru": "секция"
   },
-
   "[Translate]": {
     "en-US": "[Translate]",
     "es": "[Traducir]",
     "fr": "[Traduire]",
+    "ja": "[翻訳する]",
     "pt-BR": "[Traduzir]",
-    "zh-CN": "[我来译！]",
     "ru": "[Перевести]",
-    "ja": "[翻訳する]"
+    "zh-CN": "[我来译！]"
   },
-
   "TranslationCTA": {
     "en-US": "Our volunteers haven't translated this article into your language yet. Join us and help get the job done!",
     "es": "Nuestros voluntarios aún no han traducido este artículo al Español. ¡Únete a nosotros y ayuda a traducirlo!",
     "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire&nbsp;!",
+    "ja": "まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？",
     "pt-BR": "Nossos voluntários ainda não traduziram este artigo para sua linguagem. Junte-se a nós e nos ajude a traduzir!",
-    "zh-CN": "此页面仍未被本地化，期待你的翻译!",
     "ru": "Наши волонтёры ещё не перевели данную статью на Русский. Присоединяйтесь к нам и помогите закончить эту работу!",
-    "ja": "まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？"
+    "zh-CN": "此页面仍未被本地化，期待你的翻译!"
   },
-
   "Guides": {
     "en-US": "Guides",
     "es": "Guías",
     "fr": "Guides",
+    "ja": "ガイド",
     "pt-BR": "Guias",
     "ru": "Руководства",
-    "ja": "ガイド",
     "zh-CN": "指南"
   },
-
   "Events": {
     "en-US": "Events",
     "es": "Eventos",
     "fr": "Événements",
+    "ja": "イベント",
     "pt-BR": "Eventos",
     "ru": "События",
-    "ja": "イベント",
     "zh-CN": "事件"
   },
-
   "Interfaces": {
     "en-US": "Interfaces",
     "es": "Interfaces",
     "fr": "Interfaces",
+    "ja": "インターフェイス",
     "pt-BR": "Interfaces",
     "ru": "Интерфейсы",
-    "ja": "インターフェイス",
     "zh-CN": "接口"
   },
-
   "listSeparator": {
     "en-US": ", ",
     "es": ", ",
@@ -168,13 +152,12 @@
     "ru": ", ",
     "zh-CN": "、"
   },
-
   "MissingPage": {
     "en-US": "[Page not yet written]",
+    "es": "[Página aún no escrita]",
     "fr": "[Page qui reste à écrire]",
     "ja": "[ページがまだ書かれていません]",
     "pt-BR": "[Página ainda não foi escrita]",
-    "zh-CN": "[页面尚未撰写]",
-    "es": "[Página aún no escrita]"
+    "zh-CN": "[页面尚未撰写]"
   }
 }
