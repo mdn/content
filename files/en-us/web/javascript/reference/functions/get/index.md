@@ -176,7 +176,7 @@ const obj = {
 ### get vs. defineProperty
 
 While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have
-similar results, there is a subtle difference between the two when used on
+similar results, there is a suitable difference between the two when used on
 {{jsxref("classes")}}.
 
 When using `get` the property will be defined on the instance's prototype,
