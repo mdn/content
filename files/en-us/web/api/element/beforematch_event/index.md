@@ -7,7 +7,7 @@ tags:
 browser-compat: api.Element.beforematch_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 An element receives a **`beforematch`** event when it is in the _hidden until found_ state and the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 
