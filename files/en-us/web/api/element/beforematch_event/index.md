@@ -95,7 +95,7 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 #### Result
 
-Clicking the "Go to hidden content" button navigates to the hidden until found element. The `beforematch` event fires, the text content is updated, and then the element's content is displayed.
+Clicking the "Go to hidden content" button navigates to the hidden-until-found element. The `beforematch` event fires, the text content is updated, and then the element's content is displayed.
 
 To run the example again, click "Reload".
 
