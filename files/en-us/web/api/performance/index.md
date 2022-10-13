@@ -26,6 +26,9 @@ An object of this type can be obtained by calling the {{domxref("window.performa
 
 _The `Performance` interface doesn't inherit any properties._
 
+- {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
+  - : An {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
+
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
 
   - : A legacy {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
