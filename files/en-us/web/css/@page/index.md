@@ -59,6 +59,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
   <page-body>
 }
 ```
+
 Where the `<page-body>` includes:
 
 - page-properties
@@ -144,7 +145,6 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | min-width             |
 |                       | max-width             |
 
-
 ### margin at-rules
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page and make changes based on the properties or content set in the block of code:
@@ -213,6 +213,7 @@ Other margin-at rules include:
 ```
 
 #### page-margin properties
+
 The page-margin properties are the set of CSS properties can be set in any individual margin at-rule. They include:
 
 | Feature     | CSS properties             |
@@ -333,7 +334,7 @@ body{
   background-color: rgb(110 110 119);
 }
 
-article{  
+article{
   width: 100%;
 }
 
@@ -361,7 +362,7 @@ JavaScript
 
 ```js
     let button = document.querySelector("button");
-    
+
     button.addEventListener('click', () => {
       window.print();
     });
