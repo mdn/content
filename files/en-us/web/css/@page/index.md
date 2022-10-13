@@ -361,11 +361,11 @@ section{
 JavaScript
 
 ```js
-    let button = document.querySelector("button");
+const button = document.querySelector("button");
 
-    button.addEventListener('click', () => {
-      window.print();
-    });
+button.addEventListener("click", () => {
+  window.print();
+});
 ```
 
 Print out the page below to see the output of this example:
