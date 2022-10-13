@@ -19,11 +19,11 @@ A user indicates their preference through an operating system setting (e.g. ligh
 
 ## Embedded elements
 
-For SVG and iframes, `prefers-color-scheme` lets you to set a CSS style for the SVGs or iframe based on the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of parent element in the web page.
-SVGs must be used embedded (i.e., `<img src="circle.svg" />`) as opposed to [inlined in HTML](/en-US/docs/Web/SVG/Tutorial/Getting_Started#a_simple_example).
+For SVG and iframes, `prefers-color-scheme` lets you to set a CSS style for the SVGs or iframe based on the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the parent element in the web page.
+SVGs must be used embedded (i.e., `<img src="circle.svg" alt="circle" />`) as opposed to [inlined in HTML](/en-US/docs/Web/SVG/Tutorial/Getting_Started#a_simple_example).
 An example of using `prefers-color-scheme` in SVGs can be found in in the [Color scheme inheritance](#color_scheme_inheritance) section.
 
-Using `prefers-color-scheme` is allowed in SVG and iframe elements used [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) from a different host than the page that's referencing them.
+Using `prefers-color-scheme` is allowed in [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) `<svg>` and `<iframe>` elements. Cross-origin elements are elements retrieved from a different host than the page that is referencing them.
 To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and for more information about iframes, see the [iframe documentation](/en-US/docs/Web/HTML/Element/iframe).
 
 ## Syntax
@@ -100,9 +100,9 @@ The following CSS is used to style the elements above:
 ### Color scheme inheritance
 
 The following example shows how to use `prefers-color-scheme` with the [`color-scheme` property](/en-US/docs/Web/CSS/color-scheme) inherited from a parent element.
-A script is used to set the source of the `<img>` elements, this would normally be done in HTML as `<img src="circle.svg" />`.
+A script is used to set the source of the `<img>` elements and their `alt` attributes. This would normally be done in HTML as `<img src="circle.svg" alt="circle" />`.
 
-On browsers that support this feature (such as Firefox), you should see three circles, with one drawn in a different color.
+You should see three circles, with one drawn in a different color.
 The first circle inherits the `color-scheme` from the OS and can be toggled using the system OS's theme switcher.
 
 The second and third circles inherit the `color-scheme` from the embedding element and so the `@media` query allows to set styles of the SVG content based on the parent element's `color-scheme`.
@@ -123,6 +123,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 <!-- Embed an SVG for all <img> elements -->
 <script>
   for (let img of document.querySelectorAll("img")) {
+    img.alt = "circle";
     img.src =
       "data:image/svg+xml;base64," +
       btoa(`
