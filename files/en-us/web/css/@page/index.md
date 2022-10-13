@@ -59,6 +59,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
   <page-body>
 }
 ```
+
 Where the `<page-body>` includes:
 
 - page-properties
@@ -75,7 +76,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 
 ### page-properties
 
-| Feature     | CSS properties             |
+| Feature               | CSS properties        |
 | --------------------- | --------------------- |
 | bidi properties       | direction             |
 | background properties | background-color      |
@@ -131,7 +132,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | padding-bottom        |
 |                       | padding-left          |
 |                       | padding               |
-| quotes                | quotes            |
+| quotes                | quotes                |
 | text properties       | letter-spacing        |
 |                       | text-align            |
 |                       | text-decoration       |
@@ -139,22 +140,21 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | text-transform        |
 |                       | white-space           |
 |                       | word-spacing          |
-| visibility            | visibility                |
+| visibility            | visibility            |
 | width properties      | width                 |
 |                       | min-width             |
 |                       | max-width             |
-
 
 ### margin at-rules
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page and make changes based on the properties or content set in the block of code:
 
 ```css
-    @page {
-      @top-left{
-        <page-margin-properties>
-      }
-    }
+@page {
+  @top-left {
+    <page-margin-properties>
+  }
+}
 ```
 
 **`@top-left`** targets the top-left of the document and applies the changes based on the page-margin-properties set.
@@ -162,60 +162,61 @@ The margin at-rules are used inside of the `@page` at-rule. They each target a d
 Other margin-at rules include:
 
 ```
-    @top-left-corner { 
-      <page-margin-properties> 
-    };
-    @top-left { 
-      <page-margin-properties> 
-    };
-    @top-center { 
-      <page-margin-properties> 
-    };
-    @top-right {
-      <page-margin-properties> 
-    };
-    @top-right-corner { 
-      <page-margin-properties> 
-    };
-    @bottom-left-corner { 
-      <page-margin-properties> 
-    };
-    @bottom-left { 
-      <page-margin-properties> 
-    };
-    @bottom-center { 
-      <page-margin-properties> 
-    };
-    @bottom-right { 
-      <page-margin-properties> 
-    };
-    @bottom-right-corner { 
-      <page-margin-properties> 
-    };
-    @left-top { 
-    <page-margin-properties> 
-    };
-    @left-middle { 
-      <page-margin-properties> 
-    };
-    @left-bottom { 
-      <page-margin-properties> 
-    };
-    @right-top { 
-      <page-margin-properties> 
-    };
-    @right-middle { 
-      <page-margin-properties> 
-    };
-    @right-bottom { 
-      <page-margin-properties> 
-    };
+@top-left-corner {
+  <page-margin-properties>
+}
+@top-left {
+  <page-margin-properties>
+}
+@top-center {
+  <page-margin-properties>
+}
+@top-right {
+  <page-margin-properties>
+}
+@top-right-corner {
+  <page-margin-properties>
+}
+@bottom-left-corner {
+  <page-margin-properties>
+}
+@bottom-left {
+  <page-margin-properties>
+}
+@bottom-center {
+  <page-margin-properties>
+}
+@bottom-right {
+  <page-margin-properties>
+}
+@bottom-right-corner {
+  <page-margin-properties>
+}
+@left-top {
+  <page-margin-properties>
+}
+@left-middle {
+  <page-margin-properties>
+}
+@left-bottom {
+  <page-margin-properties>
+}
+@right-top {
+  <page-margin-properties>
+}
+@right-middle {
+  <page-margin-properties>
+}
+@right-bottom {
+  <page-margin-properties>
+}
 ```
 
 #### page-margin properties
+
 The page-margin properties are the set of CSS properties can be set in any individual margin at-rule. They include:
 
-| Feature     | CSS properties             |
+| Feature               | CSS properties        |
 | --------------------- | --------------------- |
 | bidi properties       | direction             |
 | background properties | background-color      |
@@ -246,8 +247,8 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 |                       | border                |
 | counter properties    | counter-reset         |
 |                       | counter-increment     |
-| content               | content              |
-| color                 | color               |
+| content               | content               |
+| color                 | color                 |
 | font properties       | font-family           |
 |                       | font-size             |
 |                       | font-style            |
@@ -257,7 +258,7 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 | height properties     | height                |
 |                       | min-height            |
 |                       | max-height            |
-| line height           | line-height               |
+| line height           | line-height           |
 | margin properties     | margin-top            |
 |                       | margin-right          |
 |                       | margin-bottom         |
@@ -272,7 +273,7 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 |                       | padding-bottom        |
 |                       | padding-left          |
 |                       | padding               |
-| quotes                | quotes               |
+| quotes                | quotes                |
 | text properties       | letter-spacing        |
 |                       | text-align            |
 |                       | text-decoration       |
@@ -280,12 +281,12 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 |                       | text-transform        |
 |                       | white-space           |
 |                       | word-spacing          |
-| vertical alignment    | vertical-align             |
-| visibility            | visibility               |
+| vertical alignment    | vertical-align        |
+| visibility            | visibility            |
 | width properties      | width                 |
 |                       | min-width             |
 |                       | max-width             |
-| z-index               | z-index              |
+| z-index               | z-index               |
 
 ## Examples
 
@@ -297,23 +298,48 @@ HTML:
 <article>
   <section>
     <h2>Header</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
+      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
+      velit.
+    </p>
   </section>
   <section>
     <h2>Header</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
+      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
+      velit.
+    </p>
   </section>
   <section>
     <h2>Header</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
+      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
+      velit.
+    </p>
   </section>
   <section>
     <h2>Header</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
+      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
+      velit.
+    </p>
   </section>
   <section>
     <h2>Header</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam velit.</p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
+      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
+      velit.
+    </p>
   </section>
 </article>
 
@@ -328,12 +354,12 @@ CSS:
   margin: 20%;
 }
 
-body{
-  font-family: 'Helvetica';
+body {
+  font-family: "Helvetica";
   background-color: rgb(110 110 119);
 }
 
-article{  
+article {
   width: 100%;
 }
 
@@ -351,20 +377,20 @@ section {
   -webkit-print-color-adjust: exact;
 }
 
-section{
+section {
   page-break-after: always;
   break-after: page;
 }
 ```
 
-JavaScript
+JavaScript:
 
 ```js
-    let button = document.querySelector("button");
-    
-    button.addEventListener('click', () => {
-      window.print();
-    });
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+  window.print();
+});
 ```
 
 Print out the page below to see the output of this example:
