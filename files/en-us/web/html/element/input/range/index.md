@@ -255,9 +255,7 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-When supported, we will be able to make the range vertical with CSS by declaring a height value greater than the width value. This is not yet implemented by any of the major browsers. (See Firefox {{bug(981916)}}, [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071)). It also, perhaps, may still be [under discussion](https://github.com/whatwg/html/issues/4177).
-
-In the meantime, to create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox. The CSS {{cssxref('transform')}} property can also be used to {{cssxref('rotate'}} the slider.
+To create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox. The CSS {{cssxref('transform')}} property can also be used to {{cssxref('rotate'}} the slider.
 
 #### Horizontal range control
 
