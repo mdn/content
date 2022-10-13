@@ -51,3 +51,4 @@ document.head.appendChild(meta);
 ## See also
 
 - {{HTMLElement("meta")}}
+- [Possible values for the name attribute](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification)

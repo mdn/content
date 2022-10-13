@@ -15,7 +15,9 @@ browser-compat: api.HTMLMetaElement.scheme
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLMetaElement.scheme`** property defines the scheme of the value in the {{domxref("HTMLMetaElement.content")}} attribute.
-This is most commonly used to indicate formats such as `URI`, `ISBN`, or date formatting such as `YYYY-MM-DD`.
+This property is used to indicate formats such as `URI`, `ISBN`, or date formatting such as `YYYY-MM-DD`.
+The `scheme` content is interpreted as an extension of the element's {{domxref("HTMLMetaElement.name")}} if a browser or user agent recognizes the scheme.
+
 This property is deprecated and should not be used on new web pages.
 
 ## Value
