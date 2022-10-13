@@ -58,12 +58,11 @@ This article provides information about the changes in Firefox 106 that will aff
 
 - Added support for de-serializing remote references created in the object reference store ({{bug("1788124")}}).
 
-- Added full support for the `evaluate`, `callFunction` and `disown` commands of the script module ({{bug("1778976")}}).
+- Added full support for the `script.evaluate`, `script.callFunction` and `script.disown` commands ({{bug("1778976")}}).
 
 #### Marionette
 
-- Added support for `wheel` input source for [Actions](https://w3c.github.io/webdriver/webdriver-spec.html#actions), which is associated with a
-wheel-type input device ({{bug("1746601")}}).
+- Added support for `wheel` input source for [Actions](https://w3c.github.io/webdriver/webdriver-spec.html#actions), which is associated with a wheel-type input device ({{bug("1746601")}}).
 
 - Added support for opening and closing tabs in GeckoView based applications (eg. Firefox for Android) ({{bug("1506782")}}).
 
