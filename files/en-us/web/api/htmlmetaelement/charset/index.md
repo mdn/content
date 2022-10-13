@@ -12,7 +12,7 @@ tags:
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.charset`** property is a string that specifies the character encoding used in a document.
+The **`HTMLMetaElement.charset`** property is a string that specifies the [character encoding](/en-US/docs/Glossary/character_encoding) used in a document.
 Using **non-UTF-8 character encodings is strongly discouraged** as this can create unexpected results on form submission and URL encoding.
 For more details, see [Character encodings in HTML](/en-US/docs/Web/HTML/Element/meta#attr-charset).
 

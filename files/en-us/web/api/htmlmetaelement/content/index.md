@@ -13,7 +13,7 @@ browser-compat: api.HTMLMetaElement.content
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.content`** property is gets or sets the content attribute by {{domxref("HTMLMetaElement.name")}} or {{domxref("HTMLMetaElement.httpEquiv")}}.
+The **`HTMLMetaElement.content`** property gets or sets the `content` attribute of pragma directives and named {{htmlelement("meta")}} tags.
 For more information, see the [content](/en-US/docs/Web/HTML/Element/meta#attr-content) attribute.
 
 ## Value
@@ -52,3 +52,6 @@ document.head.appendChild(meta);
 ## See also
 
 - {{HTMLElement("meta")}}
+- {{domxref("HTMLMetaElement.name")}} 
+- {{domxref("HTMLMetaElement.httpEquiv")}}
+- [Learn: Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)

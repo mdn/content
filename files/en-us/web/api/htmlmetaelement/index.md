@@ -26,11 +26,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLMetaElement.content")}}
   - : The 'value' part of name/value pairs of document metadata.
 - {{domxref("HTMLMetaElement.httpEquiv")}}
-  - : The name of an HTTP response header to define for a document.
+  - : The name of the pragma directive, the HTTP response header, to define for a document.
 - {{domxref("HTMLMetaElement.media")}}
-  - : The media context for a metadata property.
+  - : The media context for a `theme-color` metadata property.
 - {{domxref("HTMLMetaElement.name")}}
-  - : The 'name' part of name/value pairs defining metadata of a document.
+  - : The 'name' part of name/value pairs defining named metadata of a document.
 - {{domxref("HTMLMetaElement.scheme")}} {{deprecated_inline}}
   - : Defines the scheme of the value in the {{domxref("HTMLMetaElement.content")}} attribute.
     This is deprecated and should not be used on new web pages.
@@ -41,12 +41,12 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## Examples
 
-The following teo examples show a general approach to using the `HTMLMetaElement` interface.
+The following two examples show a general approach to using the `HTMLMetaElement` interface.
 For specific examples, see the pages for the individual properties as described in the [Instance properties](#instance_properties) above.
 
 ### Setting page description metadata
 
-Creating a new meta element with `description` as a name and setting a `content` value:
+Creating a new `<meta>` element with `description` as a name and setting a `content` value:
 
 ```js
 let meta = document.createElement("meta");
@@ -56,7 +56,7 @@ meta.content =
 document.head.appendChild(meta);
 ```
 
-### Setting the viewport
+### Setting the viewport metadata
 
 ```js
 var meta = document.createElement("meta");
