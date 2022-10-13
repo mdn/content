@@ -116,7 +116,7 @@ The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specificat
 
 The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
-If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin, making the request some attributes of the `PerformanceResourceTiming` object will be set to zero.
+If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin, after making the request some attributes of the `PerformanceResourceTiming` object will be set to zero.
 
 ```apache
 <IfModule mod_headers.c>
