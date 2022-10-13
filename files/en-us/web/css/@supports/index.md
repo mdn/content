@@ -128,8 +128,8 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 ### Testing for the support of a given CSS property or a prefixed version
 
 ```css
-@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) {
-  /* CSS applied when 3D transforms, prefixed or not, are supported */
+@supports ((text-stroke: 10px) or (-webkit-text-stroke: 10px) {
+  /* CSS applied when text-stroke, prefixed or not, is supported */
 }
 ```
 
@@ -141,31 +141,21 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 }
 ```
 
-### Testing for the support of custom properties
-
-```css
-@supports (--foo: green) {
-  body {
-    color: var(--varName);
-  }
-}
-```
-
 ### Testing for the support of a selector
 
-The CSS Conditional Rules Level 4 specification adds the ability to test for support of a selector—for example {{cssxref(":is",":is()")}}.
+The CSS Conditional Rules Level 4 specification adds the ability to test for support of a selector—for example {{cssxref(":has",":has()")}}.
 
 ```css
-/* This rule won't be applied in browsers which don't support :is() */
-:is(ul, ol) > li {
-  /* CSS applied when the :is(…) selector is supported */
+/* This rule won't be applied in browsers which don't support :has() */
+ul:has(> li li) {
+  /* CSS applied when the :has(…) selector is supported */
 }
 
-@supports not selector(:is(a, b)) {
-  /* Fallback for when :is() is unsupported */
+@supports not selector(:has(a, b)) {
+  /* Fallback for when :has() is unsupported */
   ul > li,
   ol > li {
-    /* The above expanded for browsers which don't support :is(…) */
+    /* The above expanded for browsers which don't support :has(…) */
   }
 }
 
