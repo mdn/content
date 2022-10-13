@@ -150,11 +150,11 @@ and `<pseudo-selector>` represents these pseudo-classes:
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page and make changes based on the properties or content set in the block of code:
 
 ```css
-    @page {
-      @top-left{
-        <page-margin-properties>
-      }
-    }
+@page {
+  @top-left {
+    <page-margin-properties>
+  }
+}
 ```
 
 **`@top-left`** targets the top-left of the document and applies the changes based on the page-margin-properties set.
@@ -162,54 +162,54 @@ The margin at-rules are used inside of the `@page` at-rule. They each target a d
 Other margin-at rules include:
 
 ```
-    @top-left-corner {
-      <page-margin-properties>
-    };
-    @top-left {
-      <page-margin-properties>
-    };
-    @top-center {
-      <page-margin-properties>
-    };
-    @top-right {
-      <page-margin-properties>
-    };
-    @top-right-corner {
-      <page-margin-properties>
-    };
-    @bottom-left-corner {
-      <page-margin-properties>
-    };
-    @bottom-left {
-      <page-margin-properties>
-    };
-    @bottom-center {
-      <page-margin-properties>
-    };
-    @bottom-right {
-      <page-margin-properties>
-    };
-    @bottom-right-corner {
-      <page-margin-properties>
-    };
-    @left-top {
-    <page-margin-properties>
-    };
-    @left-middle {
-      <page-margin-properties>
-    };
-    @left-bottom {
-      <page-margin-properties>
-    };
-    @right-top {
-      <page-margin-properties>
-    };
-    @right-middle {
-      <page-margin-properties>
-    };
-    @right-bottom {
-      <page-margin-properties>
-    };
+@top-left-corner {
+  <page-margin-properties>
+}
+@top-left {
+  <page-margin-properties>
+}
+@top-center {
+  <page-margin-properties>
+}
+@top-right {
+  <page-margin-properties>
+}
+@top-right-corner {
+  <page-margin-properties>
+}
+@bottom-left-corner {
+  <page-margin-properties>
+}
+@bottom-left {
+  <page-margin-properties>
+}
+@bottom-center {
+  <page-margin-properties>
+}
+@bottom-right {
+  <page-margin-properties>
+}
+@bottom-right-corner {
+  <page-margin-properties>
+}
+@left-top {
+  <page-margin-properties>
+}
+@left-middle {
+  <page-margin-properties>
+}
+@left-bottom {
+  <page-margin-properties>
+}
+@right-top {
+  <page-margin-properties>
+}
+@right-middle {
+  <page-margin-properties>
+}
+@right-bottom {
+  <page-margin-properties>
+}
 ```
 
 #### page-margin properties
