@@ -255,7 +255,7 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-To create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox. The CSS {{cssxref('transform')}} property can also be used to {{cssxref('rotate'}} the slider.
+To create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox. 
 
 #### Horizontal range control
 
@@ -268,64 +268,6 @@ Consider this range control:
 {{EmbedLiveSample("Horizontal_range_control", 200, 200)}}
 
 This control is horizontal (at least on most if not all major browsers; others might vary).
-
-#### Standards-based vertical range control
-
-According to the specification, making it vertical requires adding CSS to change the dimensions of the control so that it's taller than it is wide, like this:
-
-```css
-#volume {
-  height: 150px;
-  width: 50px;
-}
-```
-
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
-```
-
-{{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200)}}
-
-Unfortunately, no major browsers support the sized method of creating a vertical range control.
-
-#### Using transform
-
-You can create a vertical range control by drawing a horizontal range control on its side. The easiest way is to use CSS: by applying a {{cssxref("transform")}} to rotate the element, you can make it vertical. Let's take a look.
-
-The HTML needs to be updated to wrap the {{HTMLElement("input")}} in a {{HTMLElement("div")}} to let us correct the layout after the transform is performed (since transforms don't automatically affect the layout of the page):
-
-```html
-<div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1" />
-</div>
-```
-
-Now we need some CSS. First is the CSS for the wrapper itself; this specifies the display mode and size we want so that the page lays out correctly; in essence, it's reserving an area of the page for the slider so that the rotated slider fits into the reserved space without making a mess of things.
-
-```css
-.slider-wrapper {
-  display: inline-block;
-  width: 20px;
-  height: 150px;
-  padding: 0;
-}
-```
-
-Then comes the style information for the `<input>` element within the reserved space:
-
-```css
-.slider-wrapper input {
-  width: 150px;
-  height: 20px;
-  margin: 0;
-  transform-origin: 75px 75px;
-  transform: rotate(-90deg);
-}
-```
-
-The size of the control is set to be 150 pixels long by 20 pixels tall. The margins are set to 0 and the {{cssxref("transform-origin")}} is shifted to the middle of the space the slider rotates through; since the slider is configured to be 150 pixels wide, it rotates through a box which is 150 pixels on each side. Offsetting the origin by 75px on each axis means we will rotate around the center of that space. Finally, we rotate counter-clockwise by 90°. The result: a range input which is rotated so the maximum value is at the top and the minimum value is at the bottom.
-
-{{EmbedLiveSample("Using_transform", 200, 200, "orientation_sample3.png")}}
 
 #### Using the appearance property
 
