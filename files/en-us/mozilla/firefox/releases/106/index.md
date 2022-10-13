@@ -48,23 +48,24 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Marionette
+#### WebDriver BiDi
 
-- Added support for scroll (wheel) actions ({{bug("1746601")}}).
+- Added basic support for the `script.getRealms` command that is currently limited to the WindowRealmInfo type which includes window realms and sandbox realms ({{bug("1766240")}}).
 
-- Added support for opening and closing tabs on GeckoView applications (eg. Firefox for Android) ({{bug("1506782")}}).
-
-#### BiDi
-
-- Added basic support for the getRealms command of the script module, currently limited to the WindowRealmInfo type which includes window realms and sandbox realms ({{bug("1766240")}}).
-
-- Added support for the "load" event of the browsingContext module, which is emitted when a "load" event is triggered on a BrowsingContext's window ({{bug("1756619")}}).
+- Added support for the `browsingContext.load` event, which is emitted when a `load` event is triggered on a BrowsingContext's window ({{bug("1756619")}}).
 
 - Added an object reference store to hold strong references for serialized remote values ({{bug("1770736")}}).
 
 - Added support for de-serializing remote references created in the object reference store ({{bug("1788124")}}).
 
-- Added full support for the "evaluate", "callFunction" and "disown" commands of the script module ({{bug("1778976")}}).
+- Added full support for the `evaluate`, `callFunction` and `disown` commands of the script module ({{bug("1778976")}}).
+
+#### Marionette
+
+- Added support for `wheel` input source for [Actions](https://w3c.github.io/webdriver/webdriver-spec.html#actions), which is associated with a
+wheel-type input device ({{bug("1746601")}}).
+
+- Added support for opening and closing tabs in GeckoView based applications (eg. Firefox for Android) ({{bug("1506782")}}).
 
 ## Changes for add-on developers
 
