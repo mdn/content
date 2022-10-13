@@ -34,13 +34,16 @@ Math.pow(base, exponent)
 
 A number representing `base` taken to the power of `exponent`. Returns {{jsxref("NaN")}} in one of the following cases:
 
-- `base` or `exponent` is `NaN`.
+- `exponent` is `NaN`.
+- `base` is `NaN` and `exponent` is not `0`.
 - `base` is ±1 and `exponent` is ±`Infinity`.
 - `base < 0` and `exponent` is not an integer.
 
 ## Description
 
 `Math.pow()` is equivalent to the [`**`](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) operator, except `Math.pow()` only accepts numbers.
+
+`Math.pow(NaN, 0)` (and the equivalent `NaN ** 0`) is the only case where {{jsxref("NaN")}} doesn't propagate through mathematical operations — it returns `1` despite the operand being `NaN`. In addition, the behavior where `base` is 1 and `exponent` is non-finite (±Infinity or `NaN`) is different from IEEE 754, which specifies that the result should be 1, whereas JavaScript returns `NaN` to preserve backward compatibility with its original behavior.
 
 Because `pow()` is a static method of `Math`, use it as `Math.pow()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
@@ -94,6 +97,11 @@ Math.pow(1.1, Infinity); // Infinity
 Math.pow(0.9, -Infinity); // Infinity
 Math.pow(1, -Infinity); // NaN
 Math.pow(1.1, -Infinity); // 0
+
+// NaN: only Math.pow(NaN, 0) does not result in NaN
+Math.pow(NaN, 0); // 1
+Math.pow(NaN, 1); // NaN
+Math.pow(1, NaN); // NaN
 ```
 
 ## Specifications
