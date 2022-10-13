@@ -56,7 +56,6 @@ encrypt(algorithm, key, data)
 
       - `name`
         - : A string indicating the name of the algorithm: `AES-CTR`.
-
       - `counter`
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block.
           This must be 16 bytes long (the AES block size).

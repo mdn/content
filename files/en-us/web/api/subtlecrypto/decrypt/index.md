@@ -54,7 +54,19 @@ decrypt(algorithm, key, data)
           Must be 16 bytes, unpredictable, and preferably cryptographically random.
           However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
-    - To use [AES-CTR](#aes-ctr), pass an object with the properties in the [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams) dictionary.
+    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), pass an object with the properties the following properties: <!-- AesCtrParams dictionary in the spec -->
+
+      - `name`
+        - : A string indicating the name of the algorithm: `AES-CTR`.
+      - `counter`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block.
+          This must be 16 bytes long (the AES block size).
+          The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce.
+          For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
+      - `length`
+        - : A `Number` — the number of bits in the counter block that are used for the actual counter.
+          The counter must be big enough that it doesn't wrap: if the message is `n` blocks and the counter is `m` bits long, then the following must be true: `n <= 2^m`.
+          The [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) standard, which defines CTR, suggests that the counter should occupy half of the counter block (see [Appendix B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)), so for AES it would be 64.
 
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key to be used for decryption.
@@ -103,8 +115,8 @@ function decryptMessage(privateKey, ciphertext) {
 
 ### AES-CTR
 
-This code decrypts `ciphertext` using AES in CTR mode. Note that
-`counter` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
+This code decrypts `ciphertext` using AES in CTR mode.
+Note that `counter` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
 
 ```js
 function decryptMessage(key, ciphertext) {
