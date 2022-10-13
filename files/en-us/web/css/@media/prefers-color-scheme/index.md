@@ -105,7 +105,7 @@ A script is used to set the source of the `<img>` elements and their `alt` attri
 You should see three circles, with one drawn in a different color.
 The first circle inherits the `color-scheme` from the OS and can be toggled using the system OS's theme switcher.
 
-The second and third circles inherit the `color-scheme` from the embedding element and so the `@media` query allows to set styles of the SVG content based on the parent element's `color-scheme`.
+The second and third circles inherit the `color-scheme` from the embedding element; the `@media` query allows setting styles of the SVG content based on the parent element's `color-scheme`.
 In this case, the parent element with a `color-scheme` CSS property is a `<div>`.
 
 ```html
