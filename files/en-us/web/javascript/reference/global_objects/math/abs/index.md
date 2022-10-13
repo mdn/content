@@ -49,7 +49,7 @@ Math.abs(Infinity); // Infinity
 
 ### Coercion of parameter
 
-`Math.abs()` [coerces its parameter to a number](/en-US/docs/Web/JavaScript/Global_Objects/Number#number_coercion). Non-coercible values will become `NaN`, making `Math.abs()` also return `NaN`.
+`Math.abs()` [coerces its parameter to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Non-coercible values will become `NaN`, making `Math.abs()` also return `NaN`.
 
 ```js
 Math.abs("-1"); // 1
