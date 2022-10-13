@@ -55,6 +55,7 @@ exponentiation, but JavaScript uses that symbol for the
 3 ** 2.5 // 15.588457268119896
 10 ** -1 // 0.1
 NaN ** 2 // NaN
+1 ** Infinity // NaN (NaN result specified for legacy ECMAScript compatibility)
 ```
 
 ### Associativity
