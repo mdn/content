@@ -32,7 +32,7 @@ browser.tabs.onUpdated.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback[, extraParameters])`
+- `addListener(callback, filter)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -54,7 +54,7 @@ Events have three functions:
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
-- `extraParameters` {{optional_inline}}
+- `filter` {{optional_inline}}
 
   - : `object`. A set of filters that restrict the events sent to this listener. This object can have one or more of these properties. Events are only sent if they satisfy all the filters provided.
 
