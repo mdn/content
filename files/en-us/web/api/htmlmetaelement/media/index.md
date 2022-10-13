@@ -13,9 +13,10 @@ browser-compat: api.HTMLMetaElement.media
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.media`** property enables specifying the media for `theme-color` metadata. 
+The **`HTMLMetaElement.media`** property enables specifying the media for `theme-color` metadata.
 
-The `theme-color` metatag enables setting the color of the browser's toolbar or UI in supporting browsers and operating systems. The `media` property enables setting different theme colors for different `media` values.
+The `theme-color` property enables setting the color of the browser's toolbar or UI in supporting browsers and operating systems.
+The `media` property enables setting different theme colors for different `media` values.
 
 ## Value
 
