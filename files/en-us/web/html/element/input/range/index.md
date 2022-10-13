@@ -253,9 +253,11 @@ input[type="range"] {
 
 ### Creating vertical range controls
 
-By default, if a browser renders a range input as a slider, it will render it so that the knob slides left and right. When supported, we will be able to make the range vertical, to slide up and down with CSS by declaring a height value greater than the width value. This is not actually implemented yet by any of the major browsers. (See Firefox {{bug(981916)}}, [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071)). It also, perhaps, may still be [under discussion](https://github.com/whatwg/html/issues/4177).
+By default, browsers render range inputs as a slider with the knob sliding left and right. 
 
-In the meantime, we can make the range vertical by rotating it using CSS transforms, or, by targeting each browser engine with their own method, which includes setting the {{cssxref('appearance')}} to `slider-vertical`, by using a non-standard `orient` attribute in Firefox, or by changing the text direction for Internet Explorer and Edge.
+When supported, we will be able to make the range vertical with CSS by declaring a height value greater than the width value. This is not yet implemented by any of the major browsers. (See Firefox {{bug(981916)}}, [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071)). It also, perhaps, may still be [under discussion](https://github.com/whatwg/html/issues/4177).
+
+In the meantime, to create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox. The CSS {{cssxref('transform')}} property can also be used to {{cssxref('rotate'}} the slider.
 
 #### Horizontal range control
 
@@ -265,7 +267,7 @@ Consider this range control:
 <input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
-{{EmbedLiveSample("Horizontal_range_control", 200, 200, "orientation_sample1.png")}}
+{{EmbedLiveSample("Horizontal_range_control", 200, 200)}}
 
 This control is horizontal (at least on most if not all major browsers; others might vary).
 
@@ -284,9 +286,9 @@ According to the specification, making it vertical requires adding CSS to change
 <input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
-{{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200, "orientation_sample2.png")}}
+{{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200)}}
 
-Unfortunately, no major browsers currently support vertical range controls directly.
+Unfortunately, no major browsers support the sized method of creating a vertical range control.
 
 #### Using transform
 
@@ -341,7 +343,7 @@ We target just the inputs with a type of range:
 
 ```css
 input[type="range"] {
-  -webkit-appearance: slider-vertical;
+  appearance: slider-vertical;
 }
 ```
 
@@ -389,12 +391,12 @@ We keep the `orient` attribute with a value of `vertical` for Firefox:
 <input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
-We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `-webkit-appearance: slider-vertical` for all -webkit-based browsers:
+We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
 
 ```css
 input[type="range"] {
   writing-mode: bt-lr;
-  -webkit-appearance: slider-vertical;
+  appearance: slider-vertical;
 }
 ```
 

@@ -272,11 +272,9 @@ A `color` control can be created using the {{HTMLElement("input")}} element with
 <input type="color" name="color" id="color" />
 ```
 
-When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:
+Clicking a color control generally displays the operating system's default color picking functionality for you to actually make your choice with. 
 
-![Firefox for Android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
-
-And here is a live example for you to try out:
+Here is a live example for you to try out:
 
 {{EmbedGHLiveSample("learning-area/html/forms/color-example/index.html", '100%', 200)}}
 
