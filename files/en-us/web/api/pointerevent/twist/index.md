@@ -28,7 +28,7 @@ inclusive. For devices that do not report `twist`, the value is
 
 ## Examples
 
-When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions are called
+When a {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired, different functions are called
 depending on the value of the event's `twist` property.
 
 ```js

@@ -91,7 +91,7 @@ These are all technically optional, but it is strongly encouraged that instead o
    "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/en-US/docs/Web/API/Headers/append).
 5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere.
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
-   "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/HTMLElement/animationstart_event).
+   "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/Element/animationstart_event).
 6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API.
    Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link.
    As an example, the following object:
