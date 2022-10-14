@@ -12,7 +12,7 @@ tags:
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
 
-{{SeeCompatTable}}
+{{QuicklinksWithSubPages("Web/API/BeforeInstallPromptEvent")}}{{SeeCompatTable}}
 
 The **`prompt()`** method of the
 {{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
