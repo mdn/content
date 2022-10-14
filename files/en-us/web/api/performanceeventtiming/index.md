@@ -15,43 +15,26 @@ browser-compat: api.PerformanceEventTiming
 
 {{APIRef}}
 
-The `PerformanceEventTiming` interface of the Event Timing API provides timing information for certain event types.
+The `PerformanceEventTiming` interface of the Event Timing API provides insights into the latency of certain event types triggered by user interaction.
 
-This API enables visibility into slow events without the need to register event listeners and calling {{domxref("performance.now()")}} both at the beginning and at the end of event handler functions. Such an approach comes with unnecessary performance overhead and asynchronous code can't be measured easily either.
+## Description
 
-The `PerformanceEventTiming` interface provides event timestamps for certain event types ([see below](#events_exposed)), so that there is no need to implement event latency monitoring yourself. The user agent computes these performance measures, so that an application's performance won't suffer from unneeded event listeners.
+This API enables visibility into slow events without the need to register additional event listeners that measure performance by calling {{domxref("performance.now()")}} both at the beginning and at the end of event handler functions. Such an approach comes with unnecessary performance overhead and asynchronous code can't be measured easily either.
+
+The `PerformanceEventTiming` interface provides event timestamps for certain event types ([see below](#events_exposed)), so that there is no need to implement event latency monitoring yourself. The user agent computes these performance measures, so that an application's performance won't suffer from additional event listeners just to measure latencies.
 
 This API is particularly useful for measuring the {{Glossary("first input delay")}} (FID): the time from the point when a user first interacts with your app to the point when the browser is actually able to respond to that interaction.
 
-This interface inherits methods and properties from its parent:
+You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze. See the [example below](#getting_event_timing_information) for more.
+
+By default, `PerformanceEventTiming` entries are exposed when their `duration` is 104ms or greater. Research suggests that user input that is not handled within 100ms is considered slow and 104ms is the first multiple of 8 greater than 100ms (for security reasons, this API is rounded to the nearest of 8ms).
+However, you can set the {{domxref("PerformanceObserver")}} to a different threshold using the `durationThreshold` option in the [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method.
+
+This interface inherits methods and properties from its parent, {{domxref("PerformanceEntry")}}:
 
 {{InheritanceDiagram}}
 
-## Constructor
-
-This interface has no constructor on its own. You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyse. 
-
-For more information, see the [example below](#getting_event_timing_information).
-
-## Instance properties
-
-- {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
-  - : Returns the associated event's `cancelable` attribute.
-- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
-  - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
-- {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
-  - : Returns the time at which event dispatch started.
-- {{domxref("PerformanceEventTiming.processingEnd")}} {{ReadOnlyInline}}
-  - : Returns the time at which the event dispatch ended.
-- {{domxref("PerformanceEventTiming.target")}} {{ReadOnlyInline}}
-  - : Returns the associated event's last target, if it is not removed.
-
-## Instance methods
-
-- {{domxref("PerformanceEventTiming.toJSON()")}}
-  - : Converts the PerformanceEventTiming object to JSON.
-
-## Events exposed
+### Events exposed
 
 The following event types are exposed by the Event Timing API and contain performance metrics like event processing timestamps, counts, targets, etc.
 
@@ -89,7 +72,12 @@ The following event types are exposed by the Event Timing API and contain perfor
       <th scope="row">Input events</th>
       <td>
         {{domxref("HTMLElement/beforeinput_event", "beforeinput")}},
-        {{domxref("HTMLElement/input_event", "input")}},
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Keyboard events</th>
+      <td>
         {{domxref("Element/keydown_event", "keydown")}},
         {{domxref("Element/keypress_event", "keypress")}},
         {{domxref("Element/keyup_event", "keyup")}}
@@ -140,11 +128,46 @@ To get a list of all exposed events, you can also look up keys in the {{domxref(
 const exposedEventsList = [...performance.eventCounts.keys()];
 ```
 
+## Constructor
+
+This interface has no constructor on its own. See the [example below](#getting_event_timing_information) for how to typically get the information the `PerformanceEventTiming` interface holds.
+
+## Instance properties
+
+This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
+
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time from `startTime` to the next rendering paint (rounded to the nearest 8ms)
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
+  - : Returns `"event"` (for long events) or `"first-input"` (for the first user interaction).
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
+  - : Returns the associated event's type.
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the event was created.
+
+This interface also supports the following properties:
+
+- {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
+  - : Returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property.
+- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
+  - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
+- {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started.
+- {{domxref("PerformanceEventTiming.processingEnd")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which the event dispatch ended.
+- {{domxref("PerformanceEventTiming.target")}} {{ReadOnlyInline}}
+  - : Returns the associated event's last target, if it is not removed.
+
+## Instance methods
+
+- {{domxref("PerformanceEventTiming.toJSON()")}}
+  - : Converts the PerformanceEventTiming object to JSON.
+
 ## Examples
 
 ### Getting event timing information
 
-To get event timing information, create a {{domxref("PerformanceObserver")}} iinstance and register it using [observe()](/en-US/docs/Web/API/PerformanceObserver/observe) with the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) set to be either `"event"` or `"first-input"`.
+To get event timing information, create a {{domxref("PerformanceObserver")}} instance and then call its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -163,6 +186,12 @@ const observer = new PerformanceObserver((list) => {
 
 // Register the observer for events
 observer.observe({entryTypes: ["event"]});
+```
+
+You can also set a different `durationThreshold`, the default is 104ms and the minium possible duration threshold is 16ms.
+
+```js
+observer.observe({entryTypes: ["event"], durationThreshold: 16});
 ```
 
 ### Reporting the First Input Delay (FID)
