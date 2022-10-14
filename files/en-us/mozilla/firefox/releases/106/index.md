@@ -50,7 +50,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 #### WebDriver BiDi
 
-- Added basic support for the `script.getRealms` command that is currently limited to the WindowRealmInfo type which includes window realms and sandbox realms ({{bug("1766240")}}).
+- Added basic support for the `script.getRealms` command that is currently limited to the `WindowRealmInfo` type which includes window realms and sandbox realms ({{bug("1766240")}}).
 
 - Added support for the `browsingContext.load` event, which is emitted when a `load` event is triggered on a BrowsingContext's window ({{bug("1756619")}}).
 
