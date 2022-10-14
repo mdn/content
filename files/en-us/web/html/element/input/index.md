@@ -162,7 +162,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td>
         A control for entering a number. Displays a spinner and adds default
-        validation when supported. Displays a numeric keypad in some devices
+        validation. Displays a numeric keypad in some devices
         with dynamic keypads.
       </td>
       <td id="examplenumber">
