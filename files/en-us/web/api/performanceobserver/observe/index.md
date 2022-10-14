@@ -37,9 +37,14 @@ observe(options)
 
 - `options`
 
-  - : A `PerformanceObserverInit` dictionary with the following possible
-    members:
+  - : An object with the following possible members:
 
+    - `buffered`
+      - : A boolean flag to indicate whether buffered
+        entries should be queued into the observer's buffer. Must be used only with the
+        "`type`" option.
+    - `durationThreshold`
+      - : A {{domxref("DOMHighResTimeStamp")}} defining the threshold for {{domxref("PerformanceEventTiming")}} entries. Defaults to 104ms and is rounded to the nearest of 8ms. Lowest possible threshold is 16ms.
     - `entryTypes`
       - : An array of string objects, each
         specifying one performance entry type to observe. May not be used together with
@@ -48,10 +53,6 @@ observe(options)
       - : A single string specifying exactly one
         performance entry type to observe. May not be used together with the
         `entryTypes` option.
-    - `buffered`
-      - : A boolean flag to indicate whether buffered
-        entries should be queued into the observer's buffer. Must be used only with the
-        "`type`" option.
 
     See {{domxref("PerformanceEntry.entryType")}} for a list of valid performance entry
     type names. Unrecognized types are ignored, though the browser may output a warning
