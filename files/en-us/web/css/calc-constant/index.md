@@ -48,7 +48,7 @@ For example, `animation-name: pi;` refers to an animation named "pi". `line-heig
 
 ### CSS data types
 
-While not technically numbers, css constants act as numeric values, similar to `e` and `pi`. Thus to get an infinite length, for example, requires an expression like `calc(infinity * 1px)`.
+While not technically numbers, CSS constants act as {cssxref("number")}} values. Thus to get an infinite {{cssxref("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
 
 ### Case sensitivity
 
