@@ -21,7 +21,7 @@ This API enables visibility into slow events without the need to register event 
 
 The `PerformanceEventTiming` interface provides event timestamps for certain event types ([see below](#events_exposed)), so that there is no need to implement event latency monitoring yourself. The user agent computes these performance measures, so that an application's performance won't suffer from unneeded event listeners.
 
-This API is particularly useful for measuring the {{Glossary("first input delay")}} (FID): the time when a user first interacts with your app to the time when the browser is actually able to respond to that interaction.
+This API is particularly useful for measuring the {{Glossary("first input delay")}} (FID): the time from the point when a user first interacts with your app to the point when the browser is actually able to respond to that interaction.
 
 This interface inherits methods and properties from its parent:
 
@@ -29,14 +29,14 @@ This interface inherits methods and properties from its parent:
 
 ## Constructor
 
-This interface has no constructor on its own. You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} and [observe](/en-US/docs/Web/API/PerformanceObserver/observe) using the [entryType](/en-US/docs/Web/API/PerformanceEntry/entryType) `"event"` or `"first-input"`.
+This interface has no constructor on its own. You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyse. 
 
 For more information, see the [example below](#getting_event_timing_information).
 
 ## Instance properties
 
 - {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
-  - : Returns the associated event's cancelable attribute.
+  - : Returns the associated event's `cancelable` attribute.
 - {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
   - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
 - {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
@@ -131,7 +131,7 @@ The following event types are exposed by the Event Timing API and contain perfor
   </tbody>
 </table>
 
-Note that that the following events are not included in the list because the are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
+Note that that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
 {{domxref("HTMLElement/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
 
 To get a list of all exposed events, you can also look up keys in the {{domxref("performance.eventCounts")}} map:
@@ -144,7 +144,7 @@ const exposedEventsList = [...performance.eventCounts.keys()];
 
 ### Getting event timing information
 
-To get event timing information, a {{domxref("PerformanceObserver")}} is created and registered using [observe()](/en-US/docs/Web/API/PerformanceObserver/observe) where the [entryType](/en-US/docs/Web/API/PerformanceEntry/entryType) needs to be either `"event"` or `"first-input"`.
+To get event timing information, create a {{domxref("PerformanceObserver")}} iinstance and register it using [observe()](/en-US/docs/Web/API/PerformanceObserver/observe) with the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) set to be either `"event"` or `"first-input"`.
 
 ```js
 const observer = new PerformanceObserver((list) => {
