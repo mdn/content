@@ -31,11 +31,16 @@ const square4 = square(4);
 ```
 
 The components of execution context include:
-1. Memory component
-2. Code component
-3. Deletion of execution context
 
-#### 1. Memory component/ Variable Environment
+i. Memory component
+
+ii. Code component
+
+iii. Deletion of execution context
+
+
+
+1. Memory component/ Variable Environment
 
 Before the Javascript Code starts executing, memory will be allocated to all the variable(s) and function(s). This phase is known as Memory creation Phase.
 
@@ -44,7 +49,7 @@ Before the Javascript Code starts executing, memory will be allocated to all the
 For variable(s), key is the variable name itself and value is undefined (even if the variable is initialized).
 For function(s), key is the function name and value is body of the code.
 
-#### 2. Code component/ Thread Of Execution
+2. Code component/ Thread Of Execution
 
 This is the second phase also known as `Code Execution Phase`, where JavaScript code starts executing line by line and it starts executing the code now.
 It starts assigning the values to the variables in memory.
@@ -54,7 +59,11 @@ Code Component is also called as `Thread of Execution`
 
 <img width="781" alt="Code Execution Phase-2" src="https://user-images.githubusercontent.com/41745320/184529581-53b070f4-3100-46ce-a7bd-dd3d11a63375.png">
 
-#### Now, the Execution context inside the code component of Global Execution context gets deleted.
+Now, the Execution context inside the code component of Global Execution context gets deleted.
+
+3. Deletion Phase
+
+When the execution of JavaScript code completes and values are allocated to the variable. the Execution context inside the code component of Global Execution context gets deleted.
 
 <img width="595" alt="EC deleted inside code component" src="https://user-images.githubusercontent.com/41745320/184529679-b084aae1-a88b-4c20-8df8-c62c4b72875d.png">
 
