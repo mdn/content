@@ -44,6 +44,11 @@ grid-auto-rows: minmax(100px, auto);
 grid-auto-rows: minmax(max-content, 2fr);
 grid-auto-rows: minmax(20%, 80vmax);
 
+/* fit-content() values */
+grid-auto-rows: fit-content(400px);
+grid-auto-rows: fit-content(5cm);
+grid-auto-rows: fit-content(20%);
+
 /* multiple track-size values */
 grid-auto-rows: min-content max-content auto;
 grid-auto-rows: 100px 150px 390px;

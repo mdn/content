@@ -19,10 +19,7 @@ Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn/Serv
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Testing"
-          >Django Tutorial Part 10: Testing a Django web application</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a>.
       </td>
     </tr>
     <tr>
@@ -72,7 +69,8 @@ Some developers will choose the increased flexibility provided by IaaS over PaaS
 
 ## Choosing a hosting provider
 
-There are well over 100 hosting providers that are known to either actively support or work well with Django (you can find a fairly exhaustive list at [DjangoFriendly hosts](https://djangofriendly.com/index.html)). These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
+There are well over 100 hosting providers that are known to either actively support or work well with Django (you can find a fairly large list at [DjangoFriendly hosts](https://djangofriendly.com/index.html)).
+These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
 
@@ -280,8 +278,6 @@ The final steps are to copy your application into this local project directory a
    ```bash
    git push origin main
    ```
-
-> **Warning:** In 2020 GitHub change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call `git push origin master` instead.
 
 When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
@@ -532,7 +528,7 @@ We can then push our app to the Heroku repository as shown below.
 This will upload the app, package it in a dyno, run _collectstatic_, and start the site.
 
 ```bash
-git push heroku master
+git push heroku main
 ```
 
 If we're lucky, the app is now "running" on the site, but it won't be working properly because we haven't set up the database tables for use by our application. To do this we need to use the `heroku run` command and start a "[one off dyno](https://devcenter.heroku.com/articles/deploying-python#one-off-dynos)" to perform a migrate operation. Enter the following command in your terminal:

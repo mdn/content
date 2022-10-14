@@ -5408,7 +5408,6 @@
 /en-US/docs/MDN/Contribute/Content/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Content/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
-/en-US/docs/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
 /en-US/docs/MDN/Contribute/Does_this_belong	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Contribute/Editor/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Contribute
@@ -10202,6 +10201,8 @@
 /en-US/docs/Web/API/XRWebGLLayerInit/framebufferscalefactor	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/ignoredepthvalues	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLSubImage/textureHeight	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight
+/en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error

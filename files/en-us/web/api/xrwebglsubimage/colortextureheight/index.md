@@ -1,6 +1,6 @@
 ---
-title: XRWebGLSubImage.textureHeight
-slug: Web/API/XRWebGLSubImage/textureHeight
+title: XRWebGLSubImage.colorTextureHeight
+slug: Web/API/XRWebGLSubImage/colorTextureHeight
 page-type: web-api-instance-property
 tags:
   - API
@@ -12,12 +12,12 @@ tags:
   - WebXR Device API
   - XR
   - Experimental
-browser-compat: api.XRWebGLSubImage.textureHeight
+browser-compat: api.XRWebGLSubImage.colorTextureHeight
 ---
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The read-only **`textureHeight`** property of the {{domxref("XRWebGLSubImage")}} interface is a number representing the height in pixels of the GL attachment.
+The read-only **`colorTextureHeight`** property of the {{domxref("XRWebGLSubImage")}} interface is a number representing the height in pixels of the GL attachment.
 
 ## Value
 

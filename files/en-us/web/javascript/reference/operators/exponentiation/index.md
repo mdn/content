@@ -12,8 +12,8 @@ browser-compat: javascript.operators.exponentiation
 {{jsSidebar("Operators")}}
 
 The exponentiation operator (`**`) returns the result of raising the first
-operand to the power of the second operand. It is equivalent to `Math.pow`,
-except it also accepts BigInts as operands.
+operand to the power of the second operand. It is equivalent to {{{jsxref("Math.pow()")}}},
+except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
@@ -45,6 +45,8 @@ Note that some programming languages use the caret symbol <kbd>^</kbd> for
 exponentiation, but JavaScript uses that symbol for the
 [bitwise logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
 
+`NaN ** 0` (and the equivalent `Math.pow(NaN, 0)`) is the only case where {{jsxref("NaN")}} doesn't propagate through mathematical operations — it returns `1` despite the operand being `NaN`. In addition, the behavior where `base` is 1 and `exponent` is non-finite (±Infinity or `NaN`) is different from IEEE 754, which specifies that the result should be 1, whereas JavaScript returns `NaN` to preserve backward compatibility with its original behavior.
+
 ## Examples
 
 ### Basic exponentiation
@@ -55,6 +57,8 @@ exponentiation, but JavaScript uses that symbol for the
 3 ** 2.5 // 15.588457268119896
 10 ** -1 // 0.1
 NaN ** 2 // NaN
+NaN ** 0 // 1
+1 ** Infinity // NaN
 ```
 
 ### Associativity

@@ -6,7 +6,7 @@ tags:
   - Web Performance
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/CSS", "Learn/Performance/Web_Performance_Basics", "Learn/Performance")}}
 
 We've discussed the importance of web performance. You've learned what you need to do to optimize for web performance. But how do you convince your clients and/or management to prioritize and invest in performance? In this section, we discuss creating a clear business case to convince decision-makers to make the investment.
 
@@ -70,4 +70,5 @@ Setting conversion rate, time on site, and/or net promotion scores as KPIs give 
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)
