@@ -12,7 +12,7 @@ An **Execution Context** is the environment in which a JavaScript code executes.
 
 When the JavaScript engine runs, it first creates the _global execution context_ and then a new context is created for each function or `eval` call.
 
-Variables created using `let` and constants are available in the _current_ execution context only, while variables created using `var` are _hoisted_ to the _global_ execution context and available everywhere, when not hidden by another declaration.
+Variables created using `let` and `const` are available only in the _current_ execution context. On the other hand, variables created using `var` are _hoisted_ to the _global_ execution context and are available everywhere when not hidden by another declaration.
 
 #### Example:
 ```js
