@@ -18,7 +18,7 @@ The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web
 
 ## Syntax
 
-The `<calc-constant>` type defines a number of numeric constants that can be used in CSS math functions.
+The `<calc-constant>` type defines a number of numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
 
 ### Values
 
@@ -29,7 +29,7 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
   - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
 
 - `infinity` & `-infinity`
-  - : An infinite length, used to indicate the largest/smallest possible value.
+  - : An infinite value, used to indicate the largest/smallest possible value.
 
 - `NaN`
   - : A value representing "Not a Number" canonical casing.
@@ -38,7 +38,7 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
 
 {{CSSSyntax}}
 
-## Usage clarifications
+## Description
 
 ### Used only in calculations
 
@@ -54,7 +54,7 @@ While not technically numbers, css constants act as numeric values, similar to `
 
 CSS constants are ASCII case-insensitive. Thus, `calc(InFiNiTy)` is perfectly valid.
 
-There is only one exception, `NaN` is case-sensitive and it must be written exactly as `NaN`. Both `nan` and `NAN` are not valid constants.
+There is only one exception: `NaN` is case-sensitive and must be written exactly as `NaN`. Both `nan` and `NAN` are invalid constants.
 
 ## Examples
 
