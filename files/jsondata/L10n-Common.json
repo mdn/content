@@ -31,21 +31,25 @@
 
   "Static_methods": {
     "en-US": "Static methods",
+    "es": "Métodos estáticos",
     "fr": "Méthodes statiques"
   },
 
   "Static_properties": {
     "en-US": "Static properties",
+    "es": "Propiedades estáticas",
     "fr": "Propriétés statiques"
   },
 
   "Instance_methods": {
     "en-US": "Instance methods",
+    "es": "Métodos de instancia",
     "fr": "Méthodes d'instance"
   },
 
   "Instance_properties": {
     "en-US": "Instance properties",
+    "es": "Propiedades de instancia",
     "fr": "Propriétés d'instance"
   },
 
