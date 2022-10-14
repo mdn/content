@@ -24,11 +24,11 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRSyst
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _While `XRSystem` directly offers no properties, it does inherit properties from its parent interface, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _In addition to inheriting methods from its parent interface, {{domxref("EventTarget")}}, the `XRSystem` interface includes the following methods:_
 

@@ -29,7 +29,7 @@ The WebRTC **`RTCIceCandidatePairStats`** dictionary reports statistics which pr
 
 If a {{domxref("RTCStats")}}-based object's {{domxref("RTCStats.type", "type")}} is `candidate-pair`, it's an `RTCIceCandidatePairStats` object.
 
-## Properties
+## Instance properties
 
 _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits its properties. In addition, it adds the following new properties:_
 

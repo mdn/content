@@ -17,7 +17,7 @@ tags:
   - Web Development
 ---
 
-The links on this page lead to a variety of tutorials and training materials. Whether you are just starting out, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
+The links on this page lead to a variety of tutorials and training materials. Whether you are just starting, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
 
 These resources are created by forward-thinking companies and web developers who have embraced open standards and best practices for web development and that provide or allow translations, through an open content license such as Creative Commons.
 
@@ -60,10 +60,10 @@ These resources are created by forward-thinking companies and web developers who
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
   - : CSS (Cascading Style Sheets) is the code you use to style your webpage. _CSS Basics_ takes you through what you need to get started. We'll answer questions like: How do I make my text black or red? How do I make my content show up in such-and-such a place on the screen? How do I decorate my webpage with background images and colors?
 - [CSS first steps](/en-US/docs/Learn/CSS/First_steps)
-  - : CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
+  - : CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path toward CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
 - [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
 
-  - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
+  - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, it's time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
@@ -71,7 +71,7 @@ These resources are created by forward-thinking companies and web developers who
   - : Target HTML elements, including based on element state, with CSS.
 
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - : Understanding the browser algorithm to determine which CSS declarations get applied to element when there are compting declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
+  - : Understanding the browser algorithm to determine which CSS declarations get applied to an element when there are competing declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
 
 - [Cascade & Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
   - : The cascade, specificity, and inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved.
@@ -108,7 +108,7 @@ These resources are created by forward-thinking companies and web developers who
 - [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
   - : In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
 - [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
-  - : In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
+  - : In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
 - [Getting started with JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   - : What is JavaScript and how can it help you?
 - [Codecademy](https://www.codecademy.com/)
@@ -153,4 +153,4 @@ These resources are created by forward-thinking companies and web developers who
 ### Extension Development
 
 - [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).
+  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](https://wiki.mozilla.org/Firefox/multiprocess).

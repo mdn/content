@@ -20,7 +20,7 @@ The `LayoutShift` interface of the [Layout Instability API](/en-US/docs/Web/API/
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("LayoutShift.value")}} {{Experimental_Inline}}
   - : Returns the `impact fraction` (fraction of the viewport that was shifted) times the `distance fraction` (distance moved as a fraction of viewport).
@@ -31,7 +31,7 @@ The `LayoutShift` interface of the [Layout Instability API](/en-US/docs/Web/API/
 - {{domxref("LayoutShift.sources")}} {{Experimental_Inline}}
   - : Returns an array of {{domxref('LayoutShiftAttribution')}} objects with information on the elements that were shifted.
 
-## Methods
+## Instance methods
 
 - {{domxref("LayoutShift.toJSON()")}} {{Experimental_Inline}}
   - : Converts the properties to JSON.

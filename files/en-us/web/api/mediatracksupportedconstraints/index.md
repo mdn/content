@@ -28,7 +28,7 @@ An actual constraint set is described using an object based on the {{domxref("Me
 
 To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 
-## Properties
+## Instance properties
 
 Some combination—but not necessarily all—of the following properties will exist on the object.
 
@@ -65,7 +65,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - {{domxref("MediaTrackSupportedConstraints.groupId", "groupId")}}
   - : A Boolean value whose value is `true` if the [`groupId`](/en-US/docs/Web/API/MediaTrackConstraints#groupid) constraint is supported in the current environment.
 
-### Properties specific to shared screen tracks
+### Instance properties specific to shared screen tracks
 
 For tracks containing video sources from the user's screen contents, the following additional properties are may be included in addition to those available for video tracks.
 

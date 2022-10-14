@@ -53,11 +53,11 @@ Using a `ChannelMergerNode`, it is possible to create outputs with more channels
 - {{domxref("ChannelMergerNode.ChannelMergerNode()", "ChannelMergerNode()")}}
   - : Creates a new `ChannelMergerNode` object instance.
 
-## Properties
+## Instance properties
 
 _No specific property; inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

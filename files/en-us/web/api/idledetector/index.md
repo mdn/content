@@ -25,7 +25,7 @@ This interface requires a secure context.
 - {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}} {{Experimental_Inline}}
   - : Creates a new `IdleDetector` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
@@ -45,7 +45,7 @@ This interface requires a secure context.
 - {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
   - : Called when the value of `userState` or `screenState` has changed.
 
-## Methods
+## Instance methods
 
 - {{domxref("IdleDetector.requestPermission()")}} {{Experimental_Inline}}
 

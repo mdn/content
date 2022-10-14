@@ -97,7 +97,7 @@ input[type="button"] {
   border: initial;
 }
 input[type="button"] {
-  /* This will come the closest to restoring default rendering, when supported. */
+  /* This will come the closest to restoring default rendering. */
   border: revert;
 }
 ```

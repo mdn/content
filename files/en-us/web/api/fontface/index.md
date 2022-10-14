@@ -25,7 +25,7 @@ For URL font sources it allows authors to trigger when the remote font is fetche
 - {{domxref("FontFace.FontFace", "FontFace()")}}
   - : Constructs and returns a new `FontFace` object, built from an external resource described by a URL or from an {{jsxref("ArrayBuffer")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("FontFace.ascentOverride")}}
   - : A string that retrieves or sets the _ascent metric_ of the font. It is equivalent to the {{cssxref("@font-face/ascent-override", "ascent-override")}} descriptor.
@@ -50,7 +50,7 @@ For URL font sources it allows authors to trigger when the remote font is fetche
 - {{domxref("FontFace.unicodeRange")}}
   - : A string that retrieves or sets the _range of unicode codepoints_ encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
 - {{domxref("FontFace.variant")}}
-  - : A string that retrieves or sets the _variant_ of the font. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}} descriptor.
+  - : A string that retrieves or sets the _variant_ of the font.
 - {{domxref("FontFace.variationSettings")}}
   - : A string that retrieves or sets the _variation settings_ of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 - {{domxref("FontFace.weight")}}

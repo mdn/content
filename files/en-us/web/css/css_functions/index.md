@@ -277,15 +277,15 @@ The following functions are used as a value of properties to reference a value d
 - {{cssxref("attr", "attr()")}}
   - : Used to retrieve the value of an attribute of the selected element and use it in the stylesheet.
 - {{cssxref("env", "env()")}}
-  - : Used to insert the value of a user agent-defined environment variable.
+  - : Used to insert the value of a user-agent defined environment variable.
 - {{cssxref("url", "url()")}}
   - : Used to include a file.
 - {{cssxref("var", "var()")}}
   - : Used to insert a value of a custom property instead of any part of a value of another property.
 
-## CSS grid functions
+## Grid functions
 
-The following functions are used to define a CSS grid.
+The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 - {{cssxref("fit-content", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.

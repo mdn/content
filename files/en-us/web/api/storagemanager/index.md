@@ -20,7 +20,7 @@ browser-compat: api.StorageManager
 
 The **`StorageManager`** interface of the [Storage API](/en-US/docs/Web/API/Storage_API) provides an interface for managing persistence permissions and estimating available storage. You can get a reference to this interface using either {{domxref("navigator.storage")}} or {{domxref("WorkerNavigator.storage")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
   - : Returns a {{jsxref('Promise')}} that resolves to an object containing usage and quota numbers for your origin.

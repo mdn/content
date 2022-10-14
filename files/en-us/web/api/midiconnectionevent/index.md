@@ -24,7 +24,7 @@ The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/en-US/docs/Web/AP
 - {{domxref("MIDIConnectionEvent.MIDIConnectionEvent", "MIDIConnectionEvent()")}}
   - : Creates a new `MIDIConnectionEvent` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected."

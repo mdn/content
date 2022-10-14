@@ -19,7 +19,7 @@ The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
 - {{DOMxRef("NDEFRecord.NDEFRecord", "NDEFRecord()")}} {{Experimental_Inline}}
   - : Returns a new `NDEFRecord`.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("NDEFRecord.recordType")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the record type of the record. Records must have either a standardized well-known type name such as `"empty"`, `"text"`, `"url"`, `"smart-poster"`, `"absolute-url"`, `"mime"`, or `"unknown"` or else an external type name, which consists of a domain name and custom type name separated by a colon (":").
@@ -35,7 +35,7 @@ The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
 - {{DOMxRef("NDEFRecord.lang")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the language of a textual payload, or `null` if one was not supplied.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("NDEFRecord.toRecords", "NDEFRecord.toRecords()")}} {{Experimental_Inline}}
   - : Converts {{DOMxRef("NDEFRecord.data")}} to a sequence of records. This allows parsing the payloads of record types which may contain nested records, such as smart poster and external type records.

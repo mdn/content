@@ -50,15 +50,15 @@ The following snippet creates a new `LinkError` instance, and logs its details t
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Hello', 'someFile', 10);
+  throw new WebAssembly.LinkError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 

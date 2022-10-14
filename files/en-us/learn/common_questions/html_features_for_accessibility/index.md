@@ -8,6 +8,8 @@ tags:
   - Learn
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 The following content describes specific features of HTML that should be used to make a web page more accessible to people with different disabilities.
 
 ## Link text

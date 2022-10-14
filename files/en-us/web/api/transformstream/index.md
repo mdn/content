@@ -27,14 +27,14 @@ If not supplied, data is not modified when piped through the stream.
 - {{domxref("TransformStream.TransformStream", "TransformStream()")}}
   - : Creates and returns a transform stream object, optionally specifying a transformation object and queuing strategies for the streams.
 
-## Properties
+## Instance properties
 
 - {{domxref("TransformStream.readable")}} {{ReadOnlyInline}}
   - : The `readable` end of a `TransformStream`.
 - {{domxref("TransformStream.writable")}} {{ReadOnlyInline}}
   - : The `writable` end of a `TransformStream`.
 
-## Methods
+## Instance methods
 
 None
 

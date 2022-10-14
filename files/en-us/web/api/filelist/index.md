@@ -25,12 +25,12 @@ The following line of code fetches the first file in the node's file list as a [
 const file = document.getElementById('fileItem').files[0];
 ```
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("FileList/length", "length")}} {{ReadOnlyInline}}
   - : A read-only value indicating the number of files in the list.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("FileList/item", "item()")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("File")}} object representing the file at the specified index in the file list.

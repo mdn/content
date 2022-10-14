@@ -26,7 +26,7 @@ The name is deemed _local_ when it ignores the eventual namespace prefix and dee
 
 > **Note:** This interface represents only attributes present in the tree representation of the {{domxref("Element")}}, being a SVG, an HTML or a MathML element. It doesn't represent the _property_ of an interface associated with such element, such as {{domxref("HTMLTableElement")}} for a {{HTMLElement("table")}} element. (See {{Glossary("Attribute", "this article")}} for more information about attributes and how they are _reflected_ into properties.)
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent interfaces, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
@@ -45,7 +45,7 @@ _This interface also inherits the properties of its parent interfaces, {{domxref
 - {{domxref("Attr.value", "value")}}
   - : The attribute's value, a string that can be set and get using this property.
 
-## Methods
+## Instance methods
 
 _This interface has no specific methods, but inherits the methods of its parent interfaces, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
