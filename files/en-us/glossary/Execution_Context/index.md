@@ -30,7 +30,10 @@ const square2 = square(n); // square2 is available to the global execution conte
 const square4 = square(4); 
 ```
 
-### Components of Execution Context:
+The components of execution context include:
+1. Memory component
+2. Code component
+3. Deletion of execution context
 
 #### 1. Memory component/ Variable Environment
 
