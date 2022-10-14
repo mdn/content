@@ -290,7 +290,7 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 
 ## Examples
 
-The example below prints out 5 sections different sections in `landscape` size, and adds a 20% margin to each of them in the print-out.
+The example below prints out 5 different sections in `landscape` size, and adds a 20% margin to each of them in the print-out.
 
 HTML:
 
