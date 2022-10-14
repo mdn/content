@@ -10,7 +10,7 @@ When you write a JavaScript code, it gets interpreted by the {{glossary("Engine"
 
 An **Execution Context** is the environment in which a JavaScript code executes. The execution context consists of the {{glossary("scope")}}, which is the information that links a variable name with the actual variable storing data, and the binding of the {{jsxref("this")}} reference, which is the object that `this` refers to.
 
-When running, the JavaScript engine initially creates the _global execution context_, then a new context is created for each function or `eval` call.
+When the JavaScript engine runs, it first creates the _global execution context_ and then a new context is created for each function or `eval` call.
 
 Variables created using `let` and constants are available in the _current_ execution context only, while variables created using `var` are _hoisted_ to the _global_ execution context and available everywhere, when not hidden by another declaration.
 
