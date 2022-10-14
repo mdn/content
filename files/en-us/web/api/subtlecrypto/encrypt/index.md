@@ -52,7 +52,7 @@ encrypt(algorithm, key, data)
           Must be 16 bytes, unpredictable, and preferably cryptographically random.
           However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
-    - To use [AES-CTR](#aes-ctr), pass an object with the properties the following properties: <!-- AesCtrParams dictionary in the spec -->
+    - To use [AES-CTR](#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
 
       - `name`
         - : A string indicating the name of the algorithm: `AES-CTR`.

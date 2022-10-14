@@ -45,7 +45,7 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
   - : The {{domxref("CryptoKey")}} to use to decrypt the wrapped key. The key must have the `unwrapKey` usage set.
 - `unwrapAlgo`
 
-  - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) to be used to encrypt the exported key, and any extra parameters as required:
+  - : An object specifying the [algorithm](#supported_algorithms) to be used to unwrap the exported key, and any extra parameters as required:
 
     - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
 

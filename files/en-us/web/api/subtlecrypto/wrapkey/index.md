@@ -50,7 +50,7 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
   - : The {{domxref("CryptoKey")}} used to encrypt the exported key. The key must have the `wrapKey` usage set.
 - `wrapAlgo`
 
-  - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) to be used to encrypt the exported key, and any required extra parameters:
+  - : An object specifying the [algorithm](#supported_algorithms) to be used to wrap the exported key, and any required extra parameters:
 
     - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
 
@@ -73,7 +73,7 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
           Must be 16 bytes, unpredictable, and preferably cryptographically random.
           However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
-    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), pass an object with the properties the following properties: <!-- AesCtrParams dictionary in the spec -->
+    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
 
       - `name`
 
