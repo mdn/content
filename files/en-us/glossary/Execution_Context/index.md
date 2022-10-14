@@ -8,7 +8,7 @@ tags:
 
 When you write a JavaScript code, it gets interpreted by the {{glossary("Engine", "JavaScript engine")}}. To understand what happens behind the scenes, you need to be familiar with _execution context_. The concept of execution context is also important to understand other JavaScript concepts such as {{glossary("Hoisting")}}, {{glossary("Scope")}}, and {{glossary("Closure")}}.
 
-An **Execution Context** is the environment in which Javascript code executes. It consists of the {{glossary("scope")}}, the information that links a variable name with the actual variable storing data, and of the binding of the {{jsxref("this")}} reference, the object `this` refers to.
+An **Execution Context** is the environment in which a JavaScript code executes. The execution context consists of the {{glossary("scope")}}, which is the information that links a variable name with the actual variable storing data, and the binding of the {{jsxref("this")}} reference, which is the object that `this` refers to.
 
 When running, the JavaScript engine initially creates the _global execution context_, then a new context is created for each function or `eval` call.
 
