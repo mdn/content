@@ -19,10 +19,7 @@ Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn/Serv
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Testing"
-          >Django Tutorial Part 10: Testing a Django web application</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a>.
       </td>
     </tr>
     <tr>
@@ -56,15 +53,16 @@ The production environment is the environment provided by the server computer wh
 - Application server that passes "dynamic" requests between your Django website and the webserver.
 - Databases on which your website is dependent.
 
-> **Note:** Depending on how your production is configured you might also have a reverse proxy, load balancer, etc.
+> **Note:** Depending on how your production environment is configured you might also have a reverse proxy, load balancer, and so on.
 
-The server computer could be located on your premises and connected to the internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g. CPU, RAM, storage memory, etc.) and internet connectivity for a certain price.
+The server computer could be located on your premises and connected to the internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (CPU, RAM, storage memory, etc.) and internet connectivity for a certain price.
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Django and web-server setup.
 
 > **Note:** Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
 
-Other hosting providers support Django as part of a _Platform as a Service_ (PaaS) offering. In this sort of hosting you don't need to worry about most of your production environment (web server, application server, load balancers) as the host platform takes care of those for you (along with most of what you need to do in order to scale your application). That makes deployment quite easy, because you just need to concentrate on your web application and not all the other server infrastructure.
+Other hosting providers support Django as part of a _Platform as a Service_ (PaaS) offering. In this sort of hosting you don't need to worry about most of your production environment (web server, application server, load balancers) as the host platform takes care of those for you — along with most of what you need to do in order to scale your application.
+That makes deployment quite easy, because you just need to concentrate on your web application and not all the other server infrastructure.
 
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.
 
@@ -86,9 +84,13 @@ Some of the things to consider when choosing a host:
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
-The good news when you're starting out is that there are quite a few sites that provide "evaluation", "developer", or "hobbyist" computing environments for "free". These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period. They are however great for testing low traffic sites in a real environment, and can provide an easy migration to paying for more resources when your site gets busier. Popular choices in this category include [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), etc.
+The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
+These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period or have other constraints.
+They are however great for testing low traffic sites in a hosted environment, and can provide an easy migration to paying for more resources when your site gets busier.
+Popular choices in this category include [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), etc
 
-Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that offer a relatively inexpensive basic computing tier (in the $5 to $10USD per month range).
+Most providers also offer a "basic" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
+[Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > **Note:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
 
@@ -96,7 +98,7 @@ Many providers also have a "basic" tier that provides more useful levels of comp
 
 The [Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website) created using the _django-admin_ and _manage.py_ tools are configured to make development easier. Many of the Django project settings (specified in **settings.py**) should be different for production, either for security or performance reasons.
 
-> **Note:** It is common to have a separate **settings.py** file for production, and to import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
+> **Note:** It is common to have a separate **settings.py** file for production, and/or to conditionally import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
 
 The critical settings that you must check are:
 
@@ -137,7 +139,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 The value of the `DEBUG` will be `True` by default, but will only be `False` if the value of the `DJANGO_DEBUG` environment variable is set to `False`. Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the `DEBUG` variable to `False` is to actually set it to the string `False`.
 
-You can set the environment variable to False on Linux by issuing the following command:
+You can set the environment variable to "False" on Linux by issuing the following command:
 
 ```bash
 export DJANGO_DEBUG=False
@@ -155,45 +157,55 @@ This section provides a practical demonstration of how to install _LocalLibrary_
 
 ### Why Railway?
 
-[Heroku](https://www.heroku.com/)roku is one of the longest running and popular cloud-based PaaS services. It originally supported only Ruby apps, but now can be used to host apps from many programming environments, including Django!
+We are choosing to use Railway for several reasons:
 
-We are choosing to use Heroku for several reasons:
+- Railway has a [starter plan](https://docs.railway.app/reference/plans#starter-plan) free tier that is _really_ free, albeit with some limitations.
+  The fact that it is affordable for all developers is really important to MDN!
+- Railway takes care of most of the the infrastructure so you don't have to.
+  Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- While it provides some excellent new features, many of the ideas and approaches used are the same as for other popular hosting services, so the skills and concepts are transferrable.
+- The service and plan limitations do not impact us using Railway for this tutorial.
+  For example:
 
-- Heroku has a [free tier](https://www.heroku.com/pricing) that is _really_ free (albeit with some limitations).
-- As a PaaS, Heroku takes care of a lot of the web infrastructure for us. This makes it much easier to get started, because you don't worry about servers, load balancers, reverse proxies, or any of the other web infrastructure that Heroku provides for us under the hood.
-- While it does have some limitations these will not affect this particular application. For example:
+  - The starter plan only offers 500 hours of continuous deployment time each month, and $5 of credit that is consumed based on usage.
+    At the end of each month the hours and credit are reset and any projects must be redeployed.
+    These constraints mean that you could run this tutorial continuously for about 21 days, which is more than enough for development and testing.
+    However you wouldn't be able to use this plan for a "real" production site.
+  - The starter plan environment has only 512 MB of RAM and 1 GB of storage memory; more than enough for the tutorial.
+  - At time of writing there is only one supported region, which is in the USA.
+    The service outside this region might be slower, or blocked by local regulations.
+  - Other limitations can be found in the [Railway plan documentation](https://docs.railway.app/reference/plans#starter-plan).
 
-  - Heroku provides only short-lived storage so user-uploaded files cannot safely be stored on Heroku itself.
-  - The free tier will sleep an inactive web app if there are no requests within a half hour period. The site may then take several seconds to respond when it is woken up.
-  - The free tier limits the time that your site is running to a certain amount of hours every month (not including the time that the site is "asleep"). This is fine for a low use/demonstration site, but will not be suitable if 100% uptime is required.
-  - Other limitations are listed in [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs).
+- The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
 
-- Mostly it just works, and if you end up loving it, scaling your app is very easy.
+While Railway is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](/en-US/docs/Learn/Server-side/Django/Deployment#choosing_a_hosting_provider).
 
-While Heroku is perfect for hosting this demonstration it may not be perfect for your real website. Heroku makes things easy to set up and scale, at the cost of being less flexible, and potentially a lot more expensive once you get out of the free tier.
+### How does Railway work?
 
-### How does Heroku work?
-
-Heroku runs Django websites within one or more "[Dynos](https://devcenter.heroku.com/articles/dynos)", which are isolated, virtualized Unix containers that provide the environment required to run an application. The dynos are completely isolated and have an _ephemeral_ file system (a short-lived file system that is cleaned/emptied every time the dyno restarts). The only thing that dynos share by default are application [configuration variables](https://devcenter.heroku.com/articles/config-vars). Heroku internally uses a load balancer to distribute web traffic to all "web" dynos. Since nothing is shared between them, Heroku can scale an app horizontally by adding more dynos (though of course you may also need to scale your database to accept additional connections).
-
-Because the file system is ephemeral you can't install services required by your application directly (e.g. databases, queues, caching systems, storage, email services, etc.). Instead Heroku web applications use backing services provided as independent "add-ons" by Heroku or 3rd parties. Once attached to your web application, the dynos access the services using information contained in application configuration variables.
-
-In order to execute your application Heroku needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched. For Django apps we provide this information in a number of text files:
+Web applications are each run in their own isolated and independent virtualized container.
+In order to execute your application, Railway needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched.
+For Django apps we provide this information in a number of text files:
 
 - **runtime.txt**: the programming language and version to use.
 - **requirements.txt**: the Python component dependencies, including Django.
-- **Procfile**: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
-- **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Heroku environment.
+- **Procfile**: A list of processes to be executed to start the web application.
+  For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
+- **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
 
-Developers interact with Heroku using a special client app/terminal, which is much like a Unix Bash shell. This allows you to upload code that is stored in a git repository, inspect the running processes, see logs, set configuration variables and much more!
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
+For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
+The database service itself can be provided by Railway or some other provider.
 
-In order to get our application to work on Heroku we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
+Developers interact with Railway through the site and using a special [Command Line Interface (CLI)]<https://docs.railway.app/develop/cli>) tool.
+The CLI allows you to associate a local github repository with a railway project , upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
+One of the most useful features is you can use the CLI to run your local project with the same environment variables as the live project.
 
-Once we've done all that we can set up a Heroku account, get the Heroku client, and use it to install our website.
+In order to get our application to work on Railway we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
 
-> **Note:** The instructions below reflect how to work with Heroku at time of writing. If Heroku significantly change their processes, you may wish to instead check their setup documents: [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction).
+Once we've done all that we can set up a Railway account, get the Railway client, and install our website.
 
-That's all the overview you need in order to get started (see [How Heroku works](https://devcenter.heroku.com/articles/how-heroku-works) for a more comprehensive guide).
+That's all the overview you need in order to get started.
 
 ### Creating an application repository in GitHub
 
