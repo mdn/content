@@ -14,7 +14,7 @@ When the JavaScript engine runs, it first creates the _global execution context_
 
 Variables created using `let` and `const` are available only in the _current_ execution context. On the other hand, variables created using `var` are _hoisted_ to the _global_ execution context and are available everywhere when not hidden by another declaration.
 
-#### Example:
+## Example
 ```js
 const n = 2;  // n is available to the global execution context
 
