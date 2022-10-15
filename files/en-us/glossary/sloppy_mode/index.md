@@ -13,4 +13,4 @@ The normal, non-strict mode of JavaScript is sometimes referred to as **sloppy m
 
 ## See also
 
-- "[Strict Mode](https://exploringjs.com/es5/ch01.html#_strict_mode)" in chapter 7 ("JavaScript Syntax") in the book Speaking _JavaScript_.
+- "[Strict Mode](https://exploringjs.com/es5/ch07.html#_strict_mode)" in chapter 7 ("JavaScript Syntax") in the book Speaking _JavaScript_.
