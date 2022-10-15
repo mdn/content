@@ -25,6 +25,8 @@ sending analytics data to a web server, and avoids some of the problems with
 legacy techniques for sending analytics, such as the use of
 {{domxref("XMLHttpRequest","XMLHttpRequest")}}.
 
+> **Note:** The sendBeacon() method can make POST requests only. It does not provide ability to customize the request method, provide custom request headers, or change other processing properties of the request and response. Applications that need such requests should use the fetch API with the [keepalive](https://developer.mozilla.org/en-US/docs/Web/API/fetch#parameters) parameter set to true. This feature was added to fetch API to obsolete the need for sendBeacon().
+
 ## Syntax
 
 ```js-nolint
