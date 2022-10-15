@@ -144,7 +144,7 @@ The first pane on the left contains the list of files associated with the page y
 
 Set breakpoints where you want to pause execution. In the following image, the highlight on the number 18 shows that the line has a breakpoint set.
 
-![](source_code.png)
+![Snippet of developer tools debugger panel with the breakpoint at line 18 hilighted.](source_code.png)
 
 #### Watch expressions and breakpoints
 
