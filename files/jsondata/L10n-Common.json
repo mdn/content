@@ -32,25 +32,29 @@
   "Static_methods": {
     "en-US": "Static methods",
     "es": "Métodos estáticos",
-    "fr": "Méthodes statiques"
+    "fr": "Méthodes statiques",
+    "zh-CN": "静态方法"
   },
 
   "Static_properties": {
     "en-US": "Static properties",
     "es": "Propiedades estáticas",
-    "fr": "Propriétés statiques"
+    "fr": "Propriétés statiques",
+    "zh-CN": "静态属性"
   },
 
   "Instance_methods": {
     "en-US": "Instance methods",
     "es": "Métodos de instancia",
-    "fr": "Méthodes d'instance"
+    "fr": "Méthodes d'instance",
+    "zh-CN": "实例方法"
   },
 
   "Instance_properties": {
     "en-US": "Instance properties",
     "es": "Propiedades de instancia",
-    "fr": "Propriétés d'instance"
+    "fr": "Propriétés d'instance",
+    "zh-CN": "实例属性"
   },
 
   "Event_handlers": {
