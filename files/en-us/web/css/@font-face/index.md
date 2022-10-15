@@ -67,9 +67,9 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
     `local()`: Specifies the font name to not download the font when a local font is available. The font name may or may not be enclosed in quotes.
 
-    `format()`: __Optional__. Specify the font format. If the value is invalid, the browser may not download the resource; but if this parameter is not provided, the browser will always download the resource and then detect the format. The value can be a _keyword_ or a _string_, _keyword_ mean no quotes, _string_ require quotes. _keyword_ is newer specification, so perhaps not yet widely supported. _keyword_ support: `collection`, `embedded-opentype`, `opentype`, `svg`, `truetype`, `woff`, `woff2`. See below for supported *string*.
+    `format()`: **Optional**. Specify the font format. If the value is invalid, the browser may not download the resource; but if this parameter is not provided, the browser will always download the resource and then detect the format. The value can be a _keyword_ or a _string_, _keyword_ mean no quotes, _string_ require quotes. _keyword_ is newer specification, so perhaps not yet widely supported. _keyword_ support: `collection`, `embedded-opentype`, `opentype`, `svg`, `truetype`, `woff`, `woff2`. See below for supported _string_.
 
-    `tech()`: __Optional__. Not yet widely supported. Value is a _keyword_, support: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
+    `tech()`: **Optional**. Not yet widely supported. Value is a _keyword_, support: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
 
     The following are _string_ values supported by `format()`, and their new syntax equivalents:
 
