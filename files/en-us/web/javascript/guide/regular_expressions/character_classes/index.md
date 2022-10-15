@@ -92,7 +92,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
             Matches any single character <em>except</em> line terminators:
             <code>\n</code>, <code>\r</code>, <code>\u2028</code> or
             <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and
-            "ay", but not "yes", in "yes make my day", as there is no charecter before "y" in "yes".
+            "ay", but not "yes", in "yes make my day", as there is no character before "y" in "yes".
           </li>
           <li>
             Inside a character class, the dot loses its special meaning and
