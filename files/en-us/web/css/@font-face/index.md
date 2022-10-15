@@ -22,9 +22,10 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
 ```css
 @font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
-      format("woff");
+  font-family: "Trickster";
+  src: local(Trickster),
+       url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+       url("trickster-outline.otf") format("opentype");
 }
 ```
 
@@ -56,28 +57,40 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
-
-  - : Specifies the resource containing the font data. This can be a URL to a remote font file location or the name of a font on the user's computer.
-
-    To provide the browser with a hint as to what format a font resource is — so it can select a suitable one — it is possible to include a format type inside a `format()` function:
+  - : Specifies font resources. Is a comma-separated list representing the resource fallback order, each component containing a `url()` or a `local()`. `url()` can be followed by `format()` and `tech()`, like this:
 
     ```css
-    src: url(ideal-sans-serif.woff) format("woff"), url(basic-sans-serif.ttf)
-        format("truetype");
+    src: local(Trickster),
+         url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+         url("trickster-outline.otf") format("opentype");
     ```
-
-    The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`.
+  
+    `local()`: Specifies the font name to not download the font when a local font is available. The font name may or may not be enclosed in quotes.
+    
+    `format()`: **Optional**. Specify the font format. If the value is invalid, the browser may not download the resource; but if this parameter is not provided, the browser will always download the resource and then detect the format. The value can be a *keyword* or a *string*, *keyword* mean no quotes, *string* require quotes. *keyword* is newer specification, so perhaps not yet widely supported. *keyword* support: `collection`, `embedded-opentype`, `opentype`, `svg`, `truetype`, `woff`, `woff2`. See below for supported *string*.
+    
+    `tech()`: **Optional**. Not yet widely supported. Value is a *keyword*, support: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
+    
+    The following are *string* values supported by `format()`, and their new syntax equivalents:
+    
+    | String form                     | Equivalent syntax                   |
+    | ------------------------------- | ----------------------------------- |
+    | `format("woff2")`               | `format(woff2)`                     |
+    | `format("woff")`                | `format(woff)`                      |
+    | `format("truetype")`            | `format(truetype)`                  |
+    | `format("opentype")`            | `format(opentype)`                  |
+    | `format("collection")`          | `format(collection)`                |
+    | `format("woff2-variations")`    | `format(woff2) tech(variations)`    |
+    | `format("woff-variations")`     | `format(woff) tech(variations)`     |
+    | `format("truetype-variations")` | `format(truetype) tech(variations)` |
+    | `format("opentype-variations")` | `format(opentype) tech(variations)` |
 
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : The range of Unicode code points to be used from the font.
 
 ## Description
 
-If the `local()` function is provided, specifying a font name to look for on the user's computer, and if the {{Glossary("user agent")}} finds a match, that local font is used. Otherwise, the font resource specified using the `url()` function is downloaded and used.
-
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an Internet connection.
-
-It's common to use both `url()` and `local()` together, so that the user's installed copy of the font is used if available, falling back to downloading a copy of the font if it's not found on the user's device.
 
 The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
