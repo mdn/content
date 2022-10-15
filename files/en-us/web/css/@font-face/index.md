@@ -23,7 +23,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 ```css
 @font-face {
   font-family: "Trickster";
-  src: local(Trickster),
+  src: local("Trickster"),
        url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
        url("trickster-outline.otf") format("opentype");
 }
@@ -60,7 +60,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   - : Specifies font resources. Is a comma-separated list representing the resource fallback order, each component containing a `url()` or a `local()`. `url()` can be followed by `format()` and `tech()`, like this:
 
     ```css
-    src: local(Trickster),
+    src: local("Trickster"),
          url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
          url("trickster-outline.otf") format("opentype");
     ```
@@ -111,9 +111,9 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
   ```css example-bad
   .className {
     @font-face {
-      font-family: MyHelvetica;
+      font-family: "MyHelvetica";
       src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-        url(MgOpenModernaBold.ttf);
+        url("MgOpenModernaBold.ttf");
       font-weight: bold;
     }
   }
@@ -167,9 +167,9 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 
 ```css
 @font-face {
-  font-family: MyHelvetica;
+  font-family: "MyHelvetica";
   src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url(MgOpenModernaBold.ttf);
+    url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }
 ```
