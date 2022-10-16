@@ -25,7 +25,7 @@ sending analytics data to a web server, and avoids some of the problems with
 legacy techniques for sending analytics, such as the use of
 {{domxref("XMLHttpRequest","XMLHttpRequest")}}.
 
-> **Note:** `sendBeacon()` is limited to sending `POST` requests only, and does not provide any ability to add custom request headers, nor to change any properties of the request, and does not enable any access to the server response. For use cases that need the ability to send requests with methods other than `POST`, or to change any request properties, or that need access to the server response, instead use the [Fetch API](/en-US/docs/Web/API/Fetch_API) with the [`keepalive`](/en-US/docs/Web/API/fetch#keepalive) parameter set to true.
+> **Note:** For use cases that need the ability to send requests with methods other than `POST`, or to change any request properties, or that need access to the server response, instead use the [Fetch API](/en-US/docs/Web/API/Fetch_API) with [`keepalive`](/en-US/docs/Web/API/fetch#keepalive) set to true.
 
 ## Syntax
 
