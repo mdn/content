@@ -40,11 +40,14 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
 
 ## Description
 
-### Used only in calculations
+### Constants are not CSS keywords
 
-Mathematical constants can be used only inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions). If used outside of a calculation, they're treated like any other keyword.
+Mathematical constants can be used only inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions). They are used only for calculations. If used outside of a calculation, they're treated like any other keyword.
 
-For example, `animation-name: pi;` refers to an animation named "pi". `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
+For example:
+
+- `animation-name: pi;` refers to an animation named "pi", not the `pi` constant.
+- `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
 
 ### Constant data types
 
