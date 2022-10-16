@@ -31,8 +31,15 @@ const square4 = square(4);
 ```
 
 The components of execution context include:
+<ol>
+<li>Memory component/ Variable Environment</li>
+<li>Code component/ Thread Of Execution</li>
+<li>Deletion Phase</li>
+</ol>
 
-1. Memory component/ Variable Environment
+<ol>
+<li>
+Memory component/ Variable Environment
 
 Before the Javascript Code starts executing, memory will be allocated to all the variable(s) and function(s). This phase is known as Memory creation Phase.
 
@@ -41,7 +48,9 @@ Before the Javascript Code starts executing, memory will be allocated to all the
 For variable(s), key is the variable name itself and value is undefined (even if the variable is initialized).
 For function(s), key is the function name and value is body of the code.
 
-2. Code component/ Thread Of Execution
+</li>
+<li>
+Code component/ Thread Of Execution
 
 This is the second phase also known as `Code Execution Phase`, where JavaScript code starts executing line by line and it starts executing the code now.
 It starts assigning the values to the variables in memory.
@@ -52,8 +61,9 @@ Code Component is also called as `Thread of Execution`
 <img width="781" alt="Code Execution Phase-2" src="https://user-images.githubusercontent.com/41745320/184529581-53b070f4-3100-46ce-a7bd-dd3d11a63375.png">
 
 Now, the Execution context inside the code component of Global Execution context gets deleted.
-
-3. Deletion Phase
+</li>
+<li>
+Deletion Phase
 
 When the execution of JavaScript code completes and values are allocated to the variable. the Execution context inside the code component of Global Execution context gets deleted.
 
@@ -68,7 +78,8 @@ Now, again the local execution_context gets deleted after assigning the value in
 <img width="564" alt="EC delete after assigning square value" src="https://user-images.githubusercontent.com/41745320/184529806-3fd6d619-93bc-4b4f-839e-1507d378eea7.png">
 
 So javascript is done executing the code so the whole execution context will be deleted.
-
+</li>
+</ol>
 `Note`: Whenever Execution Context is created, it will be pushed into the call-stack. Whenever it's done it will be pulled out of the stack.
 
 So Call Stack maintains the order of execution of `Execution Context`.
