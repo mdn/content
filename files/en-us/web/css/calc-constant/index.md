@@ -48,7 +48,11 @@ For example, `animation-name: pi;` refers to an animation named "pi". `line-heig
 
 ### Constant data types
 
-While not technically numbers, CSS constants act as {{cssxref("number")}} values. Thus to get an infinite {{cssxref("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
+Both `e` and `pi` are numeric constants act as {{cssxref("number")}} values.
+
+On the other end, `infinity` and `NaN` are degenerate numeric constants. While not technically numbers, they act as {{cssxref("number")}} values. Thus to get an infinite {{cssxref("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
+
+Infinite/NaN defined mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value gets clamped to the allowed range. It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet.
 
 ### Case sensitivity
 
