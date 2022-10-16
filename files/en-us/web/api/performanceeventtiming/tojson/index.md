@@ -14,7 +14,7 @@ browser-compat: api.PerformanceEventTiming.toJSON
 
 The **`toJSON()`** method is a _serializer_; it returns a JSON representation of the {{domxref("PerformanceEventTiming","performance event timing entry")}} object.
 
-Note that it doesn't contain the {{domxref("PerformanceEventTiming.target", "target")}} property given it is of type {{domxref("Node")}} which doesn't provide a `toJSON()` operation.
+Note that it doesn't contain the {{domxref("PerformanceEventTiming.target", "target")}} property, given it is of type {{domxref("Node")}} (which doesn't provide a `toJSON()` operation).
 
 ## Syntax
 

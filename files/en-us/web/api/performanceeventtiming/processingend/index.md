@@ -24,7 +24,7 @@ A {{domxref("DOMHighResTimeStamp")}} timestamp.
 
 ### Using the processingEnd property
 
-The `processingEnd` property can be used when observing event timing entries ({{domxref("PerformanceEventTiming")}}). For example, to calculate input delay or event processing times.
+The `processingEnd` property can be used when observing event-timing entries ({{domxref("PerformanceEventTiming")}}). For example, to calculate input delay or event processing times.
 
 ```js
 const observer = new PerformanceObserver((list) => {

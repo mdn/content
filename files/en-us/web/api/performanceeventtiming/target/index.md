@@ -24,7 +24,7 @@ Or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the `Node` i
 
 ### Observing events with a specific last target
 
-The `target` property can be used when observing event timing entries ({{domxref("PerformanceEventTiming")}}). For example, to log and measure events for a given last target only.
+The `target` property can be used when observing event-timing entries ({{domxref("PerformanceEventTiming")}}). For example, to log and measure events for a given last target only.
 
 ```js
 const observer = new PerformanceObserver((list) => {

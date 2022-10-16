@@ -12,7 +12,7 @@ browser-compat: api.PerformanceEventTiming.cancelable
 
 {{APIRef}}
 
-The read-only **`cancelable`** property returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property indicating whether the event can be canceled.
+The read-only **`cancelable`** property returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property, indicating whether the event can be canceled.
 
 ## Value
 
@@ -22,7 +22,7 @@ A boolean. `true` if the associated event is cancelable, `false` otherwise.
 
 ### Observing non-cancelable events
 
-The `cancelable` property can be used when observing event timing entries ({{domxref("PerformanceEventTiming")}}). For example, to log and measure non-cancelable events only.
+The `cancelable` property can be used when observing event-timing entries ({{domxref("PerformanceEventTiming")}}). For example, to log and measure non-cancelable events only.
 
 ```js
 const observer = new PerformanceObserver((list) => {
