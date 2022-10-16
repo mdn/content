@@ -46,9 +46,9 @@ Mathematical constants can be used only inside [CSS math functions](/en-US/docs/
 
 For example, `animation-name: pi;` refers to an animation named "pi". `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
 
-### CSS data types
+### Constant data types
 
-While not technically numbers, CSS constants act as {cssxref("number")}} values. Thus to get an infinite {{cssxref("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
+While not technically numbers, CSS constants act as {{cssxref("number")}} values. Thus to get an infinite {{cssxref("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
 
 ### Case sensitivity
 
