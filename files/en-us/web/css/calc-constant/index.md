@@ -52,7 +52,7 @@ While not technically numbers, CSS constants act as {cssxref("number")}} values.
 
 ### Case sensitivity
 
-CSS constants are case-insensitive. Thus, `calc(InFiNiTy)` is perfectly valid.
+CSS constants are case-insensitive. Thus, `calc(infinity)`, `calc(INFINITY)` and `calc(InFiNiTy)` are all perfectly valid. It applies on `e` and `pi too.
 
 There is only one exception: `NaN` is case-sensitive and must be written exactly as `NaN`. Both `nan` and `NAN` are invalid constants.
 
