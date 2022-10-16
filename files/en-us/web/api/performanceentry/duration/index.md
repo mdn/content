@@ -21,6 +21,8 @@ The **`duration`** property returns a
 The value returned by this property depends on the performance entry's
 {{domxref("PerformanceEntry.entryType","type")}}:
 
+- `"event"` - returns a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the time from event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
+- `"first-input"` - returns a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the time from the first input event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
 - "`frame`" - returns a {{domxref("DOMHighResTimeStamp","timestamp")}}
   indicating the difference between the `startTime`s of two successive
   frames.
