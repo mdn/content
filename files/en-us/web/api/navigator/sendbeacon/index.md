@@ -25,7 +25,7 @@ sending analytics data to a web server, and avoids some of the problems with
 legacy techniques for sending analytics, such as the use of
 {{domxref("XMLHttpRequest","XMLHttpRequest")}}.
 
-> **Note:** For use cases that need the ability to send requests with methods other than `POST`, or to change any request properties, or that need access to the server response, instead use the [Fetch API](/en-US/docs/Web/API/Fetch_API) with [`keepalive`](/en-US/docs/Web/API/fetch#keepalive) set to true.
+> **Note:** For use cases that need the ability to send requests with methods other than `POST`, or to change any request properties, or that need access to the server response, instead use the [`fetch()`](/en-US/docs/Web/API/fetch) method with [`keepalive`](/en-US/docs/Web/API/fetch#keepalive) set to true.
 
 ## Syntax
 
