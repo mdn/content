@@ -59,7 +59,7 @@ Infinite/NaN defined mostly to make serialization simpler and more obvious, but 
 
 ### Case sensitivity
 
-CSS constants are case-insensitive. Thus, `calc(infinity)`, `calc(INFINITY)` and `calc(InFiNiTy)` are all perfectly valid. It applies on `e` and `pi too.
+CSS constants are case-insensitive. Thus, `calc(pi)`, `calc(E)` and `calc(InFiNiTy)` are all valid.
 
 There is only one exception: `NaN` is case-sensitive and must be written exactly as `NaN`. Both `nan` and `NAN` are invalid constants.
 
