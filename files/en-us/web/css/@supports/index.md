@@ -143,7 +143,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ### Testing for the support of a selector
 
-The CSS Conditional Rules Level 4 specification adds the ability to test for the support of a selector such as  {{cssxref(":has",":has()")}}.
+CSS conditional rules provide the ability to test for the support of a selector such as {{cssxref(":has",":has()")}}.
 
 ```css
 /* This rule won't be applied in browsers that don't support :has() */
