@@ -32,12 +32,6 @@ const square4 = square(4);
 
 The components of execution context include:
 
-i. Memory component
-
-ii. Code component
-
-iii. Deletion of execution context
-
 1. Memory component/ Variable Environment
 
 Before the Javascript Code starts executing, memory will be allocated to all the variable(s) and function(s). This phase is known as Memory creation Phase.
