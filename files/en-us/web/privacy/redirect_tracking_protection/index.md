@@ -8,6 +8,8 @@ tags:
   - redirect tracking protection
 ---
 
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 Firefox 79 includes protection against redirect tracking. This document describes how the protections work.
 
 ## Redirect tracking defined

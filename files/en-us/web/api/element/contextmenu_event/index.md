@@ -140,5 +140,5 @@ noContext.addEventListener('contextmenu', (e) => {
 - {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
-- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

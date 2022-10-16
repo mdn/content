@@ -18,7 +18,7 @@ browser-compat: api.Element.keydown_event
 
 The **`keydown`** event is fired when a key is pressed.
 
-Unlike the {{domxref("Element/keypress_event", "keypress")}} event, the `keydown` event is fired for all keys, regardless of whether they produce a character value.
+Unlike the deprecated {{domxref("Element/keypress_event", "keypress")}} event, the `keydown` event is fired for all keys, regardless of whether they produce a character value.
 
 The `keydown` and [`keyup`](/en-US/docs/Web/API/Element/keyup_event) events provide a code indicating which key is pressed, while `keypress` indicates which character was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 

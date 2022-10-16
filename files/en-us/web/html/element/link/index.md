@@ -172,7 +172,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{HTMLAttrDef("crossorigin")}}
 
-  - : This enumerated attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
     [CORS-enabled images](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
     The allowed values are:
 
@@ -406,7 +406,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
     </tr>
     <tr>
       <th>Permitted content</th>
-      <td>None, it is an {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th>Tag omission</th>

@@ -34,7 +34,6 @@
         "a",
         "abbr",
         "annotation",
-        "base",
         "br",
         "caption",
         "code",
@@ -42,7 +41,6 @@
         "colgroup",
         "dd",
         "details",
-        "dfn",
         "div",
         "dl",
         "dt",
@@ -84,6 +82,7 @@
         "ol",
         "p",
         "pre",
+        "q",
         "section",
         "semantics",
         "strong",
@@ -158,6 +157,13 @@
           "searchPattern": "/  +$/gm",
           "replace": "",
           "skipCode": false
+        },
+        {
+          "name": "double-spaces",
+          "message": "Avoid double spaces",
+          "searchPattern": "/([^\\s>])  ([^\\s|])/g",
+          "replace": "$1 $2",
+          "skipCode": true
         }
       ]
     }

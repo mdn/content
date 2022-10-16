@@ -20,6 +20,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
+- {{domxref("PerformanceEventTiming")}}
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformancePaintTiming")}}
@@ -27,7 +28,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : A value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. The value of both depends on the subtype. See property page for valid values.
@@ -38,7 +39,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time value of the duration of the performance event.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
   - : Returns a JSON representation of the `PerformanceEntry` object.

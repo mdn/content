@@ -37,7 +37,7 @@ Cascade layers are most relevant when you're working with CSS from multiple sour
 
 For each CSS property applied to an element, there can only be one value. You can view all the property values applied to an element by inspecting the element in your browser's developer tools. The tool's "Styles" panel shows all the property values applied on the element being inspected, along with the matched selector and the CSS source file. The selector from the origin with precedence has its values applied to the matching element.
 
-In addition to the applied styles, the Styles panel displays  crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed-out styles may come from the same origin with precedence but with lower specificity, or with matching origin and specificity, but were found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value is lacking in origin or importance.
+In addition to the applied styles, the Styles panel displays crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed-out styles may come from the same origin with precedence but with lower specificity, or with matching origin and specificity, but were found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value is lacking in origin or importance.
 
 Often, as the complexity of a site increases, the number of stylesheets increases, which makes the source order of the stylesheets both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over the CSS declarations that ultimately get applied, enabling web developers to prioritize sections of CSS without having to fight specificity.
 
@@ -219,7 +219,7 @@ Anonymous layers are created by assigning styles to a layer without naming the l
 
 The `@layer` at-rule creates a layer, named or not, or appends styles to a layer if the named layer already exists. We called the first anonymous layer `<anonymous(01)>` and the second `<anonymous(02)>`, this is just so we can explain them. These are actually unnamed layers. There is no way to reference them or add additional styles to them.
 
-All styles declared outside of a layer are joined together in an implicit layer. In the example code above, the first declaration set the `color: #333` property on  `body`. This was declared outside of any layer. Normal unlayered declarations take precedence over the normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance. This explains why even though the unlayered CSS was declared first in the code block, the implicit layer containing these unlayered styles takes precedence as if it was the last declared layer.
+All styles declared outside of a layer are joined together in an implicit layer. In the example code above, the first declaration set the `color: #333` property on `body`. This was declared outside of any layer. Normal unlayered declarations take precedence over the normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance. This explains why even though the unlayered CSS was declared first in the code block, the implicit layer containing these unlayered styles takes precedence as if it was the last declared layer.
 
 In the line `@layer theme, layout, utilities;`, in which a series of layers were declared, only the `theme` and `utilities` layers were created; `layout` was already created in the first line. Note that this declaration does not change the order of already created layers. There is currently no way to re-order layers once declared.
 
@@ -298,7 +298,7 @@ Let's look at another example, where we import [`layers1.css`](#anonymous-and-na
 @import url(layers1.css) layer(example);
 ```
 
-This will create a single layer named `example` containing some declarations and five nested layers -  `example.layout`, `example.<anonymous(01)>`, `example.theme`, `example.utilities`, and `example.<anonymous(02)>`.
+This will create a single layer named `example` containing some declarations and five nested layers - `example.layout`, `example.<anonymous(01)>`, `example.theme`, `example.utilities`, and `example.<anonymous(02)>`.
 
 To add styles to a named nested layer, use the dot notation:
 

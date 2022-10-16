@@ -115,7 +115,7 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
 }
 ```
 
-## Properties added to the Document interface
+## Instance properties added to the Document interface
 
 The Page Visibility API adds the following properties to the {{domxref("Document")}} interface:
 

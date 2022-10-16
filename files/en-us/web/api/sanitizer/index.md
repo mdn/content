@@ -25,7 +25,7 @@ This configuration may be customized using constructor options.
 - {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{Experimental_Inline}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
-## Methods
+## Instance methods
 
 - {{domxref('Sanitizer.sanitize()')}} {{Experimental_Inline}}
 

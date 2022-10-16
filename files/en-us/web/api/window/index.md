@@ -47,7 +47,7 @@ See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
 - {{domxref("XMLSerializer")}}
   - : Converts a DOM tree into XML or HTML source.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
@@ -160,7 +160,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
-### Properties implemented from elsewhere
+### Instance properties implemented from elsewhere
 
 - {{domxref("caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
@@ -183,7 +183,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.returnValue")}} {{Deprecated_Inline}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface and implements methods from `WindowOrWorkerGlobalScope` and {{domxref("EventTarget")}}._
 
@@ -262,7 +262,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
   - : Updates the state of commands of the current chrome window (UI).
 
-### Methods implemented from elsewhere
+### Instance methods implemented from elsewhere
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Register an event handler to a specific event type on the window.

@@ -151,12 +151,11 @@ Different browsers handle the checkbox and span differently, often ugly ways:
 
 | Browser                             | Rendering                         |
 | ----------------------------------- | --------------------------------- |
-| Firefox 71 (macOS)                  | ![](firefox-mac-checkbox.png)     |
-| Firefox 57 (Windows 10)             | ![](firefox-windows-checkbox.png) |
-| Chrome 77 (macOS), Safari 13, Opera | ![](chrome-mac-checkbox.png)      |
-| Chrome 63 (Windows 10)              | ![](chrome-windows-checkbox.png)  |
-| Internet Explorer 11 (Windows 10)   | ![](ie11-checkbox.png)            |
-| Edge 16 (Windows 10)                | ![](edge-checkbox.png)            |
+| Firefox 71 (macOS)                  | ![Rounded corners and 1px light grey border](firefox-mac-checkbox.png)     |
+| Firefox 57 (Windows 10)             | ![Rectangular corners with 1px medium grey border](firefox-windows-checkbox.png) |
+| Chrome 77 (macOS), Safari 13, Opera | ![Rounded cornerw with 1px medium grey border](chrome-mac-checkbox.png)      |
+| Chrome 63 (Windows 10)              | ![Rectangular borders with slightly greyish background instead of white.](chrome-windows-checkbox.png)  |
+| Edge 16 (Windows 10)                | ![Rectangular borders with slightly greyish background instead of white.](edge-checkbox.png)            |
 
 #### Using appearance: none on radios/checkboxes
 

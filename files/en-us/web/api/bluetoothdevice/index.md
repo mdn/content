@@ -20,7 +20,7 @@ environment.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A string that uniquely identifies a device.
@@ -29,7 +29,7 @@ environment.
 - {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("BluetoothDevice.watchAdvertisements()")}} {{Experimental_Inline}}
   - : A {{jsxref("Promise")}} that resolves to `undefined` or is rejected with

@@ -17,7 +17,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 <table class="standard-table">
   <tbody>
@@ -256,7 +256,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
 
-## Methods
+## Instance methods
 
 <table class="standard-table">
   <tbody>

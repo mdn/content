@@ -31,7 +31,7 @@ You are also responsible for periodically purging cache entries. Each browser ha
 
 {{securecontext_header}}
 
-## Methods
+## Instance methods
 
 - {{domxref("Cache.match", "Cache.match(request, options)")}}
   - : Returns a {{jsxref("Promise")}} that resolves to the response associated with the first matching request in the `Cache` object.

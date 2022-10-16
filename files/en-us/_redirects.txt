@@ -3647,7 +3647,7 @@
 /en-US/docs/HTML/Canvas/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-/en-US/docs/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
@@ -5407,7 +5407,6 @@
 /en-US/docs/MDN/Contribute/Content/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Content/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
-/en-US/docs/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
 /en-US/docs/MDN/Contribute/Does_this_belong	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Contribute/Editor/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Contribute
@@ -7345,6 +7344,8 @@
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/error_event
+/en-US/docs/Web/API/AesCbcParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
+/en-US/docs/Web/API/AesCtrParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
@@ -9432,6 +9433,7 @@
 /en-US/docs/Web/API/RotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.beta	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
+/en-US/docs/Web/API/RsaOaepParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
 /en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Web/API/SVGAnimationElement/onbegin	/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event
@@ -10201,6 +10203,8 @@
 /en-US/docs/Web/API/XRWebGLLayerInit/framebufferscalefactor	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/ignoredepthvalues	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLSubImage/textureHeight	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight
+/en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error
@@ -11138,6 +11142,7 @@
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
+/en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@page_rule	/en-US/docs/Web/CSS/@page
 /en-US/docs/Web/CSS/@styleset	/en-US/docs/Web/CSS/@font-feature-values
 /en-US/docs/Web/CSS/@viewport/height	/en-US/docs/Web/CSS/@viewport
@@ -11278,6 +11283,8 @@
 /en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
+/en-US/docs/Web/CSS/color_value/system-color	/en-US/docs/Web/CSS/system-color
+/en-US/docs/Web/CSS/color_value/system_color_keywords	/en-US/docs/Web/CSS/system-color
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/conic-gradient()	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/counter()	/en-US/docs/Web/CSS/counter
@@ -11809,10 +11816,11 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
-/en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+/en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Element	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
 /en-US/docs/Web/Guide/HTML/Email_links	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links
 /en-US/docs/Web/Guide/HTML/Event_attributes	/en-US/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_—_don't_use_these
@@ -11869,7 +11877,7 @@
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-/en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck

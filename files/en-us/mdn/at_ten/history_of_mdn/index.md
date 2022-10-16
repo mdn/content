@@ -1,10 +1,12 @@
 ---
-title: The History of MDN
+title: The history of MDN
 slug: MDN/At_ten/History_of_MDN
 tags:
   - History
   - MDN Meta
 ---
+
+{{MDNSidebar}}
 
 In this talk from 2015, several contributors of the MDN project look at the past ten years of [developer.mozilla.org](/), and at the decade to come. You will hear the story of different wiki software migrations, how a documentation community was built, and many more highlights of the history of the site. The group then also talks about current challenges and projects the MDN community is working on this year.
 

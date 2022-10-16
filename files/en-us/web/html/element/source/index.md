@@ -30,14 +30,14 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
       <td>It must have a start tag, but must not have an end tag.</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Permitted parents</dfn></th>
+      <th scope="row">Permitted parents</th>
       <td>
         <div>
           A media element—{{HTMLElement("audio")}} or

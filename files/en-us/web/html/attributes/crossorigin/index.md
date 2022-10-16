@@ -23,7 +23,7 @@ The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLEl
 
 The `crossorigin` content attribute on media elements is a CORS settings attribute.
 
-These attributes are enumerated, and have the following possible values:
+These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
 - `anonymous`
   - : Request uses CORS headers and credentials flag is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.

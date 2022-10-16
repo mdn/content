@@ -26,7 +26,7 @@ browser-compat: api.TextTrackCue
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
 

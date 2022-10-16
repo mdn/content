@@ -96,14 +96,14 @@ Let's show you how:
    The {{domxref("Storage.setItem()")}} method allows you to save a data item in storage — it takes two parameters: the name of the item, and its value. Try typing this into your JavaScript console (change the value to your own name, if you wish!):
 
    ```js
-   localStorage.setItem('name','Chris');
+   localStorage.setItem("name", "Chris");
    ```
 
 4. The {{domxref("Storage.getItem()")}} method takes one parameter — the name of a data item you want to retrieve — and returns the item's value. Now type these lines into your JavaScript console:
 
    ```js
-   let myName = localStorage.getItem('name');
-   myName
+   let myName = localStorage.getItem("name");
+   myName;
    ```
 
    Upon typing in the second line, you should see that the `myName` variable now contains the value of the `name` data item.
@@ -111,9 +111,9 @@ Let's show you how:
 5. The {{domxref("Storage.removeItem()")}} method takes one parameter — the name of a data item you want to remove — and removes that item out of web storage. Type the following lines into your JavaScript console:
 
    ```js
-   localStorage.removeItem('name');
-   myName = localStorage.getItem('name');
-   myName
+   localStorage.removeItem("name");
+   myName = localStorage.getItem("name");
+   myName;
    ```
 
    The third line should now return `null` — the `name` item no longer exists in the web storage.
@@ -126,9 +126,9 @@ One key feature of web storage is that the data persists between page loads (and
 2. Type these lines into the browser's JavaScript console:
 
    ```js
-   localStorage.setItem('name','Chris');
-   let myName = localStorage.getItem('name');
-   myName
+   localStorage.setItem("name", "Chris");
+   let myName = localStorage.getItem("name");
+   myName;
    ```
 
    You should see the name item returned.
@@ -137,8 +137,8 @@ One key feature of web storage is that the data persists between page loads (and
 4. Enter the following lines again:
 
    ```js
-   let myName = localStorage.getItem('name');
-   myName
+   let myName = localStorage.getItem("name");
+   myName;
    ```
 
    You should see that the value is still available, even though the browser has been closed and then opened again.
@@ -165,31 +165,31 @@ Let's build up the example, so you can understand how it works.
 
    ```js
    // create needed constants
-   const rememberDiv = document.querySelector('.remember');
-   const forgetDiv = document.querySelector('.forget');
-   const form = document.querySelector('form');
-   const nameInput = document.querySelector('#entername');
-   const submitBtn = document.querySelector('#submitname');
-   const forgetBtn = document.querySelector('#forgetname');
+   const rememberDiv = document.querySelector(".remember");
+   const forgetDiv = document.querySelector(".forget");
+   const form = document.querySelector("form");
+   const nameInput = document.querySelector("#entername");
+   const submitBtn = document.querySelector("#submitname");
+   const forgetBtn = document.querySelector("#forgetname");
 
-   const h1 = document.querySelector('h1');
-   const personalGreeting = document.querySelector('.personal-greeting');
+   const h1 = document.querySelector("h1");
+   const personalGreeting = document.querySelector(".personal-greeting");
    ```
 
 4. Next up, we need to include a small event listener to stop the form from actually submitting itself when the submit button is pressed, as this is not the behavior we want. Add this snippet below your previous code:
 
    ```js
    // Stop the form from submitting when a button is pressed
-   form.addEventListener('submit', (e) => e.preventDefault());
+   form.addEventListener("submit", (e) => e.preventDefault());
    ```
 
 5. Now we need to add an event listener, the handler function of which will run when the "Say hello" button is clicked. The comments explain in detail what each bit does, but in essence here we are taking the name the user has entered into the text input box and saving it in web storage using `setItem()`, then running a function called `nameDisplayCheck()` that will handle updating the actual website text. Add this to the bottom of your code:
 
    ```js
    // run function when the 'Say hello' button is clicked
-   submitBtn.addEventListener('click', () => {
+   submitBtn.addEventListener("click", () => {
      // store the entered name in web storage
-     localStorage.setItem('name', nameInput.value);
+     localStorage.setItem("name", nameInput.value);
      // run nameDisplayCheck() to sort out displaying the personalized greetings and updating the form display
      nameDisplayCheck();
    });
@@ -199,9 +199,9 @@ Let's build up the example, so you can understand how it works.
 
    ```js
    // run function when the 'Forget' button is clicked
-   forgetBtn.addEventListener('click', () => {
+   forgetBtn.addEventListener("click", () => {
      // Remove the stored name from web storage
-     localStorage.removeItem('name');
+     localStorage.removeItem("name");
      // run nameDisplayCheck() to sort out displaying the generic greeting again and updating the form display
      nameDisplayCheck();
    });
@@ -213,21 +213,22 @@ Let's build up the example, so you can understand how it works.
    // define the nameDisplayCheck() function
    function nameDisplayCheck() {
      // check whether the 'name' data item is stored in web Storage
-     if (localStorage.getItem('name')) {
+     if (localStorage.getItem("name")) {
        // If it is, display personalized greeting
-       const name = localStorage.getItem('name');
+       const name = localStorage.getItem("name");
        h1.textContent = `Welcome, ${name}`;
        personalGreeting.textContent = `Welcome to our website, ${name}! We hope you have fun while you are here.`;
        // hide the 'remember' part of the form and show the 'forget' part
-       forgetDiv.style.display = 'block';
-       rememberDiv.style.display = 'none';
+       forgetDiv.style.display = "block";
+       rememberDiv.style.display = "none";
      } else {
        // if not, display generic greeting
-       h1.textContent = 'Welcome to our website ';
-       personalGreeting.textContent = 'Welcome to our website. We hope you have fun while you are here.';
+       h1.textContent = "Welcome to our website ";
+       personalGreeting.textContent =
+         "Welcome to our website. We hope you have fun while you are here.";
        // hide the 'forget' part of the form and show the 'remember' part
-       forgetDiv.style.display = 'none';
-       rememberDiv.style.display = 'block';
+       forgetDiv.style.display = "none";
+       rememberDiv.style.display = "block";
      }
    }
    ```
@@ -247,6 +248,10 @@ Your example is finished — well done! All that remains now is to save your cod
 ## Storing complex data — IndexedDB
 
 The [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) (sometimes abbreviated IDB) is a complete database system available in the browser in which you can store complex related data, the types of which aren't limited to simple values like strings or numbers. You can store videos, images, and pretty much anything else in an IndexedDB instance.
+
+The IndexedDB API allows you to create a database, then create object stores within that database.
+Object stores are like tables in a relational database, and each object store can contain a number of objects.
+To learn more about the IndexedDB API, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
 However, this does come at a cost: IndexedDB is much more complex to use than the Web Storage API. In this section, we'll really only scratch the surface of what it is capable of, but we will give you enough to get started.
 
@@ -284,7 +289,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
    ```js
    // Open our database; it is created if it doesn't already exist
    // (see the upgradeneeded handler below)
-   const openRequest = window.indexedDB.open('notes_db', 1);
+   const openRequest = window.indexedDB.open("notes_db", 1);
    ```
 
    This line creates a request to open version `1` of a database called `notes_db`. If this doesn't already exist, it will be created for you by subsequent code. You will see this request pattern used very often throughout IndexedDB. Database operations take time. You don't want to hang the browser while you wait for the results, so database operations are {{Glossary("asynchronous")}}, meaning that instead of happening immediately, they will happen at some point in the future, and you get notified when they're done.
@@ -297,11 +302,13 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
    ```js
    // error handler signifies that the database didn't open successfully
-   openRequest.addEventListener('error', () => console.error('Database failed to open'));
+   openRequest.addEventListener("error", () =>
+     console.error("Database failed to open")
+   );
 
    // success handler signifies that the database opened successfully
-   openRequest.addEventListener('success', () => {
-     console.log('Database opened successfully');
+   openRequest.addEventListener("success", () => {
+     console.log("Database opened successfully");
 
      // Store the opened database object in the db variable. This is used a lot below
      db = openRequest.result;
@@ -319,20 +326,22 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
    ```js
    // Set up the database tables if this has not already been done
-   openRequest.addEventListener('upgradeneeded', (e) => {
-
+   openRequest.addEventListener("upgradeneeded", (e) => {
      // Grab a reference to the opened database
      db = e.target.result;
 
-     // Create an objectStore to store our notes in (basically like a single table)
-     // including a auto-incrementing key
-     const objectStore = db.createObjectStore('notes_os', { keyPath: 'id', autoIncrement:true });
+     // Create an objectStore in our database to store notes and an auto-incrementing key
+     // An objectStore is similar to a 'table' in a relational database
+     const objectStore = db.createObjectStore("notes_os", {
+       keyPath: "id",
+       autoIncrement: true,
+     });
 
      // Define what data items the objectStore will contain
-     objectStore.createIndex('title', 'title', { unique: false });
-     objectStore.createIndex('body', 'body', { unique: false });
+     objectStore.createIndex("title", "title", { unique: false });
+     objectStore.createIndex("body", "body", { unique: false });
 
-     console.log('Database setup complete');
+     console.log("Database setup complete");
    });
    ```
 
@@ -360,7 +369,7 @@ Below your previous event handler, add the following line, which sets up a `subm
 
 ```js
 // Create a submit event handler so that when the form is submitted the addData() function is run
-form.addEventListener('submit', addData);
+form.addEventListener("submit", addData);
 ```
 
 Now let's define the `addData()` function. Add this below your previous line:
@@ -375,29 +384,31 @@ function addData(e) {
   const newItem = { title: titleInput.value, body: bodyInput.value };
 
   // open a read/write db transaction, ready for adding the data
-  const transaction = db.transaction(['notes_os'], 'readwrite');
+  const transaction = db.transaction(["notes_os"], "readwrite");
 
   // call an object store that's already been added to the database
-  const objectStore = transaction.objectStore('notes_os');
+  const objectStore = transaction.objectStore("notes_os");
 
   // Make a request to add our newItem object to the object store
   const addRequest = objectStore.add(newItem);
 
-  addRequest.addEventListener('success', () => {
+  addRequest.addEventListener("success", () => {
     // Clear the form, ready for adding the next entry
-    titleInput.value = '';
-    bodyInput.value = '';
+    titleInput.value = "";
+    bodyInput.value = "";
   });
 
   // Report on the success of the transaction completing, when everything is done
-  transaction.addEventListener('complete', () => {
-    console.log('Transaction completed: database modification finished.');
+  transaction.addEventListener("complete", () => {
+    console.log("Transaction completed: database modification finished.");
 
     // update the display of data to show the newly added item, by running displayData() again.
     displayData();
   });
 
-  transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
+  transaction.addEventListener("error", () =>
+    console.log("Transaction not opened due to error")
+  );
 }
 ```
 
@@ -425,8 +436,8 @@ function displayData() {
 
   // Open our object store and then get a cursor - which iterates through all the
   // different data items in the store
-  const objectStore = db.transaction('notes_os').objectStore('notes_os');
-  objectStore.openCursor().addEventListener('success', (e) => {
+  const objectStore = db.transaction("notes_os").objectStore("notes_os");
+  objectStore.openCursor().addEventListener("success", (e) => {
     // Get a reference to the cursor
     const cursor = e.target.result;
 
@@ -434,9 +445,9 @@ function displayData() {
     if (cursor) {
       // Create a list item, h3, and p to put each data item inside when displaying it
       // structure the HTML fragment, and append it inside the list
-      const listItem = document.createElement('li');
-      const h3 = document.createElement('h3');
-      const para = document.createElement('p');
+      const listItem = document.createElement("li");
+      const h3 = document.createElement("h3");
+      const para = document.createElement("p");
 
       listItem.appendChild(h3);
       listItem.appendChild(para);
@@ -448,28 +459,28 @@ function displayData() {
 
       // Store the ID of the data item inside an attribute on the listItem, so we know
       // which item it corresponds to. This will be useful later when we want to delete items
-      listItem.setAttribute('data-note-id', cursor.value.id);
+      listItem.setAttribute("data-note-id", cursor.value.id);
 
       // Create a button and place it inside each listItem
-      const deleteBtn = document.createElement('button');
+      const deleteBtn = document.createElement("button");
       listItem.appendChild(deleteBtn);
-      deleteBtn.textContent = 'Delete';
+      deleteBtn.textContent = "Delete";
 
       // Set an event handler so that when the button is clicked, the deleteItem()
       // function is run
-      deleteBtn.addEventListener('click', deleteItem);
+      deleteBtn.addEventListener("click", deleteItem);
 
       // Iterate to the next item in the cursor
       cursor.continue();
     } else {
       // Again, if list item is empty, display a 'No notes stored' message
       if (!list.firstChild) {
-        const listItem = document.createElement('li');
-        listItem.textContent = 'No notes stored.'
+        const listItem = document.createElement("li");
+        listItem.textContent = "No notes stored.";
         list.appendChild(listItem);
       }
       // if there are no more cursor items to iterate through, say so
-      console.log('Notes all displayed');
+      console.log("Notes all displayed");
     }
   });
 }
@@ -495,15 +506,15 @@ function deleteItem(e) {
   // retrieve the name of the task we want to delete. We need
   // to convert it to a number before trying to use it with IDB; IDB key
   // values are type-sensitive.
-  const noteId = Number(e.target.parentNode.getAttribute('data-note-id'));
+  const noteId = Number(e.target.parentNode.getAttribute("data-note-id"));
 
   // open a database transaction and delete the task, finding it using the id we retrieved above
-  const transaction = db.transaction(['notes_os'], 'readwrite');
-  const objectStore = transaction.objectStore('notes_os');
+  const transaction = db.transaction(["notes_os"], "readwrite");
+  const objectStore = transaction.objectStore("notes_os");
   const deleteRequest = objectStore.delete(noteId);
 
   // report that the data item has been deleted
-  transaction.addEventListener('complete', () => {
+  transaction.addEventListener("complete", () => {
     // delete the parent of the button
     // which is the list item, so it is no longer displayed
     e.target.parentNode.parentNode.removeChild(e.target.parentNode);
@@ -511,8 +522,8 @@ function deleteItem(e) {
 
     // Again, if list item is empty, display a 'No notes stored' message
     if (!list.firstChild) {
-      const listItem = document.createElement('li');
-      listItem.textContent = 'No notes stored.';
+      const listItem = document.createElement("li");
+      listItem.textContent = "No notes stored.";
       list.appendChild(listItem);
     }
   });
@@ -539,12 +550,12 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
    ```js
    const videos = [
-     { 'name' : 'crystal' },
-     { 'name' : 'elf' },
-     { 'name' : 'frog' },
-     { 'name' : 'monster' },
-     { 'name' : 'pig' },
-     { 'name' : 'rabbit' }
+     { name: "crystal" },
+     { name: "elf" },
+     { name: "frog" },
+     { name: "monster" },
+     { name: "pig" },
+     { name: "rabbit" },
    ];
    ```
 
@@ -555,16 +566,20 @@ Let's walk through the most interesting parts of the example. We won't look at i
    ```js
    function init() {
      // Loop through the video names one by one
-     for(const video of videos) {
+     for (const video of videos) {
        // Open transaction, get object store, and get() each video by name
-       const objectStore = db.transaction('videos_os').objectStore('videos_os');
+       const objectStore = db.transaction("videos_os").objectStore("videos_os");
        const request = objectStore.get(video.name);
-       request.addEventListener('success', () => {
+       request.addEventListener("success", () => {
          // If the result exists in the database (is not undefined)
          if (request.result) {
            // Grab the videos from IDB and display them using displayVideo()
-           console.log('taking videos from IDB');
-           displayVideo(request.result.mp4, request.result.webm, request.result.name);
+           console.log("taking videos from IDB");
+           displayVideo(
+             request.result.mp4,
+             request.result.webm,
+             request.result.name
+           );
          } else {
            // Fetch the videos from the network
            fetchVideoFromNetwork(video);
@@ -583,8 +598,12 @@ Let's walk through the most interesting parts of the example. We won't look at i
    ```js
    // Fetch the MP4 and WebM versions of the video using the fetch() function,
    // then expose their response bodies as blobs
-   const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) => response.blob());
-   const webmBlob = fetch(`videos/${video.name}.webm`).then((response) => response.blob());
+   const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) =>
+     response.blob()
+   );
+   const webmBlob = fetch(`videos/${video.name}.webm`).then((response) =>
+     response.blob()
+   );
 
    // Only run the next code when both promises have fulfilled
    Promise.all([mp4Blob, webmBlob]).then((values) => {
@@ -601,13 +620,17 @@ Let's walk through the most interesting parts of the example. We won't look at i
    // Define the storeVideo() function
    function storeVideo(mp4, webm, name) {
      // Open transaction, get object store; make it a readwrite so we can write to the IDB
-     const objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
+     const objectStore = db
+       .transaction(["videos_os"], "readwrite")
+       .objectStore("videos_os");
 
      // Add the record to the IDB using add()
      const request = objectStore.add({ mp4, webm, name });
 
-     request.addEventListener('success', () => console.log('Record addition attempt finished'));
-     request.addEventListener('error', () => console.error(request.error));
+     request.addEventListener("success", () =>
+       console.log("Record addition attempt finished")
+     );
+     request.addEventListener("error", () => console.error(request.error));
    }
    ```
 
@@ -621,17 +644,17 @@ Let's walk through the most interesting parts of the example. We won't look at i
      const webmURL = URL.createObjectURL(webmBlob);
 
      // Create DOM elements to embed video in the page
-     const article = document.createElement('article');
-     const h2 = document.createElement('h2');
+     const article = document.createElement("article");
+     const h2 = document.createElement("h2");
      h2.textContent = title;
-     const video = document.createElement('video');
+     const video = document.createElement("video");
      video.controls = true;
-     const source1 = document.createElement('source');
+     const source1 = document.createElement("source");
      source1.src = mp4URL;
-     source1.type = 'video/mp4';
-     const source2 = document.createElement('source');
+     source1.type = "video/mp4";
+     const source2 = document.createElement("source");
      source2.src = webmURL;
-     source2.type = 'video/webm';
+     source2.type = "video/webm";
 
      // Embed DOM elements into page
      section.appendChild(article);
@@ -668,10 +691,12 @@ The first thing to note is that there's an extra bit of code placed in the main 
 
 ```js
 // Register service worker to control making site work offline
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
-    .then(() => console.log('Service Worker Registered'));
+    .register(
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js"
+    )
+    .then(() => console.log("Service Worker Registered"));
 }
 ```
 
@@ -688,16 +713,16 @@ Inside the `install` handler we use the {{domxref("ExtendableEvent.waitUntil()")
 Here is where we see the Cache API in action. We use the {{domxref("CacheStorage.open()")}} method to open a new cache object in which responses can be stored (similar to an IndexedDB object store). This promise fulfills with a {{domxref("Cache")}} object representing the `video-store` cache. We then use the {{domxref("Cache.addAll()")}} method to fetch a series of assets and add their responses to the cache.
 
 ```js
-self.addEventListener('install', (e) => {
+self.addEventListener("install", (e) => {
   e.waitUntil(
     caches
-      .open('video-store')
+      .open("video-store")
       .then((cache) =>
         cache.addAll([
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css',
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/",
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html",
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
         ])
       )
   );
@@ -719,7 +744,7 @@ Inside this block we use {{domxref("CacheStorage.match()")}} to check whether a 
 If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/fetch) the response from the network and return that instead.
 
 ```js
-self.addEventListener('fetch', (e) => {
+self.addEventListener("fetch", (e) => {
   console.log(e.request.url);
   e.respondWith(
     caches.match(e.request).then((response) => response || fetch(e.request))
