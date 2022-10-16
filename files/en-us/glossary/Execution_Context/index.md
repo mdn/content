@@ -86,5 +86,5 @@ So Call Stack maintains the order of execution of `Execution Context`.
 
 ## See also
 
-- {{glossary("Hoisting")}} 
-- {{glossary("Scope")}}
+-  {{glossary("Hoisting")}} 
+-  {{glossary("Scope")}}
