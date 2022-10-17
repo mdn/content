@@ -23,7 +23,7 @@ parseFloat(string)
 ### Parameters
 
 - `string`
-  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading and trailing {{glossary("whitespace")}} in this argument are ignored.
 
 ### Return value
 
@@ -37,7 +37,7 @@ The `parseFloat` function converts its first argument to a string, parses that s
 
 - The characters accepted by `parseFloat()` are plus sign (`+`), minus sign (`-` U+002D HYPHEN-MINUS), decimal digits (`0`–`9`), decimal point (`.`), exponent indicator (`e` or `E`), and the `"Infinity"` literal.
 - The `+`/`-` signs can only appear strictly at the beginning of the string, or immediately following the `e`/`E` character. The decimal point can only appear once, and only before the `e`/`E` character. The `e`/`E` character can only appear once, and only if there is at least one digit before it.
-- Leading spaces in the argument are trimmed and ignored.
+- Leading and trailing spaces in the argument are trimmed and ignored.
 - `parseFloat()` can also parse and return {{jsxref("Infinity")}} or `-Infinity` if the string starts with `"Infinity"` or `"-Infinity"` preceded by none or more white spaces.
 - `parseFloat()` picks the longest substring starting from the beginning that generates a valid number literal. If it encounters an invalid character, it returns the number represented up to that point, ignoring the invalid character and all characters following it.
 - If the argument's first character can't start a legal number literal per the syntax above, `parseFloat` returns {{jsxref("NaN")}}.
