@@ -25,7 +25,7 @@ Number.parseFloat(string)
 ### Parameters
 
 - `string`
-  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading and trailing {{glossary("whitespace")}} in this argument are ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading and trailing {{glossary("whitespace")}} in this argument is ignored.
 
 ### Return value
 
