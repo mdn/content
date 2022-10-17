@@ -182,7 +182,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ## Examples
 
-### Testing for the support of a given CSS property
+### Testing for the support of a CSS property
 
 ```css
 @supports (animation-name: test) {
@@ -239,9 +239,9 @@ ul:has(> li li) {
 }
 ```
 
-### Testing for support of a font technology
+### Testing for the support of a font technology
 
-The following example returns true if the browser supports the `COLRv1` font technology:
+The following example applies the CSS style if the browser supports the `COLRv1` font technology:
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
@@ -262,9 +262,9 @@ If the browser can't support the font technology, a fallback font (`Bungee-fallb
 }
 ```
 
-### Testing for support of a font format
+### Testing for the support of a font format
 
-The following example returns true if the browser supports the `woff2` font format:
+The following example applies the CSS style if the browser supports the `woff2` font format:
 
 ```css
 @supports font-format(woff2) {
