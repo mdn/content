@@ -83,19 +83,19 @@ The following example returns true and applies the CSS style if the browser supp
 
 The table below describes the available font technologies that can be queried using this function:
 
-| Technology          | Description                                                                                          |
+| Technology          | Supports                                                                                          |
 | :------------------ | :--------------------------------------------------------------------------------------------------- |
-| `color-colrv0`      | COLR version 0 table multi-colored glyph support                                                     |
-| `color-colrv1`      | COLR version 1 table multi-colored glyph support                                                     |
-| `color-svg`         | SVG table multi-colored support                                                                      |
-| `color-sbix`        | Standard bitmap graphics table support                                                               |
-| `color-cbdt`        | Color bitmap data table support                                                                      |
-| `features-opentype` | OpenType `GSUB` and `GPOS` table support                                                             |
+| `color-colrv0`      | Multi-colored glyphs COLR version 0 table                                                    |
+| `color-colrv1`      | Multi-colored glyphs COLR version 1 table                                                    |
+| `color-svg`         | SVG multi-colored tables                                                                      |
+| `color-sbix`        | Standard bitmap graphics tables                                                              |
+| `color-cbdt`        | Color bitmap data tables                                                                      |
+| `features-opentype` | OpenType `GSUB` and `GPOS` tables                                                             |
 | `features-aat`      | TrueType `morx` and `kerx` tables                                                                    |
-| `features-graphite` | Graphite feature support, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` table support.         |
+| `features-graphite` | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables         |
 | `incremental`       | Incremental font loading                                                                             |
-| `variations`        | Font variation support in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
-| `palettes`          | Font pallet support by means of `font-palette` to select one of many color palettes in the font      |
+| `variations`        | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
+| `palettes`          | Font palletes by means of `font-palette` to select one of many color palettes in the font      |
 
 #### `font-format()`
 
