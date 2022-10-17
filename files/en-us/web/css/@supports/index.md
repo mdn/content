@@ -42,14 +42,14 @@ The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and
 ```
 
 The precedence of operators can be defined with parentheses.
-Supports conditions can use either a declaration syntax of `<property>: <value>` or a `<function()>` syntax.
+Supports conditions can use either a `<property>: <value>` declaration syntax or a `<function()>` syntax.
 The following sections describe the use of each type of supports condition.
 
 ### Declaration syntax
 
-The declaration syntax checks if a browser considers any given `<property>: <value>` declaration to be valid CSS.
+The declaration syntax checks if a browser supports the specified `<property>: <value>` declaration.
 The declaration must be surrounded by parentheses.
-The following example returns true if the browser's {{CSSxRef("transform-origin")}} property considers `5% 5%` valid:
+The following example returns true and applies the CSS style if the browser supports the expression `transform-origin: 5% 5%`:
 
 ```css
 @supports (transform-origin: 5% 5%) {
@@ -58,30 +58,30 @@ The following example returns true if the browser's {{CSSxRef("transform-origin"
 
 ### Function syntax
 
-The function syntax checks if a browser considers the values within supported functions to be valid CSS.
-The supported functions are described in the following sections.
+The function syntax checks if a browser supports values or expressions within the function.
+The functions supported in the function syntax are described in the following sections.
 
 #### `selector()` {{Experimental_Inline}}
 
-A conditional function to evaluate if the browser supports a specific selector syntax.
-The following example returns true if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
+This function evaluates if a browser supports the specified selector syntax.
+The following example returns true and applies the CSS style if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
 
 ```css
-@supports selector(A > B) {
+@supports selector(h2 > p) {
 }
 ```
 
 #### `font-tech()`
 
-A conditional function to evaluate if the browser supports a specific font technology in layout and rendering.
-The following example returns true if the browser supports the `COLRv1` font technology:
+This function checks if a browser supports the specified font technology for layout and rendering.
+The following example returns true and applies the CSS style if the browser supports the `COLRv1` font technology:
 
 ```css
 @supports font-tech(color-COLRv1) {
 }
 ```
 
-This table describes the available font technologies that can be queried with this function:
+The table below describes the available font technologies that can be queried using this function:
 
 | Technology          | Description                                                                                          |
 | :------------------ | :--------------------------------------------------------------------------------------------------- |
@@ -99,8 +99,8 @@ This table describes the available font technologies that can be queried with th
 
 #### `font-format()`
 
-A conditional function to evaluate if the browser supports a specific font format in layout and rendering.
-The following example returns true if the browser supports the `opentype` font technology:
+This function checks if a browser supports the specified font format for layout and rendering.
+The following example returns true and applies the CSS style if the browser supports the `opentype` font format:
 
 ```css
 @supports font-format(opentype) {
