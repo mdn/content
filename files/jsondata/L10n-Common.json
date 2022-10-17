@@ -22,7 +22,7 @@
   "Events": {
     "en-US": "Events",
     "es": "Eventos",
-    "fr": "Événements",
+    "fr": "Évènements",
     "ja": "イベント",
     "pt-BR": "Eventos",
     "ru": "События",
@@ -40,7 +40,7 @@
   "Implemented_by": {
     "en-US": "Implemented by:",
     "es": "Implementado por:",
-    "fr": "Implémenté par&nbsp;:",
+    "fr": "Implémenté(e) par&nbsp;:",
     "ja": "実装先:",
     "pt-BR": "Implementado por:",
     "ru": "Выполняется:",

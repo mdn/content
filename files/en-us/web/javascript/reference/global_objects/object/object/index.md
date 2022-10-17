@@ -13,10 +13,9 @@ browser-compat: javascript.builtins.Object.Object
 
 The **`Object` constructor** turns the input into an object. Its behavior depends on the input's type.
 
-- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and
-  return an empty object.
-- Otherwise, it will return an object of a Type that corresponds to the given value.
-- If the value is an object already, it will return the value.
+- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it creates and returns an empty object.
+- Otherwise, it returns an object of a Type that corresponds to the given value.
+- If the value is an object already, it returns the value.
 
 ## Syntax
 

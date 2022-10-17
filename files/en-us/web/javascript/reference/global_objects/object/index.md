@@ -18,19 +18,29 @@ Nearly all objects in JavaScript are instances of {{jsxref("Object")}}; a typica
 
 Changes to the `Object` prototype object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior.
 
-The `Object` constructor's behavior depends on the input's type.
-
-- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and return an empty object.
-- If the value is an object already, it will return the value.
-- Otherwise, it will return an object of a Type that corresponds to the given value.
-
-When called in a non-constructor context, `Object` behaves identically to `new Object()`.
-
-See also the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
-
 ### Deleting a property from an object
 
 There isn't any method in an Object itself to delete its own properties (such as {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}}). To do so, one must use the [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+
+### Object coercion
+
+Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/#sec-toobject) can be summarized as follows:
+
+- Objects are returned as-is.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
+- {{jsxref("Number")}}, {{jsxref("String")}}, {{jsxref("Boolean")}}, {{jsxref("Symbol")}}, {{jsxref("BigInt")}} primitives are wrapped into their corresponding object wrappers.
+
+The best way to achieve the same effect in JavaScript is through the [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) constructor. `Object(x)` converts `x` to an object, and for `undefined` or `null`, it returns a plain object instead of throwing a {{jsxref("TypeError")}}.
+
+Places that use object coercion include:
+
+- The `object` parameter of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.
+- The `this` value of {{jsxref("Array")}} methods.
+- Parameters of `Object` methods such as {{jsxref("Object.keys()")}}.
+- Auto-boxing when a property is accessed on a primitive value, since primitives do not have properties.
+- The [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value when calling a non-strict function. Primitives are boxed while `null` and `undefined` are replaced with the [global object](/en-US/docs/Glossary/Global_object).
+
+Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion), the object coercion process itself is not observable in any way, since it doesn't invoke custom code like `toString` or `valueOf` methods.
 
 ## Constructor
 
