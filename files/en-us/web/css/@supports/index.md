@@ -14,7 +14,9 @@ browser-compat: css.at-rules.supports
 
 {{CSSRef}}
 
-The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a _feature query_. The rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
+Using this at-rule is commonly called a _feature query_.
+The rule must be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
 {{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
 
@@ -22,11 +24,32 @@ In JavaScript, `@supports` can be accessed via the CSS object model interface {{
 
 ## Syntax
 
-The `@supports` at-rule associates a block of statements with a _supports condition._ The supports condition consists of one or more name-value pairs combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`). Precedence of operators can be defined with parentheses.
+The `@supports` at-rule consists of a block of statements with a _supports condition._
+The supports condition is a set of one or more name-value pairs (e.g., `<property>: <value>`).
+
+```css
+@supports (<supports-condition>) {
+  /* If the condition is true, use the CSS in this block. */
+}
+```
+
+The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`).
+
+```css
+@supports (<supports-condition>) and (<supports-condition>) {
+  /* If both conditions are true, use the CSS in this block. */
+}
+```
+
+The precedence of operators can be defined with parentheses.
+Supports conditions can use either a declaration syntax of `<property>: <value>` or a `<function()>` syntax.
+The following sections describe the use of each type of supports condition.
 
 ### Declaration syntax
 
-The most basic supports condition is a simple declaration (a property name followed by a value, separated by a colon). The declaration must be surrounded by parentheses. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property considers `5% 5%` valid:
+The declaration syntax checks if a browser considers any given `<property>: <value>` declaration to be valid CSS.
+The declaration must be surrounded by parentheses.
+The following example returns true if the browser's {{CSSxRef("transform-origin")}} property considers `5% 5%` valid:
 
 ```css
 @supports (transform-origin: 5% 5%) {
@@ -35,27 +58,79 @@ The most basic supports condition is a simple declaration (a property name follo
 
 ### Function syntax
 
-The second basic supports condition is a supports function, the syntax for these is supported by all browsers, but the functions themselves are still being standardized.
+The function syntax checks if a browser considers the values within supported functions to be valid CSS.
+The supported functions are described in the following sections.
 
 #### `selector()` {{Experimental_Inline}}
 
-Tests if the browser supports the tested selector syntax. The following example returns true if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
+A conditional function to evaluate if the browser supports a specific selector syntax.
+The following example returns true if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
 
 ```css
 @supports selector(A > B) {
 }
 ```
 
+#### `font-tech()`
+
+A conditional function to evaluate if the browser supports a specific font technology in layout and rendering.
+The following example returns true if the browser supports the `COLORv1` font technology:
+
+```css
+@supports font-tech(color-COLRv1) {
+}
+```
+
+This table describes the available font technologies that can be queried with this function:
+
+| Technology          | Description                                                                                          |
+| :------------------ | :--------------------------------------------------------------------------------------------------- |
+| `color-colrv0`      | COLR version 0 table multi-colored glyph support                                                     |
+| `color-colrv1`      | COLR version 1 table multi-colored glyph support                                                     |
+| `color-svg`         | SVG table multi-colored support                                                                      |
+| `color-sbix`        | Standard bitmap graphics table support                                                               |
+| `color-cbdt`        | Color bitmap data table support                                                                      |
+| `features-opentype` | OpenType `GSUB` and `GPOS` table support                                                             |
+| `features-aat`      | TrueType `morx` and `kerx` tables                                                                    |
+| `features-graphite` | Graphite feature support, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` table support.         |
+| `incremental`       | Incremental font loading                                                                             |
+| `variations`        | Font variation support in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
+| `palettes`          | Font pallet support by means of `font-palette` to select one of many color palettes in the font      |
+
+#### `font-format()`
+
+A conditional function to evaluate if the browser supports a specific font format in layout and rendering.
+The following example returns true if the browser supports the `opentype` font technology:
+
+```css
+@supports font-format(opentype) {
+}
+```
+
+The following table describes the available formats that can be queried with this function:
+
+| Format              | Description                     | File extensions |
+| :------------------ | :------------------------------ | :-------------- |
+| `collection`        | OpenType Collection             | `.otc`, `.ttc`  |
+| `embedded-opentype` | Embedded OpenType               | `.eot`          |
+| `opentype`          | OpenType                        | `.ttf`, `.otf`  |
+| `svg`               | SVG Font (deprecated)           | `.svg`, `.svgz` |
+| `truetype`          | TrueType                        | `.ttf`          |
+| `woff`              | WOFF 1.0 (Web Open Font Format) | `.woff`         |
+| `woff2`             | WOFF 2.0 (Web Open Font Format) | `.woff2`        |
+
 ### The not operator
 
-The `not` operator can precede any expression to create a new expression, resulting in the negation of the original one. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property **doesn't** consider `10em 10em 10em` valid:
+The `not` operator precedes an expression resulting in the negation of the expression.
+The following returns true if the browser's {{CSSxRef("transform-origin")}} property considers `10em 10em 10em` **to be invalid:**
 
 ```css
 @supports not (transform-origin: 10em 10em 10em) {
 }
 ```
 
-As with any operator, the `not` operator can be applied to a declaration of any complexity. The following examples are both valid:
+As with any operator, the `not` operator can be applied to a declaration of any complexity.
+The following examples are both valid:
 
 ```css
 @supports not (not (transform-origin: 2px)) {
@@ -64,7 +139,8 @@ As with any operator, the `not` operator can be applied to a declaration of any 
 }
 ```
 
-> **Note:** There is no need to enclose the `not` operator between two parentheses at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
+> **Note:** There is no need to enclose the `not` operator between two parentheses at the top level.
+> To combine it with other operators, like `and` and `or`, the parentheses are required.
 
 ### The and operator
 
@@ -103,14 +179,6 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 ```
 
 > **Note:** When using both `and` and `or` operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.
-
-## Formal syntax
-
-```
-@supports <supports-condition> {
-  <stylesheet>
-}
-```
 
 ## Examples
 
