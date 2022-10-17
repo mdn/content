@@ -164,8 +164,9 @@ We are choosing to use Railway for several reasons:
 - Railway takes care of most of the the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
 - Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
-- While it provides some excellent new features, many of the ideas and approaches used are the same as for other popular hosting services, so the skills and concepts are transferrable.
-- The service and plan limitations do not impact us using Railway for this tutorial.
+- The skills and concepts you will learn when using Railway are transferrable.
+  While Railway has some excellent new features, many of the same ideas and approaches are used by other popular hosting services.
+- The service and plan limitations do not really impact us using Railway for the tutorial.
   For example:
 
   - The starter plan only offers 500 hours of continuous deployment time each month, and $5 of credit that is consumed based on usage.
@@ -187,31 +188,32 @@ Web applications are each run in their own isolated and independent virtualized 
 In order to execute your application, Railway needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched.
 For Django apps we provide this information in a number of text files:
 
-- **runtime.txt**: the programming language and version to use.
-- **requirements.txt**: the Python component dependencies, including Django.
+- **runtime.txt**: states the programming language and version to use.
+- **requirements.txt**: lists the Python dependencies needed for your site, including Django.
 - **Procfile**: A list of processes to be executed to start the web application.
   For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
 - **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
 
 Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
 For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
-The database service itself can be provided by Railway or some other provider.
+The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the site and using a special [Command Line Interface (CLI)]<https://docs.railway.app/develop/cli>) tool.
-The CLI allows you to associate a local github repository with a railway project , upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
+The CLI allows you to associate a local Github repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is you can use the CLI to run your local project with the same environment variables as the live project.
 
 In order to get our application to work on Railway we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
-
 Once we've done all that we can set up a Railway account, get the Railway client, and install our website.
 
 That's all the overview you need in order to get started.
 
 ### Creating an application repository in GitHub
 
-Heroku is closely integrated with the **git** source code version control system, using it to upload/synchronize any changes you make to the live system. It does this by adding a new heroku "remote" repository named _heroku_ pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
+Railway is closely integrated with Github and the **git** source code version control system, and you can configure it to automatically deploy changes to a particular repository or branch on Github.
+Alternatively you can push your current local code branch direct to the railway deployment using the CLI.
 
-> **Note:** If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
+> **Note:** Using a source code management system like Github is good software development practice.
+> Skip this step if you're already using Github to manager your source.
 
 There are a lot of ways to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
@@ -219,25 +221,27 @@ There are a lot of ways to work with git, but one of the easiest is to first set
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-   - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
+   - Enter a new repository name and description.
+     For example, you might use the name "django_local_library" and description "Local Library website written in Django".
    - Choose **Python** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
    - Check **Initialize this repository with a README**.
 
 4. Press **Create repository**.
-5. Click the green "**Clone or download**" button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>/django_local_library`.git\*\*).
+5. Click the green **Clone or download** button on your new repo page.
+6. Copy the URL value from the text field inside the dialog box that appears.
+   If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
 
 Now that the repository ("repo") is created we are going to want to clone it on our local computer:
 
 1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
-2. Open a command prompt/terminal and clone your repository using the URL you copied above:
+2. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash
    git clone https://github.com/<your_git_user_id>/django_local_library.git
    ```
 
-   This will create the repository in a new folder in the current working directory.
+   This will create the repo in a new folder in the current working directory.
 
 3. Navigate into the new repo.
 
@@ -245,7 +249,7 @@ Now that the repository ("repo") is created we are going to want to clone it on 
    cd django_local_library
    ```
 
-The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repository to your remote GitHub repository:
+The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repo to your remote GitHub repo:
 
 1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
 2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
@@ -258,13 +262,15 @@ The final steps are to copy your application into this local project directory a
    *.sqlite3
    ```
 
-3. Open a command prompt/terminal and use the `add` command to add all files to git. This adds the files which aren't ignored by the **.gitignore** file to the "staging area".
+3. Open a command prompt/terminal and use the `add` command to add all files to git.
+   This adds the files which aren't ignored by the **.gitignore** file to the "staging area".
 
    ```bash
    git add -A
    ```
 
-4. Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+4. Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.).
+   It should look a bit like the listing below.
 
    ```plain
    > git status
@@ -281,21 +287,20 @@ The final steps are to copy your application into this local project directory a
            new file:   templates/registration/password_reset_form.html
    ```
 
-5. When you're satisfied, `commit` the files to your local repository. This is essentially equivalent to signing off on the changes and making them an official part of the local repository.
+5. When you're satisfied, `commit` the files to your local repo. This is essentially equivalent to signing off on the changes and making them an official part of the local repo.
 
    ```bash
    git commit -m "First version of application moved into GitHub"
    ```
 
-6. At this point, the remote repository has not been changed. Synchronize (`push`) your local repository to the remote GitHub repository using the following command:
+6. At this point, the remote repo has not been changed.
+   The last step is to synchronize (`push`) your local repo up to the remote GitHub repo using the following command:
 
    ```bash
    git push origin main
    ```
 
-> **Warning:** In 2020 GitHub change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call `git push origin master` instead.
-
-When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
+When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repo as files change using this add/commit/push cycle.
 
 > **Note:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
 >
@@ -303,29 +308,40 @@ When this operation completes, you should be able to go back to the page on GitH
 >
 > The _easiest_ way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
 
-### Update the app for Heroku
+### Update the app for Railway
 
-This section explains the changes you'll need to make to our _LocalLibrary_ application to get it to work on Heroku. While Heroku's [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) instructions assume you will use the Heroku client to also run your local development environment, our changes are compatible with the existing Django development server and the workflows we've already learned.
+This section explains the changes you'll need to make to our _LocalLibrary_ application to get it to work on Railway.
+Note that these changes will not prevent you using the local testing and workflows we've already learned.
 
 #### Procfile
 
-Create the file `Procfile` (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:
+A _Procfile_ is the web application "entry point".
+It lists the commands that will be executed by Railway to start your site.
+
+Create the file `Procfile` (with no file extension) in the root of your GitHub repo and copy/paste in the following text:
 
 ```plain
-web: gunicorn locallibrary.wsgi --log-file -
+web: gunicorn locallibrary.wsgi
 ```
 
-The "`web:`" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is _gunicorn_, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
+The `web:` prefix tells Railway that this is a web process and can be sent HTTP traffic.
+The process that is started is _gunicorn_, a popular web application server, and we pass it configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
+
+Note that you can also use the Procfile to start worker processes or to run tasks before the release is deployed.
+For example, the following instruction might be used to get Django to setup our database before running gunicorn.
+
+```plain
+web: python manage.py migrate &&  gunicorn locallibrary.wsgi
+```
 
 #### Gunicorn
 
-[Gunicorn](https://gunicorn.org/) is the recommended HTTP server for use with Django on Heroku (as referenced in the Procfile above). It is a pure-Python HTTP server for WSGI applications that can run multiple Python concurrent processes within a single dyno (see [Deploying Python applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) for more information).
+[Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server that is commonly used for serving Django WSGI applications on Railway (as referenced in the Procfile above).
 
-While we won't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server.
+While we don't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server.
 
-Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/en-US/docs/Learn/Server-side/Django/development_environment)):
-
-> **Note:** Make sure that you're in your Python virtual environment (use the `workon [name-of-virtual-environment]` command) before you install _Gunicorn_ and further modules with _pip_, or you might experience problems with importing these modules in your **/locallibrary/settings.py** file in the later sections.
+First make sure that you're in the Python virtual environment that was created when you [set up the development environment](/en-US/docs/Learn/Server-side/Django/development_environment) (use the `workon [name-of-virtual-environment]` command).
+Then install _Gunicorn_ locally on the command line using _pip_:
 
 ```bash
 pip3 install gunicorn
@@ -333,15 +349,22 @@ pip3 install gunicorn
 
 #### Database configuration
 
-We can't use the default SQLite database on Heroku because it is file-based, and it would be deleted from the _ephemeral_ file system every time the application restarts (typically once a day, and every time the application or its configuration variables are changed).
+SQLite, the default Django database that you've been using for development, is a reasonable choice for small to medium websites.
+Unfortunately it cannot be used on some popular hosting services, such as Heroku, because they don't provide persistent data storage in the application environment (a requirement of SQLite).
+While that might not affect us on Railway, we'll show you another approach that will work on Railway, Heroku, and some other services.
 
-The Heroku mechanism for handling this situation is to use a [database add-on](https://elements.heroku.com/addons#data-stores) and configure the web application using information from an environment [configuration variable](https://devcenter.heroku.com/articles/config-vars), set by the add-on. There are quite a lot of database options, but we'll use the [hobby tier](https://devcenter.heroku.com/articles/heroku-postgres-plans#plan-tiers) of the _Heroku postgres_ database as this is free, supported by Django, and automatically added to our new Heroku apps when using the free hobby dyno plan tier.
+The approach is to use a database that runs in its own process somewhere on the Internet, and is accessed by the Django library application using an address passed as an environment variable.
+In this case we'll use a Postgres database that is also hosted on Railway, but you could use any database hosting service you like.
 
-The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://pypi.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://www.psycopg.org/), as Django needs this to interact with Postgres databases.
+The database connection information will be supplied to Django using an environment variable named `DATABASE_URL`.
+Rather than hard-coding this information into Django, we'll use the [dj-database-url](https://pypi.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format.
+In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://www.psycopg.org/), as Django needs this to interact with Postgres databases.
 
-##### dj-database-url (Django database configuration from environment variable)
+##### dj-database-url
 
-Install _dj-database-url_ locally so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server:
+_dj-database-url_ is used to extract the Django database configuration from an environment variable.
+
+Install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server:
 
 ```bash
 pip3 install dj-database-url
@@ -352,49 +375,63 @@ pip3 install dj-database-url
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
 
 ```plain
-# Heroku: Update database configuration from $DATABASE_URL.
+# Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 ```
 
-> **Note:**
->
-> - We'll still be using SQLite during development because the `DATABASE_URL` environment variable will not be set on our development computer.
-> - The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.
+Django will now use the database configuration in `DATABASE_URL` if the environment variable is set; otherwise it uses the default SQLite database.
+The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle (this is optional and can be removed if needed).
 
-##### psycopg2 (Python Postgres database support)
+##### psycopg2
 
-Django needs _psycopg2_ to work with Postgres databases and you will need to add this to the [requirements.txt](#requirements) for Heroku to set this up on the remote server (as discussed in the requirements section below).
-
-Django will use our SQLite database locally by default, because the `DATABASE_URL` environment variable isn't set in our local environment. If you want to switch to Postgres completely and use our Heroku free tier database for both development and production then you can. For example, to install psycopg2 and its dependencies locally on a Debian-flavoured Linux system you would use the following Bash/terminal commands:
+Django needs _psycopg2_ to work with Postgres databases.
+Install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server:
 
 ```bash
-sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
 pip3 install psycopg2-binary
 ```
 
-Installation instructions for the other platforms can be found on the [psycopg2 website here](https://www.psycopg.org/docs/install.html).
-
-However, you don't need to do this — you don't need PostgreSQL active on the local computer, as long as you give it to Heroku as a requirement, in `requirements.txt` (see below).
+Note that Django will use the SQLite database during development by default, unless `DATABASE_URL` is set.
+You can switch to Postgres completely and use the same hosted database for development and production by setting the same environment variable in your development environment (Railway makes it easy to use the same environment for production and development).
+Alternatively you can also install and use a [self-hosted Postgres database](https://www.psycopg.org/docs/install.html) on your local computer.
 
 #### Serving static files in production
 
-During development we used Django and the Django development web server to serve our static files (CSS, JavaScript, etc.). In a production environment we instead typically serve static files from a content delivery network (CDN) or the web server.
+During development we use Django and the Django development web server to serve both our dynamic HTML and our static files (CSS, JavaScript, etc.).
+This is inefficient for static files, because the requests have to pass through Django even though Django doesn't do anything with them.
+While this doesn't matter during development, it would have a significant performance impact if we were to use the same approach in production.
 
-> **Note:** Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production.
+In the production environment we typically separate the static files from the Django web application, making it easier to serve them directly from the web server or from a content delivery network (CDN).
 
-To make it easy to host static files separately from the Django web application, Django provides the _collectstatic_ tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when _collectstatic_ is run). Django templates refer to the hosting location of the static files relative to a settings variable (`STATIC_URL`), so that this can be changed if the static files are moved to another host/server.
+The important setting variables are:
 
-The relevant setting variables are:
-
-- `STATIC_URL`: This is the base URL location from which static files will be served, for example on a CDN. This is used for the static template variable that is accessed in our base template (see [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)).
+- `STATIC_URL`: This is the base URL location from which static files will be served, for example on a CDN.
 - `STATIC_ROOT`: This is the absolute path to a directory where Django's _collectstatic_ tool will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.
 - `STATICFILES_DIRS`: This lists additional directories that Django's _collectstatic_ tool should search for static files.
 
+Django templates refer to static file locations relative to a `static` tag (you can see this in the base template defined in [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page#the_locallibrary_base_template)), which in turn maps to the `STATIC_URL` setting.
+Static files can therefore be uploaded to any host and you can update your application to find them using this setting.
+
+The _collectstatic_ tool is used to collect static files into the folder defined by the `STATIC_ROOT` project setting.
+It is called with the following command:
+
+```bash
+python3 manage.py collectstatic
+```
+
+For this tutorial _collectstatic_ is run automatically by Railway before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
+The `Whitenoise` project then serves the files from the location defined by `STATIC_ROOT` (by default) at the base URL `/static/`.
+
+> **Note:** Railway does not document that it calls `python3 manage.py collectstatic` when a Django application is loaded — this has been verified by testing.
+> If needed you could run the tool in the Procfile.
+
 ##### settings.py
 
-Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file. The `BASE_DIR` should already have been defined in your file (the `STATIC_URL` may already have been defined within the file when it was created. While it will cause no harm, you might as well delete the duplicate previous reference).
+Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file.
+The `BASE_DIR` should already have been defined in your file (the `STATIC_URL` may already have been defined within the file when it was created.
+While it will cause no harm, you might as well delete the duplicate previous reference).
 
 ```python
 # Static files (CSS, JavaScript, Images)
@@ -409,17 +446,17 @@ STATIC_URL = '/static/'
 
 We'll actually do the file serving using a library called [WhiteNoise](https://pypi.org/project/whitenoise/), which we install and configure in the next section.
 
-For more information, see [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs).
-
 #### Whitenoise
 
-There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the [WhiteNoise](https://pypi.org/project/whitenoise/) project for serving of static assets directly from Gunicorn in production.
+There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections).
+The [WhiteNoise](https://pypi.org/project/whitenoise/) project provides one of the easiest methods for serving static assets directly from Gunicorn in production.
 
-> **Note:** Heroku automatically calls _collectstatic_ and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
+Railway automatically calls _collectstatic_ to prepare your static files for use by WhiteNoise after it uploads your application.
+Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
 The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
 
-##### WhiteNoise
+##### Install whitenoise
 
 Install whitenoise locally using the following command:
 
@@ -444,7 +481,8 @@ MIDDLEWARE = [
 ]
 ```
 
-Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of **/locallibrary/settings.py**:
+Optionally, you can reduce the size of the static files when they are served (this is more efficient).
+Just add the following to the bottom of **/locallibrary/settings.py**:
 
 ```python
 # Simplified static file serving.
@@ -452,9 +490,11 @@ Optionally, you can reduce the size of the static files when they are served (th
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ```
 
+You don't need to do anything else to configure _WhiteNoise_ because it uses your project settings for `STATIC_ROOT` and `STATIC_URL` by default.
+
 #### Requirements
 
-The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository. Heroku will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
+The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository. Railway will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
 
 ```bash
 pip3 freeze > requirements.txt
@@ -477,14 +517,15 @@ whitenoise==6.0.0
 
 #### Runtime
 
-The **runtime.txt** file, if defined, tells Heroku which version of Python to use.
+The **runtime.txt** file, if defined, tells Railway which version of Python to use.
 Create the file in the root of the repo and add the following text:
 
 ```plain
 python-3.10.2
 ```
 
-> **Note:** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
+> **Note:** Hosting providers do not necessarily support every Python runtime minor version.
+> They will generally use the closest supported version to the value that you specify.
 
 #### Re-test and save changes to GitHub
 
@@ -498,13 +539,13 @@ Next, lets `push` our changes to GitHub. In the terminal (after having navigated
 
 ```python
 git add -A
-git commit -m "Added files and changes required for deployment to heroku"
+git commit -m "Added files and changes required for deployment"
 git push origin main
 ```
 
-We should now be ready to start deploying LocalLibrary on Heroku.
+We should now be ready to start deploying LocalLibrary on Railway.
 
-### Get a Heroku account
+### Get a Railway account
 
 To start using Heroku you will first need to create an account:
 
