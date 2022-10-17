@@ -880,10 +880,6 @@
       "inh": "",
       "impl": []
     },
-    "DOMTransition": {
-      "inh": "",
-      "impl": []
-    },
     "DragEvent": {
       "inh": "MouseEvent",
       "impl": []
@@ -2500,6 +2496,10 @@
       "inh": "",
       "impl": []
     },
+    "PressureRecord": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -3614,6 +3614,10 @@
     },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
+      "impl": []
+    },
+    "ViewTransition": {
+      "inh": "",
       "impl": []
     },
     "VirtualKeyboard": {

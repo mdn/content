@@ -35,6 +35,14 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
   </thead>
   <tbody>
     <tr>
+      <td>string</td>
+      <td>
+        {{domxref('PerformanceEventTiming')}}
+      </td>
+      <td><code>event</code>, <code>first-input</code></td>
+      <td>The associated event's type.</td>
+    </tr>
+    <tr>
       <td>{{domxref("URL")}}</td>
       <td>
         {{domxref('PerformanceNavigationTiming')}}
