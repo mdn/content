@@ -21,12 +21,12 @@ milliseconds since January 1, 1970, 00:00:00 UTC.
 
 ```js-nolint
 Date.UTC(year)
-Date.UTC(year, month)
-Date.UTC(year, month, day)
-Date.UTC(year, month, day, hour)
-Date.UTC(year, month, day, hour, minute)
-Date.UTC(year, month, day, hour, minute, second)
-Date.UTC(year, month, day, hour, minute, second, millisecond)
+Date.UTC(year, monthIndex)
+Date.UTC(year, monthIndex, day)
+Date.UTC(year, monthIndex, day, hour)
+Date.UTC(year, monthIndex, day, hour, minute)
+Date.UTC(year, monthIndex, day, hour, minute, second)
+Date.UTC(year, monthIndex, day, hour, minute, second, millisecond)
 ```
 
 - `year`
