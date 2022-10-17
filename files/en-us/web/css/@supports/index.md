@@ -74,7 +74,7 @@ The following example returns true if the browser supports the [child combinator
 #### `font-tech()`
 
 A conditional function to evaluate if the browser supports a specific font technology in layout and rendering.
-The following example returns true if the browser supports the `COLORv1` font technology:
+The following example returns true if the browser supports the `COLRv1` font technology:
 
 ```css
 @supports font-tech(color-COLRv1) {
