@@ -529,13 +529,14 @@ python-3.10.2
 
 #### Re-test and save changes to GitHub
 
-Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above. Run the development web server as usual and then check the site still works as you expect on your browser.
+Before you proceed, first test the site again locally and make sure it wasn't broken by any of the changes above.
+Run the development web server as usual and then check the site still works as you expect on your browser.
 
 ```bash
 python3 manage.py runserver
 ```
 
-Next, lets `push` our changes to GitHub. In the terminal (after having navigated to our local repository), enter the following commands:
+Next, lets `push` the changes to GitHub. In the terminal (after having navigated to our local repository), enter the following commands:
 
 ```python
 git add -A
@@ -549,31 +550,29 @@ We should now be ready to start deploying LocalLibrary on Railway.
 
 To start using Heroku you will first need to create an account:
 
-- Go to [www.heroku.com](https://www.heroku.com/) and click the **SIGN UP FOR FREE** button.
-- Enter your details and then press **CREATE FREE ACCOUNT**. You'll be asked to check your account for a sign-up email.
-- Click the account activation link in the signup email.
-  You'll be taken back to your account on the web browser.
-- Enter your password and click **SET PASSWORD AND LOGIN**.
-- You may also need to set up an alternative authentication method, for example an authentication application.
-- You'll then be logged in and taken to the Heroku dashboard: <https://dashboard.heroku.com/apps>.
+- Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
+- Select Github in the popup to login using your Github credentials
+- You may then need to go to your email and verify your account.
+- You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
 
 ### Install the client
 
-Download and install the Heroku client by following the [instructions on Heroku here](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
+Download and install the Railway client by following the [instructions here](https://docs.railway.app/develop/cli).
 
 After the client is installed you will be able run commands.
 For example to get help on the client:
 
 ```bash
-heroku help
+railway help
 ```
 
-> **Note:** Some commands may not run if you haven't recently logged into your Heroku account on your browser.
-> In this case, the client will direct you to the website to log in, after which you will be able to run the command.
+> **Note:** Some commands may not run if you haven't recently logged into your Railway account on your browser.
+> In this case, the client will direct you to login (using a command like `railway login`).
 
 ### Create and upload the website
 
-To create the app we run the "create" command in the root directory of our repository. This creates a git remote ("pointer to a remote repository") named _heroku_ in our local git environment.
+To create the app we run the "create" command in the root directory of our repository.
+This creates a git remote ("pointer to a remote repository") named _heroku_ in our local git environment.
 
 ```bash
 heroku create
