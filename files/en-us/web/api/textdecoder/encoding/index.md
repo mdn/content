@@ -67,7 +67,7 @@ A lower-cased ASCII string, which can be one of the following values:
   ['utf-16le'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
   `'x-user-defined'`.
 - A special encoding, `'replacement'`.
-  This decodes empty input into empty output and any other arbitrary-length input into a single replacement character (the `EOF` code point).
+  This decodes empty input into empty output and any other arbitrary-length input into a single replacement character.
   It is used to prevent attacks that mismatch encodings between the client and server.
   The following encodings also map to the replacement encoding: `ISO-2022-CN`, `ISO-2022-CN-ext`, ['iso-2022-kr'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR) and ['hz-gb-2312'](<https://en.wikipedia.org/wiki/HZ_(character_encoding)>).
 
