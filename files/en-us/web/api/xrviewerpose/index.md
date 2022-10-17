@@ -29,7 +29,7 @@ This view can represent anything from the point-of-view of a user's XR headset t
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _In addition to the properties inherited from {{domxref("XRPose")}}, `XRViewerPose` includes the following:_
 

@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
+page-type: css-property
 tags:
   - CSS
   - CSS Property

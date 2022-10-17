@@ -1,6 +1,7 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
+page-type: css-at-rule
 tags:
   - Animations
   - At-rule

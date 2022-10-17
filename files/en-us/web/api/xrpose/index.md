@@ -46,7 +46,7 @@ Here, `adjReferenceSpace` is a reference space which has been updated using the 
 
 See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for further details and an example with thorough explanations of what's going on.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("XRPose.angularVelocity")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.

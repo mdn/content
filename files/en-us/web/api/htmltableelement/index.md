@@ -16,7 +16,7 @@ The **`HTMLTableElement`** interface provides special properties and methods (be
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
@@ -54,7 +54,7 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
   - : A string containing the length in pixels or in percentage of the desired width of the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}_.
 

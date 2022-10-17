@@ -1,6 +1,7 @@
 ---
-title: ':future'
+title: ":future"
 slug: Web/CSS/:future
+page-type: css-pseudo-class
 browser-compat: css.selectors.future
 ---
 

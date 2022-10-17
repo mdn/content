@@ -45,7 +45,7 @@ new WebAssembly.Memory(memoryDescriptor)
 
 ### Exceptions
 
-- If `memoryDescriptor` is an object, a {{jsxref("TypeError")}} is thrown.
+- If `memoryDescriptor` is not an object, a {{jsxref("TypeError")}} is thrown.
 - If `initial` is not specified, a {{jsxref("TypeError")}} is thrown.
 - If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
 - If `shared` is present and `true`, yet `maximum` is not specified, a {{jsxref("TypeError")}} is thrown.
@@ -61,11 +61,12 @@ The following example (see [memory.html](https://github.com/mdn/webassembly-exam
 ```js
 const memory = new WebAssembly.Memory({
   initial: 10,
-  maximum: 100
+  maximum: 100,
 });
 
-WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
-.then((obj) => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   const summands = new Uint32Array(memory.buffer);
   for (let i = 0; i < 10; i++) {
     summands[i] = i;
@@ -85,7 +86,7 @@ from JavaScript by passing `shared: true` in the constructor's initialization ob
 const memory = new WebAssembly.Memory({
   initial: 10,
   maximum: 100,
-  shared: true
+  shared: true,
 });
 ```
 

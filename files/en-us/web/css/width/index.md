@@ -1,6 +1,7 @@
 ---
 title: width
 slug: Web/CSS/width
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -40,12 +40,12 @@ In other cases, the `NodeList` is _static,_ where any changes in the DOM do not 
 
 It's good to keep this distinction in mind when you choose how to iterate over the items in the `NodeList`, and whether you should cache the list's `length`.
 
-## Properties
+## Instance properties
 
 - {{domxref("NodeList.length")}}
   - : The number of nodes in the `NodeList`.
 
-## Methods
+## Instance methods
 
 - {{domxref("NodeList.item()")}}
 
@@ -54,11 +54,11 @@ It's good to keep this distinction in mind when you choose how to iterate over t
     An alternative to accessing `nodeList[i]` (which instead returns `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
 
 - {{domxref("NodeList.entries()")}}
-  - : Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from `0` and the values are nodes.)
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are integers starting from `0` and the values are nodes.)
 - {{domxref("NodeList.forEach()")}}
   - : Executes a provided function once per `NodeList` element, passing the element as an argument to the function.
 - {{domxref("NodeList.keys()")}}
-  - : Returns an {{jsxref("Iteration_protocols", "iterator")}}, allowing code to go through all the keys of the key/value pairs contained in the collection. (In this case, the keys are numbers starting from `0`.)
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}}, allowing code to go through all the keys of the key/value pairs contained in the collection. (In this case, the keys are integers starting from `0`.)
 - {{domxref("NodeList.values()")}}
   - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing code to go through all values (nodes) of the key/value pairs contained in the collection.
 

@@ -41,22 +41,22 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("HTMLElement/pointerover_event", "pointerover")}}
-- {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
-- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
-- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
-- {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}
-- {{domxref("HTMLElement/pointerout_event", "pointerout")}}
-- {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
-- {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
-- {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Element/pointerover_event", "pointerover")}}
+- {{domxref("Element/pointerenter_event", "pointerenter")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}
+- {{domxref("Element/pointercancel_event", "pointercancel")}}
+- {{domxref("Element/pointerout_event", "pointerout")}}
+- {{domxref("Element/pointerleave_event", "pointerleave")}}
+- {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
 - {{domxref("Element/touchstart_event", "touchstart")}}
 - {{domxref("Element/touchend_event", "touchend")}}
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PerformanceEventTiming.processingStart")}}
   - : Returns the time at which event dispatch started.
@@ -67,7 +67,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{domxref("PerformanceEventTiming.target")}}
   - : Returns the associated event's last target, if it is not removed.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceEventTiming.toJSON()")}}
   - : Converts the PerformanceEventTiming object to JSON.

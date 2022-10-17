@@ -397,7 +397,7 @@ Ringing is another type of artifact that can make it particularly difficult to r
 
 **Posterization** occurs when the compression results in the loss of color detail in gradients. Instead of smooth transitions through the various colors in a region, the image becomes blocky, with blobs of color that approximate the original appearance of the image.
 
-[![](posterize-effect.jpg)](posterize-effect.jpg)
+[![Bald eagle photo with blotchy resolution.](posterize-effect.jpg)](posterize-effect.jpg)
 
 Note the blockiness of the colors in the plumage of the bald eagle in the photo above (and the snowy owl in the background). The details of the feathers is largely lost due to these posterization artifacts.
 
@@ -2036,11 +2036,11 @@ Given the constraints on how close to lossless you can get, you might consider u
 
 ```js
 const kbps = 1024;
-const Mbps = kbps*kbps;
+const Mbps = kbps * kbps;
 
 const options = {
   mimeType: 'video/webm; codecs="av01.2.19H.12.0.000.09.16.09.1, flac"',
-  bitsPerSecond: 800*Mbps,
+  bitsPerSecond: 800 * Mbps,
 };
 
 let recorder = new MediaRecorder(sourceStream, options);

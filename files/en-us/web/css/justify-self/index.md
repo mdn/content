@@ -1,6 +1,7 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
+page-type: css-property
 tags:
   - CSS
   - CSS Box Alignment

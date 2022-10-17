@@ -1,6 +1,7 @@
 ---
 title: orientation
 slug: Web/CSS/@media/orientation
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

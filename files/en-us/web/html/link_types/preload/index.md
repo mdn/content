@@ -70,7 +70,7 @@ Many different content types can be preloaded. The possible `as` attribute value
 - `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
 - `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
 - `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
-- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer or JSON file.
+- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly/WASM binary, or JSON file.
 - `font`: Font file.
 - `image`: Image file.
 - `object`: A resource to be embedded inside an {{htmlelement("object")}} element.
@@ -81,6 +81,8 @@ Many different content types can be preloaded. The possible `as` attribute value
 - `video`: Video file, as typically used in {{htmlelement("video")}}.
 
 > **Note:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
+
+> **Note:** `font` and `fetch` preloading requires the `crossorigin` attribute to be set; see [CORS-enabled fetches](#cors-enabled_fetches) below.
 
 > **Note:** There's more detail about these values and the web features they expect to be consumed by in the Preload spec — see [link element extensions](https://w3c.github.io/preload/#link-element-extensions). Also note that the full list of values the `as` attribute can take is governed by the Fetch spec — see [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination).
 

@@ -176,7 +176,7 @@ Intl.NumberFormat(locales, options)
 
     - `roundingPriority` {{experimental_inline}}
 
-      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
+      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maxmumsignificantdigits)) are specified:
 
         - `"auto"`: the result from the significant digits property is used (default).
         - `"morePrecision"`: the result from the property that results in more precision is used.
@@ -234,13 +234,13 @@ Intl.NumberFormat(locales, options)
       - : The minimum number of fraction digits to use.
         Possible values are from 0 to 20;
         the default for plain number and percent formatting is 0;
-        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use.
         Possible values are from 0 to 20;
         the default for plain number formatting is the larger of `minimumFractionDigits` and 3;
-        the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml) (2 if the list doesn't provide that information);
+        the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml) (2 if the list doesn't provide that information);
         the default for percent formatting is the larger of `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
       - : The minimum number of significant digits to use.
@@ -551,7 +551,7 @@ console.log(
 
 #### Specifying significant and fractional digits at the same time
 
-The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and significant digits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are both ways of controlling how many fractional and leading digits should be formatted.
+The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and significant digits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are both ways of controlling how many fractional and leading digits should be formatted.
 If both are used at the same time, it is possible for them to conflict.
 
 These conflicts are resolved using the [`roundingPriority`](#roundingpriority) property.

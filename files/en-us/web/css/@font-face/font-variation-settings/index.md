@@ -1,8 +1,9 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -72,7 +73,6 @@ normal                 |
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}

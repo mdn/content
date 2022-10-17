@@ -1,6 +1,7 @@
 ---
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
+page-type: css-function
 tags:
   - CSS
   - CSS Function

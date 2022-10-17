@@ -16,12 +16,12 @@ The **`TrustedTypePolicy`** interface of the {{domxref('Trusted Types API')}} de
 
 A `TrustedTypePolicy` object is created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}} to define a policy for enforcing security rules on input. Therefore, `TrustedTypePolicy` has no constructor.
 
-## Properties
+## Instance properties
 
 - {{domxref("TrustedTypePolicy.name")}} {{ReadOnlyInline}}
   - : A string containing the name of the policy.
 
-## Methods
+## Instance methods
 
 - {{domxref("TrustedTypePolicy.createHTML","TrustedTypePolicy.createHTML()")}}
   - : Creates a {{domxref("TrustedHTML")}} object.

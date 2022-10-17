@@ -25,7 +25,7 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 - {{domxref("DataTransfer.DataTransfer","DataTransfer()")}}
   - : Creates and returns a new `DataTransfer` object.
 
-## Properties
+## Instance properties
 
 ### Standard properties
 
@@ -58,7 +58,7 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 - {{domxref("DataTransfer.mozItemCount")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Gives the number of items in the drag operation. Removed in Firefox 71.
 
-## Methods
+## Instance methods
 
 ### Standard methods
 

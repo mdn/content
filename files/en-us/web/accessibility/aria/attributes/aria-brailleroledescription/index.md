@@ -14,7 +14,7 @@ The global `aria-brailleroledescription` attribute defines a human-readable, aut
 
 ## Description
 
-Braille is not a one-to-one transliteration of letters and numbers, but rather it includes various abbreviations, contractions, and characters that represent words (known as lolograms).
+Braille is not a one-to-one transliteration of letters and numbers, but rather it includes various abbreviations, contractions, and characters that represent words (known as logograms).
 
 Instead of converting long role descriptions to Braille, the `aria-brailleroledescription` attribute allows for providing an abbreviated version of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) value, which is a human-readable, author-localized description for the role of an element, for improved user experience with Braille interfaces.
 

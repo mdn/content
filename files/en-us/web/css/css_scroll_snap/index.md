@@ -1,6 +1,7 @@
 ---
 title: CSS Scroll Snap
 slug: Web/CSS/CSS_Scroll_Snap
+page-type: css-module
 tags:
   - CSS
   - CSS Scroll Snap

@@ -1,6 +1,7 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
+page-type: css-property
 tags:
   - CSS
   - CSS Property

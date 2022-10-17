@@ -19,7 +19,7 @@ It is important to note that there is only one listener per context and that it 
 
 ![We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](webaudiolistenerreduced.png)
 
-## Properties
+## Instance properties
 
 > **Note:** The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, `AudioListener.positionX`, while setting the same property is done with `AudioListener.positionX.value`. This is why these values are not marked read only, which is how they appear in the specification's IDL.
 
@@ -42,7 +42,7 @@ It is important to note that there is only one listener per context and that it 
 - {{domxref("AudioListener.upZ")}}
   - : Represents the longitudinal (back and forth) position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioListener.setOrientation()")}} {{deprecated_inline}}
   - : Sets the orientation of the listener.

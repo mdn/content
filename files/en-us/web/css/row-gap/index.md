@@ -1,6 +1,7 @@
 ---
 title: row-gap
 slug: Web/CSS/row-gap
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

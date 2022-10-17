@@ -176,8 +176,9 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 3. Use some interesting tactics to fake button behavior. Take for example our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"` (see WebAIM's [tabindex article](https://webaim.org/techniques/keyboard/tabindex) for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
 
    ```js
-   document.onkeydown = function(e) {
-     if (e.keyCode === 13) { // The Enter/Return key
+   document.onkeydown = (e) => {
+     if (e.keyCode === 13) {
+       // The Enter/Return key
        document.activeElement.onclick(e);
      }
    };

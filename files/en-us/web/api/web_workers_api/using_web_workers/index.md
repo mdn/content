@@ -767,15 +767,15 @@ The web page creates a `<div>` element with the ID `result`, which gets used to 
 
 Finally, a message is sent to the worker to start it.
 
-[Try this example live](https://mdn.github.io/fibonacci-worker/).
+[Try this example live](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/).
 
 ### Dividing tasks among multiple workers
 
 As multi-core computers become increasingly common, it's often useful to divide computationally complex tasks among multiple workers, which may then perform those tasks on multiple-processor cores.
 
-## Other types of worker
+## Other types of workers
 
-In addition to dedicated and shared web workers, there are other types of worker available:
+In addition to dedicated and shared web workers, there are other types of workers available:
 
 - [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API) essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.
 - [Audio Worklet](/en-US/docs/Web/API/Web_Audio_API#audio_processing_in_javascript) provide the ability for direct scripted audio processing to be done in a worklet (a lightweight version of worker) context.

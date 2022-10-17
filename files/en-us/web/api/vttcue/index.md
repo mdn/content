@@ -20,7 +20,7 @@ The `VTTCue` interface—part of the API for handling WebVTT (text tracks on med
 - {{domxref("VTTCue.VTTCue", "VTTCue()")}}
   - : Returns a newly created `VTTCue` object that covers the given time range and has the given text.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 
@@ -45,7 +45,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 - {{domxref("VTTCue.text")}}
   - : Returns a string with the contents of the cue.
 
-## Methods
+## Instance methods
 
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}}
   - : Returns the cue text as a {{domxref("DocumentFragment")}}.

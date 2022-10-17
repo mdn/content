@@ -1,6 +1,7 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
+page-type: css-property
 tags:
   - CSS
   - CSS Grid
@@ -43,6 +44,11 @@ grid-auto-rows: minmax(100px, auto);
 grid-auto-rows: minmax(max-content, 2fr);
 grid-auto-rows: minmax(20%, 80vmax);
 
+/* fit-content() values */
+grid-auto-rows: fit-content(400px);
+grid-auto-rows: fit-content(5cm);
+grid-auto-rows: fit-content(20%);
+
 /* multiple track-size values */
 grid-auto-rows: min-content max-content auto;
 grid-auto-rows: 100px 150px 390px;
@@ -83,7 +89,7 @@ grid-auto-rows: unset;
 
   - : Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 
-    Note: `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
+    > **Note:** `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
 
 ## Formal definition
 

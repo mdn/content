@@ -1,6 +1,7 @@
 ---
 title: ":dir()"
 slug: Web/CSS/:dir
+page-type: css-pseudo-class
 tags:
   - BiDi
   - CSS

@@ -27,7 +27,7 @@ To link an external stylesheet, you'd include a `<link>` element inside your {{H
 ```
 
 This simple example provides the path to the stylesheet inside an `href` attribute, and a `rel` attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is probably one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
-As you'll see from our [Link types](/en-US/docs/Web/HTML/Link_types) reference, there are many different kinds of relationship.
+As you'll see from our [Link types](/en-US/docs/Web/HTML/Link_types) reference, there are many kinds of relationship.
 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
 
@@ -80,7 +80,7 @@ Other usage notes:
 - When using `<link>` to establish a favicon for a site, and your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon.
   If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) is not preventing access to it.
 - The HTML and XHTML specifications define event handlers for the `<link>` element, but it is unclear how they would be used.
-- Under XHTML 1.0, empty elements such as `<link>` require a trailing slash: `<link />`.
+- Under XHTML 1.0, {{glossary("void element", "void elements")}} such as `<link>` require a trailing slash: `<link />`.
 - WebTV supports the use of the value `next` for `rel` to preload the next page in a document series.
 
 ## Attributes
@@ -172,7 +172,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{HTMLAttrDef("crossorigin")}}
 
-  - : This enumerated attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
     [CORS-enabled images](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
     The allowed values are:
 
@@ -188,7 +188,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{HTMLAttrDef("disabled")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
-  - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether or not the described stylesheet should be loaded and applied to the document.
+  - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
     Instead, the stylesheet will be loaded on-demand, if and when the `disabled` attribute is changed to `false` or removed.
 
@@ -297,7 +297,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     [Link type values](/en-US/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.
 
     > **Note:** Instead of `rev`, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Link_types).
-    > For example, to establish the reverse link for `made`, specify `author`. Also this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
+    > For example, to establish the reverse link for `made`, specify `author`. Also, this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples
 
@@ -324,7 +324,7 @@ This provides a way for users to see multiple versions of a page.
 
 ### Providing icons for different usage contexts
 
-You can include links to several different icons on the same page, and the browser will choose which one works best for its particular context using the `rel` and `sizes` values as hints.
+You can include links to several icons on the same page, and the browser will choose which one works best for its particular context using the `rel` and `sizes` values as hints.
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
@@ -406,7 +406,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
     </tr>
     <tr>
       <th>Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th>Tag omission</th>

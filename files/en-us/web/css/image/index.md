@@ -1,6 +1,7 @@
 ---
 title: <image>
 slug: Web/CSS/image
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

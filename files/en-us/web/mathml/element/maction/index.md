@@ -12,7 +12,9 @@ browser-compat: mathml.elements.maction
 
 {{MathMLRef}}{{Deprecated_Header}}
 
-The deprecated MathML **`<maction>`** element used to provide a possibility to bind an actions to mathematical expressions. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case. Some browsers will just render the first child of an `<maction>` element and ignore its `actiontype` and `selection` attributes.
+The **`<maction>`** [MathML](/en-US/docs/Web/MathML) element allows to bind actions to mathematical expressions. By default, only the first child is rendered but some browsers may take into account `actiontype` and `selection` attributes to implement custom behaviors.
+
+> **Note:** Historically, this element provided a mechanism to make MathML formulas interactive. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case.
 
 ## Attributes
 
@@ -35,33 +37,42 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 The following example uses the "toggle" `actiontype`:
 
 ```html
-<math>
-  <maction actiontype="toggle">
-    <mfrac>
-      <mn>6</mn>
-      <mn>8</mn>
-    </mfrac>
+<p>Try clicking this formula several times:
 
-    <mfrac>
-      <mrow>
+  <math display="block">
+
+    <maction actiontype="toggle">
+
+      <mfrac>
+        <mn>6</mn>
+        <mn>8</mn>
+      </mfrac>
+
+      <mfrac>
+        <mrow>
+          <mn>3</mn>
+          <mo>×</mo>
+          <mn>2</mn>
+        </mrow>
+        <mrow>
+          <mn>4</mn>
+          <mo>×</mo>
+          <mn>2</mn>
+        </mrow>
+      </mfrac>
+
+      <mfrac>
         <mn>3</mn>
-        <mo>×</mo>
-        <mn>2</mn>
-      </mrow>
-      <mrow>
         <mn>4</mn>
-        <mo>×</mo>
-        <mn>2</mn>
-      </mrow>
-    </mfrac>
+      </mfrac>
 
-    <mfrac>
-      <mn>3</mn>
-      <mn>4</mn>
-    </mfrac>
-  </maction>
-</math>
+    </maction>
+
+  </math>
+</p>
 ```
+
+{{ EmbedLiveSample('maction_example', 700, 200, "", "") }}
 
 ## Specifications
 

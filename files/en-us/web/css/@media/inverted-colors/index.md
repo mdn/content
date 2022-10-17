@@ -1,6 +1,7 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

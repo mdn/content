@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
+page-type: css-property
 tags:
   - CSS
   - CSS Scroll Snap

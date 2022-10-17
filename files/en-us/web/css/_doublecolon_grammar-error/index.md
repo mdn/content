@@ -1,6 +1,7 @@
 ---
 title: '::grammar-error'
 slug: Web/CSS/::grammar-error
+page-type: css-pseudo-element
 tags:
   - CSS
   - Experimental

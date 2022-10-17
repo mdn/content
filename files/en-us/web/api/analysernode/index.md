@@ -51,7 +51,7 @@ An `AnalyserNode` has exactly one input and one output. The node works even if t
 - {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}
   - : Creates a new instance of an `AnalyserNode` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -66,7 +66,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("AnalyserNode.smoothingTimeConstant")}}
   - : A double value representing the averaging constant with the last analysis frame — basically, it makes the transition between values over time smoother.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -85,7 +85,8 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ### Basic usage
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input.
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (see [app.js lines 108-193](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/blob/gh-pages/scripts/app.js#L108-L193) for relevant code).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();

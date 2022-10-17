@@ -51,6 +51,10 @@ the Array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators
 > **Note:** For the String method, see
 > {{jsxref("String.prototype.indexOf()")}}.
 
+The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
+The `indexOf()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Using indexOf()
@@ -99,6 +103,31 @@ updateVegetablesCollection(veggies, 'spinach');
 // New veggies collection is: potato,tomato,chillies,green-pepper,spinach
 updateVegetablesCollection(veggies, 'spinach');
 // spinach already exists in the veggies collection.
+```
+
+### Using indexOf() on sparse arrays
+
+You cannot use `indexOf()` to search for empty slots in sparse arrays.
+
+```js
+console.log([1, , 3].indexOf(undefined)); // -1
+```
+
+### Calling indexOf() on non-array objects
+
+The `indexOf()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.indexOf.call(arrayLike, 2));
+// 0
+console.log(Array.prototype.indexOf.call(arrayLike, 5));
+// -1
 ```
 
 ## Specifications

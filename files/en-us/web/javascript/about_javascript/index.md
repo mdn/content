@@ -22,7 +22,7 @@ JavaScript can function as both a [procedural](https://en.wikipedia.org/wiki/Pro
 
 JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)), object introspection (via `for ... in`), and source code recovery (JavaScript programs can decompile function bodies back into their source text).
 
-For a more in depth discussion of JavaScript programming follow the [JavaScript resources](#javascript_resources) links below.
+For a more in depth discussion of JavaScript programming, follow the [JavaScript resources](#javascript_resources) links below.
 
 ## What JavaScript implementations are available?
 

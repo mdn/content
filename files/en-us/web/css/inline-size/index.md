@@ -1,6 +1,7 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

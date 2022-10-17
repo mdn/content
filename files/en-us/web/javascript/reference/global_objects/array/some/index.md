@@ -69,9 +69,9 @@ once for each element present in the array until it finds the one where
 `callbackFn` returns a _truthy_ value (a value that becomes
 true when converted to a Boolean). If such an element is found, `some()`
 immediately returns `true`. Otherwise, `some()` returns
-`false`. `callbackFn` is invoked only for indexes of the
-array with assigned values. It is not invoked for indexes which have been deleted or
-which have never been assigned values.
+`false`.
+
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 `callbackFn` is invoked with three arguments: the value of the
 element, the index of the element, and the Array object being traversed.
@@ -93,8 +93,9 @@ visits that element's index. Elements that are deleted are not visited.
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
-> **Note:** Calling this method on an empty array returns
-> `false` for any condition!
+`some()` acts like the "there exists" quantifier in mathematics. In particular, for an empty array, it returns `false` for any condition.
+
+The `some()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -167,6 +168,32 @@ getBoolean(false);   // false
 getBoolean('false'); // false
 getBoolean(1);       // true
 getBoolean('true');  // true
+```
+
+### Using some() on sparse arrays
+
+`some()` will not run its predicate on empty slots.
+
+```js
+console.log([1, , 3].some((x) => x === undefined)); // false
+console.log([1, , 1].some((x) => x !== 1)); // false
+console.log([1, undefined, 1].some((x) => x !== 1)); // true
+```
+
+### Calling some() on non-array objects
+
+The `some()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `true`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(
+  Array.prototype.some.call(arrayLike, (x) => typeof x === "number"),
+); // false
 ```
 
 ## Specifications

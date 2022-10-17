@@ -13,10 +13,7 @@ browser-compat: api.CanvasRenderingContext2D.getTransform
 
 {{APIRef}}
 
-The
-**`CanvasRenderingContext2D.getTransform()`**
-method of the Canvas 2D API retrieves the current transformation matrix being applied to
-the context.
+The **`CanvasRenderingContext2D.getTransform()`** method of the Canvas 2D API retrieves the current transformation matrix being applied to the context.
 
 ## Syntax
 

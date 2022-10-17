@@ -18,6 +18,29 @@ The **`TextDecoder`** interface represents a decoder for a specific text encodin
 
 {{AvailableInWorkers}}
 
+## Constructor
+
+- {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
+  - : Returns a newly constructed `TextDecoder` that will generate a code point stream with the decoding method specified in parameters.
+
+## Instance properties
+
+_The `TextDecoder` interface doesn't inherit any properties._
+
+- {{DOMxRef("TextDecoder.encoding")}} {{ReadOnlyInline}}
+  - : A string containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
+- {{DOMxRef("TextDecoder.fatal")}} {{ReadOnlyInline}}
+  - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
+- {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
+  - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
+
+## Instance methods
+
+_The `TextDecoder` interface doesn't inherit any methods_.
+
+- {{DOMxRef("TextDecoder.decode()")}}
+  - : Returns a string containing the text decoded with the method of the specific `TextDecoder` object.
+
 ## Examples
 
 ### Representing text with typed arrays
@@ -45,33 +68,12 @@ console.log(utf8decoder.decode(i32arr));
 In this example, we decode the Russian text "Привет, мир!", which means "Hello, world." In our {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} constructor, we specify the Windows-1251 character encoding, which is appropriate for Cyrillic script.
 
 ```js
-let win1251decoder = new TextDecoder('windows-1251');
-let bytes = new Uint8Array([207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33]);
+const win1251decoder = new TextDecoder("windows-1251");
+const bytes = new Uint8Array([
+  207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33,
+]);
 console.log(win1251decoder.decode(bytes)); // Привет, мир!
 ```
-
-## Constructor
-
-- {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
-  - : Returns a newly constructed `TextDecoder` that will generate a code point stream with the decoding method specified in parameters.
-
-## Properties
-
-_The `TextDecoder` interface doesn't inherit any properties._
-
-- {{DOMxRef("TextDecoder.encoding")}} {{ReadOnlyInline}}
-  - : A string containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
-- {{DOMxRef("TextDecoder.fatal")}} {{ReadOnlyInline}}
-  - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
-- {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
-  - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
-
-## Methods
-
-_The `TextDecoder` interface doesn't inherit any method_.
-
-- {{DOMxRef("TextDecoder.decode()")}}
-  - : Returns a string containing the text decoded with the method of the specific `TextDecoder` object.
 
 ## Specifications
 

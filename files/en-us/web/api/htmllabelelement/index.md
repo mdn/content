@@ -17,7 +17,7 @@ The **`HTMLLabelElement`** interface gives access to properties specific to {{HT
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -30,7 +30,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 > **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

@@ -1,6 +1,7 @@
 ---
 title: column-gap
 slug: Web/CSS/column-gap
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

@@ -1,6 +1,7 @@
 ---
-title: ':read-write'
+title: ":read-write"
 slug: Web/CSS/:read-write
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

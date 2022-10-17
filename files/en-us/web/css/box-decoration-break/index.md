@@ -1,6 +1,7 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation

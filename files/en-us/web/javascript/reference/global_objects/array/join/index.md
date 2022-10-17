@@ -42,12 +42,13 @@ A string with all array elements joined. If `arr.length` is
 
 ## Description
 
-The string conversions of all array elements are joined into one string.
-
-> **Warning:** If an element is `undefined`, `null` or an empty array
-> `[]`, it is converted to an empty string.
+The string conversions of all array elements are joined into one string. If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
 
 The `join` method is accessed internally by [`Array.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) with no arguments. Overriding `join` of an array instance will override its `toString` behavior as well.
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `join()` method iterates empty slots as if they have the value `undefined`.
+
+The `join()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -65,19 +66,30 @@ a.join(' + '); // 'Wind + Water + Fire'
 a.join('');    // 'WindWaterFire'
 ```
 
-### Joining an array-like object
+### Using join() on sparse arrays
 
-The following example joins array-like object
-([`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)),
-by calling {{jsxref("Function.prototype.call")}} on `Array.prototype.join`.
+`join()` treats empty slots the same as `undefined` and produces an extra separator:
 
 ```js
-function f(a, b, c) {
-  const s = Array.prototype.join.call(arguments);
-  console.log(s); // '1,a,true'
-}
-f(1, 'a', true);
-//expected output: "1,a,true"
+console.log([1, , 3].join()); // '1,,3'
+console.log([1, undefined, 3].join()); // '1,,3' 
+```
+
+### Calling join() on non-array objects
+
+The `join()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.join.call(arrayLike));
+// 2,3,4
+console.log(Array.prototype.join.call(arrayLike, "."));
+// 2.3.4
 ```
 
 ## Specifications

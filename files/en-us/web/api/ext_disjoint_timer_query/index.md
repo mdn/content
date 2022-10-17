@@ -47,7 +47,7 @@ This extension exposes seven new constants.
 - `ext.GPU_DISJOINT_EXT`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the GPU performed any disjoint operation.
 
-## Methods
+## Instance methods
 
 This extension exposes eight new methods.
 

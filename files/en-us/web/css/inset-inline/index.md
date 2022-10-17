@@ -1,6 +1,7 @@
 ---
 title: inset-inline
 slug: Web/CSS/inset-inline
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property

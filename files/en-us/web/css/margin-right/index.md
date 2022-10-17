@@ -1,6 +1,7 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
+page-type: css-property
 tags:
   - CSS
   - CSS Property

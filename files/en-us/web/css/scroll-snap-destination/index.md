@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -75,8 +75,7 @@ Otherwise, {{jsxref("undefined")}} is returned.
 The `find` method executes the `callbackFn` function once for each index of the array until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value.
 If so, `find` immediately returns the value of that element. Otherwise, `find` returns {{jsxref("undefined")}}.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 If a `thisArg` parameter is provided to `find`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
@@ -92,19 +91,21 @@ Therefore:
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
+The `find()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Find an object in an array by one of its properties
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
 function isCherries(fruit) {
-  return fruit.name === 'cherries';
+  return fruit.name === "cherries";
 }
 
 console.log(inventory.find(isCherries));
@@ -115,14 +116,14 @@ console.log(inventory.find(isCherries));
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.find(({ name }) => name === 'cherries');
+const result = inventory.find(({ name }) => name === "cherries");
 
-console.log(result) // { name: 'cherries', quantity: 5 }
+console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
 ### Find a prime number in an array
@@ -144,29 +145,18 @@ console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
-The following examples show that nonexistent and deleted elements _are_ visited,
-and that the value passed to the callback is their value when visited:
+### Using find() on sparse arrays
+
+Empty slots in sparse arrays _are_ visited, and are treated the same as `undefined`.
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
 array.find((value, index) => {
-  console.log('Visited index ', index, ' with value ', value);
+  console.log("Visited index ", index, " with value ", value);
 });
-
-// Shows all indexes, including deleted
-array.find((value, index) => {
-  // Delete element 5 on first iteration
-  if (index === 0) {
-    console.log('Deleting array[5] with value ', array[5]);
-    delete array[5];
-  }
-  // Element 5 is still visited even though deleted
-  console.log('Visited index ', index, ' with value ', value);
-});
-// expected output:
 // Visited index 0 with value 0
 // Visited index 1 with value 1
 // Visited index 2 with value undefined
@@ -174,6 +164,17 @@ array.find((value, index) => {
 // Visited index 4 with value undefined
 // Visited index 5 with value 5
 // Visited index 6 with value 6
+
+// Shows all indexes, including deleted
+array.find((value, index) => {
+  // Delete element 5 on first iteration
+  if (index === 0) {
+    console.log("Deleting array[5] with value ", array[5]);
+    delete array[5];
+  }
+  // Element 5 is still visited even though deleted
+  console.log("Visited index ", index, " with value ", value);
+});
 // Deleting array[5] with value 5
 // Visited index 0 with value 0
 // Visited index 1 with value 1
@@ -182,6 +183,22 @@ array.find((value, index) => {
 // Visited index 4 with value undefined
 // Visited index 5 with value undefined
 // Visited index 6 with value 6
+```
+
+### Calling find() on non-array objects
+
+The `find()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)),
+); // 7.3
 ```
 
 ## Specifications

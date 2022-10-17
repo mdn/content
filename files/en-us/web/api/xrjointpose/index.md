@@ -19,7 +19,7 @@ The **`XRJointPose`** interface is an {{domxref("XRPose")}} with additional info
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("XRJointPose.radius")}} {{ReadOnlyInline}}
   - : The radius (distance from skin) for a joint.

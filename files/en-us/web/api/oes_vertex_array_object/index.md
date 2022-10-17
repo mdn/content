@@ -25,7 +25,7 @@ This extension exposes one new constant, which can be used in the {{domxref("Web
 - `ext.VERTEX_ARRAY_BINDING_OES`
   - : Returns a {{domxref("WebGLVertexArrayObject")}} object when used in the {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} method as the `pname` parameter.
 
-## Methods
+## Instance methods
 
 This extension exposes four new methods.
 

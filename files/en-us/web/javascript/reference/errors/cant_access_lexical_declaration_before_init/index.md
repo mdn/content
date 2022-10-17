@@ -40,7 +40,7 @@ Note also that this issue does not occur for variables declared using `var`, bec
 ### Invalid cases
 
 In this case, the variable `foo` is accessed before it is declared.
-At this point is has not been initialized with a value, so accessing the variable throws a reference error.
+At this point foo has not been initialized with a value, so accessing the variable throws a reference error.
 
 ```js example-bad
 function test() {
