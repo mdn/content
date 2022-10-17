@@ -249,6 +249,40 @@ The CSS Conditional Rules Level 4 specification adds the ability to test for sup
 }
 ```
 
+### Testing for support of a font technology
+
+The following example returns true if the browser supports the `COLRv1` font technology:
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
+
+@supports font-tech(color-COLRv1) {
+  font-family: "Bungee Spice";
+}
+```
+
+Note that it's also possible to test for the support of a font technology using the `tech` function inside `@font-face` rules.
+If the browser can't support the font technology, a fallback font (`Bungee-fallback.otf`) can be used instead:
+
+```css
+@font-face {
+  font-family: "Bungee Spice";
+  src: url("https://fonts.googleapis.com/css2?family=Bungee+Spice") tech(color-COLRv1),
+    url("Bungee-fallback.otf") format("opentype");
+}
+```
+
+### Testing for support of a font format
+
+The following example returns true if the browser supports the `woff2` font format:
+
+```css
+@supports font-format(woff2) {
+  font-family: "Open Sans";
+  src: url("open-sans.woff2") format("woff2");
+}
+```
+
 ## Specifications
 
 {{Specifications}}
