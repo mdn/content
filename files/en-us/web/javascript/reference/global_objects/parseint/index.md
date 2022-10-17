@@ -25,7 +25,7 @@ parseInt(string, radix)
 ### Parameters
 
 - `string`
-  - : A string starting with an integer. Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : A string starting with an integer. Leading and trailing {{glossary("whitespace")}} in this argument are ignored.
 - `radix` {{optional_inline}}
 
   - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. It is converted to a [32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion); if it's outside the range of \[2, 36] after conversion, the function will always return `NaN`. If `0` or not provided, the radix will be inferred based on `string`'s value. Be careful — this does NOT always default to `10`! The [description below](#description) explains in more detail what happens when `radix` is not provided.
@@ -90,6 +90,7 @@ parseInt("15 * 3", 10);
 parseInt("15e2", 10);
 parseInt("15px", 10);
 parseInt("12", 13);
+parseInt("   15 ");
 ```
 
 The following examples all return `NaN`:
@@ -97,6 +98,7 @@ The following examples all return `NaN`:
 ```js
 parseInt("Hello", 8); // Not a number at all
 parseInt("546", 2); // Digits other than 0 or 1 are invalid for binary radix
+parseInt("   "); // At least one digit required
 ```
 
 The following examples all return `-15`:
