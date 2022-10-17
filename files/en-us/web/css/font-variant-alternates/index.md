@@ -91,7 +91,7 @@ This property may take one of two forms:
 #### CSS
 
 ```css
-@font-feature-values "Leitura Display Swashes" {
+@font-feature-values "Bellota Text" {
   @swash {
     fancy: 1;
   }
@@ -102,14 +102,14 @@ p {
 }
 
 .variant {
-  font-family: Leitura Display Swashes;
+  font-family: Bellota Text;
   font-variant-alternates: swash(fancy);
 }
 ```
 
 #### Result
 
-> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
+> **Note:** You need to install the OpenType font _Bellota Text_ for this example to work. The font is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL) and can be found at <https://github.com/kemie/Bellota-Font>. More fonts can be found in the [Google Font corpus](https://github.com/google/fonts).
 
 {{ EmbedLiveSample('Enabling swash glyphs') }}
 
