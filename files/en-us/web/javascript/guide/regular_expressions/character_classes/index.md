@@ -373,10 +373,10 @@ console.table(nonEnglishText.match(regexpBMPWord));
 
 ```js
 const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-const regexpVowels = /[AEIOUYaeiouy]/g;
+const regexpVowels = /[AEIOUaeiou]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 26
+// Number of vowels: 25
 ```
 
 ## See also
