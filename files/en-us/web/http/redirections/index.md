@@ -22,7 +22,7 @@ In HTTP, redirection is triggered by a server sending a special _redirect_ respo
 
 When browsers receive a redirect, they immediately load the new URL provided in the `Location` header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.
 
-![](httpredirect.png)
+![Initial request goes from client to server. Server responds with a 301:moved permanently, with the URL for the redirect. Client makes an a GET request for the new URL which is returned by the server, with a 200 OK response.](httpredirect.png)
 
 There are several types of redirects, sorted into three categories:
 

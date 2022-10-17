@@ -31,7 +31,7 @@ be `0`.
 
 ## Examples
 
-In this snippet, when a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions
+In this snippet, when a {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired, different functions
 are called depending on the value of the event's `tangentialPressure`
 property.
 
