@@ -92,7 +92,7 @@ One helpful measure you can call on to inform your browser testing choices is br
 
 This is a very North America-centric, and not particularly accurate, but it can give you an idea of broad trends.
 
-See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
+Opera Mini isn't very capable in terms of running complex JavaScript at runtime. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
 
 ### Using analytics
 
