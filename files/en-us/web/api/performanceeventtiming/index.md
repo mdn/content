@@ -19,9 +19,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides insights
 
 ## Description
 
-This API enables visibility into slow events without the need to register additional event listeners that measure performance by calling {{domxref("performance.now()")}} both at the beginning and at the end of event handler functions. Such an approach comes with unnecessary performance overhead and asynchronous code can't be measured easily either.
-
-The `PerformanceEventTiming` interface provides event timestamps for certain event types ([see below](#events_exposed)), so that there is no need to implement event latency monitoring yourself. The user agent computes these performance measures, so that an application's performance won't suffer from additional event listeners just to measure latencies.
+This API enables visibility into slow events by providing event timestamps and duration for certain event types ([see below](#events_exposed)). For example, you can monitor the time between a user action and the start of its event handler, or the time an event handler takes to run.
 
 This API is particularly useful for measuring the {{Glossary("first input delay")}} (FID): the time from the point when a user first interacts with your app to the point when the browser is actually able to respond to that interaction.
 
