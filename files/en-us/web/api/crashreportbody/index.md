@@ -11,6 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.CrashReportBody
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The `CrashReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a crash report (the return value of its {{domxref("Report.body")}} property).
@@ -19,7 +20,7 @@ A crash report is generated when a document becomes unusable due to the browser 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - `reason` {{experimental_inline}}
 

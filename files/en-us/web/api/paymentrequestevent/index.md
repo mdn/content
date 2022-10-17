@@ -12,6 +12,7 @@ tags:
   - payment
 browser-compat: api.PaymentRequestEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
@@ -23,7 +24,7 @@ The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs
 - {{domxref("PaymentRequestEvent.PaymentRequestEvent","PaymentRequestEvent()")}} {{Experimental_Inline}}
   - : Creates a new `PaymentRequestEvent` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a {{domxref("PaymentInstrument")}} object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.
@@ -40,7 +41,7 @@ The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs
 - {{domxref("PaymentRequestEvent.total","total")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the total amount being requested for payment.
 
-## Methods
+## Instance methods
 
 - {{domxref("PaymentRequestEvent.openWindow","openWindow()")}} {{Experimental_Inline}}
   - : Opens the specified URL in a new window, if and only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a {{domxref("WindowClient")}}.

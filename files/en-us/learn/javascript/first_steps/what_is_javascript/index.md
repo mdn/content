@@ -15,9 +15,10 @@ tags:
   - comments
   - external
   - inline
-  - l10n:priority
+  - "l10n:priority"
   - what
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Welcome to the MDN beginner's JavaScript course!
@@ -62,14 +63,14 @@ Then we can add some CSS into the mix to get it looking nice:
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
@@ -231,9 +232,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
    ```html
    <script>
-
      // JavaScript goes here
-
    </script>
    ```
 

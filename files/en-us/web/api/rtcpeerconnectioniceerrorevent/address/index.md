@@ -17,6 +17,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCPeerConnectionIceErrorEvent.address
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The {{domxref("RTCPeerConnectionIceErrorEvent")}} property

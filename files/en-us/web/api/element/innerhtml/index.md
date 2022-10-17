@@ -13,6 +13,7 @@ tags:
   - innerHTML
 browser-compat: api.Element.innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} property

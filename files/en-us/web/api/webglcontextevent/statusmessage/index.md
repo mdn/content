@@ -11,6 +11,7 @@ tags:
   - WebGLContextEvent
 browser-compat: api.WebGLContextEvent.statusMessage
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLContextEvent.statusMessage`** property contains additional event status information, or is an empty string if no additional information is available.

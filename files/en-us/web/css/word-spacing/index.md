@@ -1,6 +1,7 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.word-spacing
 ---
+
 {{CSSRef}}
 
 The **`word-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the length of space between words and between tags.

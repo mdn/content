@@ -46,7 +46,7 @@ Keep in mind that most modern browsers have deprecated and removed support for b
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -99,7 +99,12 @@ You can use the {{cssxref("object-position")}} property to adjust the positionin
 ## Examples
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480" title="Title of my video">
+<embed
+  type="video/quicktime"
+  src="movie.mov"
+  width="640"
+  height="480"
+  title="Title of my video" />
 ```
 
 ## Accessibility concerns

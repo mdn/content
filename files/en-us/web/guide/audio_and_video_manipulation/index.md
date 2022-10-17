@@ -13,6 +13,7 @@ tags:
   - WebGL
   - developer recommendation
 ---
+
 The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.
 
 ## Video manipulation
@@ -37,9 +38,18 @@ For example, let's process a video to display it in greyscale. In this case, we'
 We can set up our video player and `<canvas>` element like this:
 
 ```html
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 
 <canvas id="my-canvas" width="480" height="270"></canvas>
@@ -125,9 +135,10 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 #### HTML
 
 ```html
-<video id="my-video" controls
-  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
-</video>
+<video
+  id="my-video"
+  controls
+  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
 ```
 
 #### JavaScript
@@ -141,8 +152,12 @@ myVideo.playbackRate = 2;
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
-  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -150,7 +165,8 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 const myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea>
+myVideo.playbackRate = 2;</textarea
+>
 ```
 
 ```js hidden
@@ -188,12 +204,12 @@ window.addEventListener('load', setPlaybackRate);
 
 The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
 
-| If the audio source is…                                                                                                                                                                  | Use this Web Audio node type                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
-| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                   | {{domxref("MediaElementAudioSourceNode")}} |
-| A plain raw audio data buffer in memory                                                                                                                                                    | {{domxref("AudioBufferSourceNode")}}         |
-| An oscillator generating a sine wave or other computed waveform                                                                                                                            | {{domxref("OscillatorNode")}}                 |
-| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}} |
+| If the audio source is…                                                                                                                                                  | Use this Web Audio node type               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                 | {{domxref("MediaElementAudioSourceNode")}} |
+| A plain raw audio data buffer in memory                                                                                                                                  | {{domxref("AudioBufferSourceNode")}}       |
+| An oscillator generating a sine wave or other computed waveform                                                                                                          | {{domxref("OscillatorNode")}}              |
+| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}}  |
 
 ### Audio filters
 
@@ -202,9 +218,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 #### HTML
 
 ```html
-<video id="my-video" controls
-  src="myvideo.mp4" type="video/mp4">
-</video>
+<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
 ```
 
 #### JavaScript
@@ -225,9 +239,18 @@ filter.gain.value = 25;
 #### Editable example
 
 ```html hidden
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -284,7 +307,7 @@ These are some of the common types of audio filter you can apply:
 - High Shelf: Allows all frequencies through, but adds a boost (or attenuation) to the higher frequencies.
 - Peaking: Allows all frequencies through, but adds a boost (or attenuation) to a range of frequencies.
 - Notch: Allows all frequencies through, except for a set of frequencies.
-- Allpass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
+- All Pass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
 
 > **Note:** See {{domxref("BiquadFilterNode")}} for more information.
 

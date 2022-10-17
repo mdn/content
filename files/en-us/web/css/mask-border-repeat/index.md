@@ -1,6 +1,7 @@
 ---
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-border-repeat
 ---
+
 {{CSSRef}}
 
 The **`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) of a source image are adjusted to fit the dimensions of an element's [mask border](/en-US/docs/Web/CSS/mask-border).

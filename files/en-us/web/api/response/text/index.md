@@ -11,15 +11,16 @@ tags:
   - Response
 browser-compat: api.Response.text
 ---
+
 {{APIRef("Fetch")}}
 
 The **`text()`** method of the {{domxref("Response")}} interface takes a {{domxref("Response")}} stream and reads it to completion.
 It returns a promise that resolves with a {{jsxref("String")}}.
-The response is *always* decoded using UTF-8.
+The response is _always_ decoded using UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

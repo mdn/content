@@ -11,15 +11,16 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) of an {{domxref("RTCPeerConnection")}}, in the `iceServers` array.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCIceServer.credential", "credential")}} {{optional_inline}}
   - : The credential to use when logging into the server. This is only used if the `RTCIceServer` represents a TURN server.
-- {{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}}
+- {{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : If the `RTCIceServer` represents a TURN server, this attribute specifies what kind of `credential` is to be used when connecting. The default is `password`.
 - {{domxref("RTCIceServer.urls", "urls")}}
   - : This **required** property is either a single string or an array of strings, each specifying a URL which can be used to connect to the server.

@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.VREyeParameters
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VREyeParameters`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents all the information required to correctly render a scene for a given eye, including field of view information.
@@ -24,12 +25,12 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 
 > **Warning:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("VREyeParameters.offset")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : *Represents the o*ffset from the center point between the user's eyes to the center of the eye, measured in meters.
-- {{domxref("VREyeParameters.fieldOfView")}}  {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : *Describes t*he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
+  - : Represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
+- {{domxref("VREyeParameters.fieldOfView")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Describes the current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
 - {{domxref("VREyeParameters.renderWidth")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the recommended render target width of each eye viewport, in pixels.
 - {{domxref("VREyeParameters.renderHeight")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}

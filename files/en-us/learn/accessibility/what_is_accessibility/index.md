@@ -18,6 +18,7 @@ tags:
   - screen reader
   - screenreader
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
 This article starts the module off with a good look at what accessibility is — this overview includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.
@@ -46,7 +47,7 @@ You might also think of accessibility as treating everyone the same, and giving 
 
 Accessibility is the right thing to do. Providing accessible sites is part of the law in some countries, which can open up some significant markets that otherwise would not be able to use your services or buy your products.
 
-Building accessible sites benefit everyone:
+Building accessible sites benefits everyone:
 
 - Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.
 - Caring about accessibility demonstrates good ethics and morals, which improves your public image.

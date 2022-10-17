@@ -12,6 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
@@ -25,7 +26,7 @@ The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/AP
 - {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}}
   - : Creates a new `SpeechRecognition` object.
 
-## Properties
+## Instance properties
 
 _`SpeechRecognition` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
@@ -40,7 +41,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
 
-## Methods
+## Instance methods
 
 _`SpeechRecognition` also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

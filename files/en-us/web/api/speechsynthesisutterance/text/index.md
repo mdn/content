@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.text
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`text`** property of the

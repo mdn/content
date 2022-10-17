@@ -10,6 +10,7 @@ tags:
   - hardwareConcurrency
 browser-compat: api.Navigator.hardwareConcurrency
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`navigator.hardwareConcurrency`** read-only property

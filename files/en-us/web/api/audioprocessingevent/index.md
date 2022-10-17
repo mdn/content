@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioProcessingEvent
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
@@ -24,7 +25,7 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` re
 - `AudioProcessingEvent()` {{Deprecated_Inline}}
   - : Creates a new `AudioProcessingEvent` object.
 
-## Properties
+## Instance properties
 
 _Also implements the properties inherited from its parent, {{domxref("Event")}}_.
 

@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -19,7 +20,7 @@ browser-compat: api.IDBFileHandle
 
 The **`IDBFileHandle`** interface provides tools to deal with a given file with all the necessary locks.
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBFileHandle.fileHandle")}} {{ReadOnlyInline}}
   - : The {{domxref("IDBMutableFile")}} object from which the lock was opened.
@@ -30,7 +31,7 @@ The **`IDBFileHandle`** interface provides tools to deal with a given file with 
 - {{domxref("IDBFileHandle.location")}}
   - : The position of the reading/writing pointer within the file.
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBFileHandle.getMetadata()")}}
   - : Allows to retrieve the file metadata (size and date of the last modification).

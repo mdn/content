@@ -14,15 +14,16 @@ tags:
   - Video
 browser-compat: api.MediaKeys
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeys`** interface of [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a set of keys that an associated {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaKeys.createSession()")}}
   - : Returns a new {{domxref("MediaKeySession")}} object, which represents a context for message exchange with a content decryption module (CDM).

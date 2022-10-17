@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
+
 {{APIRef("Media Streams API")}}
 
 The **`MediaStreamTrackEvent()`** constructor returns a new {{domxref("MediaStreamTrackEvent")}} object,
@@ -17,7 +18,7 @@ which represents an event signaling that a {{domxref("MediaStreamTrack")}} has b
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackEvent(type, options)
 ```
 

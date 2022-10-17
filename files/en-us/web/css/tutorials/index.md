@@ -1,12 +1,14 @@
 ---
 title: CSS Tutorials
 slug: Web/CSS/Tutorials
+page-type: landing-page
 tags:
   - CSS
   - Guide
   - Junk
   - Tutorial
 ---
+
 Learning CSS may be a daunting task.
 In order to help you, we have written numerous **tutorials about CSS**.
 Some are aimed at complete beginners, while others present complex features to be used by more experienced users.

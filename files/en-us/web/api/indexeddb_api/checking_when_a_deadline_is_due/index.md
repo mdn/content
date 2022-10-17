@@ -10,13 +10,14 @@ tags:
   - IndexedDB
   - deadline
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 In this article we look at a complex example involving checking the current time and date against a deadline stored via IndexedDB. The main complication here is checking the stored deadline info (month, hour, day, etc.) against the current time and date taken from a [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object.
 
 ![A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks](to-do-app.png)
 
-The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/en-US/docs/Web/API/Notification), and [Vibration](/en-US/docs/Web/API/Vibration_API) APIs. You can [download the To-do list notifications app from GitHub](https://github.com/mdn/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](https://mdn.github.io/to-do-notifications/).
+The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/en-US/docs/Web/API/Notification), and [Vibration](/en-US/docs/Web/API/Vibration_API) APIs. You can [download the To-do list notifications app from GitHub](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) and play around with the source code, or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## The basic problem
 

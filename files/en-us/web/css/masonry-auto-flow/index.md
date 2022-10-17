@@ -1,6 +1,7 @@
 ---
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
+page-type: css-property
 tags:
   - CSS
   - Experimental
@@ -11,9 +12,8 @@ tags:
   - masonry-auto-flow
 browser-compat: css.properties.masonry-auto-flow
 ---
-{{CSSRef}}
 
-{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`masonry-auto-flow`** CSS property modifies how items are placed when using [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) in [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
@@ -94,7 +94,7 @@ This property may take one of two forms:
 
 #item1 {
   background-color: lime;
-  height: 2em
+  height: 2em;
 }
 
 #item2 {

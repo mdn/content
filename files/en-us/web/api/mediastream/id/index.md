@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.MediaStream.id
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaStream.id`** read-only property is a

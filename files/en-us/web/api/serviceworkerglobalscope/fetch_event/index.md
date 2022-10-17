@@ -34,12 +34,6 @@ onfetch = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Syntax
-
-```js
-serviceWorkerGlobalScope.onfetch = (fetchEvent) => { /* … */ }
-```
-
 ## Example
 
 This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler

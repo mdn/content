@@ -1,6 +1,7 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.quotes
 ---
+
 {{CSSRef}}
 
 The **`quotes`** [CSS](/en-US/docs/Web/CSS) property sets how the browser should render quotation marks that are added using the `open-quotes` or `close-quotes` values of the CSS [`content`](/en-US/docs/Web/CSS/content) property.
@@ -90,19 +92,26 @@ For most browsers, the default value of `quotes` is `auto` (Firefox 70+), or the
 ```html
 <div lang="fr">
   <q>Ceci est une citation française.</q>
-<div>
-<hr>
-<div lang="ru">
-  <q>Это русская цитата</q>
-<div>
-<hr>
-<div lang="de">
-  <q>Dies ist ein deutsches Zitat</q>
-<div>
-<hr>
-<div lang="en">
-  <q>This is an English quote.</q>
-<div>
+  <div>
+    <hr />
+    <div lang="ru">
+      <q>Это русская цитата</q>
+      <div>
+        <hr />
+        <div lang="de">
+          <q>Dies ist ein deutsches Zitat</q>
+          <div>
+            <hr />
+            <div lang="en">
+              <q>This is an English quote.</q>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 #### CSS

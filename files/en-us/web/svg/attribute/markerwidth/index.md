@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.marker.markerWidth
 ---
+
 {{SVGRef}}
 
 The **`markerWidth`** attribute represents the width of the viewport into which the {{SVGElement("marker")}} is to be fitted when it is rendered according to the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.

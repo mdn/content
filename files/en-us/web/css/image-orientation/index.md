@@ -1,6 +1,7 @@
 ---
 title: image-orientation
 slug: Web/CSS/image-orientation
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.image-orientation
 ---
+
+{{CSSRef}}
+
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
 ```css
@@ -63,7 +67,7 @@ The following image has been rotated through 180 degrees, and the `image-orienta
 
 ```css hidden
 img {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 label {
@@ -72,17 +76,20 @@ label {
 ```
 
 ```html hidden
-<img id="image" src="oriole.jpg"
-    alt="Orientation taken from the image">
+<img id="image" src="oriole.jpg" alt="Orientation taken from the image" />
 
 <div>
-  <input type="radio" id="from-image" name="orientation" value="from-image"
-         checked>
+  <input
+    type="radio"
+    id="from-image"
+    name="orientation"
+    value="from-image"
+    checked />
   <label for="from-image">from-image</label>
 </div>
 
 <div>
-  <input type="radio" id="none" name="orientation" value="none">
+  <input type="radio" id="none" name="orientation" value="none" />
   <label for="none">none</label>
 </div>
 ```
@@ -109,5 +116,3 @@ document.addEventListener('change', (evt) => {
 
 - Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
 - {{cssxref("transform")}} and {{cssxref("rotate")}}
-
-{{CSSRef}}

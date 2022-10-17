@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult.isFinal
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`isFinal`** read-only property of the

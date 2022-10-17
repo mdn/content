@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.CountQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in chunk counting queuing strategy that can be used when constructing streams.
@@ -19,11 +20,11 @@ The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/AP
 - {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}}
   - : Creates a new `CountQueuingStrategy` object instance.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("CountQueuingStrategy.size()")}}
   - : Returns `1`.
@@ -33,18 +34,21 @@ None.
 ```js
 const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy
+);
 
 const size = queueingStrategy.size();
 ```

@@ -12,13 +12,14 @@ tags:
   - VR
 browser-compat: api.XRJointPose
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRJointPose`** interface is an {{domxref("XRPose")}} with additional information about the size of the skeleton joint it represents.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("XRJointPose.radius")}} {{ReadOnlyInline}}
   - : The radius (distance from skin) for a joint.

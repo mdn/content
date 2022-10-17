@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.mozSetImageElement
 ---
+
 {{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 The **`Document.mozSetImageElement()`** method changes the
@@ -19,7 +20,7 @@ element ID.
 
 ## Syntax
 
-```js
+```js-nolint
 mozSetImageElement(imageElementId, imageElement)
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.relatedTarget
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.relatedTarget`** read-only property is the secondary target for the mouse event, if there is one.

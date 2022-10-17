@@ -7,6 +7,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.marker
 ---
+
 {{SVGRef}}
 
 The **`<marker>`** element defines the graphic that is to be used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.
@@ -16,33 +17,56 @@ Markers are attached to shapes using the {{SVGAttr("marker-start")}}, {{SVGAttr(
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- arrowhead marker definition -->
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="6" markerHeight="6"
-        orient="auto-start-reverse">
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
 
     <!-- simple dot marker definition -->
-    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="5" markerHeight="5">
+    <marker
+      id="dot"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="5"
+      markerHeight="5">
       <circle cx="5" cy="5" r="5" fill="red" />
     </marker>
   </defs>
 
   <!-- Coordinate axes with a arrowhead in both direction -->
-  <polyline points="10,10 10,90 90,90" fill="none" stroke="black"
-   marker-start="url(#arrow)" marker-end="url(#arrow)" />
+  <polyline
+    points="10,10 10,90 90,90"
+    fill="none"
+    stroke="black"
+    marker-start="url(#arrow)"
+    marker-end="url(#arrow)" />
 
   <!-- Data line with polymarkers -->
-  <polyline points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
-   marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" />
+  <polyline
+    points="15,80 29,50 43,60 57,30 71,40 85,15"
+    fill="none"
+    stroke="grey"
+    marker-start="url(#dot)"
+    marker-mid="url(#dot)"
+    marker-end="url(#dot)" />
 </svg>
 ```
 
@@ -52,28 +76,28 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("markerHeight")}}
   - : This attribute defines the height of the marker viewport.
-    *Value type*: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)** ; *Default value*: `3`; *Animatable*: **yes**
+    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)** ; _Default value_: `3`; _Animatable_: **yes**
 - {{SVGAttr("markerUnits")}}
   - : This attribute defines the coordinate system for the attributes `markerWidth`, `markerHeight` and the contents of the `<marker>`.
-    *Value type*: `userSpaceOnUse`|`strokeWidth` ; *Default value*: `strokeWidth`; *Animatable*: **yes**
+    _Value type_: `userSpaceOnUse`|`strokeWidth` ; _Default value_: `strokeWidth`; _Animatable_: **yes**
 - {{SVGAttr("markerWidth")}}
   - : This attribute defines the width of the marker viewport.
-    *Value type*: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)** ; *Default value*: `3`; *Animatable*: **yes**
+    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)** ; _Default value_: `3`; _Animatable_: **yes**
 - {{SVGAttr("orient")}}
   - : This attribute defines the orientation of the marker relative to the shape it is attached to.
-    *Value type*: `auto`|`auto-start-reverse`|**[\<angle>](/en-US/docs/Web/SVG/Content_type#angle)** ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: `auto`|`auto-start-reverse`|**[\<angle>](/en-US/docs/Web/SVG/Content_type#angle)** ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different aspect ratio.
-    *Value type*: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; *Default value*: `xMidYMid meet`; *Animatable*: **yes**
+    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("refX")}}
   - : This attribute defines the x coordinate for the reference point of the marker.
-    *Value type*: `left`|`center`|`right`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: `left`|`center`|`right`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("refY")}}
   - : This attribute defines the y coordinate for the reference point of the marker.
-    *Value type*: `top`|`center`|`bottom`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: `top`|`center`|`bottom`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the current SVG fragment.
-    *Value type*: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: none; *Animatable*: **yes**
+    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 
 ### Global attributes
 

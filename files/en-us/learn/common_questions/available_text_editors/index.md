@@ -8,6 +8,9 @@ tags:
   - Tools
   - text editor
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article we highlight some things to think about when installing a text editor for web development.
 
 <table class="standard-table">

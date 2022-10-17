@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.
@@ -32,14 +33,14 @@ Events based on `TrackEvent` are always sent to one of the media track list type
 - {{domxref("TrackEvent.TrackEvent", "TrackEvent()")}}
   - : Creates and initializes a new `TrackEvent` object with the event type specified, as well as optional additional properties.
 
-## Properties
+## Instance properties
 
 _`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are also available on `TrackEvent` objects._
 
 - {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
   - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).
 
-## Methods
+## Instance methods
 
 _`TrackEvent` has no methods of its own; however, it is based on {{domxref("Event")}}, so it provides the methods available on `Event` objects._
 

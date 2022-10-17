@@ -16,6 +16,7 @@ tags:
   - audiotracks
 browser-compat: api.HTMLMediaElement.audioTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`audioTracks`**

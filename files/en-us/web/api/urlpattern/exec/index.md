@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.exec
 ---
+
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`exec()`** method of the {{domxref("URLPattern")}} interface takes a URL or
@@ -23,7 +24,7 @@ pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 exec(input)
 exec(input, baseURL)
 ```

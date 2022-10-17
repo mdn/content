@@ -1,6 +1,7 @@
 ---
 title: CSS Shapes
 slug: Web/CSS/CSS_Shapes
+page-type: css-module
 tags:
   - Boundaries
   - CSS
@@ -12,6 +13,7 @@ tags:
   - wrapping
 spec-urls: https://drafts.csswg.org/css-shapes/
 ---
+
 {{CSSRef}}
 
 **CSS Shapes** describe geometric shapes for use in CSS. For the [Level 1 specification](https://drafts.csswg.org/css-shapes/), CSS Shapes can be applied to floating elements. The specification defines a number of different ways to define a shape on a floated element, causing wrapping lines to wrap round the shape rather than following the rectangle of the element's box.

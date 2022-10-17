@@ -40,7 +40,7 @@ The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, must have both a start tag and an end tag.</td>
+      <td>None; must have both a start tag and an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -82,8 +82,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### Basic usage
 
 ```html
-<p>This is the first sentence.
- <small>This whole sentence is in small letters.</small>
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
 </p>
 ```
 
@@ -92,9 +93,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### CSS alternative
 
 ```html
-<p>This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small
-  letters.</span>
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
 

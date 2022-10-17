@@ -10,6 +10,7 @@ tags:
   - Service Workers
 browser-compat: api.ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableMessageEvent`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
@@ -23,7 +24,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 - {{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}
   - : Creates a new `ExtendableMessageEvent` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
@@ -38,7 +39,7 @@ _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 - {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
   - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

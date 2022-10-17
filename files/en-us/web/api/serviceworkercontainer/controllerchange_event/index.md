@@ -13,6 +13,7 @@ tags:
   - controllerchange
 browser-compat: api.ServiceWorkerContainer.controllerchange_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`controllerchange`** event of the

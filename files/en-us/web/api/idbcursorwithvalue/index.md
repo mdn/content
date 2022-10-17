@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBCursorWithValue
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBCursorWithValue`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) for traversing or iterating over multiple records in a database. It is the same as the {{domxref("IDBCursor")}}, except that it includes the `value` property.
@@ -25,11 +26,11 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 Inherits methods from its parent interface, {{domxref("IDBCursor")}}.
 
-## Properties
+## Instance properties
 
 Inherits properties from its parent interface, {{domxref("IDBCursor")}}.
 
@@ -76,4 +77,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

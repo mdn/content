@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.HTMLTableColElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableColElement`** interface provides properties for manipulating single or grouped table column elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
@@ -33,7 +34,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}
   - : A string representing the default column width.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

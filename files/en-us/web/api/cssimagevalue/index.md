@@ -12,19 +12,20 @@ tags:
   - Reference
 browser-compat: api.CSSImageValue
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take an image, for example {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, or {{cssxref('border-image-source')}}.
 
-The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves a URL, such as [`url()`](</en-US/docs/Web/CSS/url>) or [`image()`](</en-US/docs/Web/CSS/image>), but not [`linear-gradient()`](</en-US/docs/Web/CSS/gradient/linear-gradient>) or [`element()`](</en-US/docs/Web/CSS/element>).
+The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves a URL, such as [`url()`](/en-US/docs/Web/CSS/url) or [`image()`](/en-US/docs/Web/CSS/image), but not [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) or [`element()`](/en-US/docs/Web/CSS/element).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 _Inherits methods from {{domxref('CSSStyleValue')}}._
 
@@ -41,7 +42,8 @@ We add some CSS, including a background image requesting a binary file:
 ```css
 button {
   display: inline-block;
-  min-height: 100px; min-width: 100px;
+  min-height: 100px;
+  min-width: 100px;
   background: no-repeat 5% center url(magicwand.png) aqua;
 }
 ```

@@ -10,6 +10,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.createPolicy
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`createPolicy()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as `policyOptions`.
@@ -24,7 +25,7 @@ In Chrome a policy with a name of "default" creates a special policy that will b
 
 ## Syntax
 
-```js
+```js-nolint
 createPolicy(policyName, policyOptions)
 ```
 
@@ -36,11 +37,11 @@ createPolicy(policyName, policyOptions)
 
   - : User-defined functions for converting strings into trusted values.
 
-    - `CreateHTML(input[,args])`
+    - `createHTML(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedHTML")}} object.
-    - `CreateScript(input[,args])`
+    - `createScript(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScript")}} object.
-    - `CreateScriptURL(input[,args])`
+    - `createScriptURL(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
 
 ### Return value

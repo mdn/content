@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
 ---
+
 {{JSRef}}
 
 The **`BigUint64Array()`** typed array constructor creates a
@@ -20,7 +21,7 @@ using standard array index syntax (that is, using bracket notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new BigUint64Array()
 new BigUint64Array(length)
 new BigUint64Array(typedArray)

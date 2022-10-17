@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`handler.getPrototypeOf()`** method is a trap for the
@@ -17,7 +18,7 @@ The **`handler.getPrototypeOf()`** method is a trap for the
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(obj, {
   getPrototypeOf(target) {
     // …
@@ -45,7 +46,7 @@ This trap can intercept these operations:
 
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}
-- {{jsxref("Object/proto", "__proto__")}}
+- [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
 

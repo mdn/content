@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
@@ -44,9 +45,11 @@ tags:
 > - **page-type**
 >   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Landing**,  the _name of the API_ (e.g. **WebXR Device API**).
+>
+>   - : Always include the following tags: **API**, **Reference**, **Landing**, the _name of the API_ (e.g. **WebXR Device API**).
 >
 >     Include the following tags as appropriate:
+>
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
 >     - Special requirements: **Secure context** (if it is available in a secure context only)
 >     - Any other tags that represent terms people might search for related to the technology.
@@ -117,7 +120,7 @@ To help improve content discoverability and {{Glossary("SEO")}}, keep the follow
 
 - {{domxref("NameOfTheInterface")}}
   - : Include a brief description of the interface and what it does here.
-      Include one term and definition for each interface or dictionary.
+    Include one term and definition for each interface or dictionary.
 
 ### Extensions to other interfaces
 
@@ -127,7 +130,7 @@ The _name of interface_ extends the following APIs, adding the listed features.
 
 - {{domxref("addition1")}}
   - : Description of the feature of Interface#1 that is added to that API by the API you are currently documenting.
-      One *term and definition for each feature. If this API doesn't extend any other interfaces, you can delete these sections.
+    One \*term and definition for each feature. If this API doesn't extend any other interfaces, you can delete these sections.
 
 #### Interface #2
 
@@ -135,6 +138,8 @@ The _name of interface_ extends the following APIs, adding the listed features.
   - : Description of the feature of Interface#2 that is added to that API by the API you are currently documenting, etc.
 
 ## Examples
+
+Note that we use the plural "Examples" even if the page only contains one example.
 
 ### A descriptive heading
 
@@ -148,25 +153,27 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
 >
->  ```md
->  ## Examples
+> ```md
+> ## Examples
 >
->  ### Using the fetch API
->  Example of Fetch
+> ### Using the fetch API
 >
->  ### More examples
->  Links to more examples on other pages
->  ```
+> Example of Fetch
+>
+> ### More examples
+>
+> Links to more examples on other pages
+> ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:
 >
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
->  ```md
->   ## Examples
+> ```md
+> ## Examples
 >
->   For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
+> ```
 
 ## Specifications
 

@@ -12,6 +12,7 @@ tags:
   - Web MIDI API
 browser-compat: api.MIDIConnectionEvent
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is the event passed to the {{domxref("MIDIAccess.statechange_event","statechange")}} event of the {{domxref("MIDIAccess")}} interface and the {{domxref("MIDIPort.statechange_event","statechange")}} event of the {{domxref("MIDIPort")}} interface. This occurs any time a new port becomes available, or when a previously available port becomes unavailable. For example, this event is fired whenever a MIDI device is either plugged in to or unplugged from a computer.
@@ -23,7 +24,7 @@ The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/en-US/docs/Web/AP
 - {{domxref("MIDIConnectionEvent.MIDIConnectionEvent", "MIDIConnectionEvent()")}}
   - : Creates a new `MIDIConnectionEvent` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected."

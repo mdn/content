@@ -11,11 +11,12 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`PublicKeyCredentialRequestOptions`** dictionary of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) holds the options passed to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} in order to fetch a given {{domxref("PublicKeyCredential")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("PublicKeyCredentialRequestOptions.challenge")}}
   - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
@@ -30,7 +31,7 @@ The **`PublicKeyCredentialRequestOptions`** dictionary of the [Web Authenticatio
 - {{domxref("PublicKeyCredentialRequestOptions.extensions")}} {{optional_inline}}
   - : An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
 
-## Methods
+## Instance methods
 
 None.
 

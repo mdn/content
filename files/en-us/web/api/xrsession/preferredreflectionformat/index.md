@@ -14,6 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRSession.preferredReflectionFormat
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`preferredReflectionFormat`** property of the {{DOMxRef("XRSession")}} interface returns this session's preferred reflection format used for lighting estimation texture data.
@@ -22,10 +23,10 @@ The _read-only_ **`preferredReflectionFormat`** property of the {{DOMxRef("XRSes
 
 A string representing the reflection format. Possible values:
 
-| XRReflectionFormat | WebGL Format  | WebGL Internal Format  | WebGPU Format  | HDR  |
-|---|---|---|---|---|
-| "srgba8" | RGBA  | SRGB8_ALPHA8  | "rgba8unorm-srgb"  |  |
-| "rgba16f" | RGBA  | RGBA16F  | "rgba16float"  | ✓ |
+| XRReflectionFormat | WebGL Format | WebGL Internal Format | WebGPU Format     | HDR |
+| ------------------ | ------------ | --------------------- | ----------------- | --- |
+| "srgba8"           | RGBA         | SRGB8_ALPHA8          | "rgba8unorm-srgb" |     |
+| "rgba16f"          | RGBA         | RGBA16F               | "rgba16float"     | ✓   |
 
 ## Examples
 

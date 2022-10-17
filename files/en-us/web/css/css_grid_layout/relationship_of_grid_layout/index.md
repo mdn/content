@@ -1,11 +1,13 @@
 ---
 title: Relationship of grid layout to other layout methods
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
 CSS Grid Layout has been designed to work alongside other parts of CSS, as part of a complete system for doing the layout. In this guide, I will explain how a grid fits together with other techniques you may already be using.
@@ -23,7 +25,9 @@ In this first example, I am using flexbox to lay out a set of boxes. I have five
 I have also set the {{cssxref("flex-wrap")}} property to `wrap`, so that if the space in the container becomes too narrow to maintain the flex basis, items will wrap onto a new row.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -72,7 +76,9 @@ A common question then is how to make those items line up. This is where you wan
 In this next example, I create the same layout using Grid. This time we have three `1fr` column tracks. We do not need to set anything on the items themselves; they will lay themselves out one into each cell of the created grid. As you can see they stay in a strict grid, lining up in rows and columns. With five items, we get a gap on the end of row two.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -132,7 +138,9 @@ In a later guide in this series, I'll be taking a proper look at Box Alignment a
 In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to `flex-end` so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on `box1` so it will override the default and stretch to the height of the container and on `box2` so it aligns to the start of the flex container.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -178,7 +186,9 @@ In the first example, which uses flexbox, I have a container with three items in
 This second example uses a grid to create the same layout. This time we are using the box alignment properties as they apply to a grid layout. So we align to `start` and `end` rather than `flex-start` and `flex-end`. In the case of a grid layout, we are aligning the items inside their grid area. In this case that is a single grid cell, but it could be an area made up of several grid cells.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -206,7 +216,7 @@ This second example uses a grid to create the same layout. This time we are usin
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
 }
@@ -235,7 +245,9 @@ We can use grid to create a similar effect to flexbox, while still keeping the c
 In this next example, I have used the `auto-fill` keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -274,7 +286,9 @@ In this next example, I have used the `auto-fill` keyword in place of an integer
 This isn't quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining `auto-fit` and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with `minmax`. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be `1fr`. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the `1fr` maximum as an instruction to share out the remaining space between the items.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -321,7 +335,9 @@ To make the grid container a containing block you need to add the position prope
 In the below example I have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has `position: relative` and so becomes the positioning context of this item.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -343,7 +359,9 @@ In the below example I have a wrapper containing four child items. Item three is
   <div class="box1">One</div>
   <div class="box2">Two</div>
   <div class="box3">
-   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the area it has been placed into.
+    This block is absolutely positioned. In this example the grid container is
+    the containing block and so the absolute positioning offset values are
+    calculated in from the outer edges of the area it has been placed into.
   </div>
   <div class="box4">Four</div>
 </div>
@@ -352,7 +370,7 @@ In the below example I have a wrapper containing four child items. Item three is
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   gap: 20px;
   position: relative;
@@ -389,7 +407,9 @@ If the absolutely positioned item is nested inside a grid area then you can crea
 I have given `.box3` position relative and then positioned the sub-item with the offset properties. In this case, the positioning context is the grid area.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -410,9 +430,12 @@ I have given `.box3` position relative and then positioned the sub-item with the
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
-  <div class="box3">Three
+  <div class="box3">
+    Three
     <div class="abspos">
-     This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the grid area.
+      This block is absolutely positioned. In this example the grid area is the
+      containing block and so the absolute positioning offset values are
+      calculated in from the outer edges of the grid area.
     </div>
   </div>
   <div class="box4">Four</div>
@@ -422,7 +445,7 @@ I have given `.box3` position relative and then positioned the sub-item with the
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   gap: 20px;
 }
@@ -437,8 +460,8 @@ I have given `.box3` position relative and then positioned the sub-item with the
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 10px;
 }
@@ -459,7 +482,9 @@ If you set an item to `display: contents`, the box it would normally create disa
 In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don't become part of the grid layout and so display using regular block layout.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -515,7 +540,9 @@ In the following markup, I have a grid and the first item on the grid is set to 
 If I now add `display: contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

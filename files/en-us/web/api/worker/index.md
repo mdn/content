@@ -13,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`Worker`** interface of the [Web Workers API](/en-US/docs/Web/API/Web_Workers_API) represents a background task that can be created via script, which can send messages back to its creator.
@@ -30,11 +31,11 @@ Workers may themselves spawn new workers, as long as those workers are hosted at
 - {{domxref("Worker.Worker", "Worker()")}}
   - : Creates a dedicated web worker that executes the script at the specified URL. This also works for [Blob URLs](/en-US/docs/Web/API/Blob).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
@@ -92,3 +93,4 @@ In early versions of the spec, loading a cross-origin worker script threw a `Sec
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Functions and classes available to Web Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
 - Other kind of workers: {{domxref("SharedWorker")}} and [Service Worker](/en-US/docs/Web/API/Service_Worker_API).
+- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface

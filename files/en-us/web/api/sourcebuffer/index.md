@@ -13,13 +13,14 @@ tags:
   - Video
 browser-compat: api.SourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`SourceBuffer`** interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("SourceBuffer.appendWindowEnd")}}
   - : Controls the timestamp for the end of the append window.
@@ -40,7 +41,7 @@ The **`SourceBuffer`** interface represents a chunk of media to be passed into a
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
   - : A list of the video tracks currently contained inside the `SourceBuffer`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
@@ -48,7 +49,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Aborts the current segment and resets the segment parser.
 - {{domxref("SourceBuffer.appendBuffer()")}}
   - : Appends media segment data from an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object to the `SourceBuffer`.
-- {{domxref("SourceBuffer.appendBufferAsync()")}} {{Non-standard_Inline}}
+- {{domxref("SourceBuffer.appendBufferAsync()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
   - : Starts the process of asynchronously appending the specified buffer to the `SourceBuffer`. Returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
 - {{domxref("SourceBuffer.appendStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Appends media segment data from a `ReadableStream` object to the `SourceBuffer`.
@@ -56,7 +57,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Changes the {{Glossary("MIME type")}} that future calls to {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} will expect the new data to conform to.
 - {{domxref("SourceBuffer.remove()")}}
   - : Removes media segments within a specific time range from the `SourceBuffer`.
-- {{domxref("SourceBuffer.removeAsync()")}} {{Non-standard_Inline}}
+- {{domxref("SourceBuffer.removeAsync()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
   - : Starts the process of asynchronously removing media segments in the specified range from the `SourceBuffer`. Returns a {{jsxref("Promise")}} which is fulfilled once all matching segments have been removed.
 
 ## Events

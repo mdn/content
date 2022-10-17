@@ -6,8 +6,9 @@ tags:
   - HTTP Header
   - Response header
   - Reference
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-7.4.1
+spec-urls: https://httpwg.org/specs/rfc9110.html#field.allow
 ---
+
 {{HTTPSidebar}}
 
 The **`Allow`** header lists the set of methods supported by a resource.

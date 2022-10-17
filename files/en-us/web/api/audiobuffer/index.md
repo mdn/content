@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioBuffer`** interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()") }} method, or from raw data using {{ domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()") }}. Once put into an AudioBuffer, the audio can then be played by being passed into an {{ domxref("AudioBufferSourceNode") }}.
@@ -21,7 +22,7 @@ Objects of these types are designed to hold small audio snippets, typically less
 - {{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}
   - : Creates and returns a new `AudioBuffer` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioBuffer.sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float representing the sample rate, in samples per second, of the PCM data stored in the buffer.
@@ -32,7 +33,7 @@ Objects of these types are designed to hold small audio snippets, typically less
 - {{domxref("AudioBuffer.numberOfChannels")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of discrete audio channels described by the PCM data stored in the buffer.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioBuffer.getChannelData()")}}
   - : Returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the `channel` parameter (with `0` representing the first channel).
@@ -49,7 +50,11 @@ The following simple example shows how to create an `AudioBuffer` and fill it wi
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-const myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate
+);
 
 // Fill the buffer with white noise;
 // just random values between -1.0 and 1.0

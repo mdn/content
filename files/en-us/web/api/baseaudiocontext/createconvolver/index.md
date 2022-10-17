@@ -12,6 +12,7 @@ tags:
   - createConvolver
 browser-compat: api.BaseAudioContext.createConvolver
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
@@ -24,7 +25,7 @@ reverb effects to your audio. See the [spec definition of Convolution](https://w
 
 ## Syntax
 
-```js
+```js-nolint
 createConvolver()
 ```
 
@@ -44,7 +45,7 @@ as an ambience to shape the convolution (called the _impulse response_,) and
 apply that to the convolver. The example below uses a short sample of a concert hall
 crowd, so the reverb effect applied is really deep and echoey.
 
-For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -57,17 +58,21 @@ const convolver = audioCtx.createConvolver();
 let soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open('GET', 'concert-crowd.ogg', true);
-ajaxRequest.responseType = 'arraybuffer';
+ajaxRequest.open("GET", "concert-crowd.ogg", true);
+ajaxRequest.responseType = "arraybuffer";
 
 ajaxRequest.onload = () => {
   const audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, (buffer) => {
+  audioCtx.decodeAudioData(
+    audioData,
+    (buffer) => {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, (e) => console.error(`Error with decoding audio data: ${e.err}`));
-}
+    },
+    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+  );
+};
 
 ajaxRequest.send();
 

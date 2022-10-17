@@ -11,6 +11,9 @@ tags:
   - rsync
   - SFTP
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article shows you how to publish your site online using file transfer tools.
 
 <table>
@@ -158,7 +161,7 @@ You can find more details of what is needed at [How To Copy Files With Rsync Ove
 
 ### Rsync GUI tools
 
-GUI tools are available for Rsync (for those who are not as comfortable with using the command line). [Acrosync](https://acrosync.com/mac.html) is one such tool, and it is available for Windows and macOS.
+GUI tools are available for Rsync (for those who are not as comfortable using the command line). [Acrosync](https://acrosync.com/mac.html) is one such tool, and it is available for Windows and macOS.
 
 Again, you would have to get the connection credentials from your hosting provider, but this way you'd have a GUI to enter them in.
 

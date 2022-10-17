@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.vendor
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The value of the {{DomXref("Navigator")}} **`vendor`** property is always either "`Google Inc.`", "`Apple Computer, Inc.`", or (in Firefox) the empty string.

@@ -7,6 +7,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object
 ---
+
 {{JSRef}}
 
 The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
@@ -17,19 +18,29 @@ Nearly all objects in JavaScript are instances of {{jsxref("Object")}}; a typica
 
 Changes to the `Object` prototype object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior.
 
-The `Object` constructor's behavior depends on the input's type.
-
-- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and return an empty object.
-- If the value is an object already, it will return the value.
-- Otherwise, it will return an object of a Type that corresponds to the given value.
-
-When called in a non-constructor context, `Object` behaves identically to `new Object()`.
-
-See also the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
-
 ### Deleting a property from an object
 
 There isn't any method in an Object itself to delete its own properties (such as {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}}). To do so, one must use the [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+
+### Object coercion
+
+Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/#sec-toobject) can be summarized as follows:
+
+- Objects are returned as-is.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
+- {{jsxref("Number")}}, {{jsxref("String")}}, {{jsxref("Boolean")}}, {{jsxref("Symbol")}}, {{jsxref("BigInt")}} primitives are wrapped into their corresponding object wrappers.
+
+The best way to achieve the same effect in JavaScript is through the [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) constructor. `Object(x)` converts `x` to an object, and for `undefined` or `null`, it returns a plain object instead of throwing a {{jsxref("TypeError")}}.
+
+Places that use object coercion include:
+
+- The `object` parameter of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.
+- The `this` value of {{jsxref("Array")}} methods.
+- Parameters of `Object` methods such as {{jsxref("Object.keys()")}}.
+- Auto-boxing when a property is accessed on a primitive value, since primitives do not have properties.
+- The [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value when calling a non-strict function. Primitives are boxed while `null` and `undefined` are replaced with the [global object](/en-US/docs/Glossary/Global_object).
+
+Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion), the object coercion process itself is not observable in any way, since it doesn't invoke custom code like `toString` or `valueOf` methods.
 
 ## Constructor
 
@@ -85,19 +96,19 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Specifies the function that creates an object's prototype.
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 
 ## Instance methods
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : Associates a function with a property that, when accessed, executes that function and returns its return value.
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : Associates a function with a property that, when set, executes that function which modifies the property.
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineGetter__()", "__defineGetter__()")}} method.
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineSetter__()", "__defineSetter__()")}} method.
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) method.
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) method.
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
@@ -105,7 +116,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
   - : Returns a boolean indicating if the internal [ECMAScript \[\[Enumerable\]\] attribute](/en-US/docs/Web/JavaScript/Data_structures#properties) is set.
 - {{jsxref("Object.prototype.toLocaleString()")}}
-  - : Calls {{jsxref("Object.toString", "toString()")}}.
+  - : Calls {{jsxref("Object/toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}
   - : Returns a string representation of the object.
 - {{jsxref("Object.prototype.valueOf()")}}

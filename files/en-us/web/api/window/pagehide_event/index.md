@@ -12,6 +12,7 @@ tags:
   - pagehide
 browser-compat: api.Window.pagehide_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`pagehide`** event is sent to a {{domxref("Window")}} when the browser hides the current page in the process of presenting a different page from the session's history.

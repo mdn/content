@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.miterLimit
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.miterLimit`** property of the
@@ -61,7 +62,7 @@ reset.addEventListener("click", () => {
 
 edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

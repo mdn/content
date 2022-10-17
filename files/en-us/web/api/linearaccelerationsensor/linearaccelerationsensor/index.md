@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.LinearAccelerationSensor.LinearAccelerationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`LinearAccelerationSensor()`**
@@ -27,7 +28,7 @@ a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implem
 
 ## Syntax
 
-```js
+```js-nolint
 new LinearAccelerationSensor()
 new LinearAccelerationSensor(options)
 ```

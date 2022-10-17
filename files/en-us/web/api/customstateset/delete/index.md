@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.CustomStateSet.delete
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the {{domxref("CustomStateSet")}} interface deletes a single value from the `CustomStateSet`.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 

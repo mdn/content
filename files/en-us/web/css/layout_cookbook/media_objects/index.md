@@ -1,6 +1,7 @@
 ---
 title: 'Recipe: Media objects'
 slug: Web/CSS/Layout_cookbook/Media_objects
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -14,6 +15,7 @@ browser-compat:
   - css.properties.grid-template-areas
   - css.properties.float
 ---
+
 {{CSSRef}}
 
 The _Media Object_ is a pattern we see all over the web. [Named by Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) it refers to a two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet.
@@ -42,7 +44,7 @@ Media Object pattern needs some or all of the following characteristics:
 
 I have chosen to use [Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) for the media object as it allows me to control the layout in two dimensions when I need to. This means that when we have a footer, with short content above, the footer can be pushed down to the bottom of the media object.
 
-Another reason to use Grid Layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using `fit-content` with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the `max-content` size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width ")}} of 100% applied, it scales down so that it continues to fit inside the column.
+Another reason to use Grid Layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using `fit-content` with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the `max-content` size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width")}} of 100% applied, it scales down so that it continues to fit inside the column.
 
 By using {{cssxref("grid-template-areas")}} to achieve the layout, I can see the pattern in the CSS. I define my grid once we have a max-width of 500 pixels, so on smaller devices the media object stacks.
 

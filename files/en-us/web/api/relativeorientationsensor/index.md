@@ -15,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.
@@ -30,11 +31,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("RelativeOrientationSensor.RelativeOrientationSensor", "RelativeOrientationSensor()")}}
   - : Creates a new `RelativeOrientationSensor` object.
 
-## Properties
+## Instance properties
 
-_No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
+_No specific properties; inherits properties from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 

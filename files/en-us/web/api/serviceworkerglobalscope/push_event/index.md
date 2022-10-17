@@ -15,6 +15,7 @@ tags:
   - messaging
 browser-compat: api.ServiceWorkerGlobalScope.push_event
 ---
+
 {{APIRef("Push API")}}
 
 The **`push`** event is sent to a service worker's global scope (represented by the {{domxref("ServiceWorkerGlobalScope")}} interface) when the service worker has received a push message.

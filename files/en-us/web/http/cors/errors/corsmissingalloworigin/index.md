@@ -14,6 +14,7 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
@@ -32,7 +33,7 @@ If the server is under your control, add the origin of the requesting site to th
 of domains permitted access by adding it to the `Access-Control-Allow-Origin`
 header's value.
 
-For example, to allow a site at https\://amazing.site to access the resource using CORS,
+For example, to allow a site at `https://amazing.site` to access the resource using CORS,
 the header should be:
 
 ```http

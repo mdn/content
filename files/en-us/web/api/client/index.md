@@ -13,16 +13,17 @@ tags:
   - ServiceWorkers
 browser-compat: api.Client
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `Client` interface represents an executable context such as a {{domxref("Worker")}}, or a {{domxref("SharedWorker")}}. {{domxref("Window")}} clients are represented by the more-specific {{domxref("WindowClient")}}. You can get `Client`/`WindowClient` objects from methods such as {{domxref("Clients.matchAll","Clients.matchAll()")}} and {{domxref("Clients.get","Clients.get()")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("Client.postMessage()")}}
   - : Sends a message to the client.
 
-## Properties
+## Instance properties
 
 - {{domxref("Client.id")}} {{ReadOnlyInline}}
   - : The universally unique identifier of the client as a string.

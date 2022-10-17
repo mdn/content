@@ -23,6 +23,7 @@ tags:
   - events
 browser-compat: api.XRInputSourceEvent.XRInputSourceEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRInputSourceEvent()`**
@@ -32,7 +33,7 @@ represented by an {{domxref("XRInputSource")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRInputSourceEvent(type, options)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - TaskController
 browser-compat: api.TaskController
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`TaskController`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) represents a controller object that can be used to both abort and change the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of one or more prioritized tasks.
@@ -30,7 +31,7 @@ Tasks can be aborted by calling {{domxref("AbortController.abort()","abort()")}}
 - {{domxref("TaskController.TaskController", "TaskController()")}}
   - : Creates a new `TaskController` object, optionally specifying the priority of its associated [`signal`](#taskcontroller.signal).
 
-## Methods
+## Instance methods
 
 _This interface also inherits the methods of its parent, {{domxref("AbortController")}}._
 
@@ -38,7 +39,7 @@ _This interface also inherits the methods of its parent, {{domxref("AbortControl
   - : Sets the priority of the controller's [`signal`](#taskcontroller.signal), and hence the priority of any tasks with which it is associated.
     This notifies observers of the priority change by dispatching a [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event.
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("AbortController")}}._
 
@@ -49,7 +50,7 @@ _This interface also inherits the properties of its parent, {{domxref("AbortCont
 
 ## Examples
 
-> **Note:** Additional "live" examples can be found in:  [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
+> **Note:** Additional "live" examples can be found in: [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
 
 First we create a task controller, setting the priority of its associated signal to `user-blocking`.
 
@@ -88,7 +89,7 @@ Note that in a later code block we abort the task, so only the `catch()` block w
 // Post task using the controller's signal.
 // The signal priority sets the initial priority of the task
 scheduler.postTask(() => 'Task execute', {signal: controller.signal})
-  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
+  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (won't run)
   .catch((error) => { console.log(`Catch error: ${error}`); });  // Log error
 ```
 

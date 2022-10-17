@@ -15,6 +15,7 @@ tags:
   - WebAudio API
   - sound
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article explains how to create an audio worklet processor and use it in a Web Audio application.
@@ -175,7 +176,7 @@ This is similar code to the previous sample in many ways, but only the first out
 
 The only means by which you can influence the lifespan of your audio worklet processor is through the value returned by `process()`, which should be a Boolean value indicating whether or not to override the {{Glossary("user agent")}}'s decision-making as to whether or not your node is still in use.
 
-In general, the lifetime policy of any audio node is simple: if the node is still considered to be actively processing audio, it will continue to be used. In the case of an {{domxref("AudioWorkletNode")}}, the node is considered to be active if its `process()` function returns `true` *and* the node is either generating content as a source for audio data, or is receiving data from one or more inputs.
+In general, the lifetime policy of any audio node is simple: if the node is still considered to be actively processing audio, it will continue to be used. In the case of an {{domxref("AudioWorkletNode")}}, the node is considered to be active if its `process()` function returns `true` _and_ the node is either generating content as a source for audio data, or is receiving data from one or more inputs.
 
 Specifying a value of `true` as the result from your `process()` function in essence tells the Web Audio API that your processor needs to keep being called even if the API doesn't think there's anything left for you to do. In other words, `true` overrides the API's logic and gives you control over your processor's lifetime policy, keeping the processor's owning {{domxref("AudioWorkletNode")}} running even when it would otherwise decide to shut down the node.
 

@@ -8,6 +8,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.browser_specific_settings
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

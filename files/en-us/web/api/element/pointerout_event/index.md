@@ -10,6 +10,7 @@ tags:
 browser-compat: api.Element.pointerout_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The `pointerout` event is fired for several reasons including: pointing device is moved out of the _hit test_ boundaries of an element; firing the {{domxref("Element/pointerup_event", "pointerup")}} event for a device that does not support hover (see {{domxref("Element/pointerup_event", "pointerup")}}); after firing the {{domxref("Element/pointercancel_event", "pointercancel")}} event (see {{domxref("Element/pointercancel_event", "pointercancel")}}); when a pen stylus leaves the hover range detectable by the digitizer.
@@ -51,7 +52,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -87,8 +88,8 @@ para.onpointerout = (event) => {
 
 ## See also
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+- [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+- [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
 - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
 - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
 - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)

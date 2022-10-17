@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.NamedNodeMap.item
 ---
+
 {{APIRef("DOM")}}
 
 The **`item()`** method of the {{domxref("NamedNodeMap")}} interface
@@ -17,9 +18,9 @@ returns the item in the map matching the index.
 
 ## Syntax
 
-```js
-item(index);
-[index];
+```js-nolint
+item(index)
+[index]
 ```
 
 ### Parameters
@@ -39,7 +40,7 @@ the map.
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
+const pre = document.querySelector("pre");
 const attrMap = pre.attributes;
 
 pre.textContent = `The attribute map contains:

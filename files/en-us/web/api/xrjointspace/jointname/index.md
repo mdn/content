@@ -19,6 +19,7 @@ tags:
 
 browser-compat: api.XRJointSpace.jointName
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only **`jointName`** property of the {{domxref("XRJointSpace")}} interface contains the name of the joint it tracks.

@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLLinkElement.fetchPriority
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 The **`fetchPriority`** property of the
@@ -27,13 +28,13 @@ A string representing the priority hint. Possible values are:
 
 - `high`
   - : Fetch the preload at a high priority relative to other resources
-  of the same type.
+    of the same type.
 - `low`
   - : Fetch the image at a low priority relative to other resources of
-  the same type.
+    the same type.
 - `auto`
   - : Default mode, which indicates no preference for
-  the fetch priority. The browser decides what is best for the user.
+    the fetch priority. The browser decides what is best for the user.
 
 The `fetchPriority` property allows you to signal high or low priority preload
 fetches. This can be useful when applied to {{HTMLElement("link")}} elements

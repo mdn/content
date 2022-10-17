@@ -1,12 +1,14 @@
 ---
 title: CSS Miscellaneous
 slug: Web/CSS/CSS_Miscellaneous
+page-type: css-module
 tags:
   - CSS
   - Guide
   - Overview
   - Reference
 ---
+
 {{CSSRef}}
 
 These pages contain CSS properties that are supported by browsers but either aren't included in a CSS specification, don't fit into any other CSS categories, or are experimental.

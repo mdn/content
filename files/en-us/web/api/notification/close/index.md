@@ -12,6 +12,7 @@ tags:
   - close
 browser-compat: api.Notification.close
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The `close()` method of the {{domxref("Notification")}} interface is used to
@@ -27,7 +28,7 @@ close/remove a previously displayed notification.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

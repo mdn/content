@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.403
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`403 Forbidden`** response status code indicates that the server understands the request but refuses to authorize it.

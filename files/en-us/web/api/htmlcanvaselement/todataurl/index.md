@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.toDataURL()`** method returns a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) containing a representation of the image in the format specified by the `type` parameter.
@@ -24,7 +25,7 @@ The created image data will have a resolution of 96dpi for file formats that sup
 
 ## Syntax
 
-```js
+```js-nolint
 toDataURL()
 toDataURL(type)
 toDataURL(type, encoderOptions)

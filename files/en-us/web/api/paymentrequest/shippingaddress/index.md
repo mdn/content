@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentRequest.shippingAddress
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`shippingAddress`** read-only property of

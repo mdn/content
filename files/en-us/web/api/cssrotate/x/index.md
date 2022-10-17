@@ -13,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSRotate.x
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`x`** property of the

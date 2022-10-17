@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 
@@ -18,14 +19,14 @@ The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebC
 - {{domxref("AudioEncoder.AudioEncoder", "AudioEncoder()")}} {{Experimental_Inline}}
   - : Creates a new `AudioEncoder` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioEncoder.encodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of encode queue requests.
 - {{domxref("AudioEncoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioEncoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the audio encoder for encoding chunks.

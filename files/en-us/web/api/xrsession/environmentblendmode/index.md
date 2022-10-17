@@ -19,9 +19,10 @@ tags:
   - Experimental
 browser-compat: api.XRSession.environmentBlendMode
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The {{domxref("XRSession")}} interface's *read-only* **`environmentBlendMode`**
+The {{domxref("XRSession")}} interface's _read-only_ **`environmentBlendMode`**
 property identifies if, and to what degree, the computer-generated imagery is overlaid atop the real world.
 
 This is used to differentiate between fully-immersive VR sessions and AR sessions which render

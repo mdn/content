@@ -1,6 +1,7 @@
 ---
 title: ':-moz-drag-over'
 slug: Web/CSS/:-moz-drag-over
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -13,6 +14,7 @@ tags:
   - Selector
 browser-compat: css.selectors:-moz-drag-over
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches an element when a {{domxref("HTMLElement/dragover_event", "dragover")}} event is called on it.

@@ -7,23 +7,25 @@ tags:
   - Interface
   - Reference
   - Serial
+  - Experimental
 browser-compat: api.Serial
 ---
-{{securecontext_header}}{{APIRef("Serial API")}}
+
+{{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides attributes and methods for finding and connecting to serial ports from a web page.
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
-- {{domxref("Serial.requestPort()")}}
+- {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
 
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
     This method must be called with user activation.
 
-- {{domxref("Serial.getPorts()")}}
+- {{domxref("Serial.getPorts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to
     the host which the origin has permission to access.
 

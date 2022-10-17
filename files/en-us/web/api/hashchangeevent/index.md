@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.HashChangeEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HashChangeEvent`** interface represents events that fire when the fragment identifier of the URL has changed.
@@ -20,7 +21,7 @@ The fragment identifier is the part of the URL that follows (and includes) the `
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
@@ -29,7 +30,7 @@ _This interface also inherits the properties of its parent, {{domxref("Event")}}
 - {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
   - : The previous URL from which the window was navigated.
 
-## Methods
+## Instance methods
 
 _This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}._
 

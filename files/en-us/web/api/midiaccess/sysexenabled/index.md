@@ -10,6 +10,7 @@ tags:
   - MIDIAccess
 browser-compat: api.MIDIAccess.sysexEnabled
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`sysexEnabled`** read-only property of the {{domxref("MIDIAccess")}} interface indicates whether system exclusive support is enabled on the current MIDIAccess instance.

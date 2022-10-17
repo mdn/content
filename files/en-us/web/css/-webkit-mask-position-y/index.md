@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-position-y'
+title: "-webkit-mask-position-y"
 slug: Web/CSS/-webkit-mask-position-y
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-position-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-position-y` CSS property sets the initial vertical position of a mask image.
@@ -58,7 +60,10 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-mask-position-y =
+  [ <length-percentage> | top | center | bottom ]#
+```
 
 ## Examples
 

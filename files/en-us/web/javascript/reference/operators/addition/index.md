@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.addition
 ---
+
 {{jsSidebar("Operators")}}
 
 The addition operator (`+`) produces the sum of numeric operands or string
@@ -17,9 +18,28 @@ concatenation.
 
 ## Syntax
 
-```js
+```js-nolint
 x + y
 ```
+
+## Description
+
+The addition operator (`+`) is overloaded for two distinct operations: numeric addition and string concatenation. When evaluating, it first [coerces both operands to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). Then, the two operands' types are tested:
+
+- If one side is a string, the other operand is also [converted to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) and they are concatenated.
+- If they are both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), BigInt addition is performed. If one side is a BigInt but the other is not, a {{jsxref("TypeError")}} is thrown.
+- Otherwise, both sides are [converted to numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), and numeric addition is performed.
+
+String concatenation is often thought to be equivalent with [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) or [`String.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat), but they are not. Addition coerces the expression to a _primitive_, which calls [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) in priority; on the other hand, template literals and `concat()` coerce the expression to a _string_, which calls [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) in priority. If the expression has a [`@@toPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, string concatenation calls it with `"default"` as hint, while template literals use `"string"`. This is important for objects that have different string and primitive representations — such as [Temporal](https://github.com/tc39/proposal-temporal), whose `valueOf()` method throws.
+
+```js
+const t = Temporal.Now.instant();
+"" + t; // Throws TypeError
+`${t}`; // '2022-07-31T04:48:56.113918308Z'
+"".concat(t); // '2022-07-31T04:48:56.113918308Z'
+```
+
+You are advised to not use `"" + x` to perform [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
 
 ## Examples
 

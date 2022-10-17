@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.Sanitizer
 ---
+
 {{APIRef("Sanitizer")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} provides methods to sanitize untrusted strings of HTML, {{domxref("Document")}} and {{domxref("DocumentFragment")}} objects.
@@ -24,9 +25,10 @@ This configuration may be customized using constructor options.
 - {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{Experimental_Inline}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
-## Methods
+## Instance methods
 
 - {{domxref('Sanitizer.sanitize()')}} {{Experimental_Inline}}
+
   - : Returns a sanitized {{domxref('DocumentFragment')}} from an input {{domxref('Document')}} or {{domxref('DocumentFragment')}}
 
 - {{domxref('Sanitizer.sanitizeFor()')}} {{Experimental_Inline}}

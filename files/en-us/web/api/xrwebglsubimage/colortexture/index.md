@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRWebGLSubImage.colorTexture
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`colorTexture`** property of the {{domxref("XRWebGLSubImage")}} interface represents the color {{domxref("WebGLTexture")}} object for the {{domxref("XRCompositionLayer")}} to render.
 

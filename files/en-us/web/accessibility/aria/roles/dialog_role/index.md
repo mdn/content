@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: dialog role'
+title: "ARIA: dialog role"
 slug: Web/Accessibility/ARIA/Roles/dialog_role
 tags:
   - ARIA
@@ -12,12 +12,18 @@ spec-urls:
   - https://w3c.github.io/aria/#dialog
   - https://w3c.github.io/aria-practices/#dialog_modal
 ---
+
 The `dialog` role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">Your personal details were successfully updated</h2>
-  <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
+  <p id="dialog1Desc">
+    You can change your details at any time in the user account section.
+  </p>
   <button>Close</button>
 </div>
 ```
@@ -33,16 +39,21 @@ Marking up a dialog element with the `dialog` role helps assistive technology id
 
 The sections below describe how these two requirements can be met.
 
-#### Labeling
+### Labeling
 
 Even though it is not required for the dialog itself to be able to receive focus, it still needs to be labeled. The label given to the dialog will provide contextual information for the interactive controls inside the dialog. In other words, the dialog's label acts like a grouping label for the controls inside it (similar to how a `<legend>` element provides a grouping label for the controls inside a `<fieldset>` element).
 
 If a dialog already has a visible title bar, the text inside that bar can be used to label the dialog itself. The best way to achieve this is by using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute to the `role="dialog"` element. Additionally, if the dialog contains additional descriptive text besides the dialog title, this text can be associated with the dialog using the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute. This approach is shown in the code snippet below:
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">Your personal details were successfully updated</h2>
-  <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
+  <p id="dialog1Desc">
+    You can change your details at any time in the user account section.
+  </p>
   <button>Close</button>
 </div>
 ```
@@ -58,9 +69,9 @@ A dialog has particular requirements for how keyboard focus should be managed:
 - Dialogs should always have at least one focusable control. For many dialogs, there will be a button like "Close", "OK" or "Cancel". In addition to the needed control, dialogs can contain any number of focusable elements, even entire forms or other container widgets like tabs.
 - When the dialog appears on the screen, keyboard focus (whose control depends upon the dialog's purpose) should be moved to the default focusable control inside the dialog. For dialogs that only provide a basic message, it could be an "OK" button. For dialogs containing a form it could be the first field in the form.
 - After the dialog is dismissed, keyboard focus should be moved back to where it was before it moved into the dialog. Otherwise the focus can be dropped to the beginning of the page.
-- For most dialogs, the expected behavior is that the dialog's tab order *wraps*, which means that when the user tabs through the focusable elements in the dialog, the first focusable element will be focused after the last one has been reached. In other words, the tab order should be contained within and by the dialog.
+- For most dialogs, the expected behavior is that the dialog's tab order _wraps_, which means that when the user tabs through the focusable elements in the dialog, the first focusable element will be focused after the last one has been reached. In other words, the tab order should be contained within and by the dialog.
 - If the dialog can be moved or resized, ensure that these actions must be performable by keyboard users as well as mouse users. Similarly, if a dialog provides special features like toolbars or context menus, these must be reachable and operable by keyboard users as well.
-- Dialogs can be modal or non-modal. When a *modal* dialog appears on the screen, it's not possible to interact with any page content outside the dialog. In other words, the main application UI or page content is considered to be temporarily disabled as long as the modal dialog is showing. For _non-modal_ dialogs it is still possible to interact with content outside of the dialog while the dialog is showing. Note that for non-modal dialogs there will have to be a global keyboard shortcut that allows focus to be moved between opened dialogs and the main page.
+- Dialogs can be modal or non-modal. When a _modal_ dialog appears on the screen, it's not possible to interact with any page content outside the dialog. In other words, the main application UI or page content is considered to be temporarily disabled as long as the modal dialog is showing. For _non-modal_ dialogs it is still possible to interact with content outside of the dialog while the dialog is showing. Note that for non-modal dialogs there will have to be a global keyboard shortcut that allows focus to be moved between opened dialogs and the main page.
 
 ### Associated ARIA roles, states, and properties
 
@@ -81,37 +92,40 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 ## Examples
 
-#### A dialog containing a form
+### A dialog containing a form
 
 ```html
- <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-   <h2 id="dialog1Title">Subscription Form</h2>
-   <p id="dialog1Desc">We will not share this information with third parties.</p>
-   <form>
-     <p>
-       <label for="firstName">First Name</label>
-       <input id="firstName" type="text" />
-     </p>
-     <p>
-       <label for="lastName">Last Name</label>
-       <input id="lastName" type="text"/>
-     </p>
-     <p>
-       <label for="interests">Interests</label>
-       <textarea id="interests"></textarea>
-     </p>
-     <p>
-       <input type="checkbox" id="autoLogin"/>
-       <label for="autoLogin">Auto-login?</label>
-     </p>
-     <p>
-         <input type="submit" value="Save Information"/>
-     </p>
-   </form>
- </div>
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">Subscription Form</h2>
+  <p id="dialog1Desc">We will not share this information with third parties.</p>
+  <form>
+    <p>
+      <label for="firstName">First Name</label>
+      <input id="firstName" type="text" />
+    </p>
+    <p>
+      <label for="lastName">Last Name</label>
+      <input id="lastName" type="text" />
+    </p>
+    <p>
+      <label for="interests">Interests</label>
+      <textarea id="interests"></textarea>
+    </p>
+    <p>
+      <input type="checkbox" id="autoLogin" />
+      <label for="autoLogin">Auto-login?</label>
+    </p>
+    <p>
+      <input type="submit" value="Save Information" />
+    </p>
+  </form>
+</div>
 ```
 
-#### Working Examples:
+#### Working Examples
 
 - [jQuery-UI Dialog](https://jqueryui.com/dialog/)
 
@@ -136,6 +150,6 @@ Coming soon
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.AbortController
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortController`** interface represents a controller object that allows you to abort one or more Web requests as and when desired.
@@ -20,12 +21,12 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 - {{domxref("AbortController()")}}
   - : Creates a new `AbortController` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, a DOM request.
 
-## Methods
+## Instance methods
 
 - {{domxref("AbortController.abort()")}}
   - : Aborts a DOM request before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response bodies, and streams.
@@ -42,17 +43,17 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 
 ```js
 let controller;
-const url = 'video.mp4';
+const url = "video.mp4";
 
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   if (controller) {
     controller.abort();
-    console.log('Download aborted');
+    console.log("Download aborted");
   }
 });
 
@@ -61,7 +62,7 @@ function fetchVideo() {
   const signal = controller.signal;
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);

@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.DynamicsCompressorNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `DynamicsCompressorNode` interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once. This is often used in musical production and game audio. `DynamicsCompressorNode` is an {{domxref("AudioNode")}} that has exactly one input and one output.
@@ -48,7 +49,7 @@ The `DynamicsCompressorNode` interface provides a compression effect, which lowe
 - {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
   - : Creates a new instance of an `DynamicsCompressorNode` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -65,7 +66,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("DynamicsCompressorNode.release")}} {{ReadOnlyInline}}
   - : A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

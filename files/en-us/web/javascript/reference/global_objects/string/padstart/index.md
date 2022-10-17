@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.padStart
 ---
+
 {{JSRef}}
 
 The **`padStart()`** method pads the
@@ -23,7 +24,7 @@ current string.
 
 ## Syntax
 
-```js
+```js-nolint
 padStart(targetLength)
 padStart(targetLength, padString)
 ```

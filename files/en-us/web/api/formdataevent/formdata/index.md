@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FormDataEvent.formData
 ---
+
 {{APIRef("DOM")}}
 
 The `formData` read-only property of the {{domxref("FormDataEvent")}}

@@ -14,10 +14,11 @@ tags:
   - User experience
   - Web
   - menuitem
+  - Non-standard
 browser-compat: html.elements.menuitem
 ---
 
-{{HTMLRef}}{{Deprecated_Header}}
+{{HTMLRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<menuitem>`** [HTML](/en-US/docs/Web/HTML) element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.
 
@@ -35,7 +36,7 @@ A command can either be defined explicitly, with a textual label and optional ic
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -67,21 +68,21 @@ A command can either be defined explicitly, with a textual label and optional ic
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes); in particular `title` can be used to describe the command, or provide usage hints.
 
-- {{HTMLAttrDef("checked")}}
+- {{HTMLAttrDef("checked")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Boolean attribute which indicates whether the command is selected. May only be used when the `type` attribute is `checkbox` or `radio`.
-- {{HTMLAttrDef("command")}}
+- {{HTMLAttrDef("command")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies the ID of a separate element, indicating a command to be invoked indirectly. May not be used within a menu item that also includes the attributes `checked`, `disabled`, `icon`, `label`, `radiogroup` or `type`.
-- {{HTMLAttrDef("default")}}
+- {{HTMLAttrDef("default")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This Boolean attribute indicates use of the same command as the menu's subject element (such as a `button` or `input`).
-- {{HTMLAttrDef("disabled")}}
+- {{HTMLAttrDef("disabled")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Boolean attribute which indicates that the command is not available in the current state. Note that `disabled` is distinct from `hidden`; the `disabled` attribute is appropriate in any context where a change in circumstances might render the command relevant.
-- {{HTMLAttrDef("icon")}}
+- {{HTMLAttrDef("icon")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Image URL, used to provide a picture to represent the command.
 - {{HTMLAttrDef("label")}}
   - : The name of the command as shown to the user. Required when a `command` attribute is not present.
-- {{HTMLAttrDef("radiogroup")}}
+- {{HTMLAttrDef("radiogroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This attribute specifies the name of a group of commands to be toggled as radio buttons when selected. May only be used where the `type` attribute is `radio`.
-- {{HTMLAttrDef("type")}}
+- {{HTMLAttrDef("type")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : This attribute indicates the kind of command, and can be one of three values.
 
@@ -95,20 +96,24 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ```html
 <!-- A <div> element with a context menu -->
-<div contextmenu="popup-menu">
-  Right-click to see the adjusted context menu
-</div>
+<div contextmenu="popup-menu">Right-click to see the adjusted context menu</div>
 
 <menu type="context" id="popup-menu">
   <menuitem type="checkbox" checked>Checkbox</menuitem>
-  <hr>
-  <menuitem type="command" label="This command does nothing" icon="favicon-192x192.png">
+  <hr />
+  <menuitem
+    type="command"
+    label="This command does nothing"
+    icon="favicon-192x192.png">
     Commands don't render their contents.
   </menuitem>
-  <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
+  <menuitem
+    type="command"
+    label="This command has javascript"
+    onclick="alert('command clicked')">
     Commands don't render their contents.
   </menuitem>
-  <hr>
+  <hr />
   <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
   <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
 </menu>

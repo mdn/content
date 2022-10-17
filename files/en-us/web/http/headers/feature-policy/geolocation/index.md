@@ -6,10 +6,10 @@ tags:
   - Geolocation
   - HTTP
   - header
-  - Experimental
 browser-compat: http.headers.Feature-Policy.geolocation
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header
 `geolocation` directive controls whether the current document is allowed to

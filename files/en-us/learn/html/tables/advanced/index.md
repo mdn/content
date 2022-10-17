@@ -19,6 +19,7 @@ tags:
   - tfoot
   - thead
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 In the second article in this module, we look at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
@@ -50,7 +51,9 @@ You can give your table a caption by putting it inside a {{htmlelement("caption"
 
 ```html
 <table>
-  <caption>Dinosaurs in the Jurassic period</caption>
+  <caption>
+    Dinosaurs in the Jurassic period
+  </caption>
 
   …
 </table>
@@ -97,16 +100,16 @@ Let's put these new elements into action.
 5. Next, add a {{htmlattrxref("colspan","td")}} attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
 6. Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Inside the head of your HTML document, you'll see an empty {{htmlelement("style")}} element. Inside this element, add the following lines of CSS code:
 
-    ```css
-    tbody {
-      font-size: 95%;
-      font-style: italic;
-    }
+   ```css
+   tbody {
+     font-size: 95%;
+     font-style: italic;
+   }
 
-    tfoot {
-      font-weight: bold;
-    }
-    ```
+   tfoot {
+     font-weight: bold;
+   }
+   ```
 
 7. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
 
@@ -118,106 +121,107 @@ Your finished table should look something like the following:
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My spending record</title>
     <style>
+      html {
+        font-family: sans-serif;
+      }
 
-        html {
-          font-family: sans-serif;
-        }
+      table {
+        border-collapse: collapse;
+        border: 4px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
 
-          table {
-          border-collapse: collapse;
-          border: 4px solid rgb(200,200,200);
-          letter-spacing: 1px;
-          font-size: 0.8rem;
-        }
+      td,
+      th {
+        border: 2px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+      }
 
-        td, th {
-          border: 2px solid rgb(190,190,190);
-          padding: 10px 20px;
-        }
+      th {
+        background-color: rgb(235, 235, 235);
+      }
 
-        th {
-          background-color: rgb(235,235,235);
-        }
+      td {
+        text-align: center;
+      }
 
-        td {
-          text-align: center;
-        }
+      tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+      }
 
-        tr:nth-child(even) td {
-          background-color: rgb(250,250,250);
-        }
+      tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+      }
 
-        tr:nth-child(odd) td {
-          background-color: rgb(245,245,245);
-        }
+      caption {
+        padding: 10px;
+      }
 
-        caption {
-          padding: 10px;
-        }
+      tbody {
+        font-size: 90%;
+        font-style: italic;
+      }
 
-        tbody {
-          font-size: 90%;
-          font-style: italic;
-        }
-
-        tfoot {
-          font-weight: bold;
-        }
+      tfoot {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
-      <table>
-        <caption>How I chose to spend my money</caption>
-        <thead>
-          <tr>
-            <th>Purchase</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Evaluation</th>
-            <th>Cost (€)</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td colspan="4">SUM</td>
-            <td>118</td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td>Haircut</td>
-            <td>Hairdresser</td>
-            <td>12/09</td>
-            <td>Great idea</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>Lasagna</td>
-            <td>Restaurant</td>
-            <td>12/09</td>
-            <td>Regrets</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>Shoes</td>
-            <td>Shoeshop</td>
-            <td>13/09</td>
-            <td>Big regrets</td>
-            <td>65</td>
-          </tr>
-          <tr>
-            <td>Toothpaste</td>
-            <td>Supermarket</td>
-            <td>13/09</td>
-            <td>Good</td>
-            <td>5</td>
-          </tr>
-        </tbody>
+    <table>
+      <caption>
+        How I chose to spend my money
+      </caption>
+      <thead>
+        <tr>
+          <th>Purchase</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Evaluation</th>
+          <th>Cost (€)</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">SUM</td>
+          <td>118</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Haircut</td>
+          <td>Hairdresser</td>
+          <td>12/09</td>
+          <td>Great idea</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Lasagna</td>
+          <td>Restaurant</td>
+          <td>12/09</td>
+          <td>Regrets</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Shoes</td>
+          <td>Shoeshop</td>
+          <td>13/09</td>
+          <td>Big regrets</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Toothpaste</td>
+          <td>Supermarket</td>
+          <td>13/09</td>
+          <td>Good</td>
+          <td>5</td>
+        </tr>
+      </tbody>
     </table>
-
   </body>
 </html>
 ```
@@ -263,13 +267,14 @@ The following markup shows a simple nested table:
 The output of which looks something like this:
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 {{EmbedLiveSample("Nesting_Tables")}}
@@ -348,7 +353,7 @@ This section of the article provides further techniques for making tables as acc
 
 ### Using column and row headers
 
-screen readers will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screen reader users can interpret the table similarly to how a sighted user does.
+Screen readers will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screen reader users can interpret the table similarly to how a sighted user does.
 
 We already covered headers in our previous article — see [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_th_elements).
 
@@ -406,16 +411,15 @@ Returning to our spending costs example, the previous two snippets could be rewr
   </tr>
 </thead>
 <tbody>
-<tr>
-  <th id="haircut">Haircut</th>
-  <td headers="location haircut">Hairdresser</td>
-  <td headers="date haircut">12/09</td>
-  <td headers="evaluation haircut">Great idea</td>
-  <td headers="cost haircut">30</td>
-</tr>
+  <tr>
+    <th id="haircut">Haircut</th>
+    <td headers="location haircut">Hairdresser</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Great idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
 
   …
-
 </tbody>
 ```
 

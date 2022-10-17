@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: loadstart event'
+title: "HTMLMediaElement: loadstart event"
 slug: Web/API/HTMLMediaElement/loadstart_event
 page-type: web-api-event
 tags:
@@ -11,6 +11,7 @@ tags:
   - loadstart
 browser-compat: api.HTMLMediaElement.loadstart_event
 ---
+
 {{APIRef}}
 
 The **`loadstart`** event is fired when the browser has started to load a resource.
@@ -37,15 +38,13 @@ A generic {{domxref("Event")}}.
 
 ```html
 <div class="example">
+  <button type="button">Load video</button>
+  <video controls width="250"></video>
 
-    <button type="button">Load video</button>
-    <video controls width="250"></video>
-
-    <div class="event-log">
-        <label for="eventLog">Event log:</label>
-        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
-    </div>
-
+  <div class="event-log">
+    <label for="eventLog">Event log:</label>
+    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  </div>
 </div>
 ```
 
@@ -54,21 +53,21 @@ A generic {{domxref("Event")}}.
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
 }
 
 .example {
   display: grid;
   grid-template-areas:
-              "button log"
-              "video  log";
+    "button log"
+    "video  log";
 }
 
 button {
   grid-area: button;
   width: 10rem;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 video {
@@ -79,7 +78,7 @@ video {
   grid-area: log;
 }
 
-.event-log>label {
+.event-log > label {
   display: block;
 }
 ```

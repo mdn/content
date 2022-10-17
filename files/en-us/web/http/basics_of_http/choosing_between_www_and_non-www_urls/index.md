@@ -6,6 +6,7 @@ tags:
   - HTTP
   - URL
 ---
+
 {{HTTPSidebar}}
 
 A recurring question among website owners is whether to choose non-www or www URLs. This page provides some advice on what's best.
@@ -46,7 +47,7 @@ It is possible to add a special HTML {{HTMLElement("link")}} element to a page t
 When adding such a tag, you serve the same content for both domains, telling search engines which URL is canonical. In the previous example, `http://www.example.org/whaddup` would serve the same content as `http://example.org/whaddup`, but with an additional {{htmlelement("link")}} element in the head:
 
 ```html
-<link href="http://example.org/whaddup" rel="canonical">
+<link href="http://example.org/whaddup" rel="canonical" />
 ```
 
 Unlike the previous case, browser history will consider non-www and www URLs as independent entries.
@@ -57,7 +58,7 @@ With these techniques, you can configure your server to respond correctly for bo
 
 ## Deciding the case
 
-This is a very subjective topic it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, please see some of the [many](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) [articles](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on the subject.
+This is a very subjective topic — it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, please see some of the [many](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) [articles](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on the subject.
 
 ## See also
 

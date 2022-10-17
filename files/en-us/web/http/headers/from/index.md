@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.From
 ---
+
 {{HTTPSidebar}}
 
 The **`From`** request header contains an Internet email

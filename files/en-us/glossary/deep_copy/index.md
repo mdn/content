@@ -2,9 +2,9 @@
 title: Deep copy
 slug: Glossary/Deep_copy
 tags:
-  - Glossary
   - Deep copy
 ---
+
 {{MDNSidebar}}
 
 A **deep copy** of an object is a copy whose properties do not share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you can be assured you're not causing the other object to change too; that is, you won't unintentionally be causing changes to the source or copy that you don't expect. That behavior contrasts with the behavior of a [shallow copy](/en-US/docs/Glossary/Shallow_copy), in which changes to either the source or the copy may also cause the other object to change too (because the two objects share the same references).
@@ -14,11 +14,11 @@ In JavaScript, standard built-in object-copy operations ([spread syntax](/en-US/
 One way to make a deep copy of a JavaScript object, if it can be [serialized](/en-US/docs/Glossary/Serialization), is to use {{jsxref("JSON.stringify()")}} to convert the object to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a (completely new) JavaScript object:
 
 ```js
-let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
+let ingredients_list = ["noodles", { list: ["eggs", "flour", "water"] }];
 let ingredients_list_deepcopy = JSON.parse(JSON.stringify(ingredients_list));
 
 // Change the value of the 'list' property in ingredients_list_deepcopy.
-ingredients_list_deepcopy[1].list = ["rice flour","water"]
+ingredients_list_deepcopy[1].list = ["rice flour", "water"];
 // The 'list' property does not change in ingredients_list.
 console.log(ingredients_list[1].list);
 // Array(3) [ "eggs", "flour", "water" ]

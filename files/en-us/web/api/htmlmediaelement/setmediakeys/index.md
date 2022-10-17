@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.setMediaKeys
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setMediaKeys()`** property of the
@@ -22,7 +23,7 @@ playback.
 
 ## Syntax
 
-```js
+```js-nolint
 setMediaKeys(mediaKeys)
 ```
 

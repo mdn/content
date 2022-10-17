@@ -1,6 +1,7 @@
 ---
 title: Overview of shapes
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
+page-type: guide
 tags:
   - CSS
   - CSS Shapes
@@ -8,6 +9,7 @@ tags:
   - Overview
   - shapes
 ---
+
 {{CSSRef}}
 
 The [CSS Shapes Level 1 Specification](https://www.w3.org/TR/css-shapes/) describes geometric shapes in CSS. They are, in Level 1 of the specification, designed to be applied to floated items. This article provides an overview of what you can do with shapes.

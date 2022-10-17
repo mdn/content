@@ -14,6 +14,7 @@ tags:
   - getAsEntry
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.
@@ -23,7 +24,7 @@ If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitG
 
 ## Syntax
 
-```js
+```js-nolint
 webkitGetAsEntry()
 ```
 
@@ -51,15 +52,12 @@ The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} ele
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
-  <div id="boxtitle">
-    Drop Files Here
-  </div>
+  <div id="boxtitle">Drop Files Here</div>
 </div>
 
 <h2>Directory tree:</h2>
 
-<ul id="listing">
-</ul>
+<ul id="listing"></ul>
 ```
 
 ### CSS content

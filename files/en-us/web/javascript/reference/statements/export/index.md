@@ -11,6 +11,7 @@ tags:
   - export
 browser-compat: javascript.statements.export
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`export`** declaration is used to export values from a JavaScript module. Exported values can then be imported into other programs with the {{jsxref("Statements/import", "import")}} declaration or [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import). The value of an imported binding is subject to change in the module that exports it — when a module updates the value of a binding that it exports, the update will be visible in its imported value.
@@ -19,7 +20,7 @@ In order to use the `export` declaration in a source file, the file must be inte
 
 ## Syntax
 
-```js
+```js-nolint
 // Exporting declarations
 export let name1, name2/*, … */; // also var
 export const name1 = 1, name2 = 2/*, … */; // also var, let

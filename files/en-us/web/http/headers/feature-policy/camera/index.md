@@ -8,10 +8,10 @@ tags:
   - HTTP
   - Reference
   - camera
-  - Experimental
 browser-compat: http.headers.Feature-Policy.camera
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header
 `camera` directive controls whether the current document is allowed to use

@@ -21,6 +21,7 @@ tags:
   - localId
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRemoteOutboundRtpStreamStats")}}

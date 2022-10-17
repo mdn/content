@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.sdp
 ---
+
 {{APIRef("WebRTC")}}
 
 The property **`RTCSessionDescription.sdp`** is a read-only
@@ -17,9 +18,9 @@ string containing the {{Glossary("SDP")}} which describes the session.
 
 ## Syntax
 
-```js
-const value = sessionDescription.sdp;
-sessionDescription.sdp = value;
+```js-nolint
+const value = sessionDescription.sdp
+sessionDescription.sdp = value
 ```
 
 ### Value

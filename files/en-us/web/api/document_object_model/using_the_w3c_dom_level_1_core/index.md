@@ -6,6 +6,7 @@ tags:
   - DOM
   - NeedsUpdate
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The W3C's [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) is an API for manipulating the DOM trees of HTML and XML documents (among other tree-like types of documents). Due to the ubiquity of the DOM, this API is supported in all major browsers, including Mozilla Firefox and Microsoft Internet Explorer, and serves as a base for scripting on the web.
@@ -28,7 +29,7 @@ A [DOM](https://www.w3.org/TR/REC-DOM-Level-1/introduction.html) tree is a kind 
 
 has a DOM tree that looks like this:
 
-![](using_the_w3c_dom_level_1_core-doctree.jpg)
+![The DOM as a tree-like representation of a document that has a root and node elements containing content](using_the_w3c_dom_level_1_core-doctree.jpg)
 
 (Note that, although the above tree is similar to the above document's DOM tree, it's not identical, as [the actual DOM tree preserves whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace).)
 
@@ -46,7 +47,7 @@ Suppose the author wants to change the header of the above document and write tw
 
 ```html
 <body>
-  <input type="button" value="Change this document." onclick="change()">
+  <input type="button" value="Change this document." onclick="change()" />
   <h2>Header</h2>
   <p>Paragraph</p>
 </body>
@@ -88,8 +89,3 @@ You can see this script as [a complete example](/en-US/docs/Web/API/Document_obj
 Now that you are familiar with the basic concepts of the DOM, you may want to learn about the [DOM Level 1 fundamental methods](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
 
 See also the [DOM Level 1 Core specification](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) from the W3C. It's a reasonably clear spec, although it is formal. The main thing that's useful to authors is the description of the different DOM objects and all their properties and methods. Also see our [other DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
-
-**Original Document Information**
-
-- Author(s): L. David Baron \<dbaron at dbaron dot org>
-- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](https://www.mozilla.org/en-US/foundation/licensing/website-content/)

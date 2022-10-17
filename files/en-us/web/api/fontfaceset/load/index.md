@@ -11,14 +11,14 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.load
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The `load()` method of the {{domxref("FontFaceSet")}} forces all the fonts
-given in parameters to be loaded.
+The `load()` method of the {{domxref("FontFaceSet")}} forces all the fonts given in parameters to be loaded.
 
 ## Syntax
 
-```js
+```js-nolint
 load(font)
 load(font, text)
 ```

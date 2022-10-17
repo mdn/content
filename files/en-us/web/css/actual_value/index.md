@@ -1,12 +1,14 @@
 ---
 title: Actual value
 slug: Web/CSS/actual_value
+page-type: guide
 tags:
   - CSS
   - Guide
   - Reference
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#actual-value
 ---
+
 {{CSSRef}}
 
 The **actual value** of a [CSS](/en-US/docs/Web/CSS) property is the [used value](/en-US/docs/Web/CSS/used_value) of that property after any necessary approximations have been applied. For example, a {{glossary("user agent")}} that can only render borders with a whole-number pixel width may round the thickness of the border to the nearest integer.

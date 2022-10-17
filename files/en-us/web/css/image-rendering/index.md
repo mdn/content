@@ -1,6 +1,7 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
+page-type: css-property
 tags:
   - CSS
   - CSS Images
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.image-rendering
 ---
+
 {{CSSRef}}
 
 The **`image-rendering`** [CSS](/en-US/docs/Web/CSS) property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
@@ -65,9 +67,18 @@ In practical use, the `pixelated` and `crisp-edges` rules can be combined to pro
 
 ```html hidden
 <div>
-  <img class="auto" alt="A small photo of some white and yellow flower against a leafy green background. The image is about 33% smaller than the size it is being displayed at. This upscaling causes the image to appear blurry, with notable soft edges between objects." src="blumen.jpg" />
-  <img class="pixelated" alt="The same photo as the previous image, which is also being upscaled the same amount. Browsers that support the pixelated value for the image-rendering property display the image as very pixelated. Individual pixels are clearly visible and edges appear much sharper." src="blumen.jpg" />
-  <img class="crisp-edges" alt="The same photo as the previous images, which is also being upscaled the same amount. Browsers that support the crisp-edges value for the image-rendering property display the image as very pixelated. In these examples, there is virtually no perceivable difference between the pixelated and crisp-edges versions." src="blumen.jpg" />
+  <img
+    class="auto"
+    alt="A small photo of some white and yellow flower against a leafy green background. The image is about 33% smaller than the size it is being displayed at. This upscaling causes the image to appear blurry, with notable soft edges between objects."
+    src="blumen.jpg" />
+  <img
+    class="pixelated"
+    alt="The same photo as the previous image, which is also being upscaled the same amount. Browsers that support the pixelated value for the image-rendering property display the image as very pixelated. Individual pixels are clearly visible and edges appear much sharper."
+    src="blumen.jpg" />
+  <img
+    class="crisp-edges"
+    alt="The same photo as the previous images, which is also being upscaled the same amount. Browsers that support the crisp-edges value for the image-rendering property display the image as very pixelated. In these examples, there is virtually no perceivable difference between the pixelated and crisp-edges versions."
+    src="blumen.jpg" />
 </div>
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: max()
 slug: Web/CSS/max
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -13,6 +14,7 @@ tags:
   - max
 browser-compat: css.types.max
 ---
+
 {{CSSRef}}
 
 The **`max()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you set the largest (most positive) value from a list of comma-separated expressions as the value of a CSS property value. The `max()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
@@ -61,7 +63,9 @@ The font-size will at minimum be 2rems, or twice the default size of font for th
 
 ```html
 <h1>This text is always legible, but doesn't change size</h1>
-<h1 class="responsive">This text is always legible, and is responsive, to a point</h1>
+<h1 class="responsive">
+  This text is always legible, and is responsive, to a point
+</h1>
 ```
 
 {{EmbedLiveSample("Setting_a_minimum_size_for_a_font", "100%", "300")}}

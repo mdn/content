@@ -14,6 +14,9 @@ tags:
   - server-side
   - servers
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 
 <table>
@@ -39,7 +42,7 @@ This article explains how to set up a simple local testing server on your machin
 
 ## Local files vs. remote files
 
-Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file. There are many ways to achieve this.
+Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double-clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file. There are many ways to achieve this.
 
 If the web address path starts with `file://` followed by the path to the file on your local hard drive, a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with `http://` or `https://`, to show that the file has been received via HTTP.
 
@@ -63,41 +66,41 @@ To do this:
 
 1. Install Python. If you are using Linux or macOS, it should be available on your system already. If you are a Windows user, you can get an installer from the Python homepage and follow the instructions to install it:
 
-    - Go to [python.org](https://www.python.org/)
-    - Under the Download section, click the link for Python "3.xxx".
-    - At the bottom of the page, click the _Windows Installer_ link to download the installer file.
-    - When it has downloaded, run it.
-    - On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
-    - Click _Install_, then click _Close_ when the installation has finished.
+   - Go to [python.org](https://www.python.org/)
+   - Under the Download section, click the link for Python "3.xxx".
+   - At the bottom of the page, click the _Windows Installer_ link to download the installer file.
+   - When it has downloaded, run it.
+   - On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
+   - Click _Install_, then click _Close_ when the installation has finished.
 
 2. Open your command prompt (Windows) / terminal (macOS/ Linux). To check if Python is installed, enter the following command:
 
-    ```bash
-    python -V
-    # If the above fails, try:
-    python3 -V
-    # Or, if the "py" command is available, try:
-    py -V
-    ```
+   ```bash
+   python -V
+   # If the above fails, try:
+   python3 -V
+   # Or, if the "py" command is available, try:
+   py -V
+   ```
 
 3. This should return a version number. If this is OK, navigate to the directory that your example is inside, using the `cd` command.
 
-    ```bash
-    # include the directory name to enter it, for example
-    cd Desktop
-    # use two dots to jump up one directory level if you need to
-    cd ..
-    ```
+   ```bash
+   # include the directory name to enter it, for example
+   cd Desktop
+   # use two dots to jump up one directory level if you need to
+   cd ..
+   ```
 
 4. Enter the command to start up the server in that directory:
 
-    ```bash
-    # If Python version returned above is 3.X
-    # On Windows, try "python -m http.server" or "py -3 -m http.server"
-    python3 -m http.server
-    # If Python version returned above is 2.X
-    python -m SimpleHTTPServer
-    ```
+   ```bash
+   # If Python version returned above is 3.X
+   # On Windows, try "python -m http.server" or "py -3 -m http.server"
+   python3 -m http.server
+   # If Python version returned above is 2.X
+   python -m SimpleHTTPServer
+   ```
 
 5. By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
 

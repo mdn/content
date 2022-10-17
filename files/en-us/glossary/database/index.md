@@ -3,9 +3,9 @@ title: Database
 slug: Glossary/Database
 tags:
   - Database
-  - Glossary
   - Sql
 ---
+
 A **database** is a storing system that collects organized data, to make some works easier like searching, structure, and extend.
 
 In web development, most databases use the relational database management system (RDBMS) to organize data and programming in {{glossary("SQL")}}. Some databases, however, don't follow the former mechanism to organized data, which called NoSQL.

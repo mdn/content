@@ -1,9 +1,10 @@
 ---
-title: Firefox Security Guidelines
+title: Firefox security guidelines
 slug: Web/Security/Firefox_Security_Guidelines
 tags:
   - Security
 ---
+
 ## Purpose
 
 This document outlines a set of security guidelines that will generally apply to all client applications, such as Firefox and Thunderbird.
@@ -82,7 +83,7 @@ If so ensure they are safe and that no better alternatives are available.
 
 1. Does the application access any remote systems?
 
-- Ensure that TLS is used unless there's a *very* good reason not to.
+- Ensure that TLS is used unless there's a _very_ good reason not to.
 - Ensure that no user information is transmitted without the user's consent.
 
 ## Information Storage

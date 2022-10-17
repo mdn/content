@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
+
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the {{domxref("IdleDetector")}}
@@ -20,7 +21,7 @@ whether to grant the origin access to their idle state. Resolves with
 
 ## Syntax
 
-```js
+```js-nolint
 requestPermission()
 ```
 
@@ -31,6 +32,10 @@ None.
 ### Return value
 
 A `Promise` that resolves with `"granted"` or `"denied"`.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

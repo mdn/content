@@ -12,6 +12,7 @@ tags:
   - client-side
   - resources
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 In the previous article we learned about Svelte's TypeScript support, and how to use it to make your application more robust. In this final article we will look at how to deploy your application and get it online, and also share some of the resources that you should go on to, to continue your Svelte learning journey.
@@ -178,25 +179,25 @@ To deploy our app, follow these steps.
 2. Navigate to the root of your app and run `npx vercel`; the first time you do it, you'll be prompted to enter your email address, and follow the steps in the email sent to that address, for security purposes.
 3. Run `npx vercel` again, and you'll be prompted to answer a few questions, like this:
 
-    ```bash
-    > npx vercel
-    Vercel CLI 19.1.2
-    ? Set up and deploy "./mdn-svelte-tutorial"? [Y/n] y
-    ? Which scope do you want to deploy to? opensas
-    ? Link to existing project? [y/N] n
-    ? What's your project's name? mdn-svelte-tutorial
-    ? In which directory is your code located? ./
-    Auto-detected Project Settings (Svelte):
-    - Build Command: `npm run build` or `rollup -c`
-    - Output Directory: public
-    - Development Command: sirv public --single --dev --port $PORT
-    ? Want to override the settings? [y/N] n
-       Linked to opensas/mdn-svelte-tutorial (created .vercel)
-       Inspect: https://vercel.com/opensas/mdn-svelte-tutorial/[...] [1s]
-    ✅  Production: https://mdn-svelte-tutorial.vercel.app [copied to clipboard] [19s]
-       Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
-       To change the domain or build command, go to https://zeit.co/opensas/mdn-svelte-tutorial/settings
-    ```
+   ```bash
+   > npx vercel
+   Vercel CLI 19.1.2
+   ? Set up and deploy "./mdn-svelte-tutorial"? [Y/n] y
+   ? Which scope do you want to deploy to? opensas
+   ? Link to existing project? [y/N] n
+   ? What's your project's name? mdn-svelte-tutorial
+   ? In which directory is your code located? ./
+   Auto-detected Project Settings (Svelte):
+   - Build Command: `npm run build` or `rollup -c`
+   - Output Directory: public
+   - Development Command: sirv public --single --dev --port $PORT
+   ? Want to override the settings? [y/N] n
+      Linked to opensas/mdn-svelte-tutorial (created .vercel)
+      Inspect: https://vercel.com/opensas/mdn-svelte-tutorial/[...] [1s]
+   ✅  Production: https://mdn-svelte-tutorial.vercel.app [copied to clipboard] [19s]
+      Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
+      To change the domain or build command, go to https://zeit.co/opensas/mdn-svelte-tutorial/settings
+   ```
 
 4. Accept all the defaults, and you'll be fine.
 5. Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!
@@ -214,22 +215,22 @@ To demonstrate this, we will deploy our todos app to [GitLab Pages](https://abou
 1. First you'll have to [register at GitLab](https://gitlab.com/users/sign_up) and then [create a new project](https://gitlab.com/projects/new). Give you new project a short, easy name like "mdn-svelte-todo". You will have a remote URL that points to your new GitLab git repository, like `git@gitlab.com:[your-user]/[your-project].git`.
 2. Before you start to upload content to your git repository, it is a good practice to add a `.gitignore` file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the `node_modules` directory by creating a `.gitignore` file in the root folder of your local project, with the following content:
 
-    ```bash
-    node_modules/
-    ```
+   ```bash
+   node_modules/
+   ```
 
 3. Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the _Push an existing folder_ heading:
 
-    ```bash
-    cd your_root_directory # Go into your project's root directory
-    git init
-    git remote add origin https://gitlab.com/[your-user]/mdn-svelte-todo.git
-    git add .
-    git commit -m "Initial commit"
-    git push -u origin main
-    ```
+   ```bash
+   cd your_root_directory # Go into your project's root directory
+   git init
+   git remote add origin https://gitlab.com/[your-user]/mdn-svelte-todo.git
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin main
+   ```
 
-    > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/index.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
+   > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/index.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
 
 With these instructions we initialize a local git repository, then set our remote origin (where we will push our code to) as our repo on GitLab. Next we commit all the files to the local git repo, and then push those to the remote origin on GitLab.
 
@@ -239,51 +240,51 @@ Let's have a go at doing this now.
 
 1. Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
 
-    ```
-    image: node:latest
-    pages:
-      stage: deploy
-      script:
-        - npm install
-        - npm run build
-      artifacts:
-        paths:
-          - public
-      only:
-        - main
-    ```
+   ```
+   image: node:latest
+   pages:
+     stage: deploy
+     script:
+       - npm install
+       - npm run build
+     artifacts:
+       paths:
+         - public
+     only:
+       - main
+   ```
 
-    Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our main branch.
+   Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our main branch.
 
 2. Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
 
-    ```html
-    <title>Svelte To-Do list</title>
+   ```html
+   <title>Svelte To-Do list</title>
 
-    <link rel='icon' type='image/png' href='favicon.png'>
-    <link rel='stylesheet' href='global.css'>
-    <link rel='stylesheet' href='build/bundle.css'>
+   <link rel="icon" type="image/png" href="favicon.png" />
+   <link rel="stylesheet" href="global.css" />
+   <link rel="stylesheet" href="build/bundle.css" />
 
-    <script defer src='build/bundle.js'></script>
-    ```
+   <script defer src="build/bundle.js"></script>
+   ```
 
-    Do this now.
+   Do this now.
 
 3. Now we just have to commit and push our changes to GitLab. Do this by running the following commands:
 
-    ```bash
-    > git add public/index.html
-    > git add .gitlab-ci.yml
-    > git commit -m "Added .gitlab-ci.yml file and fixed index.html absolute paths"
-    > git push
-    Counting objects: 5, done.
-    Delta compression using up to 8 threads.
-    Compressing objects: 100% (5/5), done.
-    Writing objects: 100% (5/5), 541 bytes | 541.00 KiB/s, done.
-    Total 5 (delta 3), reused 0 (delta 0)
-    To gitlab.com:opensas/mdn-svelte-todo.git
-       7dac9f3..5725f46  main -> main
-    ```
+   ```bash
+   > git add public/index.html
+   > git add .gitlab-ci.yml
+   > git commit -m "Added .gitlab-ci.yml file and fixed index.html absolute paths"
+   > git push
+   Counting objects: 5, done.
+   Delta compression using up to 8 threads.
+   Compressing objects: 100% (5/5), done.
+   Writing objects: 100% (5/5), 541 bytes | 541.00 KiB/s, done.
+   Total 5 (delta 3), reused 0 (delta 0)
+   To gitlab.com:opensas/mdn-svelte-todo.git
+      7dac9f3..5725f46  main -> main
+   ```
 
 Whenever there's a job running GitLab will display an icon showing the process of the job. Clicking on it will let you inspect the output of the job.
 
@@ -324,7 +325,7 @@ There are other projects related to Svelte that are worth checking out:
 - Nevertheless, [Svelte.js — The Complete Guide](https://www.udemy.com/course/sveltejs-the-complete-guide/) by [Academind](https://academind.com/) is a very popular option with great ratings.
 - [The Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/), by [Flavio Copes](https://flaviocopes.com/), is also a useful reference for learning the main Svelte concepts.
 - If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), expected to be published in September 2020, but which you can already [preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/) for free.
-- If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau](https://twitter.com/lihautan)'s Compile [Svelte in your head](https://lihautan.com/compile-svelte-in-your-head-part-1/) blog posts. Here's [Part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [Part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/), and [Part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
+- If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau](https://twitter.com/lihautan)'s _Compile Svelte in your head_ blog posts. Here's [Part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [Part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/), and [Part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
 
 ### Interacting with the community
 

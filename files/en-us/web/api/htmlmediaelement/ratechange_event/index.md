@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.ratechange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `ratechange` event is fired when the playback rate has changed.

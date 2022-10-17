@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.EventSource.close
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`close()`** method of the {{domxref("EventSource")}}
@@ -21,7 +22,7 @@ interface closes the connection, if one is made, and sets the
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

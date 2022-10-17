@@ -1,6 +1,7 @@
 ---
 title: CSS Grid Layout
 slug: Web/CSS/CSS_Grid_Layout
+page-type: css-module
 tags:
   - CSS
   - Grid Layout
@@ -11,6 +12,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-grid/
 ---
+
 {{CSSRef}}
 
 **CSS Grid Layout** excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.
@@ -22,7 +24,9 @@ Like tables, grid layout enables an author to align elements into columns and ro
 The example below shows a three-column track grid with new rows created at a minimum of 100 pixels and a maximum of auto. Items have been placed onto the grid using line-based placement.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
@@ -31,7 +35,7 @@ The example below shows a three-column track grid with new rows created at a min
 .wrapper > div {
   border: 2px solid rgb(233 171 88);
   border-radius: 5px;
-  background-color: rgba(233 171 88 / .5);
+  background-color: rgba(233 171 88 / 0.5);
   padding: 1em;
   color: #d9480f;
 }

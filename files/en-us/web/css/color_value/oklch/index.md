@@ -1,6 +1,7 @@
 ---
 title: oklch()
 slug: Web/CSS/color_value/oklch
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -12,7 +13,8 @@ tags:
   - Experimental
 browser-compat: css.types.color.oklch
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`oklch()`** functional notation expresses a given color in the OKLCH color space. It has the same L axis as {{cssxref("color_value/oklab","oklab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
 

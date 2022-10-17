@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 The **`getElementsByName()`** method
@@ -19,7 +20,7 @@ elements with a given `name` attribute in the document.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByName(name)
 ```
 

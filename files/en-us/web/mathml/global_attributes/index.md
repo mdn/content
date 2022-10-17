@@ -28,7 +28,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [MathML](/en-US/docs/Web/MathML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("MathMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
 - [`dir`](/en-US/docs/Web/MathML/Global_attributes/dir)
 
-  - : An enumerated attribute indicating the directionality of the MathML element. It can have the following values:
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating the directionality of the MathML element. It can have the following values:
 
     - `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g. English or Moroccan style);
     - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g. Maghreb or Machrek style);
@@ -48,7 +48,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A [color](/en-US/docs/Web/CSS/color) for the element.
 
 - [`mathsize`](/en-US/docs/Web/MathML/Global_attributes/mathsize)
-  - : A [font-size](/en-US/docs/Web/CSS/font-size) for the element.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
 - [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
   - A logical classes of token elements.
@@ -57,7 +57,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 
 - [`scriptlevel`](/en-US/docs/Web/MathML/Global_attributes/scriptlevel)
-  - : A [math-depth](/en-US/docs/Web/CSS/math-depth) for the element.
+  - : Specifies a [math-depth](/en-US/docs/Web/CSS/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Global_attributes/scriptlevel#values) for accepted values and mapping.
 
 - [`style`](/en-US/docs/Web/HTML/Global_attributes/style)
   - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{MathMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.

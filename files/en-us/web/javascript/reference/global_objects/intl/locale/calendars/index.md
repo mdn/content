@@ -13,6 +13,7 @@ tags:
   - Calendars
 browser-compat: javascript.builtins.Intl.Locale.calendars
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.calendars`** property is an accessor property which returns an array of one or more unique calendar identifiers for the `Locale`.

@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindTransformFeedback
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.bindTransformFeedback()`** method
@@ -18,7 +19,7 @@ passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.
 
 ## Syntax
 
-```js
+```js-nolint
 bindTransformFeedback(target, transformFeedback)
 ```
 

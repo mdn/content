@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframeRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSKeyframeRule`** interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -25,7 +26,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSKeyframeRule.style")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSStyleDeclaration")}} of the CSS style associated with the keyframe.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 

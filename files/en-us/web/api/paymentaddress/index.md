@@ -14,13 +14,14 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress
 ---
+
 {{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`PaymentAddress`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is used to store shipping or payment address information.
 
 It may be useful to refer to the Universal Postal Union web site's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 
-## Properties
+## Instance properties
 
 - {{domxref('PaymentAddress.addressLine')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : An array of strings providing each line of the address not included among the other properties. The exact size and content varies by country or location and can include, for example, a street name, house number, apartment number, rural delivery route, descriptive instructions, or post office box number.
@@ -45,7 +46,7 @@ It may be useful to refer to the Universal Postal Union web site's [Addressing S
 
 > **Note:** Properties for which values were not specified contain empty strings.
 
-## Methods
+## Instance methods
 
 - {{domxref('PaymentAddress.toJSON()')}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A standard serializer that returns a JSON representation of the `PaymentAddress` object's properties.

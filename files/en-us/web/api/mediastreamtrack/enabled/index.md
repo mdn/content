@@ -14,6 +14,7 @@ tags:
   - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`enabled`** property on the

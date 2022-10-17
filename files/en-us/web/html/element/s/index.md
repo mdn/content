@@ -80,10 +80,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Examples
 
+```css
+.sold-out {
+  text-decoration: line-through;
+}
+```
+
 ```html
-<s>Today's Special: Salmon</s> SOLD OUT<br>
-<span style="text-decoration:line-through;">Today's Special:
-  Salmon</span> SOLD OUT
+<s>Today's Special: Salmon</s> SOLD OUT<br />
+<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
 ```
 
 {{EmbedLiveSample("Examples")}}

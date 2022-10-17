@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "unreachable code after return statement" occurs when using an

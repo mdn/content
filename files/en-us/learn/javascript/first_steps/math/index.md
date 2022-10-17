@@ -12,13 +12,14 @@ tags:
   - Operators
   - augmented
   - increment
-  - l10n:priority
+  - "l10n:priority"
   - maths
   - modulo
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-At this point in the course we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.
+At this point in the course, we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.
 
 <table>
   <tbody>
@@ -68,22 +69,22 @@ Let's quickly play with some numbers to reacquaint ourselves with the basic synt
 
 1. First of all, let's declare a couple of variables and initialize them with an integer and a float, respectively, then type the variable names back in to check that everything is in order:
 
-    ```js
-    const myInt = 5;
-    const myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   const myInt = 5;
+   const myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. Number values are typed in without quote marks — try declaring and initializing a couple more variables containing numbers before you move on.
 3. Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
+   You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
 
 ### Useful Number methods
 
@@ -105,7 +106,7 @@ Sometimes you might end up with a number that is stored as a string type, which 
 For example, try typing these lines into your console:
 
 ```js
-let myNumber = '74';
+let myNumber = "74";
 myNumber += 3;
 ```
 
@@ -118,7 +119,7 @@ typeof myNumber;
 To fix the calculation, you can do this:
 
 ```js
-let myNumber = '74';
+let myNumber = "74";
 myNumber = Number(myNumber) + 3;
 ```
 
@@ -202,29 +203,29 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
 1. First try entering some simple examples of your own, such as
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
-    ```js
-    const num1 = 10;
-    const num2 = 50;
-    9 * num1;
-    num1 ** 3;
-    num2 / num1;
-    ```
+   ```js
+   const num1 = 10;
+   const num2 = 50;
+   9 * num1;
+   num1 ** 3;
+   num2 / num1;
+   ```
 
 3. Last for this section, try entering some more complex expressions, such as:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Parts of this last set of calculations might not give you quite the result you were expecting; the section below might well give the answer as to why.
 
@@ -242,7 +243,7 @@ But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2
 
 This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).
 
-If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
+If you want to override operator precedence, you can put parentheses around the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
 
 ```js
 (num2 + num1) / (8 + 2);
@@ -250,7 +251,7 @@ If you want to override operator precedence, you can put parentheses round the p
 
 Try it and see.
 
-> **Note:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence).
+> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ## Increment and decrement operators
 
@@ -405,7 +406,7 @@ If you try entering some of these values in a console, you'll see that they all 
 
 - Display the correct text label on a button depending on whether a feature is turned on or off
 - Display a game over message if a game is over or a victory message if the game has been won
-- Display the correct seasonal greeting depending what holiday season it is
+- Display the correct seasonal greeting depending on what holiday season it is
 - Zoom a map in or out depending on what zoom level is selected
 
 We'll look at how to code such logic when we look at conditional statements in a future article. For now, let's look at a quick example:
@@ -416,18 +417,18 @@ We'll look at how to code such logic when we look at conditional statements in a
 ```
 
 ```js
-const btn = document.querySelector('button');
-const txt = document.querySelector('p');
+const btn = document.querySelector("button");
+const txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Start machine') {
-    btn.textContent = 'Stop machine';
-    txt.textContent = 'The machine has started!';
+  if (btn.textContent === "Start machine") {
+    btn.textContent = "Stop machine";
+    txt.textContent = "The machine has started!";
   } else {
-    btn.textContent = 'Start machine';
-    txt.textContent = 'The machine is stopped.';
+    btn.textContent = "Start machine";
+    txt.textContent = "The machine is stopped.";
   }
 }
 ```
@@ -446,7 +447,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-In this article we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
+In this article, we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 

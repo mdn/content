@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.mediaType
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`mediaType`**
@@ -16,7 +17,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns the {{Glossary("MIME
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.mediaType
 ```
 

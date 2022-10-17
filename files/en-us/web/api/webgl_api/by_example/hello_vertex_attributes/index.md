@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
 
 This WebGL example demonstrates how to combine shader programming and user interaction by sending user input to the shader using vertex attributes.
@@ -21,8 +22,10 @@ This WebGL example demonstrates how to combine shader programming and user inter
 How to send input to a shader program by saving data in GPU memory.
 
 ```html hidden
-<p>First encounter with attributes and sending data to GPU. Click
-on the canvas to change the horizontal position of the square.</p>
+<p>
+  First encounter with attributes and sending data to GPU. Click on the canvas
+  to change the horizontal position of the square.
+</p>
 ```
 
 ```html hidden
@@ -31,45 +34,45 @@ on the canvas to change the horizontal position of the square.</p>
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```html
 <script type="x-shader/x-vertex" id="vertex-shader">
-#version 100
-precision highp float;
+  #version 100
+  precision highp float;
 
-attribute float position;
+  attribute float position;
 
-void main() {
-  gl_Position = vec4(position, 0.0, 0.0, 1.0);
-  gl_PointSize = 64.0;
-}
+  void main() {
+    gl_Position = vec4(position, 0.0, 0.0, 1.0);
+    gl_PointSize = 64.0;
+  }
 </script>
 ```
 
 ```html
 <script type="x-shader/x-fragment" id="fragment-shader">
-#version 100
-precision mediump float;
-void main() {
-  gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
-}
+  #version 100
+  precision mediump float;
+  void main() {
+    gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+  }
 </script>
 ```
 

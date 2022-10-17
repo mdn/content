@@ -10,18 +10,17 @@ tags:
   - Web
 browser-compat: api.Navigator.share
 ---
+
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
 The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
-
-This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
 
 The method resolves a {{jsxref("Promise")}} with `undefined`.
 On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the _share target_.
 
 ## Syntax
 
-```js
+```js-nolint
 navigator.share(data)
 ```
 
@@ -116,6 +115,10 @@ The following is a list of usually shareable file types. However, you should alw
   - `.ogv` - `video/ogg`
   - `.webm` - `video/webm`
 
+## Security
+
+This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
+
 ## Examples
 
 ### Sharing a URL
@@ -170,7 +173,7 @@ To share files, first test for and call {{domxref("navigator.canShare()")}}. The
 ```html
 <div>
   <label for="files">Select images to share:</label>
-  <input id="files" type="file" accept="image/*" multiple>
+  <input id="files" type="file" accept="image/*" multiple />
 </div>
 <button id="share" type="button">Share your images!</button>
 <output id="output"></output>

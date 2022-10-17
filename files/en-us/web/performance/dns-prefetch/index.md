@@ -5,6 +5,9 @@ tags:
   - Web Performance
   - dns-prefetch
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 **`DNS-prefetch`** is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.
 
 ## Why use dns-prefetch?
@@ -16,7 +19,7 @@ When a browser requests a resource from a (third party) server, that [cross-orig
 ## Syntax
 
 ```html
-<link rel="dns-prefetch" href="https://fonts.googleapis.com/" >
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 ```
 
 ## Examples
@@ -24,9 +27,9 @@ When a browser requests a resource from a (third party) server, that [cross-orig
 ```html
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
     <!-- and all other head elements -->
   </head>
   <body>
@@ -52,8 +55,8 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 **Third**, consider pairing `dns-prefetch` with the `preconnect` hint. While `dns-prefetch` only performs a DNS lookup, `preconnect` establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Combining the two provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can safely use them together like so:
 
 ```html
-<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
-<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 ```
 
 > **Note:** If a page needs to make connections to many third-party domains, preconnecting them all is counterproductive. The `preconnect` hint is best used for only the most critical connections. For the others, just use `<link rel="dns-prefetch">` to save time on the first step — the DNS lookup.

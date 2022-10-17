@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisErrorEvent.error
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`error`** property of the
@@ -48,7 +49,7 @@ A string containing an error code. Possible codes are:
   - : The operation failed because the synthesis engine raised an error.
 - `language-unavailable`
   - : No appropriate voice was available for the language set in
-    {{domxref("SpeechSynthesisUtterance.lang")}}.
+    {{domxref("SpeechSynthesisUtterance.lang")}}. You can use the [`window.speechSynthesis.getVoices()`](/en-US/docs/Web/API/SpeechSynthesis/getVoices) method to determine which voices and languages are supported in the user's browser.
 - `voice-unavailable`
   - : The voice set in {{domxref("SpeechSynthesisUtterance.voice")}} was not available.
 - `text-too-long`

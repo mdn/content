@@ -13,26 +13,27 @@ tags:
   - Experimental
 browser-compat: api.LayoutShift
 ---
+
 {{APIRef("Layout Instability API")}}{{SeeCompatTable}}
 
 The `LayoutShift` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides insights into the stability of web pages based on movements of the elements on the page.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref("LayoutShift.value")}}
+- {{domxref("LayoutShift.value")}} {{Experimental_Inline}}
   - : Returns the `impact fraction` (fraction of the viewport that was shifted) times the `distance fraction` (distance moved as a fraction of viewport).
-- {{domxref("LayoutShift.hadRecentInput")}}
+- {{domxref("LayoutShift.hadRecentInput")}} {{Experimental_Inline}}
   - : Returns `true` if there was a user input in the past 500 milliseconds.
-- {{domxref("LayoutShift.lastInputTime")}}
+- {{domxref("LayoutShift.lastInputTime")}} {{Experimental_Inline}}
   - : Returns the time of the most recent user input.
-- {{domxref("LayoutShift.sources")}}
+- {{domxref("LayoutShift.sources")}} {{Experimental_Inline}}
   - : Returns an array of {{domxref('LayoutShiftAttribution')}} objects with information on the elements that were shifted.
 
-## Methods
+## Instance methods
 
-- {{domxref("LayoutShift.toJSON()")}}
+- {{domxref("LayoutShift.toJSON()")}} {{Experimental_Inline}}
   - : Converts the properties to JSON.
 
 ## Examples

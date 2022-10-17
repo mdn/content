@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.clear
 ---
+
 {{JSRef}}
 
 The **`clear()`** method removes all elements from a
@@ -19,7 +20,7 @@ The **`clear()`** method removes all elements from a
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

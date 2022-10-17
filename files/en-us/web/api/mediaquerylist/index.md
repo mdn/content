@@ -14,6 +14,7 @@ tags:
   - query
 browser-compat: api.MediaQueryList
 ---
+
 {{APIRef("CSSOM")}}
 
 A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/Media_Queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
@@ -24,7 +25,7 @@ This is very useful for adaptive design, since this makes it possible to observe
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `MediaQueryList` interface inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
@@ -33,7 +34,7 @@ _The `MediaQueryList` interface inherits properties from its parent interface, {
 - {{DOMxRef("MediaQueryList.media", "media")}} {{ReadOnlyInline}}
   - : A string representing a serialized media query.
 
-## Methods
+## Instance methods
 
 _The `MediaQueryList` interface inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 

@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.AudioDecoder
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} decodes chunks of audio.
@@ -19,18 +20,18 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 - {{domxref("AudioDecoder.AudioDecoder", "AudioDecoder()")}} {{Experimental_Inline}}
   - : Creates a new `AudioDecoder` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioDecoder.decodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of decode queue requests.
 - {{domxref("AudioDecoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the state of the underlying codec and whether it is configured for decoding.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioDecoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the audio decoder for decoding chunks.
-- {{domxref("AudioDecoder.decode()")}}
+- {{domxref("AudioDecoder.decode()")}} {{Experimental_Inline}}
   - : Enqueues a control message to decode a given chunk of audio.
 - {{domxref("AudioDecoder.flush()")}} {{Experimental_Inline}}
   - : Returns a promise that resolves once all pending messages in the queue have been completed.

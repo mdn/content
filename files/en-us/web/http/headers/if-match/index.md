@@ -9,6 +9,7 @@ tags:
   - Request header
 browser-compat: http.headers.If-Match
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Match`** HTTP request header makes a request conditional.

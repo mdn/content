@@ -1,6 +1,7 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function
 ---
+
 {{CSSRef}}
 
 The **`<filter-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
@@ -69,9 +71,7 @@ This example provides a simple graphic, along with a select menu to allow you to
       <option>sepia</option>
     </select>
   </li>
-  <li>
-    <input type="range"><output></output>
-  </li>
+  <li><input type="range" /><output></output></li>
   <li>
     <p>Current value: <code></code></p>
   </li>
@@ -84,7 +84,8 @@ This example provides a simple graphic, along with a select menu to allow you to
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    no-repeat center;
 }
 
 li {
@@ -95,7 +96,7 @@ li {
 }
 
 input {
-  width: 60%
+  width: 60%;
 }
 
 output {

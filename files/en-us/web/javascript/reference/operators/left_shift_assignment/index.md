@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.left_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The left shift assignment operator (`<<=`) moves the specified amount of bits to the left and assigns the result to the variable.
@@ -17,7 +18,7 @@ The left shift assignment operator (`<<=`) moves the specified amount of bits to
 
 ## Syntax
 
-```js
+```js-nolint
 x <<= y // x = x << y
 ```
 
@@ -43,5 +44,5 @@ a <<= 2; // 20
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
 - [Left shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift)

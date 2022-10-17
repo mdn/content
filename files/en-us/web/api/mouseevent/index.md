@@ -13,6 +13,7 @@ tags:
   - mouse
 browser-compat: api.MouseEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse).
@@ -30,7 +31,7 @@ Several more specific events are based on `MouseEvent`, including {{domxref("Whe
 - {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}
   - : Creates a `MouseEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
@@ -85,14 +86,14 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
   - : Alias for {{domxref("MouseEvent.clientY")}}.
 
-## Constants
+## Static properties
 
 - {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : Minimum force necessary for a normal click.
 - {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : Minimum force necessary for a force click.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
@@ -109,8 +110,12 @@ Event state (canceled or not) is then determined with the return value of method
 ### HTML
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label></p>
-<p><button id="button">Click me to send a MouseEvent to the checkbox</button></p>
+<p>
+  <label><input type="checkbox" id="checkbox" /> Checked</label>
+</p>
+<p>
+  <button id="button">Click me to send a MouseEvent to the checkbox</button>
+</p>
 ```
 
 ### JavaScript

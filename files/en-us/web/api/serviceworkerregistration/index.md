@@ -24,7 +24,7 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
 
@@ -47,7 +47,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
 
-## Methods
+## Instance methods
 
 _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 

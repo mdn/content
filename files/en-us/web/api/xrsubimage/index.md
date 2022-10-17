@@ -10,9 +10,11 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRSubImage
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRSubImage`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) represents what viewport of the GPU texture to use for rendering.
 
@@ -22,9 +24,9 @@ Below is a list of interfaces based on the <code>XRSubImage</code> interface.
 
 - {{domxref("XRWebGLSubImage")}}: used during rendering of WebGL layers.
 
-## Properties
+## Instance properties
 
-- {{domxref("XRSubImage.viewport")}} {{ReadOnlyInline}}
+- {{domxref("XRSubImage.viewport")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{domxref("XRViewport")}} used when rendering the sub image.
 
 ## Specifications

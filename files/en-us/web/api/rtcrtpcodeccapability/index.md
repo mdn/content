@@ -17,11 +17,12 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCRtpCodecCapability
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The [WebRTC API's](/en-US/docs/Web/API/WebRTC_API) **`RTCRtpCodecCapability`** dictionary provides information describing the capabilities of a single [media codec](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpCodecCapability.channels", "channels")}} {{optional_inline}}
   - : An unsigned integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.

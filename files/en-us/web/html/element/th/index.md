@@ -87,7 +87,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute contains a non-negative integer value that indicates for how many rows the cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
 - {{htmlattrdef("scope")}}
 
-  - : This enumerated attribute defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to. It may have the following values:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to. It may have the following values:
 
     - `row`: The header relates to all cells of the row it belongs to.
     - `col`: The header relates to all cells of the column it belongs to.
@@ -121,7 +121,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** Do not use this attribute as it is obsolete in the latest standard: use the {{htmlattrxref("scope", "th")}} attribute instead.
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
   - : This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) and is prefixed by '#'. This attribute may be used with one of sixteen predefined color strings:
 
@@ -142,7 +142,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `fuchsia` = "#FF00FF"
     - `aqua` = "#00FFFF"
 
-    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("th")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To create a similar effect use the {{cssxref("background-color")}} property in [CSS](/en-US/docs/Web/CSS) instead.
+    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("th")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To create a similar effect use the {{cssxref("background-color")}} property in CSS instead.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 

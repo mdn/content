@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
@@ -19,7 +20,7 @@ The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
@@ -68,11 +69,11 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
 - {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
   - : Controls whether the video frame is trimmed to fit the video display.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
+- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object that contains the current playback metrics. This information includes things like the number of dropped or corrupted frames, as well as the total number of frames.
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
   - : Requests that the user agent make video enters picture-in-picture mode

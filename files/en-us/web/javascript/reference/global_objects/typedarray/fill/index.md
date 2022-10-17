@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.fill
 ---
+
 {{JSRef}}
 
 The **`fill()`** method fills all the elements of a typed array
@@ -22,7 +23,7 @@ algorithm as {{jsxref("Array.prototype.fill()")}}. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)

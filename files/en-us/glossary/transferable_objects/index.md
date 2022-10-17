@@ -35,11 +35,11 @@ After transfer any attempt to read or write `uInt8Array` from the main thread wi
 ```js
 // Create an 8MB "file" and fill it. 8MB = 1024 * 1024 * 8 B
 const uInt8Array = new Uint8Array(1024 * 1024 * 8).map((v, i) => i);
-console.log(uInt8Array.byteLength);  // 8388608
+console.log(uInt8Array.byteLength); // 8388608
 
 // Transfer the underlying buffer to a worker
 worker.postMessage(uInt8Array, [uInt8Array.buffer]);
-console.log(uInt8Array.byteLength);  // 0
+console.log(uInt8Array.byteLength); // 0
 ```
 
 > **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
@@ -53,22 +53,22 @@ The code below shows a {{domxref("structuredClone()")}} operation where the unde
 ```js
 const original = new Uint8Array(1024);
 const clone = structuredClone(original);
-console.log(original.byteLength);  // 1024
-console.log(clone.byteLength);  // 1024
+console.log(original.byteLength); // 1024
+console.log(clone.byteLength); // 1024
 
 original[0] = 1;
-console.log(clone[0]);  // 0
+console.log(clone[0]); // 0
 
 // Transferring the Uint8Array would throw an exception as it is not a transferable object
 // const transferred = structuredClone(original, {transfer: [original]});
 
 // We can transfer Uint8Array.buffer.
-const transferred = structuredClone(original, {transfer: [original.buffer]});
-console.log(transferred.byteLength);  // 1024
-console.log(transferred[0]);  // 1
+const transferred = structuredClone(original, { transfer: [original.buffer] });
+console.log(transferred.byteLength); // 1024
+console.log(transferred[0]); // 1
 
 // After transferring Uint8Array.buffer cannot be used.
-console.log(original.byteLength);  // 0
+console.log(original.byteLength); // 0
 ```
 
 ## Supported objects

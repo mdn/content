@@ -14,6 +14,7 @@ tags:
   - track
 browser-compat: api.MediaStreamTrackEvent
 ---
+
 {{APIRef("Media Streams API")}}
 
 The **`MediaStreamTrackEvent`** interface represents events which indicate that a {{domxref("MediaStream")}} has had tracks added to or removed from the stream through calls to [Media Stream API](/en-US/docs/Web/API/Media_Streams_API) methods. These events are sent to the stream when these changes occur.
@@ -22,7 +23,7 @@ The **`MediaStreamTrackEvent`** interface represents events which indicate that 
 
 The events based on this interface are {{domxref("MediaStream/addtrack_event", "addtrack")}} and {{domxref("MediaStream/removetrack_event", "removetrack")}}.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
@@ -34,7 +35,7 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}._
 - {{domxref("MediaStreamTrackEvent.MediaStreamTrackEvent", "MediaStreamTrackEvent()")}}
   - : Constructs a new `MediaStreamTrackEvent` with the specified configuration.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent {{domxref("Event")}}._
 

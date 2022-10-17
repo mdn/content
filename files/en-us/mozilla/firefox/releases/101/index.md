@@ -2,11 +2,12 @@
 title: Firefox 101 for developers
 slug: Mozilla/Firefox/Releases/101
 tags:
-  - '101'
+  - "101"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 101 that will affect developers. Firefox 101 was released on May 31, 2022.
@@ -19,11 +20,11 @@ No notable changes.
 
 ### CSS
 
-- The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`)  or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ({{bug(1656363)}}).
+- The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`) or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ({{bug(1656363)}}).
 
 - Three new viewport sizes have been introduced: small (`s`), large (`l`), and dynamic (`d`). These new sizes have added new [viewport-percentage length units](/en-US/docs/Web/CSS/length) in addition to the existing ones - `vh`, `vw`, `vmax`, and `vmin`. The new viewport-percentage length units include `svh`, `lvh`, `dvh`, `svw`, `lvw`, `dvw`, `svmax`, `lvmax`, `dvmax`, `svmin`, `lvmin`, and `dvmin` ({{bug(1610815)}}). Additionally, the units `vb` and `vi` are now supported by default ({{bug(1610815)}}).
 
-- Support for the [`inline-size`](/en-US/docs/Web/CSS/contain#inline-size) value for the `contain` property has been added. For more information, see  ({{bug(1755565)}}).
+- Support for the [`inline-size`](/en-US/docs/Web/CSS/contain#inline-size) value for the `contain` property has been added. For more information, see ({{bug(1755565)}}).
 
 ### JavaScript
 
@@ -85,7 +86,7 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 - Addition of the {{WebExtAPIRef("storage.StorageArea.onChanged")}} event that enables you to listen for changes in content in the `local` and `sync` storage areas ({{bug(1758475)}}).
 
-#### Removals
+### Removals
 
 ### Other
 

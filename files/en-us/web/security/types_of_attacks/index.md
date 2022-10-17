@@ -3,7 +3,6 @@ title: Types of attacks
 slug: Web/Security/Types_of_attacks
 ---
 
-
 This article describes various types of security attacks and techniques to mitigate them.
 
 ## Click-jacking
@@ -36,18 +35,21 @@ CSRF (sometimes also called XSRF) is a related class of attack. The attacker cau
 Wikipedia mentions a good example for CSRF. In this situation, someone includes an image that isn't really an image (for example in an unfiltered chat or forum), instead it really is a request to your bank's server to withdraw money:
 
 ```html
-<img src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 Now, if you are logged into your bank account and your cookies are still valid (and there is no other validation), you will transfer money as soon as you load the HTML that contains this image. For endpoints that require a POST request, it's possible to programmatically trigger a \<form> submit (perhaps in an invisible \<iframe>) when the page is loaded:
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
-  <input type="hidden" name="account" value="bob">
-  <input type="hidden" name="amount" value="1000000">
-  <input type="hidden" name="for" value="mallory">
+  <input type="hidden" name="account" value="bob" />
+  <input type="hidden" name="amount" value="1000000" />
+  <input type="hidden" name="for" value="mallory" />
 </form>
-<script>window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }
+</script>
 ```
 
 There are a few techniques that should be used to prevent this from happening:

@@ -13,6 +13,7 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelSplitterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ChannelSplitterNode` interface, often used in conjunction with its opposite, {{domxref("ChannelMergerNode")}}, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
@@ -60,11 +61,11 @@ If your `ChannelSplitterNode` always has one single input, the amount of outputs
 - {{domxref("ChannelSplitterNode.ChannelSplitterNode()","ChannelSplitterNode()")}}
   - : Creates a new `ChannelSplitterNode` object instance.
 
-## Properties
+## Instance properties
 
 _No specific property; inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

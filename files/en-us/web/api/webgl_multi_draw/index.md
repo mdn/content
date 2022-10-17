@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw`** extension is part of the
@@ -31,7 +32,7 @@ When this extension is enabled:
 >
 > This extension enables the {{domxref("ANGLE_instanced_arrays")}} extension implicitly.
 
-## Methods
+## Instance methods
 
 - [`ext.multiDrawArraysWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL)
   - : Renders multiple primitives from array data (identical to multiple calls to
@@ -60,10 +61,10 @@ as `gl_DrawID`. For non-`multi*` calls, the value of
 
 ```html
 <script type="x-shader/x-vertex">
-#extension GL_ANGLE_multi_draw : require
-void main() {
-  gl_Position = vec4(gl_DrawID, 0, 0, 1);
-}
+  #extension GL_ANGLE_multi_draw : require
+  void main() {
+    gl_Position = vec4(gl_DrawID, 0, 0, 1);
+  }
 </script>
 ```
 
