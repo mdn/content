@@ -11,7 +11,7 @@ tags:
 
 {{CSSRef}}
 
-This article explains the inline formatting context
+This article explains the inline formatting context.
 
 ## Core concepts
 

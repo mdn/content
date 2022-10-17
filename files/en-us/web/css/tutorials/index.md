@@ -30,7 +30,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
     This tutorial describes how to achieve this in a simple way.
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays.
-    Media queries are the fundamental building blocks in achieving Websites that render everywhere in their best quality.
+    Media queries are the fundamental building blocks in building websites that render everywhere in their best quality.
 - [Understanding z-index](/en-US/docs/Web/CSS/Understanding_z-index)
   - : Controlling superposition of boxes is a basic feature that is very quickly needed by Web developers.
     Though not that difficult, it requires a basic knowledge of CSS.
