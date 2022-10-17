@@ -611,7 +611,7 @@ function draw() {
   conicGrad1.addColorStop(1, '#fff');
 
   const conicGrad2 = ctx.createConicGradient(0, 187, 75);
-  // we multiple our values by Math.PI/180 to convert degrees to radians
+  // we multiply our values by Math.PI/180 to convert degrees to radians
   conicGrad2.addColorStop(0, 'black');
   conicGrad2.addColorStop(0.25, 'black');
   conicGrad2.addColorStop(0.25, 'white');
