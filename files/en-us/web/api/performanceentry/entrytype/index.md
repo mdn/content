@@ -45,6 +45,18 @@ table below.
       <td>Reports load time of elements.</td>
     </tr>
     <tr>
+      <td><code>event</code></td>
+      <td>{{domxref('PerformanceEventTiming')}}</td>
+      <td>string</td>
+      <td>Reports event latencies.</td>
+    </tr>
+    <tr>
+      <td><code>first-input</code></td>
+      <td>{{domxref('PerformanceEventTiming')}}</td>
+      <td>string</td>
+      <td>Reports the {{Glossary("first input delay")}}.</td>
+    </tr>
+    <tr>
       <td><code>navigation</code></td>
       <td>
         {{domxref('PerformanceNavigationTiming')}}

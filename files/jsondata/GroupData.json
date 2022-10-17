@@ -213,6 +213,14 @@
       "properties": [],
       "events": []
     },
+    "CSS Properties and Values API": {
+      "overview": ["CSS Properties and Values API"],
+      "guides": ["/docs/Web/API/CSS_Properties_and_Values_API/guide"],
+      "interfaces": ["CSSPropertyRule"],
+      "methods": ["CSS.registerProperty"],
+      "properties": [],
+      "events": []
+    },
     "CSS Typed Object Model API": {
       "overview": ["CSS Typed OM API"],
       "guides": ["/docs/Web/API/CSS_Typed_OM_API/Guide"],
@@ -358,6 +366,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
+      "guides": ["/docs/Web/API/Encoding_API/Encodings"],
       "interfaces": [
         "TextDecoder",
         "TextEncoder",

@@ -64,7 +64,7 @@ The following steps describe what you need to do to complete the table example. 
 
 The finished table should look like this:
 
-![](assessment-table.png)
+![Complex table has a caption above it. The top row cells are column headers. There are three columns of headers. The first two columns have merged cells, with the third column being individual headers for each row. All the text is centered. The headers and every other row have a slight background color.](assessment-table.png)
 
 You can also [see the example live here](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no looking at the source code — don't cheat!)
 

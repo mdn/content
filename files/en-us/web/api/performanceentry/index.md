@@ -20,6 +20,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
+- {{domxref("PerformanceEventTiming")}}
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformancePaintTiming")}}
