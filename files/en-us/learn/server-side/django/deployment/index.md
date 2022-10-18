@@ -321,18 +321,14 @@ It lists the commands that will be executed by Railway to start your site.
 Create the file `Procfile` (with no file extension) in the root of your GitHub repo and copy/paste in the following text:
 
 ```plain
-web: gunicorn locallibrary.wsgi
+web: python manage.py migrate && gunicorn locallibrary.wsgi
 ```
 
 The `web:` prefix tells Railway that this is a web process and can be sent HTTP traffic.
-The process that is started is _gunicorn_, a popular web application server, and we pass it configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
+We then call the command Django migration command `python manage.py migrate` to set up the database tables.
+Finally, we start the _gunicorn_ process, a popular web application server, passing it configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
 
-Note that you can also use the Procfile to start worker processes or to run tasks before the release is deployed.
-For example, the following instruction might be used to get Django to setup our database before running gunicorn.
-
-```plain
-web: python manage.py migrate &&  gunicorn locallibrary.wsgi
-```
+Note that you can also use the Procfile to start worker processes or to run other non-interactive tasks before the release is deployed.
 
 #### Gunicorn
 
@@ -422,10 +418,10 @@ python3 manage.py collectstatic
 ```
 
 For this tutorial _collectstatic_ is run automatically by Railway before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
-The `Whitenoise` project then serves the files from the location defined by `STATIC_ROOT` (by default) at the base URL `/static/`.
+`Whitenoise` then finds the files from the location defined by `STATIC_ROOT` (by default) and serves them at the base URL defined by `STATIC_URL`.
 
 > **Note:** Railway does not document that it calls `python3 manage.py collectstatic` when a Django application is loaded — this has been verified by testing.
-> If needed you could run the tool in the Procfile.
+> If needed you could run the tool by adding the command to the [Procfile](#procfile).
 
 ##### settings.py
 
@@ -512,9 +508,6 @@ wheel==0.37.1
 whitenoise==6.0.0
 ```
 
-> **Note:** Make sure that a **psycopg2** line like the one above is present!
-> Even if you didn't install this locally then you should still add it to **requirements.txt**.
-
 #### Runtime
 
 The **runtime.txt** file, if defined, tells Railway which version of Python to use.
@@ -548,157 +541,191 @@ We should now be ready to start deploying LocalLibrary on Railway.
 
 ### Get a Railway account
 
-To start using Heroku you will first need to create an account:
+To start using Railway you will first need to create an account:
 
 - Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
 - Select Github in the popup to login using your Github credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
 
+### Deploy on Railway from Github
+
+Next we'll setup Railway to deploy our library from Github.
+First choose the **Dashboard** option from the site top menu, then select the **New Project** button:
+
+![Railway website dashboard with new project button](railway_new_project_button.png)
+
+Railway will display a list of options for the new project, including the option to deploy a project from a template that is first created in your Github account, and a number of databases.
+Select **Deploy from GitHub repo**.
+
+![Railway website screen - deploy](railway_new_project_button_deploy_github_repo.png)
+
+All projects in the Github repos you shared with Railway during setup are displayed.
+Select your Github repository for the local library: `<user-name>/django-locallibrary-tutorial`.
+
+![Railway website screen - selectrepo](railway_new_project_button_deploy_github_selectrepo.png)
+
+Railway will then load and deploy your project, displaying progress on the deployments tab.
+When deployment successfully completes, you'll see a screen like the one below.
+
+![Railway website screen - deployment](railway_project_deploy.png)
+
+You can click the site URL (highlighted below) to open the site in a browser (it still won't work, because the setup is not complete).
+
+### Set ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS
+
+When the site is opened at this point you'll see an error debug screen as shown below.
+This is a Django security error that is raised because our source code is not running on an "allowed host".
+
+![Deployed app - ](site_error_dissallowed_host.png)
+
+> **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
+> We'll show you how to disable it once the site is up and running.
+
+Open **/locallibrary/settings.py** in your Github project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
+
+```python
+## For example, for a site URL at 'web-production-3640.up.railway.app'
+## (replace the string below with your own site URL):
+ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
+
+# During development, you can instead set just the base URL
+# (you might decide to change the site a few times).
+# ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
+```
+
+Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.0/ref/settings/#csrf-trusted-origins) key.
+Open **/locallibrary/settings.py** and add a line like the one below:
+
+```python
+## For example, for a site URL is at 'web-production-3640.up.railway.app'
+## (replace the string below with your own site URL):
+CSRF_TRUSTED_ORIGINS = ['https://web-production-3640.up.railway.app']
+
+# During development/for this tutorial you can instead set just the base URL
+# CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
+```
+
+Then save your settings and commit them to your GitHub repo (Railway will automatically update and redeploy your application).
+
+```bash
+git add -A
+git commit -m 'Update ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS with site URL'
+git push origin main
+```
+
+### Provision and connect a Postgres SQL database
+
+Next we need to create a Postgres database and connect it to the Django application that we just deployed.
+(If you open the site now you'll get a new error because the database cannot be accessed).
+
+On Railway, choose the **Dashboard** option from the site top menu, then select the **New Project** button (these are the same steps as for creating the main project).
+Select **Provision PostgreSQL** from the list of projects:
+
+![Railway new project screen with Provision PostgreSQL highlighted](railway_new_project_button_deploy_provision_posgresql.png)
+
+Railway will set up an empty database and display information about the database in a tabbed view.
+Open the _Connect_ tab and select the "Postgres Connection URL" (above we modified the Django project to read an URL in this format that is provided as an environment variable).
+
+![Railway website screen - provision_postrgessql](railway_postgresql_connect.png)
+
+To make this accessible to the Django we need to add it to the Django process using an environment variable.
+Open the Django project (choose the **Dashboard** option from the site top menu then select the Django project from your dashboard).
+When the information screen is displayed, select the _Variables_ tab and then the **New Variable** button.
+
+Enter the variable name `DATABASE_URL` and the connection URL you copied for the database.
+This will look something like the screen shown below.
+
+![Railway website variables screen - add database url](railway_variables_database_url.png)
+
+Select **Add** to add the variable; the project will then redeploy.
+
+If you open the project now it should display just as it did locally.
+Note however that there is no way to populate the library with data yet, because we have not yet created a superuser account.
+We'll do that using the [CLI](https://docs.railway.app/develop/cli) tool on our local computer.
+
 ### Install the client
 
-Download and install the Railway client by following the [instructions here](https://docs.railway.app/develop/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
 
 After the client is installed you will be able run commands.
-For example to get help on the client:
+Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to github), and running your Django project locally using the same settings as you have on the production server.
+We show these in the next sections.
+
+You can get a list of all the possible commands by entering the following in a terminal.
 
 ```bash
 railway help
 ```
 
-> **Note:** Some commands may not run if you haven't recently logged into your Railway account on your browser.
-> In this case, the client will direct you to login (using a command like `railway login`).
+> **Note:** In the following section we use `railway login` and `railway link` to link the current project to a directory.
+> If you are logged out by the system, you will need to call both commands again to re-link the project.
 
-### Create and upload the website
+### Configure a superuser
 
-To create the app we run the "create" command in the root directory of our repository.
-This creates a git remote ("pointer to a remote repository") named _heroku_ in our local git environment.
+In order to create a superuser we need to call the Django `createsuperuser` command against the production database (this is the same operation as we ran locally in [Django Tutorial Part 4: Django admin site > Creating a superuser](/en-US/docs/Learn/Server-side/Django/Admin_site#creating_a_superuser)).
+Railway doesn't provide direct terminal access to the server, and we can't add this command to the [Procfile](#procfile) because it is interactive.
 
-```bash
-heroku create
-```
+What we can do is call this command locally on our Django project when it is connected to the _production_ database.
+The Railway client makes this easy by providing a mechanism to run commands locally using the same environment variables as the production server, including the database connection string.
 
-> **Note:** You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.
-
-We can then push our app to the Heroku repository as shown below.
-This will upload the app, package it in a dyno, run _collectstatic_, and start the site.
+First open a terminal or command prompt in a git clone of your locallibrary project.
+Then login to your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
 
 ```bash
-git push heroku master
+railway login
 ```
 
-If we're lucky, the app is now "running" on the site, but it won't be working properly because we haven't set up the database tables for use by our application. To do this we need to use the `heroku run` command and start a "[one off dyno](https://devcenter.heroku.com/articles/deploying-python#one-off-dynos)" to perform a migrate operation. Enter the following command in your terminal:
+Once logged in, link your current locallibrary directory to the associated Railway project using the following command.
+Note that you will need to select/enter a particular project when prompted:
 
 ```bash
-heroku run python manage.py migrate
+railway link
 ```
 
-We're also going to need to be able to add books and authors, so lets also create our administration superuser, again using a one-off dyno:
+Now that the local directory and project are _linked_ you can run the local Django project with settings from the production environment.
+First ensure that your normal [Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment) is ready.
+Then call the following command, entering name, email, and password as required:
 
 ```bash
-heroku run python manage.py createsuperuser
+railway run python manage.py createsuperuser
 ```
 
-Once this is complete, we can look at the site. It should work, although it won't have any books in it yet. To open your browser to the new website, use the command:
-
-```bash
-heroku open
-```
-
-Create some books in the admin site, and check out whether the site is behaving as you expect.
-
-### Managing addons
-
-You can check out the add-ons to your app using the `heroku addons` command. This will list all addons, and their price tier and state.
-
-```bash
-> heroku addons
-
-Add-on                                     Plan       Price  State
-─────────────────────────────────────────  ─────────  ─────  ───────
-heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
- └─ as DATABASE
-```
-
-Here we see that we have just one add-on, the postgres SQL database. This is free, and was created automatically when we created the app. You can open a web page to examine the database add-on (or any other add-on) in more detail using the following command:
-
-```bash
-heroku addons:open heroku-postgresql
-```
-
-Other commands allow you to create, destroy, upgrade and downgrade addons (using a similar syntax to opening). For more information see [Managing Add-ons](https://devcenter.heroku.com/articles/managing-add-ons) (Heroku docs).
+You should now be able to open your website admin area (`https://[your-url].railway.app/admin/`) and populate the database, just as shown in [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)).
 
 ### Setting configuration variables
 
-You can check out the configuration variables for the site using the `heroku config` command. Below you can see that we have just one variable, the `DATABASE_URL` used to configure our database.
+The final step is to make the site secure.
+Specifically, we need to disable debug logging and set a secret CSRF key.
+The work to read the needed values from environment variables was done in [getting your website ready to publish](#getting_your_website_ready_to_publish) (see `DJANGO_DEBUG` and `DJANGO_SECRET_KEY`).
+
+Open the information screen for the project and select the _Variables_ tab.
+This should already have the `DATABASE_URL` as shown below.
+
+![Railway - add a new variable screen](railway_variable_new.png)
+
+There are many ways to generate a cryptographically secret key.
+A simple way is to run the following Python command on your development computer:
 
 ```bash
-> heroku config
-
-=== locallibrary Config Vars
-DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3
+python -c "import secrets; print(secrets.token_urlsafe())"
 ```
 
-If you recall from the section on [getting the website ready to publish](#getting_your_website_ready_to_publish), we have to set environment variables for `DJANGO_SECRET_KEY` and `DJANGO_DEBUG`. Let's do this now.
+Select the **New Variable** button and enter the key `DJANGO_SECRET_KEY` with your secret value (then select **Add**).
+Then enter the key `DJANGO_DEBUG` with the value `False`.
+The final set of variables should look like this:
 
-> **Note:** The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/).
-
-We set `DJANGO_SECRET_KEY` using the `config:set` command (as shown below). Remember to use your own secret key!
-
-```bash
-> heroku config:set DJANGO_SECRET_KEY="eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&="
-
-Setting DJANGO_SECRET_KEY and restarting locallibrary... done, v7
-DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
-```
-
-We similarly set `DJANGO_DEBUG`:
-
-```bash
-> heroku config:set DJANGO_DEBUG=False
-
-Setting DJANGO_DEBUG and restarting locallibrary... done, v8
-DJANGO_DEBUG: False
-```
-
-If you visit the site now you'll get a "Bad request" error, because the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting is _required_ if you have `DEBUG=False` (as a security measure). Open **/locallibrary/settings.py** and change the `ALLOWED_HOSTS` setting to include your base app URL (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.
-
-```python
-ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']
-# For example:
-# ALLOWED_HOSTS = ['fathomless-scrubland-30645.herokuapp.com', '127.0.0.1']
-```
-
-Then save your settings and commit them to your GitHub repo and to Heroku:
-
-```bash
-git add -A
-git commit -m 'Update ALLOWED_HOSTS with site and development server URL'
-git push origin main
-git push heroku main
-```
-
-> **Note:** After the site update to Heroku completes, enter a URL that does not exist (e.g. **/catalog/doesnotexist/**). Previously this would have displayed a detailed debug page, but now you should just see a simple "Not Found" page.
+![Railway screen showing all the project variables](railway_variables_all.png)
 
 ### Debugging
 
-The Heroku client provides a few tools for debugging:
+The Railway client provides the logs command to show the tail of logs (a more full log is available on the site for each project):
 
 ```bash
-# Show current logs
-heroku logs
-
-# Show current logs and keep updating with any new results
-heroku logs --tail
-
-# Add additional logging for collectstatic (this tool is run automatically during a build)
-heroku config:set DEBUG_COLLECTSTATIC=1
-
-# Display dyno status
-heroku ps
+railway logs
 ```
 
-If you need more information than these can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.0/topics/logging/).
+If you need more information than this can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.0/topics/logging/).
 
 ## Summary
 
@@ -716,7 +743,16 @@ The next step is to read our last few articles, and then complete the assessment
   - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/modwsgi/) (Django docs)
   - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
-- Heroku
+- Railway Docs
+
+  - [CLI](https://docs.railway.app/develop/cli)
+
+- Digital Ocean
+
+  - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
+  - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
+
+- Heroku Docs (similar setup concepts)
 
   - [Configuring Django apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku docs)
   - [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku docs)
@@ -728,12 +764,6 @@ The next step is to read our last few articles, and then complete the assessment
   - [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs)
   - [Deploying Python applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) (Heroku docs)
   - [Deploying Python and Django apps on Heroku](https://devcenter.heroku.com/articles/deploying-python) (Heroku docs)
-  - [Other Heroku Django docs](https://devcenter.heroku.com/search?q=django)
-
-- Digital Ocean
-
-  - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
-  - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
