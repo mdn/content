@@ -85,10 +85,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("wrap") }}
 
-  - : Indicates how the control wraps text. Possible values are:
+  - : Indicates how the control wraps the value *in the form submission*. Possible values are:
 
-    - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line has no more than the width of the control; the `cols` attribute must also be specified for this to take effect.
-    - `soft`: The browser ensures that all line breaks in the value consist of a CR+LF pair, but does not insert any additional line breaks.
+    - `hard`: soft returns are hard when a line exceeds {{htmlattrxref("cols", "textarea")}} (must be specified); hard returns in the value consists of a CR+LF pair.
+    - `soft`: hard returns in the value consists of a CR+LF pair.
     - `off` {{non-standard_inline}}: Like `soft` but changes appearance to `white-space: pre` so line segments exceeding `cols` are not wrapped and the `<textarea>` becomes horizontally scrollable.
 
     If this attribute is not specified, `soft` is its default value.
