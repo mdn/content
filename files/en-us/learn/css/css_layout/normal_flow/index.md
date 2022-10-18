@@ -116,7 +116,7 @@ In the next article, we'll build on this knowledge by making changes to CSS elem
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
-## In this module
+## See also
 
 - [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)

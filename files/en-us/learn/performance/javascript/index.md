@@ -64,7 +64,7 @@ While optimizing your media files and scripts will get you very far along in ter
 
 {{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
 
-## In this module
+## See also
 
 - [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)

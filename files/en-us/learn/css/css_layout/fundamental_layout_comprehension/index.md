@@ -91,7 +91,7 @@ If you would like your work assessed or are stuck and want to ask for help:
 
 {{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-## In this module
+## See also
 
 - [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)

@@ -106,7 +106,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-## In this module
+## See also
 
 - [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
 - [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)

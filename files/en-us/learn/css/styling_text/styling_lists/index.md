@@ -447,7 +447,7 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-## In this module
+## See also
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)

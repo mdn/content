@@ -340,7 +340,7 @@ You now have all the knowledge you'll need to properly structure your web forms.
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
-## In this module
+## See also
 
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)

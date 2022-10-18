@@ -91,7 +91,7 @@ Street photo: [Street composing](https://www.pinterest.com/pin/40053896058067685
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
-## In this module
+## See also
 
 - [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 - [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)

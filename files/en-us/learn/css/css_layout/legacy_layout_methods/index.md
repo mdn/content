@@ -601,7 +601,7 @@ You now understand how various grid systems are created, which will be useful in
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-## In this module
+## See also
 
 - [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)

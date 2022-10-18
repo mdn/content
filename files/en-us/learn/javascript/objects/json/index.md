@@ -367,7 +367,7 @@ In this article, we've given you a simple guide to using JSON in your programs, 
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
-## In this module
+## See also
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)

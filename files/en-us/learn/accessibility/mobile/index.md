@@ -282,7 +282,7 @@ In this article, we have provided you with some details about common mobile acce
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
-## In this module
+## See also
 
 - [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
 - [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)

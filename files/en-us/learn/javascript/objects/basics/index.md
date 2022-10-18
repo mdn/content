@@ -409,7 +409,7 @@ In the next article we'll look at **prototypes**, which is the fundamental way t
 
 {{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
-## In this module
+## See also
 
 - **Object basics**
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)

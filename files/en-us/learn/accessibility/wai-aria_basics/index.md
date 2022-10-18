@@ -450,7 +450,7 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
-## In this module
+## See also
 
 - [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
 - [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)

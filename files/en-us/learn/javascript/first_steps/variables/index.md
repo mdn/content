@@ -436,7 +436,7 @@ By now you should know a reasonable amount about JavaScript variables and how to
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
 
-## In this module
+## See also
 
 - [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [The first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)

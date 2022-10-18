@@ -389,7 +389,7 @@ Now that the skeleton for the [Local Library website](/en-US/docs/Learn/Server-s
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-## In this module
+## See also
 
 - [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
 - [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)

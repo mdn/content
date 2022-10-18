@@ -376,7 +376,7 @@ Next up, WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
-## In this module
+## See also
 
 - [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
 - [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)

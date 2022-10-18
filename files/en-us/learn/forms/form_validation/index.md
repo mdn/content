@@ -829,7 +829,7 @@ We'll cover [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_f
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
-## In this module
+## See also
 
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)

@@ -357,7 +357,7 @@ You can however make sure that such an app has good enough color contrast and cl
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-## In this module
+## See also
 
 - [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
 - [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)

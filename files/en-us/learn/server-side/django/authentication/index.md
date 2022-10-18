@@ -748,7 +748,7 @@ In our next article, we'll look at how you can use Django forms to collect user 
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-## In this module
+## See also
 
 - [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
 - [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)

@@ -316,7 +316,7 @@ Now that you have a grasp of the HTML behind the different available form contro
 
 {{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
-## In this module
+## See also
 
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)

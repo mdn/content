@@ -455,7 +455,7 @@ In the next article, we'll explore text and how JavaScript allows us to manipula
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-## In this module
+## See also
 
 - [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)

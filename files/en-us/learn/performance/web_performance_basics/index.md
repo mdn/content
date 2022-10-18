@@ -82,7 +82,7 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 - Download everything
 - Use uncompressed media files
 
-## In this module
+## See also
 
 - [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)

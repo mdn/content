@@ -747,7 +747,7 @@ You can't escape the fact that being able to handle words and sentences in progr
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-## In this module
+## See also
 
 - [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)

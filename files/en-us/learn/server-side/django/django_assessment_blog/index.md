@@ -321,7 +321,7 @@ Once you've completed this module you've also finished all the MDN content for l
 
 {{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-## In this module
+## See also
 
 - [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
 - [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)

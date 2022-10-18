@@ -70,7 +70,7 @@ The {{cssxref('contain')}} CSS property allows an author to indicate that an ele
 
 {{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
 
-## In this module
+## See also
 
 - [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)

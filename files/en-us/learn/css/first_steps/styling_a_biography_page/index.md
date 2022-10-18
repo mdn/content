@@ -90,7 +90,7 @@ If you would like your work assessed or are stuck and want to ask for help:
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-## In this module
+## See also
 
 - [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
 - [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)

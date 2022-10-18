@@ -185,7 +185,7 @@ In our next articles we'll explain the authentication and authorization (permiss
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
 
-## In this module
+## See also
 
 - [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
 - [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)

@@ -475,7 +475,7 @@ This article has explored the fundamental concepts behind functions, paving the 
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
-## In this module
+## See also
 
 - [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
 - [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)

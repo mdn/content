@@ -443,7 +443,7 @@ If you want to get started with learning CSS, check out the [CSS Learning Area](
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
-## In this module
+## See also
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)

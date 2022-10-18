@@ -409,7 +409,7 @@ That's only the beginning, however — now it's time to take a deeper look. Form
 
 {{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
-## In this module
+## See also
 
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)

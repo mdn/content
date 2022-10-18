@@ -92,7 +92,7 @@ To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
-## In this module
+## See also
 
 - [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 - [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)

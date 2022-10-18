@@ -307,7 +307,7 @@ Next we'll turn our attention to the actual code issues your testing might uncov
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-## In this module
+## See also
 
 - [Introduction to cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
 - [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)

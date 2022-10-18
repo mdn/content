@@ -326,7 +326,7 @@ For these reasons, most modern asynchronous APIs don't use callbacks. Instead, t
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
-## In this module
+## See also
 
 - **Introducing asynchronous JavaScript**
 - [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)

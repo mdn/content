@@ -655,7 +655,7 @@ You now know all there is to know about floats in modern web development. See th
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
-## In this module
+## See also
 
 - [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)

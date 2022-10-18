@@ -468,7 +468,7 @@ At this point we'll divert briefly from creating the site, and check out the _Dj
 
 {{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-## In this module
+## See also
 
 - [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
 - [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)

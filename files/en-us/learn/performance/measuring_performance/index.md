@@ -100,7 +100,7 @@ This article provided a brief overview of the web performance metrics to help in
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
 
-## In this module
+## See also
 
 - [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)

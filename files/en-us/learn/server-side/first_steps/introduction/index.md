@@ -195,7 +195,7 @@ In a future article we'll help you choose the best web framework for your first 
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
-## In this module
+## See also
 
 - [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
 - [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)

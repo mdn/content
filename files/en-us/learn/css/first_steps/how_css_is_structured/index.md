@@ -567,7 +567,7 @@ At this point, you should have a better idea about how CSS is structured. It's a
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-## In this module
+## See also
 
 - [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
 - [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)

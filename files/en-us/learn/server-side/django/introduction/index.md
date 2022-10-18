@@ -252,7 +252,7 @@ You've already seen some real Django code above, but unlike with client-side cod
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
-## In this module
+## See also
 
 - **Django introduction**
 - [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)

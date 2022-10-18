@@ -56,7 +56,7 @@ The following looks like a scary list, but fortunately, you can get started in w
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
-## In this module
+## See also
 
 - [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 - [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)

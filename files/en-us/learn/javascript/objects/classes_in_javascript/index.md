@@ -222,7 +222,7 @@ In this article, we've gone through the main tools available in JavaScript for w
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
-## In this module
+## See also
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)

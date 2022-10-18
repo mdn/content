@@ -495,7 +495,7 @@ In the next article, we will [plunge straight into the practical](/en-US/docs/Le
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
-## In this module
+## See also
 
 - [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)

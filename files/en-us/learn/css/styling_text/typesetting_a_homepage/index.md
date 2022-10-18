@@ -106,7 +106,7 @@ If you would like your work assessed or are stuck and want to ask for help:
 
 {{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-## In this module
+## See also
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)

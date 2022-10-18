@@ -80,7 +80,7 @@ That's it for now; we hope our brief overview of the web performance topic helpe
 
 {{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
 
-## In this module
+## See also
 
 - [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)

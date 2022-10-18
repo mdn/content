@@ -209,7 +209,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
-## In this module
+## See also
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)

@@ -695,7 +695,7 @@ The only thing left to do is work through this module's assessment, which will t
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
-## In this module
+## See also
 
 - [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)

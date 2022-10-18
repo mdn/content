@@ -778,7 +778,7 @@ We hope you enjoyed playing with text in this article! The next article will pro
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
-## In this module
+## See also
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)

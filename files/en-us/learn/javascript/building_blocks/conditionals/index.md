@@ -852,7 +852,7 @@ And that's all you really need to know about conditional structures in JavaScrip
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
-## In this module
+## See also
 
 - **Making decisions in your code — conditionals**
 - [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)

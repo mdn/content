@@ -218,7 +218,7 @@ button.addEventListener('click', async () => {
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
-## In this module
+## See also
 
 - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
 - [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)

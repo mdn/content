@@ -424,7 +424,7 @@ In the testing section you also briefly saw how we can create a new Django websi
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
-## In this module
+## See also
 
 - [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
 - **Setting up a Django development environment**

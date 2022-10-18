@@ -82,7 +82,7 @@ If you would like your work assessed or are stuck and want to ask for help:
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
-## In this module
+## See also
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)

@@ -308,7 +308,7 @@ Congratulations on reaching the end! This article took you through the entire pr
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
-## In this module
+## See also
 
 - [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
 - [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)

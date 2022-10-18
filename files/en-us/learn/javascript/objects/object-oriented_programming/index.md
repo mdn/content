@@ -245,7 +245,7 @@ In the next article, we'll look at the features JavaScript provides to support c
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
 
-## In this module
+## See also
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)

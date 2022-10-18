@@ -386,7 +386,7 @@ Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/W
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
-## In this module
+## See also
 
 - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
 - **How to use promises**

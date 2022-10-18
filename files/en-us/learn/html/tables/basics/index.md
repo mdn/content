@@ -557,7 +557,7 @@ That just about wraps up the basics of HTML tables. In the next article, we'll l
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
-## In this module
+## See also
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)

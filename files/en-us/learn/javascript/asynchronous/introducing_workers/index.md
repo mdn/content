@@ -251,7 +251,7 @@ Workers can be an effective way to keep the main application responsive, althoug
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-## In this module
+## See also
 
 - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
 - [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)

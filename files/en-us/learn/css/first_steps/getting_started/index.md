@@ -297,7 +297,7 @@ In the next lesson, we'll be taking a look at [how CSS is structured](/en-US/doc
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
-## In this module
+## See also
 
 - [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
 - [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)

@@ -330,7 +330,7 @@ For the next article in this module we'll change direction slightly and consider
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
-## In this module
+## See also
 
 - [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
 - [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)

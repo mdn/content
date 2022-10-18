@@ -132,7 +132,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-## In this module
+## See also
 
 - [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)

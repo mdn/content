@@ -240,7 +240,7 @@ Here, we have only really scratched the surface of HTML. To find out more, go to
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-## In this module
+## See also
 
 - [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 - [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)

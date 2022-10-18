@@ -246,7 +246,7 @@ In the next article we'll look at the concepts underlying object-oriented progra
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
 
-## In this module
+## See also
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
 - **Object prototypes**

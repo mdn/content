@@ -110,7 +110,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 {{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
-## In this module
+## See also
 
 - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
 - [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)

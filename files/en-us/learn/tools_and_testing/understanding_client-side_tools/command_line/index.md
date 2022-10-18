@@ -487,7 +487,7 @@ That brings us to the end of our brief tour of the terminal/command line. Next u
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-## In this module
+## See also
 
 - [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
 - **Command line crash course**

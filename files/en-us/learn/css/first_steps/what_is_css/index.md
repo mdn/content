@@ -132,7 +132,7 @@ You made it to the end of the article! Now that you have some understanding of w
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
-## In this module
+## See also
 
 - [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
 - [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)

@@ -176,7 +176,7 @@ You've nearly finished this module — we only have one more thing to do. In the
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
 
-## In this module
+## See also
 
 - [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
 - [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)

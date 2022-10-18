@@ -329,7 +329,7 @@ That's it for object articles — all that remains now is for you to test your s
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
-## In this module
+## See also
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
