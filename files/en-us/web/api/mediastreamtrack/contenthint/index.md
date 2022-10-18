@@ -14,7 +14,7 @@ browser-compat: api.MediaStreamTrack.contentHint
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack.contentHint`** property returns and sets a string that may be used by the web application to provide a hint as to what type of content the track contains to guide how it should be treated by API consumers. Allowable values depend on the value of the {{domxref("MediaStreamTrack.kind")}} property.
+The **`MediaStreamTrack.contentHint`** property is a string that hints at the type of content the track contains. Allowable values depend on the value of the {{domxref("MediaStreamTrack.kind")}} property.
 
 ## Value
 
