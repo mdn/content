@@ -51,7 +51,7 @@ A policy is described using a set of individual policy directives. A policy dire
 Feature Policy provides two ways to specify policies to control features:
 
 - The {{httpheader("Feature-Policy")}} HTTP header.
-- The [`allow` attribute](/en-US/docs/Web/HTML/Element/iframe#attributes) on iframes.
+- The [`allow`](/en-US/docs/Web/HTML/Element/iframe#attributes) attribute on iframes.
 
 The primary difference between the HTTP header and the `allow` attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.
 
