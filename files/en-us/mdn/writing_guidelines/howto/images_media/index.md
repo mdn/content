@@ -60,6 +60,28 @@ Let's walk through an example:
 6. Now you're ready to create your
    [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
+## Adding alternative text to images
+
+Every `![]` and `<img>` must include `alt` text. Provide short and concise text providing all the relevant information the image conveys to a person who is able to see the image.
+
+Content of `alt` text differ based on the context. For example, if the photo of a dog is the avatar for a Yuckymeat dog food review, `alt="Fluffy"` is appropriate. If the photo is the dog's image on a animal rescue adoption site, the `alt="Fluffy, a tri-color terrier with very short hair, with a tennis ball in her mouth."` is appropriate as image conveys information that is relevant for a prospective dog parent not duplicated in surrounding text. There is rarely a need to describe the image itself. In this scenario, the dog being outdoors with a red collar and a blue leash doesn't add useful information in this context.
+
+Alternative text should include all the information the image conveys that a sighted user can access and is relevant to the context is what needs to be conveyed; nothing more. Keep it short, precise, and useful.
+
+The syntax in markdown:
+
+```html
+![<alt-text>](<url-of-image>)
+<img alt="<alt-text>" src="<url-of-image>">
+```
+
+Examples:
+
+```html
+![OpenWebDocs Logo: Carle the book worm](carle.png)
+<img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png">
+```
+
 ## Compressing images
 
 When you add images to a page on MDN Web Docs, you should make sure that they are compressed as much as possible (without degrading quality) to save on the download size for our readers.
