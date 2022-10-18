@@ -12,8 +12,9 @@ browser-compat: api.PerformanceResourceTiming.renderBlockingStatus
 
 {{APIRef("Resource Timing API")}}
 
+Render-blocking resources are static files such as fonts, CSS, and JavaScript files, that block or delay the browser from rendering page content to the screen.
 The **`renderBlockingStatus`** read-only property returns the render-blocking
-nature of the resource.
+nature of the resource. This eliminates the need to rely on complex heurestics to identify render-blocking resources.
 
 ## Value
 
@@ -30,13 +31,13 @@ In the following example, we print out the {{domxref("PerformanceEntry.name","na
 resources which are potentially render-blocking.
 
 ```js
-function print_renderBlocking_resources() {
-  const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    if (p[i].renderBlockingStatus==="blocking"){
-        console.log(p[i].name);
+function printRenderBlockingResources() {
+  const entries = performance.getEntriesByType("resource");
+  for (const entry of entries) {
+    if (entry.renderBlockingStatus==="blocking") {
+      console.log(entry.name);
     }
-  }
+  };
 }
 ```
 
