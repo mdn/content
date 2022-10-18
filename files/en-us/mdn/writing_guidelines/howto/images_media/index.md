@@ -42,7 +42,7 @@ Let's walk through an example:
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. Reference your image in the document with an `<img>` element inside `files/en-us/web/css/index.md`:
+4. Reference your image in the document with an `<img>` element and `alt` attribute inside `files/en-us/web/css/index.md`:
 
    ```html
    <img src="my-cool-image.png" alt="My cool image" />
