@@ -46,14 +46,14 @@ This function takes a stream and a `contentHint` value, and applies the hint to 
 ```js
 function setVideoTrackContentHints(stream, hint) {
   const tracks = stream.getVideoTracks();
-  tracks.forEach(track => {
-    if ('contentHint' in track) {
+  tracks.forEach((track) => {
+    if ("contentHint" in track) {
       track.contentHint = hint;
       if (track.contentHint !== hint) {
-        console.log('Invalid video track contentHint: \'' + hint + '\'');
+        console.log(`Invalid video track contentHint: "${hint}"`);
       }
     } else {
-      console.log('MediaStreamTrack contentHint attribute not supported');
+      console.log("MediaStreamTrack contentHint attribute not supported");
     }
   });
 }
