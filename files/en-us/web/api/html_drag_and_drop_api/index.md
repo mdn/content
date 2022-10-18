@@ -133,7 +133,7 @@ Learn more about drag feedback images in:
 
 - [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image)
 
-### Define the drag effect
+### Define the drop effect
 
 The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to control the feedback the user is given during a drag-and-drop operation. It typically affects which cursor the browser displays while dragging. For example, when the user hovers over a drop target, the browser's cursor may indicate the type of operation that will occur.
 

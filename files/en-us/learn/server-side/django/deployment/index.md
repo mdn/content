@@ -70,7 +70,8 @@ Some developers will choose the increased flexibility provided by IaaS over PaaS
 
 ## Choosing a hosting provider
 
-There are well over 100 hosting providers that are known to either actively support or work well with Django (you can find a fairly exhaustive list at [DjangoFriendly hosts](https://djangofriendly.com/index.html)). These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
+There are well over 100 hosting providers that are known to either actively support or work well with Django (you can find a fairly large list at [DjangoFriendly hosts](https://djangofriendly.com/index.html)).
+These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
 

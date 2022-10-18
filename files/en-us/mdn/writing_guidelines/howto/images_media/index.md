@@ -9,10 +9,75 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
+## Adding images
+
+To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using an `<img>` element or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
+
+Let's walk through an example:
+
+1. Start with a fresh working branch with the latest content from the `main` branch of the `mdn` remote.
+
+   ```sh
+   cd ~/path/to/mdn/content
+   git checkout main
+   git pull mdn main
+   # Run "yarn" again just to ensure you've
+   # installed the latest Yari dependency.
+   yarn
+   git checkout -b my-images
+   ```
+
+2. Add your image to the document folder. For this example, let's assume
+   we're adding a new image to the `files/en-us/web/css` document.
+
+   ```sh
+   cd ~/path/to/mdn/content
+   cp ../some/path/my-cool-image.png files/en-us/web/css/
+   ```
+
+3. Run `filecheck` on each image, which might complain if something's wrong.
+   For more details, see the [Compressing images](#compressing-images) section.
+
+   ```sh
+   yarn filecheck files/en-us/web/css/my-cool-image.png
+   ```
+
+4. Reference your image in the document with an `<img>` element and `alt` attribute inside `files/en-us/web/css/index.md`:
+
+   ```html
+   <img src="my-cool-image.png" alt="My cool image" />
+   ```
+
+5. Add and commit all of the deleted, created, and modified files, as well as
+   push your branch to your fork:
+
+   ```sh
+   git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
+   git commit
+   git push -u origin my-images
+   ```
+
+6. Now you're ready to create your
+   [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+
+## Compressing images
+
+When you add images to a page on MDN Web Docs, you should make sure that they are compressed as much as possible (without degrading quality) to save on the download size for our readers.
+In fact, if you don't do this, our CI process will fail and the build results will warn you that some of your images are too big.
+
+The best way to compress the images is by using the built-in compression tool.
+You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option.
+This option compresses the image as much as possible and replaces the original with the compressed version.
+For example:
+
+```sh
+yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+```
+
+## Adding videos
+
 MDN Web Docs is not a very video-heavy site, but there are certain places where video content makes sense to use as part of an article.
 This article discusses when including videos in articles is appropriate and provides tips on how to create simple but effective videos on a budget.
-
-## Using video content
 
 There are several arguments against using video content for technical documentation, particularly for reference material and advanced level guides. Some of these are listed below:
 

@@ -22,7 +22,7 @@ In this article, we'll set you up with the bare minimum — a text editor and so
 
 ### Installing a text editor
 
-You probably already have a basic text editor on your computer. By default Windows includes [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) and macOS comes with [TextEdit](https://en.wikipedia.org/wiki/TextEdit). Linux distros vary; Ubuntu comes with [gedit](https://en.wikipedia.org/wiki/Gedit) by default.
+You probably already have a basic text editor on your computer. By default Windows includes [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) and macOS comes with [TextEdit](https://en.wikipedia.org/wiki/TextEdit). Linux distros vary; the Ubuntu 22.04 LTS release comes with [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor) by default.
 
 For web development, you can probably do better than Notepad or TextEdit. We recommend starting with [Visual Studio Code](https://code.visualstudio.com/), which is a free editor, that offers live previews and code hints.
 

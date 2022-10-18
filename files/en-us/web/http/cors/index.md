@@ -160,7 +160,7 @@ The following is an example of a request that will be preflighted:
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open("POST", "https://bar.other/resources/post-here/");
+xhr.open("POST", "https://bar.other/doc");
 xhr.setRequestHeader("X-PINGOTHER", "pingpong");
 xhr.setRequestHeader("Content-Type", "text/xml");
 xhr.onreadystatechange = handler;

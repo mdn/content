@@ -85,8 +85,8 @@ para.onpointerover = (event) => {
 
 ## See also
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+- [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+- [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
 - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
 - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
 - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)

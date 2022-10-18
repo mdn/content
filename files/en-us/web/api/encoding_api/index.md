@@ -39,4 +39,5 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 
 ## See also
 
+- [Encoding API Encodings](/en-US/docs/Web/API/Encoding_API/Encodings) - Encodings that must be supported for decoding text.
 - A [polyfill](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it
