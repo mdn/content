@@ -25,7 +25,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   font-family: "Trickster";
   src: local("Trickster"),
        url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-       url("trickster-outline.otf") format("opentype");
+       url("trickster-outline.otf") format("opentype"),
+       url("trickster-outline.woff") format("woff");
 }
 ```
 
