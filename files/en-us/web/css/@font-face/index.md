@@ -58,7 +58,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
-  - : Specifies font resources. Is a comma-separated list representing the resource fallback order, each component containing a `url()` or a `local()`. `url()` can be followed by `format()` and `tech()`, like this:
+  - : Specifies font resources. A comma-separated list representing the resource fallback order, each font file within  a `url()` or `local()`.  The `url()` can be followed by `format()` and `tech()`, like this:
 
     ```css
     src: local("Trickster"),
