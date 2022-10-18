@@ -76,7 +76,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
     `local()`: Specifies a font name for when the font is available in the user's device. Quoting the font name is optional.
 
-    `format()`: **Optional**. Specifies the font format. If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth. If omitted, the browser will always download the resource and then detect the format. The preferred value type is a _keyword_, which can also be given as a _string_ (with quotes) for backward compatibility reasons.
+    `format()`: **Optional**. Specifies the font format. If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth. If omitted, the browser will always download the resource and then detect the format. The preferred value type is a _keyword_, which can also be given as a _string_ (within quotes) for backward compatibility reasons.
 
     The following table shows the valid values and their corresponding font formats. There are a few other possible values, see next paragraph.
 
@@ -90,7 +90,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
     | `embedded-opentype` | Embedded OpenType     | .eot              |
     | `svg`               | SVG Font (deprecated) | .svg, .svgz       |
 
-    > **Note:** The values `opentype` and `truetype` are completely equivalent, regardless of whether the font file uses cubic bezier curves (`CFF` table) or quadratic bezier curves (`glyf` table).
+    > **Note:** The values `opentype` and `truetype` are completely equivalent, regardless of whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyf table).
 
     `tech()`: **Optional**. Not yet widely supported. Value is a _keyword_, support: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
 
@@ -103,7 +103,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
     | `format("opentype-variations")` | `format(opentype) tech(variations)` |
     | `format("truetype-variations")` | `format(truetype) tech(variations)` |
 
-    > **Note:** `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `format(opentype) tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
+    > **Note:** `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
 
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : The range of Unicode code points to be used from the font.
@@ -114,7 +114,7 @@ It's common to use both `url()` and `local()` together, so that the user's insta
 
 If the `local()` function is provided, specifying a font name to look for on the user's device, and if the {{Glossary("user agent")}} finds a match, that local font is used. Otherwise, the font resource specified using the `url()` function is downloaded and used.
 
-Resources are attempted to be loaded in order, so usually `local()` should be written before `url()`. Also, `local()` is not just a helper for `url()`, they are both optional, a rule block containing only one or more `local()` is possible.
+Resources are attempted to be loaded in order, so usually `local()` should be written before `url()`. Also, `local()` is not just a helper for `url()`, they are equal and both are optional, a rule block containing only one or more `local()` without `url()` is possible.
 
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an Internet connection.
 
