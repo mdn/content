@@ -8,7 +8,7 @@ tags:
   - Web Performance
 ---
 
-**Quick UDP Internet Connection**, or **QUIC**, is a multiplexed transport protocol implemented on UDP. It is used instead of {{Glossary("TCP"})} as the transport layer in HTTP/3.
+**Quick UDP Internet Connection**, or **QUIC**, is a multiplexed transport protocol implemented on UDP. It is used instead of {{Glossary("TCP")}} as the transport layer in HTTP/3.
 
 QUIC was designed to provide quicker setup and lower latency for HTTP connections. In particular:
 
@@ -18,5 +18,5 @@ QUIC was designed to provide quicker setup and lower latency for HTTP connection
 
 ## See also
 
-- {{rfc(9114, "RFC 9114: the HTTP/3 specification)}}
-- {{rfc(9000, "RFC 9000: the QUIC specification)}}
+- {{rfc("9000", "the QUIC specification")}}
+- {{rfc("9114", "the HTTP/3 specification")}}
