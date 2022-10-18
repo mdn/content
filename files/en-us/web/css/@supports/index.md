@@ -83,19 +83,19 @@ The following example returns true and applies the CSS style if the browser supp
 
 The table below describes the available font technologies that can be queried using this function:
 
-| Technology          | Supports                                                                                          |
-| :------------------ | :--------------------------------------------------------------------------------------------------- |
-| `color-colrv0`      | Multi-colored glyphs COLR version 0 table                                                    |
-| `color-colrv1`      | Multi-colored glyphs COLR version 1 table                                                    |
+| Technology          | Supports                                                                                      |
+| :------------------ | :-------------------------------------------------------------------------------------------- |
+| `color-colrv0`      | Multi-colored glyphs via COLR version 0 table                                                 |
+| `color-colrv1`      | Multi-colored glyphs via COLR version 1 table                                                 |
 | `color-svg`         | SVG multi-colored tables                                                                      |
-| `color-sbix`        | Standard bitmap graphics tables                                                              |
+| `color-sbix`        | Standard bitmap graphics tables                                                               |
 | `color-cbdt`        | Color bitmap data tables                                                                      |
 | `features-opentype` | OpenType `GSUB` and `GPOS` tables                                                             |
-| `features-aat`      | TrueType `morx` and `kerx` tables                                                                    |
-| `features-graphite` | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables         |
-| `incremental`       | Incremental font loading                                                                             |
+| `features-aat`      | TrueType `morx` and `kerx` tables                                                             |
+| `features-graphite` | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
+| `incremental`       | Incremental font loading                                                                      |
 | `variations`        | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
-| `palettes`          | Font palletes by means of `font-palette` to select one of many color palettes in the font      |
+| `palettes`          | Font palletes by means of `font-palette` to select one of many color palettes in the font     |
 
 #### `font-format()`
 
@@ -251,8 +251,8 @@ The following example applies the CSS style if the browser supports the `COLRv1`
 }
 ```
 
-Note that it's also possible to test for the support of a font technology using the `tech` function inside `@font-face` rules.
-If the browser can't support the font technology, a fallback font (`Bungee-fallback.otf`) can be used instead:
+It's also possible to test for the support of a font technology by using the `tech` function inside the {{CSSxRef("@font-face")}} at-rule.
+If a browser doesn't support the font technology, a fallback font (`Bungee-fallback.otf`) can be used instead.
 
 ```css
 @font-face {
