@@ -111,7 +111,7 @@ p {
 
 #### Result
 
-> **Note:** You need to install the OpenType font _Bellota Text_ for this example to work. The font is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL) and can be found at <https://github.com/kemie/Bellota-Font>. More fonts can be found in the [Google Font corpus](https://github.com/google/fonts).
+> **Note:** The _Bellota_ font is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL) and can be found at <https://github.com/kemie/Bellota-Font>. More fonts can be found in the [Google Font corpus](https://github.com/google/fonts).
 
 {{ EmbedLiveSample('Enabling swash glyphs') }}
 
