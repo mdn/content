@@ -91,7 +91,9 @@ This property may take one of two forms:
 #### CSS
 
 ```css
-@font-feature-values "Bellota Text" {
+@import url("https://fonts.googleapis.com/css2?family=Bellota");
+
+@font-feature-values "Bellota" {
   @swash {
     fancy: 1;
   }
@@ -102,7 +104,7 @@ p {
 }
 
 .variant {
-  font-family: Bellota Text;
+  font-family: "Bellota";
   font-variant-alternates: swash(fancy);
 }
 ```
