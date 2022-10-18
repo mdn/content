@@ -125,3 +125,5 @@ If you're interested in helping develop/improve the content, take a look at [how
   - : A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.
 - [Edabit](https://edabit.com/challenges/javascript)
   - : Thousands of interactive JavaScript challenges.
+- [Scaler Topics](https://www.scaler.com/topics/)
+  - : Free resources to learn coding languages such as Java, Python, Javascript, HTML/CSS and more.
