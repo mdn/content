@@ -62,7 +62,7 @@ Let's walk through an example:
 
 ## Adding alternative text to images
 
-Every `![]` and `<img>` must include `alt` text. Provide short and concise text providing all the relevant information the image conveys to a person who is able to see the image.
+Every image, `![]` and `<img>`, must include `alt` text. Provide short and concise text providing all the relevant information the image conveys. This text is read by those unable to see the image.
 
 Content of `alt` text differ based on the context. For example, if the photo of a dog is the avatar for a Yuckymeat dog food review, `alt="Fluffy"` is appropriate. If the photo is the dog's image on a animal rescue adoption site, the `alt="Fluffy, a tri-color terrier with very short hair, with a tennis ball in her mouth."` is appropriate as image conveys information that is relevant for a prospective dog parent not duplicated in surrounding text. There is rarely a need to describe the image itself. In this scenario, the dog being outdoors with a red collar and a blue leash doesn't add useful information in this context.
 
