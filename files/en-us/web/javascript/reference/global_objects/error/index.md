@@ -90,7 +90,7 @@ You can handle the error using the {{JSxRef("Statements/try...catch", "try...cat
 
 ```js
 try {
-  throw new Error('Whoops!');
+  throw new Error("Whoops!");
 } catch (e) {
   console.error(`${e.name}: ${e.message}`);
 }
@@ -110,7 +110,6 @@ try {
     console.error(`${e.name}: ${e.message}`);
   }
   // etc.
-
   else {
     // If none of our cases matched leave the Error unhandled
     throw e;
@@ -123,7 +122,7 @@ try {
 Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e. with the same type and message).
 
 If you don't have control over the original errors that are thrown, one option is to catch them and throw new `Error` objects that have more specific messages.
-The original error should be passed to the new `Error` in the constructor `option` parameter (`cause` property), as this ensures that the original error and stack trace are available to higher level try/catch blocks.
+The original error should be passed to the new `Error` in the constructor's [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) parameter as its `cause` property. This ensures that the original error and stack trace are available to higher level try/catch blocks.
 
 The example below shows this for two methods that would otherwise fail with similar errors (`doFailSomeWay()` and `doFailAnotherWay()`):
 
@@ -132,23 +131,23 @@ function doWork() {
   try {
     doFailSomeWay();
   } catch (err) {
-    throw new Error('Failed in some way', { cause: err });
+    throw new Error("Failed in some way", { cause: err });
   }
   try {
     doFailAnotherWay();
   } catch (err) {
-    throw new Error('Failed in another way', { cause: err });
+    throw new Error("Failed in another way", { cause: err });
   }
 }
 
 try {
   doWork();
 } catch (err) {
-  switch(err.message) {
-    case 'Failed in some way':
+  switch (err.message) {
+    case "Failed in some way":
       handleFailSomeWay(err.cause);
       break;
-    case 'Failed in another way':
+    case "Failed in another way":
       handleFailAnotherWay(err.cause);
       break;
   }
@@ -157,15 +156,18 @@ try {
 
 > **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
 
-[Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+[Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`. The `Error()` base class constructor will read `options.cause` and define the `cause` property on the new error instance.
 
 ```js
 class MyError extends Error {
-  constructor(/* some arguments */) {
-    // Needs to pass both `message` and `options` to install the "cause" property.
+  constructor(message, options) {
+    // Need to pass `options` as the second parameter to install the "cause" property.
     super(message, options);
   }
 }
+
+console.log(new MyError("test", { cause: new Error("cause") }).cause);
+// Error: cause
 ```
 
 ### Custom error types
@@ -174,15 +176,13 @@ You might want to define your own error types deriving from `Error` to be able t
 
 See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
 
-#### ES6 CustomError class
-
-> **Warning:** Versions of Babel prior to 7 can handle `CustomError` class methods, but only when they are declared with [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> **Warning:** Builtin subclassing cannot be reliably transpiled to pre-ES6 code, because there's no way to construct the base class with a particular `new.target` without {{jsxref("Reflect.construct()")}}. You need [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) or manually call {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} at the end of the constructor; otherwise, the constructed instance will not be a `CustomError` instance. See [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) for more information.
 
 > **Note:** Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
 
 ```js
 class CustomError extends Error {
-  constructor(foo = 'bar', ...params) {
+  constructor(foo = "bar", ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
@@ -191,7 +191,7 @@ class CustomError extends Error {
       Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError';
+    this.name = "CustomError";
     // Custom debugging information
     this.foo = foo;
     this.date = new Date();
@@ -199,42 +199,12 @@ class CustomError extends Error {
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch (e) {
-  console.error(e.name);    // CustomError
-  console.error(e.foo);     // baz
-  console.error(e.message); // bazMessage
-  console.error(e.stack);   // stacktrace
-}
-```
-
-#### ES5 CustomError object
-
-> **Warning:** All browsers include the `CustomError` constructor in the stack trace when using a prototypal declaration.
-
-```js
-function CustomError(foo, message, fileName, lineNumber) {
-  var instance = new Error(message, fileName, lineNumber);
-  instance.foo = foo;
-  Object.setPrototypeOf(instance, CustomError.prototype);
-  if (Error.captureStackTrace) {
-    Error.captureStackTrace(instance, CustomError);
-  }
-  return instance;
-}
-
-Object.setPrototypeOf(CustomError.prototype, Error.prototype);
-
-Object.setPrototypeOf(CustomError, Error);
-
-CustomError.prototype.name = 'CustomError';
-
-try {
-  throw new CustomError('baz', 'bazMessage');
+  throw new CustomError("baz", "bazMessage");
 } catch (e) {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage
+  console.error(e.stack); // stacktrace
 }
 ```
 
