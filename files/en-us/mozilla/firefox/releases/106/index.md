@@ -18,6 +18,11 @@ This article provides information about the changes in Firefox 106 that will aff
 
 #### Removals
 
+### MathML
+
+- The [`<semantics>` MathML](/en-US/docs/Web/MathML/Element/semantics) element now only renders the first child element by default to align with the [MathML Core specification](https://w3c.github.io/mathml-core/#semantics-and-presentation).
+  The rendering algorithm is described in more details in the [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics#sect1) page ({{bug(1588733)}}).
+
 ### CSS
 
 #### Removals
