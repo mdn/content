@@ -48,10 +48,10 @@ function setVideoTrackContentHints(stream, hint) {
     if ("contentHint" in track) {
       track.contentHint = hint;
       if (track.contentHint !== hint) {
-        console.log(`Invalid video track contentHint: "${hint}"`);
+        console.error(`Invalid video track contentHint: "${hint}"`);
       }
     } else {
-      console.log("MediaStreamTrack contentHint attribute not supported");
+      console.error("MediaStreamTrack contentHint attribute not supported");
     }
   });
 }
