@@ -69,7 +69,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
     `local()`: Specifies the font name for when the font is available in the user's operating system. Quoting the font name is optional.
 
-    `format()`: **Optional**. Specify the font format. If the value is invalid, the browser may not download the resource; but if this parameter is not provided, the browser will always download the resource and then detect the format. The value can be a _keyword_ or a _string_, _keyword_ mean no quotes, _string_ require quotes. _keyword_ is newer specification, so perhaps not yet widely supported. _keyword_ support: `collection`, `embedded-opentype`, `opentype`, `svg`, `truetype`, `woff`, `woff2`. See below for supported _string_.
+    `format()`: **Optional**. Specifies the font format. If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth. If omitted, the browser will always download the resource and then detect the format. The value can be a _keyword_ or a _string_ (strings require quotes, keywords do not). Keywords support include `collection`, `embedded-opentype`, `opentype`, `svg`, `truetype`, `woff`, `woff2`. See the table below for supported _string_ values.
 
     `tech()`: **Optional**. Not yet widely supported. Value is a _keyword_, support: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
 
