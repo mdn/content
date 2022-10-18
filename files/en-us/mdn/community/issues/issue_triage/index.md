@@ -8,6 +8,8 @@ tags:
   - governance
 ---
 
+{{MDNSidebar}}
+
 This document looks at the process for triaging content bugs and getting them ready for contributors to effectively work on.
 
 ## Reporting and working on bugs
