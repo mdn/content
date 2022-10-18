@@ -66,7 +66,7 @@ Every image, `![]` and `<img>`, must include `alt` text. Provide short and conci
 
 The content of `alt` text differs based on the context. For example, if the photo of a dog is the avatar for a Yuckymeat dog food review, `alt="Fluffy"` is appropriate. If the photo is the dog's image on an animal rescue adoption site, the `alt="Fluffy, a medium-sized tri-color terrier with very short hair, playing with a chew toy."` is appropriate as the image conveys information relevant for prospective dog parents which is not duplicated in the surrounding text. There is rarely a need to describe the image itself; Fluffy being outdoors with a red collar and a blue leash doesn't add useful information in either context.
 
-Alternative text should include all the information the image conveys that a sighted user can access and is relevant to the context is what needs to be conveyed; nothing more. Keep it short, precise, and useful.
+Alternative text should include all the information the image conveys that a sighted user can access and is relevant to the context; nothing more. Keep it short, precise, and useful.
 
 The syntax in markdown:
 
