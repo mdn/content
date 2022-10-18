@@ -19,8 +19,8 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : Provides an in-depth criteria for content to be included on MDN Web Docs, the application process for getting new documentation added on MDN Web Docs, and the expectations and guidelines for a party applying.
 
-    - [Content reuse](/en-US/docs/MDN/Writing_guidelines/Content_reuse)
-      - : Describes our policy on content reuse and republishing, and how to get permission to republish content on MDN Web Docs.
+    - [Attribution and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license)
+      - : Describes our policy on using MDN Web Docs content elsewhere on the web, how to get permission to republish content on MDN, and hints for linking to MDN content.
 
 - [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
