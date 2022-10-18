@@ -68,7 +68,7 @@ The content of `alt` text differs based on the context. For example, if the phot
 
 Alternative text should include all the information the image conveys that a sighted user can access and is relevant to the context; nothing more. Keep it short, precise, and useful.
 
-The syntax in markdown:
+The syntax in markdown and HTML:
 
 ```html
 ![<alt-text>](<url-of-image>)
