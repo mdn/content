@@ -180,6 +180,14 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 > **Note:** When using both `and` and `or` operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.
 
+## Formal syntax
+
+```
+@supports <supports-condition> {
+  <stylesheet>
+}
+```
+
 ## Examples
 
 ### Testing for the support of a CSS property
