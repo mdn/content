@@ -51,7 +51,7 @@ A policy is described using a set of individual policy directives. A policy dire
 Feature Policy provides two ways to specify policies to control features:
 
 - The {{httpheader("Feature-Policy")}} HTTP header.
-- The {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes.
+- The [`allow` attribute](/en-US/docs/Web/HTML/Element/iframe#attributes) on iframes.
 
 The primary difference between the HTTP header and the `allow` attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.
 
@@ -134,7 +134,7 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
-- {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
+- {{HTMLElement("iframe", "allow", "#Attributes")}} attribute on iframes
 - [Introduction to Feature Policy](https://developer.chrome.com/blog/feature-policy/)
 - [Feature policies on www.chromestatus.com](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
