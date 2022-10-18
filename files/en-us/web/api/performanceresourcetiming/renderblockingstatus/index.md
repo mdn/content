@@ -34,11 +34,13 @@ resources which are potentially render-blocking.
 function printRenderBlockingResources() {
   const entries = performance.getEntriesByType("resource");
   for (const entry of entries) {
-    if (entry.renderBlockingStatus==="blocking") {
+    if (entry.renderBlockingStatus === "blocking") {
       console.log(entry.name);
     }
-  };
+  }
 }
+
+printRenderBlockingResources();
 ```
 
 ## Specifications
