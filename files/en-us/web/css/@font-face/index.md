@@ -77,6 +77,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
     | String form                     | Equivalent syntax                   |
     | ------------------------------- | ----------------------------------- |
+    | `format("svg")`               | `format(svg)`                     |
     | `format("woff2")`               | `format(woff2)`                     |
     | `format("woff")`                | `format(woff)`                      |
     | `format("truetype")`            | `format(truetype)`                  |
