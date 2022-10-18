@@ -20,12 +20,12 @@ To edit the underlying rules returned by `CSSRule` objects, use {{domxref("CSSSt
 
 The interface has no constructor. An instance of `CSSRuleList` is returned by {{domxref("CSSStyleSheet.cssRules")}} and {{domxref("CSSKeyframesRule.cssRules")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("CSSRuleList.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of {{domxref("CSSRule")}} objects in the collection.
 
-## Methods
+## Instance methods
 
 - {{domxref("CSSRuleList.item()")}}
   - : Gets a single {{domxref("CSSRule")}}.

@@ -12,7 +12,9 @@ browser-compat: mathml.elements.maction
 
 {{MathMLRef}}{{Deprecated_Header}}
 
-The deprecated MathML **`<maction>`** element used to provide a possibility to bind an actions to mathematical expressions. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case. Some browsers will just render the first child of an `<maction>` element and ignore its `actiontype` and `selection` attributes.
+The **`<maction>`** [MathML](/en-US/docs/Web/MathML) element allows to bind actions to mathematical expressions. By default, only the first child is rendered but some browsers may take into account `actiontype` and `selection` attributes to implement custom behaviors.
+
+> **Note:** Historically, this element provided a mechanism to make MathML formulas interactive. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case.
 
 ## Attributes
 

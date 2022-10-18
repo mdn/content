@@ -25,7 +25,7 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
   - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
@@ -42,7 +42,7 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 - {{domxref("IDBIndex.unique")}} {{ReadOnlyInline}}
   - : If `true`, this index does not allow duplicate values for a key.
 
-## Methods
+## Instance methods
 
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 

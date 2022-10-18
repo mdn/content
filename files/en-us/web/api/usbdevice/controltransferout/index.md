@@ -46,7 +46,7 @@ controlTransferOut(setup, data)
     - `request`
       - : A vendor-specific command.
     - `value`
-      - : Vender-specific request parameters.
+      - : Vendor-specific request parameters.
     - `index`
       - : The interface number of the recipient.
 

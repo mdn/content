@@ -36,7 +36,7 @@ The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/
    - BigInt: return `true` only if both operands have the same value.
    - Symbol: return `true` only if both operands reference the same symbol.
 2. If one of the operands is `null` or `undefined`, the other must also be `null` or `undefined` to return `true`. Otherwise return `false`.
-3. If one of the operands is an object and the other is a primitive, convert the object to a primitive using the object's [`@@toPrimitive()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"default"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. (This primitive conversion is the same as the one used in [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition).)
+3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion).
 4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
    - If they are of the same type, compare them using step 1.
    - If one of the operands is a Symbol but the other is not, return `false`.

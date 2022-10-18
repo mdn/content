@@ -406,7 +406,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
     </tr>
     <tr>
       <th>Permitted content</th>
-      <td>None, it is an {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th>Tag omission</th>

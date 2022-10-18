@@ -146,7 +146,7 @@ The term 'selector' can refer to one of the following:
 
   - : A selector that represents an element relative to one or more [anchor elements](/en-US/docs/Web/CSS/Pseudo-classes) preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 
-    **Examples:** `+ div#topic > #reference {...}`,  `> .icon {...}`
+    **Examples:** `+ div#topic > #reference {...}`, `> .icon {...}`
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
   - : A comma-separated list of [simple](#simple_selector), [compound](#compound_selector), or [complex](#complex_selector) selectors. If the constituent selector type of a selector list is important but unspecified, it is called a _complex selector list_. A given element is said to match a selector list when the element matches any (at least one) of the selectors in that selector list. Read more about when a selector list is deemed [invalid](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list) and how to construct a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).

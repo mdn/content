@@ -24,7 +24,7 @@ _Also inherits properties from: {{DOMxRef("Document")}}_.
 - {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from: {{DOMxRef("Document")}}_.
 

@@ -27,7 +27,7 @@ While the dictionary has a base set of properties that are present in each of th
 
 > **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017. Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
 
-## Properties
+## Instance properties
 
 _The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inherits its properties. In addition, some or all of the following properties are available._
 

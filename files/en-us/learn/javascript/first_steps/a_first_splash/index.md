@@ -443,7 +443,7 @@ for (const resetPara of resetParas) {
 
 This code creates a variable containing a list of all the paragraphs inside `<div class="resultParas">` using the {{domxref("Document.querySelectorAll", "querySelectorAll()")}} method, then it loops through each one, removing the text content of each.
 
-Note that even though `resetParas` is a constant, we can change its internal properties like `textContent`.
+Note that even though `resetPara` is a constant, we can change its internal properties like `textContent`.
 
 ### A small discussion on objects
 

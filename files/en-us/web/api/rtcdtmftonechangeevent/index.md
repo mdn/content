@@ -18,7 +18,7 @@ The **`RTCDTMFToneChangeEvent`** interface represents events sent to indicate th
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
@@ -30,7 +30,7 @@ _In addition to the properties of {{domxref("Event")}}, this interface offers th
 - {{domxref("RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent()", "RTCDTMFToneChangeEvent()")}}
   - : Returns a new `RTCDTMFToneChangeEvent`. It takes two parameters, the first being a string representing the type of the event (always `"tonechange"`); the second a dictionary containing the initial state of the properties of the event.
 
-## Methods
+## Instance methods
 
 _Supports the methods defined in {{domxref("Event")}}. There are no additional methods._
 

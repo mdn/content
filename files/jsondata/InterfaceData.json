@@ -316,6 +316,10 @@
       "inh": "Event",
       "impl": []
     },
+    "CaptureController": {
+      "inh": "",
+      "impl": []
+    },
     "CaretPosition": {
       "inh": "",
       "impl": []
@@ -876,10 +880,6 @@
       "inh": "",
       "impl": []
     },
-    "DOMTransition": {
-      "inh": "",
-      "impl": []
-    },
     "DragEvent": {
       "inh": "MouseEvent",
       "impl": []
@@ -1065,6 +1065,10 @@
       "impl": []
     },
     "FileSystemHandle": {
+      "inh": "",
+      "impl": []
+    },
+    "FileSystemSyncAccessHandle": {
       "inh": "",
       "impl": []
     },
@@ -2492,6 +2496,10 @@
       "inh": "",
       "impl": []
     },
+    "PressureRecord": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -3606,6 +3614,10 @@
     },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
+      "impl": []
+    },
+    "ViewTransition": {
+      "inh": "",
       "impl": []
     },
     "VirtualKeyboard": {

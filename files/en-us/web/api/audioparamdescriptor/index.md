@@ -20,7 +20,7 @@ The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/en-US/docs/Web
 
 It is used to create custom `AudioParam`s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by `AudioWorkletNode` constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
 
-## Properties
+## Instance properties
 
 - `name`
   - : The string which represents the name of the `AudioParam`. Under this name the `AudioParam` will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this `AudioParam`.

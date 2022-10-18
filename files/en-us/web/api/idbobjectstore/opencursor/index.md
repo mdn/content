@@ -53,7 +53,7 @@ openCursor(query, direction)
         in the decreasing order of keys.
     - `prevunique`
       - : The cursor is opened at the start of the store; then, the cursor returns all records, that are not duplicates,
-        in the increasing order of keys.
+        in the decreasing order of keys.
 
 ### Return value
 

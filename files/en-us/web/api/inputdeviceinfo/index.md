@@ -19,7 +19,7 @@ The **`InputDeviceInfo`** interface of the {{domxref('Media Streams API','','','
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 - {{domxref("InputDeviceInfo.getCapabilities()")}}
   - : Returns a `MediaTrackCapabilities` object describing the primary audio or video track of a device's `MediaStream`.

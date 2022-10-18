@@ -1,5 +1,5 @@
 ---
-title: Server Configuration
+title: Server configuration
 slug: Web/SVG/Server-configuration
 tags:
   - SVG

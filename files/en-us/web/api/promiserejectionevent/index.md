@@ -27,7 +27,7 @@ For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/Ja
 - {{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}
   - : Creates a `PromiseRejectionEvent` event, given the type of event ([`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) or [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)) and other details.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
@@ -36,7 +36,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
   - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
-## Methods
+## Instance methods
 
 _This interface has no unique methods; inherits methods from its parent {{domxref("Event")}}_.
 

@@ -20,12 +20,12 @@ of the title bar area in desktop Progressive Web Apps, and an event to know when
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("WindowControlsOverlay.visible")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
-## Methods
+## Instance methods
 
 - {{domxref("WindowControlsOverlay.getTitlebarAreaRect()")}} {{Experimental_Inline}}
   - : Returns the size and position of the title bar.

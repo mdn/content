@@ -5407,7 +5407,6 @@
 /en-US/docs/MDN/Contribute/Content/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Content/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
-/en-US/docs/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
 /en-US/docs/MDN/Contribute/Does_this_belong	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Contribute/Editor/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Contribute
@@ -7345,6 +7344,8 @@
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/error_event
+/en-US/docs/Web/API/AesCbcParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
+/en-US/docs/Web/API/AesCtrParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
@@ -9432,6 +9433,7 @@
 /en-US/docs/Web/API/RotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.beta	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
+/en-US/docs/Web/API/RsaOaepParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
 /en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Web/API/SVGAnimationElement/onbegin	/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event
@@ -10201,6 +10203,8 @@
 /en-US/docs/Web/API/XRWebGLLayerInit/framebufferscalefactor	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/ignoredepthvalues	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLSubImage/textureHeight	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight
+/en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error
@@ -11138,6 +11142,7 @@
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
+/en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@page_rule	/en-US/docs/Web/CSS/@page
 /en-US/docs/Web/CSS/@styleset	/en-US/docs/Web/CSS/@font-feature-values
 /en-US/docs/Web/CSS/@viewport/height	/en-US/docs/Web/CSS/@viewport

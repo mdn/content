@@ -17,7 +17,7 @@ The **`PerformanceElementTiming`** interface of the {{domxref('Element Timing AP
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("Element")}} representing the element we are returning information about.
@@ -38,7 +38,7 @@ The **`PerformanceElementTiming`** interface of the {{domxref('Element Timing AP
 - {{domxref("PerformanceElementTiming.url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string which is the initial URL of the resources request for images, 0 for text.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceElementTiming.toJSON()")}} {{Experimental_Inline}}
   - : Generates a JSON description of the object.

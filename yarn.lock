@@ -34,24 +34,24 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.2.4":
-  version "5.2.4"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.4.tgz#8a51db2a01435d8679df8c5a44a811456254b946"
-  integrity sha512-SaGBNAJPm2TJbi3QV8B9cRI6sviM7QGVOJyG8cDBQfesWfvjqZaM46KzVbSonxoD7Mo3iOU4RkrvHdeQcqx7Zg==
+"@mdn/browser-compat-data@^5.2.7":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.7.tgz#04cb54e4c834022f10374f3d180269fb6affe07b"
+  integrity sha512-7RlfErwjfhHnxOumpugE16aMucWh14/vF4Eccz3TuZNW0m9oqOOV+pE7vLtkrDooyyIso/zLvFA7SLhrL+dTEw==
 
-"@mdn/yari@1.18.63":
-  version "1.18.63"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.63.tgz#6304e8e3cf69f2533a064943c5dea5e348fe560d"
-  integrity sha512-vqeV3DOukIQOKrbscygG+5P9Imry/xKGo8fkrqATMUZ5cS9c+fg4HfBKVIwUjJ1gPVWTlAtWTXPGu/XdXtZMpw==
+"@mdn/yari@1.18.78":
+  version "1.18.78"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.78.tgz#c8a57599a2463ea510091d5c18dff6f968824817"
+  integrity sha512-TKfvEpEUjnRkBoMQGggm/7iZdU4MvH7j++LFeBU/fS22u/TinSkERKaCWmddLndcj9CtIsBz7cgUOIzHZGUBYA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.2.4"
+    "@mdn/browser-compat-data" "^5.2.7"
     "@mozilla/glean" "1.2.0"
     "@use-it/interval" "^1.0.0"
-    "@webref/css" "^5.3.0"
+    "@webref/css" "^5.4.0"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.26.0"
+    browser-specs "^3.29.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
@@ -63,7 +63,7 @@
     dexie "^3.2.2"
     dotenv "^16.0.3"
     ejs "^3.1.8"
-    express "^4.18.1"
+    express "^4.18.2"
     fdir "^5.2.0"
     file-type "^16.5.4"
     front-matter "^4.0.2"
@@ -293,10 +293,10 @@
   resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-1.0.0.tgz#c42c68f22ca29a0dc929041746373d94496d2b3a"
   integrity sha512-WQFcnSt/xM/mS8ZtJ0ut5lhPrl+V0HDPPcI/J0eUClsfiD+/r8A7IeW/pVcfpSVGWRmN3+WnjNteWuKyWs2WZg==
 
-"@webref/css@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.3.0.tgz#3726daef1054efe348e6185120f9cf1f887a8509"
-  integrity sha512-/iAtCSvEplzHYcwxaLlq4OtlZcKKj+B6pW3MpBPxky/FI4Xk3OxKZED+qoufhIKBtAxPYp0yc8dPPlxZL4itmg==
+"@webref/css@^5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.4.0.tgz#c822fe051ef2f3b7bec4765facf48241f99d8e34"
+  integrity sha512-Y+DJ0YcCrSH/za8qQUmYoj+6a1r6bLe7yrU26f7GOqE7WGlD/yx9uV6/dgFUm8UsXP1qGbdGz6uIhTPH7Nxwtw==
 
 accept-language-parser@^1.5.0:
   version "1.5.0"
@@ -564,10 +564,10 @@ bl@^4.1.0:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-body-parser@1.20.0:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.0.tgz#3de69bd89011c11573d7bfee6a64f11b6bd27cc5"
-  integrity sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==
+body-parser@1.20.1:
+  version "1.20.1"
+  resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.1.tgz#b1812a8912c195cd371a3ee5e66faa2338a5c668"
+  integrity sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==
   dependencies:
     bytes "3.1.2"
     content-type "~1.0.4"
@@ -577,7 +577,7 @@ body-parser@1.20.0:
     http-errors "2.0.0"
     iconv-lite "0.4.24"
     on-finished "2.4.1"
-    qs "6.10.3"
+    qs "6.11.0"
     raw-body "2.5.1"
     type-is "~1.6.18"
     unpipe "1.0.0"
@@ -602,10 +602,10 @@ braces@^3.0.1, braces@^3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.26.0:
-  version "3.26.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.26.0.tgz#484714145f6ed44b43fd2f5d489543a3b2b63716"
-  integrity sha512-f2+9hFS0gXt8Tjs9ySPYYgw9NNLAHqwASbqRUfIFdHvvfV1d6oWXf7JBajSn/dggw6X9lQxtvL1funmf7HoluA==
+browser-specs@^3.29.0:
+  version "3.29.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.29.0.tgz#9010f63524f2d7bc3d2b8e07ac40756361d564a9"
+  integrity sha512-Lk6zNX3XP0upObIM/srFJPRLMfI6kn6CFN1fi1TM39JrsZAhHjiN19rJtb2nlsLn3MfZNnTcdKER/K0aZIFaGg==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1655,14 +1655,14 @@ exenv@^1.2.0:
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
   integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
 
-express@^4.18.1:
-  version "4.18.1"
-  resolved "https://registry.yarnpkg.com/express/-/express-4.18.1.tgz#7797de8b9c72c857b9cd0e14a5eea80666267caf"
-  integrity sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==
+express@^4.18.2:
+  version "4.18.2"
+  resolved "https://registry.yarnpkg.com/express/-/express-4.18.2.tgz#3fabe08296e930c796c19e3c516979386ba9fd59"
+  integrity sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==
   dependencies:
     accepts "~1.3.8"
     array-flatten "1.1.1"
-    body-parser "1.20.0"
+    body-parser "1.20.1"
     content-disposition "0.5.4"
     content-type "~1.0.4"
     cookie "0.5.0"
@@ -1681,7 +1681,7 @@ express@^4.18.1:
     parseurl "~1.3.3"
     path-to-regexp "0.1.7"
     proxy-addr "~2.0.7"
-    qs "6.10.3"
+    qs "6.11.0"
     range-parser "~1.2.1"
     safe-buffer "5.2.1"
     send "0.18.0"
@@ -4104,10 +4104,10 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-qs@6.10.3:
-  version "6.10.3"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.3.tgz#d6cde1b2ffca87b5aa57889816c5f81535e22e8e"
-  integrity sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==
+qs@6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.0.tgz#fd0d963446f7a65e1367e01abd85429453f0c37a"
+  integrity sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==
   dependencies:
     side-channel "^1.0.4"
 
