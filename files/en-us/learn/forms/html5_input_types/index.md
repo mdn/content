@@ -190,14 +190,14 @@ To actually display the current value, and update it as it changed, you must use
 const price = document.querySelector("#price");
 const output = document.querySelector(".price-output");
 
-output.textContent = price.value;
+output.value = price.value;
 
 price.addEventListener("input", () => {
-  output.textContent = price.value;
+  output.value = price.value;
 });
 ```
 
-Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s [`textContent`](/en-US/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `textContent` is updated to the new value.
+Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s `value` to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `value` is updated to the new value.
 
 > **Note:** There is a nice tutorial covering this subject on CSS Tricks: [The Output Element](https://css-tricks.com/the-output-element/).
 
