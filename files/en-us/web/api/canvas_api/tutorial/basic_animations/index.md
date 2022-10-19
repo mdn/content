@@ -123,7 +123,7 @@ This example draws an animated clock, showing your current time.
 ### HTML
 
 ```html
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150">The current time</canvas>
 ```
 
 ### JavaScript
@@ -131,7 +131,8 @@ This example draws an animated clock, showing your current time.
 ```js
 function clock() {
   const now = new Date();
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -172,6 +173,9 @@ function clock() {
   const hr  = now.getHours() % 12;
 
   ctx.fillStyle = 'black';
+
+  // Write image description
+  canvas.innerText = "The time is: " + hr + ":" + min; 
 
   // Write Hours
   ctx.save();
@@ -241,7 +245,7 @@ In this example, a panorama is scrolled left-to-right. We're using [an image of 
 The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `canvasXSize` and `canvasYSize` variables in the JavaScript code.
 
 ```html
-<canvas id="canvas" width="800" height="200"></canvas>
+<canvas id="canvas" width="800" height="200">Yosemite National Park, meadow at the base of El Capitan</canvas>
 ```
 
 ### JavaScript
@@ -336,7 +340,7 @@ function draw() {
 ### HTML
 
 ```html
-<canvas id="cw"></canvas>
+<canvas id="cw">Animation creating multi-colored disappearing stream of light that follow the cursor as it moves over the image </canvas>
 ```
 
 ### CSS
