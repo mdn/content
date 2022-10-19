@@ -10,7 +10,7 @@ tags:
 
 This tool lets you construct CSS {{cssxref("box-shadow")}} effects, to add box shadow effects to your CSS objects.
 
-{{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}
+{{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 980)}}
 
 The box-shadow generator enables you to add one or more box shadows to an element.
 
