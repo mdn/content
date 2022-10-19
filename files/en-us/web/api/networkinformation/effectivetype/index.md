@@ -23,7 +23,7 @@ combination of recently observed, round-trip time and downlink values.
 
 ## Value
 
-A {{jsxref("String")}} containing one of 'slow-2g', '2g', '3g', or '4g'.
+A string containing one of 'slow-2g', '2g', '3g', or '4g'.
 
 ## Specifications
 
