@@ -68,21 +68,19 @@ Below are examples to clarify the syntax.
 Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from 'another.js'`) or explicitly using the {{JSxRef("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
 
 ```js
-import { myExport } from '/modules/my-module.js';
+import { myExport } from "/modules/my-module.js";
 ```
 
 You can import multiple names from the same module.
 
 ```js
-import { foo, bar } from '/modules/my-module.js';
+import { foo, bar } from "/modules/my-module.js";
 ```
 
 You can rename an export when importing it. For example, this inserts `shortName` into the current scope.
 
 ```js
-import {
-  reallyReallyLongModuleExportName as shortName,
-} from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
 A module may also export a member as a string literal which is not a valid identifier, in which case you must alias it in order to use it in the current module.
@@ -104,7 +102,7 @@ import { "a-b" as a } from "/modules/my-module.js";
 Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
 
 ```js
-import myDefault from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
 Since the default export doesn't explicitly specify a name, you can give the identifier any name you like.
@@ -112,20 +110,20 @@ Since the default export doesn't explicitly specify a name, you can give the ide
 It is also possible to specify a default import with namespace imports or named imports. In such cases, the default import will have to be declared first. For instance:
 
 ```js
-import myDefault, * as myModule from '/modules/my-module.js';
+import myDefault, * as myModule from "/modules/my-module.js";
 // myModule.default and myDefault point to the same binding
 ```
 
 or
 
 ```js
-import myDefault, { foo, bar } from '/modules/my-module.js';
+import myDefault, { foo, bar } from "/modules/my-module.js";
 ```
 
 Importing a name called `default` has the same effect as a default import. It is necessary to alias the name because `default` is a reserved word.
 
 ```js
-import { default as myDefault } from '/modules/my-module.js';
+import { default as myDefault } from "/modules/my-module.js";
 ```
 
 ### Namespace import
@@ -133,7 +131,7 @@ import { default as myDefault } from '/modules/my-module.js';
 The following code inserts `myModule` into the current scope, containing all the exports from the module located at `/modules/my-module.js`.
 
 ```js
-import * as myModule from '/modules/my-module.js';
+import * as myModule from "/modules/my-module.js";
 ```
 
 Here, `myModule` represents a _namespace_ object which contains all exports as properties. For example, if the module imported above includes an export `doAllTheAmazingThings()`, you would call it like this:
@@ -152,7 +150,7 @@ Import an entire module for side effects only, without importing anything. This 
 the module's global code, but doesn't actually import any values.
 
 ```js
-import '/modules/my-module.js';
+import "/modules/my-module.js";
 ```
 
 This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate the global variables.
@@ -186,7 +184,7 @@ function getPrimes(max) {
 ```
 
 ```js
-import { getPrimes } from '/modules/getPrimes.js';
+import { getPrimes } from "/modules/getPrimes.js";
 
 console.log(getPrimes(10)); // [2, 3, 5, 7]
 ```
@@ -205,7 +203,7 @@ setTimeout(() => {
 
 ```js
 // main.js
-import { myValue } from '/modules/my-module.js';
+import { myValue } from "/modules/my-module.js";
 console.log(myValue); // 1
 setTimeout(() => {
   console.log(myValue); // 2; my-module has updated its value

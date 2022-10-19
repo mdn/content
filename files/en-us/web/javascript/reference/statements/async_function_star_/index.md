@@ -56,7 +56,9 @@ async function* foo() {
   yield Promise.reject(1);
 }
 
-foo().next().catch((e) => console.error(e));
+foo()
+  .next()
+  .catch((e) => console.error(e));
 ```
 
 `1` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
@@ -76,7 +78,8 @@ async function* myGenerator(step) {
 }
 
 const gen = myGenerator(2);
-gen.next()
+gen
+  .next()
   .then((res) => {
     console.log(res); // { value: 0, done: false }
     return gen.next();
@@ -107,13 +110,13 @@ async function* readFiles(directory) {
     if (stats.isFile()) {
       yield {
         name: file,
-        content: await fs.readFile(file, 'utf8'),
+        content: await fs.readFile(file, "utf8"),
       };
     }
   }
 }
 
-const files = readFiles('.');
+const files = readFiles(".");
 console.log((await files.next()).value);
 // Possible output: { name: 'file1.txt', content: '...' }
 console.log((await files.next()).value);

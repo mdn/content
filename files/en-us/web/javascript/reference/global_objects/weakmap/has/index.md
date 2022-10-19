@@ -41,10 +41,10 @@ has(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has('baz');  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## Specifications
