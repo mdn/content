@@ -25,7 +25,7 @@ This API is particularly useful for measuring the {{Glossary("first input delay"
 
 You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze. See the [example below](#getting_event_timing_information) for more.
 
-By default, `PerformanceEventTiming` entries are exposed when their `duration` is 104ms or greater. Research suggests that user input that is not handled within 100ms is considered slow and 104ms is the first multiple of 8 greater than 100ms (for security reasons, this API is rounded to the nearest of 8ms).
+By default, `PerformanceEventTiming` entries are exposed when their `duration` is 104ms or greater. Research suggests that user input that is not handled within 100ms is considered slow and 104ms is the first multiple of 8 greater than 100ms (for security reasons, this API is rounded to the nearest multiple of 8ms).
 However, you can set the {{domxref("PerformanceObserver")}} to a different threshold using the `durationThreshold` option in the [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method.
 
 This interface inherits methods and properties from its parent, {{domxref("PerformanceEntry")}}:
@@ -34,7 +34,7 @@ This interface inherits methods and properties from its parent, {{domxref("Perfo
 
 ### Events exposed
 
-The following event types are exposed by the Event Timing API and contain performance metrics like event processing timestamps, counts, targets, etc.
+The following event types are exposed by the Event Timing API:
 
 <table>
   <tbody>
@@ -135,13 +135,13 @@ This interface has no constructor on its own. See the [example below](#getting_e
 This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time from `startTime` to the next rendering paint (rounded to the nearest 8ms)
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time from `startTime` to the next rendering paint (rounded to the nearest 8ms).
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"event"` (for long events) or `"first-input"` (for the first user interaction).
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the associated event's type.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the event was created.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
 
 This interface also supports the following properties:
 
@@ -150,9 +150,9 @@ This interface also supports the following properties:
 - {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
   - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
 - {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started. To measure the time between a user action and the time the event handler starts to run, calculate `processingStart-startTime`.
 - {{domxref("PerformanceEventTiming.processingEnd")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which the event dispatch ended.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which the event dispatch ended.  To measure the time the event handler took to run, calculate `processingEnd-processingStart`.
 - {{domxref("PerformanceEventTiming.target")}} {{ReadOnlyInline}}
   - : Returns the associated event's last target, if it is not removed.
 
@@ -178,7 +178,10 @@ const observer = new PerformanceObserver((list) => {
 
     // Synchronous event processing time 
     // (between start and end dispatch)
-    const time = entry.processingEnd - entry.processingStart;
+    const eventHandlerTime = entry.processingEnd - entry.processingStart;
+  console.log(`Total duration: ${duration}`);
+  console.log(`Event delay: ${delay}`);
+  console.log(`Event handler duration: ${time}`);
   });
 });
 
@@ -186,7 +189,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({entryTypes: ["event"]});
 ```
 
-You can also set a different `durationThreshold`, the default is 104ms and the minium possible duration threshold is 16ms.
+You can also set a different [`durationThreshold`](/en-US/docs/Web/API/PerformanceObserver/observe#durationthreshold). The default is 104ms and the minimum possible duration threshold is 16ms.
 
 ```js
 observer.observe({entryTypes: ["event"], durationThreshold: 16});
