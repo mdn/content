@@ -115,6 +115,7 @@ Promise.any([coffee, tea])
     const objectURL = URL.createObjectURL(value);
     const image = document.createElement("img");
     image.src = objectURL;
+    image.alt = value;
     document.body.appendChild(image);
   })
   .catch((e) => {
