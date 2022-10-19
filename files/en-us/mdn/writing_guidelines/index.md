@@ -19,9 +19,6 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : Provides an in-depth criteria for content to be included on MDN Web Docs, the application process for getting new documentation added on MDN Web Docs, and the expectations and guidelines for a party applying.
 
-    - [Attribution and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license)
-      - : Describes our policy on using MDN Web Docs content elsewhere on the web, how to get permission to republish content on MDN, and hints for linking to MDN content.
-
 - [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
   - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to [format code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
@@ -94,9 +91,10 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
       - : Macros are shortcuts that are used in pages to generate content, such as sidebars. This section lists the macros we use and what they do.
 
+- [Attributions and copyright licensing information](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license)
+
+  - : Describes our policy on using MDN Web Docs content elsewhere on the web, how to get permission to republish content on MDN, and hints for linking to MDN content.
+
 - [How to label a technology](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 
   - : This section covers our definitions for the terms obsolete, deprecated, and experimental and provides guidelines on when we remove content from MDN Web Docs.
-
-- [Attributions and copyright licensing information](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license)
-  - : This section describes what copyright license content is and how to attribute correctly.
