@@ -25,6 +25,9 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### CSS
 
+- The [@supports](/en-US/docs/Web/CSS/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
+  These functions can be used to test whether a browser supports a given font technology or format and CSS styles can be applied based on the result ({{bug(1786493)}}).
+
 #### Removals
 
 ### JavaScript
@@ -53,7 +56,23 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+- Added basic support for the `script.getRealms` command that is currently limited to the `WindowRealmInfo` type which includes window realms and sandbox realms ({{bug("1766240")}}).
+
+- Added support for the `browsingContext.load` event, which is emitted when a `load` event is triggered on a BrowsingContext's window ({{bug("1756619")}}).
+
+- Added an object reference store to hold strong references for serialized remote values ({{bug("1770736")}}).
+
+- Added support for de-serializing remote references created in the object reference store ({{bug("1788124")}}).
+
+- Added full support for the `script.evaluate`, `script.callFunction` and `script.disown` commands ({{bug("1778976")}}).
+
+#### Marionette
+
+- Added support for `wheel` input source for [Actions](https://w3c.github.io/webdriver/webdriver-spec.html#actions), which is associated with a wheel-type input device ({{bug("1746601")}}).
+
+- Added support for opening and closing tabs in GeckoView based applications (eg. Firefox for Android) ({{bug("1506782")}}).
 
 ## Changes for add-on developers
 

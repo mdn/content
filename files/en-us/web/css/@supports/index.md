@@ -95,7 +95,7 @@ The table below describes the available font technologies that can be queried us
 | `features-graphite` | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
 | `incremental`       | Incremental font loading                                                                      |
 | `variations`        | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
-| `palettes`          | Font palletes by means of `font-palette` to select one of many color palettes in the font     |
+| `palettes`          | Font palettes by means of `font-palette` to select one of many color palettes in the font     |
 
 #### `font-format()`
 
