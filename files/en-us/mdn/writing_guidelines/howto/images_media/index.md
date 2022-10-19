@@ -83,6 +83,7 @@ Examples:
 ```
 
 While purely decorative images should have an empty `alt`, images added to MDN documentation should have a purpose, and therefore require a non-empty-string description.
+
 ## Compressing images
 
 When you add images to a page on MDN Web Docs, you should make sure that they are compressed as much as possible (without degrading quality) to save on the download size for our readers.
