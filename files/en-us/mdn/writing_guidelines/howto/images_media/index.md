@@ -81,6 +81,7 @@ Examples:
 ![OpenWebDocs Logo: Carle the book worm](carle.png)
 <img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png">
 ```
+
 While purely decorative images should have an empty `alt`, images added to MDN documentation should have a purpose, and therefore require a non-empty-string description.
 ## Compressing images
 
