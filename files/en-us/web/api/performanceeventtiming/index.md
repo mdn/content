@@ -152,7 +152,7 @@ This interface also supports the following properties:
 - {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started. To measure the time between a user action and the time the event handler starts to run, calculate `processingStart-startTime`.
 - {{domxref("PerformanceEventTiming.processingEnd")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which the event dispatch ended.  To measure the time the event handler took to run, calculate `processingEnd-processingStart`.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which the event dispatch ended. To measure the time the event handler took to run, calculate `processingEnd-processingStart`.
 - {{domxref("PerformanceEventTiming.target")}} {{ReadOnlyInline}}
   - : Returns the associated event's last target, if it is not removed.
 
@@ -213,7 +213,8 @@ document.addEventListener('visibilitychange', (event) => {
 // uses `/analytics`; you can replace it with your own URL.
 function sendToAnalytics(data) {
   const body = JSON.stringify(data);
-  // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+  // Use `navigator.sendBeacon()` if available, 
+  // falling back to `fetch()`.
   (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
       fetch('/analytics', {body, method: 'POST', keepalive: true});
 }
@@ -234,7 +235,8 @@ try {
     }
   }
 
-  // Create a PerformanceObserver that calls `onFirstInputEntry` for each entry.
+  // Create a PerformanceObserver that calls
+  // `onFirstInputEntry` for each entry.
   const po = new PerformanceObserver((entryList) => {
     entryList.getEntries().forEach(onFirstInputEntry);
   });
