@@ -42,7 +42,7 @@ This article provides information about the changes in Firefox 106 that will aff
 #### DOM
 
 - The [`HTMLMetaElement.media`](/en-US/docs/Web/API/HTMLMetaElement/media) property is now supported which enables setting different theme colors based on `media` values (e.g. `max-width: 600px`).
-  Meta elements with `media` properties allows the browser to use the `content` value as a theme color for the page or UI for the given media query ({{bug(1706179)}}).
+  Meta elements with `media` properties allows the browser to use the `content` value in conjunction with `theme-color` to set the page or UI colors for a given media query ({{bug(1706179)}}).
 
 #### Media, WebRTC, and Web Audio
 
