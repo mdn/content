@@ -67,7 +67,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
          url("trickster-outline.woff") format("woff");
     ```
 
-    `url()`: Specifies the URL of a font file, like any other `url()` in CSS. If the font file used as a container contains multiple fonts, one of them should be specified, as follows:
+    `url()`: Specifies the URL of a font file, like any other `url()` in CSS. If the font file is a container for multiple fonts, a fragment identifier is included to indicate which sub-font should be used, as follows:
 
     ```css
     src: url(collection.otc#WhichFont); /* WhichFont is the PostScript name of a font in the font file */
