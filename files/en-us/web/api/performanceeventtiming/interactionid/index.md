@@ -7,10 +7,11 @@ tags:
   - Property
   - Reference
   - Web Performance
+  - Experimental
 browser-compat: api.PerformanceEventTiming.interactionId
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The read-only **`interactionId`** property returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
 
