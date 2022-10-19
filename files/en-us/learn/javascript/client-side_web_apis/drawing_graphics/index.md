@@ -72,7 +72,7 @@ If you want to create a 2D _or_ 3D scene on a web page, you need to start with a
 
 This will create a canvas on the page with a size of 320 by 240 pixels.
 
-Inside the canvas tags, put fallback content. This will be shown if the user's browser doesn't support canvas, and information for screen readers.
+You should put some fallback content inside the canvas tags. This should describe the canvas content to users of browsers that don't support canvas, or users of screen readers.
 
 ```html
 <canvas width="320" height="240">
@@ -80,7 +80,7 @@ Inside the canvas tags, put fallback content. This will be shown if the user's b
 </canvas>
 ```
 
-The above message should provide useful fallback content to the canvas content. For example, if you were rendering a constantly updating graph of stock prices, the fallback content could be a static image of the latest stock graph, with `alt` text saying what the prices are in text or a list of links to individual stock pages.
+The fallback should provide useful alternative content to the canvas content. For example, if you are rendering a constantly updating graph of stock prices, the fallback content could be a static image of the latest stock graph, with `alt` text saying what the prices are in text or a list of links to individual stock pages.
 
 > **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.
 
@@ -351,7 +351,7 @@ Here we draw two lines of text, one outline and the other stroke. The final exam
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text). 
+> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
 
 Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -534,18 +534,20 @@ Now let's create our own simple animation — we'll get a character from a certa
 1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
    
 2. Update the inner HTML to reflect the image:
+
    ```html
     <canvas class="myCanvas">
       <p>A man walking.</p>
     </canvas>
    ```
+
 3. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
 
    ```js
    ctx.translate(width / 2, height / 2);
    ```
 
-4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
+4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
    ```js
    const image = new Image();
@@ -626,7 +628,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 
 11. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
 
-   ```js
+    ```js
     window.requestAnimationFrame(draw);
     ```
 
