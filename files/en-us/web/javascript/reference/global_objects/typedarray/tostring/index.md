@@ -38,7 +38,7 @@ separated by commas. For example, the following code creates a typed array and u
 `toString` to convert the array to a string.
 
 ```js
-const numbers = new Uint8Array([2, 5, 8, 1, 4])
+const numbers = new Uint8Array([2, 5, 8, 1, 4]);
 numbers.toString(); // "2,5,8,1,4"
 ```
 
@@ -52,7 +52,7 @@ If a browser doesn't support the `TypedArray.prototype.toString()` method
 yet, JavaScript will call the `toString` method of {{jsxref("Object")}}:
 
 ```js
-const numbers = new Uint8Array([2, 5, 8, 1, 4])
+const numbers = new Uint8Array([2, 5, 8, 1, 4]);
 numbers.toString(); // "[object Uint8Array]"
 ```
 

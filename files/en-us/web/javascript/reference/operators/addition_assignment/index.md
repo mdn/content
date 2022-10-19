@@ -40,13 +40,13 @@ baz += false; // 2
 ```
 
 ```js
-let foo = 'foo';
+let foo = "foo";
 
 // String + Boolean -> concatenation
 foo += false; // "foofalse"
 
 // String + String -> concatenation
-foo += 'bar'; // "foofalsebar"
+foo += "bar"; // "foofalsebar"
 ```
 
 ```js
@@ -56,7 +56,7 @@ let bar = 5;
 bar += 2; // 7
 
 // Number + String -> concatenation
-bar += 'foo'; // "7foo"
+bar += "foo"; // "7foo"
 ```
 
 ## Specifications

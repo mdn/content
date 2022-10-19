@@ -55,9 +55,9 @@ The `unescape` function is a property of the _global object_.
 ### Using unescape
 
 ```js
-unescape('abc123');     // "abc123"
-unescape('%E4%F6%FC');  // "äöü"
-unescape('%u0107');     // "ć"
+unescape("abc123"); //    "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); //    "ć"
 ```
 
 ## Specifications
