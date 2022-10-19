@@ -83,7 +83,9 @@ const z = new Uint16Array(buffer, 2, 4);
 console.log(z.byteOffset); // 2
 
 // From an iterable
-const iterable = function*() { yield* [1, 2, 3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const uint16FromIterable = new Uint16Array(iterable);
 console.log(uint16FromIterable);
 // Uint16Array [1, 2, 3]

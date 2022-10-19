@@ -117,7 +117,7 @@ The following examples show that all elements _are_ visited, and that the value 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
 // The missing elements will be initialized to zero.
-const uint8 = new Uint8Array([0,1,,,,5,6]);
+const uint8 = new Uint8Array([0, 1, , , , 5, 6]);
 
 // Iterate through the elements in reverse order.
 // Note that all elements are visited.
