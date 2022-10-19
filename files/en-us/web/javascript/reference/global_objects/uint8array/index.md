@@ -126,7 +126,9 @@ const z = new Uint8Array(buffer, 1, 4);
 console.log(z.byteOffset); // 1
 
 // From an iterable
-const iterable = function*() { yield* [1, 2, 3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const uint8FromIterable = new Uint8Array(iterable);
 console.log(uint8FromIterable);
 // Uint8Array [1, 2, 3]

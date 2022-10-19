@@ -119,7 +119,7 @@ Uint8Array.from(s);
 ### From a string
 
 ```js
-Int16Array.from('123');
+Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 ```
 
@@ -135,7 +135,7 @@ Float32Array.from([1, 2, 3], (x) => x + x);
 ### Generate a sequence of numbers
 
 ```js
-Uint8Array.from({length: 5}, (v, k) => k);
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 
