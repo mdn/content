@@ -74,7 +74,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
     src: url(fonts.svg#WhichFont);      /* WhichFont is the element id of a font in the SVG Font file */
     ```
 
-    `local()`: Specifies a font name for when the font is available in the user's device. Quoting the font name is optional.
+    `local()`: Specifies the font name should the font be available on the user's device. Quoting the font name is optional.
 
     `format()`: **Optional**. Specifies the font format. If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth. If omitted, the browser will always download the resource and then detect the format. The preferred value type is a _keyword_, which can also be given as a _string_ (within quotes) for backward compatibility reasons.
 
