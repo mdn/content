@@ -32,7 +32,7 @@ method inherited by all objects. Its semantics are as follows (assuming
 
 ```js
 Error.prototype.toString = function () {
-  if (typeof this !== 'object' || typeof this !== 'function') {
+  if (this === null || typeof this !== 'object' && typeof this !== 'function') {
     throw new TypeError();
   }
 
