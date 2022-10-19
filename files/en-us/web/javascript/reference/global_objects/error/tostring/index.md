@@ -39,9 +39,9 @@ Error.prototype.toString = function () {
     throw new TypeError();
   }
   let name = this.name;
-  name = name === undefined ? "Error" : String(name);
+  name = name === undefined ? "Error" : `${name}`;
   let msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
+  msg = msg === undefined ? "" : `${name}`;
   if (name === "") {
     return msg;
   }
