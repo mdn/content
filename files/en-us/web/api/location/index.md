@@ -18,21 +18,19 @@ The **`Location`** interface represents the location (URL) of the object it is l
 ## Location anatomy
 
 ```html hidden
-<span id="href" title="href"
-  ><span id="origin" title="origin"
-    ><span id="protocol" title="protocol">https:</span>//<span
-      id="host"
-      title="host"
-      ><span id="hostname" title="hostname">example.org</span>:<span
-        id="port"
-        title="port"
-        >8080</span
-      ></span
-    ></span
-  ><span id="pathname" title="pathname">/foo/bar</span
-  ><span id="search" title="search">?q=baz</span
-  ><span id="hash" title="hash">#bang</span></span
->
+<p>Hover over the URL segments below to highlight their meaning.</p>
+<span id="href" title="href">
+  <span id="origin" title="origin">
+    <span id="protocol" title="protocol">https:</span>//
+    <span id="host" title="host">
+      <span id="hostname" title="hostname">example.org</span>:
+      <span id="port" title="port">8080</span>
+    </span>
+  </span>
+  <span id="pathname" title="pathname">/foo/bar</span>
+  <span id="search" title="search">?q=baz</span>
+  <span id="hash" title="hash">#bang</span>
+</span>
 ```
 
 ```css hidden
@@ -49,6 +47,14 @@ body {
   font-size: 200%;
   line-height: 1em;
   white-space: nowrap;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 50%;
+  line-height: 1em;
+  margin: 0;
+  padding-bottom: 1em;
 }
 
 [title] {
@@ -57,6 +63,7 @@ body {
   box-sizing: border-box;
   line-height: 2em;
   cursor: pointer;
+  color: gray;
 }
 
 [title]::before {
@@ -99,12 +106,12 @@ body {
 ```
 
 ```js hidden
-document.body.addEventListener('click', (evt) => {
-    evt.preventDefault();
+document.body.addEventListener("click", (evt) => {
+  evt.preventDefault();
 
-    window.location.hash = evt.target.hasAttribute('id')
-        ? `#${evt.target.getAttribute('id')}`
-        : '';
+  window.location.hash = evt.target.hasAttribute("id")
+    ? `#${evt.target.getAttribute("id")}`
+    : "";
 });
 ```
 
@@ -149,17 +156,17 @@ document.body.addEventListener('click', (evt) => {
 ```js
 // location: https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
 const loc = document.location;
-console.log(loc.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-console.log(loc.protocol);  // https:
-console.log(loc.host);      // developer.mozilla.org:8080
-console.log(loc.hostname);  // developer.mozilla.org
-console.log(loc.port);      // 8080
-console.log(loc.pathname);  // /en-US/search
-console.log(loc.search);    // ?q=URL
-console.log(loc.hash);      // #search-results-close-container
-console.log(loc.origin);    // https://developer.mozilla.org:8080
+console.log(loc.href); // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
+console.log(loc.protocol); // https:
+console.log(loc.host); // developer.mozilla.org:8080
+console.log(loc.hostname); // developer.mozilla.org
+console.log(loc.port); // 8080
+console.log(loc.pathname); // /en-US/search
+console.log(loc.search); // ?q=URL
+console.log(loc.hash); // #search-results-close-container
+console.log(loc.origin); // https://developer.mozilla.org:8080
 
-location.assign('http://another.site') // load another page
+location.assign("http://another.site"); // load another page
 ```
 
 ## Specifications
