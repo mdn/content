@@ -31,8 +31,8 @@ x **= y // x = x ** y
 // Assuming the following variable
 //  bar = 5
 
-bar **= 2     // 25
-bar **= 'foo' // NaN
+bar **= 2; // 25
+bar **= "foo"; // NaN
 ```
 
 ## Specifications

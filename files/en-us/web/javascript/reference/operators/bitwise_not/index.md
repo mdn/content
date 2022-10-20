@@ -64,9 +64,9 @@ Note that due to using 32-bit representation for numbers both `~-1` and
 ### Using bitwise NOT
 
 ```js
-~0;  // -1
+~0; // -1
 ~-1; // 0
-~1;  // -2
+~1; // -2
 ```
 
 ## Specifications
