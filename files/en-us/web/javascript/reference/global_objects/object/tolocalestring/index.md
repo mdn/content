@@ -32,7 +32,7 @@ The return value of calling `this.toString()`.
 
 ## Description
 
-{{jsxref("Object")}}'s `toLocaleString` returns the result of calling {{jsxref("Object/toString", "this.toString()")}}.
+All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype)) inherit the `toLocaleString()` method. {{jsxref("Object")}}'s `toLocaleString` returns the result of calling {{jsxref("Object/toString", "this.toString()")}}.
 
 This function is provided to give objects a generic `toLocaleString` method, even though not all may use it. In the core language, these built-in objects override `toLocaleString` to provide locale-specific formatting:
 
@@ -88,8 +88,7 @@ const frDate = testDate.toLocaleString("fr");
 
 ### Number toLocaleString() override
 
-{{jsxref("Number.prototype.toLocaleString()")}} is used to print out number displays more suitable for specific
-locales, e.g. with the correct separators. For example:
+{{jsxref("Number.prototype.toLocaleString()")}} is used to print out number displays more suitable for specific locales, e.g. with the correct separators. For example:
 
 ```js
 const testNumber = 2901234564;
