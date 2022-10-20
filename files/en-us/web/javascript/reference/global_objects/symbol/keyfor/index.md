@@ -36,7 +36,7 @@ A string representing the key for the given symbol if one is found on the [globa
 ### Using keyFor()
 
 ```js
-const globalSym = Symbol.for('foo'); // create a new global symbol
+const globalSym = Symbol.for("foo"); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 const localSym = Symbol();
@@ -44,7 +44,7 @@ Symbol.keyFor(localSym); // undefined
 
 // well-known symbols are not symbols registered
 // in the global symbol registry
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## Specifications

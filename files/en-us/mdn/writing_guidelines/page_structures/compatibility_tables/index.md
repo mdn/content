@@ -30,7 +30,7 @@ For example:
 The compatibility data query should be specified in the page front-matter in the `browser-compat` key.
 For example, {{domxref("AbortController")}} would be added as shown below:
 
-```plain
+```md
 ---
 title: AbortController
 slug: Web/API/AbortController
@@ -42,8 +42,18 @@ browser-compat: api.AbortController
 
 The compatibility and specification tables corresponding to the key are then automatically rendered in place of the `\{{Compat}}` and `\{{Specifications}}` macros in the source.
 
-You can also specify the desired API as the first argument to the macro as shown: `\{{Compat("api.AbortController")}}`.
-This can be useful if multiple compatibility tables are required on the same page.
+If multiple compatibility/specification tables are required on the same page, you can specify the value of `browser-compat` as an array. For example, for the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) this would be added as shown below:
+
+```md
+---
+title: Channel Messaging API
+slug: Web/API/Channel_Messaging_API
+# …
+browser-compat:
+  - api.MessageChannel
+  - api.MessagePort
+---
+```
 
 The macro calls generate the following tables (and corresponding set of notes):
 
