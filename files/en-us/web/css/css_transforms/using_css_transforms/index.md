@@ -45,8 +45,8 @@ Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 
 ```html
 <img
-  style="transform: rotate(90deg);
-            transform-origin: bottom left;"
+  style="rotate: 90deg;
+      transform-origin: bottom left;"
   src="logo.png"
   alt="MDN Logo" />
 ```
