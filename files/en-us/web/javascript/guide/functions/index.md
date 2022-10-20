@@ -106,7 +106,7 @@ Function expressions are convenient when passing a function as an argument to an
 function map(f, a) {
   const result = [];
   for (let i = 0; i < a.length; i++) {
-    result[i] = f(a[i]);
+    result.push(f(a[i]));
   }
   return result;
 }
