@@ -72,7 +72,7 @@ If you want to create a 2D _or_ 3D scene on a web page, you need to start with a
 
 This will create a canvas on the page with a size of 320 by 240 pixels.
 
-You should put some fallback content inside the canvas tags. This should describe the canvas content to users of browsers that don't support canvas, or users of screen readers.
+You should put some fallback content inside the `<canvas>` tags. This should describe the canvas content to users of browsers that don't support canvas, or users of screen readers.
 
 ```html
 <canvas width="320" height="240">
@@ -82,7 +82,7 @@ You should put some fallback content inside the canvas tags. This should describ
 
 The fallback should provide useful alternative content to the canvas content. For example, if you are rendering a constantly updating graph of stock prices, the fallback content could be a static image of the latest stock graph, with `alt` text saying what the prices are in text or a list of links to individual stock pages.
 
-> **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.
+> **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing `<canvas>` tags. Canvas content is not part of the DOM, but nested fallback content is.
 
 ### Creating and sizing our canvas
 
@@ -328,7 +328,6 @@ Text is drawn using two methods:
 Both of these take three properties in their basic usage: the text string to draw and the X and Y coordinates of the point to start drawing the text at. This works out as the **bottom left** corner of the **text box** (literally, the box surrounding the text you draw), which might confuse you as other drawing operations tend to start from the top left corner — bear this in mind.
 
 There are also a number of properties to help control text rendering such as {{domxref("CanvasRenderingContext2D.font", "font")}}, which lets you specify font family, size, etc. It takes as its value the same syntax as the CSS {{cssxref("font")}} property.
-
 
 Canvas content is not accessible to screen readers. Text painted to the canvas is not available to the DOM, but must be made available to be accessible. In this example, we include the text as the value for `aria-label`.
 
