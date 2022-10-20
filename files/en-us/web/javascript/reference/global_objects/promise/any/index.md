@@ -108,6 +108,7 @@ async function fetchAndDecode(url, description) {
 
 const coffee = fetchAndDecode("coffee.jpg", "Coffee");
 const tea = fetchAndDecode("tea.jpg", "Tea");
+
 Promise.any([coffee, tea])
   .then(([blob, description]) => {
     const objectURL = URL.createObjectURL(blob);
@@ -116,6 +117,9 @@ Promise.any([coffee, tea])
     image.alt = description;
     document.body.appendChild(image);
   })
+  .catch((e) => {
+    console.error(e);
+  });
 ```
 
 ## Specifications
