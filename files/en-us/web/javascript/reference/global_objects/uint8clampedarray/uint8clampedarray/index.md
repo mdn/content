@@ -89,7 +89,9 @@ const z = new Uint8ClampedArray(buffer, 1, 4);
 console.log(z.byteOffset); // 1
 
 // From an iterable
-const iterable = function*() { yield* [1, 2, 3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const uintc8FromIterable = new Uint8ClampedArray(iterable);
 console.log(uintc8FromIterable);
 // Uint8ClampedArray [1, 2, 3]

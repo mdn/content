@@ -44,7 +44,7 @@ Note that, most of the time, it is better to instead write useful link text:
 
 ## Skip Links
 
-To aid tabbing, you can supply links that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links that are found on every page. This enables keyboard users to quickly tab over repeated content and go directly to the page's main content:
+To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Element/a#skip_links) that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links that are found on every page. This enables keyboard users to quickly tab over repeated content and go directly to the page's main content:
 
 ```html
 <header>
@@ -63,13 +63,13 @@ To aid tabbing, you can supply links that allow users to jump over chunks of you
 
 ## Alt attribute for image
 
-Every image should have an `alt` attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the alt attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Role/Presentation/). All other images should include an `alt` attribute providing alternative text describing the image in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
+Every image should have an [`alt`](/en-US/docs/Web/HTML/Element/img#attr-alt) attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the `alt` attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role). All other images should include an `alt` attribute providing [alternative text describing the image](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes) in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
 
 ```html
 <!-- decorative image -->
 <img alt="" src="blueswish.png" role="presentation" />
 <img
-  alt="The Open Web Docs logo: Carle the inch worm smiling"
+  alt="The Open Web Docs logo: Carle the book worm smiling"
   src="carle.svg"
   role="img" />
 ```
@@ -85,7 +85,7 @@ The `alt` attribute for the same content may vary depending on the context. In t
 
 ## ARIA role attribute
 
-By default, all semantic elements in HTML have a `role`; for example, `<input type="radio">` has the `radio` role. Non-semantic elements in HTML do not have a role. ARIA roles can be used to describe elements that don't natively exist in HTML, such as a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) widget. Roles are also helpful for newer elements that exist but don't yet have full browser support. For example, when using SVG images, add `role="img"` to the opening tag, as there is an [SVG VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364) whereby VoiceOver does not correctly announce SVG images.
+By default, all semantic elements in HTML have a [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/); for example, `<input type="radio">` has the `radio` role. Non-semantic elements in HTML do not have a role. ARIA roles can be used to describe elements that don't natively exist in HTML, such as a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) widget. Roles are also helpful for newer elements that exist but don't yet have full browser support. For example, when using SVG images, add `role="img"` to the opening tag, as there is an [SVG VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364) whereby VoiceOver does not correctly announce SVG images.
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />
