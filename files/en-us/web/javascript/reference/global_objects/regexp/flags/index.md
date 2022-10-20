@@ -25,7 +25,7 @@ The **`flags`** accessor property represents the [flags](/en-US/docs/Web/JavaScr
 
 All built-in functions read the `flags` property instead of reading individual flag accessors.
 
-The set accessor of `flag` is `undefined`. You cannot change this property directly.
+The set accessor of `flags` is `undefined`. You cannot change this property directly.
 
 ## Examples
 
