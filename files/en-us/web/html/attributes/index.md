@@ -1513,7 +1513,7 @@ HTML defines restrictions on the allowed values of boolean attributes: If the at
 
 ```html
 <div itemscope>This is valid HTML but invalid XML.</div>
-<div itemscope="itemscope">This is also valid HTML but invalid XML.</div>
+<div itemscope=itemscope>This is also valid HTML but invalid XML.</div>
 <div itemscope="">This is valid HTML and also valid XML.</div>
 <div itemscope="itemscope">
   This is also valid HTML and XML, but perhaps a bit verbose.
