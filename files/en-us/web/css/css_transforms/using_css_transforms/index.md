@@ -47,7 +47,8 @@ Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 <img
   style="transform: rotate(90deg);
             transform-origin: bottom left;"
-  src="logo.png" />
+  src="logo.png"
+  alt="MDN Logo" />
 ```
 
 {{EmbedLiveSample('Rotating', 'auto', 240) }}
@@ -60,7 +61,8 @@ Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X
 <img
   style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-  src="logo.png" />
+  src="logo.png"
+  alt="MDN logo" />
 ```
 
 {{EmbedLiveSample('Skewing_and_translating') }}
