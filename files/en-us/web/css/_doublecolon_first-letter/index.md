@@ -1,5 +1,5 @@
 ---
-title: '::first-letter (:first-letter)'
+title: '::first-letter'
 slug: Web/CSS/::first-letter
 page-type: css-pseudo-element
 tags:
