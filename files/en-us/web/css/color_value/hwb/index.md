@@ -15,30 +15,64 @@ browser-compat: css.types.color.hwb
 
 {{CSSRef}}
 
-The **`hwb()`** functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
+The **`hwb()`** functional notation expresses an {{glossary("sRGB", "RGB")}} color according to its _hue_, _whiteness_, and _blackness_ components. An optional alpha component represents the color's transparency.
+
+Defining _complementary colors_ with `hsl()` can be done with a single formula, as they are positioned on the same diameter of the {{glossary("color wheel")}}. If `theta` is the angle of a color, its complementary one will have `180deg-theta` as its _hue_ coordinate.
 
 {{EmbedInteractiveExample("pages/css/function-hwb.html")}}
 
 ## Syntax
 
 ```css
-hwb(194 0% 0%) /* #00c3ff */
-hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
+hwb(hue whiteness lightness)
+hwb(hue whiteness lightness / alpha)
 ```
+
+> **Note:** The `hwb()` function does _not_ use commas to separate its values and the optional alpha value needs to be preceded with a forward slash (`/`) if specified.
 
 ### Values
 
-> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions and the optional alpha value needs to be preceded with a forward slash (`/`) if specified.
+- `hue`
+  - : An {{cssxref("&lt;angle&gt;")}} of the {{glossary("color wheel")}} given in one of the following units: `deg`, `rad`, `grad`, or `turn`. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` is `240deg`, `480deg` is `120deg`, `-1turn` is `1turn`, and so on.
+- `whiteness`
+  - : A {{cssxref("percentage")}} that specifies the amount of white to mix in, from `0%`, meaning no whiteness, to `100%` meaning full whiteness.
+- `blackness`
+  - : A {{cssxref("percentage")}} that specifies the amount of black to mix in, from `0%`, meaning no blackness, to `100%` meaning full blackness.
+- `alpha` {{optional_inline}}
+  - A {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;number&gt;")}} between `0` and `1`, where the number `1` corresponds to `100%` and means full opacity, while `0` corresponds to `0%` and means fully transparent.
 
-- Functional notation: `hwb(H W B[ / A])`
+## Examples
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#typedef-hue) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+A table showing how _whiteness_ and _blackness_ interact with a fixed _hue_.
 
-    `W` (whiteness) specifies the amount of white to mix in, as a percentage from 0% (no whiteness) to 100% (full whiteness).
+```html
+<table>
+  <tr><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td><td class="c16"></td></tr>
+  <tr><td class="c21"></td><td class="c22"></td><td class="c23"></td><td class="c24"></td><td class="c25"></td><td class="c26"></td></tr>
+  <tr><td class="c31"></td><td class="c32"></td><td class="c33"></td><td class="c34"></td><td class="c35"></td><td class="c36"></td></tr>
+  <tr><td class="c41"></td><td class="c42"></td><td class="c43"></td><td class="c44"></td><td class="c45"></td><td class="c46"></td></tr>
+  <tr><td class="c51"></td><td class="c52"></td><td class="c53"></td><td class="c54"></td><td class="c55"></td><td class="c56"></td></tr>
+  <tr><td class="c61"></td><td class="c62"></td><td class="c63"></td><td class="c64"></td><td class="c65"></td><td class="c66"></td></tr>
+</table>
+```
 
-    `B` (blackness) specifies the amount of black to mix in, also from 0% (no blackness) to 100% (full blackness).
+```css
+  table { border: 1px solid black; }
+  .c11 { color: hbw(60deg,   0%,  0%); } .c12 { color: hbw(60deg,   0%, 20%); } .c13 { color: hbw(60deg,   0%,  40%); }
+  .c14 { color: hbw(60deg,   0%, 60%); } .c15 { color: hbw(60deg,   0%, 80%); } .c16 { color: hbw(60deg,   0%, 100%); }
+  .c21 { color: hbw(60deg,  20%,  0%); } .c22 { color: hbw(60deg,  20%, 20%); } .c23 { color: hbw(60deg,  20%,  40%); }
+  .c24 { color: hbw(60deg,  20%, 60%); } .c25 { color: hbw(60deg,  20%, 80%); } .c26 { color: hbw(60deg,  20%, 100%); }
+  .c31 { color: hbw(60deg,  40%,  0%); } .c32 { color: hbw(60deg,  40%, 20%); } .c33 { color: hbw(60deg,  40%,  40%); }
+  .c34 { color: hbw(60deg,  40%, 60%); } .c35 { color: hbw(60deg,  40%, 80%); } .c36 { color: hbw(60deg,  40%, 100%); }
+  .c41 { color: hbw(60deg,  60%,  0%); } .c42 { color: hbw(60deg,  60%, 20%); } .c43 { color: hbw(60deg,  60%,  40%); }
+  .c44 { color: hbw(60deg,  60%, 60%); } .c45 { color: hbw(60deg,  60%, 80%); } .c46 { color: hbw(60deg,  60%, 100%); }
+  .c51 { color: hbw(60deg,  80%,  0%); } .c52 { color: hbw(60deg,  80%, 20%); } .c53 { color: hbw(60deg,  80%,  40%); }
+  .c54 { color: hbw(60deg,  80%, 60%); } .c55 { color: hbw(60deg,  80%, 80%); } .c56 { color: hbw(60deg,  80%, 100%); }
+  .c61 { color: hbw(60deg, 100%,  0%); } .c62 { color: hbw(60deg, 100%, 20%); } .c63 { color: hbw(60deg, 100%,  40%); }
+  .c64 { color: hbw(60deg, 100%, 60%); } .c65 { color: hbw(60deg, 100%, 80%); } .c66 { color: hbw(60deg, 100%, 100%); }
+```
 
-    `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+{{EmbedLiveSample()}}
 
 ## Specifications
 
@@ -47,3 +81,7 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- The [`&lt;color&gt;`](/en-US/docs/Web/CSS/color_value) type that represents any color.
