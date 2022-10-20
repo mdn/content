@@ -106,11 +106,11 @@ p {
 ```
 
 ```js hidden
-document.body.addEventListener("click", (evt) => {
-  evt.preventDefault();
+document.body.addEventListener("click", (event) => {
+  event.preventDefault();
 
-  window.location.hash = evt.target.hasAttribute("id")
-    ? `#${evt.target.getAttribute("id")}`
+  window.location.hash = event.target.hasAttribute("id")
+    ? `#${event.target.getAttribute("id")}`
     : "";
 });
 ```
