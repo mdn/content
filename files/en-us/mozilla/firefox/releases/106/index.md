@@ -18,6 +18,10 @@ This article provides information about the changes in Firefox 106 that will aff
 
 #### Removals
 
+### MathML
+
+- The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) MathML elements now only render the first child element by default ({{bug(1588733)}}).
+
 ### CSS
 
 - The [@supports](/en-US/docs/Web/CSS/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
