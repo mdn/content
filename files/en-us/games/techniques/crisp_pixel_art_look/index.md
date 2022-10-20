@@ -96,6 +96,5 @@ This code used together produces the following result:
 
 {{ EmbedLiveSample('An_example', '100%', 520) }}
 
-You can check out the [original code on GitHub](https://github.com/belen-albeza/retro-canvas) ([and a live example](https://belen-albeza.github.io/retro-canvas/).)
 
 > **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.
