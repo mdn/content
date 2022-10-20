@@ -34,8 +34,8 @@ x = y
 //  y = 10
 //  z = 25
 
-x = y     // x is 10
-x = y = z // x, y and z are all 25
+x = y; // x is 10
+x = y = z; // x, y and z are all 25
 ```
 
 ## Specifications
