@@ -94,9 +94,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
         For example, consider part of a web page that looks like this:
 
-        ![](rects-1.png)If you search for "You may", the match needs to be described by two rectangles:
+        ![](rects-1.png,alt="Image showing a website with text that reads "this domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission. More information."")If you search for "You may", the match needs to be described by two rectangles:
 
-        ![](rects-2.png)In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
+        ![](rects-2.png, alt="Image showing a website with text that reads "this domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission. More information". The words "you may" are highlighted in green.")In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
 
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
@@ -225,7 +225,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 In this example the extension uses `rectData` to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:
 
-![](redacted.png)Note that in many ways this is a poor way to redact pages.
+![](redacted.png, alt="Image of three search results with black boxes redacting portions of the page.")Note that in many ways this is a poor way to redact pages.
 
 The background script:
 
