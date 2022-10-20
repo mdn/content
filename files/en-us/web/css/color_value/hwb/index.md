@@ -33,7 +33,7 @@ hwb(hue whiteness lightness / alpha)
 ### Values
 
 - `hue`
-  - : An {{cssxref("&lt;angle&gt;")}} of the {{glossary("color wheel")}} given in one of the following units: `deg`, `rad`, `grad`, or `turn`. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` is `240deg`, `480deg` is `120deg`, `-1turn` is `1turn`, and so on.
+  - : An {{cssxref("&lt;angle&gt;")}} of the {{glossary("color wheel")}} given in one of the following units: `deg`, `rad`, `grad`, or `turn`. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` is `240deg`, `480deg` is `120deg`, `-1turn` is `1turn`, and so on. This color wheel helps finding the angle associated with a color: ![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 - `whiteness`
   - : A {{cssxref("percentage")}} that specifies the amount of white to mix in, from `0%`, meaning no whiteness, to `100%` meaning full whiteness.
 - `blackness`
