@@ -60,32 +60,28 @@ In the following sections, we'll build up a support chart in this format.
 
 ### Determine the most commonly-used browsers among your target audience
 
-Most people in North America or Western America use either Windows or Mac desktops or laptops, where the main browsers are Chrome, Firefox, Safari, IE, and Edge. You probably want to just test the latest versions of the first three, as these browsers receive regular updates. For Edge and IE, you probably want to test the last couple of versions; these should all go in the A grade tier.
+For example, most people in North American and Western Europe use either Windows or Mac desktops or laptops, where the main browsers are Chrome, Firefox, Safari, and Edge. You'd probably want to just test their latest versions, as these browsers get regular updates. These should all go in the A grade tier.
 
-Many people use iOS and Android, so you probably also want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to make sure that responsive designs are working OK.
+Most people in this demographic also use either iOS or Android phones, so you'd probably also want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work.
 
-Some people still use IE 9. This is old and less capable, so let's put it in the B grade tier.
+For IE, you'd probably want to test the last couple of versions. Some people still use IE 9. Since IE is old and less capable, and Microsoft is phasing out IE support, let's put it in the B grade tier.
 
 Opera Mini isn't very capable in terms of running complex JavaScript at runtime. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
 
 
 This gives us the following support chart so far:
 
-1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet
-2. B grade: IE 9 for Windows, Opera Mini
+1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge for Windows, iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone/tablet
+2. B grade: IE for Windows, Opera Mini
 3. C grade: n/a
 
 If your target audience is mostly located somewhere else, then the most common browsers and OSs may differ from above.
 
 > **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be something to consider.
 
-### Browser support stats
+### Browser statistics
 
-Browser support stats can make your . For example:
-
-- [Statcounter](https://gs.statcounter.com/)
-
-This is very North America-centric, and not particularly accurate, but it can give you an idea of broad trends.
+Some websites show which browsers are popular in a given region. For example, [Statcounter](https://gs.statcounter.com/) gives an idea of trends in North America.
 
 ### Using analytics
 
