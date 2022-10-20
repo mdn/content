@@ -33,7 +33,7 @@ hwb(hue whiteness lightness / alpha)
 ### Values
 
 - `hue`
-  - : An {{cssxref("&lt;angle&gt;")}} of the {{glossary("color wheel")}} given in one of the following units: `deg`, `rad`, `grad`, or `turn`. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` is `240deg`, `480deg` is `120deg`, `-1turn` is `1turn`, and so on. This color wheel helps finding the angle associated with a color: ![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
+  - : An {{cssxref("&lt;angle&gt;")}} on the {{glossary("color wheel")}} given in one of the following units: `deg`, `rad`, `grad`, or `turn`. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` is `240deg`, `480deg` is `120deg`, `-1turn` is `1turn`, and so on. This color wheel helps finding the angle associated with a color: ![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 - `whiteness`
   - : A {{cssxref("percentage")}} that specifies the amount of white to mix in, from `0%`, meaning no whiteness, to `100%` meaning full whiteness.
 - `blackness`
@@ -65,24 +65,24 @@ A table showing how _whiteness_ and _blackness_ interact with a fixed _hue_.
 ```css
   table { border-collapse: collapse;}
   td { border: 1px solid black; width: 20px; height: 10px;}
-  .c11 { background: hbw(60deg,   0%,  0%); } .c12 { background: hbw(60deg,   0%,  20%); } 
-  .c13 { background: hbw(60deg,   0%, 40%); } .c14 { background: hbw(60deg,   0%,  60%); } 
-  .c15 { background: hbw(60deg,   0%, 80%); } .c16 { background: hbw(60deg,   0%, 100%); }
-  .c21 { background: hbw(60deg,  20%,  0%); } .c22 { background: hbw(60deg,  20%,  20%); } 
-  .c23 { background: hbw(60deg,  20%, 40%); } .c24 { background: hbw(60deg,  20%,  60%); } 
-  .c25 { background: hbw(60deg,  20%, 80%); } .c26 { background: hbw(60deg,  20%, 100%); }
-  .c31 { background: hbw(60deg,  40%,  0%); } .c32 { background: hbw(60deg,  40%,  20%); } 
-  .c33 { background: hbw(60deg,  40%, 40%); } .c34 { background: hbw(60deg,  40%,  60%); } 
-  .c35 { background: hbw(60deg,  40%, 80%); } .c36 { background: hbw(60deg,  40%, 100%); }
-  .c41 { background: hbw(60deg,  60%,  0%); } .c42 { background: hbw(60deg,  60%,  20%); } 
-  .c43 { background: hbw(60deg,  60%, 40%); } .c44 { background: hbw(60deg,  60%,  60%); } 
-  .c45 { background: hbw(60deg,  60%, 80%); } .c46 { background: hbw(60deg,  60%, 100%); }
-  .c51 { background: hbw(60deg,  80%,  0%); } .c52 { background: hbw(60deg,  80%,  20%); } 
-  .c53 { background: hbw(60deg,  80%, 40%); } .c54 { background: hbw(60deg,  80%,  60%); } 
-  .c55 { background: hbw(60deg,  80%, 80%); } .c56 { background: hbw(60deg,  80%, 100%); }
-  .c61 { background: hbw(60deg, 100%,  0%); } .c62 { background: hbw(60deg, 100%,  20%); } 
-  .c63 { background: hbw(60deg, 100%, 40%); } .c64 { background: hbw(60deg, 100%,  60%); } 
-  .c65 { background: hbw(60deg, 100%, 80%); } .c66 { background: hbw(60deg, 100%, 100%); }
+  .c11 { background: hwb(60deg,   0%,  0%); } .c12 { background: hwb(60deg,   0%,  20%); } 
+  .c13 { background: hwb(60deg,   0%, 40%); } .c14 { background: hwb(60deg,   0%,  60%); } 
+  .c15 { background: hwb(60deg,   0%, 80%); } .c16 { background: hwb(60deg,   0%, 100%); }
+  .c21 { background: hwb(60deg,  20%,  0%); } .c22 { background: hwb(60deg,  20%,  20%); } 
+  .c23 { background: hwb(60deg,  20%, 40%); } .c24 { background: hwb(60deg,  20%,  60%); } 
+  .c25 { background: hwb(60deg,  20%, 80%); } .c26 { background: hwb(60deg,  20%, 100%); }
+  .c31 { background: hwb(60deg,  40%,  0%); } .c32 { background: hwb(60deg,  40%,  20%); } 
+  .c33 { background: hwb(60deg,  40%, 40%); } .c34 { background: hwb(60deg,  40%,  60%); } 
+  .c35 { background: hwb(60deg,  40%, 80%); } .c36 { background: hwb(60deg,  40%, 100%); }
+  .c41 { background: hwb(60deg,  60%,  0%); } .c42 { background: hwb(60deg,  60%,  20%); } 
+  .c43 { background: hwb(60deg,  60%, 40%); } .c44 { background: hwb(60deg,  60%,  60%); } 
+  .c45 { background: hwb(60deg,  60%, 80%); } .c46 { background: hwb(60deg,  60%, 100%); }
+  .c51 { background: hwb(60deg,  80%,  0%); } .c52 { background: hwb(60deg,  80%,  20%); } 
+  .c53 { background: hwb(60deg,  80%, 40%); } .c54 { background: hwb(60deg,  80%,  60%); } 
+  .c55 { background: hwb(60deg,  80%, 80%); } .c56 { background: hwb(60deg,  80%, 100%); }
+  .c61 { background: hwb(60deg, 100%,  0%); } .c62 { background: hwb(60deg, 100%,  20%); } 
+  .c63 { background: hwb(60deg, 100%, 40%); } .c64 { background: hwb(60deg, 100%,  60%); } 
+  .c65 { background: hwb(60deg, 100%, 80%); } .c66 { background: hwb(60deg, 100%, 100%); }
 ```
 
 {{EmbedLiveSample("Examples", "100%", "150px")}}
