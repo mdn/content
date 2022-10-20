@@ -48,7 +48,8 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
       <img
         src="promobutton_mdn5.png"
         contextmenu="ChangeImage"
-        id="promoButton" />
+        id="promoButton"
+        alt="Better CSS Docs for a better web" />
       <menu type="context" id="ChangeImage">
         <menuitem label="Change Image" onclick="changeImage()"></menuitem>
       </menu>
