@@ -63,7 +63,7 @@ Here we compare different ways to select the penultimate (last but one) item of 
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
 // Using length property
-const lengthWay = uint8[uint8.length-2];
+const lengthWay = uint8[uint8.length - 2];
 console.log(lengthWay); // Logs: 11
 
 // Using slice() method. Note an array is returned

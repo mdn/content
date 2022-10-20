@@ -31,7 +31,7 @@ This function is also used to identify [if objects have the behavior of regular 
 The following code will throw a {{jsxref("TypeError")}}:
 
 ```js
-'/bar/'.startsWith(/bar/);
+"/bar/".startsWith(/bar/);
 
 // Throws TypeError, as /bar/ is a regular expression
 // and Symbol.match is not modified.
@@ -42,8 +42,8 @@ However, if you set `Symbol.match` to `false`, the object will be considered as 
 ```js
 const re = /foo/;
 re[Symbol.match] = false;
-'/foo/'.startsWith(re); // true
-'/baz/'.endsWith(re);   // false
+"/foo/".startsWith(re); // true
+"/baz/".endsWith(re); // false
 ```
 
 ## Specifications

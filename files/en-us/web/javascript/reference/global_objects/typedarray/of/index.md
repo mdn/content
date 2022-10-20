@@ -66,10 +66,10 @@ Some subtle distinctions between {{jsxref("Array.of()")}} and
 ### Using of()
 
 ```js
-Uint8Array.of(1);            // Uint8Array [ 1 ]
-Int8Array.of('1', '2', '3'); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined);    // Int16Array [ 0 ]
+Uint8Array.of(1); // Uint8Array [ 1 ]
+Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
+Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
+Int16Array.of(undefined); // Int16Array [ 0 ]
 ```
 
 ## Specifications
