@@ -531,7 +531,7 @@ In general, the process of doing a canvas animation involves the following steps
 Now let's create our own simple animation — we'll get a character from a certain rather awesome retro computer game to walk across the screen.
 
 1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
-   
+
 2. Update the inner HTML to reflect the image:
 
    ```html
