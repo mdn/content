@@ -55,6 +55,18 @@
     "ru": "Наследование:",
     "zh-CN": "继承"
   },
+  "Instance_methods": {
+    "en-US": "Instance methods",
+    "es": "Métodos de instancia",
+    "fr": "Méthodes d'instance",
+    "zh-CN": "实例方法"
+  },
+  "Instance_properties": {
+    "en-US": "Instance properties",
+    "es": "Propiedades de instancia",
+    "fr": "Propriétés d'instance",
+    "zh-CN": "实例属性"
+  },
   "Interfaces": {
     "en-US": "Interfaces",
     "es": "Interfaces",
@@ -116,6 +128,18 @@
     "pt-BR": "Páginas relacionadas:",
     "ru": "Похожие страницы:",
     "zh-CN": "相关页面："
+  },
+  "Static_methods": {
+    "en-US": "Static methods",
+    "es": "Métodos estáticos",
+    "fr": "Méthodes statiques",
+    "zh-CN": "静态方法"
+  },
+  "Static_properties": {
+    "en-US": "Static properties",
+    "es": "Propiedades estáticas",
+    "fr": "Propriétés statiques",
+    "zh-CN": "静态属性"
   },
   "TranslationCTA": {
     "en-US": "Our volunteers haven't translated this article into your language yet. Join us and help get the job done!",

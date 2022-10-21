@@ -27,7 +27,7 @@ Possibly the most useful property on this interface is its {{DOMxRef("RTCSctpTra
 _Also inherits properties from: {{DOMxRef("EventTarget")}}_.
 
 - {{DOMxRef("RTCSctpTransport.maxChannels")}} {{ReadOnlyInline}}
-  - : An integer value indicating the maximum number of {{DOMxRef("RTCDataChannel", "<code>RTCDataChannel</code>s", "", 1)}} that can be open simultaneously.
+  - : An integer value indicating the maximum number of [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel) objects that can be opened simultaneously.
 - {{DOMxRef("RTCSctpTransport.maxMessageSize")}} {{ReadOnlyInline}}
   - : An integer value indicating the maximum size, in bytes, of a message which can be sent using the {{DOMxRef("RTCDataChannel.send()")}} method.
 - {{DOMxRef("RTCSctpTransport.state")}} {{ReadOnlyInline}}

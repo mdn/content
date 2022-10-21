@@ -59,7 +59,7 @@ console.log(hello.concat('Kevin', '. Have a nice day.'));
 const greetList = ['Hello', ' ', 'Venkat', '!'];
 "".concat(...greetList)  // "Hello Venkat!"
 
-"".concat({})    // [object Object]
+"".concat({})    // "[object Object]"
 "".concat([])    // ""
 "".concat(null)  // "null"
 "".concat(true)  // "true"

@@ -54,12 +54,14 @@ function was called with [new](/en-US/docs/Web/JavaScript/Reference/Operators/ne
 
 ```js
 function Foo() {
-  if (!new.target) { throw 'Foo() must be called with new' }
-  console.log('Foo instantiated with new')
+  if (!new.target) {
+    throw "Foo() must be called with new";
+  }
+  console.log("Foo instantiated with new");
 }
 
-new Foo()  // logs "Foo instantiated with new"
-Foo()      // throws "Foo() must be called with new"
+new Foo(); // logs "Foo instantiated with new"
+Foo(); // throws "Foo() must be called with new"
 ```
 
 ### new\.target in constructors

@@ -39,10 +39,10 @@ the key can't be found, {{jsxref("undefined")}} is returned.
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // Returns "foo".
-wm.get('baz');  // Returns undefined.
+wm.get("baz"); // Returns undefined.
 ```
 
 ## Specifications
