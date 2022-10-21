@@ -34,20 +34,7 @@ function evaluateXPath(aNode, aExpr) {
 }
 ```
 
-This function uses the **`new XPathEvaluator()`** constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to **`new XPathEvaluator()`** with the following fragment:
-
-```js
-  // XPathEvaluator is implemented on objects that implement Document
-  const xpe = aNode.ownerDocument || aNode;
-```
-
-In that case the creation of the [XPathNSResolver](/en-US/docs/Web/API/Document/createNSResolver) can be simplified as:
-
-```js
-  const nsResolver = xpe.createNSResolver(xpe.documentElement);
-```
-
-Note however that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
+Note that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
 
 If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a local or remote XML file into a DOM tree (as described in [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)), the first argument to `evaluateXPath()` should be `req.responseXML`.
 
