@@ -59,10 +59,10 @@ new URL(url, base)
 // Base URLs:
 let baseUrl = 'https://developer.mozilla.org';
 
-let A = new URL("/", baseUrl);                                
+let A = new URL("/", baseUrl);
 // => 'https://developer.mozilla.org/'
 
-let B = new URL(baseUrl);                                     
+let B = new URL(baseUrl);
 // => 'https://developer.mozilla.org/'
 
 new URL('en-US/docs', B);
@@ -73,7 +73,7 @@ let D = new URL('/en-US/docs', B);
 
 new URL('/en-US/docs', D);
 // => 'https://developer.mozilla.org/en-US/docs'
-        
+ 
 new URL('/en-US/docs', A);
 // => 'https://developer.mozilla.org/en-US/docs'
 
@@ -98,13 +98,13 @@ new URL('http://www.example.com', );
 new URL('http://www.example.com', B);
 // => 'http://www.example.com/'
 
-new URL("", "https://example.com/?query=1")    
+new URL("", "https://example.com/?query=1");
 // => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
 
-new URL("/a", "https://example.com/?query=1")  
+new URL("/a", "https://example.com/?query=1");
 // => 'https://example.com/a' (see relative URLs)
 
-new URL("//foo.com", "https://example.com")    
+new URL("//foo.com", "https://example.com");
 // => 'https://foo.com' (see relative URLs)
 ```
 
