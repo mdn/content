@@ -47,7 +47,7 @@ represents.
 ### Decoding a Cyrillic URL component
 
 ```js
-decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "JavaScript_шеллы"
 ```
 
@@ -55,7 +55,7 @@ decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 
 ```js
 try {
-  const a = decodeURIComponent('%E0%A4%A');
+  const a = decodeURIComponent("%E0%A4%A");
 } catch (e) {
   console.error(e);
 }
@@ -70,10 +70,10 @@ needs a bit of preparation.
 
 ```js
 function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, ' '));
+  return decodeURIComponent(p.replace(/\+/g, " "));
 }
 
-decodeQueryParam('search+query%20%28correct%29');
+decodeQueryParam("search+query%20%28correct%29");
 // 'search query (correct)'
 ```
 
