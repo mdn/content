@@ -566,12 +566,16 @@ Select your Github repository for the local library: `<user-name>/django-localli
 
 ![Railway website screen - selectrepo](railway_new_project_button_deploy_github_selectrepo.png)
 
+Confirm your deployment by selecting **Deploy Now**.
+
+![Confirmation screen - select deploy](railway_new_project_deploy_confirm.png)
+
 Railway will then load and deploy your project, displaying progress on the deployments tab.
 When deployment successfully completes, you'll see a screen like the one below.
 
 ![Railway website screen - deployment](railway_project_deploy.png)
 
-You can click the site URL (highlighted below) to open the site in a browser (it still won't work, because the setup is not complete).
+You can click the site URL (highlighted above) to open the site in a browser (it still won't work, because the setup is not complete).
 
 ### Set ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS
 
@@ -619,20 +623,36 @@ git push origin main
 
 Next we need to create a Postgres database and connect it to the Django application that we just deployed.
 (If you open the site now you'll get a new error because the database cannot be accessed).
+We will create the database as part of the application project, although you there is nothing to stop you creating in its own separate project.
 
-On Railway, choose the **Dashboard** option from the site top menu, then select the **New Project** button (these are the same steps as for creating the main project).
-Select **Provision PostgreSQL** from the list of projects:
+On Railway, choose the **Dashboard** option from the site top menu and then select your application project.
+At this stage it just contains a single service for your application (this can be selected to set variables and other details of the service).
+The **Settings** button can be selected to change project-wide settings.
+Select the **New** button, which is used to add services to the project.
 
-![Railway new project screen with Provision PostgreSQL highlighted](railway_new_project_button_deploy_provision_posgresql.png)
+![Railway project with new service button highlighted](railway_project_open_no_database.png)
 
-Railway will set up an empty database and display information about the database in a tabbed view.
-Open the _Connect_ tab and select the "Postgres Connection URL" (above we modified the Django project to read an URL in this format that is provided as an environment variable).
+Select **Database** when prompted about the type of service to add:
+
+![Railway project - select database as new service](railway_project_add_database.png)
+
+Then select **Add PostgreSQL** to start adding the database
+
+![Railway project - select Postgres as new service](railway_project_add_database_select_type.png)
+
+Railway will then provision a service containing an empty database in the same project.
+On completion you will now see both the application and database services in the project view.
+
+![Railway project with application and postgre database service](railway_project_two_services.png)
+
+Select the PostgreSQL service to display information about the database.
+Open the _Connect_ tab and copy the "Postgres Connection URL" (this is the address that we set up the locallibrary to read as an environment variable).
 
 ![Railway website screen - provision_postrgessql](railway_postgresql_connect.png)
 
-To make this accessible to the Django we need to add it to the Django process using an environment variable.
-Open the Django project (choose the **Dashboard** option from the site top menu then select the Django project from your dashboard).
-When the information screen is displayed, select the _Variables_ tab and then the **New Variable** button.
+To make this accessible to the library application we need to add it to the application process using an environment variable.
+First open the application service.
+Then select the _Variables_ tab and press the **New Variable** button.
 
 Enter the variable name `DATABASE_URL` and the connection URL you copied for the database.
 This will look something like the screen shown below.
