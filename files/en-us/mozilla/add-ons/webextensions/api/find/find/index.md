@@ -96,7 +96,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
         ![](rects-1.png,alt="Image showing a website with text that reads "this domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission. More information."")If you search for "You may", the match needs to be described by two rectangles:
 
-        ![](rects-2.png, alt="Image showing a website with text that reads "this domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission. More information". The words "you may" are highlighted in green.")In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
+        ![This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission.". The words "you may" are highlighted.](rects-2.png)
+
+In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
 
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
