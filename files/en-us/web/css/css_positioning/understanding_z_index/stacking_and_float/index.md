@@ -121,8 +121,6 @@ strong {
 
 {{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
 
-
-
 ## See also
 
 - [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
