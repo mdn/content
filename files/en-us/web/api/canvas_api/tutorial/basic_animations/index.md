@@ -175,7 +175,7 @@ function clock() {
   ctx.fillStyle = 'black';
 
   // Write image description
-  canvas.innerText = "The time is: " + hr + ":" + min; 
+  canvas.innerText = `The time is: ${hr}:${min}`; 
 
   // Write Hours
   ctx.save();
