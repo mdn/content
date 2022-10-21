@@ -34,7 +34,7 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
 - `NaN`
   - : A value representing "Not a Number" canonical casing.
 
-### Return Value
+### Return value
 
 Both `e` and `pi` are numeric constants act as {{cssxref("number")}} values.
 
@@ -59,7 +59,7 @@ For example:
 
 ### Case sensitivity
 
-CSS constants are case-insensitive. Thus, `calc(pi)`, `calc(E)` and `calc(InFiNiTy)` are all valid.
+CSS constants are case-insensitive. Thus, `calc(Pi)`, `calc(E)` and `calc(InFiNiTy)` are all valid.
 
 There is only one exception: `NaN` is case-sensitive and must be written exactly as `NaN`. Both `nan` and `NAN` are invalid constants.
 
@@ -73,6 +73,7 @@ e
 E
 pi
 -pi
+Pi
 infinity
 -infinity
 InFiNiTy
@@ -83,6 +84,7 @@ NaN
 
 ```plain example-bad
 nan
+Nan
 NAN
 ```
 
