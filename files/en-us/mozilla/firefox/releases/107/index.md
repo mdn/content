@@ -44,6 +44,9 @@ This article provides information about the changes in Firefox 107 that will aff
 
 #### Removals
 
+- The non-standard and deprecated [`SVGSVGElement.useCurrentView`](/en-US/docs/Web/API/SVGSVGElement#svgsvgelement.usecurrentview) property has been removed.
+  (See {{bug(1174097)}} for more details.)
+
 ### WebAssembly
 
 #### Removals
