@@ -97,24 +97,24 @@ Promise.any([failure]).catch((err) => {
 In this example, we have a function that fetches an image and returns a blob. We use `Promise.any()` to fetch a couple of images and display the first one available (i.e. whose promise has resolved).
 
 ```js
-function fetchAndDecode(url) {
-  return fetch(url).then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      return response.blob();
-    }
-  });
+async function fetchAndDecode(url, description) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  const data = await response.blob();
+  return [data, description];
 }
 
-const coffee = fetchAndDecode("coffee.jpg");
-const tea = fetchAndDecode("tea.jpg");
+const coffee = fetchAndDecode("coffee.jpg", "Coffee");
+const tea = fetchAndDecode("tea.jpg", "Tea");
 
 Promise.any([coffee, tea])
-  .then((value) => {
-    const objectURL = URL.createObjectURL(value);
+  .then(([blob, description]) => {
+    const objectURL = URL.createObjectURL(blob);
     const image = document.createElement("img");
     image.src = objectURL;
+    image.alt = description;
     document.body.appendChild(image);
   })
   .catch((e) => {

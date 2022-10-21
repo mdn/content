@@ -26,7 +26,7 @@ CSS transforms are implemented using a set of CSS properties that let you apply 
 
 ## CSS transforms properties
 
-Two major properties are used to define CSS transforms: {{cssxref("transform")}} and {{cssxref("transform-origin")}}
+Two major properties are used to define CSS transforms: {{cssxref("transform")}} (or the individual {{cssxref('translate')}}, {{cssxref('rotate')}}), and {{cssxref('scale')}} properties) and {{cssxref("transform-origin")}}
 
 - {{cssxref("transform-origin")}}
   - : Specifies the position of the origin. By default, it is at the center of the element and can be moved. It is used by several transforms, like rotations, scaling or skewing, that need a specific point as a parameter.
@@ -45,9 +45,10 @@ Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 
 ```html
 <img
-  style="transform: rotate(90deg);
-            transform-origin: bottom left;"
-  src="logo.png" />
+  style="rotate: 90deg;
+      transform-origin: bottom left;"
+  src="logo.png"
+  alt="MDN Logo" />
 ```
 
 {{EmbedLiveSample('Rotating', 'auto', 240) }}
@@ -60,7 +61,8 @@ Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X
 <img
   style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-  src="logo.png" />
+  src="logo.png"
+  alt="MDN logo" />
 ```
 
 {{EmbedLiveSample('Skewing_and_translating') }}
@@ -542,6 +544,8 @@ Once you have done this, you can work on the element in the 3D space.
 
 ## See also
 
+- The [CSS `transform` property](/en-US/docs/Web/CSS/transform) and the [CSS `<transform-function>` data types](/en-US/docs/Web/CSS/transform-function)
+- The individual tranforms properties: {{cssxref('translate')}}, {{cssxref('rotate')}}), and {{cssxref('scale')}} (There is no `skew` property)
 - [Using device orientation with 3D Transforms](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (Blog post by David DeSandro)
 - [CSS Transform Playground](https://css-transform.moro.es/) (Online tool to visualize CSS Transform functions)

@@ -60,15 +60,15 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-const de = new Intl.Collator('de', { sensitivity: 'base' })
+const de = new Intl.Collator("de", { sensitivity: "base" });
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;       // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## Specifications
