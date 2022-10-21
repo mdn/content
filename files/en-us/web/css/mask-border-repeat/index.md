@@ -26,7 +26,7 @@ mask-border-repeat: repeat;
 mask-border-repeat: round;
 mask-border-repeat: space;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 mask-border-repeat: round stretch;
 
 /* Global values */

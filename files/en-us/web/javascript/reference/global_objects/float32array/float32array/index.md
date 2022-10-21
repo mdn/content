@@ -88,7 +88,9 @@ const z = new Float32Array(buffer, 4, 4);
 console.log(z.byteOffset); // 4
 
 // From an iterable
-const iterable = function*() { yield* [1, 2, 3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const float32FromIterable = new Float32Array(iterable);
 console.log(float32FromIterable);
 // Float32Array [1, 2, 3]
