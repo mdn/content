@@ -54,6 +54,8 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ## Changes for add-on developers
 
+- [Extension version numbers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format) in Manifest V3 have been simplified. The version number is now a string with 1 to 4 numbers separated by dots, for example, `1.2.3.4`. Each number can have up to 9 digits. However, a leading zero before another digit is not allowed. For example, `2.01` is not an allowed version number; however, `0.2`, `2.0.1`, and `2.10` are allowed. The regular expression for these version numbers is `^(0|[1-9]\d{0,9})(\.(0|[1-9]\d{0,9})){0,3}$` ({{bug(1793925)}}).
+
 ### Removals
 
 ### Other

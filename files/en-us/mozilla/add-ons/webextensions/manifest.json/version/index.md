@@ -27,7 +27,7 @@ browser-compat: webextensions.manifest.version
   </tbody>
 </table>
 
-Version of the extension, formatted as numbers and ASCII characters separated by dots. For the details of the version format, see the [Version format](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format) page.
+Version of the extension, formatted as numbers and ASCII characters or, for Manifest V3 staring in Firefox 108, only numbers separated by dots in both cases. See [Manifest Version Format](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format), for details about the version format.
 
 You can inspect the [add-ons linter code](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10) to see how extension versions for Firefox are validated.
 
