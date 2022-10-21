@@ -104,7 +104,7 @@ Function expressions are convenient when passing a function as an argument to an
 
 ```js
 function map(f, a) {
-  const result = Array(a.length);
+  const result = new Array(a.length);
   for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
   }
@@ -116,7 +116,7 @@ In the following code, the function receives a function defined by a function ex
 
 ```js
 function map(f, a) {
-  const result = Array(a.length);
+  const result = new Array(a.length);
   for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
   }
