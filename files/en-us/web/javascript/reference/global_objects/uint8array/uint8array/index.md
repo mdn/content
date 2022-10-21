@@ -32,7 +32,13 @@ new Uint8Array(buffer, byteOffset, length)
 
 > **Note:** `Uint8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
-For a detailed explanation of each constructor parameter, see the [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#constructor) page.
+### Parameters
+
+See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters).
+
+### Exceptions
+
+See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions).
 
 ## Examples
 
