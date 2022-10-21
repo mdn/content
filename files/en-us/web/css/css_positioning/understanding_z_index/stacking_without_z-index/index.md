@@ -23,11 +23,9 @@ See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) fo
 
 Keep in mind, when the {{cssxref("order")}} property alters rendering from the "order of appearance in the HTML" within {{cssxref("flex")}} containers, it similarly affects the order for stacking context.
 
+## Example
+
 In the example below, elements #1 through #4 are positioned elements. Element #5 is static, and so is drawn below the other four elements, even though it comes later in the HTML markup.
-
-{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
-
-## Source code for the example
 
 ### HTML
 
@@ -112,6 +110,8 @@ div {
   margin: 0px 50px 0px 50px;
 }
 ```
+
+{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
 
 ## See also
 
