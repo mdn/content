@@ -15,20 +15,20 @@ tags:
 
 For floated blocks, the stacking order is a bit different. Floating blocks are placed between non-positioned blocks and positioned blocks:
 
-1. The background and borders of the root element
-2. Descendant non-positioned blocks, in order of appearance in the HTML
-3. _Floating blocks_
-4. Descendant positioned elements, in order of appearance in the HTML
+1. The background and borders of the root element.
+2. Descendant non-positioned blocks, in order of appearance in the HTML.
+3. _Floating blocks_.
+4. Descendant positioned blocks, in order of appearance in the HTML.
 
 See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
 Actually, as you can see in the example below, the background and border of the non-positioned block (DIV #4) is completely unaffected by floating blocks, but the content is affected. This happens according to standard float behavior. This behavior can be shown with an added rule to the above list:
 
-1. The background and borders of the root element
-2. Descendant non-positioned blocks, in order of appearance in the HTML
-3. Floating blocks
-4. _Descendant non-positioned inline elements_
-5. Descendant positioned elements, in order of appearance in the HTML
+1. The background and borders of the root element.
+2. Descendant non-positioned blocks, in order of appearance in the HTML.
+3. Floating blocks.
+4. _Descendant non-positioned inline elements_.
+5. Descendant positioned blocks, in order of appearance in the HTML.
 
 {{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
 
