@@ -14,9 +14,15 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
 
+> **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
+
 The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
 
-> **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
+```css
+@media (prefers-reduced-motion) {
+  /* styles to apply if the user's settings are set to reduced motion */
+}
+```
 
 ## Syntax
 
@@ -61,7 +67,7 @@ This example has a scaling animation by default. If Reduce Motion is enabled in 
 /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
 @media (prefers-reduced-motion) {
   .animation {
-    animation-name: dissolve;
+    animation: dissolve 2s linear infinite both;
   }
 }
 ```
