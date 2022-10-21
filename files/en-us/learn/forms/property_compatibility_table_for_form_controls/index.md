@@ -1269,7 +1269,7 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
       <td>
         <ol>
           <li>
-            Only Firefox provides full support for this property.Other browsers only support it on
+            Only Firefox provides full support for this property. Other browsers only support it on
             the <code>{{htmlelement("select")}}</code> element.
           </li>
         </ol>
