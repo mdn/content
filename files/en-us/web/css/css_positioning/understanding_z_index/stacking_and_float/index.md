@@ -29,10 +29,10 @@ Actually, as you can see in the example below, the background and border of the 
 1. The background and borders of the root element.
 2. Descendant non-positioned blocks, in order of appearance in the HTML.
 3. Floating blocks.
-4. _Descendant non-positioned inline elements_.
+4. _Descendant non-positioned inline blocks_.
 5. Descendant positioned blocks, in order of appearance in the HTML.
 
-> **Note:** If an `opacity` value is applied to the non-positioned block (DIV #4), then something strange happens: the background and border of that block pops up above the floating blocks and the positioned blocks. This is due to a peculiar part of the specification: applying a `opacity` value creates a new stacking context (see [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)).
+> **Note:** If an `opacity` value is applied to the non-positioned block (DIV #4), then something strange happens: the background and border of that block pops up above the floating blocks and the positioned blocks. This is due to a peculiar part of the specification: applying an `opacity` value creates a new stacking context (see [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)).
 
 ### HTML
 
