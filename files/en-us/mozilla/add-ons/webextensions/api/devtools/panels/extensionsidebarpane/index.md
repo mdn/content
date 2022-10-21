@@ -18,7 +18,7 @@ browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane
 
 The `ExtensionSidebarPane` object represents a pane that an extension has added to the sidebar in the browser's HTML/CSS inspector.
 
-![](inspector-sidebar.png)
+![](inspector-sidebar.png, alt="Image showing a new pane titled "My pane", that displays a JSON object:")
 
 To create an `ExtensionSidebarPane`, call the [`browser.devtools.panels.elements.createSidebarPane()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane) function.
 
