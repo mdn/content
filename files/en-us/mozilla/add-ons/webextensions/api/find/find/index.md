@@ -227,7 +227,9 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 In this example the extension uses `rectData` to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:
 
-![](redacted.png, alt="Image of three search results with black boxes redacting portions of the page.")Note that in many ways this is a poor way to redact pages.
+![Three search results with some texted redacted by black rectangles.](redacted.png)
+
+Note that in many ways this is a poor way to redact pages.
 
 The background script:
 
