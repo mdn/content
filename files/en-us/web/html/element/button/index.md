@@ -256,7 +256,7 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 ### Clicking and focus
 
-Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of `type="button"` and `type="submit"` are the same.
+Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://bugs.webkit.org/show_bug.cgi?id=22261).
 
 ## Specifications
 

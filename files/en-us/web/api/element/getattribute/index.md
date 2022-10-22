@@ -62,9 +62,9 @@ When called on an HTML element in a DOM flagged as an HTML document,
 
 ### Non-existing attributes
 
-Essentially all web browsers return `null` when
+All modern web browsers return `null` when
 the specified attribute does not exist on the specified element; this is what the [DOM specification](https://dom.spec.whatwg.org/#dom-element-getattribute) specifies. In the old DOM 3 Core specification, the return value was the _empty
-string_. The implementation of `getAttribute()` in XUL (Gecko) followed this and returned an empty string. You may encounter a {{domxref("element.hasAttribute()")}} call to check for an attribute's existence before a `getAttribute()` call for this reason.
+string_. 
 
 ### Retrieving nonce values
 
