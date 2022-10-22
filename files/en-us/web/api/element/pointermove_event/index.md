@@ -103,4 +103,4 @@ para.onpointermove = (event) => {
 - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
 - This event on `Document` targets: [`pointermove`](/en-US/docs/Web/API/Document/pointermove_event) event
 
-Internet Explorer also used to support an event named `MSPointerHover`, which fired when a contact (normally a pen) moves over an element without touching the surface. This proprietary method is specific to Internet Explorer and, as of Internet Explorer 11, has been deprecated. Starting with IE11 the [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) event will fire for all pen movement (regardless if its hovering or not).
+Internet Explorer also used to support an event named `MSPointerHover`, which fired when a contact (normally a pen) moves over an element without touching the surface. This proprietary method is specific to Internet Explorer and, as of Internet Explorer 11, has been deprecated. Starting with IE11 the `pointermove` event will fire for all pen movement (regardless if its hovering or not).
