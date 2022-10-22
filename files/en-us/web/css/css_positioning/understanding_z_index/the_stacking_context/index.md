@@ -78,16 +78,16 @@ An easy way to figure out the _rendering order_ of stacked elements along the z-
 
 In our example (sorted according to the final rendering order):
 
- - Root
+- Root
 
-   - DIV #2: `z-index` is 2
-   - DIV #3: `z-index` is 4
+  - DIV #2: `z-index` is 2
+  - DIV #3: `z-index` is 4
 
-     - DIV #5: `z-index` is 1, stacked under an element with a `z-index` of 4, which results in a rendering order of 4.1
-     - DIV #6: `z-index` is 3, stacked under an element with a `z-index` of 4, which results in a rendering order of 4.3
-     - DIV #4: `z-index` is 6, stacked under an element with a `z-index` of 4, which results in a rendering order of 4.6
+    - DIV #5: `z-index` is 1, stacked under an element with a `z-index` of 4, which results in a rendering order of 4.1
+    - DIV #6: `z-index` is 3, stacked under an element with a `z-index` of 4, which results in a rendering order of 4.3
+    - DIV #4: `z-index` is 6, stacked under an element with a `z-index` of 4, which results in a rendering order of 4.6
 
-   - DIV #1: `z-index` is 5
+  - DIV #1: `z-index` is 5
 
 ### HTML
 
