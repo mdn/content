@@ -11,8 +11,6 @@ tags:
 
 {{CSSRef}}
 
-« [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
-
 ## Description
 
 This last example shows problems that arise when mixing several positioned elements in a multi-level HTML hierarchy and when `z-index`es are assigned using class selectors.
@@ -29,19 +27,19 @@ So a third-level menu will be stacked under the following second-level menus, be
 
 To better understand the situation, here is the stacking context hierarchy:
 
-- root stacking context
+- Root stacking context
 
   - LEVEL #1
 
-    - LEVEL #2 (z-index: 1)
+    - LEVEL #2 (`z-index: 1`)
 
       - LEVEL #3
       - …
       - LEVEL #3
 
-    - LEVEL #2 (z-index: 1)
+    - LEVEL #2 (`z-index: 1`)
     - …
-    - LEVEL #2 (z-index: 1)
+    - LEVEL #2 (`z-index: 1`)
 
   - LEVEL #1
   - …

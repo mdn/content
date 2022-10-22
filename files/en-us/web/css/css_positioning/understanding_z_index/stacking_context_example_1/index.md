@@ -11,8 +11,6 @@ tags:
 
 {{CSSRef}}
 
-« [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
-
 ## Description
 
 Let's start with a basic example. In the root stacking context we have two DIVs (DIV #1 and DIV #3), both relatively positioned, but without `z-index` properties. Inside DIV #1 there is an absolutely positioned DIV #2, while in DIV #3 there is an absolutely positioned DIV #4, both without `z-index` properties.
@@ -33,7 +31,7 @@ In this last example you can see that DIV #2 and DIV #4 are not siblings, becaus
 
 In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root element, and the resulting hierarchy is the following:
 
-- root stacking context
+- Root stacking context
 
   - DIV #2 (`z-index: 1`)
   - DIV #4 (`z-index: 2`)
