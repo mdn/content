@@ -15,19 +15,19 @@ tags:
 
 When the {{cssxref("z-index")}} property is not specified on any element, elements are stacked in the following order (from bottom to top):
 
-1. The background and borders of the root element
-2. Descendant non-positioned blocks, in order of appearance in the HTML
-3. Descendant positioned elements, in order of appearance in the HTML
+1. The background and borders of the root element.
+2. Descendant non-positioned elements, in order of appearance in the HTML.
+3. Descendant positioned elements, in order of appearance in the HTML.
 
 See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
-Keep in mind, when the {{cssxref("order")}} property alters rendering from the "order of appearance in the HTML" within {{cssxref("flex")}} containers, it similarly affects the order for stacking context.
+Keep in mind, when the {{cssxref("order")}} property alters rendering from the _order of appearance in the HTML_ within {{cssxref("flex")}} containers, it similarly affects the order for stacking context.
 
-In the example below, elements #1 through #4 are positioned elements. Element #5 is static, and so is drawn below the other four elements, even though it comes later in the HTML markup.
+## Example
+
+In this example, **DIV #1** through **DIV #4** are positioned elements. **DIV #5** is static, and so is drawn below the other four elements, even though it comes later in the HTML markup.
 
 {{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
-
-## Source code for the example
 
 ### HTML
 
