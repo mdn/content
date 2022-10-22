@@ -179,20 +179,6 @@ In many syntaxes where the language binds a variable for you, you can use a dest
 
 For features specific to array or object destructuring, please refer to the individual examples below.
 
-### Destructing primitive values
-
-If you try to destruct a primitive value, javascript will try to coerce it to be an object of its corresponding type.
-
-```js
-//Javascript will convert primitive value 1 to be a Number object.
-const { a, b, toFixed:c} = 1;
-console.log(a,b,c); // undefined undefined ƒ toFixed() { [native code] }
-
-//Destructing undefined or null will throw a type error
-const {a} = undefined ; // type error
-const {a} = null ; // type error
-```
-
 ## Examples
 
 ### Array destructuring
@@ -582,6 +568,20 @@ const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
 console.log(fizzBuzz); // true
+```
+
+### Destructing primitive values
+
+If you try to destruct a primitive value, javascript will try to coerce it to be an object of its corresponding type.
+
+```js
+//Javascript will convert primitive value 1 to be a Number object.
+const { a, b, toFixed:c} = 1;
+console.log(a,b,c); // undefined undefined ƒ toFixed() { [native code] }
+
+//Destructing undefined or null will throw a type error
+const {a} = undefined ; // type error
+const {a} = null ; // type error
 ```
 
 #### Combined Array and Object Destructuring
