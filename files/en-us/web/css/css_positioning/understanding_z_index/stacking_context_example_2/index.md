@@ -17,8 +17,6 @@ tags:
 
 This is a very simple example, but it is the key for understanding the concept of _stacking context_. There are the same four DIVs of the previous example, but now `z-index` properties are assigned on both levels of the hierarchy.
 
-{{ EmbedLiveSample('Example_source_code', '352', '270') }}
-
 You can see that DIV #2 (`z-index: 2`) is above DIV #3 (`z-index: 1`), because they both belong to the same stacking context (the root one), so `z-index` values rule how elements are stacked.
 
 What can be considered strange is that DIV #2 (`z-index: 2`) is above DIV #4 (`z-index: 10`), despite their `z-index` values. The reason is that they do not belong to the same stacking context. DIV #4 belongs to the stacking context created by DIV #3, and as explained previously DIV #3 (and all its content) is under DIV #2.
@@ -124,7 +122,7 @@ span.bold {
 
 ## Result
 
-{{ EmbedLiveSample('Example', '', '300') }}
+{{ EmbedLiveSample('Example', '352', '270') }}
 
 ## See also
 
