@@ -25,9 +25,7 @@ Keep in mind, when the {{cssxref("order")}} property alters rendering from the _
 
 ## Example
 
-In this example, **DIV #1** through **DIV #4** are positioned elements. **DIV #5** is static, and so is drawn below the other four elements, even though it comes later in the HTML markup.
-
-{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
+In this example, DIV #1 through DIV #4 are positioned elements. DIV #5 is static, and so is drawn below the other four elements, even though it comes later in the HTML markup.
 
 ### HTML
 
@@ -112,6 +110,10 @@ div {
   margin: 0px 50px 0px 50px;
 }
 ```
+
+## Result
+
+{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
 
 ## See also
 

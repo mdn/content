@@ -32,9 +32,7 @@ The `z-index` property can be specified with an integer value (positive, zero, o
 
 ## Example
 
-In this example, the layers' stacking order is rearranged using `z-index`. The `z-index` of **DIV #5** has no effect since it is not a positioned element.
-
-{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
+In this example, the layers' stacking order is rearranged using `z-index`. The `z-index` of DIV #5 has no effect since it is not a positioned element.
 
 ### HTML
 
@@ -129,6 +127,10 @@ strong {
   margin: 0px 50px 0px 50px;
 }
 ```
+
+## Result
+
+{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
 
 ## See also
 

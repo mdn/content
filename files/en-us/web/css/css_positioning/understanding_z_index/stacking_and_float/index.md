@@ -34,8 +34,6 @@ Actually, as you can see in the example below, the background and border of the 
 4. _Descendant non-positioned inline elements_.
 5. Descendant positioned elements, in order of appearance in the HTML.
 
-{{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
-
 ### HTML
 
 ```html
@@ -120,6 +118,10 @@ strong {
   text-align: left;
 }
 ```
+
+## Result
+
+{{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
 
 ## See also
 
