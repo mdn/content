@@ -4179,7 +4179,7 @@
 /en-US/docs/JavaScript/Reference/Deprecated_and_obsolete_features	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
-/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments	/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee-redirect-1	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee
@@ -12098,7 +12098,7 @@
 /en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
-/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments	/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments/callee	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments/length	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length
@@ -12330,6 +12330,7 @@
 /en-US/docs/Web/JavaScript/Reference/Statements/default	/en-US/docs/Web/JavaScript/Reference/Statements/switch
 /en-US/docs/Web/JavaScript/Reference/Statements/import.meta	/en-US/docs/Web/JavaScript/Reference/Operators/import.meta
 /en-US/docs/Web/JavaScript/Reference/Statements/yield	/en-US/docs/Web/JavaScript/Reference/Operators/yield
+/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Symbols	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/Web/JavaScript/Reference/arrow_functions	/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /en-US/docs/Web/JavaScript/Reference/default_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
