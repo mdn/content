@@ -153,7 +153,7 @@ div.lev3 {
 
 ## Result
 
-{{ EmbedLiveSample('Example_source_code', '320', '330') }}
+{{ EmbedLiveSample('Example', '320', '330') }}
 
 ## See also
 
