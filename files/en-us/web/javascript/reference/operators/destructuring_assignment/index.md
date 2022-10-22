@@ -570,18 +570,26 @@ const { 'fizz-buzz': fizzBuzz } = foo;
 console.log(fizzBuzz); // true
 ```
 
-### Destructing primitive values
+### Destructuring primitive values
 
-If you try to destruct a primitive value, javascript will try to coerce it to be an object of its corresponding type.
+Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
 
 ```js
-//Javascript will convert primitive value 1 to be a Number object.
-const { a, b, toFixed:c} = 1;
-console.log(a,b,c); // undefined undefined ƒ toFixed() { [native code] }
+const { a, toFixed } = 1;
+console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
+```
 
-//Destructing undefined or null will throw a type error
-const {a} = undefined ; // type error
-const {a} = null ; // type error
+Same as accessing properties, destructuring `null` or `undefined` throws a {{jsxref("TypeError")}}.
+
+```js example-bad
+const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
+const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+```
+
+This happens even when the pattern is empty.
+
+```js example-bad
+const {} = null; // TypeError: Cannot destructure 'null' as it is null.
 ```
 
 #### Combined Array and Object Destructuring
