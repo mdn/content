@@ -113,7 +113,7 @@ div {
 
 ## Result
 
-{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
+{{EmbedLiveSample("Example", 600, 400)}}
 
 ## See also
 
