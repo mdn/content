@@ -30,7 +30,7 @@ The `<canvas>` element can be styled just like any normal image ({{cssxref("marg
 
 ### Accessible content
 
-The `<canvas>` element, like {{HTMLElement("img")}} tag in that, like for {{HTMLElement("video")}}, {{HTMLElement("audio")}}, or {{HTMLElement("picture")}} elements, must be made accessible by providing fallback text, to be displayed when the media doesn't load or the user is unable to experience it as intended. You should always provide fallback content, captions, and alternative text, as appropriate for the media type.
+The `<canvas>` element, like {{HTMLElement("img")}}, {{HTMLElement("video")}}, {{HTMLElement("audio")}}, and {{HTMLElement("picture")}} elements, must be made accessible by providing fallback text, to be displayed when the media doesn't load or the user is unable to experience it as intended. You should always provide fallback content, captions, and alternative text, as appropriate for the media type.
 
 Providing fallback content is very straightforward: just insert the alternate content inside the `<canvas>` element to be accessed by screen readers, spiders, and other automated bots. Browsers, by default, will ignore the content inside the container, rendering the canvas normally unless `<canvas>` isn't supported.
 
