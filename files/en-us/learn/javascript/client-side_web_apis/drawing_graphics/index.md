@@ -696,7 +696,7 @@ function draw() {
 draw();
 ```
 
-> **Note:** The {{htmlelement("input")}} `range` and `color` types are supported fairly well across browsers, with the exception of Internet Explorer versions less than 10; also Safari doesn't yet support `color`. If your browser doesn't support these inputs, they will fall back to simple text fields and you'll just have to enter valid color/number values yourself.
+All {{htmlelement("input")}} types are well supported. If a browser doesn't support an input type, it will fall back to a plain text fields.
 
 ## WebGL
 
