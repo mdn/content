@@ -593,7 +593,7 @@ Now let's create our own simple animation — we'll get a character from a certa
    - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value.
    - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify 102 and 148 as the width and height.
 
-9.  Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
+9. Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
 
    ```js
    if (posX % 13 === 0) {
@@ -611,19 +611,19 @@ Now let's create our own simple animation — we'll get a character from a certa
 
 10. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
-   ```js
-   if (posX > width / 2) {
-     let newStartPos = -(width / 2 + 102);
-     posX = Math.ceil(newStartPos);
-     console.log(posX);
-   } else {
-     posX += 2;
-   }
-   ```
+    ```js
+    if (posX > width / 2) {
+      let newStartPos = -(width / 2 + 102);
+      posX = Math.ceil(newStartPos);
+      console.log(posX);
+    } else {
+      posX += 2;
+    }
+    ```
 
-   We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
+    We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
 
-   If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
+    If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
 
 11. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
 
