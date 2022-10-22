@@ -34,9 +34,9 @@ The function bound as a getter to the specified property. Returns `undefined` if
 
 ## Description
 
-All objects that inherit from `Object.prototype` (that is, except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype)) inherit the `__lookupGetter__()` method. If a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) has been defined for an object's property, it's not possible to reference the getter function through that property, because that property refers to the return value of that function. `__lookupGetter__()` can be used to obtain a reference to the getter function.
+All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype)) inherit the `__lookupGetter__()` method. If a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) has been defined for an object's property, it's not possible to reference the getter function through that property, because that property refers to the return value of that function. `__lookupGetter__()` can be used to obtain a reference to the getter function.
 
-`__lookupGetter__()` walks up the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) to find the specified property. If any component along the prototype chain has the specified [own property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn), the `get` attribute of the [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) for that property is returned. If that property is a data property, `undefined` is returned. If the property is not found along the entire prototype chain, `undefined` is also returned.
+`__lookupGetter__()` walks up the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) to find the specified property. If any object along the prototype chain has the specified [own property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn), the `get` attribute of the [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) for that property is returned. If that property is a data property, `undefined` is returned. If the property is not found along the entire prototype chain, `undefined` is also returned.
 
 `__lookupGetter__()` is defined in the spec as "normative optional", which means no implementation is required to implement this. However, all major browsers implement it, and due to its continued usage, it's unlikely to be removed. If a browser implements `__lookupGetter__()`, it also needs to implement the [`__lookupSetter__()`](Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__), [`__defineGetter__()`](Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), and [`__defineSetter__()`](Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods.
 
@@ -57,7 +57,7 @@ obj.__lookupGetter__("foo");
 
 ### Looking up a property's getter in the standard way
 
-You should use the {{jsxref("Object.getOwnPropertyDescriptor()")}} API to look up a property's getter. Compared to `__lookupGetter__()`, this method allows looking up [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) properties. It also works with [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype), which don't inherit from `Object.prototype` and therefore don't have the `__lookupGetter__()` method. If `__lookupGetter__()`'s behavior of walking up the prototype chain is important, you may implement it yourself with {{jsxref("Object.getPrototypeOf()")}}.
+You should use the {{jsxref("Object.getOwnPropertyDescriptor()")}} API to look up a property's getter. Compared to `__lookupGetter__()`, this method allows looking up [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) properties. The `Object.getOwnPropertyDescriptor()` method also works with [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype), which don't inherit from `Object.prototype` and therefore don't have the `__lookupGetter__()` method. If `__lookupGetter__()`'s behavior of walking up the prototype chain is important, you may implement it yourself with {{jsxref("Object.getPrototypeOf()")}}.
 
 ```js
 const obj = {
@@ -79,16 +79,17 @@ const obj2 = {
   },
 };
 
-let getter = undefined;
-let target = obj2;
-while (target && !getter) {
-  const desc = Object.getOwnPropertyDescriptor(target, "foo");
-  if (desc) {
-    return desc.get;
+function findGetter(obj, prop) {
+  while (obj) {
+    const desc = Object.getOwnPropertyDescriptor(obj, "foo");
+    if (desc) {
+      return desc.get;
+    }
+    obj = Object.getPrototypeOf(obj);
   }
-  target = Object.getPrototypeOf(target);
 }
-console.log(getter); // [Function: get foo]
+
+console.log(findGetter(obj2, "foo")); // [Function: get foo]
 ```
 
 ## Specifications
