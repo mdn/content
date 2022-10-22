@@ -50,7 +50,7 @@
     "en-US": "Inheritance:",
     "es": "Herencia",
     "fr": "Héritage&nbsp;:",
-    "ja": "継承",
+    "ja": "継承:",
     "pt-BR": "Herança:",
     "ru": "Наследование:",
     "zh-CN": "继承"
@@ -59,12 +59,14 @@
     "en-US": "Instance methods",
     "es": "Métodos de instancia",
     "fr": "Méthodes d'instance",
+    "ja": "インスタンスメソッド",
     "zh-CN": "实例方法"
   },
   "Instance_properties": {
     "en-US": "Instance properties",
     "es": "Propiedades de instancia",
     "fr": "Propriétés d'instance",
+    "ja": "インスタンスプロパティ",
     "zh-CN": "实例属性"
   },
   "Interfaces": {
@@ -124,7 +126,7 @@
     "en-US": "Related pages:",
     "es": "Páginas relacionadas:",
     "fr": "Pages similaires&nbsp;:",
-    "ja": "関連するページ",
+    "ja": "関連するページ:",
     "pt-BR": "Páginas relacionadas:",
     "ru": "Похожие страницы:",
     "zh-CN": "相关页面："
@@ -133,19 +135,21 @@
     "en-US": "Static methods",
     "es": "Métodos estáticos",
     "fr": "Méthodes statiques",
+    "ja": "静的メソッド",
     "zh-CN": "静态方法"
   },
   "Static_properties": {
     "en-US": "Static properties",
     "es": "Propiedades estáticas",
     "fr": "Propriétés statiques",
+    "ja": "静的プロパティ",
     "zh-CN": "静态属性"
   },
   "TranslationCTA": {
     "en-US": "Our volunteers haven't translated this article into your language yet. Join us and help get the job done!",
     "es": "Nuestros voluntarios aún no han traducido este artículo al Español. ¡Únete a nosotros y ayuda a traducirlo!",
     "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire&nbsp;!",
-    "ja": "まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？",
+    "ja": "まだボランティアによって日本語に翻訳されていない記事です。 MDN に参加して、翻訳してみませんか？",
     "pt-BR": "Nossos voluntários ainda não traduziram este artigo para sua linguagem. Junte-se a nós e nos ajude a traduzir!",
     "ru": "Наши волонтёры ещё не перевели данную статью на Русский. Присоединяйтесь к нам и помогите закончить эту работу!",
     "zh-CN": "此页面仍未被本地化，期待你的翻译!"
@@ -163,7 +167,7 @@
     "en-US": ", ",
     "es": ", ",
     "fr": ", ",
-    "ja": " 、 ",
+    "ja": "、",
     "pt-BR": ", ",
     "ru": ", ",
     "zh-CN": "、"
