@@ -121,7 +121,7 @@ strong {
 
 ## Result
 
-{{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
+{{EmbedLiveSample("Example", 600, 250)}}
 
 ## See also
 
