@@ -179,7 +179,7 @@ In many syntaxes where the language binds a variable for you, you can use a dest
 
 For features specific to array or object destructuring, please refer to the individual examples below.
 
-### Destructing primitive values 
+### Destructing primitive values
 
 If you try to destruct a primitive value, javascript will try to coerce it to be an object of its corresponding type.
 
