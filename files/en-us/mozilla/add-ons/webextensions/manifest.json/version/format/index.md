@@ -9,11 +9,11 @@ tags:
 
 {{AddonSidebar}}
 
-## Version numbers in Manifest V3 
+## Version numbers in Manifest V3
 
-The **version string** for Manifest V3 extensions was simplified in Firefox 108. 
+The **version string** for Manifest V3 extensions was simplified in Firefox 108.
 
-From Firefox 108, the **version string** must be 1 to 4 numbers separated by dots, for example, `1.2.3.4`. Each number can have up to 9 digits. However, a leading zero before another digit is not allowed. For example, `2.01` is not an allowed version number; however, `0.2`, `2.0.1`, and `2.10` are allowed. 
+From Firefox 108, the **version string** must be 1 to 4 numbers separated by dots, for example, `1.2.3.4`. Each number can have up to 9 digits. However, a leading zero before another digit is not allowed. For example, `2.01` is not an allowed version number; however, `0.2`, `2.0.1`, and `2.10` are allowed.
 
 The regular expression for this version string is `^(0|[1-9]\d{0,9})(\.(0|[1-9]\d{0,9})){0,3}$`.
 
