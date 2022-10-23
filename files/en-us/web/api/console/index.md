@@ -241,7 +241,7 @@ console.timeEnd("answer time");
 
 Will log the time needed by the user to dismiss the alert box, log the time to the console, wait for the user to dismiss the second alert, and then log the ending time to the console:
 
-![time log in Firefox console](console-timelog.png)
+![Time log in Firefox console](console-timelog.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
