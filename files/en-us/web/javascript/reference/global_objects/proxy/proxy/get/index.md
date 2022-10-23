@@ -50,10 +50,8 @@ value.
 
 This trap can intercept these operations:
 
-- Property access: `proxy[foo]`and
-  `proxy.bar`
-- Inherited property access:
-  `Object.create(proxy)[foo]`
+- Property access: `proxy[foo]` and `proxy.bar`
+- Inherited property access: `Object.create(proxy)[foo]`
 - {{jsxref("Reflect.get()")}}
 
 ### Invariants

@@ -154,7 +154,7 @@ The `Expires` header specifies the lifetime of the cache using an explicit time 
 Expires: Tue, 28 Feb 2022 22:22:22 GMT
 ```
 
-However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore,`max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
+However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore, `max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
 
 If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
 
@@ -295,7 +295,7 @@ Cache-Control: max-age=0, must-revalidate
 
 However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as a workaround.
 
-But now that HTTP/1.1-conformant servers are widely deployed, there's no reason to ever use that `max-age=0`-and-`must-revalidate` combination — you should instead just use `no-cache`.
+But now that HTTP/1.1-conformant servers are widely deployed, there's no reason to ever use that `max-age=0` and `must-revalidate` combination — you should instead just use `no-cache`.
 
 ## Don't cache
 

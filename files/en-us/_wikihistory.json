@@ -125630,25 +125630,6 @@
       "Crash"
     ]
   },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-03-27T01:13:21.748Z",
-    "contributors": [
-      "sideshowbarker",
-      "hhimanshu",
-      "wbamberg",
-      "fscholz",
-      "nmve",
-      "kdex",
-      "FredJeong",
-      "nsloc22",
-      "ziriab",
-      "SphinxKnight",
-      "kscarfone",
-      "Sheppy",
-      "dbruant",
-      "rwaldron"
-    ]
-  },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:28:21.686Z",
     "contributors": [
