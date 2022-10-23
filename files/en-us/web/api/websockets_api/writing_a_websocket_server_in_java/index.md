@@ -53,9 +53,9 @@ public class WebSocket {
 ### Socket Methods
 
 - `java.net.Socket.getInputStream()`
-  -: Returns an input stream for this socket.
+  - : Returns an input stream for this socket.
 - `java.net.Socket.getOutputStream()`
-  -: Returns an output stream for this socket.
+  - : Returns an output stream for this socket.
 
 ### OutputStream Methods
 
