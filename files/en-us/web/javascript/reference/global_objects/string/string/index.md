@@ -46,11 +46,11 @@ String function and String constructor produce different results:
 
 ```js
 const a = new String("Hello world"); // a === "Hello world" is false
-const b = String("Hello world");     // b === "Hello world" is true
-a instanceof String;         // is true
-b instanceof String;         // is false
-typeof a // "object"
-typeof b // "string"
+const b = String("Hello world"); // b === "Hello world" is true
+a instanceof String; // is true
+b instanceof String; // is false
+typeof a; // "object"
+typeof b; // "string"
 ```
 
 Here, the function produces a string (the {{Glossary("primitive")}} type) as promised.
