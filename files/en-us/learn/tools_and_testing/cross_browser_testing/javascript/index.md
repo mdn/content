@@ -179,6 +179,7 @@ to the following:
 ```js
 request.onload = function() {
   let superHeroes = request.response;
+  superHeroes = JSON.parse(superHeroes);
   populateHeader(superHeroes);
   showHeroes(superHeroes);
 }
