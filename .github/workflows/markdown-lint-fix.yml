@@ -19,6 +19,8 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
+        env:
+          HUSKY: 0
         run: |
           yarn --frozen-lockfile
 
