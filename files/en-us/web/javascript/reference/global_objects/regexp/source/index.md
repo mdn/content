@@ -28,7 +28,7 @@ Conceptually, the `source` property is the text between the two forward slashes 
 ```js
 const regex = /fooBar/gi;
 
-console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
+console.log(regex.source); // "fooBar", doesn't contain /.../ and "gi".
 ```
 
 ### Empty regular expressions and escaping
