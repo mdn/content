@@ -35,11 +35,11 @@ width: calc(100px * exp(1));  /* 217px */
 The `exp(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A calculation which resolves to a {{CSSxRef("&lt;number&gt;")}}. Representing the value to be raised by a power of `e`.
+  - : A calculation which resolves to a {{CSSxRef("number")}}. Representing the value to be raised by a power of `e`.
 
 ### Return value
 
-Returns a non-negative {{CSSxRef("&lt;number&gt;")}} representing e<sup>number</sup>, which is the result of calculating `e` raised to the power of `number`.
+Returns a non-negative {{CSSxRef("number")}} representing e<sup>number</sup>, which is the result of calculating `e` raised to the power of `number`.
 
 - If `number` is `-Infinity`, the result is `0`.
 - If `number` is `0`, the result is `1`.
@@ -54,7 +54,7 @@ Returns a non-negative {{CSSxRef("&lt;number&gt;")}} representing e<sup>number</
 
 ### Rotate elements
 
-The `exp()` function can be used to {{CSSxRef("transform-function/rotate", "rotate")}} elements as it return an {{CSSxRef("&lt;number&gt;")}}.
+The `exp()` function can be used to {{CSSxRef("transform-function/rotate", "rotate")}} elements as it return a {{CSSxRef("number")}}.
 
 #### HTML
 
