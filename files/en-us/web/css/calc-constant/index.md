@@ -51,9 +51,9 @@ For example:
 
 ### Returned data type
 
-Both `e` and `pi` are numeric constants act as {{CSSxRef("number")}} values.
+In math functions, `<calc-constant>` values are evaluated as {{cssxref("number")}} values, therefore `e` and `pi` act as numeric constants.
 
-On the other hand, `infinity` and `NaN` are degenerate numeric constants. While not technically numbers, they act as {{CSSxRef("number")}} values. Thus to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
+Both `infinity` and `NaN` are slightly different, they are considered as degenerate numeric constants. While not technically numbers, they act as {{CSSxRef("number")}} values. Thus to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
 
 Infinite/NaN defined mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value gets clamped to the allowed range. It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet.
 
