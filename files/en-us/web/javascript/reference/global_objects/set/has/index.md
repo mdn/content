@@ -40,14 +40,14 @@ Returns `true` if an element with the specified value exists in the `Set` object
 const mySet = new Set();
 mySet.add("foo");
 
-console.log(mySet.has("foo"));  // true
-console.log(mySet.has("bar"));  // false
+console.log(mySet.has("foo")); // true
+console.log(mySet.has("bar")); // false
 
 const set1 = new Set();
 const obj1 = { key1: 1 };
 set1.add(obj1);
 
-console.log(set1.has(obj1));        // true
+console.log(set1.has(obj1)); // true
 console.log(set1.has({ key1: 1 })); // false, because they are different object references
 console.log(set1.add({ key1: 1 })); // now set1 contains 2 entries
 ```
