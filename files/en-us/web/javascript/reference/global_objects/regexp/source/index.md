@@ -26,7 +26,7 @@ Conceptually, the `source` property is the text between the two forward slashes 
 ### Using source
 
 ```js
-const regex = /fooBar/ig;
+const regex = /fooBar/gi;
 
 console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
 ```
@@ -36,7 +36,7 @@ console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
 ```js
 new RegExp().source; // "(?:)"
 
-new RegExp('\n').source === '\\n'; // true, starting with ES5
+new RegExp("\n").source === "\\n"; // true, starting with ES5
 ```
 
 ## Specifications

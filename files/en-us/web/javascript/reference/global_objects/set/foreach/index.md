@@ -102,7 +102,7 @@ function logSetElements(value1, value2, set) {
   console.log(`s[${value}] = ${value2}`);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
 // logs:
 // "s[foo] = foo"
