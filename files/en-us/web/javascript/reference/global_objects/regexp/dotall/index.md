@@ -50,8 +50,9 @@ const regex2 = /bar.example/;
 
 console.log(regex2.dotAll); // Output: false
 
-console.log(str2.replace(regex2, "")); // Output: bar
-//         example foo example
+console.log(str2.replace(regex2, ""));
+// bar
+// example foo example
 ```
 
 ## Specifications
