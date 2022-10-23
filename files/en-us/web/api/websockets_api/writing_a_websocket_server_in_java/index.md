@@ -22,7 +22,9 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the `java.net` package.
 
-### ServerSocket Constructor ServerSocket`(int port)`
+### ServerSocket
+
+The `ServerSocket` constructor accepts a single parameter `port` of type `int`.
 
 When you instantiate the ServerSocket class, it is bound to the port number you specified by the _port_ argument.
 
