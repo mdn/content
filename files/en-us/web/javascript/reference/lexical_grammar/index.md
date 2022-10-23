@@ -208,7 +208,6 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/new", "new")}}
 - {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
-- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
@@ -220,11 +219,11 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/with", "with")}}
-- {{jsxref("Operators/yield", "yield")}}
 
 The following are only reserved when they are found in strict mode code:
 
 - {{jsxref("Statements/let", "let")}} (also reserved in `const`, `let`, and class declarations)
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/yield", "yield")}} (also reserved in generator function bodies)
 
 The following are only reserved when they are found in module code or async function bodies:
@@ -274,9 +273,12 @@ The following are reserved as future keywords by older ECMAScript specifications
 A few identifiers have a special meaning in some contexts without being reserved words of any kind. They include:
 
 - {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- `as` ([`import * as ns from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import))
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- `from` ([`import x from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import))
 - {{jsxref("Functions/get", "get")}}
+- [`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - {{jsxref("Functions/set", "set")}}
 
 ## Literals
