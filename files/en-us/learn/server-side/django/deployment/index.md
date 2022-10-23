@@ -201,10 +201,10 @@ The database service itself may be hosted by Railway or some other provider.
 
 Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
 The CLI allows you to associate a local Github repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
-One of the most useful features is you can use the CLI to run your local project with the same environment variables as the live project.
+One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
-In order to get our application to work on Railway we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
-Once we've done all that we can set up a Railway account, get the Railway client, and install our website.
+In order to get our application to work on Railway, we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
+Once we've done all that, we can set up a Railway account, get the Railway client, and install our website.
 
 That's all the overview you need in order to get started.
 
@@ -418,11 +418,11 @@ It is called with the following command:
 python3 manage.py collectstatic
 ```
 
-For this tutorial _collectstatic_ is run automatically by Railway before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
+For this tutorial, _collectstatic_ is run automatically by Railway before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
 `Whitenoise` then finds the files from the location defined by `STATIC_ROOT` (by default) and serves them at the base URL defined by `STATIC_URL`.
 
 > **Note:** Railway does not document that it calls `python3 manage.py collectstatic` when a Django application is loaded — this has been verified by testing.
-> If needed you could run the tool by adding the command to the [Procfile](#procfile).
+> If needed, you could run the tool by adding the command to the [Procfile](#procfile).
 
 ##### settings.py
 
@@ -579,7 +579,7 @@ You can click the site URL (highlighted above) to open the site in a browser (it
 
 ### Set ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS
 
-When the site is opened at this point you'll see an error debug screen as shown below.
+When the site is opened, at this point you'll see an error debug screen as shown below.
 This is a Django security error that is raised because our source code is not running on an "allowed host".
 
 ![Deployed app - ](site_error_dissallowed_host.png)
@@ -684,7 +684,7 @@ railway help
 
 ### Configure a superuser
 
-In order to create a superuser we need to call the Django `createsuperuser` command against the production database (this is the same operation as we ran locally in [Django Tutorial Part 4: Django admin site > Creating a superuser](/en-US/docs/Learn/Server-side/Django/Admin_site#creating_a_superuser)).
+In order to create a superuser, we need to call the Django `createsuperuser` command against the production database (this is the same operation as we ran locally in [Django Tutorial Part 4: Django admin site > Creating a superuser](/en-US/docs/Learn/Server-side/Django/Admin_site#creating_a_superuser)).
 Railway doesn't provide direct terminal access to the server, and we can't add this command to the [Procfile](#procfile) because it is interactive.
 
 What we can do is call this command locally on our Django project when it is connected to the _production_ database.
