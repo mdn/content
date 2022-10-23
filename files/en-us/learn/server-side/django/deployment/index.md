@@ -214,7 +214,7 @@ Railway is closely integrated with Github and the **git** source code version co
 Alternatively you can push your current local code branch direct to the railway deployment using the CLI.
 
 > **Note:** Using a source code management system like Github is good software development practice.
-> Skip this step if you're already using Github to manager your source.
+> Skip this step if you're already using Github to manage your source.
 
 There are a lot of ways to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
