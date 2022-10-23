@@ -64,13 +64,13 @@ This typically involves making educated guesses based on user demographics. For 
 
 A quick online search tells you that most people in North America and Western Europe use Windows or Mac desktops/laptops, where the main browsers are Chrome, Firefox, Safari, and Edge. You'd probably want to just test the latest versions of these browsers, as these browsers get regular updates. These should all go in the A grade tier.
 
-Most people in this demographic also use either iOS or Android phones, so you'd probably want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work. 
+Most people in this demographic also use either iOS or Android phones, so you'd probably want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work.
 
 For IE, you'd probably want to test the last couple of versions. Some people still use IE 9. Since IE is old and less capable, and Microsoft is phasing out IE support, let's put it in the B grade tier.
 
 Opera Mini [isn't very capable of running complex JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/), so we should put this into grade B as well.
 
-Thus, we've based our choice of which browsers to test on the browsers that we expect our users to use. 
+Thus, we've based our choice of which browsers to test on the browsers that we expect our users to use.
 This gives us the following support chart so far:
 
 1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge for Windows, iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone/tablet
