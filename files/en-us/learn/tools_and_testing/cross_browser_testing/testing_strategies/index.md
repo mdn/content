@@ -46,7 +46,7 @@ This article explains how to do cross-browser testing: how to choose which brows
 
 ## Choosing which browsers and devices to test
 
-Since it's impossible to test every combination of browser and device, it's enough that you ensure your site works on the most important ones. In practical applications, "important" often means "commonly used among the target audience."
+Since you can't test every combination of browser and device, it's enough that you ensure your site works on the most important ones. In practical applications, "important" often means "commonly used among the target audience."
 
 You can classify browsers and devices by the amount of support you intend to give, e.g.:
 
@@ -58,16 +58,17 @@ In the following sections, we'll build up a support chart in this format.
 
 > **Note:** Yahoo first made this approach popular, with their [Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) approach.
 
-### Determine the most commonly-used browsers among your target audience
+### Determine your audience's most commonly used browsers
 
-For example, most people in North American and Western Europe use either Windows or Mac desktops or laptops, where the main browsers are Chrome, Firefox, Safari, and Edge. You'd probably want to just test their latest versions, as these browsers get regular updates. These should all go in the A grade tier.
+This often involves making educated guesses based on user demographics. For example, suppose your users are in North America and Western Europe:
 
-Most people in this demographic also use either iOS or Android phones, so you'd probably also want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work.
+Most people in North America and Western Europe use either Windows or Mac computers, where the main browsers are Chrome, Firefox, Safari, and Edge. You'd probably want to test only their latest versions, as these browsers get regular updates. These belong in the A grade tier.
+
+Most people in this demographic also use either iOS or Android phones, so you'd probably want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work. 
 
 For IE, you'd probably want to test the last couple of versions. Some people still use IE 9. Since IE is old and less capable, and Microsoft is phasing out IE support, let's put it in the B grade tier.
 
-Opera Mini isn't very capable in terms of running complex JavaScript at runtime. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
-
+Opera Mini [isn't very capable of running complex JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/), so we should put this into grade B as well.
 
 This gives us the following support chart so far:
 
