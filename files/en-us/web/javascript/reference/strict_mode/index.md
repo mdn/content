@@ -187,7 +187,7 @@ delete globalThis.x;
 
 #### Duplicate parameter names
 
-Strict mode requires that function parameter names be unique. In sloppy mode, the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode duplicate argument names are a syntax error:
+Strict mode requires that function parameter names be unique. In sloppy mode, the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode, duplicate argument names are a syntax error:
 
 ```js example-bad
 function sum(a, a, c) {
@@ -199,7 +199,7 @@ function sum(a, a, c) {
 
 #### Legacy octal literals
 
-Strict mode [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). In sloppy mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
+Strict mode [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). In sloppy mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Novice developers sometimes believe a leading-zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading-zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
 ```js example-bad
 "use strict";
