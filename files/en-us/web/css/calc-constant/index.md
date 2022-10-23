@@ -63,9 +63,7 @@ CSS constants are case-insensitive. Thus, `calc(Pi)`, `calc(E)` and `calc(InFiNi
 
 There is only one exception: `NaN` is case-sensitive and must be written exactly as `NaN`. Both `nan` and `NAN` are invalid constants.
 
-## Examples
-
-### Valid values
+#### Valid values
 
 ```plain example-good
 e
@@ -80,7 +78,7 @@ InFiNiTy
 NaN
 ```
 
-### Invalid values
+#### Invalid values
 
 ```plain example-bad
 nan
