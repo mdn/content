@@ -14,7 +14,7 @@ browser-compat: css.types.calc-constant
 
 {{CSSRef}}
 
-The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `π`. Rather than require authors to manually type out several digits of these constants, a few of them are provided directly by CSS.
+The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `π`. Rather than require authors to manually type out several digits of these mathematical constants or calculate them, a few of them are provided directly by CSS for convenience.
 
 ## Syntax
 
@@ -44,14 +44,18 @@ The `<calc-constant>` type defines numeric constants that can be used in [CSS ma
 
 ## Description
 
-### Constants are not CSS keywords
+### Where constants can be used?
 
-These constants are supported for convenience in CSS so that authors do not have to manually write or calculate them. Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) for calculations. If used outside of a calculation, they're treated like any other keyword.
+Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) for calculations. Math constants are not CSS keywords, but if they are used outside of a calculation, they're treated like any other keyword.
 
 For example:
 
 - `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
+
+These constants can't be used in any CSS function, only in math functions:
+
+- `rotate(1rad * pi);` won't work. You need to use `rotate(calc(1rad * pi));`
 
 ### Returned data type
 
