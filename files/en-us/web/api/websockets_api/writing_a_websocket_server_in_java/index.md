@@ -69,7 +69,7 @@ Writes `len` bytes from the specified byte array starting at offset `off` to thi
 
 ### InputStream Methods
 
-```cpp
+```java
 read(byte[] b, int off, int len)
 ```
 
