@@ -98,135 +98,107 @@ All `TypeArray` subclass constructors operate in the same way. They would all th
 
 ## Static properties
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
-  - : Returns a number value of the element size for the different
-    `TypedArray` objects.
-- {{jsxref("TypedArray.name")}}
-  - : Returns the string value of the constructor name (e.g., `"Int8Array"`).
+These properties are defined on the `TypedArray` constructor object and are thus shared by all `TypedArray` subclass constructors.
+
 - {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
   - : The constructor function used to create derived objects.
-- {{jsxref("TypedArray")}}
-  - : Prototype for `TypedArray` objects.
+
+All `TypedArray` subclasses also have the following static properties:
+
+- {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
+  - : Returns a number value of the element size for the different `TypedArray` objects.
+- {{jsxref("TypedArray.name")}}
+  - : Returns the string value of the constructor [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) (e.g., `"Int8Array"`).
 
 ## Static methods
 
+These methods are defined on the `TypedArray` constructor object and are thus shared by all `TypedArray` subclass constructors.
+
 - {{jsxref("TypedArray.from()")}}
-  - : Creates a new `TypedArray` from an array-like or iterable
-    object. See also {{jsxref("Array.from()")}}.
+  - : Creates a new `TypedArray` from an array-like or iterable object. See also {{jsxref("Array.from()")}}.
 - {{jsxref("TypedArray.of()")}}
-  - : Creates a new `TypedArray` with a variable number of
-    arguments. See also {{jsxref("Array.of()")}}.
+  - : Creates a new `TypedArray` with a variable number of arguments. See also {{jsxref("Array.of()")}}.
 
 ## Instance properties
 
+These properties are all [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) defined on the `TypedArray` prototype object and are thus read-only and shared by all `TypedArray` subclass instances.
+
 - {{jsxref("TypedArray.prototype.buffer")}}
-  - : Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array. Fixed at
-    construction time and thus **read only**.
+  - : Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array.
 - {{jsxref("TypedArray.prototype.byteLength")}}
-  - : Returns the length (in bytes) of the typed array. Fixed at construction time and
-    thus **read only.**
+  - : Returns the length (in bytes) of the typed array.
 - {{jsxref("TypedArray.prototype.byteOffset")}}
-  - : Returns the offset (in bytes) of the typed array from the start of its
-    {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read
-    only.**
+  - : Returns the offset (in bytes) of the typed array from the start of its {{jsxref("ArrayBuffer")}}.
 - {{jsxref("TypedArray.prototype.length")}}
-  - : Returns the number of elements held in the typed array. Fixed at construction time
-    and thus **read only.**
+  - : Returns the number of elements held in the typed array.
+
+All `TypedArray` subclasses also have the following instance properties:
+
+- {{jsxref("TypedArray.prototype.BYTES_PER_ELEMENT")}}
+  - : Returns a number value of the element size for the different `TypedArray` objects.
 
 ## Instance methods
+
+These methods are defined on the `TypedArray` prototype object and are thus shared by all `TypedArray` subclass instances.
 
 - {{jsxref("TypedArray.prototype.at()")}}
   - : Takes an integer value and returns the item at that index. This method allows for negative integers, which count back from the last item.
 - {{jsxref("TypedArray.prototype.copyWithin()")}}
-  - : Copies a sequence of array elements within the array. See also
-    {{jsxref("Array.prototype.copyWithin()")}}.
+  - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.prototype.entries()")}}
-  - : Returns a new _array iterator_ object that contains the key/value pairs for each index
-    in the array. See also {{jsxref("Array.prototype.entries()")}}.
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
 - {{jsxref("TypedArray.prototype.every()")}}
-  - : Tests whether all elements in the array pass the test provided by a function. See
-    also {{jsxref("Array.prototype.every()")}}.
+  - : Tests whether all elements in the array pass the test provided by a function. See also {{jsxref("Array.prototype.every()")}}.
 - {{jsxref("TypedArray.prototype.fill()")}}
-  - : Fills all the elements of an array from a start index to an end index with a static
-    value. See also {{jsxref("Array.prototype.fill()")}}.
+  - : Fills all the elements of an array from a start index to an end index with a static value. See also {{jsxref("Array.prototype.fill()")}}.
 - {{jsxref("TypedArray.prototype.filter()")}}
-  - : Creates a new array with all of the elements of this array for which the provided
-    filtering function returns `true`. See also
-    {{jsxref("Array.prototype.filter()")}}.
+  - : Creates a new array with all of the elements of this array for which the provided filtering function returns `true`. See also {{jsxref("Array.prototype.filter()")}}.
 - {{jsxref("TypedArray.prototype.find()")}}
-  - : Returns the first `element` in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found.
-    See also {{jsxref("Array.prototype.find()")}}.
+  - : Returns the first `element` in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.find()")}}.
 - {{jsxref("TypedArray.prototype.findIndex()")}}
-  - : Returns the first index value of in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found.
-    See also {{jsxref("Array.prototype.findIndex()")}}.
+  - : Returns the first index value of in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findIndex()")}}.
 - {{jsxref("TypedArray.prototype.findLast()")}}
-  - : Returns the value of the last element in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found.
-    See also {{jsxref("Array.prototype.findLast()")}}.
+  - : Returns the value of the last element in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.findLast()")}}.
 - {{jsxref("TypedArray.prototype.findLastIndex()")}}
-  - : Returns the index of the last element in the array that satisfies a provided testing function, or `-1` if no appropriate element was found.
-    See also {{jsxref("Array.prototype.findLastIndex()")}}.
+  - : Returns the index of the last element in the array that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findLastIndex()")}}.
 - {{jsxref("TypedArray.prototype.forEach()")}}
-  - : Calls a function for each element in the array. See also
-    {{jsxref("Array.prototype.forEach()")}}.
+  - : Calls a function for each element in the array. See also {{jsxref("Array.prototype.forEach()")}}.
 - {{jsxref("TypedArray.prototype.includes()")}}
-  - : Determines whether a typed array includes a certain element, returning
-    `true` or `false` as appropriate. See also
-    {{jsxref("Array.prototype.includes()")}}.
+  - : Determines whether a typed array includes a certain element, returning `true` or `false` as appropriate. See also {{jsxref("Array.prototype.includes()")}}.
 - {{jsxref("TypedArray.prototype.indexOf()")}}
-  - : Returns the first (least) index of an element within the array equal to the
-    specified value, or `-1` if none is found. See also
-    {{jsxref("Array.prototype.indexOf()")}}.
+  - : Returns the first (least) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.indexOf()")}}.
 - {{jsxref("TypedArray.prototype.join()")}}
-  - : Joins all elements of an array into a string. See also
-    {{jsxref("Array.prototype.join()")}}.
+  - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
 - {{jsxref("TypedArray.prototype.keys()")}}
-  - : Returns a new array iterator that contains the keys for each index in the array. See
-    also {{jsxref("Array.prototype.keys()")}}.
+  - : Returns a new array iterator that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}
-  - : Returns the last (greatest) index of an element within the array equal to the
-    specified value, or `-1` if none is found. See also
-    {{jsxref("Array.prototype.lastIndexOf()")}}.
+  - : Returns the last (greatest) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.prototype.map()")}}
-  - : Creates a new array with the results of calling a provided function on every element
-    in this array. See also {{jsxref("Array.prototype.map()")}}.
+  - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
 - {{jsxref("TypedArray.prototype.reduce()")}}
-  - : Apply a function against an accumulator and each value of the array (from
-    left-to-right) as to reduce it to a single value. See also
-    {{jsxref("Array.prototype.reduce()")}}.
+  - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
-  - : Apply a function against an accumulator and each value of the array (from
-    right-to-left) as to reduce it to a single value. See also
-    {{jsxref("Array.prototype.reduceRight()")}}.
+  - : Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduceRight()")}}.
 - {{jsxref("TypedArray.prototype.reverse()")}}
-  - : Reverses the order of the elements of an array — the first becomes the last, and the
-    last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.
+  - : Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.
 - {{jsxref("TypedArray.prototype.set()")}}
-  - : Stores multiple values in the typed array, reading input values from a specified
-    array.
+  - : Stores multiple values in the typed array, reading input values from a specified array.
 - {{jsxref("TypedArray.prototype.slice()")}}
-  - : Extracts a section of an array and returns a new array. See also
-    {{jsxref("Array.prototype.slice()")}}.
+  - : Extracts a section of an array and returns a new array. See also {{jsxref("Array.prototype.slice()")}}.
 - {{jsxref("TypedArray.prototype.some()")}}
-  - : Returns `true` if at least one element in this array satisfies the
-    provided testing function. See also {{jsxref("Array.prototype.some()")}}.
+  - : Returns `true` if at least one element in this array satisfies the provided testing function. See also {{jsxref("Array.prototype.some()")}}.
 - {{jsxref("TypedArray.prototype.sort()")}}
-  - : Sorts the elements of an array in place and returns the array. See also
-    {{jsxref("Array.prototype.sort()")}}.
+  - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.prototype.subarray()")}}
-  - : Returns a new `TypedArray` from the given start and end
-    element index.
+  - : Returns a new `TypedArray` from the given start and end element index.
 - {{jsxref("TypedArray.prototype.values()")}}
-  - : Returns a new _array iterator_ object that contains the values for each index in the
-    array. See also {{jsxref("Array.prototype.values()")}}.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}
-  - : Returns a localized string representing the array and its elements. See also
-    {{jsxref("Array.prototype.toLocaleString()")}}.
+  - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.prototype.toString()")}}
-  - : Returns a string representing the array and its elements. See also
-    {{jsxref("Array.prototype.toString()")}}.
+  - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
 - {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-  - : Returns a new _array iterator_ object that contains the values for each index in the
-    array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
 

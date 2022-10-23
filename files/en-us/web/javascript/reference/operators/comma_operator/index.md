@@ -64,7 +64,7 @@ example, `a` is set to the value of `b = 3` (which is 3), but the
 `c = 4` expression still evaluates and its result returned to console (i.e., 4\).
 This is due to [operator precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
-```js
+```js-nolint
 let a, b, c;
 
 a = b = 3, c = 4; // Returns 4 in console
@@ -82,7 +82,7 @@ Another example that one could make with comma operator is processing before ret
 As stated, only the last element will be returned but all others are going to be
 evaluated as well. So, one could do:
 
-```js
+```js-nolint
 function myFunc() {
   let x = 0;
 
