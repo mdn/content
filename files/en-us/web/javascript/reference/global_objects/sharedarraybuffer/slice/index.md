@@ -67,9 +67,9 @@ A new {{jsxref("SharedArrayBuffer")}} containing the extracted elements.
 
 ```js
 const sab = new SharedArrayBuffer(1024);
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 

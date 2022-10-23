@@ -51,7 +51,7 @@ console.log(`${worldString.fontcolor("red")} is red in this line`);
 // '<font color="red">Hello, world</font> is red in this line'
 
 console.log(
-  `${worldString.fontcolor("FF00")} is red in hexadecimal in this line`,
+  `${worldString.fontcolor("FF00")} is red in hexadecimal in this line`
 );
 // '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
 ```
