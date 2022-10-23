@@ -184,7 +184,6 @@ body {
 .button {
   border: none;
   display: block;
-  width: 100%;
   margin: 3% auto;
   padding: 4px;
   text-align: center;
