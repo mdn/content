@@ -200,7 +200,7 @@ h1 {
 }
 ```
 
-### Result
+## Result
 
 {{ EmbedLiveSample('Example', '100%', '396') }}
 
