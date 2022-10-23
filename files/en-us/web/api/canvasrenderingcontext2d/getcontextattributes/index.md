@@ -42,8 +42,8 @@ It has the following members:
     of transparent content and images.
 - `colorSpace` {{optional_inline}}
   - : Specifies the color space of the rendering context. Possible values are:
-    - `"srgb"`: denotes the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
-    - `"display-p3"`: denotes the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `srgb`: denotes the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
+    - `display-p3`: denotes the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
 - `desynchronized` {{optional_inline}}
   - : A Boolean indicating the user agent reduced the latency by desynchronizing
     the canvas paint cycle from the event loop.
