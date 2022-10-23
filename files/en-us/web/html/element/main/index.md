@@ -158,8 +158,6 @@ Browser reader mode functionality looks for the presence of the `<main>` element
 
 {{Compat}}
 
-To support Internet Explorer 11 and lower, you can add an {{glossary("ARIA")}} role of `"main"` to the `<main>` element. But understand that the ARIA in HTML specification states that `role="main"` shouldn't actually be used with the `<main>` element, and the W3C validator will report a warning for it. However, Internet Explorer 11 and lower will otherwise not correctly expose the `<main>` element to screen readers such JAWS unless the element also has a `role="main"` attribute.
-
 ## See also
 
 - Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}

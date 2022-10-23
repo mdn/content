@@ -403,9 +403,9 @@ Let's get started with a Sauce Labs Trial.
 The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
 
 1. Click _Start a new manual session_.
-2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![](sauce-manual-session.png)
+2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![select sauce manual session](sauce-manual-session.png)
 3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the web site running in the chosen browser.![](sauce-test-running.png)
+4. When loading has finished, you can then start to remotely test the web site running in the chosen browser.![Sauce test running](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
 
    - Stop the session
@@ -490,11 +490,11 @@ Let's get started with a BrowserStack Trial.
 
 The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — Platforms in the left column, devices on the right. When you mouse over or click on each device, you get a choice of browsers available on that device.
 
-![](browserstack-test-choices-sized.png)
+![Test Choices](browserstack-test-choices-sized.png)
 
 Clicking on one of those browser icons will load up your choice of platform/device/browser — choose one now, and give it a try.
 
-![](browserstack-test-device-sized.png)
+![Test Devices](browserstack-test-device-sized.png)
 
 > **Note:** The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
 
@@ -502,7 +502,7 @@ You'll find that you can enter URLs into the address bar, and use the other cont
 
 You'll also see a menu that allows you to control the session.
 
-![](browserstack-test-menu-sized.png)
+![Test Menu](browserstack-test-menu-sized.png)
 
 The features here are as follows:
 
@@ -708,7 +708,7 @@ The [TestingBot dashboard](https://app.saucelabs.com/dashboard/manual) lists the
 
 1. Enter the URL of the page you want to test.
 2. Choose the browser/OS combination you want to test by selecting the combination in the grid.
-   ![](screen_shot_2019-04-19_at_14.55.33.png)
+   ![Test Choices](screen_shot_2019-04-19_at_14.55.33.png)
 3. When you click _Start Browser_, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the web site running in the chosen browser.
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:
