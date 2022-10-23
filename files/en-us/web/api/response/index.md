@@ -32,7 +32,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.headers")}} {{ReadOnlyInline}}
   - : The {{domxref("Headers")}} object associated with the response.
 - {{domxref("Response.ok")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the response was successful (status in the range `200`–`299`) or not.
+  - : A boolean indicating whether the response was successful (status in the range `200` – `299`) or not.
 - {{domxref("Response.redirected")}} {{ReadOnlyInline}}
   - : Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).
 - {{domxref("Response.status")}} {{ReadOnlyInline}}
