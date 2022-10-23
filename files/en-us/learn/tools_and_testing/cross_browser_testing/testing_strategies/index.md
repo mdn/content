@@ -256,7 +256,6 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 
 - Windows 10 with Edge 14
 - Windows 10 with Edge 13
-- Windows 8.1 with IE11
 
 > **Note:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running if it is a licensed product.
 
