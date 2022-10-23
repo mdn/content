@@ -40,13 +40,13 @@ In the previous few articles, we showed how to create web forms in HTML. Now, we
 
 ### History
 
-In 1995, [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) introduced form controls (a.k.a form widgets, or form elements). But CSS wasn't released until late 1996, and wasn't supported by most browsers until years afterwards, so, in the interim, browsers relied on the underlying operating system to render form widgets. 
+In 1995, [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) introduced form controls (a.k.a. "form widgets", or "form elements"). But CSS wasn't released until late 1996, and wasn't supported by most browsers until years afterwards; so, in the interim, browsers relied on the underlying operating system to render form widgets.
 
-Even with CSS available, browser vendors were reluctant at first to make form elements stylable, because users were so accustomed to the looks of their respective browsers. But things have changed, and forms widgets are now mostly stylable, with a few exceptions. 
+Even with CSS available, browser vendors were reluctant at first to make form elements stylable, because users were so accustomed to the looks of their respective browsers. But things have changed, and forms widgets are now mostly stylable, with a few exceptions.
 
 ### Types of widgets
 
-#### Easy-to-style 
+#### Easy-to-style
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
@@ -78,12 +78,11 @@ The articles [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styli
 
 > **Note:** some proprietary CSS pseudo-elements, such as {{cssxref('::-moz-range-track')}}, are capable of styling such internal components, but these aren't consistent across browsers, so aren't very reliable. We will mention these later.
 
-
 ## Styling simple form widgets
 
 The "easy-to-style" widgets in the previous section may be styled using techniques from the articles [Your first form](/en-US/docs/Learn/Forms/Your_first_form) and [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks). There are also special selectors — [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes) — that enable styling based on the current state of the UI.
 
-We'll walk through an example at the end of this article, but first, here are some special aspects of form styling that are worth knowing about.
+We'll walk through an example at the end of this article — but first, here are some special aspects of form styling that are worth knowing about.
 
 ### Fonts and text
 
@@ -135,7 +134,7 @@ What may not be apparent via the screenshot is that the radio and checkbox contr
 
 ### Legend placement
 
-The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tricky to control placement of it. By default it is always positioned over the top border of its {{HTMLElement("fieldset")}} parent, near the top left corner. To position it somewhere else, for example inside the fieldset somewhere, or near the bottom left corner, you need to rely on positioning.
+The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tricky to control placement of it. By default, it is always positioned over the top border of its {{HTMLElement("fieldset")}} parent, near the top left corner. To position it somewhere else, for example inside the fieldset somewhere, or near the bottom left corner, you need to rely on positioning.
 
 Take the following example:
 
@@ -365,7 +364,7 @@ button:focus {
 
 ### The final result
 
-And voila! Your form should now look like this:
+And voilà! Your form should now look like this:
 
 ![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
