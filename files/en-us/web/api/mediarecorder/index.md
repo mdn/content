@@ -40,6 +40,11 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 - {{domxref("MediaRecorder.audioBitsPerSecond")}} {{ReadOnlyInline}}
   - : Returns the audio encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
 
+## Static methods
+
+- {{domxref("MediaRecorder.isTypeSupported()")}}
+  - : A static method which returns a `true` or `false` value indicating if the given MIME media type is supported by the current user agent.
+
 ## Instance methods
 
 - {{domxref("MediaRecorder.pause()")}}
@@ -52,11 +57,6 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
   - : Begins recording media; this method can optionally be passed a `timeslice` argument with a value in milliseconds. If this is specified, the media will be captured in separate chunks of that duration, rather than the default behavior of recording the media in a single large chunk.
 - {{domxref("MediaRecorder.stop()")}}
   - : Stops recording, at which point a {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing the final `Blob` of saved data is fired. No more recording occurs.
-
-## Static methods
-
-- {{domxref("MediaRecorder.isTypeSupported()")}}
-  - : A static method which returns a `true` or `false` value indicating if the given MIME media type is supported by the current user agent.
 
 ## Events
 
@@ -81,74 +81,74 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ```js
 if (navigator.mediaDevices) {
-  console.log('getUserMedia supported.');
+  console.log("getUserMedia supported.");
 
   const constraints = { audio: true };
   let chunks = [];
 
-  navigator.mediaDevices.getUserMedia(constraints)
-  .then((stream) => {
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then((stream) => {
+      const mediaRecorder = new MediaRecorder(stream);
 
-    const mediaRecorder = new MediaRecorder(stream);
+      visualize(stream);
 
-    visualize(stream);
+      record.onclick = () => {
+        mediaRecorder.start();
+        console.log(mediaRecorder.state);
+        console.log("recorder started");
+        record.style.background = "red";
+        record.style.color = "black";
+      };
 
-    record.onclick = () => {
-      mediaRecorder.start();
-      console.log(mediaRecorder.state);
-      console.log("recorder started");
-      record.style.background = "red";
-      record.style.color = "black";
-    }
+      stop.onclick = () => {
+        mediaRecorder.stop();
+        console.log(mediaRecorder.state);
+        console.log("recorder stopped");
+        record.style.background = "";
+        record.style.color = "";
+      };
 
-    stop.onclick = () => {
-      mediaRecorder.stop();
-      console.log(mediaRecorder.state);
-      console.log("recorder stopped");
-      record.style.background = "";
-      record.style.color = "";
-    }
+      mediaRecorder.onstop = (e) => {
+        console.log("data available after MediaRecorder.stop() called.");
 
-    mediaRecorder.onstop = (e) => {
-      console.log("data available after MediaRecorder.stop() called.");
+        const clipName = prompt("Enter a name for your sound clip");
 
-      const clipName = prompt('Enter a name for your sound clip');
+        const clipContainer = document.createElement("article");
+        const clipLabel = document.createElement("p");
+        const audio = document.createElement("audio");
+        const deleteButton = document.createElement("button");
 
-      const clipContainer = document.createElement('article');
-      const clipLabel = document.createElement('p');
-      const audio = document.createElement('audio');
-      const deleteButton = document.createElement('button');
+        clipContainer.classList.add("clip");
+        audio.setAttribute("controls", "");
+        deleteButton.textContent = "Delete";
+        clipLabel.textContent = clipName;
 
-      clipContainer.classList.add('clip');
-      audio.setAttribute('controls', '');
-      deleteButton.textContent = "Delete";
-      clipLabel.textContent = clipName;
+        clipContainer.appendChild(audio);
+        clipContainer.appendChild(clipLabel);
+        clipContainer.appendChild(deleteButton);
+        soundClips.appendChild(clipContainer);
 
-      clipContainer.appendChild(audio);
-      clipContainer.appendChild(clipLabel);
-      clipContainer.appendChild(deleteButton);
-      soundClips.appendChild(clipContainer);
+        audio.controls = true;
+        const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+        chunks = [];
+        const audioURL = URL.createObjectURL(blob);
+        audio.src = audioURL;
+        console.log("recorder stopped");
 
-      audio.controls = true;
-      const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-      chunks = [];
-      const audioURL = URL.createObjectURL(blob);
-      audio.src = audioURL;
-      console.log("recorder stopped");
+        deleteButton.onclick = (e) => {
+          const evtTgt = e.target;
+          evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
+        };
+      };
 
-      deleteButton.onclick = (e) => {
-        const evtTgt = e.target;
-        evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
-      }
-    }
-
-    mediaRecorder.ondataavailable = (e) => {
-      chunks.push(e.data);
-    }
-  })
-  .catch((err) => {
-    console.error(`The following error occurred: ${err}`);
-  })
+      mediaRecorder.ondataavailable = (e) => {
+        chunks.push(e.data);
+      };
+    })
+    .catch((err) => {
+      console.error(`The following error occurred: ${err}`);
+    });
 }
 ```
 

@@ -44,12 +44,12 @@ Pseudo-elements defined by a set of CSS specifications include the following:
 
 A
 
-- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::after")}}
 
 B
 
 - {{CSSxRef("::backdrop")}}
-- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::before")}}
 
 C
 
@@ -58,8 +58,8 @@ C
 
 F
 
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::first-letter")}}
+- {{CSSxRef("::first-line")}}
 - {{CSSxRef("::file-selector-button")}}
 
 G

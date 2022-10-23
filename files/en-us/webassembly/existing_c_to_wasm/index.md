@@ -189,6 +189,7 @@ const blob = new Blob([result], { type: "image/webp" });
 const blobURL = URL.createObjectURL(blob);
 const img = document.createElement("img");
 img.src = blobURL;
+img.alt = "a useful description";
 document.body.appendChild(img);
 ```
 

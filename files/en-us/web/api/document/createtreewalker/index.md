@@ -65,7 +65,7 @@ A new {{domxref("TreeWalker")}} object.
 ## Examples
 
 The following example goes through all nodes in the body,
-filters out any non nodes that aren't elements (with the \`NodeFilter.SHOW_ELEMENT\` value),
+filters out any non nodes that aren't elements (with the `NodeFilter.SHOW_ELEMENT` value),
 marks each remaining node as acceptable (The `acceptNode()` method could make
 a different decision.), and then makes use of tree walker iterator
 that is created to advance through the nodes (now all elements) and push them into an

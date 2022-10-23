@@ -18,7 +18,7 @@ tags:
 browser-compat: css.properties.text-decoration-color
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of decorations added to text by {{ cssxref("text-decoration-line") }}.
 
