@@ -36,22 +36,23 @@ The set accessor of `dotAll` is `undefined`. You cannot change this property dir
 ### Using dotAll
 
 ```js
-const str1 = 'bar\nexample foo example';
+const str1 = "bar\nexample foo example";
 
 const regex1 = /bar.example/s;
 
 console.log(regex1.dotAll); // Output: true
 
-console.log(str1.replace(regex1, '')); // Output: foo example
+console.log(str1.replace(regex1, "")); // Output: foo example
 
-const str2 = 'bar\nexample foo example';
+const str2 = "bar\nexample foo example";
 
 const regex2 = /bar.example/;
 
 console.log(regex2.dotAll); // Output: false
 
-console.log(str2.replace(regex2,'')); // Output: bar
-                                      //         example foo example
+console.log(str2.replace(regex2, ""));
+// bar
+// example foo example
 ```
 
 ## Specifications
