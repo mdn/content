@@ -18,20 +18,24 @@ The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web
 
 ## Syntax
 
-The `<calc-constant>` type defines a number of numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
+The `<calc-constant>` type defines numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
 
 ### Values
 
 - `e`
+
   - : The base of the natural logarithm, approximately equal to `2.7182818284590452354`.
 
 - `pi`
+
   - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
 
 - `infinity` & `-infinity`
+
   - : An infinite value, used to indicate the largest/smallest possible value.
 
 - `NaN`
+
   - : A value representing "Not a Number" canonical casing.
 
 ### Formal syntax
@@ -42,11 +46,11 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
 
 ### Constants are not CSS keywords
 
-Mathematical constants can be used only inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions). They are used only for calculations. If used outside of a calculation, they're treated like any other keyword.
+These constants are supported for convenience in CSS so that authors do not have to manually write or calculate them. Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) for calculations. If used outside of a calculation, they're treated like any other keyword.
 
 For example:
 
-- `animation-name: pi;` refers to an animation named "pi", not the `pi` constant.
+- `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
 
 ### Returned data type
