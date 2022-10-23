@@ -34,14 +34,6 @@ The `<calc-constant>` type defines a number of numeric constants that can be use
 - `NaN`
   - : A value representing "Not a Number" canonical casing.
 
-### Return value
-
-Both `e` and `pi` are numeric constants act as {{cssxref("number")}} values.
-
-On the other hand, `infinity` and `NaN` are degenerate numeric constants. While not technically numbers, they act as {{cssxref("number")}} values. Thus to get an infinite {{cssxref("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
-
-Infinite/NaN defined mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value gets clamped to the allowed range. It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet.
-
 ### Formal syntax
 
 {{CSSSyntax}}
@@ -56,6 +48,14 @@ For example:
 
 - `animation-name: pi;` refers to an animation named "pi", not the `pi` constant.
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
+
+### Returned data type
+
+Both `e` and `pi` are numeric constants act as {{CSSxRef("number")}} values.
+
+On the other hand, `infinity` and `NaN` are degenerate numeric constants. While not technically numbers, they act as {{CSSxRef("number")}} values. Thus to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
+
+Infinite/NaN defined mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value gets clamped to the allowed range. It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet.
 
 ### Case sensitivity
 
