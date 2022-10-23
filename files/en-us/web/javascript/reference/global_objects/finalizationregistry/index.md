@@ -112,7 +112,7 @@ const registry = new FinalizationRegistry((heldValue) => {
 
 ### Registering objects for cleanup
 
-Then you register any objects you want a cleanup callback for by calling the \`register\` method, passing in the object and a \*held value\* for it:
+Then you register any objects you want a cleanup callback for by calling the `register` method, passing in the object and a _held value_ for it:
 
 ```js
 registry.register(theObject, "some value");
