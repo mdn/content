@@ -85,7 +85,8 @@ const handlerReturnsFalse = {
   },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
@@ -101,14 +102,15 @@ failure, or you want to throw a custom exception value.
 ```js
 const handlerThrows = {
   setPrototypeOf(target, newProto) {
-    throw new Error('custom error');
+    throw new Error("custom error");
   },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p2 = new Proxy(target, handlerThrows);
-Object.setPrototypeOf(p2, newProto);  // throws new Error("custom error")
+Object.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 ```
 
