@@ -56,7 +56,7 @@ In math functions, `<calc-constant>` values are evaluated as {{cssxref("number")
 
 Both `infinity` and `NaN` are slightly different, they are considered as degenerate numeric constants. While not technically numbers, they act as {{CSSxRef("number")}} values. Thus to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
 
-Infinite/NaN defined mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value gets clamped to the allowed range. It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet.
+The `infinity` and `NaN` values are included mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value gets clamped to the allowed range. It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet.
 
 CSS constants are case-insensitive. Thus, `calc(Pi)`, `calc(E)` and `calc(InFiNiTy)` are all valid.
 
