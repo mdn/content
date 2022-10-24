@@ -56,7 +56,7 @@ The `color-scheme` property's value must be one of the following keywords.
 - `only`
   - : Forbids the user agent from overriding the color scheme for the element.
 
-    This is useful, such as the color changes caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), which cannot be overridden by `@media (prefers-color-scheme: dark)` in some cases, but can be disabled by setting `color-scheme: only light;` on the element.
+    Can be used to turn off color overrides caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), by applying `color-scheme: only light;` on a single element or `:root`.
 
 ## Formal definition
 
