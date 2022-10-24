@@ -27,8 +27,14 @@ x - y
 ### Subtraction with numbers
 
 ```js
+// Number - Number -> subtraction
 5 - 3; // 2
+
+// Number - Number -> subtraction
 3 - 5; // -2
+
+// Number - String -> subtraction
+5 - "3"; // 2
 ```
 
 ### Subtraction with non-numbers
