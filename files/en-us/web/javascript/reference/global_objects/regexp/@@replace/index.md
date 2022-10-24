@@ -42,9 +42,9 @@ A new string, with one, some, or all matches of the pattern replaced by the spec
 This method is called internally in {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} if the `pattern` argument is a {{jsxref("RegExp")}} object. For example, the following two examples return the same result.
 
 ```js
-'abc'.replace(/a/, 'A');
+"abc".replace(/a/, "A");
 
-/a/[Symbol.replace]('abc', 'A');
+/a/[Symbol.replace]("abc", "A");
 ```
 
 If the regex is global (with the `g` flag), the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method will be repeatedly called until `exec()` returns `null`. Otherwise, `exec()` would only be called once. For each `exec()` result, the substitution will be prepared based on the description in [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#description).
@@ -88,9 +88,9 @@ This method can be used in almost the same way as {{jsxref("String.prototype.rep
 
 ```js
 const re = /-/g;
-const str = '2016-01-01';
-const newstr = re[Symbol.replace](str, '.');
-console.log(newstr);  // 2016.01.01
+const str = "2016-01-01";
+const newstr = re[Symbol.replace](str, ".");
+console.log(newstr); // 2016.01.01
 ```
 
 ### Using @@replace in subclasses
@@ -113,9 +113,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp('\\d', '', 3);
-const str = '01234567';
-const newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
+const re = new MyRegExp("\\d", "", 3);
+const str = "01234567";
+const newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
 console.log(newstr); // ###34567
 ```
 

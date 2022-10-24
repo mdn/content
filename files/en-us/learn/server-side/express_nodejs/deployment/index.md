@@ -318,8 +318,6 @@ The final step is to copy in your application and then add the files to your rep
    git push origin main
    ```
 
-> **Warning:** In 2020 GitHub changed the default repo branch name to "main" (from "master"). If using an older/existing repository you might need to call `git push origin master` instead.
-
 When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
 > **Note:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
