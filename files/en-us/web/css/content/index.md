@@ -163,7 +163,10 @@ h1::before {
 
 ### Image combined with text
 
-This example inserts an image before the link. If the image is not found, it inserts text instead.
+This example inserts an image before the link.
+If the image is not found, it inserts "alt(ernative) text" instead.
+
+In addition, to force the
 
 #### HTML
 
@@ -173,10 +176,11 @@ This example inserts an image before the link. If the image is not found, it ins
 
 #### CSS
 
+The CSS to shown the image if present and otherwise the alternative text is shown below.
+
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
-    " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/xfavicon.ico") / " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
 }
@@ -184,7 +188,13 @@ a::before {
 
 #### Result
 
+The browser should display the icon before the link below, as the image is expected to be present.
+
 {{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
+
+Note that on a browser that does not support the alternative text syntax, the whole line is invalid.
+In this case neither the image or text will be displayed!
+Depending on whether the image is _likely_ to be present you could address this issue by having CSS to add either the image or default text before the line with the both.
 
 ### Targeting classes
 
