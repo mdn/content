@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollTop
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollTop`** property gets or sets the number of pixels that an element's content is scrolled vertically.
@@ -40,15 +41,16 @@ In this example, try scrolling the inner container with the dashed border, and s
 #### HTML
 
 ```html
-
 <div id="container">
   <div id="scroller">
-      <p>Far out in the uncharted backwaters of the unfashionable end
-      of the western spiral arm of the Galaxy lies a small unregarded
-      yellow sun. Orbiting this at a distance of roughly ninety-two million
-      miles is an utterly insignificant little blue green planet whose
-      ape-descended life forms are so amazingly primitive that they still
-      think digital watches are a pretty neat idea.</p>
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
   </div>
 </div>
 
@@ -76,7 +78,7 @@ In this example, try scrolling the inner container with the dashed border, and s
 const scroller = document.querySelector("#scroller");
 const output = document.querySelector("#output");
 
-scroller.addEventListener("scroll", event => {
+scroller.addEventListener("scroll", (event) => {
   output.textContent = `scrollTop: ${scroller.scrollTop}`;
 });
 ```
@@ -95,6 +97,6 @@ scroller.addEventListener("scroll", event => {
 
 ## See also
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollLeft")}}
 - {{domxref("Element.scrollTo()")}}

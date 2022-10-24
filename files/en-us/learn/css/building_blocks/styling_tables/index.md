@@ -11,6 +11,7 @@ tags:
   - Styling
   - Tables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.
@@ -41,7 +42,9 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -64,7 +67,7 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
       <td>London Calling</td>
     </tr>
 
-      ... some rows removed for brevity
+    <!-- several other great bands -->
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -84,7 +87,7 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
 
 The table is nicely marked up, easily stylable, and accessible, thanks to features such as {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Unfortunately, it doesn't look good when rendered on the screen (see it live at [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
 
-![](table-unstyled.png)
+![an unstyled table showing a summary of Uk's famous punk bands](table-unstyled.png)
 
 With only the default browser styling it looks cramped, hard to read, and boring. We need to use some CSS to fix this up.
 
@@ -96,9 +99,9 @@ Let's work through styling our table example together.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" />
+   ```
 
 ### Spacing and layout
 
@@ -130,24 +133,25 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
 
 The most important parts to note are as follows:
 
-- A {{cssxref("table-layout")}} value of `fixed` is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With `table-layout: fixed`, you can size your columns according to the width of their headings, and then deal with their content as appropriate. This is why we've selected the four different headings with the `thead th:nth-child(n)` ({{cssxref(":nth-child")}}) selector ("Select the *n*th child that is a {{htmlelement("th")}} element in a sequence, inside a {{htmlelement("thead")}} element") and given them set percentage widths. The entire column width follows the width of its heading, making for a nice way to size your table columns. Chris Coyier discusses this technique in more detail in [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).
+- A {{cssxref("table-layout")}} value of `fixed` is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With `table-layout: fixed`, you can size your columns according to the width of their headings, and then deal with their content as appropriate. This is why we've selected the four different headings with the `thead th:nth-child(n)` ({{cssxref(":nth-child")}}) selector ("Select the n-th child that is a {{htmlelement("th")}} element in a sequence, inside a {{htmlelement("thead")}} element") and given them set percentage widths. The entire column width follows the width of its heading, making for a nice way to size your table columns. Chris Coyier discusses this technique in more detail in [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).
 
   We've coupled this with a {{cssxref("width")}} of 100%, meaning that the table will fill any container it is put in, and be nicely responsive (although it would still need some more work to get it looking good on narrow screen widths).
 
-- A {{cssxref("border-collapse")}} value of `collapse` is standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: ![](no-border-collapse.png) This doesn't look very nice (although it might be the look you want, who knows?). With `border-collapse: collapse;` set, the borders collapse down into one, which looks much better: ![](border-collapse.png)
+- A {{cssxref("border-collapse")}} value of `collapse` is standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: ![a 2 by 2 table with default spacing between the borders showing no border collapse](no-border-collapse.png) This doesn't look very nice (although it might be the look you want, who knows?). With `border-collapse: collapse;` set, the borders collapse down into one, which looks much better: ![a 2 by 2 table with border-collapse property set to collapse showing borders collapse into one](border-collapse.png)
 - We've put a {{cssxref("border")}} around the whole table, which is needed because we'll be putting some borders round the table header and footer later on — it looks really odd and disjointed when you don't have a border round the whole outside of the table and end up with gaps.
 - We've set some {{cssxref("padding")}} on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.
 
 At this point, our table already looks a lot better:
 
-![](table-with-spacing.png)
+![a semi-styled table with spacing to make the data more legible and showing a summary of Uk's famous punk bands](table-with-spacing.png)
 
 ### Some simple typography
 
@@ -158,7 +162,10 @@ First of all, we've found a font on [Google Fonts](https://fonts.google.com/) th
 First, add the following {{htmlelement("link")}} element into your HTML head, just above your existing `<link>` element:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Now add the following CSS into your `style.css` file, below the previous addition:
@@ -167,11 +174,12 @@ Now add the following CSS into your `style.css` file, below the previous additio
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -200,7 +208,7 @@ There is nothing really specific to tables here; we are generally tweaking the f
 
 The result looks a bit neater:
 
-![](table-with-typography.png)
+![a styled table with a global sans-serif font stack and good spacing to make the data more legible and showing a summary of Uk's famous punk bands](table-with-typography.png)
 
 ### Graphics and colors
 
@@ -211,14 +219,21 @@ Start by adding the following CSS to your `style.css` file, again at the bottom:
 ```css
 /* graphics and colors */
 
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -259,7 +274,7 @@ table {
 
 This color explosion results in the following look:
 
-![](table-with-color.png)
+![a well styled table with a repeating background in the body rows and the entire table a solid background to make the data showing a summary of Uk's famous punk bands more appealing](table-with-color.png)
 
 Now, this may be a bit over the top and not to your taste, but the point we are trying to make here is that tables don't have to be boring and academic.
 
@@ -271,7 +286,7 @@ There is one last thing to do with our table — style the caption. To do this, 
 /* caption */
 
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
@@ -283,7 +298,7 @@ caption {
 
 There is nothing remarkable here, except for the {{cssxref("caption-side")}} property, which has been given a value of `bottom`. This causes the caption to be positioned on the bottom of the table, which along with the other declarations gives us this final look (see it live at [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)):
 
-![](table-with-caption.png)
+![a white background below the styled table containing a caption of what the table is about. "a summary of Uk's famous punk bands" in this case](table-with-caption.png)
 
 ## Table styling quick tips
 

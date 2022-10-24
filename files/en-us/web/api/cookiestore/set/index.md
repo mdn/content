@@ -8,15 +8,17 @@ tags:
   - Reference
   - set()
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore.set
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object. (See below.)
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 set(options)
 ```
@@ -64,7 +66,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 
 - {{jsxref("TypeError")}}
   - : Thrown if setting the cookie with the given values fails.
-- {{domxref("DOMException")}} `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the origin does not {{glossary("serialize")}} to a URL.
 
 ## Examples
@@ -77,7 +79,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

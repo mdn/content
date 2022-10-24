@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Location.href
 ---
+
 {{ApiRef("Location")}}
 
 The **`href`** property of the {{domxref("Location")}}
@@ -26,8 +27,8 @@ A string.
 
 ```js
 // Lets imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location/href"> element is in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/Location/href'
+const anchor = document.getElementById("myAnchor");
+const result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/Location/href'
 ```
 
 ## Specifications

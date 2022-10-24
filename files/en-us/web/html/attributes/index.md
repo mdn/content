@@ -18,10 +18,6 @@ tags:
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 
-## Global event handlers
-
-In addition to the attributes listed in the table below, the [`GlobalEventHandlers`](/en-US/docs/Web/API/GlobalEventHandlers) article lists global event handlers — such as [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) — that can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
-
 ## Attribute list
 
 <table class="standard-table">
@@ -79,7 +75,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
         {{ HTMLElement("img") }}, {{ HTMLElement("table") }},
         {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }},
-        {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }},
+        {{ HTMLElement("tfoot") }}, {{ HTMLElement("th") }},
         {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}
       </td>
       <td>Specifies the horizontal alignment of the element.</td>
@@ -300,7 +296,6 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     <tr>
       <td><code>color</code></td>
       <td>
-        {{ HTMLElement("basefont") }},
         {{ HTMLElement("font") }}, {{ HTMLElement("hr") }}
       </td>
       <td>
@@ -1512,18 +1507,34 @@ IDL attributes can [reflect other types](https://html.spec.whatwg.org/multipage/
 
 ## Boolean Attributes
 
-Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://html.spec.whatwg.org/multipage/infrastructure.html#sec-boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
+Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
 
-HTML5 defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
+HTML defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
 
-```html
-<div itemscope> This is valid HTML but invalid XML. </div>
-<div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
-<div itemscope=""> This is valid HTML and also valid XML. </div>
-<div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```html-nolint
+<div itemscope>This is valid HTML but invalid XML.</div>
+<div itemscope=itemscope>This is also valid HTML but invalid XML.</div>
+<div itemscope="">This is valid HTML and also valid XML.</div>
+<div itemscope="itemscope">
+  This is also valid HTML and XML, but perhaps a bit verbose.
+</div>
 ```
 
 To be clear, the values "`true`" and "`false`" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element's `checked` attribute would be interpreted as **true** because the attribute is present.
+
+## Event handler attributes
+
+> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also blocked by content security policies.
+
+In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
+
+All event handler attributes accept a string. The string will be used to synthesize a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions) like `function name(/*args*/) {body}`, where `name` is the attribute's name, and `body` is the attribute's value. The handler receives the same parameters as its JavaScript event handler counterpart — most handlers receive only one `event` parameter, while `onerror` receives five: `event`, `source`, `lineno`, `colno`, `error`. This means you can, in general, use the `event` variable within the attribute.
+
+```html
+<div onclick="console.log(event)">Click me!</div>
+<!-- The synthesized handler has a name; you can reference itself -->
+<div onclick="console.log(onclick)">Click me!</div>
+```
 
 ## See also
 

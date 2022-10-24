@@ -1,6 +1,7 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scaleX
 ---
+
 {{CSSRef}}
 
 The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
@@ -163,8 +165,8 @@ div {
 
 ## See also
 
-- [`scaleY()`](</en-US/docs/Web/CSS/transform-function/scaleY()>)
-- [`scaleZ()`](</en-US/docs/Web/CSS/transform-function/scaleZ()>)
+- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

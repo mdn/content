@@ -15,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.AbsoluteOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`AbsoluteOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation in relation to the Earth's reference coordinate system.
@@ -30,11 +31,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("AbsoluteOrientationSensor.AbsoluteOrientationSensor", "AbsoluteOrientationSensor()")}}
   - : Creates a new `AbsoluteOrientationSensor` object.
 
-## Properties
+## Instance properties
 
-_No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
+_No specific properties; inherits properties from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
@@ -49,15 +50,15 @@ _No specific events; inherits methods from its ancestor, {{domxref('Sensor')}}._
 The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `AbsoluteOrientationSensor` with a frequency of 60 times a second. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
 ```js
-const options = { frequency: 60, referenceFrame: 'device' };
+const options = { frequency: 60, referenceFrame: "device" };
 const sensor = new AbsoluteOrientationSensor(options);
 
-sensor.addEventListener('reading', () => {
+sensor.addEventListener("reading", () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error => {
-  if (event.error.name == 'NotReadableError') {
+sensor.addEventListener("error", (error) => {
+  if (event.error.name === "NotReadableError") {
     console.log("Sensor is not available.");
   }
 });
@@ -70,17 +71,18 @@ Using orientation sensors requires requesting permissions for multiple device se
 
 ```js
 const sensor = new AbsoluteOrientationSensor();
-Promise.all([navigator.permissions.query({ name: "accelerometer" }),
-             navigator.permissions.query({ name: "magnetometer" }),
-             navigator.permissions.query({ name: "gyroscope" })])
-       .then(results => {
-         if (results.every(result => result.state === "granted")) {
-           sensor.start();
-           ...
-         } else {
-           console.log("No permissions to use AbsoluteOrientationSensor.");
-         }
-   });
+Promise.all([
+  navigator.permissions.query({ name: "accelerometer" }),
+  navigator.permissions.query({ name: "magnetometer" }),
+  navigator.permissions.query({ name: "gyroscope" }),
+]).then((results) => {
+  if (results.every((result) => result.state === "granted")) {
+    sensor.start();
+    // …
+  } else {
+    console.log("No permissions to use AbsoluteOrientationSensor.");
+  }
+});
 ```
 
 ## Specifications

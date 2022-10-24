@@ -2,11 +2,12 @@
 title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
 tags:
-  - '68'
+  - "68"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
@@ -45,7 +46,7 @@ This article provides information about the changes in Firefox 68 that will affe
 
 - The [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
 - The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
-- [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List..._) is now more intuitive and simpler to use ({{bug(1487857)}}).
+- [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List…_) is now more intuitive and simpler to use ({{bug(1487857)}}).
 
 #### Removals
 
@@ -70,12 +71,12 @@ This article provides information about the changes in Firefox 68 that will affe
 
 - The {{CSSxRef("-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ({{bug(866102)}}).
 - Support has been added for the {{CSSxRef("::marker")}} pseudo-element ({{bug(205202)}}) and animation for `::marker` pseudos ({{bug(1538618)}})
-- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentcolor")}} to be a computed value (except for the {{cssxref("color")}} property)  ({{bug(760345)}}).
+- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentcolor")}} to be a computed value (except for the {{cssxref("color")}} property) ({{bug(760345)}}).
 - Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})
 - The {{CSSxRef("counter-set")}} property has been implemented. ({{bug(1518201)}}).
 - We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ({{bug(288704)}}).
 - Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ({{bug(1545430)}}) and ({{bug(1545425)}}).
-- [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) are now supported in indirectly rendered things e.g.) {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).
+- [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) are now supported in indirectly rendered things e.g.) {{SVGElement("mask")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{SVGElement("clipPath")}} ({{bug(1323962)}}).
 - While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, and {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
 
   In particular, the complicated syntax taking both an angle and a position will no longer work, and the `to` keyword in the `<side-or-corner>` parameter is not required for the prefixed gradient properties. You are encouraged to use the standard, non-prefixed gradient properties instead, as they're now widely supported ({{bug(1547939)}}).
@@ -173,6 +174,7 @@ _No changes._
 - When an add-on attempts to add a bookmark folder to the root folder, the resulting error message is now much more intuitive ({{bug(1512171)}}).
 - The promise returned by [`browser.tabs.duplicate()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate) now resolves immediately, before the tabs are completely loaded ({{bug(1394376)}}).
 - Support has been added for chrome.storage.managed, allowing web extension settings to be implemented via enterprise policy ({{bug(1230802)}}).
+- `proxyAuthorization` and `connectionIsolation` in {{WebExtAPIRef("proxy.onRequest")}} now apply only to HTTPS proxies ({{bug(1549368)}}.
 
 ### Manifest changes
 

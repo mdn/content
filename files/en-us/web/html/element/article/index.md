@@ -93,10 +93,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-- Each `<article>` should be identified, typically by including a heading ([`<h1>`-`<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
+- Each `<article>` should be identified, typically by including a heading ([`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
 - When an `<article>` element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be `<article>` elements nested in the `<article>` representing the blog post.
 - Author information of an `<article>` element can be provided through the {{HTMLElement("address")}} element, but it doesn't apply to nested `<article>` elements.
-- The publication date and time of an `<article>` element can be described using the {{htmlattrxref("datetime", "time")}} attribute of a {{HTMLElement("time")}} element. _Note that the {{htmlattrxref("pubdate", "time")}} attribute of {{HTMLElement("time")}} is no longer a part of the {{glossary("W3C")}} {{glossary("HTML5")}} standard._
+- The publication date and time of an `<article>` element can be described using the {{htmlattrxref("datetime", "time")}} attribute of a {{HTMLElement("time")}} element.
 
 ## Examples
 

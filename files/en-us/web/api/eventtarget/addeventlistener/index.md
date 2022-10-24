@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.EventTarget.addEventListener
 ---
+
 {{APIRef("DOM")}}
 
 The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface
@@ -43,10 +44,10 @@ such as during the bubbling phase.
 
 ## Syntax
 
-```js
-addEventListener(type, listener);
-addEventListener(type, listener, options);
-addEventListener(type, listener, useCapture);
+```js-nolint
+addEventListener(type, listener)
+addEventListener(type, listener, options)
+addEventListener(type, listener, useCapture)
 ```
 
 ### Parameters
@@ -56,7 +57,7 @@ addEventListener(type, listener, useCapture);
 - `listener`
   - : The object that receives a notification (an object that implements the
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
-    be an object with a `handleEvent()` method, or a JavaScript
+    be `null`, an object with a `handleEvent()` method, or a JavaScript
     [function](/en-US/docs/Web/JavaScript/Guide/Functions). See
     [The event listener callback](#the_event_listener_callback) for details on the callback itself.
 - `options` {{optional_inline}}
@@ -64,21 +65,21 @@ addEventListener(type, listener, useCapture);
   - : An object that specifies characteristics about the event listener. The available
     options are:
 
-    - `capture`
+    - `capture` {{optional_inline}}
       - : A boolean value indicating that events of this type will be dispatched
         to the registered `listener` before being dispatched to any
         `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
-    - `once`
+    - `once` {{optional_inline}}
       - : A boolean value indicating that the `listener`
         should be invoked at most once after being added. If `true`, the
         `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
-    - `passive`
+    - `passive` {{optional_inline}}
       - : A boolean value that, if `true`, indicates that the function
         specified by `listener` will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call `preventDefault()`, the user agent will do nothing other than
         generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari and Internet Explorer, defaults to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
-    - `signal`
+    - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
 
 - `useCapture` {{optional_inline}}
@@ -96,7 +97,7 @@ addEventListener(type, listener, useCapture);
     > **Note:** For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
     > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
 
-- `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
+- `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
   - : A Firefox (Gecko)-specific parameter. If `true`, the listener receives
     synthetic events dispatched by web content (the default is `false` for
     browser {{glossary("chrome")}} and `true` for regular web pages). This
@@ -124,7 +125,7 @@ For example, an event handler callback that can be used to handle both
 
 ```js
 function eventHandler(event) {
-  if (event.type == 'fullscreenchange') {
+  if (event.type === 'fullscreenchange') {
     /* handle a full screen toggle */
   } else /* fullscreenerror */ {
     /* handle a full screen toggle error */
@@ -163,7 +164,7 @@ try {
 
   window.addEventListener("test", null, options);
   window.removeEventListener("test", null, options);
-} catch(err) {
+} catch (err) {
   passiveSupported = false;
 }
 ```
@@ -187,8 +188,11 @@ Then, when you want to create an actual event listener that uses the options in
 question, you can do something like this:
 
 ```js
-someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
-                               ? { passive: true } : false);
+someElement.addEventListener(
+  "mouseup",
+  handleMouseUp,
+  passiveSupported ? { passive: true } : false
+);
 ```
 
 Here we're adding a listener for the {{domxref("Element/mouseup_event", "mouseup")}}
@@ -215,8 +219,12 @@ clicks on an element.
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -226,11 +234,8 @@ clicks on an element.
 // Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
-  if (t2.firstChild.nodeValue == "three") {
-    t2.firstChild.nodeValue = "two";
-  } else {
-    t2.firstChild.nodeValue = "three";
-  }
+  const isNodeThree = t2.firstChild.nodeValue === "three";
+  t2.firstChild.nodeValue = isNodeThree ? "two" : "three";
 }
 
 // Add event listener to table
@@ -254,8 +259,12 @@ This example demonstrates how to add an `addEventListener()` that can be aborted
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -270,7 +279,7 @@ el.addEventListener("click", modifyText, { signal: controller.signal } );
 // Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
-  if (t2.firstChild.nodeValue == "three") {
+  if (t2.firstChild.nodeValue === "three") {
     t2.firstChild.nodeValue = "two";
   } else {
     t2.firstChild.nodeValue = "three";
@@ -294,8 +303,12 @@ event listener.
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -310,7 +323,7 @@ function modifyText(new_text) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", function(){modifyText("four")}, false);
+el.addEventListener("click", function () { modifyText("four"); }, false);
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -330,8 +343,12 @@ notation.
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -383,26 +400,30 @@ also available to the event handler when using an arrow function.
 #### CSS
 
 ```css
-.outer, .middle, .inner1, .inner2 {
+.outer,
+.middle,
+.inner1,
+.inner2 {
   display: block;
-  width:   520px;
+  width: 520px;
   padding: 15px;
-  margin:  15px;
+  margin: 15px;
   text-decoration: none;
 }
 .outer {
   border: 1px solid red;
-  color:  red;
+  color: red;
 }
 .middle {
   border: 1px solid green;
-  color:  green;
-  width:  460px;
+  color: green;
+  width: 460px;
 }
-.inner1, .inner2 {
+.inner1,
+.inner2 {
   border: 1px solid purple;
-  color:  purple;
-  width:  400px;
+  color: purple;
+  width: 400px;
 }
 ```
 
@@ -476,6 +497,67 @@ Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition
 that not all browsers have supported historically. See [Safely detecting option support](#safely_detecting_option_support) for details.
 
+### Event listener with multiple options
+
+You can set more than one of the options in the `options` parameter. In the following example we are setting two options:
+
+- `passive`, to assert that the handler will not call {{domxref("Event.preventDefault", "preventDefault()")}}
+- `once`, to ensure that the event handler will only be called once.
+
+#### HTML
+
+```html
+<button id="example-button">You have not clicked this button.</button>
+<button id="reset-button">Click this button to reset the first button.</button>
+```
+
+#### JavaScript
+
+```js
+const buttonToBeClicked = document.getElementById("example-button");
+
+const resetButton = document.getElementById("reset-button");
+
+// the text that the button is initialized with
+const initialText = buttonToBeClicked.textContent;
+
+// the text that the button contains after being clicked
+const clickedText = "You have clicked this button.";
+
+// we hoist the event listener callback function
+// to prevent having duplicate listeners attached
+function eventListener() {
+  buttonToBeClicked.textContent = clickedText;
+}
+
+function addListener() {
+  buttonToBeClicked.addEventListener(
+    "click",
+    eventListener,
+    {
+      passive: true,
+      once: true
+    }
+  );
+}
+
+// when the reset button is clicked, the example button is reset,
+// and allowed to have its state updated again
+resetButton.addEventListener(
+  "click",
+  () => {
+    buttonToBeClicked.textContent = initialText;
+    addListener();
+  }
+);
+
+addListener();
+```
+
+#### Result
+
+{{EmbedLiveSample('Event_listener_with_multiple_options')}}
+
 ## Other notes
 
 ### The value of "this" within the handler
@@ -504,15 +586,16 @@ my_element.addEventListener('click', (e) => {
 })
 ```
 
-If an event handler (for example, {{domxref("GlobalEventHandlers.onclick",
+If an event handler (for example, {{domxref("Element.click_event",
   "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the
 attribute value is effectively wrapped in a handler function that binds the value of
 `this` in a manner consistent with the `addEventListener()`; an
 occurrence of `this` within the code represents a reference to the element.
 
 ```html
-<table id="my_table" onclick="console.log(this.id);"><!-- `this` refers to the table; logs 'my_table' -->
-  ...
+<table id="my_table" onclick="console.log(this.id);">
+  <!-- `this` refers to the table; logs 'my_table' -->
+  …
 </table>
 ```
 
@@ -522,10 +605,13 @@ shown in the following example:
 
 ```html
 <script>
-  function logID() { console.log(this.id); }
+  function logID() {
+    console.log(this.id);
+  }
 </script>
-<table id="my_table" onclick="logID();"><!-- when called, `this` will refer to the global object -->
-  ...
+<table id="my_table" onclick="logID();">
+  <!-- when called, `this` will refer to the global object -->
+  …
 </table>
 ```
 
@@ -542,14 +628,14 @@ a reference to the listener around so you can remove it later.
 This is an example with and without `bind()`:
 
 ```js
-const Something = function(element) {
+const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.onclick1 = function(event) {
+  this.onclick1 = function (event) {
     console.log(this.name); // undefined, as |this| is the element
   };
 
-  this.onclick2 = function(event) {
+  this.onclick2 = function (event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
 
@@ -566,17 +652,17 @@ Another solution is using a special function called `handleEvent()` to catch
 any events:
 
 ```js
-const Something = function(element) {
+const Something = function (element) {
   // |this| is a newly created object
   this.name = 'Something Good';
-  this.handleEvent = function(event) {
+  this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
     switch(event.type) {
       case 'click':
-        // some code here...
+        // some code here…
         break;
       case 'dblclick':
-        // some code here...
+        // some code here…
         break;
     }
   };
@@ -605,17 +691,17 @@ class SomeClass {
 
   register() {
     const that = this;
-    window.addEventListener('keydown', function(e) { that.someMethod(e); });
+    window.addEventListener('keydown', (e) => { that.someMethod(e); });
   }
 
   someMethod(e) {
     console.log(this.name);
     switch(e.keyCode) {
       case 5:
-        // some code here...
+        // some code here…
         break;
       case 6:
-        // some code here...
+        // some code here…
         break;
     }
   }
@@ -670,7 +756,7 @@ event listener is declared.
 const myButton = document.getElementById('my-button-id');
 let someString = 'Data';
 
-myButton.addEventListener('click', function() {
+myButton.addEventListener('click', () => {
   console.log(someString);  // Expected Value: 'Data'
 
   someString = 'Data Again';
@@ -705,13 +791,13 @@ Consider this example.
 const myButton = document.getElementById('my-button-id');
 const someObject = {aProperty: 'Data'};
 
-myButton.addEventListener('click', function() {
+myButton.addEventListener('click', () => {
   console.log(someObject.aProperty);  // Expected Value: 'Data'
 
   someObject.aProperty = 'Data Again';  // Change the value
 });
 
-window.setInterval(function() {
+setInterval(() => {
   if (someObject.aProperty === 'Data Again') {
     console.log('Data Again: True');
     someObject.aProperty = 'Data';  // Reset value to wait for next event execution
@@ -740,20 +826,22 @@ can respond to the change).
 ### Memory issues
 
 ```js
-const els = document.getElementsByTagName('*');
+const elts = document.getElementsByTagName('*');
 
 // Case 1
-for(let i = 0; i < els.length; i++){
-  els[i].addEventListener("click", function(e){/*do something*/}, false);
+for (const elt of elts) {
+  elt.addEventListener("click", (e) => {
+    // Do something
+  }, false);
 }
 
 // Case 2
-function processEvent(e){
-  /* do something */
+function processEvent(e) {
+  // Do something
 }
 
-for(let i = 0 ; i < els.length; i++){
-  els[i].addEventListener("click", processEvent, false);
+for (const elt of elts) {
+  elt.addEventListener("click", processEvent, false);
 }
 ```
 
@@ -768,38 +856,7 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a *static* function reference. In both
-problem-cases below, a function reference is kept, but it is redefined on each
-iteration. In the third case, the reference to the anonymous function
-is being reassigned with each iteration. In the fourth case, the entire function
-definition is unchanging, but it is still being repeatedly defined as if new. So neither is static. Therefore, though appearing to
-be multiple identical event listeners, in both cases each iteration will instead
-create a new listener with its own unique reference to the handler function.
-
-```js
-const els = document.getElementsByTagName('*');
-
-function processEvent(e){
-  /* do something */
-}
-
-// For illustration only: Note the mistake of [j] for [i]. We are registering all event listeners to the first element
-
-// Case 3
-for(let i = 0, j = 0 ; i < els.length ; i++){
-  els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
-}
-
-// Case 4
-for(let i = 0, j = 0 ; i < els.length ; i++){
-  function processEvent(e){/* do something */};
-  els[j].addEventListener("click", processEvent, false);
-}
-```
-
-Also in both case 3 and case 4, because the function reference was kept but repeatedly redefined
-with each `addEventListener()`, `removeEventListener("click", processEvent, false)` can still remove a listener, but now only
-the last one added.
+the real issue; rather it is the lack of keeping a _static_ function reference.
 
 ### Improving scrolling performance with passive listeners
 
@@ -815,13 +872,13 @@ try {
       {},
       "passive",
       {
-        get: function() { passiveIfSupported = { passive: true }; }
+        get() { passiveIfSupported = { passive: true }; }
       }
     )
   );
-} catch(err) {}
+} catch (err) {}
 
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', (event) => {
   /* do something */
   // can't use event.preventDefault();
 }, passiveIfSupported );

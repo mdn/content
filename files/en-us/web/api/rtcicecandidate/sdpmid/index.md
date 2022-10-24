@@ -18,6 +18,7 @@ tags:
   - stream
 browser-compat: api.RTCIceCandidate.sdpMid
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`sdpMid`** on the {{domxref("RTCIceCandidate")}} interface returns a string
@@ -34,10 +35,6 @@ which the candidate draws data, or `null` if no such association exists for the 
 
 > **Note:** Attempting to add a candidate (using {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for both `sdpMid` and `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
-
-## Examples
-
-...
 
 ## Specifications
 

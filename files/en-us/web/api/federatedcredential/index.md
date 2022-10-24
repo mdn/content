@@ -9,8 +9,10 @@ tags:
   - Interface
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.FederatedCredential
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`FederatedCredential`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about credentials from a federated identity provider. A federated identity provider is an entity that a website trusts to correctly authenticate a user, and that provides an API for that purpose. [OpenID Connect](https://openid.net/developers/specs/) is an example of a federated identity provider framework.
@@ -21,41 +23,41 @@ In browsers that support it, an instance of this interface may be passed in the 
 
 ## Constructor
 
-- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}
+- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}} {{Experimental_Inline}}
   - : Creates a new `FederatedCredential` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
+- {{domxref("FederatedCredential.provider")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string containing a credential's federated identity provider.
-- {{domxref("FederatedCredential.protocol")}} {{readonlyInline}}
+- {{domxref("FederatedCredential.protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string containing a credential's federated identity protocol.
 
 ### Event handlers
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 
 ## Examples
 
 ```js
-var cred = new FederatedCredential({
-  id: id,
-  name: name,
+const cred = new FederatedCredential({
+  id,
+  name,
   provider: 'https://account.google.com',
-  iconURL: iconUrl
+  iconURL,
 });
 
 // Store it
 navigator.credentials.store(cred)
-  .then(function() {
-  // Do something else.
-});
+  .then(() => {
+    // Do something else.
+  });
 ```
 
 ## Specifications

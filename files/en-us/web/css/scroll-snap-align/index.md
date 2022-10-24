@@ -1,18 +1,23 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
+page-type: css-property
 tags:
-  - Advanced
   - CSS
+  - CSS Property
+  - Web
   - Example
   - NeedsLiveSample
   - Reference
   - recipe:css-property
 browser-compat: css.properties.scroll-snap-align
 ---
+
 {{CSSRef}}
 
 The `scroll-snap-align` property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.
+
+{{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
 
 ## Syntax
 

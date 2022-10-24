@@ -16,6 +16,7 @@ tags:
   - relative
   - urls
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 Hyperlinks are really important — they are what makes the Web _a web_.
@@ -65,8 +66,9 @@ For example, the BBC homepage contains many links that point not only to multipl
 A basic link is created by wrapping the text or other content, see [Block level links](#block_level_links), inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+<p>
+  I'm creating a link to
+  <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
 </p>
 ```
 
@@ -80,9 +82,11 @@ Another attribute you may want to add to your links is `title`.
 The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/"
-   title="The best place to find more information about Mozilla's
+<p>
+  I'm creating a link to
+  <a
+    href="https://www.mozilla.org/en-US/"
+    title="The best place to find more information about Mozilla's
           mission and how to contribute">the Mozilla homepage</a>.
 </p>
 ```
@@ -109,7 +113,7 @@ If you have an image you want to make into a link, use the {{htmlelement("a")}} 
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="mozilla logo that links to the Mozilla homepage">
+  <img src="mozilla-image.png" alt="Mozilla homepage" />
 </a>
 ```
 
@@ -132,8 +136,10 @@ There are also two directories inside our root — `pdfs` and `projects`. These 
 - **Same directory**: If you wanted to include a hyperlink inside `index.html` (the top level `index.html`) pointing to `contacts.html`, you would specify the filename that you want to link to, because it's in the same directory as the current file. The URL you would use is `contacts.html`:
 
   ```html
-  <p>Want to contact a specific staff member?
-  Find details on our <a href="contacts.html">contacts page</a>.</p>
+  <p>
+    Want to contact a specific staff member? Find details on our
+    <a href="contacts.html">contacts page</a>.
+  </p>
   ```
 
 - **Moving down into subdirectories**: If you wanted to include a hyperlink inside `index.html` (the top level `index.html`) pointing to `projects/index.html`, you would need to go down into the `projects` directory before indicating the file you want to link to.
@@ -165,13 +171,19 @@ It normally makes sense to link to a specific heading, so this would look someth
 Then to link to that specific `id`, you'd include it at the end of the URL, preceded by a hash/pound symbol (`#`), for example:
 
 ```html
-<p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
+<p>
+  Want to write us a letter? Use our
+  <a href="contacts.html#Mailing_address">mailing address</a>.
+</p>
 ```
 
 You can even use the document fragment reference on its own to link to _another part of the current document_:
 
 ```html
-<p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+<p>
+  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  bottom of this page.
+</p>
 ```
 
 ### Absolute versus relative URLs
@@ -242,17 +254,23 @@ For example:
 Let's look at some examples, to see what kind of text can be used here:
 
 ```html
-<p><a href="https://www.example.com/large-report.pdf">
-  Download the sales report (PDF, 10MB)
-</a></p>
+<p>
+  <a href="https://www.example.com/large-report.pdf">
+    Download the sales report (PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="https://www.example.com/video-stream/" target="_blank">
-  Watch the video (stream opens in separate tab, HD quality)
-</a></p>
+<p>
+  <a href="https://www.example.com/video-stream/" target="_blank">
+    Watch the video (stream opens in separate tab, HD quality)
+  </a>
+</p>
 
-<p><a href="https://www.example.com/car-game">
-  Play the car game (requires Flash)
-</a></p>
+<p>
+  <a href="https://www.example.com/car-game">
+    Play the car game (requires Flash)
+  </a>
+</p>
 ```
 
 ### Use the download attribute when linking to a download
@@ -260,8 +278,9 @@ Let's look at some examples, to see what kind of text can be used here:
 When you are linking to a resource that's to be downloaded rather than opened in the browser, you can use the `download` attribute to provide a default save filename. Here's an example with a download link to the latest Windows version of Firefox:
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
-   download="firefox-latest-64bit-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+  download="firefox-latest-64bit-installer.exe">
   Download Latest Firefox for Windows (64-bit) (English, US)
 </a>
 ```
@@ -317,7 +336,8 @@ Each field and its value is specified as a query term.
 Here's an example that includes a cc, bcc, subject and body:
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```

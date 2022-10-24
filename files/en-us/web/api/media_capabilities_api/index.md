@@ -4,12 +4,12 @@ slug: Web/API/Media_Capabilities_API
 page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Media Capabilities
   - Overview
   - Reference
 browser-compat: api.MediaCapabilities
 ---
+
 {{DefaultAPISidebar("Media Capabilities API")}}
 
 The **Media Capabilities API** allows developers to determine decoding and encoding abilities of the device, exposing information such as whether media is supported and whether playback should be smooth and power efficient, with real time feedback about playback to better enable adaptive streaming, and access to display property information.
@@ -32,14 +32,13 @@ if ('mediaCapabilities' in navigator) {
     }
   };
 
-  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result => {
-    console.log('This configuration is ' +
-        (result.supported ? '' : 'not ') + 'supported, ' +
-        (result.smooth ? '' : 'not ') + 'smooth, and ' +
-        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then((result) => {
+    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
     })
     .catch(() => {
-      console.log("decodingInfo error: " + contentType)
+      console.log(`decodingInfo error: ${contentType}`)
     });
 }
 ```

@@ -15,6 +15,7 @@ tags:
   - track
 browser-compat: api.TextTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("TextTrackList")}}**
@@ -37,8 +38,8 @@ This snippet gets the number of text tracks in the first media element found in 
 {{Glossary("DOM")}} by {{domxref("Document.querySelector", "querySelector()")}}.
 
 ```js
-var mediaElem = document.querySelector("video, audio");
-var numTextTracks = 0;
+const mediaElem = document.querySelector("video, audio");
+let numTextTracks = 0;
 
 if (mediaElem.textTracks) {
   numTextTracks = mediaElem.textTracks.length;

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.tiltY
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`tiltY`** read-only property of the
@@ -30,7 +31,7 @@ This example illustrates simple accessing of the
 {{domxref("PointerEvent.tiltX","tiltX")}} and `tiltY` properties.
 
 ```js
-someElement.addEventListener("pointerdown", function(event) {
+someElement.addEventListener("pointerdown", (event) => {
   process_tilt(event.tiltX, event.tiltY);
 }, false);
 ```

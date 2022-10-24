@@ -12,6 +12,7 @@ tags:
   - height
 browser-compat: api.HTMLObjectElement.height
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`height`** property of the

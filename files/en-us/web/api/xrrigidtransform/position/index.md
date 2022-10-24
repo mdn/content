@@ -20,6 +20,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform.position
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRRigidTransform")}} property
@@ -45,7 +46,7 @@ function onSessionStarted(xrSession) {
 
   gl = initGraphics(xrSession);
 
-  let glLayer = new XRWebGLLayer(xrSession, gl);
+  const glLayer = new XRWebGLLayer(xrSession, gl);
   xrSession.updateRenderState({ baseLayer: glLayer });
 
   if (immersiveSession) {
@@ -60,20 +61,16 @@ function onSessionStarted(xrSession) {
 }
 
 function refSpaceCreated(refSpace) {
-  if (immersiveSession) {
-    xrReferenceSpace = refSpace;
-  } else {
-    xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-      new XRRigidTransform({y: -1.5});
-    );
-  }
+  xrReferenceSpace = immersiveSession
+    ? refSpace
+    : refSpace.getOffsetReferenceSpace(new XRRigidTransform({ y: -1.5 }));
   xrSession.requestAnimationFrame(onFrame);
 }
 ```
 
 After setting up the graphics context for WebXR use, this begins by looking to see if a
 variable `immersiveSession` is `true`; if so, we first request a
-`bounded-floor` reference space. if that fails (probably because
+`bounded-floor` reference space. If that fails (probably because
 `bounded-floor` isn't supported), we try requesting a
 `local-floor` reference space.
 

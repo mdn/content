@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript error "unterminated string literal" occurs when there is an unterminated
@@ -15,7 +16,7 @@ The JavaScript error "unterminated string literal" occurs when there is an unter
 
 ## Message
 
-```js
+```
 SyntaxError: Unterminated string constant (Edge)
 SyntaxError: unterminated string literal (Firefox)
 ```
@@ -45,9 +46,9 @@ To fix this error, check if:
 You can't split a string across multiple lines like this in JavaScript:
 
 ```js example-bad
-var longString = 'This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.';
+const longString = 'This is a very long string which needs
+                    to wrap across multiple lines because
+                    otherwise my code is unreadable.';
 // SyntaxError: unterminated string literal
 ```
 
@@ -56,9 +57,9 @@ a backslash, or [template literals](/en-US/docs/Web/JavaScript/Reference/Templat
 The `+` operator variant looks like this:
 
 ```js example-good
-var longString = 'This is a very long string which needs ' +
-                 'to wrap across multiple lines because ' +
-                 'otherwise my code is unreadable.';
+const longString = 'This is a very long string which needs ' +
+                   'to wrap across multiple lines because ' +
+                   'otherwise my code is unreadable.';
 ```
 
 Or you can use the backslash character ("\\") at the end of each line to indicate that
@@ -67,18 +68,17 @@ character after the backslash (except for a line break), or as an indent; otherw
 will not work. That form looks like this:
 
 ```js example-good
-var longString = 'This is a very long string which needs \
+const longString = 'This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.';
 ```
 
-Another possibility is to use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
-which are supported in ECMAScript 2015 environments:
+Another possibility is to use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
 ```js example-good
-var longString = `This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.`;
+const longString = `This is a very long string which needs
+                    to wrap across multiple lines because
+                    otherwise my code is unreadable.`;
 ```
 
 ## See also

@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.baseURI
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`baseURI`** property of the {{domxref("Node")}} interface
@@ -25,7 +26,7 @@ The base URL is determined as follows:
 1. By default, the base URL is the location of the document
    (as determined by {{domxref("window.location")}}).
 2. If it is an HTML Document and there is a {{HTMLElement("Base")}} element in the document,
-   the `href`value of the _first_ `Base` element with such an attribute is used instead.
+   the `href` value of the _first_ `Base` element with such an attribute is used instead.
 
 ## Value
 
@@ -40,25 +41,25 @@ A string representing the base URL of the {{domxref("Node")}}.
 ```
 
 ```js
-const output = document.getElementsByTagName("output")[0];
+const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 
-{{EmbedLiveSample("Without <base>", "100%", 40)}}
+{{EmbedLiveSample("Without_base", "100%", 40)}}
 
 ### With \<base>
 
 ```html
-<base href="https://developer.mozilla.org/modified_base_uri/">
+<base href="https://developer.mozilla.org/modified_base_uri/" />
 <output>Not calculated</output>
 ```
 
 ```js
-const output = document.getElementsByTagName("output")[0];
+const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 
-{{EmbedLiveSample("With <base>", "100%", 40)}}
+{{EmbedLiveSample("With_base", "100%", 40)}}
 
 ## Specifications
 

@@ -18,6 +18,7 @@ tags:
   - sound
 browser-compat: api.AudioWorklet
 ---
+
 {{APIRef("Web Audio API")}}{{securecontext_header}}
 
 The **`AudioWorklet`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.
@@ -28,11 +29,11 @@ Access the audio context's instance of `AudioWorklet` through the {{domxref("Bas
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `AudioWorklet` interface does not define any properties of its own, but does inherit properties of {{domxref("Worklet")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from {{domxref('Worklet')}}. The `AudioWorklet` interface does not define any methods of its own._
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.UIEvent.detail
 ---
+
 {{APIRef("UI Events")}}
 
 The **`UIEvent.detail`** read-only property, when non-zero, provides the current (or next, depending on the event) click count.

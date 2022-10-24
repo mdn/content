@@ -3,8 +3,8 @@ title: Color wheel
 slug: Glossary/Color_wheel
 tags:
   - Color
-  - Glossary
 ---
+
 A **color wheel**, or _color circle_, is a chart representing a palette of colors in a circle. A color wheel can display colors identified by two polar coordinates, the _angle_ and the _distance_ from the origin, the circle's center.
 
 Color wheels are convenient for comparing colors expressed in polar or cylindrical coordinates, like [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), or [`lch()`](/en-US/docs/Web/CSS/color_value/lch).

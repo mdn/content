@@ -8,6 +8,9 @@ tags:
   - NeedsActiveLearning
   - WebMechanics
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article, we describe various web-related concepts: web pages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
 
 <table>
@@ -33,7 +36,7 @@ In this article, we describe various web-related concepts: web pages, websites, 
 
 ## Summary
 
-As with any area of knowledge, the web comes with a lot of jargon. Don't worry, we won't overwhelm you with all of it (we have a [glossary](/en-US/docs/Glossary) if you're curious). However, there are a few basic terms you need to understand at the outset, since you'll hear these expressions all the time as you read on. It's easy to confuse these terms sometimes since they refer to related but different functionalities. In fact, you'll sometimes see these terms misused in news reports and elsewhere, so getting them mixed up is understandable!
+As with any area of knowledge, the web comes with a lot of jargon. Don't worry. We won't overwhelm you with all of it (we have a [glossary](/en-US/docs/Glossary) if you're curious). However, there are a few basic terms you need to understand at the outset since you'll hear these expressions all the time as you read on. It's easy to mix these terms since they refer to related but different functionalities. You'll sometimes see these terms misused in news reports and elsewhere, so getting them mixed up is understandable.
 
 We'll cover these terms and technologies in more detail as we explore further, but these quick definitions will be a great start for you:
 
@@ -61,7 +64,7 @@ Let's compare the library with a web server:
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Deeper dive
 
@@ -83,7 +86,7 @@ All web pages available on the web are reachable through a unique address. To ac
 
 ### Web site
 
-A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portion of text—that allow the user to move from one page of the website to another.
+A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
 
 To access a website, type its domain name in your browser address bar, and the browser will display the website's main web page, or _homepage_ (casually referred as "the home"):
 
@@ -112,4 +115,4 @@ Here is an instance of Firefox showing a Google search box as its default startu
 ## Next steps
 
 - Dig deeper: [What is a web server](/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- See how web pages are linked into a web site: [Understanding links on the web](/en-US/docs/Learn/Common_questions/What_are_hyperlinks)
+- See how web pages are linked into a website: [Understanding links on the web](/en-US/docs/Learn/Common_questions/What_are_hyperlinks)

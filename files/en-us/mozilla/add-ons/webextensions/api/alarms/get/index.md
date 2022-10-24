@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.alarms.get
 ---
+
 {{AddonSidebar()}}
 
 Gets an alarm, given its name.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getAlarm = browser.alarms.get(
   name                   // optional string
 )
@@ -29,7 +30,7 @@ let getAlarm = browser.alarms.get(
 
 ### Parameters
 
-- `name`{{optional_inline}}
+- `name` {{optional_inline}}
   - : `string`. The name of the alarm to get. If you don't supply this, the empty string "" will be used.
 
 ### Return value

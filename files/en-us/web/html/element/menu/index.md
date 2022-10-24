@@ -9,9 +9,12 @@ tags:
   - Web
 browser-compat: html.elements.menu
 ---
+
 {{HTMLRef}}
 
-The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is a semantic alternative to {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements), each of which represents a link or other command that the user can activate.
+The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is described in the HTML specification as a semantic alternative to {{HTMLElement("ul")}}, but treated by browsers (and exposed through the accessibility tree) as no different than {{HTMLElement("ul")}}. It represents an unordered list of items (which are represented by {{HTMLElement("li")}} elements).
+
+{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
 
 ## Attributes
 
@@ -19,7 +22,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, while `<menu>` is intended for interactive items.
+The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, while `<menu>` was intended for interactive items. The related {{HTMLElement("menuitem")}} element has been deprecated.
 
 > **Note:** In early versions of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is considered obsolete and is not in the specification.
 
@@ -39,10 +42,21 @@ In this example, a `<menu>` is used to create a toolbar for an editing applicati
 </menu>
 ```
 
+Note that this is functionally no different than:
+
+```html
+<ul>
+  <li><button onclick="copy()">Copy</button></li>
+  <li><button onclick="cut()">Cut</button></li>
+  <li><button onclick="paste()">Paste</button></li>
+</ul>
+```
+
 #### CSS
 
 ```css
-menu {
+menu,
+ul {
   display: flex;
   list-style: none;
   padding: 0;

@@ -11,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - claimInterface
+  - Experimental
 browser-compat: api.USBDevice.claimInterface
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`claimInterface()`** method of the
@@ -21,7 +23,7 @@ the requested interface is claimed for exclusive access.
 
 ## Syntax
 
-```js
+```js-nolint
 claimInterface(interfaceNumber)
 ```
 

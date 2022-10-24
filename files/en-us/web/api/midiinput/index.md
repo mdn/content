@@ -12,17 +12,18 @@ tags:
   - Web MIDI API
 browser-compat: api.MIDIInput
 ---
+
 {{APIRef("Web MIDI API")}}{{securecontext_header}}
 
 The **`MIDIInput`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) receives messages from a MIDI input port.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from {{domxref("MIDIPort")}}._
 
@@ -38,7 +39,7 @@ In the following example the name of each `MIDIInput` is printed to the console.
 ```js
 inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
-  input.onmidimessage = message => {
+  input.onmidimessage = (message) => {
     console.log(message.data);
   }
 })

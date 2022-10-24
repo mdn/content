@@ -18,6 +18,7 @@ tags:
   - sdpMLineIndex
 browser-compat: api.RTCIceCandidate.sdpMLineIndex
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sdpMLineIndex`** property on the {{domxref("RTCIceCandidate")}} interface
@@ -35,10 +36,6 @@ indicating which media source is associated with the candidate, or `null` if no 
 > {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for either `sdpMid` or
 > `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
-
-## Examples
-
-...
 
 ## Specifications
 

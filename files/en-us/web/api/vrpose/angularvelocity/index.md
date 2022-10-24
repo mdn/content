@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - angularVelocity
+  - Non-standard
 browser-compat: api.VRPose.angularVelocity
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`angularVelocity`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the angular velocity vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.
 
@@ -39,14 +41,14 @@ function drawVRScene() {
 
   // Retrieve the angular velocity values for use in rendering
   // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var angVel = curFramePose.angularVelocity;
-  var avx = angVel[0];
-  var avy = angVel[1];
-  var avz = angVel[2];
+  const curFramePose = frameData.pose;
+  const angVel = curFramePose.angularVelocity;
+  const avx = angVel[0];
+  const avy = angVel[1];
+  const avz = angVel[2];
 
   // render the scene
-  ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

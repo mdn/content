@@ -8,9 +8,11 @@ tags:
   - Reference
   - productId
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.productId
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`productId`** read-only property of the {{domxref("HIDDevice")}} interface returns the product ID of the connected HID device.
 
@@ -25,7 +27,7 @@ The following example retrieves devices with {{domxref("HID.getDevices()")}} and
 ```js
 document.addEventListener('DOMContentLoaded', async () => {
   let devices = await navigator.hid.getDevices();
-  devices.forEach(device => {
+  devices.forEach((device) => {
     console.log(`HID: ${device.productId}`);
   });
 });

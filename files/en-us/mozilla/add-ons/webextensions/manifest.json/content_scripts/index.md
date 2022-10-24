@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.content_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -163,12 +164,12 @@ Details of all the keys you can include are given in the table below.
         <p>
           Files are injected in the order given. This means that, for example,
           if you include jQuery here followed by another content script, like
-          this...
+          this:
         </p>
         <pre class="brush: json">
 "js": ["jquery.js", "my-content-script.js"]</pre
         >
-        <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
+        <p>Then, <code>"my-content-script.js"</code> can use jQuery.</p>
         <p>
           The files are injected after any files in
           <code><a href="#css">css</a></code
@@ -192,7 +193,7 @@ Details of all the keys you can include are given in the table below.
           the rest of the <code>content_scripts</code> key.
         </p>
         <p>
-          This is especially useful to run scripts in empty iframes , whose URL
+          This is especially useful to run scripts in empty iframes, whose URL
           is <code>"about:blank"</code>. To do this you should also set the
           <code>all_frames</code> key.
         </p>

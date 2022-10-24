@@ -19,6 +19,7 @@ tags:
   - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 The {{domxref("MediaDevices")}} interface's
@@ -33,7 +34,7 @@ See [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_
 
 ## Syntax
 
-```js
+```js-nolint
 getDisplayMedia(constraints)
 ```
 
@@ -61,7 +62,7 @@ audio track.
 
 - `AbortError` {{domxref("DOMException")}}
   - : Returned if an error or failure does not match any of the other exceptions listed here.
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the call to `getDisplayMedia()` was not made from code running due to a
     user action, such as an event handler. Another potential cause for this event: the
     {{domxref("document")}} in whose context `getDisplayMedia()` was called is
@@ -71,7 +72,7 @@ audio track.
     instance is not permitted access to screen sharing.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Returned if no sources of screen video are available for capture.
-- `NotReadableError`  {{domxref("DOMException")}}
+- `NotReadableError` {{domxref("DOMException")}}
   - : Returned if the user selected a screen, window, tab, or other source of screen data, but a
     hardware or operating system level error or lockout occurred, preventing the sharing
     of the selected source.
@@ -84,9 +85,7 @@ audio track.
     `advanced` and any constraints which in turn have a member named
     `min` or `exact`.
 
-## Usage notes
-
-### Privacy and security
+## Security
 
 Because `getDisplayMedia()` could be used in nefarious ways, it can be a
 source of significant privacy and security concerns. For that reason, the specification
@@ -98,8 +97,7 @@ details measures browsers are required to take in order to fully support
   to generate output that matches the constraints.
 - The go-ahead permission to use `getDisplayMedia()` cannot be persisted
   for reuse. The user must be prompted for permission every time.
-- The call to `getDisplayMedia()` must be made from code which is running
-  in response to a user action, such as in an event handler.
+- [Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 - Browsers are encouraged to provide a warning to users about sharing displays or
   windows that contain browsers, and to keep a close eye on what other content might be
   getting captured and shown to other users.
@@ -113,12 +111,12 @@ configuration and the [display surface](/en-US/docs/Web/API/Screen_Capture_API/U
 
 ```js
 async function startCapture(displayMediaOptions) {
-  let captureStream = null;
+  let captureStream;
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
-    console.error("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
   return captureStream;
 }

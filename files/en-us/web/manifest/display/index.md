@@ -7,6 +7,7 @@ tags:
   - display
 browser-compat: html.manifest.display
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

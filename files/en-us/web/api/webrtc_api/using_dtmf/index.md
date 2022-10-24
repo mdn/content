@@ -14,6 +14,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{APIRef("WebRTC")}}
 
 In order to more fully support audio/video conferencing, [WebRTC](/en-US/docs/Web/API/WebRTC_API) supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an `RTCPeerConnection`. The DTMF system is often referred to as "touch tone," after an old trade name for the system.
@@ -53,14 +54,16 @@ The HTML for this example is very basic; there are only three elements of import
 - A {{HTMLElement("div")}} to receive and display log text to show status information.
 
 ```html
-  <p>This example demonstrates the use of DTMF in WebRTC. Note that this
-     example is "cheating" by generating both peers in one code stream,
-     rather than having each be a truly separate entity.</p>
+<p>
+  This example demonstrates the use of DTMF in WebRTC. Note that this example is
+  "cheating" by generating both peers in one code stream, rather than having
+  each be a truly separate entity.
+</p>
 
-  <audio id="audio" autoplay controls></audio><br/>
-  <button name="dial" id="dial">Dial</button>
+<audio id="audio" autoplay controls></audio><br />
+<button name="dial" id="dial">Dial</button>
 
-  <div class="log"></div>
+<div class="log"></div>
 ```
 
 ### JavaScript
@@ -116,7 +119,7 @@ These are, in order:
 When the page loads, we do some basic setup: we fetch references to the dial button and the log output box elements, and we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add an event listener to the dial button so that clicking it calls the `connectAndDial()` function to begin the connection process.
 
 ```js
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
   logElement = document.querySelector(".log");
   dialButton = document.querySelector("#dial");
 
@@ -151,7 +154,7 @@ function connectAndDial() {
 
   navigator.mediaDevices.getUserMedia(mediaConstraints)
   .then(gotStream)
-  .catch(err => log(err.message));
+  .catch((err) => log(err.message));
 }
 ```
 
@@ -161,7 +164,7 @@ Next, the event handlers for the caller are established. We'll cover these in de
 
 Then a second `RTCPeerConnection`, this one representing the receiving end of the call, is created and stored in `receiverPC`; its `onicecandidate` event handler is set up too.
 
-If `addTrack()` is supported, we set up the receiver's `ontrack` event handler; otherwise, we set up `onaddstream`. The {{domxref("RTCPeerConnection.track_event", "track")}} and {{event("addstream")}} events are sent when media is added to the connection.
+If `addTrack()` is supported, we set up the receiver's `ontrack` event handler; otherwise, we set up `onaddstream`. The {{domxref("RTCPeerConnection.track_event", "track")}} and {{domxref("RTCPeerConnection/addstream_event", "addstream")}} events are sent when media is added to the connection.
 
 Finally, we call {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain access to the caller's microphone. If successful, the function `gotStream()` is called, otherwise we log the error because calling has failed.
 
@@ -177,11 +180,11 @@ function gotStream(stream) {
 
   if (hasAddTrack) {
     if (audioTracks.length > 0) {
-      audioTracks.forEach(track => callerPC.addTrack(track, stream));
+      audioTracks.forEach((track) => callerPC.addTrack(track, stream));
     }
   } else {
     log("Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
-        "back to the <strong>deprecated</strong> addStream() method...");
+        "back to the <strong>deprecated</strong> addStream() method…");
     callerPC.addStream(stream);
   }
 
@@ -215,16 +218,16 @@ Each time a DTMF tone finishes playing, a [`tonechange`](/en-US/docs/Web/API/RTC
 ```js
 function handleToneChangeEvent(event) {
   if (event.tone !== "") {
-    log("Tone played: " + event.tone);
+    log(`Tone played: ${event.tone}`);
   } else {
     log("All tones have played. Disconnecting.");
-    callerPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    callerPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
-    receiverPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    receiverPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
@@ -254,10 +257,10 @@ When the caller's `RTCPeerConnection` ICE layer comes up with a new candidate to
 ```js
 function handleCallerIceEvent(event) {
   if (event.candidate) {
-    log("Adding candidate to receiver: " + event.candidate.candidate);
+    log(`Adding candidate to receiver: ${event.candidate.candidate}`);
 
     receiverPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch(err => log("Error adding candidate to receiver: " + err));
+    .catch((err) => log(`Error adding candidate to receiver: ${err}`));
   } else {
     log("Caller is out of candidates.");
   }
@@ -274,9 +277,9 @@ Our design requires that when the connection is established, we immediately send
 
 ```js
 function handleCallerIceConnectionStateChange() {
-  log("Caller's connection state changed to " + callerPC.iceConnectionState);
+  log(`Caller's connection state changed to ${callerPC.iceConnectionState}`);
   if (callerPC.iceConnectionState === "connected") {
-    log("Sending DTMF: \"" + dialString + "\"");
+    log(`Sending DTMF: "${dialString}"`);
     dtmfSender.insertDTMF(dialString, 400, 50);
   }
 }
@@ -292,29 +295,29 @@ When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after
 
 ```js
 function handleCallerNegotiationNeeded() {
-  log("Negotiating...");
+  log("Negotiating…");
   callerPC.createOffer(offerOptions)
-  .then(function(offer) {
-    log("Setting caller's local description: " + offer.sdp);
+  .then((offer) => {
+    log(`Setting caller's local description: ${offer.sdp}`);
     return callerPC.setLocalDescription(offer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting receiver's remote description to the same as caller's local");
     return receiverPC.setRemoteDescription(callerPC.localDescription)
   })
-  .then(function() {
+  .then(() => {
     log("Creating answer");
     return receiverPC.createAnswer();
   })
-  .then(function(answer) {
-    log("Setting receiver's local description to " + answer.sdp);
+  .then((answer) => {
+    log(`Setting receiver's local description to ${answer.sdp}`);
     return receiverPC.setLocalDescription(answer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting caller's remote description to match");
     return callerPC.setRemoteDescription(receiverPC.localDescription);
   })
-  .catch(err => log("Error during negotiation: " + err.message));
+  .catch((err) => log(`Error during negotiation: ${err.message}`));
 }
 ```
 
@@ -334,11 +337,11 @@ We can also watch for changes to the signaling state (by accepting {{domxref("RT
 
 ```js
 function handleCallerSignalingStateChangeEvent() {
-  log("Caller's signaling state changed to " + callerPC.signalingState);
+  log(`Caller's signaling state changed to ${callerPC.signalingState}`);
 }
 
 function handleCallerGatheringStateChangeEvent() {
-  log("Caller's ICE gathering state changed to " + callerPC.iceGatheringState);
+  log(`Caller's ICE gathering state changed to ${callerPC.iceGatheringState}`);
 }
 ```
 
@@ -351,10 +354,10 @@ This code is analogous to the `icecandidate` event handler for the caller, seen 
 ```js
 function handleReceiverIceEvent(event) {
   if (event.candidate) {
-    log("Adding candidate to caller: " + event.candidate.candidate);
+    log(`Adding candidate to caller: ${event.candidate.candidate}`);
 
     callerPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch(err => log("Error adding candidate to caller: " + err));
+    .catch((err) => log(`Error adding candidate to caller: ${err}`));
   } else {
     log("Receiver is out of candidates.");
   }
@@ -367,7 +370,7 @@ If `event.candidate` is `null`, that indicates that there are no more candidates
 
 #### Adding media to the receiver
 
-When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{event("addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
+When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
 
 ```js
 function handleReceiverTrackEvent(event) {
@@ -389,7 +392,7 @@ A simple `log()` function is used throughout the code to append HTML to a {{HTML
 
 ```js
 function log(msg) {
-  logElement.innerHTML += msg + "<br/>";
+  logElement.innerHTML += `${msg}<br/>`;
 }
 ```
 

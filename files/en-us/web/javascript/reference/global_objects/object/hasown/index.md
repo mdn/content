@@ -6,22 +6,22 @@ tags:
   - Method
   - Object
   - hasOwn
-  - Experimental
   - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
+
 {{JSRef}}
 
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
 If the property is inherited, or does not exist, the method returns `false`.
 
-> **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.
+> **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.prototype.hasOwnProperty()")}}.
 
 {{EmbedInteractiveExample("pages/js/object-hasown.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwn(instance, prop)
 ```
 
@@ -30,8 +30,7 @@ hasOwn(instance, prop)
 - `instance`
   - : The JavaScript object instance to test.
 - `prop`
-  - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
-    the property to test.
+  - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.
 
 ### Return value
 
@@ -46,7 +45,7 @@ The method returns `false` if the property is inherited, or has not been declare
 Unlike the {{jsxref("Operators/in", "in")}} operator, this
 method does not check for the specified property in the object's prototype chain.
 
-It is recommended over {{jsxref("Object.hasOwnProperty()")}} because
+It is recommended over {{jsxref("Object.prototype.hasOwnProperty()")}} because
 it works for objects created using `Object.create(null)` and with objects that
 have overridden the inherited `hasOwnProperty()` method. While it is possible to
 workaround these problems by calling `Object.prototype.hasOwnProperty()` on an
@@ -59,8 +58,8 @@ external object, `Object.hasOwn()` is more intuitive.
 The following code shows how to determine whether the `example` object contains a property named `prop`.
 
 ```js
-let example = {};
-Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined
+const example = {};
+Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
 
 example.prop = 'exists';
 Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
@@ -77,7 +76,7 @@ Object.hasOwn(example, 'prop');   // true - own property exists with value of un
 The following example differentiates between direct properties and properties inherited through the prototype chain:
 
 ```js
-let example = {}
+const example = {};
 example.prop = 'exists';
 
 // `hasOwn` will only return true for direct properties:
@@ -96,19 +95,19 @@ Object.hasOwn(example, 'hasOwnProperty');   // returns false
 To iterate over the enumerable properties of an object, you _should_ use:
 
 ```js
-let example = { foo: true, bar: true };
-for (let name of Object.keys(example)) {
-  // ...
+const example = { foo: true, bar: true };
+for (const name of Object.keys(example)) {
+  // …
 }
 ```
 
 But if you need to use `for...in`, you can use `Object.hasOwn()` to skip the inherited properties:
 
 ```js
-let example = { foo: true, bar: true };
-for (let name in example) {
+const example = { foo: true, bar: true };
+for (const name in example) {
   if (Object.hasOwn(example, name)) {
-    // ...
+    // …
   }
 }
 ```
@@ -119,23 +118,23 @@ The elements of an {{jsxref("Array")}} are defined as direct properties, so
 you can use `hasOwn()` method to check whether a particular index exists:
 
 ```js
-let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
+const fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
 Object.hasOwn(fruits, 3);   // true ('Orange')
 Object.hasOwn(fruits, 4);   // false - not defined
 ```
 
 ### Problematic cases for hasOwnProperty
 
-This section demonstrate that `hasOwn()` is immune to the problems that affect
+This section demonstrates that `hasOwn()` is immune to the problems that affect
 `hasOwnProperty`. Firstly, it can be used with objects that have reimplemented
 `hasOwnProperty()`:
 
 ```js
-let foo = {
-  hasOwnProperty: function() {
+const foo = {
+  hasOwnProperty() {
     return false;
   },
-  bar: 'The dragons be out of office'
+  bar: 'The dragons be out of office',
 };
 
 if (Object.hasOwn(foo, 'bar')) {
@@ -148,7 +147,7 @@ It can also be used to test objects created using
 not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
 
 ```js
-let foo = Object.create(null);
+const foo = Object.create(null);
 foo.prop = 'exists';
 if (Object.hasOwn(foo, 'prop')) {
   console.log(foo.prop); //true - works irrespective of how the object is created.
@@ -166,7 +165,7 @@ if (Object.hasOwn(foo, 'prop')) {
 ## See also
 
 - [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.hasOwnProperty()")}}
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}

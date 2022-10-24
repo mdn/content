@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`FormData`** interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest.send()")}} method. It uses the same format a form would use if the encoding type were set to `"multipart/form-data"`.
@@ -25,7 +26,7 @@ An object implementing `FormData` can directly be used in a {{jsxref("Statements
 - {{domxref("FormData.FormData","FormData()")}}
   - : Creates a new `FormData` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("FormData.append()")}}
   - : Appends a new value onto an existing key inside a `FormData` object, or adds the key if it does not already exist.

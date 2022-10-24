@@ -10,6 +10,7 @@ tags:
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the
@@ -18,8 +19,8 @@ parts of two specified DOM nodes, and any content located between them.
 
 ## Syntax
 
-```js
-setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+```js-nolint
+setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 ```
 
 ### Parameters
@@ -69,19 +70,23 @@ selection into the output paragraph at the very bottom of the HTML.
 ```html
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
+  <p class="one">
+    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
+  </p>
   <p>MIDDLE</p>
-  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
+  <p class="two">
+    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
+  </p>
 </div>
 
 <div>
   <p>
     <label for="aOffset">Anchor offset</label>
-    <input id="aOffset" name="aOffset" type="number" value="0">
+    <input id="aOffset" name="aOffset" type="number" value="0" />
   </p>
   <p>
     <label for="fOffset">Focus offset</label>
-    <input id="fOffset" name="fOffset" type="number" value="0">
+    <input id="fOffset" name="fOffset" type="number" value="0" />
   </p>
   <p><button>Capture selection</button></p>
 </div>
@@ -92,25 +97,25 @@ selection into the output paragraph at the very bottom of the HTML.
 The JavaScript looks like so:
 
 ```js
-var one = document.querySelector('.one');
-var two = document.querySelector('.two');
+const one = document.querySelector('.one');
+const two = document.querySelector('.two');
 
-var aOffset = document.getElementById('aOffset');
-var fOffset = document.getElementById('fOffset');
+const aOffset = document.getElementById('aOffset');
+const fOffset = document.getElementById('fOffset');
 
-var button = document.querySelector('button');
+const button = document.querySelector('button');
 
-var output = document.querySelector('.output');
+const output = document.querySelector('.output');
 
-var selection;
+let selection;
 
-button.onclick = function() {
+button.onclick = () => {
   try {
     selection = document.getSelection();
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);
-    var text = selection.toString();
+    const text = selection.toString();
     output.textContent = text;
-  } catch(e) {
+  } catch (e) {
     output.textContent = e.message;
   }
 }

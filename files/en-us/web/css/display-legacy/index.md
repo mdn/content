@@ -1,6 +1,7 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -9,7 +10,13 @@ tags:
   - Reference
   - display-legacy
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-legacy
+browser-compat:
+  - css.properties.display.inline-block
+  - css.properties.display.inline-table
+  - css.properties.display.inline-flex
+  - css.properties.display.inline-grid
 ---
+
 {{CSSRef}}
 
 CSS 2 used a single-keyword syntax for the `display` property, requiring separate keywords for block-level and inline-level variants of the same layout mode. This page details those values.
@@ -41,6 +48,10 @@ Valid `<display-legacy>` values:
   - : The element behaves like an inline element and lays out its content according to the grid model.
 
     It is equivalent to `inline grid`.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -83,21 +94,7 @@ In the new syntax the inline flex container would be created using two values, i
 
 ## Browser compatibility
 
-### Support of inline-block
-
-{{Compat("css.properties.display.inline-block", 10)}}
-
-### Support of inline-table
-
-{{Compat("css.properties.display.inline-table", 10)}}
-
-### Support of inline-flex
-
-{{Compat("css.properties.display.inline-flex", 10)}}
-
-### Support of inline-grid
-
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## See also
 

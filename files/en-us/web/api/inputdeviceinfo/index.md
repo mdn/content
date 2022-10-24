@@ -10,7 +10,8 @@ tags:
   - InputDeviceInfo
 browser-compat: api.InputDeviceInfo
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`InputDeviceInfo`** interface of the {{domxref('Media Streams API','','',' ')}} gives access to the capabilities of the input device that it represents.
 
@@ -18,7 +19,7 @@ The **`InputDeviceInfo`** interface of the {{domxref('Media Streams API','','','
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 - {{domxref("InputDeviceInfo.getCapabilities()")}}
   - : Returns a `MediaTrackCapabilities` object describing the primary audio or video track of a device's `MediaStream`.
@@ -29,8 +30,8 @@ The following example gets all media devices with {{domxref("MediaDevices.enumer
 
 ```js
 navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
+  .then((devices) => {
+    devices.forEach((device) => {
       console.log(device); // an InputDeviceInfo object if the device is an input device, otherwise a MediaDeviceInfo object.
     });
   })

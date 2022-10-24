@@ -1,6 +1,7 @@
 ---
 title: Viewport concepts
 slug: Web/CSS/Viewport_concepts
+page-type: guide
 tags:
   - Best practices
   - CSS
@@ -11,6 +12,7 @@ tags:
   - viewport
   - virtual viewport
 ---
+
 {{CSSRef}}
 
 This article explains the concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the visual viewport and the layout viewport.
@@ -45,7 +47,7 @@ window.outerHeight /* 900 */
 
 There are several DOM properties that can help you query viewport size, and other similar lengths:
 
-- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Viewport_meta_tag#a_pixel_is_not_a_pixel), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
+- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Viewport_meta_tag#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
 - The {{DOMxRef("Window.innerWidth")}} is the width, in CSS pixels, of the browser window viewport including, if rendered, the vertical scrollbar.
 - The {{DOMxRef("Window.outerWidth")}} is the width of the outside of the browser window including all the window {{glossary("chrome")}}.
 
@@ -104,7 +106,7 @@ If you use viewport length units in your CSS within the iframe document, `1vh` w
 
 ```css
 iframe {
-    width: 50vw;
+  width: 50vw;
 }
 ```
 
@@ -114,9 +116,9 @@ A width-based media query within the iframe document is relative to the iframe's
 
 ```css
 @media screen and (min-width: 500px) {
-    p {
-        color: red;
-    }
+  p {
+    color: red;
+  }
 }
 ```
 
@@ -132,13 +134,13 @@ In an SVG document, the viewport is the visible area of the SVG image. You can s
 
 In this example, the viewport has an aspect ratio of 3:4 and is, by default, 400 by 300 units, with a unit generally being a CSS pixel.
 
-SVG also has an internal coordinate system defined via the [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) attribute, which is not related to this viewport discussion.
+SVG also has an internal coordinate system defined via the [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) attribute, which is not related to this viewport discussion.
 
 If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
 
 ```css
 @media screen and (min-width: 400px) and (max-width: 500px) {
-  /* css goes here */
+  /* CSS goes here */
 }
 ```
 
@@ -153,7 +155,7 @@ The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) provides a me
 Mobile devices come in all shapes and sizes, with screens of differing device pixel ratios. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page. Mobile browsers render pages in a virtual window or viewport, generally at 980px, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 320px, a website might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 320px space, which, depending on the design, is illegible for many if not everyone. To tell a mobile browser to use the viewport width instead of the default 980px as the width of the screen, developers can include a viewport meta tag, like the following:
 
 ```html
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width" />
 ```
 
 The `width` property controls the size of the viewport. It should preferably be set to `device-width`, which is the width of the screen in CSS pixels at a scale of 100%. There are other properties, including `maximum-scale`, `minimum-scale`, and `user-scalable`, which control whether users can zoom the page in or out, but the default values are the best for accessibility and user experience, so these can be omitted.

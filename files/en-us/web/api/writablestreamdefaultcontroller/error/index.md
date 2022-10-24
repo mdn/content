@@ -11,6 +11,7 @@ tags:
   - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController.error
 ---
+
 {{APIRef("Streams")}}
 
 The **`error()`** method of the
@@ -24,7 +25,7 @@ the underlying sink.
 
 ## Syntax
 
-```js
+```js-nolint
 error(message)
 ```
 
@@ -54,13 +55,13 @@ const writableStream = new WritableStream({
     controller.error('My error is broken');
   },
   write(chunk, controller) {
-    ...
+    // ...
   },
   close(controller) {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 });
 ```

@@ -15,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.GravitySensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`GravitySensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the gravity applied to the device along all three axes.
@@ -28,11 +29,11 @@ To use this sensor, the user must grant permission to the `'accelerometer'` devi
 - {{domxref("GravitySensor.GravitySensor", "GravitySensor()")}}
   - : Creates a new `GravitySensor` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestors, {{domxref('Accelerometer')}}, {{domxref('Sensor')}}, and {{domxref('EventTarget')}}._
 
-## Methods
+## Instance methods
 
 _`GravitySensor` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
@@ -47,7 +48,7 @@ Gravity is typically read in the {{domxref('Sensor.reading_event', 'reading')}} 
 ```js
 let gravitySensor = new GravitySensor({frequency: 60});
 
-gravitySensor.addEventListener("reading", e => {
+gravitySensor.addEventListener("reading", (e) => {
   console.log(`Gravity along the X-axis ${gravitySensor.x}`);
   console.log(`Gravity along the Y-axis ${gravitySensor.y}`);
   console.log(`Gravity along the Z-axis ${gravitySensor.z}`);

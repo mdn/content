@@ -8,15 +8,17 @@ tags:
   - Reference
   - configure
   - AudioEncoder
+  - Experimental
 browser-compat: api.AudioEncoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -26,11 +28,11 @@ configure(config)
   - : A dictionary object containing the following members:
     - `codec`
       - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
-    - `sampleRate`{{Optional_Inline}}
+    - `sampleRate` {{optional_inline}}
       - : An integer representing the number of frame samples per second.
-    - `numberOfChannels`{{Optional_Inline}}
+    - `numberOfChannels` {{optional_inline}}
       - : An integer representing the number of audio channels.
-    - `bitrate`{{Optional_Inline}}
+    - `bitrate` {{optional_inline}}
       - : An integer representing the bitrate.
 
 ### Return value
@@ -55,11 +57,11 @@ const init = {
   output: handleOutput,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 let config = {
-  codec: 'vp8',
+  codec: "vp8",
   bitrate: 2_000_000, // 2 Mbps
 };
 

@@ -8,6 +8,7 @@ tags:
   - Deprecated
 browser-compat: api.Event.returnValue
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{domxref("Event")}} property
@@ -31,7 +32,6 @@ canceled; otherwise, if the event has been canceled or the default has been prev
 the value is `false`.
 
 The value of `returnValue` is the opposite of the value returned by
-
 {{domxref("Event.defaultPrevented", "defaultPrevented")}}.
 
 ## Specifications

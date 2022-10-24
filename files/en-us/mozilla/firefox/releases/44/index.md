@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/44
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -16,7 +17,7 @@ Highlights:
 
 - [Memory tool](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
 - [Animation inspector improvements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
-- [New Waterfall markers: DomContentLoaded, load, worker messages](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
+- [New Waterfall markers: DomContentLoaded, load, worker messages](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
 
 [All devtools bugs fixed between Firefox 43 and Firefox 44.](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-11-03&query_format=advanced&chfield=resolution&chfieldfrom=2015-09-19&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678)
 
@@ -91,7 +92,7 @@ Highlights:
 #### Removals
 
 - Support for the non-standard [`let` blocks](/en-US/docs/Web/JavaScript/Reference/Statements/let#let_blocks) has been dropped ({{bug(1167029)}}.
-- The non-standard and deprecated property {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} has been removed ({{bug(683218)}}).
+- The non-standard and deprecated property `Object.prototype.__noSuchMethod__` has been removed ({{bug(683218)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -104,7 +105,7 @@ Highlights:
 - The obsolete property `DocumentType.internalSubset` has been removed ({{bug(801545)}}).
 - For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{domxref("Window.orientationchange_event", "orientationchange")}} event have been implemented ({{bug(920734)}}).
 - An {{HTMLElement("iframe")}} with explicit fullscreen request should not exit fullscreen implicitly ({{bug(1187801)}}).
-- The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}}, {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} and {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
+- The events {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/pointermove_event", "pointermove")}}, {{domxref("Element/pointerover_event", "pointerover")}}, {{domxref("Element/pointerout_event", "pointerout")}}, {{domxref("Element/pointerenter_event", "pointerenter")}} and {{domxref("Element/pointerleave_event", "pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
 - The method {{domxref("Element.webkitMatchesSelector()")}} has been added ({{bug(1216193)}}) to improve interoperability.
 - To match the spec, the method {{domxref("Document.createAttribute()")}} now converts the input to lower case ({{bug(1176313)}}).
 - The non-standard `dialog` feature for {{domxref("Window.open()")}} is no longer available to Web content. It is still available to extensions and other code with chrome privileges ({{bug(1095236)}}.
@@ -197,7 +198,7 @@ _No change._
 
 ### Interfaces
 
-_No change_
+_No change._
 
 ### XUL
 
@@ -210,7 +211,7 @@ _No change._
 
 ### XPCOM
 
-- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the `{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}` interface ({{bug(1216401)}}).
+- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the [nsPIDOMWindow](https://dxr.mozilla.org/mozilla-central/source/dom/base/nsPIDOMWindow.h) interface ({{bug(1216401)}}).
 
 ### Other
 

@@ -2,11 +2,12 @@
 title: Firefox 72 for Developers
 slug: Mozilla/Firefox/Releases/72
 tags:
-  - '72'
+  - "72"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.
@@ -57,7 +58,7 @@ _No changes._
 
 ### SVG
 
-_No changes_
+_No changes._
 
 ### JavaScript
 
@@ -109,7 +110,7 @@ _No changes_
 ### Security
 
 - Opting-out of MIME sniffing using {{HTTPHeader("X-Content-Type-Options")}} is now also applied to top-level documents if a {{HTTPHeader("Content-type")}} is provided. This can cause HTML web pages to be downloaded instead of being rendered when they are served with a MIME type other than `text/html`. Make sure to set both headers correctly. ({{bug(1591932)}}).
-- Dropped the support for [HTTP Public Key Pinning (HPKP)](/en-US/docs/Web/HTTP/Public_Key_Pinning) because of the low adoption rate and interoperability risk. The {{HTTPHeader("Public-Key-Pins")}} and {{HTTPHeader("Public-Key-Pins-Report-Only")}} headers are now silently ignored {{bug(1412438)}}.
+- Dropped the support for HTTP Public Key Pinning (HPKP) because of the low adoption rate and interoperability risk. The `Public-Key-Pins` and `Public-Key-Pins-Report-Only` headers are now silently ignored {{bug(1412438)}}.
 
 ### Plugins
 
@@ -128,6 +129,7 @@ _No changes._
 - The [`BrowserSetting.onChange`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange) event has been implemented ({{bug(1410412)}}).
 - The [`captivePortal.canonicalURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL) property has been implemented ({{bug(1592932)}}).
 - The callback functions for the [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked) and [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked) events now include a `OnClickData` property containing an object whose properties describe the mouse button pressed along with any keyboard modifiers ({{bug(1405031)}}). This allows support for additional types of mouse click.
+- The {{WebExtAPIRef("browserSettings.tlsVersionRestrictionConfig")}} property has been implemented and enables the highest and lowest versions of TLS supported by the browser to be read ({{bug(1593635)}}).
 
 ### Manifest changes
 

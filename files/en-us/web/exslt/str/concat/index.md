@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `str:concat()` returns a string containing all the string values in a node-set concatenated together.
 
 ## Syntax
 
-```js
+```plain
 str:concat(nodeSet)
 ```
 

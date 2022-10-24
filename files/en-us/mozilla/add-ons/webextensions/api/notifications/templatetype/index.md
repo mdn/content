@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.TemplateType
 ---
+
 {{AddonSidebar()}}
 
 This is a string, and represents the type of notification to create. There are four types of notification: "basic", "image", "list", "progress".
@@ -27,9 +28,9 @@ Values of this type are strings. Possible values are:
 
   - a title (`NotificationOptions.title`)
   - a message (`NotificationOptions.message`)
-  - an icon (`NotificationOptions.iconUrl`){{optional_inline}}
-  - an extra message (`NotificationOptions.contextMessage`){{optional_inline}}
-  - up to two buttons (`NotificationOptions.buttons`){{optional_inline}}
+  - an icon (`NotificationOptions.iconUrl`) {{optional_inline}}
+  - an extra message (`NotificationOptions.contextMessage`) {{optional_inline}}
+  - up to two buttons (`NotificationOptions.buttons`) {{optional_inline}}
 
 - `"image"`: everything in `"basic"` and also:
 

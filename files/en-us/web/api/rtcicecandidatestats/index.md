@@ -17,11 +17,12 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidateStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics related to an {{domxref("RTCIceCandidate")}}.
 
-## Properties
+## Instance properties
 
 `RTCIceCandidateStats` is based upon the {{domxref("RTCStats")}} dictionary, so it includes those properties in addition to the ones below.
 
@@ -30,7 +31,7 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 - {{domxref("RTCIceCandidateStats.candidateType", "candidateType")}} {{optional_inline}}
   - : A string matching one of the values in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values), indicating what kind of candidate the object provides statistics for.
 - {{domxref("RTCIceCandidateStats.deleted", "deleted")}} {{optional_inline}}
-  - : A Boolean value indicating whether or not the candidate has been released or deleted; the default value is `false`. For local candidates, it's value is `true` if the candidate has been deleted or released. For host candidates, `true` means that any network resources (usually a network socket) associated with the candidate have already been released. For {{Glossary("TURN")}} candidates, the TURN allocation is no longer active for deleted candidates. This property is not present for remote candidates.
+  - : A Boolean value indicating whether or not the candidate has been released or deleted; the default value is `false`. For local candidates, its value is `true` if the candidate has been deleted or released. For host candidates, `true` means that any network resources (usually a network socket) associated with the candidate have already been released. For {{Glossary("TURN")}} candidates, the TURN allocation is no longer active for deleted candidates. This property is not present for remote candidates.
 - {{domxref("RTCIceCandidateStats.port", "port")}} {{optional_inline}}
   - : The network port number used by the candidate.
 - {{domxref("RTCIceCandidateStats.priority", "priority")}} {{optional_inline}}
@@ -49,7 +50,7 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to present a modified user interface for host candidates (those where the {{domxref("RTCIceCandidate/address", "ip")}} refers directly to the remote peer, rather than an intermediary).
 
 ```js
-if (candidate.type == "host") {
+if (candidate.type === "host") {
   showHostControls();
 } else {
   hideHostControls();

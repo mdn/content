@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.privacy.network
 ---
+
 {{AddonSidebar}}
 
 The {{WebExtAPIRef("privacy.network")}} property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
@@ -21,7 +22,7 @@ Default values for these properties tend to vary across browsers.
 ## Properties
 
 - `networkPredictionEnabled`
-  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, `<link rel='prefetch' ...>`), and preemptively opening TCP and SSL connections to servers.
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, `<link rel='prefetch' …>`), and preemptively opening TCP and SSL connections to servers.
 - `peerConnectionEnabled`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) interface is disabled. Note that [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) is _not_ affected by this setting.
 - `webRTCIPHandlingPolicy`
@@ -42,6 +43,11 @@ Default values for these properties tend to vary across browsers.
     - `"always"`: HTTPS-Only mode is on.
     - `"never"`: HTTPS-Only mode is off.
     - `"private_browsing"`: HTTPS-Only mode is on in private browsing windows only.
+
+- `globalPrivacyControl`
+
+  - : this setting allows your extension to determine if a user has enabled
+    [Global Privacy Control](/en-US/docs/Web/API/Navigator/globalPrivacyControl). This property is read-only on all platforms. Its underlying value is a boolean where `true` indicates that the browser sends Global Privacy Control signals and `false` indicates the browser does not send the signals.
 
 ## Browser compatibility
 
@@ -85,7 +91,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +119,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

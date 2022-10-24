@@ -8,11 +8,12 @@ tags:
   - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLShaderPrecisionFormat** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the information returned by calling the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("WebGLShaderPrecisionFormat.rangeMin")}} {{ReadOnlyInline}}
   - : The base 2 log of the absolute value of the minimum value that can be represented.
@@ -26,8 +27,8 @@ The **WebGLShaderPrecisionFormat** interface is part of the [WebGL API](/en-US/d
 A `WebGLShaderPrecisionFormat` object is returned by the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 // WebGLShaderPrecisionFormat { rangeMin: 127, rangeMax: 127, precision: 23 }
 ```

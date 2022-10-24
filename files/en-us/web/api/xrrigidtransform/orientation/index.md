@@ -21,12 +21,13 @@ tags:
   - rotation
 browser-compat: api.XRRigidTransform.orientation
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRRigidTransform")}} property
 **`orientation`** is a {{domxref("DOMPointReadOnly")}}
 containing a normalized {{Glossary("quaternion")}} (also called a **unit
-quaternion** or **{{interwiki("wikipedia", "versor")}}**)
+quaternion** or **[versor](https://en.wikipedia.org/wiki/Versor)**)
 specifying the rotational component of the transform represented by the object.
 If you specify a quaternion whose length is not exactly 1.0 meters, it will be
 normalized for you.
@@ -44,7 +45,7 @@ off of ground level:
 
 ```js
 xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-  new XRRigidTransform({y: -2}, {x: 0.0, y: 1.0, z: 0.0, w: 1.0});
+  new XRRigidTransform({y: -2}, {x: 0.0, y: 1.0, z: 0.0, w: 1.0})
 );
 ```
 
@@ -62,5 +63,5 @@ should be facing directly along the _y_ axis.
 ## See also
 
 - [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
-- {{interwiki("wikipedia", "versor", "Unit quaternions")}}
-- {{interwiki("wikipedia", "Quaternions and spatial rotation")}}
+- [Unit quaternions](https://en.wikipedia.org/wiki/Versor)
+- [Quaternions and spatial rotation](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation)

@@ -8,15 +8,17 @@ tags:
   - Reference
   - requestPort
   - Serial
+  - Experimental
 browser-compat: api.Serial.requestPort
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`Serial.requestPort()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
 ## Syntax
 
-```js
+```js-nolint
 requestPort()
 requestPort(options)
 ```
@@ -29,7 +31,7 @@ requestPort(options)
 
     - `filters`
 
-      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
+      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to its products. Filters contain the following values:
 
         - `usbVendorId`
           - : An unsigned short integer that identifies a USB device vendor.
@@ -42,9 +44,9 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `"SecurityError"`
+- `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
-- {{domxref("DOMException")}} `"AbortError"`
+- `AbortError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this if the user does not select a port when prompted.
 
 ## Examples
@@ -53,7 +55,7 @@ The following example shows a filter being passed to `requestPort()` with a USB 
 
 ```js
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {

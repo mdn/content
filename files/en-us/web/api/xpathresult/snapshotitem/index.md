@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.snapshotItem
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`snapshotItem()`** method of the
@@ -21,7 +22,7 @@ current document if it is mutated.
 
 ## Syntax
 
-```js
+```js-nolint
 snapshotItem(i)
 ```
 
@@ -57,12 +58,12 @@ The following example shows the use of the `snapshotItem()` method.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-var node = null;
-var tagNames = [];
-for(var i = 0; i < result.snapshotLength; i++) {
-  var node = result.snapshotItem(i);
+const xpath = "//div";
+const result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+let node = null;
+const tagNames = [];
+for (let i = 0; i < result.snapshotLength; i++) {
+  node = result.snapshotItem(i);
   tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");

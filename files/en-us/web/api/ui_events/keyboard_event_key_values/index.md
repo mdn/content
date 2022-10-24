@@ -21,6 +21,7 @@ tags:
   - keyboard
   - keys
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 The tables below list the standard values for the [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key) property, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.
@@ -1112,7 +1113,7 @@ Keys used when using an Input Method Editor (IME) to input text which can't read
 
 Some keys are common across multiple languages, while others exist only on keyboards targeting specific languages. In addition, not all keyboards have all of these keys.
 
-#### Common IME keys
+### Common IME keys
 
 <table class="no-markdown">
   <thead>
@@ -1217,7 +1218,7 @@ Some keys are common across multiple languages, while others exist only on keybo
           If you wish to identify which specific dead key was pressed (in cases
           where more than one exists), you can do so by examining the
           {{domxref("KeyboardEvent")}}'s associated
-          {{event("compositionupdate")}} event's
+          {{domxref("Element/compositionupdate_event", "compositionupdate")}} event's
           {{domxref("CompositionEvent.data", "data")}} property.
         </p>
       </td>
@@ -1629,7 +1630,7 @@ These keys are only available on Japanese keyboards.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{domxref("Element/compositionupdate_event", "compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.
 
@@ -3070,11 +3071,11 @@ These key values represent buttons or keys present on television devices, or com
 
 Because modern remote controls for media devices often include buttons beyond the basic controls covered elsewhere in this document, key values are defined for a broad array of these additional buttons.
 
-The values below are derived in part form a number of consumer electronics technical specifications:
+The values below are derived in part from a number of consumer electronics technical specifications:
 
-- [DTV Application Software Environment](https://www.atsc.org/atsc-documents/a100-dtv-application-software-environment-level-1-dase-1/) (part of the {{interwiki("wikipedia", "ATSC")}} specification)
+- [DTV Application Software Environment](https://www.atsc.org/atsc-documents/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC) specification)
 - [Open Cable Application Platform](https://en.wikipedia.org/wiki/OpenCable_Application_Platform)
-- [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
+- [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
 > **Note:** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
@@ -3747,7 +3748,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        Toggles display of {{interwiki("wikipedia", "teletext")}},
+        Toggles display of [teletext](https://en.wikipedia.org/wiki/Teletext),
         if available.
       </td>
       <td><code>VK_TELETEXT</code></td>

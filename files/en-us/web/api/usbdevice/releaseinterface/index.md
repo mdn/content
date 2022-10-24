@@ -11,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - releaseInterface
+  - Experimental
 browser-compat: api.USBDevice.releaseInterface
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`releaseInterface()`** method of the
@@ -21,7 +23,7 @@ claimed interface is released from exclusive access.
 
 ## Syntax
 
-```js
+```js-nolint
 releaseInterface(interfaceNumber)
 ```
 

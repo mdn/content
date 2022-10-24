@@ -18,6 +18,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.address
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`address`** property is a string providing the IP address of the device which is the source of the candidate.
@@ -54,7 +55,7 @@ address from being exposed, but reduces the pool of available candidates to choo
 To do this, configure the ICE agent's ICE transport policy with an object confirming to the `configuration` property described in {{domxref("RTCPeerConnection.setConfiguration")}}, like this:
 
 ```js
-var rtcConfig = {
+const rtcConfig = {
   iceServers: [
     {
       urls: "turn:myturn.server.ip",

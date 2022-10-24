@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - exitPresent()
+  - Non-standard
 browser-compat: api.VRDisplay.exitPresent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops the `VRDisplay` presenting a scene.
 
@@ -22,7 +24,7 @@ The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops t
 
 ## Syntax
 
-```js
+```js-nolint
 exitPresent()
 ```
 
@@ -37,24 +39,24 @@ A promise that resolves once the presentation has ended. If the `VRDisplay` is n
 ## Examples
 
 ```js
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', function() {
-        if(btn.textContent === 'Start VR display') {
-          vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+      btn.addEventListener('click', () => {
+        if (btn.textContent === 'Start VR display') {
+          vrDisplay.requestPresent([{ source: canvas }]).then(() => {
             console.log('Presenting to WebVR display');
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            const leftEye = vrDisplay.getEyeParameters('left');
+            const rightEye = vrDisplay.getEyeParameters('right');
 
             canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -81,7 +83,7 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

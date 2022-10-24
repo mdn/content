@@ -84,7 +84,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<sup>` element should only be used for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
-For example, to style the {{interwiki("wikipedia", "wordmark")}} of a business or product which uses a raised baseline should be done using CSS (most likely {{cssxref("vertical-align")}}) rather than `<sup>`. This would be done using, for example, `vertical-align: super` or, to shift the baseline up 50%, `vertical-align: 50%`.
+For example, to style the [wordmark](https://en.wikipedia.org/wiki/Wordmark) of a business or product which uses a raised baseline should be done using CSS (most likely {{cssxref("vertical-align")}}) rather than `<sup>`. This would be done using, for example, `vertical-align: super` or, to shift the baseline up 50%, `vertical-align: 50%`.
 
 Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
@@ -94,7 +94,7 @@ Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
   ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
 
-- Displaying {{interwiki("wikipedia", "superior letter", "superior lettering")}}, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
+- Displaying [superior lettering](https://en.wikipedia.org/wiki/Superior_letter), which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
 
   <sup>lle</sup>
 
@@ -113,8 +113,10 @@ Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 Exponents, or powers of a number, are among the most common uses of superscripted text. For example:
 
 ```html
-<p>One of the most common equations in all of physics is
-<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.</p>
+<p>
+  One of the most common equations in all of physics is <var>E</var>=<var>m</var
+  ><var>c</var><sup>2</sup>.
+</p>
 ```
 
 The resulting output looks like this:
@@ -138,8 +140,9 @@ The resulting output:
 Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbreviated using numerals and language-specific text rendered in superscript:
 
 ```html
-<p>The ordinal number "fifth" can be abbreviated in various
-languages as follows:</p>
+<p>
+  The ordinal number "fifth" can be abbreviated in various languages as follows:
+</p>
 <ul>
   <li>English: 5<sup>th</sup></li>
   <li>French: 5<sup>ème</sup></li>

@@ -13,6 +13,7 @@ tags:
   - autoIncrement
 browser-compat: api.IDBObjectStore.autoIncrement
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`autoIncrement`** read-only property of the
@@ -27,10 +28,10 @@ Note that every object store has its own separate auto increment counter.
 
 A boolean value:
 
-| Value   | Meaning                                     |
-| ------- | ------------------------------------------- |
-| `true`  | The object store auto increments.           |
-| `false` | The object store does not auto increment.   |
+| Value   | Meaning                                   |
+| ------- | ----------------------------------------- |
+| `true`  | The object store auto increments.         |
+| `false` | The object store does not auto increment. |
 
 ## Examples
 
@@ -38,14 +39,14 @@ In the following code snippet, we open a read/write transaction on our database 
 some data to an object store using `add()`. After the object store has been
 created, we log `objectStore.autoIncrement` to
 the console. For a full working example, see
-our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view example live](https://mdn.github.io/to-do-notifications/).)
+our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
+([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -58,28 +59,28 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Create a new object ready to insert into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
   // open a read/write db transaction, ready for adding the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed.</li>';
   };
 
-  transaction.onerror = function(event) {
+  transaction.onerror = (event) => {
     note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
   console.log(objectStore.autoIncrement);
 
   // Make a request to add our newItem object to the object store
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
     note.innerHTML += '<li>Request successful.</li>';
   };
@@ -102,4 +103,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

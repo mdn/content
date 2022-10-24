@@ -9,22 +9,23 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceServerTiming
 ---
+
 {{APIRef("Resource Timing API")}} {{AvailableInWorkers}} {{securecontext_header}}
 
 The **`PerformanceServerTiming`** interface surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 
 This interface is restricted to the same origin, but you can use the {{HTTPHeader("Timing-Allow-Origin")}} header to specify the domains that are allowed to access the server metrics. Note that this interface is only available in secure contexts (HTTPS) in some browsers.
 
-## Properties
+## Instance properties
 
-- {{domxref('PerformanceServerTiming.description')}}{{readonlyInline}}
+- {{domxref('PerformanceServerTiming.description')}} {{ReadOnlyInline}}
   - : A string value of the server-specified metric description, or an empty string.
-- {{domxref('PerformanceServerTiming.duration')}}{{readonlyInline}}
+- {{domxref('PerformanceServerTiming.duration')}} {{ReadOnlyInline}}
   - : A double that contains the server-specified metric duration, or value `0.0`.
-- {{domxref('PerformanceServerTiming.name')}}{{readonlyInline}}
+- {{domxref('PerformanceServerTiming.name')}} {{ReadOnlyInline}}
   - : A string value of the server-specified metric name.
 
-## Methods
+## Instance methods
 
 - {{domxref('PerformanceServerTiming.toJSON()')}}
   - : Returns a string that is the JSON representation of the `PerformanceServerTiming` object.
@@ -46,7 +47,7 @@ function requestHandler(request, response) {
   };
   response.writeHead(200, headers);
   response.write('');
-  return setTimeout(_ => {
+  return setTimeout(() => {
    response.end();
  }, 1000)
 };

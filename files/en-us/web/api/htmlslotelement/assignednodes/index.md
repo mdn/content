@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement.assignedNodes
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assignedNodes()`** method of the {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to this slot.
@@ -19,7 +20,7 @@ If the `flatten` option is set to `true`, it returns a sequence of both the node
 
 ## Syntax
 
-```js
+```js-nolint
 assignedNodes()
 assignedNodes(options)
 ```
@@ -43,9 +44,9 @@ The following snippet is taken from our [slotchange example](https://github.com/
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
+slots[1].addEventListener('slotchange', (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
 });
 ```
 

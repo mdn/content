@@ -12,55 +12,45 @@ browser-compat: javascript.builtins.String.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-specified object.
+The **`toString()`** method returns a string representing the specified string value.
 
 {{EmbedInteractiveExample("pages/js/string-tostring.html")}}
 
 ## Syntax
 
-```js
-toString();
+```js-nolint
+toString()
 ```
 
 ### Return value
 
-A string representing the calling object.
+A string representing the specified string value.
 
 ## Description
 
-The {{jsxref("String")}} object overrides the `toString()` method of the
-{{jsxref("Object")}} object; it does not inherit
-{{jsxref("Object.prototype.toString()")}}. For {{jsxref("String")}} objects, the
-`toString()` method returns a string representation of the object and is the
-same as the {{jsxref("String.prototype.valueOf()")}} method. Using `toString()` on a {{jsxref("Number")}} object returns the binary equivalent. Using `parseInt().toString()` on a {{jsxref("String")}} object returns the binary equivalent.
+The {{jsxref("String")}} object overrides the `toString` method of {{jsxref("Object")}}; it does not inherit
+{{jsxref("Object.prototype.toString()")}}. For `String` values, the `toString` method returns the string itself (if it's a primitive) or the string that the `String` object wraps. It has the exact same implementation as {{jsxref("String.prototype.valueOf()")}}.
+
+The `toString()` method requires its `this` value to be a `String` primitive or wrapper object. It throws a {{jsxref("TypeError")}} for other `this` values without attempting to coerce them to string values.
+
+Because `String` doesn't have a [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, JavaScript calls the `toString()` method automatically when a `String` _object_ is used in a context expecting a string, such as in a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals). However, String _primitive_ values do not consult the `toString()` method to be [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) — since they are already strings, no conversion is performed.
+
+```js
+String.prototype.toString = () => "Overridden";
+console.log(`${"foo"}`); // "foo"
+console.log(`${new String("foo")}`); // "Overridden"
+```
 
 ## Examples
 
-### Using `toString()`
+### Using toString()
 
 The following example displays the string value of a {{jsxref("String")}} object:
 
 ```js
 const x = new String("Hello world");
 
-console.log(x.toString()); // logs 'Hello world'
-```
-
-The following example displays the binary value of a {{jsxref("String")}} object:
-
-```js
-const x = new String("13");
-
-console.log(parseInt(x).toString(2)); // logs '1101'
-```
-
-The following example displays the binary value of a {{jsxref("Number")}} object:
-
-```js
-const x = new Number(13);
-
-console.log(x.toString(2)); // logs '1101'
+console.log(x.toString()); // "Hello world"
 ```
 
 ## Specifications
@@ -73,5 +63,4 @@ console.log(x.toString(2)); // logs '1101'
 
 ## See also
 
-- {{jsxref("Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

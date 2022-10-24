@@ -12,6 +12,7 @@ tags:
   - error
 browser-compat: api.WorkerGlobalScope.error_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires when an error occurs in the worker.
@@ -21,9 +22,9 @@ The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires wh
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener('error', (event) => { });
 
-onerror = event => { };
+onerror = (event) => { };
 ```
 
 ## Event type
@@ -35,7 +36,7 @@ A generic {{domxref("Event")}}.
 The following code snippet shows an `onerror` handler set inside a worker:
 
 ```js
-self.onerror = function() {
+self.onerror = () => {
   console.log('There is an error inside your worker!');
 }
 ```
@@ -43,7 +44,7 @@ self.onerror = function() {
 The same snippet, but using `addEventListener()`:
 
 ```js
-self.addEventListener('error', function() {
+self.addEventListener('error', () => {
   console.log('There is an error inside your worker!');
 });
 ```

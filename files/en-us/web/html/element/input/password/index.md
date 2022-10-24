@@ -149,7 +149,7 @@ Here we see the most basic password input, with a label established using the {{
 
 ```html
 <label for="userPassword">Password: </label>
-<input id="userPassword" type="password">
+<input id="userPassword" type="password" />
 ```
 
 {{EmbedLiveSample("A_simple_password_input", 600, 40)}}
@@ -169,7 +169,7 @@ To allow the user's password manager to automatically enter the password, specif
 
 ```html
 <label for="userPassword">Password:</label>
-<input id="userPassword" type="password" autocomplete="current-password">
+<input id="userPassword" type="password" autocomplete="current-password" />
 ```
 
 {{EmbedLiveSample("Allowing_autocomplete", 600, 40)}}
@@ -180,8 +180,8 @@ To tell the user's browser that the password field must have a valid value befor
 
 ```html
 <label for="userPassword">Password: </label>
-<input id="userPassword" type="password" required>
-<input type="submit" value="Submit">
+<input id="userPassword" type="password" required />
+<input type="submit" value="Submit" />
 ```
 
 {{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}
@@ -192,7 +192,7 @@ If your recommended (or required) password syntax rules would benefit from an al
 
 ```html
 <label for="pin">PIN: </label>
-<input id="pin" type="password" inputmode="numeric">
+<input id="pin" type="password" inputmode="numeric" />
 ```
 
 {{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
@@ -203,8 +203,13 @@ As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrx
 
 ```html
 <label for="pin">PIN:</label>
-<input id="pin" type="password" inputmode="numeric" minlength="4"
-       maxlength="8" size="8">
+<input
+  id="pin"
+  type="password"
+  inputmode="numeric"
+  minlength="4"
+  maxlength="8"
+  size="8" />
 ```
 
 {{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
@@ -217,14 +222,14 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 
 ```html
 <label for="userPassword">Password: </label>
-<input id="userPassword" type="password" size="12">
+<input id="userPassword" type="password" size="12" />
 <button id="selectAll">Select All</button>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function() {
+document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
 }
 ```
@@ -243,9 +248,12 @@ In this example, only values consisting of at least four and no more than eight 
 
 ```html
 <label for="hexId">Hex ID: </label>
-<input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
-       title="Enter an ID consisting of 4-8 hexadecimal digits"
-       autocomplete="new-password">
+<input
+  id="hexId"
+  type="password"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="Enter an ID consisting of 4-8 hexadecimal digits"
+  autocomplete="new-password" />
 ```
 
 {{EmbedLiveSample("Validation", 600, 40)}}
@@ -260,10 +268,16 @@ This example only accepts input which matches the format for a [valid United Sta
 
 ```html
 <label for="ssn">SSN:</label>
-<input type="password" id="ssn" inputmode="numeric" minlength="9" maxlength="12"
-    pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
-    required autocomplete="off">
-<br>
+<input
+  type="password"
+  id="ssn"
+  inputmode="numeric"
+  minlength="9"
+  maxlength="12"
+  pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
+  required
+  autocomplete="off" />
+<br />
 <label for="ssn">Value:</label>
 <span id="current"></span>
 ```
@@ -277,10 +291,10 @@ The {{htmlattrxref("inputmode", "input")}} is set to `numeric` to encourage devi
 This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the `pattern`.
 
 ```js
-var ssn = document.getElementById("ssn");
-var current = document.getElementById("current");
+const ssn = document.getElementById("ssn");
+const current = document.getElementById("current");
 
-ssn.oninput = function(event) {
+ssn.oninput = (event) => {
   current.textContent = ssn.value;
 }
 ```

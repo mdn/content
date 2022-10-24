@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Location`** interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the {{domxref("Document")}} and {{domxref("Window")}} interface have such a linked `Location`, accessible via {{domxref("Document.location")}} and {{domxref("Window.location")}} respectively.
@@ -17,43 +18,99 @@ The **`Location`** interface represents the location (URL) of the object it is l
 ## Location anatomy
 
 ```html hidden
-<span id="href" title="href"><span id="origin" title="origin"><span id="protocol" title="protocol">https:</span>//<span id="host" title="host"><span id="hostname" title="hostname">example.org</span>:<span id="port" title="port">8080</span></span></span><span id="pathname" title="pathname">/foo/bar</span><span id="search" title="search">?q=baz</span><span id="hash" title="hash">#bang</span></span>
+<span id="href" title="href"
+  ><span id="origin" title="origin"
+    ><span id="protocol" title="protocol">https:</span>//<span
+      id="host"
+      title="host"
+      ><span id="hostname" title="hostname">example.org</span>:<span
+        id="port"
+        title="port"
+        >8080</span
+      ></span
+    ></span
+  ><span id="pathname" title="pathname">/foo/bar</span
+  ><span id="search" title="search">?q=baz</span
+  ><span id="hash" title="hash">#bang</span></span
+>
 ```
 
 ```css hidden
+html {
+  display: table;
+  width: 100%;
+}
 
-html { display: table; width: 100%; }
+body {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Georgia;
+  font-size: 200%;
+  line-height: 1em;
+  white-space: nowrap;
+}
 
-body { display: table-cell; text-align: center; vertical-align: middle; font-family: Georgia; font-size: 200%; line-height: 1em; white-space: nowrap; }
+[title] {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 2em;
+  cursor: pointer;
+}
 
-[title] { position: relative; display: inline-block; box-sizing: border-box; line-height: 2em; cursor: pointer; }
+[title]::before {
+  content: attr(title);
+  font-family: monospace;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
+  font-size: 40%;
+  line-height: 1.5;
+  background: black;
+}
 
-[title]:before { content: attr(title); font-family: monospace; position: absolute; top: 100%; width: 100%; left: 50%; margin-left: -50%; font-size: 40%; line-height: 1.5; background: black; }
+[title]:hover::before,
+:target::before {
+  background: black;
+  color: yellow;
+}
 
-[title]:hover:before, :target:before { background: black; color: yellow; }
+[title] [title]::before {
+  margin-top: 1.5em;
+}
 
-[title] [title]:before { margin-top: 1.5em; }
+[title] [title] [title]::before {
+  margin-top: 3em;
+}
 
-[title] [title] [title]:before { margin-top: 3em; }
+[title] [title] [title] [title]::before {
+  margin-top: 4.5em;
+}
 
-[title] [title] [title] [title]:before { margin-top: 4.5em; }
-
-[title]:hover, :target { position: relative; z-index: 1; outline: 50em solid rgba(255, 255, 255, .8); }
+[title]:hover,
+:target {
+  position: relative;
+  z-index: 1;
+  outline: 50em solid rgba(255, 255, 255, 0.8);
+}
 ```
 
 ```js hidden
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', (evt) => {
     evt.preventDefault();
 
     window.location.hash = evt.target.hasAttribute('id')
-        ? '#' + evt.target.getAttribute('id')
+        ? `#${evt.target.getAttribute('id')}`
         : '';
 });
 ```
 
 {{EmbedLiveSample('Location anatomy', '85ch', '160px')}}
 
-## Properties
+## Instance properties
 
 - {{domxref("Location.ancestorOrigins")}}
   - : A static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
@@ -73,10 +130,10 @@ document.body.addEventListener('click', function (evt) {
   - : A string containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#example) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#example) to make it easy to parse out the parameters from the querystring.
 - {{domxref("Location.hash")}}
   - : A string containing a `'#'` followed by the fragment identifier of the URL.
-- {{domxref("Location.origin")}} {{readOnlyInline}}
+- {{domxref("Location.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the canonical form of the origin of the specific location.
 
-## Methods
+## Instance methods
 
 - {{domxref("Location.assign()")}}
   - : Loads the resource at the URL provided in parameter.
@@ -91,7 +148,7 @@ document.body.addEventListener('click', function (evt) {
 
 ```js
 // location: https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-var loc = document.location;
+const loc = document.location;
 console.log(loc.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
 console.log(loc.protocol);  // https:
 console.log(loc.host);      // developer.mozilla.org:8080

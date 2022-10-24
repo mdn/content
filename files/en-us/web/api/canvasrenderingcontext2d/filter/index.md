@@ -6,10 +6,10 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Experimental
   - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
+
 {{APIRef}}
 
 The
@@ -40,7 +40,7 @@ of the following filter functions in a string.
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Adjusts the contrast of the drawing. A
     value of `0%` will create a drawing that is completely black. A value of
     `100%` leaves the drawing unchanged.
-- [`drop-shadow()`](</en-US/docs/Web/CSS/filter#drop-shadow()>)
+- [`drop-shadow()`](/en-US/docs/Web/CSS/filter#drop-shadow)
 
   - : Applies a drop shadow effect to the drawing. A drop shadow is effectively a blurred,
     offset version of the drawing's alpha mask drawn in a particular color, composited
@@ -126,8 +126,7 @@ photo of a rhino.
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
 <div style="display:none;">
-  <img id="source"
-       src="rhino.jpg">
+  <img id="source" src="rhino.jpg" />
 </div>
 ```
 
@@ -138,7 +137,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
-image.addEventListener('load', e => {
+image.addEventListener('load', (e) => {
   // Draw unfiltered image
   ctx.drawImage(image, 0, 0, image.width * .6, image.height * .6);
 

@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.localService
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`localService`** read-only property of the
@@ -31,12 +32,12 @@ A boolean value.
 ## Examples
 
 ```js
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+for (let i = 0; i < voices.length ; i++) {
+  const option = document.createElement('option');
+  option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-  if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+  if (voices[i].default) {
+    option.textContent += ' — DEFAULT';
   }
 
   console.log(voices[i].localService);

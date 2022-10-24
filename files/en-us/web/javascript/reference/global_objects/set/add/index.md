@@ -10,16 +10,16 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.add
 ---
+
 {{JSRef}}
 
-The **`add()`** method appends a new element with a specified
-value to the end of a `Set` object.
+The **`add()`** method inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 
@@ -40,7 +40,7 @@ The `Set` object with added value.
 const mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // chainable
+mySet.add(5).add("some text"); // chainable
 
 console.log(mySet);
 // Set [1, 5, "some text"]

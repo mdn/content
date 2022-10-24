@@ -7,6 +7,9 @@ tags:
   - NeedsActiveLearning
   - needsSchema
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article covers the all-important first step of every project: define what you want to accomplish with it.
 
 <table>
@@ -36,7 +39,7 @@ All of this is called _project ideation_ and is a necessary first step to reach 
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Deeper dive
 

@@ -9,6 +9,7 @@ tags:
   - client-side
   - features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of "the big 4" frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
@@ -53,13 +54,13 @@ const header = (
 );
 ```
 
-This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) element with a [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element inside. The curly braces around `subject` on line 4 tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
+This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) element with an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element inside. The curly braces around `subject` on line 4 tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
 
 When used with React, the JSX from the previous snippet would be compiled into this:
 
 ```js
-var subject = "World";
-var header = React.createElement("header", null,
+const subject = "World";
+const header = React.createElement("header", null,
   React.createElement("h1", null, "Hello, ", subject, "!")
 );
 ```
@@ -116,7 +117,7 @@ function add(a, b) {
 
 This code might be trivial for someone accustomed to JavaScript, but it could still be clearer. JavaScript lets us use the `+` operator to concatenate strings together, so this function would technically still work if `a` and `b` were strings — it just might not give you the result you'd expect. What if we wanted to only allow numbers to be passed into this function? TypeScript makes that possible:
 
-```js
+```ts
 function add(a: number, b: number) {
   return a + b;
 }
@@ -234,11 +235,11 @@ import AuthorCredit from "./components/AuthorCredit";
 Once that's done, `AuthorCredit` could be used inside the `Article` component like this:
 
 ```js
-  ...
+// …
 
 <AuthorCredit />
 
-  ...
+// …
 ```
 
 ### Dependency injection
@@ -297,7 +298,7 @@ All applications benefit from test coverage that ensures your software continues
 
 Each framework has extensive tools in its ecosystem, with capabilities for unit and integration testing alike.
 
-[Testing Library](https://testing-library.com/) is a suite of testing utilities that has tools for many JavaScript environments, including React, Vue, and Angular.  The Ember docs cover the [testing of Ember apps](https://guides.emberjs.com/release/testing/).
+[Testing Library](https://testing-library.com/) is a suite of testing utilities that has tools for many JavaScript environments, including React, Vue, and Angular. The Ember docs cover the [testing of Ember apps](https://guides.emberjs.com/release/testing/).
 
 Here's a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
 
@@ -308,7 +309,7 @@ import "@testing-library/jest-dom/extend-expect";
 
 import CounterButton from "./CounterButton";
 
-it("renders a semantic with an initial state of 0", () => {
+it("Renders a semantic button with an initial state of 0", () => {
   const { getByRole } = render(<CounterButton />);
   const btn = getByRole("button");
 

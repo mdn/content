@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.IDBTransaction.error_event
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The `error` event is fired on `IDBTransaction` when a request returns an error and the event bubbles up to the transaction object.
@@ -18,8 +19,8 @@ The `error` event is fired on `IDBTransaction` when a request returns an error a
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
-onerror = event => { };
+addEventListener('error', (event) => { });
+onerror = (event) => { };
 ```
 
 ## Event type
@@ -40,7 +41,7 @@ This example opens a database and tries to add a record, listening for the `erro
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = event => {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -54,7 +55,7 @@ dBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = event => {
+dBOpenRequest.onsuccess = (event) => {
   const db = dBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
@@ -77,7 +78,7 @@ The same example, using the `onerror` property instead of `addEventListener()`:
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = event => {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -91,7 +92,7 @@ dBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = event => {
+dBOpenRequest.onsuccess = (event) => {
   const db = dBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data

@@ -4,18 +4,32 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSE.md",
   "engines": {
-    "node": ">=12.0.0"
+    "node": "^16.0.0 || >=18.0.0"
   },
   "scripts": {
-    "up-to-date-check": "node scripts/up-to-date-check.js",
-    "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
-    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
+    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
-    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build"
+    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
+    "fix:js": "prettier -w \"**/*.(m)?js\"",
+    "fix:json": "prettier -w \"**/*.json(c)?\"",
+    "fix:md": "markdownlint-cli2-fix \"**/*.md\"",
+    "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:js": "prettier -c \"**/*.(m)?js\"",
+    "lint:json": "prettier -c \"**/*.json(c)?\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:yml": "prettier -c \"**/*.yml\"",
+    "prepare": "husky install",
+    "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
+    "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
-    "@mdn/yari": "1.5.6",
+    "@mdn/yari": "1.18.95",
     "cross-env": "7.0.3",
-    "env-cmd": "10.1.0"
+    "env-cmd": "10.1.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "markdownlint-cli2": "0.5.1",
+    "markdownlint-rule-search-replace": "1.0.5",
+    "prettier": "2.7.1"
   }
 }

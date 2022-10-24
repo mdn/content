@@ -6,10 +6,10 @@ tags:
   - Property
   - Reference
   - TaskPriorityChangeEvent
-  - Experimental
 browser-compat: api.TaskPriorityChangeEvent.previousPriority
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The readonly **`previousPriority`** property of the {{domxref("TaskPriorityChangeEvent")}} interface returns the priority of the corresponding {{domxref("TaskSignal")}} before it was changed and this [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event was emitted.
 
@@ -26,14 +26,13 @@ This will be one of: [`"user-blocking"`](/en-US/docs/Web/API/Prioritized_Task_Sc
 
 The code below shows the `previousPriority` being obtained in a handler for a `prioritychange` event.
 
-```js  
-  // Listen for 'prioritychange' events on the controller's signal.
-  controller.signal.addEventListener('prioritychange', 
-    event => { 
-      const previousPriority = event.previousPriority;
-      const newPriority = event.target.priority;
-      console.log(`The priority changed from ${previousPriority} to ${newPriority}.`);
-    });
+```js
+// Listen for 'prioritychange' events on the controller's signal.
+controller.signal.addEventListener('prioritychange', (event) => {
+  const previousPriority = event.previousPriority;
+  const newPriority = event.target.priority;
+  console.log(`The priority changed from ${previousPriority} to ${newPriority}.`);
+});
 ```
 
 A more complete live example can be found in [`prioritychange` event > Examples](/en-US/docs/Web/API/TaskSignal/prioritychange_event).

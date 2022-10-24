@@ -7,6 +7,7 @@ tags:
   - Property
   - Non-standard
 ---
+
 {{APIRef("Navigation timing API")}}
 
 {{Non-standard_header()}}
@@ -22,9 +23,8 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-
-p = object.msFirstPaint;
+```js-nolint
+p = object.msFirstPaint
 ```
 
 ## Value
@@ -43,6 +43,6 @@ The following example shows how to calculate the time that is required to reques
 document before the document begins to display for the user.
 
 ```js
-  var oTiming = window.performance.timing;
-  var iTimeMS = oTiming.msFirstPaint - oTiming.navigationStart;
+  const oTiming = window.performance.timing;
+  const iTimeMS = oTiming.msFirstPaint - oTiming.navigationStart;
 ```

@@ -14,6 +14,7 @@ tags:
   - x
 browser-compat: api.SVGImageElement.x
 ---
+
 {{APIRef("SVG")}}
 
 The **`x`** read-only property of the

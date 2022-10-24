@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 page-type: guide
 tags:
   - Guide
-  - HTML5
+  - HTML
   - NeedsContent
   - NeedsExample
   - NeedsMarkupWork
@@ -13,6 +13,7 @@ tags:
   - WebSocket API
   - WebSockets
 ---
+
 {{APIRef("Websockets API")}}
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.
@@ -89,7 +90,7 @@ Either the client or the server can choose to send a message at any time — tha
 
 ### Format
 
-Each data frame (from the client to the server or vice-versa) follows this same format:
+Each data frame (from the client to the server or vice versa) follows this same format:
 
 ```bash
 Frame format:
@@ -128,14 +129,16 @@ To read the payload data, you must know when to stop reading. That's why the pay
 2. Read the next 16 bits and interpret those as an unsigned integer. You're **done**.
 3. Read the next 64 bits and interpret those as an unsigned integer. (The most significant bit _must_ be 0.) You're **done**.
 
-### Reading and Unmasking the Data
+### Reading and unmasking the data
 
-If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data **ENCODED**, and the key **MASK**. To get **DECODED**, loop through the octets (bytes a.k.a. characters for text data) of **ENCODED** and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):
+If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `ENCODED`, and the key `MASK`. To get `DECODED`, loop through the octets (bytes a.k.a. characters for text data) of `ENCODED` and XOR the octet with the (i modulo 4)th octet of `MASK`. In pseudocode (that happens to be valid JavaScript):
 
 ```js
-var DECODED = "";
-for (var i = 0; i < ENCODED.length; i++) {
-    DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+const MASK = [1, 2, 3, 4]; // 4-byte mask
+const ENCODED = [105, 103, 111, 104, 110]; // encoded string "hello"
+
+// Create the byte Array of decoded payload
+const DECODED = Uint8Array.from(ENCODED, (elt, i) => elt ^ mask[i % 4]); // Perform an XOR on the mask
 ```
 
 Now you can figure out what **DECODED** means depending on your application.
@@ -144,7 +147,7 @@ Now you can figure out what **DECODED** means depending on your application.
 
 The FIN and opcode fields work together to send a message split up into separate frames. This is called message fragmentation. Fragmentation is only available on opcodes `0x0` to `0x2`.
 
-Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
+Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
 ```
 Client: FIN=1, opcode=0x1, msg="hello"

@@ -10,6 +10,7 @@ tags:
   - ServiceWorkerRegistration
 browser-compat: api.ServiceWorkerRegistration.updatefound_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`updatefound`** event of the
@@ -20,9 +21,9 @@ The **`updatefound`** event of the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('updatefound', event => { });
+addEventListener('updatefound', (event) => { });
 
-onupdatefound = event => { };
+onupdatefound = (event) => { };
 ```
 
 ## Event type

@@ -9,6 +9,7 @@ tags:
   - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-4
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`429 Too Many Requests`** response status code indicates the user has sent too many requests in a given amount of time ("rate limiting").
@@ -23,7 +24,7 @@ A {{HTTPHeader("Retry-After")}} header might be included to this response indica
 
 ## Example
 
-```
+```http
 HTTP/1.1 429 Too Many Requests
 Content-Type: text/html
 Retry-After: 3600

@@ -1,6 +1,7 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -40,6 +41,9 @@ font-size: 0.8em;
 /* <percentage> values */
 font-size: 80%;
 
+/* math value */
+font-size: math;
+
 /* Global values */
 font-size: inherit;
 font-size: initial;
@@ -50,7 +54,7 @@ font-size: unset;
 
 The `font-size` property is specified in one of the following ways:
 
-- As one of the absolute-size or relative-size keywords
+- As one of the absolute-size, relative-size or `math` keywords
 - As a `<length>` or a `<percentage>`, relative to the element's font size.
 
 ### Values
@@ -69,6 +73,9 @@ The `font-size` property is specified in one of the following ways:
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
 
 > **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+
+- `math` {{Experimental_Inline}}
+  Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) must be applied when determining the computed value of the `font-size` property.
 
 ## Description
 
@@ -114,7 +121,7 @@ One important fact to keep in mind: em values compound. Take the following HTML 
 
 ```css
 html {
-  font-size: 62.5%; /* 1em = 10px, if the default browser font-size is 16px. (62.5% of 16 = 10) */
+  font-size: 100%;
 }
 span {
   font-size: 1.6em;
@@ -129,9 +136,9 @@ span {
 
 The result is:
 
-{{EmbedLiveSample("Ems", 400, 75)}}
+{{EmbedLiveSample("Ems", 400, 100)}}
 
-Assuming that the browser's default `font-size` is 16px, the words "outer" would be rendered at 16px, but the word "inner" would be rendered at 25.6px. This is because the inner {{HTMLElement("span")}}'s `font-size` is 1.6em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
+Assuming that the browser's default `font-size` is 16px, the words "outer" would be rendered at 25.6px, but the word "inner" would be rendered at 40.96px. This is because the inner {{HTMLElement("span")}}'s `font-size` is 1.6em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
 
 ### Rems
 
@@ -141,7 +148,7 @@ The CSS below is nearly identical to the previous example. The only exception is
 
 ```css
 html {
-  font-size: 62.5%; /* font-size 1rem = 10px on default browser settings */
+  font-size: 100%;
 }
 span {
   font-size: 1.6rem;
@@ -154,9 +161,9 @@ Then we apply this CSS to the same HTML, which looks like this:
 <span>Outer <span>inner</span> outer</span>
 ```
 
-{{EmbedLiveSample("Rems", 400, 75)}}
+{{EmbedLiveSample("Rems", 400, 100)}}
 
-In this example, the words "outer inner outer" are all displayed at 16px (assuming that the browser's `font-size` has been left at the default value of 16px).
+In this example, the words "outer inner outer" are all displayed at 25.6px (assuming that the browser's `font-size` has been left at the default value of 16px).
 
 ### Ex
 
@@ -219,4 +226,6 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 - {{cssxref("font-size-adjust")}}
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
+- {{cssxref("math-depth")}}
+- {{cssxref("math-style")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

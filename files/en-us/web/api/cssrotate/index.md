@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSRotate
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSRotate`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the rotate value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
@@ -21,18 +22,18 @@ The **`CSSRotate`** interface of the {{domxref('CSS_Object_Model#css_typed_objec
 
 ## Constructor
 
-- {{domxref("CSSRotate.CSSRotate", "CSSRotate()")}}
+- {{domxref("CSSRotate.CSSRotate", "CSSRotate()")}} {{Experimental_Inline}}
   - : Creates a new `CSSRotate` object.
 
-## Properties
+## Instance properties
 
-- {{domxref('CSSRotate.x','x')}}
+- {{domxref('CSSRotate.x','x')}} {{Experimental_Inline}}
   - : Returns or sets the x-axis value.
-- {{domxref('CSSRotate.y','y')}}
+- {{domxref('CSSRotate.y','y')}} {{Experimental_Inline}}
   - : Returns or sets the y-axis value.
-- {{domxref('CSSRotate.z','z')}}
+- {{domxref('CSSRotate.z','z')}} {{Experimental_Inline}}
   - : Returns or sets the z-axis value.
-- {{domxref('CSSRotate.angle','angle')}}
+- {{domxref('CSSRotate.angle','angle')}} {{Experimental_Inline}}
   - : Returns or sets the angle value.
 
 ## Examples

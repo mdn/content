@@ -23,6 +23,7 @@ tags:
   - mp4
   - sound
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Even modest quality, high-fidelity stereo sound can use a substantial amount of disk space. For web developers, an even bigger concern is the network bandwidth needed in order to transfer audio, whether for streaming or to download it for use during gameplay. The processing of audio data to encode and decode it is handled by an audio **{{Glossary("codec")}}** (**CO**der/**DEC**oder). In this article, we look at audio codecs used on the web to compress and decompress audio, what their capabilities and use cases are, and offer guidance when choosing audio codecs to use for your content.
@@ -358,7 +359,7 @@ In addition to providing audio for specific speakers in a sound system, some cod
 
 ### Audio frequency bandwidth
 
-The **audio frequency bandwidth** of a codec indicates the range of audio frequencies that can be represented using the codec. Some codecs operate specifically by eliminating audio that falls outside a given frequency range. There is a correlation between the sample rate and the maximum sound frequency that can be represented by a waveform represented by a codec. At a theoretical level, the maximum frequency a codec can represent is the sample rate divided by two; this frequency is called the {{interwiki("wikipedia", "Nyquist frequency")}}. In reality, the maximum is slightly lower, but it's close.
+The **audio frequency bandwidth** of a codec indicates the range of audio frequencies that can be represented using the codec. Some codecs operate specifically by eliminating audio that falls outside a given frequency range. There is a correlation between the sample rate and the maximum sound frequency that can be represented by a waveform represented by a codec. At a theoretical level, the maximum frequency a codec can represent is the sample rate divided by two; this frequency is called the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency). In reality, the maximum is slightly lower, but it's close.
 
 The audio frequency bandwidth comes into play especially vividly when a codec is designed or configured to represent human speech rather than a broad range of sounds. Human speech generally resides within the audio frequency range of 300 Hz to 18 kHz. However, the vast majority of human vocalizations exist in the range 300 Hz to 8 kHz, and you can capture enough of human vocalizations in the frequency range 500 Hz to 3 kHz to still be understandable.
 
@@ -610,7 +611,7 @@ Keep in mind, however, that lossless codecs require substantially more bandwidth
 
 ### AMR (Adaptive Multi-Rate)
 
-The **[Adaptive Multi-Rate audio codec](http://www.voiceage.com/AMR-NB.AMR.html)** is optimized for encoding human speech efficiently. It was standardized in 1999 as part of the 3GPP audio standard used for both {{interwiki("wikipedia", "GSM")}} and {{interwiki("wikipedia", "UMTS")}} cellular telephony, and uses a multi-rate narrowband algorithm to encode audio frequencies at a telephony-grade quality level at around 7.4 kbps. In addition to being used for real-time telephony, AMR audio may be used for voicemail and other short audio recordings.
+The **[Adaptive Multi-Rate audio codec](http://www.voiceage.com/AMR-NB.AMR.html)** is optimized for encoding human speech efficiently. It was standardized in 1999 as part of the 3GPP audio standard used for both [GSM](https://en.wikipedia.org/wiki/GSM) and [UMTS](https://en.wikipedia.org/wiki/UMTS) cellular telephony, and uses a multi-rate narrowband algorithm to encode audio frequencies at a telephony-grade quality level at around 7.4 kbps. In addition to being used for real-time telephony, AMR audio may be used for voicemail and other short audio recordings.
 
 AMR audio which is stored in files may be typed `.amr`, but may also be encapsulated in `.3gp` files.
 
@@ -813,7 +814,7 @@ The **G.711** specification, published by the International Telecommunications U
 
 G.711 is not a high fidelity codec, but is instead optimized to support a wide range of voice levels (from whisper to shout) while maintaining high intelligibility and low computational complexity. G.711 uses a logarithmic companding algorithm which provides 14 bits of dynamic range in an 8-bit sample. It uses a sampling rate of 8000 samples/sec, corresponding to a bitrate of 64000 bps.
 
-There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: {{interwiki("wikipedia", "M-law", "µ-law")}} (commonly used in North America and Japan) and {{interwiki("wikipedia", "A-law")}} (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and vice versa.
+There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: [µ-law](https://en.wikipedia.org/wiki/M-law) (commonly used in North America and Japan) and [A-law](https://en.wikipedia.org/wiki/A-law) (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and vice versa.
 
 This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRTC_API) solutions because it is simple, easy to implement, widely-used, and broadly compatible across all modern computing platforms.
 
@@ -1009,7 +1010,7 @@ G.722 is primarily used with WebRTC connections, as it's one of the audio codecs
 
 ### MP3 (MPEG-1 Audio Layer III)
 
-Of the audio formats specified by the MPEG/MPEG-2 standards, **MPEG-1 Audio Layer III**—otherwise known as **{{interwiki("wikipedia", "MP3")}}**—is by far the most widely used and best-known. The MP3 codec is defined by [MPEG-1 Part 3](https://www.iso.org/standard/22412.html) and [MPEG-2 Part 3](https://www.iso.org/standard/26797.html), and was introduced in 1991 (and finalized in 1992).
+Of the audio formats specified by the MPEG/MPEG-2 standards, **MPEG-1 Audio Layer III**—otherwise known as **[MP3](https://en.wikipedia.org/wiki/MP3)**—is by far the most widely used and best-known. The MP3 codec is defined by [MPEG-1 Part 3](https://www.iso.org/standard/22412.html) and [MPEG-2 Part 3](https://www.iso.org/standard/26797.html), and was introduced in 1991 (and finalized in 1992).
 
 When MP3-format audio is stored inside an MPEG container, the resulting file is also referred to as just an "MP3 file" or "MP3." Files with the ubiquitous `.mp3` extension are stored in what is perhaps the most widely distributed audio file format in the world, which is in large part responsible for the digital audio revolution of the late 1990s and early 2000s.
 
@@ -1163,7 +1164,7 @@ For patent reasons, Firefox did not directly support MP3 prior to version 71; in
 
 ### Opus
 
-The {{interwiki("wikipedia", "Opus (audio format)", "Opus")}} audio format was created by the Xiph.org Foundation as a fully open audio format; it has been standardized by [IETF](https://www.ietf.org/) as {{RFC(6716)}}. It's a good general-purpose audio codec that can efficiently handle both low-complexity audio such as speech as well as music and other high-complexity sounds.
+The [Opus](https://en.wikipedia.org/wiki/Opus_(audio_format)) audio format was created by the Xiph.org Foundation as a fully open audio format; it has been standardized by [IETF](https://www.ietf.org/) as {{RFC(6716)}}. It's a good general-purpose audio codec that can efficiently handle both low-complexity audio such as speech as well as music and other high-complexity sounds.
 
 Opus supports multiple compression algorithms, and can even use more than one algorithm in the same audio file, since the encoder can choose the bit rate, audio bandwidth, algorithm, and other details of the compression settings for each frame of audio.
 
@@ -1271,7 +1272,7 @@ Opus is a good all-around audio codec for use in your web applications, and can 
         </table>
         <p>
           Although the
-          {{interwiki("wikipedia", "Nyquist–Shannon sampling theorem")}}
+          <a href="https://en.wikipedia.org/wiki/Nyquist–Shannon_sampling_theorem">Nyquist–Shannon sampling theorem</a>
           shows that audio bandwidth can be as much as one half of the sampling
           rate, Opus doesn't allow encoding outside a maximum 20 kHz audio
           frequency band, since the human ear can't perceive anything above the
@@ -1498,7 +1499,7 @@ If you have plenty of network bandwidth to work with, and are reasonably certain
 
 When compressing audio that will be getting mixed or remixed, you typically want zero or close to zero loss of fidelity, which suggests a lossless codec may be in order. However, because lossless encoding naturally has a much lower compression level than lossy encoding, you may find that if your source audio is large enough, you might have to choose a lossy encoder anyway, especially in a web environment in which you can't control the download rate of the media.
 
-Assuming that lossless compression is our best option here (which it usually is, as long as the audio files are small), the three strongest candidates from a codec perspective are {{interwiki("wikipedia", "FLAC")}}, {{interwiki("wikipedia", "Apple Lossless", "Apple Lossless (ALAC)")}}, and {{interwiki("wikipedia", "Audio Lossless Coding", "MPEG-4 ALS")}}. Which we choose will depend on browser support and which media container formats support them.
+Assuming that lossless compression is our best option here (which it usually is, as long as the audio files are small), the three strongest candidates from a codec perspective are [FLAC](https://en.wikipedia.org/wiki/FLAC), [Apple Lossless (ALA](https://en.wikipedia.org/wiki/Apple_Lossless), and [MPEG-4 ALS](https://en.wikipedia.org/wiki/Audio_Lossless_Coding). Which we choose will depend on browser support and which media container formats support them.
 
 For the purposes of this example, we'll assume that all browsers have the same codec and container support as Firefox (although this is far from true). Consider the breadth of actual support for the codecs when making your decisions.
 
@@ -1519,7 +1520,7 @@ A few popular options:
 - [Handbrake](https://handbrake.fr/)
   - : A highly popular open source front-end to FFmpeg which adds a graphical user interface that makes it much easier to control the wide variety of options FFmpeg offers while encoding audio and/or video. Binaries are available for macOS, Linux, and Windows.
 - [Audacity](https://www.audacityteam.org/)
-  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format.  Available for macOS, Linux, and Windows.
+  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format. Available for macOS, Linux, and Windows.
 - [LAME](https://lame.sourceforge.io/)
   - : A high quality open source MP3 encoder with support for CBR, ABR, and VBR encoding as well as a variety of other options. Distributed only in source form by the LAME project, but can be installed using [Homebrew](https://brew.sh/) or similar tools.
 

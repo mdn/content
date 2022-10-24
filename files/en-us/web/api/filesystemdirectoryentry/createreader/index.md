@@ -12,6 +12,7 @@ tags:
   - createReader
 browser-compat: api.FileSystemDirectoryEntry.createReader
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
@@ -21,7 +22,7 @@ the directory.
 
 ## Syntax
 
-```js
+```js-nolint
 createReader()
 ```
 
@@ -45,14 +46,14 @@ function readDirectory(directory) {
   let dirReader = directory.createReader();
   let entries = [];
 
-  let getEntries = function() {
-    dirReader.readEntries(function(results) {
+  let getEntries = () => {
+    dirReader.readEntries((results) => {
       if (results.length) {
         entries = entries.concat(toArray(results));
         getEntries();
       }
-    }, function(error) {
-      /* handle error -- error is a FileError object */
+    }, (error) => {
+      /* handle error — error is a FileError object */
     });
   };
 

@@ -8,9 +8,11 @@ tags:
   - Reference
   - changed
   - CookieChangeEvent
+  - Experimental
 browser-compat: api.CookieChangeEvent.changed
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`changed`** read-only property of the {{domxref("CookieChangeEvent")}} interface returns an array of the cookies that have been changed.
 
@@ -48,7 +50,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
 In this example when the cookie is set, the event listener logs the `changed` property to the console. The first item in that array contains an object representing the cookie that has just been set.
 
 ```js
-cookieStore.addEventListener('change', (event) => {
+cookieStore.addEventListener("change", (event) => {
   console.log(event.changed[0]);
 });
 
@@ -57,7 +59,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + one_day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

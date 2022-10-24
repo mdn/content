@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `regexp:match()` performs regular expression matching on a string, returning the submatches found as a result.
 
 ## Syntax
 
-```js
+```js-nolint
 regexp:match(targetString, regExpString[, flagsString])
 ```
 
@@ -22,7 +23,7 @@ regexp:match(targetString, regExpString[, flagsString])
   - : The string to perform regular expression matching upon.
 - `regExpString`
   - : The JavaScript style regular expression to evaluate.
-- `flagsString`{{Optional_Inline}}
+- `flagsString` {{optional_inline}}
   - : An optional string containing character flags.
 
 The character flags are:

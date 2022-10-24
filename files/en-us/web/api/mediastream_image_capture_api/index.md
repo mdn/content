@@ -10,8 +10,10 @@ tags:
   - Overview
   - Reference
   - Video
+  - Experimental
 browser-compat: api.ImageCapture
 ---
+
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
 
 The **MediaStream Image Capture API** is an API for capturing images or videos from a photographic device. In addition to capturing data, it also allows you to retrieve information about device capabilities such as image size, red-eye reduction and whether or not there is a flash and what they are currently set to. Conversely, the API allows the capabilities to be configured within the constraints what the device allows.
@@ -24,7 +26,7 @@ First, get a reference to a device by calling {{domxref("MediaDevices.getUserMed
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true })
-  .then(mediaStream => {
+  .then((mediaStream) => {
     // Do something with the stream.
   })
 ```
@@ -41,7 +43,7 @@ At this point, you might want to configure the device capabilities before captur
 let zoom = document.querySelector('#zoom');
 const capabilities = track.getCapabilities();
 // Check whether zoom is supported or not.
-if(!capabilities.zoom) {
+if (!capabilities.zoom) {
   return;
 }
 track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
@@ -55,7 +57,7 @@ let imageCapture = new ImageCapture(track);
 
 ## Interfaces
 
-- {{domxref("ImageCapture")}}
+- {{domxref("ImageCapture")}} {{Experimental_Inline}}
   - : An interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
 
 ## Specifications

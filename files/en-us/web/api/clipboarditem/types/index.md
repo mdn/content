@@ -16,6 +16,7 @@ tags:
   - paste
 browser-compat: api.ClipboardItem.types
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The read-only
@@ -41,14 +42,11 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       for (const type of clipboardItem.types) {
         const blob = await clipboardItem.getType(type);
         // we can now use blob here
       }
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }

@@ -8,9 +8,11 @@ tags:
   - Reference
   - decodeQueueSize
   - AudioDecoder
+  - Experimental
 browser-compat: api.AudioDecoder.decodeQueueSize
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`decodeQueueSize`** read-only property of the {{domxref("AudioDecoder")}} interface returns the number of pending decode requests in the queue.
 

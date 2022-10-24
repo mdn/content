@@ -1,5 +1,5 @@
 ---
-title: 'aria-owns'
+title: "aria-owns"
 slug: Web/Accessibility/ARIA/Attributes/aria-owns
 tags:
   - Accessibility
@@ -29,7 +29,7 @@ Referencing the ID of one or more elements allows any element to "own" any other
 
 Do not use `aria-owns` as a replacement for the DOM hierarchy. If the relationship is represented in the DOM, do not use `aria-owns`.
 
-A child element is owned by it's DOM parent by default: in this case, `aria-owns` should not be used. Avoid using the `aria-owns` attribute to rearrange existing child elements into a different order.
+A child element is owned by its DOM parent by default: in this case, `aria-owns` should not be used. Avoid using the `aria-owns` attribute to rearrange existing child elements into a different order.
 
 When using `aria-owns`, make sure you [manage focus order](https://css-tricks.com/focus-management-and-inert/). Ensure the visual focus order matches this assistive technology reading order.
 

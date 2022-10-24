@@ -7,9 +7,11 @@ tags:
   - Web Audio API
   - audioprocess
   - event
+  - Deprecated
 browser-compat: api.ScriptProcessorNode.audioprocess_event
 ---
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
 The `audioprocess` event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
 
@@ -29,7 +31,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 
 - `playbackTime` {{ReadOnlyInline}}
   - : A double representing the time when the audio will be played,
-     as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+    as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 - `inputBuffer` {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
     The number of channels is defined as a parameter `numberOfInputChannels`,
@@ -44,20 +46,20 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 ## Examples
 
 ```js
-scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
+scriptNode.addEventListener('audioprocess', (audioProcessingEvent) => {
   // The input buffer is a song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
+  const inputBuffer = audioProcessingEvent.inputBuffer;
 
   // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
+  const outputBuffer = audioProcessingEvent.outputBuffer;
 
   // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
+  for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
+    const inputData = inputBuffer.getChannelData(channel);
+    const outputData = outputBuffer.getChannelData(channel);
 
     // Loop through the 4096 samples
-    for (var sample = 0; sample < inputBuffer.length; sample++) {
+    for (let sample = 0; sample < inputBuffer.length; sample++) {
       // make output equal to the same as the input
       outputData[sample] = inputData[sample];
 
@@ -71,8 +73,8 @@ scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
 You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
-scriptNode.onaudioprocess = audioProcessingEvent => {
-  ...
+scriptNode.onaudioprocess = (audioProcessingEvent) => {
+  // ...
 }
 ```
 

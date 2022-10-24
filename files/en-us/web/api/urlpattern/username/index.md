@@ -12,7 +12,7 @@ tags:
 browser-compat: api.URLPattern.username
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`username`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the username part

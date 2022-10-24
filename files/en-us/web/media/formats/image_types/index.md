@@ -26,6 +26,7 @@ tags:
   - gif
   - icon
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.
@@ -66,7 +67,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         <p>
           Good choice for both images and animated images due to high performance and royalty free image format.
-          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
+          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
           <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
@@ -98,7 +99,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           Good choice for lossy compression of still images (currently the most
           popular). Prefer PNG when more precise reproduction of the image is
-          required, or WebP/AVIF if both better reproduction and highercompression are required.<br />
+          required, or WebP/AVIF if both better reproduction and higher compression are required.<br />
           <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
         </p>
       </td>
@@ -197,9 +198,9 @@ For example, an RGB color depth of 8 indicates that each of the red, green, and 
 ### APNG (Animated Portable Network Graphics)
 
 APNG is a file format first introduced by Mozilla which extends the [PNG](#png_portable_network_graphics) standard to add support for animated images.
-Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.
+Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of [color depths](https://en.wikipedia.org/wiki/Color_depth), whereas animated GIF supports only 8-bit [indexed color](https://en.wikipedia.org/wiki/Indexed_color).
 
-APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity {{interwiki("wikipedia", "throbber", "throbbers")}}, and other animated sequences.
+APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity [throbbers](https://en.wikipedia.org/wiki/Throbber), and other animated sequences.
 For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/imessage/) for Apple's iMessage application (and the Messages application on iOS).
 They're also commonly used for the animated portions of web browsers' user interfaces.
 
@@ -299,7 +300,7 @@ They're also commonly used for the animated portions of web browsers' user inter
 
 ### AVIF image
 
-AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes *AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.*
+AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes _AV1 bitstreams in the High Efficiency Image File Format (HEIF) container._
 
 > **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
@@ -515,12 +516,12 @@ Theoretically, several compression algorithms are supported, and the image data 
 
 ### GIF (Graphics Interchange Format)
 
-In 1987, the CompuServe online service provider introduced the **{{interwiki("wikipedia", "GIF")}}** (**Graphics Interchange Format**) image file format to provide a compressed graphics format that all members of their service would be able to use.
-GIF uses the {{interwiki("wikipedia", "Lempel-Ziv-Welch")}} (LZW) algorithm to losslessly compress 8-bit indexed color graphics.
+In 1987, the CompuServe online service provider introduced the **[GIF](https://en.wikipedia.org/wiki/GIF)** (**Graphics Interchange Format**) image file format to provide a compressed graphics format that all members of their service would be able to use.
+GIF uses the [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/Lempel-Ziv-Welch) (LZW) algorithm to losslessly compress 8-bit indexed color graphics.
 GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with [XBM](#xbm_x_window_system_bitmap_file).
 
 Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries).
-To simulate more than 255 or 256 colors, {{interwiki("wikipedia", "dithering")}} is generally used.
+To simulate more than 255 or 256 colors, [dithering](https://en.wikipedia.org/wiki/Dithering) is generally used.
 It is [technically possible](https://gif.ski/) to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.
 
 Pixels are opaque, unless a specific color index is designated as transparent, in which case pixels colored that value are entirely transparent.
@@ -530,7 +531,7 @@ GIF supports simple animation, in which following an initial full-size frame, a 
 GIF has been extremely popular for decades, due to its simplicity and compatibility.
 Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
 
-Another popular feature of GIF is support for {{interwiki("wikipedia", "Interlacing_(bitmaps)", "interlacing")}}, where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
+Another popular feature of GIF is support for [interlacing](https://en.wikipedia.org/wiki/Interlacing_(bitmaps)), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
 This is particularly useful when network connections are slow.
 
 GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.
@@ -855,8 +856,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     <tr>
       <th scope="row">Compression</th>
       <td>
-        Lossy; based on the
-        {{interwiki("wikipedia", "discrete cosine transform")}}
+        Lossy; based on the <a href="https://en.wikipedia.org/wiki/Discrete_cosine_transform">discrete cosine transform</a>
       </td>
     </tr>
     <tr>
@@ -868,7 +868,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
 
 ### PNG (Portable Network Graphics)
 
-The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless or lossy compression to provide more efficient compression, and supports higher color depths than [GIF](#gif_graphics_interchange_format), as well as full alpha transparency support.
+The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
 
 PNG is widely supported, with all major browsers offering full support for its features.
 Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6.
@@ -1032,7 +1032,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
 
 ### SVG (Scalable Vector Graphics)
 
-SVG is an [XML](/en-US/docs/Glossary/XML)-based {{interwiki("wikipedia", "vector graphics")}} format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
+SVG is an [XML](/en-US/docs/Glossary/XML)-based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
 SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size.
 As such, SVG is popular for user interface elements in modern Web design.
 
@@ -1094,7 +1094,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
             </tr>
             <tr>
               <th scope="row">
-                SVG as image ({{HTMLElement("img")}} etc)
+                SVG as image ({{HTMLElement("img")}}, etc.)
               </th>
               <td>28</td>
               <td>12</td>
@@ -1148,7 +1148,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
 
 ### TIFF (Tagged Image File Format)
 
-{{interwiki("wikipedia", "TIFF")}} is a raster graphics file format which was created to store scanned photos, although it can be any kind of image.
+[TIFF](https://en.wikipedia.org/wiki/TIFF) is a raster graphics file format which was created to store scanned photos, although it can be any kind of image.
 It is a somewhat "heavy" format, in that TIFF files have a tendency to be larger than images in other formats.
 This is because of the metadata often included, as well as the fact that most TIFF images are either uncompressed or use compression algorithms that still leave fairly large files after compression.
 
@@ -1191,9 +1191,8 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://www.adobe.io/open/standards/TIFF.html"
-          >adobe.io/open/standards/TIFF.html</a
-        >
+        <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml"
+          >https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272</a>
       </td>
     </tr>
     <tr>
@@ -1245,7 +1244,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
                 Each pixel is an index into a <code>ColorMap</code> record,
                 which defines the colors used in the image. The color map lists
                 all of the red values, then all of the green values, then all of
-                the blue values (rather than <code>rgb, rgb, rgb...</code>).
+                the blue values (rather than <code>rgb, rgb, rgb…</code>).
               </td>
             </tr>
             <tr>
@@ -1581,10 +1580,13 @@ For example, if you're displaying a diagram best displayed with SVG, but wish to
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagram showing the data channels">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagram showing the data channels" />
 </picture>
 ```
 

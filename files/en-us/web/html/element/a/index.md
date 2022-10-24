@@ -1,5 +1,5 @@
 ---
-title: '<a>: The Anchor element'
+title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 tags:
   - Content
@@ -20,9 +20,9 @@ browser-compat: html.elements.a
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
-Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
+Content within each `<a>` _should_ indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
 
 ## Attributes
 
@@ -87,30 +87,30 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
     - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`.
 
 - {{HTMLAttrDef("type")}}
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Deprecated attributes
 
-- {{HTMLAttrDef("charset")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("charset")}} {{Deprecated_Inline}}
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("name")}} {{Deprecated_Inline}}
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
 
-- {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("shape")}} {{Deprecated_Inline}}
 
   - : The shape of the hyperlink's region in an image map.
 
@@ -221,9 +221,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com"> Mozilla </a>
 ```
 
 #### Result
@@ -241,7 +239,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### Result
@@ -252,9 +253,7 @@ a { display: block; margin-bottom: 0.5em }
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">
-  Jump to the heading below
-</a></p>
+<p><a href="#Section_further_down"> Jump to the heading below </a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -290,14 +289,15 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
 
 #### Example painting app with save link
 
 ##### HTML
 
 ```html
-<p>Paint by holding down the mouse button and moving it.
+<p>
+  Paint by holding down the mouse button and moving it.
   <a href="" download="my_painting.png">Download my painting</a>
 </p>
 
@@ -325,8 +325,8 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
+const canvas = document.querySelector('canvas');
+const c = canvas.getContext('2d');
 c.fillStyle = 'hotpink';
 
 function draw(x, y) {
@@ -338,13 +338,13 @@ function draw(x, y) {
   }
 }
 
-canvas.addEventListener('mousemove', event =>
+canvas.addEventListener('mousemove', (event) =>
   draw(event.offsetX, event.offsetY)
 );
 canvas.addEventListener('mousedown', () => isDrawing = true);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 
-document.querySelector('a').addEventListener('click', event =>
+document.querySelector('a').addEventListener('click', (event) =>
   event.target.href = canvas.toDataURL()
 );
 ```
@@ -412,9 +412,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 Annual Report (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
 If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
@@ -422,12 +420,12 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg">
+  <img alt="(opens in new tab)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg">
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -444,12 +442,10 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 <body>
   <a href="#content" class="skip-link">Skip to main content</a>
 
-  <header>
-    …
-  </header>
+  <header>…</header>
 
-  <main id="content"> </main> <!-- The skip link jumps to here -->
-
+  <main id="content"></main>
+  <!-- The skip link jumps to here -->
 </body>
 ```
 

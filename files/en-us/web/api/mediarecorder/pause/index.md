@@ -28,12 +28,12 @@ browser queues a task that runs the below steps:
 2. Set {{domxref("MediaRecorder.state")}} to "paused".
 3. Stop gathering data into the current {{domxref("Blob")}}, but keep it available so
    that recording can be resumed later on.
-4. Raise a {{event("pause")}} event.
+4. Raise a {{domxref("MediaRecorder/pause_event", "pause")}} event.
 
 ## Syntax
 
-```js
-pause();
+```js-nolint
+pause()
 ```
 
 ### Parameters
@@ -54,14 +54,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-...
-
- pause.onclick = function() {
-     mediaRecorder.pause();
-     console.log("recording paused");
- }
-
-...
+pause.onclick = () => {
+    mediaRecorder.pause();
+    console.log("recording paused");
+}
 ```
 
 ## Specifications
@@ -76,6 +72,6 @@ None ({{jsxref("undefined")}}).
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

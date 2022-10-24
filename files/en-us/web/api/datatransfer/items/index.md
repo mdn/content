@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.items
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only {{domxref("DataTransfer")}} property `items` property is a
@@ -38,7 +39,6 @@ This example uses `items` to log information about dragged items.
 </ul>
 <div id="target">Drop Zone</div>
 
-<pre id="output"></pre>
 <button id="reset">Reset</button>
 ```
 
@@ -53,18 +53,13 @@ div {
 #target {
   border: 1px solid black;
 }
-
-#output {
-  height: 100px;
-  overflow: scroll;
-}
 ```
 
 #### JavaScript
 
 ```js
 function dragstartHandler(ev) {
- log(`dragstart: target.id = ${ev.target.id}`);
+ console.log(`dragstart: target.id = ${ev.target.id}`);
  // Add this element's id to the drag payload so the drop handler will
  // know which element to add to its tree
  ev.dataTransfer.setData("text/plain", ev.target.id);
@@ -77,9 +72,9 @@ function dropHandler(ev) {
  const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Print each item's "kind" and "type"
- if (ev.dataTransfer.items != null) {
+ if (ev.dataTransfer.items) {
    for (const item of ev.dataTransfer.items) {
-     log(`kind = ${item.kind}, type = ${item.type}`);
+     console.log(`kind = ${item.kind}, type = ${item.type}`);
    }
  }
 }
@@ -98,12 +93,6 @@ source1.addEventListener("dragstart", dragstartHandler)
 source2.addEventListener("dragstart", dragstartHandler)
 target.addEventListener("dragover", dragoverHandler)
 target.addEventListener("drop", dropHandler)
-
-function log(message) {
-  const output = document.querySelector("#output");
-  output.textContent = `${output.textContent}\n${message}`;
-  output.scrollTop = output.scrollHeight;
-}
 
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => document.location.reload());

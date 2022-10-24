@@ -6,15 +6,16 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "expression closures are deprecated" occurs when the
-non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
-syntax (shorthand function syntax) is used.
+non-standard expression closure
+syntax (shorthand function syntax) is used. This syntax is now removed and the warning message is obsolete.
 
 ## Message
 
-```js
+```
 Warning: expression closures are deprecated
 ```
 
@@ -24,10 +25,10 @@ Warning. JavaScript execution won't be halted.
 
 ## What went wrong?
 
-The non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
+The non-standard expression closure
 syntax (shorthand function syntax) is deprecated and shouldn't be used
-anymore. This syntax will be removed entirely in [bug 1083458](https://bugzilla.mozilla.org/show_bug.cgi?id=1083458) and
-scripts using it will throw a {{jsxref("SyntaxError")}} then.
+anymore. This syntax has been removed entirely in [bug 1083458](https://bugzilla.mozilla.org/show_bug.cgi?id=1083458) and
+scripts using it will throw a {{jsxref("SyntaxError")}} in newer versions of Firefox.
 
 ## Examples
 
@@ -37,10 +38,10 @@ Expression closures omit curly braces or return statements from function declara
 or from method definitions in objects.
 
 ```js example-bad
-var x = function() 1;
+var x = function () 1;
 
 var obj = {
-  count: function() 1
+  count: function () 1
 };
 ```
 
@@ -50,10 +51,10 @@ To convert the non-standard expression closures syntax to standard ECMAScript sy
 you can add curly braces and return statements.
 
 ```js example-good
-var x = function() { return 1; }
+const x = function () { return 1; }
 
-var obj = {
-  count: function() { return 1; }
+const obj = {
+  count() { return 1; }
 };
 ```
 
@@ -62,7 +63,7 @@ var obj = {
 Alternatively, you can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 
 ```js example-good
-var x = () => 1;
+const x = () => 1;
 ```
 
 ### Standard syntax using shorthand method syntax
@@ -76,10 +77,10 @@ var obj = {
 };
 ```
 
-With ES2015 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
+With [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
 
 ```js example-good
-var obj = {
+const obj = {
   get x() { return 1 },
   set x(v) { this.v = v }
 };
@@ -87,6 +88,5 @@ var obj = {
 
 ## See also
 
-- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
 - [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)

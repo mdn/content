@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: api.Location.search
 ---
+
 {{ApiRef("Location")}}
 
 The **`search`** property of the {{domxref("Location")}}
@@ -29,12 +30,12 @@ A string.
 
 ```js
 // Let an <a id="myAnchor" href="/en-US/docs/Location.search?q=123"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var queryString = anchor.search; // Returns:'?q=123'
+const anchor = document.getElementById("myAnchor");
+const queryString = anchor.search; // Returns:'?q=123'
 
 // Further parsing:
-let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q")); // is the number 123
+const params = new URLSearchParams(queryString);
+const q = parseInt(params.get("q")); // is the number 123
 ```
 
 ## Specifications

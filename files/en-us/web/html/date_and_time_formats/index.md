@@ -123,15 +123,15 @@ Before getting into the intricacies of how date and time strings are written and
 
 ## Basics
 
-Before looking at the various formats of date and time related strings used by HTML elements, it is helpful to understand a few fundamental facts about the way they're defined. HTML uses a variation of the {{interwiki("wikipedia", "ISO 8601")}} standard for its date and time strings. It's worth reviewing the descriptions of the formats you're using in order to ensure that your strings are in fact compatible with HTML, as the HTML specification includes algorithms for parsing these strings that is actually more precise than ISO 8601, so there can be subtle differences in how date and time strings are expected to look.
+Before looking at the various formats of date and time related strings used by HTML elements, it is helpful to understand a few fundamental facts about the way they're defined. HTML uses a variation of the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard for its date and time strings. It's worth reviewing the descriptions of the formats you're using in order to ensure that your strings are in fact compatible with HTML, as the HTML specification includes algorithms for parsing these strings that is actually more precise than ISO 8601, so there can be subtle differences in how date and time strings are expected to look.
 
 ### Character set
 
-Dates and times in HTML are always strings which use the {{interwiki("wikipedia", "ASCII")}} character set.
+Dates and times in HTML are always strings which use the [ASCII](https://en.wikipedia.org/wiki/ASCII) character set.
 
 ### Year numbers
 
-In order to simplify the basic format used for date strings in HTML, the specification requires that all years be given using the modern (or **proleptic**) {{interwiki("wikipedia", "Gregorian calendar")}}. While user interfaces may allow entry of dates using other calendars, the underlying value always uses the Gregorian calendar.
+In order to simplify the basic format used for date strings in HTML, the specification requires that all years be given using the modern (or **proleptic**) [Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar). While user interfaces may allow entry of dates using other calendars, the underlying value always uses the Gregorian calendar.
 
 While the Gregorian calendar wasn't created until the year 1582 (replacing the similar Julian calendar), for HTML's purposes, the Gregorian calendar is extended back to the year 1 C.E. Make sure any older dates account for this.
 
@@ -287,7 +287,7 @@ A time string can specify a time with precision to the minute, second, or to the
 
 There are some additional basic rules:
 
-- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00`–`23` are permitted.
+- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00` – `23` are permitted.
 - The minute must be a two-digit number between `00` and `59`. No values outside that range are allowed.
 - If the number of seconds is omitted (to specify a time accurate only to the minute), no colon should follow the number of minutes.
 - If specified, the integer portion of the number of seconds must be between `00` and `59`. You _cannot_ specify leap seconds by using values like `60` or `61`.
@@ -362,8 +362,8 @@ A global date and time string specifies a date and time as well as the time zone
 
 A time zone offset string specifies the offset in either a positive or a negative number of hours and minutes from the standard time base. There are two standard time bases, which are very close to the same, but not exactly the same:
 
-- For dates after the establishment of {{interwiki("wikipedia", "Coordinated Universal Time")}} (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
-- For dates prior to UTC, the time base is instead expressed in terms of {{interwiki("wikipedia", "UT1")}}, which is the contemporary Earth solar time at the prime meridian.
+- For dates after the establishment of [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
+- For dates prior to UTC, the time base is instead expressed in terms of [UT1](https://en.wikipedia.org/wiki/UT1), which is the contemporary Earth solar time at the prime meridian.
 
 The time zone string is appended immediately following the time in the date and time string. You can specify "`Z`" as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
 

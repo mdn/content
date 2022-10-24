@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentType.before
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.before()`** method inserts a set of
@@ -23,10 +24,10 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 before(param1)
 before(param1, param2)
-before(param1, param2, /* ... ,*/ paramN)
+before(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

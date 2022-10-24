@@ -15,6 +15,7 @@ tags:
   - getUniformLocation
 browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
+
 {{APIRef("WebGL")}}
 
 Part of the [WebGL API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
@@ -45,7 +46,7 @@ The uniform itself is declared in the shader program using GLSL.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniformLocation(program, name)
 ```
 
@@ -79,7 +80,7 @@ getUniformLocation(program, name)
 ### Return value
 
 A {{domxref("WebGLUniformLocation")}} value indicating the location of the named
-variable, if it exists. If the specified variable doesn't exist, {{jsxref("null")}} is
+variable, if it exists. If the specified variable doesn't exist, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is
 returned instead.
 
 The `WebGLUniformLocation` is an opaque value used to uniquely identify the

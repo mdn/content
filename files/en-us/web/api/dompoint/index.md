@@ -16,7 +16,8 @@ tags:
   - VR
 browser-compat: api.DOMPoint
 ---
-{{APIRef("DOM")}}
+
+{{APIRef("Geometry Interfaces")}}
 
 A **`DOMPoint`** object represents a 2D or 3D point in a coordinate system; it includes values for the coordinates in up to three dimensions, as well as an optional perspective value. `DOMPoint` is based on {{domxref("DOMPointReadOnly")}} but allows its properties' values to be changed.
 
@@ -29,27 +30,29 @@ In general, a positive `x` component represents a position to the right of the o
 - {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
   - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or an object to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.
 
-## Methods
+## Instance properties
 
-_`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
+_`DOMPoint` may also inherit properties from its parent, {{domxref("DOMPointReadOnly")}}._
+
+- {{domxref("DOMPoint.x")}}
+  - : The `x` coordinate of the `DOMPoint`.
+- {{domxref("DOMPoint.y")}}
+  - : The `y` coordinate of the `DOMPoint`.
+- {{domxref("DOMPoint.z")}}
+  - : The `z` coordinate of the `DOMPoint`.
+- {{domxref("DOMPoint.w")}}
+  - : The perspective value of the `DOMPoint`.
+
+## Instance methods
+
+_`DOMPoint` inherits instance methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
 ## Static methods
 
+_`DOMPoint` may also inherit static methods from its parent, {{domxref("DOMPointReadOnly")}}._
+
 - {{domxref("DOMPoint.fromPoint()", "DOMPoint.fromPoint()")}}
   - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties) which provides the values for its properties.
-
-## Properties
-
-_`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
-
-- {{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}
-  - : The `x` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}
-  - : The `y` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}
-  - : The `z` coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}
-  - : The perspective value of the `DOMPoint`.
 
 ## Examples
 
@@ -63,14 +66,9 @@ function onXRFrame(time, xrFrame) {
     let position = viewerPose.transform.position;
     let orientation = viewerPose.transform.orientation;
 
-    console.log('XR Viewer Position: {x: ' + roundToTwo(position.x)
-                                 + ', y: ' + roundToTwo(position.y)
-                                 + ', z: ' + roundToTwo(position.z));
+    console.log(`XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(position.y)}, z: ${roundToTwo(position.z)}`);
 
-    console.log('XR Viewer Orientation: {x: ' + roundToTwo(orientation.x)
-                                    + ', y: ' + roundToTwo(orientation.y)
-                                    + ', z: ' + roundToTwo(orientation.z)
-                                    + ', w: ' + roundToTwo(orientation.w));
+    console.log(`XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(orientation.y)}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`);
   }
 }
 ```

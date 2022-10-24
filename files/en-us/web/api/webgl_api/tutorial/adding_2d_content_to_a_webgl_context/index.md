@@ -14,11 +14,12 @@ tags:
   - WebGL
   - WebGL API
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
-Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), you can start rendering into it. A simple thing we can do is draw a simple square untextured plane, so let's start there, by building code to draw a square plane.
+Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), you can start rendering into it. A simple thing we can do is draw an untextured square plane, so let's start there.
 
-The complete source code for this project is [available on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2).
+The complete source code for this project is [available on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2).
 
 > **Note:** This project uses the [glMatrix](https://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
@@ -40,7 +41,7 @@ Each time a shape is rendered, the vertex shader is run for each vertex in the s
 
 The vertex shader must perform the needed transforms on the vertex's position, make any other adjustments or calculations it needs to make on a per-vertex basis, then return the transformed vertex by saving it in a special variable provided by GLSL, called `gl_Position`.
 
-The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in [varyings](/en-US/docs/Web/API/WebGL_API/Data#varyings) or [attributes](/en-US/docs/Web/API/WebGL_API/Data#attributes) as appropriate to be shared with the fragment shader.
+The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{Glossary("texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in [varyings](/en-US/docs/Web/API/WebGL_API/Data#varyings) or [attributes](/en-US/docs/Web/API/WebGL_API/Data#attributes) as appropriate to be shared with the fragment shader.
 
 Our vertex shader below receives vertex position values from an attribute we define called `aVertexPosition`. That position is then multiplied by two 4x4 matrices we provide called `uProjectionMatrix` and `uModelViewMatrix`; `gl_Position` is set to the result. For more info on projection and other matrixes [you might find this article useful](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
@@ -99,7 +100,7 @@ function initShaderProgram(gl, vsSource, fsSource) {
   // If creating the shader program failed, alert
 
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
+    alert(`Unable to initialize the shader program: ${gl.getProgramInfoLog(shaderProgram)}`);
     return null;
   }
 
@@ -124,7 +125,7 @@ function loadShader(gl, type, source) {
   // See if it compiled successfully
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    alert('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+    alert(`An error occurred compiling the shaders: ${gl.getShaderInfoLog(shader)}`);
     gl.deleteShader(shader);
     return null;
   }
@@ -164,7 +165,7 @@ After we've created a shader program we need to look up the locations that WebGL
 
 ## Creating the square plane
 
-Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.
+Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more — and more complex — 3D objects.
 
 ```js
 function initBuffers(gl) {
@@ -300,9 +301,9 @@ The first step is to clear the canvas to our background color; then we establish
 
 Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for `aVertexPosition` and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample2/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Matrix utility operations
 

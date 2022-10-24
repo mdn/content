@@ -1,6 +1,7 @@
 ---
 title: border
 slug: Web/CSS/border
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders
@@ -11,6 +12,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border
 ---
+
 {{CSSRef("CSS Borders")}}
 
 The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
@@ -124,5 +126,6 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
+- {{Cssxref("outline")}}
 - [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
 - [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

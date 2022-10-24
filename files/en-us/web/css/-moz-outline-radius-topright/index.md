@@ -1,6 +1,7 @@
 ---
-title: '-moz-outline-radius-topright'
+title: "-moz-outline-radius-topright"
 slug: Web/CSS/-moz-outline-radius-topright
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,15 +10,17 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.-moz-outline-radius-topright
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 In Mozilla applications, the **`-moz-outline-radius-topright`** [CSS](/en-US/docs/Web/CSS) property can be used to round the top-right corner of an element's {{cssxref("outline")}}.
 
 ## Syntax
 
-The value of `-moz-outline-radius-topright` is either a CSS [`<length>`](/en-US/docs/Web/CSS/length) or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The [`calc()`](</en-US/docs/Web/CSS/calc()>) function may be used as well.
+The value of `-moz-outline-radius-topright` is either a CSS [`<length>`](/en-US/docs/Web/CSS/length) or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The [`calc()`](/en-US/docs/Web/CSS/calc) function may be used as well.
 
 ### Values
 
@@ -32,7 +35,10 @@ The value of `-moz-outline-radius-topright` is either a CSS [`<length>`](/en-US/
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-moz-outline-radius-topright =
+  <outline-radius>
+```
 
 ## Examples
 

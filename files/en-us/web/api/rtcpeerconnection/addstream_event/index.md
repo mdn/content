@@ -14,9 +14,11 @@ tags:
   - WebRTC API
   - addStream
   - events
+  - Non-standard
 browser-compat: api.RTCPeerConnection.addstream_event
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The obsolete **`addstream`** event is sent to an {{domxref("RTCPeerConnection")}} when new media, in the form of a {{domxref("MediaStream")}} object, has been added to it.
 
@@ -31,14 +33,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('addstream', event => { });
+addEventListener('addstream', (event) => { });
 
-onaddstream = event => { };
+onaddstream = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamEvent")}}
 
@@ -46,7 +48,7 @@ An {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 _A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
 
-- {{domxref("MediaStreamEvent.stream")}} {{readOnlyInline}}
+- {{domxref("MediaStreamEvent.stream")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("MediaStream")}} containing the stream associated with the event.
 
 ## Examples
@@ -55,11 +57,11 @@ This example looks to determine if the user's browser supports the {{domxref("RT
 
 ```js
 if (pc.addTrack !== undefined) {
-  pc.ontrack = ev => {
-    ev.streams.forEach(stream => doAddStream(stream));
+  pc.ontrack = (ev) => {
+    ev.streams.forEach((stream) => doAddStream(stream));
   }
 } else {
-  pc.onaddstream = ev => {
+  pc.onaddstream = (ev) => {
     doAddStream(ev.stream);
   }
 }
@@ -70,7 +72,7 @@ This calls a function `doAddStream()` once for each stream being added to the {{
 You can also use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to set an event listener:
 
 ```js
-pc.addEventListener("addstream", ev => doAddStream(ev.stream), false);
+pc.addEventListener("addstream", (ev) => doAddStream(ev.stream), false);
 ```
 
 ## Browser compatibility

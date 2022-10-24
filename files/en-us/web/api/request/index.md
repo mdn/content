@@ -12,6 +12,7 @@ tags:
   - request
 browser-compat: api.Request
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Request`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents a resource request.
@@ -23,38 +24,38 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.Request","Request()")}}
   - : Creates a new `Request` object.
 
-## Properties
+## Instance properties
 
-- {{domxref("Request.body")}} {{readonlyInline}}
+- {{domxref("Request.body")}} {{ReadOnlyInline}}
   - : A {{domxref("ReadableStream")}} of the body contents.
-- {{domxref("Request.bodyUsed")}} {{readonlyInline}}
+- {{domxref("Request.bodyUsed")}} {{ReadOnlyInline}}
   - : Stores `true` or `false` to indicate whether or not the body has been used in a request yet.
-- {{domxref("Request.cache")}} {{readonlyInline}}
+- {{domxref("Request.cache")}} {{ReadOnlyInline}}
   - : Contains the cache mode of the request (e.g., `default`, `reload`, `no-cache`).
-- {{domxref("Request.credentials")}} {{readonlyInline}}
+- {{domxref("Request.credentials")}} {{ReadOnlyInline}}
   - : Contains the credentials of the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : Returns a string describing the request's destination. This is a string indicating the type of content being requested.
-- {{domxref("Request.headers")}} {{readonlyInline}}
+- {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : Contains the associated {{domxref("Headers")}} object of the request.
-- {{domxref("Request.integrity")}} {{readonlyInline}}
+- {{domxref("Request.integrity")}} {{ReadOnlyInline}}
   - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-- {{domxref("Request.method")}} {{readonlyInline}}
+- {{domxref("Request.method")}} {{ReadOnlyInline}}
   - : Contains the request's method (`GET`, `POST`, etc.)
-- {{domxref("Request.mode")}} {{readonlyInline}}
+- {{domxref("Request.mode")}} {{ReadOnlyInline}}
   - : Contains the mode of the request (e.g., `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.priority")}} {{readonlyInline}}
+- {{domxref("Request.priority")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Contains the request's priority hint (e.g., `high`, `low`, `auto`).
-- {{domxref("Request.redirect")}} {{readonlyinline}}
+- {{domxref("Request.redirect")}} {{ReadOnlyInline}}
   - : Contains the mode for how redirects are handled. It may be one of `follow`, `error`, or `manual`.
-- {{domxref("Request.referrer")}} {{readonlyInline}}
+- {{domxref("Request.referrer")}} {{ReadOnlyInline}}
   - : Contains the referrer of the request (e.g., `client`).
-- {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
+- {{domxref("Request.referrerPolicy")}} {{ReadOnlyInline}}
   - : Contains the referrer policy of the request (e.g., `no-referrer`).
-- {{domxref("Request.url")}} {{readonlyInline}}
+- {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 
-## Methods
+## Instance methods
 
 - {{domxref("Request.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.
@@ -87,8 +88,8 @@ You could then fetch this request by passing the `Request` object in as a parame
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -110,17 +111,17 @@ You could then fetch this API request by passing the `Request` object in as a pa
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
       throw new Error('Something went wrong on API server!');
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
-    // ...
-  }).catch(error => {
+    // …
+  }).catch((error) => {
     console.error(error);
   });
 ```

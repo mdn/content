@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Property
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -33,12 +34,13 @@ a _PlayTo_ device. This is done to conform to URI standards.
 ## Example
 
 ```html
-  <video src="http://www.contoso.com/videos/video.mp4"
-       msPlayToPreferredSourceUri="http://www.contoso.com/catalogid=1234" />
+<video
+  src="http://www.contoso.com/videos/video.mp4"
+  msPlayToPreferredSourceUri="http://www.contoso.com/catalogid=1234" />
 ```
 
 ```js
-  var video = document.createElement('video');
+  const video = document.createElement('video');
   document.body.appendChild(video);
 
   video.src = "http://www.contoso.com/videos/video.mp4";
@@ -47,7 +49,7 @@ a _PlayTo_ device. This is done to conform to URI standards.
 
 ## See also
 
-- [Microsoft PlayReady](https://docs.microsoft.com/en-us/playready/)
+- [Microsoft PlayReady](https://docs.microsoft.com/playready/)
   content access and protection technology is a set of technologies that can be used to
   distribute audio/video content more securely over a network, and help prevent the
   unauthorized use of this content.

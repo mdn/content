@@ -13,6 +13,7 @@ tags:
   - delegation
   - header
 ---
+
 {{HTTPSidebar}}
 
 [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows you to control which origins can use which features, both in the top-level page and in embedded frames. Essentially, you write a policy, which is an allowed list of origins for each feature. For every feature controlled by Feature Policy, the feature is only enabled in the current document or frame if its origin matches the allowed list of origins.
@@ -36,7 +37,7 @@ An `allowlist` is a list of origins that takes one or more of the following valu
   > **Note:** The `'src'` origin is used in the iframe `allow` attribute only, and is the _default_ `allowlist` value.
 
 - `'none'`: The feature is disabled in top-level and nested browsing contexts.
-- \<origin(s)>: The feature is allowed for specific origins (for example, https\://example.com). Origins should be separated by a space.
+- \<origin(s)>: The feature is allowed for specific origins (for example, `https://example.com`). Origins should be separated by a space.
 
 The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
 
@@ -88,20 +89,21 @@ The second way to use Feature Policy is for controlling content within an iframe
 For example, allow all browsing contexts within this iframe to use fullscreen:
 
 ```html
-<iframe src="https://example.com..." allow="fullscreen"></iframe>
+<iframe src="https://example.com/…" allow="fullscreen"></iframe>
 ```
 
 The default `<iframe>` [allowlist](#allowlist) value is `'src'`, so this is equivalent to:
 
 ```html
-<iframe src="https://example.com..." allow="fullscreen 'src'"></iframe>
+<iframe src="https://example.com/…" allow="fullscreen 'src'"></iframe>
 ```
 
 This example allows `<iframe>` content on a particular origin to access the user's location:
 
 ```html
-<iframe src="https://google-developers.appspot.com/demos/..."
-        allow="geolocation https://google-developers.appspot.com"></iframe>
+<iframe
+  src="https://google-developers.appspot.com/demos/…"
+  allow="geolocation https://google-developers.appspot.com"></iframe>
 ```
 
 Similar to the HTTP header, several features can be controlled at the same time by specifying a semicolon-separated list of policy directives.
@@ -109,7 +111,7 @@ Similar to the HTTP header, several features can be controlled at the same time 
 For example, this blocks the `<iframe>` from using the camera and microphone:
 
 ```html
-<iframe allow="camera 'none'; microphone 'none'">
+<iframe allow="camera 'none'; microphone 'none'">…</iframe>
 ```
 
 ## Inheritance of policy for embedded content
@@ -148,7 +150,9 @@ Feature-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-i
 Using the `<iframe>` `allow` attribute:
 
 ```html
-<iframe src="https://example.com..." allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"></iframe>
+<iframe
+  src="https://example.com/…"
+  allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"></iframe>
 ```
 
 ## See also

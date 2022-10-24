@@ -15,6 +15,7 @@ tags:
   - size
 browser-compat: api.HTMLImageElement.height
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`height`** property of the
@@ -48,11 +49,14 @@ otherwise, it's drawn at 300px.
 
 ```html
 <p>Image height: <span class="size">?</span>px (resize to update)</p>
-<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
-      alt="Clock"
-      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-          /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 200px, 300px">
+<img
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  alt="Clock"
+  srcset="
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+  "
+  sizes="(max-width: 400px) 200px, 300px" />
 ```
 
 ### JavaScript
@@ -61,10 +65,10 @@ The JavaScript code looks at the `height` to determine the height of the
 image given the width at which it's currently drawn.
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateHeight = event => { output.innerText = clockImage.height; };
+const updateHeight = (event) => { output.innerText = clockImage.height; };
 
 window.addEventListener("load", updateHeight);
 window.addEventListener("resize", updateHeight);
@@ -72,9 +76,9 @@ window.addEventListener("resize", updateHeight);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
-This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
+This example may be easier to try out {{LiveSampleLink('Examples', 'in its own window')}}.
 
 ## Specifications
 

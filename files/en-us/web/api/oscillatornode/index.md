@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`OscillatorNode`** interface represents a periodic waveform, such as a sine wave. It is an {{domxref("AudioScheduledSourceNode")}} audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.
@@ -45,9 +46,9 @@ The **`OscillatorNode`** interface represents a periodic waveform, such as a sin
 ## Constructor
 
 - {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
-  - : Creates a new instance of an `OscillatorNode` object, optionally providing an object specifying default values for the node's [properties](#properties).  As an alternative, you can use the {{domxref("BaseAudioContext.createOscillator()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
+  - : Creates a new instance of an `OscillatorNode` object, optionally providing an object specifying default values for the node's [properties](#properties). As an alternative, you can use the {{domxref("BaseAudioContext.createOscillator()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}, and adds the following properties:_
 
@@ -61,9 +62,9 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}, a
 ### Event handlers
 
 - {{domxref("OscillatorNode.onended")}}
-  - : Sets the event handler for the {{event("ended")}} event, which fires when the tone has stopped playing.
+  - : Sets the event handler for the {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event, which fires when the tone has stopped playing.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and adds the following:_
 
@@ -76,7 +77,7 @@ _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and 
 
 ## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context

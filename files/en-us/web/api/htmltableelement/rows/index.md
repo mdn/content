@@ -15,6 +15,7 @@ tags:
   - rows
 browser-compat: api.HTMLTableElement.rows
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLTableElement")}}

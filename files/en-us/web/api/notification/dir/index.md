@@ -12,6 +12,7 @@ tags:
   - dir
 browser-compat: api.Notification.dir
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The `dir` read-only property of the {{domxref("Notification")}} interface indicates the text direction of the notification, as specified in the `dir` option of the {{domxref("Notification.Notification","Notification()")}} constructor.
@@ -34,12 +35,12 @@ A string specifying the text direction. Possible values are:
 The following snippet fires a notification; a simple `options` object is created, then the notification is fired using the `Notification()` constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   dir: 'rtl'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.dir) // should return 'rtl'
 ```

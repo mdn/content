@@ -14,8 +14,11 @@ tags:
   - full screen
   - fullscreen
   - screen
-spec-urls: https://fullscreen.spec.whatwg.org/
+browser-compat:
+  - api.Document.fullscreen
+  - api.Document.fullscreenEnabled
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into fullscreen mode, as well as how to detect when the browser enters or exits fullscreen mode.
@@ -36,7 +39,7 @@ Let's consider this {{HTMLElement("video")}} element:
 We can put that video into fullscreen mode as follows:
 
 ```js
-var elem = document.getElementById("myvideo");
+const elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -59,7 +62,7 @@ On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you n
 
 ### Notification
 
-When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
+When fullscreen mode is successfully engaged, the document which contains the element receives a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event. Note that the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
 
 ### When a fullscreen request fails
 
@@ -97,8 +100,8 @@ In this example, a video is presented in a web page. Pressing the <kbd>Return</k
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
     toggleFullScreen();
   }
 }, false);
@@ -112,10 +115,8 @@ This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
   }
 }
 ```
@@ -185,13 +186,7 @@ For the moment not all browsers are implementing the unprefixed version of the A
 
 ## Browser compatibility
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
+{{Compat}}
 
 ## See also
 

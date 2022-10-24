@@ -2,11 +2,12 @@
 title: Firefox 97 for developers
 slug: Mozilla/Firefox/Releases/97
 tags:
-  - '97'
+  - "97"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 97 that affect developers. Firefox 97 was released on February 8, 2022.
@@ -40,7 +41,7 @@ No notable changes
 ### SVG
 
 - The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, can now be used as a property in CSS.
-  It accepts the values [path()](</en-US/docs/Web/CSS/path()>) or `none`. (See {{bug(1744599)}} for details.)
+  It accepts the values [path()](/en-US/docs/Web/CSS/path) or `none`. (See {{bug(1744599)}} for details.)
 
 #### Removals
 

@@ -8,9 +8,13 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mfrac
 ---
+
 {{MathMLRef}}
 
-The MathML `<mfrac>` element is used to display fractions.
+The **`<mfrac>`** [MathML](/en-US/docs/Web/MathML) element is used to display fractions. It can also be used
+to mark up fraction-like objects such as
+[binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient)
+and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).
 
 ## Syntax
 
@@ -20,48 +24,67 @@ The MathML `<mfrac>` element is used to display fractions.
 
 ## Attributes
 
-- `bevelled`
-  - : Specifies the way the fraction is displayed. If `true`, the fraction line is bevelled, which means that numerator and denominator are displayed side by side and separated by a slash (/). Otherwise, if set to `false` (which is the default value), numerator and denominator are on top of each other.
-- `class`, `id`, `style`
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
+
 - `denomalign` {{deprecated_inline}}
   - : The alignment of the denominator under the fraction. Possible values are: `left`, `center` (default), and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- `href`
-  - : Used to set a hyperlink to a specified URI.
 - `linethickness`
-  - : The thickness of the horizontal fraction line. This attributes accepts any [length values](/en-US/docs/Web/CSS/length).
-    The values `medium`, `thin`, and `thick` are deprecated and will be removed in the future.
-- `mathbackground`
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- `mathcolor`
-  - : The text color and also the fraction line color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the thickness of the horizontal fraction line.
 - `numalign` {{deprecated_inline}}
   - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
+
+> **Note:** For the `linethickness` attribute, some browsers may also accept the deprecated values `medium`, `thin` and `thick` (whose exact interpretation is left to implementers) or [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 
-Sample rendering: ![(a/b)/(c/d)](mfrac.png)
+### Simple fraction
 
-Your browser rendering: <math><mfrac bevelled="true"><mfrac><mi>a </mi><mi>b </mi></mfrac><mfrac><mi>c </mi><mi>d</mi></mfrac></mfrac></math>
+The following MathML code should render as a fraction with numerator "a + 2" and
+denominator "3 − b":
 
 ```html
-<math>
-  <mfrac bevelled="true">
-     <mfrac>
-        <mi> a </mi>
-        <mi> b </mi>
-     </mfrac>
-     <mfrac>
-        <mi> c </mi>
-        <mi> d </mi>
-     </mfrac>
+<math display="block">
+  <mfrac>
+    <mrow>
+      <mi>a</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <mo>−</mo>
+      <mi>b</mi>
+    </mrow>
   </mfrac>
 </math>
 ```
+
+{{ EmbedLiveSample('simple_fraction', 700, 200, "", "") }}
+
+### Fraction without bar
+
+The following MathML code should render as a [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient):
+
+```html hidden
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
+```
+
+```html
+<math display="block">
+  <mrow>
+    <mo>(</mo>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+</math>
+```
+
+{{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
 
 ## Specifications
 

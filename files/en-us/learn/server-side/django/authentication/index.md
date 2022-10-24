@@ -16,6 +16,7 @@ tags:
   - server-side
   - sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
 In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
@@ -59,17 +60,17 @@ The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of
 
 ```python
 INSTALLED_APPS = [
-    ...
-    'django.contrib.auth',  #Core authentication framework and its default models.
-    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
-    ....
+    # …
+    'django.contrib.auth',  # Core authentication framework and its default models.
+    'django.contrib.contenttypes',  # Django content type system (allows permissions to be associated with models).
+    # …
 
 MIDDLEWARE = [
-    ...
-    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
-    ...
-    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
-    ....
+    # …
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Manages sessions across requests
+    # …
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Associates users with requests using sessions.
+    # …
 ```
 
 ## Creating users and groups
@@ -140,7 +141,7 @@ In this section, we show how to integrate the default system into the _LocalLibr
 Add the following to the bottom of the project urls.py file (**locallibrary/locallibrary/urls.py**) file:
 
 ```python
-#Add Django site authentication urls (for login, logout, password management)
+# Add Django site authentication urls (for login, logout, password management)
 
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
@@ -178,12 +179,12 @@ The next step is to create a registration directory on the search path and then 
 
 The URLs (and implicitly, views) that we just added expect to find their associated templates in a directory **/registration/** somewhere in the templates search path.
 
-For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
+For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, that is, the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > **Note:** Your folder structure should now look like the below:
 >
 > ```
-> locallibrary/   #Django project folder
+> locallibrary/   # Django project folder
 >   catalog/
 >   locallibrary/
 >   templates/
@@ -202,13 +203,13 @@ import os # needed by code below
 Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 ```python
-    ...
+    # …
     TEMPLATES = [
       {
-       ...
+       # …
        'DIRS': [os.path.join(BASE_DIR, 'templates')],
        'APP_DIRS': True,
-       ...
+       # …
 ```
 
 ### Login template
@@ -334,7 +335,7 @@ This template provides the text of the HTML email containing the reset link that
 
 ```html
 Someone asked for password reset for email \{{ email }}. Follow the link below:
-\{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
 #### Password reset confirm
@@ -420,20 +421,20 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 ```html
   <ul class="sidebar-nav">
 
-    ...
+    …
 
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+     <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+     <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
   </ul>
 ```
 
 As you can see, we use `if`-`else`-`endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
-We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{request.path}}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
+We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{ request.path }}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
 
 > **Note:** Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.
 
@@ -446,7 +447,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def my_view(request):
-    ...
+    # …
 ```
 
 > **Note:** You can do the same sort of thing manually by testing on `request.user.is_authenticated`, but the decorator is much more convenient!
@@ -457,7 +458,7 @@ Similarly, the easiest way to restrict access to logged-in users in your class-b
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class MyView(LoginRequiredMixin, View):
-    ...
+    # …
 ```
 
 This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of "`next`" to insert the current absolute path (`redirect_field_name`).
@@ -535,10 +536,10 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('book','imprint', 'id')
+            'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back','borrower')
+            'fields': ('status', 'due_back', 'borrower')
         }),
     )
 ```
@@ -561,7 +562,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     """Generic class-based view listing books on loan to current user."""
     model = BookInstance
-    template_name ='catalog/bookinstance_list_borrowed_user.html'
+    template_name = 'catalog/bookinstance_list_borrowed_user.html'
     paginate_by = 10
 
     def get_queryset(self):
@@ -595,7 +596,7 @@ Now, all we need to do for this page is add a template. First, create the templa
 
       {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
-        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{bookinst.book.title}}</a> (\{{ bookinst.due_back }})
+        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{ bookinst.book.title }}</a> (\{{ bookinst.due_back }})
       </li>
       {% endfor %}
     </ul>
@@ -624,9 +625,9 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 
    <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
 
-   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+   <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-   <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+   <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
  </ul>
 ```
@@ -651,9 +652,9 @@ For example, we might define a permission to allow a user to mark that a book ha
 
 ```python
 class BookInstance(models.Model):
-    ...
+    # …
     class Meta:
-        ...
+        # …
         permissions = (("can_mark_returned", "Set book as returned"),)
 ```
 
@@ -684,7 +685,7 @@ from django.contrib.auth.decorators import permission_required
 @permission_required('catalog.can_mark_returned')
 @permission_required('catalog.can_edit')
 def my_view(request):
-    ...
+    # …
 ```
 
 A permission-required mixin for class-based views.
@@ -713,7 +714,7 @@ class MyView(PermissionRequiredMixin, View):
 > @login_required
 > @permission_required('catalog.can_mark_returned', raise_exception=True)
 > def my_view(request):
->     ...
+>     # …
 > ```
 
 ### Example

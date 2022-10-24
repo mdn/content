@@ -30,8 +30,7 @@ If the foreign content comes from an image obtained from either as {{domxref("HT
 Calling any of the following on a tainted canvas will result in an error:
 
 - Calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} on the canvas's context
-- Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}} on the {{HTMLElement("canvas")}} element itself
-- Calling {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} on the canvas
+- Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}, {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} or {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}} on the {{HTMLElement("canvas")}} element itself
 
 Attempting any of these when the canvas is tainted will cause a `SecurityError` to be thrown. This protects users from having private data exposed by using images to pull information from remote web sites without permission.
 
@@ -71,15 +70,17 @@ The code that starts the download (say, when the user clicks a "Download" button
 ```js
 function startDownload() {
   let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+  let imageDescription = "The Mozilla logo";
 
   downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
+  downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
 }
 ```
 
-We're using a hard-coded URL here (`imageURL`), but that could easily come from anywhere. To begin downloading the image, we create a new {{domxref("HTMLImageElement")}} object by using the {{domxref("HTMLImageElement.Image", "Image()")}} constructor. The image is then configured to allow cross-origin downloading by setting its `crossOrigin` attribute to `"Anonymous"` (that is, allow non-authenticated downloading of the image cross-origin). An event listener is added for the {{domxref("Window/load_event", "load")}} event being fired on the image element, which means the image data has been received.
+We're using a hard-coded URL (`imageURL`) and associated descriptive text (`imageDescription`) here, but that could easily come from anywhere. To begin downloading the image, we create a new {{domxref("HTMLImageElement")}} object by using the {{domxref("HTMLImageElement.Image", "Image()")}} constructor. The image is then configured to allow cross-origin downloading by setting its `crossOrigin` attribute to `"Anonymous"` (that is, allow non-authenticated downloading of the image cross-origin). An event listener is added for the {{domxref("Window/load_event", "load")}} event being fired on the image element, which means the image data has been received. Alternative text is added to the image; while `<canvas>` does not support the `alt` attribute, the value can be used to set an `aria-label` or the canvas's inner content.
 
 Finally, the image's {{domxref("HTMLImageElement.src", "src")}} attribute is set to the URL of the image to download; this triggers the download to begin.
 
@@ -89,27 +90,27 @@ The code that handles the newly-downloaded image is found in the `imageReceived(
 
 ```js
 function imageReceived() {
-  let canvas = document.createElement("canvas");
-  let context = canvas.getContext("2d");
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
 
   canvas.width = downloadedImg.width;
   canvas.height = downloadedImg.height;
+  canvas.innerText = downloadedImg.alt;
 
   context.drawImage(downloadedImg, 0, 0);
   imageBox.appendChild(canvas);
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
-    console.log("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 ```
 
 `imageReceived()` is called to handle the `"load"` event on the `HTMLImageElement` that receives the downloaded image. This event is triggered once the downloaded data is all available. It begins by creating a new {{HTMLElement("canvas")}} element that we'll use to convert the image into a data URL, and by getting access to the canvas's 2D drawing context ({{domxref("CanvasRenderingContext2D")}}) in the variable `context`.
 
-The canvas's size is adjusted to match the received image, then the image is drawn into the canvas using {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}. The canvas is then inserted into the document so the image is visible.
+The canvas's size is adjusted to match the received image, the inner text is set to the image description, then the image is drawn into the canvas using {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}. The canvas is then inserted into the document so the image is visible.
 
 Now it's time to actually save the image locally. To do this, we use the Web Storage API's local storage mechanism, which is accessed through the {{domxref("Window.localStorage", "localStorage")}} global. The canvas method {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} is used to convert the image into a data:// URL representing a PNG image, which is then saved into local storage using {{domxref("Storage.setItem", "setItem()")}}.
 

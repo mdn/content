@@ -6,15 +6,16 @@ tags:
   - Firefox 7
   - Gecko 7
 ---
+
 {{FirefoxSidebar}}
 
-Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers -- both of web content and of Firefox add-ons.
+Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers — both of web content and of Firefox add-ons.
 
 ## Changes for web developers
 
 ### HTML
 
-- The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since {{ gecko("2.0") }}.
+- The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since Gecko 2.0.
 - The {{ domxref("HTMLImageElement") }} `x` and `y` properties have been removed.
 - The {{ domxref("HTMLSelectElement") }} `add()` method `before` parameter is now optional.
 - The {{ HTMLElement("body") }} element's {{ htmlattrxref("background", "body") }} attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
@@ -22,7 +23,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 #### Canvas
 
-- As part of the [Azure project](https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
+- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
 - The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.
@@ -62,7 +63,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The `HTMLInsElement` and `HTMLDelElement` interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.
 - In a effort to conform to the upcoming [DOM4](https://dom.spec.whatwg.org/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
 - Added support for the {{ domxref("window.deviceorientation_event", "ondeviceorientation") }} and {{ domxref("window.devicemotion_event", "ondevicemotion") }} properties on {{ domxref("window") }} objects.
-- {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }} , and {{ domxref("window.moveBy") }} no longer apply to the main window.
+- {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }}, and {{ domxref("window.moveBy") }} no longer apply to the main window.
 
 ### JavaScript
 

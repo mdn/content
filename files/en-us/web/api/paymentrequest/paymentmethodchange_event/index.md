@@ -12,6 +12,7 @@ tags:
   - paymentmethodchange
 browser-compat: api.PaymentRequest.paymentmethodchange_event
 ---
+
 {{APIRef}}
 
 The **`paymentmethodchange`** event is delivered the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when the user changes the payment method within a given payment handler.
@@ -25,14 +26,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paymentmethodchange', event => { });
+addEventListener('paymentmethodchange', (event) => { });
 
-onpaymentmethodchange = event => { };
+onpaymentmethodchange = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentMethodChangeEvent")}}
 
@@ -62,14 +63,14 @@ const paymentRequest = new PaymentRequest(paymentMethods,
 paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange, false);
 
 paymentRequest.show()
-.then(response => response.complete("success"))
-.catch(err => console.log("Error handling payment request: " + err));
+.then((response) => response.complete("success"))
+.catch((err) => console.error(`Error handling payment request: ${err}`));
 ```
 
 The event handler function itself, `handlePaymentChange()`, looks like this:
 
 ```js
-handlePaymentChange = event => {
+handlePaymentChange = (event) => {
   const detailsUpdate = {};
 
   if (event.methodName === "https://apple.com/apple-pay") {
@@ -78,7 +79,7 @@ handlePaymentChange = event => {
   }
 
   event.updateWith(detailsUpdate);
-}, false);
+};
 ```
 
 This begins by looking at the event's {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} property; if that indicates that the user is trying to use Apple Pay, we pass the {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} into a function called `calculateServiceFee()`, which we might create to take the information about the transaction, such as the underlying credit card being used to service the Apple Pay request, and compute and return an object that specifies changes to be applied to the {{domxref("PaymentRequest")}} in order to add any service fees that the payment method might require.

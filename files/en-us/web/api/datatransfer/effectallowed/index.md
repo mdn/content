@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.effectAllowed
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.effectAllowed`** property specifies the
@@ -70,7 +71,9 @@ In this example we set `effectAllowed` to `"move"` in the `dragstart` handler.
 ```html
 <div>
   <p id="source" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
 <div id="target">Drop Zone</div>
 <pre id="output"></pre>
@@ -145,7 +148,7 @@ reset.addEventListener("click", () => document.location.reload());
 
 #### Result
 
-{{EmbedLiveSample("Setting and getting effectAllowed", 0, 400)}}
+{{EmbedLiveSample("Setting effectAllowed", 0, 400)}}
 
 ## Specifications
 

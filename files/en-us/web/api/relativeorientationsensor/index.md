@@ -15,6 +15,7 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.
@@ -30,11 +31,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("RelativeOrientationSensor.RelativeOrientationSensor", "RelativeOrientationSensor()")}}
   - : Creates a new `RelativeOrientationSensor` object.
 
-## Properties
+## Instance properties
 
-_No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
+_No specific properties; inherits properties from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
@@ -58,8 +59,8 @@ sensor.addEventListener('reading', () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error => {
-  if (event.error.name == 'NotReadableError') {
+sensor.addEventListener('error', (error) => {
+  if (event.error.name === 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });
@@ -74,10 +75,10 @@ Using orientation sensors requires requesting permissions for multiple device se
 const sensor = new RelativeOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),
              navigator.permissions.query({ name: "gyroscope" })])
-       .then(results => {
-         if (results.every(result => result.state === "granted")) {
+       .then((results) => {
+         if (results.every((result) => result.state === "granted")) {
            sensor.start();
-           ...
+           // ...
          } else {
            console.log("No permissions to use RelativeOrientationSensor.");
          }

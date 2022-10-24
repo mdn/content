@@ -8,9 +8,11 @@ tags:
   - Reference
   - open
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.open
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that the operating system opens the HID device.
 
@@ -18,7 +20,7 @@ The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that 
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 
@@ -41,7 +43,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the connection is op
 
 In the following example, we wait for the HID connection to open before attempting to send or receive data.
 
-```css
+```js
 await device.open();
 ```
 

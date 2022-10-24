@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.maximize
 ---
+
 {{JSRef}}
 
 The
@@ -24,7 +25,7 @@ existing values.
 
 ## Syntax
 
-```js
+```js-nolint
 maximize()
 ```
 
@@ -45,19 +46,22 @@ programmers via the `maximize()` method. `maximize()` only
 affects the main subtags that comprise the [language identifier](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions): language, script, and region subtags.
 Other subtags after the "-u" in the locale identifier are called extension subtags and
 are not affected by the `maximize()` method. Examples of these subtags
-include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
-{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
-  "Locale.numeric")}}.
+include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
+{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric",
+  "numeric")}}.
 
 ## Examples
 
 ### Using maximize
 
 ```js
-let myLocale = new Intl.Locale("fr", {hourCycle: "h24", calendar: "gregory"});
+const myLocale = new Intl.Locale("fr", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr"
 console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
-let myLocMaximized = myLocale.maximize();
+const myLocMaximized = myLocale.maximize();
 
 // Prints "fr-Latn-FR". The "Latn" and "FR" tags are added,
 // since French is only written in the Latin script and is most likely to be spoken in France.
@@ -79,5 +83,5 @@ console.log(myLocMaximized.toString());
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxref("Intl/Locale/baseName", "baseName")}}
 - [Unicode's Likely Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)

@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toUpperCase
 ---
+
 {{JSRef}}
 
 The **`toUpperCase()`** method returns the calling string value
@@ -18,7 +19,7 @@ converted to uppercase (the value will be converted to a string if it isn't one)
 
 ## Syntax
 
-```js
+```js-nolint
 toUpperCase()
 ```
 
@@ -29,7 +30,7 @@ A new string representing the calling string converted to upper case.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : When called on {{jsxref("null")}} or {{jsxref("undefined")}}, for example,
+  - : When called on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, for example,
     `String.prototype.toUpperCase.call(undefined)`.
 
 ## Description
@@ -43,7 +44,7 @@ strings are immutable.
 ### Basic usage
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### Conversion of non-string `this` values to strings
@@ -53,9 +54,9 @@ This method will convert any non-string value to a string, when you set its
 
 ```js
 const a = String.prototype.toUpperCase.call({
-  toString: function toString() {
-    return 'abcdef';
-  }
+  toString() {
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);

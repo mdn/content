@@ -8,6 +8,7 @@ tags:
   - Strict Mode
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt
@@ -15,10 +16,10 @@ to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaS
 
 ## Message
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```
+TypeError: Cannot set property x of #<Object> which has only a getter (V8-based)
 TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type
@@ -45,16 +46,16 @@ property to `30`. For more details see also the
 "use strict";
 
 function Archiver() {
-  var temperature = null;
+  const temperature = null;
   Object.defineProperty(this, 'temperature', {
-    get: function() {
+    get() {
       console.log('get!');
       return temperature;
     }
   });
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 
 arc.temperature = 30;
@@ -69,15 +70,15 @@ example like this:
 "use strict";
 
 function Archiver() {
-  var temperature = null;
-  var archive = [];
+  let temperature = null;
+  const archive = [];
 
   Object.defineProperty(this, 'temperature', {
-    get: function() {
+    get() {
       console.log('get!');
       return temperature;
     },
-    set: function(value) {
+    set(value) {
       temperature = value;
       archive.push({ val: temperature });
     }
@@ -86,7 +87,7 @@ function Archiver() {
   this.getArchive = function() { return archive; };
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;

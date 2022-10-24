@@ -3,10 +3,10 @@ title: WCAG
 slug: Glossary/WCAG
 tags:
   - Accessibility
-  - Glossary
   - WCAG
   - Web Guidelines
 ---
+
 _Web Content Accessibility Guidelines_ (**WCAG**) are a recommendation published by the {{Glossary("WAI","Web Accessibility Initiative")}} group at the {{Glossary("W3C")}}. They outline a set of guidelines for making content accessible primarily for people with disabilities but also for limited-resource devices such as mobile phones.
 
 WCAG 2.0 which superseded WCAG 1.0 was published as a W3C Recommendation on 11 December 2008. It consists of 12 guidelines organized under 4 principles (perceivable, operable, understandable, and robust) and each guideline has testable success criteria.
@@ -19,6 +19,6 @@ WCAG uses three levels of conformance:
 
 ## See also
 
-- {{Interwiki("wikipedia", "Web Content Accessibility Guidelines", "WCAG")}} on Wikipedia
+- [WCAG](https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines) on Wikipedia
 - [Accessibility information on MDN](/en-US/docs/Web/Accessibility/Information_for_Web_authors)
 - [The WCAG 2.0 recommendation at the W3C](https://www.w3.org/TR/WCAG20/)

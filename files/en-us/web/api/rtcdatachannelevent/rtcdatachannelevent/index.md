@@ -9,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannelEvent()`** constructor
@@ -19,8 +20,8 @@ creates a new {{domxref("RTCDataChannelEvent")}} object.
 
 ## Syntax
 
-```js
-new RTCDataChannelEvent(type, options);
+```js-nolint
+new RTCDataChannelEvent(type, options)
 ```
 
 ### Parameters
@@ -43,7 +44,7 @@ In this example, a new {{DOMxRef("RTCPeerConnection.datachannel_event", "datacha
 data channel which already exists.
 
 ```js
-var event = new RTCDataChannelEvent("datachannel", {"channel": dc});
+const event = new RTCDataChannelEvent("datachannel", {"channel": dc});
 ```
 
 ## Specifications

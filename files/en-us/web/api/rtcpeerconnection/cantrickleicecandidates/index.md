@@ -53,8 +53,8 @@ been established, this value is `null`.
 const pc = new RTCPeerConnection();
 
 function waitToCompleteIceGathering(pc) {
-    return new Promise(resolve => {
-        pc.addEventListener('icegatheringstatechange', e => (e.target.iceGatheringState === 'complete') && resolve(pc.localDescription));
+    return new Promise((resolve) => {
+        pc.addEventListener('icegatheringstatechange', (e) => (e.target.iceGatheringState === 'complete') && resolve(pc.localDescription));
     });
 }
 
@@ -70,7 +70,7 @@ async function newPeer(remoteOffer) {
 }
 // Handle error with try/catch
 
-pc.addEventListener('icecandidate', e => (pc.canTrickleIceCandidates) && sendCandidateToPeer(e.candidate));
+pc.addEventListener('icecandidate', (e) => (pc.canTrickleIceCandidates) && sendCandidateToPeer(e.candidate));
 ```
 
 ## Specifications

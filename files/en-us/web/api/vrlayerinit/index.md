@@ -13,6 +13,7 @@ tags:
   - Virtual Reality
   - WebVR
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 The **`VRLayerInit`** dictionary of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a content layer (an {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}) that you want to present in a VR display.
@@ -21,7 +22,7 @@ The **`VRLayerInit`** dictionary of the [WebVR API](/en-US/docs/Web/API/WebVR_AP
 
 You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}}, and present them using the {{domxref("VRDisplay.requestPresent()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("VRLayerInit.leftBounds")}} {{deprecated_inline}}
   - : Defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
@@ -34,25 +35,25 @@ You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}
 
 ```js
 // currently returns an empty array
-var layers = vrDisplay.getLayers();
+let layers = vrDisplay.getLayers();
 
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', function() {
-        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+      btn.addEventListener('click', () => {
+        vrDisplay.requestPresent([{ source: canvas }]).then(() => {
           console.log('Presenting to WebVR display');
 
           // Here it returns an array of VRLayerInit objects
-          var layers = vrDisplay.getLayers();
+          layers = vrDisplay.getLayers();
 
-          ...
+          // …
         });
       });
     }
@@ -62,10 +63,10 @@ if(navigator.getVRDisplays) {
 
 {{domxref("VRLayerInit")}} objects look something like this:
 
-```js
+```
 {
-  leftBounds : [ ... ],
-  rightBounds: [ ... ],
+  leftBounds : [ /* … */ ],
+  rightBounds: [ /* … */ ],
   source: canvasReference
 }
 ```

@@ -12,13 +12,14 @@ tags:
   - setTitle
 browser-compat: webextensions.api.browserAction.setTitle
 ---
+
 {{AddonSidebar}}
 
 Sets the browser action's title. The title is displayed in a tooltip over the browser action's icon. You can pass a `tabId` in or a `windowId` as an optional parameter — if you do this then the title is changed only for the given tab or the given window. Tabs or windows without a specific title will inherit the global title text, which defaults to the [`default_title`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specified in the manifest.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.setTitle(
   details // object
 )
@@ -42,9 +43,9 @@ browser.browserAction.setTitle(
         - if `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
 
-    - `tabId`{{Optional_Inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the title only for the given tab.
-    - `windowId`{{Optional_Inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the title for the given window.
 
 <!---->
@@ -62,10 +63,10 @@ This code switches the title between "this" and "that" each time the user clicks
 
 ```js
 function toggleTitle(title) {
-  if (title == "this") {
-    browser.browserAction.setTitle({title: "that"});
+  if (title === "this") {
+    browser.browserAction.setTitle({ title: "that" });
   } else {
-    browser.browserAction.setTitle({title: "this"});
+    browser.browserAction.setTitle({ title: "this" });
   }
 }
 
@@ -81,7 +82,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +110,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

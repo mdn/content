@@ -34,15 +34,7 @@ img {
 
 While useful for responsive layouts, this causes jank when width and height information are not included, as if no height information is present when the `<img>` element is parsed but before the image has loaded, this CSS effectively has set the height to 0. When the image loads after the page has been initially rendered to the screen, the page reflows and repaints creating a layout shift as it creates space for the newly determined height.
 
-Browsers have a mechanism for sizing images before the actual image is loaded. User agent stylesheets include an {{cssxref("aspect-ratio")}} property that is applied to replaced elements and other related elements that accept `width` and `height` attributes:
-
-```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
-  aspect-ratio: attr(width) / attr(height);
-}
-```
-
-As the selector demonstrates, this user-agent style affects any element acting as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and `<input type="image">`). When such an element has `width` and `height` attributes set on it, its aspect ratio is calculated before load time, and is available to the browser, using the dimensions provided.
+Browsers have a mechanism for sizing images before the actual image is loaded. When an `<img>`, `<video>`, or `<input type="button">` element has `width` and `height` attributes set on it, its aspect ratio is calculated before load time, and is available to the browser, using the dimensions provided.
 
 The aspect ratio is then used to calculate the height and therefore the correct size is applied to the `<img>` element, meaning that the aforementioned jank will not occur, or be minimal if the listed dimensions are not fully accurate, when the image loads.
 

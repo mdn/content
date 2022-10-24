@@ -18,6 +18,7 @@ tags:
   - seek
 browser-compat: api.HTMLMediaElement.currentTime
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}} interface's
@@ -50,7 +51,7 @@ The length of the media in seconds can be determined using the
 ## Examples
 
 ```js
-var video = document.createElement('video');
+const video = document.createElement('video');
 console.log(video.currentTime);
 ```
 

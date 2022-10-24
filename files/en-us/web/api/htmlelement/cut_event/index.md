@@ -10,8 +10,9 @@ tags:
   - Reference
   - Web
   - cut
-browser-compat: api.HTMLElement.cut_event
+browser-compat: api.Element.cut_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`cut`** event fires when the user initiates a cut action through the browser's user interface.
@@ -21,9 +22,9 @@ The **`cut`** event fires when the user initiates a cut action through the brows
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', event => { });
+addEventListener('cut', (event) => { });
 
-oncut = event => { };
+oncut = (event) => { };
 ```
 
 ## Event type
@@ -36,7 +37,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ### Value
@@ -53,7 +54,9 @@ allow text to be cut. It also logs each copy and cut attempt.
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and cutting the text in this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and cutting the text in this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>
@@ -63,12 +66,12 @@ allow text to be cut. It also logs each copy and cut attempt.
 
 ```js
 function logCopy(event) {
-  log.innerText = 'Copied!\n' + log.innerText;
+  log.innerText = `Copied!\n${log.innerText}`;
 }
 
 function preventCut(event) {
   event.preventDefault();
-  log.innerText = 'Cut blocked!\n' + log.innerText;
+  log.innerText = `Cut blocked!\n${log.innerText}`;
 }
 
 const editor = document.getElementById('editor');

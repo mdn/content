@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Window.afterprint_event
 ---
+
 {{APIRef}}
 
 The **`afterprint`** event is fired after the associated document has started printing or the print preview has been closed.
@@ -18,8 +19,8 @@ The {{domxref("Window.beforeprint_event", "beforeprint")}} and `afterprint` even
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('afterprint', event => { });
-onafterprint = event => { };
+addEventListener('afterprint', (event) => { });
+onafterprint = (event) => { };
 ```
 
 ## Event type

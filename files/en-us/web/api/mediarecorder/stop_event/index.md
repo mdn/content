@@ -40,24 +40,20 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-...
+mediaRecorder.onstop = (e) => {
+  console.log("data available after MediaRecorder.stop() called.");
 
-  mediaRecorder.onstop = function(e) {
-    console.log("data available after MediaRecorder.stop() called.");
+  const audio = document.createElement('audio');
+  audio.controls = true;
+  const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  const audioURL = window.URL.createObjectURL(blob);
+  audio.src = audioURL;
+  console.log("recorder stopped");
+}
 
-    var audio = document.createElement('audio');
-    audio.controls = true;
-    var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-    var audioURL = window.URL.createObjectURL(blob);
-    audio.src = audioURL;
-    console.log("recorder stopped");
-  }
-
-  mediaRecorder.ondataavailable = function(e) {
-    chunks.push(e.data);
-  }
-
-...
+mediaRecorder.ondataavailable = (e) => {
+  chunks.push(e.data);
+}
 ```
 
 ## Specifications
@@ -72,6 +68,6 @@ A generic {{domxref("Event")}}.
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

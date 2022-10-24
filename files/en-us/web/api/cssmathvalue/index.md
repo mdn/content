@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} a base class for classes representing complex numeric values.
@@ -29,22 +30,26 @@ Below is a list of interfaces based on the CSSMathValue interface.
 - {{domxref('CSSMathProduct')}}
 - {{domxref('CSSMathSum')}}
 
-## Properties
+## Instance properties
 
-- {{domxref('CSSMathValue.operator')}}
+- {{domxref('CSSMathValue.operator')}} {{Experimental_Inline}}
   - : Indicates the operator that the current subtype represents.
 
-### Event handlers
+## Static methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+
+## Event handlers
 
 No
 
-## Methods
-
-None.
-
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function, then {{DOMxRef("console.log()")}} the `operator`.
+We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{DOMxRef("console.log()")}} the `operator`.
 
 ```html
 <div>has width</div>
@@ -63,9 +68,9 @@ We add the JavaScript
 ```js
 const styleMap = document.querySelector('div').computedStyleMap();
 
-console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
-console.log( styleMap.get('width').operator );         // 'sum'
-console.log( styleMap.get('width').values[1].value );  // -20
+console.log(styleMap.get('width'));                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log(styleMap.get('width').operator);         // 'sum'
+console.log(styleMap.get('width').values[1].value);  // -20
 ```
 
 {{EmbedLiveSample("Examples", 120, 300)}}

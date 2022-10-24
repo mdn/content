@@ -19,6 +19,7 @@ tags:
   - stop
 browser-compat: api.XMLHttpRequest.abort
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest.abort()`** method aborts the request if
@@ -29,7 +30,7 @@ it has already been sent. When a request is aborted, its
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 
@@ -47,9 +48,9 @@ This example begins loading content from the MDN home page, then due to some con
 aborts the transfer by calling `abort()`.
 
 ```js
-var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+const xhr = new XMLHttpRequest();
+const method = "GET";
+const url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
 
 xhr.send();

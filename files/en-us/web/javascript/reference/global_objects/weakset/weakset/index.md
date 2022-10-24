@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
+
 {{JSRef}}
 
 The **`WeakSet`** constructor lets you create
@@ -16,10 +17,12 @@ The **`WeakSet`** constructor lets you create
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakSet()
 new WeakSet(iterable)
 ```
+
+> **Note:** `WeakSet()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -39,12 +42,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // removes foo from the set
-ws.has(foo);    // false, foo has been removed
-ws.has(bar);    // true, bar is retained
+ws.has(foo); // false, foo has been removed
+ws.has(bar); // true, bar is retained
 ```
 
 Note that `foo !== bar`. While they are similar objects, _they are not

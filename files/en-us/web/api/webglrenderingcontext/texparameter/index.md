@@ -9,8 +9,11 @@ tags:
   - Textures
   - WebGL
   - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.texParameterf
+browser-compat:
+  - api.WebGLRenderingContext.texParameterf
+  - api.WebGLRenderingContext.texParameteri
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.texParameter[fi]()`** methods of
@@ -18,9 +21,9 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 
 ## Syntax
 
-```js
-texParameterf(target, GLenum pname, GLfloat param)
-texParameteri(target, GLenum pname, GLint param)
+```js-nolint
+texParameterf(target, pname, param)
+texParameteri(target, pname, param)
 ```
 
 ### Parameters
@@ -30,11 +33,14 @@ texParameteri(target, GLenum pname, GLint param)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
+
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
 - `param`
+
   - : The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
     {{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
 
@@ -165,13 +171,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
 
 ## Browser compatibility
 
-### `WebGLRenderingContext.texParameterf()`
-
 {{Compat}}
-
-### `WebGLRenderingContext.texParameteri()`
-
-{{Compat("api.WebGLRenderingContext.texParameteri")}}
 
 ## See also
 

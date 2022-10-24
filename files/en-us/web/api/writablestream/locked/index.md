@@ -11,6 +11,7 @@ tags:
   - locked
 browser-compat: api.WritableStream.locked
 ---
+
 {{APIRef("Streams")}}
 
 The **`locked`** read-only property of the {{domxref("WritableStream")}} interface returns a boolean indicating whether the `WritableStream` is locked to a writer.
@@ -24,17 +25,17 @@ A boolean value indicating whether or not the writable stream is locked.
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 

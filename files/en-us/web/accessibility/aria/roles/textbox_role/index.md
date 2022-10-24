@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: textbox role'
+title: "ARIA: textbox role"
 slug: Web/Accessibility/ARIA/Roles/textbox_role
 tags:
   - ARIA
@@ -9,6 +9,7 @@ tags:
   - textbox role
   - NeedsContent
 ---
+
 The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Element/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.
 
 ## Description
@@ -20,20 +21,27 @@ The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kb
 ```html
 <!-- Simple text input field -->
 <div id="txtboxLabel">Enter your five-digit zipcode</div>
-<div role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode"
-    aria-labelledby="txtboxLabel"></div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-placeholder="5-digit zipcode"
+  aria-labelledby="txtboxLabel"></div>
 
 <!-- Multi-line text area -->
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" contenteditable="true" aria-multiline="true"
-   aria-labelledby="txtboxMultilineLabel" aria-required="true"></div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-required="true"></div>
 ```
 
 Semantic elements are more concise and require no JavaScript to support textbox features.
 
 ```html
 <label for="txtbox">Enter your five-digit zipcode</label>
-<input type="text" placeholder="5-digit zipcode" id="txtbox"/>
+<input type="text" placeholder="5-digit zipcode" id="txtbox" />
 
 <!-- Multi-line text area -->
 <label for="txtboxMultiline">Enter the tags for the article</label>
@@ -45,7 +53,7 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
 ### Associated ARIA properties
 
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) attribute
-  - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute, it indicates when that element has focus, when it is part of a composite widget such as a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox.This attribute must be updated programmatically as the focus changes.
+  - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute, it indicates when that element has focus, when it is part of a composite widget such as a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox. This attribute must be updated programmatically as the focus changes.
 - [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute
 
   - : Indicates whether and how the user's input into the field could trigger display of a prediction of the intended value. It supports the following values:
@@ -78,7 +86,7 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
     submits the form.
 
 - [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute
-  - : Represents a hint (word or phrase) to the user about what to enter into the text field. The hint should be a sample value or a brief description of the expected format.This information should not be used as a substitute for a label: a label is focusable, permanent, indicates what kind of information is expected, and increases the hit area for setting focus on the control, whereas placeholder text is only temporary hint about the expected value, which if implemented incorrectly can decrease accessibility. The placeholder should be visible when the control's value is the empty string such as when the control first receives focus and when users remove a previously-entered value. Instead of using `aria-placeholder`, use the semantic `<input type="text">` or `<textarea>` with a `placeholder` attribute.
+  - : Represents a hint (word or phrase) to the user about what to enter into the text field. The hint should be a sample value or a brief description of the expected format. This information should not be used as a substitute for a label: a label is focusable, permanent, indicates what kind of information is expected, and increases the hit area for setting focus on the control, whereas placeholder text is only temporary hint about the expected value, which if implemented incorrectly can decrease accessibility. The placeholder should be visible when the control's value is the empty string such as when the control first receives focus and when users remove a previously-entered value. Instead of using `aria-placeholder`, use the semantic `<input type="text">` or `<textarea>` with a `placeholder` attribute.
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute
   - : Indicates that the user cannot modify the value of the text field. Instead of using `aria-readonly`, use the semantic `<input type="text">` or `<textarea>` with a `readonly` attribute.
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute
@@ -93,7 +101,7 @@ In a single-line use (when `aria-multiline` is `false` or not used), the Return 
 All features associated with any and all properties and states must be maintained, and forms submission on enter or return on a single line textbox needs to be handled.
 
 - Focus event handler and aria-activedescendant attribute
-  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendent](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
+  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendant](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
 
 > **Note:**It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
 
@@ -141,6 +149,6 @@ The snippet below shows how the textbox role is added directly into the HTML sou
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

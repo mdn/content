@@ -9,6 +9,7 @@ tags:
   - TypeError
 browser-compat: javascript.builtins.TypeError
 ---
+
 {{JSRef}}
 
 The **`TypeError`** object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type.
@@ -19,6 +20,8 @@ A `TypeError` may be thrown when:
 - when attempting to modify a value that cannot be changed; or
 - when attempting to use a value in an inappropriate way.
 
+`TypeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+
 ## Constructor
 
 - {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
@@ -27,16 +30,18 @@ A `TypeError` may be thrown when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}
+- {{jsxref("Error.prototype.cause", "TypeError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}} {{non-standard_inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}} {{non-standard_inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Examples

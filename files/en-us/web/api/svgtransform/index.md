@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTransform
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG transform interface
@@ -135,7 +136,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -210,7 +211,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 <table class="no-markdown">
   <thead>

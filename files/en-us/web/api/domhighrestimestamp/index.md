@@ -14,6 +14,7 @@ tags:
   - timeStamp
 browser-compat: api.DOMHighResTimestamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 The **`DOMHighResTimeStamp`** type is a `double` and is used to store a time value in milliseconds.
@@ -34,19 +35,19 @@ event.timeStamp
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-## Properties
+## Instance properties
 
 _This type has no properties. It is a double-precision floating-point value._
 
@@ -67,7 +68,7 @@ The **time origin** is a standard time which is considered to be the beginning o
 - If the script's global object is a {{domxref("WorkerGlobalScope")}} (that is, the script is running as a web worker), the time origin is the moment at which the worker was created.
 - In all other cases, the time origin is undefined.
 
-## Methods
+## Instance methods
 
 _This type has no methods._
 
@@ -82,7 +83,7 @@ To determine how much time has elapsed since a particular point in your code, yo
 ```js
 let startTime = performance.now();
 
-/* ... do things for a while ... */
+/* do things for a while */
 
 let elapsedTime = performance.now() - startTime;
 ```

@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultWriter/abort
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -12,7 +11,8 @@ tags:
   - abort
 browser-compat: api.WritableStreamDefaultWriter.abort
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`abort()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface aborts the stream, signaling that
@@ -25,7 +25,7 @@ rejected promise.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 abort(reason)
 ```
@@ -51,21 +51,21 @@ parameter.
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-...
+// ...
 
 // abort the stream when desired
 writer.abort.then((reason) => {

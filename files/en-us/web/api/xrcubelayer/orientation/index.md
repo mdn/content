@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRCubeLayer.orientation
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`orientation`** property of the {{domxref("XRCubeLayer")}} interface represents the orientation relative to the `space` property.
 
@@ -32,7 +34,7 @@ const cubeLayer = xrGlBinding.createCubeLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
   viewPixelHeight: 512,
-  orientation: DOMPointReadOnly.fromPoint({ x: 0.0, y: 0.0, z: 0.0, w: 1.0 });
+  orientation: DOMPointReadOnly.fromPoint({ x: 0.0, y: 0.0, z: 0.0, w: 1.0 })
 });
 
 cubeLayer.orientation = someOtherPoint;

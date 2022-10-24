@@ -10,14 +10,22 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat:
+  - api.Credential
+  - api.CredentialsContainer
+  - api.PublicKeyCredential
+  - api.AuthenticatorResponse
+  - api.AuthenticatorAttestationResponse
+  - api.AuthenticatorAssertionResponse
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 The Web Authentication API is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure second-factor authentication without SMS texts.
 
 ## Web authentication concepts and usage
 
-The Web Authentication API (also referred to as WebAuthn) uses {{interwiki("wikipedia", "Public-key_cryptography", "asymmetric (public-key) cryptography")}} instead of passwords or SMS texts for registering, authenticating, and {{interwiki("wikipedia", "Multi-factor_authentication", "second-factor authentication")}} with websites. This has some benefits:
+The Web Authentication API (also referred to as WebAuthn) uses [asymmetric (public-key)](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
 
 - **Protection against phishing:** An attacker who creates a fake login website can't login as the user because the signature changes with the [origin](/en-US/docs/Glossary/Origin) of the website.
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.
@@ -56,11 +64,11 @@ After this, the registration steps are:
 5. **Browser Creates Final Data, Application sends response to Server** - The create() Promise resolves to an {{domxref("PublicKeyCredential")}}, which has a {{domxref("PublicKeyCredential.rawId")}} that is the globally unique credential id along with a response that is the {{domxref("AuthenticatorAttestationResponse")}} containing the {{domxref("AuthenticatorResponse.clientDataJSON")}} and {{domxref("AuthenticatorAttestationResponse.attestationObject")}}. The {{domxref("PublicKeyCredential")}} is sent back to the server using any desired formatting and protocol (note that the ArrayBuffer properties need to be base64 encoded or similar).
 6. **Server Validates and Finalizes Registration** - Finally, the server is required to perform a series of checks to ensure that the registration was complete and not tampered with. These include:
 
-    1. Verifying that the challenge is the same as the challenge that was sent
-    2. Ensuring that the origin was the origin expected
-    3. Validating that the signature over the clientDataHash and the attestation using the certificate chain for that specific model of the authenticator
+   1. Verifying that the challenge is the same as the challenge that was sent
+   2. Ensuring that the origin was the origin expected
+   3. Validating that the signature over the clientDataHash and the attestation using the certificate chain for that specific model of the authenticator
 
-    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use -- that is, whenever the user desires to use the public key for authentication.
+   A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use — that is, whenever the user desires to use the public key for authentication.
 
 ### Authentication
 
@@ -81,11 +89,11 @@ After this, the authentication steps are:
 5. **Browser Creates Final Data, Application sends response to Server** - The browser resolves the [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to a {{domxref("PublicKeyCredential")}} with a {{domxref("PublicKeyCredential.response")}} that contains the {{domxref("AuthenticatorAssertionResponse")}}. It is up to the JavaScript application to transmit this data back to the server using any protocol and format of its choice.
 6. **Server Validates and Finalizes Authentication** - Upon receiving the result of the authentication request, the server performs validation of the response such as:
 
-    1. Using the public key that was stored during the registration request to validate the signature by the authenticator.
-    2. Ensuring that the challenge that was signed by the authenticator matches the challenge that was generated by the server.
-    3. Checking that the Relying Party ID is the one expected for this service.
+   1. Using the public key that was stored during the registration request to validate the signature by the authenticator.
+   2. Ensuring that the challenge that was signed by the authenticator matches the challenge that was generated by the server.
+   3. Checking that the Relying Party ID is the one expected for this service.
 
-    A full list of the [steps for validating an assertion can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#verifying-assertion). Assuming the validation is successful, the server will note that the user is now authenticated. This is outside the scope of the Web Authentication API specification, but one option would be to drop a new cookie for the user session.
+   A full list of the [steps for validating an assertion can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#verifying-assertion). Assuming the validation is successful, the server will note that the user is now authenticated. This is outside the scope of the Web Authentication API specification, but one option would be to drop a new cookie for the user session.
 
 ## Interfaces
 
@@ -125,7 +133,7 @@ After this, the authentication steps are:
 
 ```js
 // sample arguments for registration
-var createCredentialDefaultArgs = {
+const createCredentialDefaultArgs = {
     publicKey: {
         // Relying Party (a.k.a. - Service):
         rp: {
@@ -156,7 +164,7 @@ var createCredentialDefaultArgs = {
 };
 
 // sample arguments for login
-var getCredentialDefaultArgs = {
+const getCredentialDefaultArgs = {
     publicKey: {
         timeout: 60000,
         // allowCredentials: [newCredential] // see below
@@ -173,8 +181,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
         console.log("NEW CREDENTIAL", cred);
 
         // normally the credential IDs available for an account would come from a server
-        // but we can just copy them from above...
-        var idList = [{
+        // but we can just copy them from above…
+        const idList = [{
             id: cred.rawId,
             transports: ["usb", "nfc", "ble"],
             type: "public-key"
@@ -192,32 +200,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
 
 ## Specifications
 
-| Specification                                                                                      |
-| -------------------------------------------------------------------------------------------------- |
-| [Web Authentication: An API for accessing Public Key Credentials](https://w3c.github.io/webauthn/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Credential
-
-{{Compat("api.Credential")}}
-
-### CredentialsContainer
-
-{{Compat("api.CredentialsContainer")}}
-
-### PublicKeyCredential
-
-{{Compat("api.PublicKeyCredential")}}
-
-### AuthenticatorResponse
-
-{{Compat("api.AuthenticatorResponse")}}
-
-### AuthenticatorAttestationResponse
-
-{{Compat("api.AuthenticatorAttestationResponse")}}
-
-### AuthenticatorAssertionResponse
-
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}

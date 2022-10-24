@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.MediaKeyMessageEvent
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) contains the content and related data when the content decryption module generates a message for the session.
 
@@ -22,16 +23,16 @@ The **`MediaKeyMessageEvent`** interface of the [EncryptedMediaExtensions API](/
 - {{domxref("MediaKeyMessageEvent.MediaKeyMessageEvent","MediaKeyMessageEvent()")}}
   - : Creates a new instance of `MediaKeyMessageEvent`.
 
-## Properties
+## Instance properties
 
 Inherits properties from its parent, {{domxref("Event")}}.
 
-- {{domxref("MediaKeyMessageEvent.message")}} {{readonlyinline}}
+- {{domxref("MediaKeyMessageEvent.message")}} {{ReadOnlyInline}}
   - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
-- {{domxref("MediaKeyMessageEvent.messageType")}} {{readonlyinline}}
+- {{domxref("MediaKeyMessageEvent.messageType")}} {{ReadOnlyInline}}
   - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
 
-## Methods
+## Instance methods
 
 Inherits methods from its parent, {{domxref("Event")}}.
 

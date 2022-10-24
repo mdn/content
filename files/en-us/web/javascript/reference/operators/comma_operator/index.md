@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.comma
 ---
+
 {{jsSidebar("Operators")}}
 
 The **comma operator** (**`,`**) evaluates each of
@@ -24,13 +25,13 @@ expressions. This is commonly used to provide multiple parameters to a
 
 ## Syntax
 
-```js
-expr1, expr2, expr3...
+```js-nolint
+expr1, expr2, expr3/* , … */
 ```
 
 ### Parameters
 
-- `expr1`, `expr2`, `expr3`...
+- `expr1`, `expr2`, `expr3`, …
   - : One or more expressions, the last of which is returned as the value of the compound
     expression.
 
@@ -52,8 +53,9 @@ once.
 The following code prints the values of the diagonal elements in the array:
 
 ```js
-for (var i = 0, j = 9; i <= 9; i++, j--)
-  console.log('a[' + i + '][' + j + '] = ' + a[i][j]);
+for (let i = 0, j = 9; i <= 9; i++, j--) {
+  console.log(`a[${i}][${j}] = ${a[i][j]}`);
+}
 ```
 
 Note that the comma operators in assignments may appear not to have the normal effect
@@ -62,13 +64,13 @@ example, `a` is set to the value of `b = 3` (which is 3), but the
 `c = 4` expression still evaluates and its result returned to console (i.e., 4\).
 This is due to [operator precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
-```js
-var a, b, c;
+```js-nolint
+let a, b, c;
 
 a = b = 3, c = 4; // Returns 4 in console
 console.log(a); // 3 (left-most)
 
-var x, y, z;
+let x, y, z;
 
 x = (y = 5, z = 6); // Returns 6 in console
 console.log(x); // 6 (right-most)
@@ -80,9 +82,9 @@ Another example that one could make with comma operator is processing before ret
 As stated, only the last element will be returned but all others are going to be
 evaluated as well. So, one could do:
 
-```js
+```js-nolint
 function myFunc() {
-  var x = 0;
+  let x = 0;
 
   return (x += 1, x); // the same as return ++x;
 }

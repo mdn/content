@@ -13,6 +13,7 @@ tags:
   - deleteDatabase
 browser-compat: api.IDBFactory.deleteDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`deleteDatabase()`** method of the
@@ -33,7 +34,7 @@ particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/v
 
 ## Syntax
 
-```js
+```js-nolint
 // For the current standard:
 deleteDatabase(name)
 
@@ -63,13 +64,13 @@ are fired.
 ## Examples
 
 ```js
-var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
-  console.log("Error deleting database.");
+DBDeleteRequest.onerror = (event) => {
+  console.error("Error deleting database.");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
+DBDeleteRequest.onsuccess = (event) => {
   console.log("Database deleted successfully");
 
   console.log(event.result); // should be undefined
@@ -92,4 +93,4 @@ DBDeleteRequest.onsuccess = function(event) {
 - Setting a range of keys: {{DOMxRef("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{DOMxRef("IDBObjectStore")}}
 - Using cursors: {{DOMxRef("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

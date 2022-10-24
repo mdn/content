@@ -11,8 +11,10 @@ tags:
   - USBDevice
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USBDevice.configuration
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`configuration`** read only property of the

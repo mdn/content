@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -111,7 +112,7 @@ tags:
 #### WebGL
 
 - The {{domxref("EXT_color_buffer_float")}} {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} extension has been implemented ({{bug(1129332)}}).
-- The {{Event("webglcontextcreationerror")}} event, which is sent when a WebGL context creation attempt fails, has been implemented ({{bug(1271478)}}). Use this to help understand what went wrong, both for debugging and for production error handling.
+- The {{domxref("HTMLCanvasElement/webglcontextcreationerror_event", "webglcontextcreationerror")}} event, which is sent when a WebGL context creation attempt fails, has been implemented ({{bug(1271478)}}). Use this to help understand what went wrong, both for debugging and for production error handling.
 
 #### IndexedDB
 
@@ -282,7 +283,7 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 ### Interfaces
 
-- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`,  active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
+- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`, active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
 
 ### Other
 

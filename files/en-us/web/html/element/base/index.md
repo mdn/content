@@ -28,7 +28,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node.baseU
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -85,26 +85,24 @@ If multiple `<base>` elements are used, only the first `href` and first `target`
 
 ### In-page anchors
 
-Links pointing to a fragment in the document — e.g. `<a href="#some-id">` — are resolved with the `<base>`, triggering an HTTP request to the base URL with the fragment attached. For example:
+Links pointing to a fragment in the document — e.g. `<a href="#some-id">` — are resolved with the `<base>`, triggering an HTTP request to the base URL with the fragment attached.
 
-1. Given `<base href="https://example.com">`
-2. ...and this link: `<a href="#anchor">To anchor</a>`
-3. ...the link points to `https://example.com/#anchor`.
+For example, given `<base href="https://example.com">` and this link: `<a href="#anchor">To anchor</a>`. The link points to `https://example.com/#anchor`.
 
 ### Open Graph
 
 [Open Graph](https://ogp.me/) tags do not acknowledge `<base>`, and should always have full absolute URLs. For example:
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Examples
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Specifications

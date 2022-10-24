@@ -16,6 +16,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioContext.AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioContext()`** constructor
@@ -25,9 +26,9 @@ graph, built from audio modules linked together, each represented by an
 
 ## Syntax
 
-```js
-new AudioContext();
-new AudioContext(options);
+```js-nolint
+new AudioContext()
+new AudioContext(options)
 ```
 
 ### Parameters
@@ -93,10 +94,8 @@ This example creates a new {{domxref("AudioContext")}} for interactive audio
 (optimizing for latency) and a sample rate of 44.1kHz.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-
-var audioCtx = new AudioContext({
-  latencyHint: 'interactive',
+const audioCtx = new AudioContext({
+  latencyHint: "interactive",
   sampleRate: 44100,
 });
 ```

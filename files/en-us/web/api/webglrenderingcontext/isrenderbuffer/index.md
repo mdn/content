@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isRenderbuffer()`** method of the
@@ -18,7 +19,7 @@ passed {{domxref("WebGLRenderbuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isRenderbuffer(renderbuffer)
 ```
 
@@ -36,9 +37,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the rend
 ### Checking a renderbuffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var renderbuffer = gl.createRenderbuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const renderbuffer = gl.createRenderbuffer();
 
 gl.isRenderbuffer(renderbuffer);
 ```

@@ -8,6 +8,7 @@ tags:
   - Tutorial
   - userScripts
 ---
+
 {{AddonSidebar}}
 
 By implementing userScripts, extension developers can modify how sites look and/or work to better meet user needs.
@@ -36,7 +37,7 @@ The "api_script" property indicates the path to the JavaScript file that contain
 
 Once you have downloaded the example:
 
-Navigate to about:debugging, click on **Load Temporary Add-on...** and double-click on the extension's manifest.
+Navigate to about:debugging, click on **Load Temporary Add-on…** and double-click on the extension's manifest.
 
 The default code included with the example allows you to load a `userScript` which will "eat" the content of pages matching the Hosts entry. Make any changes you want to make before clicking the **Register script** button at the bottom of the panel.
 

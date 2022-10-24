@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-haspopup
 ---
+
 The `aria-haspopup` attribute indicates the availability and type of interactive popup element that can be triggered by the element on which the attribute is set.
 
 ## Description
@@ -18,7 +19,7 @@ In ARIA, interactive menus, listboxes, trees, grids, and dialogs that appear on 
 
 The presence of the `aria-haspopup`, with one of six enumerated values - `menu`, `listbox`, `tree`, `grid`, `dialog`, or `true` - indicates the element can trigger a popup and what kind of popup will be displayed. In turn, the element that pops up must be of the role indicated. The value `true` is the same as `menu`. Any other value, including an empty string or other [role](/en-US/docs/Web/Accessibility/ARIA/Roles), is treated as if `false` were set.
 
-A [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) is not considered to be a popup in this context, as is not interactive.
+A [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) is not considered to be a popup in this context, as it is not interactive.
 
 > **Note:** Make sure the role of the element that serves as the container for the popup content is a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and that the value of `aria-haspopup` matches the role of the popup container.
 

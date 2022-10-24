@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: navigation Role'
+title: "ARIA: navigation Role"
 slug: Web/Accessibility/ARIA/Roles/navigation_role
 tags:
   - ARIA
@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#navigation
   - https://w3c.github.io/aria-practices/#aria_lh_navigation
 ---
+
 The `navigation` role is used to identify major groups of links used for navigating through a website or page content.
 
 ```html
@@ -79,7 +80,7 @@ If there is more than one `navigation` landmark role or {{HTMLElement('nav')}} e
   <!-- content -->
 </div>
 
-...
+…
 
 <nav id="footer-nav" aria-label="Footer">
   <!-- content -->
@@ -97,7 +98,7 @@ If a `navigation` landmark role or {{HTMLElement('nav')}} element in a document 
   </nav>
 </header>
 
-...
+…
 
 <footer>
   <nav id="footer-nav" aria-label="Main">
@@ -126,6 +127,6 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

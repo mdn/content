@@ -6,8 +6,10 @@ tags:
   - HTTP
   - Network Error Logging
   - Reference
+  - Experimental
 browser-compat: http.headers.NEL
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 Network Error Logging is a mechanism that can be configured via the {{HTTPHeader("NEL")}} HTTP _[response header](/en-US/docs/Glossary/Response_header)_. This experimental header allows web sites and applications to opt-in to receive reports about failed (and, if desired, successful) network fetches from supporting browsers.
@@ -18,7 +20,7 @@ Reports are sent to a reporting group defined within a {{HTTPHeader("Report-To")
 
 Web applications opt in to this behavior with the NEL header, which is a _[JSON-encoded](/en-US/docs/Glossary/Response_header)_ object:
 
-```
+```http
 NEL: { "report_to": "nel",
        "max_age": 31556952 }
 ```
@@ -40,7 +42,7 @@ The following object keys can be specified in the NEL header:
 
 The reporting group referenced above is defined in the usual manner within the {{HTTPHeader("Report-To")}} header, for example:
 
-```
+```http
 Report-To: { "group": "nel",
              "max_age": 31556952,
              "endpoints": [
@@ -55,7 +57,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 ### HTTP 400 (Bad Request) response
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -79,7 +81,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
 
 Note that the phase is set to `dns` in this report and no `server_ip` is available to include.
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -126,7 +128,7 @@ The type of the network error may be one of the following pre-defined values fro
 - `tcp.failed`
   - : The TCP connection failed due to reasons not covered by previous errors
 - `http.error`
-  - : The user agent successfully received a response, but it had a [4xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5) or [5xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.6) status code
+  - : The user agent successfully received a response, but it had a [4xx](https://httpwg.org/specs/rfc9110.html#status.4xx) or [5xx](https://httpwg.org/specs/rfc9110.html#status.5xx) status code
 - `http.protocol.error`
   - : The connection was aborted due to an HTTP protocol error
 - `http.response.invalid`

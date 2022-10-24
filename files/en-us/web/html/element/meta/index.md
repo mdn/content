@@ -30,7 +30,7 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
       <td>
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
           >Metadata content</a
-        >. If the {{htmlattrxref("itemprop")}} attribute is present:
+        >. If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >flow content</a
         >,
@@ -41,7 +41,7 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
     </tr>
     <tr>
       <th>Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th>Tag omission</th>
@@ -108,13 +108,13 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 - If the {{htmlattrxref("name", "meta")}} attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
 - If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
 - If the {{htmlattrxref("charset", "meta")}} attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
-- If the {{htmlattrxref("itemprop")}} attribute is set, the `<meta>` element provides _user-defined metadata_.
+- If the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the {{htmlattrxref("itemprop")}} attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
+> **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
 
 - {{htmlattrdef("charset")}}
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "`utf-8`", because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
@@ -145,15 +145,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer.
       - The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
 
-      ##### Accessibility concerns
-
-      Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
-
-      - [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-      - [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-      - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-      - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-      - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+      > **Warning:**
+      >
+      > Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
+      >
+      > - [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+      > - [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+      > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+      > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+      > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - {{htmlattrdef("name")}}
 
@@ -164,10 +164,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- Redirect page after 3 seconds -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## Specifications

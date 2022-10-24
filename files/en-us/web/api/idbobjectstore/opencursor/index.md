@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBObjectStore.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the
@@ -27,7 +28,7 @@ To determine if the add operation has completed successfully, listen for the res
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(query)
 openCursor(query, direction)
@@ -52,7 +53,7 @@ openCursor(query, direction)
         in the decreasing order of keys.
     - `prevunique`
       - : The cursor is opened at the start of the store; then, the cursor returns all records, that are not duplicates,
-        in the increasing order of keys.
+        in the decreasing order of keys.
 
 ### Return value
 
@@ -76,12 +77,12 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 cursor to iterate through all the records in the object store:
 
 ```js
-var transaction = db.transaction("name", "readonly");
-var objectStore = transaction.objectStore("name");
-var request = objectStore.openCursor();
-request.onsuccess = function(event) {
-  var cursor = event.target.result;
-  if(cursor) {
+const transaction = db.transaction("name", "readonly");
+const objectStore = transaction.objectStore("name");
+const request = objectStore.openCursor();
+request.onsuccess = (event) => {
+  const cursor = event.target.result;
+  if (cursor) {
     // cursor.value contains the current record being iterated through
     // this is where you'd do something with the result
     cursor.continue();
@@ -107,4 +108,4 @@ request.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

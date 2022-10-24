@@ -13,6 +13,7 @@ tags:
   - srcObject
 browser-compat: api.HTMLMediaElement.srcObject
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`srcObject`** property of the
@@ -94,7 +95,7 @@ if ('srcObject' in video) {
   try {
     video.srcObject = mediaSource;
   } catch (err) {
-    if (err.name != "TypeError") {
+    if (err.name !== "TypeError") {
       throw err;
     }
     // Even if they do, they may only support MediaStream

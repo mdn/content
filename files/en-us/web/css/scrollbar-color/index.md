@@ -1,15 +1,17 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property
   - Reference
-  - css scrollbars
+  - CSS scrollbars
   - recipe:css-property
   - scrollbar-color
 browser-compat: css.properties.scrollbar-color
 ---
+
 {{CSSRef}}
 
 The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the scrollbar track and thumb.
@@ -25,7 +27,7 @@ The **thumb** refers to the moving part of the scrollbar, which usually floats o
 scrollbar-color: auto;
 
 /* <color> values */
-scrollbar-color: rebeccapurple green;   /* Two valid colors.
+scrollbar-color: rebeccapurple green; /* Two valid colors.
 The first applies to the thumb of the scrollbar, the second to the track. */
 
 /* Global values */
@@ -93,7 +95,13 @@ When using `scrollbar-color` property with specific color values, authors should
 #### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 #### Result

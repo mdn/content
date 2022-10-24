@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
 The **`min`** instructions, are used for getting the lower of two numbers.

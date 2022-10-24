@@ -12,6 +12,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.compressedTexSubImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.compressedTexSubImage2D()`**
@@ -23,7 +24,7 @@ using this method or a {{domxref("WebGL2RenderingContext")}} must be used.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL 1:
 compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, srcData)
 
@@ -57,7 +58,7 @@ compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, 
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal offset within the compressed
     texture image.
@@ -156,7 +157,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = (
+const ext = (
   gl.getExtension('WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')

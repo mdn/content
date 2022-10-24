@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.activate_event
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`activate`** event is fired when a sensor becomes activated. It means that it will start obtaining readings.
@@ -24,9 +25,9 @@ on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_s
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('activate', event => { })
+addEventListener('activate', (event) => { })
 
-onactivate = event => { }
+onactivate = (event) => { }
 ```
 
 ## Event type

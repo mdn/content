@@ -11,11 +11,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise
 ---
+
 {{JSRef}}
 
 The **`Promise`** object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
-
-{{AvailableInWorkers}}
 
 To learn about the way promises work and how you can use them, we advise you to read [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) first.
 
@@ -29,44 +28,57 @@ A `Promise` is in one of these states:
 - _fulfilled_: meaning that the operation was completed successfully.
 - _rejected_: meaning that the operation failed.
 
-A pending promise can either be _fulfilled_ with a value or _rejected_ with a reason (error). When either of these options happens, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
+The _eventual state_ of a pending promise can either be _fulfilled_ with a value or _rejected_ with a reason (error).
+When either of these options occur, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
 
-As the `{{JSxRef("Promise.then", "Promise.prototype.then()")}}` and `{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}` methods return promises, they can be chained.
+A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending.
 
-![](promises.png)
+![Flowchart showing how the Promise state transitions between pending, fulfilled, and rejected via then/catch handlers. A pending promise can become either fulfilled or rejected. If fulfilled, the "on fulfillment" handler, or first parameter of the then() method, is executed and carries out further asynchronous actions. If rejected, the error handler, either passed as the second parameter of the then() method or as the sole parameter of the catch() method, gets executed.](promises.png)
+
+You will also hear the term _resolved_ used with promises — this means that the promise is settled or "locked-in" to match the eventual state of another promise, and further resolving or rejecting it has no effect. The [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) document from the original Promise proposal contains more details about promise terminology. Colloquially, "resolved" promises are often equivalent to "fulfilled" promises, but as illustrated in "States and fates", resolved promises can be pending or rejected as well. For example:
+
+```js
+new Promise((resolveOuter) => {
+  resolveOuter(
+    new Promise((resolveInner) => {
+      setTimeout(resolveInner, 1000);
+    })
+  );
+});
+```
+
+This promise is already _resolved_ at the time when it's created (because the `resolveOuter` is called synchronously), but it is resolved with another promise, and therefore won't be _fulfilled_ until 1 second later, when the inner promise fulfills. In practice, the "resolution" is often done behind the scenes and not observable, and only its fulfillment or rejection are.
 
 > **Note:** Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider using a function with no arguments e.g. `f = () => expression` to create the lazily-evaluated expression, and `f()` to evaluate the expression immediately.
 
-> **Note:** A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending. You will also hear the term _resolved_ used with promises — this means that the promise is settled or "locked-in" to match the state of another promise. [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) contain more details about promise terminology.
-
 ### Chained Promises
 
-The methods `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}`, and `{{jsxref("Promise.prototype.finally()")}}` are used to associate further action with a promise that becomes settled.
+The methods `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}`, and `{{jsxref("Promise.prototype.finally()")}}` are used to associate further action with a promise that becomes settled. As the `{{JSxRef("Promise/then", "Promise.prototype.then()")}}` and `{{JSxRef("Promise/catch", "Promise.prototype.catch()")}}` methods return promises, they can be chained.
 
-The `.then()` method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining; for example:
+The `.then()` method takes up to two arguments; the first argument is a callback function for the fulfilled case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining; for example:
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve('foo');
+    resolve("foo");
   }, 300);
 });
 
 myPromise
-  .then(handleResolvedA, handleRejectedA)
-  .then(handleResolvedB, handleRejectedB)
-  .then(handleResolvedC, handleRejectedC);
+  .then(handleFulfilledA, handleRejectedA)
+  .then(handleFulfilledB, handleRejectedB)
+  .then(handleFulfilledC, handleRejectedC);
 ```
 
 Processing continues to the next link of the chain even when a `.then()` lacks a callback function that returns a Promise object. Therefore, a chain can safely omit every _rejection_ callback function until the final `.catch()`.
 
-Handling a rejected promise in each `.then()` has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final `.catch()` statement. A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is resolved.
+Handling a rejected promise in each `.then()` has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final `.catch()` statement. A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is fulfilled.
 
 ```js
 myPromise
-  .then(handleResolvedA)
-  .then(handleResolvedB)
-  .then(handleResolvedC)
+  .then(handleFulfilledA)
+  .then(handleFulfilledB)
+  .then(handleFulfilledC)
   .catch(handleRejectedAny);
 ```
 
@@ -74,15 +86,21 @@ Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)
 
 ```js
 myPromise
-  .then(value => { return value + ' and bar'; })
-  .then(value => { return value + ' and bar again'; })
-  .then(value => { return value + ' and again'; })
-  .then(value => { return value + ' and again'; })
-  .then(value => { console.log(value) })
-  .catch(err => { console.log(err) });
+  .then((value) => `${value} and bar`)
+  .then((value) => `${value} and bar again`)
+  .then((value) => `${value} and again`)
+  .then((value) => `${value} and again`)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
-The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each resolved promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
+> **Note:** For faster execution, all synchronous actions should preferably be done within one handler, otherwise it would take several ticks to execute all handlers in sequence.
+
+The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
 
 The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
 
@@ -107,16 +125,37 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action,10)`.
 
 ```js
-const promiseA = new Promise( (resolutionFunc,rejectionFunc) => {
-    resolutionFunc(777);
+const promiseA = new Promise((resolutionFunc, rejectionFunc) => {
+  resolutionFunc(777);
 });
 // At this point, "promiseA" is already settled.
-promiseA.then( (val) => console.log("asynchronous logging has val:",val) );
+promiseA.then((val) => console.log("asynchronous logging has val:", val));
 console.log("immediate logging");
 
 // produces output in this order:
 // immediate logging
 // asynchronous logging has val: 777
+```
+
+### Thenables
+
+The JavaScript ecosystem had made multiple Promise implementations long before it became part of the language. Despite being represented differently internally, at the minimum, all Promise-like objects implement the _Thenable_ interface. A thenable implements the [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method, which is called with two callbacks: one for when the promise is fulfilled, one for when it's rejected. Promises are thenables as well.
+
+To interoperate with the existing Promise implementations, the language allows using thenables in place of promises. For example, [`Promise.resolve`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) will not only resolve promises, but also trace thenables.
+
+```js
+const aThenable = {
+  then(onFulfilled, onRejected) {
+    onFulfilled({
+      // The thenable is fulfilled with another thenable
+      then(onFulfilled, onRejected) {
+        onFulfilled(42);
+      },
+    });
+  },
+};
+
+Promise.resolve(aThenable); // A promise fulfilled with 42
 ```
 
 ### Incumbent settings object tracking
@@ -128,14 +167,14 @@ To better picture this, we can take a closer look at how the realm might be an i
 To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:
 
 ```html
-<!DOCTYPE html>
-<iframe></iframe> <!-- we have a realm here -->
-<script> // we have a realm here as well
-  const bound = frames[0].postMessage.bind(
-    frames[0], "some data", "*");
-    // bound is a built-in function -- there is no user
-    // code on the stack, so which realm do we use?
-  window.setTimeout(bound);
+<!DOCTYPE html> <iframe></iframe>
+<!-- we have a realm here -->
+<script>
+  // we have a realm here as well
+  const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
+  // bound is a built-in function — there is no user
+  // code on the stack, so which realm do we use?
+  setTimeout(bound);
   // this still works, because we use the youngest
   // realm (the incumbent) on the stack
 </script>
@@ -144,13 +183,13 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
 The same concept applies to promises. If we modify the above example a little bit, we get this:
 
 ```html
-<!DOCTYPE html>
-<iframe></iframe> <!-- we have a realm here -->
-<script> // we have a realm here as well
-  const bound = frames[0].postMessage.bind(
-    frames[0], "some data", "*");
-    // bound is a built in function -- there is no user
-    // code on the stack -- which realm do we use?
+<!DOCTYPE html> <iframe></iframe>
+<!-- we have a realm here -->
+<script>
+  // we have a realm here as well
+  const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
+  // bound is a built in function — there is no user
+  // code on the stack — which realm do we use?
   Promise.resolve(undefined).then(bound);
   // this still works, because we use the youngest
   // realm (the incumbent) on the stack
@@ -173,11 +212,15 @@ If we change this so that the `<iframe>` in the document is listening to post me
 <!-- x.html -->
 <!DOCTYPE html>
 <script>
-window.addEventListener("message", (event) => {
-  document.querySelector("#text").textContent = "hello";
-  // this code will only run in browsers that track the incumbent settings object
-  console.log(event);
-}, false);
+  window.addEventListener(
+    "message",
+    (event) => {
+      document.querySelector("#text").textContent = "hello";
+      // this code will only run in browsers that track the incumbent settings object
+      console.log(event);
+    },
+    false
+  );
 </script>
 ```
 
@@ -194,25 +237,25 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 
 - {{JSxRef("Promise.all", "Promise.all(iterable)")}}
 
-  - : Wait for all promises to be resolved, or for any to be rejected.
+  - : Wait for all promises to be fulfilled, or for any to be rejected.
 
-    If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.
+    If the returned promise fulfills, it is fulfilled with an aggregating array of the values from the fulfilled promises, in the same order as defined in the iterable of multiple promises.
 
     If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
 
-  - : Wait until all promises have settled (each may resolve or reject).
+  - : Wait until all promises have settled (each may fulfill or reject).
 
-    Returns a Promise that resolves after all of the given promises is either fulfilled or rejected, with an array of objects that each describe the outcome of each promise.
+    Returns a Promise that fulfills after all of the given promises is either fulfilled or rejected, with an array of objects that each describe the outcome of each promise.
 
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
-  - : Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise.
+  - : Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that fulfills with the value from that promise.
 - {{JSxRef("Promise.race", "Promise.race(iterable)")}}
 
   - : Wait until any of the promises is fulfilled or rejected.
 
-    If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.
+    If the returned promise fulfills, it is fulfilled with the value of the first promise in the iterable that fulfilled.
 
     If it rejects, it is rejected with the reason from the first promise that was rejected.
 
@@ -240,19 +283,19 @@ See the [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to l
 ### Basic Example
 
 ```js
-let myFirstPromise = new Promise((resolve, reject) => {
+const myFirstPromise = new Promise((resolve, reject) => {
   // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
   // In this example, we use setTimeout(...) to simulate async code.
-  // In reality, you will probably be using something like XHR or an HTML5 API.
-  setTimeout( function() {
-    resolve("Success!")  // Yay! Everything went well!
-  }, 250)
-})
+  // In reality, you will probably be using something like XHR or an HTML API.
+  setTimeout(() => {
+    resolve("Success!"); // Yay! Everything went well!
+  }, 250);
+});
 
 myFirstPromise.then((successMessage) => {
   // successMessage is whatever we passed in the resolve(...) function above.
   // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
-  console.log("Yay! " + successMessage)
+  console.log(`Yay! ${successMessage}`);
 });
 ```
 
@@ -262,82 +305,63 @@ This example shows diverse techniques for using Promise capabilities and diverse
 
 The example function `tetheredGetNumber()` shows that a promise generator will utilize `reject()` while setting up an asynchronous call, or within the call-back, or both. The function `promiseGetWord()` illustrates how an API function might generate and return a promise in a self-contained manner.
 
-Note that the function `troubleWithGetNumber()` ends with a `throw()`. That is forced because an ES6 promise chain goes through all the `.then()` promises, even after an error, and without the "throw()", the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`. The alternative is to throw a special value (in this case "-999", but a custom Error type would be more appropriate).
+Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`.
 
 This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
 
 ```js
-"use strict";
-
 // To experiment with error handling, "threshold" values cause errors randomly
 const THRESHOLD_A = 8; // can use zero 0 to guarantee error
 
 function tetheredGetNumber(resolve, reject) {
-  try {
-    setTimeout(
-      function() {
-        const randomInt = Date.now();
-        const value = randomInt % 10;
-        try {
-          if(value >= THRESHOLD_A) {
-            throw new Error(`Too large: ${value}`);
-          }
-        } catch(msg) {
-            reject(`Error in callback ${msg}`);
-        }
+  setTimeout(() => {
+    const randomInt = Date.now();
+    const value = randomInt % 10;
+    if (value < THRESHOLD_A) {
       resolve(value);
-      return;
-    }, 500);
-    // To experiment with error at set-up, uncomment the following 'throw'.
-    // throw new Error("Bad setup");
-  } catch(err) {
-    reject(`Error during setup: ${err}`);
-  }
-  return;
+    } else {
+      reject(`Too large: ${value}`);
+    }
+  }, 500);
 }
 
 function determineParity(value) {
-  const isOdd = value % 2 ? true : false ;
-  const parityInfo = { theNumber: value, isOdd: isOdd };
-  return parityInfo;
+  const isOdd = value % 2 === 1;
+  return { value, isOdd };
 }
 
 function troubleWithGetNumber(reason) {
-  console.error(`Trouble getting number: ${reason}`);
-  throw -999; // must "throw" something, to maintain error state down the chain
+  const err = new Error("Trouble getting number", { cause: reason });
+  console.error(err);
+  throw err;
 }
 
 function promiseGetWord(parityInfo) {
-  // The "tetheredGetWord()" function gets "parityInfo" as closure variable.
-  const tetheredGetWord = function(resolve,reject) {
-    const theNumber = parityInfo.theNumber;
-    const threshold_B = THRESHOLD_A - 1;
-    if(theNumber >= threshold_B) {
-      reject(`Still too large: ${theNumber}`);
+  return new Promise((resolve, reject) => {
+    const { value, isOdd } = parityInfo;
+    if (value >= THRESHOLD_A - 1) {
+      reject(`Still too large: ${value}`);
     } else {
-      parityInfo.wordEvenOdd = parityInfo.isOdd ? 'odd' : 'even';
+      parityInfo.wordEvenOdd = isOdd ? "odd" : "even";
       resolve(parityInfo);
     }
-    return;
-  }
-  return new Promise(tetheredGetWord);
+  });
 }
 
-(new Promise(tetheredGetNumber))
-  .then(determineParity,troubleWithGetNumber)
+new Promise(tetheredGetNumber)
+  .then(determineParity, troubleWithGetNumber)
   .then(promiseGetWord)
   .then((info) => {
-    console.log("Got: ",info.theNumber," , ", info.wordEvenOdd);
+    console.log(`Got: ${info.value}, ${info.wordEvenOdd}`);
     return info;
   })
   .catch((reason) => {
-    if(reason === -999) {
+    if (reason.cause) {
       console.error("Had previously handled error");
-    }
-    else {
+    } else {
       console.error(`Trouble with promiseGetWord(): ${reason}`);
     }
-   })
+  })
   .finally((info) => console.log("All done"));
 ```
 
@@ -360,44 +384,45 @@ By clicking the button several times in a short amount of time, you'll even see 
 
 ```js
 "use strict";
+
 let promiseCount = 0;
 
 function testPromise() {
-  let thisPromiseCount = ++promiseCount;
-  let log = document.getElementById('log');
+  const thisPromiseCount = ++promiseCount;
+  const log = document.getElementById("log");
   // begin
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Started<br>');
-  // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
-  let p1 = new Promise((resolve, reject) => {
-    // The executor function is called with the ability to resolve or reject the promise
-    log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise constructor<br>');
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Started<br>`);
+  // We make a new promise: we promise a numeric count of this promise,
+  // starting from 1 (after waiting 3s)
+  const p1 = new Promise((resolve, reject) => {
+    // The executor function is called with the ability
+    // to resolve or reject the promise
+    log.insertAdjacentHTML(
+      "beforeend",
+      `${thisPromiseCount}) Promise constructor<br>`
+    );
     // This is only an example to create asynchronism
-    window.setTimeout(function() {
-        // We fulfill the promise !
-        resolve(thisPromiseCount);
+    setTimeout(() => {
+      // We fulfill the promise
+      resolve(thisPromiseCount);
     }, Math.random() * 2000 + 1000);
   });
 
   // We define what to do when the promise is resolved with the then() call,
   // and what to do when the promise is rejected with the catch() call
-  p1.then(function(val) {
+  p1.then((val) => {
     // Log the fulfillment value
-    log.insertAdjacentHTML('beforeend', val + ') Promise fulfilled<br>');
+    log.insertAdjacentHTML("beforeend", `${val}) Promise fulfilled<br>`);
   }).catch((reason) => {
     // Log the rejection reason
     console.log(`Handle rejected promise (${reason}) here.`);
   });
   // end
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise made<br>');
+  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Promise made<br>`);
 }
 
-if ("Promise" in window) {
-  let btn = document.getElementById("make-promise");
-  btn.addEventListener("click",testPromise);
-} else {
-  log = document.getElementById('log');
-  log.textContent = "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
-}
+const btn = document.getElementById("make-promise");
+btn.addEventListener("click", testPromise);
 ```
 
 #### Result

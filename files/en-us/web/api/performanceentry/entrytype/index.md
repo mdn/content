@@ -11,6 +11,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.entryType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`entryType`** property returns
@@ -42,6 +43,18 @@ table below.
       <td>{{domxref('PerformanceElementTiming')}}</td>
       <td>string</td>
       <td>Reports load time of elements.</td>
+    </tr>
+    <tr>
+      <td><code>event</code></td>
+      <td>{{domxref('PerformanceEventTiming')}}</td>
+      <td>string</td>
+      <td>Reports event latencies.</td>
+    </tr>
+    <tr>
+      <td><code>first-input</code></td>
+      <td>{{domxref('PerformanceEventTiming')}}</td>
+      <td>string</td>
+      <td>Reports the {{Glossary("first input delay")}}.</td>
     </tr>
     <tr>
       <td><code>navigation</code></td>
@@ -101,9 +114,8 @@ table below.
 The following example shows the use of the `entryType` property.
 
 ```js
-function run_PerformanceEntry() {
-
-  // check for feature support before continuing
+function runPerformanceEntry() {
+  // Check for feature support before continuing
   if (performance.mark === undefined) {
     console.log("performance.mark not supported");
     return;
@@ -113,11 +125,10 @@ function run_PerformanceEntry() {
   performance.mark("begin");
 
   // Check the entryType of all the "begin" entries
-  var entriesNamedBegin = performance.getEntriesByName("begin");
-  for (var i=0; i < entriesNamedBegin.length; i++) {
-      var typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log("Entry is type: " + typeOfEntry);
-  }
+  performance.getEntriesByName("begin")
+    .forEach((entry) => {
+      console.log(`Entry is type: ${entry.entryType}`);
+    });
 
 }
 ```

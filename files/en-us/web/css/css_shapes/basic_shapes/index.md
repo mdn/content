@@ -1,36 +1,38 @@
 ---
-title: Basic Shapes
+title: Basic shapes
 slug: Web/CSS/CSS_Shapes/Basic_Shapes
+page-type: guide
 tags:
   - CSS
   - CSS Shapes
   - Guide
   - Reference
 ---
+
 {{CSSRef}}
 
 CSS Shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type, and in this guide I'll explain how each of the different values accepted by this type work. They range from simple circles to complex polygons.
 
-Before looking at the shapes, it is worth understanding two pieces of information that go together to make these shapes possible:
+Before looking at shapes, it is worth understanding two pieces of information that go together to make these shapes possible:
 
 - The `<basic-shape>` type
 - The reference box
 
 ## The \<basic-shape> type
 
-The `<basic-shape>` type is used as the value for all of our Basic Shapes. This type uses Functional Notation: the type of shape is followed by brackets, inside of which are additional values used to describe the shape.
+The `<basic-shape>` type is used as the value for all of our basic shapes. This type uses Functional Notation: the type of shape is followed by brackets, inside of which are additional values used to describe the shape.
 
 The arguments which are accepted vary depending on the shape that you are creating. We will cover these in the examples below.
 
 ## The reference box
 
-Understanding the reference box used by CSS Shapes is important when using Basic Shapes, as it defines each shape's coordinate system. You have already met the reference box in [the guide on creating shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values), which directly uses the reference box to create the shape.
+Understanding the reference box used by CSS Shapes is important when using basic shapes, as it defines each shape's coordinate system. You have already met the reference box in [the guide on creating shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values), which directly uses the reference box to create the shape.
 
-The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using `shape-outside: circle(50%)`. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a Basic Shape the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.
+The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using `shape-outside: circle(50%)`. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a basic shape, the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.
 
-![](shapes-reference-box.png)
+![An imaged clipped into a circle floated left, with a paragraph of text. The left edge of the text is circular abutting the clipped shape on the outside of the margin with the margin following the shape clipping.](shapes-reference-box.png)
 
-You can add the various Box Values after your Basic Shape definition. Therefore the default behavior is as if you have defined.
+You can add the various box values after your basic shape definition. Therefore the default behavior is as if you have defined.
 
 ```css
 .shape {
@@ -48,7 +50,7 @@ You can therefore change this in order that your shape uses the different parts 
 
 What is worth noting is that the `margin-box` will clip the shape, therefore shapes created in reference to other shapes which extend past the margin box will have the shape clipped to the margin box. We will see this in the following examples of basic shapes.
 
-For an excellent description of references boxes as they apply to CSS Shapes see [Understanding Reference Boxes for CSS Shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/).
+For an excellent description of references boxes as they apply to CSS Shapes, see [Understanding Reference Boxes for CSS Shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/).
 
 ## inset()
 

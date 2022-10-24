@@ -9,28 +9,30 @@ tags:
   - PWA
   - content index
   - content indexing
+  - Experimental
 browser-compat: api.ContentIndex
 ---
-{{DefaultAPISidebar("Content Index API")}}
 
-The **`ContentIndex`** interface of the {{domxref('Content Index API')}} allows developers to register their offline enabled content with the browser.
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
-## Properties
+The **`ContentIndex`** interface of the [Content Index API](/en-US/docs/Web/API/Content_Index_API) allows developers to register their offline enabled content with the browser.
+
+## Instance properties
 
 There are no properties of this interface.
 
-## Methods
+## Instance methods
 
-- {{domxref('ContentIndex.add()')}}
-  - : Registers an item with the {{domxref('Content Index API','content index')}}.
-- {{domxref('ContentIndex.delete()')}}
+- {{domxref('ContentIndex.add()')}} {{Experimental_Inline}}
+  - : Registers an item with the [content index](/en-US/docs/Web/API/Content_Index_API).
+- {{domxref('ContentIndex.delete()')}} {{Experimental_Inline}}
   - : Unregisters an item from the currently indexed content.
-- {{domxref('ContentIndex.getAll()')}}
+- {{domxref('ContentIndex.getAll()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with an iterable list of content index entries.
 
 ## Examples
 
-### Feature Detection and Interface Access
+### Feature detection and interface access
 
 Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the `index` property, which gives us access to the content index interface.
 
@@ -47,9 +49,9 @@ if ('index' in registration) {
 }
 ```
 
-### Adding to the Content Index
+### Adding to the content index
 
-Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the [content index](/en-US/docs/Web/API/Content_Index_API).
 
 ```js
 // our content
@@ -84,9 +86,9 @@ async function registerContent(data) {
 }
 ```
 
-### Retrieving Items Within The Current Index
+### Retrieving items within the current index
 
-The below example shows an asynchronous function that retrieves items within the {{domxref('Content Index API','content index')}} and iterates over each entry, building a list for the interface.
+The below example shows an asynchronous function that retrieves items within the [content index](/en-US/docs/Web/API/Content_Index_API) and iterates over each entry, building a list for the interface.
 
 ```js
 async function createReadingList() {
@@ -130,9 +132,9 @@ async function createReadingList() {
 }
 ```
 
-### Unregistering Indexed Content
+### Unregistering indexed content
 
-Below is an asynchronous function, that removes an item from the {{domxref('Content Index API','content index')}}.
+Below is an asynchronous function, that removes an item from the [content index](/en-US/docs/Web/API/Content_Index_API).
 
 ```js
 async function unregisterContent(article) {
@@ -149,7 +151,7 @@ async function unregisterContent(article) {
 }
 ```
 
-All the above methods are available within the scope of the {{domxref('ServiceWorker','service worker')}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
+All the above methods are available within the scope of the [service worker](/en-US/docs/Web/API/ServiceWorker). They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
 
 ```js
 // service worker script

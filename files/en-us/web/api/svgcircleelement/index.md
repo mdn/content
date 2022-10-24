@@ -11,13 +11,14 @@ tags:
   - SVGCircleElement
 browser-compat: api.SVGCircleElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGCircleElement`** interface is an interface for the {{SVGElement("circle")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
@@ -28,7 +29,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGeometry
 - {{domxref("SVGCircleElement.r")}} {{ReadOnlyInline}}
   - : This property defines the radius of the `<circle>` element. It is denoted by the {{SVGAttr("r")}} of the element.
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
@@ -41,9 +42,18 @@ In this example we draw a circle and randomly increase or decrease its radius wh
 #### HTML
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
-  <circle cx="100" cy="100" r="50" fill="gold" id="circle"
-      onclick="clickCircle();"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 250 250"
+  width="250"
+  height="250">
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    fill="gold"
+    id="circle"
+    onclick="clickCircle();" />
 </svg>
 ```
 
@@ -51,12 +61,12 @@ In this example we draw a circle and randomly increase or decrease its radius wh
 
 ```js
 function clickCircle() {
-  var circle = document.getElementById("circle");
+  const circle = document.getElementById("circle");
   // Randomly determine if the circle radius will increase or decrease
-  var change = Math.random() > 0.5 ? 10 : -10;
+  const change = Math.random() > 0.5 ? 10 : -10;
   // Clamp the circle radius to a minimum of 10 and a maximum of 250,
   // so it won't disappear or get bigger than the viewport
-  var newValue = Math.min(Math.max(circle.r.baseVal.value + change, 10), 250);
+  const newValue = Math.min(Math.max(circle.r.baseVal.value + change, 10), 250);
   circle.setAttribute("r", newValue);
 }
 ```

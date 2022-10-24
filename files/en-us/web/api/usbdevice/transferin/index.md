@@ -11,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - transferIn
+  - Experimental
 browser-compat: api.USBDevice.transferIn
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`transferIn()`** method of the {{domxref("USBDevice")}}
@@ -22,7 +24,7 @@ device.
 
 ## Syntax
 
-```js
+```js-nolint
 transferIn(endpointNumber, length)
 ```
 

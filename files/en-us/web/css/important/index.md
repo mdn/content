@@ -1,6 +1,7 @@
 ---
 title: '!important'
 slug: Web/CSS/important
+page-type: css-keyword
 tags:
   - CSS
   - Reference
@@ -10,6 +11,8 @@ tags:
 # browser-compat: css.flag.important
 ---
 
+{{CSSRef}}
+
 A `!` delimiter followed by the `important` keyword marks the declaration as important. The `!important` flag alters the rules selecting declarations inside the [cascade](/en-US/docs/Web/CSS/Cascade). A declaration that is not _important_ is called _normal_.
 
 To mark a declaration important, add the _important flag_ (`!important`) after the value in the declaration. While white space is allowed between the delimiter and the keyword, the flag is generally written as `!important` without any white space.
@@ -18,7 +21,7 @@ To mark a declaration important, add the _important flag_ (`!important`) after t
 selector {
   property: value; /* normal declaration */
   property: value !important; /* important declaration (standard) */
-  property: value ! important; /* important declaration (non-standard) */
+  property: value !important; /* important declaration (non-standard) */
 }
 ```
 
@@ -52,7 +55,7 @@ In this example, the `color` and `background-color` properties will transition t
 
 ### Cascade layers
 
-Within each of the three origins for style sheets – author, user, and user-agent – normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. Important declarations reverse the order of precedence: important declarations in the first layer take precedence over important declarations in the next layer, and so on. Also, all the important declarations have precedence over important declarations made outside of any layer.
+Within each of the three origins for style sheets – author, user, and user-agent – normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. Important declarations reverse the order of precedence: important declarations in the first layer take precedence over important declarations in the next layer, and so on. Also, all the important declarations have precedence over important declarations made outside any layer.
 
 ### Inline styles
 
@@ -78,11 +81,11 @@ When two important declarations from the same origin and layer apply to the same
 
 ```css
 #myElement p {
-    color: green !important;
+  color: green !important;
 }
 
 p {
-    color: purple !important;
+  color: purple !important;
 }
 ```
 
@@ -99,7 +102,7 @@ p {
 
 p {
   background-image: none !important;
-  background-position: 0% 0% !important;
+  background-position: 0 0 !important;
   background-size: auto auto !important;
   background-repeat: repeat !important;
   background-origin: padding-box !important;
@@ -107,7 +110,7 @@ p {
   background-attachment: scroll !important;
   background-color: blue !important;
 }
- ```
+```
 
 This example shows one of the several reasons avoiding the important flag is generally recommended.
 

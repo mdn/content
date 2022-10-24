@@ -10,9 +10,11 @@ tags:
   - Property
   - Reference
   - silent
+  - Experimental
 browser-compat: api.Notification.silent
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`silent`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the notification should be
@@ -32,12 +34,12 @@ The following snippet is intended to fire a silent notification; a simple
 {{DOMxRef("Notification.Notification","Notification()")}} constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   silent: true
 }
 
-var n = new Notification('Test notification', options);
+const n = new Notification('Test notification', options);
 
 console.log(n.silent) // should log true
 ```

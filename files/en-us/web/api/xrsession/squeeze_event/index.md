@@ -23,9 +23,11 @@ tags:
   - augmented
   - controllers
   - squeeze
+  - Experimental
 browser-compat: api.XRSession.squeeze_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The WebXR **`squeeze`** event is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions). Examples of common kinds of primary action are users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
 
@@ -36,9 +38,9 @@ For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeeze', event => { })
+addEventListener('squeeze', (event) => { })
 
-onsqueeze = event => { }
+onsqueeze = (event) => { }
 ```
 
 ## Event type
@@ -77,8 +79,8 @@ The following example uses {{domxref("EventTarget.addEventListener", "addEventLi
 This code treats the squeeze as an instantaneous action that doesn't involve tracking an ongoing activity. If you need to track a squeeze action that isn't instantaneous, listen for the {{domxref("XRSession.squeezestart_event", "squeezestart")}} and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events to sense when the squeeze action begins and ends.
 
 ```js
-xrSession.addEventListener("squeeze", event => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+xrSession.addEventListener("squeeze", (event) => {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {
@@ -91,8 +93,8 @@ xrSession.addEventListener("squeeze", event => {
 You can also set up a handler for `squeeze` events by setting the {{domxref("XRSession")}} object's `onsqueeze` event handler property to a function that handles the event:
 
 ```js
-xrSession.onsqueeze = event => {
-  if (event.inputSource.targetRayMode == "tracked-pointer") {
+xrSession.onsqueeze = (event) => {
+  if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
     if (targetRayPose) {

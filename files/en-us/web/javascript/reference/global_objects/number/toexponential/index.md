@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.toExponential
 ---
+
 {{JSRef}}
 
 The **`toExponential()`** method returns a string representing
@@ -18,7 +19,7 @@ the {{jsxref("Number")}} object in exponential notation.
 
 ## Syntax
 
-```js
+```js-nolint
 toExponential()
 toExponential(fractionDigits)
 ```

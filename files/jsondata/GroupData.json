@@ -13,6 +13,13 @@
       "properties": [],
       "events": []
     },
+    "Background Sync": {
+      "overview": ["Background Synchronization API"],
+      "interfaces": ["SyncManager", "SyncEvent"],
+      "methods": ["ServiceWorkerRegistration.sync()"],
+      "properties": [],
+      "events": ["ServiceWorkerGlobalScope: sync"]
+    },
     "Background Tasks": {
       "overview": ["Background Tasks API"],
       "interfaces": ["IdleDeadline"],
@@ -91,25 +98,23 @@
         "Path2D",
         "TextMetrics"
       ],
-      "methods": [
-        "createImageBitmap"
-      ],
+      "methods": ["createImageBitmap"],
       "properties": [],
       "events": []
     },
     "Channel Messaging API": {
       "overview": ["Channel Messaging API"],
       "guides": ["/docs/Web/API/Channel_Messaging_API/Using_channel_messaging"],
-      "interfaces": [
-        "MessageChannel",
-        "MessagePort"
-      ],
+      "interfaces": ["MessageChannel", "MessagePort"],
       "methods": [],
       "properties": [],
       "events": []
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
+      "guides": [
+        "/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard"
+      ],
       "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
       "dictionaries": ["ClipboardPermissionDescriptor"],
       "methods": [],
@@ -120,6 +125,13 @@
         "Element: cut",
         "Element: paste"
       ]
+    },
+    "Compression Streams API": {
+      "overview": ["Compression Streams API"],
+      "interfaces": ["CompressionStream", "DecompressionStream"],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
@@ -135,9 +147,7 @@
       "overview": ["Content Index API"],
       "interfaces": ["ContentIndex", "ContentIndexEvent"],
       "methods": [],
-      "properties": [
-        "ServiceWorkerRegistration.index"
-      ],
+      "properties": ["ServiceWorkerRegistration.index"],
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
     "Console API": {
@@ -145,6 +155,18 @@
       "interfaces": ["Console"],
       "methods": [],
       "properties": ["Window.console", "WorkerGlobalScope.console"],
+      "events": []
+    },
+    "Cookie Store API": {
+      "overview": ["Cookie Store API"],
+      "interfaces": [
+        "CookieStore",
+        "CookieStoreManager",
+        "CookieChangeEvent",
+        "ExtendableCookieChangeEvent"
+      ],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Credential Management API": {
@@ -169,15 +191,14 @@
     },
     "CSS Font Loading API": {
       "overview": ["CSS Font Loading API"],
-      "interfaces": [
-        "FontFace",
-        "FontFaceSet",
-        "FontFaceSource",
-        "FontFaceSetLoadEvent"
-      ],
+      "interfaces": ["FontFace", "FontFaceSet", "FontFaceSetLoadEvent"],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
+      "events": [
+        "FontFaceSet: loading event",
+        "FontFaceSet: loadingdone event",
+        "FontFaceSet: loadingerror event"
+      ]
     },
     "CSS Painting API": {
       "overview": ["CSS Painting API"],
@@ -189,6 +210,14 @@
         "PaintSize"
       ],
       "methods": ["CSS.paintWorklet"],
+      "properties": [],
+      "events": []
+    },
+    "CSS Properties and Values API": {
+      "overview": ["CSS Properties and Values API"],
+      "guides": ["/docs/Web/API/CSS_Properties_and_Values_API/guide"],
+      "interfaces": ["CSSPropertyRule"],
+      "methods": ["CSS.registerProperty"],
       "properties": [],
       "events": []
     },
@@ -253,11 +282,12 @@
       ]
     },
     "Device Orientation Events": {
+      "overview": ["Device orientation events"],
       "guides": [
-          "/docs/Web/Events/Detecting_device_orientation",
-          "/docs/Web/Events/Orientation_and_motion_data_explained",
-          "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
-        ],
+        "/docs/Web/API/Device_orientation_events/Detecting_device_orientation",
+        "/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained",
+        "/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms"
+      ],
       "interfaces": [
         "DeviceMotionEvent",
         "DeviceMotionEventAcceleration",
@@ -268,7 +298,7 @@
       "properties": [],
       "events": [
         "Window: deviceorientation",
-        "Window: compassneedscalibration",
+        "Window: deviceorientationabsolute",
         "Window: devicemotion"
       ]
     },
@@ -336,7 +366,13 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
-      "interfaces": ["TextDecoder", "TextEncoder", "TextDecoderStream", "TextEncoderStream"],
+      "guides": ["/docs/Web/API/Encoding_API/Encodings"],
+      "interfaces": [
+        "TextDecoder",
+        "TextEncoder",
+        "TextDecoderStream",
+        "TextEncoderStream"
+      ],
       "methods": [],
       "properties": [],
       "events": []
@@ -354,18 +390,12 @@
         "Navigator.requestMediaKeySystemAccess()",
         "HTMLMediaElement.setMediaKeys()"
       ],
-      "properties": [
-        "HTMLMediaElement.mediaKeys"
-      ],
-      "events": [
-        "HTMLMediaElement: encrypted"
-      ]
+      "properties": ["HTMLMediaElement.mediaKeys"],
+      "events": ["HTMLMediaElement: encrypted"]
     },
     "EyeDropper API": {
       "overview": ["EyeDropper API"],
-      "interfaces": [
-        "EyeDropper"
-      ],
+      "interfaces": ["EyeDropper"],
       "methods": [],
       "properties": [],
       "events": []
@@ -384,9 +414,7 @@
     },
     "File API": {
       "overview": ["File API"],
-      "guides": [
-        "/docs/Web/API/File_API/Using_files_from_web_applications"
-      ],
+      "guides": ["/docs/Web/API/File_API/Using_files_from_web_applications"],
       "interfaces": [
         "Blob",
         "File",
@@ -438,10 +466,7 @@
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
       "interfaces": [],
       "methods": ["Document.exitFullscreen()", "Element.requestFullscreen()"],
-      "properties": [
-        "Document.fullscreen",
-        "Document.fullscreenElement"
-      ],
+      "properties": ["Document.fullscreen", "Document.fullscreenElement"],
       "events": [
         "Document: fullscreenchange",
         "Document: fullscreenerror",
@@ -474,9 +499,12 @@
       "events": []
     },
     "Geometry Interfaces": {
+      "overview": ["Geometry interfaces"],
       "interfaces": [
         "DOMMatrix",
         "DOMMatrixReadOnly",
+        "DOMPoint",
+        "DOMQuad",
         "DOMRect",
         "DOMRectReadOnly"
       ],
@@ -501,6 +529,7 @@
     },
     "History API": {
       "overview": ["History API"],
+      "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
       "interfaces": ["History"],
       "methods": [],
       "properties": [],
@@ -512,14 +541,12 @@
         "BeforeUnloadEvent",
         "DOMStringMap",
         "ErrorEvent",
-        "GlobalEventHandlers",
         "HashChangeEvent",
         "ImageData",
         "HTMLAnchorElement",
         "HTMLAreaElement",
         "HTMLAudioElement",
         "HTMLBaseElement",
-        "HTMLBaseFontElement",
         "HTMLBodyElement",
         "HTMLBRElement",
         "HTMLButtonElement",
@@ -597,6 +624,7 @@
         "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
+        "UserActivation",
         "ValidityState",
         "Window"
       ],
@@ -722,22 +750,29 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["indexedDB"],
       "events": []
     },
     "Intersection Observer API": {
       "overview": ["Intersection Observer API"],
+      "guides": [
+        "/docs/Web/API/Intersection_Observer_API/Timing_element_visibility"
+      ],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "Largest Contentful Paint API": {
+      "overview": ["Largest Contentful Paint API"],
+      "interfaces": ["LargestContentfulPaint"],
       "methods": [],
       "properties": [],
       "events": []
     },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
-      "interfaces: ": [
-        "LayoutShift",
-        "LayoutShiftAttribution"
-      ],
+      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
       "methods": [],
       "properties": [],
       "events": []
@@ -754,23 +789,22 @@
       "guides": [
         "/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API"
       ],
-      "interfaces": [
-        "MediaCapabilities",
-        "Screen"
-      ],
+      "interfaces": ["MediaCapabilities", "Screen"],
       "methods": [
         "mediaCapabilities.decodingInfo()",
         "mediaCapabilities.encodingInfo()"
       ],
-      "properties": [],
+      "properties": ["navigator.mediaCapabilities"],
       "events": [],
       "dictionaries": []
     },
     "Media Capture and Streams": {
-      "overview": ["Media Streams API"],
-      "guides": ["/docs/Web/API/Media_Streams_API/Constraints"],
+      "overview": ["Media Capture and Streams API"],
+      "guides": [
+        "/docs/Web/API/Media_Capture_and_Streams_API/Constraints",
+        "/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos"
+      ],
       "interfaces": [
-        "BlobEvent",
         "CanvasCaptureMediaStreamTrack",
         "MediaDevices",
         "MediaStream",
@@ -788,6 +822,16 @@
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+    },
+    "Media Recorder API": {
+      "overview": ["Media Recorder API"],
+      "interfaces": ["MediaRecorder", "BlobEvent"],
+      "methods": [],
+      "properties": ["window.MediaRecorder"],
+      "events": [],
+      "dictionaries": ["MediaRecorderOptions", "BlobEventInit"],
+      "types": ["BitrateMode", "RecordingState"],
+      "callbacks": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
@@ -855,6 +899,13 @@
       "methods": [],
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
+    },
+    "Paint Timing API": {
+      "overview": ["Paint Timing API"],
+      "interfaces": ["PerformancePaintTiming"],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Payment Request API": {
       "overview": ["Payment Request API"],
@@ -980,19 +1031,7 @@
         "Element.setPointerCapture()",
         "Element.releasePointerCapture()"
       ],
-      "properties": [
-        "GlobalEventHandlers.ongotpointercapture",
-        "GlobalEventHandlers.onlostpointercapture",
-        "GlobalEventHandlers.onpointerdown",
-        "GlobalEventHandlers.onpointermove",
-        "GlobalEventHandlers.onpointerup",
-        "GlobalEventHandlers.onpointercancel",
-        "GlobalEventHandlers.onpointerover",
-        "GlobalEventHandlers.onpointerout",
-        "GlobalEventHandlers.onpointerenter",
-        "GlobalEventHandlers.onpointerleave",
-        "Navigator.maxTouchPoints"
-      ],
+      "properties": ["Navigator.maxTouchPoints"],
       "events": [
         "HTMLElement: pointerover",
         "HTMLElement: pointerenter",
@@ -1009,17 +1048,9 @@
     "Pointer Lock API": {
       "overview": ["Pointer Lock API"],
       "interfaces": [],
-      "methods": [
-        "Element.requestPointerLock()",
-        "Document.exitPointerLock()"
-      ],
-      "properties": [
-        "Document.pointerLockElement"
-      ],
-      "events": [
-        "Document: pointerlockchange",
-        "Document: pointerlockerror"
-      ]
+      "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
+      "properties": ["Document.pointerLockElement"],
+      "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1041,7 +1072,13 @@
     "Prioritized Task Scheduling API": {
       "overview": ["Prioritized Task Scheduling API"],
       "guides": [],
-      "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
+      "interfaces": [
+        "Scheduler",
+        "TaskController",
+        "TaskSignal",
+        "AbortSignal",
+        "TaskPriorityChangeEvent"
+      ],
       "methods": [],
       "properties": ["Window.scheduler"],
       "events": []
@@ -1063,9 +1100,7 @@
         "PushMessageData"
       ],
       "methods": [],
-      "properties": [
-        "ServiceWorkerRegistration.pushManager"
-      ],
+      "properties": ["ServiceWorkerRegistration.pushManager"],
       "events": [
         "ServiceWorkerGlobalScope: push",
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
@@ -1146,9 +1181,7 @@
     "Selection API": {
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
-      "properties": [
-        "GlobalEventHandlers.onselectstart"
-      ],
+      "properties": [],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
       "events": ["Document: selectionchange", "Document: selectstart"]
     },
@@ -1228,6 +1261,7 @@
       "guides": [
         "/docs/Web/API/Streams_API/Concepts",
         "/docs/Web/API/Streams_API/Using_readable_streams",
+        "/docs/Web/API/Streams_API/Using_readable_byte_streams",
         "/docs/Web/API/Streams_API/Using_writable_streams"
       ],
       "interfaces": [
@@ -1830,7 +1864,6 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Taking_still_photos",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
       ],
       "interfaces": [
@@ -1914,9 +1947,6 @@
         "RTCCertificateStats",
         "RTCRTPStreamStats"
       ],
-      "types": [
-        "RTCStatsType"
-      ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],
       "events": [
@@ -1953,10 +1983,7 @@
       "overview": ["Web Share API"],
       "guides": [],
       "interfaces": [],
-      "methods": [
-        "Navigator.canShare()",
-        "Navigator.share()"
-      ],
+      "methods": ["Navigator.canShare()", "Navigator.share()"],
       "properties": [],
       "events": []
     },
@@ -1975,6 +2002,7 @@
     },
     "Web Speech API": {
       "overview": ["Web Speech API"],
+      "guides": ["/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API"],
       "interfaces": [
         "SpeechGrammar",
         "SpeechGrammarList",
@@ -2018,6 +2046,27 @@
         "WorkerGlobalScope",
         "WorkerLocation",
         "WorkerNavigator"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "WebUSB API": {
+      "overview": ["WebUSB API"],
+      "interfaces": [
+        "USB",
+        "USBAlternateInterface",
+        "USBConfiguration",
+        "USBConnectionEvent",
+        "USBDevice",
+        "USBEndPoint",
+        "USBInterface",
+        "USBInTransferResult",
+        "USBIsochronousInTransferPacket",
+        "USBIsochronousInTransferResult",
+        "USBIsochronousOutTransferPacket",
+        "USBIsochronousOutTransferResult",
+        "USBOutTransferResult"
       ],
       "methods": [],
       "properties": [],
@@ -2071,6 +2120,7 @@
     },
     "WebXR Device API": {
       "overview": ["WebXR Device API"],
+      "guides": ["/docs/Web/API/WebXR_Device_API/Fundamentals"],
       "interfaces": [
         "XRAnchor",
         "XRBoundedReferenceSpace",
@@ -2112,9 +2162,7 @@
     },
     "Window Controls Overlay API": {
       "overview": ["Window Controls Overlay API"],
-      "interfaces": [
-        "WindowControlsOverlay"
-      ],
+      "interfaces": ["WindowControlsOverlay"],
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []

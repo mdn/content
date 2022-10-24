@@ -4,16 +4,16 @@ slug: Web/API/HTMLMediaElement/seekToNextFrame
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTMLMediaElement
   - Method
-  - Non-standard
   - Reference
   - Web
   - seekToNextFrame
+  - Deprecated
 browser-compat: api.HTMLMediaElement.seekToNextFrame
 ---
-{{APIRef("HTML DOM")}} {{non-standard_header}} {{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLMediaElement.seekToNextFrame()`** method
 asynchronously advances the current play position to the next frame in the media.
@@ -31,16 +31,16 @@ want). Possible uses for this method include filtering and editing of video cont
 
 This method returns immediately, returning a {{jsxref("Promise")}}, whose fulfillment
 handler is called when the seek operation is complete. In addition, a
-{{event("seeked")}} event is sent to let interested parties know that a seek has taken
+{{domxref("HTMLMediaElement/seeked_event", "seeked")}} event is sent to let interested parties know that a seek has taken
 place. If the seek fails because the media is already at the last frame, a
-{{event("seeked")}} event occurs, followed immediately by an {{event("ended")}} event.
+{{domxref("HTMLMediaElement/seeked_event", "seeked")}} event occurs, followed immediately by an {{domxref("HTMLMediaElement/ended_event", "ended")}} event.
 
 If there is no video on the media element, or the media isn't seekable, nothing
 happens.
 
 ## Syntax
 
-```js
+```js-nolint
 seekToNextFrame()
 ```
 

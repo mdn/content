@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisErrorEvent.error
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`error`** property of the
@@ -48,7 +49,7 @@ A string containing an error code. Possible codes are:
   - : The operation failed because the synthesis engine raised an error.
 - `language-unavailable`
   - : No appropriate voice was available for the language set in
-    {{domxref("SpeechSynthesisUtterance.lang")}}.
+    {{domxref("SpeechSynthesisUtterance.lang")}}. You can use the [`window.speechSynthesis.getVoices()`](/en-US/docs/Web/API/SpeechSynthesis/getVoices) method to determine which voices and languages are supported in the user's browser.
 - `voice-unavailable`
   - : The voice set in {{domxref("SpeechSynthesisUtterance.voice")}} was not available.
 - `text-too-long`
@@ -62,31 +63,31 @@ A string containing an error code. Possible codes are:
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for (let i = 0; i < voices.length ; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
 
   synth.speak(utterThis);
 
-  utterThis.onerror = function(event) {
-    console.error('An error has occurred with the speech synthesis: ' + event.error);
+  utterThis.onerror = (event) => {
+    console.error(`An error has occurred with the speech synthesis: ${event.error}`);
   }
 
   inputTxt.blur();

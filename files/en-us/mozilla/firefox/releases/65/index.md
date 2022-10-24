@@ -2,11 +2,12 @@
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
 tags:
-  - '65'
+  - "65"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 65 that will affect developers. Firefox 65 was released on January 29, 2019.
@@ -45,16 +46,17 @@ This article provides information about the changes in Firefox 65 that will affe
 - The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](</en-US/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) — have been implemented ({{bug(1496619)}}). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
 - Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
 
-  - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. the existing value `meterbar` is now an alias for `meter` ({{bug(1501483)}}).
-  - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. the existing value `progressbar` is now an alias for `progress-bar` ({{bug(1501506)}}).
-  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. the existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}})
+  - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. The existing value `meterbar` is now an alias for `meter` ({{bug(1501483)}}).
+  - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. The existing value `progressbar` is now an alias for `progress-bar` ({{bug(1501506)}}).
+  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. The existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}})
 
 - The behavior of {{cssxref("user-select")}} has been changed to make it align more with other browsers ({{bug(1506547)}}). Specifically:
 
   - `user-select: all` set on an element no longer overrides other values of `user-select` set on children of that element. So for example in the following snippet:
 
     ```html
-    <div style="-webkit-user-select: all">All
+    <div style="-webkit-user-select: all">
+      All
       <div style="-webkit-user-select: none">None</div>
     </div>
     ```
@@ -100,7 +102,7 @@ _No changes._
 #### DOM events
 
 - Going forward, only one {{domxref("Window.open()")}} call is allowed per event ({{bug(675574)}}).
-- The [`keyup`](/en-US/docs/Web/API/Document/keyup_event) and [`keydown`](/en-US/docs/Web/API/Document/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}.
+- The [`keyup`](/en-US/docs/Web/API/Element/keyup_event) and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}.
 
 #### Web workers
 
@@ -129,7 +131,7 @@ _No changes._
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ({{bug(1502927)}}).
 - The `dom.webcomponents.shadowdom.enabled` and `dom.webcomponents.customelements.enabled` prefs have been removed — Shadow DOM and Custom Elements can no longer be disabled in `about:config` ({{bug(1503019)}}).
 - The non-standard DOM `text` event — fired to notify the browser editor UI of IME composition string data and selection range — has been removed ({{bug(1288640)}}).
-- The {{event("keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
+- The {{domxref("Element/keypress_event", "keypress")}} event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the `Enter` key, and the `Shift` + `Enter` and `Ctrl` + `Enter` key combinations (these were kept for cross-browser compatibility purposes).
 
 ### Security
 
@@ -177,7 +179,7 @@ _No changes._
   - The {{WebExtAPIRef("tabs.Tab")}} type now has a `successorId` property, which can be used to store/retrieve the ID of the tab's successor.
   - The {{WebExtAPIRef("tabs.onActivated")}} event listener's callback has a new parameter available, `previousTabId`, which contains the ID of the previous activated tab, if it is still open.
   - The {{WebExtAPIRef("tabs.update()")}} function's `updateProperties` object has a new optional property available on it, `successorTabId`, so can be used to update it.
-  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}}  and {{WebExtAPIRef("tabs.query()")}}.
+  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}} and {{WebExtAPIRef("tabs.query()")}}.
   - The new function `tabs.moveInSuccession()` allows manipulation of tab successors in bulk.
 
 ### Manifest changes
@@ -186,7 +188,7 @@ _No changes._
 
 ### Other
 
-- The `headerURL`/`theme_frame` properties for [Webextension themes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) are now supported on Firefox for Android ({{bug(1429488)}}).
+- The `headerURL`/`theme_frame` properties for [WebExtension themes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) are now supported on Firefox for Android ({{bug(1429488)}}).
 
 ## See also
 

@@ -11,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - productID
+  - Experimental
 browser-compat: api.USBDevice.productId
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`productId`** read only property of the

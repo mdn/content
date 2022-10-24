@@ -1,6 +1,7 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -13,6 +14,7 @@ tags:
   - gradient
 browser-compat: css.types.image.gradient.conic-gradient
 ---
+
 {{CSSRef}}
 
 The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and {{glossary("color wheel", "color wheels")}}. The result of the `conic-gradient()` function is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
@@ -95,7 +97,7 @@ By default, colors transition smoothly from the color at one color stop to the c
 conic-gradient(red 40grad, 80grad, blue 360grad);
 ```
 
-If two or more color stops are at the same location, the transition will be a hard line between the first and last colors declared at that location. To use conic gradients to create pie charts --- which is NOT the correct way to create pie charts as background images are not accessible -- use hard color stops, where the color stop angles for two adjacent color stops are the same. The easiest way to do this is to use multiple position colors stops. The following two declarations are equivalent:
+If two or more color stops are at the same location, the transition will be a hard line between the first and last colors declared at that location. To use conic gradients to create pie charts — which is NOT the correct way to create pie charts as background images are not accessible — use hard color stops, where the color stop angles for two adjacent color stops are the same. The easiest way to do this is to use multiple position colors stops. The following two declarations are equivalent:
 
 ```css
 conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
@@ -117,7 +119,7 @@ background-size: 25% 25%;
 
 And, yes, you can mix and match different angle units, but don't. The above is hard to read.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 
@@ -145,8 +147,7 @@ div {
 
 ```css
 div {
-  background-image:
-     conic-gradient(from 40deg, #fff, #000);
+  background-image: conic-gradient(from 40deg, #fff, #000);
 }
 ```
 
@@ -190,9 +191,8 @@ div {
 
 ```css
 div {
-  background: conic-gradient(
-     red 36deg, orange 36deg 170deg, yellow 170deg);
-  border-radius: 50%
+  background: conic-gradient(red 36deg, orange 36deg 170deg, yellow 170deg);
+  border-radius: 50%;
 }
 ```
 
@@ -213,9 +213,12 @@ div {
 
 ```css
 div {
-  background:
-     conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn)
-     top left / 25% 25% repeat;
+  background: conic-gradient(
+      #fff 0.25turn,
+      #000 0.25turn 0.5turn,
+      #fff 0.5turn 0.75turn,
+      #000 0.75turn
+    ) top left / 25% 25% repeat;
   border: 1px solid;
 }
 ```

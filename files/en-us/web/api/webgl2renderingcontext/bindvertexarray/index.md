@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindVertexArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.bindVertexArray()`** method of
@@ -18,7 +19,7 @@ passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 bindVertexArray(vertexArray)
 ```
 
@@ -34,13 +35,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
+
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...
+
+// …
 ```
 
 ## Specifications

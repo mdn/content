@@ -23,9 +23,11 @@ tags:
   - XRInputSourceArray
   - augmented
   - keys
+  - Experimental
 browser-compat: api.XRInputSourceArray.keys
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`keys()`** method in the
 {{domxref("XRInputSourceArray")}} interface returns a {{Glossary("JavaScript")}}
@@ -35,7 +37,7 @@ of input sources.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

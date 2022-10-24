@@ -11,6 +11,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.class
 ---
+
 {{jsSidebar("Statements")}}
 
 The **class declaration** creates a new class
@@ -23,7 +24,7 @@ You can also define a class using a {{jsxref("Operators/class", "class expressio
 
 ## Syntax
 
-```js
+```js-nolint
 class name [extends otherName] {
   // class body
 }
@@ -51,7 +52,7 @@ keyword can be used.
 ```js
 class Rectangle {
   constructor(height, width) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
@@ -60,7 +61,7 @@ class Rectangle {
 class FilledRectangle extends Rectangle {
   constructor(height, width, color) {
     super(height, width);
-    this.name = 'Filled rectangle';
+    this.name = "Filled rectangle";
     this.color = color;
   }
 }
@@ -71,8 +72,8 @@ class FilledRectangle extends Rectangle {
 Re-declaring a class using the class declaration throws a {{jsxref("SyntaxError")}}.
 
 ```js example-bad
-class Foo {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Foo {}
+class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
 The same error is thrown when a class has been defined before using the class
@@ -80,7 +81,7 @@ expression.
 
 ```js example-bad
 let Foo = class {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
 ## Specifications

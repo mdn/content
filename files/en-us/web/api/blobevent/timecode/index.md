@@ -6,21 +6,17 @@ tags:
   - API
   - BlobEvent
   - Media
-  - Media Stream Recording
+  - Media Recorder API
   - Property
   - Reference
 browser-compat: api.BlobEvent.timecode
 ---
-{{SeeCompatTable}}{{APIRef("Media Capture and Streams")}}
 
-The **`timecode`** readonlyinline
-property of the {{domxref("BlobEvent")}} interface a
-{{domxref("DOMHighResTimeStamp")}} indicating the difference between the timestamp of
-the first chunk in data, and the timestamp of the first chunk in the first BlobEvent
-produced by this recorder.
+{{APIRef("Media Recorder API")}}
 
-Note that the timecode in the first produced
-BlobEvent does not need to be zero.
+The **`timecode`** read only property of the {{domxref("BlobEvent")}} interface indicates the difference between the timestamp of the first chunk of data, and the timestamp of the first chunk in the first `BlobEvent` produced by this recorder.
+
+Note that the `timecode` in the first produced `BlobEvent` does not need to be zero.
 
 ## Value
 

@@ -14,7 +14,8 @@ tags:
   - Property
 browser-compat: api.MediaMetadata.artist
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`artist`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the name of the artist, group,
@@ -44,6 +45,7 @@ if ('mediaSession' in navigator) {
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
+}
 ```
 
 ## Specifications

@@ -23,6 +23,7 @@ tags:
   - events
 browser-compat: api.XRInputSourceEvent.frame
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSourceEvent")}} property
@@ -62,7 +63,7 @@ into a function called `myCheckAndHandleHit()` to see if the ray was pointing
 at anything when the select was triggered.
 
 ```js
-xrSession.onselectstart = event => {
+xrSession.onselectstart = (event) => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                             myRefSpace);
   if (targetRayPose) {

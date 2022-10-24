@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.AbstractRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbstractRange`** abstract interface is the base class upon which all {{Glossary("DOM")}} range types are defined. A **range** is an object that indicates the start and end points of a section of content within the document.
@@ -15,7 +16,7 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("AbstractRange.collapsed", "collapsed")}} {{ReadOnlyInline}}
   - : A Boolean value which is `true` if the range is _collapsed_. A collapsed range is a range whose start position and end position are the same, resulting in a zero-character-long range.
@@ -28,7 +29,7 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
   - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
 
-## Methods
+## Instance methods
 
 _The `AbstractRange` interface does provide any methods._
 
@@ -48,13 +49,13 @@ All ranges of content within a {{domxref("Document", "document")}} are described
 When trying to access the contents of an element, keep in mind that the element itself is a node, but so is any text inside it. In order to set a range endpoint within the text of an element, be sure to find the text node inside the element:
 
 ```js
-let startElem = document.querySelector("p");
-let endElem = startElem.querySelector("span");
-let range = document.createRange();
+const startElem = document.querySelector("p");
+const endElem = startElem.querySelector("span");
+const range = document.createRange();
 
 range.setStart(startElem, 0);
-range.setEnd(endElem, endElem.childNodes[0].length/2);
-let contents = range.cloneContents();
+range.setEnd(endElem, endElem.childNodes[0].length / 2);
+const contents = range.cloneContents();
 
 document.body.appendChild(contents);
 ```
@@ -76,16 +77,16 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo">
+    <img src="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
     <section class="entry" id="entry1">
-      <h2>Section 1: An interesting thing...</h2>
-      <p>A <em>very</em> interesting thing happened on the way to the forum...</p>
+      <h2>Section 1: An interesting thing…</h2>
+      <p>A <em>very</em> interesting thing happened on the way to the forum…</p>
       <aside class="callout">
         <h2>Aside</h2>
-        <p>An interesting aside to share with you...</p>
+        <p>An interesting aside to share with you…</p>
       </aside>
     </section>
   </article>
@@ -97,28 +98,28 @@ After loading the HTML and constructing the DOM representation of the document, 
 
 [![Diagram of the DOM for a simple web page](simpledom.svg)](simpledom.svg)
 
-In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
+In this diagram, the nodes representing HTML elements are shown in green. Each row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 
-If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum..."`, you can do so like this:
+If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum…"`, you can do so like this:
 
 ```js
-let pRange = document.createRange();
+const pRange = document.createRange();
 pRange.selectNodeContents(document.querySelector("#entry1 p"));
 ```
 
 Since we wish to select the entire contents of the `<p>` element, including its descendants, this works perfectly.
 
-If we wish to instead copy the text "An interesting thing..." from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
+If we wish to instead copy the text "An interesting thing…" from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
 
-```html
-let r = document.createRange();
-let startNode = document.querySelector("section h2").childNodes[0];
-r.setStart(startNode, 11);
+```js
+const range = document.createRange();
+const startNode = document.querySelector("section h2").childNodes[0];
+range.setStart(startNode, 11);
 
-let endNode = document.querySelector("#entry1 p em").childNodes[0];
-r.setEnd(endNode, 2);
+const endNode = document.querySelector("#entry1 p em").childNodes[0];
+range.setEnd(endNode, 2);
 
-let fragment = r.cloneContents();
+const fragment = range.cloneContents();
 ```
 
 Here an interesting problem arises—we are capturing content from multiple nodes located at different levels of the DOM hierarchy, and then only part of one of them. What should the result look like?
@@ -129,13 +130,13 @@ In this example, the start of the specified range is found within the text node 
 
 The range's end is located below the {{HTMLElement("p")}} element, so that will be needed within the new fragment. So will the text node containing the word "A", since that's included in the range. Finally, an `<em>` and a text node below it will be added below the `<p>` as well.
 
-The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing...". Similarly, the last text node will contain "ve", given the request for the first two characters of the ending node.
+The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing…". Similarly, the last text node will contain "ve", given the request for the first two characters of the ending node.
 
 The resulting document fragment looks like this:
 
 ![A DocumentFragment representing the cloned content](dom-fragment.svg)
 
-Notice especially that the contents of this fragment are all *below* the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
+Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
 
 ## Example
 
@@ -148,14 +149,14 @@ Consider this simple HTML fragment of HTML.
 Imagine using a {{domxref("Range")}} to extract the word "paragraph" from this. The code to do that looks like the following:
 
 ```js
-let paraNode = document.querySelector("p");
-let paraTextNode = paraNode.childNodes[1];
+const paraNode = document.querySelector("p");
+const paraTextNode = paraNode.childNodes[1];
 
-let range = document.createRange();
+const range = document.createRange();
 range.setStart(paraTextNode, 6);
-range.setEnd(paraTextNode, paraTextNode.length-1);
+range.setEnd(paraTextNode, paraTextNode.length - 1);
 
-let fragment = range.cloneContents();
+const fragment = range.cloneContents();
 document.body.appendChild(fragment);
 ```
 

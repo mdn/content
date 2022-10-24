@@ -8,51 +8,83 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mpadded
 ---
+
 {{MathMLRef}}
 
-The MathML `<mpadded>` element is used to add extra padding and to set the general adjustment of position and size of enclosed contents.
+The **`<mpadded>`** [MathML](/en-US/docs/Web/MathML) element is used to add extra padding and to set the general adjustment of position and size of enclosed contents.
 
 ## Attributes
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- depth
-  - : Sets or increments the depth. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- height
-  - : Sets or increments the height. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- href
-  - : Used to set a hyperlink to a specified URI.
-- lspace
-  - : Sets or increments the horizontal position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- voffset
-  - : Sets or increments the vertical position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
-- width
-  - : Sets or increments the width. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
-### Pseudo-units
+- `depth`
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the `<mpadded>` element.
+- `height`
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired height (above the baseline) of the `<mpadded>` element.
+- `lspace`
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the horizontal location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
+- `voffset`
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the vertical location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
+- `width`
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the `<mpadded>` element.
 
-It is possible to use the keywords `"depth`", `"height"`, and `"width"` as a pseudo-unit for the attributes `depth`, `height`, `lspace`, `voffset`, and `width`. They represent each length of the same-named dimension.
-Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit `lspace` was allowed, which is no longer present in the MathML3 Recommendation and has been removed now.
+### Legacy syntax
+
+For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some browsers may instead accept a more complex syntax:
+
+1. An optional `+` or `-` sign as a prefix, specifying an increment or decrement to the corresponding dimension (if absent, the corresponding dimension is set directly to specified value).
+2. Followed by an [`<unsigned-number>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) (let's call it α below).
+3. Optionally followed by a value (if absent, the specified value is interpreted as "100 times α percent").
+   - A [unit](/en-US/docs/Web/MathML/Attribute/Values#units). The specified value is interpreted the same as [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+   - A [namedspace constant](/en-US/docs/Web/MathML/Attribute/Values#constants). The specified value is interpreted as α times the constant.
+   - A pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α times the corresponding dimension of the content.
+   - A percent sign followed by a pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α% the corresponding dimension of the content.
 
 ## Examples
 
+### Dimensions and offsets
+
 ```html
-<math>
-
-  <mpadded height="+150px" width="100px" lspace="2height">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
+<math display="block">
+  <mpadded width="400px" height="5em" depth="4em"
+           lspace="300px" voffset="-2em"
+           style="background: lightblue">
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>y</mi>
   </mpadded>
-
 </math>
 ```
+
+{{ EmbedLiveSample('dimensions_and_offsets_example', 700, 200, "", "") }}
+
+### Legacy syntax
+
+```html
+<math display="block">
+  <!-- increment by a length -->
+  <mpadded width="+20px" style="background: lightblue">
+    <mtext>+20px</mtext>
+  </mpadded>
+
+  <!-- set to a pseudo-unit -->
+  <mpadded width="2width" style="background: lightgreen">
+    <mtext>2width</mtext>
+  </mpadded>
+
+  <!-- increment by a percent of a pseudo-unit -->
+  <mpadded width="+400%height" style="background: lightyellow">
+    <mtext>+400%height</mtext>
+  </mpadded>
+
+  <!-- decrement to a multiple of a namedspace -->
+  <mpadded width="-1thickmathspace" style="background: pink">
+    <mtext>-.5thickmathspace</mtext>
+  </mpadded>
+</math>
+```
+
+{{ EmbedLiveSample('legacy_syntax_example', 700, 200, "", "") }}
 
 ## Specifications
 

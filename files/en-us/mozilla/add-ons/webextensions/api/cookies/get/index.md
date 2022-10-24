@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.cookies.get
 ---
+
 {{AddonSidebar()}}
 
 The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a single cookie, given its name and URL.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.cookies.get(
   details                // object
 )
@@ -35,18 +36,18 @@ let getting = browser.cookies.get(
 
   - : An `object` containing details that can be used to match a cookie to be retrieved. It can include the following properties:
 
-    - `firstPartyDomain`{{optional_inline}}
+    - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `name`
       - : A `string` representing the name of the cookie to retrieve.
-    - `partitionKey`{{optional_inline}}
+    - `partitionKey` {{optional_inline}}
 
       - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. Include this object with `topLevelSite` to obtain a cookie from partitioned storage. Otherwise, returns the cookie from unpartitioned storage. This object contains:
 
-        - `topLevelSite`{{optional_inline}}
+        - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 
-    - `storeId`{{optional_inline}}
+    - `storeId` {{optional_inline}}
       - : A `string` representing the ID of the {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store will be used.
     - `url`
       - : A `string` representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for this URL are not specified in the extension's [manifest file](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), the API call will fail.
@@ -91,7 +92,8 @@ getActive.then(getCookie);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +120,4 @@ getActive.then(getCookie);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

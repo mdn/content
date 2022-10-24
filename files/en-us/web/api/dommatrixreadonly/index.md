@@ -7,25 +7,26 @@ tags:
   - Reference
 browser-compat: api.DOMMatrixReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
-The **`DOMMatrixReadOnly`** interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The {{domxref("DOMMatrix")}} interface — which is based upon `DOMMatrixReadOnly`—adds {{interwiki("wikipedia", "Immutable object", "mutability")}}, allowing you to alter the matrix after creating it.
+The **`DOMMatrixReadOnly`** interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The {{domxref("DOMMatrix")}} interface — which is based upon `DOMMatrixReadOnly`—adds [mutability](https://en.wikipedia.org/wiki/Immutable_object), allowing you to alter the matrix after creating it.
 
 This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations doesn't allow it yet.
 
 ## Constructor
 
 - {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}}
-  - : Creates a new `DOMMMatrixReadOnly` object.
+  - : Creates a new `DOMMatrixReadOnly` object.
 
-## Properties
+## Instance properties
 
 _This interface doesn't inherit any properties._
 
 - `is2D` {{ReadOnlyInline}}
   - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
 - `isIdentity` {{ReadOnlyInline}}
-  - : A Boolean whose value is `true` if the matrix is the {{interwiki("wikipedia", "identity matrix")}}. The identity matrix is one in which every value is `0` *except* those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).
+  - : A Boolean whose value is `true` if the matrix is the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix). The identity matrix is one in which every value is `0` _except_ those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).
 - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
   - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
 - `a`, `b`, `c`, `d`, `e`, `f`
@@ -41,14 +42,14 @@ _This interface doesn't inherit any properties._
     | `e` | `m41`         |
     | `f` | `m42`         |
 
-## Methods
+## Instance methods
 
 _This interface doesn't inherit any methods. None of the following methods alter the original matrix._
 
 - {{domxref("DOMMatrixReadOnly.flipX()")}}
-  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its X-axis. This is equivalent to multiplying the matrix by  `DOMMatrix(-1, 0, 0, 1, 0, 0)`. The original matrix is not modified.
+  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its X-axis. This is equivalent to multiplying the matrix by `DOMMatrix(-1, 0, 0, 1, 0, 0)`. The original matrix is not modified.
 - {{domxref("DOMMatrixReadOnly.flipY()")}}
-  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its Y-axis. This is equivalent to multiplying the matrix by  `DOMMatrix(1, 0, 0, -1, 0, 0)`. The original matrix is not modified.
+  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its Y-axis. This is equivalent to multiplying the matrix by `DOMMatrix(1, 0, 0, -1, 0, 0)`. The original matrix is not modified.
 - {{domxref("DOMMatrixReadOnly.inverse()")}}
   - : Returns a new {{domxref("DOMMatrix")}} created by inverting the source matrix. If the matrix cannot be inverted, the new matrix's components are all set to `NaN` and its `is2D` property is set to `false`. The original matrix is not altered.
 - {{domxref("DOMMatrixReadOnly.multiply()")}}

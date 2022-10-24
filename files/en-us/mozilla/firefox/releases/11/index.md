@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 11
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 11 shipped on March 13, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
@@ -72,7 +73,7 @@ _No change._
 - Previous to Firefox 11, object store {{domxref("IDBObjectStore.autoIncrement","autoIncrement")}} counters were shared across all object stores for a given database, whereas per spec each object store should have a separate counter. This is now fixed.
 - It is now possible to {{domxref("IDBObjectStore.createIndex","create an index")}} with an empty `keyPath`.
 - It is now possible to create a multi-entry index (see [`IDBObjectStore.createIndex` parameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
-- The {{event("abort")}} event now bubbles; in addition, an {{domxref("IDBDatabase.onabort")}} handler has been added.
+- The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an {{domxref("IDBDatabase.onabort")}} handler has been added.
 - IndexedDB can now be used to store files/blobs.
 - IndexedDB now supports complex key paths, e.g. `foo.bar` to access property `bar` of property `foo`.
 - IndexedDB can now accept an array as a `keyPath` when creating an {{domxref("IDBDatabase.createObjectStore()","object store")}} or an {{domxref("IDBObjectStore.createIndex()","index")}} ({{bug("694138")}}.)

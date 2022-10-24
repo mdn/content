@@ -1,6 +1,7 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.box-decoration-break
 ---
+
 {{CSSRef}}
 
 The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_Fragmentation) should be rendered when broken across multiple lines, columns, or pages.
@@ -63,26 +65,25 @@ The `box-decoration-break` property is specified as one of the keyword values li
 
 An inline element that contains line breaks styled with:
 
-```css
-.example {
-  background: linear-gradient(to bottom right, yellow, green);
-  box-shadow:
-    8px 8px 10px 0px deeppink,
-    -5px -5px 5px 0px blue,
-    5px 5px 15px 0px yellow;
-  padding: 0em 1em;
-  border-radius: 16px;
-  border-style: solid;
-  margin-left: 10px;
-  font: 24px sans-serif;
-  line-height: 2;
-}
-
-...
-<span class="example">The<br>quick<br>orange fox</span>
+```html
+<style>
+  .example {
+    background: linear-gradient(to bottom right, yellow, green);
+    box-shadow: 8px 8px 10px 0px deeppink, -5px -5px 5px 0px blue,
+      5px 5px 15px 0px yellow;
+    padding: 0em 1em;
+    border-radius: 16px;
+    border-style: solid;
+    margin-left: 10px;
+    font: 24px sans-serif;
+    line-height: 2;
+  }
+</style>
+…
+<span class="example">The<br />quick<br />orange fox</span>
 ```
 
-... results in:
+This results in:
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example.](box-decoration-break-inline-slice.png)
 
@@ -93,7 +94,7 @@ Adding `box-decoration-break: clone` to the above styles:
 box-decoration-break: clone;
 ```
 
-... results in:
+This one results in:
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 

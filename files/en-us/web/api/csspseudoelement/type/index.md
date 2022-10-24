@@ -11,6 +11,7 @@ tags:
   - Type
 browser-compat: api.CSSPseudoElement.type
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the

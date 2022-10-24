@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.accelerationIncludingGravity
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`accelerationIncludingGravity`** property returns the
@@ -19,8 +20,8 @@ amount of acceleration recorded by the device, in [meters per second squared (m/
 which compensates for the influence of gravity, its value is the sum of the acceleration
 of the device as induced by the user and an acceleration equal and opposite to that
 caused by gravity. In other words, it measures the
-{{interwiki("wikipedia", "G-Force", "g-force")}}. In practice, this value represents
-the raw data measured by an {{interwiki("wikipedia", "accelerometer")}}.
+[g-force](https://en.wikipedia.org/wiki/G-Force). In practice, this value represents
+the raw data measured by an [accelerometer](https://en.wikipedia.org/wiki/Accelerometer).
 
 This value is not typically as useful as {{DOMxRef("DeviceMotionEvent.acceleration")}},
 but may be the only value available on devices that aren't able to remove gravity from
@@ -56,5 +57,5 @@ property:
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent")}}
 - {{DOMxRef("Accelerometer")}}
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

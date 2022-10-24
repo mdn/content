@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.Gyroscope
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`Gyroscope`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the angular velocity of the device along all three axes.
@@ -29,16 +30,16 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("Gyroscope.Gyroscope", "Gyroscope()")}}
   - : Creates a new `Gyroscope` object.
 
-## Properties
+## Instance properties
 
-- {{domxref('Gyroscope.x')}} {{readonlyinline}}
+- {{domxref('Gyroscope.x')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's x axis.
-- {{domxref('Gyroscope.y')}} {{readonlyinline}}
+- {{domxref('Gyroscope.y')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's y axis.
-- {{domxref('Gyroscope.z')}} {{readonlyinline}}
+- {{domxref('Gyroscope.z')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's z axis.
 
-## Methods
+## Instance methods
 
 _`Gyroscope` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
@@ -53,10 +54,10 @@ The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'readin
 ```js
 let gyroscope = new Gyroscope({frequency: 60});
 
-gyroscope.addEventListener('reading', e => {
-  console.log("Angular velocity along the X-axis " + gyroscope.x);
-  console.log("Angular velocity along the Y-axis " + gyroscope.y);
-  console.log("Angular velocity along the Z-axis " + gyroscope.z);
+gyroscope.addEventListener('reading', (e) => {
+  console.log(`Angular velocity along the X-axis ${gyroscope.x}`);
+  console.log(`Angular velocity along the Y-axis ${gyroscope.y}`);
+  console.log(`Angular velocity along the Z-axis ${gyroscope.z}`);
 });
 gyroscope.start();
 ```

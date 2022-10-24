@@ -9,6 +9,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.hasInstance
 ---
+
 {{JSRef}}
 
 The **`Symbol.hasInstance`** well-known symbol is used to determine if a constructor object recognizes an object as its instance. The {{jsxref("Operators/instanceof", "instanceof")}} operator's behavior can be customized by this symbol.
@@ -24,16 +25,18 @@ You could implement your custom `instanceof` behavior like this, for example:
 ```js
 class MyArray {
   static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance)
+    return Array.isArray(instance);
   }
 }
 console.log([] instanceof MyArray); // true
 ```
 
 ```js
-function MyArray() { }
+function MyArray() {}
 Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value: function(instance) { return Array.isArray(instance); }
+  value(instance) {
+    return Array.isArray(instance);
+  },
 });
 console.log([] instanceof MyArray); // true
 ```

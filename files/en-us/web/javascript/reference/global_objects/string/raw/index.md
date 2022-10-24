@@ -10,35 +10,29 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.raw
 ---
+
 {{JSRef}}
 
-The static **`String.raw()`** method
-is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
-This is _similar_ to the `r` prefix in Python, or the `@`
-prefix in C# for string literals.
-It's used to get the raw string form of template literals, that is, substitutions (e.g.
-`${foo}`) are processed, but escapes (e.g. `\n`) are not.
+The static **`String.raw()`** method is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals). This is similar to the `r` prefix in Python, or the `@` prefix in C# for string literals. It's used to get the raw string form of template literals — that is, substitutions (e.g. `${foo}`) are processed, but escape sequences (e.g. `\n`) are not.
 
 {{EmbedInteractiveExample("pages/js/string-raw.html")}}
 
 ## Syntax
 
-```js
-String.raw(callSite, ...substitutions)
+```js-nolint
+String.raw(strings, ...substitutions)
 
 String.raw`templateString`
 ```
 
 ### Parameters
 
-- `callSite`
-  - : Well-formed template call site object, like
-    `{ raw: ['foo', 'bar', 'baz'] }`.
+- `strings`
+  - : Well-formed template literal array object, like `{ raw: ['foo', 'bar', 'baz'] }`. Should be an object with a `raw` property whose value is an array-like object of strings.
 - `...substitutions`
   - : Contains substitution values.
 - `templateString`
-  - : A {{jsxref("template_literals", "template literal", "", 1)}}, optionally with
-    substitutions (`${...}`).
+  - : A [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), optionally with substitutions (`${...}`).
 
 ### Return value
 
@@ -47,19 +41,17 @@ The raw string form of a given template literal.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : A {{jsxref("TypeError")}} is thrown if the first argument is not a well-formed
-    object.
+  - : Thrown if the first argument doesn't have a `raw` property, or the `raw` property is `undefined` or `null`.
 
 ## Description
 
-In most cases, `String.raw()` is used with template literal. The first
-syntax mentioned above is only rarely used, because the JavaScript engine will call this
-with proper arguments for you, (just like with other
-[tag functions](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)).
+In most cases, `String.raw()` is used with template literals. The first syntax mentioned above is only rarely used, because the JavaScript engine will call this with proper arguments for you, (just like with other [tag functions](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)).
 
-`String.raw()` is the only built-in tag function of template literals. It
-works just like the default template function and performs concatenation. You can even
-re-implement it with normal JavaScript code.
+`String.raw()` is the only built-in template literal tag. It has close semantics to an untagged literal since it concatenates all arguments and returns a string. You can even re-implement it with normal JavaScript code.
+
+> **Warning:** You should not use `String.raw` directly as an "identity" tag. See [Building an identity tag](#building_an_identity_tag) for how to implement this.
+
+If `String.raw()` is called with an object whose `raw` property doesn't have a `length` property or a non-positive `length`, it returns an empty string `""`. If `substitutions.length < strings.raw.length - 1` (i.e. there are not enough substitutions to fill the placeholders — which can't happen in a well-formed tagged template literal), the rest of the placeholders are filled with empty strings.
 
 ## Examples
 
@@ -79,27 +71,57 @@ String.raw`Hi\u000A!`;
 // You can confirm this by checking the .length property
 // of the string.
 
-let name = 'Bob';
+const name = 'Bob';
 String.raw`Hi\n${name}!`;
 // 'Hi\\nBob!', substitutions are processed.
 
 String.raw`Hi \${name}!`;
 // 'Hi \\${name}!', the dollar sign is escaped; there's no interpolation.
+```
 
-// Normally you would not call String.raw() as a function,
-// but to simulate `foo${2 + 3}bar${'Java' + 'Script'}baz` you can do:
-String.raw({
-  raw: ['foo', 'bar', 'baz']
-}, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
-// Notice the first argument is an object with a 'raw' property,
-// whose value is an iterable representing the separated strings
-// in the template literal.
-// The rest of the arguments are the substitutions.
+### Building an identity tag
 
-// The first argument's 'raw' value can be any iterable, even a string!
-// For example, 'test' is treated as ['t', 'e', 's', 't'].
-// The following is equivalent to
-// `t${0}e${1}s${2}t`:
+Many tools give special treatment to literals tagged by a particular name.
+
+```js
+// Some formatters will format this literal's content as HTML
+const doc = html`<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hello</title>
+  </head>
+  <body>
+    <h1>Hello world!</h1>
+  </body>
+</html>
+`;
+```
+
+One might naïvely implement the `html` tag as:
+
+```js
+const html = String.raw;
+```
+
+This, in fact, works for the case above. However, because `String.raw` would concatenate the _raw_ string literals instead of the "cooked" ones, escape sequences would not be processed.
+
+```js
+const doc = html`<canvas>\n</canvas>`;
+// "<canvas>\\n</canvas>"
+```
+
+This may not be what you want for a "true identity" tag, where the tag is purely for markup and doesn't change the literal's value. In this case, you can create a custom tag and pass the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
+
+```js
+const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
+// Some formatters will format this literal's content as HTML
+const doc = html`<canvas>\n</canvas>`;
+// "<canvas>\n</canvas>"; the "\n" becomes a line break
+```
+
+Notice the first argument is an object with a `raw` property, whose value is an array-like object (with a `length` property and integer indexes) representing the separated strings in the template literal. The rest of the arguments are the substitutions. Since the `raw` value can be any array-like object, it can even be a string! For example, `'test'` is treated as `['t', 'e', 's', 't']`. The following is equivalent to `` `t${0}e${1}s${2}t` ``:
+
+```js
 String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 ```
 

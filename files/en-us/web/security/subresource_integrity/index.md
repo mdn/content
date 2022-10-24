@@ -7,8 +7,11 @@ tags:
   - Intro
   - Networking
   - Security
-spec-urls: https://w3c.github.io/webappsec-subresource-integrity/
+browser-compat:
+  - html.elements.link.integrity
+  - html.elements.script.integrity
 ---
+
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
 > **Note:** For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
@@ -55,12 +58,12 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 > **Note:**
 >
-> - The pipe-through-`xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
-> - The pipe-through-`awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
+> - The pipe-through `xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
+> - The pipe-through `awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
-```bat
+```batch
 @echo off
 set bits=384
 openssl dgst -sha%bits% -binary %1% | openssl base64 -A > tmp
@@ -73,7 +76,7 @@ pause
 To use that code:
 
 1. Save that code in a file named `sri-hash.bat` in the Windows SendTo folder in your environment (for example, `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`).
-2. Right-click a file in the File Explorer, select **Send to...**, and then select `sri-hash`. You will see the integrity value in a command box.
+2. Right-click a file in the File Explorer, select **Send to…**, and then select `sri-hash`. You will see the integrity value in a command box.
 3. Select the integrity value and right-click to copy it to the Clipboard.
 4. Press any key to dismiss the command box.
 
@@ -81,7 +84,7 @@ To use that code:
 
 For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 
@@ -94,9 +97,10 @@ In the following examples, assume that `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7
 You can use the following {{HTMLElement("script")}} element to tell a browser that before executing the `https://example.com/example-framework.js` script, the browser must first compare the script to the expected hash, and verify that there's a match.
 
 ```html
-<script src="https://example.com/example-framework.js"
-        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
 ```
 
 > **Note:** For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin).
@@ -117,9 +121,7 @@ Browsers handle SRI by doing the following:
 
 ## Browser compatibility
 
-### \<script integrity>
-
-{{Compat("html.elements.script.integrity")}}
+{{Compat}}
 
 ## See also
 

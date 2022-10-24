@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.getSubImage
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getSubImage()`** method of the {{domxref("XRWebGLBinding")}} interface returns a {{domxref("XRWebGLSubImage")}} object representing the WebGL texture to render.
 
 ## Syntax
 
-```js
+```js-nolint
 getSubImage(layer, frame)
 getSubImage(layer, frame, eye)
 ```
@@ -36,7 +38,7 @@ getSubImage(layer, frame, eye)
       - : The view represents the viewer's right eye.
     - `none`
       - : The view describes a monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.
-    Defaults to `none`.
+        Defaults to `none`.
 
 ### Return value
 
@@ -49,7 +51,7 @@ A {{jsxref("TypeError")}} is thrown,
 - if `layer` is not in the [session's `layer` array](/en-US/docs/Web/API/XRSession/updateRenderState#setting_the_layers_array).
 - if `layer` is a {{domxref("XRProjectionLayer")}}.
 - if the layer's [`layout`](/en-US/docs/Web/API/XRCompositionLayer/layout) property is `default`.
-- if the layer's [`layout`](/en-US/docs/Web/API/XRCompositionLayer/layout) property is `stereo` and `eye`is `none`.
+- if the layer's [`layout`](/en-US/docs/Web/API/XRCompositionLayer/layout) property is `stereo` and `eye` is `none`.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,15 +10,18 @@ tags:
   - Layout
   - Reference
   - Web
-spec-urls: https://drafts.csswg.org/css-grid/#valdef-grid-template-columns-fit-content
+browser-compat:
+  - css.properties.width.fit-content_function
+  - css.properties.grid-template-columns.fit-content
 ---
+
 {{CSSRef}}
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
 {{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
 
-The function can be used as a track size in [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](</en-US/docs/Web/CSS/minmax()>)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+The function can be used as a track size in [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 
 See the {{cssxref("grid-template-columns")}} page for more information on the `max-content` and `auto` keywords.
 
@@ -58,8 +62,8 @@ fit-content(40%)
 <div id="container">
   <div>Item as wide as the content.</div>
   <div>
-    Item with more text in it. Because the contents of it are
-    wider than the maximum width, it is clamped at 300 pixels.
+    Item with more text in it. Because the contents of it are wider than the
+    maximum width, it is clamped at 300 pixels.
   </div>
   <div>Flexible item</div>
 </div>
@@ -95,13 +99,7 @@ fit-content(40%)
 
 ## Browser compatibility
 
-### Supported for width (and other sizing properties)
-
-{{Compat("css.properties.width.fit-content_function")}}
-
-### Supported in grid layout
-
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}
 
 ## See also
 

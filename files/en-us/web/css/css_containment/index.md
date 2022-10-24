@@ -1,20 +1,30 @@
 ---
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
+page-type: css-module
 tags:
   - CSS
   - CSS Containment
   - Guide
   - Paint
   - Performance
-spec-urls: https://drafts.csswg.org/css-contain/#contain-property
+browser-compat:
+  - css.properties.contain
+  - css.properties.content-visibility
 ---
+
 {{CSSRef}}
-The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
+The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
+
+In addition, it lets developers indicate whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen.
+This allows the user agent to apply containment on elements when appropriate, and potentially defer layout and rendering until it is actually needed.
+
+The specification defines the CSS properties {{cssxref("contain")}} and {{cssxref("content-visibility")}}.
+This document describes the basic aims of the specification.
 
 ## Basic example
 
-Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the mark-up below.
+Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the markup below.
 
 ```html
 <h1>My blog</h1>
@@ -42,7 +52,7 @@ If we give each `<article>` the `contain` property with a value of `content`, wh
 
 We have told it by way of the `contain` property that each article is independent.
 
-The `content` value is shorthand for `contain: layout paint`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
+The `content` value is shorthand for `contain: layout paint style`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
 This information is something that is usually known, and in fact quite obvious, to the web developer creating the page. However browsers cannot guess at your intent and cannot assume that an article will be entirely self-contained. Therefore this property gives you a nice way to explain to the browser this fact, and allow it to make performance optimizations based on that knowledge.
 
@@ -89,7 +99,8 @@ article {
 
 Size containment does not offer much in the way of performance optimizations when used on its own. However, it means that the size of the element's children cannot affect the size of the element itself — its size is computed as if it had no children.
 
-If you turn on `contain: size` you need to also specify the size of the element you have applied this to. It will end up being zero-sized in most cases, if you don't manually give it a size.
+If you turn on `contain: size` you need to also specify the size of the element you have applied this to using [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) (or the equivalent longhand properties).
+It will end up being zero-sized in most cases, if you don't manually give it a size.
 
 ### Style containment
 
@@ -114,11 +125,10 @@ There are two special values of contain:
 
 We encountered the first in the example above. Using `contain: content` turns on `layout` and `paint` containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply `size` containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.
 
-To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint`, or perhaps the following to also add `style` containment in browsers that support it:
+To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint style`:
 
 ```css
 contain: strict;
-contain: strict style;
 ```
 
 ## Reference
@@ -134,9 +144,7 @@ contain: strict style;
 
 ## Browser compatibility
 
-{{Compat("css.properties.contain")}}
-
-{{Compat("css.properties.content-visibility")}}
+{{Compat}}
 
 ## External resources
 

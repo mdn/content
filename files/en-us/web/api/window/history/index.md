@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.history
 ---
+
 {{APIRef}}
 
 The `Window.history` read-only property returns a reference to the {{domxref("History")}} object, which provides an interface for manipulating the browser _session history_ (pages visited in the tab or frame that the current page is loaded in).

@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{JSSidebar("Objects")}}
 
 This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.
@@ -47,7 +48,6 @@ These global functions—functions which are called globally, rather than on an 
 
   - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
   - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
-  - {{JSxRef("Global_Objects/uneval", "uneval()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 
@@ -152,18 +152,3 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 - {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
 - {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
 - {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-
-### WebAssembly
-
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
-
-### Other
-
-- {{JSxRef("Functions/arguments", "arguments")}}

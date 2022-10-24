@@ -12,6 +12,7 @@ tags:
   - XMLHttpRequest
   - asynchronous
 ---
+
 {{domxref('XMLHttpRequest')}} supports both synchronous and asynchronous communications. In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
 
 Synchronous requests block the execution of code which causes "freezing" on the screen and an unresponsive user experience.
@@ -25,9 +26,9 @@ If you use an asynchronous {{domxref('XMLHttpRequest')}}, you receive a callback
 This is the simplest usage of asynchronous {{domxref('XMLHttpRequest')}}.
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open("GET", "/bar/foo.txt", true);
-xhr.onload = function (e) {
+xhr.onload = (e) => {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
@@ -36,7 +37,7 @@ xhr.onload = function (e) {
     }
   }
 };
-xhr.onerror = function (e) {
+xhr.onerror = (e) => {
   console.error(xhr.statusText);
 };
 xhr.send(null);
@@ -54,21 +55,21 @@ In some cases, you must read many external files. This is a standard function wh
 
 ```js
 function xhrSuccess() {
-    this.callback.apply(this, this.arguments);
+  this.callback.apply(this, this.arguments);
 }
 
 function xhrError() {
-    console.error(this.statusText);
+  console.error(this.statusText);
 }
 
-function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
-    var xhr = new XMLHttpRequest();
-    xhr.callback = callback;
-    xhr.arguments = Array.prototype.slice.call(arguments, 2);
-    xhr.onload = xhrSuccess;
-    xhr.onerror = xhrError;
-    xhr.open("GET", url, true);
-    xhr.send(null);
+function loadFile(url, callback, ...args) {
+  const xhr = new XMLHttpRequest();
+  xhr.callback = callback;
+  xhr.arguments = args;
+  xhr.onload = xhrSuccess;
+  xhr.onerror = xhrError;
+  xhr.open("GET", url, true);
+  xhr.send(null);
 }
 ```
 
@@ -76,7 +77,7 @@ Usage:
 
 ```js
 function showMessage(message) {
-    console.log(message + this.responseText);
+  console.log(`${message} ${this.responseText}`);
 }
 
 loadFile("message.txt", showMessage, "New message!\n\n");
@@ -101,24 +102,23 @@ Line 16 actually initiates the request.
 You can use a timeout to prevent your code from hanging while waiting for a read to finish. This is done by setting the value of the `timeout` property on the {{domxref('XMLHttpRequest')}} object, as shown in the code below:
 
 ```js
-function loadFile(url, timeout, callback) {
-    var args = Array.prototype.slice.call(arguments, 3);
-    var xhr = new XMLHttpRequest();
-    xhr.ontimeout = function () {
-        console.error("The request for " + url + " timed out.");
-    };
-    xhr.onload = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                callback.apply(xhr, args);
-            } else {
-                console.error(xhr.statusText);
-            }
-        }
-    };
-    xhr.open("GET", url, true);
-    xhr.timeout = timeout;
-    xhr.send(null);
+function loadFile(url, timeout, callback, ...args) {
+  const xhr = new XMLHttpRequest();
+  xhr.ontimeout = () => {
+    console.error(`The request for ${url} timed out.`);
+  };
+  xhr.onload = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        callback.apply(xhr, args);
+      } else {
+        console.error(xhr.statusText);
+      }
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.timeout = timeout;
+  xhr.send(null);
 }
 ```
 
@@ -128,7 +128,7 @@ Usage:
 
 ```js
 function showMessage (message) {
-    console.log(message + this.responseText);
+  console.log(`${message} ${this.responseText}`);
 }
 
 loadFile("message.txt", 2000, showMessage, "New message!\n");
@@ -136,13 +136,9 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 Here, we're specifying a timeout of 2000 ms.
 
-> **Note:** Support for `timeout` was added in {{Gecko("12.0")}}.
-
 ## Synchronous request
 
-> **Note:** Starting with Gecko 30.0 {{geckoRelease("30.0")}}, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to their negative impact on the user experience.
-
-Synchronous XHR requests often cause hangs on the web. But developers typically don't notice the problem because the hang only manifests with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now in deprecation state. The recommendation is that developers move away from the synchronous API and instead use asynchronous requests.
+> **Warning:** Synchronous XHR requests often cause hangs on the web, especially with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now deprecated and should be avoided in favor of asynchronous requests.
 
 All new XHR features such as `timeout` or `abort` are not allowed for synchronous XHR. Doing so will raise an `InvalidAccessError`.
 
@@ -151,7 +147,7 @@ All new XHR features such as `timeout` or `abort` are not allowed for synchronou
 This example demonstrates how to make a simple synchronous request.
 
 ```js
-var request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.open('GET', '/bar/foo.txt', false);  // `false` makes the request synchronous
 request.send(null);
 
@@ -162,7 +158,7 @@ if (request.status === 200) {
 
 Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
+Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
 
 ### Example: Synchronous HTTP request from a Worker
 
@@ -171,21 +167,24 @@ One of the few cases in which a synchronous request does not usually block execu
 **`example.html`** (the main page):
 
 ```html
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-  var worker = new Worker("myTask.js");
-  worker.onmessage = function(event) {
-    alert("Worker said: " + event.data);
-  };
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MDN Example</title>
+    <script>
+      const worker = new Worker("myTask.js");
+      worker.onmessage = (event) => {
+        alert(`Worker said: ${event.data}`);
+      };
 
-  worker.postMessage("Hello");
-</script>
-</head>
-<body></body>
+      worker.postMessage("Hello");
+    </script>
+  </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 
@@ -198,9 +197,9 @@ Hello World!!
 **`myTask.js`** (the [`Worker`](/en-US/docs/Web/API/Worker)):
 
 ```js
-self.onmessage = function (event) {
+self.onmessage = (event) => {
   if (event.data === "Hello") {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open("GET", "myFile.txt", false);  // synchronous request
     xhr.send(null);
     self.postMessage(xhr.responseText);
@@ -222,10 +221,10 @@ The following example shows theoretical analytics code that attempts to submit d
 window.addEventListener('unload', logData, false);
 
 function logData() {
-    var client = new XMLHttpRequest();
-    client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
-    client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-    client.send(analyticsData);
+  const client = new XMLHttpRequest();
+  client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
+  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+  client.send(analyticsData);
 }
 ```
 
@@ -237,7 +236,7 @@ The following example shows a theoretical analytics code pattern that submits da
 window.addEventListener('unload', logData, false);
 
 function logData() {
-    navigator.sendBeacon("/log", analyticsData);
+  navigator.sendBeacon("/log", analyticsData);
 }
 ```
 

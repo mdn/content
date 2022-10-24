@@ -1,6 +1,7 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-image-width
 ---
+
 {{CSSRef}}
 
 The **`border-image-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [border image](/en-US/docs/Web/CSS/border-image).
@@ -32,10 +34,10 @@ border-image-width: 25%;
 /* <number> value */
 border-image-width: 3;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-width: 2em 3em;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-image-width: 5% 15% 10%;
 
 /* top | right | bottom | left */
@@ -79,17 +81,19 @@ The `border-image-width` property may be specified using one, two, three, or fou
 
 This example creates a border image using the following ".png" file, which is 90 by 90 pixels:
 
-![](border.png)
+![Square image containing eight circles. The circles in each corner are light purple. The four side circles are blue. The area in the middle, where a ninth circle could fit, is blank.](border.png)
 
 Thus, each circle in the source image is 30 by 30 pixels.
 
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-   no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 #### CSS

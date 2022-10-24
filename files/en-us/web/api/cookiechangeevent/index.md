@@ -7,11 +7,13 @@ tags:
   - Interface
   - Reference
   - CookieChangeEvent
+  - Experimental
 browser-compat: api.CookieChangeEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The **`CookieChangeEvent`** interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("CookieStore.onchange()")}} when any cookie changes have occurred. A cookie change consists of a cookie and a type (either "changed" or "deleted").
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+
+The **`CookieChangeEvent`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) is the event type passed to {{domxref("CookieStore.onchange()")}} when any cookie changes occur. A cookie change consists of a cookie and a type (either "changed" or "deleted").
 
 Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
@@ -25,16 +27,16 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
 ## Constructor
 
-- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}}
+- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a new `CookieChangeEvent`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("CookieChangeEvent.changed")}}{{ReadOnlyInline}}
+- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array containing one or more changed cookies.
-- {{domxref("CookieChangeEvent.deleted")}}{{ReadOnlyInline}}
+- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array containing one or more deleted cookies.
 
 ## Examples
@@ -42,7 +44,7 @@ _This interface also inherits properties from {{domxref("Event")}}._
 In this example when the cookie is set, the event listener logs the event to the console. This is a `CookieChangeEvent` object with the {{domxref("CookieChangeEvent.changed","changed")}} property containing an object representing the cookie that has just been set.
 
 ```js
-cookieStore.addEventListener('change', (event) => {
+cookieStore.addEventListener("change", (event) => {
   console.log(event);
 });
 
@@ -51,7 +53,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + one_day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

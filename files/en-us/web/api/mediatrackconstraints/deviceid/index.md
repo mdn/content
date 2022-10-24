@@ -16,6 +16,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaTrackConstraints.deviceId
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's

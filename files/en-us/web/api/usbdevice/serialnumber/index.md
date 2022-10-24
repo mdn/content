@@ -11,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - serialNumber
+  - Experimental
 browser-compat: api.USBDevice.serialNumber
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`serialNumber`** read only property of the

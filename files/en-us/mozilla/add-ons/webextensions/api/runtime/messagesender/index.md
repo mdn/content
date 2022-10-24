@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.MessageSender
 ---
+
 {{AddonSidebar()}}
 
 An object containing information about the sender of a message or connection request; this is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.
@@ -23,15 +24,15 @@ It is also a property of {{WebExtAPIRef("runtime.Port")}}, but only in the `Port
 
 Values of this type are objects. They contain the following properties:
 
-- `tab`{{optional_inline}}
+- `tab` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.Tab')}}. The {{WebExtAPIRef('tabs.Tab')}} which opened the connection. This property will only be present when the connection was opened from a tab (including content scripts).
-- `frameId`{{optional_inline}}
+- `frameId` {{optional_inline}}
   - : `integer`. The frame that opened the connection. Zero for top-level frames, positive for child frames. This will only be set when `tab` is set.
-- `id`{{optional_inline}}
+- `id` {{optional_inline}}
 
   - : `string`. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `id` will have this value. Otherwise it will have the ID that was generated for the sender.
 
-- `url`{{optional_inline}}
+- `url` {{optional_inline}}
 
   - : `string`. The URL of the page or frame hosting the script that sent the message.
 
@@ -39,7 +40,7 @@ Values of this type are objects. They contain the following properties:
 
     \>If the sender is a script running in a web page (including content scripts as well as normal page scripts), then `url` will be the web page URL. If the script is running in an iframe, `url` will be the iframe's URL.
 
-- `tlsChannelId`{{optional_inline}}
+- `tlsChannelId` {{optional_inline}}
   - : `string`. The TLS channel ID of the page or frame that opened the connection, if requested by the extension, and if available.
 
 ## Browser compatibility
@@ -52,7 +53,8 @@ Values of this type are objects. They contain the following properties:
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -79,4 +81,4 @@ Values of this type are objects. They contain the following properties:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

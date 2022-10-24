@@ -13,15 +13,16 @@ tags:
   - Houdini
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSPerspective()`** constructor creates
-a new {{domxref("CSSPerspective")}} object representing the [perspective()](</en-US/docs/Web/CSS/transform-function/perspective()>) value of
+a new {{domxref("CSSPerspective")}} object representing the [perspective()](/en-US/docs/Web/CSS/transform-function/perspective) value of
 the individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSPerspective(length)
 ```
 

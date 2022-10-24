@@ -8,15 +8,17 @@ tags:
   - Reference
   - Serial.getPorts
   - Serial
+  - Experimental
 browser-compat: api.Serial.getPorts
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access.
 
 ## Syntax
 
-```js
+```js-nolint
 getPorts()
 ```
 
@@ -30,7 +32,7 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}}
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `"SecurityError"`
+- `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
 
 ## Examples

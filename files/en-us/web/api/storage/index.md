@@ -11,18 +11,19 @@ tags:
   - data
 browser-compat: api.Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`Storage`** interface of the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.
 
 To manipulate, for instance, the session storage for a domain, a call to {{domxref("Window.sessionStorage")}} is made; whereas for local storage the call is made to {{domxref("Window.localStorage")}}.
 
-## Properties
+## Instance properties
 
-- {{domxref("Storage.length")}} {{readonlyInline}}
+- {{domxref("Storage.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of data items stored in the `Storage` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("Storage.key()")}}
   - : When passed a number `n`, this method will return the name of the nth key in the storage.
@@ -40,7 +41,7 @@ To manipulate, for instance, the session storage for a domain, a call to {{domxr
 Here we access a `Storage` object by calling `localStorage`. We first test whether the local storage contains data items using `!localStorage.getItem('bgcolor')`. If it does, we run a function called `setStyles()` that grabs the data items using {{domxref("Storage.getItem()")}} and uses those values to update page styles. If it doesn't, we run another function, `populateStorage()`, which uses {{domxref("Storage.setItem()")}} to set the item values, then runs `setStyles()`.
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -55,15 +56,15 @@ function populateStorage() {
 }
 
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem('bgcolor');
+  const currentFont = localStorage.getItem('font');
+  const currentImage = localStorage.getItem('image');
 
   document.getElementById('bgcolor').value = currentColor;
   document.getElementById('font').value = currentFont;
   document.getElementById('image').value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
 }

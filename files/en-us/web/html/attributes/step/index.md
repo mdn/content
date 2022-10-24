@@ -8,14 +8,14 @@ tags:
   - HTML
   - Reference
   - step
-browser-compat: html.elements.input.attributes.step
+browser-compat: html.elements.input.step
 ---
 
 {{HTMLSidebar}}
 
 The **`step`** attribute is a number that specifies the granularity that the value must adhere to or the keyword `any`. It is valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types.
 
-The `step` sets the _stepping interval_ when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (minute, week, month, day) for the date/time input types. The value can must be a positive number - integer or float -- or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max)).
+The `step` sets the _stepping interval_ when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (minute, week, month, day) for the date/time input types. The value can must be a positive number - integer or float — or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max)).
 
 The default stepping value for `number` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer. The default stepping value for `time` is 1 second, with 900 being equal to 15 minutes.
 
@@ -97,7 +97,7 @@ input:invalid {
 Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" step="2" min="1.2">
+<input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
 Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Integers and even numbers followed by .2 are not valid. As we included an invalid value, supporting browsers will show the value as invalid. The number spinner, if present, will only show valid float values of `1.2` and greater

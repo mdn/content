@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 35 was released on January 13th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -67,7 +68,7 @@ Highlights:
 - {{domxref("XMLHttpRequest.responseURL")}} has been adapted to the latest spec and doesn't include the fragment (`'#xyz'`) of the URL, if relevant ({{bug(1073882)}}).
 - The internal, non-standard, `File.mozFullPath` property is no more visible from content ({{bug(1048293)}}).
 - The constructor of {{domxref("File")}} has been extended to match the specification ({{bug(1047483)}}).
-- An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled`property, defaulting to `false` ({{bug(1035060)}}).
+- An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ({{bug(1035060)}}).
 - The non-standard {{domxref("Navigator.mozIsLocallyAvailable")}} property has been removed ({{bug(1066826)}}).
 - The preference `network.websocket.enabled,` `true` by default, has been removed; [Websocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ({{bug(1091016)}}).
 - The non-standard methods and properties of {{domxref("Crypto")}} have been removed ({{bug(1030963)}}). Only methods and properties defined in the standard WebCrypto API are left.
@@ -91,7 +92,7 @@ _No change._
 
 - HTTP/2 has been implemented and activated, with AEAD ciphers only ({{bug(1027720)}}) and ({{bug('1047594')}}).
 - The HTTP/2 `alt-svc` header is now supported ({{bug(1003448)}}).
-- The [Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning) Extension for HTTP (HPKP) has been implemented ({{bug(787133)}}).
+- The Public Key Pinning Extension for HTTP (HPKP) has been implemented ({{bug(787133)}}).
 - The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ({{bug(1045897)}}).
 - Path of the source is now considered too when host-source matching happens in [CSP](/en-US/docs/Web/HTTP/CSP) ({{bug(808292)}}).
 

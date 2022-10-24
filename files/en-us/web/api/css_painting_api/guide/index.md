@@ -9,6 +9,7 @@ tags:
   - Houdini
   - Learn
 ---
+
 {{DefaultAPISidebar("CSS Painting API")}}
 The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable developers to programmatically define images which can then be used anywhere a CSS image can be invoked, such as CSS [`background-image`](/en-US/docs/Web/CSS/background-image), [`border-image`](/en-US/docs/Web/CSS/border-image-source), [`mask-image`](/en-US/docs/Web/CSS/mask-image), etc.
 
@@ -40,7 +41,7 @@ registerPaint('headerHighlight', class {
 
     /*
         ctx is the 2D drawing context
-        a subset of the HTML5 Canvas API.
+        a subset of the HTML Canvas API.
     */
   paint(ctx) {
         ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
@@ -53,7 +54,7 @@ In this class example we have defined a single context option with the `contextO
 
 We have then used the `paint()` function to paint to our canvas.
 
-A `paint()` function can take three arguments. Here we have provided one argument: the rendering context (we'll look at more in due course), often referred to by the variable name `ctx`. The 2D Rendering Context is a subset of the [HTML5 Canvas API](/en-US/docs/Web/API/Canvas_API); the version available to Houdini (called the `PaintRenderingContext2D`) is a further subset containing most of the features available in the full Canvas API with the [exception](<https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context)>) of the `CanvasImageData`, `CanvasUserInterface`, `CanvasText`, and `CanvasTextDrawingStyles` APIs.
+A `paint()` function can take three arguments. Here we have provided one argument: the rendering context (we'll look at more in due course), often referred to by the variable name `ctx`. The 2D Rendering Context is a subset of the [HTML Canvas API](/en-US/docs/Web/API/Canvas_API); the version available to Houdini (called the `PaintRenderingContext2D`) is a further subset containing most of the features available in the full Canvas API with the [exception](<https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context)>) of the `CanvasImageData`, `CanvasUserInterface`, `CanvasText`, and `CanvasTextDrawingStyles` APIs.
 
 We define the [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) as being `hsla(55, 90%, 60%, 1.0)`, which is a shade of yellow, and then call `fillRect()` to create a rectangle of that color. The [`fillRect()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect) parameters are, in order, x-axis origin, y-axis origin, width, and height. `fillRect(0, 15, 200, 20)` results in the creation of a rectangle that is 200 units wide by 20 units tall, positioned 0 units from the left and 15 units from the top of the content box.
 
@@ -119,19 +120,17 @@ The code to do this looks like so:
 
 ```js
 registerPaint('headerHighlight', class {
-
   static get contextOptions() {
-           return { alpha: true };
+    return { alpha: true };
   }
 
-    /*
-        ctx is the 2D drawing context
-        size is the paintSize, the dimensions (height and width) of the box being painted
-    */
-
+  /*
+    ctx is the 2D drawing context
+    size is the paintSize, the dimensions (height and width) of the box being painted
+  */
   paint(ctx, size) {
-        ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
-        ctx.fillRect( 0, size.height / 3, size.width * 0.4, size.height * 0.6 );
+    ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
+    ctx.fillRect(0, size.height / 3, size.width * 0.4, size.height * 0.6);
   }
 });
 ```
@@ -240,24 +239,24 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
 
 ```html
 <ul>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3</li>
-    <li>item 4</li>
-    <li>item 5</li>
-    <li>item 6</li>
-    <li>item 7</li>
-    <li>item 8</li>
-    <li>item 9</li>
-    <li>item 10</li>
-    <li>item 11</li>
-    <li>item 12</li>
-    <li>item 13</li>
-    <li>item 14</li>
-    <li>item 15</li>
-    <li>item 16</li>
-    <li>item 17</li>
-    <li>item</li>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+  <li>item 5</li>
+  <li>item 6</li>
+  <li>item 7</li>
+  <li>item 8</li>
+  <li>item 9</li>
+  <li>item 10</li>
+  <li>item 11</li>
+  <li>item 12</li>
+  <li>item 13</li>
+  <li>item 14</li>
+  <li>item 15</li>
+  <li>item 16</li>
+  <li>item 17</li>
+  <li>item</li>
 </ul>
 ```
 
@@ -316,28 +315,27 @@ registerPaint('headerHighlight', class {
     const y = size.height * 0.3;
     const blockWidth = size.width * 0.33;
     const highlightHeight = size.height * 0.85;
-        const color = props.get('--highColor');
+    const color = props.get('--highColor');
 
     ctx.fillStyle = color;
 
     ctx.beginPath();
-    ctx.moveTo( x, y );
-    ctx.lineTo( blockWidth, y );
-    ctx.lineTo( blockWidth + highlightHeight, highlightHeight );
-    ctx.lineTo( x, highlightHeight );
-    ctx.lineTo( x, y );
+    ctx.moveTo(x, y);
+    ctx.lineTo(blockWidth, y);
+    ctx.lineTo(blockWidth + highlightHeight, highlightHeight);
+    ctx.lineTo(x, highlightHeight);
+    ctx.lineTo(x, y);
     ctx.closePath();
     ctx.fill();
 
     /* create the dashes */
-    for (let i = 0; i < 4; i++) {
-      let start = i * 2;
+    for (let start = 0; start < 8; start += 2) {
       ctx.beginPath();
-      ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
-      ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
-      ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
+      ctx.moveTo((blockWidth) + (start * 10) + 10, y);
+      ctx.lineTo((blockWidth) + (start * 10) + 20, y);
+      ctx.lineTo((blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight);
+      ctx.lineTo((blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight);
+      ctx.lineTo((blockWidth) + (start * 10) + 10, y);
       ctx.closePath();
       ctx.fill();
     }
@@ -411,7 +409,7 @@ paint(ctx, size, props, args) {
     ctx.fillStyle = 'transparent';
     ctx.strokeStyle = color;
   }
-  ...
+  // …
 }
 ```
 
@@ -429,7 +427,7 @@ We can also specify that we want a particular type of argument. When we `get` ou
 static get inputArguments() { return ['*', '<length>']; }
 ```
 
-In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue.`](/en-US/docs/Web/API/CSSStyleValue)
+In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue`](/en-US/docs/Web/API/CSSStyleValue).
 
 If the custom argument is a CSS value, for instance a unit, we can invoke Typed OM CSSStyleValue class (and sub classes) by using the value type keyword when we retrieve it in the `registerPaint()` function.
 
@@ -447,20 +445,20 @@ When we `get` our list of argument values, we can ask specifically for a `<lengt
 static get inputArguments() { return ['*', '<length>']; }
 ```
 
-Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake...)
+Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake…)
 
 ```js
 paint(ctx, size, props, args) {
 
-    const strokeWidth = args[1];
+  const strokeWidth = args[1];
 
-    if (strokeWidth.unit === 'px') {
-      ctx.lineWidth = strokeWidth.value;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+  if (strokeWidth.unit === 'px') {
+    ctx.lineWidth = strokeWidth.value;
+  } else {
+    ctx.lineWidth = 1.0;
+  }
 
-  ...
+  // …
 }
 ```
 
@@ -496,21 +494,17 @@ registerPaint('hollowHighlights', class {
     const blockHeight = size.height * 0.85;
 
     // the values passed in the paint() function in the CSS
-    const color = props.get( '--boxColor' );
+    const color = props.get('--boxColor');
     const strokeType = args[0].toString();
     const strokeWidth = parseInt(args[1]);
 
     // set the stroke width
-    if ( strokeWidth ) {
-      ctx.lineWidth = strokeWidth;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+    ctx.lineWidth = strokeWidth ?? 1.0;
     // set the fill type
-    if ( strokeType === 'stroke' ) {
+    if (strokeType === 'stroke') {
       ctx.fillStyle = 'transparent';
       ctx.strokeStyle = color;
-    } else if ( strokeType === 'filled' ) {
+    } else if (strokeType === 'filled') {
       ctx.fillStyle = color;
       ctx.strokeStyle = color;
     } else {
@@ -520,11 +514,11 @@ registerPaint('hollowHighlights', class {
 
     // block
     ctx.beginPath();
-    ctx.moveTo( x, y );
-    ctx.lineTo( blockWidth, y );
-    ctx.lineTo( blockWidth + blockHeight, blockHeight );
-    ctx.lineTo( x, blockHeight );
-    ctx.lineTo( x, y );
+    ctx.moveTo(x, y);
+    ctx.lineTo(blockWidth, y);
+    ctx.lineTo(blockWidth + blockHeight, blockHeight);
+    ctx.lineTo(x, blockHeight);
+    ctx.lineTo(x, y);
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
@@ -532,11 +526,11 @@ registerPaint('hollowHighlights', class {
     for (let i = 0; i < 4; i++) {
       let start = i * 2;
       ctx.beginPath();
-      ctx.moveTo( blockWidth + (start * 10) + 10, y);
-      ctx.lineTo( blockWidth + (start * 10) + 20, y);
-      ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
-      ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
-      ctx.lineTo( blockWidth + (start * 10) + 10, y);
+      ctx.moveTo(blockWidth + (start * 10) + 10, y);
+      ctx.lineTo(blockWidth + (start * 10) + 20, y);
+      ctx.lineTo(blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
+      ctx.lineTo(blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
+      ctx.lineTo(blockWidth + (start * 10) + 10, y);
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
@@ -558,7 +552,7 @@ li {
 
 li:nth-of-type(3n) {
    --boxColor: hsla(255, 90%, 60%, 0.5);
-   background-image: paint(hollowHighlights, filled,  3px);
+   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n+1) {
@@ -569,24 +563,24 @@ li:nth-of-type(3n+1) {
 
 ```html hidden
 <ul>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3</li>
-    <li>item 4</li>
-    <li>item 5</li>
-    <li>item 6</li>
-    <li>item 7</li>
-    <li>item 8</li>
-    <li>item 9</li>
-    <li>item 10</li>
-    <li>item 11</li>
-    <li>item 12</li>
-    <li>item 13</li>
-    <li>item 14</li>
-    <li>item 15</li>
-    <li>item 16</li>
-    <li>item 17</li>
-    <li>item</li>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+  <li>item 5</li>
+  <li>item 6</li>
+  <li>item 7</li>
+  <li>item 8</li>
+  <li>item 9</li>
+  <li>item 10</li>
+  <li>item 11</li>
+  <li>item 12</li>
+  <li>item 13</li>
+  <li>item 14</li>
+  <li>item 15</li>
+  <li>item 16</li>
+  <li>item 17</li>
+  <li>item</li>
 </ul>
 ```
 

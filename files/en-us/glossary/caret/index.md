@@ -3,7 +3,6 @@ title: caret
 slug: Glossary/caret
 tags:
   - Cursor
-  - Glossary
   - Input
   - caret
   - insertion point
@@ -12,6 +11,7 @@ tags:
   - text input
   - text insertion point
 ---
+
 A **caret** (sometimes called a "text cursor") is an indicator displayed on the screen to indicate where text input will be inserted.
 
 Most user interfaces represent the caret using a thin vertical line or a character-sized box that flashes, but this can vary. This point in the text is called the **insertion point**. The word "caret" differentiates the text insertion point from the mouse cursor.
@@ -20,7 +20,7 @@ On the web, a caret is used to represent the insertion point in {{HTMLElement("i
 
 ## See also
 
-- {{interwiki("wikipedia", "Caret navigation")}} on Wikipedia
+- [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation) on Wikipedia
 
 ### CSS related to the caret
 

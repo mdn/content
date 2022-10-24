@@ -26,8 +26,8 @@ code calling {{domxref("RTCPeerConnection.setRemoteDescription()")}} in response
 
 ## Syntax
 
-```js
-var sessionDescription = peerConnection.remoteDescription;
+```js-nolint
+const sessionDescription = peerConnection.remoteDescription
 ```
 
 On a more fundamental level, the returned value is the value of
@@ -44,13 +44,11 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 `sdp` fields.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.remoteDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.remoteDescription;
 if (sd) {
-  alert("Remote session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
+  alert(`Remote session: type='${sd.type}'; sdp description='${sd.sdp}'`);
 }
 else {
   alert("No remote session yet.");

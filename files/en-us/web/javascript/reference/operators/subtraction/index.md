@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
 The subtraction operator (`-`) subtracts the two operands, producing their
@@ -17,7 +18,7 @@ difference.
 
 ## Syntax
 
-```js
+```js-nolint
 x - y
 ```
 
@@ -26,14 +27,14 @@ x - y
 ### Subtraction with numbers
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### Subtraction with non-numbers
 
 ```js
-'foo' - 3 // NaN
+"foo" - 3; // NaN
 ```
 
 ## Specifications

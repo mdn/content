@@ -11,6 +11,7 @@ tags:
   - find
 browser-compat: webextensions.api.find.find
 ---
+
 {{AddonSidebar()}}
 
 Searches for text in a tab.
@@ -27,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.find.find(
   queryphrase,       // string
   options            // optional object
@@ -38,7 +39,7 @@ browser.find.find(
 
 - `queryphrase`
   - : `string`. The text to search for.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 
@@ -59,7 +60,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 - `count`
   - : `integer`. The number of results found.
-- `rangeData`{{optional_inline}}
+- `rangeData` {{optional_inline}}
 
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. Each `RangeData` object describes where in the DOM tree the match was found. This would enable, for example, an extension to get the text surrounding each match, so as to display context for the matches.
 
@@ -78,7 +79,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
     - `endOffset`
       - : The ordinal position of the end of the match within its text node.
 
-- `rectData`{{optional_inline}}
+- `rectData` {{optional_inline}}
 
   - : `array`. If `includeRectData` was given in the `options` parameter, then this property will be included. It is an array of `RectData` objects. It contains client rectangles for all the text matched in the search, relative to the top-left of the viewport. Extensions can use this to provide custom highlighting of the results.
 
@@ -93,9 +94,13 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
         For example, consider part of a web page that looks like this:
 
-        ![](rects-1.png)If you search for "You may", the match needs to be described by two rectangles:
+        ![Text reading "this domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission." and a "More information" link.](rects-1.png)
 
-        ![](rects-2.png)In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
+ If you search for "You may", the match needs to be described by two rectangles:
+
+        ![This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission.". The words "you may" are highlighted.](rects-2.png)
+
+In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
 
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
@@ -128,9 +133,9 @@ Search for "banana" across all tabs (note that this requires the "tabs" [permiss
 
 ```js
 async function findInAllTabs(allTabs) {
-  for (let tab of allTabs) {
-    let results = await browser.find.find("banana", {tabId: tab.id});
-    console.log(`In page "${tab.url}": ${results.count} matches.`)
+  for (const tab of allTabs) {
+    const results = await browser.find.find("banana", { tabId: tab.id });
+    console.log(`In page "${tab.url}": ${results.count} matches.`);
   }
 }
 
@@ -149,27 +154,26 @@ The background script:
 // background.js
 
 async function getContexts(matches) {
-
   // get the active tab ID
-  let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+  const activeTabArray = await browser.tabs.query({
+    active: true,
+    currentWindow: true,
   });
-  let tabId = activeTabArray[0].id;
+  const tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "get-context.js"});
+  await browser.tabs.executeScript(tabId, { file: "get-context.js" });
   // ask the content script to get the contexts for us
-  let contexts = await browser.tabs.sendMessage(tabId, {
-    ranges: matches.rangeData
+  const contexts = await browser.tabs.sendMessage(tabId, {
+    ranges: matches.rangeData,
   });
-  for (let context of contexts) {
+  for (const context of contexts) {
     console.log(context);
   }
-
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("example", {includeRangeData: true}).then(getContexts);
+  browser.find.find("example", { includeRangeData: true }).then(getContexts);
 });
 ```
 
@@ -180,9 +184,14 @@ The content script:
  * Get all the text nodes into a single array
  */
 function getNodes() {
-  let walker = document.createTreeWalker(document, window.NodeFilter.SHOW_TEXT, null, false);
-  let nodes = [];
-  while(node = walker.nextNode()) {
+  const walker = document.createTreeWalker(
+    document,
+    window.NodeFilter.SHOW_TEXT,
+    null,
+    false
+  );
+  const nodes = [];
+  while ((node = walker.nextNode())) {
     nodes.push(node);
   }
 
@@ -196,11 +205,10 @@ function getNodes() {
  * of each node.
  */
 function getContexts(ranges) {
+  const contexts = [];
+  const nodes = getNodes();
 
-  let contexts = [];
-  let nodes = getNodes();
-
-  for (let range of ranges) {
+  for (const range of ranges) {
     let context = nodes[range.startTextNodePos].textContent;
     let pos = range.startTextNodePos;
     while (pos < range.endTextNodePos) {
@@ -221,7 +229,9 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 In this example the extension uses `rectData` to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:
 
-![](redacted.png)Note that in many ways this is a poor way to redact pages.
+![Three search results with some texted redacted by black rectangles.](redacted.png)
+
+Note that in many ways this is a poor way to redact pages.
 
 The background script:
 
@@ -229,21 +239,21 @@ The background script:
 // background.js
 
 async function redact(matches) {
-
   // get the active tab ID
-  let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+  const activeTabArray = await browser.tabs.query({
+    active: true,
+    currentWindow: true,
   });
-  let tabId = activeTabArray[0].id;
+  const tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "redact.js"});
+  await browser.tabs.executeScript(tabId, { file: "redact.js" });
   // ask the content script to redact matches for us
-  await browser.tabs.sendMessage(tabId, {rects: matches.rectData});
+  await browser.tabs.sendMessage(tabId, { rects: matches.rectData });
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("banana", {includeRectData: true}).then(redact);
+  browser.find.find("banana", { includeRectData: true }).then(redact);
 });
 ```
 
@@ -256,13 +266,13 @@ The content script:
  * Add a black DIV where the rect is.
  */
 function redactRect(rect) {
-  let redaction = document.createElement("div");
+  const redaction = document.createElement("div");
   redaction.style.backgroundColor = "black";
   redaction.style.position = "absolute";
   redaction.style.top = `${rect.top}px`;
   redaction.style.left = `${rect.left}px`;
-  redaction.style.width = `${rect.right-rect.left}px`;
-  redaction.style.height = `${rect.bottom-rect.top}px`;
+  redaction.style.width = `${rect.right - rect.left}px`;
+  redaction.style.height = `${rect.bottom - rect.top}px`;
   document.body.appendChild(redaction);
 }
 
@@ -270,8 +280,8 @@ function redactRect(rect) {
  * Go through every rect, redacting them.
  */
 function redactAll(rectData) {
-  for (match of rectData) {
-    for (rect of match.rectsAndTexts.rectList) {
+  for (const match of rectData) {
+    for (const rect of match.rectsAndTexts.rectList) {
       redactRect(rect);
     }
   }

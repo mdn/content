@@ -15,6 +15,7 @@ tags:
   - forEach()
 browser-compat: api.CSSUnparsedValue.forEach
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.forEach()`** method
@@ -23,21 +24,21 @@ executes a provided function once for each element of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-forEach((currentValue) => { /* ... */ } )
-forEach((currentValue, index) => { /* ... */ } )
-forEach((currentValue, index, array) => { /* ... */ } )
+forEach((currentValue) => { /* … */ } )
+forEach((currentValue, index) => { /* … */ } )
+forEach((currentValue, index, array) => { /* … */ } )
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function(currentValue) { /* ... */ })
-forEach(function(currentValue, index) { /* ... */ })
-forEach(function(currentValue, index, array){ /* ... */ })
-forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
+forEach(function(currentValue) { /* … */ })
+forEach(function(currentValue, index) { /* … */ })
+forEach(function(currentValue, index, array) { /* … */ })
+forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -48,14 +49,14 @@ forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 
     - `currentValue`
       - : The value of the current element being processed.
-    - `index`{{optional_inline}}
+    - `index` {{optional_inline}}
       - : The index of the current element being processed.
-    - `array`{{optional_inline}}
+    - `array` {{optional_inline}}
       - : The `CSSUnparsedValue` that `forEach()` is being called
         on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e the reference
+  - : Value to use as **`this`** (i.e., the reference
     `Object`) when executing `callback`.
 
 ### Return value

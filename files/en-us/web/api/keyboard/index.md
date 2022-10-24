@@ -13,6 +13,7 @@ tags:
   - keyboard
 browser-compat: api.Keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}{{securecontext_header}}
 
 The **`Keyboard`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
@@ -21,11 +22,11 @@ A list of valid code values is found in the [UI Events KeyboardEvent code Values
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with functions for retrieving the strings associated with specific physical keys.
@@ -40,11 +41,11 @@ The following example demonstrates how to get the location- or layout-specific s
 
 ```js
 if (navigator.keyboard) {
-  var keyboard = navigator.keyboard;
+  const keyboard = navigator.keyboard;
   keyboard.getLayoutMap()
-  .then(keyboardLayoutMap => {
-    var upKey = keyboardLayoutMap.get('KeyW');
-    window.alert('Press ' + upKey + ' to move up.');
+  .then((keyboardLayoutMap) => {
+    const upKey = keyboardLayoutMap.get('KeyW');
+    window.alert(`Press ${upKey} to move up.`);
   });
 } else {
   // Do something else.

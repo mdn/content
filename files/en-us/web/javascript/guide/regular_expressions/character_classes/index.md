@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
   - character classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
@@ -27,6 +28,62 @@ Character classes distinguish kinds of characters such as, for example, distingu
   <tbody></tbody>
   <tbody>
     <tr>
+      <td>
+        <code>[xyz]<br />[a-c]</code>
+      </td>
+      <td>
+        <p>
+          A character class. Matches any one of the enclosed characters. You can
+          specify a range of characters by using a hyphen, but if the hyphen
+          appears as the first or last character enclosed in the square brackets,
+          it is taken as a literal hyphen to be included in the character class
+          as a normal character.
+        </p>
+        <p>
+          For example, <code>[abcd]</code> is the same as <code>[a-d]</code>.
+          They match the "b" in "brisket", and the "c" in "chop".
+        </p>
+        <p>
+          For example, <code>[abcd-]</code> and <code>[-abcd]</code> match the
+          "b" in "brisket", the "c" in "chop", and the "-" (hyphen) in
+          "non-profit".
+        </p>
+        <p>
+          For example, <code>[\w-]</code> is the same as
+          <code>[A-Za-z0-9_-]</code>. They both match the "b" in "brisket", the
+          "c" in "chop", and the "n" in "non-profit".
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <code>[^xyz]<br />[^a-c]</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          A negated or complemented character class. That is, it matches
+          anything that is not enclosed in the brackets. You can specify a range
+          of characters by using a hyphen, but if the hyphen appears as the
+          first character after the <code>^</code> or the last character enclosed in the square brackets, it is taken as
+          a literal hyphen to be included in the character class as a normal
+          character. For example, <code>[^abc]</code> is the same as
+          <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in
+          "chop".
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> The ^ character may also indicate the
+            <a
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+              >beginning of input</a
+            >.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
       <td><code>.</code></td>
       <td>
         <p>Has one of the following meanings:</p>
@@ -35,7 +92,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
             Matches any single character <em>except</em> line terminators:
             <code>\n</code>, <code>\r</code>, <code>\u2028</code> or
             <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and
-            "ay", but not "yes", in "yes make my day".
+            "ay", but not "yes", in "yes make my day", as there is no character before "y" in "yes".
           </li>
           <li>
             Inside a character class, the dot loses its special meaning and
@@ -49,7 +106,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           including newlines.
         </p>
         <p>
-          ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to
+          The <code>s</code> "dotAll" flag allows the dot to
           also match line terminators.
         </p>
       </td>
@@ -251,6 +308,23 @@ Character classes distinguish kinds of characters such as, for example, distingu
         </div>
       </td>
     </tr>
+    <tr>
+      <td>
+        <code><em>x</em>|<em>y</em></code>
+      </td>
+      <td>
+        <p>
+          <strong>Disjunction: </strong>Matches either "x" or "y". Each component, separated by a pipe (<code>|</code>), is called an <em>alternative</em>. For example,
+          <code>/green|red/</code> matches "green" in "green apple" and "red" in
+          "red apple".
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> A disjunction is another way to specify "a set of choices", but it's not a character class. Disjunctions are not atoms — you need to use a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">group</a> to make it part of a bigger pattern. <code>[abc]</code> is functionally equivalent to <code>(?:a|b|c)</code>.
+          </p>
+        </div>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -259,8 +333,8 @@ Character classes distinguish kinds of characters such as, for example, distingu
 ### Looking for a series of digits
 
 ```js
-var randomData = "015 354 8787 687351 3512 8735";
-var regexpFourDigits = /\b\d{4}\b/g;
+const randomData = "015 354 8787 687351 3512 8735";
+const regexpFourDigits = /\b\d{4}\b/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // \d{4} indicates a digit, four times
 // \b indicates another boundary (i.e. do not end matching in the middle of a word)
@@ -272,8 +346,8 @@ console.table(randomData.match(regexpFourDigits));
 ### Looking for a word (from the latin alphabet) starting with A
 
 ```js
-var aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
-var regexpWordStartingWithA = /\b[aA]\w+/g;
+const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // [aA] indicates the letter a or A
 // \w+ indicates any character *from the latin alphabet*, multiple times
@@ -287,12 +361,22 @@ console.table(aliceExcerpt.match(regexpWordStartingWithA));
 Instead of the Latin alphabet, we can use a range of Unicode characters to identify a word (thus being able to deal with text in other languages like Russian or Arabic). The "Basic Multilingual Plane" of Unicode contains most of the characters used around the world and we can use character classes and ranges to match words written with those characters.
 
 ```js
-var nonEnglishText = "Приключения Алисы в Стране чудес";
-var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
+const nonEnglishText = "Приключения Алисы в Стране чудес";
+const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
 [ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+```
+
+### Counting vowels
+
+```js
+const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const regexpVowels = /[AEIOUYaeiouy]/g;
+
+console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
+// Number of vowels: 26
 ```
 
 ## See also
@@ -302,7 +386,7 @@ console.table(nonEnglishText.match(regexpBMPWord));
   - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
   - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
   - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass)

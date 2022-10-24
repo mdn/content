@@ -10,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.unregister
 ---
+
 {{deprecated_header}}{{ ApiRef("Push API")}}
 
 The **`unregister()`** method was used to ask the system to
@@ -19,7 +20,7 @@ unregister and delete the specified endpoint.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(pushEndpoint)
 ```
 
@@ -48,15 +49,15 @@ Those objects are anonymous JavaScript objects with the following properties:
 ## Examples
 
 ```js
-var req = navigator.push.unregister(pushEndpoint);
+const req = navigator.push.unregister(pushEndpoint);
 
-req.onsuccess = function(e) {
-  var endpoint = req.result;
-  debug("Unregistered endpoint: " + endpoint );
+req.onsuccess = (e) => {
+  const endpoint = req.result;
+  console.log(`Unregistered endpoint: ${endpoint}`);
 }
 
-req.onerror = function(e) {
-  debug("Error unregistering the endpoint: " + JSON.stringify(e));
+req.onerror = (e) => {
+  console.error(`Error unregistering the endpoint: ${e.error}`);
 }
 ```
 

@@ -13,15 +13,16 @@ tags:
   - Houdini
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTranslate()`** constructor creates a
-new {{domxref("CSSTranslate")}} object representing the [translate()](</en-US/docs/Web/CSS/transform-function/translate()>) value of the
+new {{domxref("CSSTranslate")}} object representing the [translate()](/en-US/docs/Web/CSS/transform-function/translate) value of the
 individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSTranslate(x, y)
 new CSSTranslate(x, y, z)
 ```

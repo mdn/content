@@ -10,9 +10,11 @@ tags:
   - Property
   - content indexing
   - events
+  - Experimental
 browser-compat: api.ContentIndexEvent.id
 ---
-{{DefaultAPISidebar("Content Index API")}}
+
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The read-only **`id`** property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
@@ -28,15 +30,14 @@ This example listens for the {{domxref('ContentIndexEvent', 'contentdelete')}} e
 and logs the removed content index id.
 
 The {{domxref('ContentIndexEvent')}} is only available to the
-{{domxref('ServiceWorkerGlobalScope','global scope')}} of a
+[global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a
 {{domxref('ServiceWorker')}}.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
+self.addEventListener("contentdelete", (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
-
 });
 ```
 

@@ -11,9 +11,11 @@ tags:
   - VREyeParameters
   - Virtual Reality
   - WebVR
+  - Non-standard
 browser-compat: api.VREyeParameters
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VREyeParameters`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents all the information required to correctly render a scene for a given eye, including field of view information.
 
@@ -23,34 +25,34 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 
 > **Warning:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
-## Properties
+## Instance properties
 
-- {{domxref("VREyeParameters.offset")}} {{deprecated_inline}} {{readonlyInline}}
-  - : *Represents the o*ffset from the center point between the user's eyes to the center of the eye, measured in meters.
-- {{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}
-  - : *Describes t*he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
-- {{domxref("VREyeParameters.renderWidth")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VREyeParameters.offset")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
+- {{domxref("VREyeParameters.fieldOfView")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Describes the current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
+- {{domxref("VREyeParameters.renderWidth")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the recommended render target width of each eye viewport, in pixels.
-- {{domxref("VREyeParameters.renderHeight")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VREyeParameters.renderHeight")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the recommended render target height of each eye viewport, in pixels.
 
 ## Examples
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   // If a display is available, use it to present the scene
   vrDisplay = displays[0];
   console.log('Display found');
   // Starting the presentation when the button is clicked:
   //   It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener('click', () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       console.log('Presenting to WebVR display');
 
       // Set the canvas size to the size of the vrDisplay viewport
 
-      var leftEye = vrDisplay.getEyeParameters('left');
-      var rightEye = vrDisplay.getEyeParameters('right');
+      const leftEye = vrDisplay.getEyeParameters('left');
+      const rightEye = vrDisplay.getEyeParameters('right');
 
       canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
       canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);

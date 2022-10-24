@@ -11,6 +11,7 @@ tags:
   - tee
 browser-compat: api.ReadableStream.tee
 ---
+
 {{APIRef("Streams")}}
 
 The **`tee()`** method of the
@@ -30,7 +31,7 @@ of the two `ReadableStream` branches,
 and unread data is enqueued internally on the slower consumed `ReadableStream`
 without any limit or backpressure.
 That is, when _both_ branches have an unread element in their internal queue,
-then the original `ReadableStream`’s controller’s internal queue will start to fill up,
+then the original `ReadableStream`'s controller's internal queue will start to fill up,
 and once its {{domxref("ReadableStreamDefaultController.desiredSize", "desiredSize")}} ≤ 0
 or byte stream controller {{domxref("ReadableByteStreamController.desiredSize", "desiredSize")}} ≤ 0,
 then the controller will stop calling `pull(controller)` on the
@@ -46,7 +47,7 @@ will generally lock it for the duration, preventing other readers from locking i
 
 ## Syntax
 
-```js
+```js-nolint
 tee()
 ```
 
@@ -96,7 +97,7 @@ function fetchStream(stream, list) {
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
-    listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list.appendChild(listItem);
 
     // Read some more, and call this function again

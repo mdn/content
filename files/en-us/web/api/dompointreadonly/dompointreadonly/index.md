@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: api.DOMPointReadOnly.DOMPointReadOnly
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly()`**
@@ -24,7 +25,7 @@ script code.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMPointReadOnly()
 new DOMPointReadOnly(x)
 new DOMPointReadOnly(x, y)
@@ -60,9 +61,9 @@ space.
 The following code demonstrates creating both 2D and 3D points.
 
 ```js
-var point2D = new DOMPointReadOnly(50, 25);
-var point3D = new DOMPointReadOnly(50, 0, 10);
-var perspectivePoint3D = new DOMPointReadOnly(50, 50, 25, 0.5);
+const point2D = new DOMPointReadOnly(50, 25);
+const point3D = new DOMPointReadOnly(50, 0, 10);
+const perspectivePoint3D = new DOMPointReadOnly(50, 50, 25, 0.5);
 ```
 
 ## Specifications

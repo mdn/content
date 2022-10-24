@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -13,26 +12,25 @@ tags:
   - has
 browser-compat: api.CacheStorage.has
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`has()`** method of the {{domxref("CacheStorage")}}
 interface returns a {{jsxref("Promise")}} that resolves to `true` if a
 {{domxref("Cache")}} object matches the `cacheName`.
 
-You can access `CacheStorage` through the global
-{{domxref("caches")}} property.
+You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 has(cacheName)
 ```
 
 ### Parameters
 
 - `cacheName`
-  - : A string representing the name of the {{domxref("Cache")}} object
-    you are looking for in the {{domxref("CacheStorage")}}.
+  - : A string representing the name of the {{domxref("Cache")}} object you are looking for in the {{domxref("CacheStorage")}}.
 
 ### Return value
 
@@ -45,17 +43,18 @@ The following example first checks whether a cache called 'v1' exists. If so, we
 list of assets to it. If not then we run some kind of cache set-up function.
 
 ```js
-caches.has('v1').then(function(hasCache) {
-  if (!hasCache) {
-    someCacheSetupFunction();
-  } else {
-    caches.open('v1').then(function(cache) {
-      return cache.addAll(myAssets);
-    });
-  }
-}).catch(function() {
-  // Handle exception here.
-});
+caches
+  .has("v1")
+  .then((hasCache) => {
+    if (!hasCache) {
+      someCacheSetupFunction();
+    } else {
+      caches.open("v1").then((cache) => cache.addAll(myAssets));
+    }
+  })
+  .catch(() => {
+    // Handle exception here.
+  });
 ```
 
 ## Specifications

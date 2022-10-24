@@ -17,8 +17,14 @@ tags:
   - View
   - fullscreen
   - screen
-spec-urls: https://fullscreen.spec.whatwg.org/
+browser-compat:
+  - api.Document.fullscreen
+  - api.Document.fullscreenElement
+  - api.Document.fullscreenEnabled
+  - api.Document.exitFullscreen
+  - api.Element.requestFullscreen
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 The **Fullscreen API** adds methods to present a specific {{DOMxRef("Element")}} (and its descendants) in fullscreen mode, and to exit fullscreen mode once it is no longer needed. This makes it possible to present desired content—such as an online game—using the user's entire screen, removing all browser user interface elements and other applications from the screen until fullscreen mode is shut off.
@@ -31,21 +37,21 @@ See the article [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API
 
 _The Fullscreen API has no interfaces of its own. Instead, it augments several other interfaces to add the methods, properties, and event handlers needed to provide fullscreen functionality. These are listed in the following sections._
 
-## Methods
+## Instance methods
 
 The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces to allow turning off and on fullscreen mode.
 
-### Methods on the Document interface
+### Instance methods on the Document interface
 
 - {{DOMxRef("Document.exitFullscreen()")}}
   - : Requests that the {{Glossary("user agent")}} switch from fullscreen mode back to windowed mode. Returns a {{jsxref("Promise")}} which is resolved once fullscreen mode has been completely shut off.
 
-### Methods on the Element interface
+### Instance methods on the Element interface
 
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Asks the user agent to place the specified element (and, by extension, its descendants) into fullscreen mode, removing all of the browser's UI elements as well as all other applications from the screen. Returns a {{jsxref("Promise")}} which is resolved once fullscreen mode has been activated.
 
-## Properties
+## Instance properties
 
 _The {{DOMxRef("Document")}} interface provides properties that can be used to determine if fullscreen mode is supported and available, and if fullscreen mode is currently active, which element is using the screen._
 
@@ -66,9 +72,9 @@ _The {{DOMxRef("Document")}} interface provides properties that can be used to d
 
 _The Fullscreen API defines two events which can be used to detect when fullscreen mode is turned on and off, as well as when errors occur during the process of changing between fullscreen and windowed modes._
 
-- {{Event("fullscreenchange")}}
+- {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
   - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of fullscreen mode.
-- {{Event("fullscreenerror")}}
+- {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of fullscreen mode.
 
 ## Controlling access
@@ -96,7 +102,7 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     toggleFullScreen();
   }
@@ -110,11 +116,9 @@ This code is called by the event handler above when the user hits the <kbd>Enter
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
   }
 }
 ```
@@ -129,25 +133,7 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## Browser compatibility
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenElement`
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### `Document.exitFullscreen`
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### `Element.requestFullscreen`
-
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## See also
 

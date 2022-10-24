@@ -7,6 +7,7 @@ tags:
   - Status code
 browser-compat: http.status.406
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`406 Not Acceptable`**

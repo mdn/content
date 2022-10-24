@@ -4,7 +4,6 @@ slug: Web/API/Visual_Viewport_API
 page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Layout
   - Overview
   - Reference
@@ -14,6 +13,7 @@ tags:
   - visual viewport
 browser-compat: api.VisualViewport
 ---
+
 {{DefaultAPISidebar("Visual Viewport")}}
 
 The **Visual Viewport API** provides an explicit mechanism for querying and modifying the properties of the window's {{Glossary("visual viewport")}}. The visual viewport is the visual portion of a screen excluding on-screen keyboards, areas outside of a pinch-zoom area, or any other on-screen artifact that doesn't scale with the dimensions of a page.
@@ -38,7 +38,7 @@ To access a window's visual viewport, you can obtain a {{domxref("VisualViewport
 
 ## Example
 
-The code below is based on [the sample in the specification](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html), though it adds a few things that make it function better. It shows a function called `viewportHandler()`. When called it queries the `offsetLeft` and `height` properties for values it uses in a CSS `translate()` method. You invoke this function by passing it to *both* event calls.
+The code below is based on [the sample in the specification](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html), though it adds a few things that make it function better. It shows a function called `viewportHandler()`. When called it queries the `offsetLeft` and `height` properties for values it uses in a CSS `translate()` method. You invoke this function by passing it to _both_ event calls.
 
 One thing that may not be clear in this example is the use of the `pendingUpdate` flag and the call to `requestAnimationFrame()`. The `pendingUpdate` flag serves to prevent multiple invocations of the transform that can occur when `onresize` and `onscroll` fire at the same time. Using `requestAnimationFrame()` ensures that the transform occurs before the next render.
 
@@ -51,23 +51,20 @@ function viewportHandler(event) {
 
   requestAnimationFrame(() => {
     pendingUpdate = false;
-    var layoutViewport = document.getElementById('layoutViewport');
+    const layoutViewport = document.getElementById('layoutViewport');
 
     // Since the bar is position: fixed we need to offset it by the
     // visual viewport's offset from the layout viewport origin.
-    var viewport = event.target;
-    var offsetLeft = viewport.offsetLeft;
-    var offsetTop = viewport.height
+    const viewport = event.target;
+    const offsetLeft = viewport.offsetLeft;
+    const offsetTop = viewport.height
                 - layoutViewport.getBoundingClientRect().height
                 + viewport.offsetTop;
 
     // You could also do this by setting style.left and style.top if you
     // use width: 100% instead.
-    bottomBar.style.transform = 'translate(' +
-                                offsetLeft + 'px,' +
-                                offsetTop + 'px) ' +
-                                'scale(' + 1/viewport.scale + ')'
-    })
+    bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${1 / viewport.scale})`;
+  });
 }
 
 window.visualViewport.addEventListener('scroll', viewportHandler);

@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement`** interface provides special properties and methods (beyond the regular {{DOMxRef("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
@@ -25,14 +26,14 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
   - : A {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<thead>`, a {{DOMxRef("DOMException")}} with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element, and the first `<thead>` that is a child of this element is removed from the tree, if any.
 - {{DOMxRef("HTMLTableElement.tFoot")}}
   - : A {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<tfoot>`, a {{DOMxRef("DOMException")}} with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, a {{HTMLElement("colgroup")}}, nor a {{HTMLElement("thead")}}, or as the last child if there is no such element, and the first `<tfoot>` that is a child of this element is removed from the tree, if any.
-- {{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLTableElement.rows")}} {{ReadOnlyInline}}
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all the rows of the element, that is all {{HTMLElement("tr")}} that are a child of the element, or a child of one of its {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} children. The rows members of a `<thead>` appear first, in tree order, and those members of a `<tbody>` last, also in tree order. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
-- {{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLTableElement.tBodies")}} {{ReadOnlyInline}}
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all the {{HTMLElement("tbody")}} of the element. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
 
 ### Obsolete Properties
 
-> **Warning:** The following properties are obsolete.  You should avoid using them.
+> **Warning:** The following properties are obsolete. You should avoid using them.
 
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
   - : A string containing an enumerated value reflecting the {{HTMLAttrxRef("align", "table")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
@@ -51,9 +52,9 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}
   - : A string containing a description of the purpose or the structure of the table. It reflects the obsolete {{HTMLAttrxRef("summary", "table")}} attribute.
 - {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
-  - : A string containing the length in pixels or in percentage of the desired width fo the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
+  - : A string containing the length in pixels or in percentage of the desired width of the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}_.
 

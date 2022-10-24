@@ -16,6 +16,7 @@ tags:
   - x
 browser-compat: api.DOMPointReadOnly.x
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

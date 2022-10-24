@@ -10,7 +10,8 @@ tags:
   - Polyfill
 browser-compat: api.Window.clearImmediate
 ---
-{{APIRef("HTML DOM")}}{{Non-standard_header}}
+
+{{APIRef("HTML DOM")}}
 
 This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
@@ -21,7 +22,7 @@ This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clearImmediate(immediateID)
 ```
 
@@ -40,7 +41,7 @@ None ({{jsxref("undefined")}}).
 ```js
 let immediateID = setImmediate(() => {
   // Run some code
-}
+});
 
 document.getElementById("button")
   .addEventListener(() => {

@@ -2,11 +2,12 @@
 title: Firefox 86 for developers
 slug: Mozilla/Firefox/Releases/86
 tags:
-  - '86'
+  - "86"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
@@ -40,10 +41,10 @@ _No changes._
 
   ```js
   // Get English currency code display names
-  let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+  let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
   // Get currency names
-  currencyNames.of('USD'); // "US Dollar"
-  currencyNames.of('EUR'); // "Euro"
+  currencyNames.of("USD"); // "US Dollar"
+  currencyNames.of("EUR"); // "Euro"
   ```
 
   For more information see {{bug(1654116)}}.
@@ -76,6 +77,7 @@ _No changes._
 - [Host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) now grant access to privileged parts of the [tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) ({{bug(1679688)}}).
 - `focused: false` is now ignored when set as an option in a [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) call ({{bug(1253129)}}).
 - {{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see [Getting the redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) for details ({{bug(1614919)}}).
+- The page ID is now returned as part of {{WebExtAPIRef("history.onTitleChanged")}} ({{bug(1678611)}}).
 
 ## Older versions
 

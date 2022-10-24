@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_lose_context.loseContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WEBGL_lose_context.loseContext()** method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate losing
@@ -21,7 +22,7 @@ called.
 
 ## Syntax
 
-```js
+```js-nolint
 loseContext()
 ```
 
@@ -40,10 +41,10 @@ With this method, you can simulate the
 event:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextlost', function(e) {
+canvas.addEventListener('webglcontextlost', (e) => {
   console.log(e);
 }, false);
 

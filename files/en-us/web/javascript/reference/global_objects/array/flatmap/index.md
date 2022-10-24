@@ -12,27 +12,30 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flatMap
 ---
+
 {{JSRef}}
 
 The **`flatMap()`** method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
 
+{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}
+
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-flatMap((currentValue) => { /* ... */ } )
-flatMap((currentValue, index) => { /* ... */ } )
-flatMap((currentValue, index, array) => { /* ... */ } )
+flatMap((currentValue) => { /* … */ } )
+flatMap((currentValue, index) => { /* … */ } )
+flatMap((currentValue, index, array) => { /* … */ } )
 
 // Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
 
 // Inline callback function
-flatMap(function(currentValue) { /* ... */ })
-flatMap(function(currentValue, index) { /* ... */ })
-flatMap(function(currentValue, index, array){ /* ... */ })
-flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
+flatMap(function(currentValue) { /* … */ })
+flatMap(function(currentValue, index) { /* … */ })
+flatMap(function(currentValue, index, array){ /* … */ })
+flatMap(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -50,7 +53,7 @@ flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array `flatMap` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
@@ -67,6 +70,8 @@ followed by a call to
 [`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 of depth 1.
 
+The `flatMap()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. However, the value returned from `callbackFn` must be an array if it is to be flattened.
+
 ### Alternative
 
 #### Pre-allocate and explicitly iterate
@@ -74,7 +79,7 @@ of depth 1.
 ```js
 const arr = [1, 2, 3, 4];
 
-arr.flatMap(x => [x, x * 2]);
+arr.flatMap((x) => [x, x * 2]);
 // is equivalent to
 const n = arr.length;
 const acc = new Array(n * 2);
@@ -94,40 +99,40 @@ its flexibility and readability are desired.
 
 ## Examples
 
-### `map()` and `flatMap()`
+### map() and flatMap()
 
 ```js
 const arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // only one level is flattened
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
 While the above could have been achieved by using map itself, here is an example that
-better showcases the use of `flatMap`.
+better showcases the use of `flatMap()`.
 
 Let's generate a list of words from a list of sentences.
 
 ```js
 const arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x => x.split(" "));
+arr1.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x => x.split(" "));
+arr1.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 
 Notice, the output list length can be different from the input list length.
 
-### For adding and removing items during a `map()`
+### For adding and removing items during a map()
 
 `flatMap` can be used as a way to add and remove items (modify the number of
 items) during a `map`. In other words, it allows you to map _many items to
@@ -143,13 +148,47 @@ const a = [5, 4, -3, 20, 17, -33, -4, 18]
 //         |\  \  x   |  | \   x   x   |
 //        [4,1, 4,   20, 16, 1,       18]
 
-a.flatMap( (n) =>
-  (n < 0) ?      [] :
-  (n % 2 == 0) ? [n] :
-                 [n-1, 1]
-)
-
+const result = a.flatMap((n) => {
+  if (n < 0) {
+    return [];
+  }
+  return n % 2 === 0 ? [n] : [n - 1, 1];
+});
 // expected output: [4, 1, 4, 20, 16, 1, 18]
+```
+
+### Using flatMap() on sparse arrays
+
+The `callbackFn` won't be called for empty slots in the source array because `map()` doesn't, while `flat()` ignores empty slots in the returned arrays.
+
+```js
+console.log([1, 2, , 4, 5].flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 4, 8, 5, 10]
+console.log([1, 2, 3, 4].flatMap(x => [, x * 2])); // [2, 4, 6, 8]
+```
+
+### Calling flatMap() on non-array objects
+
+The `flatMap()` method reads the `length` property of `this` and then accesses each integer index. If the return value of the callback function is not an array, it is always directly appended to the result array.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 1,
+  1: 2,
+  2: 3,
+};
+console.log(Array.prototype.flatMap.call(arrayLike, (x) => [x, x * 2]));
+// [1, 2, 2, 4, 3, 6]
+
+// Array-like objects returned from the callback won't be flattened
+console.log(
+  Array.prototype.flatMap.call(arrayLike, (x) => ({
+    length: 1,
+    0: x,
+  })),
+);
+// [ 1, 2, 2, 4, 3, 6 ]
+// [ { '0': 1, length: 2 }, { '0': 2, length: 2 }, { '0': 3, length: 2 } ]
 ```
 
 ## Specifications

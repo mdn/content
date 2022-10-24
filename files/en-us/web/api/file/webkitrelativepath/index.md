@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.webkitRelativePath
 ---
+
 {{APIRef("File API")}}
 
 The **`File.webkitRelativePath`** is a read-only property that
@@ -25,7 +26,7 @@ directory the user selected.
 ## Example
 
 In this example, a directory picker is presented which lets the user choose one or more
-directories. When the {{event("change")}} event occurs, a list of all files contained
+directories. When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list of all files contained
 within the selected directory hierarchies is generated and displayed.
 
 ### HTML

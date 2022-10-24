@@ -11,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - controlTransferOut
+  - Experimental
 browser-compat: api.USBDevice.controlTransferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`controlTransferOut()`** method of the
@@ -22,7 +24,7 @@ transmitted to the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 controlTransferOut(setup, data)
 ```
 
@@ -30,7 +32,7 @@ controlTransferOut(setup, data)
 
 - `setup`
 
-  - : An object that sets options for . The available options are:
+  - : An object that sets options for. The available options are:
 
     - `requestType`
       - : Must be one of three values specifying whether the
@@ -44,7 +46,7 @@ controlTransferOut(setup, data)
     - `request`
       - : A vendor-specific command.
     - `value`
-      - : Vender-specific request parameters.
+      - : Vendor-specific request parameters.
     - `index`
       - : The interface number of the recipient.
 

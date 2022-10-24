@@ -7,9 +7,11 @@ tags:
   - Interface
   - Reference
   - BackgroundFetchRegistration
+  - Experimental
 browser-compat: api.BackgroundFetchRegistration
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`BackgroundFetchRegistration`** interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual background fetch.
 
@@ -17,23 +19,23 @@ A `BackgroundFetchRegistration` instance is returned by the {{domxref("Backgroun
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
 
-- {{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the background fetch's ID.
-- {{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.uploadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("number")}} containing the total number of bytes to be uploaded.
-- {{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.uploaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("number")}} containing the size in bytes successfully sent, initially `0`.
-- {{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.downloadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
-- {{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.downloaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("number")}} containing the size in bytes that has been downloaded, initially `0`.
-- {{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
-- {{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
   - : One of the following strings:
 
@@ -50,23 +52,23 @@ The following properties are available synchronously, as convenience properties 
     - `"download-total-exceeded"`
       - : The provided `downloadTotal` was exceeded. This value was set when the background fetch was registered.
 
-- {{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
 
-## Methods
+## Instance methods
 
-- {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}}
+- {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}} {{Experimental_Inline}}
   - : Aborts the background fetch. Returns a {{jsxref("Promise")}} that resolves with `true` if the fetch was successfully aborted.
-- {{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}}
+- {{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}} {{Experimental_Inline}}
   - : Returns a single {{domxref("BackgroundFetchRecord")}} object which is the first match for the arguments.
-- {{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}}
+- {{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects containing requests and responses.
 
 ## Events
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event)
+- [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) {{Experimental_Inline}}
 
   - : Fired when there is a change to any of the following properties:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
@@ -80,15 +82,21 @@ The following code creates a `BackGroundFetchRegistration` as `bgFetch`, with an
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
-    title: 'Episode 5: Interesting things.',
-    icons: [{
-      sizes: '300x300',
-      src: '/ep-5-icon.png',
-      type: 'image/png',
-    }],
-    downloadTotal: 60 * 1024 * 1024,
-  });
+  const bgFetch = await swReg.backgroundFetch.fetch(
+    "my-fetch",
+    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+    {
+      title: "Episode 5: Interesting things.",
+      icons: [
+        {
+          sizes: "300x300",
+          src: "/ep-5-icon.png",
+          type: "image/png",
+        },
+      ],
+      downloadTotal: 60 * 1024 * 1024,
+    }
+  );
 });
 ```
 
@@ -101,9 +109,9 @@ console.log(bgFetch.id); // "my-fetch"
 The {{domxref("BackgroundFetchRegistration.match","match()")}} method can be used to find a particular {{domxref("BackgroundFetchRecord")}} from those that are part of the registration.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

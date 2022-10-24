@@ -10,9 +10,11 @@ tags:
   - XR
   - XRInputSources
   - XRSession
+  - Experimental
 browser-compat: api.XRSession.inputsourceschange_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when the set of available WebXR input devices changes.
 
@@ -21,9 +23,9 @@ The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when t
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('inputsourceschange', event => { })
+addEventListener('inputsourceschange', (event) => { })
 
-oninputsourceschange = event => { }
+oninputsourceschange = (event) => { }
 ```
 
 ## Event type
@@ -61,8 +63,8 @@ The following example shows how to set up an event handler which uses `inputsour
 xrSession.addEventListener("inputsourceschange", onInputSourcesChange);
 
 function onInputSourcesChange(event) {
-  for (let input of event.added) {
-    if (input.targetRayMode == "tracked-pointer") {
+  for (const input of event.added) {
+    if (input.targetRayMode === "tracked-pointer") {
       loadControllerMesh(input);
     }
   }

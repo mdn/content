@@ -2,33 +2,21 @@
 title: QUIC
 slug: Glossary/QUIC
 tags:
-  - Glossary
   - HTTP
   - QUIC
   - Reference
   - Web Performance
 ---
-**Quick UDP Internet Connection**, or **QUIC**, is an experimental multiplexed transport protocol implemented on UDP. It was developed by Google as a way to experiment with ways to improve TCP and web application delivery.
 
-As TCP is built into the kernel of many operating systems being able to experiment with changes, test them and implement modifications is an extremely slow process. The creation of QUIC allows developers to conduct experiments and try new things faster.
+**QUIC** is a multiplexed transport protocol implemented on UDP. It is used instead of {{Glossary("TCP")}} as the transport layer in HTTP/3.
 
-QUIC was designed to support the semantics of HTTP/2. It provides multiplexing, flow control, security and congestion control.
+QUIC was designed to provide quicker setup and lower latency for HTTP connections. In particular:
 
-Key features of QUIC include:
+- In TCP, the initial TCP handshake is optionally followed by a TLS handshake, which must complete before data can be transmitted. Since TLS is almost ubiquitous now, QUIC integrates the TLS handshake into the initial QUIC handshake, reducing the number of messages that must be exchanged during setup.
 
-- Reduction in connection establishment time.
-- Improved congestion control.
-- Multiplexing without head-of-line blocking.
-- Forward error correction.
-- Connection migration.
-
-There is limited browser and server support for QUIC today.
-
-### Resources
-
-- [Chromium Projects Documentation](https://www.chromium.org/quic/)
-- [IETF Draft](https://datatracker.ietf.org/doc/html/draft-tsvwg-quic-protocol-02)
+- HTTP/2 is a multiplexed protocol, allowing multiple simultaneous HTTP transactions. However, the transactions are multiplexed over a single TCP connection, meaning that packet loss and subsequent retransmissions at the TCP layer can block all transactions. QUIC avoids this by running over UDP and implementing packet loss detection and retransmission separately for each stream, meaning that packet loss only blocks the particular stream whose packets were lost.
 
 ## See also
 
-- [HTTP/2](/en-US/docs/Glossary/HTTP_2)
+- {{rfc("9000", "the QUIC specification")}}
+- {{rfc("9114", "the HTTP/3 specification")}}

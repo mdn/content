@@ -12,7 +12,7 @@ tags:
 
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
 giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
-Houdini is a group of APIs that give developers direct access to the {{domxref("CSS_Object_Model")}} (CSSOM),
+Houdini is a group of APIs that give developers direct access to the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) (CSSOM),
 enabling developers to write code the browser can parse as CSS,
 thereby creating new CSS features without waiting for them to be implemented natively in browsers.
 
@@ -26,7 +26,7 @@ Houdini code doesn't wait for that first rendering cycle to be complete.
 Rather, it is included in that first cycle — creating renderable, understandable styles.
 Houdini provides an object-based API for working with CSS values in JavaScript.
 
-Houdini's {{domxref("CSS Typed OM API")}} is a CSS Object Model with types and methods,
+Houdini's [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is a CSS Object Model with types and methods,
 exposing values as JavaScript objects
 making for more intuitive CSS manipulation than previous string based {{domxref("HTMLElement.style")}} manipulations.
 Every element and style sheet rule has a style map which is accessible via its {{domxref("StylePropertyMap")}}.
@@ -46,6 +46,7 @@ which register completely configurable worklets.
 > **Note:** You can write your own worklets, or install components created by other people.
 > The [Houdini.how](https://houdini.how/) website is a collection of worklets,
 > with [instructions on how to use them](https://houdini.how/usage/).
+
 The CSS `paint()` function is an additional function supported by the {{cssxref("image")}} type.
 It takes parameters that include the name of the worklet,
 plus additional parameters needed by the worklet.
@@ -102,7 +103,7 @@ border, or content via the `paint()` CSS function.
 
 - [CSS Painting API reference](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Painting API guide](/en-US/docs/Web/API/CSS_Painting_API/Guide)
-- [CSS Paint API](https://developers.google.com/web/updates/2018/01/paintapi)
+- [CSS Paint API](https://developer.chrome.com/blog/paintapi/)
 - [The CSS Paint API](https://css-tricks.com/the-css-paint-api/)
 - [Simulating Drop Shadows with the CSS Paint API](https://css-tricks.com/simulating-drop-shadows-with-the-css-paint-api/)
 - [CSS Paint API Being predictably random](https://jakearchibald.com/2020/css-paint-predictably-random/)
@@ -121,7 +122,7 @@ Designed to improve the extensibility of CSS,
 this API enables developers to write their own layout algorithms,
 like masonry or line snapping.
 
-_This API has some partial support in Chrome Canary. It is not yet documented on MDN_
+_This API has some partial support in Chrome Canary. It is not yet documented on MDN._
 
 ### CSS Parser API
 

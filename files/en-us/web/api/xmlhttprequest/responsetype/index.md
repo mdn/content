@@ -16,6 +16,7 @@ tags:
   - responseType
 browser-compat: api.XMLHttpRequest.responseType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} property
@@ -56,7 +57,7 @@ It can take the following values:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : An attempt was made to change the value of `responseType` on
-    an`XMLHttpRequest` which is in synchronous mode but not in a
+    an `XMLHttpRequest` which is in synchronous mode but not in a
     {{domxref("Worker")}}. For additional details, see [Synchronous XHR restrictions](#synchronous_xhr_restrictions) below.
 
 ## Usage notes

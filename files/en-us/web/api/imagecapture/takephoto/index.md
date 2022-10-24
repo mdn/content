@@ -14,7 +14,8 @@ tags:
   - takePhoto
 browser-compat: api.ImageCapture.takePhoto
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`takePhoto()`** method of the
 {{domxref("ImageCapture")}} interface takes a single exposure using the video capture
@@ -23,7 +24,7 @@ that resolves with a {{domxref("Blob")}} containing the data.
 
 ## Syntax
 
-```js
+```js-nolint
 takePhoto()
 takePhoto(photoSettings)
 ```
@@ -61,18 +62,18 @@ This example is extracted from this [Simple Image Capture demo](https://simpl.in
 {{domxref("ImageCapture")}} object.
 
 ```js
-var takePhotoButton = document.querySelector('button#takePhoto');
-var canvas = document.querySelector('canvas');
+let takePhotoButton = document.querySelector('button#takePhoto');
+let canvas = document.querySelector('canvas');
 
 takePhotoButton.onclick = takePhoto;
 
 function takePhoto() {
-  imageCapture.takePhoto().then(function(blob) {
+  imageCapture.takePhoto().then((blob) => {
     console.log('Took photo:', blob);
     img.classList.remove('hidden');
     img.src = URL.createObjectURL(blob);
-  }).catch(function(error) {
-    console.log('takePhoto() error: ', error);
+  }).catch((error) => {
+    console.error('takePhoto() error: ', error);
   });
 }
 ```

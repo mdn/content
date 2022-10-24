@@ -6,6 +6,7 @@ tags:
   - Mozilla
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -53,11 +54,11 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### Events
 
-- CSS Transitions: The {{event("transitionstart")}}, {{event("transitionrun")}}, and {{event("transitioncancel")}} events have been implemented (see {{bug(1264125)}} and {{bug(1287983)}}).
+- CSS Transitions: The {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, and {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} events have been implemented (see {{bug(1264125)}} and {{bug(1287983)}}).
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see {{bug(1002256)}}).
 - The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see {{bug(424390)}}).
-- The {{Event("auxclick")}} event and corresponding {{domxref("GlobalEventHandlers.onauxclick")}} handler have been implemented (see {{bug(1304044)}}).
-- The {{Event("transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. See {{domxref("GlobalEventHandlers.ontransitioncancel")}} for more details and an example ({{bug("1264125")}}).
+- The {{domxref("Element/auxclick_event", "auxclick")}} event and corresponding event handler have been implemented (see {{bug(1304044)}}).
+- The {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled.
 
 ### DOM
 
@@ -68,7 +69,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - {{domxref("Node.getRootNode()")}} has been implemented, replacing the deprecated `Node.rootNode` property ({{bug(1269155)}}).
 - Own properties of {{domxref("Plugin")}} and {{domxref("PluginArray")}} objects are no longer enumerable ({{bug("1270366")}}).
 - Named properties of {{domxref("MimeTypeArray")}} objects are no longer enumerable ({{bug("1270364")}}).
-- The [Permissions API](/en-US/docs/Web/API/Permissions_API) now has a new permission name available — `persistent-storage` — as used when making a {{domxref("Permissions.query()")}} (see {{bug(1270038)}}). This allows an origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
+- The [Permissions API](/en-US/docs/Web/API/Permissions_API) now has a new permission name available — `persistent-storage` — as used when making a {{domxref("Permissions.query()")}} (see {{bug(1270038)}}). This allows an origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 - The {{domxref("Performance.timeOrigin")}} property has been implemented ({{bug(1313420)}}).
 
 ### Workers and service workers
@@ -166,7 +167,7 @@ Enhanced APIs:
 
 ### JavaScript code modules
 
-- The asynchronous [AddonManager APIs](../../../Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ({{bug(987512)}}.
+- The asynchronous [AddonManager APIs]((/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ({{bug(987512)}}.
 
 ## Older versions
 

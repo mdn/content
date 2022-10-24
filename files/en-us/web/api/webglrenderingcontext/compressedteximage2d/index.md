@@ -10,8 +10,11 @@ tags:
   - WebGL
   - WebGL extension
   - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.compressedTexImage2D
+browser-compat:
+  - api.WebGLRenderingContext.compressedTexImage2D
+  - api.WebGL2RenderingContext.compressedTexImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.compressedTexImage2D()`**
@@ -24,7 +27,7 @@ using these methods.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL 1:
 compressedTexImage2D(target, level, internalformat, width, height, border)
 compressedTexImage2D(target, level, internalformat, width, height, border, pixels)
@@ -72,7 +75,7 @@ compressedTexImage3D(target, level, internalformat, width, height, depth, border
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Compressed image
@@ -175,13 +178,13 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var ext = (
+const ext = (
   gl.getExtension('WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
 );
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA_S3TC_DXT5_EXT, 512, 512, 0, textureData);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
@@ -194,13 +197,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 ## Browser compatibility
 
-### compressedTexImage2D
-
 {{Compat}}
-
-### compressedTexImage3D
-
-{{Compat("api.WebGL2RenderingContext.compressedTexImage3D")}}
 
 ## See also
 

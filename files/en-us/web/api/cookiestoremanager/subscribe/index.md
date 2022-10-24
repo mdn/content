@@ -8,15 +8,17 @@ tags:
   - Reference
   - subscribe
   - CookieStoreManager
+  - Experimental
 browser-compat: api.CookieStoreManager.subscribe
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+
+{{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
 
 The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 
 ## Syntax
 
-```js
+```js-nolint
 subscribe(subscriptions)
 ```
 

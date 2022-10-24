@@ -12,6 +12,7 @@ tags:
   - registerProtocolHandler
 browser-compat: api.Navigator.registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 The **{{domxref("Navigator")}}** method **`registerProtocolHandler()`** lets websites register their ability to open or handle particular URL schemes (aka protocols).
@@ -20,7 +21,7 @@ For example, this API lets webmail sites open `mailto:` URLs, or VoIP sites open
 
 ## Syntax
 
-```js
+```js-nolint
 registerProtocolHandler(scheme, url)
 registerProtocolHandler(scheme, url, title)
 ```
@@ -57,6 +58,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : The user agent blocked the registration.
     This might happen if:
 
@@ -65,7 +67,7 @@ None ({{jsxref("undefined")}}).
     - The browser requires that this function is called from a secure context.
     - The browser requires that the handler's URL be over HTTPS.
 
-- `SyntaxError`{{domxref("DOMException")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : The `%s` placeholder is missing from the handler URL.
 
 ## Permitted schemes
@@ -78,7 +80,7 @@ A **custom scheme** may be registered as long as:
 - The custom scheme's name includes at least 1 letter after the `web+` prefix
 - The custom scheme has only lowercase ASCII letters in its name.
 
-For example, `web+burger`, as shown in the [Example](#example) below.
+For example, `web+burger`, as shown in the [Example](#examples) below.
 
 Otherwise, the scheme must be one of the following:
 

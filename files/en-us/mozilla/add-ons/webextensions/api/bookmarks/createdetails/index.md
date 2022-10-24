@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.CreateDetails
 ---
+
 {{AddonSidebar()}}
 
 The `CreateDetails` type is used to describe the properties of a new, bookmark, bookmark folder, or separator when calling the {{WebExtAPIRef("bookmarks.create()")}} method.
@@ -27,7 +28,7 @@ An {{jsxref("object")}} containing some combination of the following fields:
   - : A {{jsxref("string")}} which indicates the ID of the parent folder into which to place the new bookmark or bookmark folder. On Chrome and Firefox, the default is the "Other Bookmarks" folder on the Bookmarks menu.
 - `title` {{optional_inline}}
   - : A {{jsxref("string")}} which specifies the title for the bookmark or the name of the folder to be created. If this isn't specified, the title is `""`.
-- `type`{{optional_inline}}
+- `type` {{optional_inline}}
   - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
 - `url` {{optional_inline}}
   - : `string`. A {{jsxref("string")}} which specifies the URL of the page to bookmark. If this is omitted or is `null`, a folder is created instead of a bookmark.
@@ -42,7 +43,8 @@ An {{jsxref("object")}} containing some combination of the following fields:
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,4 +71,4 @@ An {{jsxref("object")}} containing some combination of the following fields:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

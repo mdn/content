@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.createTexture()`** method of the
@@ -19,7 +20,7 @@ The **`WebGLRenderingContext.createTexture()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 createTexture()
 ```
 
@@ -38,9 +39,9 @@ See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using 
 ### Creating a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const texture = gl.createTexture();
 ```
 
 ## Specifications

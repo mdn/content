@@ -6,8 +6,9 @@ tags:
   - HTTP
   - Overview
   - WebMechanics
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.
@@ -173,7 +174,7 @@ When a client wants to communicate with a server, either the final server or an 
    Content-Length: 29769
    Content-Type: text/html
 
-   <!DOCTYPE html... (here come the 29769 bytes of the requested web page)
+   <!DOCTYPE html>… (here come the 29769 bytes of the requested web page)
    ```
 
 4. Close or reuse the connection for further requests.
@@ -197,7 +198,7 @@ An example HTTP request:
 
 ![A basic HTTP request](http_request.png)
 
-Requests consists of the following elements:
+Requests consist of the following elements:
 
 - An HTTP [method](/en-US/docs/Web/HTTP/Methods), usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform.
   Typically, a client wants to fetch a resource (using `GET`) or post the value of an [HTML form](/en-US/docs/Learn/Forms) (using `POST`), though more operations may be needed in other cases.

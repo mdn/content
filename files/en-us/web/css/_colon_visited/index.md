@@ -1,6 +1,7 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,16 +11,12 @@ tags:
   - Web
 browser-compat: css.selectors.visited
 ---
+
 {{CSSRef}}
 
 The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.
 
-```css
-/* Selects any <a> that has been visited */
-a:visited {
-  color: green;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
 
 Styles defined by the `:visited` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":active")}}) that has at least equal specificity. To style links appropriately, put the `:visited` rule after the `:link` rule but before the `:hover` and `:active` rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
@@ -48,7 +45,7 @@ Properties that would otherwise have no color or be transparent cannot be modifi
 ### HTML
 
 ```html
-<a href="#test-visited-link">Have you visited this link yet?</a><br>
+<a href="#test-visited-link">Have you visited this link yet?</a><br />
 <a href="">You've already visited this link.</a>
 ```
 

@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.referrerPolicy
 ---
+
 {{APIRef("Fetch")}}
 
 The **`referrerPolicy`** read-only property of the
@@ -31,8 +32,8 @@ In the following snippet, we create a new request using the
 the script), then save the request referrer policy in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myReferrer = myRequest.referrerPolicy; // returns "" by default
+const myRequest = new Request('flowers.jpg');
+const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ```
 
 ## Specifications

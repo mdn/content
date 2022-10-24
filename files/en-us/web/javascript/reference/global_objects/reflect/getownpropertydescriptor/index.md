@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The static
@@ -22,7 +23,7 @@ otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ```
 

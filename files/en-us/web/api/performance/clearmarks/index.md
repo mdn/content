@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearMarks
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`clearMarks()`** method removes the _named mark_
@@ -21,7 +22,7 @@ removed from the performance entry buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearMarks()
 clearMarks(name)
 ```
@@ -46,7 +47,7 @@ The following example shows both uses of the `clearMarks()` method.
 // Create a small helper to show how many PerformanceMark entries there are.
 function logMarkCount() {
   console.log(
-    "Found this many entries: " + performance.getEntriesByType("mark").length
+    `Found this many entries: ${performance.getEntriesByType("mark").length}`
   );
 }
 

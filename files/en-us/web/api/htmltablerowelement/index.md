@@ -9,24 +9,25 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableRowElement`** interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
+- {{domxref("HTMLTableRowElement.cells")}} {{ReadOnlyInline}}
   - : Returns a live {{domxref("HTMLCollection")}} containing the cells in the row. The `HTMLCollection` is live and is automatically updated when cells are added or removed.
-- {{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}
+- {{domxref("HTMLTableRowElement.rowIndex")}} {{ReadOnlyInline}}
   - : Returns a `long` value which gives the logical position of the row within the entire table. If the row is not part of a table, returns `-1`.
-- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}
+- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{ReadOnlyInline}}
   - : Returns a `long` value which gives the logical position of the row within the table section it belongs to. If the row is not part of a section, returns `-1`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

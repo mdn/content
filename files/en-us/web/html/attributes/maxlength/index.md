@@ -10,7 +10,9 @@ tags:
   - Reference
   - maxlength
   - textarea
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-maxlength
+browser-compat:
+  - html.elements.input.maxlength
+  - html.elements.textarea.maxlength
 ---
 
 {{HTMLSidebar}}
@@ -28,7 +30,7 @@ While the browser will generally prevent user from entering more text than the m
 ## Examples
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
@@ -39,7 +41,7 @@ While the browser will generally prevent user from entering more text than the m
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.maxlength")}}
+{{Compat}}
 
 ## See also
 

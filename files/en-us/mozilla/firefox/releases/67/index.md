@@ -2,11 +2,12 @@
 title: Firefox 67 for developers
 slug: Mozilla/Firefox/Releases/67
 tags:
-  - '67'
+  - "67"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
@@ -50,7 +51,7 @@ This article provides information about the changes in Firefox 67 that will affe
 - The following Developer Tools have been deprecated (see [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) for details):
 
   - WebIDE ({{bug(1539462)}}).
-  - Connect... page ({{bug(1539462)}}).
+  - Connect… page ({{bug(1539462)}}).
 
 ### HTML
 

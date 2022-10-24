@@ -1,6 +1,7 @@
 ---
-title: ':nth-last-child()'
+title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.nth-last-child
 ---
+
 {{CSSRef}}
 
 The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
@@ -91,12 +93,12 @@ table {
 }
 
 /* Selects the last three elements */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* Selects every element starting from the second to last item */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -137,7 +139,7 @@ A _quantity query_ styles elements depending on how many of them there are. In t
 ```css
 /* If there are at least three list items,
    style them all */
-li:nth-last-child(n+3),
+li:nth-last-child(n + 3),
 li:nth-last-child(3) ~ li {
   color: red;
 }

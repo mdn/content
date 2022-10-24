@@ -11,9 +11,11 @@ tags:
   - WebUSB
   - WebUSB API
   - configurationName
+  - Experimental
 browser-compat: api.USBConfiguration.configurationName
 ---
-{{securecontext_header}}{{APIRef("")}}
+
+{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`configurationName`** read-only property
 of the {{domxref("USBConfiguration")}} interface returns the name provided by the device

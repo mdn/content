@@ -9,6 +9,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} represents a MIDI input or output port.
@@ -17,15 +18,15 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref("MIDIPort.id")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.id")}} {{ReadOnlyInline}}
   - : Returns a string containing the unique ID of the port.
-- {{domxref("MIDIPort.manufacturer")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.manufacturer")}} {{ReadOnlyInline}}
   - : Returns a string containing the manufacturer of the port.
-- {{domxref("MIDIPort.name")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.name")}} {{ReadOnlyInline}}
   - : Returns a string containing the system name of the port.
-- {{domxref("MIDIPort.type")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.type")}} {{ReadOnlyInline}}
 
   - : Returns a string containing the type of the port, one of:
 
@@ -34,9 +35,9 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"output"`
       - : The `MIDIPort` is an output port.
 
-- {{domxref("MIDIPort.version")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.version")}} {{ReadOnlyInline}}
   - : Returns a string containing the version of the port.
-- {{domxref("MIDIPort.state")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.state")}} {{ReadOnlyInline}}
 
   - : Returns a string containing the state of the port, one of:
 
@@ -45,7 +46,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"connected"`
       - : The device that this `MIDIPort` represents is currently connected.
 
-- {{domxref("MIDIPort.connection")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.connection")}} {{ReadOnlyInline}}
 
   - : Returns a string containing the connection state of the port, one of:
 
@@ -56,7 +57,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"pending"`
       - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
 
@@ -77,19 +78,19 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
 The following example lists input and output ports, and displays information about them using properties of `MIDIPort`.
 
 ```js
-function listInputsAndOutputs( midiAccess ) {
-  for (var entry of midiAccess.inputs) {
-    var input = entry[1];
-    console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
-      "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
-      "' version:'" + input.version + "'" );
+function listInputsAndOutputs(midiAccess) {
+  for (const entry of midiAccess.inputs) {
+    const input = entry[1];
+    console.log(
+      `Input port [type:'${input.type}'] id:'${input.id}' manufacturer: '${input.manufacturer}' name: '${input.name}' version: '${input.version}'`
+    );
   }
 
-  for (var entry of midiAccess.outputs) {
-    var output = entry[1];
-    console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
-      "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
-      "' version:'" + output.version + "'" );
+  for (const entry of midiAccess.outputs) {
+    const output = entry[1];
+    console.log(
+      `Output port [type:'${output.type}'] id: '${output.id}' manufacturer: '${output.manufacturer}' name: '${output.name}' version: '${output.version}'`
+    );
   }
 }
 ```
@@ -99,8 +100,8 @@ function listInputsAndOutputs( midiAccess ) {
 The following example takes the list of input ports and adds them to a select list, in order that a user can choose the device they want to use.
 
 ```js
-inputs.forEach( function( port, key ) {
-  var opt = document.createElement("option");
+inputs.forEach((port, key) => {
+  const opt = document.createElement("option");
   opt.text = port.name;
   document.getElementById("inputportselector").add(opt);
 });

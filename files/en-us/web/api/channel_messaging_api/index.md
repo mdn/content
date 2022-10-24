@@ -8,7 +8,11 @@ tags:
   - HTML API
   - Overview
   - Reference
+browser-compat:
+  - api.MessageChannel
+  - api.MessagePort
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 The **Channel Messaging API** allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly, passing messages between one another through two-way channels (or pipes) with a port at each end.
@@ -36,22 +40,16 @@ Find out more about how to use this API in [Using channel messaging](/en-US/docs
 
 ## Examples
 
-- We have published a [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
-- You can also see a [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between main page and IFrame.
+- We have published a [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+- You can also see a [multimessaging demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between main page and IFrame.
 
 ## Specifications
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## See also
 

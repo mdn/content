@@ -11,6 +11,7 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver.ReportingObserver
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`ReportingObserver()`** constructor of the [Reporting API](/en-US/docs/Web/API/Reporting_API) creates a new
@@ -19,7 +20,7 @@ access reports.
 
 ## Syntax
 
-```js
+```js-nolint
 new ReportingObserver(callback)
 new ReportingObserver(callback, options)
 ```
@@ -58,12 +59,12 @@ new ReportingObserver(callback, options)
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```

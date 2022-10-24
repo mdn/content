@@ -12,7 +12,8 @@ tags:
   - working with files
 browser-compat: api.FileSystemHandle
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`FileSystemHandle`** interface of the {{domxref('File System Access API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
 
@@ -25,20 +26,20 @@ Below is a list of interfaces based on the FileSystemHandle interface.
 - {{domxref("FileSystemDirectoryHandle")}}
   - : Provides a handle to a directory entry.
 
-## Properties
+## Instance properties
 
-- {{domxref('FileSystemHandle.kind','kind')}} {{readonlyInline}}
+- {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
   - : Returns the type of entry. This is `'file'` if the associated entry is a file or `'directory'`.
-- {{domxref('FileSystemHandle.name', 'name')}} {{readonlyInline}}
+- {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
   - : Returns the name of the associated entry.
 
-## Methods
+## Instance methods
 
 - {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
   - : Compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
-- {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}}
+- {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : Queries the current permission state of the current handle.
-- {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}}
+- {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
   - : Requests read or readwrite permissions for the file handle.
 
 ## Examples
@@ -57,7 +58,7 @@ async function getFile() {
 
   if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.kind === 'directory')
+  } else if (fileHandle.kind === 'directory') {
     // run directory code
   }
 
@@ -100,7 +101,7 @@ The following function compares a single entry with an array of entries, and ret
 ```js
 function removeMatches(fileEntry, entriesArr) {
 
-  let newArr = entriesArr.filter( entry => !fileEntry.isSameEntry(entry) )
+  const newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
 
   return newArr;
 }

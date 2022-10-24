@@ -13,16 +13,17 @@ tags:
   - Houdini
 browser-compat: api.CSSSkewY.CSSSkewY
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSSkewY()`** constructor creates a new
 {{domxref("CSSSkewY")}} object which represents the
-[`skewY()`](</en-US/docs/Web/CSS/transform-function/skewY()>) value
+[`skewY()`](/en-US/docs/Web/CSS/transform-function/skewY) value
 of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSSkewY(ay)
 ```
 

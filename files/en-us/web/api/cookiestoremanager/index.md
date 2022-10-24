@@ -7,23 +7,25 @@ tags:
   - Interface
   - Reference
   - CookieStoreManager
+  - Experimental
 browser-compat: api.CookieStoreManager
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The **`CookieStoreManager`** interface of the {{domxref('Cookie Store')}} API allows service workers to subscribe to events for cookie changes. By using the {{domxref("CookieStoreManager.subscribe()","subscribe()")}} method a particular service worker registration can indicate that it is interested in change events.
+{{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
+
+The **`CookieStoreManager`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) allows service workers to subscribe to cookie change events. Call {{domxref("CookieStoreManager.subscribe()","subscribe()")}} on a particular service worker registration to receive change events.
 
 A `CookieStoreManager` has an associated {{domxref("ServiceWorkerRegistration")}}. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and URL. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.
 
 To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies")}}.
 
-## Methods
+## Instance methods
 
-- {{domxref("CookieStoreManager.getSubscriptions()")}}
+- {{domxref("CookieStoreManager.getSubscriptions()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("promise")}} which resolves to a list of the cookie change subscriptions for this service worker registration.
-- {{domxref("CookieStoreManager.subscribe()")}}
+- {{domxref("CookieStoreManager.subscribe()")}} {{Experimental_Inline}}
   - : Subscribes to changes to cookies. It returns a {{jsxref("promise")}} which resolves when the subscription is successful.
-- {{domxref("CookieStoreManager.unsubscribe()")}}
+- {{domxref("CookieStoreManager.unsubscribe()")}} {{Experimental_Inline}}
   - : Unsubscribes the registered service worker from changes to cookies. It returns a {{jsxref("promise")}} which resolves when the operation is successful.
 
 ## Examples
@@ -31,7 +33,7 @@ To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies
 In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
-const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.subscribe(subscriptions);
 ```
 

@@ -11,9 +11,11 @@ tags:
   - Property
   - Reference
   - vibrate
+  - Experimental
 browser-compat: api.Notification.vibrate
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The `vibrate` read-only property of the {{domxref("Notification")}}
 interface specifies a [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns)
@@ -32,12 +34,12 @@ vibration; a simple `options` object is created, and then the notification is
 fired using the `Notification()` constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   vibrate: [200, 100, 200]
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.vibrate) // should log [200,100,200]
 ```

@@ -1,6 +1,7 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-size-adjust
 ---
+
+{{CSSRef}}
+
 The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
 
 ```css
@@ -32,14 +36,14 @@ font-size-adjust: unset;
 
 The property is useful since the legibility of fonts, especially at small sizes, is determined more by the size of lowercase letters than by the size of capital letters. Legibility can become an issue when the first-choice {{ Cssxref("font-family") }} is unavailable and its replacement has a significantly different aspect ratio (the ratio of the size of lowercase letters to the size of the font).
 
-To use this property in a way that is compatible with browsers that do not support `font-size-adjust`, it is specified as a number that the {{ Cssxref("font-size") }} property is multiplied by. This means the value specified for the property should generally be the aspect ratio of the first choice font. For example, a style sheet that specifies:
+To use this property in a way that is compatible with browsers that do not support `font-size-adjust`, it is specified as a number that the {{ Cssxref("font-size") }} property is multiplied by. This means the value specified for the property should generally be the aspect ratio of the first choice font. For example, consider this style sheet:
 
 ```css
 font-size: 14px;
 font-size-adjust: 0.5;
 ```
 
-... is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px).  This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
+It is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px). This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
 
 ## Syntax
 
@@ -85,9 +89,17 @@ font-size-adjust: 0.5;
 #### HTML
 
 ```html
-<p class="times">This text uses the Times font (10px), which is hard to read in small sizes.</p>
-<p class="verdana">This text uses the Verdana font (10px), which has relatively large lowercase letters.</p>
-<p class="adjtimes">This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.</p>
+<p class="times">
+  This text uses the Times font (10px), which is hard to read in small sizes.
+</p>
+<p class="verdana">
+  This text uses the Verdana font (10px), which has relatively large lowercase
+  letters.
+</p>
+<p class="adjtimes">
+  This is the 10px Times, but now adjusted to the same aspect ratio as the
+  Verdana.
+</p>
 ```
 
 #### CSS
@@ -121,8 +133,6 @@ font-size-adjust: 0.5;
 ## Browser compatibility
 
 {{Compat}}
-
-{{CSSRef}}
 
 ## See also
 

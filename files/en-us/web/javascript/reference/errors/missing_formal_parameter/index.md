@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing formal parameter" occurs when your function
@@ -14,8 +15,10 @@ declaration is missing valid parameters.
 
 ## Message
 
-```js
+```
 SyntaxError: missing formal parameter (Firefox)
+SyntaxError: Unexpected number '3'. Expected a parameter pattern or a ')' in parameter list. (Safari)
+SyntaxError: Unexpected string literal "x". Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```
 
 ## Error type

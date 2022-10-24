@@ -12,14 +12,15 @@ tags:
   - active
 browser-compat: api.MediaStream.active
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`active`** read-only property of the
 {{domxref("MediaStream")}} interface returns a Boolean value which is
 `true` if the stream is currently active; otherwise, it returns
 `false`. A stream is considered **active** if at least one of
-its {{domxref("MediaStreamTrack")}}s is not in the {{domxref("MediaStreamTrack.ended")}}
-state. Once every track has ended, the stream's `active` property becomes
+its {{domxref("MediaStreamTrack")}}s does not have its property {{domxref("MediaStreamTrack.readyState")}}
+set to `ended`. Once every track has ended, the stream's `active` property becomes
 `false`.
 
 ## Value

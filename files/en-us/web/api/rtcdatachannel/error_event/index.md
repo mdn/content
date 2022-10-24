@@ -20,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.error_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's `onerror` event handler when an error occurs on the data channel.
@@ -33,9 +34,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener('error', (event) => { });
 
-onerror = event => { };
+onerror = (event) => { };
 ```
 
 ## Event type
@@ -75,7 +76,7 @@ const sctpCauseCodes = [
   "Protocol violation"
 ];
 
-dc.addEventListener("error", ev => {
+dc.addEventListener("error", (ev) => {
   const err = ev.error;
 
   console.error("WebRTC error: ", err.message);
@@ -123,10 +124,10 @@ In addition, however, depending on the value of {{domxref("RTCError.errorDetail"
 You can also set up an event handler for `error` events using the `RTCDataChannel` interface's {{domxref("RTCDataChannel.error_event", "onerror")}} event handler property:
 
 ```js
-dc.onerror = ev => {
+dc.onerror = (ev) => {
   const err = ev.error;
 
-  /* ... */
+  // …
 }
 ```
 

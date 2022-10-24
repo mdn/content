@@ -8,9 +8,11 @@ tags:
   - Reference
   - Web NFC
   - Property
+  - Experimental
 browser-compat: api.NDEFReader.readingerror_event
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The `readingerror` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever an error occurs during reading of NFC tags, e.g. when tags leave the reader's magnetic induction field.
 
@@ -19,9 +21,9 @@ The `readingerror` event of the {{DOMxRef("NDEFReader")}} interface is fired whe
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('readingerror', event => { });
+addEventListener('readingerror', (event) => { });
 
-onreadingerror = event => { };
+onreadingerror = (event) => { };
 ```
 
 ## Event type
@@ -42,10 +44,9 @@ const ndef = new NDEFReader();
     ndef.onreading = (event) => {
       console.log("NDEF message read.");
     };
-  }).catch(error => {
+  }).catch((error) => {
     console.log(`Error! Scan failed to start: ${error}.`);
   });
-
 ```
 
 ## Specifications

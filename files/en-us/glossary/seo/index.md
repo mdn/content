@@ -2,12 +2,12 @@
 title: SEO
 slug: Glossary/SEO
 tags:
-  - Glossary
   - Intro
   - SEO
   - Search
   - WebMechanic
 ---
+
 **SEO** (Search Engine Optimization) is the process of making a website more visible in search results, also termed improving search rankings.
 
 Search engines {{Glossary("Crawler", "crawl")}} the web, following links from page to page, and index the content found. When you search, the search engine displays the indexed content. Crawlers follow rules. If you follow those rules closely when doing SEO for a website, you give the site the best chances of showing up among the first results, increasing traffic and possibly revenue (for ecommerce and ads).
@@ -25,5 +25,5 @@ SEO methods fall into three broad classes:
 
 ## See also
 
-- {{Interwiki("wikipedia", "SEO")}} on Wikipedia
+- [SEO](https://en.wikipedia.org/wiki/SEO) on Wikipedia
 - [Google Search Central](https://developers.google.com/search/docs)

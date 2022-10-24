@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 spec-urls: https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`baseProfile`** attribute describes the minimum SVG language profile that the author believes is necessary to correctly render the content. The attribute does not specify any processing restrictions; It can be considered metadata.

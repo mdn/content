@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLSelectElement.labels`** read-only property returns a
@@ -37,10 +38,10 @@ with the `<select>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("test");
-  for(var i = 0; i < select.labels.length; i++) {
-    console.log(select.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of select.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

@@ -9,22 +9,23 @@ tags:
   - Reference
 browser-compat: api.HTMLTableCaptionElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableCaptionElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating table caption elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTableCaptionElement.align")}} {{deprecated_inline}}
   - : A string which represents an enumerated attribute indicating alignment of the caption with respect to the table.
 
-## Methods
+## Instance methods
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}_.
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Specifications
 

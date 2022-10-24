@@ -11,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - reset
+  - Experimental
 browser-compat: api.USBDevice.reset
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`reset()`** method of the {{domxref("USBDevice")}}
@@ -21,7 +23,7 @@ app operations canceled and their promises rejected.
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

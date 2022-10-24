@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.compatMode`** read-only property indicates
@@ -30,7 +31,7 @@ An enumerated value that can be:
 ## Examples
 
 ```js
-if (document.compatMode == "BackCompat") {
+if (document.compatMode === "BackCompat") {
   // in Quirks mode
 }
 ```

@@ -1,6 +1,7 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,16 +11,12 @@ tags:
   - Web
 browser-compat: css.selectors.link
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute.
 
-```css
-/* Selects any <a> that has not been visited yet */
-a:link {
-  color: red;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-link.html", "tabbed-shorter")}}
 
 Styles defined by the `:link` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":active")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:link` rule before all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
@@ -38,8 +35,8 @@ By default, most browsers apply a special {{cssxref("color")}} value to visited 
 ### HTML
 
 ```html
-<a href="#ordinary-target">This is an ordinary link.</a><br>
-<a href="">You've already visited this link.</a><br>
+<a href="#ordinary-target">This is an ordinary link.</a><br />
+<a href="">You've already visited this link.</a><br />
 <a>Placeholder link (won't get styled)</a>
 ```
 

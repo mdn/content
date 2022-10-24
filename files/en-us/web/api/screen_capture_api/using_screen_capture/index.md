@@ -18,6 +18,7 @@ tags:
   - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a [WebRTC](/en-US/docs/Web/API/WebRTC_API) conference session.
@@ -36,8 +37,8 @@ async function startCapture(displayMediaOptions) {
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
-    console.error("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
   return captureStream;
 }
@@ -50,7 +51,7 @@ You can write this code either using an asynchronous function and the [`await`](
 ```js
 function startCapture(displayMediaOptions) {
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+    .catch((err) => { console.error(`Error:${err}`); return null; });
 }
 ```
 
@@ -60,7 +61,7 @@ See [Options and constraints](#options_and_constraints), below, for more on both
 
 ### Example of a window allowing the user to select a display surface to capture
 
-[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
+[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
 
 You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
@@ -132,10 +133,6 @@ Capturing audio is always optional, and even when web content requests a stream 
 
 The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specified when `getDisplayMedia()` was called.
 
-## Security
-
-As is always the case when sharing content over a network, it's important to consider the privacy and safety implications of screen sharing.
-
 ### Potential risks
 
 Privacy and security issues surrounding screen sharing are usually not overly serious, but they do exist. The largest potential issue is users inadvertently sharing content they did not wish to share.
@@ -176,7 +173,7 @@ const stopElem = document.getElementById("stop");
 
 // Options for getDisplayMedia()
 
-var displayMediaOptions = {
+const displayMediaOptions = {
   video: {
     cursor: "always"
   },
@@ -184,11 +181,11 @@ var displayMediaOptions = {
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", function(evt) {
+startElem.addEventListener("click", (evt) => {
   startCapture();
 }, false);
 
-stopElem.addEventListener("click", function(evt) {
+stopElem.addEventListener("click", (evt) => {
   stopCapture();
 }, false);
 ```
@@ -198,10 +195,10 @@ stopElem.addEventListener("click", function(evt) {
 To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = msg => logElem.innerHTML += `${msg}<br>`;
-console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+console.log = (msg) => logElem.innerHTML += `${msg}<br>`;
+console.error = (msg) => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
+console.warn = (msg) => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
+console.info = (msg) => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -217,8 +214,8 @@ async function startCapture() {
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
-  } catch(err) {
-    console.error("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 ```
@@ -239,7 +236,7 @@ The `stopCapture()` method is called when the "Stop Capture" button is clicked. 
 function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
 
-  tracks.forEach(track => track.stop());
+  tracks.forEach((track) => track.stop());
   videoElem.srcObject = null;
 }
 ```
@@ -266,16 +263,22 @@ The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "g
 The HTML starts with a simple introductory paragraph, then gets into the meat of things.
 
 ```html
-<p>This example shows you the contents of the selected part of your display.
-Click the Start Capture button to begin.</p>
+<p>
+  This example shows you the contents of the selected part of your display.
+  Click the Start Capture button to begin.
+</p>
 
-<p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+<p>
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+</p>
 
 <video id="video" autoplay></video>
-<br>
+<br />
 
 <strong>Log:</strong>
-<br>
+<br />
 <pre id="log"></pre>
 ```
 
@@ -324,15 +327,14 @@ In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) 
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
-```
+```http
 Feature-Policy: display-capture 'self'
 ```
 
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
 
 ```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture">
-</iframe>
+<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
 ```
 
 ## Browser compatibility

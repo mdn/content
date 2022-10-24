@@ -14,6 +14,7 @@ tags:
   - seconds
 browser-compat: api.HTMLMediaElement.duration
 ---
+
 {{APIRef("HTML DOM")}}
 
 The _read-only_ {{domxref("HTMLMediaElement")}}
@@ -30,7 +31,7 @@ of `duration` is `+Infinity`.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.duration); // NaN
 ```
 

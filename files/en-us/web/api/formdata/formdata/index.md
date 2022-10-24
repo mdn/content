@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.
@@ -18,7 +19,7 @@ The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new FormData()
 new FormData(form)
 ```
@@ -54,10 +55,10 @@ You can specify the optional `form` argument when creating the `FormData` object
 
 ```html
 <form id="form">
-  <input type="text" name="text1" value="foo">
-  <input type="text" name="text2" value="bar">
-  <input type="text" name="text2" value="baz">
-  <input type="checkbox" name="check" checked disabled>
+  <input type="text" name="text1" value="foo" />
+  <input type="text" name="text2" value="bar" />
+  <input type="text" name="text2" value="baz" />
+  <input type="checkbox" name="check" checked disabled />
 </form>
 
 <output id="output"></output>

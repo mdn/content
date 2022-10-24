@@ -9,6 +9,7 @@ tags:
   - complete
 browser-compat: api.IDBTransaction.complete_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`complete`** event of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is fired when the transaction successfully completed.
@@ -18,8 +19,8 @@ The **`complete`** event of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_AP
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('complete', event => { });
-oncomplete = event => { };
+addEventListener('complete', (event) => { });
+oncomplete = (event) => { };
 ```
 
 ## Event type
@@ -34,7 +35,7 @@ Using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}:
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -42,7 +43,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -52,14 +53,14 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // add a listener for `complete`
-  transaction.addEventListener('complete', event => {
+  transaction.addEventListener('complete', (event) => {
     console.log('Transaction was completed');
   });
 
@@ -75,7 +76,7 @@ Using the `oncomplete` property:
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -83,7 +84,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -93,14 +94,14 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // add a listener for `complete`
-  transaction.oncomplete = event => {
+  transaction.oncomplete = (event) => {
     console.log('Transaction was completed');
   };
 

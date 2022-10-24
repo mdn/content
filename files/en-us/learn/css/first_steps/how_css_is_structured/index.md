@@ -14,6 +14,7 @@ tags:
   - values
   - whitespace
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Now that you are beginning to understand the purpose and use of CSS, let's examine the structure of CSS.
@@ -59,11 +60,11 @@ You reference an external CSS stylesheet from an HTML `<link>` element:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -90,13 +91,13 @@ The `href` attribute of the {{htmlelement("link")}} element needs to reference a
 
 ```html
 <!-- Inside a subdirectory called styles inside the current directory -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- Go up one directory level, then inside a subdirectory called styles -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### Internal stylesheet
@@ -107,9 +108,9 @@ The HTML for an internal stylesheet might look like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
     <style>
       h1 {
@@ -140,13 +141,15 @@ Inline styles are CSS declarations that affect a single HTML element, contained 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      Hello World!
+    </h1>
     <p style="color:red;">This is my first CSS example</p>
   </body>
 </html>
@@ -166,14 +169,12 @@ For the exercise that follows, create a folder on your computer. You can name th
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiments</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>Create your test HTML here</p>
-
   </body>
 </html>
 ```
@@ -251,7 +252,7 @@ p {
 
 However, in the case of our earlier example with the conflict between the class selector and the element selector, the class prevails, rendering the paragraph text red. How can this happen even though a conflicting style appears later in the stylesheet? A class is rated as being more specific, as in having more **specificity** than the element selector, so it cancels the other conflicting style declaration.
 
-Try this experiment for yourself! Add HTML, then add the two `p { ... }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
+Try this experiment for yourself! Add HTML, then add the two `p { }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
 
 The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) section in the next module explains this in detail, including how to calculate specificity.
 
@@ -356,7 +357,7 @@ The output from the above code looks like this:
 CSS [@rules](/en-US/docs/Web/CSS/At-rule) (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example, `@import` imports a stylesheet into another CSS stylesheet:
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
 One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/Media_Queries). Media queries use conditional logic for applying CSS styling.
@@ -448,11 +449,13 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
-/* Handle specific elements nested in the DOM  */
-/* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+/* Handle specific elements nested in the DOM */
+div p,
+#id:first-line {
   background-color: red;
   border-radius: 3px;
 }
@@ -523,9 +526,9 @@ div p + p {
 
 The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.
 
-```css
+```css-nolint
 body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body {font-size: 130%;} }
+@media (min-width: 70em) { body { font-size: 130%;}}
 
 h1 {font-size: 1.5em;}
 
@@ -547,7 +550,7 @@ padding-left: 10px;
 
 But these declarations are invalid:
 
-```css
+```css example-bad
 margin: 0auto;
 padding- left: 10px;
 ```

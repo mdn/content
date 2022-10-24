@@ -11,6 +11,7 @@ tags:
   - source order
   - specificity
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
@@ -182,23 +183,23 @@ Let's now have a look at how the browser will calculate specificity. We already 
 
 The amount of specificity a selector has is measured using three different values (or components), which can be thought of as ID, CLASS, and ELEMENT columns in the hundreds, tens, and ones place:
 
-- **Indentifiers**: Score one in this column for each ID selector contained inside the overall selector.
+- **Identifiers**: Score one in this column for each ID selector contained inside the overall selector.
 - **Classes**: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
 - **Elements**: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
 
-> **Note:** The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), combinators (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](en-US/docs/Web/CSS/:where)) have no effect on specificity.
+> **Note:** The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), combinators (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/:where)) have no effect on specificity.
 
-The negation ([`:not()`](en-US/docs/Web/CSS/:not)) and the matches-any ([`:is()`](en-US/docs/Web/CSS/:is)) pseudo-classes themselves don't have effect on specificity, but their parameters do. The specificity each contributes to the specificity algorithm is the specificity of the selector in parameter that has the greatest weight.
+The negation ([`:not()`](/en-US/docs/Web/CSS/:not)) and the matches-any ([`:is()`](/en-US/docs/Web/CSS/:is)) pseudo-classes themselves don't have effect on specificity, but their parameters do. The specificity that each contributes to the specificity algorithm is the specificity of the selector in the parameter that has the greatest weight.
 
 The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
 
-| Selector                                                                                | Identifiers | Classes | Elements | Total specificity |
-| --------------------------------------------------------------------------------------- | -------- | ---- | ---- | ----------------- |
-| `h1`                                                                                    | 0        | 0    | 1    | 0-0-1              |
-| `h1 + p::first-letter`                                                                  |  0        | 0    | 3    | 0-0-3              |
-| `li > a[href*="en-US"] > .inline-warning`                                               |  0        | 2    | 2    | 0-2-2              |
-| `#identifier`                                                                           | 1        | 0    | 0    | 1-0-0              |
-| `button:not(#mainBtn, .cta`)                                                                           | 1        | 0    | 1    | 1-0-1              |
+| Selector                                  | Identifiers | Classes | Elements | Total specificity |
+| ----------------------------------------- | ----------- | ------- | -------- | ----------------- |
+| `h1`                                      | 0           | 0       | 1        | 0-0-1             |
+| `h1 + p::first-letter`                    | 0           | 0       | 3        | 0-0-3             |
+| `li > a[href*="en-US"] > .inline-warning` | 0           | 2       | 2        | 0-2-2             |
+| `#identifier`                             | 1           | 0       | 0        | 1-0-0             |
+| `button:not(#mainBtn, .cta`)              | 1           | 0       | 1        | 1-0-1             |
 
 Before we move on, let's look at an example in action.
 
@@ -222,7 +223,7 @@ Inline styles, that is, the style declaration inside a {{htmlattrxref("style")}}
 
 There is a special piece of CSS that you can use to overrule all of the above calculations, even inline styles - the `!important` flag. However, you should be very careful while using it. This flag is used to make an individual property and value pair the most specific rule, thereby overriding the normal rules of the cascade, including normal inline styles.
 
-> **Note:** It is useful to know that the `!important` flag exists so that you know what it is when you come across it in other people's code. **However, we strongly recommend that you never use it unless you absolutely have to.**  The `!important` flag changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.
+> **Note:** It is useful to know that the `!important` flag exists so that you know what it is when you come across it in other people's code. **However, we strongly recommend that you never use it unless you absolutely have to.** The `!important` flag changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.
 
 Take a look at this example where we have two paragraphs, one of which has an ID.
 
@@ -251,12 +252,12 @@ It is also possible to declare developer styles in cascade layers: you can make 
 
 Conflicting declarations will be applied in the following order, with later ones overriding earlier ones:
 
-1. Declarations in user agent style sheets (e.g. the browser's default styles, used when no other styling is set).
+1. Declarations in user agent style sheets (e.g., the browser's default styles, used when no other styling is set).
 2. Normal declarations in user style sheets (custom styles set by a user).
 3. Normal declarations in author style sheets (these are the styles set by us, the web developers).
-4. Important declarations in author style sheets
-5. Important declarations in user style sheets
-6. Important declarations in user agent style sheets
+4. Important declarations in author style sheets.
+5. Important declarations in user style sheets.
+6. Important declarations in user agent style sheets.
 
 > **Note:** The order of precedence is inverted for styles flagged with `!important`. It makes sense for web developers' stylesheets to override user stylesheets, so the design can be kept as intended; however, sometimes users have good reasons to override web developer styles, as mentioned above, and this can be achieved by using `!important` in their rules.
 
@@ -264,9 +265,9 @@ Conflicting declarations will be applied in the following order, with later ones
 
 Even though [cascade layers](/en-US/docs/Web/CSS/@layer) is an advanced topic and you may not use this feature right away, it's important to understand how layers cascade.
 
-When you declare CSS in cascade layers, the order of precedence is determined by the order in which the layers are declared. CSS styles declared outside of any layer are combined together, in the order in which those styles are declared, into an unnamed layer, as if it were the last declared layer. With competing normal (not important) styles, later layers take precedence over earlier defined layers. For styles flagged with `!important`, however, the order is reversed, with important styles in earlier layers taking precedence over important styles declared in subsquent layers or outside of any layer. Inline styles take precedence over all author styles, no matter the layer.
+When you declare CSS in cascade layers, the order of precedence is determined by the order in which the layers are declared. CSS styles declared outside of any layer are combined together, in the order in which those styles are declared, into an unnamed layer, as if it were the last declared layer. With competing normal (not important) styles, later layers take precedence over earlier defined layers. For styles flagged with `!important`, however, the order is reversed, with important styles in earlier layers taking precedence over important styles declared in subsequent layers or outside of any layer. Inline styles take precedence over all author styles, no matter the layer.
 
-When you have multiple style blocks in different layers providing competing values for a property on a single element, the layer in which the styles are declared determine the precedence. Specifity between layers doesn't matter, but specificity within a single layer still does.
+When you have multiple style blocks in different layers providing competing values for a property on a single element, the layer in which the styles are declared determine the precedence. Specificity between layers doesn't matter, but specificity within a single layer still does.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/cascade-layers.html", '100%', 800)}}
 

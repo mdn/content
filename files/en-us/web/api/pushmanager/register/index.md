@@ -10,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.register
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 The **`register`** method is used to ask the system to request
@@ -19,7 +20,7 @@ a new endpoint for notifications.
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 ```
 
@@ -40,15 +41,15 @@ which is the endpoint URL.
 ## Examples
 
 ```js
-var req = navigator.push.register();
+const req = navigator.push.register();
 
-req.onsuccess = function(e) {
-  var endpoint = req.result;
-  debug("New endpoint: " + endpoint );
+req.onsuccess = (e) => {
+  const endpoint = req.result;
+  console.log(`New endpoint: ${endpoint}`);
 }
 
-req.onerror = function(e) {
-  debug("Error getting a new endpoint: " + JSON.stringify(e));
+req.onerror = (e) => {
+  console.error(`Error getting a new endpoint: ${e.error}`);
 }
 ```
 

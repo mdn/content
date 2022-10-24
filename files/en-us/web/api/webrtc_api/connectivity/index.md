@@ -12,6 +12,7 @@ tags:
   - Video
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
@@ -20,7 +21,7 @@ This article describes how the various WebRTC-related protocols interact with on
 
 ## Signaling
 
-Unfortunately, WebRTC can't create connections without some sort of server in the middle. We call this the **signal channel** or **signaling service**. It's any sort of channel of communication to exchange information before setting up a connection, whether by email, post card or a carrier pigeon... it's up to you.
+Unfortunately, WebRTC can't create connections without some sort of server in the middle. We call this the **signal channel** or **signaling service**. It's any sort of channel of communication to exchange information before setting up a connection, whether by email, postcard, or a carrier pigeon. It's up to you.
 
 The information we need to exchange is the Offer and Answer which just contains the {{Glossary("SDP")}} mentioned below.
 
@@ -124,7 +125,7 @@ Instead, you can initiate an **ICE rollback**. A rollback restores the SDP offer
 
 To programmatically initiate a rollback, send a description whose {{domxref("RTCSessionDescription.type", "type")}} is `rollback`. Any other properties in the description object are ignored.
 
-In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously *sent* an offer, calling `setRemoteDescription()` with a *received* offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
+In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously _sent_ an offer, calling `setRemoteDescription()` with a _received_ offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
 
 ### ICE restarts
 
