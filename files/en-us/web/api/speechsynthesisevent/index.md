@@ -12,13 +12,14 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisEvent
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._
 
@@ -31,7 +32,7 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from
 - {{domxref("SpeechSynthesisEvent.utterance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
 
-## Methods
+## Instance methods
 
 _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from its parent interface, {{domxref("Event")}}._
 

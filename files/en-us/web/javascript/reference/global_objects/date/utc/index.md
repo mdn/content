@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.UTC
 ---
+
 {{JSRef}}
 
 The **`Date.UTC()`** method accepts parameters similar to the
@@ -18,26 +19,28 @@ milliseconds since January 1, 1970, 00:00:00 UTC.
 
 ## Syntax
 
-```js
+```js-nolint
 Date.UTC(year)
-Date.UTC(year, month)
-Date.UTC(year, month, day)
-Date.UTC(year, month, day, hour)
-Date.UTC(year, month, day, hour, minute)
-Date.UTC(year, month, day, hour, minute, second)
-Date.UTC(year, month, day, hour, minute, second, millisecond)
+Date.UTC(year, monthIndex)
+Date.UTC(year, monthIndex, day)
+Date.UTC(year, monthIndex, day, hour)
+Date.UTC(year, monthIndex, day, hour, minute)
+Date.UTC(year, monthIndex, day, hour, minute, second)
+Date.UTC(year, monthIndex, day, hour, minute, second, millisecond)
 ```
 
 - `year`
+
   - : Integer value representing the year.
 
     Values from `0` to `99` map to the years
     `1900` to `1999`. All other values are the actual year.
     See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#interpretation_of_two-digit_years).
-- `month` {{optional_inline}}
+
+- `monthIndex` {{optional_inline}}
   - : An integer between `0` (January) and `11` (December)
     representing the month. Since ECMAScript 2017 it defaults to `0` if
-    omitted. _(Up until ECMAScript 2016, `month` was a required
+    omitted. _(Up until ECMAScript 2016, `monthIndex` was a required
     parameter. As of ES2017, it no longer is.)_
 - `day` {{optional_inline}}
   - : An integer between `1` and `31` representing the day of the
@@ -75,11 +78,11 @@ ways:
 
 1. `Date.UTC()` uses universal time instead of the local time.
 2. `Date.UTC()` returns a time value as a number instead of creating a
-    {{jsxref("Date")}} object.
+   {{jsxref("Date")}} object.
 
 If a parameter is outside of the expected range, the `UTC()` method updates
 the other parameters to accommodate the value. For example, if `15` is used
-for `month`, the year will be incremented by 1
+for `monthIndex`, the year will be incremented by 1
 `(year + 1)` and `3` will be used for the month.
 
 `UTC()` is a static method of {{jsxref("Date")}}, so it's called as

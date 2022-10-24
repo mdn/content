@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.manufacturerName
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`manufacturerName`** read only property of the

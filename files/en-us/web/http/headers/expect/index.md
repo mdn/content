@@ -8,6 +8,7 @@ tags:
   - Request header
 browser-compat: http.headers.Expect
 ---
+
 {{HTTPSidebar}}
 
 The **`Expect`** HTTP request header indicates expectations
@@ -15,11 +16,12 @@ that need to be met by the server to handle the request successfully.
 
 Upon `Expect: 100-continue`, the server responds with:
 
-- {{HTTPStatus("100")}} (Continue) if the information from the request header is sufficient to
-  cause immediate success
+- {{HTTPStatus("100")}} (Continue) if the information from the request header is insufficient to
+  resolve the response and the client should proceed with sending the body.
 - {{HTTPStatus("417")}} (Expectation Failed) if the server cannot meet the expectation
 
-or any other 4xx status otherwise.
+or any other status otherwise (e.g. a 4xx status for a client error, or a 2xx status if the
+request can be resolved successfully without further processing).
 
 For example, the server may reject a request if its {{HTTPHeader("Content-Length")}} is
 too large.

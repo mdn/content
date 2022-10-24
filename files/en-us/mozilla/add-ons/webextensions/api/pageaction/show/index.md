@@ -13,6 +13,7 @@ tags:
   - show
 browser-compat: webextensions.api.pageAction.show
 ---
+
 {{AddonSidebar()}}
 
 Shows the {{WebExtAPIRef("pageAction")}} for a given {{WebExtAPIRef("tabs/Tab", "tab")}}. The page action is shown whenever the given tab is the active tab.
@@ -23,7 +24,7 @@ Note that calling `show()` has no effect on a tab with no content loaded.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.show(
   tabId // integer
 )

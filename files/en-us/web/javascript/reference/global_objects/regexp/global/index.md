@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.global
 ---
+
 {{JSRef}}
 
 The **`global`** accessor property indicates whether or not the `g` flag is used with the regular expression.
@@ -31,19 +32,19 @@ The set accessor of `global` is `undefined`. You cannot change this property dir
 ```js
 const regex = /foo/g;
 
-console.log(regex.global);  // true
+console.log(regex.global); // true
 
-const str = 'fooexamplefoo';
+const str = "fooexamplefoo";
 
-const str1 = str.replace(regex, '');
+const str1 = str.replace(regex, "");
 
-console.log(str1);  // Output: example
+console.log(str1); // Output: example
 
 const regex1 = /foo/;
 
-const str2 = str.replace(regex1, '');
+const str2 = str.replace(regex1, "");
 
-console.log(str2);  // Output: examplefoo
+console.log(str2); // Output: examplefoo
 ```
 
 ## Specifications
@@ -56,7 +57,7 @@ console.log(str2);  // Output: examplefoo
 
 ## See also
 
-- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}
 - {{JSxRef("RegExp.prototype.ignoreCase")}}

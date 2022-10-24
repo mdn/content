@@ -13,6 +13,7 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n.getMessage
 ---
+
 {{AddonSidebar()}}
 
 Gets the localized string for the specified message.
@@ -21,7 +22,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ## Syntax
 
-```js
+```js-nolint
 browser.i18n.getMessage(
   messageName,  // string
   substitutions // optional any

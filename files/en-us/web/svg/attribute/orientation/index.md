@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.glyph.orientation
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`orientation`** attribute indicates that the given {{Glossary("glyph")}} is only to be used for a particular text direction, i.e. horizontal or vertical.

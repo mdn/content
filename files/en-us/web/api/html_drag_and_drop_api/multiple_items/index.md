@@ -8,6 +8,7 @@ tags:
   - Non-standard
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 > **Warning:** All of the methods and properties with a **moz** prefix (such as **mozSetDataAt()** are Gecko specific interfaces. These interfaces will **only** work with Gecko based browsers.
@@ -157,6 +158,6 @@ This processing is useful if you wish to examine the data that a drag is holding
 ## See also
 
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](Web/Guide/HTML/Drag_operations)
+- [Drag Operations](/en-US/docs/Web/Guide/HTML/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

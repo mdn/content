@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.RTCTrackEvent.receiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`receiver`** property

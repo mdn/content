@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.WINDOW_ID_CURRENT
 ---
+
 {{AddonSidebar()}}
 
 `browser.windows.WINDOW_ID_CURRENT` is a value that can be used as a `windowId` parameter in some APIs to represent the current window.

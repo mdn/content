@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.flags
 ---
+
 {{JSRef}}
 
 The **`flags`** accessor property represents the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) of the current regular expression object.
@@ -24,15 +25,15 @@ The **`flags`** accessor property represents the [flags](/en-US/docs/Web/JavaScr
 
 All built-in functions read the `flags` property instead of reading individual flag accessors.
 
-The set accessor of `flag` is `undefined`. You cannot change this property directly.
+The set accessor of `flags` is `undefined`. You cannot change this property directly.
 
 ## Examples
 
 ### Using flags
 
-```js
-/foo/ig.flags;   // "gi"
-/bar/myu.flags;  // "muy"
+```js-nolint
+/foo/ig.flags; // "gi"
+/bar/myu.flags; // "muy"
 ```
 
 ## Specifications

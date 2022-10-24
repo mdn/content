@@ -8,6 +8,7 @@ tags:
   - Deprecated
 browser-compat: api.Event.cancelBubble
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`cancelBubble`** property of the {{domxref("Event")}}

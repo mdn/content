@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.DownloadQuery
 ---
+
 {{AddonSidebar()}}
 
 The `DownloadQuery` type of the {{WebExtAPIRef("downloads")}} API defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.

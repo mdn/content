@@ -8,19 +8,30 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments.length
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`arguments.length`** property contains the number of arguments passed to the function.
 
+{{js_property_attributes(1, 0, 1)}}
+
 ## Description
 
-The arguments.length property provides the number of arguments actually passed to a function. This can be more or less than the defined parameter's count (see {{jsxref("Function.length")}}).
+The `arguments.length` property provides the number of arguments actually passed to a function. This can be more or less than the defined parameter's count (see {{jsxref("Function.prototype.length")}}). For example, for the function below:
+
+```js
+function func1(a, b, c) {
+  console.log(arguments.length);
+}
+```
+
+`func1.length` returns `3`, because `func1` declares three formal parameters. However, `func1(1, 2, 3, 4, 5)` logs `5`, because `func1` was called with five arguments. Similarly, `func1(1)` logs `1`, because `func1` was called with one argument.
 
 ## Examples
 
-### Using `arguments.length`
+### Using arguments.length
 
-In this example we define a function that can add two or more numbers together.
+In this example, we define a function that can add two or more numbers together.
 
 ```js
 function adder(base /*, num1, …, numN */) {
@@ -31,8 +42,6 @@ function adder(base /*, num1, …, numN */) {
   return base;
 }
 ```
-
-> **Note:** Note the difference between {{jsxref("Function.length")}} and arguments.length
 
 ## Specifications
 
@@ -45,4 +54,4 @@ function adder(base /*, num1, …, numN */) {
 ## See also
 
 - {{jsxref("Function")}}
-- {{jsxref("Function.length")}}
+- {{jsxref("Function.prototype.length")}}

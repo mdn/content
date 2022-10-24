@@ -16,6 +16,7 @@ tags:
   - Non-standard
 browser-compat: api.Navigator.activeVRDisplays
 ---
+
 {{APIRef("WebVR API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`activeVRDisplays`** read-only property of the

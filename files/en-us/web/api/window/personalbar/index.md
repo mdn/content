@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.personalbar
 ---
+
 {{APIRef}}
 
 Returns the `personalbar` object, whose visibility can be toggled in the

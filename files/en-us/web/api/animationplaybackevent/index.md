@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent
 ---
+
 {{ APIRef("Web Animations") }}
 
 The AnimationPlaybackEvent interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents animation events.
@@ -26,7 +27,7 @@ As animations play, they report changes to their {{domxref("Animation.playState"
 - {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent", "AnimationPlaybackEvent()")}}
   - : Constructs a new `AnimationPlaybackEvent` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
   - : The current time of the animation that generated the event.

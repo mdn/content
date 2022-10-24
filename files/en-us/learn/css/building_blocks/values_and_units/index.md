@@ -15,6 +15,7 @@ tags:
   - units
   - values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 Every property used in CSS has a value type defining the set of values that are allowed for that property. Taking a look at any property page on MDN will help you understand the values associated with a value type that are valid for any particular property. In this lesson we will take a look at some of the most frequently used value types, and their most common values and units.
@@ -62,7 +63,7 @@ In the following example, we have set the color of our heading using a keyword, 
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -146,15 +147,15 @@ The numeric type you will come across most frequently is [`<length>`](/en-US/doc
 
 The following are all **absolute** length units — they are not relative to anything else, and are generally considered to always be the same size.
 
-| Unit | Name                | Equivalent to        |
-| ---- | ------------------- | -------------------- |
+| Unit | Name                | Equivalent to            |
+| ---- | ------------------- | ------------------------ |
 | `cm` | Centimeters         | 1cm = 37.8px = 25.2/64in |
-| `mm` | Millimeters         | 1mm = 1/10th of 1cm  |
-| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
-| `in` | Inches              | 1in = 2.54cm = 96px  |
-| `pc` | Picas               | 1pc = 1/6th of 1in   |
-| `pt` | Points              | 1pt = 1/72nd of 1in  |
-| `px` | Pixels              | 1px = 1/96th of 1in  |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm      |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm       |
+| `in` | Inches              | 1in = 2.54cm = 96px      |
+| `pc` | Picas               | 1pc = 1/6th of 1in       |
+| `pt` | Points              | 1pt = 1/72nd of 1in      |
+| `px` | Pixels              | 1px = 1/96th of 1in      |
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
 
@@ -388,7 +389,7 @@ In the following example we have positioned a background image 40px from the top
 
 Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
+There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the example below, we use unquoted color keywords along with a quoted generated content string.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 600)}}
 

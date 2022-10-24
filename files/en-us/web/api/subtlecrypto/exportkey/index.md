@@ -11,6 +11,7 @@ tags:
   - exportKey
 browser-compat: api.SubtleCrypto.exportKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -31,23 +32,18 @@ API instead.
 
 ## Syntax
 
-```js
+```js-nolint
 exportKey(format, key)
 ```
 
 ### Parameters
 
 - `format`
-  - : A string value describing the data format in which
-    the key should be exported. It can be one of the following:
-    - `raw`
-      - : [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
-    - `pkcs8`
-      - : [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
-    - `spki`
-      - : [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) format.
-    - `jwk`
-      - : [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key) format.
+  - : A string value describing the data format in which the key should be exported. It can be one of the following:
+    - `raw`: [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
+    - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
+    - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) format.
+    - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key) format.
 - `key`
   - : The {{domxref("CryptoKey")}} to export.
 

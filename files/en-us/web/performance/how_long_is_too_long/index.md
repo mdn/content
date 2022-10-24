@@ -7,11 +7,14 @@ tags:
   - Tutorial
   - Web Performance
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 There are no clear set rules as to what constitutes a slow pace when loading pages, but there are specific guidelines for indicating content will load (1 second), idling (50ms), animating (16.7ms) and responding to user input (50 to 200ms).
 
 ## Load goal
 
-The  'Under a second' is often touted as optimal for load, but what does that mean? A second should be considered a rule in the maximum amount of time to indicate to a user that the request for new content was made and will load, such as the browser displaying the page title and the background color of the page displaying.
+The 'Under a second' is often touted as optimal for load, but what does that mean? A second should be considered a rule in the maximum amount of time to indicate to a user that the request for new content was made and will load, such as the browser displaying the page title and the background color of the page displaying.
 
 The first asset retrieved from a request is usually an HTML document, which then makes calls for additional assets. As noted in the description of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), when received, browsers immediately start processing the HTML, rendering the content as it is received rather than waiting for additional assets to load.
 
@@ -29,4 +32,4 @@ For scrolling and other animations to look smooth and feel responsive, the conte
 
 ## Responsiveness goal
 
-When the user interacts with content, it is important to provide feedback and acknowledge the user's response or interaction and to do so within 100ms, preferably within 50ms. 50ms seconds feels immediate. The acknowledgment of user interaction should often feel immediate, such as a hover or button press, but that doesn't mean the completed response should be instantaneous. While a slower than 100ms reaction may create a disconnect between the user interaction and the response, a 100 to 200ms transition for a response may help the user notice the response their interaction initiated, such as a menu opening.  If a response takes longer than 100ms to complete, provide some form of feedback to inform the user the interaction has occurred.
+When the user interacts with content, it is important to provide feedback and acknowledge the user's response or interaction and to do so within 100ms, preferably within 50ms. 50ms seconds feels immediate. The acknowledgment of user interaction should often feel immediate, such as a hover or button press, but that doesn't mean the completed response should be instantaneous. While a slower than 100ms reaction may create a disconnect between the user interaction and the response, a 100 to 200ms transition for a response may help the user notice the response their interaction initiated, such as a menu opening. If a response takes longer than 100ms to complete, provide some form of feedback to inform the user the interaction has occurred.

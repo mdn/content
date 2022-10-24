@@ -6,6 +6,7 @@ tags:
   - Landing
   - MDN Meta
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs needs your help! We have a large number of typos to fix, examples to write, bugs to fix, people to talk to, and more, and the number is growing as more people start using the site. This page outlines what you can do to help.
@@ -122,15 +123,9 @@ The links in this section lead to detailed guides explaining how to do a particu
 
 We will add more tasks here as time goes on.
 
-#### Priority ratings
-
-You can also look at priority ratings to give you an idea of what the most important work is to work on — we've started giving content bug issues labels of P0, P1, P2, P3, and P4 to signify how important they are, with lower numbers being more important than higher numbers.
-
-These are figured out during the regular MDN bug triage process, based on the [MDN documentation priority list](https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/).
-
 ### Other task types
 
-If our main priorities listed above don't interest you, you can find a number of other, more general task types to get involved with below, split up by skillset.
+If our main priorities listed above don't interest you, you can find a number of other, more general task types to get involved with below, split up by skill set.
 
 If you are more interested in words, you could do the following:
 

@@ -6,6 +6,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.symbol
 ---
+
 {{SVGRef}}
 
 The **`<symbol>`** element is used to define graphical template objects which can be instantiated by a {{SVGElement("use")}} element.
@@ -15,7 +16,11 @@ The use of `<symbol>` elements for graphics that are used multiple times in the 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -25,11 +30,14 @@ html,body,svg { height:100% }
     <circle cx="1" cy="1" r="1" />
   </symbol>
 
-   <!-- A grid to materialize our symbol positioning -->
-  <path d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20" fill="none" stroke="pink" />
+  <!-- A grid to materialize our symbol positioning -->
+  <path
+    d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20"
+    fill="none"
+    stroke="pink" />
 
   <!-- All instances of our symbol -->
-  <use href="#myDot" x="5"  y="5" style="opacity:1.0" />
+  <use href="#myDot" x="5" y="5" style="opacity:1.0" />
   <use href="#myDot" x="20" y="5" style="opacity:0.8" />
   <use href="#myDot" x="35" y="5" style="opacity:0.6" />
   <use href="#myDot" x="50" y="5" style="opacity:0.4" />

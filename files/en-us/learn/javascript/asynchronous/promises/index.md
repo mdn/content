@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** are the foundation of asynchronous programming in modern JavaScript. A promise is an object returned by an asynchronous function, which represents the current state of the operation. At the time the promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation.
@@ -31,7 +32,7 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 ## Using the fetch() API
 
-> **Note:** In this article we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
+> **Note:** In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
 >
 > 1. open a browser tab and visit <https://example.org>
 > 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
@@ -58,7 +59,7 @@ console.log("Started request…");
 Here we are:
 
 1. calling the `fetch()` API, and assigning the return value to the `fetchPromise` variable
-2. immediately after, logging the `fetchPromise` variable. This should output something like: `Promise { <state>: "pending" }`, telling us that we have a `Promise` object, and it has a `state` whose value is `"pending"`.  The `"pending"` state means that the fetch operation is still going on.
+2. immediately after, logging the `fetchPromise` variable. This should output something like: `Promise { <state>: "pending" }`, telling us that we have a `Promise` object, and it has a `state` whose value is `"pending"`. The `"pending"` state means that the fetch operation is still going on.
 3. passing a handler function into the Promise's **`then()`** method. When (and if) the fetch operation succeeds, the promise will call our handler, passing in a {{domxref("Response")}} object, which contains the server's response.
 4. logging a message that we have started the request.
 
@@ -170,7 +171,7 @@ First, a promise can be in one of three states:
 - **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
 - **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
- Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
+Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
 
 Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
 
@@ -372,7 +373,7 @@ The `async` and `await` keywords make it easier to build an operation from a ser
 
 Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
 
-We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
+We didn't touch on all features of promises in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
 
 Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API), and many more.
 

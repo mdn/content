@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`undefined`** property represents the primitive
@@ -19,7 +20,7 @@ value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 
 ## Syntax
 
-```js
+```js-nolint
 undefined
 ```
 
@@ -43,14 +44,14 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 >
 > //  logs "foo string"
 > (() => {
->   const undefined = 'foo';
+>   const undefined = "foo";
 >   console.log(undefined, typeof undefined);
 > })();
 >
 > //  logs "foo string"
 > ((undefined) => {
 >   console.log(undefined, typeof undefined);
-> })('foo');
+> })("foo");
 > ```
 
 ## Examples
@@ -84,7 +85,7 @@ Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 
 ```js
 let x;
-if (typeof x === 'undefined') {
+if (typeof x === "undefined") {
   // these statements execute
 }
 ```
@@ -94,11 +95,13 @@ error if the variable has not been declared.
 
 ```js
 //  x has not been declared before
-if (typeof x === 'undefined') { //  evaluates to true without errors
+if (typeof x === "undefined") {
+  //  evaluates to true without errors
   //  these statements execute
 }
 
-if (x === undefined) { //  throws a ReferenceError
+//  throws a ReferenceError
+if (x === undefined) {
 
 }
 ```
@@ -113,7 +116,7 @@ existence of a property on the _global object_, using the
 {{jsxref("Operators/in", "in")}} operator, for instance:
 
 ```js
-if ('x' in window) {
+if ("x" in window) {
   //  these statements execute only if x is defined globally
 }
 ```

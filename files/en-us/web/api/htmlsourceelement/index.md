@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLSourceElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSourceElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating {{htmlelement("source")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -34,7 +35,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLSourceElement.type")}}
   - : A string reflecting the {{ htmlattrxref("type", "source") }} HTML attribute, containing the type of the media resource.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

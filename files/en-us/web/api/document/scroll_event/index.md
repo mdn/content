@@ -12,6 +12,7 @@ tags:
   - UIEvent
 browser-compat: api.Document.scroll_event
 ---
+
 {{APIRef}}
 
 The **`scroll`** event fires when the document view has been scrolled. For element scrolling, see {{domxref("Element/scroll_event", "Element:&nbsp;scroll&nbsp;event")}}.

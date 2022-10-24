@@ -15,6 +15,7 @@ spec-urls:
   - https://w3c.github.io/resource-timing/
   - https://w3c.github.io/user-timing/
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 The [High Resolution Time](https://www.w3.org/TR/hr-time/) standard defines a {{domxref("Performance")}} interface that supports client-side latency measurements within applications. The {{domxref("Performance")}} interfaces are considered _high resolution_ because they are accurate to a thousandth of a millisecond (subject to hardware or software constraints). The interfaces support a number of use cases including calculating frame-rates (potentially important in animations) and benchmarking (such as the time to load a resource).
@@ -27,13 +28,13 @@ The {{domxref("DOMHighResTimeStamp")}} type, as its name implies, represents a h
 
 The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.
 
-## Methods
+## Instance methods
 
 The {{domxref("Performance")}} interface has two methods. The {{domxref("Performance.now","now()")}} method returns a {{domxref("DOMHighResTimeStamp")}} whose value that depends on the {{domxref("PerformanceTiming.navigationStart","navigation start")}} and scope. If the scope is a window, the value is the time the browser context was created and if the scope is a {{domxref("Worker","worker")}}, the value is the time the worker was created.
 
 The {{domxref("Performance.toJSON","toJSON()")}} method returns a serialization of the {{domxref("Performance")}} object, for those attributes that can be serialized.
 
-## Properties
+## Instance properties
 
 The {{domxref("Performance")}} interface has two properties. The {{domxref("Performance.timing","timing")}} property returns a {{domxref("PerformanceTiming")}} object containing latency-related performance information such as the start of navigation time, start and end times for redirects, start and end times for responses, etc.
 

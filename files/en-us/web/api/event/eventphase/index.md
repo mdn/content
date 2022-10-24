@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 The **`eventPhase`** read-only property of the
@@ -31,11 +32,11 @@ flow. Possible values are:
     called are triggered during this phase.
 - `Event.AT_TARGET (2)`
   - : The event has arrived at
-        {{domxref("EventTarget", "the event's target", "",
+    {{domxref("EventTarget", "the event's target", "",
         1)}}.
-        Event listeners registered for this phase are called at this time. If
-        {{domxref("Event.bubbles")}} is `false`, processing
-        the event is finished after this phase is complete.
+    Event listeners registered for this phase are called at this time. If
+    {{domxref("Event.bubbles")}} is `false`, processing
+    the event is finished after this phase is complete.
 - `Event.BUBBLING_PHASE (3)`
   - : The event is propagating back up through the target's ancestors in reverse order,
     starting with the parent, and eventually reaching the containing {{domxref("Window")}}.
@@ -57,9 +58,12 @@ flow. Possible values are:
 </ul>
 <input type="checkbox" id="chCapture" />
 <label for="chCapture">Use Capturing</label>
-<div id="d1">d1
-  <div id="d2">d2
-    <div id="d3">d3
+<div id="d1">
+  d1
+  <div id="d2">
+    d2
+    <div id="d3">
+      d3
       <div id="d4">d4</div>
     </div>
   </div>
@@ -144,7 +148,7 @@ function onDivClick(e) {
 function clearDivs() {
   for (let i = 0; i < divs.length; i++) {
     if (divs[i].id !== 'divInfo') {
-      divs[i].style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff';
+      divs[i].style.backgroundColor = i % 2 !== 0 ? '#f6eedb' : '#cceeff';
     }
   }
   divInfo.textContent = '';

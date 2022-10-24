@@ -11,9 +11,10 @@ tags:
   - Learn
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-In the previous few articles we looked at all the HTML you'll need to create and structure your web forms. In this article we will move on to looking at how to use [CSS](/en-US/docs/Web/CSS) to style your form controls. This has historically been difficult — form controls vary greatly in how easy they are to customize with CSS — but it is getting easier as old browsers are retired and modern browsers give us more features to use.
+In the previous few articles, we showed how to create web forms in HTML. Now, we'll show how to style them in [CSS](/en-US/docs/Web/CSS).
 
 <table>
   <tbody>
@@ -35,21 +36,17 @@ In the previous few articles we looked at all the HTML you'll need to create and
   </tbody>
 </table>
 
-## Why is styling form widgets challenging?
+## Challenges in styling form widgets
 
-Form controls were added to HTML in [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) in 1995; CSS wasn't released until late 1996, and wasn't supported very well by browsers for a few years after that. Browsers relied on the underlying operating system to manage and render form controls.
+### History
 
-And even with CSS available to style HTML, browser vendors have historically been reluctant to make form controls stylable because users were so accustomed to the visual appearance of their respective platforms. But this has changed. Website owners want form styles that fit in with their overall site design more than ever, and the web platform has changed to make this more possible.
+In 1995, [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) introduced form controls (a.k.a. "form widgets", or "form elements"). But CSS wasn't released until late 1996, and wasn't supported by most browsers until years afterwards; so, in the interim, browsers relied on the underlying operating system to render form widgets.
 
-For some form widgets, it is still difficult to rebuild controls to make them stylable, but we can now use CSS to style many form features, though we do need to take extra care to ensure we don't break usability.
+Even with CSS available, browser vendors were reluctant at first to make form elements stylable, because users were so accustomed to the looks of their respective browsers. But things have changed, and forms widgets are now mostly stylable, with a few exceptions.
 
-### Not all widgets are created equal when CSS is involved
+### Types of widgets
 
-At present, some difficulties remain when using CSS with forms. These problems can be divided into three categories:
-
-#### The good
-
-Some elements can be styled with few if any problems across platforms. These include the following elements:
+#### Easy-to-style
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
@@ -59,18 +56,14 @@ Some elements can be styled with few if any problems across platforms. These inc
 6. {{HTMLElement("label")}}
 7. {{HTMLElement("output")}}
 
-#### The bad
-
-Some elements are more difficult to style, requiring more complex CSS or some more specific tricks:
+#### Harder-to-style
 
 - Checkboxes and radio buttons
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 
-We describe how to handle these more specific features in the article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)[.](/en-US/docs/Learn/Forms/Advanced_form_styling)
+The article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) shows how to style these.
 
-#### The ugly
-
-Some elements can't be styled thoroughly using CSS. These include:
+#### Having internals can't be styled in CSS alone
 
 - [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
@@ -79,28 +72,27 @@ Some elements can't be styled thoroughly using CSS. These include:
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Again, we'll describe what can be done in terms of styling these elements in [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)[.](/en-US/docs/Learn/Forms/Advanced_form_styling)
+For example, the date picker calendar, and the button on \<select> that displays an options list when clicked, can't be styled using CSS alone.
 
-The real problem with all these controls is that they have a very complex structure, and beyond some basic styling (such as changing the width or margin of the control) you generally don't have the ability to style the controls' internal components (such as the date picker calendar, or the button on the \<select> that causes the options list to display) making up those widgets.
+The articles [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) and [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) describe how to style these.
 
-If you want to thoroughly customize those widgets, you really have to create your own using HTML, CSS, and JavaScript. This is beyond the scope of the core form articles, but we do look at this in an advanced article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
+> **Note:** some proprietary CSS pseudo-elements, such as {{cssxref('::-moz-range-track')}}, are capable of styling such internal components, but these aren't consistent across browsers, so aren't very reliable. We will mention these later.
 
-> **Note:** there are some proprietary CSS pseudo-elements available that allow you to style internal components of these form controls, such as {{cssxref('::-moz-range-track')}}, but these are not consistent across browsers, so can't be relied upon. We will mention these later as well.
+## Styling simple form widgets
 
-## The good
+The "easy-to-style" widgets in the previous section may be styled using techniques from the articles [Your first form](/en-US/docs/Learn/Forms/Your_first_form) and [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks). There are also special selectors — [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes) — that enable styling based on the current state of the UI.
 
-To style form controls that are easy to style with CSS, you shouldn't face much if any difficulties, since they mostly behave like any other HTML element. We already looked at some simple form styling in [Your first form](/en-US/docs/Learn/Forms/Your_first_form), and the [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks) module contains some [useful form styling essentials](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements#form_elements) too.
-
-As well as the basic CSS tools covered above, we've also been provided with several selectors — UI pseudo-classes — that enable styling based on the current state of the UI. We cover these in detail in the next article, [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes).
-
-We'll walk through an example at the end of this article to give you some more ideas on basic form control styling and placement. Before we do that however, we'd like to say a few words about specific aspects of form styling that are worth knowing about.
+We'll walk through an example at the end of this article — but first, here are some special aspects of form styling that are worth knowing about.
 
 ### Fonts and text
 
 CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:
 
 ```css
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
 }
@@ -123,8 +115,11 @@ All text fields have complete support for every property related to the CSS box 
 **This is because each widget has their own rules for border, padding and margin.** To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -139,7 +134,7 @@ What may not be apparent via the screenshot is that the radio and checkbox contr
 
 ### Legend placement
 
-The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tricky to control placement of it. By default it is always positioned over the top border of its {{HTMLElement("fieldset")}} parent, near the top left corner. To position it somewhere else, for example inside the fieldset somewhere, or near the bottom left corner, you need to rely on positioning.
+The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tricky to control placement of it. By default, it is always positioned over the top border of its {{HTMLElement("fieldset")}} parent, near the top left corner. To position it somewhere else, for example inside the fieldset somewhere, or near the bottom left corner, you need to rely on positioning.
 
 Take the following example:
 
@@ -181,12 +176,12 @@ The HTML is only slightly more involved than the example we used in [the first a
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -227,42 +222,42 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 
 ```css
 @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "handwriting";
+  src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'typewriter';
-    src: url('fonts/momt___-webfont.woff2') format('woff2'),
-         url('fonts/momt___-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "typewriter";
+  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font  : 1.3rem sans-serif;
-  padding : 0.5em;
-  margin  : 0;
-  background : #222;
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+  background: #222;
 }
 
 form {
-  position : relative;
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background : #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 
   /* we create our grid */
-  display  : grid;
-  grid-gap : 20px;
-  grid-template-columns : repeat(2, 1fr);
-  grid-template-rows    : 10em 1em 1em 1em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
@@ -270,16 +265,17 @@ Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and 
 
 ```css
 h1 {
-  font : 1em "typewriter", monospace;
-  align-self : end;
+  font: 1em "typewriter", monospace;
+  align-self: end;
 }
 
 #message {
-   grid-row: 1 / 5;
+  grid-row: 1 / 5;
 }
 
-#from, #reply {
-   display: flex;
+#from,
+#reply {
+  display: flex;
 }
 ```
 
@@ -289,28 +285,30 @@ Now we can start working on the form elements themselves. First, let's ensure th
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font: 0.8em "typewriter", sans-serif;
 }
 ```
 
 The text fields require some common rules. In other words, we remove their {{cssxref("border","borders")}} and {{cssxref("background","backgrounds")}}, and redefine their {{cssxref("padding")}} and {{cssxref("margin")}}:
 
 ```css
-input, textarea {
-  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 80%;
-  background : none;
+input,
+textarea {
+  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
 }
 ```
 
 When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 ```
@@ -323,12 +321,12 @@ Now that our text fields are complete, we need to adjust the display of the sing
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 100%;
-  height  : 90%;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 90%;
 
   border-right: 1px solid;
 
@@ -343,30 +341,30 @@ The {{HTMLElement("button")}} element is really convenient to style with CSS; yo
 
 ```css
 button {
-  padding      : 5px;
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
-  cursor       : pointer;
-  transform    : rotate(-1.5deg);
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
 }
 
 button:after {
-  content      : " >>>";
+  content: " >>>";
 }
 
 button:hover,
 button:focus {
-  outline     : none;
-  background  : #000;
-  color       : #FFF;
+  outline: none;
+  background: #000;
+  color: #fff;
 }
 ```
 
 ### The final result
 
-And voila! Your form should now look like this:
+And voilà! Your form should now look like this:
 
 ![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 

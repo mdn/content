@@ -15,6 +15,7 @@ tags:
   - picture
 browser-compat: api.HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.
@@ -26,7 +27,7 @@ The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} e
 - {{domxref("HTMLImageElement.Image()", "Image()")}}
   - : The `Image()` constructor creates and returns a new `HTMLImageElement` object representing an HTML {{HTMLElement("img")}} element which is not attached to any DOM tree. It accepts optional width and height parameters. When called without parameters, `new Image()` is equivalent to calling {{DOMxRef("Document.createElement()", "document.createElement('img')")}}.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -84,9 +85,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.vspace")}} {{deprecated_inline}}
   - : An integer value specifying the amount of empty space, in pixels, to leave above and below the image.
 
-## Methods
+## Instance methods
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.decode()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the image is decoded and it's safe to append the image to the DOM. This prevents rendering of the next frame from having to pause to decode the image, as would happen if an undecoded image were added to the DOM.

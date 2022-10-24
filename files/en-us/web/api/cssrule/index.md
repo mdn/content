@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSRule`** interface represents a single CSS rule. There are several types of rules which inherit properties from `CSSRule`.
@@ -27,7 +28,7 @@ The **`CSSRule`** interface represents a single CSS rule. There are several type
 - {{DOMXRef("CSSFontFeatureValuesRule")}}
 - {{DOMXRef("CSSViewportRule")}}
 
-## Properties common to all CSSRule instances
+## Instance properties
 
 The `CSSRule` interface specifies the properties common to all rules, while properties unique to specific rule types are specified in the more specialized interfaces for those rules' respective types.
 

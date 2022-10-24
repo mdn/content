@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.getSelection
 ---
+
 {{ ApiRef() }}
 
 The **`Window.getSelection()`** method returns a
@@ -20,7 +21,7 @@ the current position of the caret.
 
 ## Syntax
 
-```js
+```js-nolint
 getSelection()
 ```
 

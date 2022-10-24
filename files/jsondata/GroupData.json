@@ -13,6 +13,13 @@
       "properties": [],
       "events": []
     },
+    "Background Sync": {
+      "overview": ["Background Synchronization API"],
+      "interfaces": ["SyncManager", "SyncEvent"],
+      "methods": ["ServiceWorkerRegistration.sync()"],
+      "properties": [],
+      "events": ["ServiceWorkerGlobalScope: sync"]
+    },
     "Background Tasks": {
       "overview": ["Background Tasks API"],
       "interfaces": ["IdleDeadline"],
@@ -105,6 +112,9 @@
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
+      "guides": [
+        "/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard"
+      ],
       "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
       "dictionaries": ["ClipboardPermissionDescriptor"],
       "methods": [],
@@ -181,15 +191,14 @@
     },
     "CSS Font Loading API": {
       "overview": ["CSS Font Loading API"],
-      "interfaces": [
-        "FontFace",
-        "FontFaceSet",
-        "FontFaceSource",
-        "FontFaceSetLoadEvent"
-      ],
+      "interfaces": ["FontFace", "FontFaceSet", "FontFaceSetLoadEvent"],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
+      "events": [
+        "FontFaceSet: loading event",
+        "FontFaceSet: loadingdone event",
+        "FontFaceSet: loadingerror event"
+      ]
     },
     "CSS Painting API": {
       "overview": ["CSS Painting API"],
@@ -201,6 +210,14 @@
         "PaintSize"
       ],
       "methods": ["CSS.paintWorklet"],
+      "properties": [],
+      "events": []
+    },
+    "CSS Properties and Values API": {
+      "overview": ["CSS Properties and Values API"],
+      "guides": ["/docs/Web/API/CSS_Properties_and_Values_API/guide"],
+      "interfaces": ["CSSPropertyRule"],
+      "methods": ["CSS.registerProperty"],
       "properties": [],
       "events": []
     },
@@ -265,10 +282,11 @@
       ]
     },
     "Device Orientation Events": {
+      "overview": ["Device orientation events"],
       "guides": [
-        "/docs/Web/Events/Detecting_device_orientation",
-        "/docs/Web/Events/Orientation_and_motion_data_explained",
-        "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
+        "/docs/Web/API/Device_orientation_events/Detecting_device_orientation",
+        "/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained",
+        "/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms"
       ],
       "interfaces": [
         "DeviceMotionEvent",
@@ -280,7 +298,7 @@
       "properties": [],
       "events": [
         "Window: deviceorientation",
-        "Window: compassneedscalibration",
+        "Window: deviceorientationabsolute",
         "Window: devicemotion"
       ]
     },
@@ -348,6 +366,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
+      "guides": ["/docs/Web/API/Encoding_API/Encodings"],
       "interfaces": [
         "TextDecoder",
         "TextEncoder",
@@ -510,6 +529,7 @@
     },
     "History API": {
       "overview": ["History API"],
+      "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
       "interfaces": ["History"],
       "methods": [],
       "properties": [],
@@ -604,6 +624,7 @@
         "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
+        "UserActivation",
         "ValidityState",
         "Window"
       ],
@@ -729,14 +750,24 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["indexedDB"],
       "events": []
     },
     "Intersection Observer API": {
       "overview": ["Intersection Observer API"],
+      "guides": [
+        "/docs/Web/API/Intersection_Observer_API/Timing_element_visibility"
+      ],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": [],
+      "events": []
+    },
+    "Largest Contentful Paint API": {
+      "overview": ["Largest Contentful Paint API"],
+      "interfaces": ["LargestContentfulPaint"],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Layout Instability API": {
@@ -868,6 +899,13 @@
       "methods": [],
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
+    },
+    "Paint Timing API": {
+      "overview": ["Paint Timing API"],
+      "interfaces": ["PerformancePaintTiming"],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Payment Request API": {
       "overview": ["Payment Request API"],
@@ -1964,6 +2002,7 @@
     },
     "Web Speech API": {
       "overview": ["Web Speech API"],
+      "guides": ["/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API"],
       "interfaces": [
         "SpeechGrammar",
         "SpeechGrammarList",
@@ -2081,6 +2120,7 @@
     },
     "WebXR Device API": {
       "overview": ["WebXR Device API"],
+      "guides": ["/docs/Web/API/WebXR_Device_API/Fundamentals"],
       "interfaces": [
         "XRAnchor",
         "XRBoundedReferenceSpace",

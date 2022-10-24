@@ -6,6 +6,7 @@ tags:
   - HTTP
   - HTTP range requests
 ---
+
 {{HTTPSidebar}}
 
 An HTTP range request asks the server to send only a portion of an HTTP message back to a client. Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume the download.
@@ -130,4 +131,3 @@ The {{HTTPHeader("Transfer-Encoding")}} header allows chunked encoding, which is
 
 - Related status codes {{HTTPStatus("200")}}, {{HTTPStatus("206")}}, {{HTTPStatus("416")}}.
 - Related headers: {{HTTPHeader("Accept-Ranges")}}, {{HTTPHeader("Range")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("If-Range")}}, {{HTTPHeader("Transfer-Encoding")}}.
-- [Download resumption in Internet Explorer](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/download-resumption-in-internet-explorer)

@@ -13,6 +13,7 @@ tags:
   - getRecent
 browser-compat: webextensions.api.bookmarks.getRecent
 ---
+
 {{AddonSidebar()}}
 
 The `bookmarks.getRecent()` method retrieves a specified number of the most recently added bookmarks as an array of {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} objects.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingRecent = browser.bookmarks.getRecent(
   numberOfItems          // integer
 )

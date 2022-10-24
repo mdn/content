@@ -10,19 +10,20 @@ tags:
   - SVG DOM
 browser-compat: api.SVGDefsElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGDefsElement`** interface corresponds to the {{SVGElement("defs")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
-## Methods
+## Instance methods
 
-_This interface doesn't implement any specific methods, but inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
+_This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 
 ## Specifications
 

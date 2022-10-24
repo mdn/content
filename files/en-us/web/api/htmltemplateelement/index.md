@@ -11,20 +11,21 @@ tags:
   - Web Components
 browser-compat: api.HTMLTemplateElement
 ---
+
 {{APIRef("Web Components")}}
 
 The **`HTMLTemplateElement`** interface enables access to the contents of an HTML {{HTMLElement("template")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTemplateElement.content", "content")}} {{ReadOnlyInline}}
   - : A read-only {{domxref("DocumentFragment")}} which contains the DOM subtree representing the {{HTMLElement("template")}} element's template contents.
 
-## Methods
+## Instance methods
 
 _This interface inherits the methods of {{domxref("HTMLElement")}}._
 

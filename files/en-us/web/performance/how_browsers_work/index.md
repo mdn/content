@@ -14,6 +14,9 @@ tags:
   - Web Performance
   - render
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 
 To understand how to improve performance and perceived performance, it helps to understand how the browser works.
@@ -24,7 +27,7 @@ Fast sites provide better user experiences. Users want and expect web experience
 
 Two major issues in web performance are understanding issues having to do with latency and issues having to do with the fact that for the most part, browsers are single threaded.
 
-Latency is our main threat to overcome to ensure a fast load. To be fast to load, the developers' goals include sending requested information as fast as possible, or at least seem super fast. Network latency is the time it takes to transmit bytes over-the-air to computers. Web performance is what we have to do to make the page load happen as quickly as possible.
+Latency is our main threat to overcome to ensure a fast load. To be fast to load, the developers' goals include sending requested information as fast as possible, or at least seem superfast. Network latency is the time it takes to transmit bytes over-the-air to computers. Web performance is what we have to do to make the page load happen as quickly as possible.
 
 For the most part, browsers are considered single threaded. For smooth interactions, the developer's goal is to ensure performant site interactions, from smooth scrolling to being responsive to touch. Render time is key, with ensuring the main thread can complete all the work we throw at it and still always be available to handle user interactions. Web performance can be improved by understanding the single-threaded nature of the browser and minimizing the main thread's responsibilities, where possible and appropriate, to ensure rendering is smooth and responses to interactions are immediate.
 
@@ -50,7 +53,7 @@ This can be problematic for performance, particularly on mobile networks. When a
 
 Once the IP address is known, the browser sets up a connection to the server via a {{glossary('TCP handshake','TCP three-way handshake')}}. This mechanism is designed so that two entities attempting to communicate—in this case the browser and web server—can negotiate the parameters of the network TCP socket connection before transmitting data, often over {{glossary('HTTPS')}}.
 
-TCP's three way handshaking technique is often referred to as "SYN-SYN-ACK"—or more accurately SYN, SYN-ACK, ACK—because there are three messages transmitted by TCP to negotiate and start a TCP session between two computers. Yes, this means three more messages back and forth between each server, and the request has yet to be made.
+TCP's three-way handshaking technique is often referred to as "SYN-SYN-ACK"—or more accurately SYN, SYN-ACK, ACK—because there are three messages transmitted by TCP to negotiate and start a TCP session between two computers. Yes, this means three more messages back and forth between each server, and the request has yet to be made.
 
 ### TLS Negotiation
 
@@ -69,20 +72,20 @@ Once we have an established connection to a web server, the browser sends an ini
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
- <head>
-  <meta charset="UTF-8"/>
-  <title>My simple page</title>
-  <link rel="stylesheet" src="styles.css"/>
-  <script src="myscript.js"></script>
-</head>
-<body>
-  <h1 class="heading">My Page</h1>
-  <p>A paragraph with a <a href="https://example.com/about">link</a></p>
-  <div>
-    <img src="myimage.jpg" alt="image description"/>
-  </div>
-  <script src="anotherscript.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My simple page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">My Page</h1>
+    <p>A paragraph with a <a href="https://example.com/about">link</a></p>
+    <div>
+      <img src="myimage.jpg" alt="image description" />
+    </div>
+    <script src="anotherscript.js"></script>
+  </body>
 </html>
 ```
 
@@ -126,12 +129,12 @@ When the parser finds non-blocking resources, such as an image, the browser will
 
 ### Preload scanner
 
-While the browser builds the DOM tree, this process occupies the main thread. As this happens, the _preload scanner_ will parse through the content available and request high priority resources like CSS, JavaScript, and web fonts. Thanks to the preload scanner, we don't have to wait until the parser finds a reference to an external resource to request it. It will retrieve resources in the background so that by the time the main HTML parser reaches requested assets, they may possibly already be in flight, or have been downloaded. The optimizations the preload scanner provides reduce blockages.
+While the browser builds the DOM tree, this process occupies the main thread. As this happens, the _preload scanner_ will parse through the content available and request high priority resources like CSS, JavaScript, and web fonts. Thanks to the preload scanner, we don't have to wait until the parser finds a reference to an external resource to request it. It will retrieve resources in the background so that by the time the main HTML parser reaches requested assets, they may already be in flight, or have been downloaded. The optimizations the preload scanner provides reduce blockages.
 
 ```html
-<link rel="stylesheet" src="styles.css"/>
+<link rel="stylesheet" href="styles.css" />
 <script src="myscript.js" async></script>
-<img src="myimage.jpg" alt="image description"/>
+<img src="myimage.jpg" alt="image description" />
 <script src="anotherscript.js" async></script>
 ```
 

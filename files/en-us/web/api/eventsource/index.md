@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.EventSource
 ---
+
 {{APIRef("Server Sent Events")}}
 
 The **`EventSource`** interface is web content's interface to [server-sent events](/en-US/docs/Web/API/Server-sent_events).
@@ -32,7 +33,7 @@ Unlike [WebSockets](/en-US/docs/Web/API/WebSockets_API), server-sent events are 
 - {{domxref("EventSource.EventSource", "EventSource()")}}
   - : Creates a new `EventSource` to handle receiving server-sent events from a specified URL, optionally in credentials mode.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
 
@@ -43,7 +44,7 @@ _This interface also inherits properties from its parent, {{domxref("EventTarget
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("EventTarget")}}._
 
@@ -59,7 +60,7 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 - {{domxref("EventSource/open_event", "open")}}
   - : Fired when a connection to an event source has opened.
 
-Additionally, the event source itself may send messages with an event field, which will create ad-hoc events keyed to that value.
+Additionally, the event source itself may send messages with an event field, which will create ad hoc events keyed to that value.
 
 ## Examples
 

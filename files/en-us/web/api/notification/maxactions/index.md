@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Notification.maxActions
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`maxActions`** attribute of the

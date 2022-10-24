@@ -22,6 +22,7 @@ tags:
   - rendering
 browser-compat: api.HTMLImageElement.loading
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}

@@ -13,13 +13,14 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement`** interface represents a {{HTMLElement("form")}} element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -46,7 +47,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 
 Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g. a form with an input named `action` will have its `action` property return that input instead of the form's {{ htmlattrxref("action", "form") }} HTML attribute).
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 
@@ -144,32 +145,46 @@ Extract information from a `<form>` element and set some of its attributes:
 
 ```html
 <form name="formA" action="/cgi-bin/test" method="post">
- <p>Press "Info" for form details, or "Set" to change those details.</p>
- <p>
-  <button type="button" onclick="getFormInfo();">Info</button>
-  <button type="button" onclick="setFormInfo(this.form);">Set</button>
-  <button type="reset">Reset</button>
- </p>
+  <p>Press "Info" for form details, or "Set" to change those details.</p>
+  <p>
+    <button type="button" onclick="getFormInfo();">Info</button>
+    <button type="button" onclick="setFormInfo(this.form);">Set</button>
+    <button type="reset">Reset</button>
+  </p>
 
- <textarea id="form-info" rows="15" cols="20"></textarea>
+  <textarea id="form-info" rows="15" cols="20"></textarea>
 </form>
 
 <script>
-  function getFormInfo(){
+  function getFormInfo() {
     // Get a reference to the form via its name
     const f = document.forms["formA"];
     // The form properties we're interested in
-    const properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
+    const properties = [
+      "elements",
+      "length",
+      "name",
+      "charset",
+      "action",
+      "acceptCharset",
+      "action",
+      "enctype",
+      "method",
+      "target",
+    ];
     // Iterate over the properties, turning them into a string that we can display to the user
-    const info = properties.map((property) => `${property}: ${f[property]}`).join("\n");
+    const info = properties
+      .map((property) => `${property}: ${f[property]}`)
+      .join("\n");
 
     // Set the form's <textarea> to display the form's properties
-    document.forms["formA"].elements['form-info'].value = info; // document.forms["formA"]['form-info'].value would also work
+    document.forms["formA"].elements["form-info"].value = info; // document.forms["formA"]['form-info'].value would also work
   }
 
-  function setFormInfo(f){ // Argument should be a form element reference.
+  function setFormInfo(f) {
+    // Argument should be a form element reference.
     f.action = "a-different-url.cgi";
-    f.name   = "a-different-name";
+    f.name = "a-different-name";
   }
 </script>
 ```
@@ -179,35 +194,53 @@ Submit a `<form>` into a new window:
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="utf-8">
-<title>Example new-window form submission</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example new-window form submission</title>
+  </head>
+  <body>
+    <form action="test.php" target="_blank">
+      <p>
+        <label>First name: <input type="text" name="firstname" /></label>
+      </p>
+      <p>
+        <label>Last name: <input type="text" name="lastname" /></label>
+      </p>
+      <p>
+        <label><input type="password" name="pwd" /></label>
+      </p>
 
-<form action="test.php" target="_blank">
-  <p><label>First name: <input type="text" name="firstname"></label></p>
-  <p><label>Last name: <input type="text" name="lastname"></label></p>
-  <p><label><input type="password" name="pwd"></label></p>
+      <fieldset>
+        <legend>Pet preference</legend>
 
-  <fieldset>
-   <legend>Pet preference</legend>
+        <p>
+          <label><input type="radio" name="pet" value="cat" /> Cat</label>
+        </p>
+        <p>
+          <label><input type="radio" name="pet" value="dog" /> Dog</label>
+        </p>
+      </fieldset>
 
-    <p><label><input type="radio" name="pet" value="cat"> Cat</label></p>
-    <p><label><input type="radio" name="pet" value="dog"> Dog</label></p>
-  </fieldset>
+      <fieldset>
+        <legend>Owned vehicles</legend>
 
-  <fieldset>
-    <legend>Owned vehicles</legend>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Bike" />I have a
+            bike</label
+          >
+        </p>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Car" />I have a
+            car</label
+          >
+        </p>
+      </fieldset>
 
-    <p><label><input type="checkbox" name="vehicle" value="Bike">I have a bike</label></p>
-    <p><label><input type="checkbox" name="vehicle" value="Car">I have a car</label></p>
-  </fieldset>
-
-  <p><button>Submit</button></p>
-</form>
-
-</body>
+      <p><button>Submit</button></p>
+    </form>
+  </body>
 </html>
 ```
 

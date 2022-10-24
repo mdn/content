@@ -12,6 +12,7 @@ tags:
   - remove
 browser-compat: webextensions.api.browsingData.remove
 ---
+
 {{AddonSidebar()}}
 
 Removes the specified browsing data.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.remove(
   removalOptions,            // RemovalOptions object
   dataTypes                  // DataTypeSet object
@@ -59,12 +60,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.remove(
-  {since: oneWeekAgo},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 Remove all download and browsing history:
@@ -78,9 +78,9 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.remove({},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({}, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

@@ -12,6 +12,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver.observe
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`observe()`** method of the
@@ -20,7 +21,7 @@ The **`observe()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 observe(target)
 observe(target, options)
 ```

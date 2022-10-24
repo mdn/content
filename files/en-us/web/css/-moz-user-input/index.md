@@ -1,6 +1,7 @@
 ---
-title: '-moz-user-input'
+title: "-moz-user-input"
 slug: Web/CSS/-moz-user-input
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-user-input
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 In Mozilla applications, **`-moz-user-input`** determines if an element will accept user input.

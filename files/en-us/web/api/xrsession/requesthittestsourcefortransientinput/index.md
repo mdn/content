@@ -17,6 +17,7 @@ tags:
   - XRSession
 browser-compat: api.XRSession.requestHitTestSourceForTransientInput
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestHitTestSourceForTransientInput()`** method of the
@@ -24,7 +25,7 @@ The **`requestHitTestSourceForTransientInput()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 requestHitTestSourceForTransientInput(options)
 ```
 

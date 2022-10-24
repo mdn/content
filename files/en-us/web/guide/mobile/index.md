@@ -5,6 +5,7 @@ tags:
   - Intermediate
   - NeedsExample
 ---
+
 This page provides an overview of some of the main techniques needed to design web sites that work well on mobile devices. If you're looking for information on Mozilla's Firefox OS project, see the [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) page. Or you might be interested in details about [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android).
 
 We've organized it into two sections, [designing for mobile devices](#designing_for_mobile_devices) and [cross-browser compatibility](#cross-browser_development). Also see Jason Grlicky's guide to [mobile-friendliness](/en-US/docs/Web/Guide/Mobile/Mobile-friendliness) for web developers.
@@ -36,7 +37,7 @@ You can also make use of CSS properties to implement visual effects like [gradie
 
 ### Mobile APIs
 
-Finally, you can take advantage of the new possibilities offered by mobile devices, such as [orientation](/en-US/docs/Web/Events/Detecting_device_orientation) and [geolocation](/en-US/docs/Web/API/Geolocation_API).
+Finally, you can take advantage of the new possibilities offered by mobile devices, such as [orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation) and [geolocation](/en-US/docs/Web/API/Geolocation_API).
 
 ## Cross-browser development
 

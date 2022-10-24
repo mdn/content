@@ -14,13 +14,14 @@ tags:
   - Non-standard
 browser-compat: api.VRFieldOfView
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a field of view defined by 4 different degree values describing the view from a center point.
 
 > **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Properties
+## Instance properties
 
 - {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees upwards that the field of view extends in.

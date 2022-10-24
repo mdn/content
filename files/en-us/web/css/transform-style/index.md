@@ -1,6 +1,7 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transform-style
 ---
+
 {{CSSRef}}
 
 The **`transform-style`** [CSS](/en-US/docs/Web/CSS) property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
@@ -71,7 +73,7 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 
 <div class="checkbox">
   <label for="preserve"><code>preserve-3d</code></label>
-  <input type="checkbox" id="preserve" checked>
+  <input type="checkbox" id="preserve" checked />
 </div>
 ```
 
@@ -99,32 +101,32 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```

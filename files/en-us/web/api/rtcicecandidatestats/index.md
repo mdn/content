@@ -17,11 +17,12 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidateStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics related to an {{domxref("RTCIceCandidate")}}.
 
-## Properties
+## Instance properties
 
 `RTCIceCandidateStats` is based upon the {{domxref("RTCStats")}} dictionary, so it includes those properties in addition to the ones below.
 

@@ -4,13 +4,14 @@ slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
 page-type: web-api-constructor
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
+
 The `InputDeviceCapabilities()` constructor creates a new
 {{domxref("InputDeviceCapabilities")}} object provides information about the physical
 device responsible for generating a touch event.
 
 ## Syntax
 
-```js
+```js-nolint
 new InputDeviceCapabilities()
 new InputDeviceCapabilities(InputDeviceCapabilitiesInit)
 ```

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Presentation.receiver
 ---
+
 {{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **read-only** {{domxref("Presentation")}} attribute

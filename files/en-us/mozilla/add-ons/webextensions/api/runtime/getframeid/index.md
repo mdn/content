@@ -12,13 +12,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getFrameId
 ---
+
 {{AddonSidebar}}
 
 Returns the frame ID of any window global or frame element when called from a content script or extension page, including background pages.
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingInfo = browser.runtime.getFrameId(
   target               // object
 )

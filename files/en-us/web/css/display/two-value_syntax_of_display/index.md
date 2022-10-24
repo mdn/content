@@ -1,6 +1,7 @@
 ---
 title: Adapting to the new two-value syntax of display
 slug: Web/CSS/display/two-value_syntax_of_display
+page-type: guide
 tags:
   - CSS
   - Example
@@ -8,6 +9,7 @@ tags:
   - Guide
   - Intermediate
 ---
+
 {{CSSRef}}
 
 [CSS Display Module Level 3](https://drafts.csswg.org/css-display/) describes the two-value syntax for the [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the change to the syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the `display` property.

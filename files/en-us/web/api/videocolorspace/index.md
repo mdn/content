@@ -9,6 +9,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace
 ---
+
 {{APIRef("WebCodecs API")}}
 
 The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}} represents the color space of a video.
@@ -18,7 +19,7 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 - {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}} {{Experimental_Inline}}
   - : Creates a new `VideoColorSpace` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("VideoColorSpace.primaries")}} {{ReadOnlyInline}}
   - : A string containing the color primary describing the color {{glossary("gamut")}} of a video sample.
@@ -29,7 +30,7 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 - {{domxref("VideoColorSpace.fullRange")}}
   - : A {{jsxref("Boolean")}}. If `true` indicates that full-range color values are used.
 
-## Methods
+## Instance methods
 
 - {{domxref("VideoColorSpace.toJSON()")}}
   - : Returns a JSON representation of the `VideoColorSpace` object.

@@ -18,6 +18,7 @@ tags:
   - metadata
 browser-compat: api.Navigator.mediaSession
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Navigator")}} property
@@ -34,7 +35,7 @@ In addition, the `MediaSession` interface provides the
 {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method, which lets
 you receive events when the user engages device controls such as either onscreen or
 physical play, pause, seek, and other similar controls. An internet radio app, for
-example, can use `setActionHandler()` to let fhe media controls on a keyboard
+example, can use `setActionHandler()` to let the media controls on a keyboard
 or elsewhere on the user's device be used to control the app's media playback.
 
 ## Value

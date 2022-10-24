@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
+
 {{JSRef}}
 
 The **`hasIndices`** accessor property indicates whether or not the `d` flag is used with the regular expression.
@@ -27,16 +28,16 @@ The set accessor of `hasIndices` is `undefined`. You cannot change this property
 ### Using hasIndices
 
 ```js
-const str1 = 'foo bar foo';
+const str1 = "foo bar foo";
 
-const regex1 = /foo/gd;
+const regex1 = /foo/dg;
 
 console.log(regex1.hasIndices); // Output: true
 
 console.log(regex1.exec(str1).indices[0]); // Output: Array [0, 3]
 console.log(regex1.exec(str1).indices[0]); // Output: Array [8, 11]
 
-const str2 = 'foo bar foo';
+const str2 = "foo bar foo";
 
 const regex2 = /foo/;
 
@@ -55,7 +56,7 @@ console.log(regex2.exec(str2).indices); // Output: undefined
 
 ## See also
 
-- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.exec()")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}

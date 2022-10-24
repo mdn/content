@@ -10,9 +10,10 @@ tags:
   - JavaScript
   - Logic
   - control
-  - l10n:priority
+  - "l10n:priority"
   - statements
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
   "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -333,13 +334,13 @@ block is skipped. The `finally` block executes after the `try` and
 The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
-(`1`–`12`), an exception is thrown with the value
+(`1` – `12`), an exception is thrown with the value
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
 ```js
 function getMonthName(mo) {
-  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
   const months = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
@@ -492,9 +493,9 @@ You can nest one or more `try...catch` statements.
 If an inner `try` block does _not_ have a corresponding
 `catch` block:
 
-1. it *must* contain a `finally` block, and
+1. it _must_ contain a `finally` block, and
 2. the enclosing `try...catch` statement's `catch` block is
-    checked for a match.
+   checked for a match.
 
 For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
 on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)

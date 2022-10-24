@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_texture_float
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_texture_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes floating-point pixel types for textures.

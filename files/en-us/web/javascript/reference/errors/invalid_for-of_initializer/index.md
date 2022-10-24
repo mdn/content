@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "a declaration in the head of a for-of loop can't have an initializer" occurs when the head of a [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop contains an initializer expression such as `for (const i = 0 of iterable)`. This is not allowed in for-of loops.

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRRenderState.inlineVerticalFieldOfView
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`inlineVerticalFieldOfView`**

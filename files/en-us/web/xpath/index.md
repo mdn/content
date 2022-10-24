@@ -11,6 +11,7 @@ tags:
   - XPath
   - XSLT
 ---
+
 {{XSLTRef}}
 
 XPath stands for XML Path Language. It uses a non-XML syntax to provide a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML/XML_introduction) document. It can also be used to test addressed nodes within a document to determine whether they match a pattern or not.

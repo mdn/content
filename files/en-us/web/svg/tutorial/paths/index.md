@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 The {{SVGElement('path')}} element is the most powerful element in the SVG library of [basic shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). It can be used to create lines, curves, arcs, and more.
@@ -16,7 +17,7 @@ A good understanding of paths is important when drawing SVGs. While creating com
 
 The shape of a `<path>` element is defined by one parameter: {{ SVGAttr("d") }}. (See more in [basic shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes).) The `d` attribute contains a series of commands and parameters used by those commands.
 
-Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`,`10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
+Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`, `10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
 
 All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., _move 10px up and 7px to the left from the last point_).
 
@@ -32,7 +33,7 @@ M x y
 m dx dy
 ```
 
-In the following example there's only a point at (`10`,`10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
+In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
 ![](blank_path_area.png)
 
@@ -105,7 +106,7 @@ The relative forms of these commands can also be used to draw the same picture. 
  <path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
 ```
 
-The path will move to point (`10`,`10`) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
+The path will move to point (`10`, `10`) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
 
 In these examples, it would probably be simpler to use the {{SVGElement("polygon")}} or {{SVGElement("polyline")}} elements. However, paths are used so often in drawing SVG that developers may be more comfortable using them instead. There is no real performance penalty or bonus for using one or the other.
 
@@ -123,7 +124,7 @@ The cubic curve, `C`, is the slightly more complex curve. Cubic Béziers take in
  c dx1 dy1, dx2 dy2, dx dy
 ```
 
-The last set of coordinates here (`x`,`y`) specify where the line should end. The other two are control points. (`x1`,`y1`) is the control point for the start of the curve, and (`x2`,`y2`) is the control point for the end. The control points essentially describe the slope of the line starting at each point. The Bézier function then creates a smooth curve that transfers from the slope established at the beginning of the line, to the slope at the other end.
+The last set of coordinates here (`x`, `y`) specify where the line should end. The other two are control points. (`x1`, `y1`) is the control point for the start of the curve, and (`x2`, `y2`) is the control point for the end. The control points essentially describe the slope of the line starting at each point. The Bézier function then creates a smooth curve that transfers from the slope established at the beginning of the line, to the slope at the other end.
 
 ![Cubic Bézier Curves with grid](cubic_bézier_curves_with_grid.png)
 

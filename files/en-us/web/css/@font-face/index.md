@@ -1,8 +1,9 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
+page-type: css-at-rule
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule
   - CSS
   - CSS Fonts
@@ -12,6 +13,7 @@ tags:
   - typography
 browser-compat: css.at-rules.font-face
 ---
+
 {{CSSRef}}
 
 The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
@@ -21,8 +23,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
 }
 ```
 
@@ -42,8 +44,9 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   - : A {{cssxref("font-style")}} value. Accepts two values to specify a range that is supported by a font-face, for example `font-style: oblique 20deg 50deg;`
 - {{cssxref("@font-face/font-weight", "font-weight")}}
   - : A {{cssxref("font-weight")}} value. Accepts two values to specify a range that is supported by a font-face, for example `font-weight: 100 400;`
-- {{cssxref("@font-face/font-variant", "font-variant")}}
-  - : A {{cssxref("font-variant")}} value.
+
+> **Note:** The font-variant descriptor was removed from the specification in 2018. The {{cssxref("font-variant")}} value property is supported, but there is no descriptor equivalent.
+
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
   - : Allows control over advanced typographic features in OpenType fonts.
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
@@ -59,8 +62,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
     To provide the browser with a hint as to what format a font resource is — so it can select a suitable one — it is possible to include a format type inside a `format()` function:
 
     ```css
-    src: url(ideal-sans-serif.woff) format("woff"),
-         url(basic-sans-serif.ttf) format("truetype");
+    src: url(ideal-sans-serif.woff) format("woff"), url(basic-sans-serif.ttf)
+        format("truetype");
     ```
 
     The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`.
@@ -96,9 +99,8 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
   .className {
     @font-face {
       font-family: MyHelvetica;
-      src: local("Helvetica Neue Bold"),
-           local("HelveticaNeue-Bold"),
-           url(MgOpenModernaBold.ttf);
+      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }
@@ -121,22 +123,24 @@ This example specifies a downloadable font to use, applying it to the entire bod
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Web Font Sample</title>
-  <style media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Font Sample</title>
+    <style media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
 
@@ -151,9 +155,8 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```

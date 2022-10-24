@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.SerialPort.setSignals
 ---
+
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
 
 ## Syntax
 
-```js
+```js-nolint
 setSignals()
 setSignals(options)
 ```

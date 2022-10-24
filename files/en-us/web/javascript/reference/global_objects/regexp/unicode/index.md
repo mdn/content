@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.unicode
 ---
+
 {{JSRef}}
 
 The **`unicode`** accessor property indicates whether or not the `u` flag is used with the regular expression.
@@ -49,7 +50,7 @@ console.log(regex.unicode); // true
 
 ## See also
 
-- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

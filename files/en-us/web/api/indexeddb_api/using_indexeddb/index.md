@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - jsstore
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB is a way for you to persistently store data inside a user's browser. Because it lets you create web applications with rich query abilities regardless of network availability, your applications can work both online and offline.
@@ -47,7 +48,7 @@ const request = window.indexedDB.open("MyTestDatabase", 3);
 
 See that? Opening a database is just like any other operation — you have to "request" it.
 
-The open request doesn't open the database or start the transaction right away. The call to the `open()` function returns an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) object with the result or error. The result for the open function is an instance of an `IDBDatabase.`
+The open request doesn't open the database or start the transaction right away. The call to the `open()` function returns an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) object with the result or error. The result for the open function is an instance of an `IDBDatabase`.
 
 The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an `onupgradeneeded` event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in [Creating or updating the version of the database](#creating_or_updating_the_version_of_the_database) below, and the {{ domxref("IDBFactory.open") }} reference page.
 
@@ -438,7 +439,7 @@ objectStore.openCursor().onsuccess = (event) => {
 };
 ```
 
-> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`) . The following code does precisely the same thing as above:
+> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`). The following code does precisely the same thing as above:
 >
 > ```js
 > objectStore.getAll().onsuccess = (event) => {
@@ -664,12 +665,16 @@ Further reading for you to find out more information if desired.
 ### Tutorials and guides
 
 - [Databinding UI Elements with IndexedDB (2012)](https://web.dev/indexeddb-uidatabinding/)
-- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))
+- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### Libraries
 
-- [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to WebSQL and then localStorage in browsers that don't support IndexedDB.
-- [dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
-- [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
-- [ZangoDB](https://github.com/erikolson186/zangodb): A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.
+- [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to Web SQL (deprecated) and then localStorage in browsers that don't support IndexedDB.
+- [Dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.
+- [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory mongodb backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
+- [PouchDB](https://pouchdb.com): A client-side implementation of CouchDB in the browser using IndexedDB
+- [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
+- [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
+- [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.
+- [RxDB](https://rxdb.info/) A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.

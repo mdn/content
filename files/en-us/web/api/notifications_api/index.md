@@ -10,6 +10,7 @@ tags:
   - system
 browser-compat: api.Notification
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
@@ -29,7 +30,7 @@ This is not only best practice — you should not be spamming users with notific
 
 This will spawn a request dialog, along the following lines:
 
-![](screen_shot_2019-12-11_at_9.59.14_am.png)
+![A dialog box asking the user to allow notifications from that origin. There are options to never allow or allow notifications.](screen_shot_2019-12-11_at_9.59.14_am.png)
 
 From here the user can choose to allow notifications from this origin, or block them. Once a choice has been made, the setting will generally persist for the current session.
 

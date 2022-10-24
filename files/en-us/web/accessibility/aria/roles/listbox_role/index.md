@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: listbox role'
+title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 tags:
   - ARIA
@@ -13,6 +13,7 @@ spec-urls:
   - https://w3c.github.io/aria/#listbox
   - https://w3c.github.io/aria-practices/#Listbox
 ---
+
 The `listbox` role is used for lists from which a user may select one or more items which are static and, unlike HTML {{HTMLElement('select')}} elements, may contain images.
 
 ## Description
@@ -41,21 +42,27 @@ When the listbox role is added to an element, or such an element becomes visible
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
   - : Holds the `id` string of the currently active element within the listbox. If that's an option element, then that would be the `id` of the most recently interacted with option, regardless of whether that option has an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) value of `true` or not. Takes the value of only one `id`, even in a multiselectable listbox. If the `id` does not refer to a DOM descendant of the listbox, then that `id` must be included among the IDs in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute.
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+
   - : This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attributes of any other elements.
 
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+
   - : Include and set to `true` if the user can select more than one option. If set to `true`, _every_ selectable option should have an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute included and set to `true` or `false`. Options which are _not_ selectable _should not_ have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute. If `false` or omitted, only the currently selected option, if any option is selected, needs the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, and it must be set to `true`.
 
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+
   - : A Boolean attribute which indicates that an option with a non-empty string value must be selected.
 
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
+
   - : The user cannot change which options are selected or unselected, but the listbox is otherwise operable.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+
   - : A human-readable string value which identifies the listbox. If there's a visible label, then [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) should be used instead to refer to that label.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
   - : Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)
 
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
@@ -151,31 +158,37 @@ When the user selects an option, the following must occur:
 
 When the user clicks on an option, hits <kbd>Space</kbd> when focused on an option, or otherwise toggles the state of an option, the following must occur:
 
-1. Toggle the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state of the currently focused option, changing the state of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to true if it was false or false if it was true.
-1. Change the appearance of the option to reflect its selected state
-1. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
+1. Toggle the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state of the currently focused option, changing the state of the `aria-selected` to true if it was false or false if it was true.
+2. Change the appearance of the option to reflect its selected state
+3. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
 > **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 
 ## Examples
 
-#### Example 1: A single select listbox that uses [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+### Example 1: A single select listbox that uses [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
 
 The snippet below shows how the listbox role is added directly into the HTML source code.
 
 ```html
 <p id="listbox1label" role="label">Select a color:</p>
-<div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
   onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
-    <div role="option" id="listbox1-1" class="selected" aria-selected="true">Green</div>
-    <div role="option" id="listbox1-2">Orange</div>
-    <div role="option" id="listbox1-3">Red</div>
-    <div role="option" id="listbox1-4">Blue</div>
-    <div role="option" id="listbox1-5">Violet</div>
-    <div role="option" id="listbox1-6">Periwinkle</div>
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    Green
+  </div>
+  <div role="option" id="listbox1-2">Orange</div>
+  <div role="option" id="listbox1-3">Red</div>
+  <div role="option" id="listbox1-4">Blue</div>
+  <div role="option" id="listbox1-5">Violet</div>
+  <div role="option" id="listbox1-6">Periwinkle</div>
 </div>
 ```
 
@@ -184,16 +197,16 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 ```html
 <label for="listbox1">Select a color:</label>
 <select id="listbox1">
-   <option selected>Green</option>
-   <option>Orange</option>
-   <option>Red</option>
-   <option>Blue</option>
-   <option>Violet</option>
-   <option>Periwinkle</option>
+  <option selected>Green</option>
+  <option>Orange</option>
+  <option>Red</option>
+  <option>Blue</option>
+  <option>Violet</option>
+  <option>Periwinkle</option>
 </select>
 ```
 
-#### More examples
+### More examples
 
 - [Scrollable Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html): Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with `size` attribute greater than one.
 - [Collapsible Dropdown Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html): Single-select collapsible listbox that expands when activated, similar to HTML {{HTMLElement('select')}} with the attribute `size="1"`.
@@ -227,6 +240,6 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: html.manifest.display_override
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">

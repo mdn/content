@@ -13,13 +13,14 @@ tags:
   - onblur
 browser-compat: api.Element.blur_event
 ---
+
 {{APIRef}}
 
-The **`blur`** event fires when an element has lost focus. The main difference between this event and {{domxref("Element/focusout_event", "focusout")}} is that `focusout` [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) while `blur` does not.
+The **`blur`** event fires when an element has lost focus. The event does not bubble, but the related {{domxref("Element/focusout_event", "focusout")}} event that follows does bubble.
 
-The opposite of `blur` is {{domxref("Element/focus_event", "focus")}}.
+The opposite of `blur` is the {{domxref("Element/focus_event", "focus")}} event, which fires when the element has _received_ focus.
 
-This event is not cancelable and does not bubble.
+The `blur` event is not cancelable.
 
 ## Syntax
 
@@ -42,7 +43,7 @@ A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 _This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
 
 - {{domxref("FocusEvent.relatedTarget")}}
-  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
+  - : The element receiving focus, if any.
 
 ## Examples
 
@@ -52,8 +53,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -83,8 +88,12 @@ There are two ways of implementing event delegation for this event: by using the
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -118,6 +127,7 @@ The value of {{DOMxRef("Document.activeElement")}} varies across browsers while 
 
 ## See also
 
+- The {{domxref("HTMLElement.blur()")}} method
 - Related events: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
 - This event on `Window` targets: {{domxref("Window/blur_event", "blur")}} event
 - [Focusing: focus/blur](https://javascript.info/focus-blur)

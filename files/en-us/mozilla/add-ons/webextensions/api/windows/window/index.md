@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.Window
 ---
+
 {{AddonSidebar()}}
 
 Information about a browser window.

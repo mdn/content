@@ -12,6 +12,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.destructuring
 ---
+
 {{jsSidebar("Operators")}}
 
 The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
@@ -20,7 +21,7 @@ The **destructuring assignment** syntax is a JavaScript expression that makes it
 
 ## Syntax
 
-```js
+```js-nolint
 const [a, b] = array;
 const [a, , b] = array;
 const [a = aDefault, b] = array;
@@ -567,6 +568,28 @@ const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
 console.log(fizzBuzz); // true
+```
+
+### Destructuring primitive values
+
+Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
+
+```js
+const { a, toFixed } = 1;
+console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
+```
+
+Same as accessing properties, destructuring `null` or `undefined` throws a {{jsxref("TypeError")}}.
+
+```js example-bad
+const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
+const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+```
+
+This happens even when the pattern is empty.
+
+```js example-bad
+const {} = null; // TypeError: Cannot destructure 'null' as it is null.
 ```
 
 #### Combined Array and Object Destructuring

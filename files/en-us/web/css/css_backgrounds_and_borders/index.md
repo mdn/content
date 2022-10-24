@@ -1,6 +1,7 @@
 ---
 title: CSS Backgrounds and Borders
 slug: Web/CSS/CSS_Backgrounds_and_Borders
+page-type: css-module
 tags:
   - CSS
   - CSS Backgrounds and Borders
@@ -9,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-backgrounds/
 ---
+
 {{CSSRef}}
 
 Styles in the **CSS Backgrounds and Borders** module allow filling backgrounds with color or an image (clipped or resized), or modifying them in other ways.

@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
@@ -275,7 +276,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
 
         // If the data we have read so far is >= to the size advertised in the header,
         // it means we have all of the data sent.
-        // We add 4 here because that's the size of the bytes that old the payloadSize
+        // We add 4 here because that's the size of the bytes that hold the payloadSize
         if (stringData.length >= (payloadSize + 4)) {
             // Remove the header
             const contentWithoutSize = stringData.slice(4, (payloadSize + 4));
@@ -395,7 +396,7 @@ If you connected to the native application using `runtime.connectNative()`, then
 To close the native application:
 
 - On \*nix systems like macOS and Linux, the browser sends `SIGTERM` to the native application, then `SIGKILL` after the application has had a chance to exit gracefully. These signals propagate to any subprocesses unless they break away into a new process group.
-- On Windows, the browser puts the native application's process into a [Job object](https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx) and kills the job. If the native application launches additional processes and wants them to remain open after the native application is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag, such as by using `CreateProcess`.
+- On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. If the native application launches additional processes and wants them to remain open after the native application is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag, such as by using `CreateProcess`.
 
 ## Troubleshooting
 

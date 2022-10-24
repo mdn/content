@@ -13,13 +13,14 @@ tags:
   - Experimental
 browser-compat: api.LargestContentfulPaint
 ---
+
 {{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The `LargestContentfulPaint` interface of the {{domxref("Largest Contentful Paint API")}} provides details about the largest image or text paint before user input on a web page. The timing of this paint is a good heuristic for when the main page content is available during load.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("PerformanceEntry")}}._
 
@@ -36,7 +37,7 @@ _This interface also inherits properties from {{domxref("PerformanceEntry")}}._
 - {{domxref("LargestContentfulPaint.url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : If the element is an image, the request url of the image.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 

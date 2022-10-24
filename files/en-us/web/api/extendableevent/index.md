@@ -13,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
@@ -32,16 +33,16 @@ This interface inherits from the {{domxref("Event")}} interface.
 - {{domxref("ExtendableEvent.ExtendableEvent()", "ExtendableEvent()")}}
   - : Creates a new `ExtendableEvent` object.
 
-## Properties
+## Instance properties
 
 _Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("Event")}}_.
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Extends the lifetime of the event.  It is intended to be called in the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
+  - : Extends the lifetime of the event. It is intended to be called in the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
 
 ## Examples
 

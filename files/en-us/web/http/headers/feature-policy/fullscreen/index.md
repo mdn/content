@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Feature-Policy.fullscreen
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullscreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.

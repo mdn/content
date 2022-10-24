@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLUListElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLUListElement`** interface provides special properties (beyond those defined on the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating unordered list elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -24,7 +25,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLUListElement.compact")}} {{deprecated_inline}}
   - : A boolean value indicating that spacing between list items should be reduced. This property reflects the {{htmlattrxref("compact", "ul")}} attribute only, it doesn't consider the {{cssxref("line-height")}} CSS property used for that behavior in modern pages.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

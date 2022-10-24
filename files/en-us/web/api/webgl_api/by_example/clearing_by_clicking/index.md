@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
 
 This example demonstrates how to combine user interaction with WebGL graphics operations by clearing the rendering context with a random color when the user clicks.
@@ -23,33 +24,36 @@ This example provides a simple illustration of how to combine {{Glossary("WebGL"
 Note how we embed the {{Glossary("WebGL")}} function calls inside the event handler function.
 
 ```html
-<p>A very simple WebGL program that still shows some color and
-    user interaction.</p>
-<p>You can repeatedly click the empty canvas or the button below
-    to change color.</p>
-<canvas id="canvas-view">Your browser does not seem to support
-    HTML canvas.</canvas>
+<p>
+  A very simple WebGL program that still shows some color and user interaction.
+</p>
+<p>
+  You can repeatedly click the empty canvas or the button below to change color.
+</p>
+<canvas id="canvas-view">
+  Your browser does not seem to support HTML canvas.
+</canvas>
 <button id="color-switcher">Press here to switch color</button>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : inline-block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: inline-block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 

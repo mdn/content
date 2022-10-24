@@ -13,6 +13,7 @@ tags:
   - open
 browser-compat: api.IDBFactory.open
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`open()`** method of the {{domxref("IDBFactory")}} interface requests opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
@@ -26,7 +27,7 @@ May trigger `upgradeneeded`, `blocked` or `versionchange` events.
 
 ## Syntax
 
-```js
+```js-nolint
 open(name)
 open(name, version)
 ```
@@ -57,7 +58,7 @@ const request = window.indexedDB.open("toDoList", 4);
 ```
 
 In the following code snippet, we make a request to open a database, and include handlers for the success and error cases.
-For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([View the example live](https://mdn.github.io/to-do-notifications/)).
+For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const note = document.querySelector("ul");
@@ -98,4 +99,4 @@ DBOpenRequest.onsuccess = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

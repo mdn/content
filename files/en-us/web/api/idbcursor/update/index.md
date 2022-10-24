@@ -13,6 +13,7 @@ tags:
   - Update
 browser-compat: api.IDBCursor.update
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`update()`** method of the {{domxref("IDBCursor")}}
@@ -29,7 +30,7 @@ Be aware that you can't call `update()` (or
 
 ## Syntax
 
-```js
+```js-nolint
 update(value)
 ```
 
@@ -55,10 +56,10 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the cursor was created using {{domxref("IDBindex.openKeyCursor")}}, is currently being iterated, or has iterated past its end.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the underlying object store uses in-line keys and the property in the value at the object store's key path does not match the key in this
-        cursor's position.
+    cursor's position.
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured
-        cloning algorithm.
+    cloning algorithm.
 
 ## Examples
 
@@ -124,4 +125,4 @@ function updateResult() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

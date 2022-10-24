@@ -9,10 +9,11 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Promise.catch
 ---
+
 {{JSRef}}
 
 The **`catch()`** method returns a {{jsxref("Promise")}} and
-deals with rejected cases only. It behaves the same as calling {{jsxref("Promise.then",
+deals with rejected cases only. It behaves the same as calling {{jsxref("Promise/then",
   "Promise.prototype.then(undefined, onRejected)")}} (in fact, calling
 `obj.catch(onRejected)` internally calls
 `obj.then(undefined, onRejected)`). This means that you have to provide an
@@ -23,7 +24,7 @@ deals with rejected cases only. It behaves the same as calling {{jsxref("Promise
 
 ## Syntax
 
-```js
+```js-nolint
 p.catch(onRejected)
 
 p.catch(function(reason) {
@@ -56,7 +57,7 @@ called, passing the parameters `undefined` and the received
 
 The `catch` method is used for error handling in promise composition. Since
 it returns a {{jsxref("Promise")}}, it [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch)
-in the same way as its sister method, {{jsxref("Promise.then", "then()")}}.
+in the same way as its sister method, {{jsxref("Promise/then", "then()")}}.
 
 `catch()` internally calls `then()`. This is observable if you wrap the methods.
 
@@ -201,3 +202,4 @@ p2.then(
 
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.finally()")}}

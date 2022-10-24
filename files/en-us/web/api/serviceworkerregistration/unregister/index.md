@@ -27,7 +27,7 @@ unregistered.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister()
 ```
 

@@ -9,13 +9,14 @@ tags:
   - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 The **`PushSubscriptionOptions`** interface of the {{domxref('Push API','','',' ')}} represents the options associated with a push subscription.
 
 The read-only `PushSubscriptionOptions` object is returned by calling {{domxref("PushSubscription.options")}} on a {{domxref("PushSubscription")}}. This interface has no constructor of its own.
 
-## Properties
+## Instance properties
 
 - {{domxref("PushSubscriptionOptions.userVisibleOnly")}} {{ReadOnlyInline}}
   - : A boolean value indicating that the returned push

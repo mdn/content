@@ -12,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaMultiSelectable
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaMultiSelectable`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.

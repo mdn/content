@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.lineCap
 ---
+
 {{APIRef}}
 
 The
@@ -17,8 +18,7 @@ The
 property of the Canvas 2D API determines the shape used to draw the end points of lines.
 
 > **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Value
@@ -82,7 +82,6 @@ half the height of the line thickness.
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const lineCap = ['butt', 'round', 'square'];
 
 // Draw guides
 ctx.strokeStyle = '#09f';
@@ -95,14 +94,14 @@ ctx.stroke();
 
 // Draw lines
 ctx.strokeStyle = 'black';
-for (let i = 0; i < lineCap.length; i++) {
+['butt', 'round', 'square'].forEach((lineCap, i) => {
   ctx.lineWidth = 15;
-  ctx.lineCap = lineCap[i];
+  ctx.lineCap = lineCap;
   ctx.beginPath();
   ctx.moveTo(25 + i * 50, 10);
   ctx.lineTo(25 + i * 50, 140);
   ctx.stroke();
-}
+});
 ```
 
 {{EmbedLiveSample("Comparison_of_line_caps", "180", "180",

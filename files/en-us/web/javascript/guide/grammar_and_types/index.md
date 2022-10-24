@@ -4,8 +4,9 @@ slug: Web/JavaScript/Guide/Grammar_and_types
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 This chapter discusses JavaScript's basic grammar, variable declarations, data types and literals.
@@ -77,7 +78,7 @@ JavaScript has three kinds of variable declarations.
 
 You use variables as symbolic names for values in your application. The names of variables, called {{Glossary("Identifier", "identifiers")}}, conform to certain rules.
 
-A JavaScript identifier usually starts with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0`–`9`). Because JavaScript is case sensitive, letters include the characters `A` through `Z` (uppercase) as well as `a` through `z` (lowercase).
+A JavaScript identifier usually starts with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0` – `9`). Because JavaScript is case sensitive, letters include the characters `A` through `Z` (uppercase) as well as `a` through `z` (lowercase).
 
 You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6) or the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
 
@@ -332,7 +333,7 @@ The latest ECMAScript standard defines eight data types:
 
 - and {{Glossary("Object")}}
 
-Although these data types are relatively few, they enable you to perform useful functions with your applications. {{jsxref("Object", "Objects", "", 1)}} and {{jsxref("Function", "functions", "", 1)}} are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your script can perform.
+Although these data types are relatively few, they enable you to perform useful operations with your applications. [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) are the other fundamental elements of the language. While functions are technically a kind of object, you can think of objects as named containers for values, and functions as procedures that your script can perform.
 
 ### Data type conversion
 
@@ -454,7 +455,7 @@ In the following example, the `length` of the array is four, and `myList[1]` and
 const myList = ['home', , 'school', , ];
 ```
 
-> **Note:** Trailing commas help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
+> **Note:** [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
 >
 > ```diff
 > const myList = [
@@ -491,8 +492,8 @@ Note that the language specification requires numeric literals to be unsigned. N
 Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), hexadecimal (base 16), octal (base 8) and binary (base 2).
 
 - A _decimal_ integer literal is a sequence of digits without a leading `0` (zero).
-- A leading `0` (zero) on an integer literal, or a leading `0o` (or `0O`) indicates it is in _octal_. Octal integer literals can include only the digits `0`–`7`.
-- A leading `0x` (or `0X`) indicates a _hexadecimal_ integer literal. Hexadecimal integers can include digits (`0`–`9`) and the letters `a`–`f` and `A`–`F`. (The case of a character does not change its value. Therefore: `0xa` = `0xA` = `10` and `0xf` = `0xF` = `15`.)
+- A leading `0` (zero) on an integer literal, or a leading `0o` (or `0O`) indicates it is in _octal_. Octal integer literals can include only the digits `0` – `7`.
+- A leading `0x` (or `0X`) indicates a _hexadecimal_ integer literal. Hexadecimal integers can include digits (`0` – `9`) and the letters `a` – `f` and `A` – `F`. (The case of a character does not change its value. Therefore: `0xa` = `0xA` = `10` and `0xf` = `0xF` = `15`.)
 - A leading `0b` (or `0B`) indicates a _binary_ integer literal. Binary integer literals can only include the digits `0` and `1`.
 - A trailing `n` suffix on an integer literal indicates a {{jsxref("BigInt")}} literal. The integer literal can use any of the above bases. Note that leading-zero octal syntax like `0123n` is not allowed, but `0o123n` is fine.
 
@@ -630,7 +631,7 @@ The following are examples of string literals:
 
 You should use string literals unless you specifically need to use a `String` object. See {{jsxref("String")}} for details on `String` objects.
 
-You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `String.length` property with a string literal:
+You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `length` property with a string literal:
 
 ```js
 // Will print the number of symbols in the string including whitespace.
@@ -727,22 +728,22 @@ In addition to ordinary characters, you can also include special characters in s
 
 The following table lists the special characters that you can use in JavaScript strings.
 
-| Character   | Meaning                    |
-|-------------|----------------------------|
-| `\0`        | Null Byte                  |
-| `\b`        | Backspace                  |
-| `\f`        | Form Feed                  |
-| `\n`        | New Line                   |
-| `\r`        | Carriage Return            |
-| `\t`        | Tab                        |
-| `\v`        | Vertical tab               |
-| `\'`        | Apostrophe or single quote |
-| `\"`        | Double quote               |
-| `\\`        | Backslash character        |
-| `\XXX`      | The character with the Latin-1 encoding specified by up to three octal digits `XXX` between `0` and `377`. For example, `\251` is the octal sequence for the copyright symbol. |
-| `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits `XX` between `00` and `FF`. For example, `\xA9` is the hexadecimal sequence for the copyright symbol. |
+| Character   | Meaning                                                                                                                                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\0`        | Null Byte                                                                                                                                                                                                                                            |
+| `\b`        | Backspace                                                                                                                                                                                                                                            |
+| `\f`        | Form Feed                                                                                                                                                                                                                                            |
+| `\n`        | New Line                                                                                                                                                                                                                                             |
+| `\r`        | Carriage Return                                                                                                                                                                                                                                      |
+| `\t`        | Tab                                                                                                                                                                                                                                                  |
+| `\v`        | Vertical tab                                                                                                                                                                                                                                         |
+| `\'`        | Apostrophe or single quote                                                                                                                                                                                                                           |
+| `\"`        | Double quote                                                                                                                                                                                                                                         |
+| `\\`        | Backslash character                                                                                                                                                                                                                                  |
+| `\XXX`      | The character with the Latin-1 encoding specified by up to three octal digits `XXX` between `0` and `377`. For example, `\251` is the octal sequence for the copyright symbol.                                                                       |
+| `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits `XX` between `00` and `FF`. For example, `\xA9` is the hexadecimal sequence for the copyright symbol.                                                                |
 | `\uXXXX`    | The Unicode character specified by the four hexadecimal digits `XXXX`. For example, `\u00A9` is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
-| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the simple Unicode escapes `\uD87E\uDC04`.
+| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the simple Unicode escapes `\uD87E\uDC04`.                                                                                                                                       |
 
 #### Escaping characters
 
@@ -775,16 +776,6 @@ is broken \
 across multiple \
 lines.'
 console.log(str);   // this string is broken across multiple lines.
-```
-
-There is also a [**template literal**](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax. This allows for many advanced text formatting use cases, including multiline strings!
-
-```js
-const poem =
-`Roses are red,
-Violets are blue.
-Sugar is sweet,
-and so is foo.`
 ```
 
 ## More information

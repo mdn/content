@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onInstalled
 ---
+
 {{AddonSidebar()}}
 
 Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.
@@ -21,7 +22,7 @@ Note that `runtime.onInstalled` is not the same as {{WebExtAPIRef("management.on
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onInstalled.addListener(listener)
 browser.runtime.onInstalled.removeListener(listener)
 browser.runtime.onInstalled.hasListener(listener)

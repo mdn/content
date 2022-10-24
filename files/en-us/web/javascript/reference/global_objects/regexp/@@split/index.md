@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@split
 ---
+
 {{JSRef}}
 
 The **`[@@split]()`** method of a regular expression specifies how [`String.prototype.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) should behave when the regular expression is passed in as the separator.
@@ -19,7 +20,7 @@ The **`[@@split]()`** method of a regular expression specifies how [`String.prot
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.split](str[, limit])
 ```
 
@@ -39,9 +40,9 @@ An {{jsxref("Array")}} containing substrings as its elements. Capturing groups a
 This method is called internally in {{jsxref("String.prototype.split()")}} when a `RegExp` is passed as the separator. For example, the following two examples return the same result.
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 This method exists for customizing the behavior of `split()` in `RegExp` subclasses.
@@ -67,9 +68,9 @@ different order of arguments.
 
 ```js
 const re = /-/g;
-const str = '2016-01-02';
+const str = "2016-01-02";
 const result = re[Symbol.split](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### Using @@split in subclasses
@@ -85,8 +86,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp('-');
-const str = '2016-01-02';
+const re = new MyRegExp("-");
+const str = "2016-01-02";
 const result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```

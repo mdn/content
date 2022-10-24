@@ -8,6 +8,7 @@ tags:
   - Response Header
 browser-compat: http.headers.Location
 ---
+
 {{HTTPSidebar}}
 
 The **`Location`** response header indicates the URL to

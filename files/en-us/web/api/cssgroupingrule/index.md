@@ -9,20 +9,21 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSGroupingRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents any CSS [at-rule](/en-US/docs/Web/CSS/At-rule) that contains other rules nested within it.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("CSSRule")}}._
 
 - {{domxref("CSSGroupingRule.cssRules")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("CSSRule")}}._
 

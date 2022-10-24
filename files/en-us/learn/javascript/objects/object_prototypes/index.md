@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
 
 Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain what a prototype is, how prototype chains work, and how a prototype for an object can be set.
@@ -41,11 +42,11 @@ In the browser's console, try creating an object literal:
 
 ```js
 const myObject = {
-  city: 'Madrid',
+  city: "Madrid",
   greet() {
     console.log(`Greetings from ${this.city}`);
-  }
-}
+  },
+};
 
 myObject.greet(); // Greetings from Madrid
 ```
@@ -66,7 +67,7 @@ isPrototypeOf
 propertyIsEnumerable
 toLocaleString
 toString
-toValueOf
+valueOf
 ```
 
 Try accessing one of them:
@@ -133,8 +134,8 @@ const myDate = new Date(1995, 11, 17);
 
 console.log(myDate.getYear()); // 95
 
-myDate.getYear = function() {
-  console.log('something else!')
+myDate.getYear = function () {
+  console.log("something else!");
 };
 
 myDate.getYear(); // 'something else!'
@@ -157,12 +158,12 @@ Here's an example:
 ```js
 const personPrototype = {
   greet() {
-    console.log('hello!');
-  }
-}
+    console.log("hello!");
+  },
+};
 
 const carl = Object.create(personPrototype);
-carl.greet();  // hello!
+carl.greet(); // hello!
 ```
 
 Here we create an object `personPrototype`, which has a `greet()` method. We then use `Object.create()` to create a new object with `personPrototype` as its prototype. Now we can call `greet()` on the new object, and the prototype provides its implementation.
@@ -177,8 +178,8 @@ So if we set the `prototype` of a constructor, we can ensure that all objects cr
 const personPrototype = {
   greet() {
     console.log(`hello, my name is ${this.name}!`);
-  }
-}
+  },
+};
 
 function Person(name) {
   this.name = name;
@@ -199,7 +200,7 @@ We then put the methods defined in `personPrototype` onto the `Person` function'
 After this code, objects created using `Person()` will get `Person.prototype` as their prototype, which automatically contains the `greet` method.
 
 ```js
-const reuben = new Person('Reuben');
+const reuben = new Person("Reuben");
 reuben.greet(); // hello, my name is Reuben!
 ```
 
@@ -217,10 +218,10 @@ It's common to see this pattern, in which methods are defined on the prototype, 
 Properties that are defined directly in the object, like `name` here, are called **own properties**, and you can check whether a property is an own property using the static {{jsxref("Object/hasOwn", "Object.hasOwn()")}} method:
 
 ```js
-const irma = new Person('Irma');
+const irma = new Person("Irma");
 
-console.log(Object.hasOwn(irma, 'name')); // true
-console.log(Object.hasOwn(irma, 'greet')); // false
+console.log(Object.hasOwn(irma, "name")); // true
+console.log(Object.hasOwn(irma, "greet")); // false
 ```
 
 > **Note:** You can also use the non-static {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}} method here, but we recommend that you use `Object.hasOwn()` if you can.

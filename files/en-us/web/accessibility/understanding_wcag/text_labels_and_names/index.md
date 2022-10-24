@@ -6,6 +6,9 @@ tags:
   - WCAG
   - text labels
 ---
+
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+
 There are many situations in which a control, dialog, or other website feature should be given a descriptive name or label to allow users of assistive technologies to understand what its purpose is and how to operate it correctly. There are a number of different types of problems in this category, found in different contexts, and each has its own solution. The different problems and solutions are discussed in the sections below.
 
 ## Use alt attribute to label area elements that have the href attribute
@@ -17,14 +20,18 @@ In image maps, give each {{htmlelement("area")}} element an `alt` attribute cont
 The following example show a simple image map (taken from [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/TR/WCAG20-TECHS/H24.html)):
 
 ```html
-<img src="welcome.gif" usemap="#map1"
-    alt="Areas in the library. Select an area for
+<img
+  src="welcome.gif"
+  usemap="#map1"
+  alt="Areas in the library. Select an area for
 more information on that area." />
 <map id="map1" name="map1">
-  <area shape="rect" coords="0,0,30,30"
-    href="reference.html" alt="Reference" />
-  <area shape="rect" coords="34,34,100,100"
-    href="media.html" alt="Audio visual lab" />
+  <area shape="rect" coords="0,0,30,30" href="reference.html" alt="Reference" />
+  <area
+    shape="rect"
+    coords="34,34,100,100"
+    href="media.html"
+    alt="Audio visual lab" />
 </map>
 ```
 
@@ -46,9 +53,14 @@ A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/A
 The following example shows a simple dialog box, defined as such using `role="dialog"` and labelled using `aria-labelledby`.
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">Your personal details were successfully updated</h2>
-  <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
+  <p id="dialog1Desc">
+    You can change your details at any time in the user account section.
+  </p>
   <button>Close</button>
 </div>
 ```
@@ -57,8 +69,10 @@ If the dialog box doesn't have a heading, you can instead use `aria-label` to co
 
 ```html
 <div role="dialog" aria-label="Personal details updated confirmation">
-  <p>Your personal details were successfully updated. You can
-    change your details at any time in the user account section.</p>
+  <p>
+    Your personal details were successfully updated. You can change your details
+    at any time in the user account section.
+  </p>
   <button>Close</button>
 </div>
 ```
@@ -81,7 +95,10 @@ It is important in each HTML document to include a {{htmlelement("title")}} that
 The title for the reference article about the {{htmlelement("title")}} element is as follows:
 
 ```html
-<title>&lt;title&gt;: The Document Title element - HTML: Hypertext Markup Language | MDN</title>
+<title>
+  &lt;title&gt;: The Document Title element - HTML: Hypertext Markup Language |
+  MDN
+</title>
 ```
 
 Another example might look like so:
@@ -114,9 +131,10 @@ The following example shows code for a figure with a caption. The `alt` attribut
 
 ```html
 <figure>
-  <img src="milkweed.jgp"
-      alt="Black and white close-up photo of milkweed flowers">
- <figcaption>Asclepias verticillata</figcaption>
+  <img
+    src="milkweed.jgp"
+    alt="Black and white close-up photo of milkweed flowers" />
+  <figcaption>Asclepias verticillata</figcaption>
 </figure>
 ```
 
@@ -137,13 +155,13 @@ Users of assistive technology find this description helpful when trying to work 
   <fieldset>
     <legend>Choose your favorite monster</legend>
 
-    <input type="radio" id="kraken" name="monster">
-    <label for="kraken">Kraken</label><br/>
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
 
-    <input type="radio" id="sasquatch" name="monster">
-    <label for="sasquatch">Sasquatch</label><br/>
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
 
-    <input type="radio" id="mothman" name="monster">
+    <input type="radio" id="mothman" name="monster" value="M" />
     <label for="mothman">Mothman</label>
   </fieldset>
 </form>
@@ -165,11 +183,12 @@ The form element can be placed inside the {{htmlelement("label")}}, in which cas
 ### Example
 
 ```html
-<label>I agree to the terms and conditions.
-  <input type="checkbox" id="terms" name="terms">
+<label
+  >I agree to the terms and conditions.
+  <input type="checkbox" id="terms" name="terms" />
 </label>
 
-<input type="checkbox" id="emailoptin" name="optin">
+<input type="checkbox" id="emailoptin" name="optin" />
 <label for="emailoptin">Yes, please send me news about this product.</label>
 ```
 
@@ -189,10 +208,10 @@ As a best practice, also provide a {{htmlelement("title")}} for the document tha
 
 ```html
 <iframe
-    title="MDN Web docs"
-    width="300"
-    height="200"
-    src="https://developer.mozilla.org">
+  title="MDN Web docs"
+  width="300"
+  height="200"
+  src="https://developer.mozilla.org">
 </iframe>
 ```
 
@@ -219,8 +238,9 @@ Provide descriptive text for all contentful (that is, non-decorative) images and
 ### Example
 
 ```html
-<img src="milkweed.jgp"
-     alt="Black and white close-up photo of milkweed flowers">
+<img
+  src="milkweed.jgp"
+  alt="Black and white close-up photo of milkweed flowers" />
 ```
 
 ## Interactive elements must be labeled
@@ -238,16 +258,16 @@ In this example, the `label` attribute on the {{HTMLElement('optgroup')}} elemen
 ```html
 <label for="dino-select">Choose a dinosaur:</label>
 <select id="dino-select">
-    <optgroup label="Theropods">
-        <option>Tyrannosaurus</option>
-        <option>Velociraptor</option>
-        <option>Deinonychus</option>
-    </optgroup>
-    <optgroup label="Sauropods">
-        <option>Diplodocus</option>
-        <option>Saltasaurus</option>
-        <option>Apatosaurus</option>
-    </optgroup>
+  <optgroup label="Theropods">
+    <option>Tyrannosaurus</option>
+    <option>Velociraptor</option>
+    <option>Deinonychus</option>
+  </optgroup>
+  <optgroup label="Sauropods">
+    <option>Diplodocus</option>
+    <option>Saltasaurus</option>
+    <option>Apatosaurus</option>
+  </optgroup>
 </select>
 ```
 

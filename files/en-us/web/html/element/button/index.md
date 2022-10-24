@@ -135,7 +135,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
 
     - `application/x-www-form-urlencoded`: The default if the attribute is not used.
-    - `multipart/form-data`: Use to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
+    - `multipart/form-data`: Used to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
     - `text/plain`: Specified as a debugging aid; shouldn't be used for real form submission.
 
     If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
@@ -205,7 +205,9 @@ To give an icon button an accessible name, put text in the `<button>` element th
 
 ```html
 <button name="favorite">
-  <svg aria-hidden="true" viewBox="0 0 10 10"><path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/></svg>
+  <svg aria-hidden="true" viewBox="0 0 10 10">
+    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
+  </svg>
   Add to favorites
 </button>
 ```

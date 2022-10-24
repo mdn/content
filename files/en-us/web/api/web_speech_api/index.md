@@ -14,6 +14,7 @@ browser-compat:
   - api.SpeechRecognition
   - api.SpeechSynthesis
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps.
@@ -69,6 +70,13 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
     Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 - {{domxref("Window.speechSynthesis")}}
   - : Specified out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
+
+## Errors
+
+For information on errors reported by the Speech API (for example, `"language-not-supported"` and `"language-unavailable"`), see the following documentation:
+
+- [`error` property of the `SpeechRecognitionErrorEvent` object](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error)
+- [`error` property of the `SpeechSynthesisErrorEvent` object](/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error)
 
 ## Examples
 

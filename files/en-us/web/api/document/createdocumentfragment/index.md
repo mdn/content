@@ -11,6 +11,7 @@ tags:
   - createDocumentFragment
 browser-compat: api.Document.createDocumentFragment
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 Creates a new empty {{domxref("DocumentFragment")}} into which
@@ -18,7 +19,7 @@ DOM nodes can be added to build an offscreen DOM tree.
 
 ## Syntax
 
-```js
+```js-nolint
 createDocumentFragment()
 ```
 
@@ -58,8 +59,7 @@ then adds the new DOM subtree to the document to be displayed.
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript

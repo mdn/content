@@ -8,6 +8,7 @@ tags:
   - Video
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
 
 As we learned in the previous section, media, namely images and video, account for over 70% of the bytes downloaded for the average website. We have already taken a look at optimizing images. This article looks at optimizing video to improve web performance.
@@ -32,7 +33,7 @@ As we learned in the previous section, media, namely images and video, account f
       <td>
         To learn about the various video formats, their impact on performance,
         and how to reduce video impact on overall page load time while serving
-        the smallest video file size based on each browsers file type support.
+        the smallest video file size based on each browser's file type support.
       </td>
     </tr>
   </tbody>
@@ -44,7 +45,14 @@ For the average website, [25% of bandwidth comes from video](https://discuss.htt
 
 ## Optimizing video delivery
 
-It's best to [compress all video](#compress), [optimize `<source>` order](#omptimize), set [autoplay](/en-US/docs/Learn/Performance/Multimedia#video_autoplay), [remove audio from muted video](#muted), [optimize video preload](/en-US/docs/Learn/Performance/Multimedia#video_preload), and [consider streaming](/en-US/docs/Learn/Performance/Multimedia#consider_streaming) the video. The sections below describe each of these optimization techniques.
+The sections below describe the following optimization techniques:
+
+- [compress all video](#compress_all_videos)
+- [optimize `<source>` order](#optimize_source_order)
+- [set autoplay](#video_autoplay)
+- [remove audio from muted video](#remove_audio_from_muted_hero_videos)
+- [optimize video preload](#video_preload)
+- [consider streaming](#consider_streaming)
 
 ### Compress all videos
 
@@ -73,10 +81,15 @@ See [CanIUse.com](https://caniuse.com/#search=video) for current browser support
 
 ### Video autoplay
 
-To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline.`
+To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline`.
 
 ```html
-<video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
+<video
+  autoplay=""
+  loop=""
+  muted="true"
+  playsinline=""
+  src="backgroundvideo.mp4"></video>
 ```
 
 While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
@@ -89,13 +102,12 @@ For hero-video or other video without audio, removing audio is smart.
 
 ```html
 <video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
-  <source src="banner_video.webm"
-          type='video/webm; codecs="vp8, vorbis"'>
-  <source src="web_banner.mp4" type="video/mp4">
+  <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="web_banner.mp4" type="video/mp4" />
 </video>
 ```
 
-This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is auto-playing, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
+This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is autoplaying, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
 
 Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called [FFmpeg](https://www.ffmpeg.org/) can do it for you. This is the FFmpeg command string to remove audio:
 
@@ -136,4 +148,5 @@ Optimizing video has the potential to significantly improve website performance.
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

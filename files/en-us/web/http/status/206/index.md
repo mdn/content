@@ -8,6 +8,7 @@ tags:
   - Success
 browser-compat: http.status.206
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`206 Partial Content`** success status response code

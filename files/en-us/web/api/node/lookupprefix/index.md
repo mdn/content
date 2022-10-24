@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 The **`lookupPrefix()`** method of the {{domxref("Node")}} interface
@@ -16,8 +17,8 @@ When multiple prefixes are possible, the first prefix is returned.
 
 ## Syntax
 
-```js
-lookupPrefix(namespace);
+```js-nolint
+lookupPrefix(namespace)
 ```
 
 ### Parameters
@@ -37,13 +38,20 @@ If the node is a {{domxref("DocumentType")}} or a {{domxref("DocumentFragment")}
 ## Example
 
 ```html
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
+Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
 <svg xmlns:t="http://www.w3.org/2000/svg" height="1"></svg>
 <button>Click to see the results</button>
 ```

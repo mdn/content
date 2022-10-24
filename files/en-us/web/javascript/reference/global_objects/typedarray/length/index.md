@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.length
 ---
+
 {{JSRef}}
 
 The **`length`** accessor property represents the length (in elements) of a typed array.

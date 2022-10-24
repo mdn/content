@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.CSSPageRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSPageRule`** represents a single CSS {{cssxref("@page")}} rule.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -24,7 +25,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSPageRule.style")}} {{ReadOnlyInline}}
   - : Returns the [declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) associated with the at-rule.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 

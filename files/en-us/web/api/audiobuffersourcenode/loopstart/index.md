@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loopStart
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`loopStart`** property of the {{
@@ -48,13 +49,15 @@ function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
+  request.open("GET", "viper.ogg", true);
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, (buffer) => {
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
         myBuffer = buffer;
         songLength = buffer.duration;
         source.buffer = myBuffer;
@@ -62,13 +65,13 @@ function getData() {
         source.connect(audioCtx.destination);
         source.loop = true;
 
-        loopstartControl.setAttribute('max', Math.floor(songLength));
-        loopendControl.setAttribute('max', Math.floor(songLength));
+        loopstartControl.setAttribute("max", Math.floor(songLength));
+        loopendControl.setAttribute("max", Math.floor(songLength));
       },
 
-      (e) => console.error(`Error with decoding audio data: ${e.err}`));
-
-  }
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
 
   request.send();
 }
@@ -78,12 +81,12 @@ function getData() {
 loopstartControl.oninput = () => {
   source.loopStart = loopstartControl.value;
   loopstartValue.innerHTML = loopstartControl.value;
-}
+};
 
 loopendControl.oninput = () => {
   source.loopEnd = loopendControl.value;
   loopendValue.innerHTML = loopendControl.value;
-}
+};
 ```
 
 ## Specifications

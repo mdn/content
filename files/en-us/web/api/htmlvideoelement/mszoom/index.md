@@ -10,6 +10,7 @@ tags:
   - Reference
   - msZoom
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 **`msZoom`** is a read/write property which gets or sets

@@ -16,6 +16,7 @@ tags:
   - aspectRatio
 browser-compat: api.MediaTrackSettings.aspectRatio
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`aspectRatio`** property is a double-precision floating-point number indicating the aspect ratio of the {{domxref("MediaStreamTrack")}} as currently configured.

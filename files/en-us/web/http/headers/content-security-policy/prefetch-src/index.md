@@ -8,9 +8,11 @@ tags:
   - HTTP
   - Reference
   - prefetch-src
+  - Experimental
 browser-compat: http.headers.Content-Security-Policy.prefetch-src
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`prefetch-src`** directive specifies valid resources that may
@@ -65,8 +67,8 @@ Fetches for the following code will return network errors, as the URLs provided 
 match `prefetch-src`'s source list:
 
 ```html
-    <link rel="prefetch" src="https://example.org/"></link>
-    <link rel="prerender" src="https://example.org/"></link>
+    <link rel="prefetch" href="https://example.org/" />
+    <link rel="prerender" href="https://example.org/" />
 ```
 
 ## Specifications

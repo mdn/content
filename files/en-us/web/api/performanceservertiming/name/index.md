@@ -9,6 +9,7 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceServerTiming.name
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`name`** read-only property returns a

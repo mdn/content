@@ -9,9 +9,10 @@ tags:
   - Streams API
 browser-compat: api.TransformStream
 ---
+
 {{APIRef("Streams")}}
 
-The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) *transform stream* concept.
+The **`TransformStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) _transform stream_ concept.
 
 It may be passed to the {{domxref("ReadableStream.pipeThrough()")}} method in order to transform a stream of data from one format into another.
 For example, it might be used to decode (or encode) video frames, decompress data, or convert the stream from XML to JSON.
@@ -26,14 +27,14 @@ If not supplied, data is not modified when piped through the stream.
 - {{domxref("TransformStream.TransformStream", "TransformStream()")}}
   - : Creates and returns a transform stream object, optionally specifying a transformation object and queuing strategies for the streams.
 
-## Properties
+## Instance properties
 
 - {{domxref("TransformStream.readable")}} {{ReadOnlyInline}}
   - : The `readable` end of a `TransformStream`.
 - {{domxref("TransformStream.writable")}} {{ReadOnlyInline}}
   - : The `writable` end of a `TransformStream`.
 
-## Methods
+## Instance methods
 
 None
 

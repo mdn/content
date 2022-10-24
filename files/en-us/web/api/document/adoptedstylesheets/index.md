@@ -11,6 +11,7 @@ tags:
 page-type: web-api-instance-property
 browser-compat: api.Document.adoptedStyleSheets
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`adoptedStyleSheets`** property of the {{domxref("Document")}} interface is used for setting an array of constructed stylesheets to be used by the document.

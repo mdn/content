@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.table
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.table()`** method displays tabular data as a table.
@@ -39,7 +40,7 @@ The `data` argument may be an array or an object.
 console.table(["apples", "oranges", "bananas"]);
 ```
 
-![](console-table-array.png)
+![Table displaying array of strings](console-table-array.png)
 
 ```js
 // an object whose properties are strings
@@ -54,7 +55,7 @@ const me = new Person("John", "Smith");
 console.table(me);
 ```
 
-![](console-table-simple-object.png)
+![Table displaying object whose properties are strings](console-table-simple-object.png)
 
 ### Collections of compound types
 
@@ -64,7 +65,11 @@ objects, then their elements or properties are enumerated in the row, one per co
 ```js
 // an array of arrays
 
-const people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+const people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 
@@ -132,7 +137,7 @@ You can sort the table by a particular column by clicking on that column's label
 
 ## Syntax
 
-```js
+```js-nolint
 table(data)
 table(data, columns)
 ```

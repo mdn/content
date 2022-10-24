@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.IDBMutableFile
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -21,14 +22,14 @@ The **`IDBMutableFile`** interface provides access in read or write mode to a fi
 
 As `IDBMutableFile` objects are bound to a fake file system built using `IndexedDB`, such an object is created using the [`IDBDatabase.createMutableFile()`](/en-US/docs/Web/API/IDBDatabase#idbdatabase.createmutablefile) method.
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBMutableFile.name")}} {{ReadOnlyInline}}
   - : The name of the handled file.
 - {{domxref("IDBMutableFile.type")}} {{ReadOnlyInline}}
   - : The MIME type of the handled file.
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBMutableFile.open()")}}
   - : Returns a {{domxref("IDBFileHandle")}} object to read or write the associated file safely.

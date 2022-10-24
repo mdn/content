@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: api.OTPCredential
 ---
+
 {{APIRef("WebOTP API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} contains the attributes that are returned when a new one-time password is retrieved.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Credential")}}._
 
@@ -27,7 +28,7 @@ _This interface also inherits properties from {{domxref("Credential")}}._
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 

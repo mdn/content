@@ -9,13 +9,14 @@ tags:
   - Interface
 browser-compat: api.DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType`** interface represents a {{domxref("Node")}} containing a doctype.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("Node")}}._
 
@@ -30,7 +31,7 @@ _Inherits properties from its parent, {{domxref("Node")}}._
 - {{domxref("DocumentType.systemId")}} {{ReadOnlyInline}}
   - : A string, eg `"http://www.w3.org/TR/html4/strict.dtd"`, now an empty string for HTML.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("Node")}}._
 

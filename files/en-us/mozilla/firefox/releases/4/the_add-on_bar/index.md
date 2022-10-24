@@ -9,6 +9,7 @@ tags:
   - NeedsExample
   - Toolbar
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 4 eliminates the status bar from the bottom of the browser window in favor of a new toolbar located at the bottom of the window. This new toolbar, with the ID "addon-bar", is a standard XUL `<toolbar>`; add-ons can insert content into it, and the user can drag buttons into it while customizing their toolbars. This is the primary difference between the add-on bar and the old status bar; you can now put any XUL element into it, since it's a standard toolbar.
@@ -22,8 +23,9 @@ The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates
 ```js
 // Find the most recently used window
 
-var mediator = Components.classes['@mozilla.org/appshell/window-mediator;1']
-                  .getService(Components.interfaces.nsIWindowMediator);
+var mediator = Components.classes[
+  "@mozilla.org/appshell/window-mediator;1"
+].getService(Components.interfaces.nsIWindowMediator);
 var doc = mediator.getMostRecentWindow("navigator:browser").document;
 
 // Get the add-on bar for that window
@@ -55,9 +57,14 @@ if (firstrun) {
   /* Code related to firstrun */
 } else {
   try {
-    var installedVersion = Services.prefs.getCharPref("extensions.YOUREXT.installedVersion");
+    var installedVersion = Services.prefs.getCharPref(
+      "extensions.YOUREXT.installedVersion"
+    );
     if (curVersion > installedVersion) {
-      Services.prefs.setCharPref("extensions.YOUREXT.installedVersion", curVersion);
+      Services.prefs.setCharPref(
+        "extensions.YOUREXT.installedVersion",
+        curVersion
+      );
       /* Code related to upgrade */
     }
   } catch (ex) {

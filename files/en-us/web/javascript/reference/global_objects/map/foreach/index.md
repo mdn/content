@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once per each key/value
@@ -19,7 +20,7 @@ pair in the `Map` object, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach(() => { /* … */ } )
 forEach((value) => { /* … */ } )

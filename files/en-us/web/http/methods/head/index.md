@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.HEAD
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `HEAD` method** requests the [headers](/en-US/docs/Web/HTTP/Headers) that would be returned if the `HEAD` request's URL was instead requested with the HTTP {{HTTPMethod("GET")}} method. For example, if a URL might produce a large download, a `HEAD` request could read its {{HTTPHeader("Content-Length")}} header to check the filesize without actually downloading the file.

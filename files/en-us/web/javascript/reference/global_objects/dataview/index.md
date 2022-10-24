@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.DataView
 ---
+
 {{JSRef}}
 
 The **`DataView`** view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's [endianness](/en-US/docs/Glossary/Endianness).
@@ -73,7 +74,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 - {{jsxref("DataView.prototype.buffer")}}
   - : The {{jsxref("ArrayBuffer")}} referenced by this view. Fixed at construction time and thus **read only.**
 - {{jsxref("DataView.prototype.byteLength")}}
-  - : The length (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read only.**
+  - : The length (in bytes) of this view. Fixed at construction time and thus **read only.**
 - {{jsxref("DataView.prototype.byteOffset")}}
   - : The offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read only.**
 

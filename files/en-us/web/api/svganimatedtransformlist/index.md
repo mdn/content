@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedTransformList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated transform list interface
@@ -54,7 +55,7 @@ The `SVGAnimatedTransformList` interface is used for attributes which take a lis
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -88,7 +89,7 @@ The `SVGAnimatedTransformList` interface is used for attributes which take a lis
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedTransformList` interface doesn't provide any specific methods.
 

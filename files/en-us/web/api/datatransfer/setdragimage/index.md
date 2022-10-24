@@ -11,6 +11,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.setDragImage
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 When a drag occurs, a translucent image is generated from the drag target (the element
@@ -18,7 +19,7 @@ the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired at), 
 drag. This image is created automatically, so you do not need to create it yourself.
 However, if a custom image is desired, the
 **`DataTransfer.setDragImage()`** method can be used to set the
-custom image to be used. The image will typically be an {{HTMLElement("image")}} element
+custom image to be used. The image will typically be an {{HTMLElement("img")}} element
 but it can also be a {{HTMLElement("canvas")}} or any other visible element.
 
 The method's `x` and `y` coordinates define how the image should
@@ -30,7 +31,7 @@ This method must be called in the {{domxref("HTMLElement/dragstart_event", "drag
 
 ## Syntax
 
-```js
+```js-nolint
 setDragImage(imgElement, xOffset, yOffset)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.MediaCapabilities
 ---
+
 {{DefaultAPISidebar("Media Capabilities API")}}
 
 The **Media Capabilities API** allows developers to determine decoding and encoding abilities of the device, exposing information such as whether media is supported and whether playback should be smooth and power efficient, with real time feedback about playback to better enable adaptive streaming, and access to display property information.

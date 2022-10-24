@@ -5,11 +5,13 @@ tags:
   - API
   - Add-ons
   - Extensions
+  - Property
   - Reference
   - WebExtensions
   - devtools.network
 browser-compat: webextensions.api.devtools.network
 ---
+
 {{AddonSidebar}}
 
 The `devtools.network` API lets a devtools extension get information about network requests associated with the window that the devtools are attached to (the inspected window).

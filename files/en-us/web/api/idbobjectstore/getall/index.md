@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: api.IDBObjectStore.getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAll()`** method of the
@@ -31,13 +32,13 @@ This method produces the same result for:
 To tell these situations apart, you either call
 
 1. the {{domxref("IDBObjectStore.openCursor","openCursor()")}} method with the same
-    key. That method provides a cursor if the record exists, and no cursor if it does not.
+   key. That method provides a cursor if the record exists, and no cursor if it does not.
 2. the {{domxref("IDBObjectStore.count","count()")}} method with the same key, which
-    will return 1 if the row exists and 0 if it doesn't.
+   will return 1 if the row exists and 0 if it doesn't.
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 getAll(query)
 getAll(query, count)
@@ -87,4 +88,4 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -11,6 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultController.error
 ---
+
 {{APIRef("Streams")}}
 
 The **`error()`** method of the
@@ -22,7 +23,7 @@ with the associated stream to error.
 
 ## Syntax
 
-```js
+```js-nolint
 error(e)
 ```
 

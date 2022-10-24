@@ -13,6 +13,7 @@ tags:
   - onClicked
 browser-compat: webextensions.api.browserAction.onClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
@@ -21,7 +22,7 @@ To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.onClicked.addListener(listener)
 browser.browserAction.onClicked.removeListener(listener)
 browser.browserAction.onClicked.hasListener(listener)

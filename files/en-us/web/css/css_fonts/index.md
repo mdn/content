@@ -1,6 +1,7 @@
 ---
 title: CSS Fonts
 slug: Web/CSS/CSS_Fonts
+page-type: css-module
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-fonts/
 ---
+
 {{CSSRef}}
 
 **CSS Fonts** is a module of CSS that defines font-related properties and how font resources are loaded. It lets you define the style of a font, such as its family, size and weight, line height, and the glyph variants to use when multiple are available for a single character.
@@ -31,10 +33,12 @@ p {
 ```
 
 ```html
-<p>Three hundred years ago<br>
-  I thought I might get some sleep<br>
-  I stretched myself out on an antique bed<br>
-  An' my spirit did a midnite creep</p>
+<p>
+  Three hundred years ago<br />
+  I thought I might get some sleep<br />
+  I stretched myself out on an antique bed<br />
+  An' my spirit did a midnite creep
+</p>
 ```
 
 The result is as follows:

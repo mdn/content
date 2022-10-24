@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaModal
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaModal`** property of the {{domxref("Element")}} interface reflects the value of the `aria-modal` attribute, which indicates whether an element is modal when displayed. Applying the `aria-modal` property to an element with `role="dialog"` replaces the technique of using aria-hidden on the background for informing assistive technologies that content outside a dialog is inert.
@@ -30,8 +31,12 @@ A string with one of the following values:
 In this example the `aria-modal` attribute on the element with an ID of `address-modal` is set to "true" indicating that this is a modal dialog. Using `ariaModal` we update the value to "false".
 
 ```html
-<div role="dialog" id="address-modal" aria-labelledby="dialog1Title"
-  aria-describedby="dialog1Desc" aria-modal="true"></div>
+<div
+  role="dialog"
+  id="address-modal"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc"
+  aria-modal="true"></div>
 ```
 
 ```js

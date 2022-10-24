@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.send
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.send()`** method enqueues the specified data
@@ -21,7 +22,7 @@ The browser will throw an exception if you call `send()` when the connection is 
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 ```
 
@@ -54,7 +55,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if {{domxref("WebSocket/readyState", "WebSocket.readyState")}} is `CONNECTING`.
 
 ## Specifications

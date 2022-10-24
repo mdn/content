@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.defineProperty
 ---
+
 {{JSRef}}
 
 The static method **`Object.defineProperty()`** defines a new
@@ -19,7 +20,7 @@ returns the object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.defineProperty(obj, prop, descriptor)
 ```
 
@@ -57,11 +58,15 @@ Both data and accessor descriptors are objects. They share the following optiona
 properties using `Object.defineProperty()`):
 
 - `configurable`
+
   - : when this is set to `false`,
+
     - the type of this property cannot be changed between data property and accessor property, and
     - the property may not be deleted, and
     - other attributes of its descriptor cannot be changed (however, if it's a data descriptor with `writable: true`, the `value` can be changed, and `writable` can be changed to `false`).
+
     **Defaults to `false`.**
+
 - `enumerable`
   - : `true` if and only if this property shows up during enumeration of the
     properties on the corresponding object.
@@ -518,7 +523,7 @@ console.log(MyClass.prototype.y); // 1
 
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}

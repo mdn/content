@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HIDDevice.inputreport_event
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`inputreport`** event of the {{domxref("HIDDevice")}} interface fires when a new report is received from the HID device.

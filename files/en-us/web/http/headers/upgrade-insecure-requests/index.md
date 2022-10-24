@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.Upgrade-Insecure-Requests
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} [CSP](/en-US/docs/Web/HTTP/CSP) directive.

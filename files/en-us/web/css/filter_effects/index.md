@@ -1,6 +1,7 @@
 ---
 title: Filter Effects
 slug: Web/CSS/Filter_Effects
+page-type: css-module
 tags:
   - CSS
   - Filter Effects
@@ -11,6 +12,7 @@ browser-compat:
   - css.properties.backdrop-filter
   - css.properties.filter
 ---
+
 {{CSSRef}}
 
 **Filter Effects** is a module of CSS that defines a way of processing an element's rendering before it is displayed in the document.

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.StylePropertyMap.append
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`append()`** method of the
@@ -21,7 +22,7 @@ The **`append()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 append(property, value)
 ```
 

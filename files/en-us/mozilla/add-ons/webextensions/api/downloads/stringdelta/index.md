@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.StringDelta
 ---
+
 {{AddonSidebar()}}
 
 The `StringDelta` type of the {{WebExtAPIRef("downloads")}} API represents the difference between two strings.

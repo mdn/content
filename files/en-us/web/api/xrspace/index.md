@@ -15,6 +15,7 @@ tags:
   - XRSpace
 browser-compat: api.XRSpace
 ---
+
 {{SecureContext_Header}}{{APIRef("WebXR Device API")}}
 
 The **`XRSpace`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is an abstract interface providing a common basis for every class which represents a virtual coordinate system within the virtual world, in which its origin corresponds to a physical location. Spatial data in WebXR is always expressed relative to an object based upon one of the descendant interfaces of `XRSpace`, at the time at which a given {{domxref("XRFrame")}} takes place.
@@ -36,11 +37,11 @@ Below is a list of interfaces based on the `XRSpace` interface.
 - {{domxref("XRJointSpace")}}
   - : Represents the space of an {{domxref("XRHand")}} joint.
 
-## Properties
+## Instance properties
 
 _The `XRSpace` interface defines no properties of its own; however, it does inherit the properties of its parent interface, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _The `XRSpace` interface provides no methods of its own. However, it inherits the methods of {{domxref("EventTarget")}}, its parent interface._
 

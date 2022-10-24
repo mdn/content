@@ -7,6 +7,7 @@ tags:
   - Web Audio API
   - panning
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 As if its extensive variety of sound processing (and other) options wasn't enough, the Web Audio API also includes facilities to allow you to emulate the difference in sound as a listener moves around a sound source, for example panning as you move around a sound source inside a 3D game.
@@ -438,25 +439,25 @@ Wiring up out control buttons is comparatively simple — now we can listen for 
 // for each of our controls, move the boombox and change the position values
 moveControls.forEach((el) => {
 
-    let moving;
-    el.addEventListener('mousedown', () => {
-        const direction = this.dataset.control;
-        if (moving && moving.frameId) {
-            cancelAnimationFrame(moving.frameId);
-        }
-        moving = moveBoombox(direction);
-    }, false);
+  let moving;
+  el.addEventListener('mousedown', () => {
+    const direction = this.dataset.control;
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+    moving = moveBoombox(direction);
+  }, false);
 
-    window.addEventListener('mouseup', () => {
-        if (moving && moving.frameId) {
-            cancelAnimationFrame(moving.frameId);
-        }
-    }, false)
+  window.addEventListener('mouseup', () => {
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+  }, false)
 
 })
 ```
 
-## Connecting Our Graph
+## Connecting our graph
 
 Our HTML contains the audio element we want to be affected by the panner node.
 

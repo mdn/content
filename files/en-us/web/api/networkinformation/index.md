@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation`** interface of the [Network Information API](/en-US/docs/Web/API/Network_Information_API) provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes.
@@ -20,7 +21,7 @@ The `NetworkInformation` interface cannot be instantiated. It is instead accesse
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parent, {{domxref("EventTarget")}}._
 
@@ -47,7 +48,7 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
     - `other`
     - `unknown`
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 

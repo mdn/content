@@ -11,6 +11,7 @@ tags:
   - Workers
 browser-compat: api.SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, {{domxref("SharedWorkerGlobalScope")}}.
@@ -24,7 +25,7 @@ The **`SharedWorker`** interface represents a specific kind of worker that can b
 - {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
   - : Creates a shared web worker that executes the script at the specified URL.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
@@ -36,7 +37,7 @@ _Inherits properties from its parent, {{domxref("EventTarget")}}._
 - {{domxref("SharedWorker.error_event", "error")}}
   - : Fires when an error occurs in the shared worker.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}._
 

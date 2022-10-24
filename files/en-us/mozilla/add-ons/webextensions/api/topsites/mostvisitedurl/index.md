@@ -13,6 +13,7 @@ tags:
   - topSites
 browser-compat: webextensions.api.topSites.MostVisitedURL
 ---
+
 {{AddonSidebar()}}
 
 The `MostVisitedURL` type contains two properties: the title of a page and its URL.

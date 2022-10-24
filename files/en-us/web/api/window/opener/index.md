@@ -12,6 +12,7 @@ tags:
   - opener
 browser-compat: api.Window.opener
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("Window")}} interface's

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.compare
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator.prototype.compare()`** method compares two
@@ -23,7 +24,7 @@ strings according to the sort order of this {{jsxref("Intl.Collator")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 compare(string1, string2)
 ```
 
@@ -50,10 +51,10 @@ is bound to the collator from which it was obtained, so it can be passed directl
 {{jsxref("Array.prototype.sort()")}}.
 
 ```js
-const a = ['Offenbach', 'Österreich', 'Odenwald'];
-const collator = new Intl.Collator('de-u-co-phonebk');
+const a = ["Offenbach", "Österreich", "Odenwald"];
+const collator = new Intl.Collator("de-u-co-phonebk");
 a.sort(collator.compare);
-console.log(a.join(', '));
+console.log(a.join(", "));
 // → "Odenwald, Österreich, Offenbach"
 ```
 
@@ -62,11 +63,14 @@ console.log(a.join(', '));
 Use the `compare` getter function for finding matching strings in arrays:
 
 ```js
-const a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
-const collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
-const s = 'congres';
+const a = ["Congrès", "congres", "Assemblée", "poisson"];
+const collator = new Intl.Collator("fr", {
+  usage: "search",
+  sensitivity: "base",
+});
+const s = "congres";
 const matches = a.filter((v) => collator.compare(v, s) === 0);
-console.log(matches.join(', '));
+console.log(matches.join(", "));
 // → "Congrès, congres"
 ```
 

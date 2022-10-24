@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.CustomStateSet
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`CustomStateSet`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) stores a list of possible states for a custom element to be in, and allows states to be added and removed from the set.
@@ -28,12 +29,12 @@ States are stored as a `<dashed-ident>` as this format can then be accessed from
 In the same way that you can use CSS to determine if a checkbox is checked using the {{cssxref(":checked")}} pseudo-class,
 you can use a custom state pseudo-class to select a custom element that is in a certain state.
 
-## Properties
+## Instance properties
 
 - {{domxref("CustomStateSet.size")}} {{Experimental_Inline}}
   - : Returns the number of values in the `CustomStateSet`.
 
-## Methods
+## Instance methods
 
 - {{domxref("CustomStateSet.add()")}} {{Experimental_Inline}}
   - : Adds a value to the set, first checking that the _value_ is a `<dashed-ident>`.

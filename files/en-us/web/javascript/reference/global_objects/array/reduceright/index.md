@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -22,7 +23,7 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduceRight((accumulator, currentValue) => { /* … */ } )
 reduceRight((accumulator, currentValue, index) => { /* … */ } )
@@ -75,6 +76,8 @@ in the array, excluding holes in the array, receiving four arguments: the initia
 (or value from the previous callback call), the value of the current element, the
 current index, and the array over which iteration is occurring.
 
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
 The call to the reduceRight `callbackFn` would look something like
 this:
 
@@ -112,7 +115,7 @@ The callback would be invoked four times, with the arguments and return values i
 call being as follows:
 
 |             | `accumulator` | `currentValue` | `index` | Return value |
-| ------------|---------------|----------------|---------|--------------|
+| ----------- | ------------- | -------------- | ------- | ------------ |
 | First call  | `4`           | `3`            | `3`     | `7`          |
 | Second call | `7`           | `2`            | `2`     | `9`          |
 | Third call  | `9`           | `1`            | `1`     | `10`         |
@@ -131,7 +134,7 @@ look like this:
 ```
 
 |             | `accumulator` | `currentValue` | `index` | Return value |
-| ------------|---------------|----------------|---------|--------------|
+| ----------- | ------------- | -------------- | ------- | ------------ |
 | First call  | `10`          | `4`            | `4`     | `14`         |
 | Second call | `14`          | `3`            | `3`     | `17`         |
 | Third call  | `17`          | `2`            | `2`     | `19`         |
@@ -139,6 +142,8 @@ look like this:
 | Fifth call  | `20`          | `0`            | `0`     | `20`         |
 
 The value returned by `reduceRight` this time would be, of course, `20`.
+
+The `reduceRight()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -243,6 +248,30 @@ console.log(compose(double, inc)(2)); // 6
 
 // using composition function
 console.log(compose(inc, double)(2)); // 5
+```
+
+### Using reduceRight() with sparse arrays
+
+`reduceRight()` skips missing elements in sparse arrays, but it does not skip `undefined` values.
+
+```js
+console.log([1, 2, , 4].reduceRight((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
+```
+
+### Calling reduceRight() on non-array objects
+
+The `reduceRight()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+// -1, which is 4 - 3 - 2
 ```
 
 ## Specifications

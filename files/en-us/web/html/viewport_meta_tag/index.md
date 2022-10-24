@@ -6,8 +6,9 @@ tags:
   - Responsiveness
   - Mobile
   - viewport
-spec-urls: https://drafts.csswg.org/css-device-adapt/#viewport-meta
+spec-urls: https://drafts.csswg.org/css-viewport/#viewport-meta
 ---
+
 {{HTMLSidebar}}
 
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
@@ -27,7 +28,7 @@ However, this mechanism is not so good for pages that are optimized for narrow s
 A typical mobile-optimized site contains something like the following:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 Not all devices are the same width; you should make sure that your pages work well in a large variation of screen sizes and orientations.
@@ -39,11 +40,11 @@ The basic properties of the "viewport" `<meta>` tag include:
 - `height`
   - : Controls the size of the viewport. It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is [100vh](/en-US/docs/Web/CSS/length#vh), or 100% of the viewport height. Minimum: `1`. Maximum: `10000`. Negative values: ignored.
 - `initial-scale`
-  - : Controls the zoom level when the page is first loaded. Minimum: `0.1`. Maximum: `10`. Default:`1`. Negative values: ignored.
+  - : Controls the zoom level when the page is first loaded. Minimum: `0.1`. Maximum: `10`. Default: `1`. Negative values: ignored.
 - `minimum-scale`
   - : Controls how much zoom out is allowed on the page. Minimum: `0.1`. Maximum: `10`. Default: `0.1`. Negative values: ignored.
 - `maximum-scale`
-  - : Controls how much zoom in is allowed on the page. Any value less than 3 fails accessibility. Minimum: `0.1`. Maximum: `10`. Default:`10`. Negative values: ignored.
+  - : Controls how much zoom in is allowed on the page. Any value less than 3 fails accessibility. Minimum: `0.1`. Maximum: `10`. Default: `10`. Negative values: ignored.
 - `user-scalable`
   - : Controls whether zoom in and zoom out actions are allowed on the page. Valid values: `0`, `1`, `yes`, or `no`. Default: `1`, which is the same as `yes`. Setting the value to `0`, which is the same as `no`, is against Web Content Accessibility Guidelines (WCAG).
 
@@ -64,7 +65,7 @@ Sites can set their viewport to a specific size. For example, the definition `"w
 For pages that set an initial or maximum scale, this means the `width` property actually translates into a _minimum_ viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:
 
 ```html
-<meta name="viewport" content="width=500, initial-scale=1">
+<meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
 Other [attributes](/en-US/docs/Web/HTML/Element/meta#attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.

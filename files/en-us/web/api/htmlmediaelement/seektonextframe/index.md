@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLMediaElement.seekToNextFrame
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLMediaElement.seekToNextFrame()`** method
@@ -39,7 +40,7 @@ happens.
 
 ## Syntax
 
-```js
+```js-nolint
 seekToNextFrame()
 ```
 

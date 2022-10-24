@@ -13,6 +13,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.getPopup
 ---
+
 {{AddonSidebar()}}
 
 Gets the URL for the HTML document set as the popup for this page action.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingPopup = browser.pageAction.getPopup(
   details               // object
 )

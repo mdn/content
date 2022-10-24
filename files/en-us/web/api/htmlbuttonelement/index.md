@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLButtonElement`** interface provides properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("button")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -65,9 +66,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLButtonElement.value")}}
   - : A string representing the current form control value of the button.
 
-## Methods
+## Instance methods
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}_
+_Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Specifications
 

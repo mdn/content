@@ -12,6 +12,7 @@ tags:
   - referrer
 browser-compat: http.headers.Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 The **`Referrer-Policy`** {{glossary("HTTP header")}} controls how much [referrer information](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (sent with the {{HTTPHeader("Referer")}} header) should be included with requests. Aside from the HTTP header, you can [set this policy in HTML](#integration_with_html).
@@ -54,7 +55,7 @@ Referrer-Policy: unsafe-url
   - : Send only the {{glossary("origin")}} in the {{HTTPHeader("Referer")}} header.
     For example, a document at `https://example.com/page.html` will send the referrer `https://example.com/`.
 - `origin-when-cross-origin`
-  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request to the same protocol level (HTTP→HTTP, HTTPS→HTTPS), send the {{glossary("origin")}}, path, and query string . Send only the origin for cross origin requests and requests to less secure destinations (HTTPS→HTTP).
+  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request to the same protocol level (HTTP→HTTP, HTTPS→HTTPS), send the {{glossary("origin")}}, path, and query string. Send only the origin for cross origin requests and requests to less secure destinations (HTTPS→HTTP).
 - `same-origin`
   - : Send the {{glossary("origin")}}, path, and query string for {{glossary("Same-origin_policy", "same-origin")}} requests. Don't send the {{HTTPHeader("Referer")}} header for cross-origin requests.
 - `strict-origin`
@@ -76,19 +77,19 @@ Referrer-Policy: unsafe-url
 You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Element/meta#attr-name) of `referrer`:
 
 ```html
-<meta name="referrer" content="origin">
+<meta name="referrer" content="origin" />
 ```
 
 You can specify the `referrerpolicy` attribute on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, or {{HTMLElement("link")}} elements to set referrer policies for individual requests:
 
 ```html
-<a href="http://example.com" referrerpolicy="origin">
+<a href="http://example.com" referrerpolicy="origin">…</a>
 ```
 
 Alternatively, you can set a `noreferrer` [link relation](/en-US/docs/Web/HTML/Link_types) on an `a`, `area`, or `link` elements:
 
 ```html
-<a href="http://example.com" rel="noreferrer">
+<a href="http://example.com" rel="noreferrer">…</a>
 ```
 
 > **Warning:** As seen above, the `noreferrer` link relation is written without a dash. When you specify the referrer policy for the entire document with a {{HTMLElement("meta")}} element, it should be written _with_ a dash: `<meta name="referrer" content="no-referrer">`.
@@ -104,59 +105,59 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 
 ### `no-referrer`
 
-| From document            | Navigation to | Referrer used   |
-| ------------------------ | ------------- | --------------- |
+| From document              | Navigation to | Referrer used   |
+| -------------------------- | ------------- | --------------- |
 | `https://example.com/page` | _anywhere_    | _(no referrer)_ |
 
 ### `no-referrer-when-downgrade`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
 | `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
-| `https://example.com/page` | **http**://example.com        | _(no referrer)_          |
+| `https://example.com/page` | **http**://example.com          | _(no referrer)_            |
 
 ### `origin`
 
-| From document            | Navigation to | Referrer used        |
-| ------------------------ | ------------- | -------------------- |
+| From document              | Navigation to | Referrer used          |
+| -------------------------- | ------------- | ---------------------- |
 | `https://example.com/page` | _anywhere_    | `https://example.com/` |
 
 ### `origin-when-cross-origin`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
 | `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
-| `https://example.com/page` | **http**://example.com/page   | `https://example.com/`     |
+| `https://example.com/page` | **http**://example.com/page     | `https://example.com/`     |
 
 ### `same-origin`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | _(no referrer)_          |
+| `https://example.com/page` | `https://mozilla.org`           | _(no referrer)_            |
 
 ### `strict-origin`
 
-| From document               | Navigation to          | Referrer used        |
-| --------------------------- | ---------------------- | -------------------- |
-| `https://example.com/page`    | `https://mozilla.org`    | `https://example.com/` |
-| `https://example.com/page`    | **http**://example.com | _(no referrer)_      |
+| From document               | Navigation to          | Referrer used          |
+| --------------------------- | ---------------------- | ---------------------- |
+| `https://example.com/page`  | `https://mozilla.org`  | `https://example.com/` |
+| `https://example.com/page`  | **http**://example.com | _(no referrer)_        |
 | **http**://example.com/page | _anywhere_             | `http://example.com/`  |
 
 ### `strict-origin-when-cross-origin`
 
-| From document            | Navigation to                 | Referrer used            |
-| ------------------------ | ----------------------------- | ------------------------ |
+| From document              | Navigation to                   | Referrer used              |
+| -------------------------- | ------------------------------- | -------------------------- |
 | `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
 | `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
-| `https://example.com/page` | **http**://example.com        | _(no referrer)_          |
+| `https://example.com/page` | **http**://example.com          | _(no referrer)_            |
 
 ### `unsafe-url`
 
-| From document                  | Navigation to | Referrer used                  |
-| ------------------------------ | ------------- | ------------------------------ |
+| From document                    | Navigation to | Referrer used                    |
+| -------------------------------- | ------------- | -------------------------------- |
 | `https://example.com/page?q=123` | _anywhere_    | `https://example.com/page?q=123` |
 
 ### Specify a fallback policy

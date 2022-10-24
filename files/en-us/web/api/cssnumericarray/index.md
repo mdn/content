@@ -12,11 +12,12 @@ tags:
   - Interface
 browser-compat: api.CSSNumericArray
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSNumericArray`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}}  contains a list of {{domxref("CSSNumericValue")}} objects.
+The **`CSSNumericArray`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} contains a list of {{domxref("CSSNumericValue")}} objects.
 
-## Properties
+## Instance properties
 
 - {{domxref("CSSNumericArray.length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns how many {{domxref("CSSNumericValue")}} objects are contained within the `CSSNumericArray`.

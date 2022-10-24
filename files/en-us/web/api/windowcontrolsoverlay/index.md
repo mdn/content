@@ -12,19 +12,20 @@ tags:
   - Experimental
 browser-compat: api.WindowControlsOverlay
 ---
-{{SeeCompatTable}}{{APIRef("Window Controls Overlay API")}}{{securecontext_header}}
+
+{{APIRef("Window Controls Overlay API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`WindowControlsOverlay`** interface of the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) exposes information about the geometry
 of the title bar area in desktop Progressive Web Apps, and an event to know whenever it changes. This interface is accessible from {{domxref('Navigator.windowControlsOverlay')}}.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("WindowControlsOverlay.visible")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
-## Methods
+## Instance methods
 
 - {{domxref("WindowControlsOverlay.getTitlebarAreaRect()")}} {{Experimental_Inline}}
   - : Returns the size and position of the title bar.

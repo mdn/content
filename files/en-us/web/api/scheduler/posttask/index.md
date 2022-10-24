@@ -9,6 +9,7 @@ tags:
   - API
 browser-compat: api.Scheduler.postTask
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`postTask()`** method of the {{domxref("Scheduler")}} interface is used for adding tasks to be [scheduled](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) according to their [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).
@@ -31,7 +32,7 @@ Otherwise the task is immediately scheduled for prioritization.
 
 ## Syntax
 
-```js
+```js-nolint
 postTask(callback)
 postTask(callback, options)
 ```
@@ -39,18 +40,22 @@ postTask(callback, options)
 ### Parameters
 
 - `callback`
+
   - : An callback function that implements the task.
     The return value of the callback is used to resolve the promise returned by this function.
 
 - `options` {{optional_inline}}
+
   - : Task options, including:
 
     - `priority` {{optional_inline}}
+
       - : The immutable [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of the task.
         One of: [`"user-blocking"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking), [`"user-visible"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background).
         If set, this priority is used for the lifetime of the task and priority set on the `signal` is ignored.
 
     - `signal` {{optional_inline}}
+
       - : A {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}} that can be used to abort the task (from its associated controller).
 
         If the `options.priority` parameter is set then the task priority cannot be changed, and any priority on the signal is ignored.
@@ -92,7 +97,7 @@ The method returns a {{jsxref("Promise")}} that resolves with the return value o
 
 Because it returns a promise, `postTask()` can be [chained with other promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises).
 Below we show how to wait on the promise to resolve using [`then`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) or reject using [`catch`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch).
-The priority is not specified, so the the default priority of `user-visible` will be used.
+The priority is not specified, so the default priority of `user-visible` will be used.
 
 ```js
 // A function that defines a task

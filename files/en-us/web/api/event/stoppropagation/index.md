@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Event.stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 The **`stopPropagation()`** method of the {{domxref("Event")}}
@@ -19,8 +20,8 @@ see {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}.
 
 ## Syntax
 
-```js
-event.stopPropagation();
+```js-nolint
+event.stopPropagation()
 ```
 
 ### Parameters

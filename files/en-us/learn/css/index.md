@@ -12,9 +12,10 @@ tags:
   - length
   - specificity
 ---
+
 {{LearnSidebar}}
 
-Cascading Stylesheets — or {{glossary("CSS")}} — is the first technology you should start learning after {{glossary("HTML")}}. While HTML is used to define the structure and semantics of your content, CSS is used to style it and lay it out. For example, you can use CSS to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.
+Cascading Style Sheets — or {{glossary("CSS")}} — is the first technology you should start learning after {{glossary("HTML")}}. While HTML is used to define the structure and semantics of your content, CSS is used to style it and lay it out. For example, you can use CSS to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.
 
 > **Callout:**
 >
@@ -40,14 +41,17 @@ It is also recommended that you work through [Getting started with the web](/en-
 This topic contains the following modules, in a suggested order for working through them. You should start with the first one.
 
 - [CSS first steps](/en-US/docs/Learn/CSS/First_steps)
+
   - : CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
 
 - [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+
   - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
 - [CSS styling text](/en-US/docs/Learn/CSS/Styling_text)
+
   - : With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 
 - [CSS layout](/en-US/docs/Learn/CSS/CSS_layout)

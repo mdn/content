@@ -12,6 +12,7 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.restore
 ---
+
 {{AddonSidebar()}}
 
 Restores a closed tab or window. Restoring doesn't just reopen the tab or window: it also restores the tab's navigation history so the back/forward buttons will work. Restoring a window will restore all the tabs that the window contained when it was closed.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let restoringSession = browser.sessions.restore(
   sessionId             // string
 )
@@ -107,4 +108,4 @@ browser.browserAction.onClicked.addListener(() => {
 
 ## Known issues
 
-[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) -  Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"
+[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"

@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.continue
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`continue` statement** terminates execution of the
@@ -17,7 +18,7 @@ execution of the loop with the next iteration.
 
 ## Syntax
 
-```js
+```js-nolint
 continue;
 continue label;
 ```
@@ -87,8 +88,7 @@ checkiandj: while (i < 4) {
     console.log(`j: ${j}`);
     j -= 1;
 
-    if ((j % 2) === 0)
-      continue checkj;
+    if (j % 2 === 0) continue checkj;
     console.log(`${j} is odd.`);
   }
   console.log(`i = ${i}`);

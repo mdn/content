@@ -13,9 +13,10 @@ tags:
   - break
   - continue
   - for
-  - l10n:priority
+  - "l10n:priority"
   - while
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.
@@ -47,8 +48,7 @@ Loops are all about doing the same thing over and over again. Often, the code wi
 Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<button>Update</button>
-<canvas></canvas>
+<button>Update</button> <canvas></canvas>
 ```
 
 ```css hidden
@@ -220,7 +220,7 @@ console.log(filtered);
 ## The standard for loop
 
 In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times.
-In a case like that you should use the {{jsxref("statements/for","for")}} loop.
+In a case like that, you should use the {{jsxref("statements/for","for")}} loop.
 This has the following syntax:
 
 ```js
@@ -232,7 +232,7 @@ for (initializer; condition; final-expression) {
 Here we have:
 
 1. The keyword `for`, followed by some parentheses.
-2. Inside the parentheses we have three items, separated by semi-colons:
+2. Inside the parentheses we have three items, separated by semicolons:
 
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
@@ -315,7 +315,7 @@ for (let i = 0; i < cats.length; i++) {
 ```
 
 In this loop we're starting `i` at `0`, and stopping when `i` reaches the length of the array.
-Then inside the loop we're using `i` to access each item in the array in turn.
+Then inside the loop, we're using `i` to access each item in the array in turn.
 
 This works just fine, and in early versions of JavaScript, `for...of` didn't exist, so this was the standard way to iterate through an array.
 However, it offers more chances to introduce bugs into your code. For example:
@@ -382,7 +382,7 @@ First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -432,17 +432,17 @@ btn.addEventListener('click', () => {
 
 ## Skipping iterations with continue
 
-The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works in a similar manner to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
+The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works similarly to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
 Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
 
 The HTML is basically the same as the last example — a simple text input, and a paragraph for output.
 
 ```html
 <label for="number">Enter number: </label>
-<input id="number" type="text">
+<input id="number" type="text" />
 <button>Generate integer squares</button>
 
-<p>Output: </p>
+<p>Output:</p>
 ```
 
 The JavaScript is mostly the same too, although the loop itself is a bit different:
@@ -474,7 +474,7 @@ Here's the output:
 1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
 2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
-4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
+4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space at the end of the paragraph content.
 
 > **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
@@ -594,12 +594,12 @@ If you get really stuck, press "Show solution" to see a solution.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
 output.innerHTML = '';
@@ -612,8 +612,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -753,8 +753,8 @@ Specifically, we want you to:
 
 We've already provided you with:
 
-- `refused.textContent +=` — the beginnings of a line that will concatenate something on to the end of `refused.textContent`.
-- `admitted.textContent +=` — the beginnings of a line that will concatenate something on to the end of `admitted.textContent`.
+- `refused.textContent +=` — the beginnings of a line that will concatenate something at the end of `refused.textContent`.
+- `admitted.textContent +=` — the beginnings of a line that will concatenate something at the end of `admitted.textContent`.
 
 Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one.
 Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end?
@@ -771,7 +771,9 @@ If you get really stuck, press "Show solution" to see a solution.
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -788,8 +790,8 @@ refused.textContent = 'Refuse: ';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 

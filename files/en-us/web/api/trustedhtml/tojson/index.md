@@ -10,13 +10,14 @@ tags:
   - TrustedHTML
 browser-compat: api.TrustedHTML.toJSON
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toJSON()`** method of the {{domxref("TrustedHTML")}} interface returns a JSON representation of the stored data.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

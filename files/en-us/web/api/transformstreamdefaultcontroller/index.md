@@ -9,18 +9,19 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`TransformStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
 
 When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultController` is created. It therefore has no constructor. The way to get an instance of `TransformStreamDefaultController` is via the callback methods of {{domxref("TransformStream.TransformStream", "TransformStream()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("TransformStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size to fill the readable side of the stream's internal queue.
 
-## Methods
+## Instance methods
 
 - {{domxref("TransformStreamDefaultController.enqueue()")}}
   - : Enqueues a chunk (single piece of data) in the readable side of the stream.

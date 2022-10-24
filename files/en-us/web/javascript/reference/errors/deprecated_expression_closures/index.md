@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "expression closures are deprecated" occurs when the

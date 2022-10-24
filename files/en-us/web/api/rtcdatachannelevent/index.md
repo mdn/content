@@ -11,6 +11,7 @@ tags:
   - datachannel
 browser-compat: api.RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannelEvent`** interface
@@ -23,7 +24,7 @@ represents an event related to a specific {{DOMxRef("RTCDataChannel")}}.
 - {{DOMxRef("RTCDataChannelEvent.RTCDataChannelEvent", "RTCDataChannelEvent()")}}
   - : Creates a new `RTCDataChannelEvent`.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{DOMxRef("Event")}}._
 

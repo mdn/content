@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.MediaElementAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `MediaElementAudioSourceNode` interface represents an audio source consisting of an HTML {{ htmlelement("audio") }} or {{ htmlelement("video") }} element. It is an {{domxref("AudioNode")}} that acts as an audio source.
@@ -44,14 +45,14 @@ A `MediaElementAudioSourceNode` has no inputs and exactly one output, and is cre
 - {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode", "MediaElementAudioSourceNode()")}}
   - : Creates a new `MediaElementAudioSourceNode` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("MediaElementAudioSourceNode.mediaElement", "mediaElement")}} {{ReadOnlyInline}}
   - : The {{domxref("HTMLMediaElement")}} used when constructing this `MediaStreamAudioSourceNode`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 

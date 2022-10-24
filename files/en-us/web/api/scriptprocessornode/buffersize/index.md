@@ -12,9 +12,10 @@ tags:
   - Deprecated
 browser-compat: api.ScriptProcessorNode.bufferSize
 ---
+
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
-The `bufferSize` property of the {{domxref("ScriptProcessorNode")}} interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range `256`–`16384`.
+The `bufferSize` property of the {{domxref("ScriptProcessorNode")}} interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range `256` – `16384`.
 
 > **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 

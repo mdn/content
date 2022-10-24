@@ -13,6 +13,7 @@ tags:
   - complete
 browser-compat: api.PaymentResponse.complete
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
@@ -26,7 +27,7 @@ the payment request and the {{jsxref("Promise")}} returned by the
 
 ## Syntax
 
-```js
+```js-nolint
 complete()
 complete(result)
 ```

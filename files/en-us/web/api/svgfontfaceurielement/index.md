@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFontFaceUriElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGFontFaceUriElement`** interface corresponds to the {{SVGElement("font-face-uri")}} elements.
@@ -18,11 +19,11 @@ Object-oriented access to the attributes of the {{SVGElement("font-face-uri")}} 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

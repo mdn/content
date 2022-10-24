@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.VideoTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("VideoTrackList")}}** method
@@ -30,7 +31,7 @@ you know its ID string.
 
 ## Syntax
 
-```js
+```js-nolint
 getTrackById(id)
 ```
 

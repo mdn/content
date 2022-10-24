@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.search
 ---
+
 {{JSRef}}
 
 The **`search()`** method executes a search for a match between a regular expression and this {{jsxref("String")}} object.
@@ -19,7 +20,7 @@ The **`search()`** method executes a search for a match between a regular expres
 
 ## Syntax
 
-```js
+```js-nolint
 search(regexp)
 ```
 

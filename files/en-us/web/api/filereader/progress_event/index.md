@@ -12,6 +12,7 @@ tags:
   - progress
 browser-compat: api.FileReader.progress_event
 ---
+
 {{APIRef}}
 
 The `progress` event is fired periodically as the `FileReader` reads data.
@@ -53,22 +54,22 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ```html
 <div class="example">
-
-    <div class="file-select">
-        <label for="avatar">Choose a profile picture:</label>
-        <input type="file"
-               id="avatar" name="avatar"
-               accept="image/png, image/jpeg">
-    </div>
-
-    <img src="" class="preview" height="200" alt="Image preview">
-
-    <div class="event-log">
-        <label for="eventLog">Event log:</label>
-        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
-    </div>
-
+  <div class="file-select">
+    <label for="avatar">Choose a profile picture:</label>
+    <input
+      type="file"
+      id="avatar"
+      name="avatar"
+      accept="image/png, image/jpeg" />
   </div>
+
+  <img src="" class="preview" height="200" alt="Image preview" />
+
+  <div class="event-log">
+    <label for="eventLog">Event log:</label>
+    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  </div>
+</div>
 ```
 
 ```css hidden
@@ -80,15 +81,16 @@ img.preview {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  resize: none;
 }
 
 .example {
   display: grid;
   grid-template-areas:
-              "select  log"
-              "preview log";
+    "select  log"
+    "preview log";
 }
 
 .file-select {
@@ -103,12 +105,8 @@ img.preview {
   grid-area: log;
 }
 
-.event-log>label {
+.event-log > label {
   display: block;
-}
-
-.event-log-contents {
-  resize: none;
 }
 ```
 

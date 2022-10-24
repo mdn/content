@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.defineProperty
 ---
+
 {{JSRef}}
 
 The static **`Reflect.defineProperty()`** method is like
@@ -19,7 +20,7 @@ The static **`Reflect.defineProperty()`** method is like
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.defineProperty(target, propertyKey, attributes)
 ```
 
@@ -59,7 +60,7 @@ modification of a property on an object. For more details, see the
 
 ```js
 const obj = {};
-Reflect.defineProperty(obj, 'x', { value: 7 }); // true
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
 console.log(obj.x); // 7
 ```
 

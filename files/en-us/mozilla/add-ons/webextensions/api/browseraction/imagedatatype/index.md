@@ -13,6 +13,7 @@ tags:
   - browserAction
 browser-compat: webextensions.api.browserAction.ImageDataType
 ---
+
 {{AddonSidebar()}}
 
 Pixel data for an image. Must be an [`ImageData`](/en-US/docs/Web/API/ImageData) object (for example, from a {{htmlelement("canvas")}} element).

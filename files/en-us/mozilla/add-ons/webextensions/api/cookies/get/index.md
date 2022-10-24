@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.cookies.get
 ---
+
 {{AddonSidebar()}}
 
 The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a single cookie, given its name and URL.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.cookies.get(
   details                // object
 )

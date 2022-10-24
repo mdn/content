@@ -9,6 +9,7 @@ tags:
   - Request header
   - header
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Forwarded-Proto`** (XFP) header is a de-facto standard

@@ -14,13 +14,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onBrowserUpdateAvailable
 ---
+
 {{AddonSidebar}}{{Deprecated_header}}
 
 Fired when an update for the browser is available, but it isn't installed immediately because a browser restart is required.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onBrowserUpdateAvailable.addListener(listener)
 browser.runtime.onBrowserUpdateAvailable.removeListener(listener)
 browser.runtime.onBrowserUpdateAvailable.hasListener(listener)

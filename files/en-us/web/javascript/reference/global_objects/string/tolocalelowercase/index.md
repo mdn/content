@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLocaleLowerCase
 ---
+
 {{JSRef}}
 
 The **`toLocaleLowerCase()`** method returns the calling string
@@ -19,7 +20,7 @@ value converted to lower case, according to any locale-specific case mappings.
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleLowerCase()
 toLocaleLowerCase(locales)
 ```
@@ -27,9 +28,7 @@ toLocaleLowerCase(locales)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. Indicates the locale to be used to convert to
-    lower case according to any locale-specific case mappings. If multiple locales are
-    given in an {{jsxref("Array")}}, the [best available locale](https://tc39.es/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment's current locale.
+  - : A string with a BCP 47 language tag, or an array of such strings. Indicates the locale to be used to convert to lower case according to any locale-specific case mappings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 
 ### Return value
 
@@ -57,13 +56,13 @@ follow the default case mappings in Unicode, there may be a different result.
 ### Using toLocaleLowerCase()
 
 ```js
-'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
+"ALPHABET".toLocaleLowerCase(); // 'alphabet'
 
-'\u0130'.toLocaleLowerCase('tr') === 'i';    // true
-'\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
+"\u0130".toLocaleLowerCase("tr") === "i"; // true
+"\u0130".toLocaleLowerCase("en-US") === "i"; // false
 
-const locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+const locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
+"\u0130".toLocaleLowerCase(locales) === "i"; // true
 ```
 
 ## Specifications

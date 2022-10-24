@@ -17,11 +17,12 @@ tags:
   - control
 browser-compat: api.XRInputSource
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`** interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system. The device is specific to the platform being used, but provides the direction in which it is being aimed and optionally may generate events if the user triggers performs actions using the device.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRInputSource.gamepad", "gamepad")}} {{ReadOnlyInline}}
   - : A {{domxref("Gamepad")}} object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is `null`.
@@ -38,7 +39,7 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
 - {{domxref('XRInputSource.targetRaySpace', 'targetRaySpace')}} {{ReadOnlyInline}}
   - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direction in which it extends. This space is established using the method defined by `targetRayMode`.
 
-## Methods
+## Instance methods
 
 _The `XRInputSource` interface defines no methods._
 

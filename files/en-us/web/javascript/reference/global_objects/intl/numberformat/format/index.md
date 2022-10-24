@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.format
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.format()`** method formats a number according to the [locale and formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) of this {{jsxref("Intl.NumberFormat")}} object.
@@ -22,27 +23,14 @@ The **`Intl.NumberFormat.prototype.format()`** method formats a number according
 
 ## Syntax
 
-```js
+```js-nolint
 format(number)
 ```
 
 ### Parameters
 
 - `number`
-  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format.
-
-Strings are parsed as _**string** numeric literals_ (as defined by the ECMA-262 "[StringNumericLiteral](https://tc39.es/ecma262/#prod-StringNumericLiteral)" grammar).
-These support, among other things, the general syntax for decimal strings `#.#E#`, and non-base-10 numbers like hexadecimal and binary.
-String values passed to the `format()` function:
-
-- may have leading and/or trailing white space and/or line terminators.
-- may have any number of leading 0 digits.
-- may include a "+" or "-" character to indicate its sign.
-- may be empty or whitespace-only.
-  In this case the value is converted to +0.
-- may include `Infinity` or `-Infinity`.
-- cannot be suffixed with `n` (the suffix used to indicate that a numeric value is a `BigInt`)
-- cannot include a numeric literal separator (`_`).
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `format()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
 
 > **Note:** Older versions of the specification parsed strings as a {{jsxref("Number")}}.
 > Check the compatibility table for your browser.
@@ -110,7 +98,7 @@ console.log(numberFormat.format("987654321987654321"));
 ```
 
 We can also use the general "E" exponent syntax for decimal strings: `#.#E#`.
-The code below creates a {{jsxref("BigInt")}},  coerces it to a string with the suffix `E-6`, and then formats it.
+The code below creates a {{jsxref("BigInt")}}, coerces it to a string with the suffix `E-6`, and then formats it.
 
 ```js
 const numberFormat = new Intl.NumberFormat("en-US");

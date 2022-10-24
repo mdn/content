@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.createVertexArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.createVertexArray()`** method of
@@ -20,7 +21,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 createVertexArray()
 ```
 

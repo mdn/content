@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.windows.get
 ---
+
 {{AddonSidebar()}}
 
 Gets details about a window, given its ID. The details are passed into a callback.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.windows.get(
   windowId,              // integer
   getInfo                // optional object

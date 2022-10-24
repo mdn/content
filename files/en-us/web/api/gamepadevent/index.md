@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}{{securecontext_header}}
 
 The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} are fired in response to.
@@ -21,7 +22,7 @@ The GamepadEvent interface of the Gamepad API contains references to gamepads co
 - {{domxref("GamepadEvent.GamepadEvent","GamepadEvent()")}}
   - : Returns a new `GamepadEvent` object.
 
-## Properties
+## Instance properties
 
 - {{ domxref("GamepadEvent.gamepad") }} {{ReadOnlyInline}}
   - : Returns a {{ domxref("Gamepad") }} object, providing access to the associated gamepad data for the event fired.

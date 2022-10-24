@@ -8,6 +8,11 @@ tags:
   - WCAG
   - cognitive accessibility
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 
 Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).
@@ -176,7 +181,7 @@ Content should be written as clearly and as possible. A good rule to go by is to
 - Using active voice in the present tense.
 - Using correct grammar and spelling.
 
-It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR; , or "too long, didn't read") at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.
+It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR, or "too long; didn't read") at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.
 
 There are tools that can rate the level of your content. For example, this document has an average grade level of about 11. This means it should be easily understood by a native English speaker aged 16 to 17. Some tools can even provide suggestions to help simplify it.
 

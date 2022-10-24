@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: path.to.feature.NameOfTheHeader
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
@@ -40,13 +41,17 @@ browser-compat: path.to.feature.NameOfTheHeader
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
 > - **tags**
+>
 >   - : Always include the following tags: **HTTP**, **Reference**, **HTTP Header**, _NameOfTheHeader_ (e.g. **Cache-Control**).
 >
 >     Include the following tags as appropriate:
+>
 >     - Type of request/response: **Response header**, **Request header**, **Representation header**, **Payload header**, **Client hint**
 >     - Header status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
 >     - Any other tags that represent terms people might search for related to the technology. For example the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header includes the tag **Caching**.
+>
 > - **browser-compat**
+>
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macro).
 >
@@ -124,6 +129,8 @@ If the header has a lot of available directives, feel free to include multiple d
 
 ## Examples
 
+Note that we use the plural "Examples" even if the page only contains one example.
+
 ### A descriptive heading
 
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
@@ -136,25 +143,27 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
 >
->  ```md
->  ## Examples
+> ```md
+> ## Examples
 >
->  ### Using the fetch API
->  Example of Fetch
+> ### Using the fetch API
 >
->  ### More examples
->  Links to more examples on other pages
->  ```
+> Example of Fetch
+>
+> ### More examples
+>
+> Links to more examples on other pages
+> ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:
 >
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
->  ```md
->   ## Examples
+> ```md
+> ## Examples
 >
->   For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
+> ```
 
 ## Specifications
 

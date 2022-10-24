@@ -15,6 +15,7 @@ browser-compat:
   - api.DOMMatrix
   - api.WebKitCSSMatrix
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMMatrix`** interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the {{domxref("DOMMatrixReadOnly")}} interface.
@@ -30,7 +31,7 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 - {{domxref("DOMMatrix.DOMMatrix","DOMMatrix()")}}
   - : Creates and returns a new `DOMMatrix` object.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, though some of these properties are altered to be mutable._
 
@@ -53,7 +54,7 @@ _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, thoug
     | `e`  | `m41`           |
     | `f`  | `m42`           |
 
-## Methods
+## Instance methods
 
 _This interface includes the following methods, as well as the methods it inherits from {{domxref("DOMMatrixReadOnly")}}._
 

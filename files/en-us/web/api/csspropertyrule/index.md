@@ -12,13 +12,14 @@ tags:
   - Reference
 browser-compat: api.CSSPropertyRule
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
 The **`CSSPropertyRule`** interface of the {{domxref('CSS_Properties_and_Values_API','','',' ')}} represents a single CSS {{cssxref("@property")}} rule.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -31,7 +32,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSPropertyRule.syntax")}} {{ReadOnlyInline}}
   - : Returns the literal syntax of the custom property.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 

@@ -9,13 +9,14 @@ tags:
   - Web MIDI API
 browser-compat: api.MIDIAccess
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) provides methods for listing MIDI input and output devices, and obtaining access to those devices.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("MIDIAccess.inputs")}} {{ReadOnlyInline}}
   - : Returns an instance of {{domxref("MIDIInputMap")}} which provides access to any available MIDI input ports.

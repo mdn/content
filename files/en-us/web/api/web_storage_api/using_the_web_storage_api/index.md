@@ -13,6 +13,7 @@ browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 The Web Storage API provides mechanisms by which browsers can securely store key/value pairs.

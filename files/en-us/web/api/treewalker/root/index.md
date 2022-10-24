@@ -9,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.root
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.root`** read-only property returns the node

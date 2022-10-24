@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.VideoPlaybackQuality.totalFrameDelay
 ---
+
 {{APIRef("Media Source Extensions")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`VideoPlaybackQuality.totalFrameDelay`** read-only

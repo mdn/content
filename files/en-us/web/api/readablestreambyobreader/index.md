@@ -11,6 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamBYOBReader
 ---
+
 {{APIRef("Streams")}}
 
 The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) defines a reader for a {{domxref("ReadableStream")}} that supports zero-copy reading from an underlying byte source.
@@ -30,12 +31,12 @@ The `read()` method differs in that it provide a view into which data should be 
 - {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}}
   - : Creates and returns a `ReadableStreamBYOBReader` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStreamBYOBReader.closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released. This property enables you to write code that responds to an end to the streaming process.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamBYOBReader.cancel()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.

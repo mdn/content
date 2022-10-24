@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioScheduledSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `AudioScheduledSourceNode` interface—part of the Web Audio API—is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the {{domxref("AudioScheduledSourceNode.start", "start()")}} and {{domxref("AudioScheduledSourceNode.stop", "stop()")}} methods, as well as the {{domxref("AudioScheduledSourceNode.ended_event", "ended")}} event.
@@ -23,11 +24,11 @@ Unless stated otherwise, nodes based upon `AudioScheduledSourceNode` output sile
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("AudioNode")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:_
 

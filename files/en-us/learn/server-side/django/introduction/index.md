@@ -10,6 +10,7 @@ tags:
   - Server-side programming
   - django
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.
@@ -149,7 +150,7 @@ def index(request):
 
 > **Note:** A little bit of Python:
 >
-> - [Python modules](https://docs.python.org/3/tutorial/modules.html) are "libraries" of functions, stored in separate files, that we might want to use in our code. Here we import just the `HttpResponse` object from the `django.http` module so that we can use it in our view: `from django.http import HttpResponse` . There are other ways of importing some or all objects from a module.
+> - [Python modules](https://docs.python.org/3/tutorial/modules.html) are "libraries" of functions, stored in separate files, that we might want to use in our code. Here we import just the `HttpResponse` object from the `django.http` module so that we can use it in our view: `from django.http import HttpResponse`. There are other ways of importing some or all objects from a module.
 > - Functions are declared using the `def` keyword as shown above, with named parameters listed in brackets after the name of the function; the whole line ends in a colon. Note how the next lines are all **indented**. The indentation is important, as it specifies that the lines of code are inside that particular block (mandatory indentation is a key feature of Python, and is one reason that Python code is so easy to read).
 
 Views are usually stored in a file called **views.py**.

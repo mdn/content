@@ -7,6 +7,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.message
 ---
+
 {{JSRef}}
 
 The **`message`** property is a human-readable description of the error.
@@ -22,7 +23,7 @@ By default, the `message` property is an empty string, but this behavior can be 
 ### Throwing a custom error
 
 ```js
-const e = new Error('Could not parse input');
+const e = new Error("Could not parse input");
 // e.message is 'Could not parse input'
 throw e;
 ```

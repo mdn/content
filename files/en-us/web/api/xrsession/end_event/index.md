@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRSession.end_event
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.

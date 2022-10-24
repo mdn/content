@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.RegisteredContentScript
 ---
+
 {{AddonSidebar()}}
 
 This object contains details of a script to be registered or that is registered.

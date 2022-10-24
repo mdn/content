@@ -25,6 +25,7 @@ tags:
   - transform
 browser-compat: api.XRPose
 ---
+
 {{APIRef("WebXR Device API")}}{{securecontext_header}}
 
 `XRPose` is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface representing a position and orientation in the 3D space, relative to the {{domxref("XRSpace")}} within which it resides. The `XRSpace`—which is either an {{domxref("XRReferenceSpace")}} or an {{domxref("XRBoundedReferenceSpace")}}—defines the coordinate system used for the pose and, in the case of an {{domxref("XRViewerPose")}}, its underlying views.
@@ -35,7 +36,7 @@ To obtain the `XRPose` for the `XRSpace` used as the local coordinate system of 
 thePose = xrFrame.getPose(localSpace, baseSpace);
 ```
 
-The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}}  instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
+The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}} instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
 
 ```js
 viewerPose = xrFrame.getViewerPose(adjReferenceSpace);
@@ -45,7 +46,7 @@ Here, `adjReferenceSpace` is a reference space which has been updated using the 
 
 See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for further details and an example with thorough explanations of what's going on.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("XRPose.angularVelocity")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.

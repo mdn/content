@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PresentationRequest
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
 A `PresentationRequest` object is used to initiate or reconnect to a presentation made by a [controlling browsing context](https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context). The `PresentationRequest` object _MUST_ be implemented in a [controlling browsing context](https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context) provided by a [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent).
@@ -24,7 +25,7 @@ When a `PresentationRequest` is constructed, the given `urls` _MUST_ be used as 
 - {{domxref("PresentationRequest.PresentationRequest","PresentationRequest()")}} {{Experimental_Inline}}
   - : Creates a `PresentationRequest`.
 
-## Properties
+## Instance properties
 
 None
 
@@ -33,7 +34,7 @@ None
 - {{domxref("PresentationRequest.onconnectionavailable")}} {{Experimental_Inline}}
   - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
 
-## Methods
+## Instance methods
 
 - {{domxref("PresentationRequest.start()")}} {{Experimental_Inline}}
   - : Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("PresentationConnection")}} after the user agent prompts the user to select a display and grant permission to use that display.

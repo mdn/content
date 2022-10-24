@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.WindowType
 ---
+
 {{AddonSidebar()}}
 
 The type of window that hosts this tab.

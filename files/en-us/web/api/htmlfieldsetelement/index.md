@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLFieldSetElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFieldSetElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{ HTMLElement("fieldset") }} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -37,7 +38,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLFieldSetElement.willValidate")}}
   - : A boolean value `false`, because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 

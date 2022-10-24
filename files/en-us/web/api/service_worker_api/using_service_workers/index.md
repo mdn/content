@@ -20,7 +20,7 @@ One overriding problem that web users have suffered with for years is loss of co
 
 The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) for more details.
 
-> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also has been [removed](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) from Chromium 95, and is deprecated in Safari.
+> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It has also been [removed](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) from Chromium 95, and is deprecated in Safari.
 
 Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade-off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](https://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
 
@@ -38,7 +38,7 @@ With service workers, the following steps are generally observed for basic set u
 4. Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An Install event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). This is really the same kind of procedure as installing a native or Firefox OS app — making everything available for use offline.
 5. When the `oninstall` handler completes, the service worker is considered installed.
 6. Next is activation. When the service worker is installed, it then receives an activate event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a Service worker script.
-7. The Service worker will now control pages, but only those opened after the `register()` is successful. i.e. a document starts life with or without a Service worker and maintains that for its lifetime. So documents will have to be reloaded to actually be controlled.
+7. The Service worker will now control pages, but only those opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a Service worker and maintains that for its lifetime.
 
 ![](sw-lifecycle.png)
 

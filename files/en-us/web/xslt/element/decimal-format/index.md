@@ -7,6 +7,7 @@ tags:
   - XSLT
   - decimal-format
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:decimal-format>` element defines the characters and symbols that are to be used in converting numbers into strings using the `format-number( )` function.
@@ -55,7 +56,7 @@ None.
 - `digit`
   - : Specifies the character used in the format pattern to stand for a digit. The default is (`#`).
 - `pattern-separator`
-  - : Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semi-colon (`;`).
+  - : Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semicolon (`;`).
 
 ### Type
 

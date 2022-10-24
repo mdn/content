@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.detectLanguage
 ---
+
 {{AddonSidebar()}}
 
 Detects the primary language of the content in a tab, using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let detecting = browser.tabs.detectLanguage(
   tabId,                  // optional integer
   callback                // optional function

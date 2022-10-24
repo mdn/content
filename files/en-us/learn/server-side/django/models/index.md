@@ -12,6 +12,7 @@ tags:
   - django
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 This article shows how to define models for the LocalLibrary website. It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.
@@ -125,7 +126,7 @@ The following common arguments can be used when declaring many/most of the diffe
 - [verbose_name](https://docs.djangoproject.com/en/4.0/ref/models/fields/#verbose-name): A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.
 - [default](https://docs.djangoproject.com/en/4.0/ref/models/fields/#default): The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.
 - [null](https://docs.djangoproject.com/en/4.0/ref/models/fields/#null): If `True`, Django will store blank values as `NULL` in the database for fields where this is appropriate (a `CharField` will instead store an empty string). The default is `False`.
-- [blank](https://docs.djangoproject.com/en/4.0/ref/models/fields/#blank): If `True`, the field is allowed to be blank in your forms. The default is `False`, which means that Django's form validation will force you to enter a value. This is often used with `null=True` , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.
+- [blank](https://docs.djangoproject.com/en/4.0/ref/models/fields/#blank): If `True`, the field is allowed to be blank in your forms. The default is `False`, which means that Django's form validation will force you to enter a value. This is often used with `null=True`, because if you're going to allow blank values, you also want the database to be able to represent them appropriately.
 - [choices](https://docs.djangoproject.com/en/4.0/ref/models/fields/#choices): A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.
 - [primary_key](https://docs.djangoproject.com/en/4.0/ref/models/fields/#primary-key):
   If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records).
@@ -149,7 +150,7 @@ The following list describes some of the more commonly used types of fields.
 - [CharField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.CharField) is used to define short-to-mid sized fixed-length strings. You must specify the `max_length` of the data to be stored.
 - [TextField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.TextField) is used for large arbitrary-length strings. You may specify a `max_length` for the field, but this is used only when the field is displayed in forms (it is not enforced at the database level).
 - [IntegerField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.IntegerField) is a field for storing integer (whole number) values, and for validating entered values as integers in forms.
-- [DateField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#datefield) and [DateTimeField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#datetimefield) are used for storing/representing dates and date/time information (as Python `datetime.date` and `datetime.datetime` objects, respectively). These fields can additionally declare the (mutually exclusive) parameters `auto_now=True` (to set the field to the current date every time the model is saved), `auto_now_add` (to only set the date when the model is first created) , and `default` (to set a default date that can be overridden by the user).
+- [DateField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#datefield) and [DateTimeField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#datetimefield) are used for storing/representing dates and date/time information (as Python `datetime.date` and `datetime.datetime` objects, respectively). These fields can additionally declare the (mutually exclusive) parameters `auto_now=True` (to set the field to the current date every time the model is saved), `auto_now_add` (to only set the date when the model is first created), and `default` (to set a default date that can be overridden by the user).
 - [EmailField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#emailfield) is used to store and validate email addresses.
 - [FileField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#filefield) and [ImageField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#imagefield) are used to upload files and images respectively (the `ImageField` adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.
 - [AutoField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#autofield) is a special type of `IntegerField` that automatically increments. A primary key of this type is automatically added to your model if you don't explicitly specify one.
@@ -444,7 +445,7 @@ Some things to consider:
 - Should "language" be associated with a `Book`, `BookInstance`, or some other object?
 - Should the different languages be represented using model, a free text field, or a hard-coded selection list?
 
-After you've decided, add the field. You can see what we decided on GitHub [here](https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py).
+After you've decided, add the field. You can see what we decided on GitHub [here](https://github.com/mdn/django-locallibrary-tutorial/blob/main/catalog/models.py).
 
 Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.
 

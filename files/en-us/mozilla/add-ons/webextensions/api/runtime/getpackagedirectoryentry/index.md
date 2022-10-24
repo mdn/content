@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
 ---
+
 {{AddonSidebar()}}
 
 Returns a `DirectoryEntry` object representing the package directory.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingEntry = browser.runtime.getPackageDirectoryEntry()
 ```
 

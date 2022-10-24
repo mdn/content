@@ -1,6 +1,7 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transform-box
 ---
+
 {{CSSRef}}
 
 The **`transform-box`** CSS property defines the layout box to which the {{cssxref("transform")}} and {{cssxref("transform-origin")}} properties relate.
@@ -66,7 +68,16 @@ In this example we have an SVG:
   <g>
     <circle id="center" fill="red" r="1" transform="translate(25 25)" />
     <circle id="boxcenter" fill="blue" r=".5" transform="translate(15 15)" />
-    <rect id="box" x="10" y="10" width="10" height="10" rx="1" ry="1" stroke="black" fill="none" />
+    <rect
+      id="box"
+      x="10"
+      y="10"
+      width="10"
+      height="10"
+      rx="1"
+      ry="1"
+      stroke="black"
+      fill="none" />
   </g>
 </svg>
 ```

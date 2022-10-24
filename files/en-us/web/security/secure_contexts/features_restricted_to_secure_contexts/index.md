@@ -11,6 +11,7 @@ tags:
   - features
   - support
 ---
+
 This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts) for a definition and more details.
 
 ## Current features available only in secure contexts
@@ -21,7 +22,7 @@ This section lists APIs that specifications make available only in secure contex
 - [Background Sync](https://wicg.github.io/BackgroundSync/spec/) (see {{domxref("SyncManager")}}, for example)
 - [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Headers/Cache-Control)
 - [Credential Management API](/en-US/docs/Web/API/Credential_Management_API)
-- [Device Orientation / Device Motion](/en-US/docs/Web/Events/Detecting_device_orientation)
+- [Device Orientation / Device Motion](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
 - [EyeDropper API](/en-US/docs/Web/API/EyeDropper)
 - [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
 - [Generic Sensor API](https://w3c.github.io/sensors/)

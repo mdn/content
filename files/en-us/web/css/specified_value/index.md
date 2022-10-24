@@ -1,12 +1,14 @@
 ---
 title: Specified value
 slug: Web/CSS/specified_value
+page-type: guide
 tags:
   - CSS
   - Guide
   - Reference
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
 ---
+
 {{CSSRef}}
 
 The **specified value** of a [CSS](/en-US/docs/Web/CSS) property is the value it receives from the document's style sheet. The specified value for a given property is determined according to the following rules:
@@ -22,13 +24,17 @@ The **specified value** of a [CSS](/en-US/docs/Web/CSS) property is the value it
 ```html
 <p>My specified color is given explicitly in the CSS.</p>
 
-<div>The specified values of all my properties default to their
-    initial values, because none of them are given in the CSS.</div>
+<div>
+  The specified values of all my properties default to their initial values,
+  because none of them are given in the CSS.
+</div>
 
 <div class="fun">
-  <p>The specified value of my font family is not given explicitly
-      in the CSS, so it is inherited from my parent. However,
-      the border is not an inheriting property.</p>
+  <p>
+    The specified value of my font family is not given explicitly in the CSS, so
+    it is inherited from my parent. However, the border is not an inheriting
+    property.
+  </p>
 </div>
 ```
 

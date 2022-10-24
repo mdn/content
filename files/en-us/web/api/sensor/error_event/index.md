@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.error_event
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`error`** event is fired when an exception occurs on a sensor.

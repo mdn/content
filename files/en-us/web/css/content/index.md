@@ -1,6 +1,7 @@
 ---
 title: content
 slug: Web/CSS/content
+page-type: css-property
 tags:
   - CSS
   - CSS Counter
@@ -10,9 +11,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.content
 ---
+
 {{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Keywords that cannot be combined with other values */
@@ -55,8 +61,6 @@ content: revert;
 content: revert-layer;
 content: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -109,21 +113,25 @@ This example inserts quotation marks around quotes, and adds the word "Chapter" 
 
 ```html
 <h1>5</h1>
-<p>According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
-    lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.</q>
-  We must understand that there is nothing fundamentally wrong
-  with building on the contributions of others.
+<p>
+  According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.
+  </q>
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p>According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
-    must have the ability to shape the Internet and
-    their own experiences on the Internet.</q>
-  Therefore, we can infer that contributing to the open web
-  can protect our own individual experiences on it.
+<p>
+  According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.
+  </q>
+  Therefore, we can infer that contributing to the open web can protect our own
+  individual experiences on it.
 </p>
 ```
 
@@ -143,9 +151,9 @@ q::after {
 }
 
 h1::before {
-  content: "Chapter ";  /* The trailing space creates separation
-                           between the added content and the
-                           rest of the content */
+  content: "Chapter "; /* The trailing space creates separation
+                          between the added content and the
+                          rest of the content */
 }
 ```
 
@@ -167,7 +175,8 @@ This example inserts an image before the link. If the image is not found, it ins
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
 }
@@ -197,9 +206,9 @@ This example inserts additional text after special items in a list.
 
 ```css
 .new-entry::after {
-  content: " New!";  /* The leading space creates separation
-                        between the added content and the
-                        rest of the content */
+  content: " New!"; /* The leading space creates separation
+                       between the added content and the
+                       rest of the content */
   color: red;
 }
 ```
@@ -216,10 +225,12 @@ This example inserts an image before each link, and adds its `id` attribute afte
 
 ```html
 <ul>
-  <li><a id="moz" href="https://www.mozilla.org/">
-    Mozilla Home Page</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">
-    Mozilla Developer Network</a></li>
+  <li><a id="moz" href="https://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -269,7 +280,8 @@ This example replaces an element's content with an image. You can replace the co
   content: url("mdn.svg");
 }
 
-#replaced::after { /* will not show if element replacement is supported */
+/* will not show if element replacement is supported */
+#replaced::after {
   content: " (" attr(id) ")";
 }
 ```

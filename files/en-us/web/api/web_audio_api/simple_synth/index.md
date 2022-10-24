@@ -1,5 +1,5 @@
 ---
-title: 'Example and tutorial: Simple synth keyboard'
+title: "Example and tutorial: Simple synth keyboard"
 slug: Web/API/Web_Audio_API/Simple_synth
 page-type: guide
 tags:
@@ -13,6 +13,7 @@ tags:
   - Tutorial
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article presents the code and working demo of a video keyboard you can play using the mouse. The keyboard allows you to switch among the standard waveforms as well as one custom waveform, and you can control the main gain using a volume slider beneath the keyboard. This example makes use of the following Web API interfaces: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, and {{domxref("GainNode")}}.
@@ -49,13 +50,20 @@ First we create the `<div>` to contain the settings bar, so it can be styled as 
 <div class="settingsBar">
   <div class="left">
     <span>Volume: </span>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-        value="0.5" list="volumes" name="volume">
+    <input
+      type="range"
+      min="0.0"
+      max="1.0"
+      step="0.01"
+      value="0.5"
+      list="volumes"
+      name="volume" />
     <datalist id="volumes">
-      <option value="0.0" label="Mute">
-      <option value="1.0" label="100%">
+      <option value="0.0" label="Mute"></option>
+      <option value="1.0" label="100%"></option>
     </datalist>
   </div>
+</div>
 ```
 
 We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the {{htmlattrxref("name")}} attribute to find an option list whose ID matches; in this case, the data set is named `"volume"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
@@ -158,7 +166,8 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
   vertical-align: middle;
 }
 
-.left span, .left input {
+.left span,
+.left input {
   vertical-align: middle;
 }
 
@@ -513,7 +522,7 @@ Then we get the type of waveform to use by checking the value of the waveform pi
 
 The oscillator's frequency is set to the value specified in the `freq` parameter by setting the value of the {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} object. Then, at last, the oscillator is started up so that it begins to produce sound by calling the oscillator's inherited {{domxref("AudioScheduledSourceNode.start()")}} method.
 
-#### Playing a tone
+#### Playing a note
 
 When the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("Element/mouseover_event", "mouseover")}} event occurs on a key, we want to start playing the corresponding note. The `notePressed()` function is used as the event handler for these events.
 

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.USBConfiguration
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The `USBConfiguration` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about a particular configuration of a USB device and the interfaces that it supports.
@@ -22,7 +23,7 @@ The `USBConfiguration` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_
 - {{domxref("USBConfiguration.USBConfiguration", "USBConfiguration()")}} {{Experimental_Inline}}
   - : Creates a new `USBConfiguration` object which contains information about the configuration on the provided `USBDevice` with the given configuration value.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBConfiguration.configurationValue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the configuration value of this configuration. This is equal to the [`bConfigurationValue`](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) field of the configuration descriptor provided by the device defining this configuration.

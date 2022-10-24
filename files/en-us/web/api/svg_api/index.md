@@ -11,6 +11,7 @@ tags:
   - Web
 spec-urls: https://svgwg.org/svg2-draft/
 ---
+
 {{DefaultAPISidebar("SVG")}}
 
 SVG provides elements for circles, rectangles, and simple and complex curves. The elements' attribute values specify how these must be drawn. The **SVG API** is the subset of the **DOM** connecting these SVG elements and their attribute values to scripts or programming languages by representing them in memory. The SVG API thus provides methods that allow programmatic access to the SVG elements and their attribute values.

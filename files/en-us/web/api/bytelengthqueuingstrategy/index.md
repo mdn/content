@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
@@ -19,11 +20,11 @@ The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/W
 - {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
   - : Creates a new `ByteLengthQueuingStrategy` object instance.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
   - : Returns the given chunk's `byteLength` property.
@@ -33,17 +34,20 @@ None.
 ```js
 const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy
+);
 
 const size = queueingStrategy.size(chunk);
 ```

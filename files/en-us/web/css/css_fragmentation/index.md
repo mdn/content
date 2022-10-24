@@ -1,6 +1,7 @@
 ---
 title: CSS Fragmentation
 slug: Web/CSS/CSS_Fragmentation
+page-type: css-module
 tags:
   - CSS
   - CSS Fragmentation
@@ -11,6 +12,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-break/
 ---
+
 {{CSSRef}}
 
 **CSS Fragmentation** is a module of CSS that defines how content is displayed when it is broken (fragmented) across multiple [pages](/en-US/docs/Web/CSS/Paged_Media), regions, or [columns](/en-US/docs/Web/CSS/CSS_Columns).

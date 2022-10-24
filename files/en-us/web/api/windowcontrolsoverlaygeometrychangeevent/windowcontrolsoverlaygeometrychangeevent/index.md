@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
+
 {{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly created
@@ -17,7 +18,7 @@ The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly
 
 ## Syntax
 
-```js
+```js-nolint
 new WindowControlsOverlayGeometryChangeEvent(type, options)
 ```
 

@@ -20,6 +20,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSettings.cursor
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`cursor`** property indicates whether or not the cursor should be captured as part of the video track included in the {{domxref("MediaStream")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.

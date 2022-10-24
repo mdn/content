@@ -12,6 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisUtterance`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a speech request.
@@ -24,7 +25,7 @@ It contains the content the speech service should read and information about how
 - {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance", "SpeechSynthesisUtterance()")}}
   - : Returns a new `SpeechSynthesisUtterance` object instance.
 
-## Properties
+## Instance properties
 
 _`SpeechSynthesisUtterance` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 

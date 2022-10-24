@@ -13,91 +13,147 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.values
 ---
+
 {{JSRef}}
 
-The **`values()`** method returns a new
-_array iterator_ object that contains the values for each
-index in the array.
+The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ object that iterates the value of each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
 ### Return value
 
-A new {{jsxref("Array")}} iterator object.
+A new iterable iterator object.
+
+## Description
+
+`Array.prototype.values()` is the default implementation of [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator).
+
+```js
+Array.prototype.values === Array.prototype[Symbol.iterator]; // true
+```
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `values()` method iterates empty slots as if they have the value `undefined`.
+
+The `values()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
 ### Iteration using for...of loop
 
+Because `values()` returns an iterable iterator, you can use a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to iterate it.
+
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
 
 for (const letter of iterator) {
   console.log(letter);
-}  //"a" "b" "c" "d" "e"
+} // "a" "b" "c" "d" "e"
 ```
 
-**Array.prototype.values** is the default implementation of
-**Array.prototype\[Symbol.iterator]**.
+### Iteration using next()
+
+Because the return value is also an iterator, you can directly call its `next()` method.
 
 ```js
-Array.prototype.values === Array.prototype[Symbol.iterator]      // true
-```
-
-### Iteration using .next()
-
-```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
-iterator.next();               // Object { value: "a", done: false }
-iterator.next().value;         // "b"
-iterator.next()["value"];      // "c"
-iterator.next();               // Object { value: "d", done: false }
-iterator.next();               // Object { value: "e", done: false }
-iterator.next();               // Object { value: undefined, done: true }
-iterator.next().value;         // undefined
+iterator.next(); // { value: "a", done: false }
+iterator.next(); // { value: "b", done: false }
+iterator.next(); // { value: "c", done: false }
+iterator.next(); // { value: "d", done: false }
+iterator.next(); // { value: "e", done: false }
+iterator.next(); // { value: undefined, done: true }
+console.log(iterator.next().value); // undefined
 ```
 
-> **Warning:** The array iterator object is one use or temporary object
+### Reusing the iterable
 
-example:
+> **Warning:** The array iterator object should be a one-time use object. Do not reuse it.
+
+The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for...of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
-const iterator = arr.values();
-for (const letter of iterator) {
+const arr = ["a", "b", "c", "d", "e"];
+const values = arr.values();
+for (const letter of values) {
   console.log(letter);
-} //"a" "b" "c" "d" "e"
-for (const letter of iterator) {
+}
+// "a" "b" "c" "d" "e"
+for (const letter of values) {
   console.log(letter);
-} // undefined
+}
+// undefined
 ```
 
-**reason:** When `next().done=true` or
-`currentIndex>length` the `for..of` loop ends.
-See [Iteration protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-
-**Value**: there are no values stored in the array Iterator
-object; instead it stores the address of the array used in its creation and so depends
-on the values stored in that array.
+If you use a [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement to end the iteration early, the iterator can resume from the current position when continuing to iterate it.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
-const iterator = arr.values();
-console.log(iterator);        // Array Iterator {  }
-iterator.next().value;        // "a"
-arr[1] = 'n';
-iterator.next().value;        // "n"
+const arr = ["a", "b", "c", "d", "e"];
+const values = arr.values();
+for (const letter of values) {
+  console.log(letter);
+  if (letter === "b") {
+    break;
+  }
+}
+// "a" "b"
+
+for (const letter of values) {
+  console.log(letter);
+}
+// "c" "d" "e"
 ```
 
-> **Note:** If the values in the array changed the array iterator object values change too.
+### Mutations during iteration
+
+There are no values stored in the array iterator object returned from `values()`; instead, it stores the address of the array used in its creation, and reads the currently visited index on each iteration. Therefore, its iteration output depends on the value stored in that index at the time of stepping. If the values in the array changed, the array iterator object's values change too.
+
+```js
+const arr = ["a", "b", "c", "d", "e"];
+const iterator = arr.values();
+console.log(iterator); // Array Iterator { }
+console.log(iterator.next().value); // "a"
+arr[1] = "n";
+console.log(iterator.next().value); // "n"
+```
+
+### Iterating sparse arrays
+
+`values()` will visit empty slots as if they are `undefined`.
+
+```js
+for (const element of [, "a"].values()) {
+  console.log(element);
+}
+// undefined
+// 'a'
+```
+
+### Calling values() on non-array objects
+
+The `values()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+for (const entry of Array.prototype.values.call(arrayLike)) {
+  console.log(entry);
+}
+// a
+// b
+// c
+```
 
 ## Specifications
 

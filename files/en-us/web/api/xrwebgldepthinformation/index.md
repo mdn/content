@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLDepthInformation
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRWebGLDepthInformation`** interface contains depth information from the GPU/WebGL (returned by {{domxref("XRWebGLBinding.getDepthInformation()")}}).
@@ -21,7 +22,7 @@ The **`XRWebGLDepthInformation`** interface contains depth information from the 
 
 This interface inherits properties from its parent, {{domxref("XRDepthInformation")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}}
   - : Contains the height of the depth buffer (number of rows).

@@ -10,15 +10,16 @@ tags:
   - Reference
 browser-compat: api.CSSAnimation
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`CSSAnimation`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.
+Inherits properties from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.
 
 - {{domxref("CSSAnimation.animationName")}} {{ReadOnlyInline}}
   - : Returns the animation name as a string.
@@ -27,7 +28,7 @@ Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("
 
 No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.
 
-## Methods
+## Instance methods
 
 No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.
 

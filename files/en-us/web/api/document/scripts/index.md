@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.scripts
 ---
+
 {{APIRef("DOM")}}
 
 The **`scripts`** property of the {{domxref("Document")}}

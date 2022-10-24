@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLObjectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLObjectElement`** interface provides special properties and methods (beyond those on the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("object")}} element, representing external resources.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -64,7 +65,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLObjectElement.willValidate")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the element is a candidate for constraint validation. Always `false` for `HTMLObjectElement` objects.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 

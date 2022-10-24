@@ -12,6 +12,7 @@ tags:
   - getElementsByTagNameNS
 browser-compat: api.Document.getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 Returns a list of elements with the given tag name belonging to the given namespace.
@@ -19,7 +20,7 @@ The complete document is searched, including the root node.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagNameNS(namespace, name)
 ```
 
@@ -114,12 +115,14 @@ extension.
     <p>Some outer text</p>
 
     <button onclick="getAllParaElems();">
-      show all p elements in document
-    </button><br />
+      Show all p elements in document
+    </button>
+    <br />
 
     <button onclick="div1ParaElems();">
-      show all p elements in div1 element
-    </button><br />
+      Show all p elements in div1 element
+    </button>
+    <br />
 
     <button onclick="div2ParaElems();">
       show all p elements in div2 element

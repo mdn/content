@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Window.scrollX
 ---
+
 {{ APIRef("CSSOM View") }}
 
 The read-only **`scrollX`** property of the

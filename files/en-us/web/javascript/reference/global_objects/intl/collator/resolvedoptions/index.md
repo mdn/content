@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator.prototype.resolvedOptions()`** method
@@ -24,7 +25,7 @@ computed during initialization of this {{jsxref("Intl.Collator")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 
@@ -59,15 +60,15 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-const de = new Intl.Collator('de', { sensitivity: 'base' })
+const de = new Intl.Collator("de", { sensitivity: "base" });
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;       // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## Specifications

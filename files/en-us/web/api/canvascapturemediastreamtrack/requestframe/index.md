@@ -13,6 +13,7 @@ tags:
   - requestFrame
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} method
@@ -30,8 +31,8 @@ the stream.
 
 ## Syntax
 
-```js
-stream.requestFrame();
+```js-nolint
+stream.requestFrame()
 ```
 
 ### Return value

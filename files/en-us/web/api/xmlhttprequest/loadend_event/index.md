@@ -1,5 +1,5 @@
 ---
-title: 'XMLHttpRequest: loadend event'
+title: "XMLHttpRequest: loadend event"
 slug: Web/API/XMLHttpRequest/loadend_event
 page-type: web-api-event
 tags:
@@ -14,6 +14,7 @@ tags:
   - loadend
 browser-compat: api.XMLHttpRequest.loadend_event
 ---
+
 {{APIRef}}
 
 The **`loadend`** event is fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequest/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
@@ -53,9 +54,21 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```html
 <div class="controls">
-    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
-    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
-    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+  <input
+    class="xhr success"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (success)" />
+  <input
+    class="xhr error"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (error)" />
+  <input
+    class="xhr abort"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (abort)" />
 </div>
 
 <textarea readonly class="event-log"></textarea>
@@ -63,16 +76,16 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```css hidden
 .event-log {
-    width: 25rem;
-    height: 4rem;
-    border: 1px solid black;
-    margin: .5rem;
-    padding: .2rem;
+  width: 25rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.2rem;
 }
 
 input {
-    width: 11rem;
-    margin: .5rem;
+  width: 11rem;
+  margin: 0.5rem;
 }
 ```
 

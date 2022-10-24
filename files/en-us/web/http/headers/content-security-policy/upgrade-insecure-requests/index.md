@@ -13,6 +13,7 @@ tags:
   - upgrade-insecure-requests
 browser-compat: http.headers.Content-Security-Policy.upgrade-insecure-requests
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -51,7 +52,9 @@ Content-Security-Policy: upgrade-insecure-requests;
 ### Using the HTML meta element
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta
+  http-equiv="Content-Security-Policy"
+  content="upgrade-insecure-requests" />
 ```
 
 With the above header set on a domain example.com that wants to migrate from HTTP to
@@ -59,8 +62,8 @@ HTTPS, non-navigational insecure resource requests are automatically upgraded
 (first-party as well as third-party requests).
 
 ```html
-<img src="http://example.com/image.png">
-<img src="http://not-example.com/image.png">
+<img src="http://example.com/image.png" />
+<img src="http://not-example.com/image.png" />
 ```
 
 These URLs will be rewritten before the request is made, meaning that no insecure
@@ -68,8 +71,8 @@ requests will hit the network. Note that, if the requested resource is not actua
 available via HTTPS, the request will fail without any fallback to HTTP.
 
 ```html
-<img src="https://example.com/image.png">
-<img src="https://not-example.com/image.png">
+<img src="https://example.com/image.png" />
+<img src="https://not-example.com/image.png" />
 ```
 
 Navigational upgrades to third-party resources brings a significantly higher potential

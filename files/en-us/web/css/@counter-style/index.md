@@ -1,6 +1,7 @@
 ---
-title: '@counter-style'
+title: "@counter-style"
 slug: Web/CSS/@counter-style
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -9,6 +10,7 @@ tags:
   - counter
 browser-compat: css.at-rules.counter-style
 ---
+
 {{CSSRef}}
 
 The **`@counter-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you define counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.

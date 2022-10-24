@@ -2,10 +2,11 @@
 title: Firefox 62 for developers
 slug: Mozilla/Firefox/Releases/62
 tags:
-  - '62'
+  - "62"
   - Firefox
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.
@@ -55,7 +56,7 @@ _No changes._
 
 ### JavaScript
 
-- The {{jsxref("WebAssembly.Global()")}} constructor is now supported, along with global variables in WebAssembly ({{bug(1464656)}}).
+- The [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor is now supported, along with global variables in WebAssembly ({{bug(1464656)}}).
 - The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ({{bug(1435813)}}).
 - The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).
 - JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the TC39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).

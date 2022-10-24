@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +20,7 @@ the current path.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInPath(x, y)
 isPointInPath(x, y, fillRule)
 isPointInPath(path, x, y)
@@ -41,7 +42,7 @@ isPointInPath(path, x, y, fillRule)
 
     - `nonzero`
       - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
+        Default rule.
     - `evenodd`
       - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 

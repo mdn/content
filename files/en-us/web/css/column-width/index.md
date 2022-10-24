@@ -1,6 +1,7 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-width
 ---
+
 {{CSSRef}}
 
 The **`column-width`** [CSS](/en-US/docs/Web/CSS) property sets the ideal column width in a multi-column layout. The container will have as many columns as can fit without any of them having a width less than the `column-width` value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.
@@ -61,7 +63,10 @@ The `column-width` property is specified as one of the values listed below.
 
 ```html
 <p class="content-box">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+  enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit lobortis
+  nisl ut aliquip ex ea commodo consequat.
 </p>
 ```
 

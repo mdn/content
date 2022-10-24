@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRRay
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a geometric ray described by an origin point and a direction vector.
@@ -24,7 +25,7 @@ The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_De
 - {{domxref("XRRay.XRRay", "XRRay()")}} {{Experimental_Inline}}
   - : Creates a new `XRRay` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRRay.direction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the ray's 3-dimensional directional vector.
@@ -33,7 +34,7 @@ The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_De
 - {{domxref("XRRay.origin")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the 3-dimensional point in space that the ray originates from, in meters.
 
-## Methods
+## Instance methods
 
 None.
 

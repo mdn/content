@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.set
 ---
+
 {{JSRef}}
 
 The static **`Reflect.set()`** method works like setting a
@@ -19,7 +20,7 @@ property on an object.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.set(target, propertyKey, value)
 Reflect.set(target, propertyKey, value, receiver)
 ```
@@ -56,23 +57,23 @@ property assignment and is like the
 
 ```js
 // Object
-let obj = {}
-Reflect.set(obj, 'prop', 'value')  // true
-obj.prop  // "value"
+let obj = {};
+Reflect.set(obj, "prop", "value"); // true
+obj.prop; // "value"
 
 // Array
-let arr = ['duck', 'duck', 'duck']
-Reflect.set(arr, 2, 'goose')  // true
-arr[2]  // "goose"
+let arr = ["duck", "duck", "duck"];
+Reflect.set(arr, 2, "goose"); // true
+arr[2]; // "goose"
 
 // It can truncate an array.
-Reflect.set(arr, 'length', 1)  // true
-arr  // ["duck"]
+Reflect.set(arr, "length", 1); // true
+arr; // ["duck"]
 
 // With just one argument, propertyKey and value are "undefined".
-let obj = {}
-Reflect.set(obj)  // true
-Reflect.getOwnPropertyDescriptor(obj, 'undefined')
+let obj = {};
+Reflect.set(obj); // true
+Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
 ```
 
@@ -91,7 +92,11 @@ const receiver = {};
 Reflect.set(target, "a", 2, receiver); // true
 // target is { a: 1 }; receiver is { a: 2 }
 
-const target = { set a(v) { this.b = v; } };
+const target = {
+  set a(v) {
+    this.b = v;
+  },
+};
 const receiver = {};
 Reflect.set(target, "a", 2, receiver); // true
 // target is { a: [Setter] }; receiver is { b: 2 }

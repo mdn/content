@@ -9,6 +9,7 @@ tags:
   - Request header
   - header
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Forwarded-Host`** (XFH) header is a de-facto standard

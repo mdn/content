@@ -1,9 +1,10 @@
 ---
-title: Firefox Security Guidelines
+title: Firefox security guidelines
 slug: Web/Security/Firefox_Security_Guidelines
 tags:
   - Security
 ---
+
 ## Purpose
 
 This document outlines a set of security guidelines that will generally apply to all client applications, such as Firefox and Thunderbird.
