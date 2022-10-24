@@ -64,25 +64,32 @@ If the following invariants are violated, the proxy will throw a
 The following code traps {{jsxref("Object.isExtensible()")}}.
 
 ```js
-const p = new Proxy({}, {
-  isExtensible(target) {
-    console.log('called');
-    return true;
+const p = new Proxy(
+  {},
+  {
+    isExtensible(target) {
+      console.log("called");
+      return true;
+    },
   }
-});
+);
 
-console.log(Object.isExtensible(p)); // "called"
-                                     // true
+console.log(Object.isExtensible(p));
+// "called"
+// true
 ```
 
 The following code violates the invariant.
 
 ```js example-bad
-const p = new Proxy({}, {
-  isExtensible(target) {
-    return false;
+const p = new Proxy(
+  {},
+  {
+    isExtensible(target) {
+      return false;
+    },
   }
-});
+);
 
 Object.isExtensible(p); // TypeError is thrown
 ```
