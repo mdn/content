@@ -84,34 +84,35 @@ This property may take one of two forms:
 #### HTML
 
 ```html
-<p>Firefox rocks!</p>
-<p class="variant">Firefox rocks!</p>
+<p> A Fancy Swash</p>
+<p class="variant"> A Fancy Swash</p>
 ```
 
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Bellota");
+@import url("https://fonts.googleapis.com/css2?family=MonteCarlo");
 
-@font-feature-values "Bellota" {
+@font-feature-values "MonteCarlo" {
   @swash {
     fancy: 1;
   }
 }
 
 p {
+  font-family: "MonteCarlo";
   font-size: 1.5rem;
 }
 
 .variant {
-  font-family: "Bellota";
+  font-feature-settings: "swsh" 1;
   font-variant-alternates: swash(fancy);
 }
 ```
 
 #### Result
 
-> **Note:** The _Bellota_ font is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL) and can be found at <https://github.com/kemie/Bellota-Font>. More fonts can be found in the [Google Font corpus](https://github.com/google/fonts).
+> **Note:** The MonteCarlo font is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL) and can be found at <https://github.com/googlefonts/monte-carlo>. More fonts can be found in the [Google Font corpus](https://github.com/google/fonts).
 
 {{ EmbedLiveSample('Enabling swash glyphs') }}
 
