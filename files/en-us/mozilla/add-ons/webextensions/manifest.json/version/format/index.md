@@ -41,8 +41,6 @@ A few special parsing rules are applied for backward compatibility and readabili
 
 The rationale behind splitting a version part into a sequence of strings and numbers is that when comparing version parts, the numeric parts are compared as numbers, for example, '1.0pre1' < '1.0pre10', while the strings are compared byte-wise. See the next section for details on how versions are compared.
 
-See [maintenance policy](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for special rules that mark a version as "beta" in the AMO queues.
-
 ## Comparing versions
 
 When two version strings are compared, their version parts are compared left to right. For Manifest V2 style version strings, an empty or missing version part is equivalent to `0`.
