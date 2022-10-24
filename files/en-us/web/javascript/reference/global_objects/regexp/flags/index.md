@@ -31,9 +31,9 @@ The set accessor of `flags` is `undefined`. You cannot change this property dire
 
 ### Using flags
 
-```js
-/foo/ig.flags;   // "gi"
-/bar/myu.flags;  // "muy"
+```js-nolint
+/foo/ig.flags; // "gi"
+/bar/myu.flags; // "muy"
 ```
 
 ## Specifications

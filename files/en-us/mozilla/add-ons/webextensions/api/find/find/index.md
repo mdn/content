@@ -95,12 +95,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
         For example, consider part of a web page that looks like this:
 
         ![Text reading "this domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission." and a "More information" link.](rects-1.png)
-        
- If you search for "You may", the match needs to be described by two rectangles:
+
+        If you search for "You may", the match needs to be described by two rectangles:
 
         ![This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission.". The words "you may" are highlighted.](rects-2.png)
 
-In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
+        In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
 
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.

@@ -27,12 +27,12 @@ The value of the **`input`** property is modified whenever the searched string o
 
 ```js
 const re = /hi/g;
-re.test('hi there!');
-RegExp.input;         // "hi there!"
-re.test('foo');       // new test, non-matching
-RegExp.$_;            // "hi there!"
-re.test('hi world!'); // new test, matching
-RegExp.$_;            // "hi world!"
+re.test("hi there!");
+RegExp.input; // "hi there!"
+re.test("foo"); // new test, non-matching
+RegExp.$_; // "hi there!"
+re.test("hi world!"); // new test, matching
+RegExp.$_; // "hi world!"
 ```
 
 ## Specifications

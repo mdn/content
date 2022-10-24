@@ -104,7 +104,7 @@ someFile.lastModified;
 // …
 ```
 
-In Firefox, you can also enabled `privacy.resistFingerprinting`, the
+In Firefox, if you enable `privacy.resistFingerprinting`, the
 precision will be 100ms or the value of
 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever
 is larger.
