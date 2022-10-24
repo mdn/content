@@ -14,17 +14,22 @@ browser-compat: css.properties.animation-timeline
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of the animation.
+The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of an animation.
 
 The timeline can be provided by the current position on a scrollbar, in which case it is referred to as a scrollbar timeline.
-The element and scrollbar axis that is used to provided the timeline can be specified in two ways.
+The element that provides the scrollbar timeline can be specified in two ways:
 
-A named scroll timeline is one in which the element that will provide the scrollbar timeline is explicitly named, by applying the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand property), and this name is set on the element to animate using the `animation-timeline` property.
-An anonymous scroll timeline is set using the {{cssxref("animation-timeline/scroll", "scroll()")}} functional notation, which indicates that the element providing the scroll timeline is an ancestor of the element to be animated (either the root element or the nearest ancestor that has a scroll bar).
+- A _named scroll timeline_ is one in which the element that will provide the scrollbar timeline is explicitly named, by applying the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand property).
+  The name is then associated with the element to animate using the `animation-timeline` property.
+- An _anonymous scroll timeline_ is set using the {{cssxref("animation-timeline/scroll", "scroll()")}} functional notation, which indicates that the element providing the scroll timeline is an ancestor of the element to be animated.
+  The ancestor can either be set as either the root element or the nearest ancestor that has a scroll bar in either axis.
+
+Whether the scrollbar uses a scrollbar at the top/bottom or left/right of the element can also be specified.
+If the selected axis does not have a scrollbar the associated animation timeline will be inactive.
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
-The animation timeline can also be set by using the {{cssxref("animation")}} shorthand property.
+The animation timeline can also be set using the {{cssxref("animation")}} shorthand property.
 
 ## Syntax
 
@@ -41,7 +46,6 @@ animation-timeline: sliding-vertically;
 /* Single animation anonymous timeline */
 animation-timeline: scroll();
 animation-timeline: scroll(root inline);
-
 
 /* Multiple animations */
 animation-timeline: test1, animation4;
@@ -62,15 +66,11 @@ animation-timeline: unset;
 - `auto`
   - : The animation's timeline is the document's default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline).
 - `scroll()`
-  - : The timeline is provided by a scroll bar of the nearest containing element that has a scrollbar, or the root container.
-      This is referred to as an anonymous timeline.
-      The scrollbar axis and whether the scrollbar is on the nearest parent or root container may be specified.
-      By default the scrollbar in the block axis of the nearest parent is used.
+  - : The "anonymous" timeline is provided by some ancestor of the current element.
 
-      See {{cssxref("animation-timeline/scroll", "scroll()")}} for additional syntax information.
+      See {{cssxref("animation-timeline/scroll", "scroll()")}} for additional information.
 - `<timeline-name>`
-  - : A {{cssxref('custom-ident')}} or string identifying the scroll timeline, declared with the {{cssxref('scroll-timeline-name')}} property (or {{cssxref('scroll-timeline')}} shorthand property).
-    This is referred to as a "named scroll timeline".
+  - : A {{cssxref('custom-ident')}} or string identifying the named scroll timeline, declared with the {{cssxref('scroll-timeline-name')}} property (or {{cssxref('scroll-timeline')}} shorthand property).
     If two or more scroll timelines share the same name, the last declared within the cascade will be used.
     If no matching scroll timeline is found, the animation is not associated with a timeline.
 
@@ -160,7 +160,7 @@ Scroll to see the square element being animated.
 ### Setting an anonymous scroll timeline
 
 The `#square` element is animated using an anonymous scrollbar timeline, which is applied to the element to be animated using the `scroll()` functional notation.
-The timeline in this case is provided by the nearest parent that has a scrollbar in the block direction.
+The timeline in this particular example is provided by the nearest parent element that has (any) scrollbar, from the scrollbar in the block direction.
 
 #### HTML
 
@@ -175,6 +175,36 @@ The HTML for the example is shown below.
 
 #### CSS
 
+The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property.
+In this case the timeline is provided by `scroll(block nearest)`, which means that it will select the scrollbar in the block direction of the nearest ancestor element that has scrollbars; in this case the vertical scrollbar of the "container" element.
+
+Note that the `block nearest` options below are actually the default, so we could instead just have had: `scroll()`.
+
+```css
+#square {
+  background-color: deeppink;
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+  position: absolute;
+  bottom: 0;
+
+  animation-name: rotateAnimation;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-timeline: scroll(block nearest);
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+```
+
 The CSS for the container sets its height to 300px and we also set the container to create a vertical scrollbar if it overflows.
 The "stretcher" CSS sets the block height to 600px, which forces the container element to overflow.
 These two together ensure that the container has a vertical scrollbar, which allows it to be used as the source of the anonymous scrollbar timeline.
@@ -188,36 +218,6 @@ These two together ensure that the container has a vertical scrollbar, which all
 
 #stretcher {
   height: 600px;
-}
-```
-
-The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property.
-In this case the timeline is provided by `scroll(block nearest)`, which means that it will select the scrollbar in the block direction of the nearest ancestor element that has scrollbars; in this case the vertical scrollbar of the "container" element.
-
-Note that the `block nearest` options below are actually the default, and we could instead just have had: `scroll()`.
-
-```css
-#square {
-  background-color: deeppink;
-  width: 100px;
-  height: 100px;
-  margin-top: 100px;
-  animation-name: rotateAnimation;
-  animation-duration: 3s;
-  animation-direction: alternate;
-  animation-timeline: scroll(block nearest);
-
-  position: absolute;
-  bottom: 0;
-}
-
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 ```
 
