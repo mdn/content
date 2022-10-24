@@ -12,7 +12,7 @@ tags:
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.charset`** property is a string that specifies the [character encoding](/en-US/docs/Glossary/character_encoding) used in a document.
+The **`HTMLMetaElement.charset`** property is a string that specifies the {{Glossary("character_encoding", "character encoding")}} used in a document.
 Using **non-UTF-8 character encodings is strongly discouraged** as this can create unexpected results on form submission and URL encoding.
 For more details, see [Character encodings in HTML](/en-US/docs/Web/HTML/Element/meta#attr-charset).
 
@@ -22,7 +22,7 @@ A string.
 
 ## Examples
 
-Reading the character encoding of a document from a meta element:
+### Reading character encoding from a meta element
 
 ```js
 // given <meta charset="utf-8">
@@ -31,7 +31,7 @@ console.log(meta.charset);
 // "utf-8"
 ```
 
-Creating a new meta element that describes the character encoding of the document:
+### Creating a meta element
 
 ```js
 let meta = document.createElement("meta");

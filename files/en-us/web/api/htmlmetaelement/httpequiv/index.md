@@ -13,7 +13,7 @@ browser-compat: api.HTMLMetaElement.httpEquiv
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.httpEquiv`** property gets or sets the pragma directive, or HTTP response header name, for the value of the {{domxref("HTMLMetaElement.content")}} attribute.
+The **`HTMLMetaElement.httpEquiv`** property gets or sets the pragma directive or an HTTP response header name for the {{domxref("HTMLMetaElement.content")}} attribute.
 For more details on the possible values, see the [http-equiv](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
 
 ## Value
@@ -22,7 +22,7 @@ A string.
 
 ## Examples
 
-Reading the `http-equiv` value for a meta element:
+### Reading the `http-equiv` value of a meta element
 
 ```js
 // given <meta http-equiv="refresh" content="10" />

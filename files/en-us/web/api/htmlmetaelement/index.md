@@ -12,8 +12,8 @@ browser-compat: api.HTMLMetaElement
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLMetaElement`** interface contains descriptive metadata about a document provided in HTML as [`<meta>` elements](/en-US/docs/Web/HTML/Element/meta).
-It inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
+The **`HTMLMetaElement`** interface contains descriptive metadata about a document provided in HTML as [`<meta>`](/en-US/docs/Web/HTML/Element/meta) elements.
+This interface inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
 
@@ -24,13 +24,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLMetaElement.charset")}}
   - : The character encoding for a HTML document.
 - {{domxref("HTMLMetaElement.content")}}
-  - : The 'value' part of name/value pairs of document metadata.
+  - : The 'value' part of the name-value pairs of the document metadata.
 - {{domxref("HTMLMetaElement.httpEquiv")}}
-  - : The name of the pragma directive, the HTTP response header, to define for a document.
+  - : The name of the pragma directive, the HTTP response header, for a document.
 - {{domxref("HTMLMetaElement.media")}}
   - : The media context for a `theme-color` metadata property.
 - {{domxref("HTMLMetaElement.name")}}
-  - : The 'name' part of name/value pairs defining named metadata of a document.
+  - : The 'name' part of the name-value pairs defining the named metadata of a document.
 - {{domxref("HTMLMetaElement.scheme")}} {{deprecated_inline}}
   - : Defines the scheme of the value in the {{domxref("HTMLMetaElement.content")}} attribute.
     This is deprecated and should not be used on new web pages.
@@ -42,11 +42,11 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 ## Examples
 
 The following two examples show a general approach to using the `HTMLMetaElement` interface.
-For specific examples, see the pages for the individual properties as described in the [Instance properties](#instance_properties) above.
+For specific examples, see the pages for the individual properties as described in the [Instance properties](#instance_properties) section above.
 
-### Setting page description metadata
+### Setting the page description metadata
 
-Creating a new `<meta>` element with `description` as a name and setting a `content` value:
+The following example shows how to create a new `<meta>` element with `description` as a name and setting a `content` value:
 
 ```js
 let meta = document.createElement("meta");

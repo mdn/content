@@ -15,7 +15,7 @@ browser-compat: api.HTMLMetaElement.media
 
 The **`HTMLMetaElement.media`** property enables specifying the media for `theme-color` metadata.
 
-The `theme-color` property enables setting the color of the browser's toolbar or UI in supporting browsers and operating systems.
+The `theme-color` property enables setting the color of the browser's toolbar or UI in browsers and operating systems that support this property.
 The `media` property enables setting different theme colors for different `media` values.
 
 ## Value
@@ -38,10 +38,10 @@ document.head.appendChild(meta);
 
 ### Setting theme colors by device size
 
-Most meta properties can only be used once, however `theme-color` can be used multiple times if there are unique `media` values provided.
+Most meta properties can be used only once. However, `theme-color` can be used multiple times if unique `media` values are provided.
 
-This example adds two meta elements, one with a `theme-color` for all devices and another for small screens.
-The order of matching the `media` query matters, so the more specific query should be added later in the document:
+This example adds two meta elements with a `theme-color`, one for all devices and another for small screens.
+The order of matching the `media` query matters, so the more specific query should be added later in the document, as shown below:
 
 ```js
 // Add a theme-color for all devices
@@ -50,7 +50,7 @@ meta.name = "theme-color";
 meta.content = "#ffffff";
 document.head.appendChild(meta);
 
-// Add a theme-color specific to small devices
+// Add a theme-color for small devices
 var meta = document.createElement("meta");
 meta.name = "theme-color";
 meta.media = "(max-width: 600px)";

@@ -13,7 +13,7 @@ browser-compat: api.HTMLMetaElement.name
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.name`** is used in combination with {{domxref("HTMLMetaElement.content")}} to define name/value pairs of metadata of a document.
+The **`HTMLMetaElement.name`** is used in combination with {{domxref("HTMLMetaElement.content")}} to define the name-value pairs for the metadata of a document.
 The `name` attribute defines the metadata name and the `content` attribute defines the value.
 
 ## Value
@@ -22,7 +22,7 @@ A string.
 
 ## Examples
 
-Reading the metadata name for the first meta element in a document:
+### Reading the metadata name of the first meta element
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web technologies">
@@ -31,7 +31,7 @@ console.log(meta.name);
 // "keywords"
 ```
 
-Creating a new meta element with `author` metadata and setting a `content` value:
+### Creating a meta element with `author` and setting a `content` value
 
 ```js
 let meta = document.createElement("meta");

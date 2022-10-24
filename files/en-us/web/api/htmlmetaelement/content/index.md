@@ -22,7 +22,7 @@ A string.
 
 ## Examples
 
-Reading the content for when a meta element has a `keywords` name:
+### Reading the content
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web">
@@ -31,7 +31,7 @@ console.log(meta.content);
 // "documentation, HTML, web"
 ```
 
-Creating a new meta element with `description` as a name and setting a `content` value:
+### Creating a meta element and setting the `content` attribute
 
 ```js
 let meta = document.createElement("meta");
