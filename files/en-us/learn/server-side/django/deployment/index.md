@@ -181,7 +181,7 @@ We are choosing to use Railway for several reasons:
 
 - The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
 
-While Railway is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](/en-US/docs/Learn/Server-side/Django/Deployment#choosing_a_hosting_provider).
+While Railway is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](#choosing_a_hosting_provider).
 
 ### How does Railway work?
 
