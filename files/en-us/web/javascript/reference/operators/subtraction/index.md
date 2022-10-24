@@ -22,6 +22,10 @@ difference.
 x - y
 ```
 
+## Description
+
+The subtraction operator [converts both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and carries out either number subtraction or [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) subtraction, depending on the two operands' types. If the types don't match, a {{jsxref("TypeError")}} is thrown.
+
 ## Examples
 
 ### Subtraction with numbers
@@ -37,14 +41,26 @@ x - y
 ### Subtraction with non-numbers
 
 ```js
-// String - Number -> concatenation
-"foo" - 3; // NaN
+// String - Number -> subtraction
+"foo" - 3; // NaN; "foo" is converted to the number NaN
 
 // Number - String -> subtraction
-5 - "3"; // 2
+5 - "3"; // 2; "3" is converted to the number 3
 ```
 
-When subtracting a string (and the contents is a number) from a number Javascript will automaticly convert the string into a number and subtract like normal. This is known as [Numeric Conversion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion).
+### Subtraction with BigInts
+
+```js
+// BigInt - BigInt -> subtraction
+2n - 1n; // 1n
+```
+
+You cannot mix BigInt and number operands in subtraction.
+
+```js example-bad
+2n - 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 - 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
 
 ## Specifications
 
