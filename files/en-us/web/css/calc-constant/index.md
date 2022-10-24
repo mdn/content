@@ -51,9 +51,6 @@ For example:
 - `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
 
-These constants can't be used in any CSS function, only in math functions:
-
-- `rotate(1rad * pi);` won't work. You need to use `rotate(calc(1rad * pi));`
 
 In math functions, `<calc-constant>` values are evaluated as {{cssxref("number")}} values, therefore `e` and `pi` act as numeric constants.
 
