@@ -564,7 +564,7 @@ Select **Deploy from GitHub repo**.
 All projects in the Github repos you shared with Railway during setup are displayed.
 Select your Github repository for the local library: `<user-name>/django-locallibrary-tutorial`.
 
-![Railway website screen showing a dialog to choose and existing GitHub repository or chose a new one](railway_new_project_button_deploy_github_selectrepo.png)
+![Railway website screen showing a dialog to choose an existing GitHub repository or choose a new one](railway_new_project_button_deploy_github_selectrepo.png)
 
 Confirm your deployment by selecting **Deploy Now**.
 
