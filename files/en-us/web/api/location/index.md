@@ -19,18 +19,21 @@ The **`Location`** interface represents the location (URL) of the object it is l
 
 ```html hidden
 <p>Hover over the URL segments below to highlight their meaning.</p>
-<span id="href" title="href">
-  <span id="origin" title="origin">
-    <span id="protocol" title="protocol">https:</span>//
-    <span id="host" title="host">
-      <span id="hostname" title="hostname">example.org</span>:
-      <span id="port" title="port">8080</span>
-    </span>
-  </span>
-  <span id="pathname" title="pathname">/foo/bar</span>
-  <span id="search" title="search">?q=baz</span>
-  <span id="hash" title="hash">#bang</span>
-</span>
+<span id="href" title="href"
+  ><span id="origin" title="origin"
+    ><span id="protocol" title="protocol">https:</span>//<span
+      id="host"
+      title="host"
+      ><span id="hostname" title="hostname">example.org</span>:<span
+        id="port"
+        title="port"
+        >8080</span
+      ></span
+    ></span
+  ><span id="pathname" title="pathname">/foo/bar</span
+  ><span id="search" title="search">?q=baz</span
+  ><span id="hash" title="hash">#bang</span></span
+>
 ```
 
 ```css hidden
@@ -44,10 +47,9 @@ body {
   text-align: center;
   vertical-align: middle;
   font-family: Georgia;
-  font-size: 200%;
+  font-size: 175%;
   line-height: 1em;
   white-space: nowrap;
-  overflow-x: hidden;
 }
 
 p {
