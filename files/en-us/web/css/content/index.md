@@ -164,9 +164,7 @@ h1::before {
 ### Image combined with text
 
 This example inserts an image before the link.
-If the image is not found, it inserts "alt(ernative) text" instead.
-
-In addition, to force the
+If the image is not found, it inserts "alternative text" instead.
 
 #### HTML
 
@@ -180,7 +178,8 @@ The CSS to shown the image if present and otherwise the alternative text is show
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/xfavicon.ico") / " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/xfavicon.ico") /
+    " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
 }
