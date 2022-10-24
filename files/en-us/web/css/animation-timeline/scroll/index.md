@@ -157,4 +157,7 @@ Scroll to see the square element being animated.
 
 ## See also
 
--
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis)
+- [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline)
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
