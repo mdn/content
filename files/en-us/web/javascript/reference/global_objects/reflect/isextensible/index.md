@@ -45,19 +45,19 @@ See also {{jsxref("Object.isExtensible()")}}.
 ```js
 // New objects are extensible.
 const empty = {};
-Reflect.isExtensible(empty)  // === true
+Reflect.isExtensible(empty); // === true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty)  // === false
+Reflect.isExtensible(empty); // === false
 
 // Sealed objects are by definition non-extensible.
 const sealed = Object.seal({});
-Reflect.isExtensible(sealed)  // === false
+Reflect.isExtensible(sealed); // === false
 
 // Frozen objects are also by definition non-extensible.
 const frozen = Object.freeze({});
-Reflect.isExtensible(frozen)  // === false
+Reflect.isExtensible(frozen); // === false
 ```
 
 ### Difference with Object.isExtensible()
@@ -65,10 +65,10 @@ Reflect.isExtensible(frozen)  // === false
 If the `target` argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.isExtensible()")}}, a non-object `target` will return false without any errors.
 
 ```js
-Reflect.isExtensible(1)
+Reflect.isExtensible(1);
 // TypeError: 1 is not an object
 
-Object.isExtensible(1)
+Object.isExtensible(1);
 // false
 ```
 
