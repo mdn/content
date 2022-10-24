@@ -1,6 +1,7 @@
 ---
 title: exp()
 slug: Web/CSS/exp
+page-type: css-function
 tags:
   - CSS
   - CSS Function

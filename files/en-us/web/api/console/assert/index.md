@@ -57,10 +57,10 @@ The following code example demonstrates the use of a JavaScript object following
 assertion:
 
 ```js
-const errorMsg = 'the # is not even';
+const errorMsg = "the # is not even";
 for (let number = 2; number <= 5; number++) {
   console.log(`the # is ${number}`);
-  console.assert(number % 2 === 0, { number, errorMsg });
+  console.assert(number % 2 === 0, '%o', { number, errorMsg });
 }
 // output:
 // the # is 2

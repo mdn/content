@@ -1,6 +1,7 @@
 ---
 title: offset-rotate
 slug: Web/CSS/offset-rotate
+page-type: css-property
 tags:
   - CSS
   - CSS Motion Path

@@ -1,6 +1,7 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
+page-type: css-property
 tags:
   - CSS
   - CSS Grid

@@ -1,6 +1,7 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -11,7 +12,7 @@ tags:
 browser-compat: css.selectors.required
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the {{ htmlattrxref("required", "input") }} attribute set on it.
 

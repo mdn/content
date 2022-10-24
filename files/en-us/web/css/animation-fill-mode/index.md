@@ -1,6 +1,7 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

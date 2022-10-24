@@ -1,6 +1,7 @@
 ---
 title: CSS Layout cookbook
 slug: Web/CSS/Layout_cookbook
+page-type: landing-page
 tags:
   - CSS
   - Guide

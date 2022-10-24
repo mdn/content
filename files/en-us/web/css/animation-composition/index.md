@@ -1,6 +1,7 @@
 ---
 title: animation-composition
 slug: Web/CSS/animation-composition
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

@@ -1,6 +1,7 @@
 ---
 title: CSS Display
 slug: Web/CSS/CSS_Display
+page-type: css-module
 tags:
   - CSS
   - CSS Display

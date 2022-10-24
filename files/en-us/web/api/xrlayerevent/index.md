@@ -26,14 +26,14 @@ The **`XRLayerEvent`** interface of the [WebXR Device API](/en-US/docs/Web/API/W
 - {{domxref("XRLayerEvent.XRLayerEvent", "XRLayerEvent()")}} {{Experimental_Inline}}
   - : Creates and returns a new `XRLayerEvent` object.
 
-## Properties
+## Instance properties
 
 _In addition to properties inherited from its parent interface, {{domxref("Event")}}, `XRLayerEvent` provides the following:_
 
 - {{domxref("XRLayerEvent.layer", "layer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{domxref("XRLayer")}} which generated the event.
 
-## Methods
+## Instance methods
 
 _While `XRSessionEvent` defines no methods, it inherits methods from its parent interface, {{domxref("Event")}}._
 

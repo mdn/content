@@ -1,6 +1,7 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
+page-type: css-property
 tags:
   - CSS
   - CSS Property

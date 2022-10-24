@@ -25,12 +25,12 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : Creates a new instance of an `AudioWorkletProcessor` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioWorkletProcessor.port", "port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the processor and the {{domxref("AudioWorkletNode")}} which it belongs to. The other end is available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
-## Methods
+## Instance methods
 
 _The `AudioWorkletProcessor` interface does not define any methods of its own. However, you must provide a {{domxref("AudioWorkletProcessor.process", "process()")}} method, which is called in order to process the audio stream._
 
@@ -71,27 +71,30 @@ First, we need to define a custom `AudioWorkletProcessor`, which will output whi
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
-    const output = outputs[0]
+  process(inputs, outputs, parameters) {
+    const output = outputs[0];
     output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
-        channel[i] = Math.random() * 2 - 1
+        channel[i] = Math.random() * 2 - 1;
       }
-    })
-    return true
+    });
+    return true;
   }
 }
 
-registerProcessor('white-noise-processor', WhiteNoiseProcessor)
+registerProcessor("white-noise-processor", WhiteNoiseProcessor);
 ```
 
 Next, in our main script file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}}, passing it the name of the processor, then connect the node to an audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('white-noise-processor.js')
-const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
-whiteNoiseNode.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("white-noise-processor.js");
+const whiteNoiseNode = new AudioWorkletNode(
+  audioContext,
+  "white-noise-processor"
+);
+whiteNoiseNode.connect(audioContext.destination);
 ```
 
 ## Specifications

@@ -61,15 +61,15 @@ The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of
 ```python
 INSTALLED_APPS = [
     # …
-    'django.contrib.auth',  #Core authentication framework and its default models.
-    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
+    'django.contrib.auth',  # Core authentication framework and its default models.
+    'django.contrib.contenttypes',  # Django content type system (allows permissions to be associated with models).
     # …
 
 MIDDLEWARE = [
     # …
-    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Manages sessions across requests
     # …
-    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Associates users with requests using sessions.
     # …
 ```
 
@@ -141,7 +141,7 @@ In this section, we show how to integrate the default system into the _LocalLibr
 Add the following to the bottom of the project urls.py file (**locallibrary/locallibrary/urls.py**) file:
 
 ```python
-#Add Django site authentication urls (for login, logout, password management)
+# Add Django site authentication urls (for login, logout, password management)
 
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
@@ -184,7 +184,7 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 > **Note:** Your folder structure should now look like the below:
 >
 > ```
-> locallibrary/   #Django project folder
+> locallibrary/   # Django project folder
 >   catalog/
 >   locallibrary/
 >   templates/
@@ -335,7 +335,7 @@ This template provides the text of the HTML email containing the reset link that
 
 ```html
 Someone asked for password reset for email \{{ email }}. Follow the link below:
-\{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
 #### Password reset confirm
@@ -425,16 +425,16 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+     <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+     <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
   </ul>
 ```
 
 As you can see, we use `if`-`else`-`endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
-We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{request.path}}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
+We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{ request.path }}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
 
 > **Note:** Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.
 
@@ -536,10 +536,10 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('book','imprint', 'id')
+            'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back','borrower')
+            'fields': ('status', 'due_back', 'borrower')
         }),
     )
 ```
@@ -562,7 +562,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     """Generic class-based view listing books on loan to current user."""
     model = BookInstance
-    template_name ='catalog/bookinstance_list_borrowed_user.html'
+    template_name = 'catalog/bookinstance_list_borrowed_user.html'
     paginate_by = 10
 
     def get_queryset(self):
@@ -596,7 +596,7 @@ Now, all we need to do for this page is add a template. First, create the templa
 
       {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
-        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{bookinst.book.title}}</a> (\{{ bookinst.due_back }})
+        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{ bookinst.book.title }}</a> (\{{ bookinst.due_back }})
       </li>
       {% endfor %}
     </ul>
@@ -625,9 +625,9 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 
    <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
 
-   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+   <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-   <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+   <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
  </ul>
 ```

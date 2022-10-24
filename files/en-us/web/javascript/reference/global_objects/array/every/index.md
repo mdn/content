@@ -71,12 +71,7 @@ element is found, the `every` method immediately returns `false`.
 Otherwise, if `callbackFn` returns a {{Glossary("truthy")}} value
 for all elements, `every` returns `true`.
 
-> **Note:** Calling this method on an empty array will return
-> `true` for any condition!
-
-`callbackFn` is invoked only for array indexes which have assigned
-values. It is not invoked for indexes which have been deleted, or which have never been
-assigned values.
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 `callbackFn` is invoked with three arguments: the value of the
 element, the index of the element, and the Array object being traversed.
@@ -101,6 +96,8 @@ the time `every` visits them. Elements that are deleted are not visited.
 for an empty array, it returns `true`. (It is [vacuously true](https://en.wikipedia.org/wiki/Vacuous_truth) that all
 elements of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties)
 satisfy any given condition.)
+
+The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -127,13 +124,13 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```
 
-### Using arrow functions
+### Using every() on sparse arrays
 
-[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+`every()` will not run its predicate on empty slots.
 
 ```js
-[12, 5, 8, 130, 44].every((x) => x >= 10);   // false
-[12, 54, 18, 130, 44].every((x) => x >= 10); // true
+console.log([1, , 3].every((x) => x !== undefined)); // true
+console.log([2, , 2].every((x) => x === 2)); // true
 ```
 
 ### Affecting Initial Array (modifying, appending, and deleting)
@@ -190,6 +187,22 @@ arr.every((elem, index, arr) => {
 //
 // 1st iteration: [1,2,3][0] -> 1
 // 2nd iteration: [1,2][1] -> 2
+```
+
+### Calling every() on non-array objects
+
+The `every()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `false`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(
+  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+); // true
 ```
 
 ## Specifications

@@ -22,12 +22,6 @@ The **`frameType`** read-only property of the {{domxref("Client")}} interface in
 
 One of these four strings: `"auxiliary"`, `"top-level"`, `"nested"`, or `"none"`.
 
-## Examples
-
-```js
-TBD
-```
-
 ## Specifications
 
 {{Specifications}}

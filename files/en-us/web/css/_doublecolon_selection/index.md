@@ -1,6 +1,7 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout
@@ -24,7 +25,7 @@ Only certain CSS properties can be used with `::selection`:
 - {{CSSxRef("background-color")}}
 - {{CSSxRef("text-decoration")}} and its associated properties
 - {{CSSxRef("text-shadow")}}
-- {{SVGAttr("stroke-color")}}, {{SVGAttr("fill-color")}} and {{SVGAttr("stroke-width")}}
+- {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}} and {{CSSxRef("-webkit-text-stroke-width")}}
 
 In particular, {{CSSxRef("background-image")}} is ignored.
 

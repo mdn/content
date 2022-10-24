@@ -7,11 +7,10 @@ tags:
   - Canvas
   - Interface
   - Reference
-  - Experimental
 browser-compat: api.OffscreenCanvas
 ---
 
-{{APIRef("Canvas API")}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 When using the {{HtmlElement("canvas")}} element or the [Canvas API](/en-US/docs/Web/API/Canvas_API), rendering, animation, and user interaction usually happen on the main execution thread of a web application.
 The computation relating to canvas animations and rendering can have a significant impact on application performance.
@@ -27,23 +26,23 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 
 ## Constructors
 
-- {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} {{Experimental_Inline}}
+- {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}}
   - : `OffscreenCanvas` constructor. Creates a new `OffscreenCanvas` object.
 
-## Properties
+## Instance properties
 
-- {{domxref("OffscreenCanvas.height")}} {{Experimental_Inline}}
+- {{domxref("OffscreenCanvas.height")}}
   - : The height of the offscreen canvas.
-- {{domxref("OffscreenCanvas.width")}} {{Experimental_Inline}}
+- {{domxref("OffscreenCanvas.width")}}
   - : The width of the offscreen canvas.
 
-## Methods
+## Instance methods
 
-- {{domxref("OffscreenCanvas.getContext()")}} {{Experimental_Inline}}
+- {{domxref("OffscreenCanvas.getContext()")}}
   - : Returns a rendering context for the offscreen canvas.
-- {{domxref("OffscreenCanvas.convertToBlob()")}} {{Experimental_Inline}}
+- {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas.
-- {{domxref("OffscreenCanvas.transferToImageBitmap()")}} {{Experimental_Inline}}
+- {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
   - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.
 
 ## Examples

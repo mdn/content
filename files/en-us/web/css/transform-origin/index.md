@@ -1,6 +1,7 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -12,7 +13,7 @@ tags:
 browser-compat: css.properties.transform-origin
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`transform-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin for an element's transformations.
 

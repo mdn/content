@@ -27,7 +27,7 @@ child objects of `AuthenticatorResponse`, specifically
 
 An {{jsxref("ArrayBuffer")}}.
 
-## Properties
+## Instance properties
 
 After the `clientDataJSON` object is converted from an
 `ArrayBuffer` to a JavaScript object, it will have the following properties:

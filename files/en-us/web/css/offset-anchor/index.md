@@ -1,6 +1,7 @@
 ---
 title: offset-anchor
 slug: Web/CSS/offset-anchor
+page-type: css-property
 tags:
   - CSS
   - CSS Motion Path

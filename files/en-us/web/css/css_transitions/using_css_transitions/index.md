@@ -1,6 +1,7 @@
 ---
 title: Using CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -98,7 +99,7 @@ This example performs a four-second font size transition with a two-second delay
   background-color: #ffcccc;
   width: 200px;
   height: 200px;
-  transform: rotate(180deg);
+  rotate: 180deg;
 }
 ```
 

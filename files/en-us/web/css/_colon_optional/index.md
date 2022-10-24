@@ -1,6 +1,7 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -11,7 +12,7 @@ tags:
 browser-compat: css.selectors.optional
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the {{ htmlattrxref("required", "input") }} attribute set on it.
 

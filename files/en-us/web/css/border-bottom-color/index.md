@@ -1,6 +1,7 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

@@ -1,6 +1,7 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -27,10 +28,10 @@ border-image-outset: 1rem;
 /* <number> value */
 border-image-outset: 1.5;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-outset: 1 1.2;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-image-outset: 30px 2 45px;
 
 /* top | right | bottom | left */

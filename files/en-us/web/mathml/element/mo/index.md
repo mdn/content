@@ -11,63 +11,59 @@ browser-compat: mathml.elements.mo
 
 {{MathMLRef}}
 
-The MathML `<mo>` element represents an operator in a broad sense. Besides operators in strict mathematical meaning, this element also includes "operators" like parentheses, separators like comma and semicolon, or "absolute value" bars.
+The **`<mo>`** [MathML](/en-US/docs/Web/MathML) element represents an **operator** in a broad sense. Besides operators in strict mathematical meaning, this element also includes "operators" like parentheses, separators like comma and semicolon, or "absolute value" bars.
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes), this element accepts the following attributes [whose default values depend on the operator's form and content](https://w3c.github.io/mathml-core/#algorithm-for-determining-the-properties-of-an-embellished-operator):
 
 - `accent`
-  - : If the operator is used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) this attribute specifies whether the operator should be treated as an accent.
-    Allowed values are `true` or `false`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator should be treated as an accent when used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) (i.e. drawn bigger and closer to the base expression).
+
 - `fence`
-  - : There is no visual effect for this attribute, but it specifies whether the operator is a fence (such as parentheses).
-    Allowed values are `true` or `false`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.
+
 - `lspace`
-  - : The amount of space before the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space before the operator.
 
 - `maxsize`
 
-  - : If `stretchy` is `true`, this attribute specifies the maximum size of the operator. Allowed values are:
-
-    - `infinity`
-    - an arbitrary [length](/en-US/docs/Web/MathML/Attribute/Values#lengths)
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the maximum size of the operator when it is stretchy.
 
 - `minsize`
 
-  - : If `stretchy` is `true`, this attribute specifies the minimum size of the operator. Allowed values are:
-
-    - `infinity`
-    - an arbitrary [length](/en-US/docs/Web/MathML/Attribute/Values#lengths)
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum size of the operator when it is stretchy.
 
 - `movablelimits`
-  - : Specifies whether attached under- and overscripts move to sub- and superscript positions when `displaystyle` is `false`.
-    Allowed values are either `true` or `false`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether attached under- and overscripts move to sub- and superscript positions when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `compact`.
+
 - `rspace`
-  - : The amount of space after the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space after the operator.
 - `separator`
-  - : There is no visual effect for this attribute, but it specifies whether the operator is a separator (such as commas).
-    Allowed values are `true` or `false`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator is a separator (such as commas). There is no visual effect for this attribute.
+
 - `stretchy`
-  - : Specifies whether the operator stretches to the size of the adjacent element.
-    Allowed values are `true` or `false`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator stretches to the size of the adjacent element.
+
 - `symmetric`
-  - : If `stretchy` is `true`, this attribute specifies whether the operator should be vertically symmetric around the imaginary math axis (centered fraction line).
-    The default value is `true` if **stretchy** is set to `true` and otherwise `false`. Allowed values are `true` or `false`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether a stretchy operator should be vertically symmetric around the imaginary math axis (centered fraction line).
+
+> **Note:** For the `lspace`, `maxsize`, `minsize` and `rspace` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 
 ```html
-<math>
+<math display="block">
   <mrow>
     <mn>5</mn>
     <mo>+</mo>
     <mn>5</mn>
   </mrow>
+</math>
 
+<math display="block">
   <mrow>
     <mo>[</mo> <!-- default form value: prefix -->
-
     <mrow>
       <mn>0</mn>
       <mo>;</mo> <!-- default form value: infix -->
@@ -77,6 +73,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
   </mrow>
 </math>
 ```
+
+{{ EmbedLiveSample('mo_example', 700, 200, "", "") }}
 
 ## Specifications
 

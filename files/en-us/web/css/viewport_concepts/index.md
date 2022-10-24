@@ -1,6 +1,7 @@
 ---
 title: Viewport concepts
 slug: Web/CSS/Viewport_concepts
+page-type: guide
 tags:
   - Best practices
   - CSS
@@ -139,7 +140,7 @@ If you include an SVG file in your HTML, the viewport of the SVG is the initial 
 
 ```css
 @media screen and (min-width: 400px) and (max-width: 500px) {
-  /* css goes here */
+  /* CSS goes here */
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
+page-type: css-property
 tags:
   - CSS
   - CSS Property

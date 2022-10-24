@@ -202,3 +202,4 @@ p2.then(
 
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.finally()")}}

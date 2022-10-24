@@ -20,7 +20,7 @@ The interface's properties create a _resource loading timeline_ with {{domxref("
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 This interface extends the following {{domxref("PerformanceEntry")}} properties for resource performance entry types by qualifying and constraining them as follows:
 
@@ -72,7 +72,7 @@ The interface also supports the following properties which are listed in the ord
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
   - : Returns a string that is the JSON representation of the {{domxref("PerformanceResourceTiming")}} object.

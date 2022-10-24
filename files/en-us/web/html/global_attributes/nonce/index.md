@@ -35,8 +35,8 @@ From your web server, generate a random base64-encoded string of at least 128 bi
 random number generator. Nonces should be generated differently each time the page loads (nonce only once!). For example, in nodejs:
 
 ```js
-const crypto = require('crypto');
-crypto.randomBytes(16).toString('base64');
+const crypto = require("crypto");
+crypto.randomBytes(16).toString("base64");
 // '8IBTHwOdqNKAWeKl7plt8g=='
 ```
 
@@ -46,7 +46,7 @@ The nonce generated on your backend code should now be used for the inline scrip
 
 ```html
 <script nonce="8IBTHwOdqNKAWeKl7plt8g==">
- // …
+  // …
 </script>
 ```
 
@@ -65,7 +65,7 @@ Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
 For security reasons, the `nonce` content attribute is hidden (an empty string will be returned).
 
 ```js example-bad
-script.getAttribute('nonce'); // returns empty string
+script.getAttribute("nonce"); // returns empty string
 ```
 
 The [`nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property is the only way to access nonces:

@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mi
 
 {{MathMLRef}}
 
-The MathML `<mi>` element indicates that the content should be rendered as an **identifier** such as function names, variables or symbolic constants. You can also have arbitrary text in it to mark up terms.
+The **`<mi>`** [MathML](/en-US/docs/Web/MathML) element indicates that the content should be rendered as an **identifier** such as function names, variables or symbolic constants. You can also have arbitrary text in it to mark up terms.
 
 ## Attributes
 
@@ -20,17 +20,23 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 ## Examples
 
 ```html
-<math>
+<math display="block">
   <!-- Multiple characters, default mathvariant is "normal". -->
   <mi>sin</mi>
+</math>
 
+<math display="block">
   <!-- Single character, default mathvariant is "italic". -->
   <mi>y</mi>
+</math>
 
+<math display="block">
   <!-- Overriding default mathvariant. -->
   <mi mathvariant="normal">F</mi>
 </math>
 ```
+
+{{ EmbedLiveSample('mi_example', 700, 200, "", "") }}
 
 ## Specifications
 

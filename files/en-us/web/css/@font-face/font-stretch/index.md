@@ -1,8 +1,9 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -171,7 +172,6 @@ The following find a local Open Sans font or import it, and allow using the font
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

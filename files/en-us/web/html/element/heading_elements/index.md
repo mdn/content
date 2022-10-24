@@ -88,7 +88,7 @@ These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_
 
 ### Do not use multiple `<h1>` elements on one page
 
-Using more than one `<h1>` on one page was allowed in older versions of the HTML specification that inclulded the concept of an _outline algorithm_. However, this was never considered a best practice. Read more in [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
+Using more than one `<h1>` on one page was allowed in older versions of the HTML specification that included the concept of an _outline algorithm_. However, this was never considered a best practice. Read more in [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 
 Use only one `<h1>` per page and [nest headings](#nesting) without skipping levels.
 

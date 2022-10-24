@@ -51,11 +51,11 @@ function onFs(fs){
 window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);
 ```
 
-## Properties
+## Instance properties
 
 _This interface has no properties of its own, but inherits properties from its parent interface, {{domxref("FileSystemEntry")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent interface, {{domxref("FileSystemEntry")}}._
 

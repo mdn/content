@@ -1,6 +1,7 @@
 ---
 title: CSS Houdini
 slug: Web/CSS/CSS_Houdini
+page-type: guide
 tags:
   - CSS
   - Houdini

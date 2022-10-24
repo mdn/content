@@ -1,6 +1,7 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -14,7 +15,7 @@ browser-compat: css.properties.text-combine-upright
 
 The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
 
-This is used to produce an effect that is known as tate-chū-yoko (縦中横) in Japanese, or as 直書橫向 in Chinese.
+This is used to produce an effect that is known as tate-chū-yoko <q lang="ja">縦中横</q> in Japanese, or as <q lang="zh-Hant">橫向文字</q> in Chinese.
 
 {{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
 

@@ -1,6 +1,7 @@
 ---
 title: font-smooth
 slug: Web/CSS/font-smooth
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -10,7 +11,7 @@ tags:
 browser-compat: css.properties.font-smooth
 ---
 
-{{ CSSRef }} {{ Non-standard_header }}
+{{CSSRef}} {{ Non-standard_header }}
 
 The **`font-smooth`** [CSS](/en-US/docs/Web/CSS) property controls the application of anti-aliasing when fonts are rendered.
 

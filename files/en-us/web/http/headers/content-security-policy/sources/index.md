@@ -45,6 +45,10 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
     - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
 
+    > **Note:** if a scheme source is missing, the document origin's scheme is used.
+    > Secure upgrades are allowed, so if the document is loaded using `https:`, then `example.com` will match `https://example.com` but not `http://example.com`.
+    > For more information, see [CSP Level 3](https://www.w3.org/TR/CSP3/#match-url-to-source-list).
+
 - `'self'`
   - : Refers to the origin from which the protected document is being served, including the same URL scheme and port number.
     You must include the single quotes. Some browsers specifically exclude `blob` and `filesystem` from source directives.

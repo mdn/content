@@ -1,6 +1,7 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
+page-type: css-property
 tags:
   - Asian
   - CSS

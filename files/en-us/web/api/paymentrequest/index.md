@@ -28,7 +28,7 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
 - {{domxref('PaymentRequest.PaymentRequest()','PaymentRequest()')}} {{SecureContext_Inline}}
   - : Creates a new `PaymentRequest` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('PaymentRequest.id')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An unique identifier for a particular `PaymentRequest`, which can be set via `details.id`. When none is set, it defaults to a UUID.
@@ -39,7 +39,7 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
 - {{domxref('PaymentRequest.shippingType')}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the type of shipping used to fulfill the transaction. This will be one of `shipping`, `delivery`, `pickup`, or `null` if a value was not provided in the constructor.
 
-## Methods
+## Instance methods
 
 - {{domxref('PaymentRequest.canMakePayment()')}} {{SecureContext_Inline}}
   - : Indicates whether the `PaymentRequest` object can make a payment before calling `show()`.

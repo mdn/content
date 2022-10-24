@@ -1,6 +1,7 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
+page-type: css-property
 tags:
   - CSS
   - CSS Property

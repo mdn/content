@@ -2,6 +2,7 @@
 title: Controlling ratios of flex items along the main axis
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+page-type: guide
 tags:
   - Basis
   - CSS
@@ -48,15 +49,11 @@ In order to work out how much space there is available to lay out flex items, th
 
 There is a concept in CSS of {{CSSxRef('width','min-content','#min-content')}} and {{CSSxRef('width','max-content','#max-content')}} — these keywords are [defined in the CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), and can be used in place of a [length unit](/en-US/docs/Web/CSS/length).
 
-In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of `min-content`. In a browser that supports this keyword you should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the `min-content` size of that string. Essentially, the longest word in the string is dictating the size.
+In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of `min-content`. You should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the `min-content` size of that string. Essentially, the longest word in the string is dictating the size.
 
 The second paragraph has a value of `max-content` and so it does the opposite. It gets as big as it possibly can be, taking no soft-wrapping opportunities. It would overflow the box it is in if that container was too narrow.
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}
-
-If your browser does not yet support these keywords both paragraphs will be rendered as normal paragraphs in block flow; the below screenshots show the expected rendering.
-
-![The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow.](ratios-size.png)
 
 Remember this behavior and what effects `min-content` and `max-content` have as we explore `flex-grow` and `flex-shrink` later in this article.
 
@@ -84,7 +81,7 @@ In this example I have created a series of inflexible boxes, with both `flex-gro
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-basis.html", '100%', 500)}}
 
-In addition to the `auto` keyword, you can use the `content` keyword as the `flex-basis`. This will result in the `flex-basis` being taken from the content size even if there is a width set on the item. This is a newer keyword and has less browser support, however you can always get the same effect by using `auto` as the flex-basis and ensuring that your item does not have a width set, in order that it will be auto-sized.
+In addition to the `auto` keyword, you can use the `content` keyword as the `flex-basis`. This will result in the `flex-basis` being taken from the content size even if there is a width set on the item. You can also get the same effect by using `auto` as the flex-basis and ensuring that your item does not have a width set, in order that it will be auto-sized.
 
 If you want flexbox to completely ignore the size of the item when doing space distribution then set `flex-basis` to `0`. This essentially tells flexbox that all the space is up for grabs, and to share it out in proportion. We will see examples of this as we move on to look at `flex-grow`.
 
@@ -177,7 +174,7 @@ The key to really understanding how flex item sizing works is in understanding t
 ### What sets the base size of the item?
 
 1. Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
-2. Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
+2. Is `flex-basis` set to `auto` or `content`? If so, the size is based on the item size.
 3. Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
 4. Is `flex-basis` set to `0`? if so then the item size is not taken into consideration for the space-sharing calculation.
 

@@ -26,7 +26,7 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBDatabase.name")}} {{ReadOnlyInline}}
   - : A string that contains the name of the connected database.
@@ -35,7 +35,7 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 - {{domxref("IDBDatabase.objectStoreNames")}} {{ReadOnlyInline}}
   - : A {{ domxref("DOMStringList") }} that contains a list of the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
-## Methods
+## Instance methods
 
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
@@ -70,7 +70,7 @@ The following events are available to `IDBDatabase` via event bubbling from {{do
 
 ## Example
 
-In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -145,4 +145,4 @@ const objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoLis
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

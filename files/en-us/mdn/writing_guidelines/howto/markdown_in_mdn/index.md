@@ -84,7 +84,7 @@ In MDN, writers will use code fences for example code blocks. They must specify 
 - Command Prompts
   - `sh` - Bash/Shell
   - `batch` - Batch (Windows Shell)
-  - `ps` - PowerShell
+  - `powershell` - PowerShell
 - Configuration/Data Files
   - `json` - JSON
   - `ini` - INI

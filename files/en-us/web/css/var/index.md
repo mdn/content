@@ -1,6 +1,7 @@
 ---
 title: var()
 slug: Web/CSS/var
+page-type: css-function
 tags:
   - CSS
   - CSS Custom Properties

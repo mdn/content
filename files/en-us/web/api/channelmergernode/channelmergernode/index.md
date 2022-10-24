@@ -61,8 +61,8 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 const ac = new AudioContext();
 
 const options = {
-  numberOfInputs : 2
-}
+  numberOfInputs: 2,
+};
 
 const myMerger = new ChannelMergerNode(ac, options);
 ```

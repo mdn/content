@@ -56,7 +56,7 @@ None.
 - `digit`
   - : Specifies the character used in the format pattern to stand for a digit. The default is (`#`).
 - `pattern-separator`
-  - : Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semi-colon (`;`).
+  - : Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semicolon (`;`).
 
 ### Type
 

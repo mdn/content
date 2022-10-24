@@ -1,6 +1,7 @@
 ---
 title: oklch()
 slug: Web/CSS/color_value/oklch
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

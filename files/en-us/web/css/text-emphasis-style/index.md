@@ -1,6 +1,7 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
+page-type: css-property
 tags:
   - CSS
   - CSS Property

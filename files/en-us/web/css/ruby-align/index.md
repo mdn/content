@@ -1,6 +1,7 @@
 ---
 title: ruby-align
 slug: Web/CSS/ruby-align
+page-type: css-property
 tags:
   - CSS
   - CSS Property

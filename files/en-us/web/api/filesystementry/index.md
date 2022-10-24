@@ -47,7 +47,7 @@ window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, (fs) => {
 }, onError);
 ```
 
-## Properties
+## Instance properties
 
 _This interface provides the following properties._
 
@@ -62,7 +62,7 @@ _This interface provides the following properties._
 - {{domxref("FileSystemEntry.name", "name")}} {{ReadOnlyInline}}
   - : A string containing the name of the entry (the final part of the path, after the last "/" character).
 
-## Methods
+## Instance methods
 
 _This interface defines the following methods._
 

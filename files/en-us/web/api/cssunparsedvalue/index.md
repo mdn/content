@@ -27,12 +27,12 @@ Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}}
 - {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSUnparsedValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSUnparsedValue.length')}} {{Experimental_Inline}}
   - : Returns the number of items in the `CSSUnparsedValue` object.
 
-## Methods
+## Instance methods
 
 - {{domxref('CSSUnparsedValue.entries()')}} {{Experimental_Inline}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).

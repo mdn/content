@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: tabpanel role'
+title: "ARIA: tabpanel role"
 slug: Web/Accessibility/ARIA/Roles/tabpanel_role
 tags:
   - ARIA

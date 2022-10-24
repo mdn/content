@@ -1,6 +1,7 @@
 ---
-title: ':user-invalid (:-moz-ui-invalid)'
+title: ":user-invalid (:-moz-ui-invalid)"
 slug: Web/CSS/:user-invalid
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS Selectors

@@ -27,14 +27,14 @@ A [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) **`XRFrame`** object 
 
 In addition to providing a reference to the {{domxref("XRSession")}} for which this frame is to be rendered, the {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method is provided to obtain the {{domxref("XRViewerPose")}} describing the viewer's position and orientation in space, and {{domxref("XRFrame.getPose", "getPose()")}} can be used to create an {{domxref("XRPose")}} describing the relative position of one {{domxref("XRSpace")}} relative to another.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("XRFrame.session", "session")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{DOMxRef("XRSession")}} that for which this `XRFrame` describes the tracking details for all objects. The information about a specific object can be obtained by calling one of the methods on the object.
 - {{DOMxRef("XRFrame.trackedAnchors", "trackedAnchors")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("XRAnchorSet")}} containing all anchors still tracked in the frame.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRFrame.createAnchor()", "createAnchor()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} which resolves to a free-floating {{domxref("XRAnchor")}} object.

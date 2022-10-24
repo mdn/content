@@ -1,6 +1,7 @@
 ---
 title: margin-block-end
 slug: Web/CSS/margin-block-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

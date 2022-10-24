@@ -64,7 +64,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -102,8 +102,8 @@ para.onpointercancel = (event) => {
 
 - Related events
 
-  - [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
   - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
   - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
   - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
@@ -111,5 +111,3 @@ para.onpointercancel = (event) => {
   - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-- This event on `Document` targets: [`pointercancel`](/en-US/docs/Web/API/Document/pointercancel_event) event

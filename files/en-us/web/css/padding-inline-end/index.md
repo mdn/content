@@ -1,6 +1,7 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

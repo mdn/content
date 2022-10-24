@@ -11,30 +11,33 @@ browser-compat: mathml.elements.mspace
 
 {{MathMLRef}}
 
-The MathML `<mspace>` element is used to display a blank space, whose size is set by its attributes.
+The **`<mspace>`** [MathML](/en-US/docs/Web/MathML) element is used to display a blank space, whose size is set by its attributes.
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `depth`
-  - : The desired depth (below the baseline) of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the space.
 - `height`
-  - : The desired height (above the baseline) of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired height (above the baseline) of the space.
 - `width`
-  - : The desired width of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired width of the space.
 
-Note that some common attributes like `mathcolor`, `mathvariant` or `dir` have no effect on `<mspace>`.
+> **Note:** For the `depth`, `height`, `width` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 
 ```html
-<math>
-  <mspace depth="40px" height="20px" />
-
-  <mspace width="100px" />
+<math display="block">
+  <mn>1</mn>
+  <mspace depth="40px" height="20px" width="100px"
+          style="background: lightblue;"/>
+  <mn>2</mn>
 </math>
 ```
+
+{{ EmbedLiveSample('mspace_example', 700, 200, "", "") }}
 
 ## Specifications
 

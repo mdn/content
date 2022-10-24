@@ -32,7 +32,7 @@ The `@@isConcatSpreadable` symbol (`Symbol.isConcatSpreadable`) can be defined a
 By default, {{jsxref("Array.prototype.concat()")}} spreads (flattens) arrays into its result:
 
 ```js
-const alpha = ['a', 'b', 'c'];
+const alpha = ["a", "b", "c"];
 const numeric = [1, 2, 3];
 
 const alphaNumeric = alpha.concat(numeric);
@@ -43,7 +43,7 @@ console.log(alphaNumeric); // Result: ['a', 'b', 'c', 1, 2, 3]
 When setting `Symbol.isConcatSpreadable` to `false`, you can disable the default behavior:
 
 ```js
-const alpha = ['a', 'b', 'c'];
+const alpha = ["a", "b", "c"];
 const numeric = [1, 2, 3];
 
 numeric[Symbol.isConcatSpreadable] = false;
@@ -62,8 +62,8 @@ const x = [1, 2, 3];
 const fakeArray = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
-  0: 'hello',
-  1: 'world',
+  0: "hello",
+  1: "world",
 };
 
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]

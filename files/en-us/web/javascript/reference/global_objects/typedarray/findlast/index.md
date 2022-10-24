@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.TypedArray.findLast
 
 {{JSRef}}
 
-The **`findLast()`** method returns the value of the last element in a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) that satisfies the provided testing function.
+The **`findLast()`** method iterates a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 See also the {{jsxref("TypedArray.findLastIndex()", "findLastIndex()")}} method, which returns the index of the found element instead of its value.
@@ -117,7 +117,7 @@ The following examples show that all elements _are_ visited, and that the value 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
 // The missing elements will be initialized to zero.
-const uint8 = new Uint8Array([0,1,,,,5,6]);
+const uint8 = new Uint8Array([0, 1, , , , 5, 6]);
 
 // Iterate through the elements in reverse order.
 // Note that all elements are visited.

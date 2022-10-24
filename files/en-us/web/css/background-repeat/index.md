@@ -1,6 +1,7 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
+page-type: css-property
 tags:
   - CSS
   - CSS Background

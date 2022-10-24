@@ -1,6 +1,7 @@
 ---
 title: padding
 slug: Web/CSS/padding
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Padding
@@ -35,10 +36,10 @@ This property is a shorthand for the following CSS properties:
 /* Apply to all four sides */
 padding: 1em;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 padding: 5% 10%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 padding: 1em 2em 2em;
 
 /* top | right | bottom | left */

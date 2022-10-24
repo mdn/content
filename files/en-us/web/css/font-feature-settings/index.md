@@ -1,6 +1,7 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -103,7 +104,7 @@ td.tabular {
 
 /* enable stylistic set 7 */
 .fancystyle {
-  font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+  font-family: Gabriola; 
   font-feature-settings: "ss07";
 }
 ```

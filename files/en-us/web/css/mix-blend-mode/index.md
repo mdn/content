@@ -1,6 +1,7 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
+page-type: css-property
 tags:
   - Blending
   - CSS

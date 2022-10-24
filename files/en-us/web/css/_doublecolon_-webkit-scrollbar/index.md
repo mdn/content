@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-scrollbar'
 slug: Web/CSS/::-webkit-scrollbar
+page-type: css-pseudo-element
 tags:
   - '::-webkit-scrollbar'
   - CSS

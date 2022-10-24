@@ -1,6 +1,7 @@
 ---
 title: border-block-start
 slug: Web/CSS/border-block-start
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property
