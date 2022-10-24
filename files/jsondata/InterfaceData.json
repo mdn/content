@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSinkInfo": {
+      "inh": "",
+      "impl": []
+    },
     "AudioTrack": {
       "inh": "",
       "impl": []

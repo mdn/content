@@ -62,8 +62,6 @@ Around 2006–2007, Mozilla started work on an experimental 3D canvas implementa
 
 This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use a WebGL library to create a 3D scene more easily, and you can find a tutorial covering raw WebGL elsewhere — see [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
 
-> **Note:** Basic canvas functionality is supported well across browsers, with the exception of IE 8 and below for 2D canvas, and IE 11 and below for WebGL.
-
 ## Active learning: Getting started with a \<canvas>
 
 If you want to create a 2D _or_ 3D scene on a web page, you need to start with an HTML {{htmlelement("canvas")}} element. This element is used to define the area on the page into which the image will be drawn. This is as simple as including the element on the page:
@@ -74,15 +72,17 @@ If you want to create a 2D _or_ 3D scene on a web page, you need to start with a
 
 This will create a canvas on the page with a size of 320 by 240 pixels.
 
-Inside the canvas tags, you can put some fallback content, which is shown if the user's browser doesn't support canvas.
+You should put some fallback content inside the `<canvas>` tags. This should describe the canvas content to users of browsers that don't support canvas, or users of screen readers.
 
 ```html
 <canvas width="320" height="240">
-  <p>Your browser doesn't support canvas. Boo hoo!</p>
+  <p>Description of the canvas for those unable to view it.</p>
 </canvas>
 ```
 
-Of course, the above message is really unhelpful! In a real example you'd want to relate the fallback content to the canvas content. For example, if you were rendering a constantly updating graph of stock prices, the fallback content could be a static image of the latest stock graph, with alt text saying what the prices are in text.
+The fallback should provide useful alternative content to the canvas content. For example, if you are rendering a constantly updating graph of stock prices, the fallback content could be a static image of the latest stock graph, with `alt` text saying what the prices are in text or a list of links to individual stock pages.
+
+> **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing `<canvas>` tags. Canvas content is not part of the DOM, but nested fallback content is.
 
 ### Creating and sizing our canvas
 
@@ -329,6 +329,8 @@ Both of these take three properties in their basic usage: the text string to dra
 
 There are also a number of properties to help control text rendering such as {{domxref("CanvasRenderingContext2D.font", "font")}}, which lets you specify font family, size, etc. It takes as its value the same syntax as the CSS {{cssxref("font")}} property.
 
+Canvas content is not accessible to screen readers. Text painted to the canvas is not available to the DOM, but must be made available to be accessible. In this example, we include the text as the value for `aria-label`.
+
 Try adding the following block to the bottom of your JavaScript:
 
 ```js
@@ -340,6 +342,8 @@ ctx.strokeText("Canvas text", 50, 50);
 ctx.fillStyle = "red";
 ctx.font = "48px georgia";
 ctx.fillText("Canvas text", 50, 150);
+
+canvas.setAttribute("aria-label", "Canvas text");
 ```
 
 Here we draw two lines of text, one outline and the other stroke. The final example should look like so:
@@ -386,6 +390,12 @@ It is possible to render external images onto your canvas. These can be simple i
    - Parameters 4 and 5 define the width and height of the area we want to cut out from the original image we loaded.
    - Parameters 6 and 7 define the coordinates at which you want to draw the top-left corner of the cut-out portion of the image, relative to the top-left corner of the canvas.
    - Parameters 8 and 9 define the width and height to draw the cut-out area of the image. In this case, we have specified the same dimensions as the original slice, but you could resize it by specifying different values.
+
+5. When the image is meaningfully updated, the accessible description must also be updated.
+
+   ```js
+   canvas.setAttribute("aria-label", "Firefox Logo");
+   ```
 
 The final example should look like so:
 
@@ -521,13 +531,22 @@ In general, the process of doing a canvas animation involves the following steps
 Now let's create our own simple animation — we'll get a character from a certain rather awesome retro computer game to walk across the screen.
 
 1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
-2. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
+
+2. Update the inner HTML to reflect the image:
+
+   ```html
+    <canvas class="myCanvas">
+      <p>A man walking.</p>
+    </canvas>
+   ```
+
+3. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
 
    ```js
    ctx.translate(width / 2, height / 2);
    ```
 
-3. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
+4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
    ```js
    const image = new Image();
@@ -535,7 +554,7 @@ Now let's create our own simple animation — we'll get a character from a certa
    image.onload = draw;
    ```
 
-4. Now we'll add some variables to keep track of the position the sprite is to be drawn on the screen, and the sprite number we want to display.
+5. Now we'll add some variables to keep track of the position the sprite is to be drawn on the screen, and the sprite number we want to display.
 
    ```js
    let sprite = 0;
@@ -548,19 +567,19 @@ Now let's create our own simple animation — we'll get a character from a certa
 
    It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
 
-5. Now let's insert an empty `draw()` function at the bottom of the code, ready for filling up with some code:
+6. Now let's insert an empty `draw()` function at the bottom of the code, ready for filling up with some code:
 
    ```js
    function draw() {}
    ```
 
-6. The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
+7. The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
 
    ```js
    ctx.fillRect(-(width / 2), -(height / 2), width, height);
    ```
 
-7. Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:
+8. Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:
 
    ```js
    ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
@@ -574,7 +593,7 @@ Now let's create our own simple animation — we'll get a character from a certa
    - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value.
    - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify 102 and 148 as the width and height.
 
-8. Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
+9. Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
 
    ```js
    if (posX % 13 === 0) {
@@ -590,23 +609,23 @@ Now let's create our own simple animation — we'll get a character from a certa
 
    Inside the outer block we use an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `sprite` value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset `sprite` back to 0; if not we just increment it by 1.
 
-9. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
+10. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
 
-   ```js
-   if (posX > width / 2) {
-     let newStartPos = -(width / 2 + 102);
-     posX = Math.ceil(newStartPos);
-     console.log(posX);
-   } else {
-     posX += 2;
-   }
-   ```
+    ```js
+    if (posX > width / 2) {
+      let newStartPos = -(width / 2 + 102);
+      posX = Math.ceil(newStartPos);
+      console.log(posX);
+    } else {
+      posX += 2;
+    }
+    ```
 
-   We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
+    We are using another `if...else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
 
-   If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
+    If our character hasn't yet walked off the edge of the screen, we increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
 
-10. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
+11. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
 
     ```js
     window.requestAnimationFrame(draw);
@@ -677,7 +696,7 @@ function draw() {
 draw();
 ```
 
-> **Note:** The {{htmlelement("input")}} `range` and `color` types are supported fairly well across browsers, with the exception of Internet Explorer versions less than 10; also Safari doesn't yet support `color`. If your browser doesn't support these inputs, they will fall back to simple text fields and you'll just have to enter valid color/number values yourself.
+All {{htmlelement("input")}} types are well supported. If a browser doesn't support an input type, it will fall back to a plain text fields.
 
 ## WebGL
 

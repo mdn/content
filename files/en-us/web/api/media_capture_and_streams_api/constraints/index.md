@@ -1,6 +1,7 @@
 ---
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
+page-type: guide
 tags:
   - Advanced
   - Audio
@@ -61,7 +62,7 @@ Most, each constraint may be a specific value indicating a desired value for the
 const constraints = {
   width: 1920,
   height: 1080,
-  aspectRatio: 1.777777778
+  aspectRatio: 1.777777778,
 };
 
 myTrack.applyConstraints(constraints);
@@ -93,7 +94,7 @@ if (
     height: { min: 400, ideal: 1080 },
     aspectRatio: 1.777777778,
     frameRate: { max: 30 },
-    facingMode: { exact: "user" }
+    facingMode: { exact: "user" },
   };
 
   myTrack
@@ -153,7 +154,7 @@ You can also change the constraints of an existing {{domxref("MediaStreamTrack")
 ```js
 videoTrack.applyConstraints({
   width: 1920,
-  height: 1080
+  height: 1080,
 });
 ```
 
@@ -302,8 +303,10 @@ h3 {
 First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.
 
 ```js
-const videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
-const audioDefaultConstraintString = '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
+const videoDefaultConstraintString =
+  '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
+const audioDefaultConstraintString =
+  '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
 ```
 
 These defaults ask for a pretty common camera configuration, but don't insist on any property being of special importance. The browser should do its best to match these settings but will settle for anything it considers a close match.
@@ -442,7 +445,9 @@ We also need to set up an event listener to watch for the "Start Video" button t
 ```js
 document.getElementById("startButton").addEventListener(
   "click",
-  () => { startVideo(); },
+  () => {
+    startVideo();
+  },
   false
 );
 ```
@@ -563,7 +568,9 @@ function log(msg) {
 }
 
 function handleError(reason) {
-  log(`Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`);
+  log(
+    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`
+  );
 }
 ```
 

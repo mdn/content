@@ -139,6 +139,9 @@ const img = document.createElement("img");
 img.src = this.hasAttribute("img")
   ? this.getAttribute("img")
   : "img/default.png";
+img.alt = this.hasAttribute("alt")
+  ? this.getAttribute("alt")
+  : "";
 icon.appendChild(img);
 ```
 

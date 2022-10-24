@@ -61,26 +61,33 @@ If the following invariants are violated, the proxy will throw a {{jsxref("TypeE
 The following code traps {{jsxref("Object.preventExtensions()")}}.
 
 ```js
-const p = new Proxy({}, {
-  preventExtensions(target) {
-    console.log('called');
-    Object.preventExtensions(target);
-    return true;
+const p = new Proxy(
+  {},
+  {
+    preventExtensions(target) {
+      console.log("called");
+      Object.preventExtensions(target);
+      return true;
+    },
   }
-});
+);
 
-console.log(Object.preventExtensions(p)); // "called"
-                                          // false
+console.log(Object.preventExtensions(p));
+// "called"
+// false
 ```
 
 The following code violates the invariant.
 
 ```js example-bad
-const p = new Proxy({}, {
-  preventExtensions(target) {
-    return true;
+const p = new Proxy(
+  {},
+  {
+    preventExtensions(target) {
+      return true;
+    },
   }
-});
+);
 
 Object.preventExtensions(p); // TypeError is thrown
 ```
