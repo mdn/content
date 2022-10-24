@@ -38,7 +38,7 @@ lower case. `toLowerCase()` does not affect the value of the string
 ### Using `toLowerCase()`
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## Specifications

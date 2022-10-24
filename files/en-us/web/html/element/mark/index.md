@@ -16,7 +16,7 @@ browser-compat: html.elements.mark
 
 {{HTMLRef}}
 
-The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.
+The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes due to the marked passage's relevance in the enclosing context.
 
 {{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}
 

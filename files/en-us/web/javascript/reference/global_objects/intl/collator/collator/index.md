@@ -58,7 +58,7 @@ Intl.Collator(locales, options)
         - `emoji` (root)
         - `eor` (root)
         - `gb2312` (Chinese; not available in Chrome or Edge)
-        - `phonebk`(German)
+        - `phonebk` (German)
         - `phonetic` (Lingala)
         - `pinyin` (Chinese)
         - `reformed` (Swedish; do not specify explicitly as this is the default for Swedish)
@@ -150,7 +150,7 @@ Intl.Collator(locales, options)
         - `emoji` (root)
         - `eor` (root)
         - `gb2312` (Chinese; not available in Chrome or Edge)
-        - `phonebk`(German)
+        - `phonebk` (German)
         - `phonetic` (Lingala)
         - `pinyin` (Chinese)
         - `reformed` (Swedish; do not specify explicitly as this is the default for Swedish)
@@ -172,9 +172,9 @@ The following example demonstrates the different potential results for a string
 occurring before, after, or at the same level as another:
 
 ```js
-console.log(new Intl.Collator().compare('a', 'c')); // → a negative value
-console.log(new Intl.Collator().compare('c', 'a')); // → a positive value
-console.log(new Intl.Collator().compare('a', 'a')); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // → a negative value
+console.log(new Intl.Collator().compare("c", "a")); // → a positive value
+console.log(new Intl.Collator().compare("a", "a")); // → 0
 ```
 
 Note that the results shown in the code above can vary between browsers and browser

@@ -18,6 +18,10 @@ This article provides information about the changes in Firefox 106 that will aff
 
 #### Removals
 
+### MathML
+
+- The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) MathML elements now only render the first child element by default ({{bug(1588733)}}).
+
 ### CSS
 
 - The [@supports](/en-US/docs/Web/CSS/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
@@ -40,6 +44,9 @@ This article provides information about the changes in Firefox 106 that will aff
 ### APIs
 
 #### DOM
+
+- The [`HTMLMetaElement.media`](/en-US/docs/Web/API/HTMLMetaElement/media) property is now supported. This property enables you to set different theme colors based on `media` values (e.g. `max-width: 600px`).
+  Meta elements with `media` properties allow the browser to use the `content` value in conjunction with `theme-color` to set the page or UI colors for a given media query ({{bug(1706179)}}).
 
 #### Media, WebRTC, and Web Audio
 
@@ -72,7 +79,7 @@ This article provides information about the changes in Firefox 106 that will aff
 ## Changes for add-on developers
 
 - The ability to set the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` to `false` for Manifest V2 (to make a background page non-persistent) is now available by default.
-- The `object-src` directive in the `"content-security-policy"` manifest key is now optional ({{bug(1766881)}}). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive) on the `"content-security-policy"` manifest key page for more details.
+- The `object-src` directive in the `"content_security_policy"` manifest key is now optional ({{bug(1766881)}}). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive) on the `"content_security_policy"` manifest key page for more details.
 
 ### Removals
 

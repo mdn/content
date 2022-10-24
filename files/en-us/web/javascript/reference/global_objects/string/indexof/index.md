@@ -40,7 +40,7 @@ indexOf(searchString, position)
 
     - `'hello world hello'.indexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
 
-    - `'hello world hello'.indexOf('o', 99)` returns `-1`— because `99` is greater than the length of `hello world hello`, which causes the method to not search the string at all.
+    - `'hello world hello'.indexOf('o', 99)` returns `-1` — because `99` is greater than the length of `hello world hello`, which causes the method to not search the string at all.
 
 ### Return value
 

@@ -56,13 +56,13 @@ follow the default case mappings in Unicode, there may be a different result.
 ### Using toLocaleLowerCase()
 
 ```js
-'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
+"ALPHABET".toLocaleLowerCase(); // 'alphabet'
 
-'\u0130'.toLocaleLowerCase('tr') === 'i';    // true
-'\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
+"\u0130".toLocaleLowerCase("tr") === "i"; // true
+"\u0130".toLocaleLowerCase("en-US") === "i"; // false
 
-const locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+const locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
+"\u0130".toLocaleLowerCase(locales) === "i"; // true
 ```
 
 ## Specifications

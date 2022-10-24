@@ -41,11 +41,11 @@ if the key is not an object.
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.delete(window); // Returns true. Successfully removed.
 
-wm.has(window);    // Returns false. The window object is no longer in the WeakMap.
+wm.has(window); // Returns false. The window object is no longer in the WeakMap.
 ```
 
 ## Specifications

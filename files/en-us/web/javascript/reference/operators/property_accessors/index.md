@@ -57,7 +57,7 @@ document.createElement("pre");
 
 If you use a method for a numeric literal, and the numeric literal has no exponent and no decimal point, you should leave [white-space(s)](/en-US/docs/Glossary/Whitespace) before the dot preceding the method call, so that the dot is not interpreted as a decimal point.
 
-```js
+```js-nolint
 77 .toExponential();
 // or
 77
@@ -88,7 +88,7 @@ document["createElement"]("pre");
 
 A space before bracket notation is allowed.
 
-```js
+```js-nolint
 document ["createElement"]("pre");
 ```
 

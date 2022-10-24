@@ -31,10 +31,10 @@ x /= y // x = x / y
 // Assuming the following variable and that all operations are run in order
 //  bar = 5
 
-bar /= 2     // 2.5
-bar /= 2     // 1.25
-bar /= 0     // Infinity
-bar /= 'foo' // NaN
+bar /= 2; // 2.5
+bar /= 2; // 1.25
+bar /= 0; // Infinity
+bar /= "foo"; // NaN
 ```
 
 ## Specifications
