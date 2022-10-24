@@ -33,6 +33,7 @@ color-scheme: normal;
 color-scheme: light;
 color-scheme: dark;
 color-scheme: light dark;
+color-scheme: only light;
 
 /* Global values */
 color-scheme: inherit;
@@ -52,6 +53,10 @@ The `color-scheme` property's value must be one of the following keywords.
   - : Indicates that the element can be rendered using the operating system light color scheme.
 - `dark`
   - : Indicates that the element can be rendered using the operating system dark color scheme.
+- `only`
+  - : Forbids the user agent from overriding the color scheme for the element.
+
+    This is useful, such as the color changes caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), which cannot be overridden by `@media (prefers-color-scheme: dark)` in some cases, but can be disabled by setting `color-scheme: only light;` on the element.
 
 ## Formal definition
 
@@ -88,3 +93,4 @@ To opt the entire page into the user's color scheme preferences declare `color-s
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}
+- [Auto Dark Theme - Chrome Developers](https://developer.chrome.com/blog/auto-dark-theme/)
