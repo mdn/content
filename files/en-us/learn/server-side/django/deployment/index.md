@@ -564,7 +564,7 @@ Select **Deploy from GitHub repo**.
 All projects in the Github repos you shared with Railway during setup are displayed.
 Select your Github repository for the local library: `<user-name>/django-locallibrary-tutorial`.
 
-![Railway website screen - selectrepo](railway_new_project_button_deploy_github_selectrepo.png)
+![Railway website screen showing a dialog to choose and existing GitHub repository or chose a new one](railway_new_project_button_deploy_github_selectrepo.png)
 
 Confirm your deployment by selecting **Deploy Now**.
 
@@ -582,7 +582,7 @@ You can click the site URL (highlighted above) to open the site in a browser (it
 When the site is opened, at this point you'll see an error debug screen as shown below.
 This is a Django security error that is raised because our source code is not running on an "allowed host".
 
-![Deployed app - ](site_error_dissallowed_host.png)
+![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_dissallowed_host.png)
 
 > **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > We'll show you how to disable it once the site is up and running.
@@ -643,12 +643,12 @@ Then select **Add PostgreSQL** to start adding the database
 Railway will then provision a service containing an empty database in the same project.
 On completion you will now see both the application and database services in the project view.
 
-![Railway project with application and postgre database service](railway_project_two_services.png)
+![Railway project with application and Postgres database service](railway_project_two_services.png)
 
 Select the PostgreSQL service to display information about the database.
 Open the _Connect_ tab and copy the "Postgres Connection URL" (this is the address that we set up the locallibrary to read as an environment variable).
 
-![Railway website screen - provision_postrgessql](railway_postgresql_connect.png)
+![Railway website screen with provision Postgres container command line text and connection URL](railway_postgresql_connect.png)
 
 To make this accessible to the library application we need to add it to the application process using an environment variable.
 First open the application service.
