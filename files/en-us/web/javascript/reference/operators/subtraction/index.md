@@ -32,16 +32,19 @@ x - y
 
 // Number - Number -> subtraction
 3 - 5; // -2
-
-// Number - String -> subtraction
-5 - "3"; // 2
 ```
 
 ### Subtraction with non-numbers
 
 ```js
+// String - Number -> concatenation
 "foo" - 3; // NaN
+
+// Number - String -> subtraction
+5 - "3"; // 2
 ```
+
+When subtracting a string (and the contents is a number) from a number Javascript will automaticly convert the string into a number and subtract like normal. This is known as [Numeric Conversion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion).
 
 ## Specifications
 
