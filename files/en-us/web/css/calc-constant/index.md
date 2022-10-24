@@ -14,11 +14,18 @@ browser-compat: css.types.calc-constant
 
 {{CSSRef}}
 
-The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `π`. Rather than require authors to manually type out several digits of these mathematical constants or calculate them, a few of them are provided directly by CSS for convenience.
+The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `pi` evaluated as {{cssxref("number")}} values.
+These constants are supported for convenience in CSS so that authors do not have to manually write or calculate them.
+
+Using `infinity` or `-infinity` can be used by authors to create large mock values rather than calculating or generating them through other means.
+An expression like `calc(infinity * 1px)` can be used to create an infinite {{cssxref("length")}} value, for example.
 
 ## Syntax
 
-The `<calc-constant>` type defines numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
+The `<calc-constant>` type defines numeric constants used for calculations inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) (e.g., `rotate(calc(2 * pi))`).
+When used outside of a calculation, they're treated like a keyword (e.g., `animation-name: pi` refers to an animation named "pi").
+
+`NaN` is case-sensitive, but other CSS constants are case-insensitive (e.g., `calc(pi)`, `calc(E)` and `calc(InFiNiTy)` are valid).
 
 ### Values
 
@@ -36,40 +43,11 @@ The `<calc-constant>` type defines numeric constants that can be used in [CSS ma
 
 - `NaN`
 
-  - : A value representing "Not a Number" canonical casing.
+  - : A value representing "Not a Number". This constant is case-sensitive.
 
 ### Formal syntax
 
 {{CSSSyntax}}
-
-## Description
-
-### Where constants can be used?
-
-Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) for calculations. Math constants are not CSS keywords, but if they are used outside of a calculation, they're treated like any other keyword.
-
-For example:
-
-- `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.
-- `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
-
-These constants can't be used in any CSS function, only in math functions:
-
-- `rotate(1rad * pi);` won't work. You need to use `rotate(calc(1rad * pi));`
-
-### Returned data type
-
-In math functions, `<calc-constant>` values are evaluated as {{cssxref("number")}} values, therefore `e` and `pi` act as numeric constants.
-
-Both `infinity` and `NaN` are slightly different, they are considered as degenerate numeric constants. While not technically numbers, they act as {{CSSxRef("number")}} values. Thus to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
-
-Infinite/NaN defined mostly to make serialization simpler and more obvious, but can be used to indicate a "largest possible value", since an infinite value gets clamped to the allowed range. It's rare for this to be reasonable, but when using infinity its much simpler than just putting an enormous number in a stylesheet.
-
-### Case sensitivity
-
-CSS constants are case-insensitive. Thus, `calc(Pi)`, `calc(E)` and `calc(InFiNiTy)` are all valid.
-
-There is only one exception: `NaN` is case-sensitive and must be written exactly as `NaN`. Both `nan` and `NAN` are invalid constants.
 
 #### Valid values
 
