@@ -32,19 +32,19 @@ The set accessor of `global` is `undefined`. You cannot change this property dir
 ```js
 const regex = /foo/g;
 
-console.log(regex.global);  // true
+console.log(regex.global); // true
 
-const str = 'fooexamplefoo';
+const str = "fooexamplefoo";
 
-const str1 = str.replace(regex, '');
+const str1 = str.replace(regex, "");
 
-console.log(str1);  // Output: example
+console.log(str1); // Output: example
 
 const regex1 = /foo/;
 
-const str2 = str.replace(regex1, '');
+const str2 = str.replace(regex1, "");
 
-console.log(str2);  // Output: examplefoo
+console.log(str2); // Output: examplefoo
 ```
 
 ## Specifications

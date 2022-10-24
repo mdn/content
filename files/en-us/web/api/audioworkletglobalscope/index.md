@@ -24,7 +24,7 @@ The **`AudioWorkletGlobalScope`** interface of the [Web Audio API](/en-US/docs/W
 
 Each {{domxref("BaseAudioContext")}} has a single {{domxref("AudioWorklet")}} available under the {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, which runs its code in a single `AudioWorkletGlobalScope`.
 
-As the global execution context is shared across the current `BaseAudioContext`, it's possible to define any other variables and perform any actions allowed in worklets — apart from defining `AudioWorkletProcessor`-derived classes.
+As the global execution context is shared across the current `BaseAudioContext`, it's possible to define any other variables and perform any actions allowed in worklets — apart from defining `AudioWorkletProcessor` derived classes.
 
 {{InheritanceDiagram}}
 

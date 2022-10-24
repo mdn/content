@@ -55,7 +55,7 @@ For example, Firefox on Android on a Google Pixel 3 will display the Pixel launc
 
 Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.
 
-![](a2hs-on-home-screen.png)
+![A device home screen containing the app icon with the name Foxes](a2hs-on-home-screen.png)
 
 Tapping this icon opens it up, but as a fullscreen app, you'll no longer see the browser UI around it.
 
@@ -209,7 +209,7 @@ So when the button is clicked, the install prompt appears.
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 
-![](a2hs-installed-desktop.png)
+![A browser window of the app, displaying an image of a fox in a field](a2hs-installed-desktop.png)
 
 If the user selects _Cancel_, the state of the app goes back to how it was before the button was clicked.
 

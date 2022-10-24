@@ -16,11 +16,11 @@ browser-compat: http.status
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.
 Responses are grouped in five classes:
 
-1. [Informational responses](#information_responses) (`100`–`199`)
-2. [Successful responses](#successful_responses) (`200`–`299`)
-3. [Redirection messages](#redirection_messages) (`300`–`399`)
-4. [Client error responses](#client_error_responses) (`400`–`499`)
-5. [Server error responses](#server_error_responses) (`500`–`599`)
+1. [Informational responses](#information_responses) (`100` – `199`)
+2. [Successful responses](#successful_responses) (`200` – `299`)
+3. [Redirection messages](#redirection_messages) (`300` – `399`)
+4. [Client error responses](#client_error_responses) (`400` – `499`)
+5. [Server error responses](#server_error_responses) (`500` – `599`)
 
 The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 

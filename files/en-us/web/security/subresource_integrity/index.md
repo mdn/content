@@ -58,8 +58,8 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 > **Note:**
 >
-> - The pipe-through-`xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
-> - The pipe-through-`awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
+> - The pipe-through `xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
+> - The pipe-through `awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 

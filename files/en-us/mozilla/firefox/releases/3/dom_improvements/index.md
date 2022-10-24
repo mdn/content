@@ -22,6 +22,6 @@ Firefox 3 offers a number of improvements to the [Document Object Model](/en-US/
 
 ### See also
 
-- [Firefox 3 for developers](/en-US/Firefox_3_for_developers)
+- [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
 - [CSS improvements in Firefox 3](/en-US/docs/CSS_improvements_in_Firefox_3)
 - [DOM](/en-US/docs/Web/API/Document_Object_Model)
