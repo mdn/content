@@ -15,7 +15,7 @@ The **`Set[@@species]`** accessor property is an unused accessor property specif
 
 ## Syntax
 
-```js
+```js-nolint
 Set[Symbol.species]
 ```
 

@@ -97,7 +97,7 @@ following can be safely used:
 function fixedEncodeURIComponent(str) {
   return encodeURIComponent(str).replace(
     /[!'()*]/g,
-    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
   );
 }
 ```
@@ -112,8 +112,9 @@ parameters (e.g., UTF-8 filenames):
 
 ```js
 const fileName = "my file(2).txt";
-const header =
-  `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(fileName)}`;
+const header = `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(
+  fileName
+)}`;
 
 console.log(header);
 // logs "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"

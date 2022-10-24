@@ -69,11 +69,11 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `fontName`
       - : Changes the font name for the selection or at the insertion point. This requires a font name string (like `"Arial"`) as a value argument.
     - `fontSize`
-      - : Changes the font size for the selection or at the insertion point. This requires an integer from `1`-`7` as a value argument.
+      - : Changes the font size for the selection or at the insertion point. This requires an integer from `1` - `7` as a value argument.
     - `foreColor`
       - : Changes a font color for the selection or at the insertion point. This requires a hexadecimal color value string as a value argument.
     - `formatBlock`
-      - : Adds an HTML block-level element around the line containing the current selection, replacing the block element containing the line if one exists (in Firefox, {{HTMLElement("blockquote")}} is the exception — it will wrap any containing block element). Requires a tag-name string as a value argument. Virtually all block-level elements can be used. (Internet Explorer and Edge support only heading tags `H1`–`H6`, `ADDRESS`, and `PRE`, which must be wrapped in angle brackets, such as `"<H1>"`.)
+      - : Adds an HTML block-level element around the line containing the current selection, replacing the block element containing the line if one exists (in Firefox, {{HTMLElement("blockquote")}} is the exception — it will wrap any containing block element). Requires a tag-name string as a value argument. Virtually all block-level elements can be used. (Internet Explorer and Edge support only heading tags `H1` – `H6`, `ADDRESS`, and `PRE`, which must be wrapped in angle brackets, such as `"<H1>"`.)
     - `forwardDelete`
       - : Deletes the character ahead of the [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29)'s position, identical to hitting the Delete key on a Windows keyboard.
     - `heading`
