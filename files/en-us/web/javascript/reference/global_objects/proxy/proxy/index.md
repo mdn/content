@@ -92,7 +92,7 @@ In this example the target has two properties, `notProxied` and
 ```js
 const target = {
   notProxied: "original value",
-  proxied: "original value"
+  proxied: "original value",
 };
 
 const handler = {
@@ -101,13 +101,13 @@ const handler = {
       return "replaced value";
     }
     return Reflect.get(...arguments);
-  }
+  },
 };
 
 const proxy = new Proxy(target, handler);
 
 console.log(proxy.notProxied); // "original value"
-console.log(proxy.proxied);    // "replaced value"
+console.log(proxy.proxied); // "replaced value"
 ```
 
 ## Specifications
