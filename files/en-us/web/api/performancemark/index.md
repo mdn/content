@@ -21,16 +21,21 @@ browser-compat: api.PerformanceMark
 
 ## Instance properties
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
+This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
-- {{domxref("PerformanceEntry.entryType")}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns "`mark`".
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the name given to the mark when it was created via a call to {{domxref("Performance.mark()","performance.mark()")}}.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp")}} when {{domxref("Performance.mark()","performance.mark()")}} was called.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns "`0`". (A mark has no _duration_.)
+
+This interface also supports the following properties:
+
+- {{domxref("PerformanceMark.detail")}} {{ReadOnlyInline}}
+  - : Returns arbitrary metadata that has been included in the mark upon construction.
 
 ## Instance methods
 
