@@ -12,7 +12,7 @@ _Hoisting_ is not a term normatively defined in the ECMAScript specification. Th
 
 1. Being able to use a variable's value in its scope before the line it is declared. ("Value hoisting")
 2. Being able to reference a variable in its scope before the line it is declared, without throwing a {{jsxref("ReferenceError")}}, but the value is always [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). ("Declaration hoisting")
-3. The declaration of the variable causes behavior changes in its scope before the line it is declared.
+3. The declaration of the variable causes behavior changes in its scope before the line in which it is declared.
 
 The four function declarations above are hoisted with type 1 behavior; `var` declaration is hoisted with type 2 behavior; [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class) declarations (also collectively called _lexical declarations_) are hoisted with type 3 behavior.
 
