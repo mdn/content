@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 107 that will aff
 
 ### HTML
 
+- The [`height`]() & [`width`]() attributes have been added to {{HTMLElement("source")}} when it is a child of the {{HTMLElement("picture")}}.
+
 #### Removals
 
 ### CSS

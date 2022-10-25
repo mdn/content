@@ -16,6 +16,8 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### HTML
 
+- The [`height`]() & [`width`]() attributes have been added to {{HTMLElement("source")}} when it is a child of the {{HTMLElement("picture")}}, currently behind a [flag](/en-US/docs/Mozilla/Firefox/Experimental_features#height_width_attributes_for_source) {{bug(1694741)}}.
+
 #### Removals
 
 ### MathML

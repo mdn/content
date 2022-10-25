@@ -143,6 +143,48 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
+### Height & Width attributes for {{HTMLElement("source")}}
+
+HTML attributes for [height](/en-US/docs/Web/HTML/Element/source#attr-height) & [width](/en-US/docs/Web/HTML/Element/source#attr-width) ({{bug(1694741)}}).
+
+This works when the {{HTMLElement("source")}} when it is a child element of {{HTMLElement("picture")}} and helps eliminate layout shift.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.picture_source_dimension_attributes.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## CSS
 
 ### Hex boxes to display stray control characters
