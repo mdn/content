@@ -31,4 +31,4 @@ The HyperText Transfer Protocol (HTTP) **`502 Bad Gateway`** server error respon
 ## See also
 
 - {{HTTPStatus(504)}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP/1.1: Status Code Definitions]([https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html](https://www.rfc-editor.org/rfc/rfc9110.html#name-status-codes))
