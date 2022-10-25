@@ -13,7 +13,7 @@ browser-compat: http.headers.Referer
 {{HTTPSidebar}}
 
 The **`Referer`** HTTP request header contains the absolute or partial address from which a resource has been requested.
-The `Referer` header allows a server to identify where requests (typically users) are originating or where requested resources are being used.
+The `Referer` header allows a server to identify referring pages that people are visiting from or where requested resources are being used.
 This data can be used for analytics, logging, optimized caching, and more.
 
 When you click a link, the **`Referer`** contains the address of the page that includes the link.
