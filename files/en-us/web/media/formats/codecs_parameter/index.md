@@ -982,7 +982,7 @@ The first four components are required; everything from `CC` (chroma subsampling
 #### WebM media type examples
 
 - `video/webm;codecs="vp08.00.41.08,vorbis"`
-  - : VP8 video, profile 0 level 4.1, using 8-bit YUV with 4:2:0 chroma subsampling, using BT.709 color primaries, transfer function, and matrix coefficients, with the luminance and chroma values encoded within the legal ("studio") range. The video is Vorbis.
+  - : VP8 video, profile 0 level 4.1, using 8-bit YUV with 4:2:0 chroma subsampling, using BT.709 color primaries, transfer function, and matrix coefficients, with the luminance and chroma values encoded within the legal ("studio") range. The audio is in Vorbis format.
 - `video/webm;codecs="vp09.02.10.10.01.09.16.09.01,opus"`
   - : VP9 video, profile 2 level 1.0, with 10-bit YUV content using 4:2:0 chroma subsampling, BT.2020 primaries, ST 2084 EOTF (HDR SMPTE), BT.2020 non-constant luminance color matrix, and full-range chroma and luma encoding. The audio is in Opus format.
 

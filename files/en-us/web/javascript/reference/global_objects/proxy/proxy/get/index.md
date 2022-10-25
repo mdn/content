@@ -50,10 +50,8 @@ value.
 
 This trap can intercept these operations:
 
-- Property access: `proxy[foo]`and
-  `proxy.bar`
-- Inherited property access:
-  `Object.create(proxy)[foo]`
+- Property access: `proxy[foo]` and `proxy.bar`
+- Inherited property access: `Object.create(proxy)[foo]`
 - {{jsxref("Reflect.get()")}}
 
 ### Invariants
@@ -75,22 +73,26 @@ If the following invariants are violated, the proxy will throw a
 The following code traps getting a property value.
 
 ```js
-const p = new Proxy({}, {
-  get(target, property, receiver) {
-    console.log(`called: ${property}`);
-    return 10;
-  },
-});
+const p = new Proxy(
+  {},
+  {
+    get(target, property, receiver) {
+      console.log(`called: ${property}`);
+      return 10;
+    },
+  }
+);
 
-console.log(p.a); // "called: a"
-                  // 10
+console.log(p.a);
+// "called: a"
+// 10
 ```
 
 The following code violates an invariant.
 
 ```js
 const obj = {};
-Object.defineProperty(obj, 'a', {
+Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,

@@ -16,7 +16,7 @@ The **`SharedArrayBuffer[@@species]`** accessor property returns the constructor
 
 ## Syntax
 
-```js
+```js-nolint
 SharedArrayBuffer[Symbol.species]
 ```
 

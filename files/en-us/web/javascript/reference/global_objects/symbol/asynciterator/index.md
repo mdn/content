@@ -33,7 +33,7 @@ const myAsyncIterable = {
     yield "hello";
     yield "async";
     yield "iteration!";
-  }
+  },
 };
 
 (async () => {

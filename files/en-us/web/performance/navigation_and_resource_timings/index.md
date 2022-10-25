@@ -386,7 +386,7 @@ When a user requests a website or application, [to populate the browser](/en-US/
 const navigationTimings = performance.getEntriesByType('navigation');
 ```
 
-The `performance.getEntriesByType('navigation')`a returns an array of [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) objects for the _navigation_ _type_.
+The `performance.getEntriesByType('navigation')` a returns an array of [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) objects for the _navigation_ _type_.
 
 ![The results of when performance.getEntriesByType('navigation'); is entered into the console for this document](perfgentrybytypenavigation.png)
 

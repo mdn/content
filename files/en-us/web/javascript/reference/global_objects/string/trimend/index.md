@@ -50,13 +50,13 @@ String.prototype.trimRight.name === "trimEnd";
 The following example displays the lowercase string `' foo'`:
 
 ```js
-let str = '   foo  ';
+let str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## Specifications
