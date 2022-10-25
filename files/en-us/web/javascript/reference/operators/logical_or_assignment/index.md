@@ -62,7 +62,7 @@ Note that this behavior is different to mathematical and bitwise assignment oper
 If the "lyrics" element is empty, display a default value:
 
 ```js
-document.getElementById('lyrics').textContent ||= 'No lyrics.'
+document.getElementById("lyrics").textContent ||= "No lyrics.";
 ```
 
 Here the short-circuit is especially beneficial, since the element will not be updated

@@ -67,7 +67,7 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
 const sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## Specifications

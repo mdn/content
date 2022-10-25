@@ -68,8 +68,8 @@ Consider the following example:
 // Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-const re = /quick\s(?<color>brown).+?(jumps)/igd;
-const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+const re = /quick\s(?<color>brown).+?(jumps)/dgi;
+const result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 The following table shows the state of `result` after running this script:
@@ -94,7 +94,7 @@ For example, assume you have this script:
 
 ```js
 const myRe = /ab*/g;
-const str = 'abbcdefabh';
+const str = "abbcdefabh";
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
   let msg = `Found ${myArray[0]}. `;
@@ -124,7 +124,7 @@ You can also use `exec()` without creating a {{jsxref("RegExp")}} object
 explicitly:
 
 ```js
-const matches = /(hello \S+)/.exec('This is a hello world!');
+const matches = /(hello \S+)/.exec("This is a hello world!");
 console.log(matches[1]);
 ```
 

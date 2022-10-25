@@ -92,7 +92,7 @@ Most browsers have tools available that you can use to run against loaded pages 
 
 You can also use the [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might be slowing down your web app or site.
 
-![](perf-monitor.png)
+![Developer tools performance panel showing the waterfall of recording #1.](perf-monitor.png)
 
 ## Conclusion
 

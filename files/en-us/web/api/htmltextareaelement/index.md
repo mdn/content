@@ -485,7 +485,7 @@ function checkRows(oField, oKeyEvent) {
 }
 ```
 
-In the HTML we just need to hook our function to the \`onkeypress\` event and specify that our textarea does not accept pasting:
+In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
 
 ```html
 <form>

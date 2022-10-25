@@ -23,6 +23,8 @@ the h1 and applies the style to h1 */
 h1:has(+ p) { margin-bottom: 0; }
 ```
 
+The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
+
 ## Syntax
 
 ```

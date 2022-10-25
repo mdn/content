@@ -73,7 +73,7 @@ The right operand will be converted to an unsigned 32-bit integer and then taken
 ### Using unsigned right shift
 
 ```js
- 9 >>> 2; // 2
+9 >>> 2; // 2
 -9 >>> 2; // 1073741821
 ```
 

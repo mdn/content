@@ -397,7 +397,7 @@ Ringing is another type of artifact that can make it particularly difficult to r
 
 **Posterization** occurs when the compression results in the loss of color detail in gradients. Instead of smooth transitions through the various colors in a region, the image becomes blocky, with blobs of color that approximate the original appearance of the image.
 
-[![](posterize-effect.jpg)](posterize-effect.jpg)
+[![Bald eagle photo with blotchy resolution.](posterize-effect.jpg)](posterize-effect.jpg)
 
 Note the blockiness of the colors in the plumage of the bald eagle in the photo above (and the snowy owl in the background). The details of the feathers is largely lost due to these posterization artifacts.
 

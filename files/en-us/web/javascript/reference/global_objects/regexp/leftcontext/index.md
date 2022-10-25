@@ -30,9 +30,9 @@ You can not use the shorthand alias with the dot property accessor (`` RegExp.$`
 
 ```js
 const re = /world/g;
-re.test('hello world!');
+re.test("hello world!");
 RegExp.leftContext; // "hello "
-RegExp['$`'];       // "hello "
+RegExp["$`"]; // "hello "
 ```
 
 ## Specifications

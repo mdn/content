@@ -14,6 +14,8 @@ tags:
 
 In the chapter about [drawing shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), we used only the default line and fill styles. Here we will explore the canvas options we have at our disposal to make our drawings a little more attractive. You will learn how to add different colors, line styles, gradients, patterns and shadows to your drawings.
 
+> **Note:** Canvas content is not accessible to screen readers. If the canvas is purely decorative, include `role="presentation"` on the `<canvas>` opening tag. Otherwise, include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.
+
 ## Colors
 
 Up until now we have only seen methods of the drawing context. If we want to apply colors to a shape, there are two important properties we can use: `fillStyle` and `strokeStyle`.
@@ -55,7 +57,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150">A 6 by 6 square grid displaying 36 different colors</canvas>
 ```
 
 ```js hidden
@@ -85,7 +87,7 @@ This example is similar to the one above, but uses the `strokeStyle` property to
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -147,7 +149,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -185,7 +187,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -237,7 +239,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -304,7 +306,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -346,7 +348,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -411,7 +413,7 @@ function draw() {
 ```html hidden
 <table>
   <tr>
-    <td><canvas id="canvas" width="150" height="150"></canvas></td>
+    <td><canvas id="canvas" width="150" height="150" role="presentation"></canvas></td>
     <td>
       Change the <code>miterLimit</code> by entering a new value below and
       clicking the redraw button.<br /><br />
@@ -439,7 +441,7 @@ The `setLineDash` method and the `lineDashOffset` property specify the dash patt
 In this example we are creating a marching ants effect. It is an animation technique often found in selection tools of computer graphics programs. It helps the user to distinguish the selection border from the image background by animating the border. In a later part of this tutorial, you can learn how to do this and other [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations).
 
 ```html hidden
-<canvas id="canvas" width="110" height="110"></canvas>
+<canvas id="canvas" width="110" height="110" role="presentation"></canvas>
 ```
 
 ```js
@@ -529,7 +531,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -584,7 +586,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -611,7 +613,7 @@ function draw() {
   conicGrad1.addColorStop(1, '#fff');
 
   const conicGrad2 = ctx.createConicGradient(0, 187, 75);
-  // we multiple our values by Math.PI/180 to convert degrees to radians
+  // we multiply our values by Math.PI/180 to convert degrees to radians
   conicGrad2.addColorStop(0, 'black');
   conicGrad2.addColorStop(0.25, 'black');
   conicGrad2.addColorStop(0.25, 'white');
@@ -630,7 +632,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="250" height="150"></canvas>
+<canvas id="canvas" width="250" height="150" role="presentation">A conic gradient</canvas>
 ```
 
 ```js hidden
@@ -694,7 +696,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -744,7 +746,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="80"></canvas>
+<canvas id="canvas" width="150" height="80" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -779,7 +781,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="100" height="100"></canvas>
+<canvas id="canvas" width="100" height="100" role="presentation"></canvas>
 ```
 
 ```js hidden

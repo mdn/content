@@ -79,7 +79,7 @@ const MY_FAV = 7;
 MY_FAV = 20;
 
 // MY_FAV is 7
-console.log('my favorite number is: ' + MY_FAV);
+console.log("my favorite number is: " + MY_FAV);
 
 // trying to redeclare a constant throws an error
 // Uncaught SyntaxError: Identifier 'MY_FAV' has already been declared
@@ -103,14 +103,14 @@ if (MY_FAV === 7) {
   let MY_FAV = 20;
 
   // MY_FAV is now 20
-  console.log('my favorite number is ' + MY_FAV);
+  console.log("my favorite number is " + MY_FAV);
 
   // this gets hoisted into the global context and throws an error
   var MY_FAV = 20;
 }
 
 // MY_FAV is still 7
-console.log('my favorite number is ' + MY_FAV);
+console.log("my favorite number is " + MY_FAV);
 ```
 
 ### const needs to be initialized
@@ -127,14 +127,14 @@ const FOO;
 `const` also works on objects and arrays. Attempting to overwrite the object throws an error "Assignment to constant variable".
 
 ```js example-bad
-const MY_OBJECT = { key: 'value' };
-MY_OBJECT = { OTHER_KEY: 'value' };
+const MY_OBJECT = { key: "value" };
+MY_OBJECT = { OTHER_KEY: "value" };
 ```
 
 However, object keys are not protected, so the following statement is executed without problem.
 
 ```js
-MY_OBJECT.key = 'otherValue';
+MY_OBJECT.key = "otherValue";
 ```
 
 You would need to use [`Object.freeze()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to make an object immutable.
@@ -143,13 +143,13 @@ The same applies to arrays. Assigning a new array to the variable throws an erro
 
 ```js example-bad
 const MY_ARRAY = [];
-MY_ARRAY = ['B'];
+MY_ARRAY = ["B"];
 ```
 
 Still, it's possible to push items into the array and thus mutate it.
 
 ```js
-MY_ARRAY.push('A'); // ["A"]
+MY_ARRAY.push("A"); // ["A"]
 ```
 
 ## Specifications

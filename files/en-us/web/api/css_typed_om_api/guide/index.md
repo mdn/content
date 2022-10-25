@@ -377,7 +377,7 @@ console.log(transform[0].z);   // CSSUnitValue {value: 1, unit: "number"}
 console.log(transform.is2D);   // true
 ```
 
-When we `get()` the `transform` property, we get a {{domxref('CSSTransformValue')}}. We can query the length (or number) of transform functions with the .`length` property.
+When we `get()` the `transform` property, we get a {{domxref('CSSTransformValue')}}. We can query the length (or number) of transform functions with the `length` property.
 
 Seen as we have a length of `1`, which represents a single transform function, we log the first object and get a `CSSScale` object. We get `CSSUnitValues` when we query the `x`, `y`, and `z` scaling. The readonly `CSSScale.is2D` property is `true` in this scenario.
 

@@ -166,6 +166,13 @@
           "skipCode": true
         },
         {
+          "name": "stuck-definition",
+          "message": "Character is stuck to definition description marker",
+          "searchPattern": "/- :(\\w)/g",
+          "replace": "- : $1",
+          "skipCode": true
+        },
+        {      
           "name": "fqdn-moz-links",
           "message": "Don't use developer.mozilla.org for links",
           "search": "](https://developer.mozilla.org/",
