@@ -24,14 +24,19 @@ A string.
 
 ### Reading character encoding from a meta element
 
+The following example queries a `<meta>` element that contains a `charset` attribute.
+The `charset` value is logged to the console to display the character encoding of the document:
+
 ```js
 // given <meta charset="utf-8">
 let meta = document.querySelector("meta[charset]");
-console.log(meta.charset);
+console.log(meta.attributes["charset"].value);
 // "utf-8"
 ```
 
 ### Creating a meta element
+
+The following example creates a new `<meta>` element with a `charset` attribute set to `utf-8` and appends it to the document `<head>`:
 
 ```js
 let meta = document.createElement("meta");

@@ -26,6 +26,8 @@ A string.
 
 ### Setting the theme color for dark mode
 
+The following example creates a new `<meta>` element with a `name` attribute set to [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification).
+The `content` attribute is set to `#3c790a`, the `media` attribute is set to `prefers-color-scheme: dark`, and the element is appended to the document `<head>`.
 When a user has specified a dark mode in their operating system, the `media` property can be used to set a different `theme-color`:
 
 ```js
@@ -40,7 +42,7 @@ document.head.appendChild(meta);
 
 Most meta properties can be used only once. However, `theme-color` can be used multiple times if unique `media` values are provided.
 
-This example adds two meta elements with a `theme-color`, one for all devices and another for small screens.
+This example adds two meta elements with a `theme-color`; one for all devices and another for small screens.
 The order of matching the `media` query matters, so the more specific query should be added later in the document, as shown below:
 
 ```js
