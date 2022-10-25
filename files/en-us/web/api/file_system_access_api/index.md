@@ -16,6 +16,7 @@ browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle
   - api.FileSystemDirectoryHandle
+  - api.FileSystemSyncAccessHandle
   - api.FileSystemWritableFileStream
   - api.Window.showOpenFilePicker
 ---
@@ -28,13 +29,16 @@ The File System Access API allows read, write and file management capabilities.
 
 This API allows interaction with files on a user's local device, or on a user-accessible network file system. Core functionality of this API includes reading files, writing or saving files, and access to directory structure.
 
-Most of the interaction with files and directories is accomplished through handles. A parent {{domxref('FileSystemHandle')}} class helps define two child classes: {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}, for files and directories respectively.
+Most of the interaction with files and directories is accomplished through handles. A parent {{domxref('FileSystemHandle')}} class helps define two child classes: {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}, for files and directories respectively. In addition, a third class—{{domxref('FileSystemSyncAccessHandle')}}—defines a handle for synchronous read/write operations. The synchronous nature of this class brings performance advantages intended for use in contexts where asynchronous operations come with high overhead (e.g., [WebAssembly](/en-US/docs/WebAssembly)), but it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-These handles represent the file or directory on the user's system. You must first gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called, the file picker presents itself and the user selects either a file or directory. Once this happens successfully, a handle is returned. You can also gain access to file handles via the {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API')}}.
+The handles represent a file or directory on the user's system. You can first gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called, the file picker presents itself and the user selects either a file or directory. Once this happens successfully, a handle is returned. You can also gain access to file handles via the {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API')}}. In the case of {{domxref('FileSystemSyncAccessHandle')}}, the handle is accessed via the {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} method.
 
-The handle provides its own functionality and there are a few differences depending on whether a file or directory was selected (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected.
+Each handle provides its own functionality and there are a few differences depending on which one you are using (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected.
 
-There is also "save" functionality, using the {{domxref('FileSystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
+There is also "save" functionality:
+
+- In the case of the asynchronous handles, use the {{domxref('FileSystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
+- In the case of the synchronous {{domxref('FileSystemSyncAccessHandle')}}, you commit the changes to disk using the {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} method.
 
 This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
 
@@ -46,6 +50,8 @@ This API opens up potential functionality the web has been lacking. Still, secur
   - : Provides a handle to a file system entry.
 - {{domxref("FileSystemDirectoryHandle")}}
   - : provides a handle to a file system directory.
+- {{domxref("FileSystemSyncAccessHandle")}}
+  - : Provides a synchronous handle to a file system entry. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly). This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 - {{domxref("FileSystemWritableFileStream")}}
   - : is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk.
 
@@ -173,6 +179,46 @@ writableStream.write({ type: "seek", position });
 
 // resizes the file to be size bytes long
 writableStream.write({ type: "truncate", size });
+```
+
+### Synchronously reading and writing a file
+
+The following asynchronous event handler function is contained inside a Web Worker. On receiving a message from the main thread it:
+
+- Creates a synchronous file access handle.
+- Gets the size of the file and creates an {{jsxref("ArrayBuffer")}} to contain it.
+- Reads the file contents into the buffer.
+- Encodes the message and writes it to the end of the file.
+- Persists the changes to disk and closes the access handle.
+
+```js
+onmessage = async (e) => {
+  // retrieve message sent to work from main script
+  const message = e.data;
+
+  // Get handle to draft file
+  const root = await navigator.storage.getDirectory();
+  const draftFile = await root.getFileHandle('draft.txt');
+  // Get sync access handle
+  const accessHandle = await draftFile.createSyncAccessHandle();
+
+  // Get size of the file.
+  const fileSize = await accessHandle.getSize();
+  // Read file content to a buffer.
+  const buffer = new DataView(new ArrayBuffer(fileSize));
+  const readBuffer = accessHandle.read(buffer, { "at": 0 });
+
+  // Write the message to the end of the file.
+  const encoder = new TextEncoder();
+  const encodedMessage = encoder.encode(message);
+  const writeBuffer = accessHandle.write(encodedMessage, { "at" : readBuffer });
+
+  // Persist changes to disk.
+  await accessHandle.flush();
+
+  // Always close FileSystemSyncAccessHandle if done.
+  await accessHandle.close();
+}
 ```
 
 ## Specifications

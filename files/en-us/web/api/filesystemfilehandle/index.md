@@ -31,6 +31,10 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 - {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
   - : Returns a {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object
     representing the state on disk of the entry represented by the handle.
+- {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}}
+  - : Returns a {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemSyncAccessHandle')}} object
+    that can be used to synchronously read from and write to a file. The synchronous nature of this method brings performance advantages,
+    but it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
   - : Returns a {{jsxref('Promise')}} which resolves to a newly created {{domxref('FileSystemWritableFileStream')}}
     object that can be used to write to a file.
@@ -78,6 +82,46 @@ async function writeFile(fileHandle, contents) {
 
   // Close the file and write the contents to disk.
   await writable.close();
+}
+```
+
+### Synchronously reading and writing a file
+
+The following asynchronous event handler function is contained inside a Web Worker. On receiving a message from the main thread it:
+
+- Creates a synchronous file access handle.
+- Gets the size of the file and creates an {{jsxref("ArrayBuffer")}} to contain it.
+- Reads the file contents into the buffer.
+- Encodes the message and writes it to the end of the file.
+- Persists the changes to disk and closes the access handle.
+
+```js
+onmessage = async (e) => {
+  // retrieve message sent to work from main script
+  const message = e.data;
+
+  // Get handle to draft file
+  const root = await navigator.storage.getDirectory();
+  const draftFile = await root.getFileHandle('draft.txt');
+  // Get sync access handle
+  const accessHandle = await draftFile.createSyncAccessHandle();
+
+  // Get size of the file.
+  const fileSize = await accessHandle.getSize();
+  // Read file content to a buffer.
+  const buffer = new DataView(new ArrayBuffer(fileSize));
+  const readBuffer = accessHandle.read(buffer, { "at": 0 });
+
+  // Write the message to the end of the file.
+  const encoder = new TextEncoder();
+  const encodedMessage = encoder.encode(message);
+  const writeBuffer = accessHandle.write(encodedMessage, { "at" : readBuffer });
+
+  // Persist changes to disk.
+  await accessHandle.flush();
+
+  // Always close FileSystemSyncAccessHandle if done.
+  await accessHandle.close();
 }
 ```
 
