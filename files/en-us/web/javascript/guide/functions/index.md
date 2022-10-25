@@ -214,14 +214,14 @@ function square(n) {
 console.log(square(5)); // 25
 ```
 
-> **Note:** Function hoisting only works with function _declarations_ — not with function _expressions_. The code below will not work.
->
-> ```js example-bad
-> console.log(square); // ReferenceError: Cannot access 'square' before initialization
-> const square = function (n) {
->   return n * n;
-> }
-> ```
+Function hoisting only works with function _declarations_ — not with function _expressions_. The code below will not work.
+
+```js example-bad
+console.log(square); // ReferenceError: Cannot access 'square' before initialization
+const square = function (n) {
+  return n * n;
+}
+```
 
 ## Function scope
 
