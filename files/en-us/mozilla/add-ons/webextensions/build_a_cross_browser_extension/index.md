@@ -216,6 +216,4 @@ When approaching a cross-platform extension development, the differences between
 
 The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You will then need to account for the variations in the processes for submitting to each extension store.
 
-You can use [browser-extension-template](https://github.com/fregante/browser-extension-template) to quickly set up a working project for building and publishing a browser extension.
-
 Following the advice in this article, you should be able to create an extension that works well on all of the four main browsers, enabling you to deliver your extension features to more people.
