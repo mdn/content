@@ -24,11 +24,16 @@ A string.
 
 ### Reading the `http-equiv` value of a meta element
 
+The following example queries a `<meta>` element with an `http-equiv` attribute.
+The `http-equiv` attribute is logged to the console showing a `refresh` [pragma directive](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) that instructs the browser to refresh the page after a number of seconds defined by the `content` attribute:
+
 ```js
 // given <meta http-equiv="refresh" content="10" />
 let meta = document.querySelector("meta[http-equiv]");
 console.log(meta.httpEquiv);
-// "refresh"
+// refresh
+console.log(meta.content);
+// 10
 ```
 
 ## Specifications

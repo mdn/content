@@ -26,6 +26,9 @@ A string.
 
 ## Examples
 
+The following example queries a `<meta>` element that contains a `name` attribute with the value of `identifier`.
+The `scheme` value is logged to the console to display the scheme of the metadata content:
+
 ```js
 // given <meta name="identifier" content="1580081754" scheme="ISBN">
 let meta = document.querySelector("meta[name='identifier']");

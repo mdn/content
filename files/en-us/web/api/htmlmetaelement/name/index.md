@@ -22,16 +22,22 @@ A string.
 
 ## Examples
 
-### Reading the metadata name of the first meta element
+### Reading the metadata name of a meta element
+
+The following example queries the first `<meta>` element in a document.
+The `name` value is logged to the console, showing that [keywords](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) have been specified for the document:
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web technologies">
-let meta = document.querySelector("meta[0]");
+let meta = document.querySelector("meta");
 console.log(meta.name);
 // "keywords"
 ```
 
-### Creating a meta element with `author` and setting a `content` value
+### Creating a meta element with `author` metadata
+
+The following example creates a new `<meta>` element with a `name` attribute set to [`author`](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification).
+The `content` attribute sets the author of the document and the element is appended to the document `<head>`:
 
 ```js
 let meta = document.createElement("meta");
