@@ -23,7 +23,7 @@ Returns the value it is set to (from `markOptions` of {{domxref("Performance.mar
 The following example shows the use of the `detail` property.
 
 ```js
-performance.mark("dog", {detail: "labrador" });
+performance.mark("dog", { detail: "labrador" });
 
 const dogEntries = performance.getEntriesByName("dog");
 
