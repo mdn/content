@@ -251,3 +251,8 @@ div {
 - {{cssxref("&lt;transform-function&gt;")}}
 - [skewX()](/en-US/docs/Web/CSS/transform-function/skewX)
 - [skewY()](/en-US/docs/Web/CSS/transform-function/skewY)
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

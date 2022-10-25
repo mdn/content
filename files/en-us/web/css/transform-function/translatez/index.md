@@ -146,3 +146,4 @@ the user is to the element and the larger the translated element will seem.
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}
