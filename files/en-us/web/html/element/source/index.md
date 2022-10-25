@@ -163,7 +163,8 @@ In this example, two `<source>` elements are included within the {{HTMLElement("
 
 ### Picture with height & width attributes example
 
-In this example, three `<source>` elements are included within the {{HTMLElement("picture")}}, each `<source>` element has it's own {{htmlattrdef("height")}} & {{htmlattrdef("width")}} attributes applied and this help reduce Layout Shift.
+In this example, three `<source>` elements with {{htmlattrdef("height")}} and {{htmlattrdef("width")}} attributes are included in a {{HTMLElement("picture")}} element.
+A [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
 
 ```html
 <picture>
