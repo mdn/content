@@ -548,7 +548,7 @@ The following are examples of string literals:
 "bar"
 '1234'
 'one line \n another line'
-"John's cat"
+"Joyo's cat"
 ```
 
 You should use string literals unless you specifically need to use a `String` object. See {{jsxref("String")}} for details on `String` objects.
@@ -557,7 +557,7 @@ You can call any of the {{jsxref("String")}} object's methods on a string litera
 
 ```js
 // Will print the number of symbols in the string including whitespace.
-console.log("John's cat".length)  // In this case, 10.
+console.log("Joyo's cat".length)  // In this case, 10.
 ```
 
 [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) are also available. Template literals are enclosed by the back-tick (`` ` ``) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes.
@@ -574,7 +574,7 @@ Template literals provide syntactic sugar for constructing strings. (This is sim
  quoted strings cannot.`
 
 // String interpolation
-const name = 'Bob', time = 'today';
+const name = 'Lev', time = 'today';
 `Hello ${name}, how are you ${time}?`
 ```
 
