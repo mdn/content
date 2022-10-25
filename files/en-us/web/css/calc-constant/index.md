@@ -50,7 +50,9 @@ For example:
 
 - `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
-In math functions, `<calc-constant>` values are evaluated as {{cssxref("number")}} values, therefore `e` and `pi` act as numeric constants.
+- `rotate(1rad * pi);` won't work, {{CSSxRef("transform-function/rotate", "rotate()")}} is not a math function, use `rotate(calc(1rad * pi));`
+
+In math functions, `<calc-constant>` values are evaluated as {{CSSxRef("number")}} values, therefore `e` and `pi` act as numeric constants.
 
 Both `infinity` and `NaN` are slightly different, they are considered as degenerate numeric constants. While not technically numbers, they act as {{CSSxRef("number")}} values. Thus to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
 
