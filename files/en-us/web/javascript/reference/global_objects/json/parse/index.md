@@ -77,7 +77,7 @@ JSON.parse(
   (key, value) =>
     typeof value === "number"
       ? value * 2 // return value * 2 for numbers
-      : value, // return everything else unchanged
+      : value; // return everything else unchanged
 );
 
 // { p: 10 }
