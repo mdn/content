@@ -62,9 +62,7 @@ When called on an HTML element in a DOM flagged as an HTML document,
 
 ### Non-existing attributes
 
-All modern web browsers return `null` when
-the specified attribute does not exist on the specified element; this is what the [DOM specification](https://dom.spec.whatwg.org/#dom-element-getattribute) specifies. In the old DOM 3 Core specification, the return value was the _empty
-string_. 
+All modern web browsers return `null` when the specified attribute does not exist on the specified element.
 
 ### Retrieving nonce values
 
