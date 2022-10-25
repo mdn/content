@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msStereo3DRenderMode
+title: "HTMLVideoElement: msStereo3DRenderMode property"
+short-title: msStereo3DRenderMode
 slug: Web/API/HTMLVideoElement/msStereo3DRenderMode
 page-type: web-api-instance-property
 tags:

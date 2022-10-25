@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msSetVideoRectangle
+title: "HTMLVideoElement: msSetVideoRectangle property"
+short-title: msSetVideoRectangle
 slug: Web/API/HTMLVideoElement/msSetVideoRectangle
 page-type: web-api-instance-property
 tags:
@@ -43,7 +44,7 @@ HTMLVideoElement.msSetVideoRectangle(
   2, // left
   0, // top
   4, // right
-  4, // bottom
+  4 // bottom
 );
 ```
 

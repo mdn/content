@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msIsStereo3D
+title: "HTMLVideoElement: msIsStereo3D property"
+short-title: msIsStereo3D
 slug: Web/API/HTMLVideoElement/msIsStereo3D
 page-type: web-api-instance-property
 tags:

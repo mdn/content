@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.onMSVideoFrameStepCompleted
+title: "HTMLVideoElement: onMSVideoFrameStepCompleted property"
+short-title: onMSVideoFrameStepCompleted
 slug: Web/API/HTMLVideoElement/onMSVideoFrameStepCompleted
 page-type: web-api-instance-property
 tags:

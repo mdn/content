@@ -1,5 +1,6 @@
 ---
-title: Response.clone()
+title: "Response: clone() method"
+short-title: clone()
 slug: Web/API/Response/clone
 page-type: web-api-instance-method
 tags:
@@ -56,10 +57,10 @@ When the fetch resolves successfully, we clone it, extract a blob from both resp
 {{domxref("URL.createObjectURL")}}, and display them in two separate {{htmlelement("img")}} elements.
 
 ```js
-const image1 = document.querySelector('.img1');
-const image2 = document.querySelector('.img2');
+const image1 = document.querySelector(".img1");
+const image2 = document.querySelector(".img2");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   const response2 = response.clone();

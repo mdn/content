@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msIsLayoutOptimalForPlayback
+title: "HTMLVideoElement: msIsLayoutOptimalForPlayback property"
+short-title: msIsLayoutOptimalForPlayback
 slug: Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
 page-type: web-api-instance-property
 tags:

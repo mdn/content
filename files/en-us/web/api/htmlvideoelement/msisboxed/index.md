@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msIsBoxed
+title: "HTMLVideoElement: msIsBoxed property"
+short-title: msIsBoxed
 slug: Web/API/HTMLVideoElement/msIsBoxed
 page-type: web-api-instance-property
 tags:

@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msInsertVideoEffect()
+title: "HTMLVideoElement: msInsertVideoEffect() method"
+short-title: msInsertVideoEffect()
 slug: Web/API/HTMLVideoElement/msInsertVideoEffect
 page-type: web-api-instance-method
 tags:
@@ -44,7 +45,11 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const oVideo1 = document.getElementById("video1");
-oVideo1.msInsertVideoEffect("Windows.Media.VideoEffects.VideoStabilization", true, null);
+oVideo1.msInsertVideoEffect(
+  "Windows.Media.VideoEffects.VideoStabilization",
+  true,
+  null
+);
 ```
 
 ## See also

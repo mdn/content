@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.onMSVideoOptimalLayoutChanged
+title: "HTMLVideoElement: onMSVideoOptimalLayoutChanged property"
+short-title: onMSVideoOptimalLayoutChanged
 slug: Web/API/HTMLVideoElement/onMSVideoOptimalLayoutChanged
 page-type: web-api-instance-property
 tags:

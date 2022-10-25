@@ -1,5 +1,6 @@
 ---
-title: Response.bodyUsed
+title: "Response: bodyUsed property"
+short-title: bodyUsed
 slug: Web/API/Response/bodyUsed
 page-type: web-api-instance-property
 tags:
@@ -41,8 +42,8 @@ This returns `false` before and `true` afterwards, as at that point the body has
 ### JavaScript Content
 
 ```js
-const myImage = document.querySelector('.my-image');
-fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg')
+const myImage = document.querySelector(".my-image");
+fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
   .then((response) => {
     console.log(response.bodyUsed);
     const res = response.blob();

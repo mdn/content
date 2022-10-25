@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.createEquirectLayer()
+title: "XRWebGLBinding: createEquirectLayer() method"
+short-title: createEquirectLayer()
 slug: Web/API/XRWebGLBinding/createEquirectLayer
 page-type: web-api-instance-method
 tags:
@@ -121,11 +122,11 @@ function onXRSessionStarted(xrSession) {
     centralHorizontalAngle: 2 * Math.PI,
     upperVerticalAngle: Math.PI / 2.0,
     lowerVerticalAngle: -Math.PI / 2.0,
-    radius: 0
+    radius: 0,
   });
 
   xrSession.updateRenderState({
-    layers: [equirectLayer]
+    layers: [equirectLayer],
   });
 }
 ```

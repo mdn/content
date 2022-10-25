@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msStereo3DPackingMode
+title: "HTMLVideoElement: msStereo3DPackingMode property"
+short-title: msStereo3DPackingMode
 slug: Web/API/HTMLVideoElement/msStereo3DPackingMode
 page-type: web-api-instance-property
 tags:

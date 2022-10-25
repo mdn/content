@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msFrameStep()
+title: "HTMLVideoElement: msFrameStep() method"
+short-title: msFrameStep()
 slug: Web/API/HTMLVideoElement/msFrameStep
 page-type: web-api-instance-method
 tags:

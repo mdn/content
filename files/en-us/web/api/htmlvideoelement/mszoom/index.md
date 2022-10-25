@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msZoom
+title: "HTMLVideoElement: msZoom property"
+short-title: msZoom
 slug: Web/API/HTMLVideoElement/msZoom
 page-type: web-api-instance-property
 tags:
@@ -45,9 +46,9 @@ space of the video object.
 This examples gets a Video object and sets the `msZoom` property to true.
 
 ```js
-    const myVideo = document.getElementById("videoTag1");
-       myVideo.msZoom = true;
-       myVideo.play();
+const myVideo = document.getElementById("videoTag1");
+myVideo.msZoom = true;
+myVideo.play();
 ```
 
 ## See also

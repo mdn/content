@@ -1,5 +1,6 @@
 ---
-title: Response.redirect()
+title: "Response: redirect() static method"
+short-title: redirect()
 slug: Web/API/Response/redirect
 page-type: web-api-static-method
 tags:
@@ -48,7 +49,7 @@ A {{domxref("Response")}} object.
 ## Examples
 
 ```js
-Response.redirect('https://www.example.com', 302);
+Response.redirect("https://www.example.com", 302);
 ```
 
 ## Specifications

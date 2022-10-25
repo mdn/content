@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.autoPictureInPicture
+title: "HTMLVideoElement: autoPictureInPicture property"
+short-title: autoPictureInPicture
 slug: Web/API/HTMLVideoElement/autoPictureInPicture
 page-type: web-api-instance-property
 tags:

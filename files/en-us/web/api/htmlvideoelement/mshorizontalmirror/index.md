@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.msHorizontalMirror
+title: "HTMLVideoElement: msHorizontalMirror property"
+short-title: msHorizontalMirror
 slug: Web/API/HTMLVideoElement/msHorizontalMirror
 page-type: web-api-instance-property
 tags:
@@ -30,18 +31,18 @@ when user moves left, their representation on-screen would move left as well).
 ## Examples
 
 ```js
-       const myVideo = document.getElementById("videoTag1");
-       myVideo.msHorizontalMirror = true;
-       myVideo.play();
+const myVideo = document.getElementById("videoTag1");
+myVideo.msHorizontalMirror = true;
+myVideo.play();
 ```
 
 Example #2:
 
 ```js
-    const flip = document.querySelector('#flip');
-    flip.addEventListener('click', function() {
-      video.msHorizontalMirror = true;
-    });
+const flip = document.querySelector("#flip");
+flip.addEventListener("click", function () {
+  video.msHorizontalMirror = true;
+});
 ```
 
 ## See also
