@@ -161,6 +161,8 @@ In this example, two `<source>` elements are included within the {{HTMLElement("
 </picture>
 ```
 
+With the `<picture>` element, you must always include an `<img>` with a fallback image, with an `alt` attribute to ensure accessibility (unless the image is an irrelevant background decorative image).
+
 ### Picture with height & width attributes example
 
 In this example, three `<source>` elements with {{htmlattrdef("height")}} and {{htmlattrdef("width")}} attributes are included in a {{HTMLElement("picture")}} element.
@@ -168,17 +170,12 @@ A [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allows th
 
 ```html
 <picture>
-  <source srcset="mdn-logo-landscape.png"
-media="(min-width: 1000px)" width="1000" height="400">
-  <source srcset="mdn-logo-square.png"
-media="(min-width: 800px)" width="800" height="800">
-  <source srcset="mdn-logo-portrait.png"
-media="(min-width: 600px)" width="600" height="800">
-<img src="mdn-logo-fallback.png " alt="" width="500" height="400">
+  <source srcset="landscape.png" media="(min-width: 1000px)" width="1000" height="400">
+  <source srcset="square.png" media="(min-width: 800px)" width="800" height="800">
+  <source srcset="portrait.png" media="(min-width: 600px)" width="600" height="800">
+  <img src="fallback.png" alt="" width="500" height="400">
 </picture>
 ```
-
-With the `<picture>` element, you must always include an `<img>` with a fallback image, with an `alt` attribute to ensure accessibility (unless the image is an irrelevant background decorative image).
 
 ## Specifications
 
