@@ -49,13 +49,13 @@ This method lets you determine whether or not a string includes another string.
 The `includes()` method is case sensitive. For example, the following expression returns `false`:
 
 ```js
-'Blue Whale'.includes('blue')  // returns false
+"Blue Whale".includes("blue"); // returns false
 ```
 
 You can work around this constraint by transforming both the original string and the search string to all lowercase:
 
 ```js
-'Blue Whale'.toLowerCase().includes('blue')  // returns true
+"Blue Whale".toLowerCase().includes("blue"); // returns true
 ```
 
 ## Examples
@@ -63,14 +63,14 @@ You can work around this constraint by transforming both the original string and
 ### Using includes()
 
 ```js
-const str = 'To be, or not to be, that is the question.'
+const str = "To be, or not to be, that is the question.";
 
-console.log(str.includes('To be'))        // true
-console.log(str.includes('question'))     // true
-console.log(str.includes('nonexistent'))  // false
-console.log(str.includes('To be', 1))     // false
-console.log(str.includes('TO BE'))        // false
-console.log(str.includes(''))             // true
+console.log(str.includes("To be")); // true
+console.log(str.includes("question")); // true
+console.log(str.includes("nonexistent")); // false
+console.log(str.includes("To be", 1)); // false
+console.log(str.includes("TO BE")); // false
+console.log(str.includes("")); // true
 ```
 
 ## Specifications

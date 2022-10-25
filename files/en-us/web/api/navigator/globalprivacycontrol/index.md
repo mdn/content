@@ -1,6 +1,7 @@
 ---
 title: Navigator.globalPrivacyControl
 slug: Web/API/Navigator/globalPrivacyControl
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -18,10 +19,10 @@ The **`Navigator.globalPrivacyControl`** property returns the user's Global Priv
 
 The value of the property reflects that of the {{httpheader("Sec-GPC")}} HTTP header.
 
-| Sec-GPC Value | Meaning                                                       |
-|---------------|---------------------------------------------------------------|
-| 1             | User _does not_ provide consent to sell or share their data.  |
-| 0             | User _does_ provide consent to sell or share their data.      |
+| Sec-GPC Value | Meaning                                                      |
+| ------------- | ------------------------------------------------------------ |
+| 1             | User _does not_ provide consent to sell or share their data. |
+| 0             | User _does_ provide consent to sell or share their data.     |
 | unspecified   | User has not yet provided consent with regard to their data. |
 
 ## Example
