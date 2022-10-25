@@ -143,7 +143,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
-### Height & Width attributes for {{HTMLElement("source")}}
+### Height & Width attributes for `<source>`
 
 HTML attributes for [height](/en-US/docs/Web/HTML/Element/source#attr-height) & [width](/en-US/docs/Web/HTML/Element/source#attr-width) ({{bug(1694741)}}).
 
