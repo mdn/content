@@ -54,7 +54,7 @@ an object, this means the object's contents (e.g., its properties) can be altere
 
 All the considerations about the
 [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)
-apply to both {{jsxref("Statements/let", "let")}} and `const`.
+apply to both {{jsxref("Statements/let", "let")}} and `const`. For this reason, `const` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 
 A constant cannot share its name with a function or a variable in the same scope.
 
