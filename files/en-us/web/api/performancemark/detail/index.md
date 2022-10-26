@@ -12,7 +12,7 @@ browser-compat: api.PerformanceMark.detail
 
 {{APIRef}}
 
-The read-only **`detail`** property returns arbitrary metadata that has been included in the mark upon construction (either when using {{domxref("Performance.mark","performance.mark()")}} or the {{domxref("PerformanceMark.PerformanceMark","PerformanceMark()")}} constructor).
+The read-only **`detail`** property returns arbitrary metadata that was included in the mark upon construction (either when using {{domxref("Performance.mark","performance.mark()")}} or the {{domxref("PerformanceMark.PerformanceMark","PerformanceMark()")}} constructor).
 
 ## Value
 
@@ -20,7 +20,7 @@ Returns the value it is set to (from `markOptions` of {{domxref("Performance.mar
 
 ## Examples
 
-The following example shows the use of the `detail` property.
+The following example demonstrates the `detail` property.
 
 ```js
 performance.mark("dog", { detail: "labrador" });
