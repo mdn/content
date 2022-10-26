@@ -46,10 +46,9 @@ then(
 
 ### Return value
 
-Once a {{jsxref("Promise")}} is fulfilled or rejected, the respective handler function
-(`onFulfilled` or `onRejected`) will be called
-**asynchronously** (scheduled in the current thread loop). The behavior of
-the handler function follows a specific set of rules. If a handler function:
+Returns a new {{jsxref("Promise")}}.
+The behavior of returned promise follows a specific set of rules.
+If a handler function:
 
 - returns a value, the promise returned by `then` gets resolved with the
   returned value as its value.
@@ -71,18 +70,20 @@ Following, an example to demonstrate the asynchronicity of the `then`
 method.
 
 ```js
-// using a resolved promise, the 'then' block will be triggered instantly,
-// but its handlers will be triggered asynchronously as demonstrated by the console.logs
+// using a resolved promise 'resolvedProm' for example,
+// the function call 'then()' immediately returns a new promise,
+// but its handlers will get called asynchronously as demonstrated by the console.logs.
+// the new promise is assigned to 'thenProm',
+// and thenProm will be resolved with the value returned by handler
 const resolvedProm = Promise.resolve(33);
+// demonstrating that resolvedProm is resolved
+console.log(resolvedProm);
 
 const thenProm = resolvedProm.then((value) => {
-  console.log(
-    "this gets called after the end of the main stack. the value received and returned is: ",
-    value,
-  );
-  return value;
+  console.log(`this gets called after the end of the main stack. the value received is: ${value}, the value returned is: ${value + 1}`);
+  return value + 1;
 });
-// instantly logging the value of thenProm
+// immediately logging the value of thenProm
 console.log(thenProm);
 
 // using setTimeout we can postpone the execution of a function to the moment the stack is empty
@@ -91,12 +92,17 @@ setTimeout(() => {
 });
 
 // logs, in order:
-// Promise {[[PromiseStatus]]: "pending", [[PromiseResult]]: undefined}
-// "this gets called after the end of the main stack. the value received and returned is: 33"
 // Promise {[[PromiseStatus]]: "resolved", [[PromiseResult]]: 33}
+// Promise {[[PromiseStatus]]: "pending", [[PromiseResult]]: undefined}
+// "this gets called after the end of the main stack. the value received is: 33, the value returned is: 34"
+// Promise {[[PromiseStatus]]: "resolved", [[PromiseResult]]: 34}
 ```
 
 ## Description
+
+Once a {{jsxref("Promise")}} is fulfilled or rejected, the respective handler function
+(`onFulfilled` or `onRejected`) will be called **asynchronously** (scheduled in the current thread loop).
+**The handler function will get called asynchronously, even if the promise has already been settled.**
 
 As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return promises,
 they [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
