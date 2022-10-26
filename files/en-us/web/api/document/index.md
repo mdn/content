@@ -283,7 +283,7 @@ The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} inte
 The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocument")}} interface or is extended for such documents:
 
 - {{DOMxRef("Document.clear()")}} {{Deprecated_Inline}}
-  - : In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.
+  - : This method does nothing.
 - {{DOMxRef("Document.close()")}}
   - : Closes a document stream for writing.
 - {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}

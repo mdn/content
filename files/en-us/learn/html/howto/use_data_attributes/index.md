@@ -76,12 +76,6 @@ Data values are strings. Number values must be quoted in the selector for the st
 
 Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them. In addition, search crawlers may not index data attributes' values.
 
-The main issues to consider are Internet Explorer support and performance. Internet Explorer 11+ provides support for the standard, but all earlier versions [do not support `dataset`](https://caniuse.com/#feat=dataset). To support IE 10 and under you need to access data attributes with {{domxref("Element.getAttribute", "getAttribute()")}} instead. Also, the performance of reading `data-*` attributes compared to storing the data in a regular JavaScript object is poor.
-
-That said, though, for custom element-associated metadata, they are a great solution.
-
-In Firefox 49.0.2 (and perhaps earlier/later versions), the data attributes that exceed 1022 characters will not be read by JavaScript (ECMAScript 4).
-
 ## See also
 
 - This article is adapted from [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
