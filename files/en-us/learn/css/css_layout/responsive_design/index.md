@@ -130,7 +130,7 @@ Several layout methods, including [Multiple-column layout](/en-US/docs/Learn/CSS
 
 ### Multicol
 
-With multicol, you specify a `column-count` to indicates the maximum number of columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.
+With multicol, you specify a `column-count` to indicate the maximum number of columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.
 
 ```css
 .container {
@@ -187,7 +187,7 @@ img {
 }
 ```
 
-Using a single large image and scaling it down to fit small devices has obvious downsides, most notably mobile user wasting bandwidth by downloading images several times the size of what they actually see in the browser window. In addition, you may want to use images with different aspect ratios on narrow screens and compared to wider viewports. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by scaling down an image.
+Using a single large image and scaling it down to fit small devices has obvious downsides, most notably mobile users wasting bandwidth by downloading images several times the size of what they actually see in the browser window. In addition, you may want to use images with different aspect ratios on narrow screens and compared to wider viewports. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by scaling down an image.
 
 Responsive Images, using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes solve both of these problems. You can provide multiple sizes along with "hints" (metadata that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using.
 
