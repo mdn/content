@@ -63,7 +63,7 @@ Promise.all([p1, p2, p3]).then((values) => {
 If the `iterable` contains non-promise values, they will be ignored, but still counted in the returned promise array value (if the promise is fulfilled):
 
 ```js
-// All values are non-promises, so it gets fulfilled
+// All values are non-promises, so the returned promise gets fulfilled
 const p = Promise.all([1, 2, 3]);
 // The only input promise is already fulfilled,
 // so the returned promise gets fulfilled
