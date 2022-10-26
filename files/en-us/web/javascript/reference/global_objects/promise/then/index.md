@@ -47,7 +47,9 @@ then(
 ### Return value
 
 Returns a new {{jsxref("Promise")}}.
-The behavior of returned promise follows a specific set of rules.
+
+A parameter will be executed to handle promise's fulfillment or rejection.
+The behavior of returned promise depends on the execution result, following a specific set of rules.
 If a handler function:
 
 - returns a value, the promise returned by `then` gets resolved with the
