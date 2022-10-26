@@ -151,8 +151,8 @@ setTimeout(() => {
 Within [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), it's very common to "over-await" your code. For example, given the following functions:
 
 ```js
-async function promptForDishChoice() {
-  const choice = await new Promise((resolve, reject) => {
+function promptForDishChoice() {
+  return new Promise((resolve, reject) => {
     const dialog = document.createElement("dialog");
     dialog.innerHTML = `
 <form method="dialog">
