@@ -76,7 +76,7 @@ method.
 // the new promise is assigned to 'thenProm',
 // and thenProm will be resolved with the value returned by handler
 const resolvedProm = Promise.resolve(33);
-// demonstrating that resolvedProm is resolved
+// demonstrating that resolvedProm is fulfilled
 console.log(resolvedProm);
 
 const thenProm = resolvedProm.then((value) => {
