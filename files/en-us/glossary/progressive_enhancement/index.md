@@ -19,7 +19,6 @@ Progressive enhancement is a useful technique that allows web developers to focu
 ## See also
 
 - [Progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) at Wikipedia
-- [What is Progressive Enhancement, and why it matters](https://www.freecodecamp.org/news/what-is-progressive-enhancement-and-why-it-matters-e80c7aaf834a/) at freeCodeCamp
-- [Progressive Enhancement reading list 2021](https://www.quirksmode.org/blog/archives/2021/02/progressive_enh_1.html) at QuirksMode
-- [Understanding Progressive Enhancement](https://alistapart.com/article/understandingprogressiveenhancement/) by Aaron Gustafson; a 2008 _A List Apart_ article which first "placed progressive enhancement at the forefront of web developer thinking"
-- [Inclusive Web Design For the Future with Progressive Enhancement](https://hesketh.com/publications/inclusive_web_design_for_the_future/) ([related article)](http://www.hesketh.com/progressive_enhancement_and_the_future_of_web_design.html) by Steve Champeon and Nick Finck; a 2003 SXSW presentation cited by Aaron Gustafson as "unveiling a blueprint for a new way of approaching web development", and naming it "progressive enhancement"
+- [What is Progressive Enhancement, and why it matters](https://www.freecodecamp.org/news/what-is-progressive-enhancement-and-why-it-matters-e80c7aaf834a/) at freeCodeCamp (2018)
+- [Progressive Enhancement](https://www.quirksmode.org/blog/archives/2021/02/progressive_enh_1.html) at QuirksMode (2021)
+- [The Power of Progressive Enhancement](https://archive.hankchizljaw.com/wrote/the-power-of-progressive-enhancement/) at Piccalilli(2018)
