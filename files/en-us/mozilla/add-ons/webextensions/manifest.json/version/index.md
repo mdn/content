@@ -27,16 +27,16 @@ browser-compat: webextensions.manifest.version
   </tbody>
 </table>
 
-Version of the extension, formatted as numbers and ASCII characters or, for Manifest V3 staring in Firefox 108, only numbers separated by dots in both cases. See [Manifest Version Format](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format), for details about the version format.
+The version number of the extension. The version number format is enforced by each extension store, and version numbers that don't comply with store requirements may trigger a warning message in the related browser.
 
-You can inspect the [add-ons linter code](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10) to see how extension versions for Firefox are validated.
+For details of the supported version formats, see:
 
-Note that [the syntax defined for Chrome's `version`](https://developer.chrome.com/docs/extensions/mv3/manifest/version/) is more restrictive than that used by Firefox:
+- [Firefox Version Format](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format), for details of the version format supported in Firefox.
+- [Manifest - Version](https://developer.chrome.com/docs/extensions/mv3/manifest/version/), for details of version number format in Chrome.
 
-- values for `version` that are valid for Chrome will always be valid for Firefox
-- values for `version` that are valid for Firefox may not be valid for Chrome
+User [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) if you want to include an identifier in the version number that isn't supported by the store or browser. For example, `1.0 beta`.
 
-To obtain your extension version in your JavaScript code, use:
+To obtain your extension's version in your JavaScript code, use:
 
 ```js
 console.log(browser.runtime.getManifest().version);
