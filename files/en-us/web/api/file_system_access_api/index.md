@@ -38,7 +38,7 @@ Each handle provides its own functionality and there are a few differences depen
 There is also "save" functionality:
 
 - In the case of the asynchronous handles, use the {{domxref('FileSystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
-- In the case of the synchronous {{domxref('FileSystemSyncAccessHandle')}}, you commit the changes to disk using the {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} method.
+- In the case of the synchronous {{domxref('FileSystemSyncAccessHandle')}}, you write changes to a file using the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method, then commit the changes to disk using {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}}.
 
 This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
 
