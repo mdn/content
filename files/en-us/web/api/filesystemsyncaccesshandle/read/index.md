@@ -30,7 +30,7 @@ read(buffer, FileSystemReadWriteOptions)
 - `buffer`
   - : An {{jsxref("ArrayBuffer")}} or `ArrayBufferView` (such as a {{jsxref("DataView")}}) representing the buffer that the file content should be read into.
 - `FileSystemReadWriteOptions` {{optional_inline}}
-  - : An options object containing the following properties
+  - : An options object containing the following properties:
 
     - `at`
       - : A number representing the offset in bytes that the file should be read from.
