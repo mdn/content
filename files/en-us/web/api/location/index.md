@@ -53,7 +53,7 @@ body {
 }
 
 p {
-  font-size: 50%;
+  font-size: 60%;
   line-height: 1em;
   margin: 0;
   padding-bottom: 1em;
@@ -76,7 +76,7 @@ p {
   width: 100%;
   left: 50%;
   margin-left: -50%;
-  font-size: 40%;
+  font-size: 60%;
   line-height: 1.5;
   background: black;
 }
@@ -117,7 +117,7 @@ document.body.addEventListener("click", (event) => {
 });
 ```
 
-{{EmbedLiveSample('Location anatomy', '85ch', '160px')}}
+{{EmbedLiveSample('Location anatomy', '85ch', '180px')}}
 
 ## Instance properties
 
