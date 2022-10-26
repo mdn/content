@@ -88,7 +88,7 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
 >
 > # Update fields and then save again
-> user.first_name = 'John'
+> user.first_name = 'Tyrone'
 > user.last_name = 'Citizen'
 > user.save()
 > ```

@@ -199,7 +199,7 @@ function removeEvent(ev) {
 
 #### Update background color
 
-The background color of the touch areas will change as follows: no active touches is `white`; one active touch is `yellow`; two simultaneous touches is `ping` and three or more simultaneous touches is `lightblue`.
+The background color of the touch areas will change as follows: no active touches is `white`; one active touch is `yellow`; two simultaneous touches is `pink` and three or more simultaneous touches is `lightblue`.
 
 ```js
 function updateBackground(ev) {

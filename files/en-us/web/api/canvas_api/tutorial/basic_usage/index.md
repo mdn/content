@@ -28,11 +28,11 @@ The [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute isn't specific t
 
 The `<canvas>` element can be styled just like any normal image ({{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("background")}}…). These rules, however, don't affect the actual drawing on the canvas. We'll see how this is done in a [dedicated chapter](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) of this tutorial. When no styling rules are applied to the canvas it will initially be fully transparent.
 
-### Fallback content
+### Accessible content
 
-The `<canvas>` element differs from an {{HTMLElement("img")}} tag in that, like for {{HTMLElement("video")}}, {{HTMLElement("audio")}}, or {{HTMLElement("picture")}} elements, it is easy to define some fallback content, to be displayed in older browsers not supporting it, like versions of Internet Explorer earlier than version 9 or textual browsers. You should always provide fallback content to be displayed by those browsers.
+The `<canvas>` element, like the {{HTMLElement("img")}}, {{HTMLElement("video")}}, {{HTMLElement("audio")}}, and {{HTMLElement("picture")}} elements, must be made accessible by providing fallback text to be displayed when the media doesn't load or the user is unable to experience it as intended. You should always provide fallback content, captions, and alternative text, as appropriate for the media type.
 
-Providing fallback content is very straightforward: just insert the alternate content inside the `<canvas>` element. Browsers that don't support `<canvas>` will ignore the container and render the fallback content inside it. Browsers that do support `<canvas>` will ignore the content inside the container, and just render the canvas normally.
+Providing fallback content is very straightforward: just insert the alternate content inside the `<canvas>` element to be accessed by screen readers, spiders, and other automated bots. Browsers, by default, will ignore the content inside the container, rendering the canvas normally unless `<canvas>` isn't supported.
 
 For example, we could provide a text description of the canvas content or provide a static image of the dynamically rendered content. This can look something like this:
 
@@ -42,17 +42,17 @@ For example, we could provide a text description of the canvas content or provid
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt="Photo of a clock" />
+  <img src="images/clock.png" width="150" height="150" alt="A clock" />
 </canvas>
 ```
 
-Telling the user to use a different browser that supports canvas does not help users who can't read the canvas at all, for example. Providing a useful fallback text or sub DOM helps to make the canvas more accessible.
+Telling the user to use a different browser that supports canvas does not help users who can't read the canvas at all. Providing useful fallback text or sub DOM adds accessibility to an otherwise non-accessible element.
 
 ### Required `</canvas>` tag
 
 As a consequence of the way fallback is provided, unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`). If this tag is not present, the rest of the document would be considered the fallback content and wouldn't be displayed.
 
-If fallback content is not needed, a simple `<canvas id="foo" …></canvas>` is fully compatible with all browsers that support canvas at all.
+If fallback content is not needed, a simple `<canvas id="foo" role="presentation" …></canvas>` is fully compatible with all browsers that support canvas at all. This should only be used if the canvas is purely presentational.
 
 ## The rendering context
 

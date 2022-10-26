@@ -112,7 +112,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.
     Unlike `401 Unauthorized`, the client's identity is known to the server.
 - {{HTTPStatus(404, "404 Not Found")}}
-  - : The server can not find the requested resource.
+  - : The server cannot find the requested resource.
     In the browser, this means the URL is not recognized.
     In an API, this can also mean that the endpoint is valid but the resource itself does not exist.
     Servers may also send this response instead of `403 Forbidden` to hide the existence of a resource from an unauthorized client.

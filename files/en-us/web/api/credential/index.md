@@ -42,7 +42,7 @@ None.
 ```js
 let pwdCredential = new PasswordCredential({
   id: "example-username", // Username/ID
-  name: "John Doe", // Display name
+  name: "Carina Anand", // Display name
   password: "correct horse battery staple", // Password
 });
 
