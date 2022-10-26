@@ -64,7 +64,7 @@ onmessage = async (e) => {
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
-    ...
+// …
 
   // Always close FileSystemSyncAccessHandle if done.
   await accessHandle.close();
