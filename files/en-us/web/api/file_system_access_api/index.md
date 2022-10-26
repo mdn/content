@@ -206,7 +206,7 @@ onmessage = async (e) => {
   const fileSize = await accessHandle.getSize();
   // Read file content to a buffer.
   const buffer = new DataView(new ArrayBuffer(fileSize));
-  const readBuffer = accessHandle.read(buffer, { "at": 0 });
+  const readBuffer = accessHandle.read(buffer, { at: 0 });
 
   // Write the message to the end of the file.
   const encoder = new TextEncoder();
