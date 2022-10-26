@@ -32,7 +32,7 @@ Promise.any(iterable)
 A {{jsxref("Promise")}} that is:
 
 - **Already rejected**, if the `iterable` passed is empty.
-- **Asynchronously fulfilled**, when any of the promises in the given `iterable` fulfills. The fulfillment value is the rejection reason of the first promise that was rejected.
+- **Asynchronously fulfilled**, when any of the promises in the given `iterable` fulfills. The fulfillment value is the fulfillment value of the first promise that was fulfilled.
 - **Asynchronously rejected**, when all of the promises in the given `iterable` reject. The rejection reason is an {{jsxref("AggregateError")}} containing an array of rejection reasons in its `errors` property. The errors are in the order of the promises passed, regardless of completion order. If the `iterable` passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) rejected.
 
 ## Description

@@ -35,13 +35,13 @@ A {{jsxref("Promise")}} that **asynchronously settles** with the eventual state 
 
 The `Promise.race()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It's useful when you want the first async task to complete, but do not care about its eventual state (i.e. it can either succeed or fail).
 
-If the iterable contains one or more non-promise value and/or an already settled promise, then `Promise.race` will settle to the first of these values found in the iterable.
+If the iterable contains one or more non-promise values and/or an already settled promise, then `Promise.race()` will settle to the first of these values found in the iterable.
 
 ## Examples
 
 ### Using Promise.race()
 
-This is a basic example showing how `Promise.race()` can be used to race several timers implemented with [`setTimeout()`](/en-US/docs/Web/API/setTimeout). The timer with the shortest time always wins the race and becomes the resulting promise's state.
+This example shows how `Promise.race()` can be used to race several timers implemented with [`setTimeout()`](/en-US/docs/Web/API/setTimeout). The timer with the shortest time always wins the race and becomes the resulting promise's state.
 
 ```js
 function sleep(time, value, state) {
@@ -159,7 +159,7 @@ setTimeout(() => {
 // Promise { <state>: "fulfilled", <value>: "non-Promise value" }
 ```
 
-### Using Promise.race to implement request time-out
+### Using Promise.race() to implement request timeout
 
 You can race a potentially long-lasting request with a timer that rejects, so that when the time limit has elapsed, the resulting promise automatically rejects.
 
@@ -177,9 +177,9 @@ const data = Promise.race([
 
 If the `data` promise fulfills, it will contain the data fetched from `/api`; otherwise, it will reject if `fetch` remains pending for 5 seconds and loses the race with the `setTimeout` timer.
 
-### Using Promise.race to detect the status of a promise
+### Using Promise.race() to detect the status of a promise
 
-Taking advantage of `Promise.race`'s behavior of resolving to the first non-pending promise in the iterable, we can check a promise's state, including if it's pending. This example is adapted from [`promise-status-async`](https://github.com/kudla/promise-status-async/blob/master/lib/promiseState.js).
+Because `Promise.race()` resolves to the first non-pending promise in the iterable, we can check a promise's state, including if it's pending. This example is adapted from [`promise-status-async`](https://github.com/kudla/promise-status-async/blob/master/lib/promiseState.js).
 
 ```js
 function promiseState(promise) {
@@ -224,9 +224,9 @@ setTimeout(() => {
 // { status: 'rejected', reason: 300 }
 ```
 
-> **Note:** The `promiseState` function still runs asynchronously, because there is, by principle, no way to synchronously get a promise's value (i.e. without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
+> **Note:** The `promiseState` function still runs asynchronously, because there is no way to synchronously get a promise's value (i.e. without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
 
-### Comparison with Promise.any
+### Comparison with Promise.any()
 
 `Promise.race` takes the first settled {{jsxref("Promise")}}.
 
