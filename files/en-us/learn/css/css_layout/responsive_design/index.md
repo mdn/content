@@ -74,7 +74,7 @@ Zoe Mickley Gillenwater was instrumental in [her work](https://zomigi.com/blog/v
 
 ## Responsive design
 
-The term responsive design was [coined by Ethan Marcotte in 2010](https://alistapart.com/article/responsive-web-design/) and described the use of three techniques in combination, as discussed in Gillenwater's book [Flexible Web Design](http://flexiblewebbook.com/).
+The term _responsive design_ was [coined by Ethan Marcotte in 2010](https://alistapart.com/article/responsive-web-design/) and described the use of three techniques in combination, as discussed in Gillenwater's book [Flexible Web Design](http://flexiblewebbook.com/).
 
 1. The first was the idea of fluid grids, something which was already being explored by Gillenwater, and can be read up on in Marcotte's article, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (published in 2009 on A List Apart).
 2. The second technique was the idea of [fluid images](https://unstoppablerobotninja.com/entry/fluid-images/). Using a very simple technique of setting the `max-width` property to `100%`, images would scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This enables an image to scale down to fit in a flexibly-sized column, rather than overflow it, but not grow larger and become pixelated if the column becomes wider than the image.
