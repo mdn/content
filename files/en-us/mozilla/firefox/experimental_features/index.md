@@ -147,7 +147,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
 
 HTML attributes for [height](/en-US/docs/Web/HTML/Element/source#attr-height) & [width](/en-US/docs/Web/HTML/Element/source#attr-width) ({{bug(1694741)}}).
 
-This works when the {{HTMLElement("source")}} when it is a child element of {{HTMLElement("picture")}} and helps eliminate layout shift.
+These attributes can be used in {{HTMLElement("source")}} elements when they are children of {{HTMLElement("picture")}} elements and help to eliminate layout shift.
 
 <table>
   <thead>
