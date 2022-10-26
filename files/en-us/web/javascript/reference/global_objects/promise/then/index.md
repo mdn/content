@@ -48,9 +48,9 @@ then(
 
 Returns a new {{jsxref("Promise")}}.
 
-A parameter will be executed to handle promise's fulfillment or rejection.
-The behavior of returned promise depends on the execution result, following a specific set of rules.
-If a handler function:
+One of the `onFulfilled` and `onRejected` handlers will be executed to handle the current promise's fulfillment or rejection.
+The behavior of the returned promise depends on the handler's execution result, following a specific set of rules.
+If the handler function:
 
 - returns a value, the promise returned by `then` gets resolved with the
   returned value as its value.
