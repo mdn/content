@@ -14,7 +14,7 @@ browser-compat: api.PerformanceMark.PerformanceMark
 
 The **`PerformanceMark()`** constructor creates a {{domxref("DOMHighResTimeStamp","timestamp")}} with the given name.
 
-Unlike {{domxref("Performance.mark","performance.mark()")}}, performance marks created by the constructor aren't added to the browser's _performance timeline_. This means that calls to the {{domxref("Performance")}} interface's `getEntries*()` methods ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or {{domxref("Performance.getEntriesByType","getEntriesByType()")}}) won't show entries for these marks.
+Unlike {{domxref("Performance.mark","performance.mark()")}}, performance marks created by the constructor aren't added to the browser's performance timeline. This means that calls to the {{domxref("Performance")}} interface's `getEntries*()` methods ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or {{domxref("Performance.getEntriesByType","getEntriesByType()")}}) won't show entries for these marks.
 
 ## Syntax
 
@@ -26,24 +26,22 @@ new PerformanceMark(name, markOptions)
 ### Parameters
 
 - `name`
-
-  - : A string representing the name of the mark. If the
-    `name` given to this method already exists in the
-    {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
-    thrown.
-
+  - : A string representing the name of the mark.
 - `markOptions` {{optional_inline}}
-
   - : An object for specifying a timestamp and additional metadata for the mark.
-
-    - `detail`
-      - : Arbitrary metadata to include in the mark.
-    - `startTime`
-      - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
+    - `detail` {{optional_inline}}
+      - : Arbitrary metadata to include in the mark. Defaults to `null`.
+    - `startTime` {{optional_inline}}
+      - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time. Defaults to {{domxref("performance.now()")}}.
 
 ### Return value
 
 A {{domxref("PerformanceMark")}} object.
+
+### Exceptions
+
+- {{jsxref("SyntaxError")}}: Thrown if the `name` given to this method already exists in the {{domxref("PerformanceTiming")}} interface.
+- {{jsxref("TypeError")}}: Thrown if `startTime` is negative.
 
 ## Examples
 
