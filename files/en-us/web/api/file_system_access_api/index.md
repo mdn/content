@@ -198,9 +198,9 @@ onmessage = async (e) => {
 
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftFile = await root.getFileHandle('draft.txt');
+  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
   // Get sync access handle
-  const accessHandle = await draftFile.createSyncAccessHandle();
+  const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // Get size of the file.
   const fileSize = await accessHandle.getSize();
