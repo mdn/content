@@ -595,6 +595,6 @@ The best way to learn to use grid layout is to continue to build examples like t
 
 - [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
 - [CSS Layout: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Grid by Example](https://gridbyexample.com) Examples of grid layout, UI patterns, and full page layouts.
-- [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) Seven section guide
+- [Grid by Example](https://gridbyexample.com)
+- [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [CSS Grid Website Layout Examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm)

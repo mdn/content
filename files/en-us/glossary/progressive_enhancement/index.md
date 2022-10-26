@@ -21,4 +21,4 @@ Progressive enhancement is a useful technique that allows web developers to focu
 - [Progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) at Wikipedia
 - [What is Progressive Enhancement, and why it matters](https://www.freecodecamp.org/news/what-is-progressive-enhancement-and-why-it-matters-e80c7aaf834a/) at freeCodeCamp (2018)
 - [Progressive Enhancement](https://www.quirksmode.org/blog/archives/2021/02/progressive_enh_1.html) at QuirksMode (2021)
-- [The Power of Progressive Enhancement](https://archive.hankchizljaw.com/wrote/the-power-of-progressive-enhancement/) at Piccalilli(2018)
+- [The Power of Progressive Enhancement](https://archive.hankchizljaw.com/wrote/the-power-of-progressive-enhancement/) at Piccalilli (2018)
