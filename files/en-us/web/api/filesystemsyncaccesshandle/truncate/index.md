@@ -47,9 +47,9 @@ A {{jsxref('Promise')}} which resolves to undefined.
 async function truncateFile() {
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftFile = await root.getFileHandle('draft.txt');
+  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
   // Get sync access handle
-  const accessHandle = await draftFile.createSyncAccessHandle();
+  const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // Truncate the file to 0 bytes
   await accessHandle.truncate(0);
