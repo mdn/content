@@ -211,7 +211,7 @@ onmessage = async (e) => {
   // Write the message to the end of the file.
   const encoder = new TextEncoder();
   const encodedMessage = encoder.encode(message);
-  const writeBuffer = accessHandle.write(encodedMessage, { "at" : readBuffer });
+  const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
 
   // Persist changes to disk.
   await accessHandle.flush();
