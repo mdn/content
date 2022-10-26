@@ -91,7 +91,7 @@ Originally, responsive design was made simpler with [media queries](/en-US/docs/
 For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The CSS for the `.container` selector will only be applied if these two things are true.
 
 ```css
-@media screen and (min-width: 800rem) {
+@media screen and (min-width: 80rem) {
   .container {
     margin: 1em 2em;
   }
