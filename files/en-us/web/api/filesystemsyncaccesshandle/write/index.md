@@ -56,7 +56,7 @@ The following asynchronous event handler function is contained inside a Web Work
 
 ```js
 onmessage = async (e) => {
-  // retrieve message sent to work from main script
+  // Retrieve message sent to work from main script
   const message = e.data;
 
   // Get handle to draft file
