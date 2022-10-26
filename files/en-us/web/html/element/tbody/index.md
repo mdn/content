@@ -39,7 +39,8 @@ The `<tbody>` element, along with its related {{HTMLElement("thead")}} and {{HTM
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        If the `<tbody>` element is not specified, browsers will automatically insert the element to encapsulate any `<tr>` element that would otherwise be children of the `<table>` element. The `<tbody>` end tag can be omitted if the `<tbody>` element is immediately followed by a {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}} element, or if there is no more content in the parent element.
+        A `<tbody>` element's start tag can be omitted if the first thing inside the `<tbody>` element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a `<tbody>`, {{HTMLElement("thead")}}, or `{{HTMLElement("tfoot")}}` element whose end tag has been omitted. (It can't be omitted if the element is empty.)
+        A `<tbody>` element's end tag can be omitted if the `<tbody>` element is immediately followed by a `<tbody>` or `{{HTMLElement("tfoot")}}` element, or if there is no more content in the parent element.
       </td>
     </tr>
     <tr>
