@@ -423,7 +423,7 @@ const user = {
   id: 42,
   displayName: 'jdoe',
   fullName: {
-    firstName: 'John',
+    firstName: 'Jane',
     lastName: 'Doe',
   },
 };
@@ -459,7 +459,7 @@ function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} is ${name}`;
 }
 
-console.log(whois(user));  // "jdoe is John"
+console.log(whois(user));  // "jdoe is Jane"
 ```
 
 #### Setting a function parameter's default value

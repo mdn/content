@@ -152,12 +152,12 @@ The following script switches the words in the string. For the replacement text,
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
+const str = 'Maria Cruz';
 const newstr = str.replace(re, '$2, $1');
-console.log(newstr);  // Smith, John
+console.log(newstr);  // Cruz, Maria
 ```
 
-This logs `'Smith, John'`.
+This logs `'Cruz, Maria'`.
 
 ### Using an inline function that modifies the matched characters
 
