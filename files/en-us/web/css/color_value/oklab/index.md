@@ -34,7 +34,7 @@ oklab(59.69% 0.1007 0.1191);
 oklab(59.69% 0.1007 0.1191 / 0.5);
 ```
 
-> **Note:** The oklab() function does **not** support commas to separate its values as some other color functions, and the optional alpha value needs to be preceded with a forward slash (`/`) when specified.
+> **Note:** The oklab() function does **not** support commas to separate its values as some other color functions do, and the optional alpha value needs to be preceded with a forward slash (`/`) when specified.
 
 ### Values
 
