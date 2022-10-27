@@ -40,13 +40,13 @@ then(
 ### Parameters
 
 - `onFulfilled` {{optional_inline}}
-  - : A {{jsxref("Function")}} called if the `Promise` is fulfilled. This function has one argument, the `fulfillment value`. If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
+  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is fulfilled. This function has one argument, the `fulfillment value`. If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
 - `onRejected` {{optional_inline}}
-  - : A {{jsxref("Function")}} called if the `Promise` is rejected. This function has one argument, the `rejection reason`. If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
+  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is rejected. This function has one argument, the `rejection reason`. If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
 
 ### Return value
 
-Returns a new {{jsxref("Promise")}}.
+Returns a new {{jsxref("Promise")}} immediately.
 
 One of the `onFulfilled` and `onRejected` handlers will be executed to handle the current promise's fulfillment or rejection.
 The behavior of the returned promise depends on the handler's execution result, following a specific set of rules.
