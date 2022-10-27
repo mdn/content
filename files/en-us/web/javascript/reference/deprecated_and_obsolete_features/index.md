@@ -56,7 +56,7 @@ The following properties are deprecated. This does not affect their use in [repl
 | {{jsxref("RegExp.leftContext", "leftContext")}}   | The substring preceding the most recent match.            |
 | {{jsxref("RegExp.rightContext", "rightContext")}} | The substring following the most recent match.            |
 
-> **Warning:** Avoid using these static properties, as they can cause [a lot of issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
+> **Warning:** Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
 
 The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
