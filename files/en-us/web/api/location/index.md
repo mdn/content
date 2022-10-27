@@ -17,8 +17,9 @@ The **`Location`** interface represents the location (URL) of the object it is l
 
 ## Location anatomy
 
+Hover over the URL segments below to highlight their meaning:
+
 ```html hidden
-<p>Hover over the URL segments below to highlight their meaning.</p>
 <span id="href" title="href"
   ><span id="origin" title="origin"
     ><span id="protocol" title="protocol">https:</span>//<span
@@ -52,12 +53,6 @@ body {
   white-space: nowrap;
 }
 
-p {
-  font-size: 60%;
-  line-height: 1em;
-  margin: 0;
-  padding-bottom: 1em;
-}
 
 [title] {
   position: relative;
