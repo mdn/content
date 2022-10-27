@@ -73,8 +73,8 @@ method.
 
 ```js
 // using a resolved promise 'resolvedProm' for example,
-// the function call 'then()' immediately returns a new promise,
-// but its handlers will get called asynchronously as demonstrated by the console.logs.
+// the function call 'resolvedProm.then(...)' returns a new promise immediately,
+// but its handler '(value)=>{...}' will get called asynchronously as demonstrated by the console.logs.
 // the new promise is assigned to 'thenProm',
 // and thenProm will be resolved with the value returned by handler
 const resolvedProm = Promise.resolve(33);
