@@ -9,14 +9,13 @@ tags:
 
 {{AddonSidebar}}
 
-
 ## Extension version number format
 
 The **version string** used for web extensions distributed through addons.mozilla.org must be 1 to 4 numbers separated by dots, for example, `1.2.3.4`. Each number can have up to 9 digits. Non-zero numbers must not include a leading zero. For example, `2.01` is not an allowed version number; however, `0.2`, `2.0.1`, and `2.10` are allowed.
 
 The regular expression for this version string is `^(0|[1-9]\d{0,9})(\.(0|[1-9]\d{0,9})){0,3}$`.
 
-From Firefox 108, a warning is provided if an extension is installed with a version number that doesn't match this format. 
+From Firefox 108, a warning is provided if an extension is installed with a version number that doesn't match this format.
 
 This **version string** is compatible with the legacy version number format.
 
