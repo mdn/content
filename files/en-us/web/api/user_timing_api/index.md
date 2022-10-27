@@ -17,29 +17,6 @@ The **`User Timing`** API allows you to create your own {{domxref("DOMHighResTim
 
 This document provides an overview of the `mark` and `measure` performance event types, including how to work with the extensions the User Timing API provides to the {{domxref("Performance")}} interface. For more details and example code regarding these two performance event types and the methods, see [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
 
-## Example
-
-Typically, you identify the most critical paths of your application and measure how long it takes from start to finish. For example, you can measure how long it takes to login:
-
-```js
-// Place at a location in the code that starts login 
-performance.mark("login-started");
-
-// Place at a location in the code that finishes login 
-performance.mark("login-finished");
-
-// Measure login duration
-const loginMeasure = performance.measure(
-  "login-duration",
-  "login-started",
-  "login-finished"
-);
-
-// Send to analytics endpoint
-// or log to the console
-console.log(loginMeasure);
-```
-
 ## Performance marks
 
 Interface: {{domxref("PerformanceMark")}}
@@ -97,9 +74,37 @@ The `PerformanceMeasure` object inherits the following property values from {{do
 - [`performance.clearMeasures("myMeasure")`](/en-US/docs/Web/API/Performance/clearMeasures) removes the performance measure with the name "myMeasure".
 - [`performance.clearMeasures()`](/en-US/docs/Web/API/Performance/clearMeasures) removes all performance measures.
 
+## Examples
+
+### Measuring login duration
+
+Typically, you identify the most critical paths of your application and measure how long it takes from start to finish. For example, you can measure how long it takes to login:
+
+```js
+// Place at a location in the code that starts login 
+performance.mark("login-started");
+
+// Place at a location in the code that finishes login 
+performance.mark("login-finished");
+
+// Measure login duration
+const loginMeasure = performance.measure(
+  "login-duration",
+  "login-started",
+  "login-finished"
+);
+
+// Send to analytics endpoint
+// or log to the console
+console.log(loginMeasure.duration);
+```
+
+## Specifications
+
+- [User Timing specification](https://w3c.github.io/user-timing/)
+
 ## See also
 
 - [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
-- [User Timing specification](https://w3c.github.io/user-timing/)
