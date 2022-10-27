@@ -13,13 +13,15 @@ browser-compat: css.types.color.oklab
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`oklab()`** functional notation expresses a given color in the Oklab color space, which attempts to mimic how color is perceived by the human eye.
+The **`oklab()`** functional notation expresses a given color in the Oklab color space, which attempts to mimic how color is perceived by the human eye. The `oklab()` works with a Cartesian coordinate system on the OKlab color space, the a- and b-axes. If you want a polar color system, chroma and hue, use {{cssxref("oklch", "oklch()")}}.
 
 Oklab is a perceptual color space and is useful to:
 
 - Transform an image to grayscale, without changing its lightness.
 - Modify the saturation of colors, while keeping user perception of hue and lightness
 - Create smooth and uniform gradients of colors (when interpolated manually, for example, in a {{HTMLElement("canvas")}} element).
+
+The function `oklab()` can represent any color from the Oklab color space that is wider than RGB and include wide gamut and P3 colors.
 
 ## Syntax
 
@@ -83,4 +85,4 @@ div {
 ## See also
 
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
-- [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklab()` and {{cssxref("color_value/oklch",'oklch()')}} colors.
+- {{cssxref("color_value/oklch",'oklch()')}} use the same color space as `oklab()` but a polar coordinate system.
