@@ -242,13 +242,13 @@ Our writing style tends to be casual, so you should feel free to use contraction
 
 - **Dates**: For dates (not including dates in code samples), use the format "January 1, 1990".
 
-  - **Correct**: February 24, 2006
-  - **Incorrect**: February 24th, 2006; 24 February, 2006; 24/02/2006
+  - **Correct**: February 24, 2022
+  - **Incorrect**: February 24th, 2022; 24 February, 2022; 24/02/2022
 
   Alternately, you can use the YYYY/MM/DD format.
 
-  - **Correct**: 2006/02/24
-  - **Incorrect**: 02/24/2006; 24/02/2006; 02/24/06
+  - **Correct**: 2022/02/24
+  - **Incorrect**: 02/24/2022; 24/02/2022; 02/24/22
 
 - **Decades**: Use the format "1990s". Don't use an apostrophe.
 
