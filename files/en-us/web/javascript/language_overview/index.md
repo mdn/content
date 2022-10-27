@@ -718,7 +718,7 @@ class Person {
   }
 }
 
-const p = new Person("John");
+const p = new Person("Maria");
 console.log(p.sayHello());
 ```
 

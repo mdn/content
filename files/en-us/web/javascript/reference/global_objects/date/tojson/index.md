@@ -52,7 +52,7 @@ When parsing JSON containing date strings, you can use [`Date.parse()`](/en-US/d
 
 ```js
 const fileData = {
-  author: "John",
+  author: "Maria",
   title: "Date.prototype.toJSON()",
   createdAt: new Date(2019, 3, 15),
   updatedAt: new Date(2020, 6, 26),
