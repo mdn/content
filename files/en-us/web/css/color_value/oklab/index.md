@@ -39,7 +39,7 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 ### Values
 
 - lightness
-  - : A {{cssxref("&lt;percentage&gt;")}} between `0%` representing black and `100%` representing white specifying the perceived lightness.
+  - : A {{cssxref("&lt;percentage&gt;")}} between `0%` representing black and `100%` representing white, specifying the perceived lightness.
 - a-axis
   - : The distance along the `a` axis in the Oklab colorspace, that is how green/red the color is.
 - b-axis
