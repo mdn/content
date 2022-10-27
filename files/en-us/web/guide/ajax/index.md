@@ -44,7 +44,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred because it 
 - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - : The [XMLHttpRequest](https://xhr.spec.whatwg.org/) specification adds HTML parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only XML parsing. This feature allows Web apps to obtain an HTML resource as a parsed DOM using `XMLHttpRequest`.
 
-## Related technologogies
+## Related technologies
 
 While Ajax is still useful, other APIs have been developed since 2005 that enable similar functionality, including the [fetch API](/en-US/docs/Web/API/Fetch_API) and [server-sent events](/en-US/docs/Web/API/Server-sent_events).
 
