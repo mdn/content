@@ -19,7 +19,7 @@ Oklab is a perceptual color space and is useful to:
 
 - Transform an image to grayscale, without changing its lightness.
 - Modify the saturation of colors, while keeping user perception of hue and lightness
-- Create smooth and uniform gradients of colors.
+- Create smooth and uniform gradients of colors (when interpolated manually, for example, in a {{HTMLElement("canvas")}} element).
 
 ## Syntax
 
@@ -71,33 +71,6 @@ div {
 ```
 
 {{EmbedLiveSample("Green_with_oklab", "100%", 155)}}
-
-### Smooth gradients
-
-The OK lab color space allows for smoother gradients than the RGB color space.
-
-```css
-div {
-  /*padding: 1em;
-  margin: 1em;
-  border: solid 1px black;*/
-}
-
-.ref {
-  background-image: linear-gradient(to right, #0f0 0%, #f00 50%, #00f 100%);
-}
-
-.oklab {
-  background-image: linear-gradient(to right, oklab(0.86644 -0.23389 0.1795), oklab(0.62796 0.22486 0.12585 / 50%), oklab(0.45201 -0.03246 -0.31153 / 100%));
-}
-```
-
-```html
-<div class="ref">RGB</div>
-<div class="oklab">OKLAB</div>
-```
-
-{{EmbedLiveSample("Smooth_gradients", "100%", 155)}}
 
 ## Specifications
 
