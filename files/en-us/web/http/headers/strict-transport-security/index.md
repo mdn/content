@@ -34,7 +34,7 @@ The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {
 ```http
 Strict-Transport-Security: max-age=<expire-time>
 Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
-Strict-Transport-Security: max-age=<expire-time>; preload
+Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 ```
 
 ## Directives
