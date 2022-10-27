@@ -45,11 +45,11 @@ See also {{jsxref("Object.preventExtensions()")}}.
 ```js
 // Objects are extensible by default.
 const empty = {};
-Reflect.isExtensible(empty)  // === true
+Reflect.isExtensible(empty); // === true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty)  // === false
+Reflect.isExtensible(empty); // === false
 ```
 
 ### Difference with Object.preventExtensions()
@@ -57,10 +57,10 @@ Reflect.isExtensible(empty)  // === false
 If the `target` argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.preventExtensions()")}}, a non-object `target` will be returned as-is without any errors.
 
 ```js
-Reflect.preventExtensions(1)
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
-Object.preventExtensions(1)
+Object.preventExtensions(1);
 // 1
 ```
 

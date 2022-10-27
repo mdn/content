@@ -55,7 +55,7 @@ new (Object.getPrototypeOf(Int8Array))();
 
 Instead, you create an instance of a typed array of a particular type, such as an {{jsxref("Int8Array")}} or a {{jsxref("BigInt64Array")}}. These objects all have a common syntax for their constructors:
 
-```js
+```js-nolint
 new TypedArray()
 new TypedArray(length)
 new TypedArray(typedArray)
@@ -218,18 +218,18 @@ int16[0] = 42;
 console.log(int16[0]); // 42
 
 // Indexed properties on prototypes are not consulted (Fx 25)
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(32))[20]; // 0
+Int8Array.prototype[20] = "foo";
+new Int8Array(32)[20]; // 0
 // even when out of bound
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(8))[20]; // undefined
+Int8Array.prototype[20] = "foo";
+new Int8Array(8)[20]; // undefined
 // or with negative integers
-Int8Array.prototype[-1] = 'foo';
-(new Int8Array(8))[-1]; // undefined
+Int8Array.prototype[-1] = "foo";
+new Int8Array(8)[-1]; // undefined
 
 // Named properties are allowed, though (Fx 30)
-Int8Array.prototype.foo = 'bar';
-(new Int8Array(32)).foo; // "bar"
+Int8Array.prototype.foo = "bar";
+new Int8Array(32).foo; // "bar"
 ```
 
 ### Cannot be frozen

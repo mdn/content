@@ -204,7 +204,7 @@ You can also use the `<script>` element to embed data in HTML with server-side r
 <script id="data" type="application/json">
   {
     "userId": 1234,
-    "userName": "John Doe",
+    "userName": "Maria Cruz",
     "memberSince": "2000-01-01T00:00:00.000Z"
   }
 </script>

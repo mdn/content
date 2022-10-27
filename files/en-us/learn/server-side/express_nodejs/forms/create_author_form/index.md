@@ -147,7 +147,7 @@ block content
   form(method='POST' action='')
     div.form-group
       label(for='first_name') First Name:
-      input#first_name.form-control(type='text' placeholder='First name (Christian)' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
+      input#first_name.form-control(type='text' placeholder='First name (Dominique)' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
       label(for='family_name') Family Name:
       input#family_name.form-control(type='text' placeholder='Family name (Surname)' name='family_name' required='true' value=(undefined===author ? '' : author.family_name))
     div.form-group

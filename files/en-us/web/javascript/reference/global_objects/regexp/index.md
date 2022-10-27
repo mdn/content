@@ -174,12 +174,12 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
+const str = 'Maria Cruz';
 const newstr = str.replace(re, '$2, $1');
 console.log(newstr);
 ```
 
-This displays `"Smith, John"`.
+This displays `"Cruz, Maria"`.
 
 ### Using regular expression to split lines with different line endings/ends of line/line breaks
 
