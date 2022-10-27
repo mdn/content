@@ -182,7 +182,7 @@ The HTTP/2 protocol differs from HTTP/1.1 in a few ways:
 - It compresses headers. As these are often similar among a set of requests, this removes the duplication and overhead of data transmitted.
 - It allows a server to populate data in a client cache through a mechanism called the server push.
 
-Officially standardized in May 2015, HTTP/2 was incredibly successful. By May 2022, 46.4% of all websites used it (see [these stats](https://w3techs.com/technologies/details/ce-http2)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
+Officially standardized in May 2015, HTTP/2 was incredibly successful. HTTP/2 peaked in January 2022, reaching 46.9% of all websites using it (see [these stats](https://w3techs.com/technologies/details/ce-http2)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
 
 This rapid adoption was likely because HTTP/2 didn't require changes to websites and applications. To use it, only an up-to-date server that communicated with a recent browser was necessary. Only a limited set of groups was needed to trigger adoption, and as legacy browser and server versions were renewed, usage was naturally increased, without significant work for web developers.
 
@@ -196,8 +196,8 @@ HTTP's extensibility is still being used to add new features. Notably, we can ci
 
 ## HTTP/3 - HTTP over QUIC
 
-The next major version of HTTP, HTTP/3 has the same semantics as earlier versions of HTTP but uses {{Glossary("QUIC")}} instead of {{Glossary("TCP")}} for the transport layer portion.
+The next major version of HTTP, HTTP/3 has the same semantics as earlier versions of HTTP but uses {{Glossary("QUIC")}} instead of {{Glossary("TCP")}} for the transport layer portion. By October 2022, [26% of all websites were using HTTP/3](https://w3techs.com/technologies/details/ce-http3)).
 
 QUIC is designed to provide much lower latency for HTTP connections. Like HTTP/2, it is a multiplexed protocol, but HTTP/2 runs over a single TCP connection, so packet loss detection and retransmission handled at the TCP layer can block all streams. QUIC runs multiple streams over {{Glossary("UDP")}} and implements packet loss detection and retransmission independently for each stream, so that if an error occurs, only the stream with data in that packet is blocked.
 
-HTTP/3 is defined in {{RFC("9114")}} and is supported by most major browsers including Chromium (and its variants such as Chrome and Edge) and Firefox.
+Defined in {{RFC("9114")}}, [HTTP/3 is supported by most major browsers](https://caniuse.com/http3) including Chromium (and its variants such as Chrome and Edge) and Firefox.
