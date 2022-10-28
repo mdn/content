@@ -46,7 +46,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred because it 
 
 ## Related technologies
 
-While Ajax is still useful, other APIs have been developed since 2005 that enable similar functionality, including the [fetch API](/en-US/docs/Web/API/Fetch_API) and [server-sent events](/en-US/docs/Web/API/Server-sent_events).
+While Ajax is still useful, other APIs have been developed since 2005 that enable similar functionality, including the [Fetch API](/en-US/docs/Web/API/Fetch_API) and [server-sent events](/en-US/docs/Web/API/Server-sent_events).
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
   - : The Fetch API provides an interface for fetching resources. It will seem familiar to anyone who has used {{domxref("XMLHTTPRequest")}}, but this API provides a more powerful and flexible feature set.
