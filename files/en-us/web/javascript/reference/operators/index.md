@@ -178,7 +178,7 @@ Logical operators are typically used with boolean (logical) values, and when the
   - : Logical AND.
 - {{JSxRef("Operators/Logical_OR", "||")}}
   - : Logical OR.
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
   - : Nullish Coalescing Operator.
 
 ### Conditional (ternary) operator
@@ -225,8 +225,8 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Logical AND assignment.
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
   - : Logical OR assignment.
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-  - : Logical nullish assignment.
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
+  - : Nullish coalescing assignment.
 - [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
   - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
 
