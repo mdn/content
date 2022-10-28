@@ -94,7 +94,7 @@ If a property is accessed on a number literal, the [property accessor](/en-US/do
 (1).toString(); // "1"
 ```
 
-<!-- TODO in the future we can add a decorator example -->
+<!-- TODO in the future we can add a decorator section -->
 
 ### Grouping operator and automatic semicolon insertion
 
