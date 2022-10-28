@@ -225,7 +225,7 @@ nonsparseArray.forEach((element) => {
 // fourth
 ```
 
-Since JavaScript elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in","for...in")}} loops, because normal elements and all enumerable properties will be listed.
+Since JavaScript array elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in","for...in")}} loops, because normal elements and all enumerable properties will be listed.
 
 ### Array methods
 
