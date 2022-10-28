@@ -28,7 +28,6 @@ rgba(255, 255, 255) /* white */
 rgba(255, 255, 255, 0.5) /* white with 50% opacity */
 rgba(255 255 255 / 0.5); /* CSS Colors 4 space-separated values */
 rgba(255 255 255 / 50%); /* CSS Colors 4 space-separated values by percentage */
-
 ```
 
 ### Values
