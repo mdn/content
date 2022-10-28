@@ -163,6 +163,7 @@ console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not availabl
 
 ## See also
 
-- The [optional chaining operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- The [Logical nullish assignment (`??=`) operator](en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- The [optional chaining (`?.`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - The [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
 - [Default parameters in functions](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
