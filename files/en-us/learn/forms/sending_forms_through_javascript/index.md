@@ -179,7 +179,7 @@ The HTML is typical:
 ```html
 <form id="myForm">
   <label for="myName">Send me your name:</label>
-  <input id="myName" name="name" value="John" />
+  <input id="myName" name="name" value="Dominic" />
   <input type="submit" value="Send Me!" />
 </form>
 ```

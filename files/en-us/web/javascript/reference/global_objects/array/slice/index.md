@@ -36,8 +36,7 @@ slice(start, end)
     A negative index can be used, indicating an offset from the end of the sequence.
     `slice(-2)` extracts the last two elements in the sequence.
 
-    If `start` is undefined, `slice` starts from the
-    index `0`.
+    If `start` is `undefined`, `slice` starts from the index `0`.
 
     If `start` is greater than the index range of the sequence, an
     empty array is returned.
@@ -53,7 +52,7 @@ slice(start, end)
     `slice(2,-1)` extracts the third element through the second-to-last element
     in the sequence.
 
-    If `end` is omitted, `slice` extracts through the
+    If `end` is omitted or `undefined`, `slice` extracts through the
     end of the sequence (`arr.length`).
 
     If `end` is greater than the length of the sequence,

@@ -112,6 +112,8 @@ However, one major transformation is not linear, and therefore must be special-c
 
 > **Note:** Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3×3 transformation matrices, and can express translations as linear functions.
 
+> **Note:** Transform functions are used wtih the `transform` property but not with individual transform properties-{{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}.
+
 ## Examples
 
 ### Transform function comparison
@@ -261,3 +263,7 @@ selectElem.addEventListener('change', () => {
 ## See also
 
 - CSS {{cssxref("transform")}} property
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}

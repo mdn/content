@@ -57,9 +57,6 @@ possible values are:
 Assigning any other value to `effectAllowed` has no effect and the old value
 is retained.
 
-Internet Explorer will change the value to be lowercased; thus, `linkMove`
-will become `linkmove`, and so on.
-
 ## Examples
 
 ### Setting effectAllowed
