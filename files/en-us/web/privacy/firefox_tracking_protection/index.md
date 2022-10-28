@@ -30,11 +30,11 @@ Click the ⓘ symbol in the address bar to view information about the currently 
 
 If tracking cookies were present, you would be able to view the list by clicking on "Blocking Tracking Cookies" in the above image to view the following popup:
 
-![](tracking_cookies.png)
+![Page information showing cookies and site data.](tracking_cookies.png)
 
 You can click "Manage Content Blocking" to change the blocking settings:
 
-![](content_blocking.png)
+![Content blocking settings dialog box image](content_blocking.png)
 
 ## How does Firefox choose what to block?
 
