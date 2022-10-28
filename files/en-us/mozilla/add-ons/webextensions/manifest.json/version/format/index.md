@@ -31,7 +31,7 @@ A few special parsing rules are applied for backward compatibility and readabili
 
 The rationale behind splitting a version part into a sequence of strings and numbers is that when comparing version parts, the numeric parts are compared as numbers, for example, '1.0pre1' < '1.0pre10', while the strings are compared byte-wise. See the next section for details on how versions are compared.
 
-From Firefox 108, web extensions using this version string trigger a warning on installation. 
+From Firefox 108, web extensions using this version string trigger a warning on installation.
 
 ## Comparing versions
 
