@@ -23,13 +23,13 @@ Interface: {{domxref("PerformanceMark")}}
 
 {{InheritanceDiagram("PerformanceMark")}}
 
-The `PerformanceMark` interface has the following properties (directly or inherited from {{domxref("PerformanceEntry")}}):
+The `PerformanceMark` interface has the following read-only properties (directly or inherited from {{domxref("PerformanceEntry")}}):
 
-- {{domxref("PerformanceMark.detail","detail")}} which can provide additional information about the mark.
-- {{domxref("PerformanceEntry.duration","duration")}} which is always "`0`" (a mark has no duration).
-- {{domxref("PerformanceEntry.entryType","entryType")}} which is always "`mark`".
-- {{domxref("PerformanceEntry.name","name")}} which is the name given when the mark was created.
-- {{domxref("PerformanceEntry.startTime","startTime")}} which is the {{domxref("DOMHighResTimeStamp","timestamp")}} when `mark()` was called.
+- {{domxref("PerformanceMark.detail","detail")}} provides additional information about the mark.
+- {{domxref("PerformanceEntry.duration","duration")}} is always `0` (a mark has no duration).
+- {{domxref("PerformanceEntry.entryType","entryType")}} is always `"mark"`.
+- {{domxref("PerformanceEntry.name","name")}} is the name given when the mark was created.
+- {{domxref("PerformanceEntry.startTime","startTime")}} is the {{domxref("DOMHighResTimeStamp","timestamp")}} when `mark()` was called.
 
 ### Creating performance marks
 
@@ -53,13 +53,13 @@ Interface: {{domxref("PerformanceMeasure")}}
 
 {{InheritanceDiagram("PerformanceMeasure")}}
 
-The `PerformanceMeasure` interface has the following properties (directly or inherited from {{domxref("PerformanceEntry")}}):
+The `PerformanceMeasure` interface has the following read-only properties (directly or inherited from {{domxref("PerformanceEntry")}}):
 
-- {{domxref("PerformanceMeasure.detail","detail")}} which can provide additional information about the measure.
-- {{domxref("PerformanceEntry.duration","duration")}} which is a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the end mark timestamp minus the start mark timestamp).
-- {{domxref("PerformanceEntry.entryType","entryType")}} which is always "`measure`".
-- {{domxref("PerformanceEntry.name","name")}} which is the name given when the measure was created.
-- {{domxref("PerformanceEntry.startTime","startTime")}} which is the {{domxref("DOMHighResTimeStamp","timestamp")}} when `measure()` was called.
+- {{domxref("PerformanceMeasure.detail","detail")}} provides additional information about the measure.
+- {{domxref("PerformanceEntry.duration","duration")}} is a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the end mark timestamp minus the start mark timestamp).
+- {{domxref("PerformanceEntry.entryType","entryType")}} is always `"measure"`.
+- {{domxref("PerformanceEntry.name","name")}} is the name given when the measure was created.
+- {{domxref("PerformanceEntry.startTime","startTime")}} is the {{domxref("DOMHighResTimeStamp","timestamp")}} when `measure()` was called.
 
 ### Creating performance measures
 
