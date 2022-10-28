@@ -53,7 +53,7 @@ slice(start, end)
 
     If `end` is omitted or `undefined`, `slice` extracts through the end of the sequence (`arr.length`).
 
-    If `end` is greater than the length of the sequence, `slice` extracts through to the end of the sequence(`arr.length`).
+    If `end` is greater than the length of the sequence, `slice` extracts through to the end of the sequence (`arr.length`).
 
 ### Return value
 
