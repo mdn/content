@@ -24,17 +24,17 @@ The grouping operator `( )` controls the precedence of evaluation in expressions
 ### Parameters
 
 - `expression`
-  - : Any [expression](/en-US/docs/Web/JavaScript/Reference/Operators), including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) ones, to be evaluated.
+  - : Any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) to be evaluated, including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) expressions.
 
 ## Description
 
-The grouping operator consists of a pair of parentheses around an expression to override the normal [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), so that operators with lower precedence (as low as the [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) operator) can be evaluated before an operator with higher precedence. As it sounds, it groups what's inside of the parentheses.
+The grouping operator consists of a pair of parentheses around an expression that groups the contents. The operator overrides the normal [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), so that operators with lower precedence (as low as the [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) operator) can be evaluated before an operator with higher precedence.
 
 ## Examples
 
 ### Using the grouping operator
 
-Overriding multiplication and division first, then addition and subtraction to evaluate addition first.
+Evaluating addition and subtraction before multiplication and division.
 
 ```js
 const a = 1;
@@ -54,7 +54,7 @@ a + (b * c); // 7
 a * c + b * c; // 9
 ```
 
-Notice in these examples that the left-to-right order of evaluation is still preserved. In other words, the order in which the _operators_ evaluate has changed, but the order in which the _operands_ evaluate has not. For example in this code:
+Notice in these examples that the order in which the _operators_ evaluate has changed, but the order in which the _operands_ evaluate has not. For example, in this code, the function invocations `a()`, `b()`, and `c()` are evaluated left-to-right (the normal order of evaluation) before the operator order is considered.
 
 ```js
 a() * (b() + c());
@@ -64,7 +64,7 @@ The function `a` will be called before the function `b`, which will be called be
 
 ### Using the grouping operator to eliminate ambiguity
 
-An expression statement (a [statement](/en-US/docs/Web/JavaScript/Reference/Statements) consisted of a single expression) cannot start with the keyword `function`, because that would be ambiguous with a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
+An expression statement (a [statement](/en-US/docs/Web/JavaScript/Reference/Statements) consisted of a single expression) cannot start with the keyword `function`, because the parser would see it as the start of a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
 
 ```js example-bad
 function () {
