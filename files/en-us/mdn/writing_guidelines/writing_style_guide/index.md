@@ -240,20 +240,20 @@ Our writing style tends to be casual, so you should feel free to use contraction
   - **Correct**: 4000; 54,000
   - **Incorrect**: 4,000; 54000
 
-- **Dates**: For dates (not including dates in code samples), use the format "January 1, 1990".
+- **Dates**: For dates (not including dates in code samples), use the format "January 1, 1900".
 
-  - **Correct**: February 24, 2022
-  - **Incorrect**: February 24th, 2022; 24 February, 2022; 24/02/2022
+  - **Correct**: February 24, 1906
+  - **Incorrect**: February 24th, 1906; 24 February, 1906; 24/02/1906
 
   Alternately, you can use the YYYY/MM/DD format.
 
-  - **Correct**: 2022/02/24
-  - **Incorrect**: 02/24/2022; 24/02/2022; 02/24/22
+  - **Correct**: 1906/02/24
+  - **Incorrect**: 02/24/1906; 24/02/1906; 02/24/06
 
 - **Decades**: Use the format "1990s". Don't use an apostrophe.
 
-  - **Correct**: 1990s
-  - **Incorrect**: 1990's
+  - **Correct**: 1920s
+  - **Incorrect**: 1920's
 
 - **Plurals of numerals**: Add "s". Don't use an apostrophe.
 
