@@ -10,12 +10,12 @@ tags:
 
 {{DefaultAPISidebar("User Timing API")}}
 
-The **`User Timing`** API allows you to create your own {{domxref("DOMHighResTimeStamp","timestamps")}} that are part of the browser's performance timeline. There are two types of user defined timing performance entries:
+The **User Timing API** allows you measure the performance of applications using [high-precision timestamps](/en-US/docs/Web/API/DOMHighResTimeStamp) that are part of the browser's performance timeline. There are two types of timing performance entries:
 
-- `PerformanceMark` entries are marks that you can name and add at any location in an application.
-- `PerformanceMeasure` entries are time measurements between two marks.
+- {{domxref("PerformanceMark")}} entries are marks that you can name and add at any location in an application.
+- {{domxref("PerformanceMeasure")}} entries are time measurements between two marks.
 
-This document provides an overview of the mark and measure performance entry types, including how to work with the extensions the User Timing API provides to the {{domxref("Performance")}} interface. For more details and example code regarding these two performance entry types and the methods, see [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
+This document provides an overview how to work with the mark and measure performance entry types. For more details and example code, see [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
 
 ## Performance marks
 
