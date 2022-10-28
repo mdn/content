@@ -178,7 +178,7 @@ The CSS to shown the image if present and otherwise the alternative text is show
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/xfavicon.ico") /
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
     " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
