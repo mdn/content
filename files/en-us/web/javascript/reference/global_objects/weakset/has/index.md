@@ -43,8 +43,8 @@ const ws = new WeakSet();
 const obj = {};
 ws.add(window);
 
-ws.has(window);  // returns true
-ws.has(obj);     // returns false
+ws.has(window); // returns true
+ws.has(obj); // returns false
 ```
 
 ## Specifications

@@ -81,7 +81,7 @@ To obtain an `ImageData` object containing a copy of the pixel data for a canvas
 const myImageData = ctx.getImageData(left, top, width, height);
 ```
 
-This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`,`top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
+This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
 > **Note:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
@@ -301,6 +301,7 @@ You can also create a {{domxref("Blob")}} from the canvas.
 
 - {{domxref("ImageData")}}
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Canvas, images and pixels – by Christian Heilmann](https://codepo8.github.io/canvas-images-and-pixels/)
+- [Download Canvas API-Generated Images Using toBlob](https://www.digitalocean.com/community/tutorials/js-canvas-toblob)
+- [HTML5 Canvas Tutorials](https://www.html5canvastutorials.com/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

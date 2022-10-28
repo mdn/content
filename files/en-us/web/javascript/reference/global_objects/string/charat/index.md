@@ -42,7 +42,7 @@ A string representing the character (exactly one UTF-16 code unit) at the specif
 
 Characters in a string are indexed from left to right. The index of the first character
 is `0`, and the index of the last character—in a string called
-`stringName`—is `stringName.length - 1`. If
+`stringName` is `stringName.length - 1`. If
 the `index` you supply is out of this range, JavaScript returns an
 empty string.
 

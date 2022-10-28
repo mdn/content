@@ -3523,6 +3523,7 @@
 /en-US/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
 /en-US/docs/Games/Techniques/3D_collision_detection/Bounding_boxes_with_THREE.js	/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 /en-US/docs/Games/Techniques/Crisp,_pixel_art_look_with_image-rendering	/en-US/docs/Games/Techniques/Crisp_pixel_art_look
+/en-US/docs/Games/Techniques/Efficient_animation_for_web_games	/en-US/docs/Games/Techniques
 /en-US/docs/Games/Techniques/Fridge_Gamepad_API	/en-US/docs/Games/Techniques/Controls_Gamepad_API
 /en-US/docs/Games/Techniques/Input_controls	/en-US/docs/Games/Techniques/Control_mechanisms
 /en-US/docs/Games/Techniques/Input_controls/Desktop_with_gamepad	/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad
@@ -4179,7 +4180,7 @@
 /en-US/docs/JavaScript/Reference/Deprecated_and_obsolete_features	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
-/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments	/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee
 /en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee-redirect-1	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee
@@ -11144,6 +11145,7 @@
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@page_rule	/en-US/docs/Web/CSS/@page
+/en-US/docs/Web/CSS/@scroll-timeline	/en-US/docs/Web/CSS/scroll-timeline
 /en-US/docs/Web/CSS/@styleset	/en-US/docs/Web/CSS/@font-feature-values
 /en-US/docs/Web/CSS/@viewport/height	/en-US/docs/Web/CSS/@viewport
 /en-US/docs/Web/CSS/@viewport/max-height	/en-US/docs/Web/CSS/@viewport
@@ -12098,7 +12100,7 @@
 /en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
-/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments	/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments/callee	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments/length	/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length
@@ -12330,6 +12332,7 @@
 /en-US/docs/Web/JavaScript/Reference/Statements/default	/en-US/docs/Web/JavaScript/Reference/Statements/switch
 /en-US/docs/Web/JavaScript/Reference/Statements/import.meta	/en-US/docs/Web/JavaScript/Reference/Operators/import.meta
 /en-US/docs/Web/JavaScript/Reference/Statements/yield	/en-US/docs/Web/JavaScript/Reference/Operators/yield
+/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Symbols	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/Web/JavaScript/Reference/arrow_functions	/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /en-US/docs/Web/JavaScript/Reference/default_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters

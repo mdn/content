@@ -39,8 +39,8 @@ namedItem(key)
 ```html
 <div id="personal">
   <span name="title">Dr.</span>
-  <span name="firstname">John</span>
-  <span name="lastname">Doe</span>
+  <span name="firstname">Carina</span>
+  <span name="lastname">Anand</span>
   <span id="degree">(MD)</span>
 </div>
 ```

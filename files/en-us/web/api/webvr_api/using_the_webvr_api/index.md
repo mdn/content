@@ -39,7 +39,7 @@ Once you have everything assembled, you can test to see whether your setup works
 
 To illustrate how the WebVR API works, we'll study our raw-webgl-example, which looks a bit like this:
 
-![](capture1.png)
+![A gray rotating 3D cube](capture1.png)
 
 > **Note:** You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
 
@@ -235,7 +235,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 
 Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:
 
-![](capture2.png)
+![Stereoscopic view of 3D cube](capture2.png)
 
 You'll learn below how the stereoscopic view is actually produced.
 
