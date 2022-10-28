@@ -10206,6 +10206,7 @@
 /en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLSubImage/textureHeight	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight
 /en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
+/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error
@@ -12976,8 +12977,8 @@
 /en-US/docs/XSLT_in_Gecko:Generating_HTML	/en-US/docs/Web/API/XSLTProcessor/Generating_HTML
 /en-US/docs/XSLT_in_Gecko:Introduction	/en-US/docs/Web/API/XSLTProcessor/Introduction
 /en-US/docs/XSLT_in_Gecko:Resources	/en-US/docs/Web/API/XSLTProcessor/Resources
-/en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
-/en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
+/en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset

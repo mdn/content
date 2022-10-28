@@ -72603,22 +72603,6 @@
       "JdeValk"
     ]
   },
-  "Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ": {
-    "modified": "2019-03-24T00:10:44.929Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "kscarfone",
-      "Jürgen Jeka",
-      "Sheppy",
-      "Sevenspade",
-      "thelwyn",
-      "Mgjbot",
-      "Raymond wu",
-      "Fredchat",
-      "Spanglerco"
-    ]
-  },
   "Web/API/atob": {
     "modified": "2020-10-15T21:05:14.914Z",
     "contributors": [
