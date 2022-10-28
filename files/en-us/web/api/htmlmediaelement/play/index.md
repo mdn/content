@@ -45,7 +45,7 @@ rejected if for any reason playback cannot be started.
 
 ### Exceptions
 
-The promise's **rejection handler** is called with an exception name
+The promise's **rejection handler** is called with an exception {{domxref("DOMException")}}
 passed in as its sole input parameter (as opposed to a traditional exception being
 thrown). Possible errors include:
 
