@@ -85,9 +85,9 @@ Some of the things to consider when choosing a host:
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
-The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment, while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/windows/) provide free credit when you first join.
+The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment (Starting November 28th 2022 Heroku's free tier will [no longer available](https://www.heroku.com/free)), while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/windows/) provide free credit when you first join.
 
-Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Digital Ocean](https://www.digitalocean.com/) is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).
+Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Digital Ocean](https://www.digitalocean.com/) is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $4 per month lower range at time of writing) and other Paas providers like [Render](https://render.com/pricing), [Kinsta](https://kinsta.com/application-hosting/) or [Northflank](https://northflank.com/pricing))
 
 > **Note:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
 
@@ -216,7 +216,7 @@ Heroku is one of the longest-running and popular cloud-based PaaS services. It o
 
 We are choosing to use Heroku for several reasons:
 
-- Heroku has a [free tier](https://www.heroku.com/pricing) that is _really_ free (albeit with some limitations).
+- Heroku has a [free tier](https://www.heroku.com/pricing) that is _really_ free (albeit with some limitations). (Starting November 28th 2022 Heroku's free tier will [no longer available](https://www.heroku.com/free))
 - As a PaaS, Heroku takes care of a lot of the web infrastructure for us. This makes it much easier to get started because you don't worry about servers, load balancers, reverse proxies, restarting your website on a crash, or any of the other web infrastructure that Heroku provides.
 - While it does have limitations, they will not affect this particular application. For example:
 
