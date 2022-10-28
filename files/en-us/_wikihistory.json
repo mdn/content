@@ -430,21 +430,6 @@
       "ladybenko"
     ]
   },
-  "Games/Techniques/Efficient_animation_for_web_games": {
-    "modified": "2020-10-27T19:31:25.227Z",
-    "contributors": [
-      "escattone",
-      "chrisdavidmills",
-      "Mohnatus",
-      "mfluehr",
-      "wbamberg",
-      "rileym7",
-      "flyingbuddha",
-      "I_m_back_now",
-      "fscholz",
-      "jsx"
-    ]
-  },
   "Games/Techniques/Tilemaps": {
     "modified": "2019-03-23T22:47:06.522Z",
     "contributors": [
@@ -11762,76 +11747,6 @@
     "modified": "2020-09-30T15:17:09.733Z",
     "contributors": ["wbamberg", "david_ross", "jswisher", "Sheppy"]
   },
-  "MDN/Guidelines/Code_guidelines": {
-    "modified": "2020-09-30T15:27:12.089Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dvincent",
-      "estelle",
-      "Sheppy",
-      "wbamberg",
-      "spygi",
-      "reddraggone9",
-      "dbruant",
-      "fscholz",
-      "jswisher",
-      "Sebastianz",
-      "Jeremie"
-    ]
-  },
-  "MDN/Guidelines/Code_guidelines/CSS": {
-    "modified": "2020-09-30T15:27:12.762Z",
-    "contributors": ["chrisdavidmills", "sideshowbarker", "mikemorr", "estelle"]
-  },
-  "MDN/Guidelines/Code_guidelines/General": {
-    "modified": "2020-09-30T15:27:12.259Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "MDN/Guidelines/Code_guidelines/HTML": {
-    "modified": "2020-09-30T15:27:12.449Z",
-    "contributors": ["chrisdavidmills", "estelle"]
-  },
-  "MDN/Guidelines/Code_guidelines/JavaScript": {
-    "modified": "2020-09-30T15:27:13.081Z",
-    "contributors": ["chrisdavidmills", "ExE-Boss", "wbamberg", "jswisher"]
-  },
-  "MDN/Guidelines/Code_guidelines/Shell": {
-    "modified": "2020-09-30T15:27:13.214Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "MDN/Guidelines/Conventions_definitions": {
-    "modified": "2020-10-29T08:58:29.399Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sheppy",
-      "jswisher",
-      "accidentalmeme",
-      "ExE-Boss",
-      "wbamberg",
-      "duduindo"
-    ]
-  },
-  "MDN/Guidelines/Does_this_belong_on_MDN": {
-    "modified": "2020-09-30T15:27:13.393Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "jswisher",
-      "wbamberg",
-      "Sheppy",
-      "heathhamilton"
-    ]
-  },
-  "MDN/Guidelines/Editorial": {
-    "modified": "2020-09-30T15:27:13.756Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy",
-      "suterj",
-      "jswisher"
-    ]
-  },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2019-06-05T12:41:23.682Z",
     "contributors": [
@@ -12049,161 +11964,6 @@
       "jpmedley",
       "wbamberg"
     ]
-  },
-  "MDN/Writing_guidelines/Page_structures/API_constructor_subpage_template": {
-    "modified": "2020-10-15T21:57:17.349Z",
-    "contributors": ["chrisdavidmills", "Zearin_Galaurum", "wbamberg"]
-  },
-  "MDN/Writing_guidelines/Page_structures/API_event_subpage_template": {
-    "modified": "2020-10-15T22:16:13.572Z",
-    "contributors": ["chrisdavidmills", "mfuji09", "Zearin_Galaurum"]
-  },
-  "MDN/Writing_guidelines/Page_structures/API_landing_page_template": {
-    "modified": "2020-10-15T21:56:39.044Z",
-    "contributors": ["chrisdavidmills", "Zearin_Galaurum", "wbamberg", "Sheppy"]
-  },
-  "MDN/Writing_guidelines/Page_structures/API_method_subpage_template": {
-    "modified": "2020-10-15T21:57:18.954Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/API_property_subpage_template": {
-    "modified": "2020-10-15T21:57:15.719Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/API_reference_page_template": {
-    "modified": "2020-10-15T21:57:16.658Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/ARIA_Page_Template": {
-    "modified": "2020-09-30T09:04:12.619Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jennyevans",
-      "estelle",
-      "irenesmith",
-      "yatil"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/CSS_property_page_template": {
-    "modified": "2020-10-15T21:57:23.996Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "jpmedley",
-      "wbamberg"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/CSS_selector_page_template": {
-    "modified": "2020-10-15T21:57:24.149Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "ExE-Boss",
-      "wbamberg"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/Commonly-used_macros": {
-    "modified": "2020-09-30T09:04:07.403Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "escattone",
-      "sideshowbarker",
-      "jswisher",
-      "hinell",
-      "walonge",
-      "ExE-Boss",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "jameshkramer",
-      "jwhitlock",
-      "david_ross",
-      "arai",
-      "Sheppy",
-      "Nickolay",
-      "AFBarstow",
-      "pcat",
-      "jpmedley",
-      "cdr",
-      "trevorh",
-      "madarche",
-      "ethertank",
-      "lmorchard",
-      "myakura",
-      "markg",
-      "SamB",
-      "Ruakh",
-      "IgorKitsa",
-      "mattmccutchen",
-      "Potappo",
-      "Jürgen Jeka",
-      "jenzed",
-      "Mook",
-      "Waldo",
-      "Jorend",
-      "Sevenspade",
-      "Diablownik",
-      "Yorfeix",
-      "Nc15",
-      "Taken",
-      "Okome",
-      "Leandro Mercês Xavier",
-      "Dria",
-      "Brcrgw",
-      "Banan",
-      "Maian",
-      "Prodoc",
-      "Wladimir_Palant"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/Glossary_page_template": {
-    "modified": "2020-09-30T09:04:10.557Z",
-    "contributors": ["chrisdavidmills", "wbamberg"]
-  },
-  "MDN/Writing_guidelines/Page_structures/HTML_element_page_template": {
-    "modified": "2020-10-15T21:57:28.232Z",
-    "contributors": ["chrisdavidmills", "Zearin_Galaurum", "wbamberg"]
-  },
-  "MDN/Writing_guidelines/Page_structures/HTTP_header_page_template": {
-    "modified": "2020-10-15T21:57:21.725Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "jpmedley",
-      "wbamberg"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/Other": {
-    "modified": "2020-09-30T09:04:07.313Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "SphinxKnight",
-      "alattalatta",
-      "fscholz",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/SVG_element_page_template": {
-    "modified": "2020-10-15T21:57:23.797Z",
-    "contributors": ["chrisdavidmills", "Zearin_Galaurum", "wbamberg"]
   },
   "MDN/Yari": {
     "modified": "2019-12-31T16:22:53.307Z",
@@ -12529,17 +12289,6 @@
   "Mozilla/Add-ons/WebExtensions/API/bookmarks/create": {
     "modified": "2020-10-15T21:41:47.752Z",
     "contributors": ["irenesmith", "e2e8", "wbamberg", "Makyen", "Sheppy"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/bookmarks/export": {
-    "modified": "2020-10-15T21:48:18.198Z",
-    "contributors": [
-      "irenesmith",
-      "VirtualEvan",
-      "wbamberg",
-      "hellosct1",
-      "ExE-Boss",
-      "Sheppy"
-    ]
   },
   "Mozilla/Add-ons/WebExtensions/API/bookmarks/get": {
     "modified": "2020-10-15T21:41:48.062Z",
@@ -16908,18 +16657,6 @@
     "modified": "2020-06-22T16:29:16.501Z",
     "contributors": ["rebloor", "ntim", "hellosct1", "andrewtruongmoz"]
   },
-  "Mozilla/Developer_guide/ESLint": {
-    "modified": "2019-03-23T22:19:59.625Z",
-    "contributors": [
-      "Standard8",
-      "SingingTree",
-      "chrisdavidmills",
-      "kernp",
-      "Mossop",
-      "Sebastianz",
-      "david_ross"
-    ]
-  },
   "Mozilla/Firefox": {
     "modified": "2020-12-14T03:30:13.560Z",
     "contributors": [
@@ -17369,10 +17106,6 @@
       "mkato"
     ]
   },
-  "Mozilla/Firefox/Releases/17/Site_compatibility": {
-    "modified": "2019-03-23T23:35:54.758Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli"]
-  },
   "Mozilla/Firefox/Releases/18": {
     "modified": "2020-12-10T21:31:04.380Z",
     "contributors": [
@@ -17400,10 +17133,6 @@
       "claudepache"
     ]
   },
-  "Mozilla/Firefox/Releases/18/Site_compatibility": {
-    "modified": "2019-03-23T23:36:01.448Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli", "Bzbarsky"]
-  },
   "Mozilla/Firefox/Releases/19": {
     "modified": "2020-12-10T21:31:04.690Z",
     "contributors": [
@@ -17427,10 +17156,6 @@
       "saneyuki_s",
       "Markh"
     ]
-  },
-  "Mozilla/Firefox/Releases/19/Site_compatibility": {
-    "modified": "2019-03-23T23:36:04.602Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli"]
   },
   "Mozilla/Firefox/Releases/2": {
     "modified": "2020-12-10T21:31:04.072Z",
@@ -17536,10 +17261,6 @@
       "GPHemsley"
     ]
   },
-  "Mozilla/Firefox/Releases/20/Site_compatibility": {
-    "modified": "2019-03-23T23:35:23.139Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli"]
-  },
   "Mozilla/Firefox/Releases/21": {
     "modified": "2020-12-04T04:31:28.808Z",
     "contributors": [
@@ -17558,10 +17279,6 @@
       "Jesse",
       "Masayuki"
     ]
-  },
-  "Mozilla/Firefox/Releases/21/Site_compatibility": {
-    "modified": "2019-03-23T23:34:27.059Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli", "mikehenrty"]
   },
   "Mozilla/Firefox/Releases/22": {
     "modified": "2020-12-10T21:31:05.427Z",
@@ -17587,19 +17304,6 @@
       "Hsivonen"
     ]
   },
-  "Mozilla/Firefox/Releases/22/Site_compatibility": {
-    "modified": "2019-03-23T23:33:49.566Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino",
-      "teoli",
-      "Norbert",
-      "Dholbert",
-      "Bzbarsky",
-      "trevorh",
-      "Hsivonen"
-    ]
-  },
   "Mozilla/Firefox/Releases/23": {
     "modified": "2020-12-11T09:32:16.818Z",
     "contributors": [
@@ -17621,21 +17325,6 @@
       "Masayuki"
     ]
   },
-  "Mozilla/Firefox/Releases/23/Site_compatibility": {
-    "modified": "2020-12-13T08:30:00.617Z",
-    "contributors": [
-      "wbamberg",
-      "vzerbylm",
-      "kohei.yoshino",
-      "teoli",
-      "TanviVyas",
-      "ethertank",
-      "DaveG",
-      "Jesse",
-      "evilpie",
-      "Norbert"
-    ]
-  },
   "Mozilla/Firefox/Releases/24": {
     "modified": "2020-12-11T05:30:33.967Z",
     "contributors": [
@@ -17651,10 +17340,6 @@
       "hishamradwan29",
       "evilpie"
     ]
-  },
-  "Mozilla/Firefox/Releases/24/Site_compatibility": {
-    "modified": "2019-03-23T23:29:53.381Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli", "kscarfone"]
   },
   "Mozilla/Firefox/Releases/25": {
     "modified": "2020-12-11T05:30:33.627Z",
@@ -17681,16 +17366,6 @@
       "mnoorenberghe"
     ]
   },
-  "Mozilla/Firefox/Releases/25/Site_Compatibility": {
-    "modified": "2019-03-23T23:27:31.995Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino",
-      "Sheppy",
-      "dbruant",
-      "kscarfone"
-    ]
-  },
   "Mozilla/Firefox/Releases/26": {
     "modified": "2020-11-26T14:49:16.391Z",
     "contributors": [
@@ -17713,10 +17388,6 @@
       "bbouvier"
     ]
   },
-  "Mozilla/Firefox/Releases/26/Site_Compatibility": {
-    "modified": "2019-03-23T23:25:38.902Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "bsmedberg", "kscarfone"]
-  },
   "Mozilla/Firefox/Releases/27": {
     "modified": "2020-12-11T05:30:34.416Z",
     "contributors": [
@@ -17735,16 +17406,6 @@
       "frankyan",
       "kscarfone",
       "GijsKruitbosch"
-    ]
-  },
-  "Mozilla/Firefox/Releases/27/Site_Compatibility": {
-    "modified": "2019-03-23T23:25:11.845Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino",
-      "dbruant",
-      "merih",
-      "kscarfone"
     ]
   },
   "Mozilla/Firefox/Releases/28": {
@@ -17766,10 +17427,6 @@
       "ziyunfei",
       "yisi"
     ]
-  },
-  "Mozilla/Firefox/Releases/28/Site_Compatibility": {
-    "modified": "2019-03-23T23:23:26.171Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "azoorob", "cpeterson"]
   },
   "Mozilla/Firefox/Releases/29": {
     "modified": "2020-12-11T05:30:35.543Z",
@@ -17797,10 +17454,6 @@
       "merih",
       "Anwesh"
     ]
-  },
-  "Mozilla/Firefox/Releases/29/Site_Compatibility": {
-    "modified": "2019-03-23T23:21:22.167Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli"]
   },
   "Mozilla/Firefox/Releases/3": {
     "modified": "2020-12-11T09:32:16.456Z",
@@ -18240,16 +17893,6 @@
       "Ms2ger"
     ]
   },
-  "Mozilla/Firefox/Releases/30/Site_Compatibility": {
-    "modified": "2019-03-23T23:20:08.676Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino",
-      "Manishearth",
-      "bsmedberg",
-      "staktrace"
-    ]
-  },
   "Mozilla/Firefox/Releases/31": {
     "modified": "2020-12-11T18:31:04.701Z",
     "contributors": [
@@ -18271,10 +17914,6 @@
       "mnoorenberghe"
     ]
   },
-  "Mozilla/Firefox/Releases/31/Site_Compatibility": {
-    "modified": "2019-03-23T23:19:24.440Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "teoli", "phistuck"]
-  },
   "Mozilla/Firefox/Releases/32": {
     "modified": "2020-12-11T18:31:05.091Z",
     "contributors": [
@@ -18295,10 +17934,6 @@
       "fred.wang",
       "ziyunfei"
     ]
-  },
-  "Mozilla/Firefox/Releases/32/Site_Compatibility": {
-    "modified": "2019-03-23T23:15:23.284Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "cpeterson"]
   },
   "Mozilla/Firefox/Releases/33": {
     "modified": "2020-12-11T18:31:05.675Z",
@@ -18327,16 +17962,6 @@
       "ziyunfei"
     ]
   },
-  "Mozilla/Firefox/Releases/33/Site_Compatibility": {
-    "modified": "2019-03-23T23:13:10.363Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino",
-      "trevorh",
-      "kscarfone",
-      "arai"
-    ]
-  },
   "Mozilla/Firefox/Releases/34": {
     "modified": "2020-12-11T18:31:06.179Z",
     "contributors": [
@@ -18358,10 +17983,6 @@
       "merih",
       "ziyunfei"
     ]
-  },
-  "Mozilla/Firefox/Releases/34/Site_Compatibility": {
-    "modified": "2019-03-23T23:10:18.632Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "fscholz", "arai", "Dholbert"]
   },
   "Mozilla/Firefox/Releases/35": {
     "modified": "2020-11-28T15:49:29.499Z",
@@ -18391,10 +18012,6 @@
       "Waldo"
     ]
   },
-  "Mozilla/Firefox/Releases/35/Site_Compatibility": {
-    "modified": "2019-03-23T23:08:04.637Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "fbender", "Dholbert"]
-  },
   "Mozilla/Firefox/Releases/36": {
     "modified": "2020-12-11T18:31:07.085Z",
     "contributors": [
@@ -18419,10 +18036,6 @@
       "myakura"
     ]
   },
-  "Mozilla/Firefox/Releases/36/Site_Compatibility": {
-    "modified": "2019-03-23T23:05:14.591Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "kscarfone", "arai"]
-  },
   "Mozilla/Firefox/Releases/37": {
     "modified": "2020-12-11T18:31:07.685Z",
     "contributors": [
@@ -18444,10 +18057,6 @@
       "ziyunfei"
     ]
   },
-  "Mozilla/Firefox/Releases/37/Site_Compatibility": {
-    "modified": "2019-03-23T23:04:00.322Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "kscarfone", "arai"]
-  },
   "Mozilla/Firefox/Releases/38": {
     "modified": "2020-12-07T12:31:00.260Z",
     "contributors": [
@@ -18468,18 +18077,6 @@
       "ziyunfei"
     ]
   },
-  "Mozilla/Firefox/Releases/38/Site_Compatibility": {
-    "modified": "2019-03-23T23:00:25.891Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino",
-      "arai",
-      "merih",
-      "erights",
-      "kscarfone",
-      "teoli"
-    ]
-  },
   "Mozilla/Firefox/Releases/39": {
     "modified": "2019-03-23T22:59:31.342Z",
     "contributors": [
@@ -18494,10 +18091,6 @@
       "chrisdavidmills",
       "arai"
     ]
-  },
-  "Mozilla/Firefox/Releases/39/Site_Compatibility": {
-    "modified": "2019-03-23T22:59:22.719Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "arai", "fscholz"]
   },
   "Mozilla/Firefox/Releases/4": {
     "modified": "2020-11-28T21:50:59.318Z",
@@ -18600,17 +18193,6 @@
       "topaxi"
     ]
   },
-  "Mozilla/Firefox/Releases/40/Site_Compatibility": {
-    "modified": "2019-03-23T22:56:59.904Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino",
-      "aklotz",
-      "arai",
-      "fscholz",
-      "dsmatlak"
-    ]
-  },
   "Mozilla/Firefox/Releases/41": {
     "modified": "2020-12-11T18:31:09.120Z",
     "contributors": [
@@ -18634,10 +18216,6 @@
       "fred.wang"
     ]
   },
-  "Mozilla/Firefox/Releases/41/Site_Compatibility": {
-    "modified": "2019-03-23T22:52:55.596Z",
-    "contributors": ["wbamberg", "kohei.yoshino", "arai", "fscholz", "merih"]
-  },
   "Mozilla/Firefox/Releases/42": {
     "modified": "2020-12-10T21:31:05.984Z",
     "contributors": [
@@ -18659,10 +18237,6 @@
       "AlfredoLlaquet",
       "adria"
     ]
-  },
-  "Mozilla/Firefox/Releases/42/Site_Compatibility": {
-    "modified": "2019-03-23T22:50:07.252Z",
-    "contributors": ["wbamberg", "kohei.yoshino"]
   },
   "Mozilla/Firefox/Releases/43": {
     "modified": "2020-12-10T21:31:06.417Z",

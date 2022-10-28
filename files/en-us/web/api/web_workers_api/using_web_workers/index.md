@@ -262,7 +262,7 @@ console.log(typeof emulateMessage(example3)); // string
 
 // test #4
 const example4 = {
-  name: 'John Smith',
+  name: 'Carina Anand',
   age: 43,
 };
 console.log(typeof example4); // object

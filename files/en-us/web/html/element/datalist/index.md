@@ -146,7 +146,7 @@ The recommended values in the {{HTMLElement("input/range", "range")}} type will 
 The {{HTMLElement("input/color", "color")}} type can show predefined colors in a browser-provided interface.
 
 ```html
-<label id="colors">Pick a color (preferably a red tone):</label>
+<label for="colors">Pick a color (preferably a red tone):</label>
 <input type="color" list="redColors" id="colors" />
 <datalist id="redColors">
   <option value="#800000"></option>

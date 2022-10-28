@@ -205,7 +205,7 @@ The humble favicon has been around for many years. It is the first icon of this 
 
 A favicon can be added to your page by:
 
-1. Saving it in the same directory as the site's index page, saved in `.ico` format (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
+1. Saving it in the same directory as the site's index page, saved in `.ico` format (most also support favicons in more common formats like `.gif` or `.png`)
 2. Adding the following line into your HTML's {{HTMLElement("head")}} block to reference it:
 
    ```html

@@ -49,7 +49,7 @@ Before getting into too much detail, let's consider some basic concepts that you
 
 The term **field of view** (**FOV**) is one which applies to any visual technology, from old film cameras to modern digital video cameras, including the cameras in computers and mobile devices.
 
-![](binocular-vision.svg)
+![Diagram showing binocular vision.](binocular-vision.svg)
 
 #### What is field of view?
 

@@ -3523,6 +3523,7 @@
 /en-US/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
 /en-US/docs/Games/Techniques/3D_collision_detection/Bounding_boxes_with_THREE.js	/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 /en-US/docs/Games/Techniques/Crisp,_pixel_art_look_with_image-rendering	/en-US/docs/Games/Techniques/Crisp_pixel_art_look
+/en-US/docs/Games/Techniques/Efficient_animation_for_web_games	/en-US/docs/Games/Techniques
 /en-US/docs/Games/Techniques/Fridge_Gamepad_API	/en-US/docs/Games/Techniques/Controls_Gamepad_API
 /en-US/docs/Games/Techniques/Input_controls	/en-US/docs/Games/Techniques/Control_mechanisms
 /en-US/docs/Games/Techniques/Input_controls/Desktop_with_gamepad	/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad
