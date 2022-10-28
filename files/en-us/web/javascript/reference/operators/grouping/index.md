@@ -62,7 +62,7 @@ a() * (b() + c());
 
 The function `a` will be called before the function `b`, which will be called before the function `c`. For more on operator precedence, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
-### Using the grouping operator to eliminate ambiguity
+### Using the grouping operator to eliminate parsing ambiguity
 
 An expression statement (a [statement](/en-US/docs/Web/JavaScript/Reference/Statements) consisted of a single expression) cannot start with the keyword `function`, because the parser would see it as the start of a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
 
