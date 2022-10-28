@@ -231,7 +231,7 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 
 @font-face {
   font-family: "typewriter";
-  src: url("fonts/momt___-webfont.woff2") format("woff2"), url("fonts/momt___-webfont.woff")
+  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;

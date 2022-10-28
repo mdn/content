@@ -57,8 +57,8 @@ const publicKey = {
   },
   user: {
     id: new Uint8Array(16),
-    name: "jdoe@example.com",
-    displayName: "John Doe"
+    name: "canand@example.com",
+    displayName: "Carina Anand",
   },
   pubKeyCredParams: [
     {

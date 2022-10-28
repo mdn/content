@@ -57,16 +57,16 @@ Some of these methods are also the same as corresponding methods on {{jsxref("Ob
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
+  name: "Maurice",
+  color: "white",
   greeting() {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -80,7 +80,7 @@ Reflect.ownKeys(duck);
 ### Adding a new property to the object
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"
 ```

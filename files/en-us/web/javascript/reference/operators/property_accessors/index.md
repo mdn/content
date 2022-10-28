@@ -97,11 +97,11 @@ Passing expressions that evaluate to property name will do the same thing as dir
 ```js
 const key = "name";
 const getKey = () => "name";
-const Obj = { name: "John" };
+const Obj = { name: "Michel" };
 
-Obj["name"]; // returns "John"
-Obj[key]; // evaluates to Obj["name"], and returns "John"
-Obj[getKey()]; // evaluates to Obj["name"], and returns "John"
+Obj["name"]; // returns "Michel"
+Obj[key]; // evaluates to Obj["name"], and returns "Michel"
+Obj[getKey()]; // evaluates to Obj["name"], and returns "Michel"
 ```
 
 ### Property names
