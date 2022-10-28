@@ -117,8 +117,8 @@ JSON.stringify([1, "false", false]); // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
 JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2022, 0, 2, 15, 4, 5));
-// '"2022-01-02T15:04:05.000Z"'
+JSON.stringify(new Date(1906, 0, 2, 15, 4, 5));
+// '"1906-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'
