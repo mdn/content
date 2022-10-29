@@ -35,7 +35,7 @@ You can use a label to identify a loop, and then use the `break` or
 `continue` statements to indicate whether a program should interrupt the loop
 or continue its execution.
 
-Note that JavaScript has _no_ `goto` statement, you can only use
+Note that JavaScript has _no_ `goto` statement; you can only use
 labels with `break` or `continue`.
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, you
