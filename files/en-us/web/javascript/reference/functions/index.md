@@ -410,7 +410,7 @@ constructor, a function defined by a function declaration can be used before the
 function declaration itself. For example:
 
 ```js
-foo(); // logs "FOO!"
+foo(); // Logs "FOO!"
 function foo() {
   console.log('FOO!');
 }

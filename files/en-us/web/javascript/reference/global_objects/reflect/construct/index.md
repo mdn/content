@@ -127,18 +127,18 @@ function OtherClass() {
 }
 
 const obj1 = Reflect.construct(OneClass, args);
-// Output:
+// Logs:
 //     OneClass
 //     function OneClass { ... }
 
 const obj2 = Reflect.construct(OneClass, args, OtherClass);
-// Output:
+// Logs:
 //     OneClass
 //     function OtherClass { ... }
 
 const obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args);
-// Output:
+// Logs:
 //     OneClass
 //     undefined
 ```

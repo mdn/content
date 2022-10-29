@@ -71,8 +71,7 @@ You **cannot** read a private value directly from code outside the class object.
 ```js example-bad
 const score = new PrivateCounter(); // #count and #init are now both 0
 console.log(score.#count);
-  // output:
-  // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
+// SyntaxError: Private field '#count' must be declared in an enclosing class
 ```
 
 If you wish to read private data from outside a class, you must first invent a method or other function to return it. We had already done that with the `current()` getter that returns the current value of `#count`, but `#init` is locked away. Unless we add something like a `getInit()` method to the class, we can't even see the initial value from outside the class, let alone alter it, and the compiler will throw errors if we try.

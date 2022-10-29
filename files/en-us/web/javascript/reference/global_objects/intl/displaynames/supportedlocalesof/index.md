@@ -68,7 +68,7 @@ the Balinese language tag as well.
 const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

@@ -111,19 +111,16 @@ const module = {
   },
 };
 
-module.getX();
-//  returns 81
+console.log(module.getX()); // 81
 
 const retrieveX = module.getX;
-retrieveX();
-//  returns 9; the function gets invoked at the global scope
+console.log(retrieveX()); // 9; the function gets invoked at the global scope
 
-//  Create a new function with 'this' bound to module
-//  New programmers might confuse the
-//  global variable 'x' with module's property 'x'
+// Create a new function with 'this' bound to module
+// New programmers might confuse the
+// global variable 'x' with module's property 'x'
 const boundGetX = retrieveX.bind(module);
-boundGetX();
-//  returns 81
+console.log(boundGetX()); // 81
 ```
 
 > **Note:** If you run this example in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (e.g. in ECMAScript modules, or through the `"use strict"` directive), the global `this` value will be undefined, causing the `retrieveX` call to fail.
@@ -147,11 +144,9 @@ function addArguments(arg1, arg2) {
   return arg1 + arg2;
 }
 
-const list1 = list(1, 2, 3);
-//  [1, 2, 3]
+console.log(list(1, 2, 3)); // [1, 2, 3]
 
-const result1 = addArguments(1, 2);
-//  3
+console.log(addArguments(1, 2)); // 3
 
 // Create a function with a preset leading argument
 const leadingThirtySevenList = list.bind(null, 37);
@@ -159,18 +154,11 @@ const leadingThirtySevenList = list.bind(null, 37);
 // Create a function with a preset first argument.
 const addThirtySeven = addArguments.bind(null, 37);
 
-const list2 = leadingThirtySevenList();
-//  [37]
-
-const list3 = leadingThirtySevenList(1, 2, 3);
-//  [37, 1, 2, 3]
-
-const result2 = addThirtySeven(5);
-//  37 + 5 = 42
-
-const result3 = addThirtySeven(5, 10);
-//  37 + 5 = 42
-//  (the second argument is ignored)
+console.log(leadingThirtySevenList()); // [37]
+console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
+console.log(addThirtySeven(5)); // 42
+console.log(addThirtySeven(5, 10)); // 42
+// (the second argument is ignored)
 ```
 
 ### With setTimeout()

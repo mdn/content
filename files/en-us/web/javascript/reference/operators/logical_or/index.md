@@ -67,11 +67,17 @@ happens because the value of the operator is already determined after the evalua
 the first operand. See example:
 
 ```js
-function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+function A() {
+  console.log('called A');
+  return false;
+}
+function B() {
+  console.log('called B');
+  return true;
+}
 
 console.log(B() || A());
-// logs "called B" due to the function call,
+// Logs "called B" due to the function call,
 // then logs true (which is the resulting value of the operator)
 ```
 

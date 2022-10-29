@@ -92,14 +92,11 @@ plural forms, e.g. "dog" and "dogs".
 ```js
 const pr = new Intl.PluralRules();
 
-pr.select(0);
-// → 'other' if in US English locale
+pr.select(0); // 'other' if in US English locale
 
-pr.select(1);
-// → 'one' if in US English locale
+pr.select(1); // 'one' if in US English locale
 
-pr.select(2);
-// → 'other' if in US English locale
+pr.select(2); // 'other' if in US English locale
 ```
 
 ### Using options

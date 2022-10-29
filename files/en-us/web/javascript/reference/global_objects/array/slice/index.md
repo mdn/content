@@ -92,20 +92,17 @@ const myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
 const myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
 const newCar = myCar.slice(0, 2);
 
-// Display the values of myCar, newCar, and the color of myHonda
-//  referenced from both arrays.
-console.log('myCar = ', myCar);
-console.log('newCar = ', newCar);
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log('myCar =', myCar);
+console.log('newCar =', newCar);
+console.log('myCar[0].color =', myCar[0].color);
+console.log('newCar[0].color =', newCar[0].color);
 
 // Change the color of myHonda.
 myHonda.color = 'purple';
-console.log('The new color of my Honda is ', myHonda.color);
+console.log('The new color of my Honda is', myHonda.color);
 
-// Display the color of myHonda referenced from both arrays.
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log('myCar[0].color =', myCar[0].color);
+console.log('newCar[0].color =', newCar[0].color);
 ```
 
 This script writes:
@@ -117,7 +114,7 @@ myCar = [
   'cherry condition',
   'purchased 1997'
 ]
-newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
+newCar = [ { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }, 2 ]
 myCar[0].color = red
 newCar[0].color = red
 The new color of my Honda is purple

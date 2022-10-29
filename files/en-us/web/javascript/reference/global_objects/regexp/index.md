@@ -188,7 +188,7 @@ The default line ending varies depending on the platform (Unix, Windows, etc.). 
 ```js
 const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
 const lines = text.split(/\r\n|\r|\n/);
-console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 Note that the order of the patterns in the regular expression matters.
@@ -252,12 +252,12 @@ const text = 'Образец text на русском языке';
 const regex = /[\u0400-\u04FF]+/g;
 
 const match = regex.exec(text);
-console.log(match[0]); // logs 'Образец'
-console.log(regex.lastIndex); // logs '7'
+console.log(match[0]); // 'Образец'
+console.log(regex.lastIndex); // 7
 
 const match2 = regex.exec(text);
-console.log(match2[0]); // logs 'на' [did not log 'text']
-console.log(regex.lastIndex); // logs '15'
+console.log(match2[0]); // 'на' (did not log 'text')
+console.log(regex.lastIndex); // 15
 
 // and so on
 ```
@@ -268,7 +268,7 @@ The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressi
 
 ```js
 const url = "http://xxx.domain.com";
-console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
+console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).

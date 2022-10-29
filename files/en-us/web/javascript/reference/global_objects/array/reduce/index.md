@@ -198,7 +198,7 @@ const sum = objects.reduce(
   0,
 );
 
-console.log(sum); // logs 6
+console.log(sum); // 6
 ```
 
 ### Flatten an array of arrays

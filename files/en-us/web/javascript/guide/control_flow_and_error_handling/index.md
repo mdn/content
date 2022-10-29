@@ -64,7 +64,7 @@ Here, `{ x++; }` is the block statement.
 > {
 >   var x = 2;
 > }
-> console.log(x); // outputs 2
+> console.log(x); // Logs 2
 > ```
 >
 > This outputs `2` because the `var x` statement within the block is in the same scope as the `var x` statement before the block. (In C or Java, the equivalent code would have output `1`.)
@@ -481,7 +481,7 @@ try {
   console.log('caught outer "bogus"');
 }
 
-// OUTPUT
+// Logs:
 // caught inner "bogus"
 // false
 ```
@@ -520,7 +520,7 @@ For example:
 ```js
 function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
-    throw (new Error('The message'));
+    throw new Error('The message');
   } else {
     doSomethingToGetAJavaScriptError();
   }
@@ -528,9 +528,10 @@ function doSomethingErrorProne() {
 
 try {
   doSomethingErrorProne();
-} catch (e) {               // NOW, we actually use `console.error()`
-  console.error(e.name);    // logs 'Error'
-  console.error(e.message); // logs 'The message', or a JavaScript error message
+} catch (e) {
+  // Now, we actually use `console.error()`
+  console.error(e.name); // 'Error'
+  console.error(e.message); // 'The message', or a JavaScript error message
 }
 ```
 

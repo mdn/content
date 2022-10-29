@@ -155,13 +155,13 @@ const cats = ['Dusty', 'Misty', 'Twiggy'];
 console.log(cats.length); // 3
 
 cats.length = 2;
-console.log(cats); // logs "Dusty, Misty" - Twiggy has been removed
+console.log(cats); // [ 'Dusty', 'Misty' ] - Twiggy has been removed
 
 cats.length = 0;
-console.log(cats); // logs []; the cats array is empty
+console.log(cats); // []; the cats array is empty
 
 cats.length = 3;
-console.log(cats); // logs [ <3 empty items> ]
+console.log(cats); // [ <3 empty items> ]
 ```
 
 ### Iterating over arrays
@@ -355,11 +355,11 @@ The [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/inde
 
 ```js
 const a = ['a', 'b', 'a', 'b', 'a'];
-console.log(a.indexOf('b')); // logs 1
+console.log(a.indexOf('b')); // 1
 
 // Now try again, starting from after the last match
-console.log(a.indexOf('b', 2)); // logs 3
-console.log(a.indexOf('z')); // logs -1, because 'z' was not found
+console.log(a.indexOf('b', 2)); // 3
+console.log(a.indexOf('z')); // -1, because 'z' was not found
 ```
 
 The [`lastIndexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) method works like `indexOf`, but starts at the end and searches backwards.
@@ -380,7 +380,9 @@ const a = ['a', 'b', 'c'];
 a.forEach((element) => {
   console.log(element);
 });
-// logs each item in turn
+// a
+// b
+// c
 ```
 
 The [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method returns a new array of the return value from executing `callback` on every array item.
@@ -513,11 +515,13 @@ In some operations, empty slots behave as if they are filled with `undefined`.
 const arr = [1, 2, , , 5]; // Create a sparse array
 
 // Indexed access
-console.log(arr[2]); // Logs "undefined"
+console.log(arr[2]); // undefined
 
 // For...of
-for (const i of arr) console.log(i);
-// Logs "1 2 undefined undefined 5"
+for (const i of arr) {
+  console.log(i);
+}
+// 1 2 undefined undefined 5
 
 // Spreading
 const another = [...arr]; // "another" is [ 1, 2, undefined, undefined, 5 ]
@@ -527,13 +531,16 @@ But in others (most notably array iteration methods), empty slots are skipped.
 
 ```js
 const mapped = arr.map((i) => i + 1); // [ 2, 3, <2 empty items>, 6 ]
-arr.forEach((i) => console.log(i)); // Logs "1 2 5"
+arr.forEach((i) => console.log(i)); // 1 2 5
 const filtered = arr.filter(() => true); // [ 1, 2, 5 ]
 const hasFalsy = arr.some((k) => !k); // false
 
 // Property enumeration
 const keys = Object.keys(arr); // [ '0', '1', '4' ]
-for (const key in arr) console.log(key); // Logs "0 1 4"
+for (const key in arr) {
+  console.log(key);
+}
+// '0' '1' '4'
 // Spreading into an object uses property enumeration, not the array's iterator
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
@@ -572,7 +579,7 @@ Arrays can also be used like objects, to store related information.
 ```js
 const arr = [1, 2, 3];
 arr.property = "value";
-console.log(arr.property);  // Logs "value"
+console.log(arr.property); // "value"
 ```
 
 For example, when an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of [`RegExp.prototype.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), and [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).

@@ -42,15 +42,13 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 > ```js example-bad
 > //  DON'T DO THIS
 >
-> //  logs "foo string"
 > (() => {
 >   const undefined = "foo";
->   console.log(undefined, typeof undefined);
+>   console.log(undefined, typeof undefined); // foo string
 > })();
 >
-> //  logs "foo string"
 > ((undefined) => {
->   console.log(undefined, typeof undefined);
+>   console.log(undefined, typeof undefined); // foo string
 > })("foo");
 > ```
 

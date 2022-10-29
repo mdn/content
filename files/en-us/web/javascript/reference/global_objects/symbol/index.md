@@ -163,8 +163,9 @@ obj['c'] = 'c';
 obj.d = 'd';
 
 for (const i in obj) {
-  console.log(i); // logs "c" and "d"
+  console.log(i);
 }
+ // "c" "d"
 ```
 
 ### Symbols and JSON.stringify()
