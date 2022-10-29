@@ -51,7 +51,7 @@ which contains the entire element, including its padding and border-width. The
 describe the position and size of the overall rectangle in pixels. Properties other than
 `width` and `height` are relative to the top-left of the viewport.
 
-![](element-box-diagram.png)
+![Image showing returned value](element-box-diagram.png)
 
 The `width` and `height` properties of the {{domxref("DOMRect")}}
 object returned by the method include the `padding` and
