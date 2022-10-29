@@ -26,9 +26,9 @@ The `exp(number)` function contains a calculation which returns the same value a
 
 ```css
 /* A <number> value */
-width: calc(100px * exp(-1)); /*  36px */
-width: calc(100px * exp(0));  /* 100px */
-width: calc(100px * exp(1));  /* 217px */
+width: calc(100px * exp(-1)); /* 100px * 0.367879441171442 = 36px */
+width: calc(100px * exp(0));  /* 100px * 1 = 100px */
+width: calc(100px * exp(1));  /* 100px * 2.718281828459045 = 217px */
 ```
 
 ### Parameter
