@@ -17,7 +17,7 @@ The **`Element.scrollHeight`** read-only property is a
 measurement of the height of an element's content, including content not visible on the
 screen due to overflow.
 
-![](scrollheight.png)
+![Scroll height example featuring an ad for cat adoption](scrollheight.png)
 
 The `scrollHeight` value is equal to the minimum height the element would
 require in order to fit all the content in the viewport without using a vertical
