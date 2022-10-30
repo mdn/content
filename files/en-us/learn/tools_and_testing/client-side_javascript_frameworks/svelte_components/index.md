@@ -204,7 +204,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
    As usual, Svelte provides us with a nice shorthand: `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
 
-2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify the `<script>` element of your  `FilterButton` like this:
+2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify the `<script>` element of your `FilterButton` like this:
 
    ```html
    <script>
