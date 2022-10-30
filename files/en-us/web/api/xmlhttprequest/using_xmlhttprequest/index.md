@@ -862,7 +862,7 @@ function getHeaderTime() {
 
 const req = new XMLHttpRequest();
 req.open(
-  "HEAD" /* use HEAD when you only need the headers! */,
+  "HEAD", // use HEAD when you only need the headers
   "yourpage.html"
 );
 req.onload = getHeaderTime;
