@@ -35,7 +35,7 @@ An integer corresponding to the `offsetWidth` pixel value of the element. The `o
 
 ## Examples
 
-![](dimensions-offset.png)
+![Offset width example](dimensions-offset.png)
 
 ## Specifications
 
