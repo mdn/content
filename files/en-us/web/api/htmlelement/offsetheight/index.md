@@ -37,7 +37,7 @@ A number.
 
 ## Examples
 
-![](dimensions-offset.png)
+![Offset height example](dimensions-offset.png)
 
 The example image above shows a scrollbar and an `offsetHeight` which fits
 on the window. However, non-scrollable elements may have large `offsetHeight`
