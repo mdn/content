@@ -27,7 +27,7 @@ There are [open source parsing libraries for most languages](https://microformat
 
 ## How Microformats Work
 
-An author of a webpage can add microformats to their HTML. For example if they wanted to identify themselves they could use a [h-card](https://microformats.org/wiki/h-card) such as:
+An author of a webpage can add microformats to their HTML. For example if they wanted to identify themselves they could use an [h-card](https://microformats.org/wiki/h-card) such as:
 
 ### HTML Example
 
