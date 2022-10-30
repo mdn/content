@@ -41,7 +41,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 
 A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) which is `true` if logical surfaces should be permitted among the selections available to the user.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How constraints are defined")}} for an explanation of how to define constraints.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "How constraints are defined")}} for an explanation of how to define constraints.
 
 ## Usage notes
 
@@ -75,7 +75,7 @@ entirely onscreen, or may even be entirely offscreen.
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
