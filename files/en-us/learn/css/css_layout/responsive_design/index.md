@@ -15,7 +15,7 @@ tags:
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
-_Responsive web design_ (RWD) is an approach to web design to make web pages that render well on all screen sizes and resolutions while ensuring good usability; it is the way to design for a multi-device web. In this article, we'll help you understand the main techniques you need to know to master it.
+_Responsive web design_ (RWD) is a web design approach to make web pages that render well on all screen sizes and resolutions while ensuring good usability. It is the way to design for a multi-device web. In this article, we'll help you understand some techniques that can be used to master it.
 
 <table>
   <tbody>
@@ -34,27 +34,29 @@ _Responsive web design_ (RWD) is an approach to web design to make web pages tha
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand the fundamental concepts and history of responsive design.
+        To understand the fundamental purposed and CSS features used to implement responsive designs.
       </td>
     </tr>
   </tbody>
 </table>
 
-HTML is fundamentally responsive. If you create a web page containing only HTML, with no CSS, and resize the window the browser will automatically reflow the text to fit the viewport.
+HTML is fundamentally responsive, or _fluid_. If you create a web page containing only HTML, with no CSS, and resize the window, the browser will automatically reflow the text to fit the viewport.
 
-While the default responsive behavior may sound like no solution is needed, browser-wide lines of text when the browser is full screen on a wide monitor are hard to read. Adding columns and padding with CSS will reduce the line length. While this will improving usability on a large screen, if you narrow the browser or open the site on a mobile device, the site will look squashed.
+While the default responsive behavior may sound like no solution is needed, long lines of text displayed full screen on a wide monitor can be difficult to read. If wide screen line length is reduced with CSS, such as by creating columns or adding significant padding, the site may look squashed for the user who narrows their browser window or opens the site on a mobile device.
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
-Creating a non-resizeable web page doesn't work either as that leads to scroll bars on narrow devices and too much empty space on wide screens. Responsive web design, or RWD, is a design approach that addresses the range of devices and device sizes, enabling automatica adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch.
+Creating a non-resizeable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens.
 
-Responsive web design isn't a separate technology — it is a term used to describe an approach to web design or a set of best practices, used to create a layout that can _respond_ to the device being used to view the content.
+Responsive web design, or RWD, is a design approach that addresses the range of devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch.
 
-The term _responsive design_, [coined by Ethan Marcotte in 2010](https://alistapart.com/article/responsive-web-design/), described using fluid grids, fluid images, and media queries to create responsive content, as discussed in Zoe Mickley Gillenwater's book [Flexible Web Design](http://flexiblewebbook.com/), to create .
+Responsive web design isn't a separate technology — it is an approach. It is a term used to describe a set of best practices used to create a layout that can _respond_ to any device being used to view the content.
 
-Images can be made fluid by setting the `max-width` property to `100%`; requiring images to scale down when their containing column became narrower than the image's intrinsic size. This enables an image to scale down to fit its content, rather than overflow it, but not grow larger and become pixelated if the container becomes wider than the image.
+The term _responsive design_, [coined by Ethan Marcotte in 2010](https://alistapart.com/article/responsive-web-design/), described using fluid grids, fluid images, and media queries to create responsive content, as discussed in Zoe Mickley Gillenwater's book [Flexible Web Design](http://flexiblewebbook.com/).
 
-Modern CSS layout methods are inherently responsive, and, since the publication of Gillenwater's book and Marcotte's article, we have a multitude of built into the web platform to make designing responsive sites easier.
+At the time, the recommendation was to use CSS `float` for layout and media queries to query the browser width, creating layouts for different breakpoints. Fluid images are set to not exceed the width of their container; they have their `max-width` property set to `100%`. Fluid images scale down when their containing column narrow but do not grow larger than their intrinsic size when the column grows. This enables an image to scale down to fit its content, rather than overflow it, but not grow larger and become pixelated if the container becomes wider than the image.
+
+Modern CSS layout methods are inherently responsive, and, since the publication of Gillenwater's book and Marcotte's article, we have a multitude of features built into the web platform to make designing responsive sites easier.
 
 The rest of this article will point you to the various web platform features you might want to use when creating a responsive site.
 
