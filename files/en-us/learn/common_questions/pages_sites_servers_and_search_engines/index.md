@@ -64,7 +64,8 @@ Let's compare the library with a web server:
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+- [Web Server Concepts and Examples](https://www.youtube.com/watch?v=9J1nJOivdyw): A video to understand the basics of Web Servers by Ben Bjurstrom.
+- [How The Web Works - The Big Picture](https://www.youtube.com/watch?v=hJHvdBlSxug): A Detailed well visualized view on how Web works by Maximilian Schwarzmüller.
 
 ## Deeper dive
 
