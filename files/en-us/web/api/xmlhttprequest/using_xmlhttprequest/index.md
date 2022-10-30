@@ -900,7 +900,7 @@ And to test:
 
 ```js
 // Let's test the file "yourpage.html"
-ifHasChanged("yourpage.html", function (modified, visit) {
+ifHasChanged("yourpage.html", (modified, visit) => {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
       nModified
