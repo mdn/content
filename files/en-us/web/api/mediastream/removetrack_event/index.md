@@ -71,5 +71,5 @@ stream.onremovetrack = (event) => {
 - Related events: [`addtrack`](/en-US/docs/Web/API/MediaStream/addtrack_event)
 - This event on [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList) targets: [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
