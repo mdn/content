@@ -49,7 +49,9 @@ Intl.Collator(locales, options)
     > precedence.
 
     - `co`
+
       - : Variant collations for certain locales. Possible values include:
+
         - `big5han` (Chinese; not available in Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)
@@ -69,6 +71,7 @@ Intl.Collator(locales, options)
         - `zhuyin` (Chinese)
 
         This option can be also be set through the `options` property `collation`.
+
     - `kn`
       - : Whether numeric collation should be used, such that "1" < "2" <
         "10". Possible values are `"true"` and `"false"`.
@@ -141,7 +144,9 @@ Intl.Collator(locales, options)
         > property takes precedence.
 
     - `collation`
+
       - : Variant collations for certain locales. Possible values include:
+
         - `big5han` (Chinese; not available in Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)

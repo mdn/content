@@ -32,7 +32,7 @@ We could even provide an information box saying who made the suggestion and when
   Freida's pet is a
   <span role="suggestion" aria-details="comment-source">
     <span role="deletion">black Cat called Luna</span>
-    <span role="insertion">purple T. Rex called Tiny</span> 
+    <span role="insertion">purple T. Rex called Tiny</span>
   </span>.
 </p>
 
