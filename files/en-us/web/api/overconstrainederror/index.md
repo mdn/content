@@ -17,7 +17,7 @@ browser-compat: api.OverconstrainedError
 
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
-The **`OverconstrainedError`** interface of the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API) indicates that the set of desired capabilities for the current {{domxref('MediaStreamTrack')}} cannot currently be met. When this event is thrown on a MediaStreamTrack, it is muted until either the current constraints can be established or until satisfiable constraints are applied.
+The **`OverconstrainedError`** interface of the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) indicates that the set of desired capabilities for the current {{domxref('MediaStreamTrack')}} cannot currently be met. When this event is thrown on a MediaStreamTrack, it is muted until either the current constraints can be established or until satisfiable constraints are applied.
 
 {{InheritanceDiagram}}
 

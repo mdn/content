@@ -40,12 +40,12 @@ concise way based on the `locale` and `options` provided when
 instantiating {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}.
 
 ```js
-const date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-const date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-const date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
-// > 'Wed, 10 Jan 2007 10:00:00 GMT'
-// > 'Wed, 10 Jan 2007 11:00:00 GMT'
-// > 'Sat, 20 Jan 2007 10:00:00 GMT'
+const date1 = new Date(Date.UTC(1906, 0, 10, 10, 0, 0));
+const date2 = new Date(Date.UTC(1906, 0, 10, 11, 0, 0));
+const date3 = new Date(Date.UTC(1906, 0, 20, 10, 0, 0));
+// > 'Wed, 10 Jan 1906 10:00:00 GMT'
+// > 'Wed, 10 Jan 1906 11:00:00 GMT'
+// > 'Sat, 20 Jan 1906 10:00:00 GMT'
 
 const fmt1 = new Intl.DateTimeFormat("en", {
   year: '2-digit',
@@ -69,9 +69,9 @@ const fmt2 = new Intl.DateTimeFormat("en", {
 console.log(fmt2.format(date1));
 console.log(fmt2.formatRange(date1, date2));
 console.log(fmt2.formatRange(date1, date3));
-// > 'Jan 10, 2007'
-// > 'Jan 10, 2007'
-// > 'Jan 10 – 20, 2007'
+// > 'Jan 10, 1906'
+// > 'Jan 10, 1906'
+// > 'Jan 10 – 20, 1906'
 ```
 
 ## Specifications

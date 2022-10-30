@@ -19,6 +19,8 @@ The **`Intl.PluralRules.prototype.resolvedOptions()`** method
 returns a new object with properties reflecting the locale and plural formatting
 options computed during initialization of this {{jsxref("Intl.PluralRules")}} object.
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-resolvedoptions.html")}}
+
 ## Syntax
 
 ```js-nolint
