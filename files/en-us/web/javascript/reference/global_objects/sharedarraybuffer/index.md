@@ -105,17 +105,17 @@ const sab = new SharedArrayBuffer(1024);
 ### Slicing the SharedArrayBuffer
 
 ```js
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 
 ### Using it in a WebGL buffer
 
 ```js
-const canvas = document.querySelector('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.querySelector("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);

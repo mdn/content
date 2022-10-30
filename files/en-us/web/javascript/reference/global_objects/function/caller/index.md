@@ -6,10 +6,11 @@ tags:
   - JavaScript
   - Property
   - Non-standard
+  - Deprecated
 browser-compat: javascript.builtins.Function.caller
 ---
 
-{{JSRef}}{{Non-standard_Header}}
+{{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 A {{jsxref("Function")}} object's **`caller`** property accessor property represents the function that invoked the specified function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `caller` property throws an exception.
 
@@ -26,17 +27,17 @@ Note that the only behavior specified by the ECMAScript specification is that `F
   if (Object.hasOwn(f, "caller")) {
     console.log(
       "caller is an own property with descriptor",
-      Object.getOwnPropertyDescriptor(f, "caller"),
+      Object.getOwnPropertyDescriptor(f, "caller")
     );
   } else {
     console.log(
-      "f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller",
+      "f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller"
     );
     console.log(
       Object.getOwnPropertyDescriptor(
         Object.getPrototypeOf(f),
-        "caller",
-      ).get.call(f),
+        "caller"
+      ).get.call(f)
     );
   }
 })();

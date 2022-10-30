@@ -36,7 +36,7 @@ A command can either be defined explicitly, with a textual label and optional ic
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

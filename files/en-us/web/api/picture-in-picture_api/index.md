@@ -26,37 +26,37 @@ The **Picture-in-Picture API** allow websites to create a floating video window 
 - {{DOMxRef("PictureInPictureWindow")}}
   - : Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/onresize", "onresize")}} event handler property.
 
-## Methods
+## Instance methods
 
 The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} and {{DOMxRef("Document")}} interfaces to allow toggling of the floating video window.
 
-### Methods on the HTMLVideoElement interface
+### Instance methods on the HTMLVideoElement interface
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
   - : Requests that the user agent enters the video into picture-in-picture mode
 
-### Methods on the Document interface
+### Instance methods on the Document interface
 
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : Requests that the user agent returns the element in picture-in-picture mode back into its original box.
 
-## Properties
+## Instance properties
 
 The Picture-in-Picture API augments the {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating.
 
-### Properties on the HTMLVideoElement interface
+### Instance properties on the HTMLVideoElement interface
 
 - {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
   - : The `autoPictureInPicture` property will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications.
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : The `disablePictureInPicture` property will provide a hint to the user agent to not suggest the picture-in-picture to users or to request it automatically.
 
-### Properties on the Document interface
+### Instance properties on the Document interface
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
   - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g. the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
 
-### Properties on the Document or ShadowRoot interfaces
+### Instance properties on the Document or ShadowRoot interfaces
 
 - {{DOMxRef("Document.pictureInPictureElement")}} / {{DOMxRef("ShadowRoot.pictureInPictureElement")}}
   - : The `pictureInPictureElement` property tells you which {{DOMxRef("Element")}} is currently being displayed in the floating window (or in the shadow DOM). If this is `null`, the document (or shadow DOM) has no node currently in picture-in-picture mode.

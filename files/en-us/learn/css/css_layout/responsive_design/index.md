@@ -66,32 +66,28 @@ As the mobile web started to become a reality with the first feature phones, com
 
 In addition, these mobile sites often offered a very cut down experience. As mobile devices became more powerful and able to display full websites, this was frustrating to mobile users who found themselves trapped in the site's mobile version and unable to access information they knew was on the full-featured desktop version of the site.
 
-## Flexible layout before responsive design
-
-A number of approaches were developed to try to solve the downsides of the liquid or fixed-width methods of building websites. In 2004 Cameron Adams wrote a post entitled [Resolution dependent layout](https://www.themaninblue.com/writing/perspective/2004/09/21/), describing a method of creating a design that could adapt to different screen resolutions. This approach required JavaScript to detect the screen resolution and load the correct CSS.
+## Responsive design
 
 Zoe Mickley Gillenwater was instrumental in [her work](https://zomigi.com/blog/voices-that-matter-slides-available/) to describe and formalize the different ways in which flexible sites could be created, attempting to find a happy medium between filling the screen or being completely fixed in size.
 
-## Responsive design
-
-The term responsive design was [coined by Ethan Marcotte in 2010](https://alistapart.com/article/responsive-web-design/) and described the use of three techniques in combination.
+The term _responsive design_ was [coined by Ethan Marcotte in 2010](https://alistapart.com/article/responsive-web-design/) and described the use of three techniques in combination, as discussed in Gillenwater's book [Flexible Web Design](http://flexiblewebbook.com/).
 
 1. The first was the idea of fluid grids, something which was already being explored by Gillenwater, and can be read up on in Marcotte's article, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (published in 2009 on A List Apart).
 2. The second technique was the idea of [fluid images](https://unstoppablerobotninja.com/entry/fluid-images/). Using a very simple technique of setting the `max-width` property to `100%`, images would scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This enables an image to scale down to fit in a flexibly-sized column, rather than overflow it, but not grow larger and become pixelated if the column becomes wider than the image.
 3. The third key component was the [media query](/en-US/docs/Web/CSS/Media_Queries). Media Queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.
 
-It is important to understand that **responsive web design isn't a separate technology** — it is a term used to describe an approach to web design or a set of best practices, used to create a layout that can _respond_ to the device being used to view the content. In Marcotte's original exploration this meant flexible grids (using floats) and media queries, however in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout methods are inherently responsive, and we have new things built into the web platform to make designing responsive sites easier.
+It is important to understand that **responsive web design isn't a separate technology** — it is a term used to describe an approach to web design or a set of best practices, used to create a layout that can _respond_ to the device being used to view the content. In Marcotte's original exploration this meant flexible grids (using floats) and media queries, however in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout methods are inherently responsive, and, since the publication of Gillenwater's book and Marcotte's article, we have a multitude of built into the web platform to make designing responsive sites easier.
 
 The rest of this article will point you to the various web platform features you might want to use when creating a responsive site.
 
 ## Media Queries
 
-Responsive design was only able to emerge due to the media query. The Media Queries Level 3 specification became a Candidate Recommendation in 2009, meaning that it was deemed ready for implementation in browsers. Media Queries allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
+Originally, responsive design was made simpler with [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). Media Queries allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
-For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least 800 pixels wide. The CSS for the `.container` selector will only be applied if these two things are true.
+For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The CSS for the `.container` selector will only be applied if these two things are true.
 
 ```css
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 80rem) {
   .container {
     margin: 1em 2em;
   }
@@ -100,7 +96,9 @@ For example, the following media query tests to see if the current web page is b
 
 You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as _breakpoints_.
 
-A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for larger screens and implement a multiple-column layout when you know that you have enough screen width to handle it. This is often described as **mobile first** design.
+A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for wider screens and implement a multiple-column layout when you know that you have enough screen width to handle it. This is often described as **mobile first** design.
+
+Best practices encourage defining media query breakpoints with [relative units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) rather than absolute sizes of particular devices.
 
 Find out more in the MDN documentation for [Media Queries](/en-US/docs/Web/CSS/Media_Queries).
 
@@ -110,21 +108,7 @@ Responsive sites don't just change their layout between breakpoints, they are bu
 
 By using a flexible grid, you only need to add in a breakpoint and change the design at the point where the content starts to look bad. For example, if the line lengths become unreadably long as the screen size increases, or a box becomes squashed with two words on each line as it narrows.
 
-In the early days of responsive design, our only option for performing layout was to use [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats). Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.
-
-```
-target / context = result
-```
-
-For example, if our target column size is 60 pixels, and the context (or container) it is in is 980 pixels, we divide 60 by 980 to get a value we can use in our CSS, after moving the decimal point two places to the right.
-
-```css
-.col {
-  width: 6.12%; /* 60 / 980 = 0.0612 */
-}
-```
-
-This approach will be found in many places across the web today, and it is documented here in the layout section of our [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) article. It is likely that you will come across websites using this approach in your work, so it is worth understanding it, even though you would not build a modern site using a float-based flexible grid.
+In the early days of responsive design, the main option for performing layout was to use [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats). Flexible floated layouts were achieved by giving each element a percentage width, and either a {{cssxref('min-width')}} or {{cssxref('max-width')}}, or both.
 
 The following example demonstrates a simple responsive design using Media Queries and a flexible grid. On narrow screens, the layout displays the boxes stacked on top of one another:
 
@@ -136,13 +120,13 @@ On wider screens they move to two columns:
 
 > **Note:** You can find the [live example](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) and [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/float-based-rwd.html) for this example on GitHub.
 
-## Modern layout technologies
+## Responsive layout technologies
 
-Modern layout methods such as [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.
+Several layout methods, including [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.
 
 ### Multicol
 
-The oldest of these layout methods is multicol — when you specify a `column-count`, this indicates how many columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.
+With multicol, you specify a `column-count` to indicate the maximum number of columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.
 
 ```css
 .container {
@@ -160,7 +144,7 @@ If you instead specify a `column-width`, you are specifying a _minimum_ width. T
 
 ### Flexbox
 
-In Flexbox, flex items will shrink and distribute space between the items according to the space in their container, as their initial behavior. By changing the values for `flex-grow` and `flex-shrink` you can indicate how you want the items to behave when they encounter more or less space around them.
+In Flexbox, flex items shrink or grow, distributing space between the items according to the space in their container. By changing the values for `flex-grow` and `flex-shrink` you can indicate how you want the items to behave when they encounter more or less space around them.
 
 In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of `flex: 1` as described in the layout topic [Flexbox: Flexible sizing of flex items](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
 
@@ -174,7 +158,7 @@ In the example below the flex items will each take an equal amount of space in t
 }
 ```
 
-> **Note:** As an example, we have rebuilt the simple responsive layout above, this time using flexbox. You can see how we no longer need to use strange percentage values to calculate the size of the columns: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> **Note:** As an example, we have rebuilt the simple responsive layout above, this time using flexbox. You can see how we don't need to calculate the size of the columns: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### CSS grid
 
@@ -191,7 +175,7 @@ In CSS Grid Layout the `fr` unit allows the distribution of available space acro
 
 ## Responsive images
 
-The simplest approach to responsive images was as described in Marcotte's early articles on responsive design. Basically, you would take an image that was at the largest size that might be needed, and scale it down. This is still an approach used today, and in most stylesheets, you will find the following CSS somewhere:
+To ensure an image is never larger than its responsive container, the following approach is used:
 
 ```css
 img {
@@ -199,7 +183,7 @@ img {
 }
 ```
 
-There are obvious downsides to this approach. The image might be displayed a lot smaller than its intrinsic size, which is a waste of bandwidth — a mobile user may be downloading an image several times the size of what they actually see in the browser window. In addition, you may not want the same image aspect ratio on mobile as on desktop. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by scaling down an image.
+Using a single large image and scaling it down to fit small devices has obvious downsides, most notably mobile users wasting bandwidth by downloading images several times the size of what they actually see in the browser window. In addition, you may want to use images with different aspect ratios on narrow screens and compared to wider viewports. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by scaling down an image.
 
 Responsive Images, using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes solve both of these problems. You can provide multiple sizes along with "hints" (metadata that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using.
 

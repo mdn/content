@@ -135,7 +135,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
 
     - `application/x-www-form-urlencoded`: The default if the attribute is not used.
-    - `multipart/form-data`: Use to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
+    - `multipart/form-data`: Used to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
     - `text/plain`: Specified as a debugging aid; shouldn't be used for real form submission.
 
     If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
@@ -256,77 +256,7 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 ### Clicking and focus
 
-Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of `type="button"` and `type="submit"` are the same.
-
-<table>
-  <caption>
-    Does clicking on a {{HTMLElement("button")}} give it focus?
-  </caption>
-  <thead>
-    <tr>
-      <th>Desktop Browsers</th>
-      <th>Windows 8.1</th>
-      <th>OS X 10.X</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Firefox</th>
-      <td>✅ Yes - Firefox 30.0</td>
-      <td>❌ No (even with a <code>tabindex</code>) Firefox 63</td>
-    </tr>
-    <tr>
-      <th>Chrome</th>
-      <td>✅ Yes - Chrome 35</td>
-      <td>✅ Yes - Chrome 65</td>
-    </tr>
-    <tr>
-      <th>Safari</th>
-      <td>N/A</td>
-      <td>
-        ❌ No (even with a <code>tabindex</code>) Safari 12 (<a
-          href="https://bugs.webkit.org/show_bug.cgi?id=22261"
-          >bug 22261</a
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
-      <td>✅ Yes - Internet Explorer 11</td>
-      <td>N/A</td>
-    </tr>
-    <tr>
-      <th>Presto</th>
-      <td>✅ Yes - Opera 12</td>
-      <td>✅ Yes - Opera 12</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <caption>
-    Does tapping on a {{HTMLElement("button")}} give it focus?
-  </caption>
-  <thead>
-    <tr>
-      <th>Mobile Browsers</th>
-      <th>iOS 7.1.2</th>
-      <th>Android 4.4.4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Safari Mobile</th>
-      <td>❌ No (even with a <code>tabindex</code>)</td>
-      <td>N/A</td>
-    </tr>
-    <tr>
-      <th>Chrome 35</th>
-      <td>❌ No (even with a <code>tabindex</code>)</td>
-      <td>✅ Yes</td>
-    </tr>
-  </tbody>
-</table>
+Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://bugs.webkit.org/show_bug.cgi?id=22261).
 
 ## Specifications
 

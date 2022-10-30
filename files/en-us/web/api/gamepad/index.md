@@ -17,7 +17,7 @@ The **`Gamepad`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API
 
 A Gamepad object can be returned in one of two ways: via the `gamepad` property of the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events, or by grabbing any position in the array returned by the {{domxref("Navigator.getGamepads()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("Gamepad.axes")}} {{ReadOnlyInline}}
   - : An array representing the controls with axes present on the device (e.g. analog thumb sticks).

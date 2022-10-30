@@ -24,12 +24,12 @@ Below is a list of interfaces based on the AuthenticatorResponse interface.
 - {{domxref("AuthenticatorAssertionResponse")}}
 - {{domxref("AuthenticatorAttestationResponse")}}
 
-## Properties
+## Instance properties
 
 - {{domxref("AuthenticatorResponse.clientDataJSON")}}
   - : A [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) string in an {{jsxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}.
 
-## Methods
+## Instance methods
 
 None.
 

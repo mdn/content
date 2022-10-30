@@ -162,7 +162,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td>
         A control for entering a number. Displays a spinner and adds default
-        validation when supported. Displays a numeric keypad in some devices
+        validation. Displays a numeric keypad in some devices
         with dynamic keypads.
       </td>
       <td id="examplenumber">
@@ -487,7 +487,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `minlength`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
 
     The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
 
@@ -665,7 +665,7 @@ The following non-standard attributes are also available on some browsers. As a 
 
 - `autocorrect` {{non-standard_inline}}
 
-  - : (Safari only). A string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
+  - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
     - `on`
       - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
@@ -883,7 +883,7 @@ input:checked + label {
 
 ### Attribute selectors
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.
+It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
 
 ```css
 /* matches a password input */
@@ -1085,7 +1085,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td><a href="#type"><code>type</code></a></td>
       <td>{{domxref('validityState.typeMismatch')}}</td>
       <td>
-        Occurs when the value is not of the correct type, for example a email does not contain an <code>@</code> or a url doesn't contain a protocol.
+        Occurs when the value is not of the correct type, for example an email does not contain an <code>@</code> or a url doesn't contain a protocol.
       </td>
     </tr>
   </tbody>
@@ -1172,7 +1172,7 @@ In brief:
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
 - If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
-- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.
+- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
 
 > **Note:** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
 
@@ -1204,7 +1204,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -1371,7 +1371,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
 
 ### Labels
 
-When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
+When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
 
 The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
 

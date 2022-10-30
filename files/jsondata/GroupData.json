@@ -213,6 +213,14 @@
       "properties": [],
       "events": []
     },
+    "CSS Properties and Values API": {
+      "overview": ["CSS Properties and Values API"],
+      "guides": ["/docs/Web/API/CSS_Properties_and_Values_API/guide"],
+      "interfaces": ["CSSPropertyRule"],
+      "methods": ["CSS.registerProperty"],
+      "properties": [],
+      "events": []
+    },
     "CSS Typed Object Model API": {
       "overview": ["CSS Typed OM API"],
       "guides": ["/docs/Web/API/CSS_Typed_OM_API/Guide"],
@@ -358,6 +366,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
+      "guides": ["/docs/Web/API/Encoding_API/Encodings"],
       "interfaces": [
         "TextDecoder",
         "TextEncoder",
@@ -615,6 +624,7 @@
         "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
+        "UserActivation",
         "ValidityState",
         "Window"
       ],
@@ -740,7 +750,7 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["indexedDB"],
       "events": []
     },
     "Intersection Observer API": {
@@ -750,7 +760,7 @@
       ],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": [],
       "events": []
     },
     "Largest Contentful Paint API": {
@@ -1992,6 +2002,7 @@
     },
     "Web Speech API": {
       "overview": ["Web Speech API"],
+      "guides": ["/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API"],
       "interfaces": [
         "SpeechGrammar",
         "SpeechGrammarList",

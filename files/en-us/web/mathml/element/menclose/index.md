@@ -11,7 +11,7 @@ browser-compat: mathml.elements.menclose
 
 {{MathMLRef}}
 
-The MathML `<menclose>` element renders its content inside an enclosing notation specified by the `notation` attribute.
+The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its content inside an enclosing notation specified by the `notation` attribute.
 
 ## Attributes
 
@@ -37,7 +37,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
     | `verticalstrike`                       | ![verticalstrike](verticalstrike.png)                      | <math><menclose notation="verticalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>     | vertical strikeout line through contents                                                                            |
     | `horizontalstrike`                     | ![horizontalstrike](horizontalstrike.png)                  | <math><menclose notation="horizontalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | horizontal strikeout line through contents                                                                          |
     | `madruwb`                              | ![madruwb](madruwb.png)                                    | <math><menclose notation="madruwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | [Arabic factorial symbol](https://en.wikipedia.org/wiki/Modern_Arabic_mathematical_notation#Arithmetic_and_algebra) |
-    | `updiagonalarrow`                      | ![](updiagonalarrow.png)                                   | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | diagonal arrow                                                                                                      |
+    | `updiagonalarrow`                      | ![Arrow pointing up and to the right.](updiagonalarrow.png)                                   | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | diagonal arrow                                                                                                      |
     | `phasorangle`                          | ![Screenshot of the phasorangle notation](phasorangle.png) | <math><menclose notation="phasorangle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>        | phasor angle                                                                                                        |
 
 ## Examples
@@ -56,7 +56,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Specifications
 
-{{Specifications}}
+The `<menclose>` element is not defined in any browser-oriented specification but you can find a description in [MathML 4](https://w3c.github.io/mathml/#presm_menclose).
 
 ## Browser compatibility
 

@@ -32,7 +32,7 @@ There are five different types of operations that return `NaN`:
 
 `NaN` and its behaviors are not invented by JavaScript. Its semantics in floating point arithmetic (including that `NaN !== NaN`) are specified by [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). `NaN`'s behaviors include:
 
-- If `NaN` is involved in any mathematical operation, the result is also `NaN`.
+- If `NaN` is involved in a mathematical operation (but not [bitwise operations](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators)), the result is usually also `NaN`. (See [counter-example](#silently_escaping_nan) below.)
 - When `NaN` is one of the operands of any relational comparison (`>`, `<`, `>=`, `<=`), the result is always `false`.
 - `NaN` compares unequal (via [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality), [`!=`](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality), [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), and [`!==`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)) to any other value — including to another `NaN` value.
 
@@ -88,7 +88,7 @@ For more information about `NaN` and its comparison, see [Equality comparison an
 
 ### Observably distinct NaN values
 
-There's a motivation for `NaN` being unequal to itself. It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
+There's a motivation for `NaN` being unequal to itself. It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays).
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
@@ -102,6 +102,14 @@ console.log(nan2); // NaN
 console.log(Object.is(nan2, NaN)); // true
 console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
 console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+```
+
+### Silently escaping NaN
+
+`NaN` propagates through mathematical operations, so it's usually sufficient to test for `NaN` once at the end of calculation to detect error conditions. The only case where `NaN` gets silently escaped is when using [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) with an exponent of `0`, which immediately returns `1` without testing the base's value.
+
+```js
+NaN ** 0 === 1; // true
 ```
 
 ## Specifications

@@ -1,5 +1,5 @@
 ---
-title: Memory Management
+title: Memory management
 slug: Web/JavaScript/Memory_Management
 tags:
   - Garbage collection

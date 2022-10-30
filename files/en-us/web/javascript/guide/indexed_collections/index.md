@@ -88,7 +88,7 @@ const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
 
 ## Referring to array elements
 
-Because elements are also properties, you can access the using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Suppose you define the following array:
+Because elements are also properties, you can access them using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Suppose you define the following array:
 
 ```js
 const myArray = ['Wind', 'Rain', 'Fire'];
@@ -225,7 +225,7 @@ nonsparseArray.forEach((element) => {
 // fourth
 ```
 
-Since JavaScript elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in","for...in")}} loops, because normal elements and all enumerable properties will be listed.
+Since JavaScript array elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in","for...in")}} loops, because normal elements and all enumerable properties will be listed.
 
 ### Array methods
 

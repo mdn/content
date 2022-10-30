@@ -63,7 +63,7 @@ But as you'll see in greater detail later on, it makes sense to use the correct 
 <button>Play video</button>
 ```
 
-Not only do HTML `<button>`s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Return</kbd> or <kbd>Enter</kbd>.
+Not only do HTML `<button>`s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Space</kbd>, <kbd>Return</kbd> or <kbd>Enter</kbd>.
 
 Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if you do it consistently from the start of your project. Even better, semantic markup has other benefits beyond accessibility:
 
@@ -160,7 +160,7 @@ The language you use can also affect accessibility. In general, you should use c
 
 - Don't use dashes if you can avoid it. Instead of writing 5–7, write 5 to 7.
 - Expand abbreviations — instead of writing Jan, write January.
-- Expand acronyms, at least once or twice, then use the [<abbr>](/en-US/docs/Web/HTML/Element/abbr) tag to describe them.
+- Expand acronyms, at least once or twice, then use the [`<abbr>`](/en-US/docs/Web/HTML/Element/abbr) tag to describe them.
 
 ### Page layouts
 

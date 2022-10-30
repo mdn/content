@@ -88,8 +88,7 @@ checkiandj: while (i < 4) {
     console.log(`j: ${j}`);
     j -= 1;
 
-    if ((j % 2) === 0)
-      continue checkj;
+    if (j % 2 === 0) continue checkj;
     console.log(`${j} is odd.`);
   }
   console.log(`i = ${i}`);

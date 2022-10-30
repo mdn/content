@@ -54,7 +54,7 @@ This can be encountered when:
 ```js
 function check(n) {
   if (!(n >= -500 && n <= 500)) {
-    throw new RangeError("The argument must be between -500 and 500.")
+    throw new RangeError("The argument must be between -500 and 500.");
   }
 }
 
@@ -72,7 +72,9 @@ try {
 ```js
 function check(value) {
   if (!["apple", "banana", "carrot"].includes(value)) {
-    throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
+    throw new RangeError(
+      'The argument must be an "apple", "banana", or "carrot".'
+    );
   }
 }
 

@@ -22,12 +22,12 @@ In some instances, `InputDeviceCapabilities` represents the capabilities of logi
 - {{domxref("InputDeviceCapabilities.InputDeviceCapabilities", "InputDeviceCapabilities()")}} {{Experimental_Inline}}
   - : Creates an `InputDeviceCapabilities` object.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("InputDeviceCapabilities.firesTouchEvents")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{JSxRef("Boolean")}} that indicates whether the device dispatches touch events.
 
-## Methods
+## Instance methods
 
 None.
 

@@ -264,9 +264,8 @@ Browsers no longer use CSS prefixes when implementing new experimental features.
 If you are required to use prefixes in your work, write the prefixed versions first followed by the non-prefixed standard version. This way the standard version will automatically override the prefixed versions when supported. For example:
 
 ```css
--ms-transform: rotate(90deg);
--webkit-transform: rotate(90deg);
-transform: rotate(90deg);
+-webkit-text-stroke: 4px navy;
+text-stroke: 4px navy;
 ```
 
 > **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.

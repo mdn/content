@@ -17,7 +17,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 <table class="standard-table">
   <tbody>
@@ -256,7 +256,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
 
-## Methods
+## Instance methods
 
 <table class="standard-table">
   <tbody>
@@ -485,7 +485,7 @@ function checkRows(oField, oKeyEvent) {
 }
 ```
 
-In the HTML we just need to hook our function to the \`onkeypress\` event and specify that our textarea does not accept pasting:
+In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
 
 ```html
 <form>

@@ -16,7 +16,7 @@ The **`HTMLAreaElement`** interface provides special properties and methods (bey
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -65,7 +65,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAreaElement.username")}}
   - : A string containing the username specified before the domain name.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 

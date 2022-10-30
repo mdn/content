@@ -174,12 +174,12 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
+const str = 'Maria Cruz';
 const newstr = str.replace(re, '$2, $1');
 console.log(newstr);
 ```
 
-This displays `"Smith, John"`.
+This displays `"Cruz, Maria"`.
 
 ### Using regular expression to split lines with different line endings/ends of line/line breaks
 
@@ -262,7 +262,7 @@ console.log(regex.lastIndex); // logs '15'
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`.
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
 ### Extracting subdomain name from URL
 

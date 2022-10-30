@@ -130,7 +130,7 @@ When you look back at your browser, you'll notice something unfortunate: your li
 
 We don't only want to eat; we have other things to — well — to do. Next we'll look at how we can make different component calls render unique content.
 
-## Make a _unique_ `<Todo />`
+## Make a unique `<Todo />`
 
 Components are powerful because they let us re-use pieces of our UI, and refer to one place for the source of that UI. The problem is, we don't typically want to reuse all of each component; we want to reuse most parts, and change small pieces. This is where props come in.
 

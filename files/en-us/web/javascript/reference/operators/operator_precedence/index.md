@@ -117,7 +117,7 @@ Operator precedence will be handled _recursively_. For example, consider this ex
 First, we group operators with different precedence by decreasing levels of precedence.
 
 1. The `**` operator has the highest precedence, so it's grouped first.
-2. Looking around the `**` expression, it has `*` on the right and `+` on the right. `*` has higher precedence, so it's grouped first. `*` and `/` have the same precedence, so we group them together for now.
+2. Looking around the `**` expression, it has `*` on the right and `+` on the left. `*` has higher precedence, so it's grouped first. `*` and `/` have the same precedence, so we group them together for now.
 3. Looking around the `*`/`/` expression grouped in 2, because `+` has higher precedence than `>>`, the former is grouped.
 
 ```js

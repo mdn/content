@@ -16,7 +16,7 @@ The **`TrustedScriptURL`** interface of the {{domxref('Trusted Types API')}} rep
 
 The value of a **TrustedScriptURL** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 
-## Methods
+## Instance methods
 
 - {{domxref("TrustedScriptURL.toJSON()")}}
   - : Returns a JSON representation of the stored data.

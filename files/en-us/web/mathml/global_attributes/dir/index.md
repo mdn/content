@@ -10,7 +10,7 @@ browser-compat: mathml.global_attributes.dir
 
 {{MathMLRef("Global_attributes")}}
 
-The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an enumerated attribute that indicates the directionality of the MathML element.
+The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the MathML element.
 
 ## Syntax
 

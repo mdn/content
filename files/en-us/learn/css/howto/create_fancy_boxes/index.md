@@ -25,7 +25,7 @@ Ok, that's a very small bit of HTML, what can we tweak on that element? All of t
 - Its box model properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("border")}}, etc.
 - Its background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-position")}}, {{cssxref("background-size")}}, etc.
 - Its pseudo-element: {{cssxref("::before")}} and {{cssxref("::after")}}
-- and some aside properties like: {{cssxref("box-shadow")}}, {{cssxref("transform")}}, {{cssxref("outline")}}, etc.
+- and some aside properties like: {{cssxref("box-shadow")}}, {{cssxref("rotate")}}, {{cssxref("outline")}}, etc.
 
 So we have a very large playground. Let the fun begin.
 
@@ -120,7 +120,7 @@ Okay, let's have fun with backgrounds:
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
 ## Pseudo-elements
 
@@ -286,7 +286,7 @@ So it's possible to create a wonderful effect when we mix all of this together. 
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-Let's create some partial drop shadow effect. The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.
+Let's create some partial drop-shadow effects. The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using a pseudo-element and the {{cssxref("rotate")}} property, one of the three individual {{cssxref("transform")}} properties.
 
 ```css
 .fancy {
@@ -309,7 +309,7 @@ Let's create some partial drop shadow effect. The {{cssxref("box-shadow")}} prop
   max-width: 200px;
 
   box-shadow: 0px 13px 10px black;
-  transform: rotate(4deg);
+  rotate: 4deg;
 }
 ```
 

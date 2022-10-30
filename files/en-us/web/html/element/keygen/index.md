@@ -50,7 +50,7 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -106,7 +106,7 @@ For RSA keys, the `keyparams` parameter is not used (ignored if present). The us
 
 For DSA keys, the `keyparams` parameter specifies the DSA PQG parameters which are to be used in the keygen process. The value of the `pqg` parameter is the BASE64 encoded, DER encoded Dss-Parms as specified in IETF [RFC 3279](https://datatracker.ietf.org/doc/html/rfc3279). The user may be given a choice of DSA key sizes, allowing the user to choose one of the sizes defined in the DSA standard.
 
-For EC keys, the `keyparams` parameter specifies the name of the elliptic curve on which the key will be generated. It is normally a string from the list in [RFC 5480, section 2.1.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1.1). (Note that only a subset of the curves named there may actually be supported in any particular browser.) If the `keyparams` parameter string is not a recognized curve name string, then a curve is chosen according to the user's chosen key strength (low, medium, high), using the curve named "`secp384r1`" for high, and the curve named "`secp256r1`" for medium keys. (Note: choice of the number of key strengths, default values for each strength, and the UI by which the user is offered a choice, are outside of the scope of this specification.)
+For EC keys, the `keyparams` parameter specifies the name of the elliptic curve on which the key will be generated. It is normally a string from the list in [RFC 5480, section 2.1.1.1](https://datatracker.ietf.org/doc/html/rfc5480#section-2.1.1.1). (Note that only a subset of the curves named there may actually be supported in any particular browser.) If the `keyparams` parameter string is not a recognized curve name string, then a curve is chosen according to the user's chosen key strength (low, medium, high), using the curve named "`secp384r1`" for high, and the curve named "`secp256r1`" for medium keys. (Note: choice of the number of key strengths, default values for each strength, and the UI by which the user is offered a choice, are outside the scope of this specification.)
 
 The `<keygen>` element is only valid within an HTML form. It will cause some sort of selection to be presented to the user for selecting key size. The UI for the selection may be a menu, radio buttons, or possibly something else. The browser presents several possible key strengths. Currently, two strengths are offered, high and medium. If the user's browser is configured to support cryptographic hardware (e.g. "smart cards") the user may also be given a choice of where to generate the key, i.e., in a smart card or in software and stored on disk.
 

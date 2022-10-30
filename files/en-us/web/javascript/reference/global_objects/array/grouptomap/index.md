@@ -90,7 +90,9 @@ While groups often depend only on the current element, you can implement groupin
 If a `thisArg` parameter is provided to `groupToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If `thisArg` is not provided, then {{jsxref("undefined")}} is used.
 
-The `group()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a map of arrays that contains the same elements as the ones from the original array. The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
+The `groupToMap()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a map of arrays that contains the same elements as the ones from the original array. The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
+
+The `groupToMap()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 This method is useful when you need to group information that is related to a particular object that might potentially change over time.
 This is because even if the object is modified, it will continue to work as a key to the returned `Map`.
@@ -167,6 +169,21 @@ When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collection
 ```js
 console.log([1, , 3].groupToMap((x) => x));
 // Map { 1 => [1], undefined => [undefined], 3 => [3] }
+```
+
+### Calling groupToMap() on non-array objects
+
+The `groupToMap()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.groupToMap.call(arrayLike, (x) => x % 2));
+// Map { 0 => [2, 4], 1 => [3] }
 ```
 
 ## Specifications

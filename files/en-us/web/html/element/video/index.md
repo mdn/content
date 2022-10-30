@@ -58,14 +58,14 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - {{htmlattrdef("crossorigin")}}
 
-  - : This enumerated attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
     - `anonymous`
-      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
+      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the resource will be _tainted_, and its usage restricted.
     - `use-credentials`
-      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
+      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the resource will be _tainted_ and its usage restricted.
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
 - {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.

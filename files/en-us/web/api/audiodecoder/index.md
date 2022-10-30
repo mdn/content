@@ -20,14 +20,14 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 - {{domxref("AudioDecoder.AudioDecoder", "AudioDecoder()")}} {{Experimental_Inline}}
   - : Creates a new `AudioDecoder` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioDecoder.decodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of decode queue requests.
 - {{domxref("AudioDecoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the state of the underlying codec and whether it is configured for decoding.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioDecoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the audio decoder for decoding chunks.

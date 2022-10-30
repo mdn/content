@@ -41,7 +41,7 @@ renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 - `internalFormat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
-    values (\`gl.DEPTH_STENCIL\` is not supported):
+    values (`gl.DEPTH_STENCIL` is not supported):
 
     - `gl.R8`
     - `gl.R8UI`

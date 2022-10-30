@@ -410,12 +410,12 @@ JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/
 
 ```js
 const Manager = {
-  name: "John",
+  name: "Karina",
   age: 27,
   job: "Software Engineer"
 }
 const Intern = {
-  name: "Ben",
+  name: "Tyrone",
   age: 21,
   job: "Software Engineer Intern"
 }
@@ -428,8 +428,8 @@ function sayHi() {
 Manager.sayHi = sayHi;
 Intern.sayHi = sayHi;
 
-Manager.sayHi(); // Hello, my name is John'
-Intern.sayHi(); // Hello, my name is Ben'
+Manager.sayHi(); // Hello, my name is Karina
+Intern.sayHi(); // Hello, my name is Tyrone
 ```
 
 The `this` refers to the object that it is in. You can create a new function called `howOldAmI()` which logs a sentence saying how old the person is.

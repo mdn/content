@@ -7,6 +7,8 @@ tags:
   - needsSchema
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article, we explain what web servers are, how web servers work, and why they are important.
 
 <table>
@@ -20,7 +22,7 @@ In this article, we explain what web servers are, how web servers work, and why 
         >, and
         <a
           href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
-          >understand the difference between a web page, a web site, a web
+          >understand the difference between a web page, a website, a web
           server, and a search engine</a
         >.
       </td>
