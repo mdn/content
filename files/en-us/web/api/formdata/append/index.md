@@ -60,6 +60,15 @@ formData.append('userpic', myFileInput.files[0], 'chris1.jpg');
 formData.append('userpic', myFileInput.files[1], 'chris2.jpg');
 ```
 
+If you need to set a different `Content-type` for `formData`, you can use `Blob` like this:
+
+```js
+const blob = new Blob(["true"], {
+  type: "application/json",
+});
+formData.append("isDisabled", blob);
+```
+
 If the value is not a string or a `Blob`, `append()` will convert it to a string automatically:
 
 ```js
