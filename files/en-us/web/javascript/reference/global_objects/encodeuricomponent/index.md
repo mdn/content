@@ -117,7 +117,7 @@ const header = `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC598
 )}`;
 
 console.log(header);
-// logs "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"
+// "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"
 
 function encodeRFC5987ValueChars(str) {
   return (

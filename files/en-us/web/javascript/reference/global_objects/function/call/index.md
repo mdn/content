@@ -140,7 +140,7 @@ function display() {
   console.log(`globProp value is ${this.globProp}`);
 }
 
-display.call(); // logs "globProp value is Wisen"
+display.call(); // Logs "globProp value is Wisen"
 ```
 
 In strict mode, the value of `this` will be `undefined`.

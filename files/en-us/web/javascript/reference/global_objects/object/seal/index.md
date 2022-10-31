@@ -66,7 +66,7 @@ delete obj.prop;
 const o = Object.seal(obj);
 
 o === obj; // true
-Object.isSealed(obj); // === true
+Object.isSealed(obj); // true
 
 // Changing property values on a sealed object
 // still works.

@@ -446,12 +446,14 @@ const arr = [3, 5, 7];
 arr.foo = 'hello';
 
 for (const i in arr) {
-  console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i);
 }
+// "0" "1" "2" "foo"
 
 for (const i of arr) {
-  console.log(i); // logs 3, 5, 7
+  console.log(i);
 }
+// Logs: 3 5 7
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",

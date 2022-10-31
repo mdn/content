@@ -8,6 +8,7 @@ tags:
   - Reference
   - color
   - oklab
+  - Experimental
 browser-compat: css.types.color.oklab
 ---
 
