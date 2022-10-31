@@ -105,7 +105,7 @@ const observer = new PerformanceObserver(perfObserver);
 observer.observe({ entryTypes: ["measure", "mark"] });
 ```
 
-For more information, see {{domxref("PerformanceObserver")}} and [Using Performance Timeline](https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline).
+For more information, see {{domxref("PerformanceObserver")}} and [Using Performance Timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline).
 
 ## Retrieving markers and measures
 
