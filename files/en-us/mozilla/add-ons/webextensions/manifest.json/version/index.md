@@ -40,7 +40,7 @@ Extension stores and browsers may enforce or warn if the version string doesn't 
 
 It may be possible to create an extension that appears to have a valid version number when run in a browser but doesn't comply with store requirements. Particular care should be taken when developing cross-browser extensions that use large number elements.
 
-Some browsers and web stores may recognize the [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key. This key enables you to provide a descriptive version string that is displayed rather than the version number. For example, `1.0 beta`.
+Some browsers and web stores may recognize the [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key. This key enables you to provide a descriptive version string that may be displayed instead of the version number. For example, `1.0 beta`.
 
 ### Comparing versions
 
