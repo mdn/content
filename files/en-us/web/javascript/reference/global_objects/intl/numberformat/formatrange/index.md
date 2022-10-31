@@ -57,11 +57,11 @@ const nf = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // → "€3 – €5"
+console.log(nf.formatRange(3, 5)); // "€3 – €5"
 
 // Note: the "approximately equals" symbol is added if
-//   startRange and endRange round to the same values.
-console.log(nf.formatRange(2.9, 3.1)); // → "~€3"
+// startRange and endRange round to the same values.
+console.log(nf.formatRange(2.9, 3.1)); // "~€3"
 ```
 
 ```js
@@ -71,8 +71,8 @@ const nf = new Intl.NumberFormat("es-ES", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // → "3-5 €"
-console.log(nf.formatRange(2.9, 3.1)); // → "~3 €"
+console.log(nf.formatRange(3, 5)); // "3-5 €"
+console.log(nf.formatRange(2.9, 3.1)); // "~3 €"
 ```
 
 ## Specifications

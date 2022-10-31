@@ -28,11 +28,10 @@ x -= y // x = x - y
 ### Using subtraction assignment
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar -= 2; //     3
-bar -= "foo"; // NaN
+bar -= 2; // 3
+bar -= 'foo'; // NaN
 ```
 
 ## Specifications

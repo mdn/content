@@ -17,7 +17,7 @@ tags:
 browser-compat: html.elements.input.type_image
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.
 
@@ -201,7 +201,7 @@ Let's look at a basic example that includes all the essential features you'd nee
   - : Specifies the HTTP method that the browser uses to submit the form. Possible values are:
 
     - `post`: The data from the form is included in the body of the form and is sent to the server.
-    - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+    - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side effects and contains only ASCII characters.
 
     If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
 
@@ -331,7 +331,7 @@ label {
 }
 ```
 
-Here, `object-position` is configured to draw the image at the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
+Here, `object-position` is configured to draw the image in the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
 
 ## Specifications
 

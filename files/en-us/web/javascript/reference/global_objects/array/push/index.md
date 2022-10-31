@@ -125,8 +125,7 @@ const obj = {
 // Let's add some empty objects just to illustrate.
 obj.addElem({});
 obj.addElem({});
-console.log(obj.length);
-// → 2
+console.log(obj.length); // 2
 ```
 
 Note that although `obj` is not an array, the method `push`
