@@ -391,4 +391,4 @@ In audio terms, **fan-in** describes the process by which a {{domxref("ChannelMe
 
 **Fan-out** describes the opposite process, whereby a {{domxref("ChannelSplitterNode")}} takes a multi-channel input source and outputs multiple _mono_ output signals:
 
-![Fan-out process diagram. A single point-less arrow representing a multi-channel input source splits to output multiple ponted arrows representing multiple mono output signals](fanout.svg)
+![Fan-out process diagram. A single point-less arrow representing a multi-channel input source splits to output multiple pointed arrows representing multiple mono output signals](fanout.svg)

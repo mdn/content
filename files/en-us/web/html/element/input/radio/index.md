@@ -92,18 +92,15 @@ The resulting HTML looks like this:
 ```html
 <form>
   <fieldset>
-  <legend>Please select your preferred contact method:</legend>
+    <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email">
+      <input type="radio" id="contactChoice1" name="contact" value="email" />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>
@@ -136,14 +133,11 @@ Let's add a little bit of code to our example so we can examine the data generat
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email">
+      <input type="radio" id="contactChoice1" name="contact" value="email" />
       <label for="contactChoice1">Email</label>
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>
@@ -160,15 +154,19 @@ Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event lis
 const form = document.querySelector("form");
 const log = document.querySelector("#log");
 
-form.addEventListener("submit", (event) => {
-  const data = new FormData(form);
-  let output = "";
-  for (const entry of data) {
-    output = `${output}${entry[0]}=${entry[1]}\r`;
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  (event) => {
+    const data = new FormData(form);
+    let output = "";
+    for (const entry of data) {
+      output = `${output}${entry[0]}=${entry[1]}\r`;
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false
+);
 ```
 
 Try this example out and see how there's never more than one result for the `contact` group.
@@ -186,6 +184,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
     Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
 - {{htmlattrdef("value")}}
+
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
 - {{htmlattrdef("required")}}
@@ -204,23 +203,24 @@ To make a radio button selected by default, you include `checked` attribute, as 
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>
       <button type="submit">Submit</button>
     </div>
   </fieldset>
-
 </form>
 ```
 

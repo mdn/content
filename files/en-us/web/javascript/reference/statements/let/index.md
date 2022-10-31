@@ -216,7 +216,7 @@ This is still in the temporal dead zone as its declaration statement has not bee
 ```js example-bad
 function go(n) {
   // n here is defined!
-  console.log(n); // Object {a: [1,2,3]}
+  console.log(n); // { a: [1, 2, 3] }
 
   for (let n of n.a) { // ReferenceError
     console.log(n);

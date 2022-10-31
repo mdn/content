@@ -67,7 +67,7 @@ to use the logical OR operator
 ```js
 let foo;
 
-//  foo is never assigned any value so it is still undefined
+// foo is never assigned any value so it is still undefined
 const someDummyText = foo || 'Hello!';
 ```
 
@@ -113,11 +113,11 @@ function B() { console.log('B was called'); return false;}
 function C() { console.log('C was called'); return "foo";}
 
 console.log(A() ?? C());
-// logs "A was called" then "C was called" and then "foo"
+// Logs "A was called" then "C was called" and then "foo"
 // as A() returned undefined so both expressions are evaluated
 
 console.log(B() ?? C());
-// logs "B was called" then "false"
+// Logs "B was called" then "false"
 // as B() returned false (and not null or undefined), the right
 // hand side expression was not evaluated
 ```
@@ -163,6 +163,7 @@ console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not availabl
 
 ## See also
 
-- The [optional chaining operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- The [logical nullish assignment (`??=`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
+- The [optional chaining (`?.`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - The [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
 - [Default parameters in functions](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)

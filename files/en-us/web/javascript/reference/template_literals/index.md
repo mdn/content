@@ -53,13 +53,13 @@ To supply a function of your own, precede the template literal with a function n
 To escape a backtick in a template literal, put a backslash (`\`) before the backtick.
 
 ```js
-`\`` === "`"; // --> true
+`\`` === "`"; // true
 ```
 
 Dollar signs can be escaped as well to prevent interpolation.
 
 ```js
-`\${1}` === "${1}"; // --> true
+`\${1}` === "${1}"; // true
 ```
 
 ### Multi-line strings
@@ -271,7 +271,7 @@ function tag(strings) {
 }
 
 tag`string text line 1 \n string text line 2`;
-// logs "string text line 1 \n string text line 2" ,
+// Logs "string text line 1 \n string text line 2" ,
 // including the two characters '\' and 'n'
 ```
 

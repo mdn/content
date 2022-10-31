@@ -7,6 +7,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.externally_connectable
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

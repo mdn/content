@@ -41,7 +41,6 @@ The `atan2(y, x)` function accepts two comma-separated values as its parameters.
 
 - `y`
   - : The y coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}}, or a {{cssxref("&lt;percentage&gt;")}}.
-
 - `x`
   - : The y coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}}, or a {{cssxref("&lt;percentage&gt;")}}.
 

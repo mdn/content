@@ -48,22 +48,17 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
     the following values are available additionally:
 
     - `gl.COPY_READ_BUFFER`
-      - : Buffer for copying from one buffer object
-          to another.
+      - : Buffer for copying from one buffer object to another.
     - `gl.COPY_WRITE_BUFFER`
-      - : Buffer for copying from one buffer object
-          to another.
+      - : Buffer for copying from one buffer object to another.
     - `gl.TRANSFORM_FEEDBACK_BUFFER`
-      - : Buffer for transform feedback
-          operations.
+      - : Buffer for transform feedback operations.
     - `gl.UNIFORM_BUFFER`
       - : Buffer used for storing uniform blocks.
     - `gl.PIXEL_PACK_BUFFER`
-      - : Buffer used for pixel transfer
-          operations.
+      - : Buffer used for pixel transfer operations.
     - `gl.PIXEL_UNPACK_BUFFER`
-      - : Buffer used for pixel transfer
-          operations.
+      - : Buffer used for pixel transfer operations.
 
 - `dstByteOffset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes where the data replacement
@@ -93,8 +88,8 @@ None ({{jsxref("undefined")}}).
 ### Using `bufferSubData`
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);

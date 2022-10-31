@@ -531,7 +531,7 @@ GIF supports simple animation, in which following an initial full-size frame, a 
 GIF has been extremely popular for decades, due to its simplicity and compatibility.
 Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
 
-Another popular feature of GIF is support for [interlacing](https://en.wikipedia.org/wiki/Interlacing_(bitmaps)), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
+Another popular feature of GIF is support for [interlacing](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
 This is particularly useful when network connections are slow.
 
 GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.

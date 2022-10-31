@@ -139,7 +139,7 @@ const restock = { restock: true };
 const sufficient = { restock: false };
 const result = inventory.groupToMap(({ quantity }) => quantity < 6 ? restock : sufficient);
 console.log(result.get(restock));
-// expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
 Note that the function argument `{ quantity }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter).
@@ -154,12 +154,11 @@ For this reason it is important that anything that needs to use the map keeps a 
 // The key can be modified and still used
 restock['fast'] = true;
 console.log(result.get(restock));
-// expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
 
 // A new key can't be used, even if it has the same structure!
 const restock2 = { restock: true };
-console.log(result.get(restock2));
-// expected output: undefined
+console.log(result.get(restock2)); // undefined
 ```
 
 ### Using groupToMap() on sparse arrays

@@ -33,9 +33,9 @@ Which one the language decides to adopt depends on the identity of `OP1` ad `OP2
 If `OP1` and `OP2` have different precedence levels (see the table below), the operator with the higher _precedence_ goes first and associativity does not matter. Observe how multiplication has higher precedence than addition and executed first, even though addition is written first in the code.
 
 ```js
-console.log(3 + 10 * 2); // logs 23
-console.log(3 + (10 * 2)); // logs 23 because parentheses here are superfluous
-console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
+console.log(3 + 10 * 2); // 23
+console.log(3 + (10 * 2)); // 23, because parentheses here are superfluous
+console.log((3 + 10) * 2); // 26, because the parentheses change the order
 ```
 
 Within operators of the same precedence, the language groups them by _associativity_. _Left-associativity_ (left-to-right) means that it is interpreted as `(a OP1 b) OP2 c`, while _right-associativity_ (right-to-left) means it is interpreted as `a OP1 (b OP2 c)`. Assignment operators are right-associative, so you can write:
@@ -117,7 +117,7 @@ Operator precedence will be handled _recursively_. For example, consider this ex
 First, we group operators with different precedence by decreasing levels of precedence.
 
 1. The `**` operator has the highest precedence, so it's grouped first.
-2. Looking around the `**` expression, it has `*` on the right and `+` on the right. `*` has higher precedence, so it's grouped first. `*` and `/` have the same precedence, so we group them together for now.
+2. Looking around the `**` expression, it has `*` on the right and `+` on the left. `*` has higher precedence, so it's grouped first. `*` and `/` have the same precedence, so we group them together for now.
 3. Looking around the `*`/`/` expression grouped in 2, because `+` has higher precedence than `>>`, the former is grouped.
 
 ```js
