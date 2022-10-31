@@ -179,7 +179,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
+        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
       </td>
       <td>
         Playback is ready to start after having been paused or delayed due to
