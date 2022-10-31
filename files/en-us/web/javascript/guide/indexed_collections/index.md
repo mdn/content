@@ -206,6 +206,7 @@ const sparseArray = ['first', 'second', , 'fourth'];
 sparseArray.forEach((element) => {
   console.log(element);
 });
+// Logs:
 // first
 // second
 // fourth
@@ -219,6 +220,7 @@ const nonsparseArray = ['first', 'second', undefined, 'fourth'];
 nonsparseArray.forEach((element) => {
   console.log(element);
 });
+// Logs:
 // first
 // second
 // undefined
@@ -380,6 +382,7 @@ const a = ['a', 'b', 'c'];
 a.forEach((element) => {
   console.log(element);
 });
+// Logs:
 // a
 // b
 // c
@@ -521,7 +524,7 @@ console.log(arr[2]); // undefined
 for (const i of arr) {
   console.log(i);
 }
-// 1 2 undefined undefined 5
+// Logs: 1 2 undefined undefined 5
 
 // Spreading
 const another = [...arr]; // "another" is [ 1, 2, undefined, undefined, 5 ]
@@ -540,7 +543,7 @@ const keys = Object.keys(arr); // [ '0', '1', '4' ]
 for (const key in arr) {
   console.log(key);
 }
-// '0' '1' '4'
+// Logs: '0' '1' '4'
 // Spreading into an object uses property enumeration, not the array's iterator
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
