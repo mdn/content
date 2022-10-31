@@ -9,6 +9,8 @@ tags:
 
 {{AddonSidebar}}
 
+This page describes legacy web extension version string formats. See the manifest [version key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) documentation for information on the current version string format.
+
 ## Firefox legacy version number
 
 A **version string** consists of one or more _version parts_, separated by dots.
