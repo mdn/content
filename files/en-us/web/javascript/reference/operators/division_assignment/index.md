@@ -33,7 +33,7 @@ let bar = 5;
 bar /= 2; // 2.5
 bar /= 2; // 1.25
 bar /= 0; // Infinity
-bar /= 'foo'; // NaN
+bar /= "foo"; // NaN
 ```
 
 ## Specifications
