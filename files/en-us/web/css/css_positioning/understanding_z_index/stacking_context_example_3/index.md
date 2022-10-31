@@ -13,7 +13,7 @@ tags:
 
 ## Description
 
-This last example shows problems that arise when mixing several positioned elements in a multi-level HTML hierarchy and when `z-index`es are assigned using class selectors.
+This last example shows problems that arise when mixing several positioned elements in a multi-level HTML hierarchy and when `z-index` values are assigned using class selectors.
 
 Let's take as an example a three-level hierarchical menu made from several positioned `div`s. Second-level and third-level `div`s appear when hovering or clicking on their parents. Usually this kind of menu is script-generated either client-side or server-side, so style rules are assigned with a class selector instead of the id selector.
 
