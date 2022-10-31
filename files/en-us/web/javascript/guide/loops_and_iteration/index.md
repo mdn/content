@@ -453,7 +453,7 @@ for (const i in arr) {
 for (const i of arr) {
   console.log(i);
 }
- // 3 5 7
+// Logs: 3 5 7
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
