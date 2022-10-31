@@ -9,21 +9,21 @@ tags:
 
 {{DefaultAPISidebar("User Timing API")}}
 
-The **User Timing API** allows you measure the performance of applications using [high-precision timestamps](/en-US/docs/Web/API/DOMHighResTimeStamp) that are part of the browser's performance timeline.
+The **User Timing API** allows you to measure the performance of applications using [high-precision timestamps](/en-US/docs/Web/API/DOMHighResTimeStamp) that are part of the browser's performance timeline.
 There are two types of timing performance entries:
 
 - {{domxref("PerformanceMark")}} entries are marks that you can name and add at any location in an application.
 - {{domxref("PerformanceMeasure")}} entries are time measurements between two marks.
 
-This document explains in detail how to work with the mark and measure performance entry types. If you are already familiar with the API, see also the [User Timing API](/en-US/docs/Web/API/User_Timing_API) overview page, or consult the reference pages.
+This document explains how to work with the mark and measure performance entry types. If you are already familiar with the API, see the [User Timing API](/en-US/docs/Web/API/User_Timing_API) overview page, or consult the reference pages.
 
 ## What is User Timing?
 
-The browser provides certain information (performance entries) to the browser's performance timeline for you. This includes, for example, entries provided by the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API) that determine the length of time it takes to fetch a resource like an image.
+The browser provides certain information (called _performance entries_) to the browser's performance timeline for you. This includes, for example, entries provided by the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API) that determine the time it takes to fetch a resource like an image.
 
-The browser, however, can not determine what is going on your application. For example, when a user clicks a button or performs a specific task within your application there is no high precision performance measurement. The User Timing API is an extension to the browser's performance timeline and helps you to measure and record performance data that is custom to your application.
+The browser, however, can not determine what is going on in your application. For example, when a user clicks a button or performs a specific task within your application, there is no high-precision performance measurement. The User Timing API is an extension to the browser's performance timeline and helps you to measure and record performance data that is custom to your application.
 
-The advantage of using this API, over calls to {{jsxref("Date.now()")}} or {{domxref("performance.now()")}}, is that you can give the markers a name and that it integrates well with performance tooling. Browser's developer tools can display performance marks in Performance Panels and it also works with other performance APIs like {{domxref("PerformanceObserver")}} objects.
+The advantage of using this API, over calls to {{jsxref("Date.now()")}} or {{domxref("performance.now()")}}, is that you can give the markers a name and that it integrates well with performance tooling. Browser's developer tools can display performance marks in Performance Panels, and it also works with other performance APIs like {{domxref("PerformanceObserver")}} objects.
 
 ## Adding performance markers
 
@@ -39,7 +39,7 @@ performance.mark("login-started");
 performance.mark("login-finished");
 ```
 
-If the `name` argument isn't enough, `mark()` is configurable using an options object where you can put additional information in the `detail` property (can be of any type). You can also set a different `startTime` if needed. In the following code, the `startTime` is set to `12.5` and additional information like the html element used is provided with `detail`.
+If the `name` argument isn't enough, `mark()` is configurable using an options object where you can put additional information in the `detail` property, which can be of any type. You can also set a different `startTime` if needed. In the following code, the `startTime` is set to `12.5`, and additional information, like the HTML element used, is provided with `detail`.
 
 ```js
 performance.mark("login-started", {
@@ -50,11 +50,11 @@ performance.mark("login-started", {
 
 ## Measuring duration between markers
 
-Now that you added markers into your application, you can measure the time between the markers.
+Now that you added markers to your application, you can measure the time between them.
 
-The {{domxref("Performance.measure()")}} method is used to create a {{domxref("PerformanceMeasure")}} object. It accepts a name parameter, used to identify the measure, and two marks, start and end, that it should measure between. The following example creates "login-duration" measure and measures between the start and the finish of the login process.
+The {{domxref("Performance.measure()")}} method is used to create a {{domxref("PerformanceMeasure")}} object. It accepts a `name` parameter, used to identify the measure, and two marks, `start` and `end`, that it should measure between. The following example creates a `"login-duration"` measure and measures between the start and the finish of the login process.
 
-The object then has a `duration` property which calculated the end mark timestamp minus the start mark timestamp for you. You can log this value or send it it some analytics end point, for example.
+The object then has a `duration` property which calculates the end mark timestamp minus the start mark timestamp for you. For example, you can log this value or send it to some analytics endpoint.
 
 ```js
 const loginMeasure = performance.measure(
@@ -111,10 +111,10 @@ For more information, see {{domxref("PerformanceObserver")}} and [Using Performa
 
 There are many different performance entries in the browser's performance timeline. Some are added by the browser, and some might be added by you, like the login markers and measures from the examples above.
 
-To retrieve performance marks and measures at a single point in time, the {{domxref("Performance")}} interface provides three methods as shown below.
+To retrieve performance marks and measures at a single point in time, the {{domxref("Performance")}} interface provides three methods, as shown below.
 
-> **Note:** The methods below do not notify you about new performance markers; you will only get markers that have been created at the time you call these methods.
-> See the section [Observing performance measures](#observing_performance_measures) above for receiving notifications about new metrics as they come available using a {{domxref("PerformanceObserver")}}. Usually, using performance observers is the preferred way to get performance markers and measures.
+> **Note:** The methods below do not notify you about new performance markers; you will only get markers that have been created when you call these methods.
+> See the section [Observing performance measures](#observing_performance_measures) above for receiving notifications about new metrics as they become available using a {{domxref("PerformanceObserver")}}. Usually, using performance observers is the preferred way to get performance markers and measures.
 
 The {{domxref("Performance.getEntries","performance.getEntries()")}} method gets all performance entries. You can filter them as needed.
 
@@ -148,7 +148,7 @@ The {{domxref("Performance.getEntriesByName","performance.getEntriesByName(name,
 
 ```js
 // Log all marks named "debug-marks"
-const debugMarks = performance.getEntriesByName("debug-mark","mark");
+const debugMarks = performance.getEntriesByName("debug-mark", "mark");
 debugMarks.forEach((entry) => {
   console.log(`${entry.name}'s startTime: ${entry.startTime}`);
 });
