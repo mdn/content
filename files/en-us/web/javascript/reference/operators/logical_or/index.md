@@ -114,7 +114,7 @@ o10 = false || varObject // f || object returns varObject
 > **Note:** If you use this operator to provide a default value to some
 > variable, be aware that any _falsy_ value will not be used. If you only need to
 > filter out [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, consider using
-> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
 
 ### Conversion rules for booleans
 
@@ -173,7 +173,7 @@ is always equal to:
 
 ## See also
 
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}
