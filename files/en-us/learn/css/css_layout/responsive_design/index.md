@@ -80,6 +80,8 @@ A common approach when using Media Queries is to create a simple single-column l
 
 If using breakpoints, best practices encourage defining media query breakpoints with [relative units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) rather than absolute sizes of an individaul device.
 
+There are different approaches to the styles defined within a media query block; ranging from using media queries to {{cssxref('link')}} style sheets based on browser size ranges to only including custom properties variables to store values associated with each breakpoint.
+
 Find out more in the MDN documentation for [Media Queries](/en-US/docs/Web/CSS/Media_Queries).
 
 Media queries can help with RWD, but are not a requirement. Flexible grids, relative units, and minimum and maximum unit values can be used without queries.
