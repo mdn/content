@@ -22,7 +22,7 @@ tags:
 browser-compat: html.elements.img
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 

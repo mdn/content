@@ -78,10 +78,10 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 ```js
 const mySet1 = new Set()
 
-mySet1.add(1)           // Set [ 1 ]
-mySet1.add(5)           // Set [ 1, 5 ]
-mySet1.add(5)           // Set [ 1, 5 ]
-mySet1.add('some text') // Set [ 1, 5, 'some text' ]
+mySet1.add(1)           // Set(1) { 1 }
+mySet1.add(5)           // Set(2) { 1, 5 }
+mySet1.add(5)           // Set(2) { 1, 5 }
+mySet1.add('some text') // Set(3) { 1, 5, 'some text' }
 const o = {a: 1, b: 2}
 mySet1.add(o)
 
@@ -101,39 +101,38 @@ mySet1.has(5)       // false, 5 has been removed
 
 mySet1.size         // 4, since we just removed one value
 
-mySet1.add(5)       // Set [1, 'some text', {...}, {...}, 5] - a previously deleted item will be added as a new item, it will not retain its original position before deletion
+mySet1.add(5)       // Set(5) { 1, 'some text', {...}, {...}, 5 } - a previously deleted item will be added as a new item, it will not retain its original position before deletion
 
-console.log(mySet1)
-// logs Set(5) [ 1, "some text", {…}, {…}, 5 ] in Firefox
-// logs Set(5) { 1, "some text", {…}, {…}, 5 } in Chrome
+console.log(mySet1) // Set(5) { 1, "some text", {…}, {…}, 5 }
 ```
 
 ### Iterating Sets
 
+Iteration of sets visits elements in insertion order.
+
 ```js
-// iterate over items in set
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1) {
   console.log(item);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1.keys()) {
   console.log(item);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1.values()) {
   console.log(item);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
-// (key and value are the same here)
+// key and value are the same here
 for (const [key, value] of mySet1.entries()) {
   console.log(key);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// convert Set object to an Array object, with Array.from
+// Convert Set object to an Array object, with Array.from
 const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
 
 // the following will also work if run in an HTML document
@@ -155,7 +154,6 @@ const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
 mySet2.forEach((value) => {
   console.log(value);
 });
-
 // 1
 // 2
 // 3

@@ -270,7 +270,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
 - {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
 
 ### Conditional (ternary) operator
 
@@ -293,7 +293,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
 - {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
 - {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
 

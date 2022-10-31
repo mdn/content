@@ -50,7 +50,7 @@ As we talked about in our HTML [Multimedia and embedding](/en-US/docs/Learn/HTML
 
 This however was still not enough. While you could use [CSS](/en-US/docs/Learn/CSS) and [JavaScript](/en-US/docs/Learn/JavaScript) to animate (and otherwise manipulate) SVG vector images — as they are represented by markup — there was still no way to do the same for bitmap images, and the tools available were rather limited. The Web still had no way to effectively create animations, games, 3D scenes, and other requirements commonly handled by lower level languages such as C++ or Java.
 
-The situation started to improve when browsers began to support the {{htmlelement("canvas")}} element and associated [Canvas API](/en-US/docs/Web/API/Canvas_API) — Apple invented it in around 2004, and other browsers followed by implementing it in the years that followed. As you'll see below, canvas provides many useful tools for creating 2D animations, games, data visualizations, and other types of app, especially when combined with some of the other APIs the web platform provides.
+The situation started to improve when browsers began to support the {{htmlelement("canvas")}} element and associated [Canvas API](/en-US/docs/Web/API/Canvas_API) in 2004. As you'll see below, canvas provides some useful tools for creating 2D animations, games, data visualizations, and other types of applications, especially when combined with some of the other APIs the web platform provides, but can be difficult or impossible to make accessible
 
 The below example shows a simple 2D canvas-based bouncing balls animation that we originally met in our [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice) module:
 

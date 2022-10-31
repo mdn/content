@@ -32,8 +32,7 @@ class caseInsensitiveSearch {
   }
 }
 
-console.log("foobar".search(new caseInsensitiveSearch("BaR")));
-// expected output: 3
+console.log("foobar".search(new caseInsensitiveSearch("BaR"))); // 3
 ```
 
 ## Specifications

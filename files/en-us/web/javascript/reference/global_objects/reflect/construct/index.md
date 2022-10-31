@@ -127,20 +127,20 @@ function OtherClass() {
 }
 
 const obj1 = Reflect.construct(OneClass, args);
-// Output:
-//     OneClass
-//     function OneClass { ... }
+// Logs:
+// OneClass
+// function OneClass { ... }
 
 const obj2 = Reflect.construct(OneClass, args, OtherClass);
-// Output:
-//     OneClass
-//     function OtherClass { ... }
+// Logs:
+// OneClass
+// function OtherClass { ... }
 
 const obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args);
-// Output:
-//     OneClass
-//     undefined
+// Logs:
+// OneClass
+// undefined
 ```
 
 ## Examples

@@ -143,6 +143,48 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
+### Height & Width attributes for `<source>`
+
+HTML attributes for [height](/en-US/docs/Web/HTML/Element/source#attr-height) & [width](/en-US/docs/Web/HTML/Element/source#attr-width) ({{bug(1694741)}}).
+
+These attributes can be used in {{HTMLElement("source")}} elements when they are children of {{HTMLElement("picture")}} elements and help to eliminate layout shift.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.picture_source_dimension_attributes.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -2011,6 +2053,7 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
 ### CSP "script-src-elem" and "script-src-attr" directives
 
 The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
+
 <table>
   <thead>
     <tr>

@@ -68,7 +68,7 @@ void function () {
   console.log("Executed!");
 }();
 
-// Output: "Executed!"
+// Logs "Executed!"
 ```
 
 This is a bit longer than wrapping the function expression in parentheses, which has the same effect of forcing the `function` keyword to be parsed as the start of an expression instead of a statement.
