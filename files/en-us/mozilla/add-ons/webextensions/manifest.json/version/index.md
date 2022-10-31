@@ -35,12 +35,12 @@ The version string consists of 1 to 4 numbers separated by dots, for example, `1
 
 Extension stores and browsers may enforce or warn if the version string doesn't comply with this format. They may also apply restrictions to the range of numbers available. For example:
 
-- Firefox Browser Add-ons requires version strings using numbers of up to nine digits, complying with this regular expression `^(0|[1-9]\d{0,9})(\.(0|[1-9]\d{0,9})){0,3}$`. Also, from Firefox 108, a warning is provided if an extension is installed with a version number that doesn't match this format.
-- The Chrome Web Store requires [numbers between 0 and 65535](https://developer.chrome.com/docs/extensions/mv3/manifest/version/) and does not permit all-zero extension strings. For example 0.0 or 0.0.0.0 are not permitted.
+- [addons.mozilla.org](https://addons.mozilla.org/) (AMO) allows version strings using numbers of up to nine digits, complying with this regular expression `^(0|[1-9][0-9]{0,8})([.](0|[1-9][0-9]{0,8})){0,3}$`. Also, from Firefox 108, a warning is provided if an extension is installed with a version number that doesn't match this format.
+- The Chrome Web Store requires [numbers between 0 and 65535](https://developer.chrome.com/docs/extensions/mv3/manifest/version/) and does not permit all-zero extension strings. For example, 0.0 or 0.0.0.0 are not permitted.
 
 It may be possible to create an extension that appears to have a valid version number when run in a browser but doesn't comply with store requirements. Particular care should be taken when developing cross-browser extensions that use large number elements.
 
-Use [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) if you want to include an identifier in the version number that isn't supported by the store or browser. For example, `1.0 beta`.
+Some browsers and web stores may recognize the [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key. This key enables you to provide a descriptive version string that is displayed rather than the version number. For example, `1.0 beta`.
 
 ### Comparing versions
 
