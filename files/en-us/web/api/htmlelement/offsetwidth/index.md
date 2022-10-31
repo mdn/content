@@ -35,7 +35,7 @@ An integer corresponding to the `offsetWidth` pixel value of the element. The `o
 
 ## Examples
 
-![Shows the components of the offset-width property. We see five regions labeled margin-top, border-top, padding-top, border-bottom and margin-bottom. The offset-width is the sum of the width of these regions returned as an integer.](dimensions-offset.png)
+![An example element with large padding, border and margin. `offsetWidth` is the layout width of the element including its padding and border, and excluding its margin.](dimensions-offset.png)
 
 ## Specifications
 
