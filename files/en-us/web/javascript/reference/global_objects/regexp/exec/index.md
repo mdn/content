@@ -39,12 +39,12 @@ If the match succeeds, the `exec()` method returns an array and updates the [`la
 - `input`
   - : The original string that was matched against.
 - `groups`
-  - : An object of named capturing groups whose keys are the names and values are the capturing groups or {{jsxref("undefined")}} if no named capturing groups were defined. See [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) for more information.
+  - : A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) of named capturing groups, whose keys are the names, and values are the capturing groups, or {{jsxref("undefined")}} if no named capturing groups were defined. See [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) for more information.
 - `indices` {{optional_inline}}
 
   - : This property is only present when the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag is set. It is an array where each entry represents the bounds of a substring match. Each substring match itself is an array where the first entry represents its start index and the second entry its end index.
 
-    It additionally has a `groups` property which holds an object of all named capturing groups. The keys are the names of the capturing groups and each value is an array with the first item being the start entry and the second entry being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, `groups` is `undefined`.
+    It additionally has a `groups` property which holds a [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) of all named capturing groups. The keys are the names of the capturing groups and each value is an array with the first item being the start entry and the second entry being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, `groups` is `undefined`.
 
 ## Description
 
