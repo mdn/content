@@ -272,6 +272,7 @@ In all cases, `[@@toPrimitive]()`, if present, must be callable and return a pri
 ## See also
 
 - [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
+- [Common Data Structures implemented in JavaScript](https://github.com/stuymedova/common-data-structures)
 - [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
 - [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
 - [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
