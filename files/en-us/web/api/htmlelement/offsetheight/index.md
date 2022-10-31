@@ -37,7 +37,7 @@ A number.
 
 ## Examples
 
-![Shows the components of the offset-height property. We see five regions labeled margin-top, border-top, padding-top, border-bottom and margin-bottom. The offset-height is the sum of the height of these regions returned as an integer.](dimensions-offset.png)
+![An example element with large padding, border and margin. `offsetHeight` is the layout height of the element including its padding and border, and excluding its margin.](dimensions-offset.png)
 
 The example image above shows a scrollbar and an `offsetHeight` which fits
 on the window. However, non-scrollable elements may have large `offsetHeight`
