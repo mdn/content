@@ -219,6 +219,8 @@ Then the short-circuiting effect of `&&` would only prevent `C()` from being eva
 
 However, note that short-circuiting does not change the final evaluation outcome. It only affects the evaluation of _operands_, not how _operators_ are grouped — if evaluation of operands doesn't have side effects (for example, logging to the console, assigning to variables, throwing an error), short-circuiting would not be observable at all.
 
+The assignment counterparts of these operators ([`&&=`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment), [`||=`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment), [`??=`](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)) are short-circuited as well. They are short-circuited in a way that the assignment does not happen at all.
+
 ## Table
 
 The following table lists operators in order from highest precedence (18) to lowest precedence (1).
@@ -589,7 +591,7 @@ Several notes about the table:
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
           >Nullish coalescing operator (??)</a
         >
       </td>
