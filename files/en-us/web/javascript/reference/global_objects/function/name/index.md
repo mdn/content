@@ -243,7 +243,7 @@ With a `static name()` method `Foo.name` no longer holds the actual class name b
 
 ```js
 const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // function name()
+console.log(fooInstance.constructor.name); // ƒ name() {}
 ```
 
 Due to the existence of static fields, `name` may not be a function either.
