@@ -115,7 +115,7 @@ existence of a property on the _global object_, using the
 
 ```js
 if ("x" in window) {
-  // these statements execute only if x is defined globally
+  // These statements execute only if x is defined globally
 }
 ```
 
