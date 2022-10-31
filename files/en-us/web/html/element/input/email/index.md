@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.input.type_email
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an e-mail address, or, if the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is specified, a list of e-mail addresses.
 
@@ -96,7 +96,7 @@ The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constrain
 
 ### minlength
 
-The minimum number of characters (as UTF-16 code units) the user can enter into the `email` input. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `email` input has no minimum length.
+The minimum number of characters (as UTF-16 code units) the user can enter into the `email` input. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `email` input has no minimum length.
 
 The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
@@ -138,7 +138,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ## Using email inputs
 
-E-mail addresses are among the most frequently-inputted textual data forms on the web; they're used when logging into web sites, when requesting information, to allow order confirmation, for webmail, and so forth. As such, the `email` input type can make your job as a web developer much easier since it can help simplify your work when building the user interface and logic for e-mail addresses. When you create an email input with the proper `type` value, `email`, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate e-mail address. This can help avoid cases in which the user mistypes their address, or provides an invalid address.
+E-mail addresses are among the most frequently-inputted textual data forms on the web; they're used when logging into websites, when requesting information, to allow order confirmation, for webmail, and so forth. As such, the `email` input type can make your job as a web developer much easier since it can help simplify your work when building the user interface and logic for e-mail addresses. When you create an email input with the proper `type` value, `email`, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate e-mail address. This can help avoid cases in which the user mistypes their address, or provides an invalid address.
 
 It's important, however, to note that this is not enough to ensure that the specified text is an e-mail address which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be an e-mail address.
 
@@ -269,7 +269,7 @@ Browsers that support the `email` input type automatically provide validation to
 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
-To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid, see [Form data validation](/en-US/docs/Learn/Forms/Form_validation).
+To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid, see [Form data validation](/en-US/docs/Learn/Forms/Form_validation).
 
 > **Note:** There are known specification issues related to international domain names and the validation of e-mail addresses in HTML. See [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) for details.
 
