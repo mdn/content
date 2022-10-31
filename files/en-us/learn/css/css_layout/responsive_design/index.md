@@ -90,7 +90,7 @@ Media queries can help with RWD, but are not a requirement. Flexible grids, rela
 
 Responsive sites are built on flexible grids, meaning you don't need to target every possible device size with pixel perfect layouts.
 
-By using a flexible grid, you can change a feature or add in a breakpoint and change the design at the point where the content starts to look bad. For example, if the line lengths become unreadably long as the screen size increases you can use {{cssxref('columns')}}; if a box becomes squashed with two words on each line as it narrows you can set a breakpoint.
+By using a flexible grid, you can change a feature or add in a breakpoint and change the design at the point where the content starts to look bad. For example, to ensure line lengths don't become unreadably long as the screen size increases you can use {{cssxref('columns')}}; if a box becomes squashed with two words on each line as it narrows you can set a breakpoint.
 
 Several layout methods, including [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.
 
@@ -111,6 +111,8 @@ If you instead specify a `column-width`, you are specifying a _minimum_ width. T
   column-width: 10em;
 }
 ```
+
+You can use the {{cssxref('columns')}} shorthand to provides a maximum number of columns and a minimum column width. This can ensure line lengths don't become unreadably long as the screen size increases or too narrow as the screen size decreases.
 
 ### Flexbox
 
