@@ -11177,6 +11177,7 @@
 /en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /en-US/docs/Web/CSS/CSS_Color	/en-US/docs/Web/CSS/CSS_Colors
 /en-US/docs/Web/CSS/CSS_Compositing_and_Blending	/en-US/docs/Web/CSS/Compositing_and_Blending
+/en-US/docs/Web/CSS/CSS_Device_Adaptation	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
@@ -11208,7 +11209,7 @@
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/display-inside
 /en-US/docs/Web/CSS/CSS_Types/display-outside	/en-US/docs/Web/CSS/display-outside
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_Basic_User_Interface
-/en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS/CSS_Device_Adaptation
+/en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/Web/CSS/CSS_percentage_values	/en-US/docs/Web/CSS

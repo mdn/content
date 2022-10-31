@@ -279,8 +279,6 @@ There are other settings you can use with the viewport meta tag, however in gene
 
 You should avoid using `minimum-scale`, `maximum-scale`, and in particular setting `user-scalable` to `no`. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.
 
-> **Note:** There was a CSS @ rule designed to replace the viewport meta tag — [@viewport](/en-US/docs/Web/CSS/@viewport) — however, the rule failed to gain traction and has been deprecated. @viewport should not be used.
-
 ## Summary
 
 Responsive design refers to a site or application design that responds to the environment in which it is viewed. It encompasses a number of CSS and HTML features and techniques and is now essentially just how we build websites by default. Consider the sites that you visit on your phone — it is probably fairly unusual to come across a site that is the desktop version scaled down, or where you need to scroll sideways to find things. This is because the web has moved to this approach of designing responsively.
