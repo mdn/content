@@ -68,7 +68,7 @@ console.log(loginMeasure.duration);
 
 The {{domxref("Performance.measure()")}} method is also configurable using an options object, so you can do more advanced measurements or provide additional information using the `detail` property.
 
-For example, you can use the [`event.timestamp`](/en-US/docs/Web/API/Event/timeStamp) property from a [`click` event](/en-US/docs/Web/API/Element/click_event) to know exactly when a user clicked login and measure that to the point in time when the UI was updated and the user sees they are logged in (which is the `"login-finished"` marker here).
+For example, you can use the [`event.timestamp`](/en-US/docs/Web/API/Event/timeStamp) property from a [`click` event](/en-US/docs/Web/API/Element/click_event) to know exactly when a user clicked login and measure that to the point in time when the UI was updated, which is the `"login-finished"` marker here.
 
 ```js
 loginButton.addEventListener('click', (clickEvent) => {
