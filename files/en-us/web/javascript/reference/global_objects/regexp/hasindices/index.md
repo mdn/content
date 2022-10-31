@@ -21,7 +21,11 @@ The **`hasIndices`** accessor property indicates whether or not the `d` flag is 
 
 `RegExp.prototype.hasIndices` has the value `true` if the `d` flag was used; otherwise, `false`. The `d` flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group. It does not change the regex's interpretation or matching behavior in any way, but only provides additional information in the matching result.
 
+This flag primarily affects the return value of [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec). If the `d` flag is present, the array returned by `exec()` has an additional `indices` property as described in the `exec()` method's [return value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#return_value). Because all other regex-related methods (such as {{jsxref("String.prototype.match()")}}) call `exec()` internally, they will also return the indices if the regex has the `d` flag.
+
 The set accessor of `hasIndices` is `undefined`. You cannot change this property directly.
+
+For a usage example, see [using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups_and_match_indices).
 
 ## Examples
 
