@@ -68,11 +68,10 @@ You can then use `env()` in your CSS:
 
 ```css
 body {
-  padding:
-    env(safe-area-inset-top, 20px)
-    env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px)
-    env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
+      safe-area-inset-bottom,
+      20px
+    ) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -148,11 +147,10 @@ The below example makes use of the optional second parameter of `env()`, which a
 p {
   width: 300px;
   border: 2px solid red;
-  padding:
-    env(safe-area-inset-top, 50px)
-    env(safe-area-inset-right, 50px)
-    env(safe-area-inset-bottom, 50px)
-    env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
+      safe-area-inset-bottom,
+      50px
+    ) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -162,29 +160,16 @@ p {
 
 ```css
 /* zero for all rectangular user agents */
-padding: env(
-  safe-area-inset-bottom,
-  50px
-);
+padding: env(safe-area-inset-bottom, 50px);
 
 /* 50px because UA properties are case sensitive */
-padding: env(
-  Safe-area-inset-bottom,
-  50px
-);
+padding: env(Safe-area-inset-bottom, 50px);
 
 /* as if padding: '50px 20px' were set because x is not a valid environment variable */
-padding: env(
-  x,
-  50px 20px
-);
+padding: env(x, 50px 20px);
 
 /* ignored because '50px, 20px' is not a valid padding value and x is not a valid environment variable */
-padding: env(
-  x,
-  50px,
-  20px
-);
+padding: env(x, 50px, 20px);
 ```
 
 The syntax of the fallback, like that of custom properties, allows commas. But, if the property value doesn't support commas, the value is not valid.
@@ -238,7 +223,6 @@ main {
 - [CSS Custom Properties for Cascading Variables](/en-US/docs/Web/CSS/CSS_Variables)
 - [Custom Properties (--\*)](/en-US/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-- {{CSSxRef("@viewport", "viewport-fit (@viewport)")}}
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)
