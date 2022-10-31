@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.dd
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, definition, or value for the preceding term ({{HTMLElement("dt")}}) in a description list ({{HTMLElement("dl")}}).
 

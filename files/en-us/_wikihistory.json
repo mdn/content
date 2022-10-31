@@ -78120,28 +78120,6 @@
       "webinista"
     ]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2020-12-03T08:29:56.177Z",
-    "contributors": [
-      "wbamberg",
-      "chrisdavidmills",
-      "Kinan-Diraneyya",
-      "sideshowbarker",
-      "Zhang-Junzhi",
-      "ExE-Boss",
-      "mfluehr",
-      "fscholz",
-      "Sheppy",
-      "erikadoyle",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "hexalys",
-      "miller9904",
-      "nishanths",
-      "jswisher"
-    ]
-  },
   "Web/CSS/Adjacent_sibling_combinator": {
     "modified": "2020-10-15T21:03:44.777Z",
     "contributors": [
@@ -78739,17 +78717,6 @@
       "Ptak82",
       "PablO",
       "Spanglerco"
-    ]
-  },
-  "Web/CSS/CSS_Device_Adaptation": {
-    "modified": "2020-10-15T21:38:35.406Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "DaleGardner",
-      "Sebastianz",
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Display": {

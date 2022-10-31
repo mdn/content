@@ -308,7 +308,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}} {{Deprecated_Inline}}
+- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.

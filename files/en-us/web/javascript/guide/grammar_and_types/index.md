@@ -234,7 +234,7 @@ Also, the contents of an array are not protected, so the following statement is 
 ```js
 const MY_ARRAY = ['HTML','CSS'];
 MY_ARRAY.push('JAVASCRIPT');
-console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
+console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 ```
 
 ## Data structures and types

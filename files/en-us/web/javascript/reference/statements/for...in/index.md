@@ -78,7 +78,7 @@ for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
 }
 
-// Output:
+// Logs:
 // "obj.a = 1"
 // "obj.b = 2"
 // "obj.c = 3"
@@ -105,7 +105,7 @@ for (const prop in obj) {
   }
 }
 
-// Output:
+// Logs:
 // "obj.color = red"
 ```
 

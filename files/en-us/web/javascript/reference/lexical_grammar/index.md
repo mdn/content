@@ -322,13 +322,13 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is _exponent_ or _power_ number – a signed integer.
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
-175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
-1E3    // => 1000
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
 ```
 
 #### Binary

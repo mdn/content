@@ -85,8 +85,8 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
     "use strict";
     eval?.(`"use strict"; with(Math) console.log(PI);`);
   }
-  strictContext(); // logs 3.141592653589793
-  strictContextStrictEval(); // throws a SyntaxError because the source string is in strict mode
+  strictContext(); // Logs 3.141592653589793
+  strictContextStrictEval(); // Throws a SyntaxError because the source string is in strict mode
   ```
 
   On the other hand, direct eval inherits the strictness of the invoking context.
@@ -99,8 +99,8 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
     "use strict";
     eval(`with(Math) console.log(PI);`);
   }
-  nonStrictContext(); // logs 3.141592653589793
-  strictContext(); // throws a SyntaxError because it's in strict mode
+  nonStrictContext(); // Logs 3.141592653589793
+  strictContext(); // Throws a SyntaxError because it's in strict mode
   ```
 
 - `var`-declared variables and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) would go into the surrounding scope if the source string is not interpreted in strict mode — for indirect eval, they become global variables. If it's a direct eval in a strict mode context, or if the `eval` source string itself is in strict mode, then `var` and function declarations do not "leak" into the surrounding scope.
@@ -311,7 +311,7 @@ which are much faster and safer:
 ```js
 const obj = { a: 20, b: 30 };
 const propName = getPropName();  // returns "a" or "b"
-const result = obj[propName];  //  obj[ "a" ] is the same as obj.a
+const result = obj[propName];  // obj["a"] is the same as obj.a
 ```
 
 You can even use this method to access descendant properties. Using `eval()`

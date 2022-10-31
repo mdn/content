@@ -477,7 +477,7 @@ Each property is assigned an array containing the elements in the group.
 ```js
 const result = inventory.group(({ type }) => type);
 console.log(result.vegetables);
-// expected output: Array [Object { name: "asparagus", type: "vegetables" }]
+// [{ name: "asparagus", type: "vegetables" }]
 ```
 
 Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
@@ -578,7 +578,7 @@ const execResult = myRe.exec('cdbBdbsbz');
 
 console.log(execResult.input); // 'cdbBdbsbz'
 console.log(execResult.index); // 1
-console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
+console.log(execResult); // [ "dbBd", "bB", "d" ]
 ```
 
 For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
