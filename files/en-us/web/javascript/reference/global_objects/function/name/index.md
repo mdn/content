@@ -259,7 +259,7 @@ If a class has a static property called `name`, it will also become _writable_. 
 
 ```js
 Foo.name = 'Hello';
-console.log(Foo.name); // "Hello" if class Foo has a static name() property but "Foo" if not.
+console.log(Foo.name); // "Hello" if class Foo has a static "name" property, but "Foo" if not.
 ```
 
 Therefore you may not rely on the built-in `name` property to always hold a class's name.
