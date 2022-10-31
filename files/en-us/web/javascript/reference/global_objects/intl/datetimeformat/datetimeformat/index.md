@@ -375,6 +375,7 @@ for (const zoneName of timezoneNames) {
   console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
+// Logs:
 // short: 12/16/2021, PST
 // long: 12/16/2021, Pacific Standard Time
 // shortOffset: 12/16/2021, GMT-8
