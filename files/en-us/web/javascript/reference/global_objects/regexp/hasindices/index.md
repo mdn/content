@@ -25,9 +25,9 @@ This flag primarily affects the return value of [`exec()`](/en-US/docs/Web/JavaS
 
 The set accessor of `hasIndices` is `undefined`. You cannot change this property directly.
 
-For a usage example, see [using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups_and_match_indices).
-
 ## Examples
+
+There a more detailed usage example at [Groups and backreferences > Using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups_and_match_indices).
 
 ### Using hasIndices
 
