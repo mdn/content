@@ -71,7 +71,7 @@ also understand Indonesian, and therefore return the Balinese language tag as we
 const locales = ["ban", "id-u-co-pinyin", "de-ID"];
 const options = { localeMatcher: "lookup" };
 console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
-// → "id-u-co-pinyin, de-ID"
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

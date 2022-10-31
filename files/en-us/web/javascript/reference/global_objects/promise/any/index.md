@@ -66,7 +66,8 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
   // pFast fulfills first
 });
-// expected output: "Done quick"
+// Logs:
+// Done quick
 ```
 
 ### Rejections with AggregateError
@@ -81,7 +82,7 @@ const failure = new Promise((resolve, reject) => {
 Promise.any([failure]).catch((err) => {
   console.log(err);
 });
-// expected output: "AggregateError: No Promise in Promise.any was resolved"
+// AggregateError: No Promise in Promise.any was resolved
 ```
 
 ### Displaying the first image loaded

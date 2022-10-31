@@ -120,11 +120,9 @@ const p = new Proxy({}, handler);
 p.a = 1;
 p.b = undefined;
 
-console.log(p.a, p.b);
-//  1, undefined
+console.log(p.a, p.b); // 1, undefined
 
-console.log('c' in p, p.c);
-//  false, 37
+console.log('c' in p, p.c); // false, 37
 ```
 
 ### No-op forwarding proxy
@@ -135,12 +133,9 @@ In this example, we are using a native JavaScript object to which our proxy will
 const target = {};
 const p = new Proxy(target, {});
 
-p.a = 37;
-//  operation forwarded to the target
+p.a = 37; // Operation forwarded to the target
 
-console.log(target.a);
-//  37
-//  (The operation has been properly forwarded!)
+console.log(target.a); // 37 (The operation has been properly forwarded!)
 ```
 
 Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private property forwarding](#no_private_property_forwarding) for more information.
@@ -372,22 +367,14 @@ const products = new Proxy({
   }
 });
 
-console.log(products.browsers);
-//  ['Internet Explorer', 'Netscape']
+console.log(products.browsers); // ['Internet Explorer', 'Netscape']
 
-products.browsers = 'Firefox';
-//  pass a string (by mistake)
-
-console.log(products.browsers);
-//  ['Firefox'] <- no problem, the value is an array
+products.browsers = 'Firefox'; // pass a string (by mistake)
+console.log(products.browsers); // ['Firefox']; no problem, the value is an array
 
 products.latestBrowser = 'Chrome';
-
-console.log(products.browsers);
-//  ['Firefox', 'Chrome']
-
-console.log(products.latestBrowser);
-//  'Chrome'
+console.log(products.browsers); // ['Firefox', 'Chrome']
+console.log(products.latestBrowser); // 'Chrome'
 ```
 
 ### Finding an array item object by its property

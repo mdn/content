@@ -51,7 +51,7 @@ function returnLast(arr) {
 }
 
 const lastItem = returnLast(uint8);
-console.log(lastItem); // Logs: 18
+console.log(lastItem); // 18
 ```
 
 ### Comparing methods
@@ -64,15 +64,15 @@ const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
 // Using length property
 const lengthWay = uint8[uint8.length - 2];
-console.log(lengthWay); // Logs: 11
+console.log(lengthWay); // 11
 
 // Using slice() method. Note an array is returned
 const sliceWay = uint8.slice(-2, -1);
-console.log(sliceWay[0]); // Logs: 11
+console.log(sliceWay[0]); // 11
 
 // Using at() method
 const atWay = uint8.at(-2);
-console.log(atWay); // Logs: 11
+console.log(atWay); // 11
 ```
 
 ## Specifications

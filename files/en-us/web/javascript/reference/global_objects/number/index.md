@@ -176,7 +176,7 @@ const notANum = Number.NaN;
 The following example shows the minimum and maximum integer values that can be represented as `Number` object.
 
 ```js
-const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9007199254740991
+const biggestInt = Number.MAX_SAFE_INTEGER; // (2**53 - 1) => 9007199254740991
 const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9007199254740991
 ```
 
