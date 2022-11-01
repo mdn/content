@@ -76,7 +76,7 @@ The result types are described below.
 
 ## Examples
 
-This basic example presents a function `reader()` which reads a file from a [file input](/en-US/docs/Web/HTML/Element/input/file). It works by creating a {{domxref("FileReader")}} object and creating a listener for {{domxref("FileReader/load_event", "load")}} event such that when then file is read, the `result` is obtained and passed to the callback function provided to `reader(file, callback)`.
+This example presents a function `reader()` which reads a file from a [file input](/en-US/docs/Web/HTML/Element/input/file). It works by creating a {{domxref("FileReader")}} object and creating a listener for {{domxref("FileReader/load_event", "load")}} events, such that when then file is read, the `result` is obtained and passed to the callback function provided to `reader()`.
 
 The content is handled as raw text data.
 
