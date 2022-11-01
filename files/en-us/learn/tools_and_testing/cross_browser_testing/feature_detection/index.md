@@ -292,9 +292,9 @@ It now contains a large number of classes that indicate the support status of di
 
 - `cssgridlegacy` or `no-cssgridlegacy` depending on whether a legacy version of grid is or is not supported.
 
-> **Note:** You can find a list of what most of the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features). Unfortunately,
+> **Note:** You can find a list of what most of the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features).
 
-Modernizr does not test for support of some new CSS features like container queries, cascade layers, or subgrid. If it did, we would update our `@supports` example in the following way:
+Unfortunately, Modernizr does not test for support of some new CSS features like container queries, cascade layers, or subgrid. If it did, we would update our `@supports` example in the following way:
 
 ```css
 main {
