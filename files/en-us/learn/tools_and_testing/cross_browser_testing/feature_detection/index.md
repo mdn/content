@@ -294,7 +294,7 @@ It now contains a large number of classes that indicate the support status of di
 
 > **Note:** You can find a list of what most of the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features). Unfortunately,
 
-Modernizr does not test for support of some new CSS features like container queries, cascade layers, or subgrid. If it did, we would update our @supports example in the following way:
+Modernizr does not test for support of some new CSS features like container queries, cascade layers, or subgrid. If it did, we would update our `@supports` example in the following way:
 
 ```css
 main {
