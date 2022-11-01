@@ -25,7 +25,7 @@ A {{domxref("VideoColorSpace")}} object.
 The following example prints the `colorSpace` to the console.
 
 ```js
-console.log(VideoFrame.colorSpace);
+console.log(videoFrame.colorSpace);
 ```
 
 ## Specifications
