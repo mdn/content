@@ -78120,28 +78120,6 @@
       "webinista"
     ]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2020-12-03T08:29:56.177Z",
-    "contributors": [
-      "wbamberg",
-      "chrisdavidmills",
-      "Kinan-Diraneyya",
-      "sideshowbarker",
-      "Zhang-Junzhi",
-      "ExE-Boss",
-      "mfluehr",
-      "fscholz",
-      "Sheppy",
-      "erikadoyle",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "hexalys",
-      "miller9904",
-      "nishanths",
-      "jswisher"
-    ]
-  },
   "Web/CSS/Adjacent_sibling_combinator": {
     "modified": "2020-10-15T21:03:44.777Z",
     "contributors": [
@@ -78739,17 +78717,6 @@
       "Ptak82",
       "PablO",
       "Spanglerco"
-    ]
-  },
-  "Web/CSS/CSS_Device_Adaptation": {
-    "modified": "2020-10-15T21:38:35.406Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "DaleGardner",
-      "Sebastianz",
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Display": {
@@ -122811,10 +122778,6 @@
     "modified": "2020-12-11T06:01:32.854Z",
     "contributors": ["bershanskiy", "hinell", "jridgewell", "fscholz"]
   },
-  "Web/JavaScript/Reference/Operators/Logical_nullish_assignment": {
-    "modified": "2020-10-15T22:31:36.573Z",
-    "contributors": ["hinell", "jridgewell", "fscholz"]
-  },
   "Web/JavaScript/Reference/Operators/Multiplication": {
     "modified": "2020-10-15T22:30:30.916Z",
     "contributors": ["fscholz", "wbamberg"]
@@ -122823,7 +122786,7 @@
     "modified": "2020-10-15T22:30:34.996Z",
     "contributors": ["fscholz"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-12-04T00:50:22.490Z",
     "contributors": [
       "OtterOne",
@@ -122839,6 +122802,10 @@
       "wbamberg",
       "SphinxKnight"
     ]
+  },
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment": {
+    "modified": "2020-10-15T22:31:36.573Z",
+    "contributors": ["hinell", "jridgewell", "fscholz"]
   },
   "Web/JavaScript/Reference/Operators/Object_initializer": {
     "modified": "2020-12-09T16:49:20.024Z",

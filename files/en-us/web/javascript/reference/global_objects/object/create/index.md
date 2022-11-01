@@ -169,7 +169,7 @@ const rect = new Rectangle();
 
 console.log("Is rect an instance of Rectangle?", rect instanceof Rectangle); // true
 console.log("Is rect an instance of Shape?", rect instanceof Shape); // true
-rect.move(1, 1); // Outputs, 'Shape moved.'
+rect.move(1, 1); // Logs 'Shape moved.'
 ```
 
 Note that there are caveats to watch out for using `create()`, such as re-adding the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property to ensure proper semantics. Although `Object.create()` is believed to have better performance than mutating the prototype with {{jsxref("Object.setPrototypeOf()")}}, the difference is in fact negligible if no instances have been created and property accesses haven't been optimized yet. In modern code, the [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax should be preferred in any case.

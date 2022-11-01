@@ -244,7 +244,7 @@ const customerName = customer.name?.getName?.(); // Method does not exist, custo
 
 ### Combining with the nullish coalescing operator
 
-The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) may be used after optional chaining in order to build a default value when none was found:
+The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) may be used after optional chaining in order to build a default value when none was found:
 
 ```js
 function printCustomerCity(customer) {
@@ -272,4 +272,4 @@ printCustomerCity({
 
 ## See also
 
-- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

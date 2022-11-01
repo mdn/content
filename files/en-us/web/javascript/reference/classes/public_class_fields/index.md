@@ -50,8 +50,7 @@ class ClassWithStaticField {
   static staticField = 'static field';
 }
 
-console.log(ClassWithStaticField.staticField);
-// expected output: "static field"
+console.log(ClassWithStaticField.staticField); // "static field"
 ```
 
 Fields without initializers are initialized to `undefined`.
@@ -61,9 +60,8 @@ class ClassWithStaticField {
   static staticField;
 }
 
-console.assert(Object.hasOwn(ClassWithStaticField, 'staticField'));
-console.log(ClassWithStaticField.staticField);
-// expected output: "undefined"
+console.log(Object.hasOwn(ClassWithStaticField, 'staticField')); // true
+console.log(ClassWithStaticField.staticField); // "undefined"
 ```
 
 Public static fields are not reinitialized on subclasses, but can be accessed via the
@@ -78,11 +76,8 @@ class SubClassWithStaticField extends ClassWithStaticField {
   static subStaticField = 'sub class field';
 }
 
-console.log(SubClassWithStaticField.subStaticField);
-// expected output: "sub class field"
-
-console.log(SubClassWithStaticField.baseStaticField);
-// expected output: "base field"
+console.log(SubClassWithStaticField.subStaticField); // "sub class field"
+console.log(SubClassWithStaticField.baseStaticField); // "base field"
 ```
 
 When initializing fields, `this` refers to the class constructor. You can
@@ -101,11 +96,9 @@ class SubClassWithStaticField extends ClassWithStaticField {
   static subStaticField = super.baseStaticMethod();
 }
 
-console.log(ClassWithStaticField.anotherBaseStaticField);
-// expected output: "base static field"
+console.log(ClassWithStaticField.anotherBaseStaticField); // "base static field"
 
-console.log(SubClassWithStaticField.subStaticField);
-// expected output: "base static method output"
+console.log(SubClassWithStaticField.subStaticField); // "base static method output"
 ```
 
 ### Public instance fields
@@ -124,8 +117,7 @@ class ClassWithInstanceField {
 }
 
 const instance = new ClassWithInstanceField();
-console.log(instance.instanceField);
-// expected output: "instance field"
+console.log(instance.instanceField); // "instance field"
 ```
 
 Fields without initializers are initialized to `undefined`.
@@ -137,8 +129,7 @@ class ClassWithInstanceField {
 
 const instance = new ClassWithInstanceField();
 console.assert(Object.hasOwn(instance, 'instanceField'));
-console.log(instance.instanceField);
-// expected output: "undefined"
+console.log(instance.instanceField); // "undefined"
 ```
 
 Like properties, field names may be computed.
@@ -151,8 +142,7 @@ class ClassWithComputedFieldName {
 }
 
 const instance = new ClassWithComputedFieldName();
-console.log(instance.prefixField);
-// expected output: "prefixed field"
+console.log(instance.prefixField); // "prefixed field"
 ```
 
 When initializing fields `this` refers to the class instance under
@@ -173,11 +163,9 @@ class SubClassWithInstanceField extends ClassWithInstanceField {
 const base = new ClassWithInstanceField();
 const sub = new SubClassWithInstanceField();
 
-console.log(base.anotherBaseInstanceField);
-// expected output: "base field"
+console.log(base.anotherBaseInstanceField); // "base field"
 
-console.log(sub.subInstanceField);
-// expected output: "base method output"
+console.log(sub.subInstanceField); // "base method output"
 ```
 
 Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor.
@@ -261,8 +249,7 @@ class ClassWithStaticMethod {
   }
 }
 
-console.log(ClassWithStaticMethod.staticMethod());
-// expected output: "static method has been called."
+console.log(ClassWithStaticMethod.staticMethod()); // "static method has been called."
 ```
 
 The static methods are added to the class constructor with
@@ -281,8 +268,7 @@ class ClassWithPublicInstanceMethod {
 }
 
 const instance = new ClassWithPublicInstanceMethod();
-console.log(instance.publicMethod());
-// expected output: "hello world"
+console.log(instance.publicMethod()); // "hello world"
 ```
 
 Public instance methods are added to the class prototype at the time of class
@@ -318,8 +304,7 @@ class SubClass extends BaseClass {
 }
 
 const instance = new SubClass();
-console.log(instance.subPublicMethod());
-// expected output: "hello world"
+console.log(instance.subPublicMethod()); // "hello world"
 ```
 
 Getters and setters are special methods that bind to a class property and are called
@@ -338,12 +323,10 @@ class ClassWithGetSet {
 }
 
 const instance = new ClassWithGetSet();
-console.log(instance.msg);
-// expected output: "hello world"
+console.log(instance.msg); // "hello world"
 
 instance.msg = 'cake';
-console.log(instance.msg);
-// expected output: "hello cake"
+console.log(instance.msg); // "hello cake"
 ```
 
 ## Specifications

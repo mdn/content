@@ -31,7 +31,7 @@ class ReverseSplit {
 }
 
 console.log("Another one bites the dust".split(new ReverseSplit()));
-// expected output: [ "dust", "the", "bites", "one", "Another" ]
+// [ "dust", "the", "bites", "one", "Another" ]
 ```
 
 ## Specifications

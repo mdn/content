@@ -60,16 +60,17 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
   }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
-//   "i = 1, j = 0"
-//   "i = 2, j = 0"
-//   "i = 2, j = 1"
-//   "i = 2, j = 2"
-// Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
+// Logs:
+// i = 0, j = 0
+// i = 0, j = 1
+// i = 0, j = 2
+// i = 1, j = 0
+// i = 2, j = 0
+// i = 2, j = 1
+// i = 2, j = 2
 ```
+
+Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2".
 
 ### Using a labeled continue statement
 
@@ -108,13 +109,14 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
   }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
-//   "i = 1, j = 0"
-// Notice the difference with the previous continue example
+// Logs:
+// i = 0, j = 0
+// i = 0, j = 1
+// i = 0, j = 2
+// i = 1, j = 0
 ```
+
+Notice the difference with the previous `continue` example.
 
 ### Using a labeled break statement
 

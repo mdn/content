@@ -34,7 +34,7 @@ The process works like this (using {{domxref("MediaStreamTrack")}} as an example
 3. Finally, the track's `applyConstraints()` method is called to configure the API as desired by specifying the values or ranges of values it wishes to use for any of the constrainable properties about which it has a preference.
 4. The track's `getConstraints()` method returns the set of constraints passed into the most recent call to `applyConstraints()`. This may not represent the actual current state of the track, due to properties whose requested values had to be adjusted and because platform default values aren't represented. For a complete representation of the track's current configuration, use `getSettings()`.
 
-In the Media Stream API, both {{domxref("MediaStream")}} and {{domxref("MediaStreamTrack")}} have constrainable properties.
+In the Media Capture and Streams API, both {{domxref("MediaStream")}} and {{domxref("MediaStreamTrack")}} have constrainable properties.
 
 ## Determining if a constraint is supported
 
@@ -590,7 +590,7 @@ Here you can see the complete example in action.
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
