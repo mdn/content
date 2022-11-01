@@ -69,7 +69,7 @@ The Navigation API allows you to store state on each history entry. This is deve
 
 To get a {{domxref("NavigationHistoryEntry")}}'s state, you call its {{domxref("NavigationHistoryEntry.getState", "getState()")}} method. It is initially `undefined`, but when state information is set on the entry, it will return the previously-set state information.
 
-Setting state is a bit more nuanced. You can't retrieve the state value and then update it directly — the copy stored on the entry will not change. Instead, you need to update it while performing a {{domxref("Navigation.navigate", "navigate()")}} or {{domxref("Navigation.reload", "reload()")}} — each one of these optionally takes an options object parameter, which includes a `state` property containing the new state to set on the history entry. When these navigations complete, the state change will be automatically applied.
+Setting state is a bit more nuanced. You can't retrieve the state value and then update it directly — the copy stored on the entry will not change. Instead, you need to update it while performing a {{domxref("Navigation.navigate", "navigate()")}} or {{domxref("Navigation.reload", "reload()")}} — each one of these optionally takes an options object parameter, which includes a `state` property containing the new state to set on the history entry. When these navigations commit, the state change will be automatically applied.
 
 In other cases a state change is not automatically applied, and you will need to do it manually once the navigation has completed. This is handled using {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}. The {{domxref("Navigation/currententrychange_event", "currententrychange")}} will fire when the current entry change is complete.
 
