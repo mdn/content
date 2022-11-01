@@ -180,11 +180,10 @@ In this case, the two async functions are synchronous in effect, because they do
 
 ```js
 function foo(name) {
-  return Promise.resolve().then(() => {
-    console.log(name, "start");
-    console.log(name, "middle");
-    console.log(name, "end");
-  });
+  console.log(name, "start");
+  console.log(name, "middle");
+  console.log(name, "end");
+  return Promise.resolve();
 }
 ```
 
@@ -212,10 +211,47 @@ This corresponds to:
 
 ```js
 function foo(name) {
-  return Promise.resolve()
+  console.log(name, "start");
+  return Promise.resolve(console.log(name, "middle"))
     .then(() => {
-      console.log(name, "start");
+      console.log(name, "end");
+    });
+}
+```
+
+The first executed `await` ends the synchronous execution of async function.
+
+After the first one, `await` ends the current microtask.
+
+```js
+async function foo(name) {
+  console.log(name, "start");
+  await null;
+  console.log(name, "middle");
+  await null;
+  console.log(name, "end");
+}
+
+foo("First");
+foo("Second");
+
+// First start
+// Second start
+// First middle
+// Second middle
+// First end
+// Second end
+```
+
+This corresponds to:
+
+```js
+function foo(name) {
+  console.log(name, "start");
+  return Promise.resolve(null)
+    .then(() => {
       console.log(name, "middle");
+      return null;
     })
     .then(() => {
       console.log(name, "end");
@@ -224,6 +260,42 @@ function foo(name) {
 ```
 
 While the extra `then()` handler is not necessary and can be merged with the previous one, its existence means the code will take one extra tick to complete. The same happens for `await`. Therefore, make sure to use `await` only when necessary (to unwrap promises into their values).
+
+Other microtasks can execute before async function resumes.
+
+```js
+let i = 0;
+queueMicrotask(function test() {
+  i++;
+  console.log("microtask loop 1:", i);
+  if (i < 6) {
+    queueMicrotask(test);
+  }
+});
+let j = 0;
+queueMicrotask(function test() {
+  j++;
+  console.log("microtask loop 2:", j);
+  if (j < 6) {
+    queueMicrotask(test);
+  }
+});
+(async () => {
+  console.log("before await");
+  await null;
+  console.log("resume 1");
+  await null;
+  console.log("resume 2");
+  for (let i = 3; i < 6; i++) {
+    await null;
+    console.log("resume", i);
+  }
+})();
+queueMicrotask(() => {
+  console.log("queueMicrotask after calling async function");
+})
+console.log("sync");
+```
 
 ### Improving stack trace
 
