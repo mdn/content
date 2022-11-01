@@ -55,7 +55,7 @@ called, then both the `DOCUMENT_POSITION_CONTAINS` and
 const head = document.head;
 const body = document.body;
 
-if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+if (head.compareDocumentPosition(body) && Node.DOCUMENT_POSITION_FOLLOWING) {
   console.log('Well-formed document');
 } else {
   console.error('<head> is not before <body>');
