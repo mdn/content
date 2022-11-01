@@ -240,7 +240,7 @@ The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
   - : Change your sample document, `doc2.html`, adding this tag to it near the end, just before `</BODY>`: `<IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin">` Predict where the image will appear in your document. Then refresh your browser to see if you were correct.
 - Solution
   - : The image appears to the right of the second list.
-    ![](pin_placement.png)
+    ![A list of five placeholder texts is titled Numbered Paragraphs. A yellow pin is placed to the right of a blue box containing the list.](pin_placement.png)
 - Challenge
   - : Add a rule to your stylesheet that places the image in the top right of your document.
 - Solution
