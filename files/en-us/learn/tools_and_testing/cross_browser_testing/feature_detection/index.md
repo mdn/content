@@ -130,7 +130,7 @@ For example, we could rewrite our previous example to use `@supports`:
 
 This at-rule block applies the CSS rule within only if the current browser supports the `grid-template-columns: subgrid;` declaration. For a condition with a value to work, you need to include a complete declaration (not just a property name) and NOT include the semicolon on the end.
 
-`@supports` also has `AND`, `OR`, and `NOT` logic available — the other block applies the a regular grid layout if the subgrid option is not available:
+`@supports` also has `AND`, `OR`, and `NOT` logic available — the other block applies the regular grid layout if the subgrid option is not available:
 
 ```css
 @supports not (grid-template-columns: subgrid) {
