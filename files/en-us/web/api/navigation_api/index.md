@@ -107,7 +107,7 @@ There are a few perceived limitations with the Navigation API, which may or may 
 
 ```js
 navigation.addEventListener('navigate', navigateEvent => {
-    // Exit early if this navigation shouldn't be intercepted, 
+  // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
   if (shouldNotIntercept(navigateEvent)) return;
 
