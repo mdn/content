@@ -209,7 +209,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 }
 
 webPush.setVapidDetails(
-  'https://serviceworke.rs/',
+  'https://mdn.github.io/serviceworker-cookbook',
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
