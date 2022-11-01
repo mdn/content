@@ -74,9 +74,7 @@ You can write tests for CSS features by testing for the existence of _[element.s
 
 A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) support in a browser; for browsers that support the `subgrid` value for a subgrid value for [`grid-template-columns`](/en-US/docs/Web/CSS/grid-template-columns) and [`grid-template-rows`](/en-US/docs/Web/CSS/grid-template-rows), we can use subgrid in our layout. For browsers that don't, we could use regular grid that works fine but is not as cool-looking.
 
-For example, you could include a subgrid stylesheet if the value is supported.
-
-In the head of our HTML file we link to two stylesheets: one for all the styling, and one that implements the default layout if subgrid is not supported:
+Using this as an example, we could include a subgrid stylesheet if the value is supported and a regular grid stylesheet if not. To do so, we could include two stylesheets in the head of our HTML file: one for all the styling, and one that implements the default layout if subgrid is not supported:
 
 ```html
 <link href="basic-styling.css" rel="stylesheet">
