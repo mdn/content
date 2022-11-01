@@ -46,7 +46,7 @@ While the default responsive behavior may sound like no solution is needed, long
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
-Creating a non-resizeable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens.
+Creating a non-resizable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens.
 
 Responsive web design, or RWD, is a design approach that addresses the range of devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch.
 
@@ -78,7 +78,7 @@ You can add multiple media queries within a stylesheet, tweaking your whole layo
 
 A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for wider screens and implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first** design.
 
-If using breakpoints, best practices encourage defining media query breakpoints with [relative units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) rather than absolute sizes of an individaul device.
+If using breakpoints, best practices encourage defining media query breakpoints with [relative units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) rather than absolute sizes of an individual device.
 
 There are different approaches to the styles defined within a media query block; ranging from using media queries to {{cssxref('link')}} style sheets based on browser size ranges to only including custom properties variables to store values associated with each breakpoint.
 
@@ -130,7 +130,7 @@ In the example below the flex items will each take an equal amount of space in t
 }
 ```
 
-> **Note:** As an example, we have built a simple responsive layout above using flexbox. We use a breakboint to switch to multiple columns when the screen grows, and limit the size of the main content with {{cssxref('max-width')}}: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> **Note:** As an example, we have built a simple responsive layout above using flexbox. We use a breakpoint to switch to multiple columns when the screen grows, and limit the size of the main content with {{cssxref('max-width')}}: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### CSS grid
 
