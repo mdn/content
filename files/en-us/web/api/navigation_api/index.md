@@ -18,7 +18,7 @@ browser-compat:
   - api.Window.navigation
 ---
 
-{{securecontext_header}}{{seecompattable}}{{DefaultAPISidebar("Navigation API")}}
+{{seecompattable}}{{DefaultAPISidebar("Navigation API")}}
 
 The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also introspect an application's history entries. This is a successor to previous web platform features such as [The History API](/en-US/docs/Web/API/History_API) and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
 
@@ -41,7 +41,7 @@ Once a navigation is initiated, and your `intercept()` handler is called, a {{do
 
 > **Note:** In this context "transition" refers to the transition between one history entry and another. It isn't related to CSS transitions.
 
-> **Note:** You can also call {{domxref("Event.preventDefault", "preventDefault()")}} to stop the navigation entirely.
+> **Note:** In future implementations you will be able to call {{domxref("Event.preventDefault", "preventDefault()")}} to stop the navigation entirely. This is specced out, but not currently implemented anywhere.
 
 When the `intercept()` handler function's promise fulfills, the `Navigate` object's {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, allowing you to run cleanup code after a successful navigation has completed. If it rejects, meaning the navigation has failed, {{domxref("Navigation/navigateerror_event", "navigateerror")}} fires instead, allowing you to gracefully handle the failure case. There is also a {{domxref("NavigationTransition.finished", "finished")}} property on the `NavigationTransition` object, which fullfills or rejects at the same time as the aforementioned events are fired, providing another path for handling the success and failure cases if it is needed.
 
@@ -69,15 +69,13 @@ The Navigation API allows you to store state on each history entry. This is deve
 
 To get a {{domxref("NavigationHistoryEntry")}}'s state, you call its {{domxref("NavigationHistoryEntry.getState", "getState()")}} method. It is initially `undefined`, but when state information is set on the entry, it will return the previously-set state information.
 
-Setting state is a bit more nuanced. You can't retrieve the state value and then update it directly — the copy stored on the entry will not change. Instead, you need to update it while performing a {{domxref("Navigation.navigate", "navigate()")}} or {{domxref("Navigation.reload", "reload()")}} — each one of these optionally takes an options object parameter, which includes a `state` property containing the new state to set on the history entry. When these navigations commit, the state change will be automatically applied.
+Setting state is a bit more nuanced. You can't retrieve the state value and then update it directly — the copy stored on the entry will not change. Instead, you update it while performing a {{domxref("Navigation.navigate", "navigate()")}} or {{domxref("Navigation.reload", "reload()")}} — each one of these optionally takes an options object parameter, which includes a `state` property containing the new state to set on the history entry. When these navigations commit, the state change will be automatically applied.
 
-In other cases a state change is not automatically applied, and you will need to do it manually once the navigation has completed. This is handled using {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}. The {{domxref("Navigation/currententrychange_event", "currententrychange")}} will fire when the current entry change is complete.
-
-(I'M REALLY NOT SURE IF THIS SECTION ON STATE IS ACCURATE. I AM KINDA GUESSING AT THE "AUTOMATIC BEHAVIOR" MENTIONED ABOVE, AND WHEN UPDATECURRENTENTRY() SHOULD BE USED. NONE OF THE MATERIAL I'VE FOUND SEEMS PARTICULARLY CLEAR ON THIS POINT.)
+In some cases however, a state change will be independent from a navigation or reload — for example when a page contains an expandable/collapsible {{htmlelement("details")}} element. In this case, you might want to store the expanded/collapsed state in your history entry, so you can restore it when the user returns to the page or restarts their browser. Cases like this are handled using {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}. The {{domxref("Navigation/currententrychange_event", "currententrychange")}} will fire when the current entry change is complete.
 
 ### Limitations
 
-There are a few perceived limitations with the Navigation API, which may or may not be limitating depending on how your app is set up. Find out about these by reading [Modern client-side routing: the Navigation API > What's missing?](https://developer.chrome.com/docs/web-platform/navigation-api/#whats-missing)
+There are a few perceived limitations with the Navigation API, which may or may not be limiting depending on how your app is set up. Find out about these by reading [Modern client-side routing: the Navigation API > What's missing?](https://developer.chrome.com/docs/web-platform/navigation-api/#whats-missing)
 
 ## Interfaces
 
@@ -175,7 +173,7 @@ Or
 navigation.reload({state: newState});
 ```
 
-Or if the state could not be updated automatically during a navigation transition:
+Or if the state is independent from a navigation or reload:
 
 ```js
 navigation.updateCurrentEntry({state: newState});
@@ -192,3 +190,4 @@ navigation.updateCurrentEntry({state: newState});
 ## See also
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
+- [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
