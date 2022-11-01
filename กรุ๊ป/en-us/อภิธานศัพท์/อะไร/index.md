@@ -1,4 +1,4 @@
----
+เนื้อหา/ไฟล์/en-us/อภิธานศัพท์/โครเมียม/ index.md--
 title: Chrome
 slug: Glossary/Chrome
 tags:
