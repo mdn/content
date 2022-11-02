@@ -20,7 +20,6 @@ jobs:
         with:
           files: |
             **/*.md
-          max_fetch_depth: "180"
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
