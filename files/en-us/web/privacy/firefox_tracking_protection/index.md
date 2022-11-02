@@ -34,7 +34,7 @@ If tracking cookies were present, you would be able to view the list by clicking
 
 You can click "Manage Content Blocking" to change the blocking settings:
 
-![Content blocking settings dialog box image](content_blocking.png)
+![There are 3 levels of content blocking, standard, strict, or custom, which can be set to always on or only on when firefox is set to block known trackers.](content_blocking.png)
 
 ## How does Firefox choose what to block?
 
