@@ -66,7 +66,7 @@ const x = async function* (y) {
 };
 x(6)
   .next()
-  .then((res) => console.log(res.value)); // logs 36
+  .then((res) => console.log(res.value)); // 36
 ```
 
 ## Specifications

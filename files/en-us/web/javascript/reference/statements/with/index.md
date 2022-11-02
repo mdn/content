@@ -148,7 +148,7 @@ const namespace = new Proxy(
 );
 
 with (namespace) {
-  console.log(a, b, c); // logs "a b c"
+  console.log(a, b, c); // "a" "b" "c"
 }
 ```
 

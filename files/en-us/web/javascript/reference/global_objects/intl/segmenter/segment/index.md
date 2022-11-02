@@ -49,7 +49,6 @@ for (const {segment, index, isWordLike} of segments) {
     isWordLike ? " (word-like)" : ""
   );
 }
-// logs
 // segment at code units [0, 3]: «Moi» (word-like)
 // segment at code units [3, 4]: « »
 // segment at code units [4, 5]: «?»

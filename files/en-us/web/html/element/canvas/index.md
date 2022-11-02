@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.canvas
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 
@@ -89,7 +89,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - {{htmlattrdef("height")}}
   - : The height of the coordinate space in CSS pixels. Defaults to 150.
 - {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
+  - : Lets the canvas know whether translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
 - {{htmlattrdef("width")}}
   - : The width of the coordinate space in CSS pixels. Defaults to 300.
 
@@ -126,7 +126,7 @@ The maximum size of a `<canvas>` element is very large, but the exact size depen
 
 ### HTML
 
-This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to render the canvas, or if can't read a canvas.
+This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to read or render the canvas.
 
 ```html
 <canvas width="300" height="300">
