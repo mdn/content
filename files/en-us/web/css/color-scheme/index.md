@@ -93,4 +93,3 @@ To opt the entire page into the user's color scheme preferences declare `color-s
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}
-- [Auto Dark Theme - Chrome Developers](https://developer.chrome.com/blog/auto-dark-theme/)
