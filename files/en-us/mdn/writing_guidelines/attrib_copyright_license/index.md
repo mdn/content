@@ -72,7 +72,7 @@ If someone wants to donate an article to MDN that they previously published on t
 
 **If the content is published under an open license:**
 
-- Say what it is, and link to the license so we can check whether it is compatible with [MDN's license](/en-US/docs/MDN/About#using_mdn_web_docs_content).
+- Say what it is, and link to the license so we can check whether it is compatible with [MDN's license](https://github.com/mdn/content/blob/main/LICENSE.md).
 
 ## Linking to MDN Web Docs articles
 
