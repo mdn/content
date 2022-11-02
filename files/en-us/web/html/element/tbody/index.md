@@ -1,5 +1,5 @@
 ---
-title: '<tbody>: The Table Body element'
+title: "<tbody>: The Table Body element"
 slug: Web/HTML/Element/tbody
 tags:
   - Element
@@ -39,15 +39,15 @@ The `<tbody>` element, along with its related {{HTMLElement("thead")}} and {{HTM
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        A `<tbody>` element's start tag can be omitted if the first thing inside the `<tbody>` element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a `<tbody>`, {{HTMLElement("thead")}}, or `{{HTMLElement("tfoot")}}` element whose end tag has been omitted. (It can't be omitted if the element is empty.)
-        A `<tbody>` element's end tag can be omitted if the `<tbody>` element is immediately followed by a `<tbody>` or `{{HTMLElement("tfoot")}}` element, or if there is no more content in the parent element.
+        A <code>&lt;tbody&gt;</code> element's start tag can be omitted if the first thing inside the <code>&lt;tbody&gt;</code> element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a <code>&lt;tbody&gt;</code>, {{HTMLElement("thead")}}, or {{HTMLElement("tfoot")}} element whose end tag has been omitted. (It can't be omitted if the element is empty.)
+        A <code>&lt;tbody&gt;</code> element's end tag can be omitted if the <code>&lt;tbody&gt;</code> element is immediately followed by a <code>&lt;tbody&gt;</code> or {{HTMLElement("tfoot")}} element, or if there is no more content in the parent element.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Within the required parent {{ HTMLElement("table") }} element,
-        the `<tbody>` element can be added after a
+        the <code>&lt;tbody&gt;</code> element can be added after a
         {{ HTMLElement("caption") }},
         {{HTMLElement("colgroup") }}, and a
         {{ HTMLElement("thead") }} element.
