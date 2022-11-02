@@ -36,7 +36,7 @@ const listC = new Array(-100) //negative sign
 // RangeError: Invalid array length
 ```
 
-You can set the `length` property to truncate an array at any time. When you extend an array by changing its `length` property, the number of actual elements increases; for example, if you set `length` to 3 when it is currently 2, the array now contains 3 elements, which causes the third element to be a non-iterable empty slot.
+You can set the `length` property to truncate an array at any time. When you extend an array by changing its `length` property, the number of actual elements increases; for example, if you set `length` to 3 when it is currently 2, the array now contains 3 elements, which causes the third element to be an empty slot.
 
 ```js
 const arr = [1, 2];
