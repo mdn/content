@@ -7,8 +7,9 @@ tags:
   - Performance
   - Web Performance
 spec-urls:
-  - https://w3c.github.io/hr-time/
+  - https://wicg.github.io/element-timing/
   - https://w3c.github.io/event-timing/
+  - https://w3c.github.io/hr-time/
   - https://w3c.github.io/largest-contentful-paint/
   - https://w3c.github.io/longtasks/
   - https://w3c.github.io/navigation-timing/
@@ -17,84 +18,58 @@ spec-urls:
   - https://w3c.github.io/resource-timing/
   - https://w3c.github.io/server-timing/
   - https://w3c.github.io/user-timing/
-  - https://wicg.github.io/element-timing/
 ---
 
 {{DefaultAPISidebar("Performance API")}}
 
 The Performance API is a group of standards used to measure the performance of web applications.
-It provides high resolution points in time ({{domxref("DOMHighResTimeStamp")}}) and a performance timeline for benchmarking.
 
-The various timing APIs (see below) identify the bottlenecks of the web applications. They all appear as an entry ({{domxref("PerformanceEntry")}}) on the performance timeline. Performance observers ({{domxref("PerformanceObserver")}}) can notify about new performance entries.
+## Concepts and usage
+
+To ensure web applications are fast, it's important to measure and analyze various performance metrics. The Performance API provides important built-in metrics and the ability to add you own measurements to the browser's performance timeline. The performance timeline contains high precision timestamps and can be displayed in developer tools. You can also send its data to analytics end points to record performance metrics over time.
+
+Each performance metric is represented by a single {{domxref("PerformanceEntry")}}. It has a `name`, a `duration`, a `startTime`, and a `type`. All performance metrics extend the `PerformanceEntry` interface and qualify it further.
+
+Most of the performance entries are recorded for you without you having to do anything, and are then accessible either through {{domxref("Performance.getEntries()")}} or (preferably) through {{domxref("PerformanceObserver")}}. For example, {{domxref("PerformanceEventTiming")}} entries are recorded for events that take longer than a set threshold. But the Performance API also enables you to define and record your own custom events, using the {{domxref("PerformanceMark")}} and {{domxref("PerformanceMeasure")}} interfaces.
+
+The main {{domxref("Performance")}} interface is available for each global using {{domxref("performance_property", "self.performance")}} and enables you to add record custom performance entries, to clear performance entries, and to retrieve performance entries.
+
+The {{domxref("PerformanceObserver")}} interface enables to to listen for various types of performance entry as they are recorded.
 
 ![UML diagram of Performance APIs](diagram.svg)
 
-## Performance API reference docs
+## Interfaces
 
-<div class="index">
-
-### High resolution time
-
-- {{domxref("performance_property", "self.performance")}}
 - {{domxref("Performance")}}
-- {{domxref("DOMHighResTimeStamp")}}
-
-### Performance timeline
-
+  - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("performance_property", "self.performance")}}.
 - {{domxref("PerformanceEntry")}}
+  - : An entry on the performance timeline encapsulating a single performance metric. All performance metrics inherit from this interface.
 - {{domxref("PerformanceObserver")}}
+  - : Listens for new performance entries as they are recorded in the performance timeline.
 - {{domxref("PerformanceObserverEntryList")}}
-- {{domxref("Performance.getEntries()")}}
-- {{domxref("Performance.getEntriesByName()")}}
-- {{domxref("Performance.getEntriesByType()")}}
-
-### Resource Timing
-
-- {{domxref("PerformanceResourceTiming")}}
-- {{domxref("Performance.clearResourceTimings()")}}
-- {{domxref("Performance.setResourceTimingBufferSize()")}}
-- {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
-
-### User Timing
-
-- {{domxref("PerformanceMark")}}
-- {{domxref("PerformanceMeasure")}}
-- {{domxref("Performance.mark()")}}
-- {{domxref("Performance.measure()")}}
-- {{domxref("Performance.clearMarks()")}}
-- {{domxref("Performance.clearMeasures()")}}
-
-### Long Task Timing
-
-- {{domxref("PerformanceLongTaskTiming")}}
-- {{domxref("TaskAttributionTiming")}}
-
-### Navigation Timing
-
-- {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformanceTiming")}} {{deprecated_inline}}
-- {{domxref("PerformanceNavigation")}} {{deprecated_inline}}
-
-### Server Timing
-
-- {{domxref("PerformanceServerTiming")}}
-- {{HTTPHeader("Server-Timing")}}
-
-### Event Timing
-
-- {{domxref("PerformanceEventTiming")}}
-- {{domxref("Performance.eventCounts")}}
-
-### Element Timing
-
+  - : List of entries that were observed in a performance observer.
 - {{domxref("PerformanceElementTiming")}}
-
-### Paint Timing
-
+  - : Measures rendering timestamps of specific elements.
+- {{domxref("PerformanceEventTiming")}}
+  - : Measures latency of events and first input delay (FID).
+- {{domxref("PerformanceLongTaskTiming")}}
+  - : Detects long tasks that occupy rendering and block other tasks from being executed.
+- {{domxref("TaskAttributionTiming")}}
+  - : Identifies the type of task and the container that is responsible for the long task.
+- {{domxref("PerformanceMark")}}
+  - : Custom marker for your own entry on the performance timeline.
+- {{domxref("PerformanceMeasure")}}
+  - : Custom time measurement between two performance entries.
+- {{domxref("PerformanceNavigationTiming")}}
+  - : Measures document navigation events, like how much time it takes to load a document.
 - {{domxref("PerformancePaintTiming")}}
+  - : Measures render operations during web page construction.
 - {{domxref("LargestContentfulPaint")}}
-
-</div>
+  - : Measures the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
+- {{domxref("PerformanceResourceTiming")}}
+  - : Measures network loading metrics such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times for resources such as images, scripts, fetch calls, etc.
+- {{domxref("PerformanceServerTiming")}}
+  - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 
 ## Guides and tutorials
 
