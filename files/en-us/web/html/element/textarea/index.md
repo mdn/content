@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.textarea
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<textarea>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
 
@@ -42,7 +42,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("autocorrect") }} {{non-standard_inline}}
 
-  - : A string which indicates whether or not to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
+  - : A string which indicates whether to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
 
     - `on`
       - : Enable automatic spelling correction and text substitutions.
