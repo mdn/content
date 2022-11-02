@@ -39,9 +39,10 @@ None.
 
 ## Examples
 
-This example checks whether the document has focus every 300 milliseconds. To test the
-functionality of `hasFocus()`, click on the button to open a new window, and
-try switching between the two pages.
+The following example checks whether the current document has focus.
+We create a function called `checkPageFocus()` that updates an element depending on the result of `document.hasFocus()`.
+Two listeners are triggered on [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) events that call our `checkPageFocus()` function.
+To test `hasFocus()`, click on the button to open a new window and try switching between both pages.
 
 ### HTML
 
@@ -54,24 +55,28 @@ try switching between the two pages.
 
 ```js
 function checkPageFocus() {
-  const body = document.querySelector('body');
-  const log = document.getElementById('log');
+  const body = document.querySelector("body");
+  const log = document.getElementById("log");
 
   if (document.hasFocus()) {
-    log.textContent = 'This document has the focus.';
-    body.style.background = '#fff';
+    log.textContent = "This document has the focus.";
+    body.style.background = "#fff";
   } else {
-    log.textContent = 'This document does not have the focus.';
-    body.style.background = '#ccc';
+    log.textContent = "This document does not have the focus.";
+    body.style.background = "#ccc";
   }
 }
 
 function openWindow() {
-  window.open('https://developer.mozilla.org/', 'MDN', 'width=640,height=320,left=150,top=150');
+  window.open(
+    "https://developer.mozilla.org/",
+    "MDN",
+    "width=640,height=320,left=150,top=150"
+  );
 }
 
-// Check page focus every 300 milliseconds
-setInterval(checkPageFocus, 300);
+window.addEventListener("blur", checkPageFocus);
+window.addEventListener("focus", checkPageFocus);
 ```
 
 ### Result
