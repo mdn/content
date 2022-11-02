@@ -188,7 +188,7 @@ console.log(
   })),
 );
 // [ 1, 2, 2, 4, 3, 6 ]
-// [ { '0': 1, length: 2 }, { '0': 2, length: 2 }, { '0': 3, length: 2 } ]
+// [ { '0': 1, length: 1 }, { '0': 2, length: 1 }, { '0': 3, length: 1 } ]
 ```
 
 ## Specifications
