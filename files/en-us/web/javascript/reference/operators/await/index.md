@@ -108,7 +108,7 @@ async function f3() {
   console.log(y); // 20
 
   const obj = {};
-  console.log(await obj === obj); // true
+  console.log((await obj) === obj); // true
 }
 
 f3();
@@ -180,10 +180,11 @@ In this case, the two async functions are synchronous in effect, because they do
 
 ```js
 function foo(name) {
-  return Promise.resolve().then(() => {
+  return new Promise((resolve) => {
     console.log(name, "start");
     console.log(name, "middle");
     console.log(name, "end");
+    resolve();
   });
 }
 ```
@@ -212,18 +213,59 @@ This corresponds to:
 
 ```js
 function foo(name) {
-  return Promise.resolve()
-    .then(() => {
-      console.log(name, "start");
-      console.log(name, "middle");
-    })
-    .then(() => {
-      console.log(name, "end");
-    });
+  return new Promise((resolve) => {
+    console.log(name, "start");
+    resolve(console.log(name, "middle"));
+  }).then(() => {
+    console.log(name, "end");
+  });
 }
 ```
 
-While the extra `then()` handler is not necessary and can be merged with the previous one, its existence means the code will take one extra tick to complete. The same happens for `await`. Therefore, make sure to use `await` only when necessary (to unwrap promises into their values).
+While the extra `then()` handler is not necessary, and the handler can be merged with the executor passed to the constructor, the `then()` handler's existence means the code will take one extra tick to complete. The same happens for `await`. Therefore, make sure to use `await` only when necessary (to unwrap promises into their values).
+
+Other microtasks can execute before the async function resumes. This example uses [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask) to demonstrate how the microtask queue is processed when each `await` expression is encountered.
+
+```js
+let i = 0;
+
+queueMicrotask(function test() {
+  i++;
+  console.log("microtask", i);
+  if (i < 3) {
+    queueMicrotask(test);
+  }
+});
+
+(async () => {
+  console.log("async function start");
+  for (let i = 1; i < 3; i++) {
+    await null;
+    console.log("async function resume", i);
+  }
+  await null;
+  console.log("async function end");
+})();
+
+queueMicrotask(() => {
+  console.log("queueMicrotask() after calling async function");
+});
+
+console.log("script sync part end");
+
+// Logs:
+// async function start
+// script sync part end
+// microtask 1
+// async function resume 1
+// queueMicrotask() after calling async function
+// microtask 2
+// async function resume 2
+// microtask 3
+// async function end
+```
+
+In this example, the `test()` function is always called before the async function resumes, so the microtasks they each schedule are always executed in an intertwined fashion. On the other hand, because both `await` and `queueMicrotask()` schedule microtasks, the order of execution is always based on the order of scheduling. This is why the "queueMicrotask() after calling async function" log happens after the async function resumes for the first time.
 
 ### Improving stack trace
 
