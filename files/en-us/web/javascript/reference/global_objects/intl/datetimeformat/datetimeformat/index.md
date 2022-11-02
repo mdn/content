@@ -303,7 +303,7 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
+// "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
 ```
 
 ### Using timeStyle and dateStyle
@@ -339,7 +339,7 @@ console.log(new Intl.DateTimeFormat('en-GB', {
   dayPeriod: 'short',
   timeZone: 'UTC',
 }).format(date));
-// > 4 at night"  (same formatting in en-GB for all dayPeriod values)
+// 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -347,7 +347,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'narrow',
   timeZone: 'UTC',
 }).format(date));
-// > "4 mat."  (same output in French for both narrow/short dayPeriod)
+// "4 mat."  (same output in French for both narrow/short dayPeriod)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -355,7 +355,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'long',
   timeZone: 'UTC',
 }).format(date));
-// > "4 du matin"
+// "4 du matin"
 ```
 
 ### Using timeZoneName
@@ -375,13 +375,13 @@ for (const zoneName of timezoneNames) {
   console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
-// expected output:
-// > "short: 12/16/2021, PST"
-// > "long: 12/16/2021, Pacific Standard Time"
-// > "shortOffset: 12/16/2021, GMT-8"
-// > "longOffset: 12/16/2021, GMT-08:00"
-// > "shortGeneric: 12/16/2021, PT"
-// > "longGeneric: 12/16/2021, Pacific Time"
+// Logs:
+// short: 12/16/2021, PST
+// long: 12/16/2021, Pacific Standard Time
+// shortOffset: 12/16/2021, GMT-8
+// longOffset: 12/16/2021, GMT-08:00
+// shortGeneric: 12/16/2021, PT
+// longGeneric: 12/16/2021, Pacific Time
 ```
 
 ## Specifications

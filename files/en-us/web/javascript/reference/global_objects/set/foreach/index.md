@@ -104,7 +104,7 @@ function logSetElements(value1, value2, set) {
 
 new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
-// logs:
+// Logs:
 // "s[foo] = foo"
 // "s[bar] = bar"
 // "s[undefined] = undefined"

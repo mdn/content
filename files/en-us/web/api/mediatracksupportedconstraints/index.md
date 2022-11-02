@@ -26,7 +26,7 @@ Because of the way interface definitions in WebIDL work, if a constraint is requ
 
 An actual constraint set is described using an object based on the {{domxref("MediaTrackConstraints")}} dictionary.
 
-To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
 ## Instance properties
 
@@ -80,8 +80,8 @@ For tracks containing video sources from the user's screen contents, the followi
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaTrackConstraints")}}

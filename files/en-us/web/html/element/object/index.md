@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.object
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
 
@@ -113,7 +113,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   height="720"></object>
 ```
 
-Note that a `type` field is normally specified, but is not needed for youtube videos.
+Note that a `type` field is normally specified, but is not needed for Youtube videos.
 
 ## Specifications
 

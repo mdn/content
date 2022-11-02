@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.tfoot
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows summarizing the columns of the table.
 

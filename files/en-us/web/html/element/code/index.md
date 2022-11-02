@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.code
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<code>`** [HTML](/en-US/docs/Web/HTML) element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the {{Glossary("user agent", "user agent's")}} default monospace font.
 

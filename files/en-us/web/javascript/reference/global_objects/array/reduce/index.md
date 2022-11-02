@@ -198,7 +198,7 @@ const sum = objects.reduce(
   0,
 );
 
-console.log(sum); // logs 6
+console.log(sum); // 6
 ```
 
 ### Flatten an array of arrays
@@ -250,7 +250,7 @@ function groupBy(objectArray, property) {
 }
 
 const groupedPeople = groupBy(people, "age");
-// groupedPeople is:
+console.log(groupedPeople);
 // {
 //   20: [
 //     { name: 'Max', age: 20 },
@@ -289,8 +289,8 @@ const allbooks = friends.reduce(
   (previousValue, currentValue) => [...previousValue, ...currentValue.books],
   ["Alphabet"],
 );
-
-// allbooks = [
+console.log(allbooks);
+// [
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'

@@ -417,6 +417,5 @@ This short chapter only explains some techniques to create more advanced animati
 ## See also
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/en-US/docs/Games/Techniques/Efficient_animation_for_web_games)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

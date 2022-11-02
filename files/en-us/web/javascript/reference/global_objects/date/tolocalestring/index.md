@@ -64,7 +64,7 @@ const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 // toLocaleString() without arguments depends on the
 // implementation, the default locale, and the default time zone
 console.log(date.toLocaleString());
-// → "12/11/2012, 7:00:00 PM" if run in en-US locale with time zone America/Los_Angeles
+// "12/11/2012, 7:00:00 PM" if run in en-US locale with time zone America/Los_Angeles
 ```
 
 ### Checking for support for locales and options arguments
@@ -100,29 +100,29 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // US English uses month-day-year order and 12-hour time with AM/PM
 console.log(date.toLocaleString('en-US'));
-// → "12/19/2012, 7:00:00 PM"
+// "12/19/2012, 7:00:00 PM"
 
 // British English uses day-month-year order and 24-hour time without AM/PM
 console.log(date.toLocaleString('en-GB'));
-// → "20/12/2012 03:00:00"
+// "20/12/2012 03:00:00"
 
 // Korean uses year-month-day order and 12-hour time with AM/PM
 console.log(date.toLocaleString('ko-KR'));
-// → "2012. 12. 20. 오후 12:00:00"
+// "2012. 12. 20. 오후 12:00:00"
 
 // Arabic in most Arabic-speaking countries uses Eastern Arabic numerals
 console.log(date.toLocaleString('ar-EG'));
-// → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
+// "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
 // For Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era
 console.log(date.toLocaleString('ja-JP-u-ca-japanese'));
-// → "24/12/20 12:00:00"
+// "24/12/20 12:00:00"
 
 // When requesting a language that may not be supported, such as
 // Balinese, include a fallback language (in this case, Indonesian)
 console.log(date.toLocaleString(['ban', 'id']));
-// → "20/12/2012 11.00.00"
+// "20/12/2012 11.00.00"
 ```
 
 ### Using options
@@ -142,18 +142,18 @@ const options = {
 };
 
 console.log(date.toLocaleString('de-DE', options));
-// → "Donnerstag, 20. Dezember 2012"
+// "Donnerstag, 20. Dezember 2012"
 
 // An application may want to use UTC and make that visible
 options.timeZone = 'UTC';
 options.timeZoneName = 'short';
 
 console.log(date.toLocaleString('en-US', options));
-// → "Thursday, December 20, 2012, GMT"
+// "Thursday, December 20, 2012, GMT"
 
 // Sometimes even the US needs 24-hour time
 console.log(date.toLocaleString('en-US', { hour12: false }));
-// → "12/19/2012, 19:00:00"
+// "12/19/2012, 19:00:00"
 ```
 
 ### Avoid comparing formatted date values to static values
