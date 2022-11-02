@@ -452,7 +452,7 @@ A basic data table can be written with very simple markup, for example:
   <tr>
     <td>Gabriel</td>
     <td>13</td>
-    <td>he/them</td>
+    <td>he/him</td>
   </tr>
   <tr>
     <td>Elva</td>
