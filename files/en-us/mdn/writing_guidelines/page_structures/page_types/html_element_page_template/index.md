@@ -76,13 +76,13 @@ browser-compat: path.to.feature.NameOfTheElement
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
 >   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
-> - `\{{HTMLRef}}` — this generates the left-hand-side reference sidebar for the element.
+> - `\{{HTMLSidebar}}` — this generates the left-hand-side reference sidebar for the element.
 >   The content of the sidebar depends on the tags in the page metadata.
 > - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{HTMLRef}}
+{{SeeCompatTable}}{{Deprecated_Header}}
 
 The **`<insert_the_element_name>`** [HTML](/en-US/docs/Web/HTML) element does _(insert a summary paragraph naming the element and saying what it does, ideally 1 or 2 short sentences)_.
 
