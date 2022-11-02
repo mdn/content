@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.th
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as header of a group of table cells. The exact nature of this group is defined by the {{htmlattrxref("scope", "th")}} and {{htmlattrxref("headers", "th")}} attributes.
 

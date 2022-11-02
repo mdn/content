@@ -17,7 +17,7 @@ tags:
 browser-compat: html.elements.sub
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<sub>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text.
 
@@ -88,7 +88,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<sub>` element should be used only for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
-For example, using `<sub>` to style the name of a company which uses altered baselines in their [wordmark](https://en.wikipedia.org/wiki/Wordmark) would not be appropriate; instead, CSS should be used (likely the {{cssxref("vertical-align")}} property, such as `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
+For example, using `<sub>` to style the name of a company which uses altered baselines in their [wordmark](https://en.wikipedia.org/wiki/Wordmark) would not be appropriate; instead, CSS should be used (likely the {{cssxref("vertical-align")}} property), such as `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
 
 Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
@@ -172,6 +172,6 @@ The output:
 
 ## See also
 
-- The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
+- The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use them both at the same time, and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
 - The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
 - The CSS {{cssxref("vertical-align")}} property.
