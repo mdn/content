@@ -82,7 +82,7 @@ browser-compat: path.to.feature.NameOfTheElement
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{SeeCompatTable}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{HTMLSidebar}}
 
 The **`<insert_the_element_name>`** [HTML](/en-US/docs/Web/HTML) element does _(insert a summary paragraph naming the element and saying what it does, ideally 1 or 2 short sentences)_.
 
