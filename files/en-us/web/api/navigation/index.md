@@ -1,0 +1,141 @@
+---
+title: Navigation
+slug: Web/API/Navigation
+page-type: web-api-interface
+tags:
+  - API
+  - History
+  - Interface
+  - Landing
+  - Navigate
+  - Navigation
+  - Navigation API
+  - Scroll
+  - Traversal
+browser-compat: api.Navigation
+---
+
+{{DefaultAPISidebar("Navigation API")}}
+
+The **`Navigation`** interface of the {{domxref("Navigation API")}} allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, introspecting navigation history entries, and managing navigations as they happen.
+
+It is accessed via the {{domxref("Window.navigation")}} property.
+
+The Navigation API only creates history entries created directly in the application document (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+
+{{InheritanceDiagram}}
+
+## Instance properties
+
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
+
+- {{domxref("Navigation.canGoBack", "canGoBack")}} {{ReadOnlyInline}}
+  - : Returns `true` if it is possible to navigate backwards in the navigation history
+    (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
+    and `false` if it is not.
+- {{domxref("Navigation.canGoForward", "canGoForward")}} {{ReadOnlyInline}}
+  - : Returns `true` if it is possible to navigate forwards in the navigation history
+    (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
+    and `false` if it is not.
+- {{domxref("Navigation.currentEntry", "currentEntry")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("NavigationHistoryEntry")}} object representing the location the user is currently
+    navigated to right now.
+- {{domxref("Navigation.transition", "transition")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("NavigationTransition")}} object representing the status of an in-progress navigation,
+    which can be used to track it. Returns `null` in no navigation is currently in progress.
+
+### `Navigation` events
+
+- {{domxref("Navigation/currententrychange_event", "currententrychange")}}
+  - : Fired when the {{domxref("Navigation.currentEntry")}} has changed.
+- {{domxref("Navigation/navigate_event", "navigate")}}
+  - : Fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, allowing you to intercept as required.
+- {{domxref("Navigation/navigateerror_event", "navigateerror")}}
+  - : Fired when a navigation fails.
+- {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}}
+  - : Fired when a successful navigation has completed.
+
+## Instance methods
+
+_Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
+
+- {{domxref("Navigation.back", "back()")}}
+  - : Navigates backwards by one entry in the navigation history.
+- {{domxref("Navigation.entries", "entries()")}}
+  - : Returns an array of {{domxref("NavigationHistoryEntry")}} objects representing all existing history entries.
+- {{domxref("Navigation.forward", "forward()")}}
+  - : Navigates forwards by one entry in the navigation history.
+- {{domxref("Navigation.navigate", "navigate()")}}
+  - : Navigates to a specific URL, updating any provided `state` in the history entries list.
+- {{domxref("Navigation.reload", "reload()")}}
+  - : Reloads the current URL, updating any provided `state` in the history entries list.
+- {{domxref("Navigation.traverseTo", "traverseTo()")}}
+  - : Navigates to a specific {{domxref("NavigationHistoryEntry")}} by {{domxref("NavigationHistoryEntry.key", "key")}},
+    passing any provided `info` to the corresponding {{domxref("NavigateEvent")}}.
+- {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}
+  - : Updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}},
+    in cases where the state change will be independent from a navigation or reload.
+
+## Examples
+
+### Moving forwards and backwards in the history
+
+```js
+if(navigation.canGoBack) {
+  navigation.back();
+} else {
+  displayBanner('You are on the first page');
+}
+
+  ...
+
+if(navigation.canGoForward) {
+  navigation.forward();
+} else {
+  displayBanner('You are on the last page');
+}
+```
+
+### Traversing to a specific history entry
+
+```js
+// On JS startup, get the key of the first loaded page
+// so the user can always go back there.
+const {key} = navigation.currentEntry;
+backToHomeButton.onclick = () => navigation.traverseTo(key);
+
+// Navigate away, but the button will always work.
+await navigation.navigate('/another_url').finished;
+```
+
+### Navigating and updating state
+
+```js
+navigation.navigate(url, {state: newState});
+```
+
+Or
+
+```js
+navigation.reload({state: newState});
+```
+
+Or if the state is independent from a navigation or reload:
+
+```js
+navigation.updateCurrentEntry({state: newState});
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
+- [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
+- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

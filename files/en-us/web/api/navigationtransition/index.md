@@ -1,0 +1,55 @@
+---
+title: NavigationTransition
+slug: Web/API/NavigationTransition
+page-type: web-api-interface
+tags:
+  - API
+  - History
+  - Interface
+  - Landing
+  - Navigate
+  - NavigationTransition
+  - Navigation API
+  - Scroll
+  - Traversal
+browser-compat: api.NavigationTransition
+---
+
+{{DefaultAPISidebar("Navigation API")}}
+
+The **`NavigationTransition`** interface of the {{domxref("Navigation API")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the {{domxref("Navigation/navigatesuccess_event", "success")}} or {{domxref("Navigation/navigateerror_event", "error")}} stage.
+
+It is accessed via the {{domxref("Navigation.transition")}} property.
+
+{{InheritanceDiagram}}
+
+## Instance properties
+
+- {{domxref("NavigationTransition.navigationType", "navigationType")}} {{ReadOnlyInline}}
+  - : Returns the type of the ongoing navigation.
+- {{domxref("NavigationTransition.from", "from")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.
+- {{domxref("NavigationTransition.finished", "finished")}} {{ReadOnlyInline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills at the same time the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, or rejects at the same time the {{domxref("Navigation/navigateerror_event", "navigateerror")}} event fires.
+
+## Examples
+
+```js
+await navigation.transition.finished;
+// Navigation has completed successfully
+// Cleanup any ongoing monitoring
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
+- [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
+- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

@@ -30,7 +30,7 @@ The API is accessed via the {{domxref("Window.navigation")}} property, which ret
 
 ### Handling navigations
 
-`navigation` has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place. The `navigate` event has an event object of type {{domxref("NavigateEvent")}}, which contains detailed information including the navigation's destination URL, type, whether it contains `POST` form data or a download request, and more.
+`navigation` has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API")}}, where it is sometimes hard to figure out responding to all navigations.) The `navigate` event has an event object of type {{domxref("NavigateEvent")}}, which contains detailed information including the navigation's destination URL, type, whether it contains `POST` form data or a download request, and more.
 
 It also contains two methods:
 
@@ -45,11 +45,15 @@ Once a navigation is initiated, and your `intercept()` handler is called, a {{do
 
 When the `intercept()` handler function's promise fulfills, the `Navigate` object's {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, allowing you to run cleanup code after a successful navigation has completed. If it rejects, meaning the navigation has failed, {{domxref("Navigation/navigateerror_event", "navigateerror")}} fires instead, allowing you to gracefully handle the failure case. There is also a {{domxref("NavigationTransition.finished", "finished")}} property on the `NavigationTransition` object, which fullfills or rejects at the same time as the aforementioned events are fired, providing another path for handling the success and failure cases if it is needed.
 
-### Programmatically traversing the navigation history
+> **Note:** Previous to the Navigation API being available, to do something similar you'd have to listen for all click events on links, run `e.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
+
+### Programmatically updating and traversing the navigation history
 
 As the user navigates through your application, each new location navigated to results in the creation of a navigation history entry. Each history entry is represented by a distinct {{domxref("NavigationHistoryEntry")}} object instance. These contain several useful properties such as the entry's key, URL, and state information. You can return the entry that the user is currently navigated to right now using {{domxref("Navigation.currentEntry","currentEntry")}}, and an array of all existing history entries using {{domxref("Navigation.entries", "entries()")}}. Each `NavigationHistoryEntry` object has a {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} event, which fires when the entry is no longer part of the browser history (e.g. navigate back three times, then navigate forwards to somewhere else. Those three history entries will be disposed).
 
-The `Navigation` object contains all the methods you'll need to traverse through the navigation history:
+> **Note:** The Navigation API only creates history entries created directly in the application document (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+
+The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
 - {{domxref("Navigation.navigate", "navigate()")}} navigates to a new URL, creating a new navigation history entry.
 - {{domxref("Navigation.reload", "reload()")}} reloads the current navigation history entry.
@@ -65,7 +69,7 @@ Each one of the above methods returns an object containing two promises — `{ c
 
 ### State
 
-The Navigation API allows you to store state on each history entry. This is developer-defined information — it can be whatever you like. For example, you might want to store a `visitCount` property that records the number of times a view has been visited, or an object containing multiple properties.
+The Navigation API allows you to store state on each history entry. This is developer-defined information — it can be whatever you like. For example, you might want to store a `visitCount` property that records the number of times a view has been visited, or an object containing multiple properties related to UI state, so that state can be restored when a user returns to that view.
 
 To get a {{domxref("NavigationHistoryEntry")}}'s state, you call its {{domxref("NavigationHistoryEntry.getState", "getState()")}} method. It is initially `undefined`, but when state information is set on the entry, it will return the previously-set state information.
 
@@ -88,9 +92,9 @@ There are a few perceived limitations with the Navigation API, which may or may 
 - {{domxref("NavigationTransition")}}
   - : Represents an ongoing navigation.
 - {{domxref("NavigationCurrentEntryChangeEvent")}}
-  - : Event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the currently navigated to history entry changes. Provides access to the navigation type, and the previous history entry that was navigated from.
+  - : Event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the {{domxref("Navigation.currentEntry")}} has changed. It provides access to the navigation type, and the previous history entry that was navigated from.
 - {{domxref("NavigateEvent")}}
-  - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. Provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
+  - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. It provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
 
 ## Extensions to the `Window` interface
 
