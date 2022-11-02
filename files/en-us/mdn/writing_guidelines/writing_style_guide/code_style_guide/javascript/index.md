@@ -533,12 +533,12 @@ Switch statements can be a little tricky.
 - When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
 
   ```js example-good
-  const hanSolo = new Person("Han Solo", 25, "male");
+  const hanSolo = new Person("Han Solo", 25, "he/him");
 
   const luke = {
     name: "Luke Skywalker",
     age: 25,
-    gender: "male",
+    pronouns: "he/him",
   };
   ```
 
@@ -566,10 +566,10 @@ const object = new Object();
 
   ```js example-good
   class Person {
-    constructor(name, age, gender) {
+    constructor(name, age, pronouns) {
       this.name = name;
       this.age = age;
-      this.gender = gender;
+      this.pronouns = pronouns;
     }
 
     greeting() {
@@ -665,14 +665,14 @@ Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Stri
 Use the strict equality and inequality operators like this:
 
 ```js example-good
-name === "Chris";
+name === "Shilpa";
 age !== 25;
 ```
 
 Don't use the loose equality and inequality operators, as shown below:
 
 ```js example-bad
-name == "Chris";
+name == "Shilpa";
 age != 25;
 ```
 
@@ -693,14 +693,14 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 - Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
 
   ```js example-good
-  const name = "Chris";
+  const name = "Shilpa";
   console.log(`Hi! I'm ${name}!`);
   ```
 
   Don't concatenate strings like this:
 
   ```js example-bad
-  const name = "Chris";
+  const name = "Shilpa";
   console.log("Hi! I'm" + name + "!"); // Hi! I'mChris!
   ```
 
@@ -741,7 +741,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - If a variable will not be reassigned, prefer `const`, like so:
 
   ```js example-good
-  const name = "Chris";
+  const name = "Shilpa";
   console.log(name);
   ```
 
@@ -756,7 +756,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
 
   ```js example-bad
-  let name = "Chris";
+  let name = "Shilpa";
   console.log(myName);
   ```
 
@@ -772,7 +772,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   ```js example-bad
   var age = 40;
-  var name = "Chris";
+  var name = "Shilpa";
   ```
 
 - Declare one variable per line, like so:

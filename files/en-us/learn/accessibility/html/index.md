@@ -447,22 +447,22 @@ A basic data table can be written with very simple markup, for example:
   <tr>
     <td>Name</td>
     <td>Age</td>
-    <td>Gender</td>
+    <td>Pronouns</td>
   </tr>
   <tr>
     <td>Gabriel</td>
     <td>13</td>
-    <td>Male</td>
+    <td>he/them</td>
   </tr>
   <tr>
     <td>Elva</td>
     <td>8</td>
-    <td>Female</td>
+    <td>she/her</td>
   </tr>
   <tr>
     <td>Freida</td>
     <td>5</td>
-    <td>Female</td>
+    <td>she/her</td>
   </tr>
 </table>
 ```
