@@ -64,8 +64,7 @@ let Rectangle = class {
     this.width = width;
   }
 };
-console.log(Rectangle.name);
-// output: "Rectangle"
+console.log(Rectangle.name); // "Rectangle"
 
 // named
 Rectangle = class Rectangle2 {
@@ -74,8 +73,7 @@ Rectangle = class Rectangle2 {
     this.width = width;
   }
 };
-console.log(Rectangle.name);
-// output: "Rectangle2"
+console.log(Rectangle.name); // "Rectangle2"
 ```
 
 > **Note:** Class **expressions** must be declared before they can be used (they are subject to the same hoisting restrictions as described in the [class declarations](#class_declarations) section).

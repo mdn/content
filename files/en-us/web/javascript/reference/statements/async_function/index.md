@@ -183,6 +183,8 @@ async function foo() {
 foo().catch(() => {}); // Attempt to swallow all errors...
 ```
 
+`async function` declarations are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope.
+
 ## Examples
 
 ### Async functions and execution order

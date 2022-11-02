@@ -152,6 +152,12 @@
           "skipCode": true
         },
         {
+          "name": "relative-link-path",
+          "message": "Don't use relative paths",
+          "search": "](..",
+          "skipCode": true
+        },
+        {
           "name": "trailing-spaces",
           "message": "Avoid trailing spaces",
           "searchPattern": "/  +$/gm",
@@ -163,6 +169,13 @@
           "message": "Avoid double spaces",
           "searchPattern": "/([^\\s>])  ([^\\s|])/g",
           "replace": "$1 $2",
+          "skipCode": true
+        },
+        {
+          "name": "stuck-definition",
+          "message": "Character is stuck to definition description marker",
+          "searchPattern": "/- :(\\w)/g",
+          "replace": "- : $1",
           "skipCode": true
         }
       ]

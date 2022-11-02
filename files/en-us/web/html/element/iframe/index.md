@@ -17,7 +17,7 @@ tags:
 browser-compat: html.elements.iframe
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.
 

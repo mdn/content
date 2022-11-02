@@ -49,8 +49,7 @@ class A {
 }
 
 // var defined in static block is not hoisted
-console.log(y);
-// > 'Outer y'
+console.log(y); // 'Outer y'
 ```
 
 The `this` inside a static block refers to the constructor object of the class.
@@ -136,8 +135,7 @@ class D {
   }
 }
 
-getDPrivateField(new D('private'));
-// > private
+console.log(getDPrivateField(new D('private'))); // private
 ```
 
 ### Workarounds

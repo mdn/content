@@ -114,11 +114,9 @@ function log(locale) {
   );
 }
 
-log("en-US");
-// expected output: 5/24/2012 26,254.39
+log("en-US"); // 5/24/2012 26,254.39
 
-log("de-DE");
-// expected output: 24.5.2012 26.254,39
+log("de-DE"); // 24.5.2012 26.254,39
 ```
 
 ## Specifications
