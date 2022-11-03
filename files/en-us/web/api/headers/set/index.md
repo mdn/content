@@ -23,9 +23,8 @@ overwrites the existing value with the new one, whereas {{domxref("Headers.appen
 appends the new value to the end of the set of values.
 
 For security reasons, some headers can only be controller by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
