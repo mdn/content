@@ -85,11 +85,9 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 #### HTML
 
 ```html
-<p>
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
+<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
   nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
-  massa, sit amet vulputate nulla pharetra ut."
-</p>
+  massa, sit amet vulputate nulla pharetra ut.”</p>
 ```
 
 #### CSS
