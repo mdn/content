@@ -40,6 +40,8 @@ The {{domxref("PerformanceObserver")}} interface enables you to listen for vario
 
 ## Interfaces
 
+- {{domxref("EventCounts")}}
+  - : A read-only map returned by {{domxref("performance.eventCounts")}} containing the number of events which have been dispatched per event type.
 - {{domxref("LargestContentfulPaint")}}
   - : Measures the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
 - {{domxref("Performance")}}
