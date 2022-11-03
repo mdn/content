@@ -35,21 +35,21 @@ Note that these keywords are _case insensitive_, but are listed here with mixed 
 - `ButtonFace`
   - : Background color of controls
 - `ButtonText`
-  - : Foreground color of controls
+  - : Text color of controls
 - `Canvas`
   - : Background of application content or documents
 - `CanvasText`
-  - : Foreground color in application content or documents
+  - : Text color in application content or documents
 - `Field`
   - : Background of input fields
 - `FieldText`
   - : Text in input fields
 - `GrayText`
-  - : Foreground color for disabled items (e.g. a disabled control)
+  - : Text color for disabled items (e.g. a disabled control)
 - `Highlight`
   - : Background of selected items
 - `HighlightText`
-  - : Foreground color of selected items
+  - : Text color of selected items
 - `LinkText`
   - : Text of non-active, non-visited links
 - `Mark`
