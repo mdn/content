@@ -306,7 +306,7 @@ The available types are as follows:
       <th colspan="3">Obsolete values</th>
     </tr>
     <tr>
-      <td>`datetime`</td>
+      <td><code>datetime</code></td>
       <td>
         {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>

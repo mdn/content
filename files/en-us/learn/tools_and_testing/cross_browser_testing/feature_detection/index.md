@@ -46,21 +46,21 @@ Feature detection involves working out whether a browser supports a certain bloc
 
 ## The concept of feature detection
 
-The idea behind feature detection is that you can run a test to determine whether a feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that _do_ support the feature, and browsers that _don't_. If you don't do this, browsers that don't support the features you are using in your code won't display your sites properly and will just fail, creating a bad user experience.
+The idea behind feature detection is that you can run a test to determine whether a feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that _do_ support the feature, and browsers that _don't_. If you don't do this, browsers that don't support the features you are using in your code may not display your sites properly or might fail altogether, creating a bad user experience.
 
 Let's recap and look at the example we touched on in our [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#feature_detection) — the [Geolocation API](/en-US/docs/Web/API/Geolocation_API) (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a `geolocation` property available on the global [Navigator](/en-US/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
 
 ```js
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    // show the location on a map, perhaps using the Google Maps API
+    // show the location on a map, such as the Google Maps API
   });
 } else {
-  // Give the user a choice of static maps instead perhaps
+  // Give the user a choice of static maps
 }
 ```
 
-It is probably better to use an established feature detection library however, rather than writing your own all the time. Modernizr is the industry standard for feature detection tests, and we'll look at that later on.
+To detect a single feature, the `if` statement works well. For complex applications, consider using an established feature detection library rather than writing your own. Modernizr is the industry standard for feature detection tests, and we'll look at that later on.
 
 Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_bad_browser_sniffing_code) for more details.
 
@@ -70,78 +70,73 @@ In this section, we'll look at implementing your own feature detection tests, in
 
 ### CSS
 
-You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform`) in JavaScript.
+You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.rotate`) in JavaScript.
 
-A classic example might be to test for [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) support in a browser; for browsers that support the newest Flexbox spec, we could use a flexible and robust flex layout. For browsers that don't, we could use a floated layout that works OK, although it is slightly more brittle and hacky, and not as cool-looking.
+A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) support in a browser; for browsers that support the `subgrid` value for a subgrid value for [`grid-template-columns`](/en-US/docs/Web/CSS/grid-template-columns) and [`grid-template-rows`](/en-US/docs/Web/CSS/grid-template-rows), we can use subgrid in our layout. For browsers that don't, we could use regular grid that works fine but is not as cool-looking.
 
-Let's implement something that demonstrates this, although we'll keep it simple for now.
+Using this as an example, we could include a subgrid stylesheet if the value is supported and a regular grid stylesheet if not. To do so, we could include two stylesheets in the head of our HTML file: one for all the styling, and one that implements the default layout if subgrid is not supported:
 
-1. Start by making local copies of our [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/float-layout.css), and [`basic-styling.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/basic-styling.css) files. Save them in a new directory.
-2. We will add the HTML5 Shiv to our example too so that the HTML5 semantic elements will style properly in older versions of IE. Download the latest version (see [Manual installation](https://github.com/aFarkas/html5shiv#manual-installation)), unzip the ZIP file, copy the `html5shiv-printshiv.min.js` and `html5shiv.min.js` files into your example directory, and link to one of the files by putting the following under your {{htmlelement("title")}} element:
+```html
+<link href="basic-styling.css" rel="stylesheet">
+<link class="conditional" href="grid-layout.css" rel="stylesheet">
+```
 
-   ```html
-   <script src="html5shiv.min.js"></script>
-   ```
+Here, `basic-styling.css` handles all the styling that we want to give to every browser. We have two additional CSS files, `grid-layout.css` and `subgrid-layout.css`, which contain the CSS we want to selectively apply to browsers depending on their support levels.
 
-   > **Note:** This step is no longer needed. All modern browsers are able to render semantic elements.
+We use JavaScript to test the support for the subgrid value, then update the `href` of our conditional stylessheet based on browser support.
 
-3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browsers depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
-4. First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
-5. Next, add a `<script></script>` element at the bottom of your body (just before the closing `</body>` tag).
-6. Give it the following contents:
+We can add a `<script></script>` to our document, filled with the following JavaScript
 
    ```js
    const conditional = document.querySelector('.conditional');
-   const testElem = document.createElement('div');
-   if (testElem.style.flex !== undefined && testElem.style.flexFlow !== undefined) {
-     conditional.setAttribute('href', 'flex-layout.css');
-   } else {
-     conditional.setAttribute('href', 'float-layout.css');
+   if (CSS.supports("grid-template-columns", "subgrid")) {
+     conditional.setAttribute('href', 'subgrid-layout.css.css');
    }
    ```
 
-Here we are grabbing a reference to the second `<link>` element, and creating a `<div>` element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.
-
-> **Note:** If you have trouble getting this to work, you can compare it to our [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) code (see also the [live version](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
-
-When you save everything and try out your example, you should see the flexbox layout applied to the page if the browser supports modern flexbox, and the float layout if not.
-
-> **Note:** Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in [CSS fallback behavior](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#css_fallback_behavior) and [Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes).
+In our conditional statement, we test to see if the{{cssxref("grid-template-columns")}} property supports the `subgrid` value using [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports).
 
 #### @supports
 
-CSS has a native feature detection mechanism: the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/Media_Queries) (see also [Responsive design problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#responsive_design_problems)) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.
+CSS has a native feature detection mechanism: the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/Media_Queries) except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported, similar to `CSS.supports()`.
 
-For example, we could rewrite our previous example to use `@supports` — see [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). If you look at the latter, you'll see a couple of `@supports` blocks, for example:
+For example, we could rewrite our previous example to use `@supports`:
 
 ```css
-@supports (flex-flow: row) and (flex: 1) {
+@supports (grid-template-columns: subgrid) {
   main {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(4, minmax(100px, auto));
   }
 
-  main div {
-    padding-right: 4%;
-    flex: 1;
+  .item {
+    display: grid;
+    grid-column: 2 / 7;
+    grid-row: 2 / 4;
+    grid-template-columns: subgrid;
+    grid-template-rows: repeat(3, 80px);
   }
 
-  main div:last-child {
-    padding-right: 0;
+  .subitem {
+    grid-column: 3 / 6;
+    grid-row: 1 / 3;
   }
+
 }
 ```
 
-This at-rule block applies the CSS rule within only if the current browser supports both the `flex-flow: row` and `flex: 1` declarations. For each condition to work, you need to include a complete declaration (not just a property name) and NOT include the semicolon on the end.
+This at-rule block applies the CSS rule within only if the current browser supports the `grid-template-columns: subgrid;` declaration. For a condition with a value to work, you need to include a complete declaration (not just a property name) and NOT include the semicolon on the end.
 
-`@supports` also has `OR` and `NOT` logic available — the other block applies the float layout if the flexbox properties are not available:
+`@supports` also has `AND`, `OR`, and `NOT` logic available — the other block applies the regular grid layout if the subgrid option is not available:
 
 ```css
-@supports not (flex-flow: row) and (flex: 1) {
+@supports not (grid-template-columns: subgrid) {
   /* rules in here */
 }
 ```
 
-This may look a lot more convenient than the previous example — we can do all of our feature detection in CSS, no JavaScript required, and we can handle all the logic in a single CSS file, cutting down on HTTP requests. This is the preferred method of determining browser support for CSS features.
+This is more convenient than the previous example — we can do all of our feature detection in CSS, no JavaScript required, and we can handle all the logic in a single CSS file, cutting down on HTTP requests. For this reason it is the preferred method of determining browser support for CSS features.
 
 ### JavaScript
 
@@ -196,7 +191,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
       <td>
         See
         <a href="https://diveinto.html5doctor.com/detect.html#video-formats"
-          >Dive Into HTML5 Video Formats detection</a
+          >Dive into HTML Video Format detection</a
         >
         test.
       </td>
@@ -211,7 +206,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
       <td>
         See
         <a href="https://diveinto.html5doctor.com/detect.html#input-types"
-          >Dive into HTML5 <code>&#x3C;input></code> types detection</a
+          >Dive into HTML <code>&#x3C;input></code> type detection</a
         >
         test.
       </td>
@@ -221,7 +216,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
 
 > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
-The [Dive into HTML5 Detecting HTML5 Features](https://diveinto.html5doctor.com/detect.html) page has a lot more useful feature detection tests besides the ones listed above, and you can generally find a feature detection test for most things by searching for "detect support for YOUR-FEATURE-HERE" in your favorite search engine. Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
+Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables) from 2016.
 
 #### matchMedia
 
@@ -254,12 +249,12 @@ It is possible to implement your own feature detection tests using techniques li
 When you are experimenting with Modernizr you might as well use the development build, which includes every possible feature detection test. Download this now by:
 
 1. Clicking on the [Development build](https://modernizr.com/download?do_not_use_in_production) link.
-2. Clicking the big pink _Build_ button on the page that comes up.
+2. Clicking the big pink _Build_ button at the top of the page.
 3. Clicking the top _Download_ link in the dialog box that appears.
 
-Save it somewhere sensible, like the directory you've been creating your other examples for in this article.
+Save it somewhere sensible, like the directory you've been using your other guides in this series.
 
-When you are using Modernizr in production, you can go to the [Download page](https://modernizr.com/download) you've already visited and click the plus buttons for only the features you need feature detects for. Then when you click the _Build_ button, you'll download a custom build containing only those feature detects, making for a much smaller file size.
+When you are using Modernizr in production, you can go to the [Download page](https://modernizr.com/download) you've already visited and click the plus buttons to include only the features you need to feature detect. Then when you click the _Build_ button, you'll download a custom build containing only those feature detects, making for a much smaller file size.
 
 ### CSS
 
@@ -281,65 +276,54 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 4. Now edit your opening `<html>` tag, so that it looks like this:
 
    ```html
-   <html class="no-js">…</html>
+   <html lang="en-us" class="no-js">…</html>
    ```
 
 At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
 
 ```html
 <html
-  class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
-blob-constructor cookies cors (and loads of more values)">…</html>
+  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">…</html>
 ```
 
-It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, `<html>` would be given a class name of `no-flexbox`. If it did support modern flexbox, it would get a class name of `flexbox`. If you search through the class list, you'll also see others relating to flexbox, like:
+It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support grid at all, `<html>` would be given a class name of `no-cssgrid`. If you search through the class list, you'll also see others relating to grid, like:
 
-- `flexboxlegacy` for the old flexbox spec (2009).
-- `flexboxtweener` for 2011 in between syntax supported by IE10.
-- `flexwrap` for the {{cssxref("flex-wrap")}} property, which isn't present in some implementations.
+- `cssgridlegacy` or `no-cssgridlegacy` depending on whether a legacy version of grid is or is not supported.
 
-> **Note:** You can find a list of what all the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features).
+> **Note:** You can find a list of what most of the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features).
 
-Moving on, let's update our CSS to use Modernizr rather than `@supports`. Go into `modernizr-css.css`, and replace the two `@supports` blocks with the following:
+Unfortunately, Modernizr does not test for support of some new CSS features like container queries, cascade layers, or subgrid. If it did, we would update our `@supports` example in the following way:
 
 ```css
-/* Properties for browsers with modern flexbox */
-
-.flexbox main {
+main {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
+.item {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-rows: repeat(3, 80px);
+}
+/* Properties for browsers with subgrid */
+.csssubgrid .item {
+    grid-template-columns: subgrid;
+}
+.csssubgrid .subitem {
+   grid-column: 3 / 6;
+   grid-row: 1 / 3;
+}
+/* Fallbacks for browsers that don't support subgrid */
+.no-csssubgrid .subitem {
   display: flex;
-}
-
-.flexbox main div {
-  padding-right: 4%;
-  flex: 1;
-}
-
-.flexbox main div:last-child {
-  padding-right: 0;
-}
-
-/* Fallbacks for browsers that don't support modern flexbox */
-
-.no-flexbox main div {
-  width: 22%;
-  float: left;
-  padding-right: 4%;
-}
-
-.no-flexbox main div:last-child {
-  padding-right: 0;
-}
-
-.no-flexbox footer {
-  clear: left;
+  flex: 33%;
 }
 ```
 
-So how does this work? Because all those class names have been put on the `<html>` element, you can target browsers that do or don't support a feature using specific descendant selectors. So here we're applying the top set of rules only to browsers that do support flexbox, and the bottom set of rules only to browsers that don't (`no-flexbox`).
+So how does this work? Because all those class names have been put on the `<html>` element, you can target browsers that do or don't support a feature using specific descendant selectors. So here we're applying the top set of rules only to browsers that do support subgrid, and the bottom set of rules only to browsers that don't (`no-csssubgrid`).
 
-> **Note:** Bear in mind that all of Modernizr's HTML and JavaScript feature tests are also reported in these class names, so you can quite happily apply CSS selectively based on whether the browser supports HTML or JavaScript features, if needed.
-
-> **Note:** If you have trouble getting this to work, check your code against our [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) and [`modernizr-css.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/modernizr-css.css) files (see this running live also).
+> **Note:** All of Modernizr's HTML and JavaScript feature tests are reported as class names, so you can apply CSS selectively based on whether the browser supports HTML or JavaScript features, if needed.
 
 ### JavaScript
 
