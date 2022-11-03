@@ -122,7 +122,7 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 ### formtarget
 
-A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
+A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}). A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
 
 In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:
 

@@ -106914,16 +106914,6 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol": {
-    "modified": "2020-03-12T19:39:59.552Z",
-    "contributors": [
-      "fscholz",
-      "subrahmanyabhat",
-      "KadirTopal",
-      "cughudson_1",
-      "arai"
-    ]
-  },
   "Web/JavaScript/Reference/Errors": {
     "modified": "2020-04-16T12:51:05.334Z",
     "contributors": ["fscholz", "wbamberg", "Sheppy", "chrisdavidmills"]
