@@ -19,7 +19,7 @@ The
 method of the Canvas 2D API creates a gradient along the line connecting two given
 coordinates.
 
-![](mdn-canvas-lineargradient.png)
+![An example of the application of the gradient applied to a shape](mdn-canvas-lineargradient.png)
 
 This method returns a linear {{domxref("CanvasGradient")}}. To be applied to a shape,
 the gradient must first be assigned to the
