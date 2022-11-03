@@ -65,8 +65,6 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
   - : How to create flex containers with multiple lines and control the display of the items in those lines.
 - [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
   - : Common design patterns that are typical Flexbox use cases.
-- [Backwards compatibility of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-  - : Browser status of Flexbox, interoperability issues and supporting older browsers and versions of the spec
 
 ## Specifications
 
