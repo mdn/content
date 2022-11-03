@@ -27,7 +27,7 @@ Note that these keywords are _case insensitive_, but are listed here with mixed 
 - `AccentColor`
   - : Background of accented user interface controls
 - `AccentColorText`
-  - : Foreground of accented user interface controls
+  - : Text of accented user interface controls
 - `ActiveText`
   - : Text of active links
 - `ButtonBorder`
