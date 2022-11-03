@@ -24,7 +24,7 @@ The **`<address>`** [HTML](/en-US/docs/Web/HTML) element indicates that the encl
 
 {{EmbedInteractiveExample("pages/tabbed/address.html", "tabbed-standard")}}
 
-The contact information provided by an `<address>` element's contents can take whatever form is appropriate for the context, and may include any type of contact information that is needed, such as a physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. The `<address>` element should include the name of the person, people, or organization to which the contact information refers.
+The contact information provided by an `<address>` element's contents that can take whatever form is appropriate for the context, and may include any type of contact information that is needed, such as a physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. The `<address>` element should include the name of the person, people, or organization to which the contact information refers.
 
 `<address>` can be used in a variety of contexts, such as providing a business's contact information in the page header, or indicating the author of an article by including an `<address>` element within the {{HTMLElement("article")}}.
 
