@@ -219,7 +219,7 @@ The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_Gr
 
 With the majority of browsers supporting Flexbox and Grid, it can be reasonably hard to test older browsers. One way is to use an online testing tool such as Sauce Labs, as detailed in the [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-You can also download and install Virtual Machines, and run older versions of browsers in a contained environment on your own computer. If you are still required to support Internet Explorer, Microsoft provides [a range of Virtual Machines available for free download](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). These are available for Mac, Windows and Linux operating systems and so are a great way to test in old and modern Windows browsers even if you are not using a Windows computer.
+You can also download and install virtual machines, and run older versions of browsers in a contained environment on your computer. If you are still required to support Internet Explorer, Microsoft provides [a range of Virtual Machines available for free download](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). These are available for Mac, Windows and Linux operating systems and so are a great way to test in old and modern Windows browsers even if you are not using a Windows computer.
 
 ## Summary
 
