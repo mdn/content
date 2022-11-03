@@ -41,7 +41,7 @@ If the promise is rejected, the `await` expression throws the rejected value. Th
 
 The `expression` is resolved in the same way as {{jsxref("Promise.resolve()")}}. This means [thenable objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are supported, and if `expression` is not a promise, it's implicitly wrapped in a `Promise` and then resolved. Even when `expression` is not a promise, the async function execution still pauses until the next tick, due to the implicit promise wrapping and unwrapping. In the meantime, the caller of the async function resumes execution. [See example below.](#control_flow_effects_of_await)
 
-Again, `await` is only valid inside `async` functions and at the top levels of modules. Since `async` functions are themselves asynchronous and return promises, an `await` expression inside an `async` function never blocks the main thread; it only defers execution of code that actually depends on the result, i.e. anything after the `await` expression.
+Because `await` is only valid inside async functions and modules, which themselves are asynchronous and return promises, the `await` expression never blocks the main thread and only defers execution of code that actually depends on the result, i.e. anything after the `await` expression.
 
 ## Examples
 
@@ -143,7 +143,7 @@ const response = await promisedFunction().catch((err) => {
 
 ### Top level await
 
-You can use the `await` keyword on its own (outside of an async function) in the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules). This means that modules with child modules that use `await` will wait for the child modules to execute before they themselves run.
+You can use the `await` keyword on its own (outside of an async function) in the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules). This means that modules with child modules that use `await` will wait for the child modules to execute before they themselves run, all while not blocking other child modules from loading.
 
 Here is an example of a simple module using the [Fetch API](/en-US/docs/Web/API/Fetch_API) and specifying await within the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement. Any modules that include this will wait for the fetch to resolve before running any code.
 
