@@ -40,7 +40,11 @@ The `data` argument may be an array or an object.
 console.table(["apples", "oranges", "bananas"]);
 ```
 
-![Table displaying array of strings](console-table-array.png)
+| (index) | Values    |
+|---------|-----------|
+| 0       | 'apples'  |
+| 1       | 'oranges' |
+| 2       | 'bananas' |
 
 ```js
 // an object whose properties are strings
@@ -55,7 +59,10 @@ const me = new Person("Tyrone", "Jones");
 console.table(me);
 ```
 
-![Table displaying object whose properties are strings](console-table-simple-object.png)
+| (index)   | Values   |
+|-----------|----------|
+| firstName | 'Tyrone' |
+| lastName  | 'Jones'  |
 
 ### Collections of compound types
 
@@ -73,7 +80,11 @@ const people = [
 console.table(people);
 ```
 
-![Table displaying array of arrays](console-table-array-of-array.png)
+| (index) | 0        | 1       |
+|---------|----------|---------|
+| 0       | 'Tyrone' | 'Jones' |
+| 1       | 'Janet'  | 'Smith' |
+| 2       | 'Maria'  | 'Cruz'  |
 
 ```js
 // an array of objects
@@ -93,7 +104,11 @@ console.table([tyrone, janet, maria]);
 Note that if the array contains objects, then the columns are labeled with the property
 name.
 
-![Table displaying array of objects](console-table-array-of-objects.png)
+| (index) | firstName | lastName |
+|---------|-----------|----------|
+| 0       | 'Tyrone'  | 'Jones'  |
+| 1       | 'Janet'   | 'Smith'  |
+| 2       | 'Maria'   | 'Cruz'   |
 
 ```js
 // an object whose properties are objects
@@ -107,7 +122,11 @@ family.daughter = new Person("Maria", "Jones");
 console.table(family);
 ```
 
-![Table displaying object of objects](console-table-object-of-objects.png)
+| (index)  | firstName | lastName |
+|----------|-----------|----------|
+| daughter | 'Maria'   | 'Jones'  |
+| father   | 'Tyrone'  | 'Jones'  |
+| mother   | 'Janet'   | 'Jones'  |
 
 ### Restricting the columns displayed
 
@@ -129,7 +148,11 @@ const maria = new Person("Maria", "Cruz");
 console.table([tyrone, janet, maria], ["firstName"]);
 ```
 
-![Table displaying array of objects with filtered output](console-table-array-of-objects-firstname-only.png)
+| (index) | firstName |
+|---------|-----------|
+| 0       | 'Tyrone'  |
+| 1       | 'Janet'   |
+| 2       | 'Maria'   |
 
 ### Sorting columns
 
