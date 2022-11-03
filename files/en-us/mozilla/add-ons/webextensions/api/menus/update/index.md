@@ -45,14 +45,14 @@ let updating = browser.menus.update(
 
       - : `string`. String describing an action that should be taken when the user clicks the item. Possible values are:
 
-        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one
-        - `"_execute_action"`: simulate a click on the extension's action, opening its popup if it has one
+        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one (Manifest V2 only)
+        - `"_execute_action"`: simulate a click on the extension's action, opening its popup if it has one (Manifest V3 only)
         - `"_execute_page_action"`: simulate a click on the extension's page action, opening its popup if it has one
         - `"_execute_sidebar_action"`: open the extension's sidebar
 
         See the documentation of special shortcuts in the manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) for details.
 
-        Clicking the item will still trigger the {{WebExtAPIRef("menus.onClicked")}} event, but there's no guarantee of the ordering here: the command may be executed before `onClicked` fires.
+        When specified, clicking the item does not trigger the {{WebExtAPIRef("menus.onClicked")}} event; instead, the pop-up is opened. When not specified, clicking the item triggers {{WebExtAPIRef("menus.onClicked")}} and can be used to implement fallback behavior.
 
     - `contexts` {{optional_inline}}
 

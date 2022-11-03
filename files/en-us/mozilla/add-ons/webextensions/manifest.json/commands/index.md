@@ -156,7 +156,7 @@ The availability of these special shortcuts varies between manifest versions and
   <tr>
     <th></th>
     <th>Manifest V2</th>
-    <th>Manifiest V3</th>
+    <th>Manifest V3</th>
   </tr>
 </thead>
 <tbody>
