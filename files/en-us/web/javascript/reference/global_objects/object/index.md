@@ -14,7 +14,7 @@ The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/We
 
 ## Description
 
-Nearly all [objects](/en-US/docs/Web/JavaScript/Data_structures#objects) in JavaScript are instances of {{jsxref("Object")}}; a typical object inherits properties (including methods) from `Object.prototype`, although these properties may be shadowed (a.k.a. overridden). The only objects that don't inheit from `Object.prototype` are those with [`null` prototype](#null-prototype_objects), or descended from other `null` prototype objects.
+Nearly all [objects](/en-US/docs/Web/JavaScript/Data_structures#objects) in JavaScript are instances of {{jsxref("Object")}}; a typical object inherits properties (including methods) from `Object.prototype`, although these properties may be shadowed (a.k.a. overridden). The only objects that don't inherit from `Object.prototype` are those with [`null` prototype](#null-prototype_objects), or descended from other `null` prototype objects.
 
 Changes to the `Object.prototype` object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior. To make it more secure, `Object.prototype` is the only object in the core JavaScript language that has [immutable prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#description) — the prototype of `Object.prototype` is always `null` and not changeable.
 
@@ -23,7 +23,7 @@ Changes to the `Object.prototype` object are seen by **all** objects through pro
 You should avoid calling any `Object.prototype` method, especially those that are not intended to be polymorphic (i.e. only its initial behavior makes sense and no descending object could override it in a meaningful way). All objects descending from `Object.prototype` may define a custom own property that has the same name, but with entirely different semantics from what you expect. Furthermore, these properties are not inherited by [`null`-prototype objects](#null-prototype_objects). All modern JavaScript utilities for working with objects are [static](#static_methods). More specifically:
 
 - [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), and [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) exist to be polymorphic and you should expect the object to define its own implementation with sensible behaviors, so you can call them as instance methods. However, `valueOf()` and `toString()` are usually implicitly called through [type conversion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) and you don't need to call them yourself in your code.
-- [`__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) are already deprecated and should not be used. The {{jsxref("Object.defineProperty()")}} and {{jsxref("Object.getOwnPropertyDescriptor()")}} alternatives are static methods.
+- [`__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) are deprecated and should not be used. Use the static alternatives {{jsxref("Object.defineProperty()")}} and {{jsxref("Object.getOwnPropertyDescriptor()")}} instead.
 - The [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property is deprecated and should not be used. The {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}} alternatives are static methods.
 - The [`propertyIsEnumerable()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) and [`hasOwnProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) methods can be replaced with the {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.hasOwn()")}} static methods, respectively.
 - The [`isPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) method can usually be replaced with [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof), if you are checking the `prototype` property of a constructor.
@@ -51,14 +51,14 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 ### null-prototype objects
 
-Almost objects in JavaScript ultimately inherit from `Object.prototype` (see [inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)). However, you may create `null`-prototype objects using [`Object.create(null)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or the [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) with `__proto__: null` (note: the `__proto__` key in object literals is different from the deprecated [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property). You can also change the prototype of an existing object to `null` through [`Object.setPrototypeOf(obj, null)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
+Almost all objects in JavaScript ultimately inherit from `Object.prototype` (see [inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)). However, you may create `null`-prototype objects using [`Object.create(null)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or the [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) with `__proto__: null` (note: the `__proto__` key in object literals is different from the deprecated [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property). You can also change the prototype of an existing object to `null` by calling [`Object.setPrototypeOf(obj, null)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
 
 ```js
 const obj = Object.create(null);
 const obj2 = { __proto__: null };
 ```
 
-An object with `null` prototype can behave in unexpected ways, because it doesn't inherit any object methods from `Object.prototype`. This is especially true when debugging, since common object-property converting/detecting utility functions may generate errors, or lose information (especially if using silent error-traps that ignore errors).
+An object with a `null` prototype can behave in unexpected ways, because it doesn't inherit any object methods from `Object.prototype`. This is especially true when debugging, since common object-property converting/detecting utility functions may generate errors, or lose information (especially if using silent error-traps that ignore errors).
 
 For example, the lack of [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) often makes debugging intractable:
 
@@ -86,7 +86,7 @@ normalObj.constructor; // shows "Object() { [native code] }"
 nullProtoObj.constructor; // shows "undefined"
 ```
 
-We can add the `toString` method back to the null-prototype object by simply assigning it one:
+We can add the `toString` method back to the null-prototype object by assigning it one:
 
 ```js
 nullProtoObj.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
