@@ -73,9 +73,9 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
 ## See also
 
 - Glossary terms:
-  - {{Glossary("Flexbox", "", 1)}}
-  - {{Glossary("Flex Container", "", 1)}}
-  - {{Glossary("Flex Item", "", 1)}}
-  - {{Glossary("Main Axis", "", 1)}}
-  - {{Glossary("Cross Axis", "", 1)}}
-  - {{Glossary("Flex", "", 1)}}
+  - {{Glossary("Flexbox")}}
+  - {{Glossary("Flex Container")}}
+  - {{Glossary("Flex Item")}}
+  - {{Glossary("Main Axis")}}
+  - {{Glossary("Cross Axis")}}
+  - {{Glossary("Flex")}}
