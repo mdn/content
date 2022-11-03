@@ -13,14 +13,14 @@ tags:
 
 The aim of the tests on this page is to assess whether you've understood the [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math) article.
 
-> **Note:** If there is an error in your code it will be logged into the results panel on this page (or in the browser's JavaScript console in the downloadable version) to help you.
+> **Note:** If there is an error in your code, it will be logged into the results panel on this page (or in the browser's JavaScript console for the downloadable version) to help you.
 > It might be helpful to copy the code into an online tool like [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to test your work.
 > If you get stuck, you can [ask us for help](#assessment_or_further_help).
 
 ## Math 1
 
 Let's start out by testing your knowledge of basic math operators.
-You will have to create four numeric values, adding two together, subtracting one from another, then multiplying the results.
+You will create four numeric values, add two together, subtract one from another, then multiply the results.
 Finally, we need to write a check that proves that this value is an even number.
 
 Try updating the live code below to recreate the finished example by following these steps:
