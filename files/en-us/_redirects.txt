@@ -5690,6 +5690,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.onInstalled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.onUninstalled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.setEnabled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/setEnabled
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/createProperties	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/menus.overrideContext()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/clear	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear

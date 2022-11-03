@@ -13584,10 +13584,6 @@
       "rolfedh"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/menus/createProperties": {
-    "modified": "2020-10-15T22:23:28.723Z",
-    "contributors": ["irenesmith"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement": {
     "modified": "2020-10-15T22:08:31.540Z",
     "contributors": [
