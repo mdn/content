@@ -25,7 +25,7 @@ Finally, we need to write a check that proves that this value is an even number.
 
 Try updating the live code below to recreate the finished example by following these steps:
 
-1. Create four variables with sensible names that contain numbers.
+1. Create four variables that contain numbers. Call the variables something sensible.
 2. Add the first two variables together and store the result in another variable.
 3. Subtract the fourth variable from the third and store the result in another variable.
 4. Multiply the results from steps **2** and **3** and store the result in a variable called `finalResult`.
