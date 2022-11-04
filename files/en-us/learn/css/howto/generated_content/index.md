@@ -28,7 +28,7 @@ This issue does not arise if the content you specify consists of symbols or imag
 
 ### Text content
 
-CSS can insert text content before or after an element. It can also be used to change the content of a marker before a {{HTMLElement('li')}} or other elements styled as a {{ cssxref("display", "list-item") }}. To specify this, make a rule and add {{ cssxref("::before") }}, {{ cssxref("::after") }} or {{cssxref("::marker")}} to the selector. In the declaration, specify the {{ cssxref("content") }} property with the text content as its value.
+CSS can insert text content before or after an element. It can also be used to change the content of a marker before a {{HTMLElement('li')}} or other elements styled as a {{ cssxref("display", "list-item") }}. To specify this, make a rule and add {{ cssxref("::before") }}, {{ cssxref("::after") }}, or {{cssxref("::marker")}} to the selector. In the declaration, specify the {{ cssxref("content") }} property with the text content as its value.
 
 #### HTML
 
