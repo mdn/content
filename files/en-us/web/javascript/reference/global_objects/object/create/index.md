@@ -90,19 +90,13 @@ Note that there are caveats to watch out for using `create()`, such as re-adding
 
 ### Using propertiesObject argument with Object.create()
 
+`Object.create()` allows fine-tuned control over the object creation process. The [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) is, in fact, a syntax sugar of `Object.create()`. With `Object.create()`, we can create objects with a designated prototype and also some properties. Note that the second parameter maps keys to _property descriptors_ — this means you can control each property's enumerability, configurability, etc. as well, which you can't do in object initializers.
+
 ```js
-let o;
-
-// create an object with null as prototype
-o = Object.create(null);
-
 o = {};
-// is equivalent to:
+// Is equivalent to:
 o = Object.create(Object.prototype);
 
-// Example where we create an object with a couple of
-// sample properties. (Note that the second parameter
-// maps keys to *property descriptors*.)
 o = Object.create(Object.prototype, {
   // foo is a regular 'value property'
   foo: {
@@ -122,23 +116,24 @@ o = Object.create(Object.prototype, {
   },
 });
 
-function Constructor() {}
-o = new Constructor();
-// is equivalent to:
-o = Object.create(Constructor.prototype);
-// Of course, if there is actual initialization code
-// in the Constructor function,
-// the Object.create() cannot reflect it
-
 // Create a new object whose prototype is a new, empty
 // object and add a single property 'p', with value 42.
 o = Object.create({}, { p: { value: 42 } });
+```
 
-// by default properties ARE NOT writable,
-// enumerable or configurable:
-o.p = 24;
-o.p;
-// 42
+With `Object.create()`, we can create an object [with `null` as prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The equivalent syntax in object initializers would be the [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) key.
+
+```js
+o = Object.create(null);
+// Is equivalent to:
+o = { __proto__: null };
+```
+
+By default properties are _not_ writable, enumerable or configurable.
+
+```js
+o.p = 24; // throws in strict mode
+o.p; // 42
 
 o.q = 12;
 for (const prop in o) {
@@ -147,9 +142,12 @@ for (const prop in o) {
 // 'q'
 
 delete o.p;
-// false
+// false; throws in strict mode
+```
 
-// to specify a property with the same attributes as in an initializer
+To specify a property with the same attributes as in an initializer, explicitly specify `writable`, `enumerable` and `configurable`.
+
+```js
 o2 = Object.create(
   {},
   {
@@ -165,6 +163,17 @@ o2 = Object.create(
 // o2 = Object.create({ p: 42 })
 // which will create an object with prototype { p: 42 }
 ```
+
+You can use `Object.create()` to mimic the behavior of the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.
+
+```js
+function Constructor() {}
+o = new Constructor();
+// Is equivalent to:
+o = Object.create(Constructor.prototype);
+```
+
+Of course, if there is actual initialization code in the `Constructor` function, the `Object.create()` method cannot reflect it.
 
 ## Specifications
 
