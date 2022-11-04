@@ -6,14 +6,12 @@ tags:
   - CSS Logical Property
   - CSS Property
   - Reference
-  - experimental
   - contain-intrinsic-block-size
-  - Experimental
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`contain-intrinsic-block-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_Logical_Properties) defines the block size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
