@@ -91,7 +91,10 @@ This property may take one of two forms:
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=MonteCarlo");
+@font-face {
+  font-family: MonteCarlo;
+  src: url(MonteCarlo-Regular.ttf);
+}
 
 @font-feature-values "MonteCarlo" {
   @swash {
@@ -110,11 +113,9 @@ p {
 }
 ```
 
-#### Result
-
-> **Note:** The MonteCarlo font is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL) and can be found at <https://github.com/googlefonts/monte-carlo>. More fonts can be found in the [Google Font corpus](https://github.com/google/fonts).
-
-{{ EmbedLiveSample('Enabling swash glyphs') }}
+> **Note:** For this example to work you need to load the MonteCarlo font which is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL). Download at <https://github.com/googlefonts/monte-carlo>.
+>
+> More fonts are available in the [Google Font corpus](https://github.com/google/fonts). However, note that fonts loaded from Google Fonts directly (for example, using `@import url("https://fonts.googleapis.com/css2?family=MonteCarlo");`) won't work. Google Fonts hosted fonts seem to strip the swash feature.
 
 ## Specifications
 
