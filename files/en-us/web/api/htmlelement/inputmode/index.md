@@ -26,20 +26,20 @@ It is used primarily on {{HTMLElement("input")}} elements, but is usable on any 
 This attribute may have one of the following values:
 
 - `decimal`
-  - : Fractional numeric input keyboard containing the digits and decimal separator for the user's locale (typically <kbd>.</kbd> or <kbd>,</kbd>).
+  - : Fractional numeric input keyboard that contains the digits and decimal separator for the user's locale (typically <kbd>.</kbd> or <kbd>,</kbd>).
 - `email`
   - : A virtual keyboard optimized for entering email addresses.
     Typically includes the <kbd>@</kbd>character as well as other optimizations.
 - `none`
-  - : No virtual keyboard, for when the page implements its own keyboard input control.
+  - : No virtual keyboard. This is used when the page implements its own keyboard input control.
 - `numeric`
-  - : Numeric input keyboard, but only requires the digits 0–9.
+  - : Numeric input keyboard that only requires the digits 0–9.
     Devices may or may not show a minus key.
 - `search`
   - : A virtual keyboard optimized for search input.
     For instance, the [return/submit key](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search".
 - `tel`
-  - : A telephone keypad input, including the digits 0–9, the asterisk (<kbd>\*</kbd>), and the pound (<kbd>#</kbd>) key.
+  - : A telephone keypad input that includes the digits 0–9, the asterisk (<kbd>\*</kbd>), and the pound (<kbd>#</kbd>) key.
 - `text`
   - : Standard input keyboard for the user's current locale.
 - `url`
