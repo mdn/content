@@ -19,7 +19,7 @@ The **`IDBFactory`** interface of the [IndexedDB API](/en-US/docs/Web/API/Indexe
 
 {{AvailableInWorkers}}
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBFactory.open")}}
   - : The current method to request opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).

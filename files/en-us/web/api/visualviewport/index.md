@@ -22,7 +22,7 @@ You can get a window's visual viewport using {{domxref("Window.visualViewport")}
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
 

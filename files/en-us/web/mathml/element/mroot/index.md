@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mroot
 
 {{MathMLRef}}
 
-The MathML `<mroot>` element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
+The **`<mroot>`** [MathML](/en-US/docs/Web/MathML) element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
 
 ## Attributes
 

@@ -28,7 +28,7 @@ If the attribute is given without a value, like `<label contenteditable>Example 
 
 If this attribute is missing or its value is invalid, its value is _inherited_ from its parent element: so the element is editable if its parent is editable.
 
-Note that although its allowed values include `true` and `false`, this attribute is an _enumerated_ one and not a _Boolean_ one.
+Note that although its allowed values include `true` and `false`, this attribute is an _[enumerated](/en-US/docs/Glossary/Enumerated)_ one and not a _Boolean_ one.
 
 You can set the color used to draw the text insertion {{Glossary("caret")}} with the CSS {{cssxref("caret-color")}} property.
 
@@ -42,7 +42,6 @@ You can set the color used to draw the text insertion {{Glossary("caret")}} with
 
 ## See also
 
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
 - The CSS {{cssxref("caret-color")}} property

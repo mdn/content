@@ -49,7 +49,7 @@ console.log(+y);
 
 ### Usage with non-numbers
 
-```js
+```js-nolint
 +true  // 1
 +false // 0
 +null  // 0

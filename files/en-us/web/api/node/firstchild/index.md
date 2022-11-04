@@ -50,7 +50,7 @@ will create a `#text` node, from a single space to multiple spaces, returns,
 tabs, and so on.
 
 Another `#text` node is inserted between the closing
-`</span>` and `</p>`tags.
+`</span>` and `</p>` tags.
 
 If this whitespace is removed from the source, the #text nodes are not inserted and the
 span element becomes the paragraph's first child.

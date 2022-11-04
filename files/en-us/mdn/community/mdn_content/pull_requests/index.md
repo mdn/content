@@ -1,5 +1,5 @@
 ---
-title: Pull Request Etiquette and Process for MDN Content
+title: Pull request etiquette and process for MDN Web Docs
 slug: MDN/Community/MDN_content/Pull_requests
 page-type: mdn-community-guide
 tags:

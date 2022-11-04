@@ -33,8 +33,8 @@ Intl[Symbol.toStringTag]
 ### Using toStringTag
 
 ```js
-Object.prototype.toString.call(Intl) // "[object Intl]"
-Intl.toString() // "[object Intl]"
+Object.prototype.toString.call(Intl); // "[object Intl]"
+Intl.toString(); // "[object Intl]"
 ```
 
 ## Specifications

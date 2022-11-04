@@ -53,7 +53,7 @@ In basic use without specifying a locale, a formatted string in the default loca
 const number = 3500;
 
 console.log(new Intl.NumberFormat().format(number));
-// → '3,500' if in US English locale
+// '3,500' if in US English locale
 ```
 
 ### Using locales
@@ -65,24 +65,24 @@ const number = 123456.789;
 
 // German uses comma as decimal separator and period for thousands
 console.log(new Intl.NumberFormat('de-DE').format(number));
-// → 123.456,789
+// 123.456,789
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
 console.log(new Intl.NumberFormat('ar-EG').format(number));
-// → ١٢٣٤٥٦٫٧٨٩
+// ١٢٣٤٥٦٫٧٨٩
 
 // India uses thousands/lakh/crore separators
 console.log(new Intl.NumberFormat('en-IN').format(number));
-// → 1,23,456.789
+// 1,23,456.789
 
 // the nu extension key requests a numbering system, e.g. Chinese decimal
 console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
-// → 一二三,四五六.七八九
+// 一二三,四五六.七八九
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
 console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
-// → 123.456,789
+// 123.456,789
 ```
 
 ### Using options
@@ -94,29 +94,29 @@ const number = 123456.789;
 
 // request a currency format
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
-// → 123.456,79 €
+// 123.456,79 €
 
 // the Japanese yen doesn't use a minor unit
 console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number));
-// → ￥123,457
+// ￥123,457
 
 // limit to three significant digits
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
-// → 1,23,000
+// 1,23,000
 
 // Formatting with units
 console.log(new Intl.NumberFormat('pt-PT', {
   style: 'unit',
   unit: 'kilometer-per-hour'
 }).format(50));
-// → 50 km/h
+// 50 km/h
 
 console.log((16).toLocaleString('en-GB', {
   style: 'unit',
   unit: 'liter',
   unitDisplay: 'long',
 }));
-// → 16 litres
+// 16 litres
 ```
 
 For an exhaustive list of options, see the [`Intl.NumberFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) page.

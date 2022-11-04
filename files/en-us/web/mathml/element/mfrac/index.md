@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mfrac
 
 {{MathMLRef}}
 
-The MathML `<mfrac>` element is used to display fractions. It can also be used
+The **`<mfrac>`** [MathML](/en-US/docs/Web/MathML) element is used to display fractions. It can also be used
 to mark up fraction-like objects such as
 [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient)
 and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).
@@ -29,9 +29,11 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `denomalign` {{deprecated_inline}}
   - : The alignment of the denominator under the fraction. Possible values are: `left`, `center` (default), and `right`.
 - `linethickness`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the thickness of the horizontal fraction line. Some browsers may also accept deprecated values `medium`, `thin` and `thick` but their exact interpretation is left to implementers.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the thickness of the horizontal fraction line.
 - `numalign` {{deprecated_inline}}
   - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
+
+> **Note:** For the `linethickness` attribute, some browsers may also accept the deprecated values `medium`, `thin` and `thick` (whose exact interpretation is left to implementers) or [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 

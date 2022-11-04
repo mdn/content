@@ -51,7 +51,7 @@ Note that as of Firefox 40, IndexedDB transactions have relaxed durability guara
 
 If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBTransaction.db")}} {{ReadOnlyInline}}
   - : The database connection with which this transaction is associated.
@@ -64,7 +64,7 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 - {{domxref("IDBTransaction.objectStoreNames")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
 
-## Methods
+## Instance methods
 
 Inherits from: {{domxref("EventTarget")}}
 

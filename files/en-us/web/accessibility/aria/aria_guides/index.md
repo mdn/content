@@ -5,6 +5,28 @@ tags:
   - ARIA
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
+    <li class="toggle">
+      <details><summary>ARIA states and properties</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details><summary>WAI-ARIA Roles</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
+      </details>
+    </li>
+  </ol>
+</section>
+
 Accessible Rich Internet Applications (**ARIA**) defines ways to make the Web more accessible to people with disabilities. A few guidelines to follow that ensure better accessibility, like using drag and drop for placement of the widgets.
 
 - Error Handling in Forms

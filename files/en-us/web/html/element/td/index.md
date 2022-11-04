@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.td
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table that contains data. It participates in the _table model_.
 
@@ -98,7 +98,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how the cell content's horizontal alignment will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how the cell content's horizontal alignment will be handled. Possible values are:
 
     - `left`: The content is aligned to the left of the cell.
     - `center`: The content is centered in the cell.

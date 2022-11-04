@@ -11,9 +11,9 @@ tags:
 browser-compat: api.ServiceWorkerGlobalScope.message_event
 ---
 
-{{APIRef}}
+{{APIRef("Service Workers API")}}
 
-The **`message`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.
+The **`message`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("Worker.postMessage()", "ServiceWorker.postMessage()")}} method to send messages to service workers.
 The service worker can optionally send a response back via the {{domxref("Client.postMessage()")}}, corresponding to the controlled page.
 
 This event is not cancelable and does not bubble.

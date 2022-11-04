@@ -46,6 +46,8 @@ If an element is `undefined`, `null`, it is converted to an empty string instead
 
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `toLocaleString()` method iterates empty slots as if they have the value `undefined`.
 
+The `toLocaleString()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Using locales and options
@@ -75,6 +77,21 @@ For more examples, see also the [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript
 
 ```js
 console.log([1, , 3].toLocaleString()); // '1,,3'
+```
+
+### Calling toLocaleString() on non-array objects
+
+The `toLocaleString()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 1,
+  1: 2,
+  2: 3,
+};
+console.log(Array.prototype.toLocaleString.call(arrayLike));
+// 1,2,3
 ```
 
 ## Specifications

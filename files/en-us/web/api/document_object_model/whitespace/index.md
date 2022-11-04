@@ -34,7 +34,7 @@ This source code contains a couple of line feeds after the `DOCTYPE` and a bunch
 
 This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
 
-### What _does_ happen to whitespace?
+### What does happen to whitespace?
 
 They don't just disappear, however.
 

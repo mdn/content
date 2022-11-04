@@ -29,10 +29,13 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
+
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
+
+> **Note:** Some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Specifications
 

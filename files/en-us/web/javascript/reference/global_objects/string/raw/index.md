@@ -65,7 +65,7 @@ String.raw`Hi\n${2+3}!`;
 
 String.raw`Hi\u000A!`;
 // 'Hi\\u000A!', same here, this time we will get the
-//  \, u, 0, 0, 0, A, 6 characters.
+// \, u, 0, 0, 0, A, 6 characters.
 // All kinds of escape characters will be ineffective
 // and backslashes will be present in the output string.
 // You can confirm this by checking the .length property

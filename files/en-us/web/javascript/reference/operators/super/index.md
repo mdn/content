@@ -174,7 +174,7 @@ const obj2 = {
 }
 
 Object.setPrototypeOf(obj2, obj1);
-obj2.method2(); // logs "method 1"
+obj2.method2(); // Logs "method 1"
 ```
 
 ### Methods that read super.prop do not behave differently when bound to other objects
@@ -212,13 +212,13 @@ const child = {
 };
 
 Object.setPrototypeOf(child, parent1);
-child.myParent(); // logs "1"
+child.myParent(); // Logs "1"
 
 const myParent = child.myParent;
-myParent(); // still logs "1"
+myParent(); // Still logs "1"
 
 const anotherChild = { __proto__: parent2, myParent };
-anotherChild.myParent(); // still logs "1"
+anotherChild.myParent(); // Still logs "1"
 ```
 
 Only resetting the entire inheritance chain will change the reference of `super`.

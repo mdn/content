@@ -11,7 +11,7 @@ browser-compat: mathml.elements.msqrt
 
 {{MathMLRef}}
 
-The MathML `<msqrt>` element is used to display square roots (no index is displayed). The square root accepts only one argument, which leads to the following syntax: `<msqrt> base </msqrt>`.
+The **`<msqrt>`** [MathML](/en-US/docs/Web/MathML) element is used to display square roots (no index is displayed). The square root accepts only one argument, which leads to the following syntax: `<msqrt> base </msqrt>`.
 
 ## Attributes
 

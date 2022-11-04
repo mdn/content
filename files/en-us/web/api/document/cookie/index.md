@@ -122,7 +122,7 @@ single cookie at a time using this method. Consider also that:
 
 ## Examples
 
-### Example #1: Simple usage
+### Example 1: Simple usage
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -155,7 +155,7 @@ function clearOutputCookies() {
 
 {{EmbedLiveSample('Example_1_Simple_usage', 200, 72)}}
 
-### Example #2: Get a sample cookie named _test2_
+### Example 2: Get a sample cookie named test2
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -193,7 +193,7 @@ function clearOutputCookieValue() {
 
 {{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 72)}}
 
-### Example #3: Do something only once
+### Example 3: Do something only once
 
 In order to use the following code, please replace all occurrences of the word
 `doSomethingOnlyOnce` (the name of the cookie) with a custom name.
@@ -230,7 +230,7 @@ function clearOutputDoOnce() {
 
 {{EmbedLiveSample('Example_3_Do_something_only_once', 200, 72)}}
 
-### Example #4: Reset the previous cookie
+### Example 4: Reset the previous cookie
 
 ```js
 function resetOnce() {
@@ -262,7 +262,7 @@ function clearOutputResetOnce() {
 
 {{EmbedLiveSample('Example_4_Reset_the_previous_cookie', 200, 72)}}
 
-### Example #5: Check a cookie existence
+### Example 5: Check a cookie existence
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -296,7 +296,7 @@ function clearOutputACookieExists() {
 
 {{EmbedLiveSample('Example_5_Check_a_cookie_existence', 200, 72)}}
 
-### Example #6: Check that a cookie has a specific value
+### Example 6: Check that a cookie has a specific value
 
 ```js
 function checkCookieHasASpecificValue() {

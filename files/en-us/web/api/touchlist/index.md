@@ -18,12 +18,12 @@ browser-compat: api.TouchList
 
 The **`TouchList`** interface represents a list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding `TouchList` object would have one {{domxref("Touch")}} object for each finger, for a total of three entries.
 
-## Properties
+## Instance properties
 
 - {{domxref("TouchList.length")}} {{ReadOnlyInline}}
   - : The number of {{domxref("Touch")}} objects in the `TouchList`.
 
-## Methods
+## Instance methods
 
 - {{domxref("TouchList.item()")}}
   - : Returns the {{domxref("Touch")}} object at the specified index in the list.

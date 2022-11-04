@@ -17,7 +17,7 @@ The **`SVGTextPositioningElement`** interface is implemented by elements that su
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGTextContentElement")}}._
 
@@ -32,7 +32,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGTextCont
 - {{domxref("SVGTextPositioningElement.rotate")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedNumberList")}} reflecting the {{SVGAttr("rotate")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't provide any specific methods, but inherits methods from its parent, {{domxref("SVGTextContentElement")}}._
 

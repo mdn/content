@@ -66,15 +66,19 @@ If the following invariants are violated, the proxy will throw a {{jsxref("TypeE
 The following code traps {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ```js
-const p = new Proxy({ a: 20}, {
-  getOwnPropertyDescriptor(target, prop) {
-    console.log(`called: ${prop}`);
-    return { configurable: true, enumerable: true, value: 10 };
-  },
-});
+const p = new Proxy(
+  { a: 20 },
+  {
+    getOwnPropertyDescriptor(target, prop) {
+      console.log(`called: ${prop}`);
+      return { configurable: true, enumerable: true, value: 10 };
+    },
+  }
+);
 
-console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
-                                                            // 10
+console.log(Object.getOwnPropertyDescriptor(p, "a").value);
+// "called: a"
+// 10
 ```
 
 The following code violates an invariant.
@@ -88,7 +92,7 @@ const p = new Proxy(obj, {
   },
 });
 
-Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
+Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 ```
 
 ## Specifications

@@ -26,7 +26,7 @@ The {{domxref("MutationObserver")}} interface provides the ability to watch for 
 - {{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}
   - : Creates and returns a new `MutationObserver` which will invoke a specified callback function when DOM changes occur.
 
-## Methods
+## Instance methods
 
 - {{domxref("MutationObserver.disconnect()", "disconnect()")}}
   - : Stops the `MutationObserver` instance from receiving further notifications until and unless {{domxref("MutationObserver.observe", "observe()")}} is called again.

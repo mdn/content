@@ -41,14 +41,14 @@ const re = /(hi)?/g;
 Matches the empty string.
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 
 Returns `["hi", "hi"]` with `lastIndex` equal to 2.
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 

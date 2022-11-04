@@ -93,8 +93,9 @@ visits that element's index. Elements that are deleted are not visited.
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
-> **Note:** Calling this method on an empty array returns
-> `false` for any condition!
+`some()` acts like the "there exists" quantifier in mathematics. In particular, for an empty array, it returns `false` for any condition.
+
+The `some()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -177,6 +178,22 @@ getBoolean('true');  // true
 console.log([1, , 3].some((x) => x === undefined)); // false
 console.log([1, , 1].some((x) => x !== 1)); // false
 console.log([1, undefined, 1].some((x) => x !== 1)); // true
+```
+
+### Calling some() on non-array objects
+
+The `some()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `true`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(
+  Array.prototype.some.call(arrayLike, (x) => typeof x === "number"),
+); // false
 ```
 
 ## Specifications

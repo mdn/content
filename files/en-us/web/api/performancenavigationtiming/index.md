@@ -18,7 +18,7 @@ The **`PerformanceNavigationTiming`** interface provides methods and properties 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 This interface extends the following {{domxref('PerformanceEntry')}} properties for navigation performance entry types by qualifying and constraining them as follows:
 
@@ -67,7 +67,7 @@ The interface also supports the following properties:
 - {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time value equal to the time immediately before the user agent starts the unload event of the previous document.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceNavigationTiming.toJSON()")}}
   - : Returns a string that is the JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.

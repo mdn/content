@@ -11,20 +11,18 @@ browser-compat: mathml.elements.munderover
 
 {{MathMLRef}}
 
-The MathML `<munderover>` element is used to attach accents or limits both under and over an expression.
+The **`<munderover>`** [MathML](/en-US/docs/Web/MathML) element is used to attach accents or limits both under and over an expression.
 
 It uses the following syntax: `<munderover> base underscript overscript </munderover>`
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `accent`
-  - : If `true`, the overscript is an _accent_, which is drawn closer to the base expression.
-    If `false` (default value), the overscript is a _limit_ over the base expression.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the over script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 - `accentunder`
-  - : If `true`, the underscript is an _accent_, which is drawn closer to the base expression.
-    If `false` (default value), the underscript is a _limit_ under the base expression.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
 ## Examples
 

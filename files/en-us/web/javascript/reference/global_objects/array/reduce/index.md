@@ -130,6 +130,8 @@ const getMax = (a, b) => Math.max(a, b);
 [].reduce(getMax); // TypeError
 ```
 
+The `reduce()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### How reduce() works without an initial value
@@ -196,7 +198,7 @@ const sum = objects.reduce(
   0,
 );
 
-console.log(sum); // logs 6
+console.log(sum); // 6
 ```
 
 ### Flatten an array of arrays
@@ -248,7 +250,7 @@ function groupBy(objectArray, property) {
 }
 
 const groupedPeople = groupBy(people, "age");
-// groupedPeople is:
+console.log(groupedPeople);
 // {
 //   20: [
 //     { name: 'Max', age: 20 },
@@ -287,8 +289,8 @@ const allbooks = friends.reduce(
   (previousValue, currentValue) => [...previousValue, ...currentValue.books],
   ["Alphabet"],
 );
-
-// allbooks = [
+console.log(allbooks);
+// [
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'
@@ -417,6 +419,21 @@ multiply24(10); // 240
 ```js
 console.log([1, 2, , 4].reduce((a, b) => a + b)); // 7
 console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
+```
+
+### Calling reduce() on non-array objects
+
+The `reduce()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
+// 9
 ```
 
 ## Specifications

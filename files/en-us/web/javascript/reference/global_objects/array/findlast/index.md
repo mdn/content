@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Array.findLast
 
 {{JSRef}}
 
-The **`findLast()`** method returns the value of the last element in an array that satisfies the provided testing function.
+The **`findLast()`** method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
@@ -95,6 +95,8 @@ Therefore:
 - Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+
+The `findLast()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -196,6 +198,22 @@ array.findLast((value, index) => {
 // Visited index 2 with value undefined
 // Visited index 1 with value 1
 // Visited index 0 with value 0
+```
+
+### Calling findLast() on non-array objects
+
+The `findLast()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
+); // 4
 ```
 
 ## Specifications
