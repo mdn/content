@@ -18,7 +18,8 @@ When the read operation is complete, the {{domxref("FileReader.readyState","read
 the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and the {{domxref("FileReader.result","result")}} property contains the contents of the file as a text string.
 
 > **Note:** The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as text.
-> **Note:** This method loads the entire contents of the file in memory and is not suitable for large files. Prefer readAsArrayBuffer for large files
+
+> **Note:** This method loads the entire file's content into memory and is not suitable for large files. Prefer [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer) for large files.
 
 ## Syntax
 
