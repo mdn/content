@@ -143,8 +143,8 @@ const createCredentialDefaultArgs = {
         // User:
         user: {
             id: new Uint8Array(16),
-            name: "john.p.smith@example.com",
-            displayName: "John P. Smith"
+            name: "carina.p.anand@example.com",
+            displayName: "Carina P. Anand"
         },
 
         pubKeyCredParams: [{

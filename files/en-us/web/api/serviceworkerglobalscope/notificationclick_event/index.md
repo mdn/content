@@ -67,7 +67,7 @@ self.addEventListener('notificationclick', (event) => {
 });
 ```
 
-Or use the {{domxref("ServiceWorkerGlobalScope/onnotificationclick", "onnotificationclick")}} event handler property:
+Or use the `onnotificationclick` event handler property:
 
 ```js
 self.onnotificationclick = (event) => {

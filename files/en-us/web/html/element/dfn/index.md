@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.dfn
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the term being defined within the context of a definition phrase or sentence. The {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the {{HTMLElement("section")}} element which is the nearest ancestor of the `<dfn>` is considered to be the definition of the term.
 

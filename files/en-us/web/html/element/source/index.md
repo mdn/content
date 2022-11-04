@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.source
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element. It is a {{glossary("void element")}}, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
 
@@ -41,7 +41,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
       <td>
         <div>
           A media element—{{HTMLElement("audio")}} or
-          {{HTMLelement("video")}}—and it must be placed before any
+          {{HTMLElement("video")}}—and it must be placed before any
           <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
             >flow content</a
           >
@@ -162,6 +162,20 @@ In this example, two `<source>` elements are included within the {{HTMLElement("
 ```
 
 With the `<picture>` element, you must always include an `<img>` with a fallback image, with an `alt` attribute to ensure accessibility (unless the image is an irrelevant background decorative image).
+
+### Picture with height & width attributes example
+
+In this example, three `<source>` elements with {{htmlattrdef("height")}} and {{htmlattrdef("width")}} attributes are included in a {{HTMLElement("picture")}} element.
+A [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
+
+```html
+<picture>
+  <source srcset="landscape.png" media="(min-width: 1000px)" width="1000" height="400">
+  <source srcset="square.png" media="(min-width: 800px)" width="800" height="800">
+  <source srcset="portrait.png" media="(min-width: 600px)" width="600" height="800">
+  <img src="fallback.png" alt="Image used when the browser does not support the sources" width="500" height="400">
+</picture>
+```
 
 ## Specifications
 

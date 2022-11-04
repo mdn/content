@@ -82,7 +82,8 @@ These element-specific interfaces make up the majority of the HTML DOM API, and 
 
 ## HTML DOM target audience
 
-The features exposed by the HTML DOM are among the most commonly-used APIs in the web developer's arsenal. All but the most simple web applications will use some features of the HTML DOM.
+The features exposed by the HTML DOM are among the most commonly-used APIs in a web developer's toolkit.
+All but the most simple web applications will use some features of the HTML DOM.
 
 ## HTML DOM API interfaces
 
@@ -316,7 +317,7 @@ In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/in
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]

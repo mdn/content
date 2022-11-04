@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.input
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
@@ -306,7 +306,7 @@ The available types are as follows:
       <th colspan="3">Obsolete values</th>
     </tr>
     <tr>
-      <td>`datetime`</td>
+      <td><code>datetime</code></td>
       <td>
         {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>
@@ -619,7 +619,7 @@ The following non-standard attributes are also available on some browsers. As a 
     <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
-        A string indicating whether or not autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
+        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
       </td>
     </tr>
     <tr>
@@ -657,7 +657,7 @@ The following non-standard attributes are also available on some browsers. As a 
         <a href="#webkitdirectory"><code>webkitdirectory</code></a>
       </td>
       <td>
-        A Boolean indicating whether or not to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
+        A Boolean indicating whether to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
       </td>
     </tr>
   </tbody>
@@ -764,7 +764,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>{{Cssxref(":placeholder-shown")}}</td>
       <td>
         Element that is currently displaying <a href="#placeholder"><code>placeholder</code> text</a>,
-        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as of yet, no value.
+        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as yet, no value.
       </td>
     </tr>
     <tr>
@@ -1128,7 +1128,7 @@ function validate(input) {
 }
 ```
 
-The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is `null`.
+The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all the values are valid, until the message is `null`.
 
 #### Custom validation error example
 

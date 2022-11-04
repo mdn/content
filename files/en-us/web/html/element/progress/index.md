@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.progress
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
 

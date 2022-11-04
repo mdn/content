@@ -23,9 +23,8 @@ that if the specified header already exists and accepts multiple values,
 `append()` will append the new value onto the end of the set of values.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 

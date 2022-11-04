@@ -14,7 +14,7 @@ tags:
   - Web
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar("Attributes")}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 
@@ -1172,7 +1172,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>{{ HTMLElement("ol") }}</td>
       <td>
         Indicates whether the list should be displayed in a descending order
-        instead of a ascending.
+        instead of an ascending order.
       </td>
     </tr>
     <tr>
@@ -1524,7 +1524,7 @@ To be clear, the values "`true`" and "`false`" are not allowed on boolean attrib
 
 ## Event handler attributes
 
-> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also blocked by content security policies.
+> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
 In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 
