@@ -8,7 +8,7 @@ tags:
 {{AddonSidebar}}
 
 Commonly referred to as a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), this user interface option is a button added to the browser toolbar. Users click the button to interact with your extension.
-![Browser action example with a paw print button.](browser-action.png)
+![A custom browser action icon it the browser tool bar that looks like paw print.](browser-action.png)
 
 The toolbar button (browser action) is very like the address bar button (page action). For the differences, and guidance on when to use what, see [Page actions and browser actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions#page_actions_and_browser_actions).
 
