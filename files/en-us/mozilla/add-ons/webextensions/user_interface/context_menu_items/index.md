@@ -15,7 +15,7 @@ You would use this option to expose features that are relevant to specific brows
 
 The full list of supported contexts is available at {{WebExtAPIRef("menus.ContextType")}} and includes contexts outside of a web page, such as bookmark items in the browser UI. For example, the "[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" extension adds a menu item that allows the user to open a bookmark URL in a new container tab:
 
-![A context menu with "open in new container tab" submenu highlighted. The submenu shows personal, work, banking, shopping, and Facebook contextual identities.There is an option at the top of the submenu to select no container.](extension_context_menu.png)
+![A context menu with "open in new container tab" submenu highlighted. The submenu shows personal, work, banking, shopping, and Facebook contextual identities. There is an option at the top of the submenu to select no container.](extension_context_menu.png)
 
 ## Specifying context menu items
 
