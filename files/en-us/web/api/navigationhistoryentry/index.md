@@ -32,15 +32,15 @@ The Navigation API only exposes history entries created directly by the applicat
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("NavigationHistoryEntry.id", "id")}} {{ReadOnlyInline}}
-  - : Returns a unique, UA-generated value that always represents the history entry, useful to correlate a history entry with an external resource such as a storage cache.
+  - : Returns the `id` of the history entry. This is a unique, UA-generated value that always represents the history entry, useful to correlate a history entry with an external resource such as a storage cache.
 - {{domxref("NavigationHistoryEntry.index", "index")}} {{ReadOnlyInline}}
   - : Returns the index of the history entry in the history entries list (i.e. returned by {{domxref("Navigation.entries()")}}), or `-1` if the entry does not appear in the list.
 - {{domxref("NavigationHistoryEntry.key", "key")}} {{ReadOnlyInline}}
-  - : Returns a unique, UA-generated value that represents the history entry's slot in the history entries list, used to navigate to this place in the history via {{domxref("Navigation.traverseTo()")}}. It will be reused by other entries that replace the entry in the list (i.e. if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
+  - : Returns the `key` of the history entry. This is a unique, UA-generated value that represents the history entry's slot in the history entries list, used to navigate to this place in the history via {{domxref("Navigation.traverseTo()")}}. It will be reused by other entries that replace the entry in the list (i.e. if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
 - {{domxref("NavigationHistoryEntry.sameDocument", "sameDocument")}} {{ReadOnlyInline}}
-  - : Returns `true` if this history entry is for the same `document` as the current {{domxref("Window.document")}} value, or `false` otherwise.
+  - : Returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
 - {{domxref("NavigationHistoryEntry.url", "url")}} {{ReadOnlyInline}}
-  - : Returns the URL of this history entry.
+  - : Returns the absolute URL of this history entry.
 
 ## `NavigationHistoryEntry` events
 

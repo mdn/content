@@ -13,7 +13,6 @@ tags:
   - Navigation API
   - Property
   - Reference
-  - reload
   - Scroll
   - Traversal
   - updateCurrentEntry
