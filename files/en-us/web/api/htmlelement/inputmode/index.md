@@ -10,7 +10,6 @@ tags:
   - HTML element
   - Property
   - Reference
-  - hidden
 browser-compat: api.HTMLElement.inputMode
 ---
 
