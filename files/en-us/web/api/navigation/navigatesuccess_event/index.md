@@ -22,7 +22,7 @@ browser-compat: api.Navigation.navigatesuccess_event
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`navigatesuccess`** event of the {{domxref("Navigation")}} interface is fired when a successful navigation has completed.
+The **`navigatesuccess`** event of the {{domxref("Navigation")}} interface is fired when a successful navigation has finished.
 
 This means that all promises returned by your `intercept()` handler are fulfilled. This is equivalent to the {{domxref("NavigationTransition.finished")}} promise fulfilling.
 

@@ -42,11 +42,20 @@ oncurrententrychange = (event) => {};
 
 ## Examples
 
-`changeentrychange` could be used by analytics packages that don't care about the navigation finishing, just committing. It could also be used to set up relevant per-entry events, for example:
+Navigation data reporting:
 
 ```js
 navigation.addEventListener("currententrychange", () => {
-  navigation.currentEntry.addEventListener("dispose", disposeHandler);
+  const data = navigation.currentEntry.getState();
+  submitAnalyticsData(data.analytics);
+});
+```
+
+Setting up a per-entry event:
+
+```js
+navigation.addEventListener("currententrychange", () => {
+  navigation.currentEntry.addEventListener("dispose", genericDisposeHandler);
 });
 ```
 

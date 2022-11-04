@@ -34,14 +34,14 @@ It is accessed via the {{domxref("NavigateEvent.destination")}} property.
 - {{domxref("NavigationDestination.key", "key")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("NavigationHistoryEntry.key", "key")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or `null` otherwise.
 - {{domxref("NavigationDestination.sameDocument", "sameDocument")}} {{ReadOnlyInline}}
-  - : Returns `true` if the navigation is to the same `document` as the current {{domxref("Window.document")}} value, or `false` otherwise.
+  - : Returns `true` if the navigation is to the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
 - {{domxref("NavigationDestination.url", "url")}} {{ReadOnlyInline}}
   - : Returns the URL being navigated to.
 
 ## Instance methods
 
 - {{domxref("NavigationDestination.getState", "getState()")}}
-  - : Returns the available `state` associated with the destination {{domxref("NavigationHistoryEntry")}}, or navigation operation (e.g. {{domxref("Navigation.navigate()", "navigate()")}}) as appropriate.
+  - : Returns a clone of the available state associated with the destination {{domxref("NavigationHistoryEntry")}}, or navigation operation (e.g. {{domxref("Navigation.navigate()", "navigate()")}}) as appropriate.
 
 ## Examples
 

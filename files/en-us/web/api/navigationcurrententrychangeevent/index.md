@@ -37,7 +37,7 @@ This event fires after the navigation is committed, meaning that the visible URL
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
 - {{domxref("NavigationCurrentEntryChangeEvent.from", "from")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("NavigationHistoryEntry")}} that has changed.
+  - : Returns the {{domxref("NavigationHistoryEntry")}} that was navigated from.
 - {{domxref("NavigationCurrentEntryChangeEvent.navigationType", "navigationType")}} {{ReadOnlyInline}}
   - : Returns the type of the navigation that resulted in the change.
 
@@ -47,7 +47,7 @@ Navigation data reporting:
 
 ```js
 navigation.addEventListener("currententrychange", () => {
-  const data = navigation.currentEntry.getState()
+  const data = navigation.currentEntry.getState();
   submitAnalyticsData(data.analytics);
 });
 ```

@@ -23,7 +23,7 @@ The **`Navigation`** interface of the {{domxref("Navigation API")}} allows contr
 
 It is accessed via the {{domxref("Window.navigation")}} property.
 
-The Navigation API only creates history entries created directly in the application document (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+The Navigation API only exposes history entries created directly by the application (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
 
 {{InheritanceDiagram}}
 
@@ -55,7 +55,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("Navigation/navigateerror_event", "navigateerror")}}
   - : Fired when a navigation fails.
 - {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}}
-  - : Fired when a successful navigation has completed.
+  - : Fired when a successful navigation has finished.
 
 ## Instance methods
 
@@ -68,13 +68,13 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("Navigation.forward", "forward()")}}
   - : Navigates forwards by one entry in the navigation history.
 - {{domxref("Navigation.navigate", "navigate()")}}
-  - : Navigates to a specific URL, updating any provided `state` in the history entries list.
+  - : Navigates to a specific URL, updating any provided state in the history entries list.
 - {{domxref("Navigation.reload", "reload()")}}
-  - : Reloads the current URL, updating any provided `state` in the history entries list.
+  - : Reloads the current URL, updating any provided state in the history entries list.
 - {{domxref("Navigation.traverseTo", "traverseTo()")}}
   - : Navigates to a specific {{domxref("NavigationHistoryEntry")}} by {{domxref("NavigationHistoryEntry.key", "key")}}.
 - {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}
-  - : Updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}}; used
+  - : Updates the state of the {{domxref("Navigation.currentEntry","currentEntry")}}; used
     in cases where the state change will be independent from a navigation or reload.
 
 ## Examples

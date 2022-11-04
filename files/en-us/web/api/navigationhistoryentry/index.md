@@ -23,7 +23,7 @@ The **`NavigationHistoryEntry`** interface of the {{domxref("Navigation API")}} 
 
 These objects are commonly accessed via the {{domxref("Navigation.currentEntry")}} property and {{domxref("Navigation.entries()")}} method.
 
-The Navigation API only creates history entries created directly in the application document (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+The Navigation API only exposes history entries created directly by the application (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
 
 {{InheritanceDiagram}}
 
@@ -52,7 +52,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("NavigationHistoryEntry.getState", "getState()")}}
-  - : Returns the available `state` associated with this history entry.
+  - : Returns a clone of the available state associated with this history entry.
 
 ## Examples
 

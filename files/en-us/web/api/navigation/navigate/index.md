@@ -20,7 +20,7 @@ browser-compat: api.Navigation.navigate
 {{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`navigate()`** method of the
-{{domxref("Navigation")}} interface navigates to a specific URL, updating any provided `state` in the history entries list.
+{{domxref("Navigation")}} interface navigates to a specific URL, updating any provided state in the history entries list.
 
 ## Syntax
 

@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 - {{domxref("NavigateEvent.canIntercept", "canIntercept")}} {{ReadOnlyInline}}
   - : Returns `true` if the navigation can be intercepted, or `false` otherwise (e.g. you can't intercept a cross-origin navigation).
 - {{domxref("NavigateEvent.destination", "destination")}} {{ReadOnlyInline}}
-  - : Returns the URL being navigated to.
+  - : Returns a {{domxref("NavigationDestination")}} object representing the destination being navigated to.
 - {{domxref("NavigateEvent.downloadRequest", "downloadRequest")}} {{ReadOnlyInline}}
   - : Returns the filename of the file requested for download, in the case of a download navigation (e.g. an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.
 - {{domxref("NavigateEvent.formData", "formData")}} {{ReadOnlyInline}}
@@ -45,9 +45,9 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 - {{domxref("NavigateEvent.info", "info")}} {{ReadOnlyInline}}
   - : Returns the `info` data value passed by the initiating navigation operation (e.g. {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}), or `undefined` if no `info` data was passed.
 - {{domxref("NavigateEvent.navigationType", "navigationType")}} {{ReadOnlyInline}}
-  - : Returns the type of the navigation, which is one of `push`, `reload`, `replace`, or `traverse`.
+  - : Returns the type of the navigation, which a string equal to `push`, `reload`, `replace`, or `traverse`.
 - {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}}
-  - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g. by the user pressing the browser's "Stop" button).
+  - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g. by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
 - {{domxref("NavigateEvent.userInitiated", "userInitiated")}} {{ReadOnlyInline}}
   - : Returns `true` if the navigation was initiated by the user (e.g. by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons), or `false` otherwise.
 
@@ -56,7 +56,7 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 _Inherits methods from its parent, {{DOMxRef("Event")}}._
 
 - {{domxref("NavigateEvent.intercept", "intercept()")}}
-  - : Intercepts this navigation, turning it into a same-document navigation to the {{domxref("NavigateEvent.destination", "destination")}} URL. It can accept a handler that defines what the navigation handling behavior should be, plus options to control autofocus ansd scroll behavior as desired.
+  - : Intercepts this navigation, turning it into a same-document navigation to the {{domxref("{{domxref("NavigationDestination.url")}}", "destination")}} URL. It can accept a handler function that defines what the navigation handling behavior should be, plus `focusReset` and `scroll` options to control behavior as desired.
 - {{domxref("NavigateEvent.scroll", "scroll()")}}
   - : Can be called to manually trigger the browser-driven scrolling behavior that occurs in response to the navigation, if you want it to happen before the navigation handling has completed.
 

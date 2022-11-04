@@ -32,7 +32,7 @@ The API is accessed via the {{domxref("Window.navigation")}} property, which ret
 
 ### Handling navigations
 
-`navigation` has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API")}}, where it is sometimes hard to figure out responding to all navigations.) The `navigate` event has an event object of type {{domxref("NavigateEvent")}}, which contains detailed information including the navigation's destination URL, type, whether it contains `POST` form data or a download request, and more.
+`navigation` has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API")}}, where it is sometimes hard to figure out responding to all navigations.) The `navigate` event has an event object of type {{domxref("NavigateEvent")}}, which contains detailed information including details around the navigation's destination, type, whether it contains `POST` form data or a download request, and more.
 
 It also contains two methods:
 
@@ -43,7 +43,7 @@ Once a navigation is initiated, and your `intercept()` handler is called, a {{do
 
 > **Note:** In this context "transition" refers to the transition between one history entry and another. It isn't related to CSS transitions.
 
-> **Note:** In future implementations you will be able to call {{domxref("Event.preventDefault", "preventDefault()")}} to stop the navigation entirely. This is specced out, but not currently implemented anywhere.
+> **Note:** You can also call {{domxref("Event.preventDefault", "preventDefault()")}} to stop the navigation entirely in most cases. This works today for most push, reload, and replace navigations; cancellation of traverse navigations is not yet implemented.
 
 When the `intercept()` handler function's promise fulfills, the `Navigate` object's {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, allowing you to run cleanup code after a successful navigation has completed. If it rejects, meaning the navigation has failed, {{domxref("Navigation/navigateerror_event", "navigateerror")}} fires instead, allowing you to gracefully handle the failure case. There is also a {{domxref("NavigationTransition.finished", "finished")}} property on the `NavigationTransition` object, which fullfills or rejects at the same time as the aforementioned events are fired, providing another path for handling the success and failure cases if it is needed.
 
@@ -53,7 +53,7 @@ When the `intercept()` handler function's promise fulfills, the `Navigate` objec
 
 As the user navigates through your application, each new location navigated to results in the creation of a navigation history entry. Each history entry is represented by a distinct {{domxref("NavigationHistoryEntry")}} object instance. These contain several useful properties such as the entry's key, URL, and state information. You can return the entry that the user is currently navigated to right now using {{domxref("Navigation.currentEntry","currentEntry")}}, and an array of all existing history entries using {{domxref("Navigation.entries", "entries()")}}. Each `NavigationHistoryEntry` object has a {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} event, which fires when the entry is no longer part of the browser history (e.g. navigate back three times, then navigate forwards to somewhere else. Those three history entries will be disposed).
 
-> **Note:** The Navigation API only creates history entries created directly in the application document (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+> **Note:** The Navigation API only exposes history entries created directly by the application (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
