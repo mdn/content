@@ -197,7 +197,7 @@ const div4 = (callback, x) => {
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // -> 14
+computation(console.log, 5) // Logs 14
 
 // same as:
 

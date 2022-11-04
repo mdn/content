@@ -248,6 +248,20 @@ new ClassWithPrivateAccessor();
 // 🎬hello world🛑
 ```
 
+Unlike public methods, private methods are not accessible on `Class.prototype`.
+
+```js
+class C {
+  #method() {}
+  static getMethod(x) {
+    return x.#method;
+  }
+}
+
+console.log(C.getMethod(new C())); // [Function: #method]
+console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
+```
+
 #### Private static methods
 
 Like their public equivalent, private static methods are called on the class itself, not instances of the class. Like private static fields, they are only accessible from inside the class declaration.

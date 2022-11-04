@@ -54,6 +54,8 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ## Changes for add-on developers
 
+- Firefox now issues a warning when an extension is installed if its [version number](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) doesn't follow the recommended format ({{bug(1793925)}}).
+
 ### Removals
 
 ### Other

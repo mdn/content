@@ -39,12 +39,12 @@ const myAsyncIterable = {
 (async () => {
   for await (const x of myAsyncIterable) {
     console.log(x);
-    // expected output:
-    //    "hello"
-    //    "async"
-    //    "iteration!"
   }
 })();
+// Logs:
+// "hello"
+// "async"
+// "iteration!"
 ```
 
 When creating an API, remember that async iterables are designed to represent something _iterable_ — like a stream of data or a list —, not to completely replace callbacks and events in most situations.

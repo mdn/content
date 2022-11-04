@@ -9,7 +9,7 @@ tags:
 browser-compat: html.elements.header
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
 

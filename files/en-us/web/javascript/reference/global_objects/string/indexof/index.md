@@ -109,8 +109,8 @@ The following example uses `indexOf()` to locate substrings in the string
 ```js
 const str = 'Brave new world';
 
-console.log(`Index of first w from start is ${str.indexOf('w')}`); // logs 8
-console.log(`Index of "new" from start is ${str.indexOf('new')}`); // logs 6
+console.log(str.indexOf('w')); // 8
+console.log(str.indexOf('new')); // 6
 ```
 
 ### indexOf() and case-sensitivity
@@ -127,10 +127,8 @@ because the `indexOf()` method is case sensitive, the string
 const myString = 'brie, pepper jack, cheddar';
 const myCapString = 'Brie, Pepper Jack, Cheddar';
 
-console.log(`myString.indexOf("cheddar") is ${myString.indexOf('cheddar')}`);
-// logs 19
-console.log(`myCapString.indexOf("cheddar") is ${myCapString.indexOf('cheddar')}`);
-// logs -1
+console.log(myString.indexOf('cheddar')); // 19
+console.log(myCapString.indexOf('cheddar')); // -1
 ```
 
 ### Using indexOf() to count occurrences of a letter in a string
@@ -148,7 +146,7 @@ while (position !== -1) {
   position = str.indexOf('e', position + 1);
 }
 
-console.log(count); // displays 4
+console.log(count); // 4
 ```
 
 ## Specifications

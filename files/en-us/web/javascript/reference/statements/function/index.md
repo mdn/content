@@ -116,7 +116,7 @@ Function declarations in JavaScript are [hoisted](/en-US/docs/Glossary/Hoisting)
 global scope. You can use the function before you declared it:
 
 ```js
-hoisted(); // logs "foo"
+hoisted(); // Logs "foo"
 
 function hoisted() {
   console.log('foo');
