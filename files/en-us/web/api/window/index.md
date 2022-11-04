@@ -103,7 +103,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.name")}}
   - : Gets/sets the name of the window.
-- {{domxref("Window.navigation")}} {{ReadOnlyInline}}
+- {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the {{domxref("Navigation API")}}.
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
   - : Returns a reference to the navigator object.

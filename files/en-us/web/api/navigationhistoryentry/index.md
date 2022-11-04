@@ -4,18 +4,20 @@ slug: Web/API/NavigationHistoryEntry
 page-type: web-api-interface
 tags:
   - API
+  - Experimental
   - History
   - Interface
   - Landing
   - Navigate
   - NavigationHistoryEntry
   - Navigation API
+  - Reference
   - Scroll
   - Traversal
 browser-compat: api.NavigationHistoryEntry
 ---
 
-{{DefaultAPISidebar("Navigation API")}}
+{{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`NavigationHistoryEntry`** interface of the {{domxref("Navigation API")}} represents a single navigation history entry.
 

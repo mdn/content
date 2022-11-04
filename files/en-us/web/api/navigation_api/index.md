@@ -4,12 +4,14 @@ slug: Web/API/Navigation_API
 page-type: web-api-overview
 tags:
   - API
+  - Experimental
   - History
   - Landing
   - Navigate
   - Navigation
   - Navigation API
   - Overview
+  - Reference
   - Scroll
   - Traversal
 browser-compat:
@@ -63,9 +65,9 @@ The `Navigation` object contains all the methods you'll need to update and trave
 
 Each one of the above methods returns an object containing two promises — `{ committed, finished }`. This allows the invoking function to wait on taking further action until:
 
-- `committed` fulfills, meaning that the visible URL has changed and a new NavigationHistoryEntry has been created.
+- `committed` fulfills, meaning that the visible URL has changed and a new {{domxref("NavigationHistoryEntry")}} has been created.
 - `finished` fulfills, meaning that all promises returned by your `intercept()` handler are fulfilled. This is equivalent to the {{domxref("NavigationTransition.finished")}} promise fulfilling, when the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, as mentioned earlier.
-- either one of the above promises rejects, meaning that the navigation transition has failed for some reason.
+- either one of the above promises rejects, meaning that the navigation has failed for some reason.
 
 ### State
 

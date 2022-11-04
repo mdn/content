@@ -4,6 +4,7 @@ slug: Web/API/Window/navigation
 page-type: web-api-instance-property
 tags:
   - API
+  - Experimental
   - Navigate
   - Navigation
   - Navigation API
@@ -13,7 +14,7 @@ tags:
 browser-compat: api.Window.navigation
 ---
 
-{{ ApiRef() }}
+{{APIRef}}{{seecompattable}}
 
 The `navigation` read-only property of the {{domxref("Window")}} interface returns the current `window`'s associated {{domxref("Navigation")}} object.
 

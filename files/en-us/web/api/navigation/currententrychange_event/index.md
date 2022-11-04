@@ -1,0 +1,65 @@
+---
+title: "Navigation: currententrychange event"
+slug: Web/API/Navigation/currententrychange_event
+page-type: web-api-event
+tags:
+  - API
+  - currententrychange
+  - Event
+  - Experimental
+  - History
+  - Navigate
+  - Navigation
+  - Navigation API
+  - Property
+  - Reference
+  - reload
+  - Scroll
+  - Traversal
+  - updateCurrentEntry
+browser-compat: api.Navigation.currententrychange_event
+---
+
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
+
+The **`currententrychange`** event of the {{domxref("Navigation")}} interface is fired when the {{domxref("Navigation.currentEntry")}} has changed.
+
+This event will fire for same-document navigations (e.g. {{domxref("Navigation.back", "back()")}} or {{domxref("Navigation.traverseTo", "traverseTo()")}}), replacements (i.e. a {{domxref("Navigation.navigate", "navigate()")}} call with `history` set to `replace`), or other calls that change the entry's state (e.g. {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}, or the {{domxref("History API")}}'s {{domxref("History.replaceState()")}}).
+
+This event fires after the navigation is committed, meaning that the visible URL has changed and the {{domxref("NavigationHistoryEntry")}} update has occurred. It is useful for migrating from usage of older API features like the {{domxref("Window/hashchange_event", "hashchange")}} or {{domxref("Window/popstate_event", "popstate")}} events.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("currententrychange", (event) => {});
+
+oncurrententrychange = (event) => {};
+```
+
+> **Note:** The event object is of type {{domxref("NavigationCurrentEntryChangeEvent")}}.
+
+## Examples
+
+`changeentrychange` could be used by analytics packages that don't care about the navigation finishing, just committing. It could also be used to set up relevant per-entry events, for example:
+
+```js
+navigation.addEventListener("currententrychange", () => {
+  navigation.currentEntry.addEventListener("dispose", disposeHandler);
+});
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
+- [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
+- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

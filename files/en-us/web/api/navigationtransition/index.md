@@ -4,18 +4,20 @@ slug: Web/API/NavigationTransition
 page-type: web-api-interface
 tags:
   - API
+  - Experimental
   - History
   - Interface
   - Landing
   - Navigate
   - NavigationTransition
   - Navigation API
+  - Reference
   - Scroll
   - Traversal
 browser-compat: api.NavigationTransition
 ---
 
-{{DefaultAPISidebar("Navigation API")}}
+{{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`NavigationTransition`** interface of the {{domxref("Navigation API")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the {{domxref("Navigation/navigatesuccess_event", "success")}} or {{domxref("Navigation/navigateerror_event", "error")}} stage.
 

@@ -4,18 +4,20 @@ slug: Web/API/Navigation
 page-type: web-api-interface
 tags:
   - API
+  - Experimental
   - History
   - Interface
   - Landing
   - Navigate
   - Navigation
   - Navigation API
+  - Reference
   - Scroll
   - Traversal
 browser-compat: api.Navigation
 ---
 
-{{DefaultAPISidebar("Navigation API")}}
+{{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`Navigation`** interface of the {{domxref("Navigation API")}} allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, introspecting navigation history entries, and managing navigations as they happen.
 
@@ -70,10 +72,9 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("Navigation.reload", "reload()")}}
   - : Reloads the current URL, updating any provided `state` in the history entries list.
 - {{domxref("Navigation.traverseTo", "traverseTo()")}}
-  - : Navigates to a specific {{domxref("NavigationHistoryEntry")}} by {{domxref("NavigationHistoryEntry.key", "key")}},
-    passing any provided `info` to the corresponding {{domxref("NavigateEvent")}}.
+  - : Navigates to a specific {{domxref("NavigationHistoryEntry")}} by {{domxref("NavigationHistoryEntry.key", "key")}}.
 - {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}
-  - : Updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}},
+  - : Updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}}; used
     in cases where the state change will be independent from a navigation or reload.
 
 ## Examples
@@ -82,7 +83,9 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ```js
 if(navigation.canGoBack) {
-  navigation.back();
+  await navigation.back().finished;
+  // Handle any required clean-up after
+  // navigation has finished
 } else {
   displayBanner('You are on the first page');
 }
@@ -90,7 +93,9 @@ if(navigation.canGoBack) {
   ...
 
 if(navigation.canGoForward) {
-  navigation.forward();
+  await navigation.forward().finished;
+  // Handle any required clean-up after
+  // navigation has finished
 } else {
   displayBanner('You are on the last page');
 }

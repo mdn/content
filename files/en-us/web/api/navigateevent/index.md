@@ -4,18 +4,20 @@ slug: Web/API/NavigateEvent
 page-type: web-api-interface
 tags:
   - API
+  - Experimental
   - History
   - Interface
   - Landing
   - Navigate
   - NavigateEvent
   - Navigation API
+  - Reference
   - Scroll
   - Traversal
 browser-compat: api.NavigateEvent
 ---
 
-{{DefaultAPISidebar("Navigation API")}}
+{{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`NavigateEvent`** interface of the {{domxref("Navigation API")}} is the event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated (this includes usage of History API features like {{domxref("History.go()")}}). `NavigateEvent` provides access to information about that navigation, and allows developers to intercept and control the navigation handling.
 

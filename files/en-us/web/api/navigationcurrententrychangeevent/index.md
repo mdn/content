@@ -4,18 +4,20 @@ slug: Web/API/NavigationCurrentEntryChangeEvent
 page-type: web-api-interface
 tags:
   - API
+  - Experimental
   - History
   - Interface
   - Landing
   - Navigate
   - NavigationCurrentEntryChangeEvent
   - Navigation API
+  - Reference
   - Scroll
   - Traversal
 browser-compat: api.NavigationCurrentEntryChangeEvent
 ---
 
-{{DefaultAPISidebar("Navigation API")}}
+{{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`NavigationCurrentEntryChangeEvent`** interface of the {{domxref("Navigation API")}} is the event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the {{domxref("Navigation.currentEntry")}} has changed.
 

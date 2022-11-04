@@ -4,18 +4,20 @@ slug: Web/API/NavigationDestination
 page-type: web-api-interface
 tags:
   - API
+  - Experimental
   - History
   - Interface
   - Landing
   - Navigate
   - NavigationDestination
   - Navigation API
+  - Reference
   - Scroll
   - Traversal
 browser-compat: api.NavigationDestination
 ---
 
-{{DefaultAPISidebar("Navigation API")}}
+{{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`NavigationDestination`** interface of the {{domxref("Navigation API")}} represents the destination being navigated to in the current navigation.
 
