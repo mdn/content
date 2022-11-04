@@ -14,7 +14,7 @@ tags:
   - Web
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar("Attributes")}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 
@@ -1172,7 +1172,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>{{ HTMLElement("ol") }}</td>
       <td>
         Indicates whether the list should be displayed in a descending order
-        instead of a ascending.
+        instead of an ascending order.
       </td>
     </tr>
     <tr>

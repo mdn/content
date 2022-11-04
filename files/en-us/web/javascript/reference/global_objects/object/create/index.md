@@ -98,13 +98,13 @@ o = {};
 o = Object.create(Object.prototype);
 
 o = Object.create(Object.prototype, {
-  // foo is a regular 'value property'
+  // foo is a regular data property
   foo: {
     writable: true,
     configurable: true,
     value: "hello",
   },
-  // bar is a getter-and-setter (accessor) property
+  // bar is an accessor property
   bar: {
     configurable: false,
     get() {
