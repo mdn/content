@@ -24,6 +24,11 @@ A `WeakRef` object contains a weak reference to an object, which is called its _
 - {{jsxref("WeakRef/WeakRef", "WeakRef()")}}
   - : Creates a new `WeakRef` object.
 
+## Instance properties
+
+- `WeakRef.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakRef"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("WeakRef.prototype.deref()")}}
