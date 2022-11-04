@@ -193,7 +193,7 @@ The browser should display the icon before the link below, as the image is expec
 
 Note that on a browser that does not support the alternative text syntax, the whole line is invalid.
 In this case neither the image or text will be displayed!
-Depending on whether the image is _likely_ to be present you could address this issue by having CSS to add either the image or default text before the line with the both.
+Depending on whether the image is _likely_ to be present, you could address this issue by including CSS that adds the image or the default text before the line with them both.
 
 ### Targeting classes
 
