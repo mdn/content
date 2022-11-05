@@ -63,19 +63,9 @@ The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
 
-  - a unitless `<number>`: In this case it is interpreted as `flex: <number> 1 0` where:
-
-    - the {{cssxref("flex-grow")}} value is `<number>`
-    - the {{cssxref("flex-shrink")}} value is assumed to be `1`
-    - the {{cssxref("flex-basis")}} value is assumed to be `0`
-
-  - a valid value for {{cssxref("&lt;width&gt;")}}: In this case it is interpreted as `flex: 1 1 <width>` where:
-
-    - the {{cssxref("flex-grow")}} value is assumed to be `1`
-    - the {{cssxref("flex-shrink")}} value is assumed to be `1`.
-    - the {{cssxref("flex-basis")}} value is `<width>`
-
-  - one of the keywords: `none`, `auto`, or `initial`.
+  - a {{cssxref("&lt;number&gt;")}}: then it is interpreted as {{cssxref("flex-grow")}} and expands to `flex: <number> 1 0`.
+  - a {{cssxref("&lt;width&gt;")}} or the keyword `content`: then it is interpreted as {{cssxref("flex-basis")}} and expands to `flex: 1 1 (<width> | content)`.
+  - the keyword `none` or one of the global keywords.
 
 - **Two-value syntax:**
 
@@ -86,13 +76,13 @@ The `flex` property may be specified using one, two, or three values.
   - The second value must be one of:
 
     - a {{cssxref("&lt;number&gt;")}}: then it is interpreted as `<flex-shrink>`.
-    - a valid value for {{cssxref("width")}}: then it is interpreted as `<flex-basis>`.
+    - a {{cssxref("width")}} or the keyword `content`: then it is interpreted as `<flex-basis>`.
 
 - **Three-value syntax:** the values must be in the following order:
 
   1. a {{cssxref("&lt;number&gt;")}} for `<flex-grow>`.
   2. a {{cssxref("&lt;number&gt;")}} for `<flex-shrink>`.
-  3. a valid value for {{cssxref("width")}} for `<flex-basis>`.
+  3. a {{cssxref("width")}} or the keyword `content` for `<flex-basis>`.
 
 ### Values
 
