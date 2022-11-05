@@ -81,7 +81,7 @@
       "impl": []
     },
     "AudioDecoder": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "AudioDestinationNode": {
@@ -89,7 +89,7 @@
       "impl": []
     },
     "AudioEncoder": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "AudioListener": {
@@ -472,6 +472,10 @@
       "inh": "CSSColorValue",
       "impl": []
     },
+    "CSSColorProfileRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColorValue": {
       "inh": "CSSStyleValue",
       "impl": []
@@ -597,10 +601,6 @@
       "impl": []
     },
     "CSSNamespaceRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
-    "CSSNestingRule": {
       "inh": "CSSRule",
       "impl": []
     },
@@ -3589,11 +3589,11 @@
       "impl": []
     },
     "VideoDecoder": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "VideoEncoder": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "VideoFrame": {
