@@ -40,7 +40,6 @@ The method returns the node changed by a mutation observed with a {{domxref("Mut
 
 - If the node type is `characterData`, the method will return the {{domxref("characterData")}} node.
 
-
 ## Examples
 
 In this code snippet, the `observer` will log to the console the tag name of every element with an observed mutation with the {{domxref("MutationObserver.observe")}} method.

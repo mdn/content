@@ -18,7 +18,7 @@ browser-compat: api.MutationRecord.nextSibling
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} method **`nextSibling()`** returns the node after an added or removed node. 
+The {{domxref("MutationRecord")}} method **`nextSibling()`** returns the node after an added or removed node.
 
 ## Syntax
 

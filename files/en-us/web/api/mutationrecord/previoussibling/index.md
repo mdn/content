@@ -18,7 +18,7 @@ browser-compat: api.MutationRecord.previousSibling
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} method **`previousSibling()`** returns the node before an added or removed node. 
+The {{domxref("MutationRecord")}} method **`previousSibling()`** returns the node before an added or removed node.
 
 ## Syntax
 
