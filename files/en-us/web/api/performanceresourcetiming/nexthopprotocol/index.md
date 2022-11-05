@@ -11,7 +11,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`nextHopProtocol`** read-only
 property is a string representing the _network

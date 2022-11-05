@@ -11,7 +11,7 @@ tags:
 browser-compat: api.PerformanceObserverEntryList.getEntries
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`getEntries()`** method of the
 {{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly
