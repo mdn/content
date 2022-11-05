@@ -12,7 +12,7 @@ tags:
 
 Commonly referred to as a [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.
 
-![Page action button example](address_bar_button.png)
+![Page action button is an icon of a dog paw print](address_bar_button.png)
 
 ## Page actions and browser actions
 
