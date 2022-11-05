@@ -454,7 +454,7 @@ for (const i of arr) {
 }
 ```
 
-The {{jsxref("Statements/for...of","for...of")}} statement can also be used with [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to loop over objects using iterators like {{jsxref("Object.entries()")}}:
+The `for...of` and `for...in` statements can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). For example, you can simultaneously loop over the keys and values of an object using {{jsxref("Object.entries()")}}.
 
 ```js
 const obj = { foo: 1, bar: 2 };
