@@ -42,6 +42,7 @@ set(typedarray, targetOffset)
   - : The offset into the target array at which to begin writing values from the source
     array. If this value is omitted, 0 is assumed (that is, the source array will
     overwrite values in the target array starting at index 0).
+
 ### Return value
 
 {{jsxref("undefined")}}.
