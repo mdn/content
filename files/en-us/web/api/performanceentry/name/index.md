@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEntry.name
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`name`** property of the
 {{domxref("PerformanceEntry")}} interface returns a value that further specifies the

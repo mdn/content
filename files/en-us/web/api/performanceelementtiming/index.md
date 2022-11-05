@@ -11,7 +11,7 @@ tags:
 browser-compat: api.PerformanceElementTiming
 ---
 
-{{APIRef("Element Timing")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`PerformanceElementTiming`** interface of the {{domxref('Element Timing API','','',' ')}} reports timing information on a specific element identified by the page author. For example it could report timing information about the main image in an article.
 

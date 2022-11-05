@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEntry.duration
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`duration`** property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the

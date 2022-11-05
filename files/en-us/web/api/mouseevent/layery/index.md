@@ -103,7 +103,7 @@ An integer value in pixels for the y-coordinate of the mouse pointer, when the m
         <label for="parentId">Parent Element id: </label>
         <input type="text" name="parentId" size="7" /><br />
         <label for="pageXCoords">pageX: </label>
-        <input type="text" name="pageXCoords" size="7" /> 
+        <input type="text" name="pageXCoords" size="7" />
         <label for="pageYCoords">pageY: </label>
         <input type="text" name="pageYCoords" size="7" /><br />
         <label for="layerXCoords">layerX: </label>

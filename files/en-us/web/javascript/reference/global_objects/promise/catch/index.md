@@ -80,7 +80,7 @@ in the same way as its sister method, {{jsxref("Promise/then", "then()")}}.
 // calling catch on an already resolved promise
 Promise.resolve().catch(function XXX() {});
 
-// logs:
+// Logs:
 // Called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
 // Called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
 ```

@@ -49,7 +49,9 @@ Intl.Collator(locales, options)
     > precedence.
 
     - `co`
+
       - : Variant collations for certain locales. Possible values include:
+
         - `big5han` (Chinese; not available in Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)
@@ -69,6 +71,7 @@ Intl.Collator(locales, options)
         - `zhuyin` (Chinese)
 
         This option can be also be set through the `options` property `collation`.
+
     - `kn`
       - : Whether numeric collation should be used, such that "1" < "2" <
         "10". Possible values are `"true"` and `"false"`.
@@ -141,7 +144,9 @@ Intl.Collator(locales, options)
         > property takes precedence.
 
     - `collation`
+
       - : Variant collations for certain locales. Possible values include:
+
         - `big5han` (Chinese; not available in Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)
@@ -172,9 +177,9 @@ The following example demonstrates the different potential results for a string
 occurring before, after, or at the same level as another:
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // → a negative value
-console.log(new Intl.Collator().compare("c", "a")); // → a positive value
-console.log(new Intl.Collator().compare("a", "a")); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // -1, or some other negative value
+console.log(new Intl.Collator().compare("c", "a")); // 1, or some other positive value
+console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 
 Note that the results shown in the code above can vary between browsers and browser

@@ -13,7 +13,7 @@ tags:
 browser-compat: api.PerformanceObserver.takeRecords
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`takeRecords()`** method of the
 {{domxref('PerformanceObserver')}} interface returns the current list of

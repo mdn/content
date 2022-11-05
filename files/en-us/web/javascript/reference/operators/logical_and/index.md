@@ -67,11 +67,17 @@ If `expr` is a function, the function is never called.
 See the example below:
 
 ```js
-function A() { console.log('called A'); return false; }
-function B() { console.log('called B'); return true; }
+function A() {
+  console.log('called A');
+  return false;
+}
+function B() {
+  console.log('called B');
+  return true;
+}
 
 console.log(A() && B());
-// logs "called A" to the console due to the call for function A,
+// Logs "called A" to the console due to the call for function A,
 // && evaluates to false (function A returns false), then false is logged to the console;
 // the AND operator short-circuits here and ignores function B
 ```

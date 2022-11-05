@@ -310,12 +310,12 @@ const Animal = {
 
 // Create new animal type called animal1
 const animal1 = Object.create(Animal);
-animal1.displayType(); // Output: Invertebrates
+animal1.displayType(); // Logs: Invertebrates
 
 // Create new animal type called fish
 const fish = Object.create(Animal);
 fish.type = 'Fishes';
-fish.displayType(); // Output: Fishes
+fish.displayType(); // Logs: Fishes
 ```
 
 ## Inheritance
@@ -465,8 +465,8 @@ const myObj = {
 };
 
 console.log(myObj.a); // 7
-console.log(myObj.b); // 8 <-- At this point the get b() method is initiated.
-myObj.c = 50;         //   <-- At this point the set c(x) method is initiated
+console.log(myObj.b); // 8, returned from the get b() method
+myObj.c = 50;         // Calls the set c(x) method
 console.log(myObj.a); // 25
 ```
 
@@ -506,7 +506,7 @@ myobj.b = 12;
 
 // Removes the a property, leaving myobj with only the b property.
 delete myobj.a;
-console.log ('a' in myobj); // output: "false"
+console.log('a' in myobj); // false
 ```
 
 ## Comparing objects
@@ -532,7 +532,7 @@ fruit == fruitbear; // return true
 fruit === fruitbear; // return true
 
 fruit.name = 'grape';
-console.log(fruitbear); // output: { name: "grape" }, instead of { name: "apple" }
+console.log(fruitbear); // { name: "grape" }; not { name: "apple" }
 ```
 
 For more information about comparison operators, see [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators).

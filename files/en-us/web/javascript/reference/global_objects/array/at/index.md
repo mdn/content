@@ -59,12 +59,12 @@ function returnLast(arr) {
 
 // Get the last item of our array 'cart'
 const item1 = returnLast(cart);
-console.log(item1); // Logs: 'pear'
+console.log(item1); // 'pear'
 
 // Add an item to our 'cart' array
 cart.push('orange');
 const item2 = returnLast(cart);
-console.log(item2); // Logs: 'orange'
+console.log(item2); // 'orange'
 ```
 
 ### Comparing methods
@@ -77,15 +77,15 @@ const colors = ['red', 'green', 'blue'];
 
 // Using length property
 const lengthWay = colors[colors.length-2];
-console.log(lengthWay); // Logs: 'green'
+console.log(lengthWay); // 'green'
 
 // Using slice() method. Note an array is returned
 const sliceWay = colors.slice(-2, -1);
-console.log(sliceWay[0]); // Logs: 'green'
+console.log(sliceWay[0]); // 'green'
 
 // Using at() method
 const atWay = colors.at(-2);
-console.log(atWay); // Logs: 'green'
+console.log(atWay); // 'green'
 ```
 
 ### Calling at() on non-array objects

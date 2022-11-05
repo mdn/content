@@ -57,7 +57,7 @@ Assuming a runtime that supports Indonesian and German but not Balinese in date 
 const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

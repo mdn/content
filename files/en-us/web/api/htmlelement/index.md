@@ -43,13 +43,15 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.enterkeyhint")}}
   - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
 - {{DOMxRef("HTMLElement.hidden")}}
-  - : A boolean value indicating if the element is hidden or not.
+  - : A string or boolean value reflecting the value of the element's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute.
 - {{DOMxRef("HTMLElement.inert")}}
   - : A boolean value indicating whether the user agent must act as though the given node is absent for the purposes of user interaction events, in-page text searches ("find in page"), and text selection.
 - {{DOMxRef("HTMLElement.innerText")}}
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
+- {{DOMxRef("HTMLElement.inputMode")}}
+  - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
