@@ -137,7 +137,7 @@ You can handle rejected promises without a `try` block by chaining a [`catch()`]
 ```js
 const response = await promisedFunction().catch((err) => {
   console.error(err);
-  return "default response"
+  return "default response";
 });
 // response will be "default response" if the promise is rejected
 ```
