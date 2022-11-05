@@ -13584,10 +13584,6 @@
       "rolfedh"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/menus/createProperties": {
-    "modified": "2020-10-15T22:23:28.723Z",
-    "contributors": ["irenesmith"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement": {
     "modified": "2020-10-15T22:08:31.540Z",
     "contributors": [
@@ -94238,19 +94234,6 @@
       "jswisher"
     ]
   },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-24T00:12:21.082Z",
-    "contributors": [
-      "teoli",
-      "trevorh",
-      "BenB",
-      "skimpax",
-      "caos30",
-      "kohei.yoshino",
-      "wbamberg",
-      "jswisher"
-    ]
-  },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2020-09-09T05:19:22.895Z",
     "contributors": [
@@ -106912,16 +106895,6 @@
       "Mgjbot",
       "Ptak82",
       "Dria"
-    ]
-  },
-  "Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol": {
-    "modified": "2020-03-12T19:39:59.552Z",
-    "contributors": [
-      "fscholz",
-      "subrahmanyabhat",
-      "KadirTopal",
-      "cughudson_1",
-      "arai"
     ]
   },
   "Web/JavaScript/Reference/Errors": {

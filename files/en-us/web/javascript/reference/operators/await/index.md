@@ -12,7 +12,7 @@ browser-compat: javascript.operators.await
 
 {{jsSidebar("Operators")}}
 
-The `await` operator is used to wait for a {{jsxref("Promise")}} and get its fulfillment value. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules).
+The `await` operator is used to wait for a {{jsxref("Promise")}} and get its fulfillment value. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
 ## Syntax
 
@@ -27,7 +27,7 @@ await expression
 
 ### Return value
 
-The fulfillment value of the promise or thenable object, or the expression itself's value if it's not thenable.
+The fulfillment value of the promise or thenable object, or, if the expression is not thenable, the expression's own value.
 
 ### Exceptions
 
@@ -35,7 +35,7 @@ Throws the rejection reason if the promise or thenable object is rejected.
 
 ## Description
 
-The `await` expression is usually used to unwrap promises by passing a {{jsxref("Promise")}} as the `expression`. This causes async function execution to pause until the promise is settled (that is, fulfilled or rejected), and to resume execution of the async function after fulfillment. When resumed, the value of the `await` expression is that of the fulfilled promise.
+`await` is usually used to unwrap promises by passing a {{jsxref("Promise")}} as the `expression`. Using `await` pauses the execution of its surrounding `async` function until the promise is settled (that is, fulfilled or rejected). When execution resumes, the value of the `await` expression becomes that of the fulfilled promise.
 
 If the promise is rejected, the `await` expression throws the rejected value. The function containing the `await` expression will [appear in the stack trace](#improving_stack_trace) of the error. Otherwise, if the rejected promise is not awaited or is immediately returned, the caller function will not appear in the stack trace.
 
@@ -100,7 +100,7 @@ f();
 
 ### Conversion to promise
 
-If the value is not a `Promise`, it converts the value to a resolved `Promise`, and waits for it. The awaited value's identity doesn't change as long as it doesn't have a `then` property that's callable.
+If the value is not a `Promise`, `await` converts the value to a resolved `Promise`, and waits for it. The awaited value's identity doesn't change as long as it doesn't have a `then` property that's callable.
 
 ```js
 async function f3() {
@@ -143,7 +143,7 @@ const response = await promisedFunction().catch((err) => {
 
 ### Top level await
 
-You can use the `await` keyword on its own (outside of an async function) within a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). This means modules, with child modules that use `await`, wait for the child module to execute before they themselves run, all while not blocking other child modules from loading.
+You can use the `await` keyword on its own (outside of an async function) at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules). This means that modules with child modules that use `await` will wait for the child modules to execute before they themselves run, all while not blocking other child modules from loading.
 
 Here is an example of a simple module using the [Fetch API](/en-US/docs/Web/API/Fetch_API) and specifying await within the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement. Any modules that include this will wait for the fetch to resolve before running any code.
 

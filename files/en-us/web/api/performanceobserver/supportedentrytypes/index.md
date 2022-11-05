@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceObserver.supportedEntryTypes
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The static **`supportedEntryTypes`** read-only property of the
 {{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.

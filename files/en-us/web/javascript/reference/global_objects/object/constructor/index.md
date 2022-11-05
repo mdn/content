@@ -19,7 +19,7 @@ The **`constructor`** property returns a reference to the {{jsxref("Object")}} c
 
 ## Description
 
-Any object (with the exception of [`null` prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype)) will have a `constructor` property on its `[[Prototype]]`. Objects created with literals will also have a `constructor` property that points to the constructor type for that object — for example, array literals create {{jsxref("Array")}} objects, and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) create plain objects.
+Any object (with the exception of [`null` prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) will have a `constructor` property on its `[[Prototype]]`. Objects created with literals will also have a `constructor` property that points to the constructor type for that object — for example, array literals create {{jsxref("Array")}} objects, and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) create plain objects.
 
 ```js
 const o1 = {};
@@ -305,6 +305,6 @@ Again, using `Object.setPrototypeOf()` may have adverse performance effects, so 
 
 ## See also
 
-- {{jsxref("statements/class","Class declaration","",1)}}
-- {{jsxref("Classes/constructor","Class constructor","",1)}}
-- Glossary: {{Glossary("constructor", "", 1)}}
+- {{jsxref("statements/class", "Class declaration")}}
+- {{jsxref("Classes/constructor", "Class constructor")}}
+- Glossary: {{Glossary("constructor")}}

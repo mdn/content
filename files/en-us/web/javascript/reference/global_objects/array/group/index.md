@@ -67,8 +67,7 @@ group(function(element, index, array) { /* … */ }, thisArg)
 
 ### Return value
 
-An [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with properties for all groups, each assigned to an array containing the elements of the associated group.
-The value is an object that does not inherit from `Object.prototype`.
+A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) with properties for all groups, each assigned to an array containing the elements of the associated group.
 
 ### Exceptions
 

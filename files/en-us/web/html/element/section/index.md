@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.section
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
 

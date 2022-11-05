@@ -5690,6 +5690,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.onInstalled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.onUninstalled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.setEnabled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/setEnabled
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/createProperties	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/menus.overrideContext()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/clear	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
@@ -11866,6 +11867,7 @@
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
+/en-US/docs/Web/Guide/Mobile/Separate_sites	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Performance/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
 /en-US/docs/Web/Guide/Prefixes	/en-US/docs/Glossary/Vendor_Prefix
@@ -12082,7 +12084,7 @@
 /en-US/docs/Web/JavaScript/Guide/Sameness	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /en-US/docs/Web/JavaScript/Guide/Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
-/en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
+/en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Guide/Using_native_JSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
 /en-US/docs/Web/JavaScript/Guide/iterable	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
@@ -12099,6 +12101,7 @@
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
+/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
@@ -12740,7 +12743,7 @@
 /en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Web/Guide/Mobile/Mobile-friendliness
 /en-US/docs/Web_Development/Mobile/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Mobile/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/Web_Development/Mobile/Separate_sites	/en-US/docs/Web/Guide/Mobile/Separate_sites
+/en-US/docs/Web_Development/Mobile/Separate_sites	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Web_Development/Responsive_Web_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
