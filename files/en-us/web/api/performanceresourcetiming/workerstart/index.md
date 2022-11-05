@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.workerStart
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`workerStart`** read-only property of the
 {{domxref("PerformanceResourceTiming")}} interface returns a

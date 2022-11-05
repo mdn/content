@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.connectStart
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`connectStart`** read-only property returns the
 {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the user agent starts
