@@ -429,7 +429,7 @@ console.log(boundAdd(1, 2, 3)); // 48
 
 Perhaps the greatest benefit of using arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, `call()`, `apply()`, or `bind()` to ensure that the function is executed in the proper scope.
 
-With traditional function expressions, code would have to be written like this:
+With traditional function expressions, code like this does not work as expected:
 
 ```js
 const obj = {
