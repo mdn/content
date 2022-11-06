@@ -173,7 +173,7 @@ const func = () => ({ foo: 1 });
 
 ### Cannot be used as methods
 
-Arrow function expressions should be used for non-method functions because arrow functions do not have their own `this`. Let's see what happens when we try to use them as methods:
+Arrow function expressions should only be used for non-method functions because they do not have their own `this`. Let's see what happens when we try to use them as methods:
 
 ```js
 "use strict";
