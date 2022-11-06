@@ -461,7 +461,7 @@ The `for...of` and `for...in` statements can also be used with [destructuring](/
 ```js
 const obj = { foo: 1, bar: 2 };
 
-for (const [key, val] of Objects.entries()) {
+for (const [key, val] of Object.entries(obj)) {
   console.log(key, val);
 }
 // "foo" 1
