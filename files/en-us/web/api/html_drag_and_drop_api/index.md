@@ -61,9 +61,6 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 > **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
 
-### Gecko-specific interfaces
-
-Mozilla and Firefox support some features not in the standard drag-and-drop model. These are _convenience functions_ to help with dragging multiple items or non-string data (such as files). For more information, see [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items). Additionally, see the {{domxref("DataTransfer")}} reference page for all of the [Gecko-specific properties](/en-US/docs/Web/API/DataTransfer#gecko_properties) and [Gecko-specific methods](/en-US/docs/Web/API/DataTransfer#gecko_methods).
 
 ## The basics
 
@@ -262,7 +259,6 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 ## See also
 
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)
