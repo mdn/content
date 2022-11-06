@@ -163,7 +163,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-This is because JavaScript only sees the arrow function as having a concise body if the token following the arrow is not a left brace, so the code inside braces ({}) is parsed as a sequence of statements (i.e. `foo` is treated like a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label), not a key in an object literal).
+This is because JavaScript only sees the arrow function as having a concise body if the token following the arrow is not a left brace, so the code inside braces ({}) is parsed as a sequence of statements, where `foo` is a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label, not a key in an object literal.
 
 To fix this, wrap the object literal in parentheses:
 
