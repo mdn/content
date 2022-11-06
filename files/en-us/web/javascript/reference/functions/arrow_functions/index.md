@@ -138,7 +138,7 @@ const bob2 = (a) => a + 100;
 
 Arrow functions can have either a _concise body_ or the usual _block body_.
 
-In a concise body, only an expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
+In a concise body, only a single expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
 
 ```js
 const func = (x) => x * x;
@@ -173,7 +173,7 @@ const func = () => ({ foo: 1 });
 
 ### Cannot be used as methods
 
-As stated previously, arrow function expressions are best suited for non-method functions, because arrow functions do not have their own `this`. Let's see what happens when we try to use them as methods:
+Arrow function expressions should be used for non-method functions because arrow functions do not have their own `this`. Let's see what happens when we try to use them as methods:
 
 ```js
 "use strict";
