@@ -6,13 +6,11 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - experimental
   - contain-intrinsic-width
-  - Experimental
 browser-compat: css.properties.contain-intrinsic-width
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
