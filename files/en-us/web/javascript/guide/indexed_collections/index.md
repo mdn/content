@@ -384,9 +384,9 @@ a.forEach((element) => {
 // c
 ```
 
-The `forEach` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisObject`. If provided, `thisObject` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window), [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), etc.) when the function is [not strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), or `undefined` when the function is strict.
+The `forEach` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisArg`. If provided, `thisArg` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window), [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), etc.) when the function is [not strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), or `undefined` when the function is strict.
 
-> **Note:** The `sort()` method introduced above is not an iterative method, because its callback function is only used for comparison and may not be called in any particular order based on element order. `sort()` does not accept the `thisObject` parameter either.
+> **Note:** The `sort()` method introduced above is not an iterative method, because its callback function is only used for comparison and may not be called in any particular order based on element order. `sort()` does not accept the `thisArg` parameter either.
 
 The [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method returns a new array of the return value from executing `callback` on every array item.
 
