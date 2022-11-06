@@ -329,21 +329,17 @@ myArray.sort();
 // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 ```
 
-`sort()` can also take a callback function to determine how array elements are compared.
-
-The `sort` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisObject`. If provided, `thisObject` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window)) when using arrow function as callback, or `undefined` when using normal function as callback.
-
-The callback function is called with two arguments, that are array's elements.
-
-The function below compares two values and returns one of three values:
-
-For instance, the following will sort by the last letter of a string:
+`sort()` can also take a callback function to determine how array elements are compared. The callback function is called with two arguments, which are two values from the array. The function compares these two values and returns a positive number, negative number, or zero, indicating the order of the two values. For instance, the following will sort the array by the last letter of a string:
 
 ```js
 const sortFn = (a, b) => {
-  if (a[a.length - 1] < b[b.length - 1]) return -1;
-  if (a[a.length - 1] > b[b.length - 1]) return 1;
-  if (a[a.length - 1] === b[b.length - 1]) return 0;
+  if (a[a.length - 1] < b[b.length - 1]) {
+    return -1; // Negative number => a < b, a comes before b
+  } else if (a[a.length - 1] > b[b.length - 1]) {
+    return 1; // Positive number => a > b, a comes after b
+  } else if (a[a.length - 1] === b[b.length - 1]) {
+    return 0; // Zero => a = b, a and b keep their original order
+  }
 }
 myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
@@ -387,6 +383,10 @@ a.forEach((element) => {
 // b
 // c
 ```
+
+The `forEach` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisArg`. If provided, `thisArg` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window), [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), etc.) when the function is [not strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), or `undefined` when the function is strict.
+
+> **Note:** The `sort()` method introduced above is not an iterative method, because its callback function is only used for comparison and may not be called in any particular order based on element order. `sort()` does not accept the `thisArg` parameter either.
 
 The [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method returns a new array of the return value from executing `callback` on every array item.
 
