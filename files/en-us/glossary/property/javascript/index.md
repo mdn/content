@@ -26,7 +26,7 @@ const obj = {
 };
 ```
 
-The object `obj` has two properties. The first one has `"a"` as the key and `1` as the value. The second one has `"b"` as the key and a function as the value. The `"a"` – `1`, `"b"` – `function` associations are the properties of the object.
+The object `obj` has two properties. The first one has `"a"` as the key and `1` as the value. The second one has `"b"` as the key and a function as the value (using the [method syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)). The `"a"` – `1`, `"b"` – `function` associations are the properties of the object.
 
 In the context of [classes](/en-US/docs/Web/JavaScript/Reference/Classes), properties can be divided into _instance properties_, which are owned by each instance, and _static properties_, which are owned by the class and hold data common to all instances. In the context of [inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain), properties can also be divided into _own properties_, which are owned by the object itself, and _inherited properties_, which are owned by objects in the prototype chain of the object.
 
