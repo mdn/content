@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
 
 Object-oriented programming (OOP) is a programming paradigm fundamental to many programming languages, including Java and C++. In this article, we'll provide an overview of the basic concepts of OOP. We'll describe three main concepts: **classes and instances**, **inheritance**, and **encapsulation**. For now, we'll describe these concepts without reference to JavaScript in particular, so all the examples are given in {{Glossary("Pseudocode", "pseudocode")}}.
@@ -84,14 +85,14 @@ This constructor takes two parameters, so we can initialize the `name` and `teac
 Now that we have a constructor, we can create some professors. Programming languages often use the keyword `new` to signal that a constructor is being called.
 
 ```js
-walsh = new Professor('Walsh', 'Psychology')
-lillian = new Professor('Lillian', 'Poetry')
+walsh = new Professor("Walsh", "Psychology");
+lillian = new Professor("Lillian", "Poetry");
 
-walsh.teaches  // 'Psychology'
-walsh.introduceSelf()  // 'My name is Professor Walsh and I will be your Psychology professor.'
+walsh.teaches; // 'Psychology'
+walsh.introduceSelf(); // 'My name is Professor Walsh and I will be your Psychology professor.'
 
-lillian.teaches  // 'Poetry'
-lillian.introduceSelf()  // 'My name is Professor Lillian and I will be your Poetry professor.'
+lillian.teaches; // 'Poetry'
+lillian.introduceSelf(); // 'My name is Professor Lillian and I will be your Poetry professor.'
 ```
 
 This creates two objects, both instances of the `Professor` class.
@@ -149,18 +150,18 @@ In this case, we would say that `Person` is the **superclass** or **parent class
 You might notice that `introduceSelf()` is defined in all three classes. The reason for this is that while all people want to introduce themselves, the way they do so is different:
 
 ```js
-walsh = new Professor('Walsh', 'Psychology')
-walsh.introduceSelf()  // 'My name is Professor Walsh and I will be your Psychology professor.'
+walsh = new Professor("Walsh", "Psychology");
+walsh.introduceSelf(); // 'My name is Professor Walsh and I will be your Psychology professor.'
 
-summers = new Student('Summers', 1)
-summers.introduceSelf() // 'My name is Summers and I'm in the first year.'
+summers = new Student("Summers", 1);
+summers.introduceSelf(); // 'My name is Summers and I'm in the first year.'
 ```
 
 We might have a default implementation of `introduceSelf()` for people who aren't students _or_ professors:
 
 ```js
-pratt = new Person('Pratt')
-pratt.introduceSelf() // 'My name is Pratt.'
+pratt = new Person("Pratt");
+pratt.introduceSelf(); // 'My name is Pratt.'
 ```
 
 This feature - when a method has the same name but a different implementation in different classes - is called **polymorphism**. When a method in a subclass replaces the superclass's implementation, we say that the subclass **overrides** the version in the superclass.
@@ -175,7 +176,7 @@ For example, suppose students are allowed to study archery if they are in the se
 
 ```js
 if (student.year > 1) {
-    // allow the student into the class
+  // allow the student into the class
 }
 ```
 
@@ -194,7 +195,7 @@ class Student : extends Person
 
 ```js
 if (student.canStudyArchery()) {
-    // allow the student into the class
+  // allow the student into the class
 }
 ```
 

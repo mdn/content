@@ -12,6 +12,7 @@ tags:
   - click
 browser-compat: api.Notification.click_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`click`** event of the {{domxref("Notification")}}

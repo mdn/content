@@ -13,6 +13,7 @@ tags:
   - cross browser
   - selenium
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 In this article, we will teach you how to install your own automation environment and run your own tests using Selenium/WebDriver and a testing library such as selenium-webdriver for Node. We will also look at how to integrate your local testing environment with commercial tools like the ones discussed in the previous article.
@@ -64,9 +65,9 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
 1. To start with, set up a new npm project, as discussed in [Setting up Node and npm](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#setting_up_node_and_npm) in the last chapter. Call it something different, like `selenium-test`.
 2. Next, we need to install a framework to allow us to work with Selenium from inside Node. We are going to choose selenium's official [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver), as the documentation seems fairly up-to-date and it is well-maintained. If you want different options, [webdriver.io](https://webdriver.io/) and [nightwatch.js](https://nightwatchjs.org/) are also good choices. To install selenium-webdriver, run the following command, making sure you are inside your project folder:
 
-    ```bash
-    npm install selenium-webdriver
-    ```
+   ```bash
+   npm install selenium-webdriver
+   ```
 
 > **Note:** It is still a good idea to follow these steps even if you previously installed selenium-webdriver and downloaded the browser drivers. You should make sure that everything is up-to-date.
 
@@ -82,25 +83,25 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 
 1. If you're not already using the `bash` shell (for example, on macOS systems, the default is the `zsh` shell, not `bash`), switch to the `bash` shell:
 
-    ```bash
-    exec bash
-    ```
+   ```bash
+   exec bash
+   ```
 
 2. Open your `.bash_profile` (or `.bashrc`) file (if you can't see hidden files, you'll need to display them, see [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) or [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu)).
 3. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
-    ```bash
-    #Add WebDriver browser drivers to PATH
+   ```bash
+   #Add WebDriver browser drivers to PATH
 
-    export PATH=$PATH:/Users/bob
-    ```
+   export PATH=$PATH:/Users/bob
+   ```
 
 4. Save and close this file, then restart your Terminal/command prompt to reapply your Bash configuration.
 5. Check that your new paths are in the `PATH` variable by entering the following into your terminal:
 
-    ```bash
-    echo $PATH
-    ```
+   ```bash
+   echo $PATH
+   ```
 
 6. You should see it printed out in the terminal.
 
@@ -111,42 +112,42 @@ OK, let's try a quick test to make sure everything is working.
 1. Create a new file inside your project directory called `google_test.js`:
 2. Give it the following contents, then save it:
 
-    ```js
-    const webdriver = require('selenium-webdriver');
-    const By = webdriver.By;
-    const until = webdriver.until;
+   ```js
+   const webdriver = require('selenium-webdriver');
+   const By = webdriver.By;
+   const until = webdriver.until;
 
-    const driver = new webdriver.Builder()
-      .forBrowser('firefox')
-      .build();
+   const driver = new webdriver.Builder()
+     .forBrowser('firefox')
+     .build();
 
-    driver.get('http://www.google.com');
+   driver.get('http://www.google.com');
 
-    driver.findElement(By.name('q')).sendKeys('webdriver');
+   driver.findElement(By.name('q')).sendKeys('webdriver');
 
-    driver.sleep(1000).then(() => {
-      driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
-    });
+   driver.sleep(1000).then(() => {
+     driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+   });
 
-    driver.findElement(By.name('btnK')).click();
+   driver.findElement(By.name('btnK')).click();
 
-    driver.sleep(2000).then(() => {
-      driver.getTitle().then((title) => {
-        if (title === 'webdriver - Google Search') {
-          console.log('Test passed');
-        } else {
-          console.log('Test failed');
-        }
-        driver.quit();
-      });
-    });
-    ```
+   driver.sleep(2000).then(() => {
+     driver.getTitle().then((title) => {
+       if (title === 'webdriver - Google Search') {
+         console.log('Test passed');
+       } else {
+         console.log('Test failed');
+       }
+       driver.quit();
+     });
+   });
+   ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
-    ```bash
-    node google_test
-    ```
+   ```bash
+   node google_test
+   ```
 
 You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 2 seconds; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed. WebDriver will then close down the Firefox instance and stop.
 
@@ -157,52 +158,52 @@ There is also nothing to stop you running the test on multiple browsers simultan
 1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html) reference page.
 2. Give it the following contents, then save it:
 
-    ```js
-    const webdriver = require('selenium-webdriver');
-    const By = webdriver.By;
-    const until = webdriver.until;
+   ```js
+   const webdriver = require('selenium-webdriver');
+   const By = webdriver.By;
+   const until = webdriver.until;
 
-    let driver_fx = new webdriver.Builder()
-      .forBrowser('firefox')
-      .build();
+   let driver_fx = new webdriver.Builder()
+     .forBrowser('firefox')
+     .build();
 
-    let driver_chr = new webdriver.Builder()
-      .forBrowser('chrome')
-      .build();
+   let driver_chr = new webdriver.Builder()
+     .forBrowser('chrome')
+     .build();
 
-    searchTest(driver_fx);
-    searchTest(driver_chr);
+   searchTest(driver_fx);
+   searchTest(driver_chr);
 
-    function searchTest(driver) {
-      driver.get('http://www.google.com');
-      driver.findElement(By.name('q')).sendKeys('webdriver');
+   function searchTest(driver) {
+     driver.get('http://www.google.com');
+     driver.findElement(By.name('q')).sendKeys('webdriver');
 
-      driver.sleep(1000).then(() => {
-        driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
-      });
+     driver.sleep(1000).then(() => {
+       driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+     });
 
-      driver.findElement(By.name('btnK')).click();
+     driver.findElement(By.name('btnK')).click();
 
-      driver.sleep(2000).then(() => {
-        driver.getTitle().then((title) => {
+     driver.sleep(2000).then(() => {
+       driver.getTitle().then((title) => {
 
-          if (title === 'webdriver - Google Search') {
-            console.log('Test passed');
-          } else {
-            console.log('Test failed');
-          }
-          driver.quit();
-        });
-      });
+         if (title === 'webdriver - Google Search') {
+           console.log('Test passed');
+         } else {
+           console.log('Test failed');
+         }
+         driver.quit();
+       });
+     });
 
-    }
-    ```
+   }
+   ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
-    ```bash
-    node google_test_multiple
-    ```
+   ```bash
+   node google_test_multiple
+   ```
 
 4. If you are using a Mac and do decide to test Safari, you might get an error message along the lines of "Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver." If you get this, follow the given instruction and try again.
 
@@ -326,7 +327,7 @@ node quick_test.js
 
 You should see the button's text label reported inside the console.
 
-let's do something a bit more useful. delete the previous code entry, then add this line at the bottom instead:
+Let's do something a bit more useful. Delete the previous code entry, then add this line at the bottom instead:
 
 ```js
 button.click();
@@ -421,15 +422,15 @@ In addition, we should mention test results/reporting — we've been reporting r
 1. For example, try making a local copy of our [`mocha_test.js`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/selenium/mocha_test.js) example inside your project directory. Put it inside a subfolder called `test`. This example uses a long chain of promises to run all the steps required in our test — the promise-based methods WebDriver uses need to resolve for it to work properly.
 2. Install the mocha test harness by running the following command inside your project directory:
 
-    ```bash
-    npm install --save-dev mocha
-    ```
+   ```bash
+   npm install --save-dev mocha
+   ```
 
 3. You can now run the test (and any others you put inside your `test` directory) using the following command:
 
-    ```bash
-    npx mocha --no-timeouts
-    ```
+   ```bash
+   npx mocha --no-timeouts
+   ```
 
 4. You should include the `--no-timeouts` flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).
 
@@ -448,72 +449,72 @@ Let's write an example:
 1. Inside your project directory, create a new file called `lambdatest_google_test.js`
 2. Give it the following contents:
 
-    ```js
-    const webdriver = require('selenium-webdriver');
-    const By = webdriver.By;
-    const until = webdriver.until;
+   ```js
+   const webdriver = require('selenium-webdriver');
+   const By = webdriver.By;
+   const until = webdriver.until;
 
-    // username: Username can be found at automation dashboard
-    const USERNAME = '{username}';
+   // username: Username can be found at automation dashboard
+   const USERNAME = '{username}';
 
-    // AccessKey: AccessKey can be generated from automation dashboard or profile section
-    const KEY = '{accessKey}';
+   // AccessKey: AccessKey can be generated from automation dashboard or profile section
+   const KEY = '{accessKey}';
 
-    // gridUrl: gridUrl can be found at automation dashboard
-    const GRID_HOST = 'hub.lambdatest.com/wd/hub';
+   // gridUrl: gridUrl can be found at automation dashboard
+   const GRID_HOST = 'hub.lambdatest.com/wd/hub';
 
-    function searchTextOnGoogle() {
-      // Setup Input capabilities
-      const capabilities = {
-        platform: 'windows 10',
-        browserName: 'chrome',
-        version: '67.0',
-        resolution: '1280x800',
-        network: true,
-        visual: true,
-        console: true,
-        video: true,
-        name: 'Test 1', // name of the test
-        build: 'NodeJS build' // name of the build
-        };
+   function searchTextOnGoogle() {
+     // Setup Input capabilities
+     const capabilities = {
+       platform: 'windows 10',
+       browserName: 'chrome',
+       version: '67.0',
+       resolution: '1280x800',
+       network: true,
+       visual: true,
+       console: true,
+       video: true,
+       name: 'Test 1', // name of the test
+       build: 'NodeJS build' // name of the build
+       };
 
-      // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
-      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
+     // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
+     const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
 
-      // setup and build selenium driver object
-      const driver = new webdriver.Builder()
-        .usingServer(gridUrl)
-        .withCapabilities(capabilities)
-        .build();
+     // setup and build selenium driver object
+     const driver = new webdriver.Builder()
+       .usingServer(gridUrl)
+       .withCapabilities(capabilities)
+       .build();
 
-      // navigate to a URL, search for a text and get title of page
-      driver.get('https://www.google.com/ncr').then(function() {
-        driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
-          driver.getTitle().then((title) => {
-            setTimeout(() => {
-              console.log(title);
-              driver.quit();
-              }, 5000);
-            });
-          });
-        });
-      }
+     // navigate to a URL, search for a text and get title of page
+     driver.get('https://www.google.com/ncr').then(function() {
+       driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
+         driver.getTitle().then((title) => {
+           setTimeout(() => {
+             console.log(title);
+             driver.quit();
+             }, 5000);
+           });
+         });
+       });
+     }
 
-    searchTextOnGoogle();
-    ```
+   searchTextOnGoogle();
+   ```
 
 3. Visit your [LambdaTest automation dashboard](https://www.lambdatest.com/selenium-automation), to fetch your LambdaTest's username and access key by clicking on the **key** icon on the top-right(see _Username and Access Keys_). Replace the `{username}` and `{accessKey}` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
 4. Run the below command in your terminal to execute your test:
 
-    ```bash
-    node lambdatest_google_test
-    ```
+   ```bash
+   node lambdatest_google_test
+   ```
 
-    The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.
-    If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/).
+   The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.
+   If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/).
 
 5. Now if you go to your [LambdaTest Automation dashboard](https://www.lambdatest.com/selenium-automation), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
-    [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
+   [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
 > **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
 
@@ -525,15 +526,15 @@ When executing numerous automation tests, marking their status as passed or fail
 
 1. Use the below command for marking a status as **passed** on LambdaTest.
 
-    ```bash
-    driver.executeScript("lambda-status=passed");
-    ```
+   ```bash
+   driver.executeScript("lambda-status=passed");
+   ```
 
 2. Use the below command for marking a status as **failed** on LambdaTest.
 
-    ```bash
-    driver.executeScript("lambda-status=failed");
-    ```
+   ```bash
+   driver.executeScript("lambda-status=failed");
+   ```
 
 ### BrowserStack
 
@@ -544,62 +545,62 @@ Let's write an example:
 1. Inside your project directory, create a new file called `bstack_google_test.js`.
 2. Give it the following contents:
 
-    ```js
-    const webdriver = require('selenium-webdriver');
-    const By = webdriver.By;
-    const until = webdriver.until;
+   ```js
+   const webdriver = require('selenium-webdriver');
+   const By = webdriver.By;
+   const until = webdriver.until;
 
-    // Input capabilities
-    const capabilities = {
-      'browserName' : 'Firefox',
-      'browser_version' : '56.0 beta',
-      'os' : 'OS X',
-      'os_version' : 'Sierra',
-      'resolution' : '1280x1024',
-      'browserstack.user' : 'YOUR-USER-NAME',
-      'browserstack.key' : 'YOUR-ACCESS-KEY',
-      'browserstack.debug' : 'true',
-      'build' : 'First build'
-    };
+   // Input capabilities
+   const capabilities = {
+     'browserName' : 'Firefox',
+     'browser_version' : '56.0 beta',
+     'os' : 'OS X',
+     'os_version' : 'Sierra',
+     'resolution' : '1280x1024',
+     'browserstack.user' : 'YOUR-USER-NAME',
+     'browserstack.key' : 'YOUR-ACCESS-KEY',
+     'browserstack.debug' : 'true',
+     'build' : 'First build'
+   };
 
-    const driver = new webdriver.Builder()
-      .usingServer('http://hub-cloud.browserstack.com/wd/hub')
-      .withCapabilities(capabilities)
-      .build();
+   const driver = new webdriver.Builder()
+     .usingServer('http://hub-cloud.browserstack.com/wd/hub')
+     .withCapabilities(capabilities)
+     .build();
 
-    driver.get('http://www.google.com');
-    driver.findElement(By.name('q')).sendKeys('webdriver');
+   driver.get('http://www.google.com');
+   driver.findElement(By.name('q')).sendKeys('webdriver');
 
-    driver.sleep(1000).then(() => {
-      driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
-    });
+   driver.sleep(1000).then(() => {
+     driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+   });
 
-    driver.findElement(By.name('btnK')).click();
+   driver.findElement(By.name('btnK')).click();
 
-    driver.sleep(2000).then(() => {
-      driver.getTitle().then((title) => {
-        if (title === 'webdriver - Google Search') {
-          console.log('Test passed');
-        } else {
-          console.log('Test failed');
-        }
-      });
-    });
+   driver.sleep(2000).then(() => {
+     driver.getTitle().then((title) => {
+       if (title === 'webdriver - Google Search') {
+         console.log('Test passed');
+       } else {
+         console.log('Test failed');
+       }
+     });
+   });
 
-    driver.quit();
-    ```
+   driver.quit();
+   ```
 
 3. From your [BrowserStack automation dashboard](https://www.browserstack.com/automate), get your user name and access key (see _Username and Access Keys_). Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
 4. Run your test with the following command:
 
-    ```bash
-    node bstack_google_test
-    ```
+   ```bash
+   node bstack_google_test
+   ```
 
-    The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
+   The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
 5. Now if you go back to the [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you'll see your test listed:
-    ![](bstack_automated_results.png)
+   ![BrowserStack automated results](bstack_automated_results.png)
 
 If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
 
@@ -615,55 +616,55 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
 
 1. First, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
 
-    ```js
-    const request = require("request");
-    ```
+   ```js
+   const request = require("request");
+   ```
 
 2. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
 
-    ```js
-    'project' : 'Google test 2'
-    ```
+   ```js
+   'project' : 'Google test 2'
+   ```
 
 3. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver …`) :
 
-    ```js
-    let sessionId;
+   ```js
+   let sessionId;
 
-    driver.session_.then((sessionData) =>{
-      sessionId = sessionData.id_;
-    });
-    ```
+   driver.session_.then((sessionData) =>{
+     sessionId = sessionData.id_;
+   });
+   ```
 
 4. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
 
-    ```js
-    driver.sleep(2000).then(() => {
-      driver.getTitle().then((title) => {
-        if (title === 'webdriver - Google Search') {
-          console.log('Test passed');
-          request({ 
-            uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
-            method: "PUT",
-            form: { "status": "passed", "reason": "Google results showed correct title" }
-          });
-        } else {
-          console.log('Test failed');
-          request({
-            uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
-            method: "PUT",
-            form: { "status": "failed", "reason": "Google results showed wrong title" }
-          });
-        }
-      });
-    });
-    ```
+   ```js
+   driver.sleep(2000).then(() => {
+     driver.getTitle().then((title) => {
+       if (title === 'webdriver - Google Search') {
+         console.log('Test passed');
+         request({
+           uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
+           method: "PUT",
+           form: { "status": "passed", "reason": "Google results showed correct title" }
+         });
+       } else {
+         console.log('Test failed');
+         request({
+           uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
+           method: "PUT",
+           form: { "status": "failed", "reason": "Google results showed wrong title" }
+         });
+       }
+     });
+   });
+   ```
 
 These are fairly intuitive — once the test completes, we send an API call to BrowserStack to update the test with a passed or failed status, and a reason for the result.
 
 If you now go back to your [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you should see your test session available, as before, but with the updated data attached to it:
 
-![](bstack_custom_results.png)
+![BrowserStack Custom Results](bstack_custom_results.png)
 
 ### Sauce Labs
 
@@ -674,58 +675,58 @@ Let's write an example:
 1. Inside your project directory, create a new file called `sauce_google_test.js`.
 2. Give it the following contents:
 
-    ```js
-    const webdriver = require('selenium-webdriver');
-    const By = webdriver.By;
-    const until = webdriver.until;
-    const username = "YOUR-USER-NAME";
-    const accessKey = "YOUR-ACCESS-KEY";
+   ```js
+   const webdriver = require('selenium-webdriver');
+   const By = webdriver.By;
+   const until = webdriver.until;
+   const username = "YOUR-USER-NAME";
+   const accessKey = "YOUR-ACCESS-KEY";
 
-    const driver = new webdriver.Builder()
-      .withCapabilities({
-        browserName: 'chrome',
-        platform: 'Windows XP',
-        version: '43.0',
-        username,
-        accessKey,
-      })
-      .usingServer(`https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`)
-      .build();
+   const driver = new webdriver.Builder()
+     .withCapabilities({
+       browserName: 'chrome',
+       platform: 'Windows XP',
+       version: '43.0',
+       username,
+       accessKey,
+     })
+     .usingServer(`https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`)
+     .build();
 
-    driver.get('http://www.google.com');
+   driver.get('http://www.google.com');
 
-    driver.findElement(By.name('q')).sendKeys('webdriver');
+   driver.findElement(By.name('q')).sendKeys('webdriver');
 
-    driver.sleep(1000).then(() => {
-      driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
-    });
+   driver.sleep(1000).then(() => {
+     driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+   });
 
-    driver.findElement(By.name('btnK')).click();
+   driver.findElement(By.name('btnK')).click();
 
-    driver.sleep(2000).then(() => {
-      driver.getTitle().then((title) => {
-        if (title === 'webdriver - Google Search') {
-          console.log('Test passed');
-        } else {
-          console.log('Test failed');
-        }
-      });
-    });
+   driver.sleep(2000).then(() => {
+     driver.getTitle().then((title) => {
+       if (title === 'webdriver - Google Search') {
+         console.log('Test passed');
+       } else {
+         console.log('Test failed');
+       }
+     });
+   });
 
-    driver.quit();
-    ```
+   driver.quit();
+   ```
 
 3. From your [Sauce Labs user settings](https://app.saucelabs.com/user-settings), get your user name and access key. Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
 4. Run your test with the following command:
 
-    ```bash
-    node sauce_google_test
-    ```
+   ```bash
+   node sauce_google_test
+   ```
 
-    The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
+   The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
 5. Now if you go to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
-    ![](sauce_labs_automated_test.png)
+   ![Sauce Labs automated test](sauce_labs_automated_test.png)
 
 > **Note:** Sauce Labs' [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
@@ -739,61 +740,61 @@ To do this, you need to:
 
 1. Install the Node Sauce Labs wrapper using the following command (if you've not already done it for this project):
 
-    ```bash
-    npm install saucelabs --save-dev
-    ```
+   ```bash
+   npm install saucelabs --save-dev
+   ```
 
 2. Require saucelabs — put this at the top of your `sauce_google_test.js` file, just below the previous variable declarations:
 
-    ```js
-    const SauceLabs = require('saucelabs');
-    ```
+   ```js
+   const SauceLabs = require('saucelabs');
+   ```
 
 3. Create a new instance of SauceLabs, by adding the following just below that:
 
-    ```js
-    const saucelabs = new SauceLabs({
-      username : "YOUR-USER-NAME",
-      password : "YOUR-ACCESS-KEY"
-    });
-    ```
+   ```js
+   const saucelabs = new SauceLabs({
+     username : "YOUR-USER-NAME",
+     password : "YOUR-ACCESS-KEY"
+   });
+   ```
 
-    Again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (note that the saucelabs npm package rather confusingly uses `password`, not `accessKey`). Since you are using these twice now, you may want to create a couple of helper variables to store them in.
+   Again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (note that the saucelabs npm package rather confusingly uses `password`, not `accessKey`). Since you are using these twice now, you may want to create a couple of helper variables to store them in.
 
 4. Below the block where you define the `driver` variable (just below the `build()` line), add the following block — this gets the correct driver `sessionID` that we need to write data to the job (you can see it action in the next code block):
 
-    ```js
-    driver.getSession().then((sessionid) => {
-      driver.sessionID = sessionid.id_;
-    });
-    ```
+   ```js
+   driver.getSession().then((sessionid) => {
+     driver.sessionID = sessionid.id_;
+   });
+   ```
 
 5. Finally, replace the `driver.sleep(2000)` block near the bottom of the code with the following:
 
-    ```js
-    driver.sleep(2000).then(() => {
-      driver.getTitle().then((title) => {
-        let testPassed = false;
-        if (title === 'webdriver - Google Search') {
-          console.log('Test passed');
-          testPassed = true;
-        } else {
-          console.error('Test failed');
-        }
+   ```js
+   driver.sleep(2000).then(() => {
+     driver.getTitle().then((title) => {
+       let testPassed = false;
+       if (title === 'webdriver - Google Search') {
+         console.log('Test passed');
+         testPassed = true;
+       } else {
+         console.error('Test failed');
+       }
 
-        saucelabs.updateJob(driver.sessionID, {
-          name: 'Google search results page title test',
-          passed: testPassed
-        });
-      });
-    });
-    ```
+       saucelabs.updateJob(driver.sessionID, {
+         name: 'Google search results page title test',
+         passed: testPassed
+       });
+     });
+   });
+   ```
 
 Here we've set a `testPassed` variable to `true` or `false` depending on whether the test passed or fails, then we've used the `saucelabs.updateJob()` method to update the details.
 
 If you now go back to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you should see your new job now has the updated data attached to it:
 
-![](sauce_labs_updated_job_info.png)
+![Sauce Labs Updated Job info](sauce_labs_updated_job_info.png)
 
 ### Your own remote server
 
@@ -803,11 +804,11 @@ If you don't want to use a service like Sauce Labs or BrowserStack, you can alwa
 2. Next, download the latest [Selenium standalone server](https://selenium-release.storage.googleapis.com/index.html) — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your `PATH`, do so now (see the [Setting up Selenium in Node](#setting_up_selenium_in_node) section).
 3. Run the standalone server by entering the following into a terminal on your server computer
 
-    ```bash
-    java -jar selenium-server-standalone-3.0.0.jar
-    ```
+   ```bash
+   java -jar selenium-server-standalone-3.0.0.jar
+   ```
 
-    (update the `.jar` filename) so it matches exactly what file you've got.
+   (update the `.jar` filename) so it matches exactly what file you've got.
 
 4. The server will run on [`http://localhost:4444/wd/hub`](http://localhost:4444/wd/hub) — try going there now to see what you get.
 
@@ -816,18 +817,18 @@ Now we've got the server running, let's create a demo test that will run on the 
 1. Create a copy of your `google_test.js` file, and call it `google_test_remote.js`; put it in your project directory.
 2. Update the second code block (which starts with `let driver = …`) like so
 
-    ```js
-    let driver = new webdriver.Builder()
-      .forBrowser('firefox')
-      .usingServer('http://localhost:4444/wd/hub')
-      .build();
-    ```
+   ```js
+   let driver = new webdriver.Builder()
+     .forBrowser('firefox')
+     .usingServer('http://localhost:4444/wd/hub')
+     .build();
+   ```
 
 3. Run your test, and you should see it run as expected; this time however you will be running it on the standalone server:
 
-    ```bash
-    node google_test_remote.js
-    ```
+   ```bash
+   node google_test_remote.js
+   ```
 
 So this is pretty cool. We have tested this locally, but you could set this up on just about any server along with the relevant browser drivers, and then connect your scripts to it using the URL you choose to expose it at.
 

@@ -10,6 +10,7 @@ tags:
   - Geometry
 browser-compat: api.DOMQuad
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbitrary quadrilateral. Returning `DOMQuad`s lets `getBoxQuads()` return accurate information even when arbitrary 2D or 3D transforms are present. It has a handy `bounds` attribute returning a `DOMRectReadOnly` for those cases where you just want an axis-aligned bounding rectangle.
@@ -19,12 +20,12 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 - {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}}
   - : Creates a new `DOMQuad` object.
 
-## Properties
+## Instance properties
 
 - p1,p2,p3,p4 {{ReadOnlyInline}}
   - : are {{domxref("DOMPoint")}} objects for each of the `DOMQuad` object's four corners.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMQuad.fromRect()")}}
   - : Returns a new `DOMQuad` object based on the passed set of coordinates.

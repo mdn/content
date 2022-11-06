@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.Date
 ---
+
 {{JSRef}}
 
 The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return a string representing the current time.
@@ -16,7 +17,7 @@ The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return 
 
 ## Syntax
 
-```js
+```js-nolint
 new Date()
 new Date(value)
 new Date(dateString)
@@ -50,6 +51,7 @@ When no parameters are provided, the newly-created `Date` object represents the 
 #### Date string
 
 - `dateString`
+
   - : A string value representing a date, in a format recognized by the {{jsxref("Date.parse()")}} method. (The ECMA262 spec specifies a [simplified version of ISO 8601](https://tc39.es/ecma262/#sec-date-time-string-format), but other formats can be implementation-defined, which commonly include [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14).)
 
     > **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the ISO 8601 format (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. Support for [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) format strings is by convention only. A library can help if many different formats are to be accommodated.
@@ -61,7 +63,7 @@ When no parameters are provided, the newly-created `Date` object represents the 
 - `dateObject`
   - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time. This is equivalent to `new Date(dateObject.valueOf())`, except the `valueOf()` method is not called.
 
-When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values will be converted to a primitive (calling `[@@toPrimitive]("default")`, `valueOf()`, and `toString()`, in that order). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
+When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
 
 #### Individual date and time component values
 
@@ -90,7 +92,7 @@ Similarly, if any parameter underflows, it "borrows" from the higher positions. 
 
 Calling `new Date()` (the `Date()` constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, or if the date to be constructed will have a UNIX timestamp less than `-8,640,000,000,000,000` or greater than `8,640,000,000,000,000` milliseconds, it returns a `Date` object whose [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) method returns the literal string `Invalid Date`.
 
-Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called wth any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
+Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called with any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
 
 ## Examples
 

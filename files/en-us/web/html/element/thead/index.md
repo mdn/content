@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.thead
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows defining the head of the columns of the table.
 
@@ -81,7 +81,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell
@@ -97,7 +97,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
-  - : This attribute defines the background color of each cell of the column. It accepts a 6-digit hexadecimal color or a named color.  Alphatransparency is not supported.
+  - : This attribute defines the background color of each column cell. It accepts a 6-digit hexadecimal color or a named color. Alpha transparency is not supported.
 
     > **Note:** Do not use this attribute, as it is non-standard. The `thead` element should be styled using the CSS {{cssxref("background-color")}} property, which can be applied to any element, including the `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
 

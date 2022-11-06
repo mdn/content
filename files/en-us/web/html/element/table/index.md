@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.table
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 
@@ -89,7 +89,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("align")}} {{Deprecated_inline}}
 
-  - : This enumerated attribute indicates how the table must be aligned inside the containing document. It may have the following values:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the table must be aligned inside the containing document. It may have the following values:
 
     - `left`: the table is displayed on the left side of the document;
     - `center`: the table is displayed in the center of the document;
@@ -230,8 +230,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 <p>Table with colgroup and col</p>
 <table>
   <colgroup>
-    <col style="background-color: #0f0">
-    <col span="2">
+    <col style="background-color: #0f0" />
+    <col span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -247,7 +247,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 <p>Simple table with caption</p>
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -255,15 +257,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```
 
 ```css hidden
-table
-{
-border-collapse: collapse;
-border-spacing: 0px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
-table, th, td
-{
-padding: 5px;
-border: 1px solid black;
+table,
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
 }
 ```
 
@@ -302,11 +304,11 @@ HTMLTableSectionElement.prototype.sort = function (cb) {
   Array.from(this.rows)
     .sort(cb)
     .forEach((e) => this.appendChild(this.removeChild(e)));
-}
+};
 
-document.querySelector('table').tBodies[0].sort(
-  (a, b) => a.textContent.localeCompare(b.textContent),
-);
+document
+  .querySelector("table")
+  .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
 ```
 
 ##### Result
@@ -349,7 +351,7 @@ The following example adds an event handler to every `<th>` element of every `<t
 ##### JavaScript
 
 ```js
-const allTables = document.querySelectorAll('table');
+const allTables = document.querySelectorAll("table");
 
 for (const table of allTables) {
   const tBody = table.tBodies[0];
@@ -359,7 +361,7 @@ for (const table of allTables) {
   for (const th of headerCells) {
     const cellIndex = th.cellIndex;
 
-    th.addEventListener('click', () => {
+    th.addEventListener("click", () => {
       rows.sort((tr1, tr2) => {
         const tr1Text = tr1.cells[cellIndex].textContent;
         const tr2Text = tr2.cells[cellIndex].textContent;
@@ -559,50 +561,50 @@ This example provides one way to display tables in small spaces. We've hidden th
 
 When looking at these styles you'll notice that table's {{cssxref("display")}} property has been set to `block`. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set {{cssxref("white-space")}} to `nowrap` on the `<tbody>`. However, we don't do this for the `<thead>` to avoid long titles forcing columns to be wider than they need to be to display the data.
 
-To keep the table headers on the page while scrolling down we've set {{cssxref("position")}} to sticky on the `<th>` elements. Note that we have **not** set {{cssxref("border-collapse")}}  to `collapse`, as if we do the header cannot be separated correctly from the rest of the table.
+To keep the table headers on the page while scrolling down we've set {{cssxref("position")}} to sticky on the `<th>` elements. Note that we have **not** set {{cssxref("border-collapse")}} to `collapse`, as if we do the header cannot be separated correctly from the rest of the table.
 
 ```css
 table,
 th,
 td {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 table {
-    width: 100%;
-    max-width: 400px;
-    height: 240px;
-    margin: 0 auto;
-    display: block;
-    overflow-x: auto;
-    border-spacing: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 240px;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  border-spacing: 0;
 }
 
 tbody {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 th,
 td {
-    padding: 5px 10px;
-    border-top-width: 0;
-    border-left-width: 0;
+  padding: 5px 10px;
+  border-top-width: 0;
+  border-left-width: 0;
 }
 
 th {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    vertical-align: bottom;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  vertical-align: bottom;
 }
 
 th:last-child,
 td:last-child {
-    border-right-width: 0;
+  border-right-width: 0;
 }
 
 tr:last-child td {
-    border-bottom-width: 0;
+  border-bottom-width: 0;
 }
 ```
 
@@ -623,13 +625,15 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 ### Scoping rows and columns
 
-The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified so as to provide necessary information about the cells related to a header.
+The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
 #### Example
 
 ```html
 <table>
-  <caption>Color names and values</caption>
+  <caption>
+    Color names and values
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Name</th>

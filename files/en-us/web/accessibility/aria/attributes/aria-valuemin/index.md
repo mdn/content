@@ -1,5 +1,5 @@
 ---
-title: 'aria-valuemin'
+title: "aria-valuemin"
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemin
 tags:
   - Accessibility

@@ -14,9 +14,11 @@ tags:
   - WebXR Device API
   - XR
   - XRQuadLayer
+  - Experimental
 browser-compat: api.XRQuadLayer
 ---
-{{securecontext_header}}{{APIRef("WebXR Device API")}}
+
+{{securecontext_header}}{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRQuadLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a layer that takes up a flat rectangular space in the virtual environment. An `XRQuadLayer` has no thickness. It is a two-dimensional object positioned and oriented in 3D space. The position of a quad refers to the center of the quad. Only the front of the layer is visible.
 
@@ -31,26 +33,26 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
-- {{domxref("XRQuadLayer.height")}}
+- {{domxref("XRQuadLayer.height")}} {{Experimental_Inline}}
   - : Represents the height of the layer in meters.
-- {{domxref("XRQuadLayer.space")}}
+- {{domxref("XRQuadLayer.space")}} {{Experimental_Inline}}
   - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
-- {{domxref("XRQuadLayer.transform")}}
+- {{domxref("XRQuadLayer.transform")}} {{Experimental_Inline}}
   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
-- {{domxref("XRQuadLayer.width")}}
+- {{domxref("XRQuadLayer.width")}} {{Experimental_Inline}}
   - : Represents the width of the layer in meters.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 
 ## Events
 
-- {{domxref("XRQuadLayer.redraw_event", "redraw")}}
+- {{domxref("XRQuadLayer.redraw_event", "redraw")}} {{Experimental_Inline}}
   - : Sent to the `XRQuadLayer` object when the underlying resources of the layer are lost or when the XR Compositor can no longer reproject the layer. If this event is sent, authors should redraw the content of the layer in the next XR animation frame.
 
 ## Specifications

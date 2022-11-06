@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.SpeechRecognitionEvent.interpretation
 ---
+
 {{APIRef("Web Speech API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`interpretation`** read-only property of the

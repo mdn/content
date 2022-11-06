@@ -10,24 +10,21 @@ tags:
   - Reference
 browser-compat: api.CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSS`** interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.
 
-## Properties
-
-_The CSS interface is a utility interface and no object of this type can be created: only static properties are defined on it._
-
-### Static properties
+## Static properties
 
 - {{DOMxRef("CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Provides access to the Worklet responsible for all the classes related to painting.
 
-## Methods
+## Instance properties
 
-_The CSS interface is a utility interface and no object of this type can be created: only static methods are defined on it._
+_The CSS interface is a utility interface and no object of this type can be created: only static properties are defined on it._
 
-### Static methods
+## Static methods
 
 _No inherited static methods_.
 
@@ -44,6 +41,10 @@ _No inherited static methods_.
     ```js
     CSS.em(3) // CSSUnitValue {value: 3, unit: "em"}
     ```
+
+## Instance methods
+
+_The CSS interface is a utility interface and no object of this type can be created: only static methods are defined on it._
 
 ## Specifications
 

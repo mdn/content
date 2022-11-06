@@ -9,11 +9,12 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`TrustedTypePolicyFactory`** interface of the {{domxref('Trusted Types API')}} creates policies and allows the verification of Trusted Type objects against created policies.
 
-## Properties
+## Instance properties
 
 - {{domxref("TrustedTypePolicyFactory.emptyHTML")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("TrustedHTML")}} object containing an empty string.
@@ -22,7 +23,7 @@ The **`TrustedTypePolicyFactory`** interface of the {{domxref('Trusted Types API
 - {{domxref("TrustedTypePolicyFactory.defaultPolicy")}} {{ReadOnlyInline}}
   - : Returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.
 
-## Methods
+## Instance methods
 
 - {{domxref("TrustedTypePolicyFactory.createPolicy()")}}
   - : Creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as `policyOptions`.

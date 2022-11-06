@@ -10,6 +10,7 @@ tags:
   - constants
 browser-compat: javascript.statements.const
 ---
+
 {{jsSidebar("Statements")}}
 
 Constants are block-scoped, much like variables declared using the
@@ -20,15 +21,14 @@ keyword. The value of a constant can't be changed through reassignment (i.e. by 
 
 ## Syntax
 
-```js
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```js-nolint
+const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]
 ```
 
 - `nameN`
   - : The constant's name, which can be any legal {{Glossary("identifier")}}.
 - `valueN`
-  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions),
-    including a function expression.
+  - : The constant's value. This can be any legal expression, including a function expression.
 
 The [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 syntax can also be used to declare variables.
@@ -54,7 +54,7 @@ an object, this means the object's contents (e.g., its properties) can be altere
 
 All the considerations about the
 [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)
-apply to both {{jsxref("Statements/let", "let")}} and `const`.
+apply to both {{jsxref("Statements/let", "let")}} and `const`. For this reason, `const` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 
 A constant cannot share its name with a function or a variable in the same scope.
 
@@ -79,7 +79,7 @@ const MY_FAV = 7;
 MY_FAV = 20;
 
 // MY_FAV is 7
-console.log('my favorite number is: ' + MY_FAV);
+console.log("my favorite number is: " + MY_FAV);
 
 // trying to redeclare a constant throws an error
 // Uncaught SyntaxError: Identifier 'MY_FAV' has already been declared
@@ -103,14 +103,14 @@ if (MY_FAV === 7) {
   let MY_FAV = 20;
 
   // MY_FAV is now 20
-  console.log('my favorite number is ' + MY_FAV);
+  console.log("my favorite number is " + MY_FAV);
 
   // this gets hoisted into the global context and throws an error
   var MY_FAV = 20;
 }
 
 // MY_FAV is still 7
-console.log('my favorite number is ' + MY_FAV);
+console.log("my favorite number is " + MY_FAV);
 ```
 
 ### const needs to be initialized
@@ -127,14 +127,14 @@ const FOO;
 `const` also works on objects and arrays. Attempting to overwrite the object throws an error "Assignment to constant variable".
 
 ```js example-bad
-const MY_OBJECT = { key: 'value' };
-MY_OBJECT = { OTHER_KEY: 'value' };
+const MY_OBJECT = { key: "value" };
+MY_OBJECT = { OTHER_KEY: "value" };
 ```
 
 However, object keys are not protected, so the following statement is executed without problem.
 
 ```js
-MY_OBJECT.key = 'otherValue';
+MY_OBJECT.key = "otherValue";
 ```
 
 You would need to use [`Object.freeze()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to make an object immutable.
@@ -143,13 +143,13 @@ The same applies to arrays. Assigning a new array to the variable throws an erro
 
 ```js example-bad
 const MY_ARRAY = [];
-MY_ARRAY = ['B'];
+MY_ARRAY = ["B"];
 ```
 
 Still, it's possible to push items into the array and thus mutate it.
 
 ```js
-MY_ARRAY.push('A'); // ["A"]
+MY_ARRAY.push("A"); // ["A"]
 ```
 
 ## Specifications

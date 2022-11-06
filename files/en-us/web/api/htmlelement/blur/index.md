@@ -17,8 +17,8 @@ The **`HTMLElement.blur()`** method removes keyboard focus from the current elem
 
 ## Syntax
 
-```js
-blur();
+```js-nolint
+blur()
 ```
 
 ### Parameters

@@ -14,6 +14,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
 
 This WebGL example provides a simple demonstration of procedural texturing with fragment shaders. That is, using code to generate textures for use in shading WebGL objects.
@@ -34,51 +35,51 @@ Texturing a point sprite with calculations done per-pixel in the fragment shader
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```html
 <script type="x-shader/x-vertex" id="vertex-shader">
-#version 100
-precision highp float;
+  #version 100
+  precision highp float;
 
-attribute vec2 position;
+  attribute vec2 position;
 
-void main() {
-  gl_Position = vec4(position, 0.0, 1.0);
-  gl_PointSize = 128.0;
-}
+  void main() {
+    gl_Position = vec4(position, 0.0, 1.0);
+    gl_PointSize = 128.0;
+  }
 </script>
 ```
 
 ```html
 <script type="x-shader/x-fragment" id="fragment-shader">
-#version 100
-precision mediump float;
-void main() {
-  vec2 fragmentPosition = 2.0*gl_PointCoord - 1.0;
-  float distance = length(fragmentPosition);
-  float distanceSqrd = distance * distance;
-  gl_FragColor = vec4(
-    0.2/distanceSqrd,
-    0.1/distanceSqrd,
-    0.0, 1.0 );
-}
+  #version 100
+  precision mediump float;
+  void main() {
+    vec2 fragmentPosition = 2.0*gl_PointCoord - 1.0;
+    float distance = length(fragmentPosition);
+    float distanceSqrd = distance * distance;
+    gl_FragColor = vec4(
+      0.2/distanceSqrd,
+      0.1/distanceSqrd,
+      0.0, 1.0 );
+  }
 </script>
 ```
 

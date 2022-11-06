@@ -1,6 +1,7 @@
 ---
 title: clip
 slug: Web/CSS/clip
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.clip
 ---
+
 {{CSSRef}}{{Deprecated_Header}}
 
 The **`clip`** [CSS](/en-US/docs/Web/CSS) property defines a visible portion of an element. The `clip` property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
@@ -93,10 +95,21 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic">
-  <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
-  <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
-  <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+  <img
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Original graphic" />
+  <img
+    id="top-left"
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Graphic clipped to upper left" />
+  <img
+    id="middle"
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Graphic clipped to bottom right" />
 </p>
 ```
 

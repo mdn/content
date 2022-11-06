@@ -1,6 +1,7 @@
 ---
 title: box-align
 slug: Web/CSS/box-align
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.box-align
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard.
@@ -69,7 +71,10 @@ If the alignment is set using the element's `align` attribute, then the style is
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-align =
+  start | center | end | baseline | stretch
+```
 
 ## Examples
 
@@ -78,52 +83,54 @@ If the alignment is set using the element's `align` attribute, then the style is
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="UTF-8">
-<title>CSS box-align example</title>
-<style>
-div.example {
-  display: box;                   /* As specified */
-  display: -moz-box;              /* Mozilla */
-  display: -webkit-box;           /* WebKit */
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS box-align example</title>
+    <style>
+      div.example {
+        display: box; /* As specified */
+        display: -moz-box; /* Mozilla */
+        display: -webkit-box; /* WebKit */
 
-  /* Make this box taller than the children,
+        /* Make this box taller than the children,
      so there is room for the box-pack */
-  height: 400px;
+        height: 400px;
 
-  /* Make this box wider than the children
+        /* Make this box wider than the children
      so there is room for the box-align */
-  width: 300px;
+        width: 300px;
 
-  /* Children should be oriented vertically */
-  box-orient: vertical;           /* As specified */
-  -moz-box-orient: vertical;      /* Mozilla */
-  -webkit-box-orient: vertical;   /* WebKit */
+        /* Children should be oriented vertically */
+        box-orient: vertical; /* As specified */
+        -moz-box-orient: vertical; /* Mozilla */
+        -webkit-box-orient: vertical; /* WebKit */
 
-  /* Align children to the horizontal center of this box */
-  box-align: center;              /* As specified */
-  -moz-box-align: center;         /* Mozilla */
-  -webkit-box-align: center;      /* WebKit */
+        /* Align children to the horizontal center of this box */
+        box-align: center; /* As specified */
+        -moz-box-align: center; /* Mozilla */
+        -webkit-box-align: center; /* WebKit */
 
-  /* Pack children to the bottom of this box */
-  box-pack: end;                  /* As specified */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
-}
+        /* Pack children to the bottom of this box */
+        box-pack: end; /* As specified */
+        -moz-box-pack: end; /* Mozilla */
+        -webkit-box-pack: end; /* WebKit */
+      }
 
-div.example > p {
-  /* Make children narrower than their parent,
+      div.example > p {
+        /* Make children narrower than their parent,
      so there is room for the box-align */
-  width: 200px;
-}
-</style>
-</head>
-<body>
-  <div class="example">
-    <p>I will be second from the bottom of div.example, centered horizontally.</p>
-    <p>I will be on the bottom of div.example, centered horizontally.</p>
-  </div>
-</body>
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <p>
+        I will be second from the bottom of div.example, centered horizontally.
+      </p>
+      <p>I will be on the bottom of div.example, centered horizontally.</p>
+    </div>
+  </body>
 </html>
 ```
 

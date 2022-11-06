@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.fullscreenElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`fullscreenElement`** read-only property of the

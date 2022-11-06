@@ -11,7 +11,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserver.observe
 ---
-{{APIRef("Performance Timeline API")}}
+
+{{APIRef("Performance API")}}
 
 The **`observe()`** method of the
 **{{domxref("PerformanceObserver")}}** interface is used to specify the
@@ -28,7 +29,7 @@ function—set when creating the {{domxref("PerformanceObserver")}}—is invoked
 
 ## Syntax
 
-```js
+```js-nolint
 observe(options)
 ```
 
@@ -36,9 +37,14 @@ observe(options)
 
 - `options`
 
-  - : A `PerformanceObserverInit` dictionary with the following possible
-    members:
+  - : An object with the following possible members:
 
+    - `buffered`
+      - : A boolean flag to indicate whether buffered
+        entries should be queued into the observer's buffer. Must be used only with the
+        "`type`" option.
+    - `durationThreshold`
+      - : A {{domxref("DOMHighResTimeStamp")}} defining the threshold for {{domxref("PerformanceEventTiming")}} entries. Defaults to 104ms and is rounded to the nearest of 8ms. Lowest possible threshold is 16ms.
     - `entryTypes`
       - : An array of string objects, each
         specifying one performance entry type to observe. May not be used together with
@@ -47,10 +53,6 @@ observe(options)
       - : A single string specifying exactly one
         performance entry type to observe. May not be used together with the
         `entryTypes` option.
-    - `buffered`
-      - : A boolean flag to indicate whether buffered
-        entries should be queued into the observer's buffer. Must be used only with the
-        "`type`" option.
 
     See {{domxref("PerformanceEntry.entryType")}} for a list of valid performance entry
     type names. Unrecognized types are ignored, though the browser may output a warning
@@ -69,18 +71,18 @@ for `"mark"` and `"frame"` events, and the other watches for
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  const entries = list.getEntries();
-  for (let i=0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
+  list.getEntries()
+    .forEach((entry) => {
+      // Process "mark" and "frame" events
+    });
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 
-function perf_observer(list, observer) {
+function perfObserver(list, observer) {
   // Process the "measure" event
 }
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+const observer2 = new PerformanceObserver(perfObserver);
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## Specifications

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Screen.mozEnabled
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 This Boolean attribute controls the device's screen. Setting it to `false`

@@ -12,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect.getComputedTiming
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The `getComputedTiming()` method of the {{domxref("AnimationEffect")}} interface returns the calculated timing properties for this animation effect.
@@ -27,7 +28,7 @@ Although many of the attributes of the returned object are common to the object 
 
 ## Syntax
 
-```js
+```js-nolint
 getComputedTiming()
 ```
 

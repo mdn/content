@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Encoding`** {{Glossary("representation header")}} lists any encodings that have been applied to the representation (message payload), and in what order.
@@ -60,7 +61,7 @@ Content-Encoding: deflate, gzip
   - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
     structure (defined in {{rfc(1950)}}) with the [deflate](https://en.wikipedia.org/wiki/Deflate) compression
     algorithm (defined in {{rfc(1951)}}).
-- `br`
+- `br` {{Non-standard_Inline}}
   - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
 
 ## Examples

@@ -8,6 +8,7 @@ tags:
   - User-agent
 browser-compat: http.headers.User-Agent
 ---
+
 {{HTTPSidebar}}
 
 The **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.

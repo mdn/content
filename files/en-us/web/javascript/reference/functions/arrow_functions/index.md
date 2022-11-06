@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional
@@ -135,9 +136,9 @@ expression return is not needed:
 
 Multiline statements require body braces and return:
 
-```js
+```js-nolint
 // The parentheses are optional with one single parameter
-(param) => {
+param => {
   const a = 1;
   return a + param;
 }
@@ -335,7 +336,7 @@ const bound = add.bind(obj);
 console.log(bound(1, 2, 3)); // result 2026
 ```
 
-Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
+Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
 
 #### Traditional function example
 

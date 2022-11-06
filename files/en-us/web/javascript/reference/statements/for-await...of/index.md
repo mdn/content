@@ -23,7 +23,7 @@ The **`for await...of` statement** creates a loop iterating over [async iterable
 
 ## Syntax
 
-```js
+```js-nolint
 for await (variable of iterable)
   statement
 ```
@@ -136,8 +136,7 @@ async function getResponseSize(url) {
     responseSize += chunk.length;
   }
 
-  console.log(`Response Size: ${responseSize} bytes`);
-  // expected output: "Response Size: 1071472"
+  console.log(`Response Size: ${responseSize} bytes`); // "Response Size: 1071472"
   return responseSize;
 }
 getResponseSize("https://jsonplaceholder.typicode.com/photos");

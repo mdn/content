@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Type
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Type`** representation header is used to indicate the original {{Glossary("MIME type","media type")}} of the resource (prior to any content encoding applied for sending).
@@ -52,7 +53,7 @@ In requests, (such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}), the clie
 ## Syntax
 
 ```http
-Content-Type: text/html; charset=UTF-8
+Content-Type: text/html; charset=utf-8
 Content-Type: multipart/form-data; boundary=something
 ```
 
@@ -61,7 +62,7 @@ Content-Type: multipart/form-data; boundary=something
 - `media-type`
   - : The [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the resource or the data.
 - charset
-  - : The character encoding standard.
+  - : The character encoding standard. Case insensitive, lowercase is preferred.
 - boundary
   - : For multipart entities the `boundary` directive is required. The directive consists of 1 to 70 characters from a set of characters (and not ending with white space) known to be very robust through email gateways. It is used to encapsulate the boundaries of the multiple parts of the message. Often, the header boundary is prepended with two dashes and the final boundary has two dashes appended at the end.
 
@@ -73,8 +74,8 @@ In a {{HTTPMethod("POST")}} request, resulting from an HTML form submission, the
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```

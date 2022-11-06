@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MessageChannel.port1
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`port1`** read-only property of the

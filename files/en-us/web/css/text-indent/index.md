@@ -1,6 +1,7 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -12,6 +13,7 @@ tags:
   - text-indent
 browser-compat: css.properties.text-indent
 ---
+
 {{CSSRef}}
 
 The **`text-indent`** CSS property sets the length of empty space (indentation) that is put before lines of text in a block.
@@ -70,10 +72,14 @@ text-indent: unset;
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS
@@ -100,47 +106,55 @@ Treating first paragraphs differently from subsequent paragraphs can be done usi
 ```html
 <h2>Lorem ipsum</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
-venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor metus.
-Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus blandit eros
-et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur non, elementum ac
-sapien. Cras consequat turpis non augue ullamcorper, sit amet porttitor dui
-interdum.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
+  venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor
+  metus. Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus
+  blandit eros et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur
+  non, elementum ac sapien. Cras consequat turpis non augue ullamcorper, sit
+  amet porttitor dui interdum.
+</p>
 
-<p>Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
-tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla facilisi.
-In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor odio a semper.
-Donec vitae dapibus ipsum. Donec libero purus, convallis eu efficitur id, pulvinar
-elementum diam. Maecenas mollis blandit placerat. Ut gravida pellentesque nunc, in
-eleifend ante convallis sit amet.</p>
+<p>
+  Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
+  tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla
+  facilisi. In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor
+  odio a semper. Donec vitae dapibus ipsum. Donec libero purus, convallis eu
+  efficitur id, pulvinar elementum diam. Maecenas mollis blandit placerat. Ut
+  gravida pellentesque nunc, in eleifend ante convallis sit amet.
+</p>
 
 <h2>Donec ullamcorper elit nisl</h2>
 
-<p>Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce
-tempor in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
-nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit vestibulum
-nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-ac turpis egestas. Donec vulputate leo ut iaculis ultrices. Cras egestas rhoncus
-lorem. Nunc blandit tempus lectus, rutrum hendrerit orci eleifend id. Ut at quam
-velit.</p>
+<p>
+  Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce tempor
+  in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
+  nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit
+  vestibulum nulla. Pellentesque habitant morbi tristique senectus et netus et
+  malesuada fames ac turpis egestas. Donec vulputate leo ut iaculis ultrices.
+  Cras egestas rhoncus lorem. Nunc blandit tempus lectus, rutrum hendrerit orci
+  eleifend id. Ut at quam velit.
+</p>
 
-<p>Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
-sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
-iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus ac
-dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan libero,
-sed euismod ipsum ullamcorper sed.</p>
+<p>
+  Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
+  sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
+  iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus
+  ac dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan
+  libero, sed euismod ipsum ullamcorper sed.
+</p>
 ```
 
 #### CSS
 
 ```css
 p {
-    text-align: justify;
-    margin: 1em 0 0 0;
+  text-align: justify;
+  margin: 1em 0 0 0;
 }
 p + p {
-    text-indent: 2em;
-    margin: 0;
+  text-indent: 2em;
+  margin: 0;
 }
 ```
 
@@ -153,10 +167,14 @@ p + p {
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS

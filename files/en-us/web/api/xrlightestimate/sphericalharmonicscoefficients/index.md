@@ -14,6 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRLightEstimate.sphericalHarmonicsCoefficients
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`sphericalHarmonicsCoefficients`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.

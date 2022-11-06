@@ -11,11 +11,12 @@ tags:
   - Learn
   - Pop
   - Push
-  - l10n:priority
+  - "l10n:priority"
   - shift
   - split
   - unshift
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 In the final article of this module, we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
@@ -52,17 +53,17 @@ Arrays consist of square brackets and items that are separated by commas.
 
 1. Suppose we want to store a shopping list in an array. Paste the following code into the console:
 
-    ```js
-    const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    console.log(shopping);
-    ```
+   ```js
+   const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+   console.log(shopping);
+   ```
 
 2. In the above example, each item is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings. For example:
 
-    ```js
-    const sequence = [1, 1, 2, 3, 5, 8, 13];
-    const random = ['tree', 795, [0, 1, 2]];
-    ```
+   ```js
+   const sequence = [1, 1, 2, 3, 5, 8, 13];
+   const random = ['tree', 795, [0, 1, 2]];
+   ```
 
 3. Before proceeding, create a few example arrays.
 
@@ -81,35 +82,36 @@ Items in an array are numbered, starting from zero. This number is called the it
 
 1. Enter the following into your console:
 
-    ```js
-    const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    console.log(shopping[0]);
-    // returns "bread"
-    ```
+   ```js
+   const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+   console.log(shopping[0]);
+   // returns "bread"
+   ```
 
 2. You can also modify an item in an array by giving a single array item a new value. Try this:
 
-    ```js
-    const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    shopping[0] = 'tahini';
-    console.log(shopping);
-    // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
-    ```
+   ```js
+   const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+   shopping[0] = 'tahini';
+   console.log(shopping);
+   // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+   ```
 
-    > **Note:** We've said it before, but just as a reminder — computers start counting from 0!
+   > **Note:** We've said it before, but just as a reminder — computers start counting from 0!
 
 3. Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
 
-    ```js
-    const random = ['tree', 795, [0, 1, 2]];
-    random[2][2];
-    ```
+   ```js
+   const random = ['tree', 795, [0, 1, 2]];
+   random[2][2];
+   ```
 
 4. Try making some more modifications to your array examples before moving on. Play around a bit, and see what works and what doesn't.
 
-## Finding items in an array
+## Finding the index of items in an array
 
-This is fine if you know the index of an item, but what if you don't? You can find the index of a particular item using the {{jsxref("Array.prototype.indexOf()","indexOf()")}} method. This takes an item as an argument and returns the index, or `-1` if the item was not found in the array:
+If you don't know the index of an item, you can use the {{jsxref("Array.prototype.indexOf()","indexOf()")}} method.
+The `indexOf()` method takes an item as an argument and will either return the item's index or `-1` if the item is not in the array:
 
 ```js
 const birds = ['Parrot', 'Falcon', 'Owl'];
@@ -240,39 +242,39 @@ Often you'll be presented with some raw data contained in a big long string, and
 
 1. Let's play with this, to see how it works. First, create a string in your console:
 
-    ```js
-    const data = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
-    ```
+   ```js
+   const data = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+   ```
 
 2. Now let's split it at each comma:
 
-    ```js
-    const cities = data.split(',');
-    cities;
-    ```
+   ```js
+   const cities = data.split(',');
+   cities;
+   ```
 
 3. Finally, try finding the length of your new array, and retrieving some items from it:
 
-    ```js
-    cities.length;
-    cities[0]; // the first item in the array
-    cities[1]; // the second item in the array
-    cities[cities.length - 1]; // the last item in the array
-    ```
+   ```js
+   cities.length;
+   cities[0]; // the first item in the array
+   cities[1]; // the second item in the array
+   cities[cities.length - 1]; // the last item in the array
+   ```
 
 4. You can also go the opposite way using the {{jsxref("Array.prototype.join()","join()")}} method. Try the following:
 
-    ```js
-    const commaSeparated = cities.join(',');
-    commaSeparated;
-    ```
+   ```js
+   const commaSeparated = cities.join(',');
+   commaSeparated;
+   ```
 
 5. Another way of converting an array to a string is to use the {{jsxref("Array.prototype.toString()","toString()")}} method. `toString()` is arguably simpler than `join()` as it doesn't take a parameter, but more limiting. With `join()` you can specify different separators, whereas `toString()` always uses a comma. (Try running Step 4 with a different character than a comma.)
 
-    ```js
-    const dogNames = ['Rocket','Flash','Bella','Slugger'];
-    dogNames.toString(); // Rocket,Flash,Bella,Slugger
-    ```
+   ```js
+   const dogNames = ['Rocket','Flash','Bella','Slugger'];
+   dogNames.toString(); // Rocket,Flash,Bella,Slugger
+   ```
 
 ## Active learning: Printing those products
 
@@ -290,18 +292,16 @@ Let's return to the example we described earlier — printing out product names 
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 150px;">
+  <ul></ul>
 
-<ul>
-
-</ul>
-
-<p></p>
-
+  <p></p>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 410px;width: 95%">
 const list = document.querySelector('.output ul');
@@ -335,8 +335,8 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -486,18 +486,16 @@ To complete the app, we need you to:
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="min-height: 150px;">
+  <input type="text" /><button>Search</button>
 
-<input type="text"><button>Search</button>
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 370px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -538,8 +536,8 @@ searchBtn.onclick = () => {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 

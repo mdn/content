@@ -5,6 +5,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 You are able to include a custom sidebar on API reference pages it so that it displays links to related Interfaces, tutorials, and other resources relevant just to that API.
@@ -62,7 +63,7 @@ As you can see, we've used "Fetch API" for the name, and inside the object value
 
 This section lists all the sub-members you could include in a `GroupData` entry.
 
-Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  `https://developer.mozilla.org/<language-code>/docs/Web/API` — to create the final URL for the displayed link.
+Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page — `https://developer.mozilla.org/<language-code>/docs/Web/API` — to create the final URL for the displayed link.
 So for example, "Response" will result in a link being created like so:
 
 ```html
@@ -83,24 +84,24 @@ These are all technically optional, but it is strongly encouraged that instead o
 3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}.
    If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list.
    "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
-   Do _not_ list methods that are members of interfaces that are members of interfaces that are owned by the same API.
+   Do _not_ list methods that are members of interfaces that are owned by the same API.
 4. `"properties"` — the value is an array that should contain all of the properties associated with the API.
    This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces.
    If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list.
    "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/en-US/docs/Web/API/Headers/append).
 5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere.
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
-   "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/HTMLElement/animationstart_event).
+   "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/Element/animationstart_event).
 6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API.
    Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link.
    As an example, the following object:
 
-    ```json
-    { "url":   "/docs/Web/API/Detecting_device_orientation",
-    "title": "Detecting device orientation" }
-    ```
+   ```json
+   { "url":   "/docs/Web/API/Detecting_device_orientation",
+   "title": "Detecting device orientation" }
+   ```
 
-    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/Events/Detecting_device_orientation](/en-US/docs/Web/Events/Detecting_device_orientation).
+   Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
 
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.

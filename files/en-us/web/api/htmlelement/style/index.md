@@ -11,6 +11,7 @@ tags:
   - Style
 browser-compat: api.HTMLElement.style
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`style`** read-only property returns the _inline_ style of an element in the form of a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style).

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FocusEvent.relatedTarget
 ---
+
 {{ apiref("DOM Events") }}
 
 The **`FocusEvent.relatedTarget`** read-only property is the

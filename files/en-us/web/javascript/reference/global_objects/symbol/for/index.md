@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.for
 ---
+
 {{JSRef}}
 
 The **`Symbol.for(key)`** method searches for existing symbols
@@ -18,8 +19,8 @@ a new symbol gets created in the global symbol registry with this key.
 
 ## Syntax
 
-```js
-Symbol.for(key);
+```js-nolint
+Symbol.for(key)
 ```
 
 ### Parameters
@@ -47,15 +48,15 @@ create a new global symbol.
 ### Using Symbol.for()
 
 ```js
-Symbol.for('foo'); // create a new global symbol
-Symbol.for('foo'); // retrieve the already created symbol
+Symbol.for("foo"); // create a new global symbol
+Symbol.for("foo"); // retrieve the already created symbol
 
 // Same global symbol, but not locally
-Symbol.for('bar') === Symbol.for('bar'); // true
-Symbol('bar') === Symbol('bar'); // false
+Symbol.for("bar") === Symbol.for("bar"); // true
+Symbol("bar") === Symbol("bar"); // false
 
 // The key is also used as the description
-const sym = Symbol.for('mario');
+const sym = Symbol.for("mario");
 sym.toString(); // "Symbol(mario)"
 ```
 
@@ -63,8 +64,8 @@ To avoid name clashes with your global symbol keys and other (library code) glob
 symbols, it might be a good idea to prefix your symbols:
 
 ```js
-Symbol.for('mdn.foo');
-Symbol.for('mdn.bar');
+Symbol.for("mdn.foo");
+Symbol.for("mdn.bar");
 ```
 
 ## Specifications

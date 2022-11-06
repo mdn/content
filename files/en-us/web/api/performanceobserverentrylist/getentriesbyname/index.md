@@ -10,7 +10,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntriesByName
 ---
-{{APIRef("Performance Timeline API")}}
+
+{{APIRef("Performance API")}}
 
 The **`getEntriesByName()`** method of the
 {{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly
@@ -27,7 +28,7 @@ interfaces.
 
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByName(name)
 getEntriesByName(name, type)
 ```

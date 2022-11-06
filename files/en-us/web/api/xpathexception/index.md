@@ -11,11 +11,12 @@ tags:
   - XPath
 browser-compat: api.XPathException
 ---
+
 {{APIRef("DOM XPath")}}{{Deprecated_Header}}
 
 In the [DOM XPath API](/en-US/docs/Web/XPath) the **`XPathException`** interface represents exception conditions that can be encountered while performing XPath operations.
 
-## Properties
+## Instance properties
 
 - {{domxref("XPathException.code")}} {{ReadOnlyInline}}
   - : Returns a `short` that contains one of the [error code constants](#error_codes).

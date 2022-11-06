@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 The {{SVGElement('path')}} element is the most powerful element in the SVG library of [basic shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). It can be used to create lines, curves, arcs, and more.
@@ -16,7 +17,7 @@ A good understanding of paths is important when drawing SVGs. While creating com
 
 The shape of a `<path>` element is defined by one parameter: {{ SVGAttr("d") }}. (See more in [basic shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes).) The `d` attribute contains a series of commands and parameters used by those commands.
 
-Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`,`10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
+Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`, `10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
 
 All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., _move 10px up and 7px to the left from the last point_).
 
@@ -32,7 +33,7 @@ M x y
 m dx dy
 ```
 
-In the following example there's only a point at (`10`,`10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
+In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
 ![](blank_path_area.png)
 
@@ -105,7 +106,7 @@ The relative forms of these commands can also be used to draw the same picture. 
  <path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
 ```
 
-The path will move to point (`10`,`10`) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
+The path will move to point (`10`, `10`) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
 
 In these examples, it would probably be simpler to use the {{SVGElement("polygon")}} or {{SVGElement("polyline")}} elements. However, paths are used so often in drawing SVG that developers may be more comfortable using them instead. There is no real performance penalty or bonus for using one or the other.
 
@@ -123,7 +124,7 @@ The cubic curve, `C`, is the slightly more complex curve. Cubic Béziers take in
  c dx1 dy1, dx2 dy2, dx dy
 ```
 
-The last set of coordinates here (`x`,`y`) specify where the line should end. The other two are control points. (`x1`,`y1`) is the control point for the start of the curve, and (`x2`,`y2`) is the control point for the end. The control points essentially describe the slope of the line starting at each point. The Bézier function then creates a smooth curve that transfers from the slope established at the beginning of the line, to the slope at the other end.
+The last set of coordinates here (`x`, `y`) specify where the line should end. The other two are control points. (`x1`, `y1`) is the control point for the start of the curve, and (`x2`, `y2`) is the control point for the end. The control points essentially describe the slope of the line starting at each point. The Bézier function then creates a smooth curve that transfers from the slope established at the beginning of the line, to the slope at the other end.
 
 ![Cubic Bézier Curves with grid](cubic_bézier_curves_with_grid.png)
 
@@ -258,7 +259,7 @@ For the unrotated ellipse in the image above, there are only two different arcs 
 
 Notice that each of the blue ellipses are formed by two arcs, depending on traveling clockwise or counter-clockwise. Each ellipse has one short arc and one long arc. The two ellipses are just mirror images of each other. They are flipped along the line formed from the start→end points.
 
-If the start→end points are farther than the ellipse's `x` and `y` radius can reach, the ellipse's radii will be minimally expanded so it could reach the start→end points. The interactive codepen at the bottom of this page demonstrates this well. To determine if an ellipse's radii are large enough to require expanding, a system of equations would need to be solved, such as [this on wolfram alpha](https://www.wolframalpha.com/input/?i=solve+\(\(110+-+x\)%5E2%2F36%5E2\)+%2B+\(\(215+-+y\)%5E2%2F60%5E2\)+%3D+1,+\(\(150.71+-+x\)%5E2%2F36%5E2\)+%2B+\(\(170.29+-+y\)%5E2%2F60%5E2\)+%3D+1). This computation is for the non-rotated ellipse with start→end (`110`, `215`)→(`150.71`, `170.29`). The solution, (`x`, `y`), is the center of the ellipse(s). The solution will be [imaginary](https://www.wolframalpha.com/input/?i=solve+\(\(110+-+x\)%5E2%2F30%5E2\)+%2B+\(\(215+-+y\)%5E2%2F50%5E2\)+%3D+1,+\(\(162.55+-+x\)%5E2%2F30%5E2\)+%2B+\(\(162.45+-+y\)%5E2%2F50%5E2\)+%3D+1) if the ellipse's radii are too small. This second computation is for the non-rotated ellipse with start→end (`110`, `215`)→(`162.55`, `162.45`). The solution has a small imaginary component because the ellipse was just barely expanded.
+If the start→end points are farther than the ellipse's `x` and `y` radius can reach, the ellipse's radii will be minimally expanded so it could reach the start→end points. The interactive codepen at the bottom of this page demonstrates this well. To determine if an ellipse's radii are large enough to require expanding, a system of equations would need to be solved, such as [this on wolfram alpha](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F36%5E2)+%2B+((215+-+y)%5E2%2F60%5E2)+%3D+1,+((150.71+-+x)%5E2%2F36%5E2)+%2B+((170.29+-+y)%5E2%2F60%5E2)+%3D+1>). This computation is for the non-rotated ellipse with start→end (`110`, `215`)→(`150.71`, `170.29`). The solution, (`x`, `y`), is the center of the ellipse(s). The solution will be [imaginary](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F30%5E2)+%2B+((215+-+y)%5E2%2F50%5E2)+%3D+1,+((162.55+-+x)%5E2%2F30%5E2)+%2B+((162.45+-+y)%5E2%2F50%5E2)+%3D+1>) if the ellipse's radii are too small. This second computation is for the non-rotated ellipse with start→end (`110`, `215`)→(`162.55`, `162.45`). The solution has a small imaginary component because the ellipse was just barely expanded.
 
 The four different paths mentioned above are determined by the next two parameter flags. As mentioned earlier, there are still two possible ellipses for the path to travel around and two different possible paths on both ellipses, giving four possible paths. The first parameter is the `large-arc-flag`. It determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle. The second parameter is the `sweep-flag`. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles will be traveled around. The example below shows all four possible combinations, along with the two circles for each case.
 

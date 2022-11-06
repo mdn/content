@@ -11,17 +11,18 @@ tags:
   - Non-standard
 browser-compat: api.HTMLShadowElement
 ---
+
 {{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLShadowElement`** interface represents a {{HTMLElement("shadow")}} HTML Element, which is used in [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits the methods of {{domxref("HTMLElement")}}._
 

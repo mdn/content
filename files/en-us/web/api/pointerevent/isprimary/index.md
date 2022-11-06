@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.isPrimary
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`isPrimary`** read-only property of the
@@ -27,9 +28,9 @@ can achieve that by ignoring non-primary pointers.
 
 A pointer is considered primary if the pointer represents a mouse device. A pointer
 representing pen input is considered the primary pen input if its
-{{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers representing
+{{domxref("Element/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers representing
 pen input existed. A pointer representing touch input is considered the primary touch
-input if its {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers
+input if its {{domxref("Element/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers
 representing touch input existed.
 
 When two or more pointer device types are being used concurrently, multiple pointers

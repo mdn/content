@@ -1,6 +1,7 @@
 ---
 title: list-style-position
 slug: Web/CSS/list-style-position
+page-type: css-property
 tags:
   - CSS
   - CSS Lists
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.list-style-position
 ---
+
 {{CSSRef}}
 
 The **`list-style-position`** [CSS](/en-US/docs/Web/CSS) property sets the position of the {{cssxref("::marker")}} relative to a list item.
@@ -60,19 +62,22 @@ The `list-style-position` property is specified as one of the keyword values lis
 #### HTML
 
 ```html
-<ul class="inside">List 1
+<ul class="inside">
+  List 1
   <li>List Item 1-1</li>
   <li>List Item 1-2</li>
   <li>List Item 1-3</li>
   <li>List Item 1-4</li>
 </ul>
-<ul class="outside">List 2
+<ul class="outside">
+  List 2
   <li>List Item 2-1</li>
   <li>List Item 2-2</li>
   <li>List Item 2-3</li>
   <li>List Item 2-4</li>
 </ul>
-<ul class="inside-img">List 3
+<ul class="inside-img">
+  List 3
   <li>List Item 3-1</li>
   <li>List Item 3-2</li>
   <li>List Item 3-3</li>

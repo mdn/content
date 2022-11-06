@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCollection.namedItem
 ---
+
 {{APIRef("DOM")}}
 
 The **`namedItem()`** method of the {{domxref("HTMLCollection")}} interface returns
@@ -19,8 +20,8 @@ In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like 
 
 ## Syntax
 
-```js
-const item = collection.namedItem(key);
+```js-nolint
+namedItem(key)
 ```
 
 ### Parameters
@@ -38,8 +39,8 @@ const item = collection.namedItem(key);
 ```html
 <div id="personal">
   <span name="title">Dr.</span>
-  <span name="firstname">John</span>
-  <span name="lastname">Doe</span>
+  <span name="firstname">Carina</span>
+  <span name="lastname">Anand</span>
   <span id="degree">(MD)</span>
 </div>
 ```

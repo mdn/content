@@ -1,8 +1,9 @@
 ---
-title: '-webkit-animation'
+title: "-webkit-animation"
 slug: Web/CSS/@media/-webkit-animation
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Reference
   - WebKit
@@ -11,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: css.at-rules.media.-webkit-animation
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 > **Note:** All browsers support the [`animation`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.

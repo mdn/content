@@ -14,6 +14,7 @@ tags:
   - id
 browser-compat: api.Document.getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 The {{domxref("Document")}} method **`getElementById()`** returns an {{domxref("Element")}} object representing the element whose {{domxref("Element.id", "id")}} property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
@@ -22,7 +23,7 @@ If you need to get access to an element which doesn't have an ID, you can use {{
 
 ## Syntax
 
-```js
+```js-nolint
 getElementById(id)
 ```
 
@@ -77,7 +78,7 @@ Unlike some other element-lookup methods such as {{domxref("Document.querySelect
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Document</title>
   </head>
   <body>

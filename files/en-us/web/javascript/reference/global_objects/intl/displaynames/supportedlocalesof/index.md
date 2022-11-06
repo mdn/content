@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames.supportedLocalesOf()`** method returns
@@ -19,7 +20,7 @@ without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.DisplayNames.supportedLocalesOf(locales)
 Intl.DisplayNames.supportedLocalesOf(locales, options)
 ```
@@ -27,8 +28,7 @@ Intl.DisplayNames.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:
@@ -68,7 +68,7 @@ the Balinese language tag as well.
 const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

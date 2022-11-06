@@ -1,8 +1,9 @@
 ---
-title: '-moz-user-focus'
+title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
+page-type: css-property
 tags:
-  - '-moz-user-focus'
+  - "-moz-user-focus"
   - CSS
   - CSS:Mozilla Extensions
   - NeedsContent
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-user-focus
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
@@ -57,14 +59,17 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-user-focus =
+  ignore | normal | select-after | select-before | select-menu | select-same | select-all | none
+```
 
 ## Examples
 
 ### HTML
 
 ```html
-<input class="ignored" value="The user cannot focus on this element.">
+<input class="ignored" value="The user cannot focus on this element." />
 ```
 
 ### CSS

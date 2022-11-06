@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This page lists many of the general-purpose macros created for use on MDN.
@@ -194,7 +195,7 @@ There are templates for almost every large collection of pages.
 They typically link back to the main page of the reference/guide/tutorial (this is often needed because our breadcrumbs sometimes can't do this) and put the article in the appropriate category.
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) generates the sidebar for CSS reference pages.
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) generates the sidebar for HTML reference pages.
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) generates the sidebar for HTML reference pages.
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) generates the sidebar for Web API reference pages.
 
 ## General-purpose formatting
@@ -272,14 +273,14 @@ They can also be used to mark up a section on a page.
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
 
-##### Syntax
+#### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-##### Examples
+#### Examples
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}

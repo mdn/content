@@ -14,6 +14,7 @@ tags:
   - play
 browser-compat: api.HTMLMediaElement.play
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}}
@@ -26,7 +27,7 @@ permission issues, result in the promise being rejected.
 
 ## Syntax
 
-```js
+```js-nolint
 play()
 ```
 
@@ -44,7 +45,7 @@ rejected if for any reason playback cannot be started.
 
 ### Exceptions
 
-The promise's **rejection handler** is called with an exception name
+The promise's **rejection handler** is called with a {{domxref("DOMException")}} object
 passed in as its sole input parameter (as opposed to a traditional exception being
 thrown). Possible errors include:
 

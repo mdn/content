@@ -24,6 +24,7 @@ tags:
   - Experimental
 browser-compat: api.XRInputSourceArray.length
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`length`** property returns an integer value

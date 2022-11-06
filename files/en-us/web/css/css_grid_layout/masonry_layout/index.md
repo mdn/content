@@ -1,12 +1,14 @@
 ---
 title: Masonry layout
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grid
   - Experimental
   - masonry
 ---
+
 {{CSSRef}}
 
 Level 3 of the [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is, and how to use it.

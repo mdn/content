@@ -9,7 +9,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming
 ---
-{{APIRef("Resource Timing API")}}
+
+{{APIRef("Performance API")}}
 
 The **`PerformanceResourceTiming`** interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's _resources_. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.
 
@@ -19,7 +20,7 @@ The interface's properties create a _resource loading timeline_ with {{domxref("
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 This interface extends the following {{domxref("PerformanceEntry")}} properties for resource performance entry types by qualifying and constraining them as follows:
 
@@ -70,8 +71,10 @@ The interface also supports the following properties which are listed in the ord
   - : A `number` that is the size (in octets) received from the fetch (HTTP or cache) of the _message body_, after removing any applied content-codings.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
+- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
+  - : A string representing the render-blocking status. Must be: "`blocking`" or "`non-blocking`".
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
   - : Returns a string that is the JSON representation of the {{domxref("PerformanceResourceTiming")}} object.

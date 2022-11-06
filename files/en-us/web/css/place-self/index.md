@@ -1,6 +1,7 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Alignment
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.place-self
 ---
+
 {{CSSRef}}
 
 The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e. the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout). If the second value is not present, the first value is also used for it.
@@ -125,6 +127,7 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 80px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
 }
 
@@ -147,13 +150,10 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
-}
-
-article {
-  margin: 20px;
 }
 ```
 

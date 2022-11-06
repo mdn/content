@@ -25,6 +25,7 @@ tags:
   - Method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} method
@@ -40,7 +41,7 @@ standard 2D display but can then be transitioned to a 3D immersion system.
 
 ## Syntax
 
-```js
+```js-nolint
 makeXRCompatible()
 ```
 
@@ -87,11 +88,13 @@ on its main menu that offers an option to start the game in WebXR mode.
 
 ### HTML
 
-The HTML for the buttons looks lke this:
+The HTML for the buttons looks like this:
 
 ```html
 <button class="green button" type="button">Start Game</button>
-<button class="blue button use-webxr" type="button">Start Game (VR mode)</button>
+<button class="blue button use-webxr" type="button">
+  Start Game (VR mode)
+</button>
 ```
 
 The first button starts the game, continuing to present the game onscreen as usual. The

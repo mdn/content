@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.ProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 The **`ProcessingInstruction`** interface represents a [processing instruction](https://www.w3.org/TR/xml/#sec-pi); that is, a {{domxref("Node")}} which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.
@@ -27,14 +28,14 @@ is a processing instruction whose `target` is `xml`.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}
   - : A name identifying the application to which the instruction is targeted.
 
-## Methods
+## Instance methods
 
 _This interface doesn't have any specific method, but inherits methods from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 

@@ -8,6 +8,7 @@ tags:
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Until now we haven't looked at the actual pixels of our canvas. With the `ImageData` object you can directly read and write a data array to manipulate pixel data. We will also look into how image smoothing (anti-aliasing) can be controlled and how to save images from your canvas.
@@ -30,7 +31,7 @@ The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of d
 For example, to read the blue component's value from the pixel at column 200, row 50 in the image, you would do the following:
 
 ```js
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+const blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 If given a set of coordinates (X and Y), you may end up doing something like this:
@@ -80,7 +81,7 @@ To obtain an `ImageData` object containing a copy of the pixel data for a canvas
 const myImageData = ctx.getImageData(left, top, width, height);
 ```
 
-This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`,`top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
+This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
 > **Note:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
@@ -92,17 +93,16 @@ In this example we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRe
 
 ```js
 const img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-img.addEventListener('load', () => {
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+img.addEventListener("load", () => {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
 });
-const hoveredColor = document.getElementById('hovered-color');
-const selectedColor = document.getElementById('selected-color');
-
+const hoveredColor = document.getElementById("hovered-color");
+const selectedColor = document.getElementById("selected-color");
 
 function pick(event, destination) {
   const bounding = canvas.getBoundingClientRect();
@@ -118,8 +118,8 @@ function pick(event, destination) {
   return rgba;
 }
 
-canvas.addEventListener('mousemove', event => pick(event, hoveredColor));
-canvas.addEventListener('click', event => pick(event, selectedColor));
+canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
+canvas.addEventListener("click", (event) => pick(event, selectedColor));
 ```
 
 The code's usage is demonstrated in the following live example:
@@ -150,57 +150,57 @@ In this example we iterate over all pixels to change their values, then we put t
 
 ```js
 const img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
 
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 img.onload = () => {
-    ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, 0, 0);
 };
 
 const original = () => {
-    ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, 0, 0);
 };
 
 const invert = () => {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (let i = 0; i < data.length; i += 4) {
-        data[i]     = 255 - data[i];     // red
-        data[i + 1] = 255 - data[i + 1]; // green
-        data[i + 2] = 255 - data[i + 2]; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    data[i] = 255 - data[i]; // red
+    data[i + 1] = 255 - data[i + 1]; // green
+    data[i + 2] = 255 - data[i + 2]; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
 const grayscale = () => {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (let i = 0; i < data.length; i += 4) {
-        const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-        data[i]     = avg; // red
-        data[i + 1] = avg; // green
-        data[i + 2] = avg; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    data[i] = avg; // red
+    data[i + 1] = avg; // green
+    data[i + 2] = avg; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
-const inputs = document.querySelectorAll('[name=color]');
+const inputs = document.querySelectorAll("[name=color]");
 for (const input of inputs) {
-    input.addEventListener("change", (evt) => {
-        switch (evt.target.value) {
-            case "inverted":
-                return invert();
-            case "grayscale":
-                return grayscale();
-            default:
-                return original();
-        }
-    });
+  input.addEventListener("change", (evt) => {
+    switch (evt.target.value) {
+      case "inverted":
+        return invert();
+      case "grayscale":
+        return grayscale();
+      default:
+        return original();
+    }
+  });
 }
 ```
 
@@ -227,24 +227,28 @@ Zoom example:
 
 ```js
 const img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
 img.onload = () => {
   draw(this);
 };
 
 function draw(img) {
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
 
-  const smoothedZoomCtx = document.getElementById('smoothed-zoom').getContext('2d');
+  const smoothedZoomCtx = document
+    .getElementById("smoothed-zoom")
+    .getContext("2d");
   smoothedZoomCtx.imageSmoothingEnabled = true;
   smoothedZoomCtx.mozImageSmoothingEnabled = true;
   smoothedZoomCtx.webkitImageSmoothingEnabled = true;
   smoothedZoomCtx.msImageSmoothingEnabled = true;
 
-  const pixelatedZoomCtx = document.getElementById('pixelated-zoom').getContext('2d');
+  const pixelatedZoomCtx = document
+    .getElementById("pixelated-zoom")
+    .getContext("2d");
   pixelatedZoomCtx.imageSmoothingEnabled = false;
   pixelatedZoomCtx.mozImageSmoothingEnabled = false;
   pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
@@ -259,7 +263,7 @@ function draw(img) {
         200, 200);
   };
 
-  canvas.addEventListener('mousemove', (event) => {
+  canvas.addEventListener("mousemove", (event) => {
     const x = event.layerX;
     const y = event.layerY;
     zoom(smoothedZoomCtx, x, y);
@@ -297,6 +301,7 @@ You can also create a {{domxref("Blob")}} from the canvas.
 
 - {{domxref("ImageData")}}
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Canvas, images and pixels – by Christian Heilmann](https://codepo8.github.io/canvas-images-and-pixels/)
+- [Download Canvas API-Generated Images Using toBlob](https://www.digitalocean.com/community/tutorials/js-canvas-toblob)
+- [HTML5 Canvas Tutorials](https://www.html5canvastutorials.com/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

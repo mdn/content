@@ -12,6 +12,7 @@ tags:
   - redirected
 browser-compat: api.Response.redirected
 ---
+
 {{APIRef("Fetch")}}
 
 The read-only **`redirected`** property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.

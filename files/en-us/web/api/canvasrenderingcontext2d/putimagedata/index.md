@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.putImageData()`**
@@ -25,7 +26,7 @@ manipulation of canvas contents in the article [Pixel manipulation with canvas](
 
 ## Syntax
 
-```js
+```js-nolint
 putImageData(imageData, dx, dy)
 putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 ```

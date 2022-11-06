@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-required
 ---
+
 The `aria-required` attribute indicates that user input is required on the element before a form may be submitted.
 
 ## Description
@@ -33,11 +34,16 @@ If a form contains both required and optional form elements, the required elemen
 The attribute should be added to the form-control role. If the user needs to fill in an email address [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), include `aria-required="true"` on the textbox.
 
 ```html
-<div id="tbLabel">Email Address *</>
-<div role="textbox" contenteditable aria-labelledby="tblabel" aria-required="true" id="email1"></div>
+<div id="tbLabel">Email Address *</div>
+<div
+  role="textbox"
+  contenteditable
+  aria-labelledby="tblabel"
+  aria-required="true"
+  id="email1"></div>
 ```
 
- > **Note:** If the field's label already contains the word "required", it is recommended to leave out the `aria-required` attribute. This avoids that screen readers read out the term "required" twice.
+> **Note:** If the field's label already contains the word "required", it is recommended to leave out the `aria-required` attribute. This avoids that screen readers read out the term "required" twice.
 
 In this example, JavaScript must be used to prevent the containing form from being submitted if the textbox has no content.
 

@@ -6,6 +6,7 @@ tags:
   - writing-guide
 page-type: mdn-writing-guide
 ---
+
 {{MDNSidebar}}
 
 This article gives you some handy information about approaching how to document technologies.
@@ -32,7 +33,7 @@ Useful resources for writing any documentation include:
 3. The latest modern web browsers:
    These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting.
    This is especially pertinent if you are documenting a feature that is 'upcoming'.
-4. Demos/blog posts/other info: Find as much info as you can. If you are updating a technology because it has changed,  ensure that the resources you are using to learn are not out of date. This is why the first two points above are important.
+4. Demos/blog posts/other info: Find as much info as you can. If you are updating a technology because it has changed, ensure that the resources you are using to learn are not out of date. This is why the first two points above are important.
 
 It can also be wise to try and find someone to help answer questions. This can be the specification authors or the engineers who implement browser features.
 

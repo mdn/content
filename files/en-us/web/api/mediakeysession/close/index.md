@@ -12,6 +12,7 @@ tags:
   - close
 browser-compat: api.MediaKeySession.close
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.close()` method notifies that the current media session
@@ -20,7 +21,7 @@ associated with this object and close it. Then, it returns a {{jsxref('Promise')
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

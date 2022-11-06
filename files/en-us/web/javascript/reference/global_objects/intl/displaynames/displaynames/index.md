@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames()`** constructor creates
@@ -23,7 +24,7 @@ translation of language, region and script display names.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DisplayNames(locales, options)
 ```
 
@@ -33,10 +34,7 @@ new Intl.DisplayNames(locales, options)
 
 - `locales`
 
-  - : A string with a BCP 47 language tag, or an array of such strings. For the
-    general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
-    extension key is allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension key is allowed:
 
     - `nu`
       - : The numbering system to be used. Possible values include:
@@ -78,6 +76,7 @@ new Intl.DisplayNames(locales, options)
         - `"script"`
 
     - `languageDisplay`
+
       - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
         - `"dialect"`
         - `"standard"`
@@ -97,8 +96,8 @@ In basic use without specifying a locale, a formatted string in the default loca
 with default options is returned.
 
 ```js
-console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
-// Expected output: 'us'
+console.log((new Intl.DisplayNames([], { type: 'language' })).of('US'));
+// 'us'
 ```
 
 ### Using type `dateTimeField`
@@ -107,17 +106,17 @@ Example using `dateTimeField` as a type option, will return the localized date t
 
 ```js
 const dn = new Intl.DisplayNames('pt', {type: 'dateTimeField'});
-console.log(dn.of('era')); // logs 'era'
-console.log(dn.of('year')); // logs 'ano'
-console.log(dn.of('month')); // logs 'mês'
-console.log(dn.of('quarter')); // logs 'trimestre'
-console.log(dn.of('weekOfYear')); // logs 'semana'
-console.log(dn.of('weekday')); // logs 'dia da semana'
-console.log(dn.of('dayPeriod')); // logs 'AM/PM'
-console.log(dn.of('day')); // logs 'dia'
-console.log(dn.of('hour')); // logs 'hora'
-console.log(dn.of('minute')); // logs 'minuto'
-console.log(dn.of('second')); // logs 'segundo'
+console.log(dn.of('era')); // 'era'
+console.log(dn.of('year')); // 'ano'
+console.log(dn.of('month')); // 'mês'
+console.log(dn.of('quarter')); // 'trimestre'
+console.log(dn.of('weekOfYear')); // 'semana'
+console.log(dn.of('weekday')); // 'dia da semana'
+console.log(dn.of('dayPeriod')); // 'AM/PM'
+console.log(dn.of('day')); // 'dia'
+console.log(dn.of('hour')); // 'hora'
+console.log(dn.of('minute')); // 'minuto'
+console.log(dn.of('second')); // 'segundo'
 ```
 
 ### Using type `calendar`
@@ -126,23 +125,23 @@ Example using `calendar` as a type option, will return the localized calendar na
 
 ```js
 const dn = new Intl.DisplayNames('en', {type: 'calendar'});
-console.log(dn.of('roc')); // logs 'Minguo Calendar'
-console.log(dn.of('gregory')); // logs 'Gregorian Calendar'
-console.log(dn.of('chinese')); // logs 'Chinese Calendar'
+console.log(dn.of('roc')); // 'Minguo Calendar'
+console.log(dn.of('gregory')); // 'Gregorian Calendar'
+console.log(dn.of('chinese')); // 'Chinese Calendar'
 ```
 
 ### Using type `language` with `languageDisplay`
 
-Example using  `language` as a type with `languageDisplay` options.
+Example using `language` as a type with `languageDisplay` options.
 
 ```js
 // Using `dialect` option
 const dnDialect = new Intl.DisplayNames('en', {type: 'language', languageDisplay: 'dialect'});
-console.log(dnDialect.of('en-GB')); // logs 'British English'
+console.log(dnDialect.of('en-GB')); // 'British English'
 
 // Using `standard` option
 const dnStd = new Intl.DisplayNames('en', {type: 'language', languageDisplay: 'standard'});
-console.log(dnStd.of('en-GB')); // logs 'English (United Kingdom)'
+console.log(dnStd.of('en-GB')); // 'English (United Kingdom)'
 ```
 
 ## Specifications

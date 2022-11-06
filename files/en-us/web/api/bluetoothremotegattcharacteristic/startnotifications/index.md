@@ -13,6 +13,7 @@ tags:
   - startNotifications()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.startNotifications
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.startNotifications()`** method
@@ -21,7 +22,7 @@ there is an active notification on it.
 
 ## Syntax
 
-```js
+```js-nolint
 startNotifications()
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.implementation
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.implementation`** property returns a

@@ -10,7 +10,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserver.PerformanceObserver
 ---
-{{APIRef("Performance Timeline API")}}
+
+{{APIRef("Performance API")}}
 
 The **`PerformanceObserver()`** constructor creates a new
 {{domxref("PerformanceObserver")}} object with the given observer `callback`.
@@ -21,7 +22,7 @@ registered, via the {{domxref("PerformanceObserver.observe","observe()")}} metho
 
 ## Syntax
 
-```js
+```js-nolint
 new PerformanceObserver(callback)
 ```
 
@@ -43,18 +44,18 @@ A new {{domxref("PerformanceObserver")}} object which will call the specified
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  const entries = list.getEntries();
-  for (let i=0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
+  list.getEntries()
+    .forEach((entry) => {
+      // Process "mark" and "frame" events
+    });
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 
-function perf_observer(list, observer) {
+function perfObserver(list, observer) {
   // Process the "measure" event
 }
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+const observer2 = new PerformanceObserver(perfObserver);
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## Specifications

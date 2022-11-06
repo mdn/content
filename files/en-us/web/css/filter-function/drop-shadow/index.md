@@ -1,6 +1,7 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.drop-shadow
 ---
+
 {{CSSRef}}
 
 The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
@@ -63,7 +65,6 @@ drop-shadow(.5rem .5rem 1rem #e23)
 ## See also
 
 - {{cssxref("&lt;filter-function&gt;")}}
-- CSS {{cssxref("box-shadow")}} property
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
@@ -73,3 +74,5 @@ drop-shadow(.5rem .5rem 1rem #e23)
 - {{cssxref("filter-function/opacity", "opacity()")}}
 - {{cssxref("filter-function/saturate", "saturate()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxref("box-shadow")}} property
+- {{cssxref("text-shadow")}} property

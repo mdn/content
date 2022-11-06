@@ -20,6 +20,7 @@ tags:
   - tracking
 browser-compat: api.XRSession.requestReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestReferenceSpace()`** method of the
@@ -30,7 +31,7 @@ space requested.
 
 ## Syntax
 
-```js
+```js-nolint
 requestReferenceSpace(referenceSpaceType)
 ```
 
@@ -41,6 +42,8 @@ requestReferenceSpace(referenceSpaceType)
     The string must be one of the values below.
 
 ### Return value
+
+A {{JSxRef("Promise")}} that resolves with an {{DOMxRef("XRReferenceSpace")}} object.
 
 The types of reference space are listed below, with brief information about their use cases and which interface is used to implement them.
 
@@ -54,10 +57,6 @@ The types of reference space are listed below, with brief information about thei
   - : An {{domxref("XRReferenceSpace")}} tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.
 - `viewer`
   - : An {{domxref("XRReferenceSpace")}} tracking space whose native origin tracks the viewer's position and orientation. This is used for environments in which the user can physically move around, and is supported by all instances of {{domxref("XRSession")}}, both immersive and inline, though it's most useful for inline sessions. It's particularly useful when determining the distance between the viewer and an input, or when working with offset spaces. Otherwise, typically, one of the other reference space types will be used more often.
-
-### Return value
-
-A {{JSxRef("Promise")}} that resolves with an {{DOMxRef("XRReferenceSpace")}} object.
 
 ### Exceptions
 

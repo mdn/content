@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.waiting_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `waiting` event is fired when playback has stopped because of a temporary lack of data.

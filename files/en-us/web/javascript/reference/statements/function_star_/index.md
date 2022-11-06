@@ -10,6 +10,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.generator_function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`function*`** declaration (`function` keyword
@@ -23,7 +24,7 @@ constructor, or the function expression syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 function* name(param0) {
   statements
 }
@@ -80,6 +81,8 @@ When a generator is finished, subsequent `next()` calls will not execute any
 of that generator's code, they will just return an object of this form:
 `{value: undefined, done: true}`.
 
+`function*` declarations are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope.
+
 ## Examples
 
 ### Simple example
@@ -98,7 +101,7 @@ console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
-// ...
+// …
 ```
 
 ### Example with yield\*

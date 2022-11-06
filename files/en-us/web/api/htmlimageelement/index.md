@@ -15,6 +15,7 @@ tags:
   - picture
 browser-compat: api.HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.
@@ -26,7 +27,7 @@ The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} e
 - {{domxref("HTMLImageElement.Image()", "Image()")}}
   - : The `Image()` constructor creates and returns a new `HTMLImageElement` object representing an HTML {{HTMLElement("img")}} element which is not attached to any DOM tree. It accepts optional width and height parameters. When called without parameters, `new Image()` is equivalent to calling {{DOMxRef("Document.createElement()", "document.createElement('img')")}}.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -40,7 +41,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/Media_Queries) which are in place.
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional string representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
-- {{domxref("HTMLImageElement.fetchPriority")}}
+- {{domxref("HTMLImageElement.fetchPriority")}} {{Experimental_Inline}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of the image relative to other images. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLImageElement.height")}}
   - : An integer value that reflects the {{htmlattrxref("height", "img")}} HTML attribute, indicating the rendered height of the image in CSS pixels.
@@ -84,9 +85,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.vspace")}} {{deprecated_inline}}
   - : An integer value specifying the amount of empty space, in pixels, to leave above and below the image.
 
-## Methods
+## Instance methods
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.decode()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the image is decoded and it's safe to append the image to the DOM. This prevents rendering of the next frame from having to pause to decode the image, as would happen if an undecoded image were added to the DOM.

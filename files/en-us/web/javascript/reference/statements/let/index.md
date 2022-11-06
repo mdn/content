@@ -11,6 +11,7 @@ tags:
   - let
 browser-compat: javascript.statements.let
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`let`** declaration declares a block-scoped local variable, optionally initializing it to a value.
@@ -19,8 +20,8 @@ The **`let`** declaration declares a block-scoped local variable, optionally ini
 
 ## Syntax
 
-```js
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
+```js-nolint
+let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN]
 ```
 
 ### Parameters
@@ -41,7 +42,7 @@ let { bar } = foo; // where foo = { bar:10, baz:12 };
 
 **`let`** allows you to declare variables that are limited to the scope of a {{jsxref("statements/block", "block", "", 1)}} statement, or expression on which it is used, unlike the {{jsxref("statements/var", "var")}} keyword, which declares a variable globally, or locally to an entire function regardless of block scope.
 The other difference between {{jsxref("statements/var", "var")}} and
-`let` is that the latter is initialized to a value only when a [parser evaluates it (see below)](#temporal_dead_zone_tdz).
+`let` is that the latter can only be accessed after its declaration is reached (see [temporal dead zone](#temporal_dead_zone_tdz)). For this reason, `let` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 
 Just like {{jsxref("statements/const", "const", "Description")}} the `let` does _not_ create properties of the {{domxref("window")}} object when declared globally (in the top-most scope).
 
@@ -215,7 +216,7 @@ This is still in the temporal dead zone as its declaration statement has not bee
 ```js example-bad
 function go(n) {
   // n here is defined!
-  console.log(n); // Object {a: [1,2,3]}
+  console.log(n); // { a: [1, 2, 3] }
 
   for (let n of n.a) { // ReferenceError
     console.log(n);

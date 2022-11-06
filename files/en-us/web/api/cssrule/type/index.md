@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSRule.type
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The read-only **`type`** property of the

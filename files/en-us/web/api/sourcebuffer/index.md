@@ -13,13 +13,14 @@ tags:
   - Video
 browser-compat: api.SourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`SourceBuffer`** interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("SourceBuffer.appendWindowEnd")}}
   - : Controls the timestamp for the end of the append window.
@@ -40,7 +41,7 @@ The **`SourceBuffer`** interface represents a chunk of media to be passed into a
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
   - : A list of the video tracks currently contained inside the `SourceBuffer`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

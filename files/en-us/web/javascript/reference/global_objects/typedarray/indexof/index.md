@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method returns the first index at which a
@@ -23,7 +24,7 @@ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchElement)
 indexOf(searchElement, fromIndex)
 ```
@@ -57,9 +58,9 @@ typed array using
 
 ```js
 const uint8 = new Uint8Array([2, 5, 9]);
-uint8.indexOf(2);     // 0
-uint8.indexOf(7);     // -1
-uint8.indexOf(9, 2);  // 2
+uint8.indexOf(2); // 0
+uint8.indexOf(7); // -1
+uint8.indexOf(9, 2); // 2
 uint8.indexOf(2, -1); // -1
 uint8.indexOf(2, -3); // 0
 ```

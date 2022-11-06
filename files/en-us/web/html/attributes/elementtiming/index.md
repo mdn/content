@@ -19,7 +19,7 @@ The **`elementtiming`** attribute is used to indicate that an element is flagged
 The value given for `elementtiming` becomes an identifier for the observed element.
 
 ```html
-<img alt="alt" src="img.jpg" elementtiming="label for element">
+<img alt="alt" src="img.jpg" elementtiming="label for element" />
 ```
 
 Good contenders for elements you might want to observe are:

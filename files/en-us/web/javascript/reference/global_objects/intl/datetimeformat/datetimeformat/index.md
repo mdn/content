@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat()`** constructor creates
@@ -23,7 +24,7 @@ language-sensitive date and time formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DateTimeFormat()
 new Intl.DateTimeFormat(locales)
 new Intl.DateTimeFormat(locales, options)
@@ -39,12 +40,7 @@ Intl.DateTimeFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. To use the
-    browser's default locale, omit this field, pass `undefined`, or pass an empty array. Unicode extension are supported
-    (for example `"en-US-u-ca-buddhist"`). For the general form and
-    interpretation of the `locales` argument, see the
-    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
-    extension keys are allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension keys are allowed:
 
     - `nu`
       - : Numbering system. Possible values include: `"arab"`,
@@ -56,6 +52,7 @@ Intl.DateTimeFormat(locales, options)
         `"mymr"`, `"orya"`, `"tamldec"`,
         `"telu"`, `"thai"`, `"tibt"`.
     - `ca`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -102,6 +99,7 @@ Intl.DateTimeFormat(locales, options)
         > `hour`, `month`, etc.).
 
     - `calendar`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -305,23 +303,23 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
+// "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
 ```
 
 ### Using timeStyle and dateStyle
 
 ```js
-const shortTime = new Intl.DateTimeFormat("en" , {
+const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short"
 });
 console.log(shortTime.format(Date.now())); // "13:31 AM"
 
-const shortDate = new Intl.DateTimeFormat("en" , {
+const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
 });
 console.log(shortDate.format(Date.now())); // "07/07/20"
 
-const mediumTime = new Intl.DateTimeFormat("en" , {
+const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });
@@ -338,10 +336,10 @@ const date = Date.UTC(2012, 11, 17, 4, 0, 42);
 console.log(new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
   hourCycle: 'h12',
-  dayPeriod: 'short', 
+  dayPeriod: 'short',
   timeZone: 'UTC',
 }).format(date));
-// > 4 at night"  (same formatting in en-GB for all dayPeriod values)
+// 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -349,7 +347,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'narrow',
   timeZone: 'UTC',
 }).format(date));
-// > "4 mat."  (same output in French for both narrow/short dayPeriod)
+// "4 mat."  (same output in French for both narrow/short dayPeriod)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -357,7 +355,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'long',
   timeZone: 'UTC',
 }).format(date));
-// > "4 du matin"
+// "4 du matin"
 ```
 
 ### Using timeZoneName
@@ -377,13 +375,13 @@ for (const zoneName of timezoneNames) {
   console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
-// expected output:
-// > "short: 12/16/2021, PST"
-// > "long: 12/16/2021, Pacific Standard Time"
-// > "shortOffset: 12/16/2021, GMT-8"
-// > "longOffset: 12/16/2021, GMT-08:00"
-// > "shortGeneric: 12/16/2021, PT"
-// > "longGeneric: 12/16/2021, Pacific Time"
+// Logs:
+// short: 12/16/2021, PST
+// long: 12/16/2021, Pacific Standard Time
+// shortOffset: 12/16/2021, GMT-8
+// longOffset: 12/16/2021, GMT-08:00
+// shortGeneric: 12/16/2021, PT
+// longGeneric: 12/16/2021, Pacific Time
 ```
 
 ## Specifications

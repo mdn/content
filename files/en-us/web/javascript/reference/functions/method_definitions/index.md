@@ -10,6 +10,7 @@ tags:
   - Syntax
 browser-compat: javascript.functions.method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer.
@@ -18,7 +19,7 @@ browser-compat: javascript.functions.method_definitions
 
 ## Syntax
 
-```js
+```js-nolint
 const obj = {
   get property() {},
   set property(value) {},
@@ -27,7 +28,7 @@ const obj = {
   async property(parameters) {},
   async *generator(parameters) {},
 
-  //  with computed keys
+  // with computed keys
   get [expression]() {},
   set [expression](value) {},
   [expression](parameters) {},
@@ -46,10 +47,10 @@ Given the following code:
 ```js
 const obj = {
   foo: function () {
-    // ...
+    // …
   },
   bar: function () {
-    // ...
+    // …
   }
 }
 ```
@@ -59,10 +60,10 @@ You are now able to shorten this to:
 ```js
 const obj = {
   foo() {
-    // ...
+    // …
   },
   bar() {
-    // ...
+    // …
   }
 }
 ```

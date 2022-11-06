@@ -13,6 +13,13 @@
       "properties": [],
       "events": []
     },
+    "Background Sync": {
+      "overview": ["Background Synchronization API"],
+      "interfaces": ["SyncManager", "SyncEvent"],
+      "methods": ["ServiceWorkerRegistration.sync()"],
+      "properties": [],
+      "events": ["ServiceWorkerGlobalScope: sync"]
+    },
     "Background Tasks": {
       "overview": ["Background Tasks API"],
       "interfaces": ["IdleDeadline"],
@@ -105,6 +112,9 @@
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
+      "guides": [
+        "/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard"
+      ],
       "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
       "dictionaries": ["ClipboardPermissionDescriptor"],
       "methods": [],
@@ -181,15 +191,14 @@
     },
     "CSS Font Loading API": {
       "overview": ["CSS Font Loading API"],
-      "interfaces": [
-        "FontFace",
-        "FontFaceSet",
-        "FontFaceSource",
-        "FontFaceSetLoadEvent"
-      ],
+      "interfaces": ["FontFace", "FontFaceSet", "FontFaceSetLoadEvent"],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
+      "events": [
+        "FontFaceSet: loading event",
+        "FontFaceSet: loadingdone event",
+        "FontFaceSet: loadingerror event"
+      ]
     },
     "CSS Painting API": {
       "overview": ["CSS Painting API"],
@@ -201,6 +210,14 @@
         "PaintSize"
       ],
       "methods": ["CSS.paintWorklet"],
+      "properties": [],
+      "events": []
+    },
+    "CSS Properties and Values API": {
+      "overview": ["CSS Properties and Values API"],
+      "guides": ["/docs/Web/API/CSS_Properties_and_Values_API/guide"],
+      "interfaces": ["CSSPropertyRule"],
+      "methods": ["CSS.registerProperty"],
       "properties": [],
       "events": []
     },
@@ -265,10 +282,11 @@
       ]
     },
     "Device Orientation Events": {
+      "overview": ["Device orientation events"],
       "guides": [
-        "/docs/Web/Events/Detecting_device_orientation",
-        "/docs/Web/Events/Orientation_and_motion_data_explained",
-        "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
+        "/docs/Web/API/Device_orientation_events/Detecting_device_orientation",
+        "/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained",
+        "/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms"
       ],
       "interfaces": [
         "DeviceMotionEvent",
@@ -280,7 +298,7 @@
       "properties": [],
       "events": [
         "Window: deviceorientation",
-        "Window: compassneedscalibration",
+        "Window: deviceorientationabsolute",
         "Window: devicemotion"
       ]
     },
@@ -348,6 +366,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
+      "guides": ["/docs/Web/API/Encoding_API/Encodings"],
       "interfaces": [
         "TextDecoder",
         "TextEncoder",
@@ -480,9 +499,12 @@
       "events": []
     },
     "Geometry Interfaces": {
+      "overview": ["Geometry interfaces"],
       "interfaces": [
         "DOMMatrix",
         "DOMMatrixReadOnly",
+        "DOMPoint",
+        "DOMQuad",
         "DOMRect",
         "DOMRectReadOnly"
       ],
@@ -490,23 +512,9 @@
       "properties": [],
       "events": []
     },
-    "High Resolution Time": {
-      "overview": ["Performance API"],
-      "interfaces": [
-        "PerformanceEntry",
-        "PerformanceMark",
-        "PerformanceMeasure",
-        "PerformanceNavigation",
-        "PerformanceResourceTiming",
-        "PerformanceTiming",
-        "DOMHighResTimeStamp"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "History API": {
       "overview": ["History API"],
+      "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
       "interfaces": ["History"],
       "methods": [],
       "properties": [],
@@ -601,6 +609,7 @@
         "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
+        "UserActivation",
         "ValidityState",
         "Window"
       ],
@@ -726,26 +735,22 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["indexedDB"],
       "events": []
     },
     "Intersection Observer API": {
       "overview": ["Intersection Observer API"],
+      "guides": [
+        "/docs/Web/API/Intersection_Observer_API/Timing_element_visibility"
+      ],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": [],
       "events": []
     },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "Long Tasks API": {
-      "overview": ["Long Tasks API"],
-      "interfaces": ["PerformanceLongTaskTiming", "TaskAttributionTiming"],
       "methods": [],
       "properties": [],
       "events": []
@@ -839,19 +844,6 @@
       "properties": [],
       "events": []
     },
-    "Navigation Timing": {
-      "overview": ["Navigation timing API"],
-      "guides": ["/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing"],
-      "interfaces": [
-        "Performance",
-        "PerformanceNavigation",
-        "PerformanceTiming",
-        "PerformanceNavigationTiming"
-      ],
-      "methods": [],
-      "properties": ["performance_property"],
-      "events": []
-    },
     "Network Information API": {
       "overview": ["Network Information API"],
       "interfaces": ["NetworkInformation"],
@@ -899,42 +891,38 @@
       "overview": ["Performance API"],
       "guides": [
         "/docs/Web/API/Performance_API/Using_the_Performance_API",
-        "/docs/Web/API/Frame_timing_API",
         "/docs/Web/API/Long_Tasks_API",
         "/docs/Web/API/Navigation_timing_API",
+        "/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing",
         "/docs/Web/API/Performance_Timeline",
         "/docs/Web/API/Performance_Timeline/Using_Performance_Timeline",
         "/docs/Web/API/Resource_Timing_API",
         "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API",
-        "/docs/Web/API/User_timing_API"
+        "/docs/Web/API/User_timing_API",
+        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API",
+        "/docs/Web/API/Element_timing_API",
+        "/docs/Web/API/Paint_timing_API",
+        "/docs/Web/API/Largest_Contentful_Paint_API"
       ],
       "interfaces": [
+        "EventCounts",
+        "LargestContentfulPaint",
         "Performance",
         "PerformanceEntry",
+        "PerformanceElementTiming",
+        "PerformanceEventTiming",
         "PerformanceLongTaskTiming",
         "PerformanceMark",
         "PerformanceMeasure",
+        "PerformanceNavigation",
         "PerformanceNavigationTiming",
         "PerformanceObserver",
-        "PerformanceResourceTiming",
-        "TaskAttributionTiming",
-        "performance_property"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "Performance Timeline API": {
-      "overview": ["Performance Timeline"],
-      "guides": [
-        "/docs/Web/API/Performance_Timeline/Using_Performance_Timeline"
-      ],
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceObserver",
         "PerformanceObserverEntryList",
-        "PerformanceResourceTiming"
+        "PerformancePaintTiming",
+        "PerformanceResourceTiming",
+        "PerformanceServerTiming",
+        "PerformanceTiming",
+        "TaskAttributionTiming"
       ],
       "methods": [],
       "properties": ["performance_property"],
@@ -1086,20 +1074,6 @@
       "interfaces": ["ResizeObserver", "ResizeObserverEntry"],
       "methods": [],
       "properties": [],
-      "events": []
-    },
-    "Resource Timing API": {
-      "overview": ["Resource Timing API"],
-      "guides": [
-        "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API"
-      ],
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceResourceTiming"
-      ],
-      "methods": [],
-      "properties": ["performance_property"],
       "events": []
     },
     "Screen Capture API": {
@@ -1473,17 +1447,6 @@
     "URL Pattern API": {
       "overview": ["URL Pattern API"],
       "interfaces": ["URLPattern"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "User Timing API": {
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceMark",
-        "PerformanceMeasure"
-      ],
       "methods": [],
       "properties": [],
       "events": []
@@ -1961,6 +1924,7 @@
     },
     "Web Speech API": {
       "overview": ["Web Speech API"],
+      "guides": ["/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API"],
       "interfaces": [
         "SpeechGrammar",
         "SpeechGrammarList",
@@ -2078,6 +2042,7 @@
     },
     "WebXR Device API": {
       "overview": ["WebXR Device API"],
+      "guides": ["/docs/Web/API/WebXR_Device_API/Fundamentals"],
       "interfaces": [
         "XRAnchor",
         "XRBoundedReferenceSpace",

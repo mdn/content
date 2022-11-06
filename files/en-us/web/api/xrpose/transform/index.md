@@ -19,6 +19,7 @@ tags:
   - transform
 browser-compat: api.XRPose.transform
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
 The `transform` read-only attribute of the

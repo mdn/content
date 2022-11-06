@@ -14,6 +14,7 @@ tags:
   - Video
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called **signaling**. This tutorial will guide you through building a two-way video-call.
@@ -87,7 +88,7 @@ When starting the signaling process, an **offer** is created by the user initiat
 - `name`
   - : The sender's username.
 - `target`
-  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice-versa).
+  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice versa).
 - `sdp`
   - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
 
@@ -166,9 +167,7 @@ The HTML for our client needs a location for video to be presented. This require
   <div class="camera-box">
     <video id="received_video" autoplay></video>
     <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>
-      Hang Up
-    </button>
+    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
   </div>
 </div>
 ```
@@ -670,7 +669,7 @@ Another obvious improvement would be to add a "ringing" feature, so that instead
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - The [Perfect Negotiation](/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern

@@ -1,6 +1,7 @@
 ---
 title: Descendant combinator
 slug: Web/CSS/Descendant_combinator
+page-type: css-combinator
 tags:
   - CSS
   - Reference
@@ -8,6 +9,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.descendant
 ---
+
 {{CSSRef("Selectors")}}
 
 The **descendant combinator** — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.

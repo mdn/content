@@ -1,6 +1,7 @@
 ---
-title: '-moz-image-rect'
+title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -12,6 +13,7 @@ tags:
   - Experimental
 browser-compat: css.types.-moz-image-rect
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.
@@ -55,14 +57,14 @@ The container looks like this:
 
 ```css
 #container {
-  width:267px;
-  height:272px;
-  top:100px;
-  left:100px;
-  position:absolute;
-  font-size:16px;
-  text-shadow:white 0px 0px 6px;
-  text-align:center;
+  width: 267px;
+  height: 272px;
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  font-size: 16px;
+  text-shadow: white 0px 0px 6px;
+  text-align: center;
 }
 ```
 
@@ -71,9 +73,9 @@ Then the four boxes defining the segments of the image are defined. Let's look a
 ```css
 #box1 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -82,9 +84,9 @@ This is the top-left corner of the image. It defines a rectangle containing the 
 ```css
 #box2 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -95,15 +97,15 @@ The other corners follow a similar pattern:
 ```css
 #box3 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 #box4 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -128,14 +130,18 @@ This code handles the click event when the container receives a mouse click.
 
 ```js
 function rotate() {
-  let prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  let prevStyle = window
+    .getComputedStyle(document.getElementById("box4"), null)
+    .getPropertyValue("background-image");
 
   // Now that we've saved the last one, start rotating
-  for (let i=1; i<=4; i++) {
+  for (let i = 1; i <= 4; i++) {
     const curId = `box${i}`;
 
     // Shift the background images
-    const curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    const curStyle = window
+      .getComputedStyle(document.getElementById(curId), null)
+      .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }

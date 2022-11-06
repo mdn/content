@@ -1,6 +1,7 @@
 ---
 title: Guide to scroll anchoring
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -8,6 +9,7 @@ tags:
   - scroll anchoring
 browser-compat: css.properties.overflow-anchor
 ---
+
 {{CSSRef}}
 
 As a user of the web, you are probably familiar with the problem that scroll anchoring solves. You browse to a long page on a slow connection and begin to scroll to read the content; while you are busy reading, the part of the page you are looking at suddenly jumps. This has happened because large images or some other elements have just loaded further up in the content.
@@ -68,7 +70,7 @@ These suppression triggers are changes to the computed value of any of the follo
 - {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("right")}}, or {{cssxref("bottom")}}
 - {{cssxref("margin")}} or {{cssxref("padding")}}
 - Any {{cssxref("width")}} or {{cssxref("height")}}-related properties
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} and the individual transform properties {{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}
 
 Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box also disable scroll anchoring.
 

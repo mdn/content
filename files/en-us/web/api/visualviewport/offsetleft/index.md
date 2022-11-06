@@ -12,6 +12,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport.offsetLeft
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`offsetLeft`** read-only property of the

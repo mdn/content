@@ -1,6 +1,7 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
+page-type: css-property
 tags:
   - CSS
   - Non-standard
@@ -9,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.box-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
@@ -55,7 +57,10 @@ HTML DOM elements lay out their contents along the inline-axis by default. This 
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-orient =
+  horizontal | vertical | inline-axis | block-axis | inherit
+```
 
 ## Examples
 
@@ -67,8 +72,8 @@ Here, the `box-orient` property will cause the two {{HTMLElement("p")}} sections
 
 ```html
 <div class="example">
-    <p>I will be to the left of my sibling.</p>
-    <p>I will be to the right of my sibling.</p>
+  <p>I will be to the left of my sibling.</p>
+  <p>I will be to the right of my sibling.</p>
 </div>
 ```
 
@@ -76,14 +81,14 @@ Here, the `box-orient` property will cause the two {{HTMLElement("p")}} sections
 
 ```css
 div.example {
-  display: -moz-box;                /* Mozilla */
-  display: -webkit-box;             /* WebKit */
-  display: box;                     /* As specified */
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  display: box; /* As specified */
 
   /* Children should be oriented vertically */
-  -moz-box-orient: horizontal;      /* Mozilla */
-  -webkit-box-orient: horizontal;   /* WebKit */
-  box-orient: horizontal;           /* As specified */
+  -moz-box-orient: horizontal; /* Mozilla */
+  -webkit-box-orient: horizontal; /* WebKit */
+  box-orient: horizontal; /* As specified */
 }
 ```
 

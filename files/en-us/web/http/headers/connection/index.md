@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: http.headers.Connection
 ---
+
 {{HTTPSidebar}}
 
 The **`Connection`** general header controls whether the
@@ -17,10 +18,11 @@ network connection stays open after the current transaction finishes. If the val
 is `keep-alive`, the connection is persistent and not closed, allowing for
 subsequent requests to the same server to be done.
 
-> **Warning:** Connection-specific header fields such as {{HTTPHeader("Connection")}} and
-> {{HTTPHeader("Keep-Alive")}} are
-> [prohibited in HTTP/2](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2).
-> Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
+> **Warning:** Connection-specific header fields such as
+> {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}} are prohibited
+> in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
+> [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting). Chrome and
+> Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
 > spec requirements and does not load any response that contains them.
 
 Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},

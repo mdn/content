@@ -15,6 +15,7 @@ tags:
   - Experimental
 browser-compat: api.Metadata.size
 ---
+
 {{APIRef("File and Directory Entries API")}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The read-only **`size`** property of

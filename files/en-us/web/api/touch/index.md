@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.Touch
 ---
+
 {{APIRef("Touch Events")}}
 
 The **`Touch`** interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.
@@ -24,7 +25,7 @@ The {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, and {{ domxr
 - {{domxref("Touch.Touch", "Touch()")}}
   - : Creates a Touch object.
 
-## Properties
+## Instance properties
 
 _This interface has no parent, and doesn't inherit or implement other properties._
 
@@ -58,7 +59,7 @@ _This interface has no parent, and doesn't inherit or implement other properties
 - {{domxref("Touch.force")}} {{ReadOnlyInline}}
   - : Returns the amount of pressure being applied to the surface by the user, as a `float` between `0.0` (no pressure) and `1.0` (maximum pressure).
 
-## Methods
+## Instance methods
 
 _This interface has no methods and no parent, and doesn't inherit or implement any methods._
 

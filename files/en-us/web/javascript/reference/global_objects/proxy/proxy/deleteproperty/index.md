@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 ---
+
 {{JSRef}}
 
 The **`handler.deleteProperty()`** method is a trap for the
@@ -17,7 +18,7 @@ The **`handler.deleteProperty()`** method is a trap for the
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   deleteProperty(target, property) {
   }
@@ -67,24 +68,27 @@ If the following invariants are violated, the proxy will throw a
 The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
 
 ```js
-const p = new Proxy({}, {
-  deleteProperty(target, prop) {
-    if (!(prop in target)) {
-      console.log(`property not found: ${prop}`);
-      return false;
-    }
-    delete target[prop];
-    console.log(`property removed: ${prop}`);
-    return true;
-  },
-});
+const p = new Proxy(
+  {},
+  {
+    deleteProperty(target, prop) {
+      if (!(prop in target)) {
+        console.log(`property not found: ${prop}`);
+        return false;
+      }
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      return true;
+    },
+  }
+);
 
 p.a = 10;
-console.log('a' in p); // true
+console.log("a" in p); // true
 
 const result1 = delete p.a; // "property removed: a"
 console.log(result1); // true
-console.log('a' in p); // false
+console.log("a" in p); // false
 
 const result2 = delete p.a; // "property not found: a"
 console.log(result2); // false

@@ -12,6 +12,7 @@ tags:
   - visibilityState
 browser-compat: api.WindowClient.visibilityState
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`visibilityState`** read-only property of the

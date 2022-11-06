@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: api.HTMLAreaElement.protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The

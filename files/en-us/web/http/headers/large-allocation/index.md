@@ -11,7 +11,8 @@ tags:
   - Non-standard
 browser-compat: http.headers.Large-Allocation
 ---
-{{HTTPSidebar}} {{Deprecated_Header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The non-standard **`Large-Allocation`** response header tells the browser that the page being loaded is going to want to perform a large allocation.
 It's not implemented in current versions of any browser, but is harmless to send to any browser.

@@ -9,9 +9,8 @@ tags:
   - Tutorial
   - WebSockets
 ---
-{{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
+{{DefaultAPISidebar("Websockets API")}}
 
 This example shows you how to create a WebSocket API server using Oracle Java.
 
@@ -21,13 +20,11 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the _java.net_ package.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the `java.net` package.
 
 ### ServerSocket
 
-Constructor:
-
-ServerSocket`(int port)`
+The `ServerSocket` constructor accepts a single parameter `port` of type `int`.
 
 When you instantiate the ServerSocket class, it is bound to the port number you specified by the _port_ argument.
 
@@ -55,18 +52,14 @@ public class WebSocket {
       System.out.println("A client connected.");
 ```
 
-### Socket
+### Socket Methods
 
-Methods:
+- `java.net.Socket.getInputStream()`
+  - : Returns an input stream for this socket.
+- `java.net.Socket.getOutputStream()`
+  - : Returns an output stream for this socket.
 
-- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
-  Returns an input stream for this socket.
-- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
-  Returns an output stream for this socket.
-
-### OutputStream
-
-Methods:
+### OutputStream Methods
 
 ```java
 write(byte[] b, int off, int len)
@@ -74,11 +67,9 @@ write(byte[] b, int off, int len)
 
 Writes `len` bytes from the specified byte array starting at offset `off` to this output stream.
 
-### InputStream
+### InputStream Methods
 
-Methods:
-
-```cpp
+```java
 read(byte[] b, int off, int len)
 ```
 
@@ -134,24 +125,24 @@ If we send "abcdef", we get these bytes:
 129 134 167 225 225 210 198 131 130 182 194 135
 ```
 
-\- 129:
+- 129:
 
-| FIN (Is this the whole message?) | RSV1 | RSV2 | RSV3 | Opcode   |
-| -------------------------------- | ---- | ---- | ---- | -------- |
-| 1                                | 0    | 0    | 0    | 0x1=0001 |
+  | FIN (Is this the whole message?) | RSV1 | RSV2 | RSV3 | Opcode   |
+  | -------------------------------- | ---- | ---- | ---- | -------- |
+  | 1                                | 0    | 0    | 0    | 0x1=0001 |
 
-FIN: You can send your message in frames, but now keep things simple.
-Opcode _0x1_ means this is a text. [Full list of Opcodes](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)
+  FIN: You can send your message in frames, but now keep things simple.
+  Opcode _0x1_ means this is a text. [Full list of Opcodes](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)
 
-\- 134:
+- 134:
 
-If the second byte minus 128 is between 0 and 125, this is the length of the message. If it is 126, the following 2 bytes (16-bit unsigned integer), if 127, the following 8 bytes (64-bit unsigned integer, the most significant bit MUST be 0) are the length.
+  If the second byte minus 128 is between 0 and 125, this is the length of the message. If it is 126, the following 2 bytes (16-bit unsigned integer), if 127, the following 8 bytes (64-bit unsigned integer, the most significant bit MUST be 0) are the length.
 
-> **Note:** I can take 128 because the first bit is always 1.
+  > **Note:** It can take 128 because the first bit is always 1.
 
-\- 167, 225, 225 and 210 are the bytes of the key to decode. It changes every time.
+- 167, 225, 225 and 210 are the bytes of the key to decode. It changes every time.
 
-\- The remaining encoded bytes are the message.
+- The remaining encoded bytes are the message.
 
 ### Decoding algorithm
 

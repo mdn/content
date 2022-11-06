@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastIndex
 ---
+
 {{JSRef}}
 
 **`lastIndex`** is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.
@@ -40,14 +41,14 @@ const re = /(hi)?/g;
 Matches the empty string.
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 
 Returns `["hi", "hi"]` with `lastIndex` equal to 2.
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 

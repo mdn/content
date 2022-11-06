@@ -7,6 +7,7 @@ tags:
   - TouchEvent
   - touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
@@ -92,12 +93,13 @@ function handle_pinch_zoom(ev) {
   if (ev.targetTouches.length === 2 && ev.changedTouches.length === 2) {
     // Check if the two target touches are the same ones that started
     // the 2-touch
-    let point1 = -1;
-    let point2 = -1;
-    for (let i = 0; i < tpCache.length; i++) {
-      if (tpCache[i].identifier === ev.targetTouches[0].identifier) point1 = i;
-      if (tpCache[i].identifier === ev.targetTouches[1].identifier) point2 = i;
-    }
+    const point1 = tpCache.findLastIndex(
+      (tp) => tp.identifier === ev.targetTouches[0].identifier
+    );
+    const point2 = tpCache.findLastIndex(
+      (tp) => tp.identifier === ev.targetTouches[1].identifier
+    );
+
     if (point1 >= 0 && point2 >= 0) {
       // Calculate the difference between the start and move coordinates
       const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
@@ -188,10 +190,10 @@ function end_handler(ev) {
 The application uses {{HTMLElement("div")}} elements for the touch areas and provides buttons to enable logging and clear the log.
 
 ```html
-<div id="target1"> Tap, Hold or Swipe me 1</div>
-<div id="target2"> Tap, Hold or Swipe me 2</div>
-<div id="target3"> Tap, Hold or Swipe me 3</div>
-<div id="target4"> Tap, Hold or Swipe me 4</div>
+<div id="target1">Tap, Hold or Swipe me 1</div>
+<div id="target2">Tap, Hold or Swipe me 2</div>
+<div id="target3">Tap, Hold or Swipe me 3</div>
+<div id="target4">Tap, Hold or Swipe me 4</div>
 
 <!-- UI for logging/debugging -->
 <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>

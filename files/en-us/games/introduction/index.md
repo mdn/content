@@ -12,7 +12,7 @@ tags:
 
 The modern web has quickly become a viable platform not only for creating stunning, high quality games, but also for distributing those games.
 
-The range of games that can be created is on par with desktop and native OS counterparts. With modern Web technologies and a recent browser, it's entirely possible to make stunning, top-notch games for the Web. And we're not talking about simple card games or multi-player social games that have in the olden days been done using Flash®. We're talking about 3D action shooters, RPGs, and more. Thanks to massive performance improvements in [JavaScript](/en-US/docs/Web/JavaScript) just-in-time compiler technology and new APIs, you can build games that run in the browser (or on [HTML5](/en-US/docs/Glossary/HTML5)-powered devices) without making compromises.
+The range of games that can be created is on par with desktop and native OS counterparts. With modern Web technologies and a recent browser, it's entirely possible to make stunning, top-notch games for the Web. And we're not talking about simple card games or multiplayer social games that have in the olden days been done using Flash®. We're talking about 3D action shooters, RPGs, and more. Thanks to massive performance improvements in [JavaScript](/en-US/docs/Web/JavaScript) just-in-time compiler technology and new APIs, you can build games that run in the browser (or on [HTML5](/en-US/docs/Glossary/HTML5)-powered devices) without making compromises.
 
 ## The HTML game platform
 
@@ -91,7 +91,7 @@ As a game developer, whether you're an individual or a large game studio, you wa
 1. The reach of the Web is enormous; it's everywhere. Games built with HTML work on smartphones, tablets, PCs and Smart TVs.
 2. Marketing and discoverability are improved. You're not limited to promoting your app on someone else's app store. Instead, you can advertise and promote your game all over the Web as well as other media, taking advantage of the Web's inherent linkability and shareability to reach new customers.
 3. You have control where it matters: Payments. You don't have to hand over 30% of your revenues to someone else just because your game is in their ecosystem. Instead, charge what you want and use whatever payment processing service you like.
-4. Again with more control, you can update your game whenever you want. No waiting breathlessly for approval while someone hidden within another company decides whether or not your critical bug fix will ship today or tomorrow.
+4. Again with more control, you can update your game whenever you want. No waiting breathlessly for approval while someone hidden within another company decides whether your critical bug fix will ship today or tomorrow.
 5. Control your analytics! Instead of relying on someone else to make all the decisions about what analytics you need, you can collect your own — or choose the third party that you like the best — to gather information about your sales and your game's reach.
 6. You get to manage your customer relationship more closely, in your own way. No more having customer feedback filtered through an app store's limited mechanisms. Engage with your customers the way you want to, without a middleman.
 7. Your players can play your game anywhere, anytime. Because the Web is ubiquitous, your customers can check their game's status on their phones, tablets, their home laptops, their work desktops, or anything else.
@@ -127,6 +127,6 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
   - : The WebSocket API lets you connect your app or site to a server to transmit data back and forth in real-time. Perfect for multiplayer gaming action, chat services, and so forth.
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : Workers give you the ability to spawn background threads running their own JavaScript code, to take advantage of modern, multi-core processors.
+  - : Workers give you the ability to spawn background threads running their own JavaScript code, to take advantage of modern, multicore processors.
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [File API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
   - : The combination of XMLHttpRequest and the File API lets you send and receive any kind of data you want (don't let the "XML" throw you!) from a Web server. This is a great way to do anything from downloading new game levels and artwork to transmitting non-real-time game status information back and forth.

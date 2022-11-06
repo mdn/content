@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCRtpStreamStats.kind
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`kind`** property of the

@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.div
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is applied to its parent element).
 
@@ -102,8 +102,9 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 
 ```html
 <div>
-  <p>Any kind of content here. Such as
-  &lt;p&gt;, &lt;table&gt;. You name it!</p>
+  <p>
+    Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!
+  </p>
 </div>
 ```
 
@@ -119,8 +120,7 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 
 ```html
 <div class="shadowbox">
-  <p>Here's a very interesting note displayed in a
-  lovely shadowed box.</p>
+  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
 </div>
 ```
 

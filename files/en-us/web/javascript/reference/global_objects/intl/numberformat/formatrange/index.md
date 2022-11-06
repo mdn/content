@@ -13,19 +13,21 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
 
 ## Syntax
 
-```js
+```js-nolint
 formatRange(startRange, endRange)
 ```
 
 ### Parameters
 
 - `startRange`
+
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 - `endRange`
@@ -55,11 +57,11 @@ const nf = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // → "€3 – €5"
+console.log(nf.formatRange(3, 5)); // "€3 – €5"
 
 // Note: the "approximately equals" symbol is added if
-//   startRange and endRange round to the same values.
-console.log(nf.formatRange(2.9, 3.1)); // → "~€3"
+// startRange and endRange round to the same values.
+console.log(nf.formatRange(2.9, 3.1)); // "~€3"
 ```
 
 ```js
@@ -69,8 +71,8 @@ const nf = new Intl.NumberFormat("es-ES", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // → "3-5 €"
-console.log(nf.formatRange(2.9, 3.1)); // → "~3 €"
+console.log(nf.formatRange(3, 5)); // "3-5 €"
+console.log(nf.formatRange(2.9, 3.1)); // "~3 €"
 ```
 
 ## Specifications

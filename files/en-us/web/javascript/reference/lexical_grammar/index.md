@@ -9,6 +9,7 @@ tags:
   - Literal
 browser-compat: javascript.grammar
 ---
+
 {{JsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include control characters, line terminators, [white space](/en-US/docs/Glossary/Whitespace), and comments. The others, such as identifiers and punctuators, will be used for further syntax analysis. ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to make certain invalid token sequences become valid.
@@ -170,7 +171,7 @@ class C {
 
 _Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
 
-Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const`- and `let`-declarations.
+Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
@@ -207,7 +208,6 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/new", "new")}}
 - {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
-- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
@@ -219,11 +219,11 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/with", "with")}}
-- {{jsxref("Operators/yield", "yield")}}
 
 The following are only reserved when they are found in strict mode code:
 
 - {{jsxref("Statements/let", "let")}} (also reserved in `const`, `let`, and class declarations)
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/yield", "yield")}} (also reserved in generator function bodies)
 
 The following are only reserved when they are found in module code or async function bodies:
@@ -273,9 +273,12 @@ The following are reserved as future keywords by older ECMAScript specifications
 A few identifiers have a special meaning in some contexts without being reserved words of any kind. They include:
 
 - {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- `as` ([`import * as ns from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import))
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- `from` ([`import x from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import))
 - {{jsxref("Functions/get", "get")}}
+- [`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - {{jsxref("Functions/set", "set")}}
 
 ## Literals
@@ -316,16 +319,16 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer.
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is _exponent_ or _power_ number – a signed integer.
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
-175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
-1E3    // => 1000
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
 ```
 
 #### Binary
@@ -643,7 +646,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 - The `=>` of an arrow function should be on the same line as the end of its parameters.
 - The `async` of async functions, methods, etc. cannot be directly followed by a line terminator.
 - If a line starts with one of `(`, `[`, `` ` ``, `+`, `-`, `/` (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.
-- Class fields should preferably be ended with semicolons — semicolons are required between a field declaration and a generator method.
+- Class fields should preferably always be ended with semicolons — in addition to the previous rule (which includes a field declaration followed by a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), since the latter starts with `[`), semicolons are also required between a field declaration and a generator method.
 
 ## Browser compatibility
 

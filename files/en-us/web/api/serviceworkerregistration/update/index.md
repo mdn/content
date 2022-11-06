@@ -24,7 +24,7 @@ bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 
 ## Syntax
 
-```js
+```js-nolint
 update()
 ```
 

@@ -5,19 +5,19 @@ page-type: web-api-instance-method
 tags:
   - API
   - Canvas
-  - Experimental
   - Method
   - OffscreenCanvas
   - Reference
 browser-compat: api.OffscreenCanvas.getContext
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+
+{{APIRef("Canvas API")}}
 
 The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported.
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType, contextAttributes)
 ```
 
@@ -32,7 +32,7 @@ getContext(contextType, contextAttributes)
     - `webgl`
       - : Creates a {{domxref("WebGLRenderingContext")}} object representing a three-dimensional rendering context.
         This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
-    - `webgl2` {{experimental_inline}}
+    - `webgl2`
       - : Creates a {{domxref("WebGL2RenderingContext")}} object representing a three-dimensional rendering context.
         This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0).
     - `bitmaprenderer`
@@ -47,16 +47,14 @@ getContext(contextType, contextAttributes)
   - : You can use several context attributes when creating your rendering context, for example:
 
     ```js
-    offscreen.getContext("webgl",
-                     { antialias: false,
-                       depth: false });
+    offscreen.getContext("webgl", { antialias: false, depth: false });
     ```
 
     2d context attributes:
 
     - `alpha`
       - : Boolean that indicates if the canvas contains an alpha channel. If set to `false`, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images then.
-    - `willReadFrequently` {{non-standard_inline}} (Gecko only)
+    - `willReadFrequently` {{non-standard_inline}} (Firefox only)
       - : Boolean that indicates whether or not a lot of read-back operations are planned.
         This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently.
         This option is only available, if the flag `gfx.canvas.willReadFrequently.enable` is set to `true` (which, by default, is only the case for B2G/Firefox OS).
@@ -113,4 +111,4 @@ gl.canvas; // OffscreenCanvas
 
 - The interface defining this method: {{domxref("OffscreenCanvas")}}
 - {{domxref("HTMLCanvasElement.getContext()")}}
-- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, and {{domxref("ImageBitmapRenderingContext")}}
+- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, {{domxref("ImageBitmapRenderingContext")}}, and {{domxref("OffscreenCanvasRenderingContext2D")}}

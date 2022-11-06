@@ -6,6 +6,7 @@ tags:
   - Website performance
 ---
 
+{{LearnSidebar}}{{PreviousMenu("Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
 There are many [reasons](https://web.dev/why-speed-matters/) why your website should perform as well as possible.
 Below is a quick review of best practices, tools, APIs with links to provide more information about each topic.
@@ -32,15 +33,19 @@ Web performance is all about user experience and perceived performance. As we le
 To load CSS asynchronously one can set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring JavaScript, so it is important to include a noscript tag with a traditional fallback.
 
 ```html
-<link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/path/to/my.css"></noscript>
+<link
+  rel="stylesheet"
+  href="/path/to/my.css"
+  media="print"
+  onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="/path/to/my.css" /></noscript>
 ```
 
 The downside with this approach is the flash of unstyled text (FOUT.) The simplest way to address this is by inlining CSS that is required for any content that is rendered above the fold, or what you see in the browser viewport before scrolling. These styles will improve perceived performance as the CSS does not require a file request.
 
 ```html
 <style>
-// Insert your CSS here
+  /* Insert your CSS here */
 </style>
 ```
 
@@ -76,6 +81,22 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 
 - Download everything
 - Use uncompressed media files
+
+## In this module
+
+- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
+- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
+- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
+- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
+- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
+- [Multimedia: video](/en-US/docs/Learn/Performance/video)
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
+- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
+- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
+- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
+- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)
 
 ## See also
 

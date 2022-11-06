@@ -12,7 +12,8 @@ tags:
   - Reference
 browser-compat: html.elements.image
 ---
-{{HTMLRef}}{{deprecated_header}}{{Non-standard_header}}
+
+{{HTMLSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`<image>`** [HTML](/en-US/docs/Web/HTML) element is an ancient and poorly supported precursor to the {{HTMLElement("img")}} element.
 **It should not be used**.

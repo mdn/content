@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.startOffset
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.startOffset`** read-only property returns a number

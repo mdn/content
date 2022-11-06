@@ -12,6 +12,7 @@ tags:
   - setSinkId
 browser-compat: api.HTMLMediaElement.setSinkId
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.setSinkId()`** method sets the ID of
@@ -20,7 +21,7 @@ This only works when the application is authorized to use the specified device.
 
 ## Syntax
 
-```js
+```js-nolint
 setSinkId(sinkId)
 ```
 

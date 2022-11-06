@@ -1,6 +1,7 @@
 ---
-title: '-webkit-tap-highlight-color'
+title: "-webkit-tap-highlight-color"
 slug: Web/CSS/-webkit-tap-highlight-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -34,7 +35,10 @@ A {{Cssxref("&lt;color&gt;")}}.
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-tap-highlight-color =
+  <color>
+```
 
 ## Specifications
 

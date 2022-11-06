@@ -13,6 +13,7 @@ tags:
   - videoTracks
 browser-compat: api.SourceBuffer.videoTracks
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`videoTracks`** read-only property of the

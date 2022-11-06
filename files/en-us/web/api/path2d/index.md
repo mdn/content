@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Path2D
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D`** interface of the Canvas 2D API is used to declare a path that can then be used on a {{domxref("CanvasRenderingContext2D")}} object. The [path methods](/en-US/docs/Web/API/CanvasRenderingContext2D#paths) of the `CanvasRenderingContext2D` interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.
@@ -19,7 +20,7 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare a path that c
 - {{domxref("Path2D.Path2D", "Path2D()")}}
   - : `Path2D` constructor. Creates a new `Path2D` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("Path2D.addPath()")}}
   - : Adds a path to the current path.

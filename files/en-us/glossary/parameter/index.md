@@ -3,9 +3,9 @@ title: Parameter
 slug: Glossary/Parameter
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
+
 A parameter is a named variable passed into a {{Glossary("function")}}. Parameter variables are used to import {{Glossary("argument","arguments")}} into functions.
 
 For example:
@@ -15,7 +15,7 @@ function example(parameter) {
   console.log(parameter); // Output = foo
 }
 
-const argument = 'foo';
+const argument = "foo";
 
 example(argument);
 ```

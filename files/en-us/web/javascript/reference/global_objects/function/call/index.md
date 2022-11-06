@@ -7,6 +7,7 @@ tags:
   - Method
 browser-compat: javascript.builtins.Function.call
 ---
+
 {{JSRef}}
 
 The **`call()`** method calls the function with a given `this` value and arguments provided individually.
@@ -15,7 +16,7 @@ The **`call()`** method calls the function with a given `this` value and argumen
 
 ## Syntax
 
-```js
+```js-nolint
 call()
 call(thisArg)
 call(thisArg, arg1, /* …, */ argN)
@@ -139,7 +140,7 @@ function display() {
   console.log(`globProp value is ${this.globProp}`);
 }
 
-display.call(); // logs "globProp value is Wisen"
+display.call(); // Logs "globProp value is Wisen"
 ```
 
 In strict mode, the value of `this` will be `undefined`.

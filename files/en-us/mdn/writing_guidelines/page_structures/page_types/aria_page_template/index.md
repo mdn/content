@@ -6,13 +6,14 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 ## Page includes
 
 ### Title and slug
 
-An ARIA role page should have a _title_ and _slug_ of *ARIA:Name*Of*TheRole*. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) has a _title_ and _slug_ of _ARIA/NameOfTheRole_role_ and the [aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute has a title of _ARIA-labelledby Attribute._
+An ARIA role page should have a `title` and `slug` of `ARIA: Name Of The Role`. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) has a `title` and `slug` of `ARIA/NameOfTheRole_role` and the [aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute has a `title` of `aria-labelledby`.
 
 ### Top macros
 
@@ -71,6 +72,8 @@ Include a complete description of the attribute or role.
 
 ## Examples
 
+Note that we use the plural "Examples" even if the page only contains one example.
+
 ### A descriptive heading
 
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
@@ -83,25 +86,27 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
 >
->  ```md
->  ## Examples
+> ```md
+> ## Examples
 >
->  ### Using the fetch API
->  Example of Fetch
+> ### Using the fetch API
 >
->  ### More examples
->  Links to more examples on other pages
->  ```
+> Example of Fetch
+>
+> ### More examples
+>
+> Links to more examples on other pages
+> ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:
 >
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
->  ```md
->   ## Examples
+> ```md
+> ## Examples
 >
->   For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
+> ```
 
 ## Accessibility concerns
 

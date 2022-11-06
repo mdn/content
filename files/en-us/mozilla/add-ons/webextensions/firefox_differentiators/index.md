@@ -10,6 +10,7 @@ tags:
   - Themes
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Firefox is a great place to begin your browser extension development. To start, you get the highest compliance with the proposed browser extension API including use of the `browser.*` namespace and promises for handling asynchronous events. Then, there is a highly supportive community of extension developers, ready to assist you.

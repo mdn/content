@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLIFrameElement`** interface provides special properties and methods (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
@@ -62,9 +63,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.width")}}
   - : A string that reflects the {{htmlattrxref("width", "iframe")}} HTML attribute, indicating the width of the frame.
 
-## Methods
+## Instance methods
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}_.
+_Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Specifications
 

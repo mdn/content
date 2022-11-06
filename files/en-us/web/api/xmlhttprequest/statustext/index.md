@@ -12,6 +12,7 @@ tags:
   - XMLHttpRequest Status
 browser-compat: api.XMLHttpRequest.statusText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The read-only **`XMLHttpRequest.statusText`** property returns a string containing the response's status message as returned by the HTTP server. Unlike [`XMLHTTPRequest.status`](/en-US/docs/Web/API/XMLHttpRequest/status) which indicates a numerical status code, this property contains the _text_ of the response status, such as "OK" or "Not Found". If the request's [`readyState`](/en-US/docs/Web/API/XMLHttpRequest/readyState) is in `UNSENT` or `OPENED` state, the value of `statusText` will be an empty string.

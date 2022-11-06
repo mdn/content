@@ -7,7 +7,8 @@ tags:
   - Performance
   - Web
 ---
-When building modern Web apps and sites, it's important to make your content perform well. That is, to make it work quickly and efficiently. This lets it work effectively both for users of powerful desktop systems as well as for handheld devices with less power.  There are several tools available to check the performance of a website or blog. The most notable tools are listed below.
+
+When building modern Web apps and sites, it's important to make your content perform well. That is, to make it work quickly and efficiently. This lets it work effectively both for users of powerful desktop systems as well as for handheld devices with less power. There are several tools available to check the performance of a website or blog. The most notable tools are listed below.
 
 - [Google PageSpeed Insights](https://pagespeed.web.dev/)
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)

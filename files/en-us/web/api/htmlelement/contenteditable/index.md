@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentEditable`** property of
@@ -37,13 +38,6 @@ A string.
 ## Browser compatibility
 
 {{Compat}}
-
-In Internet Explorer, `contenteditable` cannot be applied to the
-{{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}},
-{{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}},
-{{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements
-directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
-can be placed inside the individual table cells.
 
 ## See also
 

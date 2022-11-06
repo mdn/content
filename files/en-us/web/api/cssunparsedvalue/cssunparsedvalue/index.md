@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue()`** constructor
@@ -21,7 +22,7 @@ that reference custom properties.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSUnparsedValue(members)
 ```
 

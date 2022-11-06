@@ -34,8 +34,8 @@ For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put
 
 ## Syntax
 
-```js
-add(request);
+```js-nolint
+add(request)
 ```
 
 ### Parameters

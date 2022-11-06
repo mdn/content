@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.yield_star
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`yield*` expression** is used to
@@ -22,7 +23,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 yield* expression
 ```
 
@@ -76,7 +77,7 @@ objects).
 ```js
 function* g3(...args) {
   yield* [1, 2];
-  yield* '34';
+  yield* "34";
   yield* args;
 }
 
@@ -91,19 +92,19 @@ console.log(iterator.next()); // {value: 6, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
 ```
 
-### The value of yield* expression itself
+### The value of yield\* expression itself
 
 `yield*` is an expression, not a statement—so it evaluates to a value.
 
 ```js
 function* g4() {
   yield* [1, 2, 3];
-  return 'foo';
+  return "foo";
 }
 
 function* g5() {
   const g4ReturnValue = yield* g4();
-  console.log(g4ReturnValue) // 'foo'
+  console.log(g4ReturnValue); // 'foo'
   return g4ReturnValue;
 }
 
@@ -127,5 +128,5 @@ console.log(iterator.next()); // {value: 'foo', done: true}
 
 - [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

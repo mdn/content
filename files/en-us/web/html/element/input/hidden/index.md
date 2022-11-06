@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.input.type_hidden
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`hidden`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
@@ -97,13 +97,13 @@ Hidden inputs don't participate in constraint validation; they have no real valu
 
 Let's look at how we might implement a simple version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
 
-The edit form's HTML might look a little bit like this:
+The edit form's HTML might look a bit like this:
 
 ```html
 <form>
   <div>
     <label for="title">Post title:</label>
-    <input type="text" id="title" name="title" value="My excellent blog post">
+    <input type="text" id="title" name="title" value="My excellent blog post" />
   </div>
   <div>
     <label for="content">Post content:</label>
@@ -114,7 +114,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
   <div>
     <button type="submit">Update post</button>
   </div>
-  <input type="hidden" id="postId" name="postId" value="34657">
+  <input type="hidden" id="postId" name="postId" value="34657" />
 </form>
 ```
 
@@ -141,7 +141,8 @@ label {
   padding-right: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 7;
   font-family: sans-serif;
   font-size: 1.1rem;

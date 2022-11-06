@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAreaElement.relList`** read-only property reflects

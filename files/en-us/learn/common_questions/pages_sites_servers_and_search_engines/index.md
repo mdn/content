@@ -8,6 +8,9 @@ tags:
   - NeedsActiveLearning
   - WebMechanics
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article, we describe various web-related concepts: web pages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
 
 <table>
@@ -112,4 +115,4 @@ Here is an instance of Firefox showing a Google search box as its default startu
 ## Next steps
 
 - Dig deeper: [What is a web server](/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- See how web pages are linked into a web site: [Understanding links on the web](/en-US/docs/Learn/Common_questions/What_are_hyperlinks)
+- See how web pages are linked into a website: [Understanding links on the web](/en-US/docs/Learn/Common_questions/What_are_hyperlinks)

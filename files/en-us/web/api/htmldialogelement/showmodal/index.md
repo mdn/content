@@ -11,6 +11,7 @@ tags:
   - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`showModal()`** method of the
@@ -21,7 +22,7 @@ the content outside it is rendered inert.
 
 ## Syntax
 
-```js
+```js-nolint
 showModal()
 ```
 
@@ -35,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element).
 
 ## Examples
@@ -47,58 +48,57 @@ From there you can click the _Cancel_ button to close the dialog (via the
 button.
 
 ```html
-  <!-- Simple pop-up dialog box, containing a form -->
-  <dialog id="favDialog">
-    <form method="dialog">
-      <section>
-        <p><label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select></p>
-      </section>
-      <menu>
-        <button id="cancel" type="reset">Cancel</button>
-        <button type="submit">Confirm</button>
-      </menu>
-    </form>
-  </dialog>
+<!-- Simple pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>
+      <label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal" name="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select>
+    </p>
+    <div>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </div>
+  </form>
+</dialog>
 
-  <menu>
-    <button id="updateDetails">Update details</button>
-  </menu>
+<div>
+  <button id="updateDetails">Update details</button>
+</div>
 
-  <script>
-    (() => {
-      const updateButton = document.getElementById('updateDetails');
-      const cancelButton = document.getElementById('cancel');
-      const dialog = document.getElementById('favDialog');
-      dialog.returnValue = 'favAnimal';
+<script>
+  (() => {
+    const updateButton = document.getElementById("updateDetails");
+    const cancelButton = document.getElementById("cancel");
+    const dialog = document.getElementById("favDialog");
+    dialog.returnValue = "favAnimal";
 
-      function openCheck(dialog) {
-        if (dialog.open) {
-          console.log('Dialog open');
-        } else {
-          console.log('Dialog closed');
-        }
+    function openCheck(dialog) {
+      if (dialog.open) {
+        console.log("Dialog open");
+      } else {
+        console.log("Dialog closed");
       }
+    }
 
-      // Update button opens a modal dialog
-      updateButton.addEventListener('click', () => {
-        dialog.showModal();
-        openCheck(dialog);
-      });
+    // Update button opens a modal dialog
+    updateButton.addEventListener("click", () => {
+      dialog.showModal();
+      openCheck(dialog);
+    });
 
-      // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', () => {
-        dialog.close('animalNotChosen');
-        openCheck(dialog);
-      });
-
-    })();
-  </script>
+    // Form cancel button closes the dialog box
+    cancelButton.addEventListener("click", () => {
+      dialog.close("animalNotChosen");
+      openCheck(dialog);
+    });
+  })();
+</script>
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)

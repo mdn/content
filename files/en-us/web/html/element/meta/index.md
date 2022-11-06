@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.meta
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other HTML meta-related elements, like {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("title")}}.
 
@@ -41,7 +41,7 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
     </tr>
     <tr>
       <th>Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th>Tag omission</th>
@@ -164,10 +164,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- Redirect page after 3 seconds -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## Specifications

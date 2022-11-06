@@ -19,7 +19,7 @@ This article discusses a useful technique for giving your canvas/WebGL games a c
 
 ## The concept
 
-Retro [pixel art](https://wikipedia.org/wiki/Pixel_art) aesthetics are getting popular, especially in [indie games](https://wikipedia.org/wiki/Indie_game) or [game jam](https://wikipedia.org/wiki/Game_jam) entries. But since today's screens render content at high resolutions, there is a problem with making sure the pixel art does not look blurry. Developers have been manually scaling up graphics so they are shown with blocks that represent pixels. Two downsides to this method are larger file sizes and [compression artifacts](https://wikipedia.org/wiki/Compression_artifact).
+Retro [pixel art](https://en.wikipedia.org/wiki/Pixel_art) aesthetics are getting popular, especially in [indie games](https://en.wikipedia.org/wiki/Indie_game) or [game jam](https://en.wikipedia.org/wiki/Game_jam) entries. But since today's screens render content at high resolutions, there is a problem with making sure the pixel art does not look blurry. Developers have been manually scaling up graphics so they are shown with blocks that represent pixels. Two downsides to this method are larger file sizes and [compression artifacts](https://en.wikipedia.org/wiki/Compression_artifact).
 
 <table class="standard-table">
   <tbody>
@@ -37,7 +37,7 @@ Retro [pixel art](https://wikipedia.org/wiki/Pixel_art) aesthetics are getting p
       <td>none</td>
       <td>vendor's algorithm</td>
       <td>
-        <a href="https://wikipedia.org/wiki/Nearest-neighbor_interpolation"
+        <a href="https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation"
           >nearest-neighbor algorithm</a
         >
       </td>
@@ -64,7 +64,7 @@ Let's have a look at an example. The original image we want to upscale looks lik
 Here's some HTML to create a simple canvas:
 
 ```html
-<canvas id="game" width="128" height="128"></canvas>
+<canvas id="game" width="128" height="128">A cat</canvas>
 ```
 
 CSS to size the canvas and render a crisp image:
@@ -73,9 +73,6 @@ CSS to size the canvas and render a crisp image:
 canvas {
   width: 512px;
   height: 512px;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-crisp-edges;
-  image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
 ```
@@ -99,4 +96,4 @@ This code used together produces the following result:
 
 {{ EmbedLiveSample('An_example', '100%', 520) }}
 
-> **Note:** You can check out the [original code on GitHub](https://github.com/belen-albeza/retro-canvas) ([and a live example](https://belen-albeza.github.io/retro-canvas/).)
+> **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.

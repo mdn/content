@@ -1,9 +1,10 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
+page-type: css-pseudo-class
 tags:
-  - ':focus'
-  - ':focus-visible'
+  - ":focus"
+  - ":focus-visible"
   - CSS
   - Layout
   - Pseudo-class
@@ -12,6 +13,7 @@ tags:
   - Web
 browser-compat: css.selectors.focus-visible
 ---
+
 {{CSSRef}}
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
@@ -33,16 +35,17 @@ This selector is useful to provide a different focus indicator based on the user
 In this example, the `:focus-visible` selector uses the UA's behavior to determine when to match. Compare what happens when you click on the different controls with a mouse, versus when you tab through them using a keyboard. Note the difference in behavior from elements styled with `:focus`.
 
 ```html
-<input value="Default styles"><br>
-<button>Default styles</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Default styles" /><br />
+<button>Default styles</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 
@@ -63,7 +66,7 @@ If your code has to work in old browser versions that do not support `:focus-vis
 
 ```html
 <button class="button with-fallback" type="button">
-  Button with fallback
+    Button with fallback
 </button>
 <button class="button without-fallback" type="button">
   Button without fallback

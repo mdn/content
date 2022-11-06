@@ -12,12 +12,13 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTServer
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT
 Server on a remote device.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("BluetoothRemoteGATTServer.connected")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean value that returns true while this script execution environment is
@@ -26,7 +27,7 @@ Server on a remote device.
 - {{DOMxRef("BluetoothRemoteGATTServer.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A reference to the {{DOMxRef("BluetoothDevice")}} running the server.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("BluetoothRemoteGATTServer.connect()")}} {{Experimental_Inline}}
   - : Causes the script execution environment to connect to `this.device`.

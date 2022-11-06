@@ -11,10 +11,11 @@ tags:
   - Variables
   - declaring
   - initializing
-  - l10n:priority
+  - "l10n:priority"
   - loose typing
   - strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.
@@ -96,7 +97,7 @@ One special thing about variables is that they can contain just about anything �
 
 > **Note:** We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
 
-![](boxes.png)
+![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of javascript variables. Each box contains hypothetical values that represent various javascript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
 
 ## Declaring a variable
 
@@ -109,7 +110,7 @@ let myAge;
 
 Here we're creating two variables called `myName` and `myAge`. Try typing these lines into your web browser's console. After that, try creating a variable (or two) with your own name choices.
 
-> **Note:** In JavaScript, all code instructions should end with a semi-colon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
+> **Note:** In JavaScript, all code instructions should end with a semicolon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
 
 You can test whether these values now exist in the execution environment by typing just the variable's name, e.g.
 
@@ -206,7 +207,7 @@ myName = 'Bob';
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
 
-For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no reason to use `var`, unless you need to support Internet Explorer 10 or older with your code.
+For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no longer any reason to use `var`, as it has been supported since Internet Explorer 11.
 
 > **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
 >
@@ -421,7 +422,7 @@ If you can't do as much with `const` as you can with `let`, why would you prefer
 
 In this course, we adopt the following principle about when to use `let` and when to use `const`:
 
-*Use `const` when you can, and use `let` when you have to.*
+_Use `const` when you can, and use `let` when you have to._
 
 This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.
 

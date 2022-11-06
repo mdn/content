@@ -25,6 +25,7 @@ tags:
   - Experimental
 browser-compat: api.XRInputSourceArray.values
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}}
@@ -35,7 +36,7 @@ array, from first to last.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -54,7 +55,7 @@ list.
 ## Examples
 
 This example snippet walks through each input and calls the
-function `checkInput()`  with each returned value.
+function `checkInput()` with each returned value.
 
 ```js
 for (const source of xrSession.inputSources.values()) {

@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.effectAllowed
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.effectAllowed`** property specifies the
@@ -56,9 +57,6 @@ possible values are:
 Assigning any other value to `effectAllowed` has no effect and the old value
 is retained.
 
-Internet Explorer will change the value to be lowercased; thus, `linkMove`
-will become `linkmove`, and so on.
-
 ## Examples
 
 ### Setting effectAllowed
@@ -70,7 +68,9 @@ In this example we set `effectAllowed` to `"move"` in the `dragstart` handler.
 ```html
 <div>
   <p id="source" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
 <div id="target">Drop Zone</div>
 <pre id="output"></pre>

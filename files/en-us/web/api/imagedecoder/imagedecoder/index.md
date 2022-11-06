@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: api.ImageDecoder.ImageDecoder
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} object which unpacks and decodes image data.
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageDecoder(init)
 ```
 

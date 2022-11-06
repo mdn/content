@@ -8,6 +8,7 @@ tags:
   - History API
   - History API Tutorial
 ---
+
 {{DefaultAPISidebar("History API")}}
 The {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods add and modify history entries, respectively. These methods work in conjunction with the {{domxref("Window/popstate_event", "popstate")}} event.
 
@@ -75,7 +76,7 @@ let stateObj = { foo: "bar" }
 history.pushState(stateObj, "page 2", "bar.html")
 ```
 
-The explanation of these two lines above can be found at the above section *[Example of pushState() method](#example_of_pushstate_method)* section.
+The explanation of these two lines above can be found at the above section _[Example of pushState() method](#example_of_pushstate_method)_ section.
 
 Next, suppose `https://mozilla.org/bar.html` executes the following JavaScript:
 
@@ -95,7 +96,7 @@ See {{domxref("Window/popstate_event", "popstate")}} for sample usage.
 
 ### Reading the current state
 
-When your page loads, it might have a non-null state object.  This can happen, for example, if the page sets a state object (using {{DOMxRef("History.pushState","pushState()")}} or {{DOMxRef("History.replaceState","replaceState()")}}) and then the user restarts their browser. When the page reloads, the page will receive an `onload` event, but no `popstate` event. However, if you read the {{DOMxRef("History.state","history.state")}} property, you'll get back the state object you would have gotten if a `popstate` had fired.
+When your page loads, it might have a non-null state object. This can happen, for example, if the page sets a state object (using {{DOMxRef("History.pushState","pushState()")}} or {{DOMxRef("History.replaceState","replaceState()")}}) and then the user restarts their browser. When the page reloads, the page will receive an `onload` event, but no `popstate` event. However, if you read the {{DOMxRef("History.state","history.state")}} property, you'll get back the state object you would have gotten if a `popstate` had fired.
 
 You can read the state of the current history entry without waiting for a `popstate` event using the {{DOMxRef("History.state","history.state")}} property like this:
 

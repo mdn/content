@@ -13,6 +13,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`ResizeObserver`** interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.
@@ -26,11 +27,11 @@ The **`ResizeObserver`** interface reports changes to the dimensions of an {{dom
 - {{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}
   - : Creates and returns a new `ResizeObserver` object.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref('ResizeObserver.disconnect()')}}
   - : Unobserves all observed {{domxref('Element')}} targets of a particular observer.

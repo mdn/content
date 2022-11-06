@@ -7,6 +7,7 @@ tags:
   - rust
   - wasm
 ---
+
 {{WebAssemblySidebar}}
 
 If you have some Rust code, you can compile it into [WebAssembly](/en-US/docs/WebAssembly) (wasm). This tutorial takes you through all you need to know to compile a Rust project to wasm and use it in an existing web app.
@@ -196,7 +197,7 @@ This does a number of things (and they take a lot of time, especially the first 
 4. Reads your `Cargo.toml` and produces an equivalent `package.json`.
 5. Copies your `README.md` (if you have one) into the package.
 
-The end result? You have a package inside of the `pkg` directory.
+The end result? You have a package inside the `pkg` directory.
 
 #### A digression about code size
 
@@ -204,7 +205,7 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 
 ## Using the package on the web
 
-Now that we've got a compiled wasm module. let's run it in the browser.
+Now that we've got a compiled wasm module, let's run it in the browser.
 
 Let's start by creating a file named `index.html` in the root of the project, and give it the following contents:
 
@@ -212,16 +213,15 @@ Let's start by creating a file named `index.html` in the root of the project, an
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
     <script type="module">
-      import init, {greet} from "./pkg/hello_wasm.js";
-      init()
-        .then(() => {
-          greet("WebAssembly")
-        });
+      import init, { greet } from "./pkg/hello_wasm.js";
+      init().then(() => {
+        greet("WebAssembly");
+      });
     </script>
   </body>
 </html>
@@ -231,7 +231,7 @@ The script in this file will import the js glue code, initialize the wasm module
 
 Serve the root directory of the project with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
-> **Note:** Make sure to use an up to date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
+> **Note:** Make sure to use an up-to-date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
 
 Load `index.html` from the web server (if you used the Python3 example: `http://localhost:8000`). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
 
@@ -239,7 +239,7 @@ Load `index.html` from the web server (if you used the Python3 example: `http://
 
 If you want to use the WebAssembly module with npm, we'll need to make a few changes.
 
-Let's start by recompiling out Rust with the target bundler option:
+Let's start by recompiling our Rust with the target bundler option:
 
 ```bash
 wasm-pack build --target bundler
@@ -251,7 +251,7 @@ We are building an npm package, so you need to have Node.js and npm installed.
 
 To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
 
-Next, let's use \`npm link\` to make this package available to other JavaScript packages installed
+Next, let's use `npm link` to make this package available to other JavaScript packages installed
 
 ```bash
 cd pkg
@@ -262,7 +262,7 @@ We now have an npm package, written in Rust, but compiled to WebAssembly. It's r
 
 ### Using the npm package on the web
 
-Let's build a website that uses our new npm package. Many people use npm packages through various bundler tools, and we'll be using one of them, `webpack`, in this tutorial. It's only a little bit complex, and shows a realistic use-case.
+Let's build a website that uses our new npm package. Many people use npm packages through various bundler tools, and we'll be using one of them, `webpack`, in this tutorial. It's only a bit complex, and shows a realistic use-case.
 
 Let's move back out of the `pkg` directory, and make a new directory, `site`, to try this out in:
 
@@ -294,14 +294,14 @@ Create a new file, `package.json`, and put the following code in it:
 Next, we need to configure Webpack. Create `webpack.config.js` and put the following in it:
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
@@ -321,7 +321,7 @@ Finally, we need to modify the HTML file; open the `index.html` file and replace
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>

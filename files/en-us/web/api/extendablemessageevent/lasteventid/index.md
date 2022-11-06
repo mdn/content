@@ -11,6 +11,7 @@ tags:
   - lastEventID
 browser-compat: api.ExtendableMessageEvent.lastEventId
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`lastEventID`** read-only property of the

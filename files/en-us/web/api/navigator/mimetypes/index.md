@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.mimeTypes
 ---
+
 {{ ApiRef("HTML DOM") }}{{deprecated_header}}
 
 Returns a {{domxref("MimeTypeArray")}} object, which contains a list of {{domxref("MimeType")}} objects representing the MIME types recognized and supported by the browser.

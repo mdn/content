@@ -1,6 +1,7 @@
 ---
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -11,6 +12,7 @@ spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-images/
 ---
+
 {{CSSRef}}
 
 Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types — values and units — that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.
@@ -49,7 +51,7 @@ In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a st
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -69,7 +71,7 @@ Such values are used without quotes:
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
@@ -97,7 +99,7 @@ A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<st
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}}  for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}} for more information.
 
 ## Numeric data types
 
@@ -160,7 +162,7 @@ Absolute length units are fixed to a physical length: either an inch or a centim
 | `mm` | Millimeters         | 1mm = 1/10th of 1cm |
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 | `in` | Inches              | 1in = 2.54cm = 96px |
-| `pc` | Picas               | 1pc = 1/6th of 1in |
+| `pc` | Picas               | 1pc = 1/6th of 1in  |
 | `pt` | Points              | 1pt = 1/72th of 1in |
 | `px` | Pixels              | 1px = 1/96th of 1in |
 
@@ -201,9 +203,9 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
 
-| Unit  | Name      | Description                                          |
-| ----- | --------- | ---------------------------------------------------- |
-| `fr`  | Flex      | Represents a flexible length within a grid container |
+| Unit | Name | Description                                          |
+| ---- | ---- | ---------------------------------------------------- |
+| `fr` | Flex | Represents a flexible length within a grid container |
 
 #### Resolution units
 

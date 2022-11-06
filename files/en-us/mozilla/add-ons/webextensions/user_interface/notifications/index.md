@@ -4,11 +4,12 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.
 
-![](notify-shadowed.png)
+![Click notification in the top right corner of the browser window.](notify-shadowed.png)
 
 Notifications can include a call to action for the user, and your add-on can listen for the user clicking the notification or the notification closing.
 

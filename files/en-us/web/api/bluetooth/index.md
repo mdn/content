@@ -11,6 +11,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.Bluetooth
 ---
+
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`Bluetooth`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) returns a
@@ -19,7 +20,7 @@ options.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent {{domxref("EventTarget")}}._
 
@@ -29,7 +30,7 @@ _Inherits properties from its parent {{domxref("EventTarget")}}._
     allows the user to open. A BluetoothDevice representing the beacon would be available
     through `navigator.bluetooth.referringDevice`.
 
-## Methods
+## Instance methods
 
 - {{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolved to a boolean value indicating

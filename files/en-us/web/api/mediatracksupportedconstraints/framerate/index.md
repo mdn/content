@@ -16,6 +16,7 @@ tags:
   - frameRate
 browser-compat: api.MediaTrackSupportedConstraints.frameRate
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`frameRate`** property is a read-only Boolean value which is
@@ -48,8 +49,7 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 ### HTML
 
 ```html
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ### CSS
@@ -79,7 +79,7 @@ While this example is trivial, you can replace the simple output of "Supported" 
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

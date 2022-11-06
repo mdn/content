@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
 ---
+
 {{JSRef}}
 
 The **`handler.ownKeys()`** method is a trap for
@@ -17,7 +18,7 @@ The **`handler.ownKeys()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   ownKeys(target) {
   }
@@ -70,31 +71,35 @@ If the following invariants are violated, the proxy will throw a
 The following code traps {{jsxref("Object.getOwnPropertyNames()")}}.
 
 ```js
-const p = new Proxy({}, {
-  ownKeys(target) {
-    console.log('called');
-    return ['a', 'b', 'c'];
+const p = new Proxy(
+  {},
+  {
+    ownKeys(target) {
+      console.log("called");
+      return ["a", "b", "c"];
+    },
   }
-});
+);
 
-console.log(Object.getOwnPropertyNames(p)); // "called"
-                                            // [ 'a', 'b', 'c' ]
+console.log(Object.getOwnPropertyNames(p));
+// "called"
+// [ 'a', 'b', 'c' ]
 ```
 
 The following code violates an invariant.
 
 ```js example-bad
 const obj = {};
-Object.defineProperty(obj, 'a', {
+Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: true,
-  value: 10 }
-);
+  value: 10,
+});
 
 const p = new Proxy(obj, {
   ownKeys(target) {
     return [123, 12.5, true, false, undefined, null, {}, []];
-  }
+  },
 });
 
 console.log(Object.getOwnPropertyNames(p));

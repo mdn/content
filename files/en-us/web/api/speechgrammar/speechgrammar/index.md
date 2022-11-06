@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.SpeechGrammar.SpeechGrammar
 ---
+
 {{APIRef("Web Speech API")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`SpeechGrammar()`** constructor of the
@@ -22,7 +23,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechGrammar()
 ```
 

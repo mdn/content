@@ -11,6 +11,7 @@ tags:
   - clientId
 browser-compat: api.FetchEvent.clientId
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`clientId`** read-only property of the

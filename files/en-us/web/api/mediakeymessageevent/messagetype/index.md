@@ -11,6 +11,7 @@ tags:
   - messageType
 browser-compat: api.MediaKeyMessageEvent.messageType
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent.messageType`** read-only property indicates the

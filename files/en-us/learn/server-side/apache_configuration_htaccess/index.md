@@ -9,6 +9,9 @@ tags:
   - Permanent Redirect
   - Redirect
 ---
+
+{{LearnSidebar}}
+
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
 While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called \`httpd.conf\`), you should add this logic there under a `Directory` block.
@@ -43,7 +46,7 @@ There are times when we need to tell users that a resource has moved, either tem
 </IfModule>
 ```
 
-The possible values for the first parameter are listed below. If the first parameter is not included is defaults to `temp`.
+The possible values for the first parameter are listed below. If the first parameter is not included, it defaults to `temp`.
 
 - permanent
   - : Returns a permanent redirect status (301) indicating that the resource has moved permanently.
@@ -113,7 +116,7 @@ The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specificat
 
 The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
-If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin making the request some of the attributes of the `PerformanceResourceTiming` object will be set to zero.
+If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin, after making the request some attributes of the `PerformanceResourceTiming` object will be set to zero.
 
 ```apache
 <IfModule mod_headers.c>
@@ -156,7 +159,7 @@ For example, the filename extensions of content files often define the content's
 
 **Changing the metadata for a file does not change the value of the Last-Modified header. Thus, previously cached copies may still be used by a client or proxy, with the previous headers. If you change the metadata (language, content type, character set, or encoding) you may need to 'touch' affected files (updating their last modified date) to ensure that all visitors receive the corrected content headers.**
 
-### Serve resources with the proper media types (a.k.a MIME types)
+### Serve resources with the proper media types (a.k.a. MIME types)
 
 Associates media types with one or more extensions to make sure the resources will be served appropriately.
 
@@ -226,8 +229,7 @@ Servers should use text/javascript for JavaScript resources as indicated in the 
 
 Every piece of content on the web has a character set. Most, if not all, the content is UTF-8 Unicode.
 
-Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
-) to serve all resources labeled as `text/html` or `text/plain` with the `UTF-8` charset.
+Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset) to serve all resources labeled as `text/html` or `text/plain` with the `UTF-8` charset.
 
 ```apache
 <IfModule mod_mime.c>
@@ -278,9 +280,9 @@ The required steps are:
 2. Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
 3. If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
 
-    - Some cloud hosting services will require you set `RewriteBase`
-    - See [Rackspace FAQ](https://web.archive.org/web/20151223141222/http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
-    - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
+   - Some cloud hosting services will require you set `RewriteBase`
+   - See [Rackspace FAQ](https://web.archive.org/web/20151223141222/http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
+   - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
 
 ```apache
 <IfModule mod_rewrite.c>
@@ -447,7 +449,7 @@ If a user types `example.com` in their browser, even if the server redirects the
 
 The following header ensures that a browser only connects to your server via HTTPS, regardless of what the users type in the browser's address bar.
 
-Be aware that Strict Transport Security is not revokable and you must ensure being able to serve the site over HTTPS for as long as you've specified in the `max-age` directive. If you don't have a valid TLS connection anymore (e.g. due to an expired TLS certificate) your visitors will see an error message even when attempting to connect over HTTP.
+Be aware that Strict Transport Security is not revokable, and you must ensure being able to serve the site over HTTPS for as long as you've specified in the `max-age` directive. If you don't have a valid TLS connection anymore (e.g. due to an expired TLS certificate) your visitors will see an error message even when attempting to connect over HTTP.
 
 ```apache
 <IfModule mod_headers.c>
@@ -463,22 +465,22 @@ Be aware that Strict Transport Security is not revokable and you must ensure bei
 
 1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
 
-    - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
-    - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
+   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
+   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
 
 2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
 
-    - If you want to use the `<base>` element, then use `base-uri 'self'` instead
+   - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
 3. Only allows form submissions are from the current origin with: `form-action 'self'`
 4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
-    - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
-    - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
+   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
+   - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
 
 5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
 
-    - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
+   - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
 6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 
@@ -616,7 +618,7 @@ Compress all output labeled with one of the following media types using the [Add
 
 ## Map extensions to media types
 
-Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these files types would be served without an appropriate `Content-Encoding` response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
+Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these files types were served without an appropriate `Content-Encoding` response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
 
 ```apache
 <IfModule mod_deflate.c>

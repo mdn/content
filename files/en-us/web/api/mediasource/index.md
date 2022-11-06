@@ -15,6 +15,7 @@ tags:
   - Video
 browser-compat: api.MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API) represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.
@@ -26,18 +27,18 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 - {{domxref("MediaSource.MediaSource", "MediaSource()")}}
   - : Constructs and returns a new `MediaSource` object with no associated source buffers.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
 - {{domxref("MediaSource.activeSourceBuffers")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 - {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
@@ -52,7 +53,12 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaSource.setLiveSeekableRange()")}}
   - : Sets the range that the user can seek to in the media element.
 
-### Events
+## Static methods
+
+- {{domxref("MediaSource.isTypeSupported()")}}
+  - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
+
+## Events
 
 - {{domxref("MediaSource.sourceclose_event", "sourceclose")}}
   - : Fired when the `MediaSource` instance is not attached to a media element anymore.
@@ -60,11 +66,6 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Fired when the `MediaSource` instance is still attached to a media element, but {{domxref("MediaSource.endOfStream", "endOfStream()")}} has been called.
 - {{domxref("MediaSource.sourceopen_event", "sourceopen")}}
   - : Fired when the `MediaSource` instance has been opened by a media element and is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
-
-## Static methods
-
-- {{domxref("MediaSource.isTypeSupported()")}}
-  - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
 
 ## Examples
 

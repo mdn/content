@@ -14,13 +14,14 @@ tags:
   - web animations api
 browser-compat: api.Animation.reverse
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`Animation.reverse()`** method of the {{ domxref("Animation") }} Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse.
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 
@@ -43,8 +44,8 @@ const shrinkAlice = () => {
   aliceChange.play();
 
   // play the bottle's animation
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 But it could also have been done by calling `reverse()` on `aliceChange` like so:
@@ -55,8 +56,8 @@ const shrinkAlice = () => {
   aliceChange.reverse();
 
   // play the bottle's animation
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 ## Specifications

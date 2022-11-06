@@ -6,8 +6,10 @@ tags:
   - HTTP
   - Reference
   - header
+  - Deprecated
 browser-compat: http.headers.DNT
 ---
+
 {{HTTPSidebar}}{{Deprecated_header}}
 
 The **`DNT`** (**D**o **N**ot

@@ -12,6 +12,7 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent
 ---
+
 {{HTTPSidebar}}
 
 The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event")}}, and represents the event object of an event sent on a document or worker when its content security policy is violated.
@@ -23,7 +24,7 @@ The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event"
 - {{domxref("SecurityPolicyViolationEvent.SecurityPolicyViolationEvent","SecurityPolicyViolationEvent()")}}
   - : Creates a new `SecurityPolicyViolationEvent` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("SecurityPolicyViolationEvent.blockedURI")}} {{ReadOnlyInline}}
   - : A string representing the URI of the resource that was blocked because it violates a policy.

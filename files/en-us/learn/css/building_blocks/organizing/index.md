@@ -14,6 +14,7 @@ tags:
   - pre-processor
   - styleguide
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
@@ -143,13 +144,24 @@ In this section of the stylesheet we are providing default styling for the type 
 ```css
 /* || GENERAL STYLES */
 
-body { /* … */ }
+body {
+  /* … */
+}
 
-h1, h2, h3, h4 { /* … */ }
+h1,
+h2,
+h3,
+h4 {
+  /* … */
+}
 
-ul { /* … */ }
+ul {
+  /* … */
+}
 
-blockquote { /* … */ }
+blockquote {
+  /* … */
+}
 ```
 
 After this section, we could define a few utility classes, for example, a class that removes the default list style for lists we're going to display as flex items or in some other way. If you have a few styling choices you know you will want to apply to lots of different elements, they can be put in this section.
@@ -171,9 +183,13 @@ Then we can add everything that is used sitewide. That might be things like the 
 ```css
 /* || SITEWIDE */
 
-.main-nav { /* … */ }
+.main-nav {
+  /* … */
+}
 
-.logo { /* … */ }
+.logo {
+  /* … */
+}
 ```
 
 Finally, we will include CSS for specific things, broken down by the context, page, or even component in which they are used.
@@ -181,9 +197,13 @@ Finally, we will include CSS for specific things, broken down by the context, pa
 ```css
 /* || STORE PAGES */
 
-.product-listing { /* … */ }
+.product-listing {
+  /* … */
+}
 
-.product-box { /* … */ }
+.product-box {
+  /* … */
+}
 ```
 
 By ordering things in this way, we at least have an idea in which part of the stylesheet we will be looking for something that we want to change.
@@ -243,7 +263,7 @@ If you are not taking an OOCSS approach you might create a custom CSS for the di
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -253,7 +273,7 @@ If you are not taking an OOCSS approach you might create a custom CSS for the di
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -266,7 +286,7 @@ In OOCSS, you would create one pattern called `media` that would have all of the
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
@@ -307,11 +327,12 @@ BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity su
 ```html
 <form class="form form--theme-xmas form--simple">
   <label class="label form__label" for="inputId"></label>
-    <input class="form__input" type="text" id="inputId" />
+  <input class="form__input" type="text" id="inputId" />
 
   <input
     class="form__submit form__submit--disabled"
-    type="submit" value="Submit" />
+    type="submit"
+    value="Submit" />
 </form>
 ```
 
@@ -341,7 +362,7 @@ CSS now has native [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_prop
 
 If we created a variable called `$base-color`, as in the first line below, we could then use it through the stylesheet anywhere that required that color.
 
-```css
+```scss
 $base-color: #c6538c;
 
 .alert {
@@ -363,19 +384,19 @@ I mentioned above that one way to organize CSS is to break down stylesheets into
 
 So, for example, with [partials](https://sass-lang.com/documentation/at-rules/use#partials), you could have several style files inside a directory, say `foundation/_code.scss`, `foundation/_lists.scss`, `foundation/_footer.scss`, `foundation/_links.scss`, etc. You could then use the Sass `@use` role to load them into other stylesheets:
 
-```css
-// foundation/_index.sass
-@use 'code'
-@use 'lists'
-@use 'footer'
-@use 'links'
+```scss
+// foundation/_index.scss
+@use "code";
+@use "lists";
+@use "footer";
+@use "links";
 ```
 
 If the partials are all loaded into an index file, as implied above, you can then load that entire directory into another stylesheet in one go:
 
-```css
-// style.sass
-@use 'foundation'
+```scss
+// style.scss
+@use "foundation";
 ```
 
 > **Note:** A simple way to try out Sass is to use [CodePen](https://codepen.io) — you can enable Sass for your CSS in the Settings for a Pen, and CodePen will then run the Sass parser for you in order that you can see the resulting webpage with regular CSS applied. Sometimes you will find that CSS tutorials have used Sass rather than plain CSS in their CodePen demos, so it is handy to know a little bit about it.

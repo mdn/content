@@ -7,8 +7,9 @@ tags:
   - Reference
   - Status code
   - Successful response
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.3.4
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`203 Non-Authoritative Information`** response

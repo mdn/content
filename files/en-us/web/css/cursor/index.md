@@ -1,6 +1,7 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
+page-type: css-property
 tags:
   - Arrow
   - CSS
@@ -14,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the mouse cursor, if any, to show when the mouse pointer is over an element.
@@ -40,7 +42,8 @@ cursor: url(cursor_1.png) 4 12, auto;
 cursor: url(cursor_2.png) 2 2, pointer;
 
 /* URLs and fallback URLs (some with coordinates), with mandatory keyword fallback */
-cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), /* … ,*/ url(cursor_n.cur) 5 5, progress;
+cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), /* … ,*/ url(cursor_n.cur) 5 5,
+  progress;
 
 /* Global values */
 cursor: inherit;
@@ -63,6 +66,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
     More than one {{cssxref("url", "url()")}} may be provided as fallbacks, in case some cursor image types are not supported.
     A non-URL fallback (one or more of the keyword values) _must_ be at the end of the fallback list.
 - `<x>` `<y>` {{optional_inline}}
+
   - : Optional x- and y-coordinates indicating the cursor hotspot; the precise position within the cursor that is being pointed to.
 
     The numbers are in units of image pixels.
@@ -163,7 +167,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         <tr style="cursor: alias">
           <th rowspan="7" scope="row" style="cursor: auto">Drag &#x26; drop</th>
           <td><code>alias</code></td>
-          <td><img src="alias.gif" alt="wide arrow pointing up and to the left partially obscuring a smaller folder icon with a curved arrow pointing up and the the right"/></td>
+          <td><img src="alias.gif" alt="wide arrow pointing up and to the left partially obscuring a smaller folder icon with a curved arrow pointing up and to the right"/></td>
           <td>An alias or shortcut is to be created.</td>
         </tr>
         <tr style="cursor: copy">
@@ -173,7 +177,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: move">
           <td><code>move</code></td>
-          <td><img src="move.gif"  alt="plus sign made of two thin lines. The four points are small arrows facing out" /></td>
+          <td><img src="move.gif" alt="plus sign made of two thin lines. The four points are small arrows facing out" /></td>
           <td>Something is to be moved.</td>
         </tr>
         <tr style="cursor: no-drop">
@@ -306,23 +310,23 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>sw-resize</code></td>
           <td>
             <img
-              alt="thin long arrow pointing  bottom-left"
+              alt="thin long arrow pointing bottom-left"
               src="sw-resize.gif"
             />
           </td>
         </tr>
         <tr style="cursor: ew-resize">
           <td><code>ew-resize</code></td>
-          <td><img  alt="thin long arrow pointing left and right" class="default" src="3-resize.gif" /></td>
+          <td><img alt="thin long arrow pointing left and right" class="default" src="3-resize.gif" /></td>
           <td rowspan="4" style="cursor: auto">Bidirectional resize cursor.</td>
         </tr>
         <tr style="cursor: ns-resize">
           <td><code>ns-resize</code></td>
-          <td><img  alt="thin long arrow pointing up and down" class="default" src="6-resize.gif" /></td>
+          <td><img alt="thin long arrow pointing up and down" class="default" src="6-resize.gif" /></td>
         </tr>
         <tr style="cursor: nesw-resize">
           <td><code>nesw-resize</code></td>
-          <td><img  alt="thin long arrow pointing both to the top-right and bottom-left" class="default" src="1-resize.gif" /></td>
+          <td><img alt="thin long arrow pointing both to the top-right and bottom-left" class="default" src="1-resize.gif" /></td>
         </tr>
         <tr style="cursor: nwse-resize">
           <td><code>nwse-resize</code></td>
@@ -338,7 +342,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: zoom-out">
           <td><code>zoom-out</code></td>
-          <td><img  alt="magnifying glass with a minus sign" class="default" src="zoom-out.gif" /></td>
+          <td><img alt="magnifying glass with a minus sign" class="default" src="zoom-out.gif" /></td>
         </tr>
       </tbody>
     </table>
@@ -363,7 +367,7 @@ For example, on Firefox and Chromium cursor images are restricted to 128x128 pix
 User agents are required by the specification to support PNG files, SVG v1.1 files in secure static mode that contain a natural size, and any other non-animated image file formats that they support for images in other properties.
 Desktop browsers also broadly support the `.cur` file format.
 
-The specification further indicates that user agents  _should_ also support SVG v1.1 files in secure animated mode that contain a natural size, along with any other animated images file formats they support for images in other properties.
+The specification further indicates that user agents _should_ also support SVG v1.1 files in secure animated mode that contain a natural size, along with any other animated images file formats they support for images in other properties.
 User agents _may_ support both static and animated SVG images that do not contain a natural size.
 
 ### Other notes

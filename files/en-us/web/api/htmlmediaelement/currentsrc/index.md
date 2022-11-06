@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.currentSrc`** property contains the

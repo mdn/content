@@ -14,9 +14,11 @@ tags:
   - WebXR Device API
   - XR
   - XRCubeLayer
+  - Experimental
 browser-compat: api.XRCubeLayer
 ---
-{{securecontext_header}}{{APIRef("WebXR Device API")}}
+
+{{securecontext_header}}{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRCubeLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a layer that renders directly from a [cubemap](https://en.wikipedia.org/wiki/Cube_mapping) and projects it onto the inside faces of a cube.
 
@@ -28,22 +30,22 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
-- {{domxref("XRCubeLayer.space")}}
+- {{domxref("XRCubeLayer.space")}} {{Experimental_Inline}}
   - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
-- {{domxref("XRCubeLayer.orientation")}}
+- {{domxref("XRCubeLayer.orientation")}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the orientation relative to the `space` property.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 
 ## Events
 
-- {{domxref("XRCubeLayer.redraw_event", "redraw")}}
+- {{domxref("XRCubeLayer.redraw_event", "redraw")}} {{Experimental_Inline}}
   - : Sent to the `XRCubeLayer` object when the underlying resources of the layer are lost or when the XR Compositor can no longer reproject the layer. If this event is sent, authors should redraw the content of the layer in the next XR animation frame.
 
 ## Specifications

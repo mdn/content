@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetParent
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetParent`** read-only property returns a

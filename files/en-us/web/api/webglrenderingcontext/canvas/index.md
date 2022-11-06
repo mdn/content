@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.canvas
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.canvas`** property is a read-only
@@ -19,8 +20,8 @@ object.
 
 ## Syntax
 
-```js
-gl.canvas;
+```js-nolint
+gl.canvas
 ```
 
 ### Return value
@@ -68,4 +69,4 @@ gl.canvas; // OffscreenCanvas
 ## See also
 
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-- {{domxref("OffscreenCanvas")}}
+- The {{domxref("OffscreenCanvas")}} interface

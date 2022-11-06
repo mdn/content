@@ -9,7 +9,7 @@ tags:
 browser-compat: html.elements.li
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item in a list. It must be contained in a parent element: an ordered list ({{HTMLElement("ol")}}), an unordered list ({{HTMLElement("ul")}}), or a menu ({{HTMLElement("menu")}}). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
 
@@ -109,9 +109,9 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 ```html
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 ```
 
@@ -121,9 +121,9 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 ```html
 <ol type="I">
-    <li value="3">third item</li>
-    <li>fourth item</li>
-    <li>fifth item</li>
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
 </ol>
 ```
 
@@ -133,9 +133,9 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 

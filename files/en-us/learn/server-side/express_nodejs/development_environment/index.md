@@ -13,6 +13,7 @@ tags:
   - npm
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 Now that you know what [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#introducing_express) is for, we'll show you how to set up and test a Node/Express development environment on Windows, or Linux (Ubuntu), or macOS. For any of those operating systems, this article provides what you need to start developing Express apps.
@@ -22,8 +23,7 @@ Now that you know what [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/In
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Know how to open a terminal / command line. Know how to install software
-        packages on your development computer's operating system.
+        Know how to open a terminal / command line. Know how to install software packages on your development computer's operating system.
       </td>
     </tr>
     <tr>
@@ -79,17 +79,17 @@ Installing _Node_ and _npm_ on Windows and macOS is straightforward because you 
 
 1. Download the required installer:
 
-    1. Go to <https://nodejs.org/en/>
-    2. Select the button to download the LTS build that is "Recommended for most users".
+   1. Go to <https://nodejs.org/en/>
+   2. Select the button to download the LTS build that is "Recommended for most users".
 
 2. Install Node by double-clicking on the downloaded file and following the installation prompts.
 
 ### Ubuntu 20.04
 
-The easiest way to install the most recent LTS version of Node 12.x is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
+The easiest way to install the most recent LTS version of Node is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
@@ -101,51 +101,50 @@ The easiest way to test that node is installed is to run the "version" command i
 
 ```bash
 > node -v
-v12.18.4
+v16.17.1
 ```
 
 The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v
-6.14.6
+8.19.2
 ```
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
 
 1. Copy the following text into a file named **hellonode.js**. This uses pure Node features (nothing from Express):
 
-    ```js
-    //Load HTTP module
-    const http = require("http");
-    const hostname = '127.0.0.1';
-    const port = 3000;
+   ```js
+   //Load HTTP module
+   const http = require("http");
+   const hostname = "127.0.0.1";
+   const port = 3000;
 
-    //Create HTTP server and listen on port 3000 for requests
-    const server = http.createServer((req, res) => {
+   //Create HTTP server and listen on port 3000 for requests
+   const server = http.createServer((req, res) => {
+     //Set the response HTTP header with HTTP status and Content type
+     res.statusCode = 200;
+     res.setHeader("Content-Type", "text/plain");
+     res.end("Hello World\n");
+   });
 
-      //Set the response HTTP header with HTTP status and Content type
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.end('Hello World\n');
-    });
+   //listen for request on port 3000, and as a callback function have the port listened on logged
+   server.listen(port, hostname, () => {
+     console.log(`Server running at http://${hostname}:${port}/`);
+   });
+   ```
 
-    //listen for request on port 3000, and as a callback function have the port listened on logged
-    server.listen(port, hostname, () => {
-      console.log(`Server running at http://${hostname}:${port}/`);
-    });
-    ```
+   The code imports the "http" module and uses it to create a server (`createServer()`) that listens for HTTP requests on port 3000. The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
 
-    The code imports the "http" module and uses it to create a server (`createServer()`) that listens for HTTP requests on port 3000. The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
-
-    > **Note:** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
+   > **Note:** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
 
 2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
-    ```bash
-    >node hellonode.js
-    Server running at http://127.0.0.1:3000/
-    ```
+   ```bash
+   >node hellonode.js
+   Server running at http://127.0.0.1:3000/
+   ```
 
 3. Navigate to the URL `http://127.0.0.1:3000`. If everything is working, the browser should display the string "Hello World".
 
@@ -165,90 +164,90 @@ The following steps show how you can use npm to download a package, save it into
 
 1. First create a directory for your new application and navigate into it:
 
-    ```bash
-    mkdir myapp
-    cd myapp
-    ```
+   ```bash
+   mkdir myapp
+   cd myapp
+   ```
 
 2. Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
 
-    ```bash
-    npm init
-    ```
+   ```bash
+   npm init
+   ```
 
-    If you display the **package.json** file (`cat package.json`), you will see the defaults that you accepted, ending with the license.
+   If you display the **package.json** file (`cat package.json`), you will see the defaults that you accepted, ending with the license.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC"
+   }
+   ```
 
 3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
    ```bash
     npm install express
-    ```
+   ```
 
-    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
+   The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC",
-      "dependencies": {
-        "express": "^4.17.1"
-      }
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+       "express": "^4.17.1"
+     }
+   }
+   ```
 
 4. To use the Express library you call the `require()` function in your **index.js** file to include it in your application.
-    Create this file now, in the root of the "myapp" application directory, and give it the following contents:
+   Create this file now, in the root of the "myapp" application directory, and give it the following contents:
 
-    ```js
-    const express = require('express')
-    const app = express();
-    const port = 3000;
+   ```js
+   const express = require("express");
+   const app = express();
+   const port = 3000;
 
-    app.get('/', (req, res) => {
-      res.send('Hello World!')
-    });
+   app.get("/", (req, res) => {
+     res.send("Hello World!");
+   });
 
-    app.listen(port, () => {
-      console.log(`Example app listening on port ${port}!`)
-    });
-    ```
+   app.listen(port, () => {
+     console.log(`Example app listening on port ${port}!`);
+   });
+   ```
 
-    This code shows a minimal "HelloWorld" Express web application.
-    This imports the "express" module using `require()` and uses it to create a server (`app`) that listens for HTTP requests on port 3000 and prints a message to the console explaining what browser URL you can use to test the server.
-    The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
+   This code shows a minimal "HelloWorld" Express web application.
+   This imports the "express" module using `require()` and uses it to create a server (`app`) that listens for HTTP requests on port 3000 and prints a message to the console explaining what browser URL you can use to test the server.
+   The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
 
-    > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
+   > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
 
 5. You can start the server by calling node with the script in your command prompt:
 
-    ```bash
-    >node index.js
-    Example app listening on port 3000
-    ```
+   ```bash
+   >node index.js
+   Example app listening on port 3000
+   ```
 
-6. Navigate to the URL `http://127.0.0.1:3000/`.
-    If everything is working, the browser should display the string "Hello World!".
+6. Navigate to the URL `http://localhost:3000/`.
+   If everything is working, the browser should display the string "Hello World!".
 
 ### Development dependencies
 
@@ -380,7 +379,7 @@ The DEBUG command creates useful logging, resulting in an output like that shown
   helloworld:server Listening on port 3000 +0ms
 ```
 
-Open a browser and navigate to `http://127.0.0.1:3000/` to see the default Express welcome page.
+Open a browser and navigate to `http://localhost:3000/` to see the default Express welcome page.
 
 ![Express - Generated App Default Screen](express_default_screen.png)
 
@@ -398,7 +397,7 @@ In the next article we start working through a tutorial to build a complete web 
 - [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
 - [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
-- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)
+- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/windows/dev-environment/javascript/) (docs.microsoft.com)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 

@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Comparison
 ---
+
 {{WebAssemblySidebar}}
 
 The **`ge`** instructions, short for _greater or equal_, check if a number is greater than or equal to another number. If the first number is greater than or equal to the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
@@ -32,9 +33,9 @@ i32.ge_u
 
 | Instruction | Binary opcode |
 | ----------- | ------------- |
-| `i32.gt_s`  | `0x4e`        |
-| `i32.gt_u`  | `0x4f`        |
-| `i64.gt_s`  | `0x59`        |
-| `i64.gt_u`  | `0x5a`        |
-| `f32.gt`    | `0x60`        |
-| `f64.gt`    | `0x66`        |
+| `i32.ge_s`  | `0x4e`        |
+| `i32.ge_u`  | `0x4f`        |
+| `i64.ge_s`  | `0x59`        |
+| `i64.ge_u`  | `0x5a`        |
+| `f32.ge`    | `0x60`        |
+| `f64.ge`    | `0x66`        |

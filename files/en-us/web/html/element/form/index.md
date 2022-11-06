@@ -13,13 +13,13 @@ tags:
 browser-compat: html.elements.form
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
 
 {{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
 
-It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) to style a `<form>` element based on whether or not the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
+It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) to style a `<form>` element based on whether the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
 
 <table class="properties">
   <tbody>
@@ -148,7 +148,7 @@ The following attributes control behavior during form submission.
     The only allowed methods/values are (case insensitive):
 
     - `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/en-US/docs/Web/API/Request/body).
-    - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/en-US/docs/Glossary/Idempotent).
+    - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent).
     - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and throws a submit event on submission without submitting data or clearing the form.
 
     This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
@@ -176,7 +176,7 @@ The following attributes control behavior during form submission.
 <!-- Form which will send a GET request to the current URL -->
 <form method="get">
   <label>Name:
-    <input name="submitted-name" autocomplete="name">
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -184,7 +184,7 @@ The following attributes control behavior during form submission.
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
   <label>Name:
-    <input name="submitted-name" autocomplete="name">
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -192,8 +192,9 @@ The following attributes control behavior during form submission.
 <!-- Form with fieldset, legend, and label -->
 <form method="post">
   <fieldset>
-    <legend>Title</legend>
-    <label><input type="radio" name="radio"> Select me</label>
+    <legend>Do you agree to the terms?</legend>
+    <label><input type="radio" name="radio" value="yes" /> Yes</label>
+    <label><input type="radio" name="radio" value="no" /> No</label>
   </fieldset>
 </form>
 ```

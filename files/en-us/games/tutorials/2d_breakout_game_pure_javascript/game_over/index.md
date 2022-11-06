@@ -77,7 +77,7 @@ if (y + dy < ballRadius) {
 }
 ```
 
-If the ball hits the bottom edge of the Canvas we need to check whether it hits the paddle . if yes, then it bounces off just like you'd expect; if not then the game is over as before.
+If the ball hits the bottom edge of the Canvas we need to check whether it hits the paddle. If so, then it bounces off just like you'd expect; if not, then the game is over as before.
 
 ## Compare your code
 

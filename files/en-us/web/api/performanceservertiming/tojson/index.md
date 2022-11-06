@@ -11,7 +11,8 @@ tags:
   - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
-{{APIRef("Resource Timing API")}}
+
+{{APIRef("Performance API")}}
 
 The **`toJSON()`** method of the
 {{domxref("PerformanceServerTiming")}} interface returns a string that
@@ -19,7 +20,7 @@ is the JSON representation of the {{domxref('PerformanceServerTiming')}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

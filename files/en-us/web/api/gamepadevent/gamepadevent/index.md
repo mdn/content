@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.GamepadEvent.GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadEvent()`** constructor creates a new {{domxref("GamepadEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new GamepadEvent(type, options)
 ```
 

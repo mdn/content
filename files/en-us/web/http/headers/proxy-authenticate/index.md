@@ -9,6 +9,7 @@ tags:
   - Response Header
 browser-compat: http.headers.Proxy-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Proxy-Authenticate`** response header defines the

@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.data
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} element must be used.
 
@@ -87,9 +87,9 @@ The following example displays product names but also associates each name with 
 ```html
 <p>New Products</p>
 <ul>
- <li><data value="398">Mini Ketchup</data></li>
- <li><data value="399">Jumbo Ketchup</data></li>
- <li><data value="400">Mega Jumbo Ketchup</data></li>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
 </ul>
 ```
 

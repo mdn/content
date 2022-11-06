@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.descent
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`descent`** attribute defines the maximum unaccented depth of the font.

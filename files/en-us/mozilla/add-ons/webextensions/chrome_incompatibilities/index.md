@@ -6,6 +6,7 @@ tags:
   - WebExtensions
   - google chrome
 ---
+
 {{AddonSidebar}}
 
 Extensions built with WebExtension APIs are designed to be compatible with Chrome and Opera extensions. As far as possible, extensions written for those browsers should run on Firefox with minimal changes.
@@ -28,7 +29,7 @@ The rest of this page summarizes these and other incompatibilities.
 
 ## JavaScript APIs
 
-### _chrome.\*_ and _browser.\*_ namespace
+### chrome.\* and browser.\* namespace
 
 - **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 
@@ -78,11 +79,11 @@ The rest of this page summarizes these and other incompatibilities.
   );
   ```
 
-### Firefox supports both the *chrome* and *browser* namespaces
+### Firefox supports both the chrome and browser namespaces
 
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome`, using callbacks, as well as `browser`, using promises. This means that many Chrome extensions will just work in Firefox without any changes.
 
-> **Note:** However, this is _not_ part of the WebExtensions standard. and may not be supported by all compliant browsers.
+> **Note:** However, this is _not_ part of the WebExtensions standard and may not be supported by all compliant browsers.
 
 If you choose to write your extension to use `browser` and promises, then Firefox also provides a polyfill that will enable it to run in Chrome: <https://github.com/mozilla/webextension-polyfill>.
 

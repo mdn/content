@@ -14,9 +14,11 @@ tags:
   - WebXR Device API
   - XR
   - XRCompositionLayer
+  - Experimental
 browser-compat: api.XRCompositionLayer
 ---
-{{securecontext_header}}{{APIRef("WebXR Device API")}}
+
+{{securecontext_header}}{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRCompositionLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a base class that defines a set of common properties and behaviors for WebXR layer types. It is not constructable on its own.
 
@@ -32,24 +34,24 @@ Several layer types inherit from `XRCompositionLayer`:
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}}
+- {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}} {{Experimental_Inline}}
   - : A boolean enabling the layer's texture alpha channel.
-- {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}}
+- {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}} {{Experimental_Inline}}
   - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
-- {{domxref("XRCompositionLayer.layout")}} {{ReadOnlyInline}}
+- {{domxref("XRCompositionLayer.layout")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The layout type of the layer.
-- {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}}
+- {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The number of mip levels in the color and texture data for the layer.
-- {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}}
+- {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean signaling that the layer should be re-rendered in the next frame.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
-- {{domxref("XRCompositionLayer.destroy()")}}
+- {{domxref("XRCompositionLayer.destroy()")}} {{Experimental_Inline}}
   - : Deletes the underlying layer attachments.
 
 ## Specifications

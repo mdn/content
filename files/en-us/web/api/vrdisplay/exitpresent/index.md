@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.exitPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops the `VRDisplay` presenting a scene.
@@ -23,7 +24,7 @@ The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops t
 
 ## Syntax
 
-```js
+```js-nolint
 exitPresent()
 ```
 
@@ -82,7 +83,7 @@ if (navigator.getVRDisplays) {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

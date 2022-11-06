@@ -8,9 +8,8 @@ tags:
   - Tutorial
   - WebSockets
 ---
-{{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
+{{DefaultAPISidebar("Websockets API")}}
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
@@ -18,7 +17,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the `System.Net.Sockets` namespace.
 
 > **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
@@ -32,7 +31,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` specifies the IP of the listener, and `port` specifies the port.
 
-> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`_._
+> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`.
 
 Methods:
 
@@ -77,17 +76,17 @@ Properties:
 
 Methods:
 
-- ```cs
+- Writes bytes from buffer, offset and size determine length of message.
+
+  ```cs
   Write(Byte[] buffer, int offset, int size)
   ```
 
-  Writes bytes from buffer, offset and size determine length of message.
+- Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
 
-- ```cs
+  ```cs
   Read(Byte[] buffer, int offset, int size)
   ```
-
-  Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
 
 Let us extend our example.
 

@@ -1,6 +1,7 @@
 ---
 title: grid-row
 slug: Web/CSS/grid-row
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Grid
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.grid-row
 ---
+
 {{CSSRef}}
 
 The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.

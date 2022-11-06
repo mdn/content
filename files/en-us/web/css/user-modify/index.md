@@ -1,6 +1,7 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -12,6 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.user-modify
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`user-modify`** property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.

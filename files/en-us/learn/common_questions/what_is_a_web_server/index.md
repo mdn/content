@@ -6,6 +6,9 @@ tags:
   - Infrastructure
   - needsSchema
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article, we explain what web servers are, how web servers work, and why they are important.
 
 <table>
@@ -19,7 +22,7 @@ In this article, we explain what web servers are, how web servers work, and why 
         >, and
         <a
           href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
-          >understand the difference between a web page, a web site, a web
+          >understand the difference between a web page, a website, a web
           server, and a search engine</a
         >.
       </td>
@@ -94,8 +97,8 @@ On a web server, the HTTP server is responsible for processing and answering inc
 1. Upon receiving a request, an HTTP server first checks if the requested URL matches an existing file.
 2. If so, the web server sends the file content back to the browser. If not, an application server builds the necessary file.
 3. If neither process is possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}.
-    The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.
-    [![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/docs/Web/HTTP/Status/404)
+   The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.
+   [![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/docs/Web/HTTP/Status/404)
 
 ### Static vs. dynamic content
 

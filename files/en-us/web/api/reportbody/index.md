@@ -10,6 +10,7 @@ tags:
   - ReportBody
 browser-compat: api.ReportBody
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} represents the body of a report. Individual report types inherit from this interface, adding specific attributes relevant to the particular report.
@@ -22,7 +23,7 @@ The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} rep
 
 An instance of `ReportBody` is returned as the value of {{domxref("Report.body")}}. The interface has no constructor.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReportBody.toJSON()")}} {{experimental_inline}}
   - : A _serializer_ which returns a JSON representation of the `ReportBody` object.

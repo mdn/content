@@ -1,6 +1,7 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.box-pack
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
@@ -84,7 +86,10 @@ If the packing is set using the element's `pack` attribute, then the style is ig
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+box-pack =
+  start | center | end | justify
+```
 
 ## Examples
 
@@ -113,8 +118,8 @@ div.example {
   -webkit-box-align: center; /* WebKit */
 
   /* Pack children to the bottom of this box */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end; /* Mozilla */
+  -webkit-box-pack: end; /* WebKit */
 }
 
 div.example p {

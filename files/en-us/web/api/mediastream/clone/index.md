@@ -12,6 +12,7 @@ tags:
   - clone
 browser-compat: api.MediaStream.clone
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`clone()`** method of the {{domxref("MediaStream")}}
@@ -22,7 +23,7 @@ contains clones of every {{domxref("MediaStreamTrack")}} contained by the
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

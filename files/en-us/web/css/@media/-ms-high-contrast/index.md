@@ -1,13 +1,15 @@
 ---
-title: '-ms-high-contrast'
+title: "-ms-high-contrast"
 slug: Web/CSS/@media/-ms-high-contrast
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Non-standard
   - Reference
   - media feature
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
@@ -45,7 +47,9 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 ```
 
@@ -53,7 +57,9 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```
 
@@ -87,8 +93,6 @@ Not part of any standard.
 As of Microsoft Edge 18, `-ms-high-contrast: none` is no longer supported. Microsoft Edge versions 18 and higher will be using the [`forced-colors` media feature](/en-US/docs/Web/CSS/@media/forced-colors) instead, but the `forced-colors` media feature specification is still being actively worked on.
 
 The `-ms-high-contrast` media feature works with the {{CSSxRef("-ms-high-contrast-adjust")}} property.
-
-The `-ms-high-contrast` media feature was introduced in Windows 8.
 
 ## See also
 

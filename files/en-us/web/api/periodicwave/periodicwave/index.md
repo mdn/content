@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.PeriodicWave.PeriodicWave
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -18,7 +19,7 @@ The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 
 ## Syntax
 
-```js
+```js-nolint
 new PeriodicWave(context)
 new PeriodicWave(context, options)
 ```

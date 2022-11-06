@@ -1,6 +1,7 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 ---
+
 {{CSSRef}}
 
 The **`font-variant-alternates`** CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
@@ -82,32 +84,38 @@ This property may take one of two forms:
 #### HTML
 
 ```html
-<p>Firefox rocks!</p>
-<p class="variant">Firefox rocks!</p>
+<p> A Fancy Swash</p>
+<p class="variant"> A Fancy Swash</p>
 ```
 
 #### CSS
 
 ```css
-@font-feature-values "Leitura Display Swashes" {
-    @swash { fancy: 1 }
+@font-face {
+  font-family: MonteCarlo;
+  src: url(MonteCarlo-Regular.ttf);
+}
+
+@font-feature-values "MonteCarlo" {
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {
+  font-family: "MonteCarlo";
   font-size: 1.5rem;
 }
 
 .variant {
-  font-family: Leitura Display Swashes;
+  font-feature-settings: "swsh" 1;
   font-variant-alternates: swash(fancy);
 }
 ```
 
-#### Result
-
-> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
-
-{{ EmbedLiveSample('Enabling swash glyphs') }}
+> **Note:** For this example to work you need to load the MonteCarlo font which is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL). Download at <https://github.com/googlefonts/monte-carlo>.
+>
+> More fonts are available in the [Google Font corpus](https://github.com/google/fonts). However, note that fonts loaded from Google Fonts directly (for example, using `@import url("https://fonts.googleapis.com/css2?family=MonteCarlo");`) won't work. Google Fonts hosted fonts seem to strip the swash feature.
 
 ## Specifications
 

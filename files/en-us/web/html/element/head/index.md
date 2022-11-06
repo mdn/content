@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.head
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable information ({{glossary("metadata")}}) about the document, like its [title](/en-US/docs/Web/HTML/Element/title), [scripts](/en-US/docs/Web/HTML/Element/script), and [style sheets](/en-US/docs/Web/HTML/Element/style).
 
@@ -88,8 +88,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Document title</title>
   </head>
 </html>

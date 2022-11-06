@@ -1,6 +1,7 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
+page-type: css-property
 tags:
   - CSS
   - CSS Containment
@@ -13,6 +14,7 @@ tags:
   - Web
 browser-compat: css.properties.content-visibility
 ---
+
 {{CSSRef}}
 
 The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. Basically it enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
@@ -46,11 +48,11 @@ content-visibility: unset;
 
 {{cssinfo}}
 
-## Accessibility
+## Accessibility concerns
 
 Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 
-However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` *will still appear in the accessibility tree*. If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
+However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_. If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
 
 ## Examples
 
@@ -105,4 +107,5 @@ The following example shows that it is possible to manage visibility in script. 
 
 ## See also
 
+- [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)

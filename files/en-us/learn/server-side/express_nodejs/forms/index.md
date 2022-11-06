@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 6: Working with forms'
+title: "Express Tutorial Part 6: Working with forms"
 slug: Learn/Server-side/Express_Nodejs/forms
 tags:
   - Beginner
@@ -11,6 +11,7 @@ tags:
   - Node
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 In this tutorial we'll show you how to work with HTML Forms in Express using Pug. In particular, we'll discuss how to write forms to create, update, and delete documents from the site's database.
@@ -20,17 +21,13 @@ In this tutorial we'll show you how to work with HTML Forms in Express using Pug
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
-          >Express Tutorial Part 5: Displaying library data</a
-        >
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to write forms to get data from users, and update the
-        database with this data.
+        To understand how to write forms to get data from users, and update the database with this data.
       </td>
     </tr>
   </tbody>
@@ -56,9 +53,13 @@ The form is defined in HTML as a collection of elements inside `<form>…</form>
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -84,7 +85,7 @@ As shown in the diagram above, the main things that form handling code needs to 
 
 1. Display the default form the first time it is requested by the user.
 
-    - The form may contain blank fields (e.g. if you're creating a new record), or it may be pre-populated with initial values (e.g. if you are changing a record, or have useful default initial values).
+   - The form may contain blank fields (e.g. if you're creating a new record), or it may be pre-populated with initial values (e.g. if you are changing a record, or have useful default initial values).
 
 2. Receive data submitted by the user, usually in an HTTP `POST` request.
 3. Validate and sanitize the data.
@@ -120,7 +121,7 @@ npm install express-validator
 To use the validator in our controllers, we specify the particular functions we want to import from the [express-validator](https://www.npmjs.com/package/express-validator) module, as shown below:
 
 ```js
-const { body,validationResult } = require('express-validator');
+const { body, validationResult } = require("express-validator");
 ```
 
 There are many functions available, allowing you to check and sanitize data from request parameters, body, headers, cookies, etc., or all of them at once. For this tutorial, we'll primarily be using `body` and `validationResult` (as "required" above).
@@ -134,10 +135,7 @@ The functions are defined as below:
   ```js
   [
     // …
-    body('name', 'Empty name')
-      .trim()
-      .isLength({ min: 1 })
-      .escape(),
+    body("name", "Empty name").trim().isLength({ min: 1 }).escape(),
     // …
   ];
   ```
@@ -147,7 +145,7 @@ The functions are defined as below:
   ```js
   [
     // …
-    body('age', 'Invalid age')
+    body("age", "Invalid age")
       .optional({ checkFalsy: true })
       .isISO8601()
       .toDate(),
@@ -160,12 +158,12 @@ The functions are defined as below:
   ```js
   [
     // …
-    body('name')
+    body("name")
       .trim()
       .isLength({ min: 1 })
-      .withMessage('Name empty.')
+      .withMessage("Name empty.")
       .isAlpha()
-      .withMessage('Name must be alphabet letters.'),
+      .withMessage("Name must be alphabet letters."),
     // …
   ];
   ```
@@ -174,16 +172,16 @@ The functions are defined as below:
 
   ```js
   (req, res, next) => {
-      // Extract the validation errors from a request.
-      const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-      if (!errors.isEmpty()) {
-        // There are errors. Render form again with sanitized values/errors messages.
-        // Error messages can be returned in an array using `errors.array()`.
-      } else {
-        // Data from form is valid.
-      }
-  }
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      // Error messages can be returned in an array using `errors.array()`.
+    } else {
+      // Data from form is valid.
+    }
+  };
   ```
 
   We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Validation Result API](https://express-validator.github.io/docs/validation-result-api.html) for more information.
@@ -214,10 +212,10 @@ We have already created the routes for all our model's create pages in **/routes
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 // POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 ```
 
 ## Express forms subarticles

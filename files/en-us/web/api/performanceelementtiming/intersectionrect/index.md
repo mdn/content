@@ -11,7 +11,8 @@ tags:
   - Experimental
 browser-compat: api.PerformanceElementTiming.intersectionRect
 ---
-{{APIRef("Element Timing")}}{{SeeCompatTable}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`intersectionRect`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the rectangle of the element within the viewport.
 
@@ -26,7 +27,11 @@ For display images this is the display rectangle of the image within the viewpor
 In this example calling `entry.intersectionRect` returns a {{domxref("DOMRectReadOnly")}} object with the display rectangle of the image.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

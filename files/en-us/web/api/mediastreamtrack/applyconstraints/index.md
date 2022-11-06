@@ -12,6 +12,7 @@ tags:
   - applyConstraints
 browser-compat: api.MediaStreamTrack.applyConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The
@@ -25,12 +26,12 @@ Constraints can be used to ensure that the media meets certain guidelines you pr
 For example, you may prefer high-density video but require that the frame rate be a
 little low to help keep the data rate low enough not overtax the network. Constraints
 can also specify ideal and/or acceptable sizes or ranges of sizes.
-See [Applying constraints](/en-US/docs/Web/API/Media_Streams_API/Constraints#applying_constraints)
-in [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for more information on how to apply your preferred constraints.
+See [Applying constraints](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#applying_constraints)
+in [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for more information on how to apply your preferred constraints.
 
 ## Syntax
 
-```js
+```js-nolint
 applyConstraints()
 applyConstraints(constraints)
 ```
@@ -62,7 +63,7 @@ specifies that the page or web app needs a width between 640 and 1280 and a heig
 between 480 and 720, with the later number in each pair being preferred. The advanced
 property further specifies that an image size of 1920 by 1280 is the preferred or an
 aspect ratio of 1.333 if that is not available. Note that these constraints also
-illustrate what the spec refers to as a *backoff strategy*.
+illustrate what the spec refers to as a _backoff strategy_.
 
 ```js
 const constraints = {

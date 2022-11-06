@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleSheet.insertRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet.insertRule()`**
@@ -22,7 +23,7 @@ method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current s
 
 ## Syntax
 
-```js
+```js-nolint
 insertRule(rule)
 insertRule(rule, index)
 ```
@@ -133,19 +134,6 @@ function addStylesheetRules (rules) {
 ## Browser compatibility
 
 {{Compat}}
-
-### Legacy browser support
-
-To support Internet Explorer 8 and below, use:
-`addRule(selector, rule [, index]);`. Example:
-`addRule('pre', 'font: 14px verdana'); // add rule at end`
-
-Also note the non-standard
-[`removeRule()`](https://www.quirksmode.org/dom/w3c_css.html#change)
-and
-[`.rules`](https://www.quirksmode.org/dom/w3c_css.html#access)
-instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
-{{domxref("CSSStyleSheet",".cssRules")}}, respectively.
 
 ## See also
 

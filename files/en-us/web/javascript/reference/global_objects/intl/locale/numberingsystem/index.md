@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.numberingSystem
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.numberingSystem`** property is an accessor property that returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) used by the locale.

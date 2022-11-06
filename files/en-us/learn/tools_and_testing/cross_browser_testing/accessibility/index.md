@@ -15,6 +15,7 @@ tags:
   - cross browser
   - keyboard
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Next we turn our attention to accessibility, providing information on common problems, how to do simple testing, and how to make use of auditing/automation tools for finding accessibility issues.
@@ -81,18 +82,20 @@ The most important quick win in semantic HTML is to use a structure of headings 
 
 ```html example-bad
 <font size="7">My heading</font>
-<br><br>
+<br /><br />
 This is the first section of my document.
-<br><br>
+<br /><br />
 I'll add another paragraph here too.
-<br><br>
+<br /><br />
 <font size="5">My subheading</font>
-<br><br>
-This is the first subsection of my document. I'd love people to be able to find this content!
-<br><br>
+<br /><br />
+This is the first subsection of my document. I'd love people to be able to find
+this content!
+<br /><br />
 <font size="5">My 2nd subheading</font>
-<br><br>
-This is the second subsection of my content. I think it is more interesting than the last one.
+<br /><br />
+This is the second subsection of my content. I think it is more interesting than
+the last one.
 ```
 
 ```html example-good
@@ -104,11 +107,17 @@ This is the second subsection of my content. I think it is more interesting than
 
 <h2>My subheading</h2>
 
-<p>This is the first subsection of my document. I'd love people to be able to find this content!</p>
+<p>
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
+</p>
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content. I think it is more interesting than the last one.</p>
+<p>
+  This is the second subsection of my content. I think it is more interesting
+  than the last one.
+</p>
 ```
 
 In addition, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with.
@@ -126,7 +135,7 @@ Certain HTML features can be selected using only the keyboard — this is defaul
 
 You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
 
-![](button-focused-unfocused.png)
+![A screenshot of three buttons demonstrating sample of the default behavior of interactive native elements. The third button is highlighted by a blue border to indicate its focus state.](button-focused-unfocused.png)
 
 > **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
@@ -144,8 +153,14 @@ This example highlights the importance of using the correct semantic element for
 Another tip — as shown in our example, you can control how your focusable elements look when focused, using the [:focus](/en-US/docs/Web/CSS/:focus) pseudo-class. It is a good idea to double up focus and hover styles, so your users get that visual clue that a control will do something when activated, whether they are using mouse or keyboard:
 
 ```css
-a:hover, input:hover, button:hover, select:hover,
-a:focus, input:focus, button:focus, select:focus {
+a:hover,
+input:hover,
+button:hover,
+select:hover,
+a:focus,
+input:focus,
+button:focus,
+select:focus {
   font-weight: bold;
 }
 ```
@@ -160,15 +175,16 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 2. Create keyboard shortcuts via JavaScript, so functionality is activated when you press certain keys on the keyboard. See [Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) for some game-related examples that can be adapted for any purpose.
 3. Use some interesting tactics to fake button behavior. Take for example our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"` (see WebAIM's [tabindex article](https://webaim.org/techniques/keyboard/tabindex) for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
 
-    ```js
-    document.onkeydown = function(e) {
-      if (e.keyCode === 13) { // The Enter/Return key
-        document.activeElement.onclick(e);
-      }
-    };
-    ```
+   ```js
+   document.onkeydown = (e) => {
+     if (e.keyCode === 13) {
+       // The Enter/Return key
+       document.activeElement.onclick(e);
+     }
+   };
+   ```
 
-    Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
+   Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
 
 > **Note:** This technique will only work if you set your original event handlers via event handler properties (e.g. `onclick`). `addEventListener` won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.
 
@@ -220,7 +236,7 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
-![](20191022144107.png)
+![A screenshot demonstrating an example of accessible hiding and showing content in tabs. The example has three tabs namely Tab 1, Tab 2 and Tab 3. Tab 1 is currently focused and activated to display content.](20191022144107.png)
 
 Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.
 
@@ -230,7 +246,7 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 
 ### JavaScript
 
-JavaScript has the same kind of problems as CSS with respect to accessibility — it can be disastrous for accessibility if used badly, or overused. We've already hinted at some accessibility problems related to JavaScript, mainly in the area of semantic HTML — you should always use appropriate semantic HTML to implement functionality wherever it is available, for example use links and buttons as appropriate. Don't use `<div>` elements with JavaScript code to fake functionality if at all possible — it is error prone, and more work than using the free functionality HTML gives you.
+JavaScript has the same kind of problems as CSS with respect to accessibility — it can be disastrous for accessibility if used badly, or overused. We've already hinted at some accessibility problems related to JavaScript, mainly in the area of semantic HTML — you should always use appropriate semantic HTML to implement functionality wherever it is available, for example use links and buttons as appropriate. Don't use `<div>` elements with JavaScript code to fake functionality if at all possible — it is error-prone, and more work than using the free functionality HTML gives you.
 
 #### Simple functionality
 
@@ -241,7 +257,7 @@ Generally simple functionality should work with just the HTML in place — JavaS
 
 > **Note:** WebAIM's [Accessible JavaScript](https://webaim.org/techniques/javascript/) provides some useful further details about considerations for accessible JavaScript.
 
-More complex JavaScript implementations can create issues with accessibility — you need to do what you can. For example, it would be unreasonable to expect you to make a complex 3D game written using [WebGL](/en-US/docs/Learn/WebGL) 100% accessible to a blind person, but you could implement [keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.
+More complex JavaScript implementations can create issues with accessibility — you need to do what you can. For example, it would be unreasonable to expect you to make a complex 3D game written using [WebGL](/en-US/docs/Glossary/WebGL) 100% accessible to a blind person, but you could implement [keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.
 
 #### Complex functionality
 
@@ -303,7 +319,7 @@ Let's look at an example, using Wave.
 
 These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) example. We got the following results:
 
-![](axe-screenshot.png)
+![A screenshot of accessibility issues identified by the Axe tool.](axe-screenshot.png)
 
 aXe is also installable using `npm`, and can be integrated with task runners like [Grunt](https://gruntjs.com/) and [Gulp](https://gulpjs.com/), automation frameworks like [Selenium](https://www.selenium.dev/) and [Cucumber](https://cucumber.io/), unit testing frameworks like [Jasmine](https://jasmine.github.io/), and more besides (again, see the [main aXe page](https://www.deque.com/axe/) for details).
 
@@ -315,7 +331,7 @@ It is definitely worth testing with a screen reader to get used to how severely 
 - Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows, and macOS), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS and iOS), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
-Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually. screen readers tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all of the details — saying that, they all work in basically the same sort of way.
+Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually, screen readers tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all the details — saying that, they all work in basically the same sort of way.
 
 Let's go through some tests with a couple of different screen readers to give you a general idea of how they work and how to test with them.
 
@@ -331,7 +347,7 @@ To turn it on, press Cmd + F5. If you've not used VO before, you will be given a
 
 When VO is on, the display will look mostly the same, but you'll see a black box at the bottom left of the screen that contains information on what VO currently has selected. The current selection will also be highlighted, with a black border — this highlight is known as the **VO cursor**.
 
-![](voiceover.png)
+![A sample screenshot demonstrating accessibility testing using VoiceOver on the MDN homepage. The bottom left of the image is a highlight of the information selected on the webpage.](voiceover.png)
 
 To use VO, you will make a lot of use of the "VO modifier" — this is a key or key combination that you need to press in addition to the actual VO keyboard shortcuts to get them to work. Using a modifier like this is common with screen readers, to enable them to keep their commands from clashing with other commands. In the case of VO, the modifier can either be CapsLock, or Ctrl + Option.
 
@@ -452,8 +468,8 @@ This seems like a lot of commands, but it isn't so bad when you get used to it, 
 NVDA is Windows-only, and you'll need to install it.
 
 1. Download it from [nvaccess.org](https://www.nvaccess.org/). You can choose whether to make a donation or download it for free; you'll also need to give them your e-mail address before you can download it.
-2. Once downloaded, install it — you double click the installer, accept the license and follow the prompts.
-3. To start NVDA, double click on the program file/shortcut, or use the keyboard shortcut Ctrl + Alt + N. You'll see the NVDA welcome dialog when you start it. Here you can choose from a couple of options, then press the _OK_ button to get going.
+2. Once downloaded, install it — you double-click the installer, accept the license and follow the prompts.
+3. To start NVDA, double-click on the program file/shortcut, or use the keyboard shortcut Ctrl + Alt + N. You'll see the NVDA welcome dialog when you start it. Here you can choose from a couple of options, then press the _OK_ button to get going.
 
 NVDA will now be active on your computer.
 

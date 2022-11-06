@@ -13,6 +13,7 @@ tags:
   - utterance
 browser-compat: api.SpeechSynthesisEvent.utterance
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`utterance`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.

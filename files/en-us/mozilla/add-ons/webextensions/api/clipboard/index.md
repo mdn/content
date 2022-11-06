@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.clipboard
 ---
+
 {{AddonSidebar}}
 
 The WebExtension `clipboard` API (which is different from the [standard Clipboard API](/en-US/docs/Web/API/Clipboard_API)) enables an extension to copy items to the system clipboard. Currently the WebExtension `clipboard` API only supports copying images, but it's intended to support copying text and HTML in the future.

@@ -21,10 +21,11 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.hspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The
-*obsolete* **`hspace`** property of the
+_obsolete_ **`hspace`** property of the
 {{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty
 space to leave empty on the left and right sides of the {{HTMLElement("img")}} element
 when laying out the page.

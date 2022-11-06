@@ -1,6 +1,7 @@
 ---
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -10,9 +11,10 @@ tags:
   - Deprecated
 browser-compat: css.properties.box-ordinal-group
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 The **`box-ordinal-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to an ordinal group.
 
@@ -39,7 +41,10 @@ The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;int
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+box-ordinal-group =
+  <integer>
+```
 
 ## Examples
 
@@ -73,6 +78,7 @@ Not part of any standard.
 
 ## See also
 
-- {{CSSxRef("box-flex")}}
-- {{CSSxRef("box-flex-group")}}
-- {{CSSxRef("box-pack")}}
+- {{CSSxRef("flex")}}
+- {{CSSxRef("flex-basis")}}
+- {{CSSxRef("flex-grow")}}
+- {{CSSxRef("flex-shrink")}}

@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.escape
 ---
+
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
 > **Warning:** Although `escape()` is not
@@ -37,7 +38,7 @@ sequence.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 
@@ -65,12 +66,12 @@ is used.
 ### Using escape
 
 ```js
-escape('abc123');     // "abc123"
-escape('äöü');        // "%E4%F6%FC"
-escape('ć');          // "%u0107"
+escape("abc123"); // "abc123"
+escape("äöü"); // "%E4%F6%FC"
+escape("ć"); // "%u0107"
 
 // special characters
-escape('@*_+-./');    // "@*_+-./"
+escape("@*_+-./"); // "@*_+-./"
 ```
 
 ## Specifications

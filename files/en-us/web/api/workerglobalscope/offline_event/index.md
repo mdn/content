@@ -11,6 +11,7 @@ tags:
   - offline
 browser-compat: api.WorkerGlobalScope.offline_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`offline`** event of the {{domxref("WorkerGlobalScope")}} fires when the device loses connection to the internet.

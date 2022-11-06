@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.getFrameData
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getFrameData()`** method of the {{domxref("VRDisplay")}} interface accepts a {{domxref("VRFrameData")}} object and populates it with the information required to render the current frame.
@@ -25,7 +26,7 @@ This includes the {{domxref("VRPose")}} and view and projection matrices for the
 
 ## Syntax
 
-```js
+```js-nolint
 getFrameData(frameData)
 ```
 
@@ -102,7 +103,7 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

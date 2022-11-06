@@ -12,7 +12,10 @@ tags:
   - management
 browser-compat: webextensions.api.management.install
 ---
-{{AddonSidebar()}}Installs and enables a theme extension from the given URL.
+
+{{AddonSidebar()}}
+
+Installs and enables a theme extension from the given URL.
 
 This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and will only work with signed themes.
 
@@ -20,7 +23,7 @@ This is an asynchronous function that returns a [Promise](/en-US/docs/Web/JavaSc
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.install(options)
 ```
 

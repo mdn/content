@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.close
 ---
+
 {{APIRef}}
 
 The **`Window.close()`** method closes the current window, or
@@ -27,7 +28,7 @@ objects returned by
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

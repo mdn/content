@@ -1,6 +1,7 @@
 ---
 title: box-direction
 slug: Web/CSS/box-direction
+page-type: css-property
 tags:
   - CSS
   - Non-standard
@@ -9,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.box-direction
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. The `-moz-box-direction` will only be used for XUL while the previous standard `box-direction` has been replaced by `flex-direction`. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
@@ -56,7 +58,10 @@ If the direction is set using the element's `dir` attribute, then the style is i
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-direction =
+  normal | reverse | inherit
+```
 
 ## Examples
 
@@ -65,9 +70,9 @@ If the direction is set using the element's `dir` attribute, then the style is i
 ```css
 .example {
   /* bottom-to-top layout */
-  -moz-box-direction: reverse;      /* Mozilla */
-  -webkit-box-direction: reverse;   /* WebKit */
-  box-direction: reverse;           /* As specified */
+  -moz-box-direction: reverse; /* Mozilla */
+  -webkit-box-direction: reverse; /* WebKit */
+  box-direction: reverse; /* As specified */
 }
 ```
 

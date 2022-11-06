@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.clip
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +23,7 @@ In the image below, the red outline represents a clipping region shaped like a s
 Only those parts of the checkerboard pattern that are within the clipping region get
 drawn.
 
-![](canvas_clipping_path.png)
+![Star-shaped clipping region](canvas_clipping_path.png)
 
 > **Note:** Be aware that the clipping region is only constructed from
 > shapes added to the path. It doesn't work with shape primitives drawn directly to the
@@ -32,7 +33,7 @@ drawn.
 
 ## Syntax
 
-```js
+```js-nolint
 clip()
 clip(path)
 clip(fillRule)
@@ -48,7 +49,7 @@ clip(path, fillRule)
 
     - `nonzero`
       - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
+        Default rule.
     - `evenodd`
       - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 

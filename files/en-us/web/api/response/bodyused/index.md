@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.bodyUsed
 ---
+
 {{APIRef("Fetch")}}
 
 The **`bodyUsed`** read-only property of the {{domxref("Response")}} interface is a boolean value that indicates whether the body has been read yet.
@@ -32,7 +33,9 @@ This returns `false` before and `true` afterwards, as at that point the body has
 ### HTML Content
 
 ```html
-<img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png">
+<img
+  class="my-image"
+  src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png" />
 ```
 
 ### JavaScript Content

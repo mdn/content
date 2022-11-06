@@ -1,6 +1,7 @@
 ---
 title: oklch()
 slug: Web/CSS/color_value/oklch
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -12,6 +13,7 @@ tags:
   - Experimental
 browser-compat: css.types.color.oklch
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`oklch()`** functional notation expresses a given color in the OKLCH color space. It has the same L axis as {{cssxref("color_value/oklab","oklab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
@@ -47,4 +49,5 @@ oklch(59.69% 0.156 49.77 / .5)
 ## See also
 
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
+- [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 - [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklch()` and {{cssxref("color_value/oklab",'oklab()')}} colors.

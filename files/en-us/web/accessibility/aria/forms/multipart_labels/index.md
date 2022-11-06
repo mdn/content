@@ -1,5 +1,5 @@
 ---
-title: 'Multipart labels: Using ARIA for labels with embedded fields inside them'
+title: "Multipart labels: Using ARIA for labels with embedded fields inside them"
 slug: Web/Accessibility/ARIA/forms/Multipart_labels
 tags:
   - ARIA
@@ -18,6 +18,35 @@ tags:
   - trouble shoot
   - troubleshoot
 ---
+
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
+    <li class="toggle">
+      <details open><summary>Forms</summary>
+        <ol>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms/Multipart_labels">Multipart labels</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
+    <li class="toggle">
+      <details><summary>ARIA states and properties</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details><summary>WAI-ARIA Roles</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
+      </details>
+    </li>
+  </ol>
+</section>
+
 ## Problem
 
 You have a form where you ask your user a question, but the answer is mentioned in the question itself. A classic example we all know from our browser settings is the setting "Delete history after x days". "Delete history after" is to the left of the textbox, x is the number, for example 21, and the word "days" follows the textbox, forming a sentence that is easy to understand.
@@ -39,11 +68,17 @@ body {
 ```
 
 ```html
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" type="checkbox" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  type="checkbox" />
 
 <span id="labelShutdown">Shut down computer after</span>
 
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" id="shutdownTime" type="text" value="10" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  id="shutdownTime"
+  type="text"
+  value="10" />
 
 <span id="shutdownUnit"> minutes</span>
 ```

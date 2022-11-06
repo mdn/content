@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.calendar
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.calendar`** property is an accessor property which returns the type of calendar used in the `Locale`.

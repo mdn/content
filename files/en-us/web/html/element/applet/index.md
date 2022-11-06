@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.applet
 ---
 
-{{HTMLRef}}{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The obsolete **HTML Applet Element** (**`<applet>`**) embeds a Java applet into the document; this element has been deprecated in favor of {{HTMLElement("object")}}.
 
@@ -50,7 +50,7 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, both the starting and ending tag are mandatory.</td>
+      <td>None; both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -106,8 +106,13 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
 ### HTML
 
 ```html
-<applet code="game.class" align="left" archive="game.zip" height="250" width="350">
-  <param name="difficulty" value="easy">
+<applet
+  code="game.class"
+  align="left"
+  archive="game.zip"
+  height="250"
+  width="350">
+  <param name="difficulty" value="easy" />
   <p>Sorry, you need Java to play this game.</p>
 </applet>
 ```

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.pointer-events
 ---
+
 {{SVGRef}}
 
 The **`pointer-events`** attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.
@@ -41,7 +42,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -52,8 +57,7 @@ html,body,svg { height:100% }
   to click outside the circle
   -->
   <rect x="0" y="0" height="10" width="10" fill="black" />
-  <circle cx="5" cy="5" r="4" fill="white"
-          pointer-events="visiblePainted" />
+  <circle cx="5" cy="5" r="4" fill="white" pointer-events="visiblePainted" />
 
   <!--
   The circle below will never catch a mouse event.
@@ -61,23 +65,22 @@ html,body,svg { height:100% }
   are clicking on the circle or the rect itself
   -->
   <rect x="10" y="0" height="10" width="10" fill="black" />
-  <circle cx="15" cy="5" r="4" fill="white"
-          pointer-events="none" />
+  <circle cx="15" cy="5" r="4" fill="white" pointer-events="none" />
 </svg>
 ```
 
 ```js
-window.addEventListener('mouseup', (e) => {
+window.addEventListener("mouseup", (e) => {
   // Let's pick a random color between #000000 and #FFFFFF
-  const color = Math.round(Math.random() * 0xFFFFFF);
+  const color = Math.round(Math.random() * 0xffffff);
 
   // Let's format the color to fit CSS requirements
-  const fill = `#${color.toString(16).padStart(6, '0')}`;
+  const fill = `#${color.toString(16).padStart(6, "0")}`;
 
   // Let's apply our color in the
   // element we actually clicked on
   e.target.style.fill = fill;
-})
+});
 ```
 
 {{EmbedLiveSample("Example", '100%', 150)}}

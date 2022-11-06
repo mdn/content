@@ -10,6 +10,7 @@ tags:
   - touch
 browser-compat: api.Touch.pageX
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`Touch.pageX`** read-only property returns the X

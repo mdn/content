@@ -1,6 +1,7 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.only-of-type
 ---
+
 {{CSSRef}}
 
 The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has no siblings of the same type.
@@ -35,7 +37,8 @@ The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) r
   <div>I am `div` #1.</div>
   <p>I am the only `p` among my siblings.</p>
   <div>I am `div` #2.</div>
-  <div>I am `div` #3.
+  <div>
+    I am `div` #3.
     <i>I am the only `i` child.</i>
     <em>I am `em` #1.</em>
     <em>I am `em` #2.</em>

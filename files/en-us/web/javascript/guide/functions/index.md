@@ -6,8 +6,9 @@ tags:
   - Functions
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
 Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
@@ -103,7 +104,7 @@ Function expressions are convenient when passing a function as an argument to an
 
 ```js
 function map(f, a) {
-  const result = [];
+  const result = new Array(a.length);
   for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
   }
@@ -115,7 +116,7 @@ In the following code, the function receives a function defined by a function ex
 
 ```js
 function map(f, a) {
-  const result = [];
+  const result = new Array(a.length);
   for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
   }
@@ -160,28 +161,7 @@ square(5);
 
 The preceding statement calls the function with an argument of `5`. The function executes its statements and returns the value `25`.
 
-Functions must be _in scope_ when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:
-
-```js
-console.log(square(5));
-// …
-function square(n) {
-  return n * n;
-}
-```
-
-The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).
-
-> **Note:** This works only when defining the function using the above syntax (i.e., `function funcName(){}`). The code below will not work.
->
-> This means that function hoisting only works with function _declarations_—not with function _expressions_.
->
-> ```js example-bad
-> console.log(square); // ReferenceError: Cannot access 'square' before initialization
-> const square = function (n) {
->   return n * n;
-> }
-> ```
+Functions must be _in scope_ when they are called, but the function declaration can be [hoisted](#function_hoisting) (appear below the call in the code). The scope of a function declaration is the function in which it is declared (or the entire program, if it is declared at the top level).
 
 The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The `showProps()` function (defined in [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)) is an example of a function that takes an object as an argument.
 
@@ -209,7 +189,39 @@ const e = factorial(5); // e gets the value 120
 
 There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
 
-It turns out that _functions are themselves objects_—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.
+It turns out that _functions are themselves objects_ — and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) The [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [`apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) methods can be used to achieve this goal.
+
+### Function hoisting
+
+Consider the example below:
+
+```js
+console.log(square(5)); // 25
+
+function square(n) {
+  return n * n;
+}
+```
+
+This code runs without any error, despite the `square()` function being called before it's declared. This is because the JavaScript interpreter hoists the entire function declaration to the top of the current scope, so the code above is equivalent to:
+
+```js
+// All function declarations are effectively at the top of the scope
+function square(n) {
+  return n * n;
+}
+
+console.log(square(5)); // 25
+```
+
+Function hoisting only works with function _declarations_ — not with function _expressions_. The code below will not work.
+
+```js example-bad
+console.log(square); // ReferenceError: Cannot access 'square' before initialization
+const square = function (n) {
+  return n * n;
+}
+```
 
 ## Function scope
 
@@ -326,8 +338,7 @@ function foo(i) {
 }
 foo(3);
 
-// Output:
-
+// Logs:
 // begin: 3
 // begin: 2
 // begin: 1
@@ -407,7 +418,7 @@ function A(x) {
   }
   B(2);
 }
-A(1); // logs 6 (1 + 2 + 3)
+A(1); // Logs 6 (which is 1 + 2 + 3)
 ```
 
 In this example, `C` accesses `B`'s `y` and `A`'s `x`.
@@ -638,11 +649,11 @@ const a = [
 
 const a2 = a.map(function(s) { return s.length; });
 
-console.log(a2); // logs [8, 6, 7, 9]
+console.log(a2); // [8, 6, 7, 9]
 
 const a3 = a.map((s) => s.length);
 
-console.log(a3); // logs [8, 6, 7, 9]
+console.log(a3); // [8, 6, 7, 9]
 ```
 
 ### No separate this

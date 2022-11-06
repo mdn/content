@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.usbVersionMinor
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`usbVersionMinor`** read only property of the

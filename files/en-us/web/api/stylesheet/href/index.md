@@ -1,5 +1,5 @@
 ---
-title: Stylesheet.href
+title: StyleSheet.href
 slug: Web/API/StyleSheet/href
 page-type: web-api-instance-property
 tags:
@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.href
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`href`** property of the {{domxref("StyleSheet")}}
@@ -25,21 +26,21 @@ On a local machine:
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>href example</title>
-  <link rel="styleSheet" href="example.css" />
-  <script>
-  function sref() {
-    alert(document.styleSheets[0].href);
-  }
-  </script>
-</head>
-<body>
-  <div class="thunder">Thunder</div>
-  <button onclick="sref()">ss</button>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>href example</title>
+    <link rel="styleSheet" href="example.css" />
+    <script>
+      function sref() {
+        alert(document.styleSheets[0].href);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="thunder">Thunder</div>
+    <button onclick="sref()">ss</button>
+  </body>
 </html>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: definition role'
+title: "ARIA: definition role"
 slug: Web/Accessibility/ARIA/Roles/definition_role
 tags:
   - Accessibility
@@ -18,13 +18,24 @@ The `definition` ARIA role indicates the element is a definition of a term or co
 The `definition` ARIA role can be included an element that is a definition of a term or concept, similar to the native {{HTMLElement('dfn')}} element. To associate the definition with the `term` being defined, and to provide an accessible name, reference the term being defined with `role="term"`, using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
 ```html
-<p><span role="term">Mansplaining</span>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. </p>
+<p>
+  <span role="term">Mansplaining</span>,
+  <span role="definition">a portmanteau of "man" and "explain",
+    is the patronizing act of explaining without being asked to do so,
+    to someone already learned on the topic, often
+    after someone has already explained it</span>.
+</p>
 ```
 
-> **Note:** Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available**
+> **Note:** Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available.**
 
 ```html
-<p><dfn>Mansplaining</dfn>, a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it. </p>
+<p>
+  <dfn>Mansplaining</dfn>, a portmanteau of "man" and
+  "explain", is the patronizing act of explaining without
+  being asked to do so, to someone already learned on the
+  topic, often after someone has already explained it.
+</p>
 ```
 
 ## Specifications
@@ -43,6 +54,6 @@ The `definition` ARIA role can be included an element that is a definition of a 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

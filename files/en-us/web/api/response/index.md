@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.
@@ -22,7 +23,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.Response","Response()")}}
   - : Creates a new `Response` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("Response.body")}} {{ReadOnlyInline}}
   - : A {{domxref("ReadableStream")}} of the body contents.
@@ -31,7 +32,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.headers")}} {{ReadOnlyInline}}
   - : The {{domxref("Headers")}} object associated with the response.
 - {{domxref("Response.ok")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the response was successful (status in the range `200`–`299`) or not.
+  - : A boolean indicating whether the response was successful (status in the range `200` – `299`) or not.
 - {{domxref("Response.redirected")}} {{ReadOnlyInline}}
   - : Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).
 - {{domxref("Response.status")}} {{ReadOnlyInline}}
@@ -45,7 +46,14 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.url")}} {{ReadOnlyInline}}
   - : The URL of the response.
 
-## Methods
+## Static methods
+
+- {{domxref("Response.error()")}}
+  - : Returns a new `Response` object associated with a network error.
+- {{domxref("Response.redirect()")}}
+  - : Creates a new response with a different URL.
+
+## Instance methods
 
 - {{domxref("Response.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.
@@ -53,14 +61,10 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.
 - {{domxref("Response.clone()")}}
   - : Creates a clone of a `Response` object.
-- {{domxref("Response.error()")}}
-  - : Returns a new `Response` object associated with a network error.
 - {{domxref("Response.formData()")}}
   - : Returns a promise that resolves with a {{domxref("FormData")}} representation of the response body.
 - {{domxref("Response.json()")}}
   - : Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.
-- {{domxref("Response.redirect()")}}
-  - : Creates a new response with a different URL.
 - {{domxref("Response.text()")}}
   - : Returns a promise that resolves with a text representation of the response body.
 
@@ -74,13 +78,13 @@ The `fetch()` call returns a promise, which resolves to the `Response` object as
 You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type.
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg')
-.then((response) => response.blob())
-.then((blob) => {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then((response) => response.blob())
+  .then((blob) => {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 You can also use the {{domxref("Response.Response", "Response()")}} constructor to create your own custom `Response` object:
@@ -96,14 +100,14 @@ Here we call a PHP program file that generates a JSON string, displaying the res
 ```js
 // Function to do an Ajax call
 const doAjax = async () => {
-  const response = await fetch('Ajax.php'); // Generate the Response object
+  const response = await fetch("Ajax.php"); // Generate the Response object
   if (response.ok) {
     const jsonValue = await response.json(); // Get JSON value from the response body
     return Promise.resolve(jsonValue);
   } else {
-    return Promise.reject('*** PHP file not found');
+    return Promise.reject("*** PHP file not found");
   }
-}
+};
 
 // Call the function and output value or error message to console
 doAjax().then(console.log).catch(console.log);

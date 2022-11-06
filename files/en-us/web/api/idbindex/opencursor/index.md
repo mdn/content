@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBIndex.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the {{domxref("IDBIndex")}}
@@ -29,7 +30,7 @@ If the key range is not specified or is null, then the range includes all the re
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(range)
 openCursor(range, direction)
@@ -120,4 +121,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

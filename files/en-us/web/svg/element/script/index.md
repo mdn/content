@@ -7,29 +7,42 @@ tags:
   - SVG
 browser-compat: svg.elements.script
 ---
+
+{{SVGRef}}
+
 The SVG `script` element allows to add scripts to an SVG document.
 
 > **Note:** While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
 
 ## Example
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+```html-nolint
+Click the circle to change colors.
+<svg viewBox="0 0 10 10" height="120px" width="120px" xmlns="http://www.w3.org/2000/svg">
   <script>
-  // <![CDATA[
-  window.addEventListener('DOMContentLoaded', () => {
-    function getColor () {
-      const R = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      const G = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      const B = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      return `#${R}${G}${B}`
-    }
+    // <![CDATA[
+    window.addEventListener("DOMContentLoaded", () => {
+      function getColor() {
+        const R = Math.round(Math.random() * 255)
+          .toString(16)
+          .padStart(2, "0");
 
-    document.querySelector('circle').addEventListener('click', (e) => {
-      e.target.style.fill = getColor()
-    })
-  })
-  // ]]>
+        const G = Math.round(Math.random() * 255)
+          .toString(16)
+          .padStart(2, "0");
+
+        const B = Math.round(Math.random() * 255)
+          .toString(16)
+          .padStart(2, "0");
+
+        return `#${R}${G}${B}`;
+      }
+
+      document.querySelector("circle").addEventListener("click", (e) => {
+        e.target.style.fill = getColor();
+      });
+    });
+    // ]]>
   </script>
 
   <circle cx="5" cy="5" r="4" />
@@ -77,5 +90,3 @@ The SVG `script` element allows to add scripts to an SVG document.
 ## See also
 
 - [`script` element in HTML](/en-US/docs/Web/HTML/Element/script)
-
-{{SVGRef}}

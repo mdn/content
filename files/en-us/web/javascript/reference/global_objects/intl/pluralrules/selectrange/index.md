@@ -1,5 +1,5 @@
 ---
-title: Intl.PluralRules.selectRange()
+title: Intl.PluralRules.prototype.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 tags:
   - Internationalization
@@ -14,13 +14,14 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 selectRange(startRange, endRange)
 ```
 
@@ -38,11 +39,9 @@ This function selects a pluralization category according to the locale and forma
 ### Using selectRange()
 
 ```js
- new Intl.PluralRules('sl').selectRange(102, 201);
-// → 'few'
+new Intl.PluralRules('sl').selectRange(102, 201); // 'few'
 
- new Intl.PluralRules('pt').selectRange(102, 102);
-// → 'other'
+new Intl.PluralRules('pt').selectRange(102, 102); // 'other'
 ```
 
 ## Specifications

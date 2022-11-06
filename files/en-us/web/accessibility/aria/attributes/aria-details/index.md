@@ -11,6 +11,7 @@ tags:
   - longdesc
 spec-urls: https://w3c.github.io/aria/#aria-details
 ---
+
 The global `aria-details` attribute identifies the element (or elements) that provide additional information related to the object.
 
 ## Description

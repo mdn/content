@@ -10,27 +10,21 @@ tags:
   - Reference
 browser-compat: api.AbortSignal
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortSignal`** interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
+_The AbortSignal interface may also inherit properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
 - {{domxref("AbortSignal.reason")}} {{ReadOnlyInline}}
   - : A JavaScript value providing the abort reason, once the signal has aborted.
-
-## Methods
-
-_The **`AbortSignal`** interface inherits methods from its parent interface, {{domxref("EventTarget")}}._
-
-- {{domxref("AbortSignal.throwIfAborted()")}}
-  - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
 ## Static methods
 
@@ -38,6 +32,13 @@ _The **`AbortSignal`** interface inherits methods from its parent interface, {{d
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
 - {{domxref("AbortSignal.timeout()")}}
   - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
+
+## Instance methods
+
+_The **`AbortSignal`** interface may also inherit methods from its parent interface, {{domxref("EventTarget")}}._
+
+- {{domxref("AbortSignal.throwIfAborted()")}}
+  - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
 ## Events
 
@@ -62,21 +63,21 @@ Below you can see that the fetch operation is aborted in the second event listen
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);
@@ -98,7 +99,7 @@ Note that when there is a timeout the `fetch()` promise rejects with a "`Timeout
 This allows code to differentiate between timeouts (for which user notification is probably required), and user aborts.
 
 ```js
-const url = 'video.mp4';
+const url = "video.mp4";
 
 try {
   const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
@@ -108,7 +109,9 @@ try {
   if (err.name === "TimeoutError") {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
-    console.error("Fetch aborted by user action (browser stop button, closing tab, etc.");
+    console.error(
+      "Fetch aborted by user action (browser stop button, closing tab, etc."
+    );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");
   } else {
@@ -127,20 +130,18 @@ The code snippet below shows how you might call {{domxref("AbortController.abort
 
 ```js
 try {
-  const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), 5000)
-  const res = await fetch(url, { signal: controller.signal })
-  const body = await res.json()
-}
-catch (e) {
-    if (e.name === "AbortError") {
-      // Notify the user of abort.
-      // Note this will never be a timeout error!
-    } else {
-      // A network error, or some other problem.
-      console.log(`Type: ${e.name}, Message: ${e.message}`)
-    }
-
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 5000);
+  const res = await fetch(url, { signal: controller.signal });
+  const body = await res.json();
+} catch (e) {
+  if (e.name === "AbortError") {
+    // Notify the user of abort.
+    // Note this will never be a timeout error!
+  } else {
+    // A network error, or some other problem.
+    console.log(`Type: ${e.name}, Message: ${e.message}`);
+  }
 } finally {
   clearTimeout(timeoutId);
 }

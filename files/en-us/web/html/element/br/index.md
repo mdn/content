@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.br
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
 
@@ -42,11 +42,11 @@ You can set a {{cssxref("margin")}} on `<br>` elements themselves to increase th
 In the following example we use `<br>` elements to create line breaks between the different lines of a postal address:
 
 ```html
-Mozilla<br>
-331 E. Evelyn Avenue<br>
-Mountain View, CA<br>
-94041<br>
-USA<br>
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
 The result looks like so:
@@ -80,7 +80,7 @@ Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

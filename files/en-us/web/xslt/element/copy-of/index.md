@@ -7,6 +7,7 @@ tags:
   - XSLT
   - copy-of
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:copy-of>` element makes a deep copy (including descendant nodes) of whatever the select attribute specifies to the output document.

@@ -1,7 +1,7 @@
 ---
 title: PerformanceObserver.supportedEntryTypes
 slug: Web/API/PerformanceObserver/supportedEntryTypes
-page-type: web-api-instance-property
+page-type: web-api-static-property
 tags:
   - API
   - Property
@@ -11,9 +11,10 @@ tags:
   - supportedEntryTypes
 browser-compat: api.PerformanceObserver.supportedEntryTypes
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`supportedEntryTypes`** read-only property of the
+{{APIRef("Performance API")}}
+
+The static **`supportedEntryTypes`** read-only property of the
 {{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
 As the list of supported entries varies per browser and is evolving, this property allows web developers to check which are available.

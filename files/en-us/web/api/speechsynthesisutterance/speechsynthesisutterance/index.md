@@ -12,13 +12,14 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}
 
 The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUtterance")}} interface returns a new `SpeechSynthesisUtterance` object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechSynthesisUtterance(text)
 ```
 
@@ -47,7 +48,7 @@ inputForm.onsubmit = (event) => {
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (i = 0; i < voices.length ; i++) {
+  for (let i = 0; i < voices.length; i++) {
     if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

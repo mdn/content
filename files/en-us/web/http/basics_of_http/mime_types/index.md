@@ -13,6 +13,7 @@ tags:
   - application/json
   - application/xml
 ---
+
 {{HTTPSidebar}}
 
 A **media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
@@ -215,7 +216,7 @@ The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) 
 
 The most commonly used MIME types used for web content are listed below.
 This isn't a complete list of all the types that may be available, however.
-See the [media container formats](/en-US/docs/Web/Media/Formats/Containers) guide for that.
+See the [media container formats guide](/en-US/docs/Web/Media/Formats/Containers) for that.
 
 | MIME type                                               | Audio or video type                                                                                                                                                                     |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -254,10 +255,15 @@ Content-Disposition: form-data; name="myField"
 The following `<form>`:
 
 ```html
-<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
-  <label>Name: <input name="myTextField" value="Test"></label>
-  <label><input type="checkbox" name="myCheckBox"> Check</label>
-  <label>Upload file: <input type="file" name="myFile" value="test.txt"></label>
+<form
+  action="http://localhost:8000/"
+  method="post"
+  enctype="multipart/form-data">
+  <label>Name: <input name="myTextField" value="Test" /></label>
+  <label><input type="checkbox" name="myCheckBox" /> Check</label>
+  <label>
+    Upload file: <input type="file" name="myFile" value="test.txt"/>
+  </label>
   <button>Send the file</button>
 </form>
 ```

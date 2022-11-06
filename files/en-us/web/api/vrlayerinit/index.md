@@ -13,6 +13,7 @@ tags:
   - Virtual Reality
   - WebVR
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 The **`VRLayerInit`** dictionary of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a content layer (an {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}) that you want to present in a VR display.
@@ -21,7 +22,7 @@ The **`VRLayerInit`** dictionary of the [WebVR API](/en-US/docs/Web/API/WebVR_AP
 
 You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}}, and present them using the {{domxref("VRDisplay.requestPresent()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("VRLayerInit.leftBounds")}} {{deprecated_inline}}
   - : Defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.

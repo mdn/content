@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSinkInfo": {
+      "inh": "",
+      "impl": []
+    },
     "AudioTrack": {
       "inh": "",
       "impl": []
@@ -300,10 +304,6 @@
       "inh": "MediaStreamTrack",
       "impl": []
     },
-    "CanvasFilter": {
-      "inh": "",
-      "impl": []
-    },
     "CanvasGradient": {
       "inh": "",
       "impl": []
@@ -318,6 +318,10 @@
     },
     "CaptureActionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "CaptureController": {
+      "inh": "",
       "impl": []
     },
     "CaretPosition": {
@@ -468,6 +472,10 @@
       "inh": "CSSColorValue",
       "impl": []
     },
+    "CSSColorProfileRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColorValue": {
       "inh": "CSSStyleValue",
       "impl": []
@@ -593,10 +601,6 @@
       "impl": []
     },
     "CSSNamespaceRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
-    "CSSNestingRule": {
       "inh": "CSSRule",
       "impl": []
     },
@@ -738,10 +742,6 @@
     },
     "CSSVariableReferenceValue": {
       "inh": "",
-      "impl": []
-    },
-    "CSSViewportRule": {
-      "inh": "CSSRule",
       "impl": []
     },
     "CustomElementRegistry": {
@@ -1072,6 +1072,10 @@
       "inh": "",
       "impl": []
     },
+    "FileSystemSyncAccessHandle": {
+      "inh": "",
+      "impl": []
+    },
     "FileSystemWritableFileStream": {
       "inh": "WritableStream",
       "impl": []
@@ -1258,6 +1262,10 @@
     },
     "GPUExternalTexture": {
       "inh": "",
+      "impl": []
+    },
+    "GPUInternalError": {
+      "inh": "GPUError",
       "impl": []
     },
     "GPUOutOfMemoryError": {
@@ -1540,6 +1548,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLModelElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLModElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1724,6 +1736,10 @@
       "inh": "Credential",
       "impl": []
     },
+    "IdentityProvider": {
+      "inh": "",
+      "impl": []
+    },
     "IdleDeadline": {
       "inh": "",
       "impl": []
@@ -1805,6 +1821,14 @@
       "impl": []
     },
     "IntrinsicSizes": {
+      "inh": "",
+      "impl": []
+    },
+    "JsonLd": {
+      "inh": "",
+      "impl": []
+    },
+    "JsonLdProcessor": {
       "inh": "",
       "impl": []
     },
@@ -2476,6 +2500,10 @@
       "inh": "",
       "impl": []
     },
+    "PressureRecord": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2532,6 +2560,22 @@
       "inh": "AbstractRange",
       "impl": []
     },
+    "RdfDataset": {
+      "inh": "",
+      "impl": []
+    },
+    "RdfGraph": {
+      "inh": "",
+      "impl": []
+    },
+    "RdfLiteral": {
+      "inh": "",
+      "impl": []
+    },
+    "RdfTriple": {
+      "inh": "",
+      "impl": []
+    },
     "ReadableByteStreamController": {
       "inh": "",
       "impl": []
@@ -2558,6 +2602,10 @@
     },
     "RelativeOrientationSensor": {
       "inh": "OrientationSensor",
+      "impl": []
+    },
+    "RemoteDocument": {
+      "inh": "",
       "impl": []
     },
     "RemotePlayback": {
@@ -3524,6 +3572,10 @@
       "inh": "PermissionStatus",
       "impl": []
     },
+    "UserActivation": {
+      "inh": "",
+      "impl": []
+    },
     "ValidityState": {
       "inh": "",
       "impl": []
@@ -3566,6 +3618,10 @@
     },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
+      "impl": []
+    },
+    "ViewTransition": {
+      "inh": "",
       "impl": []
     },
     "VirtualKeyboard": {
@@ -3878,6 +3934,10 @@
     },
     "XRBoundedReferenceSpace": {
       "inh": "XRReferenceSpace",
+      "impl": []
+    },
+    "XRCamera": {
+      "inh": "",
       "impl": []
     },
     "XRCompositionLayer": {

@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.shadow
 ---
 
-{{Deprecated_Header}}{{Non-standard_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<shadow>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of the [Web Components](/en-US/docs/Web/Web_Components) technology suite—was intended to be used as a shadow DOM {{glossary("insertion point")}}. You might have used it if you have created multiple shadow roots under a shadow host. It is not useful in ordinary HTML.
 
@@ -80,25 +80,24 @@ Here is a simple example of using the `<shadow>` element. It is an HTML file wit
       <!-- This heading will not be displayed -->
       <h4>My Original Heading</h4>
     </div>
-  <script>
-    // Get the <div> above with its content
-    const origContent = document.querySelector('div');
-    // Create the first shadow root
-    const shadowroot1 = origContent.createShadowRoot();
-    // Create the second shadow root
-    const shadowroot2 = origContent.createShadowRoot();
+    <script>
+      // Get the <div> above with its content
+      const origContent = document.querySelector("div");
+      // Create the first shadow root
+      const shadowroot1 = origContent.createShadowRoot();
+      // Create the second shadow root
+      const shadowroot2 = origContent.createShadowRoot();
 
-    // Insert something into the older shadow root
-    shadowroot1.innerHTML =
-      '<p>Older shadow root inserted by &lt;shadow&gt;</p>';
+      // Insert something into the older shadow root
+      shadowroot1.innerHTML =
+        "<p>Older shadow root inserted by &lt;shadow&gt;</p>";
 
-    // Insert into younger shadow root, including <shadow>.
-    // The previous markup will not be displayed unless
-    // <shadow> is used below.
-    shadowroot2.innerHTML =
-      '<shadow></shadow> <p>Younger shadow root, displayed because it is the youngest.</p>';
-  </script>
-
+      // Insert into younger shadow root, including <shadow>.
+      // The previous markup will not be displayed unless
+      // <shadow> is used below.
+      shadowroot2.innerHTML =
+        "<shadow></shadow> <p>Younger shadow root, displayed because it is the youngest.</p>";
+    </script>
   </body>
 </html>
 ```
@@ -119,5 +118,3 @@ This element is no longer defined by any specifications.
 
 - [Web Components](/en-US/docs/Web/Web_Components)
 - {{HTMLElement("content")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
-
-{{HTMLRef}}

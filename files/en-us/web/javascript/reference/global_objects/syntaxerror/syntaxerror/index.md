@@ -8,6 +8,7 @@ tags:
   - SyntaxError
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
 ---
+
 {{JSRef}}
 
 The **`SyntaxError`** constructor creates a new error object
@@ -15,7 +16,7 @@ that represents an error when trying to interpret syntactically invalid code.
 
 ## Syntax
 
-```js
+```js-nolint
 new SyntaxError()
 new SyntaxError(message)
 new SyntaxError(message, options)
@@ -39,7 +40,7 @@ SyntaxError(message, fileName, lineNumber)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
@@ -51,7 +52,7 @@ SyntaxError(message, fileName, lineNumber)
 
 ```js
 try {
-  eval('hoo bar');
+  eval("hoo bar");
 } catch (e) {
   console.error(e instanceof SyntaxError);
   console.error(e.message);
@@ -67,15 +68,15 @@ try {
 
 ```js
 try {
-  throw new SyntaxError('Hello', 'someFile.js', 10);
+  throw new SyntaxError("Hello", "someFile.js", 10);
 } catch (e) {
   console.error(e instanceof SyntaxError); // true
-  console.error(e.message);                // Hello
-  console.error(e.name);                   // SyntaxError
-  console.error(e.fileName);               // someFile.js
-  console.error(e.lineNumber);             // 10
-  console.error(e.columnNumber);           // 0
-  console.error(e.stack);                  // @debugger eval code:3:9
+  console.error(e.message); // Hello
+  console.error(e.name); // SyntaxError
+  console.error(e.fileName); // someFile.js
+  console.error(e.lineNumber); // 10
+  console.error(e.columnNumber); // 0
+  console.error(e.stack); // @debugger eval code:3:9
 }
 ```
 

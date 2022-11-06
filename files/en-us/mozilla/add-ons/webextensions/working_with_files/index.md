@@ -5,6 +5,7 @@ tags:
   - Guide
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 Your browser extension may need to work with files to deliver its full functionality. This article looks at the five mechanisms you have for handling files:
@@ -136,7 +137,7 @@ Note the use of [`URL.revokeObjectURL()`](/en-US/docs/Web/API/URL/revokeObjectUR
 Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob URL was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.
 
 Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
-API References:  [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
+API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > **Note:** You can also use the full Web [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 

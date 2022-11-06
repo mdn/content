@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.MediaQueryListEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 The `MediaQueryListEvent` object stores information on the changes that have happened to a {{DOMxRef("MediaQueryList")}} object — instances are available as the event object on a function referenced by a {{DOMxRef("MediaQueryList.change_event", "change")}} event.
@@ -22,7 +23,7 @@ The `MediaQueryListEvent` object stores information on the changes that have hap
 - {{DOMxRef("MediaQueryListEvent.MediaQueryListEvent()", "MediaQueryListEvent()")}}
   - : Creates a new `MediaQueryListEvent` instance.
 
-## Properties
+## Instance properties
 
 _The `MediaQueryListEvent` interface inherits properties from its parent interface, {{DOMxRef("Event")}}._
 
@@ -31,7 +32,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 - {{DOMxRef("MediaQueryListEvent.media")}} {{ReadOnlyInline}}
   - : A string representing a serialized media query.
 
-## Methods
+## Instance methods
 
 _The `MediaQueryListEvent` interface inherits methods from its parent interface, {{DOMxRef("Event")}}._
 

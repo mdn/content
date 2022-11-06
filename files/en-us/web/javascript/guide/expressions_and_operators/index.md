@@ -7,8 +7,9 @@ tags:
   - Guide
   - JavaScript
   - Operators
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 This chapter describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
@@ -60,7 +61,7 @@ operator operand
 operand operator
 ```
 
-For example, `x++` or `++x`. The `operator operand` form is called a _postfix_ unary operator, and the `operand operator` form is called a _prefix_ unary operator. `++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
+For example, `x++` or `++x`. The `operator operand` form is called a _prefix_ unary operator, and the `operand operator` form is called a _postfix_ unary operator. `++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
 
 ## Assignment operators
 
@@ -70,9 +71,9 @@ That is, `x = f()` is an assignment expression that assigns the value of `f()` t
 
 There are also compound assignment operators that are shorthand for the operations listed in the following table:
 
-| Name                                                                                                              | Shorthand operator | Meaning          |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- |
-| [Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)                                           | `x = f()`          | `x = f()`        |
+| Name                                                                                                              | Shorthand operator | Meaning            |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| [Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)                                           | `x = f()`          | `x = f()`          |
 | [Addition assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`         | `x = x + f()`      |
 | [Subtraction assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                   | `x -= f()`         | `x = x - f()`      |
 | [Multiplication assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)             | `x *= f()`         | `x = x * f()`      |
@@ -87,7 +88,7 @@ There are also compound assignment operators that are shorthand for the operatio
 | [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
 | [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
 | [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
-| [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
+| [Nullish coalescing assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
 
 ### Assigning to properties
 
@@ -232,17 +233,17 @@ because the assignment operator `=` is [right-associative][].
 However, it evaluates from left to right:
 
 1. The assignment expression `y = x = f()` starts to evaluate.
-    1. The `y` on this assignment's left-hand side evaluates
-       into a reference to the variable named `y`.
-    2. The assignment expression `x = f()` starts to evaluate.
-        1. The `x` on this assignment's left-hand side evaluates
-           into a reference to the variable named `x`.
-        2. The function call `f()` prints "F!" to the console and
-           then evaluates to the number `2`.
-        3. That `2` result from `f()` is assigned to `x`.
-    3. The assignment expression `x = f()` has now finished evaluating;
-       its result is the new value of `x`, which is `2`.
-    4. That `2` result in turn is also assigned to `y`.
+   1. The `y` on this assignment's left-hand side evaluates
+      into a reference to the variable named `y`.
+   2. The assignment expression `x = f()` starts to evaluate.
+      1. The `x` on this assignment's left-hand side evaluates
+         into a reference to the variable named `x`.
+      2. The function call `f()` prints "F!" to the console and
+         then evaluates to the number `2`.
+      3. That `2` result from `f()` is assigned to `x`.
+   3. The assignment expression `x = f()` has now finished evaluating;
+      its result is the new value of `x`, which is `2`.
+   4. That `2` result in turn is also assigned to `y`.
 2. The assignment expression `y = x = f()` has now finished evaluating;
    its result is the new value of `y` – which happens to be `2`.
    `x` and `y` are assigned to `2`,
@@ -253,25 +254,25 @@ However, it evaluates from left to right:
 `y = [ f(), x = g() ]` also evaluates from left to right:
 
 1. The assignment expression `y = [ f(), x = g() ]` starts to evaluate.
-    1. The `y` on this assignment's left-hand evaluates
-       into a reference to the variable named `y`.
-    2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
-        1. The function call `f()` prints "F!" to the console and
-           then evaluates to the number `2`.
-        2. The assignment expression `x = g()` starts to evaluate.
-            1. The `x` on this assignment's left-hand side evaluates
-               into a reference to the variable named `x`.
-            2. The function call `g()` prints "G!" to the console and
-               then evaluates to the number `3`.
-            3. That `3` result from `g()` is assigned to `x`.
-        3. The assignment expression `x = g()` has now finished evaluating;
-           its result is the new value of `x`, which is `3`.
-           That `3` result becomes the next element
-           in the inner array literal (after the `2` from the `f()`).
-    3. The inner array literal `[ f(), x = g() ]`
-       has now finished evaluating;
-       its result is an array with two values: `[ 2, 3 ]`.
-    4. That `[ 2, 3 ]` array is now assigned to `y`.
+   1. The `y` on this assignment's left-hand evaluates
+      into a reference to the variable named `y`.
+   2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
+      1. The function call `f()` prints "F!" to the console and
+         then evaluates to the number `2`.
+      2. The assignment expression `x = g()` starts to evaluate.
+         1. The `x` on this assignment's left-hand side evaluates
+            into a reference to the variable named `x`.
+         2. The function call `g()` prints "G!" to the console and
+            then evaluates to the number `3`.
+         3. That `3` result from `g()` is assigned to `x`.
+      3. The assignment expression `x = g()` has now finished evaluating;
+         its result is the new value of `x`, which is `3`.
+         That `3` result becomes the next element
+         in the inner array literal (after the `2` from the `f()`).
+   3. The inner array literal `[ f(), x = g() ]`
+      has now finished evaluating;
+      its result is an array with two values: `[ 2, 3 ]`.
+   4. That `[ 2, 3 ]` array is now assigned to `y`.
 2. The assignment expression `y = [ f(), x = g() ]` has
    now finished evaluating;
    its result is the new value of `y` – which happens to be `[ 2, 3 ]`.
@@ -286,19 +287,19 @@ However, it evaluates from left to right:
 For more information about objects, read [Working with Objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).)
 
 1. The assignment expression `x[f()] = g()` starts to evaluate.
-    1. The `x[f()]` property access on this assignment's left-hand
-       starts to evaluate.
-        1. The `x` in this property access evaluates
-           into a reference to the variable named `x`.
-        2. Then the function call `f()` prints "F!" to the console and
-           then evaluates to the number `2`.
-    2. The `x[f()]` property access on this assignment
-       has now finished evaluating;
-       its result is a variable property reference: `x[2]`.
-    3. Then the function call `g()` prints "G!" to the console and
-       then evaluates to the number `3`.
-    4. That `3` is now assigned to `x[2]`.
-       (This step will succeed only if `x` is assigned to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).)
+   1. The `x[f()]` property access on this assignment's left-hand
+      starts to evaluate.
+      1. The `x` in this property access evaluates
+         into a reference to the variable named `x`.
+      2. Then the function call `f()` prints "F!" to the console and
+         then evaluates to the number `2`.
+   2. The `x[f()]` property access on this assignment
+      has now finished evaluating;
+      its result is a variable property reference: `x[2]`.
+   3. Then the function call `g()` prints "G!" to the console and
+      then evaluates to the number `3`.
+   4. That `3` is now assigned to `x[2]`.
+      (This step will succeed only if `x` is assigned to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).)
 2. The assignment expression `x[f()] = g()` has now finished evaluating;
    its result is the new value of `x[2]` – which happens to be `3`.
    `x[2]` is now assigned to `3`,
@@ -518,7 +519,7 @@ In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScri
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus</a> (<code>+</code>)
       </td>
       <td>
-        Unary operator. Attempts to convert the operand to a number, if it is not already.
+        Unary operator. Attempts to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion">convert the operand to a number</a>, if it is not already.
       </td>
       <td>
         <p><code>+"3"</code> returns <code>3</code>.</p>
@@ -579,11 +580,11 @@ Conceptually, the bitwise logical operators work as follows:
 For example, the binary representation of nine is 1001, and the binary representation of fifteen is 1111.
 So, when the bitwise operators are applied to these values, the results are as follows:
 
-| Expression | Result | Binary Description                                    |
-| ---------- | ------ | ----------------------------------------------------- |
-| `15 & 9`   | `9`    | `1111 & 1001 = 1001`                                  |
-| `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                                 |
-| `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                                  |
+| Expression | Result | Binary Description                                |
+| ---------- | ------ | ------------------------------------------------- |
+| `15 & 9`   | `9`    | `1111 & 1001 = 1001`                              |
+| `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                             |
+| `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                              |
 | `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
 | `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
@@ -766,7 +767,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
 
@@ -1087,7 +1088,7 @@ You could call `validate` in each form element's `onChange` event handler, using
 
 ```html
 <p>Enter a number between 18 and 99:</p>
-<input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+<input type="text" name="age" size="3" onChange="validate(this, 18, 99);" />
 ```
 
 ### Grouping operator

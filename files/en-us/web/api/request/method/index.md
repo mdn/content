@@ -10,6 +10,7 @@ tags:
   - request
 browser-compat: api.Request.method
 ---
+
 {{APIRef("Fetch")}}
 
 The **`method`** read-only property of the

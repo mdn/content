@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS.
@@ -33,7 +34,7 @@ The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {
 ```http
 Strict-Transport-Security: max-age=<expire-time>
 Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
-Strict-Transport-Security: max-age=<expire-time>; preload
+Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 ```
 
 ## Directives
@@ -43,7 +44,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 - `includeSubDomains` {{optional_inline}}
   - : If this optional parameter is specified, this rule applies to all of the site's subdomains as well.
 - `preload` {{optional_inline}} {{non-standard_inline}}
-  - : See [Preloading Strict Transport Security](#preloading_strict_transport_security) for details.
+  - : See [Preloading Strict Transport Security](#preloading_strict_transport_security) for details. When using `preload`, the `max-age` directive must be at least `31536000` (1 year), and the `includeSubDomains` directive must be present.
     Not part of the specification.
 
 ## Description

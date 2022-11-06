@@ -13,8 +13,6 @@ browser-compat: html.global_attributes.contextmenu
 
 {{HTMLSidebar("Global_attributes")}}{{Deprecated_Header}}{{Non-standard_header}}
 
-> **Warning:** The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) and will be removed from all browsers
-
 The **`contextmenu`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is the [**id**](/en-US/docs/Web/HTML/Global_attributes/id) of a {{HTMLElement("menu")}} to use as the contextual menu for this element.
 
 A _context menu_ is a menu that appears upon user interaction, such as a right-click. HTML now allows us to customize this menu. Here are some implementation examples, including nested menus.
@@ -33,22 +31,25 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
   </menu>
   <ol>
     <li>
-      Anywhere in the example you can share the page on Twitter and
-      Facebook using the Share menu from your context menu.
+      Anywhere in the example you can share the page on Twitter and Facebook
+      using the Share menu from your context menu.
     </li>
     <li contextmenu="changeFont" id="fontSizing">
-      On this specific list element, you can change the size of the text
-      by using the "Increase/Decrease font" actions from your context menu
+      On this specific list element, you can change the size of the text by
+      using the "Increase/Decrease font" actions from your context menu
     </li>
     <menu type="context" id="changeFont">
       <menuitem label="Increase Font" onclick="incFont()"></menuitem>
       <menuitem label="Decrease Font" onclick="decFont()"></menuitem>
     </menu>
     <li contextmenu="ChangeImage" id="changeImage">
-      On the image below, you can fire the "Change Image" action
-      in your Context Menu.<br />
-      <img src="promobutton_mdn5.png"
-          contextmenu="ChangeImage" id="promoButton" />
+      On the image below, you can fire the "Change Image" action in your Context
+      Menu.<br />
+      <img
+        src="promobutton_mdn5.png"
+        contextmenu="ChangeImage"
+        id="promoButton"
+        alt="Better CSS Docs for a better web" />
       <menu type="context" id="ChangeImage">
         <menuitem label="Change Image" onclick="changeImage()"></menuitem>
       </menu>
@@ -61,13 +62,17 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
 
 ```js
 function shareViaTwitter() {
-  window.open("https://twitter.com/intent/tweet?text=" +
-      "Hurray! I am learning ContextMenu from MDN via Mozilla");
+  window.open(
+    "https://twitter.com/intent/tweet?text=" +
+      "Hurray! I am learning ContextMenu from MDN via Mozilla"
+  );
 }
 
 function shareViaFacebook() {
-  window.open("https://facebook.com/sharer/sharer.php?u=" +
-      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus");
+  window.open(
+    "https://facebook.com/sharer/sharer.php?u=" +
+      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus"
+  );
 }
 
 function incFont() {

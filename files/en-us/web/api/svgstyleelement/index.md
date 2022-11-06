@@ -10,13 +10,14 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -33,12 +34,13 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given element.
 
 - {{domxref("SVGStyleElement.sheet")}} {{ReadOnlyInline}}
+
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
 
 - {{domxref("SVGStyleElement.disabled")}}
   - : A boolean value indicating whether or not the associated stylesheet is disabled.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
@@ -53,15 +55,17 @@ To dynamically create an SVG style element (`SVGStyleElement`), you need to use 
 Given the following SVG element:
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <circle cx="50" cy="50" r="25" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="25" />
 </svg>
 ```
 
 You can create an SVG style element as shown:
 
 ```js
-// Get the the SVG element object by tag name
+// Get the SVG element object by tag name
 const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace
@@ -81,7 +85,9 @@ These include: {{domxref("Document.getElementsByTagName()")}}, {{domxref("Docume
 For example, consider the HTML below that defines an SVG file with a style element.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id">
     circle {
       fill: gold;
@@ -117,14 +123,16 @@ const style = document.querySelector("#circle_style_id");
 
 This example demonstrates how to get and set the properties of a style element, which in this case was specified in an SVG definition.
 
-#### HTML
+### HTML
 
 The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element, along with an HTML [`<button>`](/en-US/docs/Web/HTML/Element/button) element that will be used to enable and disable the style, and an HTML [`<textarea>`](/en-US/docs/Web/HTML/Element/button) element for logging the property values.
 
 ```html
 <button>Disable</button>
 <textarea id="log" rows="6" cols="90"></textarea>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id" media="all and (min-width: 600px)">
     circle {
       fill: gold;
@@ -139,7 +147,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 Note that above we have set the `media` attribute on the `style` tag.
 We have not set `type` as it is deprecated, or `disabled` because there is no such attribute (only the property on the element).
 
-#### JavaScript
+### JavaScript
 
 The code below gets the `style` element (an `SVGStyleElement`) using its id.
 
@@ -189,7 +197,7 @@ button.addEventListener('click', () => {
    });
 ```
 
-#### Result
+### Result
 
 The result is shown below.
 Toggle the button to enable and disable the SVG style element.

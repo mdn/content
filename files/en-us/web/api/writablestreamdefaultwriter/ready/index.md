@@ -13,6 +13,7 @@ tags:
   - WritableStreamDefaultWriter
 browser-compat: api.WritableStreamDefaultWriter.ready
 ---
+
 {{APIRef("Streams")}}
 
 The **`ready`** read-only property of the

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.entries
 ---
+
 {{JSRef}}
 
 The **`Object.entries()`** method returns an array of a given
@@ -28,7 +29,7 @@ the array should be sorted first, like
 
 ## Syntax
 
-```js
+```js-nolint
 Object.entries(obj)
 ```
 
@@ -87,9 +88,9 @@ Object.entries(obj).forEach(([key, value]) => {
 });
 ```
 
-### Converting an `Object` to a `Map`
+### Converting an Object to a Map
 
-The {{jsxref("Map", "new Map()")}} constructor accepts an iterable of
+The {{jsxref("Map/Map", "Map()")}} constructor accepts an iterable of
 `entries`. With `Object.entries`, you can easily convert from
 {{jsxref("Object")}} to {{jsxref("Map")}}:
 
@@ -99,7 +100,7 @@ const map = new Map(Object.entries(obj));
 console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 ```
 
-### Iterating through an `Object`
+### Iterating through an Object
 
 Using [Array Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
 
