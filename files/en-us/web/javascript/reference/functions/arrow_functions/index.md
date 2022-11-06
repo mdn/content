@@ -61,6 +61,8 @@ async (param1, param2, ...paramN) => {
 
 Let's decompose a traditional anonymous function down to the simplest arrow function step-by-step. Each step along the way is a valid arrow function.
 
+> **Note:** Traditional function expressions and arrow functions have more differences than their syntax. We will introduce their behavior differences in more detail in the next few subsections.
+
 ```js
 // Traditional anonymous function
 (function (a) {
@@ -78,8 +80,6 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
 // 3. Remove the parameter parentheses
 a => a + 100;
 ```
-
-> **Note:** Traditional function expressions and arrow functions have more differences than their syntax. We will introduce other differences in the next few subsections.
 
 In the example above, both the parentheses around the parameter and the braces around the function body may be omitted. However, they can only be omitted in certain cases.
 
