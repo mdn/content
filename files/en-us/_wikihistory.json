@@ -26912,6 +26912,10 @@
     "modified": "2020-10-15T21:40:08.646Z",
     "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
   },
+  "Web/API/DataTransfer/mozSetDataAt": {
+    "modified": "2020-10-15T21:40:08.879Z",
+    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
+  },
   "Web/API/DataTransfer/mozSourceNode": {
     "modified": "2020-10-15T21:40:08.759Z",
     "contributors": ["fscholz", "rolfedh", "AFBarstow"]
