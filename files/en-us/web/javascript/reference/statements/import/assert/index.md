@@ -136,7 +136,7 @@ In `index.html`:
 
 Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guide/Modules#troubleshooting)) and go to the `index.html` page. You should see `John` on the page.
 
-> **Note:** JSON modules only have one default export. You cannot do named imports from them (e.g. `import { name } from "data.json"`).
+> **Note:** JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
 
 ## Specifications
 
