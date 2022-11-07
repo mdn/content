@@ -110,15 +110,15 @@ There are a few perceived limitations with the Navigation API, which may or may 
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', navigateEvent => {
+navigation.addEventListener('navigate', event => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(navigateEvent)) return;
+  if (shouldNotIntercept(event)) return;
 
-  const url = new URL(navigateEvent.destination.url);
+  const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {
-    navigateEvent.intercept({
+    event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while
         //fetching the new content, such as a spinner or loading page
@@ -136,16 +136,16 @@ navigation.addEventListener('navigate', navigateEvent => {
 ### Handling scrolling using `scroll()`
 
 ```js
-navigation.addEventListener('navigate', navigateEvent => {
-  if (shouldNotIntercept(navigateEvent)) return;
-  const url = new URL(navigateEvent.destination.url);
+navigation.addEventListener('navigate', event => {
+  if (shouldNotIntercept(event)) return;
+  const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {
-    navigateEvent.intercept({
+    event.intercept({
       async handler() {
         const articleContent = await getArticleContent(url.pathname);
         renderArticlePage(articleContent);
-        navigateEvent.scroll();
+        event.scroll();
 
         const secondaryContent = await getSecondaryContent(url.pathname);
         addSecondaryContent(secondaryContent);

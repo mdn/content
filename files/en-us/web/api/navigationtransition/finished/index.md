@@ -1,10 +1,11 @@
 ---
-title: NavigationDestination.sameDocument
-slug: Web/API/NavigationDestination/sameDocument
+title: NavigationTransition.finished
+slug: Web/API/NavigationTransition/finished
 page-type: web-api-instance-property
 tags:
   - API
   - Experimental
+  - finished
   - History
   - Navigate
   - Navigation
@@ -12,29 +13,26 @@ tags:
   - Property
   - Read-only
   - Reference
-  - sameDocument
   - Scroll
   - Traversal
-browser-compat: api.NavigationDestination.sameDocument
+browser-compat: api.NavigationTransition.finished
 ---
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`sameDocument`** read-only property of the
-{{domxref("NavigationDestination")}} interface returns `true` if the navigation is to the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
-
-This is useful for checking whether the navigation will be same-document or cross-document.
+The **`finished`** read-only property of the
+{{domxref("NavigationTransition")}} interface returns a {{jsxref("Promise")}} that fulfills at the same time the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, or rejects at the same time the {{domxref("Navigation/navigateerror_event", "navigateerror")}} event fires.
 
 ## Value
 
-A boolean.
+A {{jsxref("Promise")}} that resolves to `undefined`.
 
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', event => {
-  console.log(event.destination.sameDocument);
-});
+await navigation.transition.finished;
+// Navigation has completed successfully
+// Cleanup any ongoing monitoring
 ```
 
 ## Specifications

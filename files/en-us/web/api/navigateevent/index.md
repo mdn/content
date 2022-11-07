@@ -39,13 +39,13 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 - {{domxref("NavigateEvent.downloadRequest", "downloadRequest")}} {{ReadOnlyInline}}
   - : Returns the filename of the file requested for download, in the case of a download navigation (e.g. an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.
 - {{domxref("NavigateEvent.formData", "formData")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission, or null otherwise.
+  - : Returns the {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission, or `null` otherwise.
 - {{domxref("NavigateEvent.hashChange", "hashChange")}} {{ReadOnlyInline}}
   - : Returns `true` if the navigation is a fragment navigation (i.e. to a fragment identifier in the same document), or `false` otherwise.
 - {{domxref("NavigateEvent.info", "info")}} {{ReadOnlyInline}}
   - : Returns the `info` data value passed by the initiating navigation operation (e.g. {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}), or `undefined` if no `info` data was passed.
 - {{domxref("NavigateEvent.navigationType", "navigationType")}} {{ReadOnlyInline}}
-  - : Returns the type of the navigation, which a string equal to `push`, `reload`, `replace`, or `traverse`.
+  - : Returns the type of the navigation — `push`, `reload`, `replace`, or `traverse`.
 - {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g. by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
 - {{domxref("NavigateEvent.userInitiated", "userInitiated")}} {{ReadOnlyInline}}
@@ -65,15 +65,15 @@ _Inherits methods from its parent, {{DOMxRef("Event")}}._
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', navigateEvent => {
+navigation.addEventListener('navigate', event => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(navigateEvent)) return;
+  if (shouldNotIntercept(event)) return;
 
-  const url = new URL(navigateEvent.destination.url);
+  const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {
-    navigateEvent.intercept({
+    event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while
         //fetching the new content, such as a spinner or loading page
@@ -93,16 +93,16 @@ navigation.addEventListener('navigate', navigateEvent => {
 ### Handling scrolling using `scroll()`
 
 ```js
-navigation.addEventListener('navigate', navigateEvent => {
+navigation.addEventListener('navigate', event => {
   if (shouldNotIntercept(navigateEvent)) return;
-  const url = new URL(navigateEvent.destination.url);
+  const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {
-    navigateEvent.intercept({
+    event.intercept({
       async handler() {
         const articleContent = await getArticleContent(url.pathname);
         renderArticlePage(articleContent);
-        navigateEvent.scroll();
+        event.scroll();
 
         const secondaryContent = await getSecondaryContent(url.pathname);
         addSecondaryContent(secondaryContent);

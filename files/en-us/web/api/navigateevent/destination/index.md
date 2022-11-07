@@ -1,12 +1,14 @@
 ---
-title: NavigationDestination.url
-slug: Web/API/NavigationDestination/url
+title: NavigateEvent.destination
+slug: Web/API/NavigateEvent/destination
 page-type: web-api-instance-property
 tags:
   - API
+  - destination
   - Experimental
   - History
   - Navigate
+  - NavigateEvent
   - Navigation
   - Navigation API
   - Property
@@ -14,22 +16,19 @@ tags:
   - Reference
   - Scroll
   - Traversal
-  - url
-browser-compat: api.NavigationDestination.url
+browser-compat: api.NavigateEvent.destination
 ---
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`url`** read-only property of the
-{{domxref("NavigationDestination")}} interface returns the URL being navigated to.
+The **`destination`** read-only property of the
+{{domxref("NavigateEvent")}} interface returns a {{domxref("NavigationDestination")}} object representing the destination being navigated to.
 
 ## Value
 
-A string.
+A {{domxref("NavigationDestination")}} object.
 
 ## Examples
-
-### Handling a navigation using `intercept()`
 
 ```js
 navigation.addEventListener('navigate', event => {

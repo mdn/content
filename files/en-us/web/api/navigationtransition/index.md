@@ -27,12 +27,12 @@ It is accessed via the {{domxref("Navigation.transition")}} property.
 
 ## Instance properties
 
-- {{domxref("NavigationTransition.navigationType", "navigationType")}} {{ReadOnlyInline}}
-  - : Returns the type of the ongoing navigation.
-- {{domxref("NavigationTransition.from", "from")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.
 - {{domxref("NavigationTransition.finished", "finished")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that fulfills at the same time the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, or rejects at the same time the {{domxref("Navigation/navigateerror_event", "navigateerror")}} event fires.
+- {{domxref("NavigationTransition.from", "from")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.
+- {{domxref("NavigationTransition.navigationType", "navigationType")}} {{ReadOnlyInline}}
+  - : Returns the type of the ongoing navigation.
 
 ## Examples
 

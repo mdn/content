@@ -46,17 +46,17 @@ It is accessed via the {{domxref("NavigateEvent.destination")}} property.
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', navigateEvent => {
+navigation.addEventListener('navigate', event => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(navigateEvent)) return;
+  if (shouldNotIntercept(event)) return;
 
   // Returns a URL() object constructed from the
   // NavigationDestination.url value
-  const url = new URL(navigateEvent.destination.url);
+  const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {
-    navigateEvent.intercept({
+   event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while
         //fetching the new content, such as a spinner or loading page

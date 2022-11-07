@@ -46,8 +46,8 @@ None.
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', navigateEvent => {
-  console.log(navigateEvent.destination.getState());
+navigation.addEventListener('navigate', event => {
+  console.log(event.destination.getState());
 });
 ```
 

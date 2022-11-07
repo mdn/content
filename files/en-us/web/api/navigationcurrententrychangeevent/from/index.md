@@ -1,10 +1,11 @@
 ---
-title: NavigationDestination.sameDocument
-slug: Web/API/NavigationDestination/sameDocument
+title: NavigationCurrentEntryChangeEvent.from
+slug: Web/API/NavigationCurrentEntryChangeEvent/from
 page-type: web-api-instance-property
 tags:
   - API
   - Experimental
+  - from
   - History
   - Navigate
   - Navigation
@@ -12,28 +13,25 @@ tags:
   - Property
   - Read-only
   - Reference
-  - sameDocument
   - Scroll
   - Traversal
-browser-compat: api.NavigationDestination.sameDocument
+browser-compat: api.NavigationCurrentEntryChangeEvent.from
 ---
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`sameDocument`** read-only property of the
-{{domxref("NavigationDestination")}} interface returns `true` if the navigation is to the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
-
-This is useful for checking whether the navigation will be same-document or cross-document.
+The **`from`** read-only property of the
+{{domxref("NavigationCurrentEntryChangeEvent")}} interface returns the {{domxref("NavigationHistoryEntry")}} that was navigated from.
 
 ## Value
 
-A boolean.
+A {{domxref("NavigationHistoryEntry")}} object.
 
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', event => {
-  console.log(event.destination.sameDocument);
+navigation.addEventListener("currententrychange", event => {
+  console.log(event.from);
 });
 ```
 
