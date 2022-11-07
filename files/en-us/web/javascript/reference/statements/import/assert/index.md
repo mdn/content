@@ -47,7 +47,9 @@ export { exports } from "module-name" assert { key: "data", key2: "data2", /* â€
 
 ## Description
 
-Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary motivation was JSON modules. Consider the following statement:
+Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary motivation was to ensure that JSON modules are not parsed as code if served incorrectly.
+
+Consider the following statement:
 
 ```js
 import data from "https://exmaple.com/data.json";
