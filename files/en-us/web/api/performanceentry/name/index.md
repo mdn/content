@@ -12,16 +12,16 @@ browser-compat: api.PerformanceEntry.name
 
 {{APIRef("Performance API")}} {{AvailableInWorkers}}
 
-The read-only **`name`** property of the {{domxref("PerformanceEntry")}} interface is a string representing the name for a performance entry. It acts as an identifier, but it does not have to be unique. The value depends on the subtype.
+The read-only **`name`** property of the {{domxref("PerformanceEntry")}} interface is a string representing the name for a performance entry. It acts as an identifier, but it does not have to be unique. The value depends on the subclass.
 
 ## Value
 
-A string. The value depends on the subtype of the `PerformanceEntry` object as shown by the table below.
+A string. The value depends on the subclass of the `PerformanceEntry` object as shown by the table below.
 
 <table class="no-markdown">
   <thead>
     <tr>
-      <th scope="col">Subtype</th>
+      <th scope="col">Subclass</th>
       <th scope="col">Value</th>
     </tr>
   </thead>
@@ -42,15 +42,15 @@ A string. The value depends on the subtype of the `PerformanceEntry` object as s
       <td>{{domxref('PerformanceLongTaskTiming')}}</td>
       <td>One of the following strings:
         <ul>
-          <li><code>"unknown"</code></li>
-          <li><code>"self"</code></li>
-          <li><code>"same-origin-ancestor"</code></li>
-          <li><code>"same-origin-descendant"</code></li>
-          <li><code>"same-origin"</code></li>
           <li><code>"cross-origin-ancestor"</code></li>
           <li><code>"cross-origin-descendant"</code></li>
           <li><code>"cross-origin-unreachable"</code></li>
           <li><code>"multiple-contexts"</code></li>
+          <li><code>"same-origin-ancestor"</code></li>
+          <li><code>"same-origin-descendant"</code></li>
+          <li><code>"same-origin"</code></li>
+          <li><code>"self"</code></li>
+          <li><code>"unknown"</code></li>
         </ul>
       </td>
     </tr>
@@ -70,18 +70,20 @@ A string. The value depends on the subtype of the `PerformanceEntry` object as s
     </tr>
     <tr>
       <td>{{domxref('PerformanceNavigationTiming')}}</td>
-      <td>The document's address.</td>
+      <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
     </tr>
     <tr>
       <td>{{domxref('PerformancePaintTiming')}}</td>
-      <td>
-        Either <code>"first-paint"</code> or
-        <code>"first-contentful-paint"</code>.
+      <td>One of the following strings:
+        <ul>
+          <li><code>"first-paint"</code></li>
+          <li><code>"first-contentful-paint"</code></li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>{{domxref('PerformanceResourceTiming')}}</td>
-      <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected. </td>
+      <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
     </tr>
     <tr>
       <td>{{domxref('TaskAttributionTiming')}}</td>
@@ -108,7 +110,7 @@ performance.getEntriesByType("resource").forEach((entry) => {
 
 ### Getting performance entries by name
 
-Both, {{domxref("Performance")}} and {{domxref("PerformanceObserver")}}, provide methods that allow you to get performance entries by name directly. You don't necessarily need the `name` property for that, instead you might use {{domxref("Performance.getEntriesByName()")}} or {{domxref("PerformanceObserverEntryList.getEntriesByName()")}}.
+Both {{domxref("Performance")}} and {{domxref("PerformanceObserver")}} provide methods that allow you to get performance entries by name directly. You don't necessarily need the `name` property for that, instead you might use {{domxref("Performance.getEntriesByName()")}} or {{domxref("PerformanceObserverEntryList.getEntriesByName()")}}.
 
 ```js
 // Log all marks named "debug-marks" at this point in time

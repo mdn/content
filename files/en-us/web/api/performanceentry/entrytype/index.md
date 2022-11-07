@@ -77,6 +77,7 @@ const scriptResources = performance.getEntries().filter((entry) =>
   entry.entryType === "resource" && 
   entry.initiatorType === "script"
 );
+console.log(scriptResources);
 ```
 
 ### Getting performance entries by type
