@@ -14,7 +14,7 @@ tags:
 browser-compat: api.PerformanceObserver.disconnect
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`disconnect()`** method of the
 {{domxref('PerformanceObserver')}} interface is used to stop the performance observer

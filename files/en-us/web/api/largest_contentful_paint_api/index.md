@@ -13,7 +13,7 @@ tags:
 browser-compat: api.LargestContentfulPaint
 ---
 
-{{DefaultAPISidebar("Largest Contentful Paint API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Performance API")}}{{SeeCompatTable}}
 
 The **Largest Contentful Paint API** provides [perceived performance](/en-US/docs/Learn/Performance/Perceived_performance) data that allows you to know exactly how long a user waits, after navigating to your page, before seeing the main content of the page in their browser viewport — in contrast to just knowing when the user can first see a loading indicator or background image or other such initial/early-loading content (which is what the related [Paint Timing API](/en-US/docs/Web/API/Paint_Timing_API) provides).
 

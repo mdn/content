@@ -38,7 +38,7 @@ See {{jsxref("Symbol.unscopables")}} for how to set unscopable properties for yo
 
 {{js_property_attributes(0,0,1)}}
 
-## Example
+## Examples
 
 Imagine the `keys.push('something')` call below is in code that was written prior to ECMAScript 2015.
 

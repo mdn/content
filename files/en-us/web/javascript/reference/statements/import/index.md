@@ -166,7 +166,7 @@ In this example, we create a re-usable module that exports a function to get all
 /**
  * Returns a list of prime numbers that are smaller than `max`.
  */
-function getPrimes(max) {
+export function getPrimes(max) {
   const isPrime = Array.from({ length: max }, () => true);
   isPrime[0] = isPrime[1] = false;
   isPrime[2] = true;
