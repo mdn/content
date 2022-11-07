@@ -61,7 +61,6 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 > **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
 
-
 ## The basics
 
 This section is a summary of the basic steps to add drag-and-drop functionality to an application.
