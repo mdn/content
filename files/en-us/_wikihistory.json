@@ -11965,25 +11965,6 @@
       "wbamberg"
     ]
   },
-  "MDN/Yari": {
-    "modified": "2019-12-31T16:22:53.307Z",
-    "contributors": [
-      "peterbe",
-      "SphinxKnight",
-      "jswisher",
-      "9999472",
-      "ExE-Boss",
-      "wbamberg",
-      "chrisdavidmills",
-      "LikeVincent",
-      "xGabey",
-      "xgqfrms",
-      "jrdacosta2002",
-      "groovecoder",
-      "Sheppy",
-      "Nickolay"
-    ]
-  },
   "Mozilla": {
     "modified": "2020-12-05T08:30:39.624Z",
     "contributors": [
@@ -113080,10 +113061,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag": {
-    "modified": "2020-10-27T09:11:05.635Z",
-    "contributors": ["evilpie", "hamishwillee", "chrisdavidmills"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Intl/Collator": {
     "modified": "2020-12-07T14:51:37.568Z",
     "contributors": [
@@ -114044,19 +114021,6 @@
       "jameshkramer",
       "kdex",
       "arai"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:37:21.945Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "wbamberg",
-      "kdex",
-      "arai",
-      "nb1080",
-      "marcionitao",
-      "jpmedley"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Map/Map": {
