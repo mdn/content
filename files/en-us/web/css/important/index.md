@@ -116,7 +116,7 @@ This example shows one of the several reasons avoiding the important flag is gen
 
 ## Impact on custom properties
 
-When the `!important` flag is added to a custom property value declaration, it makes the value assignment important. The important flag is then stripped from the custome property value meaning the flag is not passed to the [`var()`](/en-US/docs/Web/CSS/var) function and it does not make the declaration important.
+When the `!important` flag is added to a custom property value declaration, it makes the value assignment important. The important flag is then stripped from the custom property value. The important flag is not passed as part of the custom property value to the [`var()`](/en-US/docs/Web/CSS/var) function.
 
 ```css
 :root {
@@ -135,7 +135,7 @@ blockquote {
 <p>This is a paragraph</p>
 <blockquote>This is a blockquote</blockquote>
 ```
-In the above scenario, the paragraph will be red, not blue, since the custom property value assignment is important. The blockquote will be purple, because the purple normal declaration comes after the normal red declaration. 
+In this example, the paragraph will be red, not blue, as the custom property value assignment is important. The blockquote will be purple, because the purple normal declaration comes after the normal red declaration. 
 
 {{ EmbedLiveSample('Impact_on_custom_properties', '500', '250') }}
 
