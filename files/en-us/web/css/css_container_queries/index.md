@@ -15,17 +15,17 @@ tags:
 
 CSS containment provides a way to isolate parts of a page and declare to the browser these parts are independent from the rest of the page in terms of styles and layout.
 
-If you are creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), you often use media queries to change the document layout based on the size of the {{Glossary("viewport")}}.
-Many page designs use common components made of HTML elements that must have a different layout depending on the available space in a page.
-The available space may not only depend on the size of the viewport, but instead relate to the context where the component is placed.
+If you are creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), you often use media queries to change the page layout based on the size of the {{Glossary("viewport")}}.
+It's common to group HTML elements into components that have a specific layout depending on the available space in a page.
+The available space might not only depend on the size of the viewport, but also on the context where a component appears.
 
-For example, the following component might be displayed in a wide layout as two columns or a narrow layout stacked vertically:
+![A webpage with a card component demonstrating the difference between media and conrainer queries.](container-query-diagram.png)
 
-![Image of two card components one displayed in two columns, the other stacked](demo.jpg)
-
-We can choose to display the component in a narrow or wide layout based on a selector or class to check where it is in the document, such as a sidebar, for example, where we would use the narrow version.
-When we view our page on large screens, the component might have enough space in the container to be displayed in a wide layout.
+The illustration below shows how the same component can be displayed with multiple layouts.
 Container queries allow us to look at the container size and make style decisions of the contents based on the size of the container rather than the viewport.
+If the container has less available space, we can hide certain elements, or use smaller fonts, for example:
+
+![A webpage with three card components displayed in different layouts depending on their container's size.](container-query-examples.png)
 
 ### The container-type property
 
