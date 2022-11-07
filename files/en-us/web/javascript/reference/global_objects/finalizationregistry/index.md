@@ -89,6 +89,11 @@ Here are some specific points that the authors of the WeakRef proposal that Fina
 - {{jsxref("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry()")}}
   - : Creates a new `FinalizationRegistry` object.
 
+## Instance properties
+
+- `FinalizationRegistry.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"FinalizationRegistry"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("FinalizationRegistry.prototype.register()")}}

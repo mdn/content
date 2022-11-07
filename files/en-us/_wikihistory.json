@@ -113076,10 +113076,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag": {
-    "modified": "2020-10-27T09:11:05.635Z",
-    "contributors": ["evilpie", "hamishwillee", "chrisdavidmills"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Intl/Collator": {
     "modified": "2020-12-07T14:51:37.568Z",
     "contributors": [
@@ -114040,19 +114036,6 @@
       "jameshkramer",
       "kdex",
       "arai"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:37:21.945Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "wbamberg",
-      "kdex",
-      "arai",
-      "nb1080",
-      "marcionitao",
-      "jpmedley"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Map/Map": {

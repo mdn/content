@@ -68,6 +68,11 @@ The number of objects or their traversal order is immaterial, so a `WeakSet` is 
 - {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
   - : Creates a new `WeakSet` object.
 
+## Instance properties
+
+- `WeakSet.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakSet"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("WeakSet.prototype.add()")}}

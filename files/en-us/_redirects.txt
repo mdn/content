@@ -12156,6 +12156,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
@@ -12191,6 +12192,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Locale/region	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Locale/script	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Locale/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number

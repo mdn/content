@@ -45,6 +45,11 @@ Here are some specific points that the authors of the WeakRef proposal included 
 - {{jsxref("WeakRef/WeakRef", "WeakRef()")}}
   - : Creates a new `WeakRef` object.
 
+## Instance properties
+
+- `WeakRef.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakRef"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("WeakRef.prototype.deref()")}}
