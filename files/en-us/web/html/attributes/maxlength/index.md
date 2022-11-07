@@ -19,6 +19,8 @@ browser-compat:
 
 The **`maxlength`** attribute defines the maximum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-maxlength.html", "tabbed-shorter")}}
+
 If no maxlength is specified, or an invalid value is specified, the input or textarea has no maximum length.
 
 Any `maxlength` value must be greater than or equal to the value of [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength), if present and valid. The input will fail constraint validation if the length of the text value of the field is greater than maxlength UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.

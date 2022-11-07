@@ -24,6 +24,8 @@ browser-compat: html.global_attributes.autocomplete
 
 The HTML `autocomplete` attribute lets web developers specify what if any permission the {{Glossary("user agent")}} has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+
 It is available on {{HTMLElement("input")}} elements that take a text or numeric value as input, {{HTMLElement("textarea")}} elements, {{HTMLElement("select")}} elements, and {{HTMLElement("form")}} elements.
 
 The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. Perhaps the browser offers the ability to save encrypted credit card information, for autocompletion following an authentication procedure.

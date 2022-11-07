@@ -19,6 +19,8 @@ browser-compat:
 
 The **`minlength`** attribute defines the minimum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher. If no minlength is specified, or an invalid value is specified, the input has no minimum length. This value must be less than or equal to the value of [maxlength](/en-US/docs/Web/HTML/Attributes/maxlength), otherwise the value will never be valid, as it is impossible to meet both criteria.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-minlength.html", "tabbed-shorter")}}
+
 The input will fail constraint validation if the length of the text value of the field is less than minlength UTF-16 code units long, with {{domxref('validityState.tooShort')}} returning `true`. Constraint validation is only applied when the value is changed by the user. Once submission fails, some browsers will display an error message indicating the minimum length required and the current length.
 
 ## Examples

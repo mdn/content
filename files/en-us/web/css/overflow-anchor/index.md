@@ -15,6 +15,8 @@ browser-compat: css.properties.overflow-anchor
 
 The **`overflow-anchor`** [CSS](/en-US/docs/Web/CSS) property provides a way to opt out of the browser's scroll anchoring behavior, which adjusts scroll position to minimize content shifts.
 
+{{EmbedInteractiveExample("pages/css/overflow-anchor.html")}}
+
 Scroll anchoring behavior is enabled by default in any browser that supports it. Therefore, changing the value of this property is typically only required if you are experiencing problems with scroll anchoring in a document or part of a document and need to turn the behavior off.
 
 ## Syntax
