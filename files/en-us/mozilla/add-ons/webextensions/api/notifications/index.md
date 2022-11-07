@@ -18,7 +18,7 @@ To use this API you need to have the "notifications" [permission](/en-US/docs/Mo
 
 The notification looks the same on all desktop operating systems. Something like:
 
-![](notification.png)
+![Example notification with a bold title and regular text](notification.png)
 
 ## Types
 
