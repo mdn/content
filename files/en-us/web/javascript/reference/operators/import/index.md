@@ -1,5 +1,5 @@
 ---
-title: import
+title: import()
 slug: Web/JavaScript/Reference/Operators/import
 tags:
   - ECMAScript 2015
@@ -55,7 +55,7 @@ The import declaration syntax (`import something from "somewhere"`) is static an
 
 Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
 
-If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations, but the asynchronous dynamic import syntax will always be available, allowing you to import modules into non-module environments.
+If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations. On the other hand, the asynchronous dynamic import syntax is always available, allowing you to import modules into non-module environments.
 
 The `options` parameter allows different kinds of import options. For example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert):
 
