@@ -15,8 +15,6 @@ browser-compat: html.elements.input.capture
 
 The **`capture`** attribute specifies that, optionally, a new file should be captured, and which device should be used to capture that new media of a type defined by the [`accept`](accept) attribute.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-capture.html", "tabbed-standard")}}
-
 Values include `user` and `environment`. The capture attribute is supported on the {{HTMLElement("input/file", "file")}} input type.
 
 The `capture` attribute takes as its value a string that specifies which camera to use for capture of image or video data, if the [accept](accept) attribute indicates that the input should be of one of those types.
@@ -27,6 +25,8 @@ The `capture` attribute takes as its value a string that specifies which camera 
 | `environment` | The outward-facing camera and/or microphone should be used |
 
 > **Note:** Capture was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-capture.html", "tabbed-standard")}}
 
 ## Examples
 

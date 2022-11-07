@@ -13,9 +13,9 @@ browser-compat: css.properties.hyphenate-character
 
 The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the character (or string) used at the end of a line before a hyphenation break.
 
-{{EmbedInteractiveExample("pages/css/hyphenate-character.html")}}
-
 Both automatic and soft hyphens are displayed according to the specified hyphenate-character value.
+
+{{EmbedInteractiveExample("pages/css/hyphenate-character.html")}}
 
 ## Syntax
 
