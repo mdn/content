@@ -10,13 +10,13 @@ tags:
 browser-compat: api.PerformanceObserverEntryList
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`PerformanceObserverEntryList`** interface is a list of {{domxref("PerformanceEntry","performance events", '', 'true')}} that were explicitly _observed_ via the {{domxref("PerformanceObserver.observe","observe()")}} method.
 
 Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceObserverEntryList.getEntries","PerformanceObserverEntryList.getEntries()")}}
   - : Returns a list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects based on the given _filter_.

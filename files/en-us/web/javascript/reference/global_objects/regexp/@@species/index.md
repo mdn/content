@@ -21,7 +21,7 @@ The **`RegExp[@@species]`** accessor property returns the constructor used to co
 
 ## Syntax
 
-```js
+```js-nolint
 RegExp[Symbol.species]
 ```
 
@@ -82,15 +82,15 @@ Or you can use this to observe the copying process:
 ```js
 class MyRegExp extends RegExp {
   constructor(...args) {
-    console.log('Creating a new MyRegExp instance with args: ', args);
+    console.log("Creating a new MyRegExp instance with args: ", args);
     super(...args);
   }
   static get [Symbol.species]() {
-    console.log('Copying MyRegExp');
+    console.log("Copying MyRegExp");
     return this;
   }
   exec(value) {
-    console.log('Executing with lastIndex: ', this.lastIndex);
+    console.log("Executing with lastIndex: ", this.lastIndex);
     return super.exec(value);
   }
 }

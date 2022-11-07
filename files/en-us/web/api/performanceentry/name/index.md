@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEntry.name
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`name`** property of the
 {{domxref("PerformanceEntry")}} interface returns a value that further specifies the
@@ -34,6 +34,14 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>string</td>
+      <td>
+        {{domxref('PerformanceEventTiming')}}
+      </td>
+      <td><code>event</code>, <code>first-input</code></td>
+      <td>The associated event's type.</td>
+    </tr>
     <tr>
       <td>{{domxref("URL")}}</td>
       <td>

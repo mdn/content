@@ -25,7 +25,7 @@ of the underlying connection technology.
 
 ## Value
 
-A {{jsxref("double")}}.
+A number.
 
 ## Specifications
 

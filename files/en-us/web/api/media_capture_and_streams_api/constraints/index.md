@@ -1,6 +1,7 @@
 ---
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
+page-type: guide
 tags:
   - Advanced
   - Audio
@@ -33,7 +34,7 @@ The process works like this (using {{domxref("MediaStreamTrack")}} as an example
 3. Finally, the track's `applyConstraints()` method is called to configure the API as desired by specifying the values or ranges of values it wishes to use for any of the constrainable properties about which it has a preference.
 4. The track's `getConstraints()` method returns the set of constraints passed into the most recent call to `applyConstraints()`. This may not represent the actual current state of the track, due to properties whose requested values had to be adjusted and because platform default values aren't represented. For a complete representation of the track's current configuration, use `getSettings()`.
 
-In the Media Stream API, both {{domxref("MediaStream")}} and {{domxref("MediaStreamTrack")}} have constrainable properties.
+In the Media Capture and Streams API, both {{domxref("MediaStream")}} and {{domxref("MediaStreamTrack")}} have constrainable properties.
 
 ## Determining if a constraint is supported
 
@@ -61,7 +62,7 @@ Most, each constraint may be a specific value indicating a desired value for the
 const constraints = {
   width: 1920,
   height: 1080,
-  aspectRatio: 1.777777778
+  aspectRatio: 1.777777778,
 };
 
 myTrack.applyConstraints(constraints);
@@ -93,7 +94,7 @@ if (
     height: { min: 400, ideal: 1080 },
     aspectRatio: 1.777777778,
     frameRate: { max: 30 },
-    facingMode: { exact: "user" }
+    facingMode: { exact: "user" },
   };
 
   myTrack
@@ -153,7 +154,7 @@ You can also change the constraints of an existing {{domxref("MediaStreamTrack")
 ```js
 videoTrack.applyConstraints({
   width: 1920,
-  height: 1080
+  height: 1080,
 });
 ```
 
@@ -302,8 +303,10 @@ h3 {
 First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.
 
 ```js
-const videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
-const audioDefaultConstraintString = '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
+const videoDefaultConstraintString =
+  '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
+const audioDefaultConstraintString =
+  '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
 ```
 
 These defaults ask for a pretty common camera configuration, but don't insist on any property being of special importance. The browser should do its best to match these settings but will settle for anything it considers a close match.
@@ -442,7 +445,9 @@ We also need to set up an event listener to watch for the "Start Video" button t
 ```js
 document.getElementById("startButton").addEventListener(
   "click",
-  () => { startVideo(); },
+  () => {
+    startVideo();
+  },
   false
 );
 ```
@@ -563,7 +568,9 @@ function log(msg) {
 }
 
 function handleError(reason) {
-  log(`Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`);
+  log(
+    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`
+  );
 }
 ```
 
@@ -583,7 +590,7 @@ Here you can see the complete example in action.
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}

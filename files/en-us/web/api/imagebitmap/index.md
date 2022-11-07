@@ -17,14 +17,14 @@ The **`ImageBitmap`** interface represents a bitmap image which can be drawn to 
 
 `ImageBitmap` is a {{glossary("Transferable objects","transferable object")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageBitmap.height")}} {{ReadOnlyInline}}
   - : An `unsigned` `long` representing the height, in CSS pixels, of the `ImageData`.
 - {{domxref("ImageBitmap.width")}} {{ReadOnlyInline}}
   - : An `unsigned` `long` representing the width, in CSS pixels, of the `ImageData`.
 
-## Methods
+## Instance methods
 
 - {{domxref("ImageBitmap.close()")}}
   - : Disposes of all graphical resources associated with an `ImageBitmap`.

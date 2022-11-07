@@ -88,14 +88,11 @@ If you live somewhere else, or are working on a site that will serve somewhere e
 
 One helpful measure you can call on to inform your browser testing choices is browser support stats. There are a number of sites that provide such stats, for example:
 
-- [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0)
 - [Statcounter](https://gs.statcounter.com/)
 
-These are both very North America-centric, and not particularly accurate, but they can give you an idea of broad trends.
+This is a very North America-centric, and not particularly accurate, but it can give you an idea of broad trends.
 
-For example, let's go to [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0). You can see that Opera is listed as having small but visible usage figures, so we should add it to our support chart too as grade C.
-
-IE8 is listed as being significant too, but it is older and no longer capable. Opera Mini is also significant, but it isn't very capable in terms of running complex JavaScript at runtime, etc. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
+Opera Mini isn't very capable in terms of running complex JavaScript at runtime. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
 
 ### Using analytics
 
@@ -233,7 +230,7 @@ To use a Virtual Box, you need to:
 
 1. Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
 2. [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
-3. Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
+3. Open the app; you'll be presented with a view like the following: ![Application window left panel lists Windows operating system and Opera TV emulators. Right panel include several subpanels including general, system, display, settings, audio, network and a preview.](virtualbox.png)
 4. To create a new virtual machine, press the _New_ button in the top left-hand corner.
 5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
 
@@ -259,12 +256,6 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 
 - Windows 10 with Edge 14
 - Windows 10 with Edge 13
-- Windows 8.1 with IE11
-- Windows 8 with IE10
-- Windows 7 with IE9
-- Windows XP with IE8
-- Windows XP with IE7
-- Windows XP with IE6
 
 > **Note:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running if it is a licensed product.
 

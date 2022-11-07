@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceEntry.entryType
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`entryType`** property returns
 a string representing the type of performance metric such as, for
@@ -43,6 +43,18 @@ table below.
       <td>{{domxref('PerformanceElementTiming')}}</td>
       <td>string</td>
       <td>Reports load time of elements.</td>
+    </tr>
+    <tr>
+      <td><code>event</code></td>
+      <td>{{domxref('PerformanceEventTiming')}}</td>
+      <td>string</td>
+      <td>Reports event latencies.</td>
+    </tr>
+    <tr>
+      <td><code>first-input</code></td>
+      <td>{{domxref('PerformanceEventTiming')}}</td>
+      <td>string</td>
+      <td>Reports the {{Glossary("first input delay")}}.</td>
     </tr>
     <tr>
       <td><code>navigation</code></td>

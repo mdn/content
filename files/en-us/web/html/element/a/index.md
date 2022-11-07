@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.a
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
@@ -57,7 +57,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
-    - While web browsers may not support other URL schemes, web sites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+    - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
 - {{HTMLAttrDef("hreflang")}}
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
@@ -87,7 +87,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
     - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`.
 
 - {{HTMLAttrDef("type")}}
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
@@ -289,7 +289,7 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
 
 #### Example painting app with save link
 

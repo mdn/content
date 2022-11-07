@@ -25,13 +25,13 @@ For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split](
 ```js
 class ReverseSplit {
   [Symbol.split](string) {
-    const array = string.split(' ');
+    const array = string.split(" ");
     return array.reverse();
   }
 }
 
-console.log('Another one bites the dust'.split(new ReverseSplit()));
-// expected output: [ "dust", "the", "bites", "one", "Another" ]
+console.log("Another one bites the dust".split(new ReverseSplit()));
+// [ "dust", "the", "bites", "one", "Another" ]
 ```
 
 ## Specifications

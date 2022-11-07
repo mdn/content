@@ -67,8 +67,7 @@ group(function(element, index, array) { /* … */ }, thisArg)
 
 ### Return value
 
-An [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with properties for all groups, each assigned to an array containing the elements of the associated group.
-The value is an object that does not inherit from `Object.prototype`.
+A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) with properties for all groups, each assigned to an array containing the elements of the associated group.
 
 ### Exceptions
 
@@ -90,6 +89,8 @@ If a `thisArg` parameter is provided to `group()`, it will be used as the `this`
 If it is not provided, then {{jsxref("undefined")}} is used.
 
 The `group()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns an object of arrays that contains the same elements as the ones from the original array. Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+
+The `group()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ### Mutating the array in the callback
 
@@ -179,6 +180,21 @@ When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collection
 
 ```js
 console.log([1, , 3].group((x) => x)); // { 1: [1], undefined: [undefined], 3: [3] }
+```
+
+### Calling group() on non-array objects
+
+The `group()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.group.call(arrayLike, (x) => x % 2));
+// { 0: [2, 4], 1: [3] }
 ```
 
 ## Specifications

@@ -56,7 +56,7 @@ In most implementations, the [IANA time zone database](https://en.wikipedia.org/
 // Create a Date instance for the current time
 const currentLocalDate = new Date();
 // Create a Date instance for 03:24 GMT-0200 on May 1st in 2016
-const laborDay2016at0324GMTminus2 = new Date('2016-05-01T03:24:00Z-02:00');
+const laborDay2016at0324GMTminus2 = new Date('2016-05-01T03:24:00-02:00');
 currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezoneOffset();
 // true, always, in any timezone that doesn't annually shift in and out of DST
 // false, sometimes, in any timezone that annually shifts in and out of DST

@@ -26,6 +26,31 @@ Examples include:
 
 > **Note:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
+## Instance properties
+
+- {{domxref("AudioNode.context")}} {{ReadOnlyInline}}
+  - : Returns the associated {{domxref("BaseAudioContext")}}, that is the object representing the processing graph the node is participating in.
+- {{domxref("AudioNode.numberOfInputs")}} {{ReadOnlyInline}}
+  - : Returns the number of inputs feeding the node. Source nodes are defined as nodes having a `numberOfInputs` property with a value of `0`.
+- {{domxref("AudioNode.numberOfOutputs")}} {{ReadOnlyInline}}
+  - : Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of `0` for this attribute.
+- {{domxref("AudioNode.channelCount")}}
+  - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.
+- {{domxref("AudioNode.channelCountMode")}}
+  - : Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
+- {{domxref("AudioNode.channelInterpretation")}}
+  - : Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+    The possible values are `"speakers"` or `"discrete"`.
+
+## Instance methods
+
+_Also implements methods from the interface_ {{domxref("EventTarget")}}.
+
+- {{domxref("AudioNode.connect()")}}
+  - : Allows us to connect the output of this node to be input into another node, either as audio data or as the value of an {{domxref("AudioParam")}}.
+- {{domxref("AudioNode.disconnect()")}}
+  - : Allows us to disconnect the current node from another one it is already connected to.
+
 ## Description
 
 ### The audio routing graph
@@ -72,31 +97,6 @@ You are free to use either constructors or factory methods, or mix both, however
 - Slightly better performance: In both Chrome and Firefox, the factory methods call the constructors internally.
 
 _Brief history:_ The first version of the Web Audio spec only defined the factory methods. After a [design review in October 2013](https://github.com/WebAudio/web-audio-api/issues/250), it was decided to add constructors because they have numerous benefits over factory methods. The constructors were added to the spec from August to October 2016. Factory methods continue to be included in the spec and are not deprecated.
-
-## Properties
-
-- {{domxref("AudioNode.context")}} {{ReadOnlyInline}}
-  - : Returns the associated {{domxref("BaseAudioContext")}}, that is the object representing the processing graph the node is participating in.
-- {{domxref("AudioNode.numberOfInputs")}} {{ReadOnlyInline}}
-  - : Returns the number of inputs feeding the node. Source nodes are defined as nodes having a `numberOfInputs` property with a value of `0`.
-- {{domxref("AudioNode.numberOfOutputs")}} {{ReadOnlyInline}}
-  - : Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of `0` for this attribute.
-- {{domxref("AudioNode.channelCount")}}
-  - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.
-- {{domxref("AudioNode.channelCountMode")}}
-  - : Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
-- {{domxref("AudioNode.channelInterpretation")}}
-  - : Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
-    The possible values are `"speakers"` or `"discrete"`.
-
-## Methods
-
-_Also implements methods from the interface_ {{domxref("EventTarget")}}.
-
-- {{domxref("AudioNode.connect()")}}
-  - : Allows us to connect the output of this node to be input into another node, either as audio data or as the value of an {{domxref("AudioParam")}}.
-- {{domxref("AudioNode.disconnect()")}}
-  - : Allows us to disconnect the current node from another one it is already connected to.
 
 ## Example
 

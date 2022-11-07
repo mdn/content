@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.style
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
 

@@ -13,7 +13,6 @@ Strict mode for an entire script is invoked by including the statement `"use str
 ## See also
 
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [Transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Sloppy mode")}}

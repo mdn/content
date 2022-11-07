@@ -37,6 +37,6 @@ It takes one of the following values:
 
 ## See also
 
-- [Media Stream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - The {{domxref("MediaStreamTrack.ended_event", "ended")}} event

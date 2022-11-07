@@ -47,10 +47,8 @@ The following example shows an HTML document and corresponding "XHTML" document,
 </html>
 ```
 
-In practice, very few "XHTML" documents are served over the web with a `Content-Type: application/xhtml+xml` header. Instead, even though the documents are written to conform to XML syntax rules, they are served with a `Content-Type: text/html` header — so browsers parse those documents using HTML parsers rather than XML parsers, which can cause a variety of sometimes-very-surprising problems. The problems are described in more details in the following articles:
+In practice, very few "XHTML" documents are served over the web with a `Content-Type: application/xhtml+xml` header. Instead, even though the documents are written to conform to XML syntax rules, they are served with a `Content-Type: text/html` header — so browsers parse those documents using HTML parsers rather than XML parsers.
 
-- [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) by David Hammond
-- [Sending XHTML as text/html Considered Harmful](https://www.hixie.ch/advocacy/xhtml) by Ian Hickson
-- [XHTML's Dirty Little Secret](https://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) by Mark Pilgrim
-- [XHTML - What's the Point?](https://hsivonen.fi/xhtml-the-point/) by Henri Sivonen
-- [XHTML is not for Beginners](https://lachy.id.au/log/2005/12/xhtml-beginners) by Lachlan Hunt
+## See also
+
+- Glossary definitions: [XHTML](/en-US/docs/Glossary/XHTML),[HTML](/en-US/docs/Glossary/HTML), [HTML5](/en-US/docs/Glossary/HTML5), [SVG](/en-US/docs/Glossary/SVG), [MathML](/en-US/docs/Glossary/MathML), and [XML](/en-US/docs/Glossary/XML)

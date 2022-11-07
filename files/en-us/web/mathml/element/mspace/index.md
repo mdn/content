@@ -18,7 +18,7 @@ The **`<mspace>`** [MathML](/en-US/docs/Web/MathML) element is used to display a
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `depth`
-  - :  A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the space.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the space.
 - `height`
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired height (above the baseline) of the space.
 - `width`

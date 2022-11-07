@@ -20,7 +20,7 @@ This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("FontFaceSet.status")}} {{ReadOnlyInline}}
   - : Indicates the font-face's loading status. It will be one of `'loading'` or `'loaded'`.
@@ -38,7 +38,7 @@ This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in 
 - {{domxref("FontFaceSet.loadingerror_event", "loadingerror")}}
   - : Fires when an error occurred whilst loading a font-face set.
 
-## Methods
+## Instance methods
 
 - {{domxref("FontFaceSet.add","FontFaceSet.add()")}}
   - : Adds a font to the font set.

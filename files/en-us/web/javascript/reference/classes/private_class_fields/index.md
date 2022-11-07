@@ -151,7 +151,7 @@ new Stamper(obj);
 // now the `this` value. `Stamper` then defines `#stamp` on `obj`
 
 console.log(obj); // In some dev tools, it shows {#stamp: 42}
-console.log(getStamp(obj)); // 42
+console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
 ```
 
@@ -246,6 +246,20 @@ class ClassWithPrivateAccessor {
 
 new ClassWithPrivateAccessor();
 // 🎬hello world🛑
+```
+
+Unlike public methods, private methods are not accessible on `Class.prototype`.
+
+```js
+class C {
+  #method() {}
+  static getMethod(x) {
+    return x.#method;
+  }
+}
+
+console.log(C.getMethod(new C())); // [Function: #method]
+console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
 ```
 
 #### Private static methods

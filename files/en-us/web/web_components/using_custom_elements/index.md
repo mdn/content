@@ -95,6 +95,10 @@ const img = icon.appendChild(document.createElement("img"));
 img.src = this.hasAttribute("img")
   ? this.getAttribute("img")
   : "img/default.png";
+// Always include descriptive text when adding an image
+img.alt = this.hasAttribute("alt")
+  ? this.getAttribute("alt")
+  : "";
 
 const info = wrapper.appendChild(document.createElement("span"));
 info.setAttribute("class", "info");

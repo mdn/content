@@ -24,7 +24,7 @@ An instance of the [WebRTC](/en-US/docs/Web/API/WebRTC_API) API's **`RTCRtpEncod
 
 This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing the configuration of an RTP sender's {{domxref("RTCRtpSendParameters.encodings", "encodings")}}; {{domxref("RTCRtpDecodingParameters")}} is used to describe the configuration of an RTP receiver's {{domxref("RTCRtpReceiveParameters", "encodings")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpEncodingParameters.active", "active")}}
   - : If `true`, the described encoding is currently actively being used. That is, for RTP senders, the encoding is currently being used to send data, while for receivers, the encoding is being used to decode received data. The default value is `true`.

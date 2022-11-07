@@ -18,12 +18,12 @@ The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} obj
 
 > **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The number of plugins in the array.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("PluginArray.item")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} at the specified index into the array.

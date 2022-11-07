@@ -105,7 +105,7 @@ function isPrime(element) {
 }
 
 let uint8 = new Uint8Array([4, 6, 8, 12]);
-console.log(uint8.findLast(isPrime)); //  undefined (no primes in array)
+console.log(uint8.findLast(isPrime)); // undefined (no primes in array)
 uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLast(isPrime)); // 11
 ```
@@ -117,7 +117,7 @@ The following examples show that all elements _are_ visited, and that the value 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
 // The missing elements will be initialized to zero.
-const uint8 = new Uint8Array([0,1,,,,5,6]);
+const uint8 = new Uint8Array([0, 1, , , , 5, 6]);
 
 // Iterate through the elements in reverse order.
 // Note that all elements are visited.
@@ -135,22 +135,21 @@ uint8.findLast((value, index) => {
   // Element 3 is still visited but will have a new value.
   console.log(`Visited index ${index} with value ${value}`);
 });
-// expected output:
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value 5"
-// > "Visited index 4 with value 0"
-// > "Visited index 3 with value 0"
-// > "Visited index 2 with value 0"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
-// > "Deleting uint8[5] with value 5"
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value 5"
-// > "Visited index 4 with value 0"
-// > "Visited index 3 with value 44"
-// > "Visited index 2 with value 0"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
+// Visited index 6 with value 6
+// Visited index 5 with value 5
+// Visited index 4 with value 0
+// Visited index 3 with value 0
+// Visited index 2 with value 0
+// Visited index 1 with value 1
+// Visited index 0 with value 0
+// Deleting uint8[5] with value 5
+// Visited index 6 with value 6
+// Visited index 5 with value 5
+// Visited index 4 with value 0
+// Visited index 3 with value 44
+// Visited index 2 with value 0
+// Visited index 1 with value 1
+// Visited index 0 with value 0
 ```
 
 ## Specifications

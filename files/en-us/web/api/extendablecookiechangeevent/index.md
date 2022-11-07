@@ -29,7 +29,7 @@ Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are
 - {{domxref("ExtendableCookieChangeEvent.ExtendableCookieChangeEvent", "ExtendableCookieChangeEvent()")}}
   - : Creates a new `ExtendableCookieChangeEvent`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("ExtendableEvent")}}._
 

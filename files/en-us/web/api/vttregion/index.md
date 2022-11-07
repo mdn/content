@@ -18,7 +18,7 @@ The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on 
 - {{domxref("VTTRegion.VTTRegion", "VTTRegion()")}}
   - : Returns a newly created `VTTRegion` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("VTTRegion.id")}}
   - : A string that identifies the region.

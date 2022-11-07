@@ -16,7 +16,7 @@ tags:
 
 One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.
 
-> **Note:** You can find working examples of all the code snippets in our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo.
+> **Note:** You can find working examples of all the code snippets in our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo.
 
 ## Basic concepts
 
@@ -66,7 +66,7 @@ Let's go on to look at some specific examples.
 
 ## Creating a waveform/oscilloscope
 
-To create the oscilloscope visualization (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
+To create the oscilloscope visualization (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
 
 ```js
 analyser.fftSize = 2048;
@@ -89,52 +89,52 @@ function draw() {
 In here, we use `requestAnimationFrame()` to keep looping the drawing function once it has been started:
 
 ```js
-  const drawVisual = requestAnimationFrame(draw);
+const drawVisual = requestAnimationFrame(draw);
 ```
 
 Next, we grab the time domain data and copy it into our array
 
 ```js
-  analyser.getByteTimeDomainData(dataArray);
+analyser.getByteTimeDomainData(dataArray);
 ```
 
 Next, fill the canvas with a solid color to start
 
 ```js
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+canvasCtx.fillStyle = "rgb(200, 200, 200)";
+canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
 Set a line width and stroke color for the wave we will draw, then begin drawing a path
 
 ```js
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
-  canvasCtx.beginPath();
+canvasCtx.lineWidth = 2;
+canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+canvasCtx.beginPath();
 ```
 
 Determine the width of each segment of the line to be drawn by dividing the canvas width by the array length (equal to the FrequencyBinCount, as defined earlier on), then define an x variable to define the position to move to for drawing each segment of the line.
 
 ```js
-  const sliceWidth = WIDTH * 1.0 / bufferLength;
-  let x = 0;
+const sliceWidth = WIDTH / bufferLength;
+let x = 0;
 ```
 
 Now we run through a loop, defining the position of a small segment of the wave for each point in the buffer at a certain height based on the data point value from the array, then moving the line across to the place where the next wave segment should be drawn:
 
 ```js
-  for (let i = 0; i < bufferLength; i++) {
-    const v = dataArray[i] / 128.0;
-    const y = v * (HEIGHT / 2);
+for (let i = 0; i < bufferLength; i++) {
+  const v = dataArray[i] / 128.0;
+  const y = v * (HEIGHT / 2);
 
-    if (i === 0) {
-      canvasCtx.moveTo(x, y);
-    } else {
-      canvasCtx.lineTo(x, y);
-    }
-
-    x += sliceWidth;
+  if (i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
   }
+
+  x += sliceWidth;
+}
 ```
 
 Finally, we finish the line in the middle of the right-hand side of the canvas, then draw the stroke we've defined:
@@ -186,9 +186,9 @@ Now we set our `barWidth` to be equal to the canvas width divided by the number 
 We also set a `barHeight` variable, and an `x` variable to record how far across the screen to draw the current bar.
 
 ```js
-  const barWidth = (WIDTH / bufferLength) * 2.5;
-  let barHeight;
-  let x = 0;
+const barWidth = (WIDTH / bufferLength) * 2.5;
+let barHeight;
+let x = 0;
 ```
 
 As before, we now start a for loop and cycle through each value in the `dataArray`. For each one, we make the `barHeight` equal to the array value, set a fill color based on the `barHeight` (taller bars are brighter), and draw a bar at `x` pixels across the canvas, which is `barWidth` wide and `barHeight / 2` tall (we eventually decided to cut each bar in half so they would all fit on the canvas better.)
@@ -217,4 +217,4 @@ This code gives us a result like the following:
 
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
-> **Note:** The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/voice-change-o-matic-float-data) too) — this is exactly the same as the original [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/), except that it uses Float data, not unsigned byte data.
+> **Note:** The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic-float-data) too) — this is exactly the same as the original [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/), except that it uses Float data, not unsigned byte data.
