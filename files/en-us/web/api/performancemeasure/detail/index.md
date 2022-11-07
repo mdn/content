@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceMeasure.detail
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The read-only **`detail`** property returns arbitrary metadata that was included in the mark upon construction (when using {{domxref("Performance.measure","performance.measure()")}}.
 

@@ -11,7 +11,7 @@ tags:
 browser-compat: api.PerformanceObserver.PerformanceObserver
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`PerformanceObserver()`** constructor creates a new
 {{domxref("PerformanceObserver")}} object with the given observer `callback`.

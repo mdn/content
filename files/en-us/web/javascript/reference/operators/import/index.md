@@ -33,7 +33,7 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 
 ### Return value
 
-It returns a promise which fulfills to an object containing all exports from `moduleName`, with the same shape as a namespace import (`import * as name from moduleName`): an object with `null` prototype, and the default export available as a key named `default`.
+It returns a promise which fulfills to an object containing all exports from `moduleName`, with the same shape as a namespace import (`import * as name from moduleName`): a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`.
 
 ## Description
 

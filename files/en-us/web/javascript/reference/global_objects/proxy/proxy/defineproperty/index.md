@@ -52,15 +52,14 @@ The **`handler.defineProperty()`** method is a trap for
 
 This trap can intercept these operations:
 
-- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Reflect.defineProperty()")}}
+
+Or any other operation that invokes the `[[DefineOwnProperty]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - A property cannot be added, if the target object is not extensible.
 - A property cannot be added as or modified to be non-configurable, if it does not
