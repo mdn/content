@@ -95,11 +95,11 @@ The assertion syntax is designed to be extensible — although only `type` is kn
 import data from "https://example.com/module.js" assert { this: "looks good" };
 ```
 
-This likely does nothing unless your host reads that key. The assertion:
+This likely does nothing unless your host understands that key. The assertion:
 
 - Does not affect the module's behavior. What the importer has asserted about the module is not available to the module being imported. (For example, it's not part of [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta).) Only the host can read and validate the assertion.
 - Does not affect how the host interprets the module. For example, the host will not decide to parse a module as JSON if it has already decided that the module contains JavaScript — via MIME type in browsers or extensions in Node.js — even when there's a `type: "json"` assertion. It would simply fail the import.
-- Is not used by the host to cache the module. If a module with the same specifier is imported twice twice, once with the assertion and once without, and neither import fails, then they would result in the exact same module without re-executing it.
+- Is not used by the host to cache the module. If a module with the same specifier is imported twice, once with the assertion and once without, and neither import fails, then they would result in the exact same module without re-executing it.
 
 The specification explicitly calls out `type: "json"` to be supported. If a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` assertions, the host may still parse it as JSON if security is not an issue in this environment.
 
