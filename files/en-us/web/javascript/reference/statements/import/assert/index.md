@@ -31,7 +31,7 @@ export { exports } from "module-name" assert { key: "data", key2: "data2", /* â€
 
 > **Note:** Assertions can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc.
 
-> **Note:** The grammar does not allow a line break between the `"module-name"` specifier and the `assert` keyword, to avoid syntactical ambiguity in the following valid code where `assert` is a variable name via [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion):
+> **Note:** The grammar does not allow a line break between the `"module-name"` specifier and the `assert` keyword, in order to avoid syntactical ambiguity in the following valid code where `assert` is a variable name via [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion):
 >
 > ```js
 > import { something } from "module-name"
