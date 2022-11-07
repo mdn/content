@@ -21,9 +21,9 @@ The available space might not only depend on the size of the viewport, but also 
 
 ![A webpage with a card component demonstrating the difference between media and conrainer queries.](container-query-diagram.png)
 
-The illustration below shows how the same component can be displayed with multiple layouts.
-Container queries allow us to look at the container size and make style decisions of the contents based on the size of the container rather than the viewport.
-If the container has less available space, we can hide certain elements, or use smaller fonts, for example:
+Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport.
+If the container has less available space, we can hide certain elements or use smaller fonts, for example.
+The illustration below shows how the same component can be displayed with multiple layouts using container queries:
 
 ![A webpage with three card components displayed in different layouts depending on their container's size.](container-query-examples.png)
 
