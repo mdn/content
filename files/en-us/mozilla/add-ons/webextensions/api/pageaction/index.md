@@ -17,7 +17,7 @@ browser-compat: webextensions.api.pageAction
 
 A [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) is a clickable icon inside the browser's address bar.
 
-![](page-action.png)
+![Paw print icon representing a page action](page-action.png)
 
 You can listen for clicks on the icon, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that will open when the icon is clicked.
 

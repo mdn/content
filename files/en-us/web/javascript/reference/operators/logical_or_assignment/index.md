@@ -52,7 +52,7 @@ const x = {
 x.value ??= 2;
 ```
 
-In fact, if `x` is not truthy, `y` is not evaluated at all.
+In fact, if `x` is truthy, `y` is not evaluated at all.
 
 ```js
 const x = 1;

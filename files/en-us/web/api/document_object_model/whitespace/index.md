@@ -267,7 +267,7 @@ You probably don't want the gaps in between the blocks — depending on the use 
 
 The Firefox DevTools HTML Inspector will highlight text nodes, and also show you exactly what area the elements are taking up — useful if you are wondering what is causing the problem, and are maybe thinking you've got some extra margin in there or something!
 
-![](whitespace-devtools.png)
+![Example of displaying whitespaces between blocks in the Firefox DevTools HTML Inspector](whitespace-devtools.png)
 
 ### Solutions
 
