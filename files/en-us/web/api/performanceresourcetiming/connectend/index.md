@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.connectEnd
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`connectEnd`** read-only property returns the
 {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes

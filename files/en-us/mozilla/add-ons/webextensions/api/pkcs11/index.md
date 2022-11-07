@@ -28,9 +28,9 @@ Perform the following steps:
 2. Select **Tools > Options** or select the **Firefox menu** and then **Options**
 3. Once the Options page opens, select **Privacy & Security**
 4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices…**
-   ![](device_manager.png)
+   ![Security modules and devices](device_manager.png)
 5. Click or tap the **Load** button
-   ![](load_device_driver.png)
+   ![Load PKCS#11 device driver](load_device_driver.png)
 6. Enter a name for the security module, such as "_My Client Database_"
 
    > **Warning:** Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
