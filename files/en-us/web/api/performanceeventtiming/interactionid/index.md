@@ -51,7 +51,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({entryTypes: ["event"]}); 
+observer.observe({type: "event", buffered: true}); 
 
 // Log events with maximum event duration for a user interaction
 Object.entries(eventLatencies).forEach(([k, v]) => {
