@@ -176,7 +176,7 @@ Intl.NumberFormat(locales, options)
 
     - `roundingPriority` {{experimental_inline}}
 
-      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maxmumsignificantdigits)) are specified:
+      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified:
 
         - `"auto"`: the result from the significant digits property is used (default).
         - `"morePrecision"`: the result from the property that results in more precision is used.
