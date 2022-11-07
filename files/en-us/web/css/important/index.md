@@ -131,11 +131,13 @@ blockquote {
    color: purple;
 }
 ```
+
 ```html hidden
 <p>This is a paragraph</p>
 <blockquote>This is a blockquote</blockquote>
 ```
-In this example, the paragraph will be red, not blue, as the custom property value assignment is important. The blockquote will be purple, because the purple normal declaration comes after the normal red declaration. 
+
+In this example, the paragraph will be red, not blue, as the custom property value assignment is important. The blockquote will be purple, because the purple normal declaration comes after the normal red declaration.
 
 {{ EmbedLiveSample('Impact_on_custom_properties', '500', '250') }}
 
