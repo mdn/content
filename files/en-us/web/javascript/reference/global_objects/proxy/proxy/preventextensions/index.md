@@ -48,9 +48,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.seal()")}}
 - {{jsxref("Object.freeze()")}}
 
+Or any other operation that invokes the `[[PreventExtensions]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - `Object.preventExtensions(proxy)` only returns `true` if `Object.isExtensible(proxy)` is `false`.
 

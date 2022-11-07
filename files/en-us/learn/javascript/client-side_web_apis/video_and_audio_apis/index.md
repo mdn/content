@@ -68,7 +68,7 @@ You can review what all the HTML features do in the article linked above; for ou
 
 This is not as immediately useful for video playback, but it does have advantages. One big issue with the native browser controls is that they are different in each browser — not very good for cross-browser support! Another big issue is that the native controls in most browsers aren't very keyboard-accessible.
 
-You can solve both these problems by hiding the native controls (by removing the `controls` attribute), and programming your own with HTML, CSS, and JavaScript. In the next section we'll look at the basic tools we have available to do this.
+You can solve both these problems by hiding the native controls (by removing the `controls` attribute), and programming your own with HTML, CSS, and JavaScript. In the next section, we'll look at the basic tools we have available to do this.
 
 ## The HTMLMediaElement API
 
@@ -171,7 +171,7 @@ button:before {
 
 First of all, at the top of the CSS we use a {{cssxref("@font-face")}} block to import a custom web font. This is an icon font — all the characters of the alphabet equate to common icons you might want to use in an application.
 
-Next we use generated content to display an icon on each button:
+Next, we use generated content to display an icon on each button:
 
 - We use the {{cssxref("::before")}} selector to display the content before each {{htmlelement("button")}} element.
 - We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the [`data-icon`](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) attribute. In the case of our play button, `data-icon` contains a capital "P".
@@ -305,7 +305,7 @@ Let's implement probably the most important control — the play/pause button.
 
 #### Seeking back and forth
 
-There are many ways that you can implement rewind and fast forward functionality; here we are showing you a relatively complex way of doing it, which doesn't break when the different buttons are pressed in an unexpected order.
+There are many ways that you can implement rewind and fast-forward functionality; here we are showing you a relatively complex way of doing it, which doesn't break when the different buttons are pressed in an unexpected order.
 
 1. First of all, add the following two [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous ones:
 
@@ -351,7 +351,7 @@ There are many ways that you can implement rewind and fast forward functionality
    }
    ```
 
-   You'll notice that first we initialize two variables — `intervalFwd` and `intervalRwd` — you'll find out what they are for later on.
+   You'll notice that first, we initialize two variables — `intervalFwd` and `intervalRwd` — you'll find out what they are for later on.
 
    Let's step through `mediaBackward()` (the functionality for `mediaForward()` is exactly the same, but in reverse):
 
@@ -391,7 +391,7 @@ There are many ways that you can implement rewind and fast forward functionality
 
 #### Updating the elapsed time
 
-The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+The very last piece of our media player to implement is the time-elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Add the following `addEventListener()` line just below the others:
 

@@ -7,7 +7,7 @@ tags:
   - Web Performance
 ---
 
-{{DefaultAPISidebar("Performance Timeline API")}}
+{{DefaultAPISidebar("Performance API")}}
 
 The **[Performance Timeline](https://w3c.github.io/performance-timeline/)** standard defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The standard also includes interfaces that allow an application to be notified when specific performance events occur. Together, these interfaces can be used to help identify an application's performance bottlenecks.
 

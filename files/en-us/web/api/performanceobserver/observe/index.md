@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceObserver.observe
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`observe()`** method of the
 **{{domxref("PerformanceObserver")}}** interface is used to specify the

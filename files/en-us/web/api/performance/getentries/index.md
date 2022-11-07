@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Performance.getEntries
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`getEntries()`** method returns a list of all
 {{domxref("PerformanceEntry")}} objects for the page. The list's members
