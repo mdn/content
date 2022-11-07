@@ -52,7 +52,7 @@ Import assertions allow hosts to do additional checks about the module that has 
 Consider the following statement:
 
 ```js
-import data from "https://exmaple.com/data.json";
+import data from "https://example.com/data.json";
 ```
 
 On the web, each import statement would result in a HTTP request. The response is then prepared into a JavaScript value and made available to the program by the host (i.e. the browser). For example, the response may look like this:
@@ -64,7 +64,7 @@ Content-Type: application/json; charset=utf-8
 {"name":"John"}
 ```
 
-JSON modules are identified by the `application/json` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). When the host sees this MIME type instead of `text/javascript` (for JavaScript source), it would parse the result as JSON instead of executing it as code — and the former is generally a safer thing to do. However, there's no in-code metadata that signals the author's intent that a particular module should always be interpreted as JSON. Very importantly, the extension (the last part of the URL) cannot be used to identify a file's type — only the MIME type can. If the `https://exmaple.com/data.json` URL actually returns a JS file with `text/javascript` MIME, the `import` would unintentionally execute external code, causing a security threat.
+JSON modules are identified by the `application/json` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). When the host sees this MIME type instead of `text/javascript` (for JavaScript source), it would parse the result as JSON instead of executing it as code — and the former is generally a safer thing to do. However, there's no in-code metadata that signals the author's intent that a particular module should always be interpreted as JSON. Very importantly, the extension (the last part of the URL) cannot be used to identify a file's type — only the MIME type can. If the `https://example.com/data.json` URL actually returns a JS file with `text/javascript` MIME, the `import` would unintentionally execute external code, causing a security threat.
 
 Import assertions fix this problem by allowing the author to explicitly specify how a module should be validated. For example, the import statement above would actually fail in a browser:
 
@@ -79,7 +79,7 @@ Instead, you must provide an assertion. To validate the module's type (via MIME 
 Therefore, the code above should be re-written as:
 
 ```js
-import data from "https://exmaple.com/data.json" assert { type: "json" };
+import data from "https://example.com/data.json" assert { type: "json" };
 ```
 
 This does NOT change how the module is interpreted. The host already knows to parse the module as JSON given the MIME type. It only uses the assertion to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail:
@@ -92,7 +92,7 @@ The assertion syntax is designed to be extensible — although only `type` is kn
 
 ```js
 // Likely does nothing...
-import data from "https://exmaple.com/module.js" assert { this: "looks good" };
+import data from "https://example.com/module.js" assert { this: "looks good" };
 ```
 
 This likely does nothing unless your host reads that key. The assertion:
