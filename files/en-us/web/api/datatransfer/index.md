@@ -86,8 +86,6 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
   - : Removes the data associated with the given format for an item at the specified index. The index is in the range from zero to the number of items minus one. Removed in Firefox 71.
 - {{domxref("DataTransfer.mozGetDataAt()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one. Removed in Firefox 71.
-- {{domxref("DataTransfer.mozSetDataAt()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : A data transfer may store multiple items, each at a given zero-based index. `mozSetDataAt()` may only be called with an index argument less than `mozItemCount` in which case an existing item is modified, or equal to `mozItemCount` in which case a new item is added, and the `mozItemCount` is incremented by one. Removed in Firefox 71.
 - {{domxref("DataTransfer.mozTypesAt()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned. Removed in Firefox 71.
 
