@@ -21,7 +21,7 @@ By default, the scrollbar in the "block" direction provides the timeline (this i
 The scrollbar that is used can be set by applying [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis) on the same element as the `scroll-timeline-name`.
 Note that if the element does not display a scrollbar in the axis dimension, then no timeline will be created.
 
-The `scroll-timeline-name` (and `scroll-timeline-axis`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline-name) shorthand property.
+The `scroll-timeline-name` (and `scroll-timeline-axis`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property.
 
 ## Syntax
 
