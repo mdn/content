@@ -17,6 +17,8 @@ The **`accept`** attribute takes as its value a comma-separated list of one or m
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
 
+## Overview
+
 The accept property is an attribute of the {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} type. It was supported on the {{htmlelement("form")}} element, but was removed in favor of {{HTMLElement("input/file", "file")}}.
 
 Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of specific type, or use the wild card to denote a type of any format is acceptable.
