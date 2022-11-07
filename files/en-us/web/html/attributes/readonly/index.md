@@ -19,6 +19,7 @@ The Boolean **`readonly`** attribute, when present, makes the element not mutabl
 {{EmbedInteractiveExample("pages/tabbed/attribute-readonly.html", "tabbed-shorter")}}
 
 ## Overview
+
 If the `readonly` attribute is specified on an input element, because the user can not edit the input, the element does not participate in constraint validation.
 
 The `readonly` attribute is supported by `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, and `{{HTMLElement("input/number","number")}}` `{{HTMLElement("input")}}` types and the `{{HTMLElement("textarea")}}` form control elements. If present on any of these input types and elements, the `{{cssxref(':read-only')}}` pseudo class will match. If the attribute is not included, the `{{cssxref(':read-write')}}` pseudo class will match.
