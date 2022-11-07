@@ -36,10 +36,9 @@ slice(start, end)
     A negative index can be used, indicating an offset from the end of the sequence.
     `slice(-2)` extracts the last two elements in the sequence.
 
-    If `start` is `undefined`, `slice` starts from the index `0`.
+    If `start` is omitted or `undefined`, `slice` starts from the index `0`.
 
-    If `start` is greater than the index range of the sequence, an
-    empty array is returned.
+    If `start` is greater than the length of the sequence, an empty array is returned.
 
 - `end` {{optional_inline}}
 
@@ -52,12 +51,9 @@ slice(start, end)
     `slice(2,-1)` extracts the third element through the second-to-last element
     in the sequence.
 
-    If `end` is omitted or `undefined`, `slice` extracts through the
-    end of the sequence (`arr.length`).
+    If `end` is omitted or `undefined`, `slice` extracts through the end of the sequence (`arr.length`).
 
-    If `end` is greater than the length of the sequence,
-    `slice` extracts through to the end of the sequence
-    (`arr.length`).
+    If `end` is greater than the length of the sequence, `slice` extracts through to the end of the sequence (`arr.length`).
 
 ### Return value
 
@@ -96,20 +92,17 @@ const myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
 const myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
 const newCar = myCar.slice(0, 2);
 
-// Display the values of myCar, newCar, and the color of myHonda
-//  referenced from both arrays.
-console.log('myCar = ', myCar);
-console.log('newCar = ', newCar);
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log('myCar =', myCar);
+console.log('newCar =', newCar);
+console.log('myCar[0].color =', myCar[0].color);
+console.log('newCar[0].color =', newCar[0].color);
 
 // Change the color of myHonda.
 myHonda.color = 'purple';
-console.log('The new color of my Honda is ', myHonda.color);
+console.log('The new color of my Honda is', myHonda.color);
 
-// Display the color of myHonda referenced from both arrays.
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log('myCar[0].color =', myCar[0].color);
+console.log('newCar[0].color =', newCar[0].color);
 ```
 
 This script writes:
@@ -121,7 +114,7 @@ myCar = [
   'cherry condition',
   'purchased 1997'
 ]
-newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
+newCar = [ { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }, 2 ]
 myCar[0].color = red
 newCar[0].color = red
 The new color of my Honda is purple

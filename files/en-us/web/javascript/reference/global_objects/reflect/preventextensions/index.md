@@ -45,11 +45,11 @@ See also {{jsxref("Object.preventExtensions()")}}.
 ```js
 // Objects are extensible by default.
 const empty = {};
-Reflect.isExtensible(empty); // === true
+Reflect.isExtensible(empty); // true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty); // === false
+Reflect.isExtensible(empty); // false
 ```
 
 ### Difference with Object.preventExtensions()

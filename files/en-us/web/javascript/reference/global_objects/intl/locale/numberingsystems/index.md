@@ -121,12 +121,12 @@ List supported number system for a given `Locale`.
 
 ```js
 const arEG = new Intl.Locale("ar-EG");
-console.log(arEG.numberingSystems); // logs ["arab"]
+console.log(arEG.numberingSystems); // ["arab"]
 ```
 
 ```js
 const ja = new Intl.Locale("ja");
-console.log(ja.numberingSystems); // logs ["latn"]
+console.log(ja.numberingSystems); // ["latn"]
 ```
 
 ## Specifications

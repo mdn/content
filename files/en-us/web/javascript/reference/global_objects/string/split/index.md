@@ -214,7 +214,7 @@ const splitByNumber = {
 };
 
 const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
+console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
 ```
 
 The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
@@ -292,7 +292,7 @@ const splitCommands = {
 };
 
 const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
-console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
+console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", "brightness down"]
 ```
 
 ## Specifications

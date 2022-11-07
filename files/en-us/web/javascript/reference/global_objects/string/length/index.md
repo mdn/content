@@ -38,7 +38,7 @@ Since `length` counts code units instead of characters, if you want to get the n
 ```js
 function getCharacterLength(str) {
   // The string iterator that is used here iterates over characters,
-  //  not mere code units
+  // not mere code units
   return [...str].length;
 }
 
@@ -54,10 +54,10 @@ const x = "Mozilla";
 const empty = "";
 
 console.log(`${x} is ${x.length} code units long`);
-/* "Mozilla is 7 code units long" */
+// Mozilla is 7 code units long
 
 console.log(`The empty string has a length of ${empty.length}`);
-// expected output: "The empty string has a length of 0"
+// The empty string has a length of 0
 ```
 
 ### Strings with length not equal to the number of characters
@@ -79,10 +79,8 @@ Because string is a primitive, attempting to assign a value to a string's `lengt
 const myString = "bluebells";
 
 myString.length = 4;
-console.log(myString);
-// expected output: "bluebells"
-console.log(myString.length);
-// expected output: 9
+console.log(myString); // "bluebells"
+console.log(myString.length); // 9
 ```
 
 ## Specifications
