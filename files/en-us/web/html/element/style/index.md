@@ -35,8 +35,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{htmlattrdef("title")}}
   - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
 - {{htmlattrdef("blocking")}}
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as  critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
-      - `render`: The rendering of content on the screen is blocked
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
+    - `render`: The rendering of content on the screen is blocked
 
 ### Deprecated attributes
 

@@ -223,8 +223,9 @@ You can also use the `<script>` element to embed data in HTML with server-side r
 ### Blocking rendering till a script is fetched and executed
 
 You can include `render` token inside a `blocking` attribute;
-the rendering of the page will be blocked till the script is fetched and executed. In the example below, we block rendering on an async script, 
-so that the script doesn’t block parsing but is guaranteed to be evaluated before rendering starts.
+the rendering of the page will be blocked till the script is fetched and executed. In the example below, we block rendering on an async script,
+so that the script doesn't block parsing but is guaranteed to be evaluated before rendering starts.
+
 ```html
 <script blocking="render" async src="async-script.js"></script>
 ```
