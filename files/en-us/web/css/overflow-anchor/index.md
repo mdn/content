@@ -19,7 +19,6 @@ Scroll anchoring behavior is enabled by default in any browser that supports it.
 
 {{EmbedInteractiveExample("pages/css/overflow-anchor.html")}}
 
-
 ## Syntax
 
 ```css

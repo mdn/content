@@ -19,7 +19,6 @@ The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properti
 
 {{EmbedInteractiveExample("pages/css/offset.html")}}
 
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
