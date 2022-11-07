@@ -335,13 +335,10 @@ myArray.sort();
 const sortFn = (a, b) => {
   if (a[a.length - 1] < b[b.length - 1]) {
     return -1; // Negative number => a < b, a comes before b
-  }
-  if (a[a.length - 1] > b[b.length - 1]) {
+  } else if (a[a.length - 1] > b[b.length - 1]) {
     return 1; // Positive number => a > b, a comes after b
   }
-  if (a[a.length - 1] === b[b.length - 1]) {
-    return 0; // Zero => a = b, a and b keep their original order
-  }
+  return 0; // Zero => a = b, a and b keep their original order
 }
 myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
