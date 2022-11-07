@@ -13,8 +13,7 @@ browser-compat: api.PerformanceEntry.entryType
 
 {{APIRef("Performance API")}} {{AvailableInWorkers}}
 
-The read-only **`entryType`** property returns a string representing the type of performance metric. For
-example, if the subtype is {{domxref('PerformanceMark')}}, it will be "`mark`".
+The read-only **`entryType`** property returns a string representing the type of performance metric that this entry represents.
 
 All supported `entryTypes` are available using the static property {{domxref("PerformanceObserver.supportedEntryTypes")}}.
 
@@ -22,72 +21,50 @@ All supported `entryTypes` are available using the static property {{domxref("Pe
 
 A string. The return value depends on the subtype of the `PerformanceEntry` object. Some subtypes have more than one `entryType`.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Subtype</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{domxref('LargestContentfulPaint')}}</td>
-      <td><code>largest-contentful-paint</code></td>
-      <td>Reports the largest paint an element triggered on screen.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceElementTiming')}}</td>
-      <td><code>element</code></td>
-      <td>Reports load time of elements.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceEventTiming')}}</td>
-      <td><code>event</code></td>
-      <td>Reports event latencies.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceEventTiming')}}</td>
-      <td><code>first-input</code></td>
-      <td>Reports the {{Glossary("first input delay")}}.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceLongTaskTiming')}}</td>
-      <td><code>longtask</code></td>
-      <td>Reports instances of long tasks.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceMark')}}</td>
-      <td><code>mark</code></td>
-      <td>Reports your own custom performance markers.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceMeasure')}}</td>
-      <td><code>measure</code></td>
-      <td>Reports your own custom performance measures.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceNavigationTiming')}}</td>
-      <td><code>navigation</code></td>
-      <td>Reports document navigation timing.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformancePaintTiming')}}</td>
-      <td><code>paint</code></td>
-      <td>Reports key moments of document rendering (first paint, first contentful paint) during page load.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('PerformanceResourceTiming')}}</td>
-      <td><code>resource</code></td>
-      <td>Reports timing information for resources in a document.</td>
-    </tr>
-    <tr>
-      <td>{{domxref('TaskAttributionTiming')}}</td>
-      <td><code>taskattribution</code></td>
-      <td>Reports the type of work that contributed significantly to the long task.</td>
-    </tr>
-  </tbody>
-</table>
+- `element`
+  - : Reports load time of elements.
+
+      The entry instance will be a {{domxref("PerformanceElementTiming")}} object.
+- `event`
+  - : Reports event latencies.
+
+      The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
+- `first-input`
+  - : Reports the {{Glossary("first input delay")}} (FID).
+
+      The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
+- `largest-contentful-paint`
+  - : Reports the largest paint an element triggered on screen.
+
+       The entry instance will be a {{domxref("LargestContentfulPaint")}} object.
+- `longtask`
+  - : Reports instances of long tasks.
+
+      The entry instance will be a {{domxref("PerformanceLongTaskTiming")}} object.
+- `mark`
+  - : Reports your own custom performance markers.
+
+      The entry instance will be a {{domxref("PerformanceMark")}} object.
+- `measure`
+  - : Reports your own custom performance measures.
+
+      The entry instance will be a {{domxref("PerformanceMeasure")}} object.
+- `navigation`
+  - : Reports document navigation timing.
+
+      The entry instance will be a {{domxref("PerformanceNavigationTiming")}} object.
+- `paint`
+  - : Reports key moments of document rendering (first paint, first contentful paint) during page load.
+
+      The entry instance will be a {{domxref("PerformancePaintTiming")}} object.
+- `resource`
+  - : Reports timing information for resources in a document.
+
+      The entry instance will be a {{domxref("PerformanceResourceTiming")}} object.
+- `taskattribution`
+  - : Reports the type of work that contributed significantly to the long task.
+
+      The entry instance will be a {{domxref("TaskAttributionTiming")}} object.
 
 ## Examples
 
