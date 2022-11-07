@@ -79,7 +79,7 @@ Intl.NumberFormat(locales, options)
         The default value is `"standard"`.
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`.
-        For information about this option, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+        For information about this option, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
     - `notation`
 
       - : The formatting that should be displayed for the number. The default is `"standard"`.
