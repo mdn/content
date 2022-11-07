@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceLongTaskTiming.attribution
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{SeeCompatTable}}{{APIRef("Performance API")}}
 
 The **`attribution`** readonly property of the
 {{domxref("PerformanceLongTaskTiming")}} interface returns a sequence of

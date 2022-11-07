@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceNavigationTiming.unloadEventEnd
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}
 
 The **`unloadEventEnd`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the

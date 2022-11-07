@@ -10207,6 +10207,7 @@
 /en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLSubImage/textureHeight	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight
 /en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
+/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error
@@ -11867,6 +11868,7 @@
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
+/en-US/docs/Web/Guide/Mobile/Separate_sites	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Performance/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
 /en-US/docs/Web/Guide/Prefixes	/en-US/docs/Glossary/Vendor_Prefix
@@ -12742,7 +12744,7 @@
 /en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Web/Guide/Mobile/Mobile-friendliness
 /en-US/docs/Web_Development/Mobile/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Mobile/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/Web_Development/Mobile/Separate_sites	/en-US/docs/Web/Guide/Mobile/Separate_sites
+/en-US/docs/Web_Development/Mobile/Separate_sites	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Web_Development/Responsive_Web_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
@@ -12982,8 +12984,8 @@
 /en-US/docs/XSLT_in_Gecko:Generating_HTML	/en-US/docs/Web/API/XSLTProcessor/Generating_HTML
 /en-US/docs/XSLT_in_Gecko:Introduction	/en-US/docs/Web/API/XSLTProcessor/Introduction
 /en-US/docs/XSLT_in_Gecko:Resources	/en-US/docs/Web/API/XSLTProcessor/Resources
-/en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
-/en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
+/en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset

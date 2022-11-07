@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceEntry.entryType
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`entryType`** property returns
 a string representing the type of performance metric such as, for

@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.secureConnectionStart
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`secureConnectionStart`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts the
