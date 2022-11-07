@@ -51,7 +51,7 @@ Attributes contain extra information about the element that you don't want to ap
 An attribute should always have the following:
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
-2. The attribute name followed by an equal sign.
+2. The attribute name followed by an equal sign except very few attributes like required (though we can give proper value to be consistant).
 3. The attribute value wrapped by opening and closing quotation marks.
 
 > **Note:** Simple attribute values that don't contain ASCII whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
