@@ -15,13 +15,11 @@ browser-compat: api.PerformanceEntry
 
 The **`PerformanceEntry`** object encapsulates a single performance metric that is part of the browser's performance timeline.
 
-A performance entry can be created by calling the {{domxref("Performance.mark()")}} or {{domxref("Performance.measure()")}} methods at an explicit point in an application. This allows you to add your own metrics to the performance timeline.
+The Performance API offers built-in metrics which are specialized subclasses of `PerformanceEntry`. This includes entries for resource loading, event timing, {{Glossary("first input delay")}} (FID), and more.
 
-The Performance API also offers important built-in metrics which are specialized sub classes of `PerformanceEntry`. This includes entries for resource loading, event timing, or {{Glossary("first input delay")}} (FID), and more.
+A performance entry can also be created by calling the {{domxref("Performance.mark()")}} or {{domxref("Performance.measure()")}} methods at an explicit point in an application. This allows you to add your own metrics to the performance timeline.
 
-The `PerformanceEntry` instances will always be one of the following subtypes:
-
-<div class="index">
+The `PerformanceEntry` instances will always be one of the following subclasses:
 
 - {{domxref("LargestContentfulPaint")}}
 - {{domxref("PerformanceEventTiming")}}
@@ -34,10 +32,6 @@ The `PerformanceEntry` instances will always be one of the following subtypes:
 - {{domxref("PerformanceServerTiming")}}
 - {{domxref("TaskAttributionTiming")}}
 
-</div>
-
-![UML diagram of PerformanceEntry inheritance](diagram.svg)
-
 ## Instance properties
 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
@@ -47,7 +41,7 @@ The `PerformanceEntry` instances will always be one of the following subtypes:
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the duration of the performance entry. Might be 0.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the duration of the performance entry.
 
 ## Instance methods
 
@@ -59,7 +53,7 @@ The `PerformanceEntry` instances will always be one of the following subtypes:
 ### Working with performance entries
 
 The following example creates `PerformanceEntry` objects that are of the types {{domxref("PerformanceMark")}} and {{domxref("PerformanceMeasure")}}.
-The mark and measure subtypes inherit the `duration`, `entryType`, `name`, and `starTime` properties from `PerformanceEntry` and give them their respective meaning.
+The `PerformanceMark` and `PerformanceMeasure` subclasses inherit the `duration`, `entryType`, `name`, and `startTime` properties from `PerformanceEntry` and set them to their appropriate values.
 
 ```js
 // Place at a location in the code that starts login 
@@ -69,7 +63,7 @@ performance.mark("login-started");
 performance.mark("login-finished");
 
 // Measure login duration
-const loginMeasure = performance.measure(
+performance.measure(
   "login-duration",
   "login-started",
   "login-finished"
