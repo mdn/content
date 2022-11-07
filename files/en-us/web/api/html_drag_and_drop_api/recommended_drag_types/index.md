@@ -11,7 +11,6 @@ tags:
 
 The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.
 
-
 ## Dragging Text
 
 For dragging text, use the `text/plain` type. The second data parameter should be the dragged string. For example:
