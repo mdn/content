@@ -7,7 +7,7 @@ tags:
   - Web Performance
 ---
 
-{{DefaultAPISidebar("User Timing API")}}
+{{DefaultAPISidebar("Performance API")}}
 
 The **User Timing API** allows you to measure the performance of applications using [high-precision timestamps](/en-US/docs/Web/API/DOMHighResTimeStamp) that are part of the browser's performance timeline.
 There are two types of timing performance entries:

@@ -13,7 +13,7 @@ tags:
 browser-compat: api.PerformanceEventTiming
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The `PerformanceEventTiming` interface of the Event Timing API provides insights into the latency of certain event types triggered by user interaction.
 
