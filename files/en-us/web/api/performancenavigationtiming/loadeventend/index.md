@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceNavigationTiming.loadEventEnd
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}
 
 The **`loadEventEnd`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} which is equal to the time when the load

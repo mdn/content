@@ -13,35 +13,7 @@ browser-compat: javascript.builtins.Intl
 
 The **`Intl`** object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The **`Intl`** object provides access to several constructors as well as functionality common to the internationalization constructors and other language sensitive functions.
 
-## Constructor properties
-
-- {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
-  - : Constructor for collators, which are objects that enable language-sensitive string comparison.
-- {{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
-  - : Constructor for objects that enable language-sensitive date and time formatting.
-- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
-  - : Constructor for objects that enable the consistent translation of language, region and script display names.
-- {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
-  - : Constructor for objects that enable language-sensitive list formatting.
-- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
-  - : Constructor for objects that represents a Unicode locale identifier.
-- {{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
-  - : Constructor for objects that enable language-sensitive number formatting.
-- {{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
-  - : Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.
-- {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
-  - : Constructor for objects that enable language-sensitive relative time formatting.
-- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
-  - : Constructor for objects that enable locale-sensitive text segmentation.
-
-## Static methods
-
-- {{jsxref("Intl.getCanonicalLocales()")}}
-  - : Returns canonical locale names.
-- {{jsxref("Intl.supportedValuesOf()")}}
-  - : Returns a sorted array containing the supported unique calendar, collation, currency, numbering systems, or unit values supported by the implementation.
-
-## Locale identification and negotiation
+## Description
 
 The internationalization constructors as well as several language sensitive methods of other constructors (listed under [See also](#see_also)) use a common pattern for identifying locales and determining the one they will actually use: they all accept `locales` and `options` arguments, and negotiate the requested locale(s) against the locales they support using an algorithm specified in the `options.localeMatcher` property.
 
@@ -53,7 +25,7 @@ The `locales` argument is used to determine the locale used in a given operation
 - A locale: A locale identifier or an [`Intl.Locale`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) object that wraps a locale identifier.
 - A list of locales: Any other value, that will be converted into an object and then treated as an array of locales.
 
-In the latter two cases, the actual locale used is the best-supported locale determined by [locale negotiation](#locale_negotiation).
+In the latter two cases, the actual locale used is the best-supported locale determined by [locale negotiation](#locale_identification_and_negotiation).
 
 A locale identifier is a string that consists of:
 
@@ -86,17 +58,45 @@ BCP 47 extension sequences consist of a single digit or letter (other than `"x"`
 
 Finally, a private-use extension sequence using the letter `"x"` may appear, followed by one or more one- to eight-letter or digit subtags separated by hyphens. This allows applications to encode information for their own private use, that will be ignored by all `Intl` operations.
 
-### Locale negotiation
-
-The list of locales specified by the `locales` argument, after Unicode extensions have been removed from them, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the `"lookup"` matcher follows the Lookup algorithm specified in [BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4); the `"best fit"` matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
-
-If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the `"co"` key (collation) is only supported by {{jsxref("Intl.Collator")}}, and its `"phonebk"` value is only supported for German.
-
 ### options argument
 
 The `options` argument must be an object with properties that vary between constructors and functions. If the `options` argument is not provided or is undefined, default values are used for all properties.
 
 One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described above.
+
+### Locale identification and negotiation
+
+The list of locales specified by the `locales` argument, after Unicode extensions have been removed from them, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the `"lookup"` matcher follows the Lookup algorithm specified in [BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4); the `"best fit"` matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
+
+If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the `"co"` key (collation) is only supported by {{jsxref("Intl.Collator")}}, and its `"phonebk"` value is only supported for German.
+
+## Constructor properties
+
+- {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
+  - : Constructor for collators, which are objects that enable language-sensitive string comparison.
+- {{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - : Constructor for objects that enable language-sensitive date and time formatting.
+- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+  - : Constructor for objects that enable the consistent translation of language, region and script display names.
+- {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+  - : Constructor for objects that enable language-sensitive list formatting.
+- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
+  - : Constructor for objects that represents a Unicode locale identifier.
+- {{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+  - : Constructor for objects that enable language-sensitive number formatting.
+- {{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
+  - : Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.
+- {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+  - : Constructor for objects that enable language-sensitive relative time formatting.
+- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
+  - : Constructor for objects that enable locale-sensitive text segmentation.
+
+## Static methods
+
+- {{jsxref("Intl.getCanonicalLocales()")}}
+  - : Returns canonical locale names.
+- {{jsxref("Intl.supportedValuesOf()")}}
+  - : Returns a sorted array containing the supported unique calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 
 ## Examples
 

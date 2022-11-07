@@ -32,7 +32,7 @@ getTime()
 A number representing the milliseconds elapsed between 1 January 1970 00:00:00 UTC and
 the given date.
 
-## Reduced time precision
+## Description
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `new Date().getTime()` might get rounded depending on browser settings. In

@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceLongTaskTiming
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{SeeCompatTable}}{{APIRef("Performance API")}}
 
 The **`PerformanceLongTaskTiming`** interface of the [Long Tasks API](/en-US/docs/Web/API/Long_Tasks_API) reports instances of long tasks.
 
