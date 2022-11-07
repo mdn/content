@@ -48,7 +48,7 @@ import "module-name";
 - `aliasN`
   - : Names that will refer to the named imports. Must be a valid JavaScript identifier.
 
-The import statement may also be followed by a series of afterthoughts after the `"module-name"`. They include:
+The import statement may also be followed by a series of attributes after the `"module-name"`. They include:
 
 - [Import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert) with `assert`
 

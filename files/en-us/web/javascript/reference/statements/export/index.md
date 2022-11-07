@@ -222,7 +222,7 @@ The "export from" syntax allows the `as` token to be omitted, which makes the de
 export { default, function2 } from 'bar.js';
 ```
 
-`export from` supports all afterthoughts that `import` supports — for example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert):
+`export from` supports all attributes that `import` supports — for example, [import assertions](/en-US/docs/Web/JavaScript/Reference/Statements/import/assert):
 
 ```js
 export { default } from "./data.json" assert { type: "json" };
