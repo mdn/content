@@ -45,6 +45,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 - Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
 - Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
 - intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
+- [SSE.dev Tool for learning & testing](https://sse.dev)
 
 ### Related Topics
 
