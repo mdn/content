@@ -46,6 +46,11 @@ But because a `WeakMap` doesn't allow observing the liveness of its keys, its ke
 - {{jsxref("WeakMap/WeakMap", "WeakMap()")}}
   - : Creates a new `WeakMap` object.
 
+## Instance properties
+
+- `WeakMap.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("WeakMap.prototype.delete()")}}

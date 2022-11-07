@@ -91,7 +91,7 @@ This section defines the terms used in this document, some of which are from the
 - `Stale response`
   - : Indicates that the response is a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately because revalidation could change the response from being stale to being [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) again.
 - `Age`
-  - : The time since a response was generated. It is a criterion for whether a response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) or [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
+  - : The time since a response was generated. It is a criterion for whether a response is [fresh or stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
 
 ## Directives
 
@@ -303,7 +303,7 @@ Cache-Control: max-age=0
 
 `max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
-If the `max-age` value isn't non-negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) section of the HTTP specification states:
+If the `max-age` value isn't non-negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) section of the HTTP specification states:
 
 > Caches are encouraged to consider responses that have invalid freshness information to be stale.
 
@@ -453,6 +453,6 @@ Alternatively, `Clear-Site-Data` can clear a browser cache for a site. But be ca
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
-- [RFC 7234 – Hypertext Transfer Protocol (HTTP/1.1): Caching](https://httpwg.org/specs/rfc7234.html)
+- [RFC 9111 – HTTP Caching](https://httpwg.org/specs/rfc9111.html)
 - [RFC 5861 – HTTP Cache-Control Extensions for Stale Content](https://httpwg.org/specs/rfc5861.html)
 - [RFC 8246 – HTTP Immutable Responses](https://httpwg.org/specs/rfc8246.html)

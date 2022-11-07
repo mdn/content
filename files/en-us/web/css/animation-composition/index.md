@@ -1,6 +1,7 @@
 ---
 title: animation-composition
 slug: Web/CSS/animation-composition
+page-type: css-property
 tags:
   - CSS
   - CSS Animations
@@ -51,7 +52,7 @@ animation-composition: unset;
 
 Each property that is targeted by the [@keyframes](/en-US/docs/Web/CSS/@keyframes) at-rule is associated with an effect stack. The value of the effect stack is calculated by combining the _underlying value_ of a property in a CSS style rule with the _effect value_ of that property in the keyframe. The `animation-composition` property helps to specify how to combine the underlying value with the effect value.
 
-For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10px)` is the effect value. The `filter` property is affected by both animations, `pulse` and `brightness-pulse`. The `animation-composition` property specifies the operation to perform to produce the final effect value after compositing the effect of the underlying value and the effect value.
+For example, in the CSS below, `blur(5px)` is the underlying value, and `blur(10px)` is the effect value. The `animation-composition` property specifies the operation to perform to produce the final effect value after compositing the effect of the underlying value and the effect value.
 
 ```css
 .icon:hover {

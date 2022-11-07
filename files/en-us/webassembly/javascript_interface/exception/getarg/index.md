@@ -85,9 +85,9 @@ const tagToImport = new WebAssembly.Tag({ parameters: ["i32"] });
 
 // Note: the import object properties match the import statement in WebAssembly code!
 const importObject = {
-  "extmod": {
-    "exttag": tagToImport
-  }
+  extmod: {
+    exttag: tagToImport,
+  },
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)

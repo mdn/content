@@ -102,8 +102,8 @@ para.onpointercancel = (event) => {
 
 - Related events
 
-  - [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
   - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
   - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
   - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
@@ -111,5 +111,3 @@ para.onpointercancel = (event) => {
   - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-- This event on `Document` targets: [`pointercancel`](/en-US/docs/Web/API/Document/pointercancel_event) event

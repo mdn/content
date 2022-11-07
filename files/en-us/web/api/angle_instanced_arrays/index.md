@@ -27,7 +27,7 @@ This extension exposes one new constant, which can be used in the {{domxref("Web
 - `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
   - : Returns a {{domxref("WebGL_API/Types", "GLint")}} describing the frequency divisor used for instanced rendering when used in the {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} as the `pname` parameter.
 
-## Methods
+## Instance methods
 
 This extension exposes three new methods.
 

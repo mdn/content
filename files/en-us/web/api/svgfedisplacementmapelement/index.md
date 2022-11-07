@@ -58,7 +58,7 @@ The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement(
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -83,7 +83,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDisplacementMapElement.yChannelSelector")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("yChannelSelect")}} attribute of the given element. It takes one of the `SVG_CHANNEL_*` constants defined on this interface.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

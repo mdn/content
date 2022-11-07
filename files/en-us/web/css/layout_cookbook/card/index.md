@@ -1,6 +1,7 @@
 ---
 title: Card
 slug: Web/CSS/Layout_cookbook/Card
+page-type: guide
 tags:
   - CSS
   - CSS Cookbook

@@ -18,7 +18,7 @@ The **`ContactsManager`** interface of the {{domxref('Contact Picker API')}} all
 
 The `ContactsManager` is available through the global {{domxref('navigator.contacts')}} property.
 
-## Methods
+## Instance methods
 
 - {{domxref('ContactsManager.select','select()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} which, when resolved, presents the user with a contact picker which allows them to select contact(s) they wish to share.

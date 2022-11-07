@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEntry.startTime
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`startTime`** property returns the first recorded
 {{domxref("DOMHighResTimeStamp","timestamp")}} of the
@@ -21,17 +21,19 @@ The **`startTime`** property returns the first recorded
 The value returned by this property depends on the performance entry's
 {{domxref("PerformanceEntry.entryType","type")}}:
 
-- "`frame`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+- `"event"` - returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the event was created.
+- `"first-input"` - returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the first input event was created.
+- `"frame"` - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
   when the frame was started.
-- "`mark`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+- `"mark"` - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
   when the mark was created by a call to
   {{domxref("Performance.mark","performance.mark()")}}.
-- "`measure`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+- `"measure"` - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
   when the measure was created by a call to
   {{domxref("Performance.measure","performance.measure()")}}.
-- "`navigation`" - returns the
+- `"navigation"` - returns the
   {{domxref("DOMHighResTimeStamp","timestamp")}} with a value of "`0`".
-- "`resource`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+- `"resource"` - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
   immediately before the browser {{domxref("PerformanceResourceTiming/fetchStart","starts
     fetching the resource")}}.
 

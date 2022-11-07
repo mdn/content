@@ -52,35 +52,33 @@ let testPermissions1 = {
   permissions: ["tabs"],
 };
 
-browser.permissions.contains(testPermissions1).then((result) => {
-  console.log(result); // true
-});
+const testResult1 = await browser.permissions.contains(testPermissions1);
+console.log(testResult1); // true
 
 let testPermissions2 = {
   origins: ["*://mozilla.org/"],
   permissions: ["tabs", "alarms"],
 };
 
-browser.permissions.contains(testPermissions2).then((result) => {
-  console.log(result); // false, "alarms" doesn't match
-});
+const testResult2 = await browser.permissions.contains(testPermissions2);
+console.log(testResult2); // false, "alarms" doesn't match
 
 let testPermissions3 = {
   origins: ["https://developer.mozilla.org/"],
   permissions: ["tabs", "webRequest"],
 };
 
-browser.permissions.contains(testPermissions3).then((result) => {
-  console.log(result); // true: "https://developer.mozilla.org/"
-}); // matches: "*://*.mozilla.org/*"
+const testResult3 = await browser.permissions.contains(testPermissions3);
+console.log(testResult3); // true: "https://developer.mozilla.org/"
+                          // matches: "*://*.mozilla.org/*"
 
 let testPermissions4 = {
   origins: ["https://example.org/"],
 };
 
-browser.permissions.contains(testPermissions4).then((result) => {
-  console.log(result); // false, "https://example.org/"
-}); // does not match
+const testResult4 = await browser.permissions.contains(testPermissions4);
+console.log(testResult4); // false, "https://example.org/"
+                          // does not match
 ```
 
 {{WebExtExamples}}

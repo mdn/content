@@ -62,6 +62,8 @@ Values of zero are all considered to be equal, regardless of sign. (That is, `-0
 
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
 
+The `includes()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Using includes()
@@ -115,20 +117,21 @@ You can search for `undefined` in a sparse array and get `true`.
 console.log([1, , 3].includes(undefined)); // true
 ```
 
-### includes() used as a generic method
+### Calling includes() on non-array objects
 
-`includes()` method is intentionally generic. It does not require
-`this` value to be an Array object, so it can be applied to other kinds of
-objects (e.g. array-like objects).
-
-The example below illustrates `includes()` method called on the function's
-[arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
+The `includes()` method reads the `length` property of `this` and then accesses each integer index.
 
 ```js
-(function () {
-  console.log(Array.prototype.includes.call(arguments, 'a')); // true
-  console.log(Array.prototype.includes.call(arguments, 'd')); // false
-})('a', 'b', 'c');
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.includes.call(arrayLike, 2));
+// true
+console.log(Array.prototype.includes.call(arrayLike, 1));
+// false
 ```
 
 ## Specifications

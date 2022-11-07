@@ -19,7 +19,7 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 - {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}}
   - : Creates a new `DOMMatrixReadOnly` object.
 
-## Properties
+## Instance properties
 
 _This interface doesn't inherit any properties._
 
@@ -42,7 +42,7 @@ _This interface doesn't inherit any properties._
     | `e` | `m41`         |
     | `f` | `m42`         |
 
-## Methods
+## Instance methods
 
 _This interface doesn't inherit any methods. None of the following methods alter the original matrix._
 

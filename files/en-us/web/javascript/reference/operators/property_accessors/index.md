@@ -24,7 +24,7 @@ object[expression]
 
 ## Description
 
-One can think of an object as an _associative array_ (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). The _keys_ in this array are the names of the object's properties.
+One can think of an object as an _associative array_ (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). The _keys_ in this array are the names of the object's [properties](/en-US/docs/Glossary/property/JavaScript).
 
 There are two ways to access properties: _dot notation_ and _bracket notation_.
 
@@ -57,7 +57,7 @@ document.createElement("pre");
 
 If you use a method for a numeric literal, and the numeric literal has no exponent and no decimal point, you should leave [white-space(s)](/en-US/docs/Glossary/Whitespace) before the dot preceding the method call, so that the dot is not interpreted as a decimal point.
 
-```js
+```js-nolint
 77 .toExponential();
 // or
 77
@@ -88,7 +88,7 @@ document["createElement"]("pre");
 
 A space before bracket notation is allowed.
 
-```js
+```js-nolint
 document ["createElement"]("pre");
 ```
 
@@ -97,12 +97,14 @@ Passing expressions that evaluate to property name will do the same thing as dir
 ```js
 const key = "name";
 const getKey = () => "name";
-const Obj = { name: "John" };
+const Obj = { name: "Michel" };
 
-Obj["name"]; // returns "John"
-Obj[key]; // evaluates to Obj["name"], and returns "John"
-Obj[getKey()]; // evaluates to Obj["name"], and returns "John"
+Obj["name"]; // returns "Michel"
+Obj[key]; // evaluates to Obj["name"], and returns "Michel"
+Obj[getKey()]; // evaluates to Obj["name"], and returns "Michel"
 ```
+
+However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 ### Property names
 

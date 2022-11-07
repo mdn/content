@@ -15,9 +15,9 @@ tags:
 browser-compat: html.elements.blockquote
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see [Notes](#usage_notes) for how to change it). A URL for the source of the quotation may be given using the **cite** attribute, while a text representation of the source can be given using the {{HTMLElement("cite")}} element.
+The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see [Notes](#usage_notes) for how to change it). A URL for the source of the quotation may be given using the `cite` attribute, while a text representation of the source can be given using the {{HTMLElement("cite")}} element.
 
 {{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
@@ -98,7 +98,7 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
     Avian carriers can provide high delay, low throughput, and low altitude
     service. The connection topology is limited to a single point-to-point path
     for each carrier, used with standard carriers, but many carriers can be used
-    without significant interference with each other, outside of early spring.
+    without significant interference with each other, outside early spring.
     This is because of the 3D ether space available to the carriers, in contrast
     to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
     avoidance system, which increases availability.

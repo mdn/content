@@ -29,8 +29,6 @@ browser-compat: webextensions.manifest.manifest_version
 
 This key specifies the version of manifest.json used by this extension.
 
-Currently, this must always be 2.
-
 ## Example
 
 ```json

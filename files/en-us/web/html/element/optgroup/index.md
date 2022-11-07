@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.optgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of options within a {{HTMLElement("select")}} element.
 

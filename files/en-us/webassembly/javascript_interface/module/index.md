@@ -39,8 +39,9 @@ See the `index-compile.html` [source code](https://github.com/mdn/webassembly-ex
 ```js
 const worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-  .then((mod) => worker.postMessage(mod));
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod)
+);
 ```
 
 The worker function [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) defines an import object for the module to use. The function then sets up an event handler to receive the module from the main thread. When the module is received, we create an instance from it using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method and invoke an exported function from inside it.
@@ -50,12 +51,12 @@ const importObject = {
   imports: {
     imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
 onmessage = (e) => {
-  console.log('module received from main thread');
+  console.log("module received from main thread");
   const mod = e.data;
 
   WebAssembly.instantiate(mod, importObject).then((instance) => {

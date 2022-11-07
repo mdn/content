@@ -20,7 +20,7 @@ One overriding problem that web users have suffered with for years is loss of co
 
 The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) for more details.
 
-> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also has been [removed](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) from Chromium 95, and is deprecated in Safari.
+> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It has also been [removed](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) from Chromium 95, and is deprecated in Safari.
 
 Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade-off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](https://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
 
@@ -40,7 +40,7 @@ With service workers, the following steps are generally observed for basic set u
 6. Next is activation. When the service worker is installed, it then receives an activate event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a Service worker script.
 7. The Service worker will now control pages, but only those opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a Service worker and maintains that for its lifetime.
 
-![](sw-lifecycle.png)
+![lifecycle diagram](sw-lifecycle.png)
 
 The below graphic shows a summary of the available service worker events:
 
@@ -103,7 +103,7 @@ This could be for the following reasons:
 2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
 3. It is also not allowed to point to a service worker of a different origin than that of your app.
 
-![](important-notes.png)
+![Possible registration failure reasons](important-notes.png)
 
 Also note:
 
@@ -156,7 +156,7 @@ self.addEventListener("install", (event) => {
 
 Now you've got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
 
-![](sw-fetch.png)
+![Fetch event diagram](sw-fetch.png)
 
 A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
 

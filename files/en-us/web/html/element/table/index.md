@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.table
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 
@@ -89,7 +89,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("align")}} {{Deprecated_inline}}
 
-  - : This enumerated attribute indicates how the table must be aligned inside the containing document. It may have the following values:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the table must be aligned inside the containing document. It may have the following values:
 
     - `left`: the table is displayed on the left side of the document;
     - `center`: the table is displayed in the center of the document;
@@ -304,11 +304,11 @@ HTMLTableSectionElement.prototype.sort = function (cb) {
   Array.from(this.rows)
     .sort(cb)
     .forEach((e) => this.appendChild(this.removeChild(e)));
-}
+};
 
-document.querySelector('table').tBodies[0].sort(
-  (a, b) => a.textContent.localeCompare(b.textContent),
-);
+document
+  .querySelector("table")
+  .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
 ```
 
 ##### Result
@@ -351,7 +351,7 @@ The following example adds an event handler to every `<th>` element of every `<t
 ##### JavaScript
 
 ```js
-const allTables = document.querySelectorAll('table');
+const allTables = document.querySelectorAll("table");
 
 for (const table of allTables) {
   const tBody = table.tBodies[0];
@@ -361,7 +361,7 @@ for (const table of allTables) {
   for (const th of headerCells) {
     const cellIndex = th.cellIndex;
 
-    th.addEventListener('click', () => {
+    th.addEventListener("click", () => {
       rows.sort((tr1, tr2) => {
         const tr1Text = tr1.cells[cellIndex].textContent;
         const tr2Text = tr2.cells[cellIndex].textContent;
@@ -625,7 +625,7 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 ### Scoping rows and columns
 
-The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified so as to provide necessary information about the cells related to a header.
+The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
 #### Example
 

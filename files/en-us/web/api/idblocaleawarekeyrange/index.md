@@ -19,11 +19,11 @@ browser-compat: api.IDBLocaleAwareKeyRange
 
 The **`IDBLocaleAwareKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is a Firefox-specific version of {{domxref("IDBKeyRange")}} — it functions in exactly the same fashion, and has the same properties and methods, but it is intended for use with {{domxref("IDBIndex")}} objects when the original index had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters)) — that is, it has [locale aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) enabled.
 
-## Methods
+## Instance methods
 
 _This interface inherits all the methods of its parent interface, {{domxref("IDBKeyRange")}}._
 
-## Properties
+## Instance properties
 
 _This interface inherits all the properties of its parent interface, {{domxref("IDBKeyRange")}}._
 
@@ -79,4 +79,4 @@ Not currently part of any specification.
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -18,7 +18,7 @@ The **`HTMLTrackElement`** interface represents an {{Glossary("HTML")}} {{HTMLEl
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -46,7 +46,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}
   - : Returns {{Domxref("TextTrack")}} is the track element's text track data.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

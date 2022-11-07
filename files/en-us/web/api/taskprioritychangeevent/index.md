@@ -23,14 +23,14 @@ The **`TaskPriorityChangeEvent`** is the interface for the [`prioritychange`](/e
 - {{domxref("TaskPriorityChangeEvent.TaskPriorityChangeEvent", "TaskPriorityChangeEvent()")}}
   - : Creates a new `TaskPriorityChangeEvent` object, setting an event name and previous priority.
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
 - {{domxref("TaskPriorityChangeEvent.previousPriority")}} {{ReadOnlyInline}}
   - : Returns the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of the corresponding {{domxref("TaskSignal")}} _before_ this [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event.
 
-## Methods
+## Instance methods
 
 _This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}._
 

@@ -26,14 +26,14 @@ The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) re
 - {{domxref("PushEvent.PushEvent", "PushEvent()")}}
   - : Creates a new `PushEvent` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
 
 - {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

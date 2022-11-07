@@ -57,7 +57,8 @@ const permissionsToRequest = {
   origins: ["https://developer.mozilla.org/"],
 };
 
-function requestPermissions() {
+async function requestPermissions() {
+
   function onResponse(response) {
     if (response) {
       console.log("Permission was granted");
@@ -67,12 +68,10 @@ function requestPermissions() {
     return browser.permissions.getAll();
   }
 
-  browser.permissions
-    .request(permissionsToRequest)
-    .then(onResponse)
-    .then((currentPermissions) => {
-      console.log(`Current permissions:`, currentPermissions);
-    });
+  const response = await browser.permissions.request(permissionsToRequest);
+  const currentPermissions = await onResponse(response);
+
+  console.log(`Current permissions:`, currentPermissions);
 }
 
 document

@@ -16,11 +16,11 @@ The **`HTMLUnknownElement`** interface represents an invalid HTML element and de
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _No specific property; inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
 

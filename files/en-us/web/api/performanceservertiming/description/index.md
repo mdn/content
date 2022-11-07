@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceServerTiming.description
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`description`** read-only property returns a
 string value of the server-specified metric description, or an empty

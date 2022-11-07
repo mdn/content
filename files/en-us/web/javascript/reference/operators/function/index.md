@@ -72,7 +72,8 @@ You can't use function expressions before you create them:
 
 ```js
 console.log(notHoisted); // undefined
-//  even though the variable name is hoisted, the definition isn't. so it's undefined.
+// Even though the variable name is hoisted,
+// the definition isn't. so it's undefined.
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function () {
