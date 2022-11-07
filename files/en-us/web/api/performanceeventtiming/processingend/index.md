@@ -39,7 +39,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 // Register the observer for events
-observer.observe(type: "event", buffered: true});
+observer.observe({type: "event", buffered: true});
 ```
 
 ## Specifications
