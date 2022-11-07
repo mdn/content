@@ -335,9 +335,11 @@ myArray.sort();
 const sortFn = (a, b) => {
   if (a[a.length - 1] < b[b.length - 1]) {
     return -1; // Negative number => a < b, a comes before b
-  } else if (a[a.length - 1] > b[b.length - 1]) {
+  }
+  if (a[a.length - 1] > b[b.length - 1]) {
     return 1; // Positive number => a > b, a comes after b
-  } else if (a[a.length - 1] === b[b.length - 1]) {
+  }
+  if (a[a.length - 1] === b[b.length - 1]) {
     return 0; // Zero => a = b, a and b keep their original order
   }
 }
