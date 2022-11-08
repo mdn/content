@@ -32,11 +32,13 @@ None.
 
 ### Return value
 
-If the mutated node type is `childList`, the method returns a `NodeList` of the nodes added to the target of the mutation observed by the {{domxref("MutationObserver")}}, and will return an empty `NodeList` if there are no mutations observed; returns `null` if the type is not of `childList`.
+If this record's [`type`](/en-US/web/api/MutationRecord/type) is `childList`, this is a `NodeList` of the nodes added to the target of the mutation observed by the {{domxref("MutationObserver")}}.
+
+If this record's [`type`](/en-US/web/api/MutationRecord/type) is not `childList`, this is `null`.
 
 ## Examples
 
-In this code snippet, the observer will log to the console the tag name of every node added to the target node with the {{domxref("MutationObserver.observe")}} method.
+In this code snippet, the observer will log to the console the tag name of every node added to the target node with the {{domxref("MutationObserver.observe()")}} method.
 
 ```js
 var observer = new MutationObserver(function(mutations) {

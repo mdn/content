@@ -18,7 +18,7 @@ browser-compat: api.MutationRecord.attributeName
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} method **`attributeName()`** returns the local name of the mutated attribute in the {{domxref("MutationRecord")}} observed by the target of a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} **`attributeName`** property contains the name of a changed attribute belonging to a node that is observed by a {{domxref("MutationObserver")}}.
 
 ## Syntax
 
@@ -36,9 +36,9 @@ If the mutated node type is `attributes`, the method will return the local name 
 
 ## Examples
 
-This code snippet is used to observe changes in a userlist: the userlist is DOM element that functions as a list of all users currently connected to a server (in this example, consider it is a `<ul>`). The userlist itself contains child elements (i.e. `<li>`), each containing an attribute associated with the username the user status.
+This code snippet is used to observe changes in a userlist: the userlist is a DOM element that functions as a list of all users currently connected to a server (in this example, consider it is a `<ul>`). The userlist itself contains child elements (i.e. `<li>`), each containing an attribute associated with the username or the user status.
 
-The {{domxref("MutationObserver")}} observes changes in the status and username attributes of the elements via the {{domxref("MutationObserver.observe")}} "attributeFilter" parameter- when a change is observed, the appropriate callback function is called. The methods {{domxref("MutationRecord.type")}} and {{domxref("MutationRecord.attributeName")}} are used to further filter the mutations to execute some desired functionality.
+The {{domxref("MutationObserver")}} observes changes in the `status` and `username` attributes of the elements via the {{domxref("MutationObserver.observe()")}} "attributeFilter" parameter. When the value of one of the listed attributes is changed, the callback function is called. The callback uses the {{domxref("MutationRecord.type")}} and {{domxref("MutationRecord.attributeName")}} properties to take the appropriate action.
 
 ```js
 const userListElement = document.querySelector("#userlist");

@@ -18,8 +18,7 @@ browser-compat: api.MutationRecord.oldValue
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} method **`oldValue()`** returns the value of the {{domxref("MutationRecord.target")}} node before the observation of a mutation by a {{domxref("MutationObserver")}} if the `attributeOldValue` or `characterDataOldValue` parameters of the
-{{domxref("MutationObserver.observe")}} are set to `true`.
+The {{domxref("MutationRecord")}} **`oldValue`** property contains the character data or attribute value of an observed node before it was changed.
 
 ## Syntax
 
