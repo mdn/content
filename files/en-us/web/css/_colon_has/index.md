@@ -176,7 +176,7 @@ This selector could have also been written as:
 
 ### Logical operations
 
-The `:has()` relational selector can be used to check if one of multiple features is true, or if all the features are true. 
+The `:has()` relational selector can be used to check if one of the multiple features is true or if all the features are true.
 
 By using comma-separated values inside the `:has()` relational selector, you are checking to see if any of the parameters exist. `x:has(a, b)` will style `x` if descendant `a` OR `b` exists.
 
