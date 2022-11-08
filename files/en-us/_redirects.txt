@@ -5470,7 +5470,7 @@
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN/Tools/Sample_server
+/en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Structures	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/:-ms-input-placeholder_pseudo-class	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
@@ -5514,7 +5514,7 @@
 /en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
 /en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
-/en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN/Tools/Sample_server
+/en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Where_is_everything	/en-US/docs/MDN/Community/Contributing/Our_repositories
 /en-US/docs/MDN/Doc_status/NSPR	https://firefox-source-docs.mozilla.org/nspr/index.html
 /en-US/docs/MDN/Feedback	/en-US/docs/MDN/Community
@@ -5578,6 +5578,7 @@
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
+/en-US/docs/MDN/Tools/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
