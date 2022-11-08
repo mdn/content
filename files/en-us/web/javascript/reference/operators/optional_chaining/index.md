@@ -66,7 +66,7 @@ created:
 ```js
 const temp = obj.first;
 const nestedProp =
-  temp === null || temp === undefined ? undefined : temp.second;
+  temp == null ? undefined : temp.second; // Since null == undefined, we don't have to go for strict equality
 ```
 
 Optional chaining cannot be used on a non-declared root object, but can be used with a root object with value `undefined`.
@@ -155,9 +155,9 @@ This is equivalent to:
 ```js
 const potentiallyNullObj = null;
 const prop =
-  potentiallyNullObj === null || potentiallyNullObj === undefined
+  potentiallyNullObj == null
     ? undefined
-    : potentiallyNullObj.a.b;
+    : potentiallyNullObj.a.b; //// Since null == undefined, we don't have to go for strict equality
 ```
 
 However, this short-circuiting behavior only happens along one continuous "chain" of property accesses. If you [group](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) one part of the chain, then subsequent property accesses will still be evaluated.
