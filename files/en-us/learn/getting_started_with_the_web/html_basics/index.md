@@ -48,10 +48,10 @@ Elements can also have attributes that look like the following:
 
 Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute _name_ and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
 
-An attribute should always have the following:
+Attributes that set a value always have:
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
-2. The attribute name followed by an equal sign except very few attributes like required (though we can give proper value to be consistant).
+2. The attribute name followed by an equal sign.
 3. The attribute value wrapped by opening and closing quotation marks.
 
 > **Note:** Simple attribute values that don't contain ASCII whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
