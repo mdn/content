@@ -35,7 +35,7 @@ expr1, expr2, expr3/* , … */
   - : One or more expressions, the last of which is returned as the value of the compound
     expression.
 
-## Usage notes
+## Description
 
 You can use the comma operator when you want to include multiple expressions in a
 location that requires a single expression. The most common usage of this operator is to

@@ -214,6 +214,11 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
     Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.
 
+## Instance properties
+
+- `Promise.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 See the [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how these methods use the Microtask queue and services.
