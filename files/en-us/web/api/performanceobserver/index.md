@@ -41,7 +41,7 @@ The **`PerformanceObserver`** interface is used to observe performance measureme
 ### Creating a PerformanceObserver
 
 The following example creates a `PerformanceObserver` watching for "mark" ({{domxref("PerformanceMark")}}) and "measure" ({{domxref("PerformanceMeasure")}}) events.
-The `perfObserver` callback provides a `list` ({{domxref("PerformanceObserverEntryList")}}) which allows you get observed performance entries.
+The `perfObserver` callback provides a `list` ({{domxref("PerformanceObserverEntryList")}}) which allows you to get observed performance entries.
 
 ```js
 function perfObserver(list, observer) {
