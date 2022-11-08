@@ -13,64 +13,102 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule whose condition is a container query, which is a boolean combination of container size queries and/or container style queries.
-Style declarations within the `<stylesheet>` block of an `@container` rule are filtered by its condition to only match when the container query is true for their element's query container.
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts).
+Style declarations are filtered by a condition and applied to the container if the condition is true.
+The condition is evaluated when the container changes size.
 
 ```css
-@container (width > 40em) {
+@container (width > 400px) {
   h2 {
     font-size: 1.5em;
   }
 }
 ```
 
-For each element, the query container to be queried is selected from among the element's ancestor query containers that are established as a valid query container for all the container features in the `<container-condition>`.
-The optional `<container-name>` filters the set of query containers considered to just those with a matching query container name.
-
+An optional `<container-name>` can be provided which filters the set of query containers considered to just those with a matching query container name.
 Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
-If no ancestor is an eligible query container, then the container query is unknown for that element.
 
-## Syntax
-
-### Descriptors
-
-Each `@container` has a set of descriptors.
-
-- {{cssxref("@container/aspect-ratio", "aspect-ratio")}}
-  - : The ratio of the value of the width container feature to the value of the height container feature.
-- {{cssxref("@container/block-size", "block-size")}}
-  - : The block size of the query container.
-- {{cssxref("@container/height", "height")}}
-  - : The height of the query container.
-- {{cssxref("@container/inline-size", "inline-size")}}
-  - : The inline size of the query container.
-- {{cssxref("@container/orientation", "orientation")}}
-  - : The orientation of the query container.
-- {{cssxref("@container/width", "width")}}
-  - : The width of the query container.
+```css
+@container sidebar (width > 400px) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+```
 
 ## Formal syntax
 
 ```
-@container <container-name> { <declaration-list> }
+@container <container-name> <container-condition> {
+  <container-queries>
+}
 ```
 
 ## Examples
 
+### Basic example
+
+Given the following HTML example which is a card component with an image, a title, and some text:
+
+```html
+<div class="container">
+  <div class="card">
+    <img src="image.png" alt="An awesome picture of a cat" />
+    <h2>Card title</h2>
+    <p>Card content</p>
+  </div>
+</div>
+```
+
+A container context can be created using the `container-type` property:
+
 ```css
-main,
-aside {
-  container: my-layout / inline-size;
+.container {
+  container-type: inline-size;
 }
+```
 
-.media-object {
-  display: grid;
-  grid-template: "img" auto "content" auto / 100%;
+You can then target that container by adding the name to the container query:
+
+```css
+@container (min-width: 400px) {
+  .card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }
+```
 
-@container my-layout (inline-size > 45em) {
-  .media-object {
-    grid-template: "img content" auto / auto 1fr;
+### Named container example
+
+Given the following HTML example which is a card component with an image, a title, and some text:
+
+```html
+<div class="container">
+  <div class="card">
+    <img src="image.png" alt="An awesome picture of a cat" />
+    <h2>Card title</h2>
+    <p>Card content</p>
+  </div>
+</div>
+```
+
+When creating a container context using `container-type`, add the `container-name` property:
+
+```css
+.container {
+  container-type: inline-size;
+  container-name: sidebar;
+}
+```
+
+You can then target that container by adding the name to the container query:
+
+```css
+@container sidebar (min-width: 400px) {
+  .card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 }
 ```
@@ -85,6 +123,7 @@ aside {
 
 ## See also
 
+- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
