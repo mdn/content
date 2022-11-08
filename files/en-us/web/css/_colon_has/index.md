@@ -183,8 +183,12 @@ By using comma-separated values inside the `:has()` relational selector, you are
 By chaining together multiple `:has()` relational selectors together, you are checking to see all of the parameters exist. `x:has(a):has(b)` will style `x` if descendant `a` AND `b` exist.
 
 ```css
-body:has(video, audio) {/*styles to apply if the content contains audio OR video */ }
-body:has(video):has(audio) {/*styles to apply if the content contains both audio AND video */ }
+body:has(video, audio) {
+  /* styles to apply if the content contains audio OR video */
+}
+body:has(video):has(audio) {
+  /* styles to apply if the content contains both audio AND video */
+}
 ```
 
 ## Specifications
