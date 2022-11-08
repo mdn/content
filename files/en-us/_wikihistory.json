@@ -11826,10 +11826,6 @@
       "stephaniehobson"
     ]
   },
-  "MDN/Tools/Sample_server": {
-    "modified": "2020-09-30T16:47:39.734Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Sheppy", "jswisher"]
-  },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
@@ -11963,25 +11959,6 @@
       "Sheppy",
       "jpmedley",
       "wbamberg"
-    ]
-  },
-  "MDN/Yari": {
-    "modified": "2019-12-31T16:22:53.307Z",
-    "contributors": [
-      "peterbe",
-      "SphinxKnight",
-      "jswisher",
-      "9999472",
-      "ExE-Boss",
-      "wbamberg",
-      "chrisdavidmills",
-      "LikeVincent",
-      "xGabey",
-      "xgqfrms",
-      "jrdacosta2002",
-      "groovecoder",
-      "Sheppy",
-      "Nickolay"
     ]
   },
   "Mozilla": {
@@ -113095,10 +113072,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag": {
-    "modified": "2020-10-27T09:11:05.635Z",
-    "contributors": ["evilpie", "hamishwillee", "chrisdavidmills"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Intl/Collator": {
     "modified": "2020-12-07T14:51:37.568Z",
     "contributors": [
@@ -114059,19 +114032,6 @@
       "jameshkramer",
       "kdex",
       "arai"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:37:21.945Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "wbamberg",
-      "kdex",
-      "arai",
-      "nb1080",
-      "marcionitao",
-      "jpmedley"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Map/Map": {
