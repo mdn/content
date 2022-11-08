@@ -150,7 +150,9 @@ In CSS Grid Layout the `fr` unit allows the distribution of available space acro
 To ensure media is never larger than its responsive container, the following approach can be used:
 
 ```css
-img, picture, video {
+img,
+picture,
+video {
   max-width: 100%;
 }
 ```
@@ -267,6 +269,7 @@ It has also become much easier to achieve responsive designs with the help of th
 - [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
