@@ -48,7 +48,7 @@ This article explains how to do cross-browser testing: how to choose which brows
 
 Since you can't test every combination of browser and device, it's enough that you ensure your site works on the most important ones. In practical applications, "important" often means "commonly used among the target audience."
 
-You can classify browsers and devices by the amount of support you intend to give, e.g.:
+You can classify browsers and devices by the amount of support you intend to give. For example:
 
 1. A grade: Common/modern browsers — Known to be capable. Test thoroughly and provide full support.
 2. B grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.
