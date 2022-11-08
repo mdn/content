@@ -5511,8 +5511,7 @@
 /en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/Tools	/en-US/docs/MDN/Tools
-/en-US/docs/MDN/Contribute/Tools/Document_paramaters	/en-US/docs/MDN
-/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs//en-US/docs/MDN
+/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
 /en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN/Tools/Sample_server
