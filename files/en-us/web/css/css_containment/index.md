@@ -146,6 +146,7 @@ contain: strict;
 
 {{Compat}}
 
-## External resources
+## See also
 
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- The {{domxref("contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
