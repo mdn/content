@@ -44,9 +44,7 @@ A string with a value which is a correct value for the chosen `syntax`.
 
 ## Formal syntax
 
-```
-<string>
-```
+{{csssyntax}}
 
 ## Examples
 
