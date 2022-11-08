@@ -13,10 +13,10 @@ tags:
 
 {{CSSRef}}
 
-CSS containment provides a way to isolate parts of a page and declare to the browser these parts are independent from the rest of the page in terms of styles and layout.
+[CSS containment](/en-US/docs/Web/CSS/CSS_Containment) provides a way to isolate parts of a page and declare to the browser these parts are independent from the rest of the page in terms of styles and layout.
 
-If you are creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), you often use media queries to change the page layout based on the size of the {{Glossary("viewport")}}.
-It's common to group HTML elements into components that have a specific layout depending on the available space in a page.
+If you are creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), you often use [media queries](/en-US/docs/Web/CSS/Media_Queries) to change the page layout based on the size of the {{Glossary("viewport")}}.
+It's common to group HTML elements into reusable components that have a specific layout depending on the available space in a page.
 The available space might not only depend on the size of the viewport, but also on the context where a component appears.
 
 ![A webpage with a card component demonstrating the difference between media and conrainer queries.](container-query-diagram.png)
@@ -32,9 +32,11 @@ The illustration below shows how the same component can be displayed with multip
 The `container-type` property can have the following values:
 
 - `size`
-  - : Establishes a query container for dimensional queries on the block and inline axis. Applies layout, style, and size containment to the element.
+  - : Establishes a query container for dimensional queries on the block and inline axis.
+    Applies layout, style, and size containment to the element.
 - `inline-size`
-  - : Establishes a query container for dimensional queries on the inline axis of the container. Applies layout, style, and inline-size containment to the element.
+  - : Establishes a query container for dimensional queries on the inline axis of the container.
+    Applies layout, style, and inline-size containment to the element.
 - `normal`
   - : The element is not a query container for any dimensional queries on the block and inline axis.
 
@@ -65,7 +67,8 @@ Adding the `container-type` property with a size value creates a **containment c
 This means that the browser knows we might want to query this container later.
 You can then write a query which looks to this containment context rather than the viewport size, in order to make layout decisions for a component.
 
-A container query is created using `@container`. This will query the nearest containment context.
+A container query is created using `@container`.
+This will query the nearest containment context.
 To cause the card to display as two columns only if the sidebar is wider than `700px`, we use the following CSS:
 
 ```css
@@ -104,20 +107,20 @@ You can then target just that query container by adding the name to the containe
 }
 ```
 
-## Alternatives to container queries
+## Fallbacks for container queries
 
-Many container query cases can be solved, or at least partially solved, with existing technology.
-These solutions will remain important even as container queries make it into browsers, as fallbacks for those browsers that don't yet support the spec.
+For browsers that don't yet support container queries, grid and flex layouts can be used to achieve a similar effect.
 
-One solution for components that may occupy different locations, is to use a class or a selector that targets them based on document location.
-
-Another solution is to rely on grid or flex layout.
-The component used in my demo could be laid out using flexbox, which would give it some ability to display as one or two columns based on available width.
-You don't have the ability to make larger layout changes using this method, however in many cases you can achieve an acceptable result.
-As container queries become available you could maintain the grid or flex version as the fallback for non-supporting browsers.
+Alternatively, you can detect where the component is in a document using JavaScript and apply a selector or a class based on document location.
 
 ## See also
 
+- {{Cssxref("@container")}}
+- {{Cssxref("contain")}}
+- {{Cssxref("container-name")}}
+- {{Cssxref("container-type")}}
+- {{cssxref("content-visibility")}}
+- [Media Queries](/en-US/docs/Web/CSS/Media_Queries)
 - [Editor's Draft CSS Containment Level 3](https://drafts.csswg.org/css-contain-3/)
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)
