@@ -174,7 +174,7 @@ This selector could have also been written as:
 }
 ```
 
-## Logical operatations
+### Logical operations
 
 The `:has()` relational selector can be used to check if one of multiple features is true, or if all the features are true. 
 
