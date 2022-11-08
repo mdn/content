@@ -18,7 +18,7 @@ browser-compat: api.MutationRecord.attributeName
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} method **`attributeName()`** returns the local name of the mutated attribute in the {{domxref("MutationRecord")}} observed by the target of a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} **`attributeName`** property contains the name of a changed attribute belonging to a node that is observed by a {{domxref("MutationObserver")}}.
 
 ## Syntax
 
