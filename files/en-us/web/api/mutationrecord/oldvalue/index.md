@@ -29,36 +29,53 @@ The property is set to the value (as a string) of a node before a mutation obser
 
 ## Examples
 
-In this code snippet, we'll create a span element with the content `foo` and observe it with a {{domxref("MutationObserver")}}. The observer will log to the console the value of the `foo` element before the mutation once the mutation occurs. If we change the value of the `foo` element to `bar`, the {{domxref("MutationRecord.oldValue")}} will be `foo`- if we change it again to `baz`, the `oldValue` property will be `bar`.
+### Show Old Color Value
+
+In the following example, there is a button that changes the color of an `h1` to a random new color. A {{domxref("MutationObserver")}} is used to observe the target node (`h1`) for changes to the attribute; when a change is detected, the observer calls a function, `logOldValue`.
+
+The `logOldValue` function is passed the `mutationRecords` array, which contains the `MutationRecord` objects. The `oldValue` property of the `MutationRecord` object is then displayed.
+
+#### HTML
+
+```html
+<h1 id="h1" style="rgb(0, 0, 0);">Hi, Mom!</h1>
+<button id="changeColorButton">Change color</button>
+<p id="log"></p>
+```
+
+#### JavaScript
 
 ```js
-// Create a span with "foo"
-let span = document.createElement("span");
-span.innerHTML = "foo";
+const h1 = document.getElementById("h1");
+const changeValueButton = document.getElementById("changeColorButton");
+const log = document.getElementById("log");
 
-// Create a mutation observer
-const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        // Log the old value of the span once the mutation occurs
-        console.log(mutation.oldValue);
-    });
+function changeColor() {
+  // Generates a 6 character hexadecimal string
+  let newColor = Math.floor(Math.random()*16777215).toString(16);
+  h1.style.color = `#${newColor}`;
+}
+
+changeColorButton.addEventListener("click", function () {
+  changeColor();
 });
 
-// Observe the span for mutations
-observer.observe(span, {
-    characterData: true,
-    characterDataOldValue: true
+function logOldValue(mutationRecordArray) {
+  for (const record of mutationRecordArray) {
+    log.textContent = `Old value: ${record.oldValue}`;
+  }
+}
+
+const observer = new MutationObserver(logOldValue);
+observer.observe(h1, {
+  attributes: true,
+  attributeOldValue: true
 });
-
-// Change the content of the span to "bar"
-span.innerHTML = "bar";
-/// Console output: foo
-
-// Change it again to "baz"
-span.innerHTML = "baz";
-/// Console output: bar
-
 ```
+
+#### Result
+
+{{EmbedLiveSample("Show Old Color Value")}}
 
 ## Specifications
 
