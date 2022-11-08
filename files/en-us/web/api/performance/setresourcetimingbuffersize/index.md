@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Performance.setResourceTimingBufferSize
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`setResourceTimingBufferSize()`** method sets the
 browser's _resource timing buffer_ size to the specified number of

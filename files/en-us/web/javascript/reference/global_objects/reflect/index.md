@@ -22,6 +22,11 @@ The `Reflect` object provides the following static functions which have the same
 
 Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
 
+## Static properties
+
+- `Reflect[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Reflect"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Static methods
 
 - {{jsxref("Reflect.apply()")}}

@@ -163,4 +163,4 @@ We are building up a number of examples in our [web-components-examples](https:/
 - [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Easy Web Components in \~1kB _Including polyfill_ — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.
 - [Slim.js](https://github.com/slimjs/slim.js) — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.
 - [Stencil](https://stenciljs.com/) — Toolchain for building reusable, scalable design systems in web components.
-- [omi](https://tencent.github.io/omi/) -  Front End Cross-Frameworks Framework
+- [omi](https://tencent.github.io/omi/) - Front End Cross-Frameworks Framework

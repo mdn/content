@@ -32,7 +32,7 @@ Intl.Segmenter.supportedLocalesOf(locales, options)
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
-        `"best fit"`. For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+        `"best fit"`. For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
 
 ### Return value
 
