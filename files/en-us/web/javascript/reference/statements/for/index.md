@@ -177,16 +177,18 @@ function showOffsetPos(id) {
   ); // semicolon
 
   console.log(
-    `Offset position of '${id}' element:\n left: ${left}px;\n top: ${top}px;`,
+    `Offset position of "${id}" element:
+left: ${left}px;
+top: ${top}px;`,
   );
 }
 
 showOffsetPos("content");
 
-// Output:
-// "Offset position of "content" element:
+// Logs:
+// Offset position of "content" element:
 // left: 0px;
-// top: 153px;"
+// top: 153px;
 ```
 
 Note that the semicolon after the `for` statement is mandatory, because it stands as an [empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty). Otherwise, the `for` statement acquires the following `console.log` line as its `statement` section, which makes the `log` execute multiple times.

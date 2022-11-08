@@ -70,11 +70,11 @@ an arbitrary combination of constructor and prototype by using
 
 ```js
 function OneClass() {
-  this.name = 'one';
+  this.name = "one";
 }
 
 function OtherClass() {
-  this.name = 'other';
+  this.name = "other";
 }
 
 // Calling this:
@@ -93,7 +93,6 @@ console.log(obj2 instanceof OneClass); // false
 console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true
 
-
 // Another example to demonstrate below:
 
 function func1(a, b, c, d) {
@@ -104,7 +103,7 @@ function func2(d, e, f, g) {
   console.log(arguments[3]);
 }
 
-const obj1 = Reflect.construct(func1, ['I', 'Love', 'my', 'country']);
+const obj1 = Reflect.construct(func1, ["I", "Love", "my", "country"]);
 ```
 
 However, while the end result is the same, there is one important difference in the
@@ -119,29 +118,29 @@ parameter if supplied, or `target` if not.
 
 ```js
 function OneClass() {
-  console.log('OneClass');
+  console.log("OneClass");
   console.log(new.target);
 }
 function OtherClass() {
-  console.log('OtherClass');
+  console.log("OtherClass");
   console.log(new.target);
 }
 
 const obj1 = Reflect.construct(OneClass, args);
-// Output:
-//     OneClass
-//     function OneClass { ... }
+// Logs:
+// OneClass
+// function OneClass { ... }
 
 const obj2 = Reflect.construct(OneClass, args, OtherClass);
-// Output:
-//     OneClass
-//     function OtherClass { ... }
+// Logs:
+// OneClass
+// function OtherClass { ... }
 
 const obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args);
-// Output:
-//     OneClass
-//     undefined
+// Logs:
+// OneClass
+// undefined
 ```
 
 ## Examples
@@ -150,8 +149,8 @@ OneClass.apply(obj3, args);
 
 ```js
 const d = Reflect.construct(Date, [1776, 6, 4]);
-d instanceof Date  // true
-d.getFullYear()    // 1776
+d instanceof Date; // true
+d.getFullYear(); // 1776
 ```
 
 ## Specifications

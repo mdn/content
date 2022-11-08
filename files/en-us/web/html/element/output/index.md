@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.output
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.
 

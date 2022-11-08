@@ -154,7 +154,7 @@ const result = a.flatMap((n) => {
   }
   return n % 2 === 0 ? [n] : [n - 1, 1];
 });
-// expected output: [4, 1, 4, 20, 16, 1, 18]
+console.log(result); // [4, 1, 4, 20, 16, 1, 18]
 ```
 
 ### Using flatMap() on sparse arrays
@@ -187,8 +187,7 @@ console.log(
     0: x,
   })),
 );
-// [ 1, 2, 2, 4, 3, 6 ]
-// [ { '0': 1, length: 2 }, { '0': 2, length: 2 }, { '0': 3, length: 2 } ]
+// [ { '0': 1, length: 1 }, { '0': 2, length: 1 }, { '0': 3, length: 1 } ]
 ```
 
 ## Specifications

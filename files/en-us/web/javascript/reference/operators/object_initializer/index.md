@@ -253,10 +253,10 @@ const obj1 = { foo: 'bar', x: 42 };
 const obj2 = { foo: 'baz', y: 13 };
 
 const clonedObj = { ...obj1 };
-// Object { foo: "bar", x: 42 }
+// { foo: "bar", x: 42 }
 
 const mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }
+// { foo: "baz", x: 42, y: 13 }
 ```
 
 > **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!

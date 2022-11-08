@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEntry.startTime
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`startTime`** property returns the first recorded
 {{domxref("DOMHighResTimeStamp","timestamp")}} of the

@@ -35,7 +35,7 @@ An integer corresponding to the `offsetWidth` pixel value of the element. The `o
 
 ## Examples
 
-![](dimensions-offset.png)
+![An example element with large padding, border and margin. `offsetWidth` is the layout width of the element including its padding and border, and excluding its margin.](dimensions-offset.png)
 
 ## Specifications
 

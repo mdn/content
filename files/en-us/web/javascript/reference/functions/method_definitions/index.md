@@ -28,7 +28,7 @@ const obj = {
   async property(parameters) {},
   async *generator(parameters) {},
 
-  //  with computed keys
+  // with computed keys
   get [expression]() {},
   set [expression](value) {},
   [expression](parameters) {},
@@ -47,10 +47,10 @@ Given the following code:
 ```js
 const obj = {
   foo: function () {
-    // ...
+    // …
   },
   bar: function () {
-    // ...
+    // …
   }
 }
 ```
@@ -60,10 +60,10 @@ You are now able to shorten this to:
 ```js
 const obj = {
   foo() {
-    // ...
+    // …
   },
   bar() {
-    // ...
+    // …
   }
 }
 ```

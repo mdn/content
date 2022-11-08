@@ -55,7 +55,7 @@ new (Object.getPrototypeOf(Int8Array))();
 
 Instead, you create an instance of a typed array of a particular type, such as an {{jsxref("Int8Array")}} or a {{jsxref("BigInt64Array")}}. These objects all have a common syntax for their constructors:
 
-```js
+```js-nolint
 new TypedArray()
 new TypedArray(length)
 new TypedArray(typedArray)
@@ -123,6 +123,8 @@ These methods are defined on the `TypedArray` constructor object and are thus sh
 
 These properties are all [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) defined on the `TypedArray` prototype object and are thus read-only and shared by all `TypedArray` subclass instances.
 
+- `TypedArray.prototype[@@toStringTag]`
+  - : The initial value of a typed array's [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the same string as its [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name). This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
 - {{jsxref("TypedArray.prototype.buffer")}}
   - : Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array.
 - {{jsxref("TypedArray.prototype.byteLength")}}
@@ -218,18 +220,18 @@ int16[0] = 42;
 console.log(int16[0]); // 42
 
 // Indexed properties on prototypes are not consulted (Fx 25)
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(32))[20]; // 0
+Int8Array.prototype[20] = "foo";
+new Int8Array(32)[20]; // 0
 // even when out of bound
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(8))[20]; // undefined
+Int8Array.prototype[20] = "foo";
+new Int8Array(8)[20]; // undefined
 // or with negative integers
-Int8Array.prototype[-1] = 'foo';
-(new Int8Array(8))[-1]; // undefined
+Int8Array.prototype[-1] = "foo";
+new Int8Array(8)[-1]; // undefined
 
 // Named properties are allowed, though (Fx 30)
-Int8Array.prototype.foo = 'bar';
-(new Int8Array(32)).foo; // "bar"
+Int8Array.prototype.foo = "bar";
+new Int8Array(32).foo; // "bar"
 ```
 
 ### Cannot be frozen

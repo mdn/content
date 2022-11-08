@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.initiatorType
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`initiatorType`** read-only property is a
 string that represents the _type_ of resource that

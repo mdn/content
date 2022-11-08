@@ -124,7 +124,7 @@ const myInstance = MyClass(); // TypeError: Class constructor MyClass cannot be 
 
 ### Class declaration hoisting
 
-Unlike function declarations, class declarations are not hoisted, which means you cannot use a class before it is declared.
+Unlike function declarations, class declarations are not [hoisted](/en-US/docs/Glossary/Hoisting) (or, in some interpretations, hoisted but with the temporal dead zone restriction), which means you cannot use a class before it is declared.
 
 ```js
 new MyClass(); // ReferenceError: Cannot access 'MyClass' before initialization

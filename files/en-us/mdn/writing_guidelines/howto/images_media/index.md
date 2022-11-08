@@ -260,7 +260,7 @@ This is used by inserting the following in your page at the position you want th
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
-For example, is the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
+For example, if the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
 
 ```
 \{{EmbedYouTube("ELS2OOUvxIw")}}

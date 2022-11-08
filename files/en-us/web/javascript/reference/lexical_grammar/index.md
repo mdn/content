@@ -56,7 +56,9 @@ Only the following Unicode code points are treated as line terminators in ECMASc
 
 Comments are used to add hints, notes, suggestions, or warnings to JavaScript code. This can make it easier to read and understand. They can also be used to disable code to prevent it from being executed; this can be a valuable debugging tool.
 
-JavaScript has two long-standing ways to add comments to code.
+JavaScript has two long-standing ways to add comments to code: line comments and block comments. In addition, there's a special hashbang comment syntax.
+
+### Line comments
 
 The first way is the `//` comment; this makes all text following it on the same line into a comment. For example:
 
@@ -67,6 +69,8 @@ function comment() {
 }
 comment();
 ```
+
+### Block comments
 
 The second way is the `/* */` style, which is much more flexible.
 
@@ -110,6 +114,8 @@ comment();
 ```
 
 In this case, the `console.log()` call is never issued, since it's inside a comment. Any number of lines of code can be disabled this way.
+
+### Hashbang comments
 
 There's a special third comment syntax, the **hashbang comment**. A hashbang comment behaves exactly like a single line-only (`//`) comment, except that it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
 
@@ -322,13 +328,13 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is _exponent_ or _power_ number – a signed integer.
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
-175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
-1E3    // => 1000
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
 ```
 
 #### Binary
@@ -575,7 +581,7 @@ This rule is a complement to the previous rule, specifically for the case where 
 - `(param) <here> => {}`
 - `async <here> function`, `async <here> prop()`, `async <here> function*`, `async <here> *prop()`, `async <here> (param) <here> => {}`
 
-Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
+Here [`++`](/en-US/docs/Web/JavaScript/Reference/Operators/Increment) is not treated as a postfix operator applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
 ```js
 a = b

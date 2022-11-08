@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.canvas
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 
@@ -89,7 +89,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - {{htmlattrdef("height")}}
   - : The height of the coordinate space in CSS pixels. Defaults to 150.
 - {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
+  - : Lets the canvas know whether translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
 - {{htmlattrdef("width")}}
   - : The width of the coordinate space in CSS pixels. Defaults to 300.
 
@@ -126,7 +126,7 @@ The maximum size of a `<canvas>` element is very large, but the exact size depen
 
 ### HTML
 
-This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to render the canvas, or if can't read a canvas.
+This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to read or render the canvas.
 
 ```html
 <canvas width="300" height="300">
@@ -174,4 +174,6 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
 - [Canvas cheat sheet (2009)](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [Canvas cheat sheet (pdf) (2015)](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf)
+- [Canvas cheat sheet (pdf)](https://www.coding-dude.com/wp/wp-content/uploads/2020/09/HTML5-canvas-cheat-sheet.pdf)
 - [Canvas introduction by Apple (2013)](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

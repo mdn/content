@@ -446,12 +446,26 @@ const arr = [3, 5, 7];
 arr.foo = 'hello';
 
 for (const i in arr) {
-  console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i);
 }
+// "0" "1" "2" "foo"
 
 for (const i of arr) {
-  console.log(i); // logs 3, 5, 7
+  console.log(i);
 }
+// Logs: 3 5 7
+```
+
+The `for...of` and `for...in` statements can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). For example, you can simultaneously loop over the keys and values of an object using {{jsxref("Object.entries()")}}.
+
+```js
+const obj = { foo: 1, bar: 2 };
+
+for (const [key, val] of Object.entries(obj)) {
+  console.log(key, val);
+}
+// "foo" 1
+// "bar" 2
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",

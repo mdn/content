@@ -8,6 +8,8 @@ tags:
   - Tools
 ---
 
+{{CSSRef}}
+
 This tool can be used to generate CSS {{cssxref("border-radius")}} effects.
 
 {{EmbedGHLiveSample("css-examples/tools/border-radius-generator/", '100%', 900)}}
