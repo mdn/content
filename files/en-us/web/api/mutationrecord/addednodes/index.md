@@ -38,7 +38,7 @@ If this record's [`type`](/en-US/web/api/MutationRecord/type) is not `childList`
 
 ## Examples
 
-In this code snippet, the observer will log to the console the tag name of every node added to the target node with the {{domxref("MutationObserver.observe")}} method.
+In this code snippet, the observer will log to the console the tag name of every node added to the target node with the {{domxref("MutationObserver.observe()")}} method.
 
 ```js
 var observer = new MutationObserver(function(mutations) {
