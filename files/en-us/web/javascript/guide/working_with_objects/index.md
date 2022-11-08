@@ -187,7 +187,7 @@ const myCar = {
 };
 ```
 
-Like JavaScript variables, property names are case sensitive. Property names can only be strings or Symbols — all keys are [converted to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) unless they are Symbols. [Array indices](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description) are, in fact, properties with string keys that contain integers.
+Like JavaScript variables, property names are case sensitive. Property names can only be strings or Symbols — all keys are [converted to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) unless they are Symbols. [Array indices](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_indices) are, in fact, properties with string keys that contain integers.
 
 ### Accessing properties
 
