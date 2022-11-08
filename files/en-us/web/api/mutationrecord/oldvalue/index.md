@@ -38,7 +38,7 @@ The `logOldValue` function is passed the `mutationRecords` array, which contains
 #### HTML
 
 ```html
-<h1 id="h1" style="rgb(0, 0, 0);">Hi, Mom!</h1>
+<h1 id="h1" style="color:rgb(0, 0, 0);">Hi, Mom!</h1>
 <button id="changeColorButton">Change color</button>
 <p id="log"></p>
 ```
@@ -52,7 +52,7 @@ const log = document.getElementById("log");
 
 function changeColor() {
   // Generates a 6 character hexadecimal string
-  let newColor = Math.floor(Math.random()*16777215).toString(16);
+  const newColor = Math.floor(Math.random()*16777215).toString(16);
   h1.style.color = `#${newColor}`;
 }
 
