@@ -13,7 +13,7 @@ tags:
 browser-compat: api.TaskAttributionTiming.containerId
 ---
 
-{{APIRef("Long Tasks")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`containerId`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the container's `id`

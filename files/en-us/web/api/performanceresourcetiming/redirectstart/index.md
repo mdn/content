@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.redirectStart
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`redirectStart`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the fetch
