@@ -50,6 +50,8 @@ new FontFace(family, source, descriptors)
       - : With an allowable value for {{cssxref("@font-face/ascent-override")}}.
     - `descentOverride`
       - : With an allowable value for {{cssxref("@font-face/descent-override")}}.
+    - `display`
+      - : With an allowable value for {{cssxref("@font-face/font-display")}}.
     - `featureSettings`
       - : With an allowable value for {{cssxref("font-feature-settings")}}.
     - `lineGapOverride`
