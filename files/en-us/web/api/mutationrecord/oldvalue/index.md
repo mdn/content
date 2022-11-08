@@ -1,18 +1,12 @@
 ---
-title: MutationRecord.oldValue()
+title: MutationRecord.oldValue
 slug: Web/API/MutationRecord/oldValue
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
+  - oldValue
   - MutationRecord
-  - NeedsContent
-  - NeedsUpdate
+  - Property
   - Reference
-  - mutation
-  - method
 browser-compat: api.MutationRecord.oldValue
 ---
 
@@ -20,40 +14,30 @@ browser-compat: api.MutationRecord.oldValue
 
 The {{domxref("MutationRecord")}} **`oldValue`** property contains the character data or attribute value of an observed node before it was changed.
 
-## Syntax
+## Value
 
-```js-nolint
-oldValue()
-```
-
-### Parameters
-
-None.
-
-### Return value
-
-The return value depends based on the value of {{domxref("MutationRecord.type")}}. The method returns the value (as a string) of a node before a mutation observed with a {{domxref("MutationObserver")}}; otherwise, `null` is returned.
+The property is set to the value (as a string) of a node before a mutation observed with a {{domxref("MutationObserver")}}. The value depends based on the value of {{domxref("MutationRecord.type")}}.
 
 > **Note:** For this to work as expected, the `attributeOldValue` or `characterDataOldValue` parameters of the
-> {{domxref("MutationObserver.observe")}} must be set to `true` to demonstrate the return functionality detailed below.
+> {{domxref("MutationObserver.observe()")}} must be set to `true` to demonstrate the functionality detailed below.
 
-- If the mutation type is `attributes`, the method will return the pre-mutation value of the attribute element whose attribute(s) have been mutated.
+- If the mutation type is `attributes`, the value will be the pre-mutation value of the attribute element whose attribute(s) have been mutated.
 
-- If the mutation type is `characterData`, the method will return the pre-mutation value of the {{domxref("characterData")}} node that has been mutated.
+- If the mutation type is `characterData`, the value will be the pre-mutation value of the {{domxref("characterData")}} node that has been mutated.
 
-- If the mutation type is `childList`, the method will return `null`.
+- If the mutation type is `childList`, the value will be `null`.
 
 ## Examples
 
-In this code snippet, we'll create a span element with the content `foo` and observe it with a {{domxref("MutationObserver")}}. The observer will log to the console the value of the `foo` element before the mutation once the mutation occurs. If we change the value of the `foo` element to `bar`, the {{domxref("MutationRecord.oldValue")}} will be `foo`- if we change it again to `baz`, the `oldValue` method will return `bar`.
+In this code snippet, we'll create a span element with the content `foo` and observe it with a {{domxref("MutationObserver")}}. The observer will log to the console the value of the `foo` element before the mutation once the mutation occurs. If we change the value of the `foo` element to `bar`, the {{domxref("MutationRecord.oldValue")}} will be `foo`- if we change it again to `baz`, the `oldValue` property will be `bar`.
 
 ```js
 // Create a span with "foo"
-var span = document.createElement("span");
+let span = document.createElement("span");
 span.innerHTML = "foo";
 
 // Create a mutation observer
-var observer = new MutationObserver(function(mutations) {
+const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
         // Log the old value of the span once the mutation occurs
         console.log(mutation.oldValue);

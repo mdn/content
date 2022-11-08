@@ -1,38 +1,22 @@
 ---
-title: MutationRecord.attributeNamespace()
+title: MutationRecord.attributeNamespace
 slug: Web/API/MutationRecord/attributeNamespace
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
+  - attributeNamespace
   - MutationRecord
-  - NeedsContent
-  - NeedsUpdate
+  - Property
   - Reference
-  - mutation
-  - method
 browser-compat: api.MutationRecord.attributeNamespace
 ---
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} method **`attributeNamespace()`** returns the namespace of the mutated attribute in the {{domxref("MutationRecord")}} observed by the target of a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} property **`attributeNamespace`** is the namespace of the mutated attribute in the {{domxref("MutationRecord")}} observed by a {{domxref("MutationObserver")}}.
 
-## Syntax
+## Value
 
-```js-nolint
-attributeNamespace()
-```
-
-### Parameters
-
-None.
-
-### Return value
-
-If the mutated node type is `attributes`, the method returns the namespace of the mutated attribute of the mutation target; returns `null` otherwise.
+If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `attributes`, the property is the namespace of the mutated attribute of the mutation target. The value is `null` otherwise.
 
 ## Specifications
 

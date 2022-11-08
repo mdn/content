@@ -1,18 +1,12 @@
 ---
-title: MutationRecord.attributeName()
+title: MutationRecord.attributeName
 slug: Web/API/MutationRecord/attributeName
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
+  - attributeName
   - MutationRecord
-  - NeedsContent
-  - NeedsUpdate
+  - Property
   - Reference
-  - mutation
-  - method
 browser-compat: api.MutationRecord.attributeName
 ---
 
@@ -20,53 +14,79 @@ browser-compat: api.MutationRecord.attributeName
 
 The {{domxref("MutationRecord")}} **`attributeName`** property contains the name of a changed attribute belonging to a node that is observed by a {{domxref("MutationObserver")}}.
 
-## Syntax
+## Value
 
-```js-nolint
-attributeName()
-```
+If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `attributes`, this is the name of the mutated attribute of the mutation target.
 
-### Parameters
-
-None.
-
-### Return value
-
-If the mutated node type is `attributes`, the method will return the local name of the mutated attribute of the mutation target; returns `null` otherwise.
+If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is not `attributes`, this is `null`.
 
 ## Examples
 
-This code snippet is used to observe changes in a userlist: the userlist is a DOM element that functions as a list of all users currently connected to a server (in this example, consider it is a `<ul>`). The userlist itself contains child elements (i.e. `<li>`), each containing an attribute associated with the username or the user status.
+### Get Last Updated Attribute
 
-The {{domxref("MutationObserver")}} observes changes in the `status` and `username` attributes of the elements via the {{domxref("MutationObserver.observe()")}} "attributeFilter" parameter. When the value of one of the listed attributes is changed, the callback function is called. The callback uses the {{domxref("MutationRecord.type")}} and {{domxref("MutationRecord.attributeName")}} properties to take the appropriate action.
+In the following example, there are four buttons: two change the style attribute of the `h1` element, and two change the class attribute of the `h1` element. The script uses a {{domxref("MutationObserver")}} to detect the changes and will update the text below to the name of the last attribute that was changed.
 
-```js
-const userListElement = document.querySelector("#userlist");
+#### HTML
 
-const observer = new MutationObserver(callback);
-observer.observe(userListElement, {
-  attributeFilter: [ "status", "username" ],
-  attributeOldValue: true,
-  subtree: true
-});
+```html
+<h1 class="blue" style="color:black;" id="hiMom">Hi, Mom!</h1>
 
-function callback(mutationList) {
-  mutationList.forEach((mutation) => {
-    switch(mutation.type) {
-      case "attributes":
-        switch(mutation.attributeName) {
-          case "status":
-            userStatusChanged(mutation.target.username, mutation.target.status);
-            break;
-          case "username":
-            usernameChanged(mutation.oldValue, mutation.target.username);
-            break;
-        }
-        break;
-    }
-  });
+<button id="redButton">Set class to "red"</button>
+<button id="blueButton">Set class to "blue"</button>
+<button id="whiteButton">Set style to "color:white;"</button>
+<button id="blackButton">Set style to "color:black;"</button>
+
+<p id="log">Updated attribute name:</p>
+```
+#### CSS
+
+```css
+.red {
+  background-color:red;
+}
+
+.blue {
+  background-color:blue;
 }
 ```
+
+#### JavaScript
+
+```js
+const hiMom = document.querySelector("#hiMom");
+const redButton = document.querySelector("#redButton");
+const blueButton = document.querySelector("#blueButton ");
+const whiteButton = document.querySelector("#whiteButton");
+const blackButton = document.querySelector("#blackButton");
+const log = document.querySelector("#log");
+
+redButton.addEventListener("click", function () { 
+  hiMom.classList.add('red'); hiMom.classList.remove('blue') }); 
+
+blueButton.addEventListener("click", function () { 
+  hiMom.classList.add('blue'); hiMom.classList.remove('red') });
+
+whiteButton.addEventListener("click", function () {  
+  hiMom.style.color = "white" }); 
+
+blackButton.addEventListener("click", function () { 
+  hiMom.style.color = "black" }); 
+
+function logLastAttr(mutationRecordArray) {
+  for (const record of mutationRecordArray) {
+  if (record.type === 'attributes') {
+    log.textContent = `Updated attribute name: ${record.attributeName}`;
+   }
+  }
+}
+
+const observer = new MutationObserver(logLastAttr);
+observer.observe(hiMom, {attributes: true});
+```
+
+#### Result
+
+{{EmbedLiveSample("Get Last Updated Attribute")}}
 
 ## Specifications
 

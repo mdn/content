@@ -1,51 +1,35 @@
 ---
-title: MutationRecord.target()
+title: MutationRecord.target
 slug: Web/API/MutationRecord/target
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
+  - target
   - MutationRecord
-  - NeedsContent
-  - NeedsUpdate
+  - Property
   - Reference
-  - mutation
-  - method
 browser-compat: api.MutationRecord.target
 ---
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} method **`target()`** returns the target of a mutation observed with a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} property **`target`** is the target (i.e. the mutated/changed node) of a mutation observed with a {{domxref("MutationObserver")}}.
 
-## Syntax
+## Value
 
-```js-nolint
-type()
-```
+The value of the property is the node changed by a mutation observed with a {{domxref("MutationObserver")}}; the value can be vastly different depending on the value of {{domxref("MutationRecord.type")}}.
 
-### Parameters
+- If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `attributes`, the value will be the element whose attribute(s) have been mutated.
 
-None.
+- If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `childList`, the value will be the element whose child element(s) have been mutated.
 
-### Return value
-
-The method returns the node changed by a mutation observed with a {{domxref("MutationObserver")}}; the return value can be vastly different depending on the value of {{domxref("MutationRecord.type")}}.
-
-- If the node type is `attributes`, the method will return the element whose attribute(s) have been mutated.
-
-- If the node type is `childList`, the method will return the element whose child element(s) have been mutated.
-
-- If the node type is `characterData`, the method will return the {{domxref("characterData")}} node.
+- If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `characterData`, the value will be the {{domxref("characterData")}} node.
 
 ## Examples
 
-In this code snippet, the `observer` will log to the console the tag name of every element with an observed mutation with the {{domxref("MutationObserver.observe")}} method.
+In this code snippet, the `observer` will log to the console the tag name of every element with an observed mutation with the {{domxref("MutationObserver.observe()")}} property.
 
 ```js
-var observer = new MutationObserver(function(mutations) {
+const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
         console.log(mutation.target.tagName);
     });

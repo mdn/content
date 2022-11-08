@@ -34,7 +34,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td>{{domxref("MutationRecord.type")}}</td>
       <td><code>String</code></td>
       <td>
-        Returns <code>"attributes"</code> if the mutation was an attribute
+        <code>"Attributes"</code> if the mutation was an attribute
         mutation,<br /><code>"characterData"</code> if it was a mutation to a
         <code>CharacterData</code> node,<br />and <code>"childList"</code> if it
         was a mutation to the tree of nodes.
@@ -44,7 +44,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td>{{domxref("MutationRecord.target")}}</td>
       <td>{{domxref("Node")}}</td>
       <td>
-        Returns the node the mutation affected, depending on the
+        The node the mutation affected, depending on the
         {{domxref("MutationRecord.type")}}.<br />For
         <code>attributes</code>, it is the element whose attribute changed.<br />For
         <code>characterData</code>, it is the
@@ -56,7 +56,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td>{{domxref("MutationRecord.addedNodes")}}</td>
       <td>{{domxref("NodeList")}}</td>
       <td>
-        Return the nodes added. Will be an empty
+        The nodes added. Will be an empty
         {{domxref("NodeList")}} if no nodes were added.
       </td>
     </tr>
@@ -64,7 +64,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td>{{domxref("MutationRecord.removedNodes")}}</td>
       <td>{{domxref("NodeList")}}</td>
       <td>
-        Return the nodes removed. Will be an empty
+        The nodes removed. Will be an empty
         {{domxref("NodeList")}} if no nodes were removed.
       </td>
     </tr>
@@ -72,7 +72,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td>{{domxref("MutationRecord.previousSibling")}}</td>
       <td>{{domxref("Node")}}</td>
       <td>
-        Return the previous sibling of the added or removed nodes, or
+        The previous sibling of the added or removed nodes, or
         <code>null</code>.
       </td>
     </tr>
@@ -80,7 +80,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td>{{domxref("MutationRecord.nextSibling")}}</td>
       <td>{{domxref("Node")}}</td>
       <td>
-        Return the next sibling of the added or removed nodes, or
+        The next sibling of the added or removed nodes, or
         <code>null</code>.
       </td>
     </tr>
@@ -88,14 +88,14 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td>{{domxref("MutationRecord.attributeName")}}</td>
       <td><code>String</code></td>
       <td>
-        Returns the local name of the changed attribute, or <code>null</code>.
+        The name of the changed attribute, or <code>null</code>.
       </td>
     </tr>
     <tr>
       <td>{{domxref("MutationRecord.attributeNamespace")}}</td>
       <td><code>String</code></td>
       <td>
-        Returns the namespace of the changed attribute, or <code>null</code>.
+        The namespace of the changed attribute, or <code>null</code>.
       </td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
       <td><code>String</code></td>
       <td>
         <p>
-          The return value depends on the
+          The value depends on the
           {{domxref("MutationRecord.type")}}.<br />For
           <code>attributes</code>, it is the value of the changed attribute
           before the change.<br />For <code>characterData</code>, it is the data
