@@ -180,7 +180,7 @@ The `:has()` relational selector can be used to check if one of the multiple fea
 
 By using comma-separated values inside the `:has()` relational selector, you are checking to see if any of the parameters exist. `x:has(a, b)` will style `x` if descendant `a` OR `b` exists.
 
-By chaining together multiple `:has()` relational selectors together, you are checking to see all of the parameters exist. `x:has(a):has(b)` will style `x` if descendant `a` AND `b` exist.
+By chaining together multiple `:has()` relational selectors together, you are checking to see if all of the parameters exist. `x:has(a):has(b)` will style `x` if descendant `a` AND `b` exist.
 
 ```css
 body:has(video, audio) {
