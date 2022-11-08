@@ -187,7 +187,7 @@ const myCar = {
 };
 ```
 
-Like JavaScript variables, property names are case sensitive. Property names can only be strings or Symbols — all keys are [converted to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) unless they are Symbols. [Array indices](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#notes) are, in fact, properties with string keys that contain integers.
+Like JavaScript variables, property names are case sensitive. Property names can only be strings or Symbols — all keys are [converted to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) unless they are Symbols. [Array indices](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_indices) are, in fact, properties with string keys that contain integers.
 
 ### Accessing properties
 
@@ -437,10 +437,10 @@ A [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is a function ass
 
 Getters and setters can be either
 
-- defined within [object initializers](#object_initializers), or
+- defined within [object initializers](#using_object_initializers), or
 - added later to any existing object.
 
-Within [object initializers](#object_initializers), getters and setters are defined like regular [methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), but prefixed with the keywords `get` or `set`. The getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:
+Within [object initializers](#using_object_initializers), getters and setters are defined like regular [methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), but prefixed with the keywords `get` or `set`. The getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:
 
 ```js
 const myObj = {
