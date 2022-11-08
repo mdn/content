@@ -5578,7 +5578,7 @@
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Tools/Document_parameters	/en-US/docs//en-US/docs/MDN
-/en-US/docs/MDN/Tools/Unsupported_GET_API	/en-US/docs//en-US/docs/MDN
+/en-US/docs/MDN/Tools/Unsupported_GET_API	/en-US/docs/MDN
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
