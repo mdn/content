@@ -5511,7 +5511,7 @@
 /en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/Tools	/en-US/docs/MDN/Tools
-/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
+/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs//en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
 /en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN/Tools/Sample_server
@@ -5536,7 +5536,7 @@
 /en-US/docs/MDN/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/API	/en-US/docs/MDN/Tools/Unsupported_GET_API
+/en-US/docs/MDN/Kuma/API	/en-US/docs//en-US/docs/MDN
 /en-US/docs/MDN/Kuma/Changelog	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /en-US/docs/MDN/Kuma/Contributing	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /en-US/docs/MDN/Kuma/Contributing/Getting_started	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
@@ -5577,7 +5577,8 @@
 /en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
-/en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
+/en-US/docs/MDN/Tools/Document_parameters	/en-US/docs//en-US/docs/MDN
+/en-US/docs/MDN/Tools/Unsupported_GET_API	/en-US/docs//en-US/docs/MDN
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
