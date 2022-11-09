@@ -42,7 +42,7 @@ flatMap(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function that produces an element of the new Array.
+  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array.
 
     The function is called with the following arguments:
 
@@ -63,7 +63,7 @@ by a depth of 1.
 
 ## Description
 
-The `flatMap()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). See {{jsxref("Array.prototype.map()")}} for a detailed description of the callback function. The `flatMap()` method is identical to [`map(callbackFn, thisArg)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) followed by [`flat(1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat).
+The `flatMap()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). See {{jsxref("Array.prototype.map()")}} for a detailed description of the callback function. The `flatMap()` method is identical to [`map(callbackFn, thisArg)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) followed by [`flat(1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) — for each element, it produces an array of new elements, and concatenates the resulting arrays together to form a new array.
 
 The `flatMap()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. However, the value returned from `callbackFn` must be an array if it is to be flattened.
 

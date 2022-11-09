@@ -42,7 +42,7 @@ every(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : A function to test for each element.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise.
 
     The function is called with the following arguments:
 

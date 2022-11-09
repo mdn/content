@@ -49,7 +49,7 @@ find(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array. The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
 
     The function is called with the following arguments:
 

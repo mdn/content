@@ -43,8 +43,7 @@ map(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function that is called for every element of `arr`.
-    Each time `callbackFn` executes, the returned value is added to `newArray`.
+  - : A function to execute for each element in the array. Its return value is added as a single element in the new array.
 
     The function is called with the following arguments:
 

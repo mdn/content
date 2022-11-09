@@ -43,7 +43,7 @@ findIndex(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : A function used to test elements in the array. The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found. The index of this element is then returned by `findIndex()`.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
 
     The function is called with the following arguments:
 

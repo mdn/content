@@ -42,7 +42,7 @@ forEach(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each element.
+  - : A function to execute for each element in the array. Its return value is discarded.
 
     The function is called with the following arguments:
 

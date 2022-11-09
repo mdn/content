@@ -45,7 +45,7 @@ reduceRight(function (accumulator, currentValue, index, array) { /* … */ }, in
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array.
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
 
     The function is called with the following arguments:
 

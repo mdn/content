@@ -45,7 +45,7 @@ groupToMap(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each element in the array. The value ({{Glossary("object")}} or {{Glossary("primitive")}}) returned from the callback indicates the group of the current element.
+  - : A function to execute for each element in the array. It should return a value ({{Glossary("object")}} or {{Glossary("primitive")}}) indicating the group of the current element.
 
     The function is called with the following arguments:
 

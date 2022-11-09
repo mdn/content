@@ -44,7 +44,7 @@ group(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each element in the array. The object returned from the callback indicates the group of the current element. It must be possible to coerce this returned callback value into a property key (string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)).
+  - : A function to execute for each element in the array. It should return a value that can get coerced into a property key (string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indicating the group of the current element.
 
     The function is called with the following arguments:
 

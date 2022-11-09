@@ -41,7 +41,7 @@ filter(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function is a predicate, to test each element of the array. Return a value that coerces to `true` to keep the element, or to `false` otherwise.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to keep the element in the resulting array, and a falsy value otherwise.
 
     The function is called with the following arguments:
 
