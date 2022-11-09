@@ -34,7 +34,7 @@ The API is accessed via the {{domxref("Window.navigation")}} property, which ret
 
 `navigation` has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API")}}, where it is sometimes hard to figure out responding to all navigations.) The `navigate` event has an event object of type {{domxref("NavigateEvent")}}, which contains detailed information including details around the navigation's destination, type, whether it contains `POST` form data or a download request, and more.
 
-It also contains two methods:
+The `NavigationEvent` object also provides two methods:
 
 - {{domxref("NavigateEvent.intercept", "intercept()")}} allows you to control what happens when the navigation is initiated using a callback handler function, which should return a promise. For example, in the case of an SPA, it can be used to load relevant new content into the UI based on the path of the URL navigated to.
 - {{domxref("NavigateEvent.scroll", "scroll()")}} allows you to manually initiate the browser's scroll behavior (e.g. to a fragment identifier in the URL), if it makes sense for your code, rather than waiting for the browser to handle it automatically.
