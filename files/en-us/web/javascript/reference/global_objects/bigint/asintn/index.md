@@ -25,13 +25,18 @@ BigInt.asIntN(bits, bigint)
 ### Parameters
 
 - `bits`
-  - : The amount of bits available for the integer size.
+  - : The amount of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
 - `bigint`
   - : The BigInt value to clamp to fit into the supplied bits.
 
-### Returns
+### Return value
 
 The value of `bigint` modulo 2^`bits`, as a signed integer.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `bits` is negative or greater than 2<sup>53</sup> - 1.
 
 ## Description
 
@@ -53,6 +58,8 @@ If the leading bit of the remaining number is `1`, the result is negative. For e
 
 > **Note:** `BigInt` values are always encoded as two's complement in binary.
 
+Unlike similar language APIs such as {{jsxref("Number.prototype.toExponential()")}}, `asIntN` is a static property of {{jsxref("BigInt")}}, so you always use it as `BigInt.asIntN()`, rather than as a method of a BigInt value. Exposing `asIntN()` as a "standard library function" allows [interop with asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+
 ## Examples
 
 ### Staying in 64-bit ranges
@@ -62,11 +69,9 @@ The `BigInt.asIntN()` method can be useful to stay in the range of 64-bit arithm
 ```js
 const max = 2n ** (64n - 1n) - 1n;
 
-BigInt.asIntN(64, max);
-// ↪ 9223372036854775807n
+BigInt.asIntN(64, max); // 9223372036854775807n
 
-BigInt.asIntN(64, max + 1n);
-// ↪ -9223372036854775808n
+BigInt.asIntN(64, max + 1n); // -9223372036854775808n
 // negative because the 64th bit of 2^63 is 1
 ```
 

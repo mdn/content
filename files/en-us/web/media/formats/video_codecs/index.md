@@ -267,7 +267,7 @@ In addition, each encoder utility may have variations in how they process the so
     <tr>
       <th scope="row">Lossy compression</th>
       <td>
-        To some degree, artifacts and other forms of quality degradation wil
+        To some degree, artifacts and other forms of quality degradation will
         occur, depending on the specific codec and how much compression is being
         applied
       </td>
@@ -397,7 +397,7 @@ Ringing is another type of artifact that can make it particularly difficult to r
 
 **Posterization** occurs when the compression results in the loss of color detail in gradients. Instead of smooth transitions through the various colors in a region, the image becomes blocky, with blobs of color that approximate the original appearance of the image.
 
-[![](posterize-effect.jpg)](posterize-effect.jpg)
+[![Bald eagle photo with blotchy resolution.](posterize-effect.jpg)](posterize-effect.jpg)
 
 Note the blockiness of the colors in the plumage of the bald eagle in the photo above (and the snowy owl in the background). The details of the feathers is largely lost due to these posterization artifacts.
 
@@ -413,7 +413,7 @@ In the example image above, note how the sky has bands of different shades of bl
 
 **Mosquito noise** is a temporal artifact which presents as noise or **edge busyness** that appears as a flickering haziness or shimmering that roughly follows outside the edges of objects with hard edges or sharp transitions between foreground objects and the background. The effect can be similar in appearance to [ringing](#ringing) .
 
-![](mosquito-effect-sm.png)
+![Example of an image whose compression has introduced mosquito noise.](mosquito-effect-sm.png)
 
 The photo above shows mosquito noise in a number of places, including in the sky surrounding the bridge. In the upper-right corner, an inset shows a close-up of a portion of the image that exhibits mosquito noise.
 
@@ -1980,9 +1980,9 @@ First, let's look at the best options for videos presented on a typical web site
 
 1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
@@ -2001,9 +2001,9 @@ If your mission is to present video at the highest possible quality, you will pr
 
 1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
 
@@ -2036,11 +2036,11 @@ Given the constraints on how close to lossless you can get, you might consider u
 
 ```js
 const kbps = 1024;
-const Mbps = kbps*kbps;
+const Mbps = kbps * kbps;
 
 const options = {
   mimeType: 'video/webm; codecs="av01.2.19H.12.0.000.09.16.09.1, flac"',
-  bitsPerSecond: 800*Mbps,
+  bitsPerSecond: 800 * Mbps,
 };
 
 let recorder = new MediaRecorder(sourceStream, options);
@@ -2050,7 +2050,7 @@ This example creates a `MediaRecorder` configured to record [AV1](#av1) video us
 
 Breaking down the value of the `codecs` parameter into its dot-delineated properties, we see the following:
 
-| Value  | Description                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                              |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
@@ -2060,7 +2060,7 @@ Breaking down the value of the `codecs` parameter into its dot-delineated proper
 | `000`  | The chroma subsampling mode, taken from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification. A value of 000, combined with the monochrome mode value 0, indicates that we want 4:4:4 chroma subsampling, or no loss of color data. |
 | `09`   | The color primaries to use. This value comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification; 9 indicates that we want to use BT.2020 color, which is used for HDR.                                                       |
 | `16`   | The transfer characteristics to use. This comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) as well; 16 indicates that we want to use the characteristics for BT.2100 PQ color.                                                                |
-| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
+| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                       |
 | `1`    | The video "full range" flag. A value of 1 indicates that we want the full color range to be used.                                                                                                                                                                                        |
 
 The documentation for your codec choices will probably offer information you'll use when constructing your `codecs` parameter.

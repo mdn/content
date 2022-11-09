@@ -1,6 +1,7 @@
 ---
 title: display
 slug: Web/CSS/display
+page-type: css-property
 tags:
   - CSS
   - CSS Display
@@ -72,7 +73,7 @@ The keyword values can be grouped into six value categories.
     - `block`
       - : The element generates a block element box, generating line breaks both before and after the element when in the normal flow.
     - `inline`
-      - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space
+      - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > **Note:** Browsers that support the two-value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
 > This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
@@ -146,7 +147,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
     - `ruby-text` {{Experimental_Inline}}
       - : These elements behave like {{HTMLElement("rt")}} HTML elements.
     - `ruby-base-container` {{Experimental_Inline}}
-      - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
+      - : These elements are generated as anonymous boxes.
     - `ruby-text-container` {{Experimental_Inline}}
       - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
@@ -246,11 +247,9 @@ The individual pages for the different types of value that `display` can have se
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 - [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
 - [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
-- [Cross-browser Flexbox mixins](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
 - [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
 - [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
 - [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
 
 ### display: grid

@@ -3,7 +3,6 @@ title: XPath
 slug: Glossary/XPath
 tags:
   - CodingScripting
-  - Glossary
   - XML
   - XPath
 ---

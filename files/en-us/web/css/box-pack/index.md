@@ -1,6 +1,7 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
+page-type: css-property
 tags:
   - CSS
   - CSS Property

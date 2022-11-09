@@ -8,9 +8,7 @@ tags:
 
 In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/Web/SVG), [JavaScript](/en-US/docs/Web/JavaScript), and the [DOM](/en-US/docs/Web/API/Document_Object_Model) to animate a swarm of "motes". These motes are governed by two simple principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.
 
-This is done completely in W3C Standards–XHTML, SVG, and JavaScript–no Flash or any vendor-specific extensions. This example should work in Firefox 1.5 and above.
-
-[View the example](https://media.prod.mdn.mozit.cloud/samples/svg/swarm-of-motes.xhtml)
+[View the example](https://media.prod.mdn.mozit.cloud/samples/svg/swarm-of-motes.xhtml). The linked example was written with 2006 best practices. The example below has been updated to modern JavaScript best practices. Both work.
 
 ```xml
 <?xml version='1.0'?>
@@ -51,13 +49,6 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     second each mote tries to move away from the average
     mote position. Combined, we get this very natural
     looking behavior.
-    </p>
-
-    <p>
-    This is done completely in W3C Standards–XHTML,
-    SVG and JavaScript–no flash or any vendor specific
-    extensions. Currently, this will work in Mozilla Firefox
-    version 1.5 and above.
     </p>
 
     <div>
@@ -268,7 +259,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       }
 
       this.elt.setAttributeNS(null, 'x1', old_x);
-      this.elt.setAttributeNS(null, 'y1' ,old_y);
+      this.elt.setAttributeNS(null, 'y1', old_y);
 
       this.elt.setAttributeNS(null, 'x2', this.x);
       this.elt.setAttributeNS(null, 'y2', this.y);

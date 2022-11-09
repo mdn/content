@@ -39,8 +39,8 @@ A {{domxref("WaveShaperNode")}}.
 
 ## Examples
 
-The following example shows basic usage of an AudioContext to create a wave shaper
-node. For applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) [demo](https://mdn.github.io/voice-change-o-matic/) ([see app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
+The following example shows basic usage of an AudioContext to create a wave shaper node.
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 > **Note:** Sigmoid functions are commonly used for distortion curves
 > because of their natural properties. Their S-shape, for instance, helps create a

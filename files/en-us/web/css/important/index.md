@@ -1,6 +1,7 @@
 ---
 title: '!important'
 slug: Web/CSS/important
+page-type: css-keyword
 tags:
   - CSS
   - Reference
@@ -9,6 +10,8 @@ tags:
   - \!important
 # browser-compat: css.flag.important
 ---
+
+{{CSSRef}}
 
 A `!` delimiter followed by the `important` keyword marks the declaration as important. The `!important` flag alters the rules selecting declarations inside the [cascade](/en-US/docs/Web/CSS/Cascade). A declaration that is not _important_ is called _normal_.
 
@@ -52,7 +55,7 @@ In this example, the `color` and `background-color` properties will transition t
 
 ### Cascade layers
 
-Within each of the three origins for style sheets – author, user, and user-agent – normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. Important declarations reverse the order of precedence: important declarations in the first layer take precedence over important declarations in the next layer, and so on. Also, all the important declarations have precedence over important declarations made outside of any layer.
+Within each of the three origins for style sheets – author, user, and user-agent – normal declarations in unlayered styles override layered style declarations, with the last declared having precedence over the layers declared before it. Important declarations reverse the order of precedence: important declarations in the first layer take precedence over important declarations in the next layer, and so on. Also, all the important declarations have precedence over important declarations made outside any layer.
 
 ### Inline styles
 
@@ -99,7 +102,7 @@ p {
 
 p {
   background-image: none !important;
-  background-position: 0% 0% !important;
+  background-position: 0 0 !important;
   background-size: auto auto !important;
   background-repeat: repeat !important;
   background-origin: padding-box !important;
@@ -110,6 +113,33 @@ p {
 ```
 
 This example shows one of the several reasons avoiding the important flag is generally recommended.
+
+## Impact on custom properties
+
+When the `!important` flag is added to a custom property value declaration, it makes the value assignment important. The `!important` flag is then stripped from the custom property value. The `!important` flag is not passed as part of the custom property value to the [`var()`](/en-US/docs/Web/CSS/var) function.
+
+```css
+:root {
+  --myColor: red !important;
+  --myColor: blue;
+}
+p {
+  color: var(--myColor);
+  }
+blockquote {
+   color: var(--myColor);
+   color: purple;
+}
+```
+
+```html hidden
+<p>This is a paragraph</p>
+<blockquote>This is a blockquote</blockquote>
+```
+
+In this example, the paragraph will be red, not blue, as the custom property value assignment is important. The blockquote will be purple, because the purple normal declaration comes after the normal red declaration.
+
+{{ EmbedLiveSample('Impact_on_custom_properties', '500', '250') }}
 
 ## Best practices
 

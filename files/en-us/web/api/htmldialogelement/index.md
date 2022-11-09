@@ -17,7 +17,7 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -26,7 +26,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : A string that sets or returns the return value for the dialog.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 

@@ -22,7 +22,7 @@ and a list of the characteristics of this service.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("BluetoothRemoteGATTService.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns information about a Bluetooth device through an instance of
@@ -33,7 +33,7 @@ and a list of the characteristics of this service.
 - {{domxref("BluetoothRemoteGATTService.uuid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string representing the UUID of this service.
 
-## Methods
+## Instance methods
 
 - {{domxref("BluetoothRemoteGATTService.getCharacteristic()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} to an instance of

@@ -1,8 +1,9 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles
@@ -38,11 +39,7 @@ A couple of scenarios where a fallback style will be used are:
 
 ## Formal syntax
 
-```
-<counter-style-name>
-
-<counter-style-name> = <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

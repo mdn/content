@@ -4,7 +4,6 @@ slug: Glossary/Chrome
 tags:
   - Browser
   - Chrome
-  - Glossary
   - WebMechanics
 ---
 

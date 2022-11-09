@@ -1,6 +1,7 @@
 ---
-title: '@property'
+title: "@property"
 slug: Web/CSS/@property
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -61,20 +62,16 @@ Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
 ## Formal syntax
 
-```
-@property <custom-property-name> {
-  <declaration-list>
-}
-```
+{{csssyntax}}
 
 ## Specifications
 

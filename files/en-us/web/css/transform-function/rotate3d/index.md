@@ -1,6 +1,7 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -336,5 +337,6 @@ div {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}

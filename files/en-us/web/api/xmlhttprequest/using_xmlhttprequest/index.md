@@ -29,7 +29,7 @@ send the request. After the transaction completes, the object will contain usefu
 information such as the response body and the [HTTP status](/en-US/docs/Web/HTTP/Status) of the result.
 
 ```js
-function reqListener () {
+function reqListener() {
   console.log(this.responseText);
 }
 
@@ -131,7 +131,7 @@ const req = new XMLHttpRequest();
 req.onload = (e) => {
   const arraybuffer = req.response; // not responseText
   /* ... */
-}
+};
 req.open("GET", url);
 req.responseType = "arraybuffer";
 req.send();
@@ -167,9 +167,9 @@ req.open();
 // ...
 
 // progress on transfers from the server to the client (downloads)
-function updateProgress (event) {
+function updateProgress(event) {
   if (event.lengthComputable) {
-    const percentComplete = event.loaded / event.total * 100;
+    const percentComplete = (event.loaded / event.total) * 100;
     // ...
   } else {
     // Unable to compute progress information since the total size is unknown
@@ -234,7 +234,9 @@ One can also detect all three load-ending conditions (`abort`,
 req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
-  console.log("The transfer finished (although we don't know if it succeeded or not).");
+  console.log(
+    "The transfer finished (although we don't know if it succeeded or not)."
+  );
 }
 ```
 
@@ -523,8 +525,8 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -542,8 +544,12 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          <label>First name:
+            <input type="text" name="firstname" />
+          </label><br />
+          <label>Last name:
+            <input type="text" name="lastname" />
+          </label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -560,10 +566,15 @@ ways to _submit_, and to **upload files**:
       onsubmit="AJAXSubmit(this); return false;">
       <fieldset>
         <legend>Registration example</legend>
-        <p>Your name: <input type="text" name="user" /></p>
         <p>
-          Your message:<br />
-          <textarea name="message" cols="40" rows="8"></textarea>
+          <label>Your name:
+            <input type="text" name="user" />
+          </label>
+        </p>
+        <p>
+          <label>Your message:<br />
+            <textarea name="message" cols="40" rows="8"></textarea>
+          </label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -581,24 +592,26 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Upload example</legend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" /><br />
+          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>Last name: <input type="text" name="lastname" /></label><br />
           Sex:
           <input id="sex_male" type="radio" name="sex" value="male" />
           <label for="sex_male">Male</label>
           <input id="sex_female" type="radio" name="sex" value="female" />
           <label for="sex_female">Female</label><br />
           Password: <input type="password" name="secret" /><br />
-          What do you prefer:
-          <select name="image_type">
-            <option>Books</option>
-            <option>Cinema</option>
-            <option>TV</option>
-          </select>
+          <label>What do you prefer:
+            <select name="image_type">
+              <option>Books</option>
+              <option>Cinema</option>
+              <option>TV</option>
+            </select>
+          </label>
         </p>
         <p>
-          Post your photos:
-          <input type="file" multiple name="photos[]" />
+          <label>Post your photos:
+            <input type="file" multiple name="photos[]" />
+          </label>
         </p>
         <p>
           <input
@@ -615,8 +628,9 @@ ways to _submit_, and to **upload files**:
           <label for="vehicle_car">I have a car</label>
         </p>
         <p>
-          Describe yourself:<br />
-          <textarea name="description" cols="50" rows="8"></textarea>
+          <label>Describe yourself:<br />
+            <textarea name="description" cols="50" rows="8"></textarea>
+          </label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -843,11 +857,14 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
 
 ```js
 function getHeaderTime() {
-  console.log(this.getResponseHeader("Last-Modified"));  // A valid GMTString date or null
+  console.log(this.getResponseHeader("Last-Modified")); // A valid GMTString date or null
 }
 
 const req = new XMLHttpRequest();
-req.open("HEAD" /* use HEAD when you only need the headers! */, "yourpage.html");
+req.open(
+  "HEAD", // use HEAD when you only need the headers
+  "yourpage.html"
+);
 req.onload = getHeaderTime;
 req.send();
 ```
@@ -858,7 +875,9 @@ Let's create two functions:
 
 ```js
 function getHeaderTime() {
-  const lastVisit = parseFloat(window.localStorage.getItem(`lm_${this.filepath}`));
+  const lastVisit = parseFloat(
+    window.localStorage.getItem(`lm_${this.filepath}`)
+  );
   const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
   if (isNaN(lastVisit) || lastModified > lastVisit) {
@@ -881,9 +900,13 @@ And to test:
 
 ```js
 // Let's test the file "yourpage.html"
-  ifHasChanged("yourpage.html", function (modified, visit) {
-    console.log(`The page '${this.filepath}' has been changed on ${(new Date(nModified)).toLocaleString()}!`);
-  });
+ifHasChanged("yourpage.html", function (modified, visit) {
+  console.log(
+    `The page '${this.filepath}' has been changed on ${new Date(
+      nModified
+    ).toLocaleString()}!`
+  );
+});
 ```
 
 If you want to know if the current page has changed, refer to the article about {{domxref("document.lastModified")}}.

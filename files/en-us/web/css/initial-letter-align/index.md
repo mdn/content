@@ -1,6 +1,7 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
+page-type: css-property
 tags:
   - Align
   - CSS

@@ -4,7 +4,6 @@ slug: Glossary/Crawler
 tags:
   - Browser
   - Crawler
-  - Glossary
   - Infrastructure
 ---
 

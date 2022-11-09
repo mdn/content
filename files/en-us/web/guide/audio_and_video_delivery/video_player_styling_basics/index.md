@@ -155,7 +155,7 @@ Simple `:hover` and `:focus` states are then set for each button that alters the
 
 To obtain appropriate button images, a set of free common control set icons was downloaded from the web. Each image was then converted to a base64 encoded string (using an online [base64 image encoder](https://www.base64-image.de/)), since the images are quite small, the resultant encoded strings are quite short.
 
-Since some buttons have dual functionality, e.g. play/pause, and mute/unmute, these buttons have different states that need to be styled. As mentioned earlier, a \`data-state\` variable is used to indicate which state such buttons are currently in.
+Since some buttons have dual functionality, e.g. play/pause, and mute/unmute, these buttons have different states that need to be styled. As mentioned earlier, a `data-state` variable is used to indicate which state such buttons are currently in.
 
 For example, the play/pause button has the following background image definitions (the full base64 strings have been omitted for brevity):
 

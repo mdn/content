@@ -1,6 +1,7 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

@@ -1,6 +1,7 @@
 ---
 title: CSS Container Queries
 slug: Web/CSS/CSS_Container_Queries
+page-type: guide
 tags:
   - CSS
   - CSS Containment
@@ -34,7 +35,7 @@ It is this situation that container queries would solve. Instead of looking at t
 
 The container queries specification is to become part of {{cssxref("CSS_Containment", "CSS Containment")}}. The initial CSS Containment draft defined the {{cssxref("contain")}} property to allow for performance optimizations. It provides a way for web developers to isolate parts of the DOM and declare to the browser these are independent from the rest of the document.
 
-The level 3 [draft specification](https://drafts.csswg.org/css-contain-3/) adds the `inline-size` and `block-size` keywords to `contain`.
+The level 3 [draft specification](https://drafts.csswg.org/css-contain-3/) adds the `inline-size` keyword to `contain`.
 
 In addition the draft specification proposes some new properties:
 
@@ -53,12 +54,8 @@ The `container-type` property can have the following values:
   - : Establishes a query container for dimensional queries on the block and inline axis. Applies layout, style, and size containment to the element.
 - `inline-size`
   - : Establishes a query container for dimensional queries on the inline axis of the container. Applies layout, style, and inline-size containment to the element.
-- `block-size`
-  - : Establishes a query container for dimensional queries on the block axis of the container. Applies layout, style, and block-size containment to the element.
-- `style`
-  - : Establishes a query container for style queries.
-- `state`
-  - : Establishes a query container for state queries.
+- `normal`
+  - : The element is not a query container for any dimensional queries on the block and inline axis.
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the documentation for {{cssxref("contain")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: At-rules
 slug: Web/CSS/At-rule
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -47,7 +48,6 @@ A subset of nested statements, which can be used as a statement of a style sheet
 - {{cssxref("@page")}} — Describes the aspect of layout changes that will be applied when printing the document.
 - {{cssxref("@font-face")}} — Describes the aspect of an external font to be downloaded.
 - {{cssxref("@keyframes")}} — Describes the aspect of intermediate steps in a CSS animation sequence.
-- {{cssxref("@viewport")}} {{deprecated_inline}} — Describes the aspects of the viewport for small screen devices. _(currently at the Working Draft stage)_
 - {{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles. _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`) — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType. _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
 - {{cssxref("@property")}} {{experimental_inline}} — Describes the aspect of custom properties and variables. _(currently at the Working Draft stage)_
@@ -80,7 +80,6 @@ Since each conditional group may also contain nested statements, there may be an
 - {{cssxref("@page")}}
 - {{cssxref("@property")}} {{experimental_inline}}
 - {{cssxref("@supports")}}
-- {{cssxref("@viewport")}} {{deprecated_inline}}
 
 ## Specifications
 

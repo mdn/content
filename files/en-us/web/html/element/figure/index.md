@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.figure
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
 
@@ -137,7 +137,7 @@ function NavigatorExample() {
 
 ```html
 <figure>
-  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+  <figcaption><b>Edsger Dijkstra:</b></figcaption>
   <blockquote>
     If debugging is the process of removing software bugs, then programming must
     be the process of putting them in.

@@ -1,6 +1,7 @@
 ---
 title: rotateY()
 slug: Web/CSS/transform-function/rotateY
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -178,5 +179,6 @@ div {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}

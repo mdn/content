@@ -1,6 +1,7 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

@@ -3,7 +3,6 @@ title: Wrapper
 slug: Glossary/Wrapper
 tags:
   - CodingScripting
-  - Glossary
   - Wrapper
 ---
 

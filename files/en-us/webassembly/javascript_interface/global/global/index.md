@@ -55,7 +55,10 @@ The value of the global is then changed, first to `42` using the `Global.value` 
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-  const result = got === expected ? `SUCCESS! Got: ${got}<br>` : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  const result =
+    got === expected
+      ? `SUCCESS! Got: ${got}<br>`
+      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
   output.innerHTML += `Testing ${msg}: ${result}`;
 }
 
@@ -68,13 +71,13 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
     assertEq(
       "getting initial value from wasm",
       instance.exports.getGlobal(),
-      0,
+      0
     );
     global.value = 42;
     assertEq(
       "getting JS-updated value from wasm",
       instance.exports.getGlobal(),
-      42,
+      42
     );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);

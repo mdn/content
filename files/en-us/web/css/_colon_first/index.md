@@ -1,8 +1,9 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
+page-type: css-pseudo-class
 tags:
-  - '@page'
+  - "@page"
   - CSS
   - Layout
   - Pseudo-class
@@ -58,7 +59,7 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").addEventListener('click', () => {
+document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```

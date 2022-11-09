@@ -37,7 +37,7 @@ Below is a list of interfaces based on the `Sensor` interface.
 - {{domxref('Magnetometer')}}
 - {{domxref('OrientationSensor')}}
 
-## Properties
+## Instance properties
 
 - {{domxref('Sensor.activated')}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the sensor is active.
@@ -46,7 +46,7 @@ Below is a list of interfaces based on the `Sensor` interface.
 - {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}}
   - : Returns the time stamp of the latest sensor reading.
 
-## Methods
+## Instance methods
 
 - {{domxref('Sensor.start()')}}
   - : Activates one of the sensors based on `Sensor`.

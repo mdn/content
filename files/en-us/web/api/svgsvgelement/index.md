@@ -17,7 +17,7 @@ The **`SVGSVGElement`** interface provides access to the properties of {{SVGElem
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 
@@ -70,7 +70,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGSVGElement.currentTranslate")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGPoint")}} representing the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element. The behavior is undefined for `<svg>` elements that are not at the outermost level.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 

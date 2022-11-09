@@ -18,7 +18,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 > **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-## Methods
+## Instance methods
 
 - {{domxref("WEBGL_lose_context.loseContext()")}}
   - : Simulates losing the context.

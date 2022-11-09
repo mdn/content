@@ -46,10 +46,10 @@ A {{jsxref("Boolean")}}.
 ### Using includes
 
 ```js
-const uint8 = new Uint8Array([1,2,3]);
-uint8.includes(2);     // true
-uint8.includes(4);     // false
-uint8.includes(3, 3);  // false
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.includes(2); // true
+uint8.includes(4); // false
+uint8.includes(3, 3); // false
 
 // NaN handling (only true for Float32 and Float64)
 new Uint8Array([NaN]).includes(NaN); // false, since the NaN passed to the constructor gets converted to 0

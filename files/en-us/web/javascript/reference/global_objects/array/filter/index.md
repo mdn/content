@@ -22,26 +22,26 @@ The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_
 
 ```js-nolint
 // Arrow function
-filter((element) => { /* … */ } )
-filter((element, index) => { /* … */ } )
-filter((element, index, array) => { /* … */ } )
+filter((element) => { /* … */ })
+filter((element, index) => { /* … */ })
+filter((element, index, array) => { /* … */ })
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(element) { /* … */ })
-filter(function(element, index) { /* … */ })
-filter(function(element, index, array){ /* … */ })
-filter(function(element, index, array) { /* … */ }, thisArg)
+filter(function (element) { /* … */ })
+filter(function (element, index) { /* … */ })
+filter(function (element, index, array) { /* … */ })
+filter(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function is a predicate, to test each element of the array. Return a value that coerces to `true` to keep the element, or to `false` otherwise.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to keep the element in the resulting array, and a falsy value otherwise.
 
     The function is called with the following arguments:
 
@@ -50,10 +50,10 @@ filter(function(element, index, array) { /* … */ }, thisArg)
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array on which `filter()` was called.
+      - : The array `filter()` was called upon.
 
 - `thisArg` {{optional_inline}}
-  - : Value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -61,21 +61,19 @@ A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of the given ar
 
 ## Description
 
-`filter()` calls a provided `callbackFn` function once for each element in an array, and constructs a new array of all the values for which `callbackFn` returns [a value that coerces to `true`](/en-US/docs/Glossary/Truthy). `callbackFn` is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the `callbackFn` test are skipped, and are not included in the new array.
+The `filter()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, and constructs a new array of all the values for which `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. Array elements which do not pass the `callbackFn` test are not included in the new array.
 
-`callbackFn` is invoked with three arguments:
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-1. the value of the element
-2. the index of the element
-3. the Array object being traversed
+The `filter()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) that contains the same elements as the ones from the original array (with some filtered out). However, the function provided as `callbackFn` can mutate the array. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `filter()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
 
-`filter()` does not mutate the array on which it is called.
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
-The range of elements processed by `filter()` is set before the first invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`. If existing elements of the array are deleted in the same way they will not be visited.
-
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+The `filter()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -164,6 +162,31 @@ function filterItems(arr, query) {
 
 console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
 console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
+```
+
+### Using filter() on sparse arrays
+
+`filter()` will skip empty slots.
+
+```js
+console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
+console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
+```
+
+### Calling filter() on non-array objects
+
+The `filter()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(
+  Array.prototype.filter.call(arrayLike, (x) => x <= "b"),
+); // [ 'a', 'b' ]
 ```
 
 ### Affecting Initial Array (modifying, appending and deleting)

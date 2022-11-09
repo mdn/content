@@ -2,7 +2,6 @@
 title: Cacheable
 slug: Glossary/cacheable
 tags:
-  - Glossary
   - WebMechanics
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: Breadcrumb Navigation
+title: Breadcrumb navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -46,6 +47,8 @@ This pattern is laid out using a simple flex layout demonstrating how a line of 
 ## Accessibility concerns
 
 I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.
+
+Beware that the arrows `→` added via `content` are also exposed to screen readers or braille displays.
 
 ## Browser compatibility
 

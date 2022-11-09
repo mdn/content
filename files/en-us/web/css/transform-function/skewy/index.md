@@ -1,6 +1,7 @@
 ---
 title: skewY()
 slug: Web/CSS/transform-function/skewY
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -179,3 +180,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

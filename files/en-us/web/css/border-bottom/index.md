@@ -1,6 +1,7 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders

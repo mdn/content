@@ -15,8 +15,6 @@ The **`mscandidatewindowupdate`** event is thrown after the Input Method Editor 
 
 This proprietary method is specific to Internet Explorer.
 
-> **Note:** Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.
-
 An IME candidate window may be identified as needing to change size for any of the following reasons:
 
 - As a result of displaying new / changed alternatives or predictions

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: navigation Role'
+title: "ARIA: navigation role"
 slug: Web/Accessibility/ARIA/Roles/navigation_role
 tags:
   - ARIA

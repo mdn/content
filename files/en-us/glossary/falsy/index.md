@@ -3,7 +3,6 @@ title: Falsy
 slug: Glossary/Falsy
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 
@@ -80,3 +79,4 @@ console.log(0 && "dog");
 - {{Glossary("Truthy")}}
 - {{Glossary("Type_coercion", "Coercion")}}
 - {{Glossary("Boolean")}}
+- [Boolean coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)

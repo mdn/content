@@ -1,6 +1,7 @@
 ---
 title: unset
 slug: Web/CSS/unset
+page-type: css-keyword
 tags:
   - CSS
   - CSS Cascade

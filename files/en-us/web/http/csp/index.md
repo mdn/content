@@ -18,7 +18,7 @@ including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and
 These attacks are used for everything from data theft, to site defacement, to malware distribution.
 
 CSP is designed to be fully backward compatible (except CSP version 2 where there are some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2/) section 1.1).
-Browsers that don't support it still work with servers that implement it, and vice-versa: browsers that don't support CSP ignore it, functioning as usual, defaulting to the standard same-origin policy for web content.
+Browsers that don't support it still work with servers that implement it, and vice versa: browsers that don't support CSP ignore it, functioning as usual, defaulting to the standard same-origin policy for web content.
 If the site doesn't offer the CSP header, browsers likewise use the standard [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 To enable CSP, you need to configure your web server to return the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
@@ -250,4 +250,3 @@ the browser will block self-hosted content and off-site content, and incorrectly
 - [CSP in Web Workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy
-- [CSP Scanner](https://cspscanner.com/) - Improve your Content Security Policy

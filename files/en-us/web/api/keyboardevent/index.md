@@ -117,7 +117,7 @@ The following constants identify which part of the keyboard the key event origin
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
@@ -157,7 +157,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
   - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 

@@ -1,6 +1,7 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -112,3 +113,8 @@ function removeHint() {
 ## See also
 
 - {{cssxref("transform")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no individual `skew` property

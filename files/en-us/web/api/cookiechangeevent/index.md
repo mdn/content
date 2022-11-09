@@ -30,7 +30,7 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 - {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a new `CookieChangeEvent`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
@@ -44,7 +44,7 @@ _This interface also inherits properties from {{domxref("Event")}}._
 In this example when the cookie is set, the event listener logs the event to the console. This is a `CookieChangeEvent` object with the {{domxref("CookieChangeEvent.changed","changed")}} property containing an object representing the cookie that has just been set.
 
 ```js
-cookieStore.addEventListener('change', (event) => {
+cookieStore.addEventListener("change", (event) => {
   console.log(event);
 });
 
@@ -53,7 +53,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + one_day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

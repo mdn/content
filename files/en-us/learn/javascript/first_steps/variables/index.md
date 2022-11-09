@@ -110,7 +110,7 @@ let myAge;
 
 Here we're creating two variables called `myName` and `myAge`. Try typing these lines into your web browser's console. After that, try creating a variable (or two) with your own name choices.
 
-> **Note:** In JavaScript, all code instructions should end with a semi-colon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
+> **Note:** In JavaScript, all code instructions should end with a semicolon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
 
 You can test whether these values now exist in the execution environment by typing just the variable's name, e.g.
 
@@ -207,7 +207,7 @@ myName = 'Bob';
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
 
-For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no reason to use `var`, unless you need to support Internet Explorer 10 or older with your code.
+For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no longer any reason to use `var`, as it has been supported since Internet Explorer 11.
 
 > **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
 >

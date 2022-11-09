@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.input.type_time
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
 
@@ -112,7 +112,7 @@ You can set a default value for the input by including a valid time in the {{htm
 
 ### Setting the value using JavaScript
 
-You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
+You can also get and set the time value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 
 ```js
 const timeControl = document.querySelector('input[type="time"]');
@@ -253,7 +253,7 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_times', 600, 40) }}
 
-Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
 ```css
 div {
@@ -498,7 +498,7 @@ const minuteSelect = document.querySelector('#minute');
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// Test whether a new date input falls back to a text input or not
+// Test whether a new time input falls back to a text input or not
 const test = document.createElement('input');
 
 try {

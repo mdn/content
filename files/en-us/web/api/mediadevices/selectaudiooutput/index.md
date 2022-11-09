@@ -18,11 +18,6 @@ browser-compat: api.MediaDevices.selectAudioOutput
 The {{domxref("MediaDevices")}} method **`selectAudioOutput()`** prompts the user to select a specific audio output device, for example a speaker or headset.
 On success, the returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} describing the selected device.
 
-The method must be triggered from some UI interaction like a button click (more precisely, it _requires_ {{Glossary("transient activation")}}).
-
-Access to audio output devices is gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
-The prompt will not be displayed if the `speaker-selection` permission has not been granted.
-
 ## Syntax
 
 ```js-nolint
@@ -59,6 +54,13 @@ The object describes the user-selected audio output device.
   - : Returned if there are no available audio output devices.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if there hasn't been a {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
+Access to audio output devices is gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+The prompt will not be displayed if the `speaker-selection` permission has not been granted.
 
 ## Examples
 

@@ -49,8 +49,8 @@ The last index of the element in the array; `-1` if not found.
 ## Description
 
 `lastIndexOf` compares `searchElement` to elements of the typed array using
-[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)
-(the same method used by the ===, or triple-equals, operator).
+[strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using)
+(the same method used by the `===` operator).
 
 ## Examples
 
@@ -58,10 +58,10 @@ The last index of the element in the array; `-1` if not found.
 
 ```js
 const uint8 = new Uint8Array([2, 5, 9, 2]);
-uint8.lastIndexOf(2);     // 3
-uint8.lastIndexOf(7);     // -1
-uint8.lastIndexOf(2, 3);  // 3
-uint8.lastIndexOf(2, 2);  // 0
+uint8.lastIndexOf(2); // 3
+uint8.lastIndexOf(7); // -1
+uint8.lastIndexOf(2, 3); // 3
+uint8.lastIndexOf(2, 2); // 0
 uint8.lastIndexOf(2, -2); // 0
 uint8.lastIndexOf(2, -1); // 3
 ```

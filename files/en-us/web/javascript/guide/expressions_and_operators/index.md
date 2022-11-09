@@ -88,7 +88,7 @@ There are also compound assignment operators that are shorthand for the operatio
 | [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
 | [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
 | [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
-| [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
+| [Nullish coalescing assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
 
 ### Assigning to properties
 
@@ -519,7 +519,7 @@ In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScri
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus</a> (<code>+</code>)
       </td>
       <td>
-        Unary operator. Attempts to convert the operand to a number, if it is not already.
+        Unary operator. Attempts to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion">convert the operand to a number</a>, if it is not already.
       </td>
       <td>
         <p><code>+"3"</code> returns <code>3</code>.</p>
@@ -767,7 +767,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
 

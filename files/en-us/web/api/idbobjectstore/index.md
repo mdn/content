@@ -17,7 +17,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBObjectStore.indexNames")}} {{ReadOnlyInline}}
   - : A list of the names of [indexes](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) on objects in this object store.
@@ -30,7 +30,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 - {{domxref("IDBObjectStore.autoIncrement")}} {{ReadOnlyInline}}
   - : The value of the auto increment flag for this object store.
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBObjectStore.add()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for adding new records to an object store.
@@ -63,7 +63,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 ## Example
 
-This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -147,4 +147,4 @@ objectStoreRequest.onsuccess = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,6 +1,7 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -51,7 +52,7 @@ text-shadow: unset;
 
 This property is specified as a comma-separated list of shadows.
 
-Each shadow is specified as two or three `<length>` values, followed optionally by a `<color>` value. The first two `<length>` values are the `<offset-x>` and `<offset-y>` values. The third, optional, `<length>` value is the `<blur-radius>`. The`<color>` value is the shadow's color.
+Each shadow is specified as two or three `<length>` values, followed optionally by a `<color>` value. The first two `<length>` values are the `<offset-x>` and `<offset-y>` values. The third, optional, `<length>` value is the `<blur-radius>`. The `<color>` value is the shadow's color.
 
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
@@ -122,6 +123,7 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 ## See also
 
-- {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
+- {{cssxref("box-shadow")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

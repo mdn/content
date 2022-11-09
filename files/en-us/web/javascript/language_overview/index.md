@@ -91,7 +91,7 @@ Number values also include {{jsxref("NaN")}} (short for "Not a Number") and {{js
 
 ### Strings
 
-Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+Strings in JavaScript are sequences of Unicode characters. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
 
 ```js
 console.log("Hello, world");
@@ -221,7 +221,7 @@ x = x + 5;
 
 You can use `++` and `--` to increment and decrement respectively. These can be used as a prefix or postfix operators.
 
-The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators#addition) also does string concatenation:
+The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) also does string concatenation:
 
 ```js
 "hello" + " world"; // "hello world"
@@ -718,11 +718,11 @@ class Person {
   }
 }
 
-const p = new Person("John");
+const p = new Person("Maria");
 console.log(p.sayHello());
 ```
 
-JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
 
 ```js
 const withAuthentication = (cls) =>

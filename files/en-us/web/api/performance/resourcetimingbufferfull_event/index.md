@@ -13,7 +13,7 @@ tags:
 browser-compat: api.Performance.resourcetimingbufferfull_event
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The `resourcetimingbufferfull` event is fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
 

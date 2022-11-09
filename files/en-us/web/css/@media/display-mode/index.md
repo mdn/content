@@ -1,8 +1,9 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -29,6 +30,7 @@ The `display-mode` feature is specified as a keyword value chosen from the list 
 | `standalone` | The application will look and feel like a standalone application. This can include the application having a different window, its own icon in the application launcher, etc. In this mode, the user agent will exclude UI elements for controlling navigation, but can include other UI elements such as a status bar. | `minimal-ui`          |
 | `minimal-ui` | The application will look and feel like a standalone application, but will have a minimal set of UI elements for controlling navigation. The elements will vary by browser.                                                                                                                                            | `browser`             |
 | `browser`    | The application opens in a conventional browser tab or new window, depending on the browser and platform.                                                                                                                                                                                                              | (none)                |
+| `window-controls-overlay` | In this mode, the application looks and feels like a standalone desktop application, and the [Window Controls Overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API) feature is enabled. | (none) |
 
 ## Examples
 

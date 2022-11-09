@@ -451,13 +451,13 @@ const constraints = {
 
 ## See also
 
-- The older {{domxref("navigator.getUserMedia()")}} legacy API.
+- The older {{domxref("navigator.getUserMedia()")}} legacy API
 - {{domxref("mediaDevices.enumerateDevices()")}}: Listing available media devices
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): Capturing
   screen contents as a {{domxref("MediaStream")}}
 - {{domxref("mediaDevices.getDisplayMedia()")}}: Getting a stream containing screen
   contents
-- [Taking webcam photos](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
+- [Taking webcam photos](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
   rather than video

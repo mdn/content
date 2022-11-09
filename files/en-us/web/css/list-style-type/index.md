@@ -1,6 +1,7 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
+page-type: css-property
 tags:
   - CSS
   - CSS Lists
@@ -190,21 +191,7 @@ A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and
 
 ## Accessibility concerns
 
-The [VoiceOver](https://help.apple.com/voiceover/info/guide/) screen reader has an issue where unordered lists with a `list-style-type` value of `none` applied to them will not be announced as a list. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo content](/en-US/docs/Web/CSS/content) before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
-
-```css
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "\200B";
-}
-```
-
-- [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility_concerns).
 
 ## Formal definition
 

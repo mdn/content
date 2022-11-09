@@ -1,6 +1,7 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -167,5 +168,10 @@ div {
 - [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
 - [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - {{cssxref("transform")}}
+- {{cssxref("scale")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}
+- Other individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

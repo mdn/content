@@ -96,7 +96,7 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### Perl-like RegExp properties
 
-Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties).
+Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp).
 
 ## Constructor
 
@@ -107,6 +107,18 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 - {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
   - : The constructor function that is used to create derived objects.
+- {{JSxRef("RegExp.n", "RegExp.$1-$9")}}
+  - : The legacy read-only static properties that contain parenthesized substring matches.
+- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the last string against which a regular expression was successfully matched.
+- {{JSxRef("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the last matched characters.
+- {{JSxRef("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{Non-standard_Inline}}
+  - : A static property that contains the last parenthesized substring match.
+- {{JSxRef("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the substring preceding the most recent match.
+- {{JSxRef("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Non-standard_Inline}}
+  - : A static read-only property that contains the substring following the most recent match.
 
 ## Instance properties
 
@@ -162,12 +174,12 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
+const str = 'Maria Cruz';
 const newstr = str.replace(re, '$2, $1');
 console.log(newstr);
 ```
 
-This displays `"Smith, John"`.
+This displays `"Cruz, Maria"`.
 
 ### Using regular expression to split lines with different line endings/ends of line/line breaks
 
@@ -176,7 +188,7 @@ The default line ending varies depending on the platform (Unix, Windows, etc.). 
 ```js
 const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
 const lines = text.split(/\r\n|\r|\n/);
-console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 Note that the order of the patterns in the regular expression matters.
@@ -222,7 +234,7 @@ while ((r = re.exec("123 456"))) {
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
 // [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
-//   ... and no more match.
+//  … and no more match.
 ```
 
 With the global flag `g`, all 6 digits would be matched, not just 3.
@@ -240,23 +252,23 @@ const text = 'Образец text на русском языке';
 const regex = /[\u0400-\u04FF]+/g;
 
 const match = regex.exec(text);
-console.log(match[0]); // logs 'Образец'
-console.log(regex.lastIndex); // logs '7'
+console.log(match[0]); // 'Образец'
+console.log(regex.lastIndex); // 7
 
 const match2 = regex.exec(text);
-console.log(match2[0]); // logs 'на' [did not log 'text']
-console.log(regex.lastIndex); // logs '15'
+console.log(match2[0]); // 'на' (did not log 'text')
+console.log(regex.lastIndex); // 15
 
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`.
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
-### Extracting sub-domain name from URL
+### Extracting subdomain name from URL
 
 ```js
 const url = "http://xxx.domain.com";
-console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
+console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).

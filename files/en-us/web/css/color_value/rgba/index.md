@@ -1,6 +1,7 @@
 ---
 title: rgba()
 slug: Web/CSS/color_value/rgba
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -9,8 +10,7 @@ tags:
   - Web
   - color
   - rgba
-browser-compat:
-  - css.types.color.rgba
+browser-compat: css.types.color.rgba
 ---
 
 {{CSSRef}}
@@ -25,8 +25,9 @@ The **`rgba()`** functional notation expresses a color according to its red, gre
 
 ```css
 rgba(255, 255, 255) /* white */
-rgba(255, 255, 255, .5) /* white with 50% opacity */
+rgba(255, 255, 255, 0.5) /* white with 50% opacity */
 rgba(255 255 255 / 0.5); /* CSS Colors 4 space-separated values */
+rgba(255 255 255 / 50%); /* CSS Colors 4 space-separated values by percentage */
 ```
 
 ### Values

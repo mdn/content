@@ -21,7 +21,7 @@ The `LayoutShiftAttribution` interface of the [Layout Instability API](/en-US/do
 
 Instances of `LayoutShiftAttribution` are returned in an array by calling {{domxref("LayoutShift.sources")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("LayoutShiftAttribution.Node")}} {{ReadOnlyInline}}
   - : Returns the element that has shifted (null if it has been removed).
@@ -30,7 +30,7 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 - {{domxref("LayoutShiftAttribution.currentRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element after the shift.
 
-## Methods
+## Instance methods
 
 - {{domxref("LayoutShiftAttribution.toJSON()")}} {{Experimental_Inline}}
   - : Returns a JSON representation of the `LayoutShiftAttribution` object.

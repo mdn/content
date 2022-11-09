@@ -1,6 +1,7 @@
 ---
-title: '::first-line (:first-line)'
+title: '::first-line'
 slug: Web/CSS/::first-line
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout

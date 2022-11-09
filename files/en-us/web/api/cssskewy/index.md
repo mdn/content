@@ -25,16 +25,16 @@ The **`CSSSkewY`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 - {{domxref("CSSSkewY.CSSSkewY", "CSSSkewY()")}} {{Experimental_Inline}}
   - : Creates a new `CSSSkewY` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor_ {{domxref("CSSTransformValue")}}.
 
 - {{domxref('CSSSkewY.ay','ay')}} {{Experimental_Inline}}
   - : Returns or sets the y-axis value.
 
-## Methods
+## Instance methods
 
-_Inherits methods from its ancestor_ {{domxref("CSSTransformValue")}}_._
+_Inherits methods from its ancestor_ {{domxref("CSSTransformValue")}}.
 
 ## Examples
 

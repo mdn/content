@@ -2,7 +2,7 @@
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
 tags:
-  - '59'
+  - "59"
   - Firefox
   - Release Notes
 ---

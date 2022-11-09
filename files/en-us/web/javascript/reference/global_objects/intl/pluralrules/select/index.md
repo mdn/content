@@ -1,5 +1,5 @@
 ---
-title: Intl.PluralRules.prototytpe.select()
+title: Intl.PluralRules.prototype.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 tags:
   - Internationalization
@@ -17,6 +17,8 @@ browser-compat: javascript.builtins.Intl.PluralRules.select
 
 The **`Intl.PluralRules.prototype.select()`** method returns a
 string indicating which plural rule to use for locale-aware formatting.
+
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-select.html")}}
 
 ## Syntax
 
@@ -45,20 +47,13 @@ options of a {{jsxref("Intl.PluralRules")}} object.
 ### Using select()
 
 ```js
-new Intl.PluralRules('ar-EG').select(0);
-// → 'zero'
+const pr = new Intl.PluralRules("ar-EG");
 
-new Intl.PluralRules('ar-EG').select(1);
-// → 'one'
-
-new Intl.PluralRules('ar-EG').select(2);
-// → 'two'
-
-new Intl.PluralRules('ar-EG').select(6);
-// → 'few'
-
-new Intl.PluralRules('ar-EG').select(18);
-// → 'many'
+pr.select(0); // 'zero'
+pr.select(1); // 'one'
+pr.select(2); // 'two'
+pr.select(6); // 'few'
+pr.select(18); // 'many'
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: <translation-value>
 slug: Web/CSS/translation-value
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -150,4 +151,5 @@ selectElem.addEventListener('change', () => {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("translate")}} property

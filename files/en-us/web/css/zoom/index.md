@@ -1,6 +1,7 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -152,5 +153,4 @@ Not part of any standard. This property originated in Internet Explorer. Apple h
 ## See also
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
-- The `zoom` viewport descriptor used with [`@viewport`](/en-US/docs/Web/CSS/@viewport)
 - [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) on the Firefox issue tracker Bugzilla

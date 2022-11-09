@@ -1,6 +1,7 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
+page-type: css-property
 tags:
   - CSS
   - CSS Backgrounds and Borders
@@ -172,7 +173,7 @@ p {
 
 ## See also
 
-- The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
 - {{cssxref("text-shadow")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

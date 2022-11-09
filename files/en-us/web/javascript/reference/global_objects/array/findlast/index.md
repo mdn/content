@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Array.findLast
 
 {{JSRef}}
 
-The **`findLast()`** method returns the value of the last element in an array that satisfies the provided testing function.
+The **`findLast()`** method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
@@ -33,41 +33,38 @@ If you need to find:
 
 ```js-nolint
 // Arrow function
-findLast((element) => { /* … */ } )
-findLast((element, index) => { /* … */ } )
-findLast((element, index, array) => { /* … */ } )
+findLast((element) => { /* … */ })
+findLast((element, index) => { /* … */ })
+findLast((element, index, array) => { /* … */ })
 
 // Callback function
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
 
 // Inline callback function
-findLast(function(element) { /* … */ })
-findLast(function(element, index) { /* … */ })
-findLast(function(element, index, array){ /* … */ })
-findLast(function(element, index, array) { /* … */ }, thisArg)
+findLast(function (element) { /* … */ })
+findLast(function (element, index) { /* … */ })
+findLast(function (element, index, array) { /* … */ })
+findLast(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : A function used to test elements in the array.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
 
     The function is called with the following arguments:
 
     - `element`
-      - : The current element in the array.
+      - : The current element being processed in the array.
     - `index`
-      - : The index (position) of the current element in the array.
+      - : The index of the current element being processed in the array.
     - `array`
-      - : The array that `findLast()` was called on.
-
-    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
-    The value of this element is returned by `findLast()`.
+      - : The array `findLast()` was called upon.
 
 - `thisArg` {{optional_inline}}
-  - : Object to use as {{jsxref("Operators/this", "this")}} when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -75,27 +72,19 @@ The value of the element in the array with the highest index value that satisfie
 
 ## Description
 
-The `findLast()` method executes the `callbackFn` function once for each element of the array in descending-index order until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value.
-`findLast()` then returns the value of that element and stops iterating through the array.
-If `callbackFn` never returns a truthy value, `findLast()` returns {{jsxref("undefined")}}.
+The `findLast()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in descending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `findLast()` then returns that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `findLast()` returns {{jsxref("undefined")}}.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
-If a `thisArg` parameter is provided to `findLast()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
-If it is not provided, then {{jsxref("undefined")}} is used.
+`findLast()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-The `findLast()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
-The elements processed by `findLast()` are set _before_ the first invocation of `callbackFn`.
-Therefore:
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `findLast()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are visited as if they were `undefined`.
 
-- `callbackFn` will not visit any elements added to the array after the call to `findLast()` begins.
-- Elements that are assigned to indexes that have already been visited will not be revisited by `callbackFn`.
-- Elements that are assigned to indexes outside the range, will not be visited by `callbackFn`.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `findLast()` visits that element's index.
-- Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+The `findLast()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -159,9 +148,9 @@ console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
-### Nonexistent and deleted elements are visited
+### Using findLast() on sparse arrays
 
-The following examples show that nonexistent and deleted elements _are_ visited, and that the value passed to the callback is their value when visited:
+Empty slots in sparse arrays _are_ visited, and are treated the same as `undefined`.
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
@@ -171,6 +160,13 @@ const array = [0, 1, , , , 5, 6];
 array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
 });
+// Visited index 6 with value 6
+// Visited index 5 with value 5
+// Visited index 4 with value undefined
+// Visited index 3 with value undefined
+// Visited index 2 with value undefined
+// Visited index 1 with value 1
+// Visited index 0 with value 0
 
 // Shows all indexes, including deleted
 array.findLast((value, index) => {
@@ -182,22 +178,30 @@ array.findLast((value, index) => {
   // Element 5 is still visited even though deleted
   console.log(`Visited index ${index} with value ${value}`);
 });
-// expected output:
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value 5"
-// > "Visited index 4 with value undefined"
-// > "Visited index 3 with value undefined"
-// > "Visited index 2 with value undefined"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
-// > "Deleting array[5] with value 5"
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value undefined"
-// > "Visited index 4 with value undefined"
-// > "Visited index 3 with value undefined"
-// > "Visited index 2 with value undefined"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
+// Deleting array[5] with value 5
+// Visited index 6 with value 6
+// Visited index 5 with value undefined
+// Visited index 4 with value undefined
+// Visited index 3 with value undefined
+// Visited index 2 with value undefined
+// Visited index 1 with value 1
+// Visited index 0 with value 0
+```
+
+### Calling findLast() on non-array objects
+
+The `findLast()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
+); // 4
 ```
 
 ## Specifications

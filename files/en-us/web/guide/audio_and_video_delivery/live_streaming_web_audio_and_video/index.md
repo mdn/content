@@ -82,7 +82,7 @@ A couple of HTTP-based live streaming video formats are beginning to see support
 
 ### MPEG-DASH
 
-DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently seen support added to Chrome, and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
+DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
 
 > **Note:** You can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
@@ -107,7 +107,6 @@ At the start of the streaming session, an [extended M3U (m3u8) playlist](https:/
 | Safari iOS6+             |       | ✓     |              |
 | Chrome Mobile            | ✓     | ✓ [2] |              |
 | Opera Mobile             | ✓ [1] | ✓     |              |
-| Internet Explorer Mobile | ✓ 11  | ✓ [2] |              |
 | Android                  | ✓     |       |              |
 
 \[1] Via JavaScript and MSE
@@ -154,7 +153,7 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 
 [SHOUTcast](https://en.wikipedia.org/wiki/SHOUTcast) is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format to be broadcast. For web use, SHOUTcast streams are transmitted over HTTP.
 
-> **Note:** [SHOUTcast URLs may require a semi-colon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+> **Note:** [SHOUTcast URLs may require a semicolon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 

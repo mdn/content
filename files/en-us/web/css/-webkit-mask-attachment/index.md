@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
+page-type: css-property
 tags:
   - CSS
   - CSS Property

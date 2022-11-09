@@ -1,6 +1,7 @@
 ---
 title: order
 slug: Web/CSS/order
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

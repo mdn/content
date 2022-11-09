@@ -2,10 +2,11 @@
 title: Critical rendering path
 slug: Web/Performance/Critical_rendering_path
 tags:
-  - Glossary
   - Performance
   - Reference
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
 
 The Critical Rendering Path is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen. Optimizing the critical render path improves render performance.
 The critical rendering path includes the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM), [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) (CSSOM), render tree and layout.
@@ -28,7 +29,7 @@ The greater the number of nodes, the longer the following events in the critical
 
 ### CSS Object Model
 
-The DOM contains all the content of the page. The CSSOM contains all the information on how to style the DOM. CSSOM is similar to the DOM, but different. While the DOM construction is incremental, CSSOM is not. CSS is render blocking: the browser blocks page rendering until it receives and processes all of the CSS. CSS is render blocking because rules can be overwritten, so the content can't be rendered until the CSSOM is complete.
+The DOM contains all the content of the page. The CSSOM contains all the information on how to style the DOM. CSSOM is similar to the DOM, but different. While the DOM construction is incremental, CSSOM is not. CSS is render blocking: the browser blocks page rendering until it receives and processes all the CSS. CSS is render blocking because rules can be overwritten, so the content can't be rendered until the CSSOM is complete.
 
 CSS has its own set of rules for identifying valid tokens. Remember the C in CSS stands for 'Cascade'. CSS rules cascade down. As the parser converts tokens to nodes, descendant nodes will inherit some of the styles of the parent. The incremental processing features don't apply to CSS like they do with HTML, because subsequent rules may override previous ones. The CSS object model gets built as the CSS is parsed, but can't be used to build the render tree until it is completely parsed because styles that are going to be overwritten with later parsing should not be rendered to the screen.
 

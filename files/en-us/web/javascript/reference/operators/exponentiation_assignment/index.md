@@ -28,11 +28,10 @@ x **= y // x = x ** y
 ### Using exponentiation assignment
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar **= 2     // 25
-bar **= 'foo' // NaN
+bar **= 2; // 25
+bar **= "foo"; // NaN
 ```
 
 ## Specifications

@@ -125,7 +125,7 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 </div>
 ```
 
-#### Working Examples:
+#### Working Examples
 
 - [jQuery-UI Dialog](https://jqueryui.com/dialog/)
 

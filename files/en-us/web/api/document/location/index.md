@@ -52,6 +52,6 @@ console.log(document.location);
 
 ## See also
 
-- The interface of the returned value, {{domxref("Location")}}.
+- The interface of the returned value, {{domxref("Location")}}
 - A similar information, but attached to the {{Glossary("browsing context")}},
-  {{domxref("Window.location")}}.
+  {{domxref("Window.location")}}

@@ -1,8 +1,9 @@
 ---
 title: size
 slug: Web/CSS/@page/size
+page-type: css-at-rule-descriptor
 tags:
-  - '@page'
+  - "@page"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -84,24 +85,7 @@ size: A4 portrait;
 
 ## Formal syntax
 
-```
-<length>{1,2}                               |
-auto                                        |
-[ <page-size> || [ portrait | landscape ] ]
-
-where
-<page-size> =
-  A5     |
-  A4     |
-  A3     |
-  B5     |
-  B4     |
-  JIS-B5 |
-  JIS-B4 |
-  letter |
-  legal  |
-  ledger
-```
+{{csssyntax}}
 
 ## Examples
 

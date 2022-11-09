@@ -319,7 +319,7 @@ const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
 ```
 
-You may also see some legacy code using [`Object.create`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). However, because this re-assigns the `prototype` property, it's a bad practice, for the reasons previously described here.
+You may also see some legacy code using {{jsxref("Object.create()")}} to build the inheritance chain. However, because this reassigns the `prototype` property and removes the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property, it can be more error-prone, while performance gains may not be apparent if the constructors haven't created any instances yet.
 
 ```js example-bad
 function Base() {}
@@ -339,10 +339,10 @@ In JavaScript, as mentioned above, functions are able to have properties. All fu
 ```js
 function doSomething() {}
 console.log(doSomething.prototype);
-//  It does not matter how you declare the function; a
-//  function in JavaScript will always have a default
-//  prototype property — with one exception: an arrow
-//  function doesn't have a default prototype property:
+// It does not matter how you declare the function; a
+// function in JavaScript will always have a default
+// prototype property — with one exception: an arrow
+// function doesn't have a default prototype property:
 const doSomethingFromArrowFunction = () => {};
 console.log(doSomethingFromArrowFunction.prototype);
 ```

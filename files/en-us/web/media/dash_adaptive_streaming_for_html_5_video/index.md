@@ -6,6 +6,8 @@ tags:
   - HTML
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+
 Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
 
 ## Browser Support
@@ -69,7 +71,7 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
 -an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
 ```
 
-### 2. Create the manifest file:
+### 2. Create the manifest file
 
 ```bash
 ffmpeg \

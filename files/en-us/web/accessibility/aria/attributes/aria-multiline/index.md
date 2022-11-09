@@ -1,5 +1,5 @@
 ---
-title: 'aria-multiline'
+title: "aria-multiline"
 slug: Web/Accessibility/ARIA/Attributes/aria-multiline
 tags:
   - Accessibility
@@ -57,7 +57,7 @@ Inherits into roles:
 
 ## See Also
 
-- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/text_role) role
+- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - ARIA [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
 
 <section id="Quick_links">

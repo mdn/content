@@ -1,6 +1,7 @@
 ---
 title: transform
 slug: Web/CSS/transform
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -137,4 +138,5 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_t
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
+- Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}), and {{cssxref('scale')}} (there is no `skew` property).
 - Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)

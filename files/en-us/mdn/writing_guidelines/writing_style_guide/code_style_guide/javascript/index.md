@@ -223,7 +223,7 @@ When writing code, you usually omit parameters you don't need. But in some code 
 To do so, use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
 
 ```js
-array.forEach((value, /* index, array */) => {
+array.forEach((value /* , index, array */) => {
   // …
 });
 ```
@@ -533,12 +533,12 @@ Switch statements can be a little tricky.
 - When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
 
   ```js example-good
-  const hanSolo = new Person("Han Solo", 25, "male");
+  const hanSolo = new Person("Han Solo", 25, "he/him");
 
   const luke = {
     name: "Luke Skywalker",
     age: 25,
-    gender: "male",
+    pronouns: "he/him",
   };
   ```
 
@@ -566,10 +566,10 @@ const object = new Object();
 
   ```js example-good
   class Person {
-    constructor(name, age, gender) {
+    constructor(name, age, pronouns) {
       this.name = name;
       this.age = age;
-      this.gender = gender;
+      this.pronouns = pronouns;
     }
 
     greeting() {
@@ -665,14 +665,14 @@ Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Stri
 Use the strict equality and inequality operators like this:
 
 ```js example-good
-name === "Chris";
+name === "Shilpa";
 age !== 25;
 ```
 
 Don't use the loose equality and inequality operators, as shown below:
 
 ```js example-bad
-name == "Chris";
+name == "Shilpa";
 age != 25;
 ```
 
@@ -693,15 +693,15 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 - Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
 
   ```js example-good
-  const name = "Chris";
+  const name = "Shilpa";
   console.log(`Hi! I'm ${name}!`);
   ```
 
   Don't concatenate strings like this:
 
   ```js example-bad
-  const name = "Chris";
-  console.log("Hi! I'm" + name + "!"); // Hi! I'mChris!
+  const name = "Shilpa";
+  console.log("Hi! I'm" + name + "!"); // Hi! I'mShilpa!
   ```
 
 - Don't overuse template literals. If there are no substitutions, use a normal string literal instead.
@@ -741,7 +741,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - If a variable will not be reassigned, prefer `const`, like so:
 
   ```js example-good
-  const name = "Chris";
+  const name = "Shilpa";
   console.log(name);
   ```
 
@@ -756,7 +756,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
 
   ```js example-bad
-  let name = "Chris";
+  let name = "Shilpa";
   console.log(myName);
   ```
 
@@ -772,7 +772,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   ```js example-bad
   var age = 40;
-  var name = "Chris";
+  var name = "Shilpa";
   ```
 
 - Declare one variable per line, like so:
@@ -786,7 +786,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
 
-  ```js example-bad
+  ```js-nolint example-bad
   let var1, var2;
   let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
   ```

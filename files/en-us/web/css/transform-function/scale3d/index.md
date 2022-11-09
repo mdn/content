@@ -1,6 +1,7 @@
 ---
 title: scale3d()
 slug: Web/CSS/transform-function/scale3d
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -176,3 +177,7 @@ div {
 - [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
 - [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}

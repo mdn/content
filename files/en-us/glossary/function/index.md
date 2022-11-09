@@ -3,7 +3,6 @@ title: Function
 slug: Glossary/Function
 tags:
   - CodingScripting
-  - Glossary
   - IIFE
   - Immediately Invoked Function Expressions (IIFE)
   - Intro

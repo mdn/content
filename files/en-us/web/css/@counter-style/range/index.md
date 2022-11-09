@@ -1,8 +1,9 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles
@@ -61,10 +62,7 @@ When range is specified as integers, the value `infinite` can be used to denote 
 
 ## Formal syntax
 
-```
-[ [ <integer> | infinite ]{2} ]# |
-auto
-```
+{{csssyntax}}
 
 ## Examples
 

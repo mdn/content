@@ -1,6 +1,7 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -157,3 +158,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

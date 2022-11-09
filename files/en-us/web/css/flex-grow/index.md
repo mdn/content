@@ -1,6 +1,7 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -114,4 +115,4 @@ The remaining space is the size of the flex container minus the size of all flex
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
-- [\`flex-grow\` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works
+- [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works

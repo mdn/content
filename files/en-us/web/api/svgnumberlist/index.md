@@ -95,14 +95,14 @@ An `SVGNumberList` is indexable and can be accessed like an array.
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 | Name                                 | Type          | Description                      |
 | ------------------------------------ | ------------- | -------------------------------- |
 | `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
-## Methods
+## Instance methods
 
 <table class="standard-table">
   <thead>

@@ -1,8 +1,9 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
+page-type: css-at-rule
 tags:
-  - '@media'
+  - "@media"
   - At-rule
   - CSS
   - Conditional
@@ -180,11 +181,7 @@ Because of this potential, a browser may opt to fudge the returned values in som
 
 ## Formal syntax
 
-```
-@media <media-query-list> {
-  <stylesheet>
-}
-```
+{{csssyntax}}
 
 ## Examples
 

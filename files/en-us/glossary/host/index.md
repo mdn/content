@@ -2,7 +2,6 @@
 title: Host
 slug: Glossary/Host
 tags:
-  - Glossary
   - Intermediate
   - Web
   - WebMechanics

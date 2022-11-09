@@ -1,6 +1,7 @@
 ---
 title: column-rule-style
 slug: Web/CSS/column-rule-style
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout
@@ -10,7 +11,7 @@ tags:
 browser-compat: css.properties.column-rule-style
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
 The **`column-rule-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of the line drawn between columns in a multi-column layout.
 

@@ -118,18 +118,18 @@ The constructor for `EvilCircle` should:
 Finally, the constructor should set up the code enabling the user to move the evil circle around the screen:
 
 ```js
-window.addEventListener('keydown', (e) => {
-  switch(e.key) {
-    case 'a':
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
       this.x -= this.velX;
       break;
-    case 'd':
+    case "d":
       this.x += this.velX;
       break;
-    case 'w':
+    case "w":
       this.y -= this.velY;
       break;
-    case 's':
+    case "s":
       this.y += this.velY;
       break;
   }
@@ -169,7 +169,7 @@ Now we've defined the evil circle, we need to actually make it appear in our sce
 
 - First of all, create a new evil circle object instance (specifying the necessary parameters). You only need to do this once, not on every iteration of the loop.
 - At the point where you loop through every ball and call the `draw()`, `update()`, and `collisionDetect()` functions for each one, make it so that these functions are only called if the current ball exists.
-- Call the evil ball instance's `draw()`, `checkBounds()`, and `collisionDetect()` methods on every iteration of the loop.
+- Call the evil circle instance's `draw()`, `checkBounds()`, and `collisionDetect()` methods on every iteration of the loop.
 
 ### Implementing the score counter
 

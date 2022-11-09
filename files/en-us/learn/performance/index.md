@@ -36,7 +36,7 @@ This topic contains the following guides. The following is a suggested order for
 - [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
   - : This article discusses why web performance is important for accessibility, user experience and your business goals.
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-  - : You know web performance is important, but what is constitutes web performance? This article introduces the components of performance, from web page loading and rendering, including how your content makes it into your users browser to be viewed, to what groups of people we need to consider when thinking about performance.
+  - : You know web performance is important, but what constitutes web performance? This article introduces the components of performance, from web page loading and rendering, including how your content makes it into your users' browser to be viewed, to what groups of people we need to consider when thinking about performance.
 - [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
   - : More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
@@ -55,8 +55,8 @@ This topic contains the following guides. The following is a suggested order for
   - : A look at whether you need to include external fonts and, if you do, how to include the fonts your design requires with the least impact on your sites performance.
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
   - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-  - : There are many different things a developer can do to improve performance, but how fast is fast enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing managements, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+  - : There are many things a developer can do to improve performance, but how fast is fast enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing management, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
 
 ## See also
 

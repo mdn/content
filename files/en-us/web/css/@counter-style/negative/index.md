@@ -1,8 +1,9 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -39,14 +40,7 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## Formal syntax
 
-```
-<symbol> <symbol>?
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

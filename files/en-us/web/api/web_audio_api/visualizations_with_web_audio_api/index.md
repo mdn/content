@@ -16,21 +16,21 @@ tags:
 
 One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.
 
-> **Note:** You can find working examples of all the code snippets in our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo.
+> **Note:** You can find working examples of all the code snippets in our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo.
 
 ## Basic concepts
 
 To extract data from your audio source, you need an {{ domxref("AnalyserNode") }}, which is created using the {{ domxref("BaseAudioContext.createAnalyser") }} method, for example:
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 ```
 
 This node is then connected to your audio source at some point between your source and your destination, for example:
 
 ```js
-source = audioCtx.createMediaStreamSource(stream);
+const source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);
 analyser.connect(distortion);
 distortion.connect(audioCtx.destination);
@@ -66,7 +66,7 @@ Let's go on to look at some specific examples.
 
 ## Creating a waveform/oscilloscope
 
-To create the oscilloscope visualization (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
+To create the oscilloscope visualization (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
 
 ```js
 analyser.fftSize = 2048;
@@ -101,7 +101,7 @@ analyser.getByteTimeDomainData(dataArray);
 Next, fill the canvas with a solid color to start
 
 ```js
-canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+canvasCtx.fillStyle = "rgb(200, 200, 200)";
 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -109,47 +109,46 @@ Set a line width and stroke color for the wave we will draw, then begin drawing 
 
 ```js
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 canvasCtx.beginPath();
 ```
 
 Determine the width of each segment of the line to be drawn by dividing the canvas width by the array length (equal to the FrequencyBinCount, as defined earlier on), then define an x variable to define the position to move to for drawing each segment of the line.
 
 ```js
-const sliceWidth = WIDTH * 1.0 / bufferLength;
-const x = 0;
+const sliceWidth = WIDTH / bufferLength;
+let x = 0;
 ```
 
 Now we run through a loop, defining the position of a small segment of the wave for each point in the buffer at a certain height based on the data point value from the array, then moving the line across to the place where the next wave segment should be drawn:
 
 ```js
-      for (let i = 0; i < bufferLength; i++) {
+for (let i = 0; i < bufferLength; i++) {
+  const v = dataArray[i] / 128.0;
+  const y = v * (HEIGHT / 2);
 
-        const v = dataArray[i] / 128.0;
-        const y = v * HEIGHT/2;
+  if (i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
+  }
 
-        if (i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
+  x += sliceWidth;
+}
 ```
 
 Finally, we finish the line in the middle of the right-hand side of the canvas, then draw the stroke we've defined:
 
 ```js
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
+  canvasCtx.lineTo(WIDTH, HEIGHT / 2);
+  canvasCtx.stroke();
+}
 ```
 
 At the end of this section of code, we invoke the `draw()` function to start off the whole process:
 
 ```js
-    draw();
+draw();
 ```
 
 This gives us a nice waveform display that updates several times a second:
@@ -165,7 +164,6 @@ First, we again set up our analyser and data array, then clear the current canva
 ```js
 analyser.fftSize = 256;
 const bufferLength = analyser.frequencyBinCount;
-console.log(bufferLength);
 const dataArray = new Uint8Array(bufferLength);
 
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
@@ -174,13 +172,13 @@ canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 Next, we start our `draw()` function off, again setting up a loop with `requestAnimationFrame()` so that the displayed data keeps updating, and clearing the display with each animation frame.
 
 ```js
-    function draw() {
-      drawVisual = requestAnimationFrame(draw);
+function draw() {
+  drawVisual = requestAnimationFrame(draw);
 
-      analyser.getByteFrequencyData(dataArray);
+  analyser.getByteFrequencyData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
 Now we set our `barWidth` to be equal to the canvas width divided by the number of bars (the buffer length). However, we are also multiplying that width by 2.5, because most of the frequencies will come back as having no audio in them, as most of the sounds we hear every day are in a certain lower frequency range. We don't want to display loads of empty bars, therefore we shift the ones that will display regularly at a noticeable height across so they fill the canvas display.
@@ -190,26 +188,26 @@ We also set a `barHeight` variable, and an `x` variable to record how far across
 ```js
 const barWidth = (WIDTH / bufferLength) * 2.5;
 let barHeight;
-const x = 0;
+let x = 0;
 ```
 
-As before, we now start a for loop and cycle through each value in the `dataArray`. For each one, we make the `barHeight` equal to the array value, set a fill color based on the `barHeight` (taller bars are brighter), and draw a bar at `x` pixels across the canvas, which is `barWidth` wide and `barHeight/2` tall (we eventually decided to cut each bar in half so they would all fit on the canvas better.)
+As before, we now start a for loop and cycle through each value in the `dataArray`. For each one, we make the `barHeight` equal to the array value, set a fill color based on the `barHeight` (taller bars are brighter), and draw a bar at `x` pixels across the canvas, which is `barWidth` wide and `barHeight / 2` tall (we eventually decided to cut each bar in half so they would all fit on the canvas better.)
 
-The one value that needs explaining is the vertical offset position we are drawing each bar at: `HEIGHT-barHeight/2`. I am doing this because I want each bar to stick up from the bottom of the canvas, not down from the top, as it would if we set the vertical position to 0. Therefore, we instead set the vertical position each time to the height of the canvas minus `barHeight/2`, so therefore each bar will be drawn from partway down the canvas, down to the bottom.
+The one value that needs explaining is the vertical offset position we are drawing each bar at: `HEIGHT - barHeight / 2`. I am doing this because I want each bar to stick up from the bottom of the canvas, not down from the top, as it would if we set the vertical position to 0. Therefore, we instead set the vertical position each time to the height of the canvas minus `barHeight / 2`, so therefore each bar will be drawn from partway down the canvas, down to the bottom.
 
 ```js
-      for (let i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i]/2;
+  for (let i = 0; i < bufferLength; i++) {
+    barHeight = dataArray[i] / 2;
 
-        canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-        canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight);
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight);
 
-        x += barWidth + 1;
-      }
-    };
+    x += barWidth + 1;
+  }
+}
 ```
 
-Again, at the end of the code we invoke the draw() function to set the whole process in motion.
+Again, at the end of the code we invoke the `draw()` function to set the whole process in motion.
 
 ```js
 draw();
@@ -219,4 +217,4 @@ This code gives us a result like the following:
 
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
-> **Note:** The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/voice-change-o-matic-float-data) too) — this is exactly the same as the original [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/), except that it uses Float data, not unsigned byte data.
+> **Note:** The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic-float-data) too) — this is exactly the same as the original [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/), except that it uses Float data, not unsigned byte data.

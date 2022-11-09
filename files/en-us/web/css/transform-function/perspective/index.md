@@ -1,6 +1,7 @@
 ---
 title: perspective()
 slug: Web/CSS/transform-function/perspective
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -191,3 +192,7 @@ p + div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}

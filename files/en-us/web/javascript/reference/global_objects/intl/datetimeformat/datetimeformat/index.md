@@ -132,7 +132,7 @@ Intl.DateTimeFormat(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `timeZone`
       - : The time zone to use. The only value implementations must recognize is
         `"UTC"`; the default is the runtime's default time zone.
@@ -303,23 +303,23 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
+// "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
 ```
 
 ### Using timeStyle and dateStyle
 
 ```js
-const shortTime = new Intl.DateTimeFormat("en" , {
+const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short"
 });
 console.log(shortTime.format(Date.now())); // "13:31 AM"
 
-const shortDate = new Intl.DateTimeFormat("en" , {
+const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
 });
 console.log(shortDate.format(Date.now())); // "07/07/20"
 
-const mediumTime = new Intl.DateTimeFormat("en" , {
+const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });
@@ -339,7 +339,7 @@ console.log(new Intl.DateTimeFormat('en-GB', {
   dayPeriod: 'short',
   timeZone: 'UTC',
 }).format(date));
-// > 4 at night"  (same formatting in en-GB for all dayPeriod values)
+// 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -347,7 +347,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'narrow',
   timeZone: 'UTC',
 }).format(date));
-// > "4 mat."  (same output in French for both narrow/short dayPeriod)
+// "4 mat."  (same output in French for both narrow/short dayPeriod)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -355,7 +355,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'long',
   timeZone: 'UTC',
 }).format(date));
-// > "4 du matin"
+// "4 du matin"
 ```
 
 ### Using timeZoneName
@@ -375,13 +375,13 @@ for (const zoneName of timezoneNames) {
   console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
-// expected output:
-// > "short: 12/16/2021, PST"
-// > "long: 12/16/2021, Pacific Standard Time"
-// > "shortOffset: 12/16/2021, GMT-8"
-// > "longOffset: 12/16/2021, GMT-08:00"
-// > "shortGeneric: 12/16/2021, PT"
-// > "longGeneric: 12/16/2021, Pacific Time"
+// Logs:
+// short: 12/16/2021, PST
+// long: 12/16/2021, Pacific Standard Time
+// shortOffset: 12/16/2021, GMT-8
+// longOffset: 12/16/2021, GMT-08:00
+// shortGeneric: 12/16/2021, PT
+// longGeneric: 12/16/2021, Pacific Time
 ```
 
 ## Specifications

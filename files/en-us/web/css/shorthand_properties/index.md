@@ -1,6 +1,7 @@
 ---
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -195,6 +196,7 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("border-width")}}
   - {{cssxref("column-rule")}}
   - {{cssxref("columns")}}
+  - {{cssxref("contain-intrinsic-size")}}
   - {{cssxref("flex")}}
   - {{cssxref("flex-flow")}}
   - {{cssxref("font")}}
@@ -216,6 +218,7 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("place-self")}}
   - {{cssxref("scroll-margin")}}
   - {{cssxref("scroll-padding")}}
+  - {{cssxref("scroll-timeline")}}
   - {{cssxref("text-decoration")}}
   - {{cssxref("text-emphasis")}}
   - {{cssxref("transition")}}

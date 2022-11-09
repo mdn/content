@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: composite role'
+title: "ARIA: composite role"
 slug: Web/Accessibility/ARIA/Roles/composite_role
 tags:
   - Accessibility

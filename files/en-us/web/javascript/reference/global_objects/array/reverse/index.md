@@ -27,12 +27,12 @@ The reference to the original array, now reversed. Note that the array is revers
 
 ## Description
 
-The `reverse` method transposes the elements of the calling array object in
+The `reverse()` method transposes the elements of the calling array object in
 place, mutating the array, and returning a reference to the array.
 
-`reverse` is intentionally generic; this method can be called on objects resembling arrays. Objects which do not contain a
-`length` property reflecting the last in a series of consecutive, zero-based
-numerical properties may not behave in any meaningful manner.
+The `reverse()` method preserves empty slots. If the source array is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots' corresponding new indices are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and also become empty slots.
+
+The `reverse()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
@@ -48,21 +48,6 @@ console.log(items); // [1, 2, 3]
 
 items.reverse();
 console.log(items); // [3, 2, 1]
-```
-
-### Reversing the elements in an array-like object
-
-The following example creates an array-like object `obj`, containing three
-elements and a length property, then reverses the array-like object. The call to
-`reverse()` returns a reference to the reversed array-like object
-`obj`.
-
-```js
-const obj = {0: 1, 1: 2, 2: 3, length: 3};
-console.log(obj); // {0: 1, 1: 2, 2: 3, length: 3}
-
-Array.prototype.reverse.call(obj); //same syntax for using apply()
-console.log(obj); // {0: 3, 1: 2, 2: 1, length: 3}
 ```
 
 ### The reverse() method returns the reference to the same array
@@ -85,6 +70,30 @@ const numbers = [3, 2, 4, 1, 5];
 const reverted = [...numbers].reverse();
 reverted[0] = 5;
 console.log(numbers[0]); // 3
+```
+
+### Using reverse() on sparse arrays
+
+Sparse arrays remain sparse after calling `reverse()`. Empty slots are copied over to their respective new indices as empty slots.
+
+```js
+console.log([1, , 3].reverse()); // [3, empty, 1]
+console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
+```
+
+### Calling reverse() on non-array objects
+
+The `reverse()` method reads the `length` property of `this`. It then visits each index between `0` and `length / 2`, and swaps the two corresponding indices on both ends, [deleting](/en-US/docs/Web/JavaScript/Reference/Operators/delete) properties if needed.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+};
+console.log(Array.prototype.reverse.call(arrayLike));
+// { '0': 4, length: 3, unrelated: 'foo' }
+// The '2' index is deleted because the '0' index was not present originally
 ```
 
 ## Specifications

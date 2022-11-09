@@ -17,7 +17,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-In this article we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad-hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
+In this article we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
 
 <table>
   <tbody>
@@ -88,14 +88,11 @@ If you live somewhere else, or are working on a site that will serve somewhere e
 
 One helpful measure you can call on to inform your browser testing choices is browser support stats. There are a number of sites that provide such stats, for example:
 
-- [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0)
 - [Statcounter](https://gs.statcounter.com/)
 
-These are both very North America-centric, and not particularly accurate, but they can give you an idea of broad trends.
+This is a very North America-centric, and not particularly accurate, but it can give you an idea of broad trends.
 
-For example, let's go to [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0). You can see that Opera is listed as having small but visible usage figures, so we should add it to our support chart too as grade C.
-
-IE8 is listed as being significant too, but it is older and no longer capable. Opera Mini is also significant, but it isn't very capable in terms of running complex JavaScript at runtime, etc. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
+Opera Mini isn't very capable in terms of running complex JavaScript at runtime. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
 
 ### Using analytics
 
@@ -122,7 +119,7 @@ Now you should be able to go back to the [Analytics Web](https://analytics.googl
 
 By default, you should see the reporting tab, like so:
 
-![](analytics-reporting.png)
+![How google analytics collects data in its main reporting dashboard](analytics-reporting.png)
 
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
 [Getting started with Analytics](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1) provides some useful guidance on reporting (and more) for beginners.
@@ -151,7 +148,7 @@ When you've got a new addition to your codebase that needs testing, before you s
 
 Consider the following example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), and also the [example running live](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
 
-![](sliding-box-demo.png)
+![How to prepare a testing scenario featuring the design and user requirements](sliding-box-demo.png)
 
 Test criteria for this feature could be written like so:
 
@@ -233,7 +230,7 @@ To use a Virtual Box, you need to:
 
 1. Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
 2. [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
-3. Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
+3. Open the app; you'll be presented with a view like the following: ![Application window left panel lists Windows operating system and Opera TV emulators. Right panel include several subpanels including general, system, display, settings, audio, network and a preview.](virtualbox.png)
 4. To create a new virtual machine, press the _New_ button in the top left-hand corner.
 5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
 
@@ -245,13 +242,13 @@ To use a Virtual Box, you need to:
 
 Now the new virtual box should appear in the left-hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
 
-![](virtualbox-installer.png)
+![How to install the virtual Box for a specific operating system](virtualbox-installer.png)
 
 > **Warning:** You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
 
 After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
-![](virtualbox-running.png)
+![Virtual box machine running on an windows operating system](virtualbox-running.png)
 
 You need to treat this virtual operating system installation just like you would any real installation — for example, as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.
 
@@ -259,12 +256,6 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 
 - Windows 10 with Edge 14
 - Windows 10 with Edge 13
-- Windows 8.1 with IE11
-- Windows 8 with IE10
-- Windows 7 with IE9
-- Windows XP with IE8
-- Windows XP with IE7
-- Windows XP with IE6
 
 > **Note:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running if it is a licensed product.
 

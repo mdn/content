@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.tr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements.
 
@@ -53,9 +53,9 @@ The following attributes may still be implemented in browsers but are no longer 
 
 - {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
 
-  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either an [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
+  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either a [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
 
-    > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the [CSS](/en-US/docs/Web/CSS) property {{CSSxRef("background-color")}}.
+    > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the CSS property {{CSSxRef("background-color")}}.
 
 - {{HTMLAttrDef("char")}} {{deprecated_inline}}
 
@@ -74,7 +74,7 @@ The following attributes may still be implemented in browsers but are no longer 
   - : A string specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
 
     - `baseline`
-      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the [baseline](https://en.wikipedia.org/wiki/Baseline) of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
+      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the [baseline](https://en.wikipedia.org/wiki/Baseline) of the font(s) used in the row. If all the characters in the row are the same size, the effect is the same as `bottom`.
     - `bottom`,
       - : Draws the text in each of the row's cells as closely as possible to the bottom edge of those cells.
     - `middle`
@@ -156,7 +156,7 @@ Let's actually look at the output first this time:
 
 {{EmbedLiveSample("Row_and_column_spanning", 500, 150)}}
 
-Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are sub-headings below "Membership Dates". This is accomplished by:
+Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are subheadings below "Membership Dates". This is accomplished by:
 
 - Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the {{htmlattrxref("rowspan")}} attribute, making them each be two rows tall.
 - Having the first row's "Membership Dates" heading cell span two columns using the {{htmlattrxref("colspan")}} attribute, which causes this heading to actually be two columns wide.
@@ -359,7 +359,7 @@ td {
 }
 ```
 
-While we add a {{CSSxRef("font")}} property to the {{HTMLElement("table")}} element here to set a more visually-appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style here, where we style `<tr>` elements located within the {{HTMLElement("thead")}} so they have a light blue background color. This is a way to quickly apply a background color to all of the cells in the heading area at once.
+While we add a {{CSSxRef("font")}} property to the {{HTMLElement("table")}} element here to set a more visually-appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style here, where we style `<tr>` elements located within the {{HTMLElement("thead")}} so they have a light blue background color. This is a way to quickly apply a background color to all the cells in the heading area at once.
 
 This does _not_ affect the style of the {{HTMLElement("th")}} elements in the first column, though, where we treat the member names as a row heading.
 

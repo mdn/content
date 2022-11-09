@@ -51,7 +51,7 @@ which contains the entire element, including its padding and border-width. The
 describe the position and size of the overall rectangle in pixels. Properties other than
 `width` and `height` are relative to the top-left of the viewport.
 
-![](element-box-diagram.png)
+![DOMRect object that is the smallest rectangle containing the entire element.](element-box-diagram.png)
 
 The `width` and `height` properties of the {{domxref("DOMRect")}}
 object returned by the method include the `padding` and
@@ -79,8 +79,8 @@ position changes (because their values are relative to the viewport and not abso
 
 If you need the bounding rectangle relative to the top-left corner of the document,
 just add the current scrolling position to the `top` and `left`
-properties (these can be obtained using {{domxref("window.scrollX")}} and
-{{domxref("window.scrollY")}}) to get a bounding rectangle which is independent from the
+properties (these can be obtained using {{domxref("window.scrollY")}} and
+{{domxref("window.scrollX")}}) to get a bounding rectangle which is independent from the
 current scrolling position.
 
 ## Examples

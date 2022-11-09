@@ -1,9 +1,10 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
+page-type: css-pseudo-class
 tags:
-  - ':focus'
-  - ':focus-visible'
+  - ":focus"
+  - ":focus-visible"
   - CSS
   - Layout
   - Pseudo-class
@@ -64,7 +65,9 @@ button {
 If your code has to work in old browser versions that do not support `:focus-visible`, check supports of `:focus-visible` with {{cssxref("@supports")}} and repeat the same focus styling in it, but inside a `:focus` rule. Note that even if you do not specify anything at all for `:focus`, old browsers will simply display the native outline, which can be enough.
 
 ```html
-<button class="button with-fallback" type="button">Button with fallback</button>
+<button class="button with-fallback" type="button">
+    Button with fallback
+</button>
 <button class="button without-fallback" type="button">
   Button without fallback
 </button>

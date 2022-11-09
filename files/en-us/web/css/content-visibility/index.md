@@ -1,6 +1,7 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
+page-type: css-property
 tags:
   - CSS
   - CSS Containment
@@ -47,7 +48,7 @@ content-visibility: unset;
 
 {{cssinfo}}
 
-## Accessibility
+## Accessibility concerns
 
 Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 
@@ -106,4 +107,5 @@ The following example shows that it is possible to manage visibility in script. 
 
 ## See also
 
+- [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)

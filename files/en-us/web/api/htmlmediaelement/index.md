@@ -23,7 +23,7 @@ The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its ancestors {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
@@ -116,7 +116,7 @@ These properties are obsolete and should not be used, even if a browser still su
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its ancestors {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 

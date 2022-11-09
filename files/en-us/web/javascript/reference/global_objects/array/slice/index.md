@@ -36,11 +36,9 @@ slice(start, end)
     A negative index can be used, indicating an offset from the end of the sequence.
     `slice(-2)` extracts the last two elements in the sequence.
 
-    If `start` is undefined, `slice` starts from the
-    index `0`.
+    If `start` is omitted or `undefined`, `slice` starts from the index `0`.
 
-    If `start` is greater than the index range of the sequence, an
-    empty array is returned.
+    If `start` is greater than the length of the sequence, an empty array is returned.
 
 - `end` {{optional_inline}}
 
@@ -53,12 +51,9 @@ slice(start, end)
     `slice(2,-1)` extracts the third element through the second-to-last element
     in the sequence.
 
-    If `end` is omitted, `slice` extracts through the
-    end of the sequence (`arr.length`).
+    If `end` is omitted or `undefined`, `slice` extracts through the end of the sequence (`arr.length`).
 
-    If `end` is greater than the length of the sequence,
-    `slice` extracts through to the end of the sequence
-    (`arr.length`).
+    If `end` is greater than the length of the sequence, `slice` extracts through to the end of the sequence (`arr.length`).
 
 ### Return value
 
@@ -66,19 +61,11 @@ A new array containing the extracted elements.
 
 ## Description
 
-`slice` does not alter the original array. It returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of
-elements from the original array. Elements of the original array are copied into the
-returned array as follows:
+The `slice()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) that contains some of the same elements as the ones from the original array.
 
-- For objects, `slice` copies object references into the new array. Both the
-  original and new array refer to the same object. If an object changes, the changes are
-  visible to both the new and original arrays.
-- For strings, numbers and booleans (not {{jsxref("String")}}, {{jsxref("Number")}}
-  and {{jsxref("Boolean")}} objects), `slice` copies the values into the new
-  array. Changes to the string, number, or boolean in one array do not affect the other
-  array.
+The `slice()` method preserves empty slots. If the sliced portion is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the returned array is sparse as well.
 
-If a new element is added to either array, the other array is not affected.
+The `slice()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -105,20 +92,17 @@ const myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
 const myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
 const newCar = myCar.slice(0, 2);
 
-// Display the values of myCar, newCar, and the color of myHonda
-//  referenced from both arrays.
-console.log('myCar = ', myCar);
-console.log('newCar = ', newCar);
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log('myCar =', myCar);
+console.log('newCar =', newCar);
+console.log('myCar[0].color =', myCar[0].color);
+console.log('newCar[0].color =', newCar[0].color);
 
 // Change the color of myHonda.
 myHonda.color = 'purple';
-console.log('The new color of my Honda is ', myHonda.color);
+console.log('The new color of my Honda is', myHonda.color);
 
-// Display the color of myHonda referenced from both arrays.
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log('myCar[0].color =', myCar[0].color);
+console.log('newCar[0].color =', newCar[0].color);
 ```
 
 This script writes:
@@ -130,7 +114,7 @@ myCar = [
   'cherry condition',
   'purchased 1997'
 ]
-newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
+newCar = [ { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }, 2 ]
 myCar[0].color = red
 newCar[0].color = red
 The new color of my Honda is purple
@@ -138,37 +122,42 @@ myCar[0].color = purple
 newCar[0].color = purple
 ```
 
-### Array-like objects
+### Calling slice() on non-array objects
 
-`slice` method can also be called to convert Array-like objects/collections
-to a new Array. You just {{jsxref("Function.prototype.bind", "bind")}} the method to the
-object. The {{jsxref("Functions/arguments", "arguments")}} inside a function is an
-example of an 'array-like object'.
+The `slice()` method reads the `length` property of `this`. It then reads the integer-keyed properties from `start` to `end` and defines them on a newly created array.
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
-}
-
-const list1 = list(1, 2, 3); // [1, 2, 3]
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.slice.call(arrayLike, 1, 3));
+// [ 3, 4 ]
 ```
 
-Binding can be done with the {{jsxref("Function.prototype.call", "call()")}} method of
-{{jsxref("Function")}} and it can also be reduced using
-`[].slice.call(arguments)` instead of
-`Array.prototype.slice.call`.
+### Using slice() to convert array-like objects to arrays
 
-Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
+The `slice()` method is often used with {{jsxref("Function.prototype.bind", "bind()")}} and {{jsxref("Function.prototype.call", "call()")}} to create a utility method that converts an array-like object into an array.
 
 ```js
-const unboundSlice = Array.prototype.slice;
-const slice = Function.prototype.call.bind(unboundSlice);
+// slice() is called with `this` passed as the first argument
+const slice = Function.prototype.call.bind(Array.prototype.slice);
 
 function list() {
   return slice(arguments);
 }
 
 const list1 = list(1, 2, 3); // [1, 2, 3]
+```
+
+### Using slice() on sparse arrays
+
+The array returned from `slice()` may be sparse if the source is sparse.
+
+```js
+console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 ```
 
 ## Specifications

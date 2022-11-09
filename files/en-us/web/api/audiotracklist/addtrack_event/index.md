@@ -96,5 +96,5 @@ videoElement.audioTracks.onaddtrack = (event) => {
 - Related events: [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event), [`change`](/en-US/docs/Web/API/AudioTrackList/change_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
 - This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`addtrack`](/en-US/docs/Web/API/MediaStream/addtrack_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

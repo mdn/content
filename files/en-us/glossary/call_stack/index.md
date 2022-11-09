@@ -4,7 +4,6 @@ slug: Glossary/Call_stack
 tags:
   - Call Stack
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

@@ -75,7 +75,7 @@ const myIterator = {
   next() {
     // ...
   },
-  [Symbol.iterator] () {
+  [Symbol.iterator]() {
     return this;
   },
 };
@@ -210,9 +210,9 @@ const obj = {
       return() {
         console.log("Closing");
         return { done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 const [b] = obj;

@@ -1,6 +1,7 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
+page-type: css-property
 tags:
   - CSS
   - CSS Background

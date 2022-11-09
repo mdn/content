@@ -26,7 +26,7 @@ The `Document` interface describes the common properties and methods for any kin
 - {{DOMxRef("Document.Document", "Document()")}}
   - : Creates a new `Document` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
@@ -174,7 +174,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
 
-## Methods
+## Instance methods
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
@@ -283,7 +283,7 @@ The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} inte
 The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocument")}} interface or is extended for such documents:
 
 - {{DOMxRef("Document.clear()")}} {{Deprecated_Inline}}
-  - : In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.
+  - : This method does nothing.
 - {{DOMxRef("Document.close()")}}
   - : Closes a document stream for writing.
 - {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}
@@ -400,9 +400,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
 - {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-- {{DOMxRef("Element/pointerlockchange_event", "pointerlockchange")}}
+- {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
   - : Fired when the pointer is locked/unlocked.
-- {{DOMxRef("Element/pointerlockerror_event", "pointerlockerror")}}
+- {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
   - : Fired when locking the pointer failed.
 - {{DOMxRef("Document/pointermove_event", "pointermove")}}
   - : Fired when a pointer changes coordinates.

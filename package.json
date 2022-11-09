@@ -23,10 +23,10 @@
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
-    "@mdn/yari": "1.18.51",
+    "@mdn/yari": "1.23.1",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "husky": "8.0.1",
+    "husky": "8.0.2",
     "lint-staged": "13.0.3",
     "markdownlint-cli2": "0.5.1",
     "markdownlint-rule-search-replace": "1.0.5",

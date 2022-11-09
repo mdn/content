@@ -22,7 +22,7 @@ The **`XRWebGLDepthInformation`** interface contains depth information from the 
 
 This interface inherits properties from its parent, {{domxref("XRDepthInformation")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}}
   - : Contains the height of the depth buffer (number of rows).

@@ -126,18 +126,20 @@ To help improve content discoverability and {{Glossary("SEO")}}, keep the follow
 
 The _name of interface_ extends the following APIs, adding the listed features.
 
-#### Interface #1
+#### Interface 1
 
 - {{domxref("addition1")}}
   - : Description of the feature of Interface#1 that is added to that API by the API you are currently documenting.
     One \*term and definition for each feature. If this API doesn't extend any other interfaces, you can delete these sections.
 
-#### Interface #2
+#### Interface 2
 
 - {{domxref("addition1")}}
   - : Description of the feature of Interface#2 that is added to that API by the API you are currently documenting, etc.
 
 ## Examples
+
+Note that we use the plural "Examples" even if the page only contains one example.
 
 ### A descriptive heading
 

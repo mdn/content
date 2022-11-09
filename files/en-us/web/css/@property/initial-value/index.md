@@ -1,6 +1,7 @@
 ---
 title: initial-value
 slug: Web/CSS/@property/initial-value
+page-type: css-at-rule-descriptor
 tags:
   - CSS
   - Reference
@@ -43,9 +44,7 @@ A string with a value which is a correct value for the chosen `syntax`.
 
 ## Formal syntax
 
-```
-<string>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -65,10 +64,10 @@ Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

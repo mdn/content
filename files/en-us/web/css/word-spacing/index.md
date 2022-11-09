@@ -1,6 +1,7 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -26,10 +27,6 @@ word-spacing: normal;
 word-spacing: 3px;
 word-spacing: 0.3em;
 
-/* <percentage> values */
-word-spacing: 50%;
-word-spacing: 200%;
-
 /* Global values */
 word-spacing: inherit;
 word-spacing: initial;
@@ -44,8 +41,6 @@ word-spacing: unset;
   - : The normal inter-word spacing, as defined by the current font and/or the browser.
 - {{cssxref("length")}}
   - : Specifies extra spacing in addition to the intrinsic inter-word spacing defined by the font.
-- {{cssxref("percentage")}}
-  - : Specifies extra spacing as a percentage of the affected character's advance width.
 
 ## Examples
 

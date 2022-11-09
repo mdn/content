@@ -47,15 +47,15 @@ string as its description:
 
 ```js
 const sym1 = Symbol();
-const sym2 = Symbol('foo');
-const sym3 = Symbol('foo');
+const sym2 = Symbol("foo");
+const sym3 = Symbol("foo");
 ```
 
 The above code creates three new symbols. Note that `Symbol("foo")` does not
 coerce the string `"foo"` into a symbol. It creates a new symbol each time:
 
 ```js
-Symbol('foo') === Symbol('foo'); // false
+Symbol("foo") === Symbol("foo"); // false
 ```
 
 ### new Symbol()
@@ -76,10 +76,10 @@ If you really want to create a `Symbol` wrapper object, you can use the
 `Object()` function:
 
 ```js
-const sym = Symbol('foo');
+const sym = Symbol("foo");
 const symObj = Object(sym);
-typeof sym    // => "symbol"
-typeof symObj // => "object"
+typeof sym; // "symbol"
+typeof symObj; // "object"
 ```
 
 ## Specifications

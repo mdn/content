@@ -1,6 +1,7 @@
 ---
-title: ':in-range'
+title: ":in-range"
 slug: Web/CSS/:in-range
+page-type: css-pseudo-class
 tags:
   - CSS
   - Pseudo-class

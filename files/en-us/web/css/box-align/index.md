@@ -1,6 +1,7 @@
 ---
 title: box-align
 slug: Web/CSS/box-align
+page-type: css-property
 tags:
   - CSS
   - CSS Property

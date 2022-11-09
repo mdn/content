@@ -71,10 +71,12 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## Instance properties
 
+- `DataView.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"DataView"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("DataView.prototype.buffer")}}
   - : The {{jsxref("ArrayBuffer")}} referenced by this view. Fixed at construction time and thus **read only.**
 - {{jsxref("DataView.prototype.byteLength")}}
-  - : The length (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read only.**
+  - : The length (in bytes) of this view. Fixed at construction time and thus **read only.**
 - {{jsxref("DataView.prototype.byteOffset")}}
   - : The offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read only.**
 

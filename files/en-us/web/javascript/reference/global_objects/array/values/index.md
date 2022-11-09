@@ -38,6 +38,10 @@ A new iterable iterator object.
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 ```
 
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `values()` method iterates empty slots as if they have the value `undefined`.
+
+The `values()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Iteration using for...of loop
@@ -118,6 +122,37 @@ console.log(iterator); // Array Iterator { }
 console.log(iterator.next().value); // "a"
 arr[1] = "n";
 console.log(iterator.next().value); // "n"
+```
+
+### Iterating sparse arrays
+
+`values()` will visit empty slots as if they are `undefined`.
+
+```js
+for (const element of [, "a"].values()) {
+  console.log(element);
+}
+// undefined
+// 'a'
+```
+
+### Calling values() on non-array objects
+
+The `values()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+for (const entry of Array.prototype.values.call(arrayLike)) {
+  console.log(entry);
+}
+// a
+// b
+// c
 ```
 
 ## Specifications

@@ -307,7 +307,7 @@ JavaScript libraries tend to come in a few main varieties (some libraries will s
   The [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) for several useful code samples).
 - Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when "DHTML" was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS features and APIs to implementing effects more easily.
 - UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example [Foundation](https://get.foundation/), [Bootstrap](https://getbootstrap.com/), and [Material-UI](https://mui.com/) (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.
-- Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery
+- Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), or even Web SQL (which is now deprecated, but is still supported in Chromium-based browsers in secure contexts). As another example, jQuery
 
 When choosing a library to use, make sure that it works across the set of browsers you want to support, and test your implementation thoroughly. Also make sure that the library is popular and well-supported, and isn't likely to just become obsolete next week. Talk to other developers to find out what they recommend, see how much activity and how many contributors the library has on GitHub (or wherever else it is stored), etc.
 
@@ -335,7 +335,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
-5. ```js
+   ```js
    const myImage = document.querySelector('.my-image');
 
    fetch('flowers.jpg').then((response) => {
@@ -346,7 +346,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
    });
    ```
 
-6. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch), you should still see the flower image appear — cool!
+5. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch), you should still see the flower image appear — cool!
    ![heading reading fetch basic example with a photo of purple flowers](fetch-image.jpg)
 
 > **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).

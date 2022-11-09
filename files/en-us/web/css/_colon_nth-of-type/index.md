@@ -1,6 +1,7 @@
 ---
-title: ':nth-of-type()'
+title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

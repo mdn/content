@@ -1,6 +1,7 @@
 ---
 title: margin
 slug: Web/CSS/margin
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property
@@ -31,10 +32,10 @@ This property is a shorthand for the following CSS properties:
 margin: 1em;
 margin: -3px;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 margin: 5% auto;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 margin: 1em auto 2em;
 
 /* top | right | bottom | left */

@@ -1,6 +1,7 @@
 ---
 title: float
 slug: Web/CSS/float
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning

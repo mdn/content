@@ -1,6 +1,7 @@
 ---
-title: ':nth-last-col'
+title: ":nth-last-col"
 slug: Web/CSS/:nth-last-col
+page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-col
 ---
 

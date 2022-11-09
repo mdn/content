@@ -4,7 +4,6 @@ slug: Glossary/PNG
 tags:
   - Beginner
   - Composing
-  - Glossary
   - Infrastructure
   - PNG
 ---

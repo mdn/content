@@ -1,6 +1,7 @@
 ---
 title: CSS Fragmentation
 slug: Web/CSS/CSS_Fragmentation
+page-type: css-module
 tags:
   - CSS
   - CSS Fragmentation

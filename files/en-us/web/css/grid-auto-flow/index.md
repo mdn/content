@@ -1,6 +1,7 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
+page-type: css-property
 tags:
   - CSS
   - CSS Grid

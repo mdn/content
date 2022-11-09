@@ -23,14 +23,14 @@ The **`MIDIMessageEvent`** interface of the [Web MIDI API](/en-US/docs/Web/API/W
 - {{domxref("MIDIMessageEvent.MIDIMessageEvent", "MIDIMessageEvent()")}}
   - : Creates a new `MIDIMessageEvent` object instance.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
 - {{domxref("MIDIMessageEvent.data")}}
   - : A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the [MIDI specification](https://www.midi.org/specifications-old/item/table-1-summary-of-midi-message) for more information on its form.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from {{domxref("Event")}}._
 

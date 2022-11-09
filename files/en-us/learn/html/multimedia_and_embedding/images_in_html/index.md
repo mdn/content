@@ -52,7 +52,9 @@ In the beginning, the Web was just text, and it was really quite boring. Fortuna
 
 ## How do we put an image on a webpage?
 
-In order to put a simple image on a webpage, we use the {{htmlelement("img")}} element. This is an {{glossary("empty element")}} (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — `src` (sometimes spoken as its full title, _source_). The `src` attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as `href` attribute values in {{htmlelement("a")}} elements.
+In order to put a simple image on a web page, we use the {{htmlelement("img")}} element. This is a {{Glossary("void element")}} (meaning, it cannot have any child content and cannot have an end tag) that requires two attributes to be useful: `src` and `alt`. The `src` attribute contains a URL pointing to the image you want to embed in the page. As with the`href` attribute for {{htmlelement("a")}} elements, the `src` attribute can be a relative URL or an absolute URL. Without a `src` attribute, an `img` element has no image to load.
+
+The [`alt` attribute is described below](#Alternative_text).
 
 > **Note:** You should read [A quick primer on URLs and paths](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths) to refresh your memory on relative and absolute URLs before continuing.
 
@@ -78,15 +80,15 @@ You could embed the image using its absolute URL, for example:
 <img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
-But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.
+But this is not recommended. You should host your own images, which in simple setups means keeping the images for your website on the same server as your HTML. In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
 
-> **Warning:** Most images are copyrighted. Do **not** display an image on your webpage unless:
+> **Warning:** **Never** point your src attribute at an image hosted on someone else's website **without permission**. This is called "hotlinking". It is generally considered unethical, since someone else would be paying the bandwidth costs for delivering the image when someone visits your page. It also leaves you with no control over whether the image is removed or replaced with something embarrassing.
+>
+> In general, you should host the images you want to use on your site. Keep in mind that many images you may find on the web are copyrighted. Before you host an image, you should make sure that one of these applies:
 >
 > - You own the image.
 > - You have received explicit, written permission from the image owner.
 > - You have ample proof that the image is, in fact, in the public domain.
->
-> Copyright violations are illegal and unethical. In addition, **never** point your `src` attribute at an image hosted on someone else's website that you don't have permission to link to. This is called "hotlinking". Again, stealing someone's bandwidth is illegal. It also slows down your page, leaving you with no control over whether the image is removed or replaced with something embarrassing.
 
 Our above code would give us the following result:
 

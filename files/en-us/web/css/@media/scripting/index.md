@@ -1,6 +1,7 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

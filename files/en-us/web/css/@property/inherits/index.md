@@ -1,6 +1,7 @@
 ---
 title: inherits
 slug: Web/CSS/@property/inherits
+page-type: css-at-rule-descriptor
 tags:
   - CSS
   - Reference
@@ -44,9 +45,7 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Formal syntax
 
-```
-true | false
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -66,10 +65,10 @@ Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
+page-type: css-property
 tags:
   - CSS
   - CSS Property
