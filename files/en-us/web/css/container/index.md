@@ -1,7 +1,7 @@
 ---
 title: Container shorthand
 slug: Web/CSS/container
-page-type: guide
+page-type: css-property
 tags:
   - container
   - CSS

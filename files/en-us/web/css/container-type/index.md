@@ -1,7 +1,7 @@
 ---
 title: Container type
 slug: Web/CSS/container-type
-page-type: guide
+page-type: css-property
 tags:
   - container
   - CSS
