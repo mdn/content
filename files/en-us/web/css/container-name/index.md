@@ -3,9 +3,11 @@ title: Container name
 slug: Web/CSS/container-name
 page-type: guide
 tags:
+  - container
   - CSS
-  - Guide
+  - CSS Containment
   - Reference
+  - Property
 spec-urls: https://www.w3.org/TR/css-contain-3/#container-name
 ---
 

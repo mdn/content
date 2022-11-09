@@ -3,9 +3,11 @@ title: Container shorthand
 slug: Web/CSS/container
 page-type: guide
 tags:
+  - container
   - CSS
-  - CSS Property
+  - CSS Containment
   - Reference
+  - Property
 spec-urls: https://www.w3.org/TR/css-contain-3/#container-shorthand
 ---
 
