@@ -26,7 +26,7 @@ returns `true` if the user agent is skipping the element's rendering, or `false`
 
 ## Value
 
-A boolean—returns `true` if the user agent is skipping the element's rendering, or `false` otherwise.
+A boolean. Returns `true` if the user agent is skipping the element's rendering or `false` otherwise.
 
 ## Examples
 
