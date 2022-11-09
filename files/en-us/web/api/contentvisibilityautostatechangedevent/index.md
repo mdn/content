@@ -67,10 +67,14 @@ function stateChanged(event) {
 }
 
 // Call this when the canvas updates need to start.
-function startCanvasUpdates(canvas) { ... }
+function startCanvasUpdates(canvas) {
+  // …
+}
 
 // Call this when the canvas updates need to stop.
-function stopCanvasUpdates(canvas) { ... }
+function stopCanvasUpdates(canvas) {
+  // …
+}
 ```
 
 ## Specifications
