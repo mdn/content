@@ -12,10 +12,7 @@ browser-compat: api.PerformanceEntry.toJSON
 
 {{APIRef("Performance API")}}
 
-The **`toJSON()`** method is a _serializer_; it returns
-a JSON representation of the {{domxref("PerformanceEntry","performance entry")}} object.
-
-{{AvailableInWorkers}}
+The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEntry","performance entry", "", "no-code")}} object.
 
 ## Syntax
 
@@ -33,45 +30,32 @@ A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} o
 
 ## Examples
 
+### Using the toJSON method
+
 The following example shows the use of the `toJSON()` method.
 
 ```js
-function runPerformanceEntry() {
-  console.log("PerformanceEntry support…");
-
-  if (performance.mark === undefined) {
-    console.log("The property performance.mark is not supported");
-    return;
-  }
-
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  doWork(50000);
-  performance.mark("End");
-
-  // Use getEntries() to iterate through the each entry
-  performance.getEntries()
-    .forEach((entry, i) => {
-      console.log(`Entry[${i}]`);
-      checkPerformanceEntry(entry);
-    });
-}
-
-function checkPerformanceEntry(obj) {
-  const properties = ["name", "entryType", "startTime", "duration"];
-  const methods = ["toJSON"];
-
-  // Check each property
-  properties.forEach((property) => {
-    const supported = property in obj;
-    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry.toJSON());
   });
+});
 
-  // Check each method
-  methods.forEach((method) => {
-    const supported = typeof obj[method] === "function";
-    console.log(`…${method} = ${supported ? JSON.stringify(obj[method]()) : "Not supported"}`);
-  });
+// Register the observer for events
+observer.observe({type: "event", buffered: true});
+```
+
+This would log a JSON object like so:
+
+```json
+{
+  "name": "dragover",
+  "entryType": "event",
+  "startTime": 67090751.599999905,
+  "duration": 128,
+  "processingStart": 67090751.70000005,
+  "processingEnd": 67090751.900000095,
+  "cancelable": true
 }
 ```
 
@@ -82,3 +66,7 @@ function checkPerformanceEntry(obj) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("JSON")}}
