@@ -30,7 +30,7 @@ The illustration below shows how the same card component can be displayed with m
 ## Using container queries
 
 To use container queries, you need to declare a **containment context** on an element so that the browser knows we might want to query the dimensions of this container later.
-To do this, you use the `container-type` property a value of `size`, `inline-size`, or `block-size`.
+To do this, you use the {{Cssxref("container-type")}} property a value of `size`, `inline-size`, or `block-size`.
 These values have the following effects:
 
 - `size`: the query will be based on the width and height of the container.
@@ -98,6 +98,31 @@ We can then target this containment context using the `@container` at-rule:
   .card {
     display: grid;
     grid-template-columns: 2fr 1fr;
+  }
+}
+```
+
+## Container query length units
+
+When applying styles to a container using container queries, you can use container query length units.
+These units specify a length relative to the dimensions of a query container.
+Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
+
+The container query length units are:
+
+- `cqw`: 1% of a query container's width
+- `cqh`: 1% of a query container's height
+- `cqi`: 1% of a query container's inline size
+- `cqb`: 1% of a query container's block size
+- `cqmin`: The smaller value of either `cqi` or `cqb`
+- `cqmax`: The larger value of either `cqi` or `cqb`
+
+The following example uses the `cqi` unit to set the font size of a heading based on the inline size of the container:
+
+```css
+@container (min-width: 700px) {
+  .card h1 {
+    font-size: max(1.5em, 1.23em + 2cqi);
   }
 }
 ```
