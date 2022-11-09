@@ -34,7 +34,7 @@ const numbers = {
 };
 
 console.log(Array.from(str.matchAll(numbers)));
-//  Array ["2016", "01", "02", "2019", "03", "07"]
+// ["2016", "01", "02", "2019", "03", "07"]
 ```
 
 ## Specifications

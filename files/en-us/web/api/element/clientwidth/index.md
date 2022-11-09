@@ -31,7 +31,7 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![An example element with large padding, border and margin. clientWidth is the inner width of the element including its padding, and excluding its margin, border, and vertical scrollbar.](dimensions-client.png)
 
 ## Specifications
 

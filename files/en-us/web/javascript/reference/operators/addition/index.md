@@ -67,6 +67,9 @@ false + false // 0
 
 // String + Boolean -> concatenation
 'foo' + false // "foofalse"
+
+// String + Number -> concatenation
+'2' + 2 // "22"
 ```
 
 ## Specifications

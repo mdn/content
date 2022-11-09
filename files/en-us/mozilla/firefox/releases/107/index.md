@@ -22,6 +22,11 @@ This article provides information about the changes in Firefox 107 that will aff
 
 ### CSS
 
+- The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) shorthand CSS property can now be applied to specify the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+  This allows a user agent to determine the size of an element without needing to render its child elements.
+  The shorthand properties [`contain-intrinsic-width`](/en-US/docs/Web/CSS/contain-intrinsic-width) and [`contain-intrinsic-height`](/en-US/docs/Web/CSS/contain-intrinsic-height) are also supported, along with the [logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties) [`contain-intrinsic-block-size`](/en-US/docs/Web/CSS/contain-intrinsic-block-size) and [`contain-intrinsic-inline-size`](/en-US/docs/Web/CSS/contain-intrinsic-inline-size).
+  ({{bug(1597529)}}).
+
 #### Removals
 
 ### JavaScript
@@ -43,6 +48,9 @@ This article provides information about the changes in Firefox 107 that will aff
 #### Media, WebRTC, and Web Audio
 
 #### Removals
+
+- The non-standard and deprecated [`SVGSVGElement.useCurrentView`](/en-US/docs/Web/API/SVGSVGElement#svgsvgelement.usecurrentview) property has been removed.
+  (See {{bug(1174097)}} for more details.)
 
 ### WebAssembly
 

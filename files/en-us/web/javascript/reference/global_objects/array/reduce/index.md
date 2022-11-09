@@ -33,33 +33,33 @@ The reducer walks through the array element-by-element, at each step adding the 
 
 ```js-nolint
 // Arrow function
-reduce((previousValue, currentValue) => { /* … */ } )
-reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* … */ } )
+reduce((accumulator, currentValue) => { /* … */ } )
+reduce((accumulator, currentValue, currentIndex) => { /* … */ } )
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ } )
 
-reduce((previousValue, currentValue) => { /* … */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex) => { /* … */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex, array) => { /* … */ }, initialValue)
+reduce((accumulator, currentValue) => { /* … */ } , initialValue)
+reduce((accumulator, currentValue, currentIndex) => { /* … */ } , initialValue)
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ }, initialValue)
 
 // Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function(previousValue, currentValue) { /* … */ })
-reduce(function(previousValue, currentValue, currentIndex) { /* … */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ })
+reduce(function(accumulator, currentValue) { /* … */ })
+reduce(function(accumulator, currentValue, currentIndex) { /* … */ })
+reduce(function(accumulator, currentValue, currentIndex, array) { /* … */ })
 
-reduce(function(previousValue, currentValue) { /* … */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex) { /* … */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ }, initialValue)
+reduce(function(accumulator, currentValue) { /* … */ }, initialValue)
+reduce(function(accumulator, currentValue, currentIndex) { /* … */ }, initialValue)
+reduce(function(accumulator, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
   - : A "reducer" function called with the following arguments:
-    - `previousValue`
+    - `accumulator`
       - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`
       - : The value of the current element. On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`.
@@ -68,9 +68,9 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ },
     - `array`
       - : The array being traversed.
 - `initialValue` {{optional_inline}}
-  - : A value to which `previousValue` is initialized the first time the callback is called.
+  - : A value to which `accumulator` is initialized the first time the callback is called.
     If `initialValue` is specified, that also causes `currentValue` to be initialized to the first value in the array.
-    If `initialValue` is _not_ specified, `previousValue` is initialized to the first value in the array, and `currentValue` is initialized to the second value in the array.
+    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `currentValue` is initialized to the second value in the array.
 
 ### Return value
 
@@ -141,10 +141,10 @@ The code below shows what happens if we call `reduce()` with an array and no ini
 ```js
 const array = [15, 16, 17, 18, 19];
 
-function reducer(previousValue, currentValue, index) {
-  const returns = previousValue + currentValue;
+function reducer(accumulator, currentValue, index) {
+  const returns = accumulator + currentValue;
   console.log(
-    `previousValue: ${previousValue}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+    `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
   );
   return returns;
 }
@@ -154,7 +154,7 @@ array.reduce(reducer);
 
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
 
-|             | `previousValue` | `currentValue` | `index` | Return value |
+|             | `accumulator`   | `currentValue` | `index` | Return value |
 | ----------- | --------------- | -------------- | ------- | ------------ |
 | First call  | `15`            | `16`           | `1`     | `31`         |
 | Second call | `31`            | `17`           | `2`     | `48`         |
@@ -169,14 +169,14 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 
 ```js
 [15, 16, 17, 18, 19].reduce(
-  (previousValue, currentValue) => previousValue + currentValue,
+  (accumulator, currentValue) => accumulator + currentValue,
   10,
 );
 ```
 
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
 
-|             | `previousValue` | `currentValue` | `index` | Return value |
+|             | `accumulator`   | `currentValue` | `index` | Return value |
 | ----------- | --------------- | -------------- | ------- | ------------ |
 | First call  | `10`            | `15`           | `0`     | `25`         |
 | Second call | `25`            | `16`           | `1`     | `41`         |
@@ -194,11 +194,11 @@ an `initialValue`, so that each item passes through your function.
 ```js
 const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
 const sum = objects.reduce(
-  (previousValue, currentValue) => previousValue + currentValue.x,
+  (accumulator, currentValue) => accumulator + currentValue.x,
   0,
 );
 
-console.log(sum); // logs 6
+console.log(sum); // 6
 ```
 
 ### Flatten an array of arrays
@@ -209,7 +209,7 @@ const flattened = [
   [2, 3],
   [4, 5],
 ].reduce(
-  (previousValue, currentValue) => previousValue.concat(currentValue),
+  (accumulator, currentValue) => accumulator.concat(currentValue),
   [],
 );
 // flattened is [0, 1, 2, 3, 4, 5]
@@ -250,7 +250,7 @@ function groupBy(objectArray, property) {
 }
 
 const groupedPeople = groupBy(people, "age");
-// groupedPeople is:
+console.log(groupedPeople);
 // {
 //   20: [
 //     { name: 'Max', age: 20 },
@@ -286,11 +286,11 @@ const friends = [
 // allbooks - list which will contain all friends' books +
 // additional list contained in initialValue
 const allbooks = friends.reduce(
-  (previousValue, currentValue) => [...previousValue, ...currentValue.books],
+  (accumulator, currentValue) => [...accumulator, ...currentValue.books],
   ["Alphabet"],
 );
-
-// allbooks = [
+console.log(allbooks);
+// [
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'
@@ -304,11 +304,11 @@ const allbooks = friends.reduce(
 ```js
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
 const myArrayWithNoDuplicates = myArray.reduce(
-  (previousValue, currentValue) => {
-    if (!previousValue.includes(currentValue)) {
-      return [...previousValue, currentValue];
+  (accumulator, currentValue) => {
+    if (!accumulator.includes(currentValue)) {
+      return [...accumulator, currentValue];
     }
-    return previousValue;
+    return accumulator;
   },
   [],
 );
@@ -326,12 +326,12 @@ can filter and map while traversing once with {{jsxref("Array/forEach", "forEach
 ```js
 const numbers = [-5, 6, 2, 0];
 
-const doubledPositiveNumbers = numbers.reduce((previousValue, currentValue) => {
+const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
   if (currentValue > 0) {
     const doubled = currentValue * 2;
-    return [...previousValue, doubled];
+    return [...accumulator, doubled];
   }
-  return previousValue;
+  return accumulator;
 }, []);
 
 console.log(doubledPositiveNumbers); // [12, 4]

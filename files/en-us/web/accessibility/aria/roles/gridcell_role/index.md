@@ -143,7 +143,7 @@ The following example creates a table-style grouping of information:
 
 ## Accessibility concerns
 
-Support for `gridcell` and certain `gridcell`-related ARIA roles and properties have poor support with assistive technologies. If at all possible, use [HTML table markup](/en-US/docs/Web/HTML/Element/table) in their place.
+Support for `gridcell` and certain `gridcell` related ARIA roles and properties have poor support with assistive technologies. If at all possible, use [HTML table markup](/en-US/docs/Web/HTML/Element/table) in their place.
 
 ## Best practices
 

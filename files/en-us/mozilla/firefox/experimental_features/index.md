@@ -143,6 +143,48 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
+### Height & Width attributes for `<source>`
+
+HTML attributes for [height](/en-US/docs/Web/HTML/Element/source#attr-height) & [width](/en-US/docs/Web/HTML/Element/source#attr-width) ({{bug(1694741)}}).
+
+These attributes can be used in {{HTMLElement("source")}} elements when they are children of {{HTMLElement("picture")}} elements and help to eliminate layout shift.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>106</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.picture_source_dimension_attributes.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -433,9 +475,11 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 ### Scroll-linked animations
 
 A scroll-linked animation is one in which the animation depends on the scroll position of a scrollbar instead of time, or some other dimension.
-The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular container can be used as the source for a scroll-linked animation.
-The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the `animation-timeline` property to the `scroll-timeline-name`.
-For more information, see {{bug(1676791)}} and {{bug(1754897)}}.
+The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-linked animation.
+The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the {{cssxref('animation-timeline')}} property to the name value that was set in `scroll-timeline-name`.
+
+You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
+For more information, see {{bug(1676791)}}, {{bug(1754897)}}, and {{bug(1737918)}}.
 
 <table>
   <thead>
@@ -448,22 +492,22 @@ For more information, see {{bug(1676791)}} and {{bug(1754897)}}.
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
@@ -596,48 +640,6 @@ The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) propert
   </tbody>
 </table>
 
-### Trigonometric functions
-
-CSS [trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) allow for making calculations relating to geometry.
-The functions available are `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()`.
-See {{bug(1774589)}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>105</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.trig.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### @font-face src feature checking
 
 The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
@@ -675,48 +677,6 @@ See {{bug(1715546)}} for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.font-tech.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### contain-intrinsic-size property
-
-The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) property specifies the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
-This is needed when the [`contain: size`](/en-US/docs/Web/CSS/contain) or [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) properties are applied, so that the user agent can determine the size of the element without needing to render its child elements.
-({{bug(1597529)}}).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.contain-intrinsic-size.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2011,6 +1971,7 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
 ### CSP "script-src-elem" and "script-src-attr" directives
 
 The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
+
 <table>
   <thead>
     <tr>

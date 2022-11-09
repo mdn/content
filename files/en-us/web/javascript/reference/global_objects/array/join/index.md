@@ -59,11 +59,11 @@ the array four times: using the default separator, then a comma and a space, the
 and an empty string.
 
 ```js
-const a = ['Wind', 'Water', 'Fire'];
-a.join();      // 'Wind,Water,Fire'
-a.join(', ');  // 'Wind, Water, Fire'
-a.join(' + '); // 'Wind + Water + Fire'
-a.join('');    // 'WindWaterFire'
+const a = ["Wind", "Water", "Fire"];
+a.join(); // 'Wind,Water,Fire'
+a.join(", "); // 'Wind, Water, Fire'
+a.join(" + "); // 'Wind + Water + Fire'
+a.join(""); // 'WindWaterFire'
 ```
 
 ### Using join() on sparse arrays
@@ -72,7 +72,7 @@ a.join('');    // 'WindWaterFire'
 
 ```js
 console.log([1, , 3].join()); // '1,,3'
-console.log([1, undefined, 3].join()); // '1,,3' 
+console.log([1, undefined, 3].join()); // '1,,3'
 ```
 
 ### Calling join() on non-array objects

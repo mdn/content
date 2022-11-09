@@ -48,9 +48,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
 
+Or any other operation that invokes the `[[GetOwnProperty]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - `getOwnPropertyDescriptor()` must return an object or `undefined`.
 - A property cannot be reported as non-existent, if it exists as a non-configurable own property of the target object.
@@ -66,15 +68,19 @@ If the following invariants are violated, the proxy will throw a {{jsxref("TypeE
 The following code traps {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ```js
-const p = new Proxy({ a: 20}, {
-  getOwnPropertyDescriptor(target, prop) {
-    console.log(`called: ${prop}`);
-    return { configurable: true, enumerable: true, value: 10 };
-  },
-});
+const p = new Proxy(
+  { a: 20 },
+  {
+    getOwnPropertyDescriptor(target, prop) {
+      console.log(`called: ${prop}`);
+      return { configurable: true, enumerable: true, value: 10 };
+    },
+  }
+);
 
-console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
-                                                            // 10
+console.log(Object.getOwnPropertyDescriptor(p, "a").value);
+// "called: a"
+// 10
 ```
 
 The following code violates an invariant.
@@ -88,7 +94,7 @@ const p = new Proxy(obj, {
   },
 });
 
-Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
+Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 ```
 
 ## Specifications

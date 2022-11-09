@@ -35,7 +35,7 @@ class name [extends otherName] {
 The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
 `constructor` method is optional.
 
-Class declarations are not {{Glossary("Hoisting", "hoisted")}}
+Class declarations behave like [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) and are not {{Glossary("Hoisting", "hoisted")}}
 (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Examples

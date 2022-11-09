@@ -204,7 +204,7 @@ try {
   console.error("outer", ex.message);
 }
 
-// Output:
+// Logs:
 // "finally"
 // "outer" "oops"
 ```
@@ -225,7 +225,7 @@ try {
   console.error("outer", ex.message);
 }
 
-// Output:
+// Logs:
 // "inner" "oops"
 // "finally"
 ```
@@ -246,7 +246,7 @@ try {
   console.error("outer", ex.message);
 }
 
-// Output:
+// Logs:
 // "inner" "oops"
 // "finally"
 // "outer" "oops"
@@ -281,7 +281,7 @@ This includes exceptions thrown inside of the `catch`-block:
   }
 })();
 
-// Output:
+// Logs:
 // "inner" "oops"
 // "finally"
 ```

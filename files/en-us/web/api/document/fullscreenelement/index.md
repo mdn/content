@@ -30,7 +30,7 @@ strict mode); the setter is a no-operation and it will be ignored.
 ## Value
 
 The {{domxref("Element")}} object that's currently in fullscreen mode; if fullscreen
-mode isn't currently in use by the `document`>, the returned
+mode isn't currently in use by the `document`, the returned
 value is `null`.
 
 ## Examples

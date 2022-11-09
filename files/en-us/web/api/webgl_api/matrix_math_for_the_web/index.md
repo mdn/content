@@ -273,7 +273,7 @@ let rotateZMatrix = [
 
 [View on JSFiddle](https://jsfiddle.net/tatumcreative/9vr2dorz/)
 
-![](matrix-rotation.jpg)
+![An example of matrix rotation.](matrix-rotation.jpg)
 
 Here are a set of functions that return rotation matrices for rotating around each of the three axes. One big note is that there is no perspective applied, so it might not feel very 3D yet. The flatness is equivalent to when a camera zooms in really close onto an object in the distance — the sense of perspective disappears.
 

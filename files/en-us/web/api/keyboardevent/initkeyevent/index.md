@@ -23,9 +23,9 @@ tags:
 
 The **`KeyboardEvent.initKeyEvent()`** method is used to
 initialize the value of an event created using
-{{domxref("document.createEvent")}}`("KeyboardEvent")`. Events initialized in
+{{domxref("document.createEvent")}} `("KeyboardEvent")`. Events initialized in
 this way must have been created with the
-{{domxref("document.createEvent")}}`("KeyboardEvent")` method.
+{{domxref("document.createEvent")}} `("KeyboardEvent")` method.
 `initKeyEvent()` must be called to set the event before it is [dispatched](/en-US/docs/Web/API/EventTarget/dispatchEvent).
 
 ## Syntax

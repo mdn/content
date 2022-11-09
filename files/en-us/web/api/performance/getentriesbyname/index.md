@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Performance.getEntriesByName
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
 The **`getEntriesByName()`** method returns a list of
 {{domxref("PerformanceEntry")}} objects for the given _name_ and _type_.

@@ -38,7 +38,7 @@ Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-exam
 
 We'll be focusing on the latter example in this article, which looks like:
 
-![](channel-messaging-demo.png)
+![Demo with "Hello this is my demo" sent as five separate messages. The messages are displayed as a bulleted list.](channel-messaging-demo.png)
 
 ## Creating the channel
 
