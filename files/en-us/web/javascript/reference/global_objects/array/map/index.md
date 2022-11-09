@@ -33,10 +33,10 @@ map(callbackFn)
 map(callbackFn, thisArg)
 
 // Inline callback function
-map(function(element) { /* … */ })
-map(function(element, index) { /* … */ })
-map(function(element, index, array){ /* … */ })
-map(function(element, index, array) { /* … */ }, thisArg)
+map(function (element) { /* … */ })
+map(function (element, index) { /* … */ })
+map(function (element, index, array) { /* … */ })
+map(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -53,10 +53,10 @@ map(function(element, index, array) { /* … */ }, thisArg)
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array `map` was called upon.
+      - : The array `map()` was called upon.
 
 - `thisArg` {{optional_inline}}
-  - : Value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -64,34 +64,19 @@ A new array with each element being the result of the callback function.
 
 ## Description
 
-`map` calls a provided `callbackFn` function
-**once for each element** in an array, in order, and constructs a new array
-from the results.
+The `map()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array and constructs a new array from the results.
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-`callbackFn` is invoked with three arguments: the value of the
-element, the index of the element, and the array object being mapped.
+The `map()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this`. However, the function provided as `callbackFn` can mutate the array. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-If a `thisArg` parameter is provided, it will be used as callback's
-`this` value. Otherwise, the value {{jsxref("undefined")}} will be used as
-its `this` value. The `this` value ultimately observable by
-`callbackFn` is determined according to
-[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `map()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
 
-The `map()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this`.
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The `map()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
-
-The range of elements processed by `map` is set before the first invocation
-of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes
-outside the range, will not be visited by `callbackFn`.
-If existing elements of the array are changed after the call to `map`, their
-value will be the value at the time `callbackFn` visits them.
-Elements that are deleted after the call to `map` begins and before being
-visited are not visited.
-
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 Since `map` builds a new array, calling it without using the returned
 array is an anti-pattern; use {{jsxref("Array/forEach", "forEach")}} or
