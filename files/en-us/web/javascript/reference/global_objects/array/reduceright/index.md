@@ -138,7 +138,7 @@ The `array` parameter never changes through the process — it's always `[0, 1, 
 
 ### How reduceRight() works with an initial value
 
-Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed the second argument to `reduceRight()`:
+Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed as the second argument to `reduceRight()`:
 
 ```js
 [0, 1, 2, 3, 4].reduceRight(

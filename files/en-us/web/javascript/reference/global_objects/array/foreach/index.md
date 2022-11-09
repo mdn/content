@@ -80,7 +80,7 @@ There is no way to stop or break a `forEach()` loop other than by throwing an ex
 
 Early termination may be accomplished with looping statements like [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in). Array methods like {{jsxref("Array/every", "every()")}}, {{jsxref("Array/some", "some()")}}, {{jsxref("Array/find", "find()")}}, and {{jsxref("Array/findIndex", "findIndex()")}} also stops iteration immediately when further iteration is not necessary.
 
-`forEach()` expects a synchronous function — it does not wait for promises. Make sure you are aware of the implications while using promises (or async functions) as `forEach` callback.
+`forEach()` expects a synchronous function — it does not wait for promises. Make sure you are aware of the implications while using promises (or async functions) as `forEach` callbacks.
 
 ```js
 const ratings = [5, 4, 5];
