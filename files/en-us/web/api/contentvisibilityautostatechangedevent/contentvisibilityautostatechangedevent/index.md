@@ -23,7 +23,7 @@ new ContentVisibilityAutoStateChangedEvent(type, options)
 
 - `type`
   - : A string representing the type of event. In the case of `ContentVisibilityAutoStateChangedEvent` this is always `event`.
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
   - : An init object that contains the following properties:
     - `skipped`
       - : A boolean, which is set to `true` if the user agent is skipping the element's rendering, or `false` otherwise.
