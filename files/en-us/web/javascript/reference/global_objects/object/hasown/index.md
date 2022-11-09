@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Object.hasOwn
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
 If the property is inherited, or does not exist, the method returns `false`.
 
-> **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.
+> **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.prototype.hasOwnProperty()")}}.
 
 {{EmbedInteractiveExample("pages/js/object-hasown.html")}}
 
@@ -45,7 +45,7 @@ The method returns `false` if the property is inherited, or has not been declare
 Unlike the {{jsxref("Operators/in", "in")}} operator, this
 method does not check for the specified property in the object's prototype chain.
 
-It is recommended over {{jsxref("Object.hasOwnProperty()")}} because
+It is recommended over {{jsxref("Object.prototype.hasOwnProperty()")}} because
 it works for objects created using `Object.create(null)` and with objects that
 have overridden the inherited `hasOwnProperty()` method. While it is possible to
 workaround these problems by calling `Object.prototype.hasOwnProperty()` on an
@@ -165,7 +165,7 @@ if (Object.hasOwn(foo, 'prop')) {
 ## See also
 
 - [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.hasOwnProperty()")}}
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}

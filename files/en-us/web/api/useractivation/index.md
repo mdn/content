@@ -6,6 +6,7 @@ tags:
   - API
   - Interface
   - Reference
+  - Experimental
 browser-compat: api.UserActivation
 ---
 
@@ -24,7 +25,7 @@ See [Features gated by user activation](/en-US/docs/Web/Security/User_activation
 
 This API is only available in the window context and not exposed to workers.
 
-## Properties
+## Instance properties
 
 - {{domxref("UserActivation.hasBeenActive")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Indicates whether the current window has sticky user activation.

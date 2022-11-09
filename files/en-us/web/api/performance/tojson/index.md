@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Performance.toJSON
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{APIRef("Performance API")}}
 
 The **`toJSON()`** method of the {{domxref("Performance")}}
 interface is a standard serializer: it returns a JSON representation of the performance

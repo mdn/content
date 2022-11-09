@@ -13,7 +13,7 @@ tags:
 browser-compat: api.TaskAttributionTiming.containerType
 ---
 
-{{APIRef("Long Tasks")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`containerType`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the type of frame container, one

@@ -15,12 +15,12 @@ browser-compat: api.MimeTypeArray
 
 The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by {{domxref("Navigator.mimeTypes")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("MimeTypeArray.length")}} {{Deprecated_Inline}}
   - : The number of items in the array.
 
-## Methods
+## Instance methods
 
 - {{domxref("MimeTypeArray.item()")}} {{Deprecated_Inline}}
   - : Returns the `MimeType` object with the specified index.

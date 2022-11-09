@@ -15,8 +15,6 @@ The **`mscandidatewindowshow`** event is thrown immediately after the Input Meth
 
 This proprietary method is specific to Internet Explorer.
 
-> **Note:** Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.
-
 This event fires after the positioning information of the IME candidate window has been determined. You can obtain the positioning information using the [getCandidateWindowClientRect](/en-US/docs/Web/API/getCandidateWindowClientRect) method, and adjust your layout as needed to avoid any occlusions with the IME candidate window.
 
 Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).

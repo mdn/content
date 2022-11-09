@@ -59,7 +59,7 @@ powerful tool for asynchronous programming as they mitigate — if not entirely 
 However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
 
-Calling a generator function does not execute its body immediately; an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)
+Calling a generator function does not execute its body immediately; a [generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
 object for the function is returned instead. When the iterator's `next()`
 method is called, the generator function's body is executed until the first
 {{jsxref("Operators/yield", "yield")}} expression, which specifies the value to be
@@ -81,6 +81,8 @@ When a generator is finished, subsequent `next()` calls will not execute any
 of that generator's code, they will just return an object of this form:
 `{value: undefined, done: true}`.
 
+`function*` declarations are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope.
+
 ## Examples
 
 ### Simple example
@@ -99,7 +101,7 @@ console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
-// ...
+// …
 ```
 
 ### Example with yield\*

@@ -73,7 +73,7 @@ An `unsigned short`. Possible values are:
 
 ## Examples
 
-This example will listen for audio data to be loaded for the element \`example\`. It will
+This example will listen for audio data to be loaded for the element `example`. It will
 then check if at least the current playback position has been loaded. If it has, the
 audio will play.
 

@@ -17,11 +17,11 @@ The **`SVGFEFuncAElement`** interface corresponds to the {{SVGElement("feFuncA")
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface not provide any specific properties, but inherits properties from its parent interface, {{domxref("SVGComponentTransferFunctionElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGComponentTransferFunctionElement")}}._
 

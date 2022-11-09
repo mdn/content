@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Number
 
 {{JSRef}}
 
-**`Number`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate numbers like `37` or `-9.25`.
+**`Number`** values represent floating-point numbers like `37` or `-9.25`.
 
 The `Number` constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the `Number()` function.
 
@@ -75,7 +75,7 @@ Many built-in operations that expect numbers first coerce their arguments to num
   - [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are not allowed.
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first converted to a primitive by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
 
 There are two ways to achieve nearly the same effect in JavaScript.
 
@@ -176,7 +176,7 @@ const notANum = Number.NaN;
 The following example shows the minimum and maximum integer values that can be represented as `Number` object.
 
 ```js
-const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9007199254740991
+const biggestInt = Number.MAX_SAFE_INTEGER; // (2**53 - 1) => 9007199254740991
 const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9007199254740991
 ```
 

@@ -9,7 +9,7 @@ tags:
 browser-compat: html.elements.ul
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<ul>`** [HTML](/en-US/docs/Web/HTML) element represents an unordered list of items, typically rendered as a bulleted list.
 

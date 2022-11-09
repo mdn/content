@@ -90,7 +90,7 @@ Starting with Firefox 30, the error stack of code in `Function()` and `eval()` c
 
 ```js
 try {
-  new Function('throw new Error()')();
+  new Function("throw new Error()")();
 } catch (e) {
   console.log(e.stack);
 }

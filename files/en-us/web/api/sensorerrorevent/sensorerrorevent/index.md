@@ -30,7 +30,7 @@ new SensorErrorEvent(type, options)
 ### Parameters
 
 - `type`
-  - :A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `error`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:

@@ -55,10 +55,10 @@ uint.toLocaleString();
 // if run in a de-DE locale
 // "2.000,500,8.123,12,4.212"
 
-uint.toLocaleString('en-US');
+uint.toLocaleString("en-US");
 // "2,000,500,8,123,12,4,212"
 
-uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+uint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
 ```
 

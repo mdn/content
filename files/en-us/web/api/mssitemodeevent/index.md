@@ -16,7 +16,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 MSSiteModeEvent
 
-### Methods
+### Instance methods
 
 <table class="no-markdown">
   <thead>
@@ -52,7 +52,7 @@ MSSiteModeEvent
   </tbody>
 </table>
 
-### Properties
+### Instance properties
 
 <table class="no-markdown">
   <thead>

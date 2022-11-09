@@ -22,11 +22,11 @@ The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fe
 - {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}} {{Experimental_Inline}}
   - : Creates a new `BackgroundFetchUIEvent` object. This constructor is not typically used, as the browser creates these objects itself for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events.
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}._
 
-## Methods
+## Instance methods
 
 - {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
   - : Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.

@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.wbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
 
@@ -40,7 +40,7 @@ The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opp
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        It is an {{Glossary("void element")}}; it must have a start
+        It is a {{Glossary("void element")}}; it must have a start
         tag, but must not have an end tag.
       </td>
     </tr>

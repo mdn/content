@@ -18,12 +18,12 @@ The **`TextTrackCueList`** array-like object represents a dynamically updating l
 
 This interface has no constructor. Retrieve an instance of this object with {{domxref('TextTrack.cues')}} which returns all of the cues in a {{domxref("TextTrack")}} object.
 
-## Properties
+## Instance properties
 
 - {{domxref('TextTrackCueList.length')}} {{ReadOnlyInline}}
   - : An `unsigned long` that is the number of cues in the list.
 
-## Methods
+## Instance methods
 
 - {{domxref('TextTrackCueList.getCueById()')}}
   - : Returns the first {{domxref('TextTrackCue')}} object with the identifier passed to it.

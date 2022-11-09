@@ -10,7 +10,7 @@ browser-compat: svg.elements.metadata
 
 {{SVGRef}}
 
-The **`<metadata>`** [SVG](/en-US/docs/Web/SVG) element adds metadata to SVG content. Metadata is structured information about data. The contents of `<metadata>` should be elements from other {{Glossary("XML")}} {{Glossary("namespace", "namespaces")}} such as {{Glossary("RDF")}}, [FOAF](https://en.wikipedia.org/wiki/FOAF_\(ontology\)), etc.
+The **`<metadata>`** [SVG](/en-US/docs/Web/SVG) element adds metadata to SVG content. Metadata is structured information about data. The contents of `<metadata>` should be elements from other {{Glossary("XML")}} {{Glossary("namespace", "namespaces")}} such as {{Glossary("RDF")}}, [FOAF](<https://en.wikipedia.org/wiki/FOAF_(ontology)>), etc.
 
 ## Usage context
 

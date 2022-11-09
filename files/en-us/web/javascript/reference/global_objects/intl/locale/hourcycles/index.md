@@ -39,12 +39,12 @@ List supported hour cycles for a given `Locale`.
 
 ```js
 const arEG = new Intl.Locale("ar-EG");
-console.log(arEG.hourCycles); // logs ["h12"]
+console.log(arEG.hourCycles); // ["h12"]
 ```
 
 ```js
 const jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.hourCycles); // logs ["h23"]
+console.log(jaJP.hourCycles); // ["h23"]
 ```
 
 ## Specifications

@@ -18,7 +18,7 @@ browser-compat: api.RTCRtpReceiver
 
 The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) manages the reception and decoding of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpReceiver.track")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("MediaStreamTrack")}} associated with the current `RTCRtpReceiver` instance.
@@ -30,7 +30,12 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 - `rtcpTransport` {{deprecated_inline}}
   - : This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpReceiver.transport", "transport")}} property instead.
 
-## Methods
+## Static methods
+
+- {{domxref("RTCRtpReceiver.getCapabilities()")}}
+  - : Returns the most optimistic view of the capabilities of the system for receiving media of the given kind.
+
+## Instance methods
 
 - {{domxref("RTCRtpReceiver.getContributingSources()")}}
   - : Returns an array of {{domxref("RTCRtpContributingSource")}} instances for each unique CSRC (contributing source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
@@ -40,11 +45,6 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
   - : Returns a {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref("RTCStatsReport")}} which contains statistics about the incoming streams and their dependencies.
 - {{domxref("RTCRtpReceiver.getSynchronizationSources()")}}
   - : Returns an array including one {{domxref("RTCRtpSynchronizationSource")}} instance for each unique SSRC (synchronization source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
-
-## Static methods
-
-- {{domxref("RTCRtpReceiver.getCapabilities()")}}
-  - : Returns the most optimistic view of the capabilities of the system for receiving media of the given kind.
 
 ## Specifications
 

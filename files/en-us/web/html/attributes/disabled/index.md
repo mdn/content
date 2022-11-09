@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: disabled'
+title: "HTML attribute: disabled"
 slug: Web/HTML/Attributes/disabled
 tags:
   - Attribute
@@ -118,7 +118,7 @@ When form controls are disabled, many browsers will display them in a lighter, g
 </fieldset>
 ```
 
-{{EmbedLiveSample('Examples', 500, 300)}}
+{{EmbedLiveSample('Examples', 500, 450)}}
 
 ## Specifications
 

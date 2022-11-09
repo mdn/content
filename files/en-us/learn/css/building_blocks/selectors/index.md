@@ -69,9 +69,8 @@ h1 {
 
 I could also combine these into a selector list, by adding a comma between them.
 
-```css
-h1,
-.special {
+```css-nolint
+h1, .special {
   color: blue;
 }
 ```
