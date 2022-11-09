@@ -12,7 +12,7 @@ browser-compat: api.PerformanceEntry.toJSON
 
 {{APIRef("Performance API")}}
 
-The **`toJSON()`** method is a _serializer_; it returns a JSON representation of the {{domxref("PerformanceEntry","performance entry")}} object.
+The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEntry","performance entry", "", "no-code")}} object.
 
 ## Syntax
 

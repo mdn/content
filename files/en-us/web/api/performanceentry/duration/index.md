@@ -20,28 +20,26 @@ A {{domxref("DOMHighResTimeStamp")}} representing the duration of the {{domxref(
 
 The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
 
-- `element`
-  - : The `duration` is always `0`.
 - `event`
-  - : Indicates the time from the event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
+  - : The time from the event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
 - `first-input`
-  - : The `duration` is a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the time from the first input event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
-- `largest-contentful-paint`
-  - : The `duration` is always `0`.
+  - : The time from the first input event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
 - `longtask`
-  - : The `duration` is the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the elapsed time between the start and end of task, with a 1ms granularity.
-- `mark`
-  - : The `duration` is always `0`.
+  - : The elapsed time between the start and end of task, with a 1ms granularity.
 - `measure`
-  - : The `duration` is a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the measure.
+  - : The duration of the measure.
 - `navigation`
   - : The difference between the entry's {{domxref("PerformanceNavigationTiming.loadEventEnd", "loadEventEnd")}} and {{domxref("PerformanceEntry.startTime", "startTime")}} properties.
-- `paint`
-  - : The `duration` is always `0`.
 - `resource`
   - : The entry's {{domxref("PerformanceResourceTiming/responseEnd", "responseEnd")}} value minus the entry's {{domxref("PerformanceEntry.startTime","startTime")}} value.
+
+For the following entry types, `duration` is not applicable, and in this case the value is always `0`:
+
+- `element`
+- `largest-contentful-paint`
+- `mark`
+- `paint`
 - `taskattribution`
-  - : The `duration` is always `0`.
 
 ## Examples
 
