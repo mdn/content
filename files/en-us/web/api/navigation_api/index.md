@@ -47,7 +47,7 @@ Once a navigation is initiated, and your `intercept()` handler is called, a {{do
 
 When the `intercept()` handler function's promise fulfills, the `Navigation` object's {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, allowing you to run cleanup code after a successful navigation has completed. If it rejects, meaning the navigation has failed, {{domxref("Navigation/navigateerror_event", "navigateerror")}} fires instead, allowing you to gracefully handle the failure case. There is also a {{domxref("NavigationTransition.finished", "finished")}} property on the `NavigationTransition` object, which fullfills or rejects at the same time as the aforementioned events are fired, providing another path for handling the success and failure cases.
 
-> **Note:** Previous to the Navigation API being available, to do something similar you'd have to listen for all click events on links, run `e.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
+> **Note:** Before the Navigation API was available, to do something similar you'd have to listen for all click events on links, run `e.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
 
 ### Programmatically updating and traversing the navigation history
 
