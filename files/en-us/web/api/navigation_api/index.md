@@ -22,7 +22,7 @@ browser-compat:
 
 {{seecompattable}}{{DefaultAPISidebar("Navigation API")}}
 
-The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also introspect an application's history entries. This is a successor to previous web platform features such as [The History API](/en-US/docs/Web/API/History_API) and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the [History API](/en-US/docs/Web/API/History_API) and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
 
 ## Concepts and Usage
 
