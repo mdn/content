@@ -6,6 +6,7 @@ tags:
   - API
   - Constructor
   - ContentVisibilityAutoStateChangedEvent
+  - content-visibility
   - CSS
   - CSS Containment
   - Experimental
@@ -13,7 +14,6 @@ tags:
   - Paint
   - Reference
   - Style
-  - Visibility
   - Web
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
 ---

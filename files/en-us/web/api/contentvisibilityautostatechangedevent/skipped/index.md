@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 tags:
   - API
   - ContentVisibilityAutoStateChangedEvent
+  - content-visibility
   - CSS
   - CSS Containment
   - Experimental
@@ -14,7 +15,6 @@ tags:
   - Reference
   - skipped
   - Style
-  - Visibility
   - Web
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.skipped
 ---

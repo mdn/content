@@ -5,6 +5,7 @@ page-type: web-api-interface
 tags:
   - API
   - ContentVisibilityAutoStateChangedEvent
+  - content-visibility
   - CSS
   - CSS Containment
   - Event
@@ -15,14 +16,13 @@ tags:
   - Paint
   - Reference
   - Style
-  - Visibility
   - Web
 browser-compat: api.contentvisibilityautostatechanged_event
 ---
 
 {{APIRef("ContentVisibilityAutoStateChangedEvent")}}{{seecompattable}}
 
-The **`contentvisibilityautostatechanged`** global event fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when its rendering requirements change, i.e. its content starts or stops being rendered.
+The **`contentvisibilityautostatechanged`** global event fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when its rendering requirements change, i.e. its content starts or stops [skipping its contents](https://www.w3.org/TR/css-contain-2/#skips-its-contents).
 
 This occurs when:
 
