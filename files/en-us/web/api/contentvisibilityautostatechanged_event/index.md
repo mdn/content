@@ -28,7 +28,7 @@ This occurs when:
 
 - The element appears in, or disappears from, the viewport, or a user-agent-defined margin around the viewport (the spec recommends 50% of the viewport dimensions, to give the app time to prepare for when the element visibility changes).
 - The element or its contents receive focus or stop being focused.
-- The element or its contents are selected or stop being selected, for example manually by dragging over the text with mouse cursor, or by some other highlight operation as described in [Selecting highlighted contents](https://www.w3.org/TR/css-pseudo-4/#highlight-selectors).
+- The element or its contents are selected or stop being selected; for example, manually, by dragging over the text with mouse cursor, or by some other highlight operation as described in [Selecting highlighted contents](https://www.w3.org/TR/css-pseudo-4/#highlight-selectors).
 - The element or its contents are placed in or removed from the top layer.
 
 > **Note:** In real terms, "stops being rendered" means that the user agent skips an element's rendering (including layout and painting) until it is actually needed, making preceding page rendering much faster.
