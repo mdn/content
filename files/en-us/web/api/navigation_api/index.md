@@ -24,7 +24,7 @@ browser-compat:
 
 The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the [History API](/en-US/docs/Web/API/History_API) and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
 
-## Concepts and Usage
+## Concepts and usage
 
 In SPAs, the page template tends to stay the same during usage, and the content is dynamically rewritten as the user visits different pages or features. As a result, only one distinct page is loaded in the browser, which breaks the expected user experience of navigating back and forth between different locations in the viewing history. This problem can be solved to a degree via [The History API](/en-US/docs/Web/API/History_API), but it is not designed for the needs of SPAs. The Navigation API aims to bridge that gap.
 
