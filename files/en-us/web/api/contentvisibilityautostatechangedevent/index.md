@@ -21,7 +21,7 @@ browser-compat: api.ContentVisibilityAutoStateChangedEvent
 
 {{APIRef}}{{seecompattable}}
 
-The **`ContentVisibilityAutoStateChangedEvent`** interface of the [CSS Containment Module Level 2](https://www.w3.org/TR/css-contain-2/#content-visibility-auto-state-changed) is the event object for the {{domxref("contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event, which fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when its rendering requirements change, i.e. its content starts or stops [skipping its contents](https://www.w3.org/TR/css-contain-2/#skips-its-contents).
+The **`ContentVisibilityAutoStateChangedEvent`** interface of the [CSS Containment Module Level 2](https://www.w3.org/TR/css-contain-2/#content-visibility-auto-state-changed) is the event object for the {{domxref("contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event, which fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when its rendering requirements change; i.e. its content starts or stops [skipping its contents](https://www.w3.org/TR/css-contain-2/#skips-its-contents).
 
 This occurs when:
 
