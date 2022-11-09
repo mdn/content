@@ -1,7 +1,7 @@
 ---
 title: contentvisibilityautostatechanged event
 slug: Web/API/contentvisibilityautostatechanged_event
-page-type: web-api-interface
+page-type: web-api-event
 tags:
   - Experimental
   - Event
