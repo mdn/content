@@ -17,7 +17,7 @@ A `!` delimiter followed by the `important` keyword marks the declaration as imp
 
 To mark a declaration important, add the _important flag_ (`!important`) after the value in the declaration. While white space is allowed between the delimiter and the keyword, the flag is generally written as `!important` without any white space.
 
-```css
+```css-nolint
 selector {
   property: value; /* normal declaration */
   property: value !important; /* important declaration (standard) */
