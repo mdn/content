@@ -17,30 +17,23 @@ The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container changes size.
 
+An optional `<container-name>` can be provided which filters the set of query containers considered to just those with a matching query container name.
+Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
+
+## Syntax
+
 ```css
 @container (width > 400px) {
   h2 {
     font-size: 1.5em;
   }
 }
-```
 
-An optional `<container-name>` can be provided which filters the set of query containers considered to just those with a matching query container name.
-Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
-
-```css
+/* Specifying a container name */
 @container sidebar (width > 400px) {
   h2 {
     font-size: 1.5em;
   }
-}
-```
-
-## Formal syntax
-
-```
-@container <container-name> <container-condition> {
-  <container-queries>
 }
 ```
 

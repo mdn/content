@@ -102,6 +102,27 @@ We can then target this containment context using the `@container` at-rule:
 }
 ```
 
+### Shorthand container syntax
+
+The explicit way to create a container context using `container-type` and `container-name` looks like the following:
+
+```css
+.container {
+  container-type: inline-size;
+  container-name: sidebar;
+}
+```
+
+The shorthand way of declaring a containment context is to use the `contain` property:
+
+```css
+.container {
+  container: sidebar inline-size;
+}
+```
+
+For more information on this property, see the {{Cssxref("container")}} reference.
+
 ## Container query length units
 
 When applying styles to a container using container queries, you can use container query length units.
@@ -152,9 +173,10 @@ If we want to use a single-column layout for devices with a smaller viewport, we
 ## See also
 
 - {{Cssxref("@container")}}
-- {{Cssxref("contain")}}
+- {{Cssxref("container")}}
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
+- {{Cssxref("contain")}}
 - {{cssxref("content-visibility")}}
 - [Media Queries](/en-US/docs/Web/CSS/Media_Queries)
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)

@@ -1,6 +1,6 @@
 ---
 title: Container shorthand
-slug: Web/CSS/container-shorthand
+slug: Web/CSS/container
 page-type: guide
 tags:
   - CSS
@@ -69,6 +69,6 @@ You can then target that container by adding the name to the container query:
 ## See also
 
 - {{Cssxref("@container")}}
-- {{Cssxref("contain")}}
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
+- {{Cssxref("contain")}}
