@@ -150,12 +150,11 @@
       "properties": ["ServiceWorkerRegistration.index"],
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
-    "ContentVisibilityAutoStateChangedEvent": {
-      "overview": ["ContentVisibilityAutoStateChangedEvent"],
-      "interfaces": [],
+    "CSS Containment": {
+      "interfaces": ["ContentVisibilityAutoStateChangedEvent"],
       "methods": [],
       "properties": [],
-      "events": []
+      "events": ["Element: contentvisibilityautostatechanged"]
     },
     "Console API": {
       "overview": ["Console API"],

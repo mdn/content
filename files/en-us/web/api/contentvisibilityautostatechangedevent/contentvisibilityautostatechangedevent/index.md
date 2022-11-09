@@ -9,7 +9,7 @@ tags:
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
 ---
 
-{{APIRef}}{{seecompattable}}
+{{APIRef("CSS Containment")}}{{seecompattable}}
 
 The **`ContentVisibilityAutoStateChangedEvent()`** constructor creates a new {{domxref("ContentVisibilityAutoStateChangedEvent")}} object instance.
 
@@ -26,11 +26,11 @@ new ContentVisibilityAutoStateChangedEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that contains the following properties:
     - `skipped`
-      - : A boolean, which is set to `true` if the user agent is skipping the element's rendering, or `false` otherwise.
+      - : A boolean, which is set to `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
 
 ## Examples
 
-A developer would not use this constructor manually. A new `ContentVisibilityAutoStateChangedEvent` object is constructed when a handler is invoked as a result of the {{domxref("contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event firing.
+A developer would not use this constructor manually. A new `ContentVisibilityAutoStateChangedEvent` object is constructed when a handler is invoked as a result of the {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event firing.
 
 ```js
 canvasElem.addEventListener('contentvisibilityautostatechanged', event => {
@@ -48,7 +48,7 @@ canvasElem.addEventListener('contentvisibilityautostatechanged', event => {
 
 ## See also
 
-- The {{domxref("contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
+- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property

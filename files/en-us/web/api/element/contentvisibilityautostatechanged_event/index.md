@@ -1,35 +1,32 @@
 ---
-title: ContentVisibilityAutoStateChangedEvent
-slug: Web/API/ContentVisibilityAutoStateChangedEvent
-page-type: web-api-interface
+title: "Element: contentvisibilityautostatechanged event"
+slug: Web/API/Element/contentvisibilityautostatechanged_event
+page-type: web-api-event
 tags:
   - Experimental
-  - Interface
+  - Event
   - Reference
-browser-compat: api.ContentVisibilityAutoStateChangedEvent
+browser-compat: api.element.contentvisibilityautostatechanged_event
 ---
 
 {{APIRef("CSS Containment")}}{{seecompattable}}
 
-The **`ContentVisibilityAutoStateChangedEvent`** interface of the [CSS Containment Module Level 2](https://www.w3.org/TR/css-contain-2/#content-visibility-auto-state-changed) is the event object for the {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event, which fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+The **`contentvisibilityautostatechanged`** event fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
 
 This means that the user agent skips an element's rendering (including layout and painting) until it is needed, making page rendering much faster.
 
 The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event provides a way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power. It should be noted that, even when hidden from view, element contents will remain semantically relevant (e.g. to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
 
-{{InheritanceDiagram}}
+## Syntax
 
-## Constructor
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-- {{domxref("ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent", "ContentVisibilityAutoStateChangedEvent()")}}
-  - : Creates a new `ContentVisibilityAutoStateChangedEvent` object instance.
+```js
+addEventListener("contentvisibilityautostatechanged", (event) => {});
+contentvisibilityautostatechanged = (event) => {};
+```
 
-## Instance properties
-
-_Inherits properties from its parent, {{DOMxRef("Event")}}._
-
-- {{domxref("ContentVisibilityAutoStateChangedEvent.skipped", "skipped")}} {{ReadOnlyInline}}
-  - : Returns `true` if the user agent is skipping the element's rendering, or `false` otherwise.
+> **Note:** The event object is of type {{domxref("ContentVisibilityAutoStateChangedEvent")}}.
 
 ## Examples
 
@@ -49,7 +46,7 @@ function stateChanged(event) {
 
 // Call this when the canvas updates need to start.
 function startCanvasUpdates(canvas) {
-  // …
+  // … 
 }
 
 // Call this when the canvas updates need to stop.
@@ -68,7 +65,7 @@ function stopCanvasUpdates(canvas) {
 
 ## See also
 
-- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
+- {{domxref("ContentVisibilityAutoStateChangedEvent")}}
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property

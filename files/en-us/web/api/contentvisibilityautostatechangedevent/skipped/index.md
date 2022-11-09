@@ -19,14 +19,14 @@ tags:
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.skipped
 ---
 
-{{ APIRef }}{{seecompattable}}
+{{APIRef("CSS Containment")}}{{seecompattable}}
 
 The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangedEvent") }} interface
-returns `true` if the user agent is skipping the element's rendering, or `false` otherwise.
+returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
 
 ## Value
 
-A boolean. Returns `true` if the user agent is skipping the element's rendering or `false` otherwise.
+A boolean. Returns `true` if the user agent skips the element's contents, or `false` otherwise.
 
 ## Examples
 
@@ -53,6 +53,7 @@ function startCanvasUpdates(canvas) {
 function stopCanvasUpdates(canvas) {
   // …
 }
+```
 
 ## Specifications
 
@@ -64,7 +65,7 @@ function stopCanvasUpdates(canvas) {
 
 ## See also
 
-- The {{domxref("contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
+- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property
