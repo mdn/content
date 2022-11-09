@@ -15,7 +15,7 @@ tags:
 
 A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.
 
-Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function. Imagine a function, `createAudioFileAsync()`, which asynchronously generates a sound file given a configuration record and two callback functions, one called if the audio file is successfully created, and the other called if an error occurs.
+Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function. Imagine a function, `createAudioFileAsync()`, which asynchronously generates a sound file given a configuration record and two callback functions: one called if the audio file is successfully created, and the other called if an error occurs.
 
 Here's some code that uses `createAudioFileAsync()`:
 
@@ -62,9 +62,9 @@ const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
 ```
 
-This second promise (`promise2`) represents the completion not just of `doSomething()`, but also of the `successCallback` or `failureCallback` you passed in, which can be other asynchronous functions returning a promise. When that's the case, any callbacks added to `promise2` get queued behind the promise returned by either `successCallback` or `failureCallback`.
+This second promise (`promise2`) represents the completion not just of `doSomething()`, but also of the `successCallback` or `failureCallback` you passed in — which can be other asynchronous functions returning a promise. When that's the case, any callbacks added to `promise2` get queued behind the promise returned by either `successCallback` or `failureCallback`.
 
-With this pattern, you can create longer chains of processing, where each promise represents the completion of one asynchronous step in the chain. In addition, the arguments to `then` are optional, and `catch(failureCallback)` is short for `then(null, failureCallback)`, so if your error handling code is the same for all steps, you can attach it to the end of the chain:
+With this pattern, you can create longer chains of processing, where each promise represents the completion of one asynchronous step in the chain. In addition, the arguments to `then` are optional, and `catch(failureCallback)` is short for `then(null, failureCallback)` — so if your error handling code is the same for all steps, you can attach it to the end of the chain:
 
 ```js
 doSomething()
@@ -175,7 +175,7 @@ doSomethingCritical()
   .catch((e) => console.error(`Critical failure: ${e.message}`));
 ```
 
-Note that the optional steps here are nested, not from the indentation, but from the placement of the outer `(` and `)` around them.
+Note that the optional steps here are nested — with the nesting caused not by the indentation, but by the placement of the outer `(` and `)` parentheses around the steps.
 
 The inner error-silencing `catch` handler only catches failures from `doSomethingOptional()` and `doSomethingExtraNice()`, after which the code resumes with `moreCriticalStuff()`. Importantly, if `doSomethingCritical()` fails, its error is caught by the final (outer) `catch` only, and does not get swallowed by the inner `catch` handler.
 
@@ -228,13 +228,13 @@ doSomething()
 // Forgot to terminate chain with a catch!
 ```
 
-The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken, or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run in parallel with them, likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
+The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run in parallel with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
 
 The second mistake is to nest unnecessarily, enabling the first mistake. Nesting also limits the scope of inner error handlers, which—if unintended—can lead to uncaught errors. A variant of this is the [promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.
 
 The third mistake is forgetting to terminate chains with `catch`. Unterminated promise chains lead to uncaught promise rejections in most browsers. See [error handling](#error_handling) below.
 
-A good rule-of-thumb is to always either return or terminate promise chains, and as soon as you get a new promise, return it immediately, to flatten things:
+A good rule of thumb is to always either return or terminate promise chains, and as soon as you get a new promise, return it immediately, to flatten things:
 
 ```js example-good
 doSomething()
@@ -299,7 +299,7 @@ async function foo() {
 }
 ```
 
-It builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) reference.
+It builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
 
 Promises solve a fundamental flaw with the callback pyramid of doom, by catching all errors, even thrown exceptions and programming errors. This is essential for functional composition of asynchronous operations.
 
@@ -340,7 +340,7 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 });
 ```
 
-If one of the promises in the array rejects, `Promise.all()` immediately rejects the returned promise and abort the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
+If one of the promises in the array rejects, `Promise.all()` immediately rejects the returned promise and aborts the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
 
 These methods all run promises in parallel — a sequence of promises are started simultaneously and do not wait for each other. Sequential composition is possible using some clever JavaScript:
 
@@ -391,7 +391,7 @@ for (const f of [func1, func2, func3]) {
 /* use last result (i.e. result3) */
 ```
 
-However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises in parallel so that they don't unnecessarily block each other if one's execution doesn't depend on another's result.
+However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises in parallel so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
 
 ## Creating a Promise around an old callback API
 
@@ -445,7 +445,7 @@ doSomething(() => {
 console.log(value); // 1 or 2?
 ```
 
-On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call them is delegated to the promise implementation, and both the API user and API developer automatically gets strong semantic guarantees, including:
+On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call the callbacks is delegated to the promise implementation, and both the API user and API developer automatically gets strong semantic guarantees, including:
 
 - Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/EventLoop#run-to-completion) of the JavaScript event loop.
 - These callbacks will be invoked even if they were added _after_ the success or failure of the asynchronous operation that the promise represents.
