@@ -36,9 +36,7 @@ ascent-override: 90%;
 
 ## Formal syntax
 
-```
-normal | <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 
