@@ -859,19 +859,6 @@
       "properties": ["Window.navigation"],
       "events": []
     },
-    "Navigation Timing": {
-      "overview": ["Navigation timing API"],
-      "guides": ["/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing"],
-      "interfaces": [
-        "Performance",
-        "PerformanceNavigation",
-        "PerformanceTiming",
-        "PerformanceNavigationTiming"
-      ],
-      "methods": [],
-      "properties": ["performance_property"],
-      "events": []
-    },
     "Network Information API": {
       "overview": ["Network Information API"],
       "interfaces": ["NetworkInformation"],

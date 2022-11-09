@@ -17,7 +17,6 @@ tags:
 browser-compat:
   - api.Navigation
   - api.NavigateEvent
-  - api.Window.navigation
 ---
 
 {{seecompattable}}{{DefaultAPISidebar("Navigation API")}}
@@ -51,9 +50,9 @@ When the `intercept()` handler function's promise fulfills, the `Navigation` obj
 
 ### Programmatically updating and traversing the navigation history
 
-As the user navigates through your application, each new location navigated to results in the creation of a navigation history entry. Each history entry is represented by a distinct {{domxref("NavigationHistoryEntry")}} object instance. These contain several properties such as the entry's key, URL, and state information. You can get the entry that the user is currently on right now using {{domxref("Navigation.currentEntry")}}, and an array of all existing history entries using {{domxref("Navigation.entries()")}}. Each `NavigationHistoryEntry` object has a {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} event, which fires when the entry is no longer part of the browser history. For example, if the user navigates back three times, then navigates forward to somewhere else, those three history entries will be disposed of).
+As the user navigates through your application, each new location navigated to results in the creation of a navigation history entry. Each history entry is represented by a distinct {{domxref("NavigationHistoryEntry")}} object instance. These contain several properties such as the entry's key, URL, and state information. You can get the entry that the user is currently on right now using {{domxref("Navigation.currentEntry")}}, and an array of all existing history entries using {{domxref("Navigation.entries()")}}. Each `NavigationHistoryEntry` object has a {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} event, which fires when the entry is no longer part of the browser history. For example, if the user navigates back three times, then navigates forward to somewhere else, those three history entries will be disposed of.
 
-> **Note:** The Navigation API only exposes history entries created directly by the application (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+> **Note:** The Navigation API only exposes history entries created directly by the application's top-level context (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
@@ -81,12 +80,16 @@ In some cases however, a state change will be independent from a navigation or r
 
 ### Limitations
 
-There are a few perceived limitations with the Navigation API, which may or may not be limiting depending on how your app is set up. Find out about these by reading [Modern client-side routing: the Navigation API > What's missing?](https://developer.chrome.com/docs/web-platform/navigation-api/#whats-missing)
+There are a few perceived limitations with the Navigation API:
+
+1. The current specification doesn't trigger {{domxref("Navigation.navigate_event", "navigate")}} on a page's first load. This might be fine for sites that use Server Side Rendering (SSR)—your server could return the correct initial state, which is the fastest way to get content to your users. But sites that leverage client-side code to create their pages may need an additional function to initialize the page.
+2. The Navigation API operates only within a single frame—the top-level page, or a single specific {{htmlelement("iframe")}}. This has some interesting implications that are [further documented in the spec](https://github.com/WICG/navigation-api#warning-backforward-are-not-always-opposites), but in practice, will reduce developer confusion. The previous History API has several confusing edge cases, like support for frames, which the Navigation API handles up-front.
+3. You can't currently use the Navigation API to programmatically modify or rearrange the history list. It might be useful to have a temporary state, for example navigating the user to a temporary modal that asks them for some information, then going back to the previous URL. In this case, you'd want to delete the temporary modal navigation entry so the user cannot mess up the application flow by hitting the forward button and opening it again.
 
 ## Interfaces
 
 - {{domxref("Navigation")}}
-  - : Allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, introspecting navigation history entries, and managing navigations as they happen.
+  - : Allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
 - {{domxref("NavigationDestination")}}
   - : Represents the destination being navigated to in the current navigation.
 - {{domxref("NavigationHistoryEntry")}}
@@ -98,7 +101,7 @@ There are a few perceived limitations with the Navigation API, which may or may 
 - {{domxref("NavigateEvent")}}
   - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. It provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
 
-## Extensions to the `Window` interface
+## Extensions to other interfaces
 
 - {{domxref("Window.navigation")}}
   - : Returns the current `window`'s associated {{domxref("Navigation")}} object. Entry point for the API.
