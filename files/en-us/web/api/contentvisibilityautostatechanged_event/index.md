@@ -22,7 +22,7 @@ This occurs when:
 
 > **Note:** In real terms, _stops being rendered_ means that the user agent skips an element's rendering (including layout and painting) until it is needed, making preceding page rendering much faster.
 
-This provides a way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power. It should be noted that, even when hidden from view, element contents will remain semantically relevant (e.g. to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
+This provides a way for an app's code to start or stop rendering processes (e.g., drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power. It should be noted that, even when hidden from view, element contents will remain semantically relevant (e.g., to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
 
 ## Syntax
 
