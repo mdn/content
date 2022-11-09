@@ -174,12 +174,11 @@ If we want to use a single-column layout for devices with a smaller viewport, we
 
 ## See also
 
-- {{Cssxref("@container")}}
-- {{Cssxref("container")}}
-- {{Cssxref("container-name")}}
-- {{Cssxref("container-type")}}
-- {{Cssxref("contain")}}
-- {{cssxref("content-visibility")}}
-- [Media Queries](/en-US/docs/Web/CSS/Media_Queries)
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
+- CSS {{Cssxref("@container")}} at-rule
+- CSS {{Cssxref("contain")}} property
+- CSS {{Cssxref("container")}} shorthand property
+- CSS {{Cssxref("container-name")}} property
+- CSS {{cssxref("content-visibility")}} property
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)
