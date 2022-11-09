@@ -31,7 +31,7 @@ The value of the property reflects that of the {{httpheader("Sec-GPC")}} HTTP he
 console.log(navigator.globalPrivacyControl);
 // prints "1" indicating user does not want their data shared or sold.
 // prints "0" if the user consents to their data being shared or sold.
-// prints "specified" if Sec-GPC header is not present.
+// prints "unspecified" if Sec-GPC header is not present.
 ```
 
 ## Specifications
