@@ -11826,10 +11826,6 @@
       "stephaniehobson"
     ]
   },
-  "MDN/Tools/Sample_server": {
-    "modified": "2020-09-30T16:47:39.734Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Sheppy", "jswisher"]
-  },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
@@ -11963,25 +11959,6 @@
       "Sheppy",
       "jpmedley",
       "wbamberg"
-    ]
-  },
-  "MDN/Yari": {
-    "modified": "2019-12-31T16:22:53.307Z",
-    "contributors": [
-      "peterbe",
-      "SphinxKnight",
-      "jswisher",
-      "9999472",
-      "ExE-Boss",
-      "wbamberg",
-      "chrisdavidmills",
-      "LikeVincent",
-      "xGabey",
-      "xgqfrms",
-      "jrdacosta2002",
-      "groovecoder",
-      "Sheppy",
-      "Nickolay"
     ]
   },
   "Mozilla": {
@@ -13583,10 +13560,6 @@
       "Makyen",
       "rolfedh"
     ]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/menus/createProperties": {
-    "modified": "2020-10-15T22:23:28.723Z",
-    "contributors": ["irenesmith"]
   },
   "Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement": {
     "modified": "2020-10-15T22:08:31.540Z",
@@ -72192,22 +72165,6 @@
       "JdeValk"
     ]
   },
-  "Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ": {
-    "modified": "2019-03-24T00:10:44.929Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "kscarfone",
-      "Jürgen Jeka",
-      "Sheppy",
-      "Sevenspade",
-      "thelwyn",
-      "Mgjbot",
-      "Raymond wu",
-      "Fredchat",
-      "Spanglerco"
-    ]
-  },
   "Web/API/atob": {
     "modified": "2020-10-15T21:05:14.914Z",
     "contributors": [
@@ -94238,19 +94195,6 @@
       "jswisher"
     ]
   },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-24T00:12:21.082Z",
-    "contributors": [
-      "teoli",
-      "trevorh",
-      "BenB",
-      "skimpax",
-      "caos30",
-      "kohei.yoshino",
-      "wbamberg",
-      "jswisher"
-    ]
-  },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2020-09-09T05:19:22.895Z",
     "contributors": [
@@ -106914,16 +106858,6 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol": {
-    "modified": "2020-03-12T19:39:59.552Z",
-    "contributors": [
-      "fscholz",
-      "subrahmanyabhat",
-      "KadirTopal",
-      "cughudson_1",
-      "arai"
-    ]
-  },
   "Web/JavaScript/Reference/Errors": {
     "modified": "2020-04-16T12:51:05.334Z",
     "contributors": ["fscholz", "wbamberg", "Sheppy", "chrisdavidmills"]
@@ -113138,10 +113072,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag": {
-    "modified": "2020-10-27T09:11:05.635Z",
-    "contributors": ["evilpie", "hamishwillee", "chrisdavidmills"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Intl/Collator": {
     "modified": "2020-12-07T14:51:37.568Z",
     "contributors": [
@@ -114102,19 +114032,6 @@
       "jameshkramer",
       "kdex",
       "arai"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:37:21.945Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "wbamberg",
-      "kdex",
-      "arai",
-      "nb1080",
-      "marcionitao",
-      "jpmedley"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Map/Map": {

@@ -272,6 +272,8 @@ console.log(contacts.size) // 1
 
 ## Instance properties
 
+- `Map.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Map.prototype.size")}}
   - : Returns the number of key/value pairs in the `Map` object.
 

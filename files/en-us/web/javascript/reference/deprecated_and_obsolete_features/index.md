@@ -197,7 +197,12 @@ Array comprehensions and generator comprehensions are removed.
 (for (x of iterable) for (y of iterable) x + y)
 ```
 
-The `Iterator` and `StopIteration` globals from the [legacy iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol) are obsolete.
+Firefox, prior to version 26, implemented another iterator protocol that is similar to the standard [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). An object is an legacy iterator when it implements a `next()` method, which produces a value on each call and throws a `StopIteration` object at the end of iteration. This legacy iterator protocol differs from the standard iterator protocol:
+
+- The value was returned directly as the return value of calls to `next()`, instead of the `value` property of the `IteratorResult` object.
+- Iteration termination was expressed by throwing a `StopIteration` object, instead of through the `done` property of the `IteratorResult` object.
+
+This feature, along with the `StopIteration` global constructor, was removed in Firefox 58+. For future-facing usages, consider using [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Sharp variables
 

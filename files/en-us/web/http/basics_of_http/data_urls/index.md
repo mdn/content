@@ -38,8 +38,8 @@ A few examples:
   - : base64-encoded version of the above
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
   - : An HTML document with `<h1>Hello, World!</h1>`
-- `data:text/html,<script>alert('hi');</script>`
-  - : An HTML document that executes a JavaScript alert. Note that the closing script tag is required.
+- `data:text/html,%3Cscript%3Ealert%28%27hi%27%29%3B%3C%2Fscript%3E`
+  - : An HTML document with `<script>alert('hi');</script>` that executes a JavaScript alert. Note that the closing script tag is required.
 
 ## Encoding data into base64 format
 

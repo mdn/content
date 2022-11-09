@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEventTiming.toJSON
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The **`toJSON()`** method is a _serializer_; it returns a JSON representation of the {{domxref("PerformanceEventTiming","performance event timing entry")}} object.
 
@@ -44,7 +44,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 // Register the observer for events
-observer.observe({entryTypes: ["event"]});
+observer.observe({type: "event", buffered: true});
 ```
 
 This would log a JSON object like so:

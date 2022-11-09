@@ -174,4 +174,6 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
 - [Canvas cheat sheet (2009)](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [Canvas cheat sheet (pdf) (2015)](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf)
+- [Canvas cheat sheet (pdf)](https://www.coding-dude.com/wp/wp-content/uploads/2020/09/HTML5-canvas-cheat-sheet.pdf)
 - [Canvas introduction by Apple (2013)](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

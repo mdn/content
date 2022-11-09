@@ -12,7 +12,7 @@ tags:
 browser-compat: api.Performance
 ---
 
-{{APIRef("High Resolution Time")}}
+{{APIRef("Performance API")}}
 
 The **`Performance`** interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API).
 

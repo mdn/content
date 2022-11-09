@@ -15,7 +15,7 @@ browser-compat: http.headers.Transfer-Encoding
 
 The **`Transfer-Encoding`** header specifies the form of encoding used to safely transfer the {{Glossary("Payload body","payload body")}} to the user.
 
-> **Note:** [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) doesn't support HTTP 1.1's chunked transfer encoding mechanism, as it provides its own, more efficient, mechanisms for data streaming.
+> **Note:** [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) disallows all uses of the Transfer-Encoding header other than the HTTP/2 specific: `"trailers"`. HTTP 2 provides its own more efficient mechanisms for data streaming than chunked transfer and forbids the use of the header. Usage of the header in HTTP/2 may likely result in a specific `protocol error` as HTTP/2 Protocol prohibits the use.
 
 `Transfer-Encoding` is a [hop-by-hop header](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers), that is applied to a message between two nodes, not to a resource itself.
 Each segment of a multi-node connection can use different `Transfer-Encoding` values.

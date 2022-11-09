@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.responseEnd
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`responseEnd`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives
