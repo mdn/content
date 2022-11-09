@@ -16,7 +16,7 @@ The **`ContentVisibilityAutoStateChangedEvent()`** constructor creates a new {{d
 ## Syntax
 
 ```js-nolint
-new ContentVisibilityAutoStateChangedEvent(type, init)
+new ContentVisibilityAutoStateChangedEvent(type, options)
 ```
 
 ### Parameters
