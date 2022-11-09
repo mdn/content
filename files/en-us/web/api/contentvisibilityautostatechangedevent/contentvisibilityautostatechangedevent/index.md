@@ -34,7 +34,7 @@ A developer would not use this constructor manually. A new `ContentVisibilityAut
 
 ```js
 canvasElem.addEventListener('contentvisibilityautostatechanged', event => {
-  ...
+  // …
 });
 ```
 
