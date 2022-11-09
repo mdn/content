@@ -15,7 +15,7 @@ tags:
 
 Let's start with a basic example. In the root stacking context, there are two relatively positioned `<div>` elements (DIV #1 and DIV #3) without `z-index` properties. Inside DIV #1, there is an absolutely positioned DIV #2, while in DIV #3, there is an absolutely positioned DIV #4, both without `z-index` properties.
 
-The only stacking context is the root context. Without `z-index`es, elements are stacked in order of occurrence.
+The only stacking context is the root context. Without `z-index` values, elements are stacked in order of occurrence.
 
 ![Stacking context example 1](understanding_zindex_05a.png)
 
