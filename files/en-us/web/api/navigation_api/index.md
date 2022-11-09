@@ -26,7 +26,7 @@ The **Navigation API** provides the ability to initiate, intercept, and manage b
 
 ## Concepts and usage
 
-In SPAs, the page template tends to stay the same during usage, and the content is dynamically rewritten as the user visits different pages or features. As a result, only one distinct page is loaded in the browser, which breaks the expected user experience of navigating back and forth between different locations in the viewing history. This problem can be solved to a degree via [The History API](/en-US/docs/Web/API/History_API), but it is not designed for the needs of SPAs. The Navigation API aims to bridge that gap.
+In SPAs, the page template tends to stay the same during usage, and the content is dynamically rewritten as the user visits different pages or features. As a result, only one distinct page is loaded in the browser, which breaks the expected user experience of navigating back and forth between different locations in the viewing history. This problem can be solved to a degree via the [History API](/en-US/docs/Web/API/History_API), but it is not designed for the needs of SPAs. The Navigation API aims to bridge that gap.
 
 The API is accessed via the {{domxref("Window.navigation")}} property, which returns a reference to a global {{domxref("Navigation")}} object. Each `window` object has its own corresponding `navigation` instance.
 
