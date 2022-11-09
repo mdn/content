@@ -43,10 +43,8 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 ```js
 const canvasElem = document.querySelector('canvas');
 
-function init() {
-  canvasElem.addEventListener('contentvisibilityautostatechanged', stateChanged);
-  canvasElem.style.contentVisibility = 'auto';
-}
+canvasElem.addEventListener('contentvisibilityautostatechanged', stateChanged);
+canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {
   if (event.skipped) {
