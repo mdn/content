@@ -143,5 +143,4 @@ You can then target that container by adding the name to the container query:
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
-- {{Cssxref("@container")}}
 - {{Cssxref("content-visibility")}}

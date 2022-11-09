@@ -21,8 +21,8 @@ The available space might not only depend on the size of the viewport, but also 
 
 ![A webpage with a card component demonstrating the difference between media and conrainer queries.](container-query-diagram.png)
 
-Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport.
-If the container has less available space, we can hide certain elements or use smaller fonts, for example.
+Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport or other device characteristics.
+If the container has less space in the surrounding context, we can hide certain elements or use smaller fonts, for example.
 The illustration below shows how the same card component can be displayed with multiple layouts using container queries:
 
 ![A webpage with three card components displayed in different layouts depending on their container's size.](container-query-examples.png)
@@ -123,7 +123,7 @@ The shorthand way of declaring a containment context is to use the `contain` pro
 
 For more information on this property, see the {{Cssxref("container")}} reference.
 
-## Container query length units
+### Container query length units
 
 When applying styles to a container using container queries, you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
@@ -147,6 +147,8 @@ The following example uses the `cqi` unit to set the font size of a heading base
   }
 }
 ```
+
+For more information on these units, see the [Container query length units](/en-US/docs/Web/CSS/length#container_query_length_units) reference.
 
 ## Fallbacks for container queries
 
@@ -181,4 +183,3 @@ If we want to use a single-column layout for devices with a smaller viewport, we
 - [Media Queries](/en-US/docs/Web/CSS/Media_Queries)
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)
-- CSS Working Group [GitHub project for Container Queries](https://github.com/w3c/csswg-drafts/projects/18)

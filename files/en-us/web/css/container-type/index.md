@@ -11,18 +11,22 @@ spec-urls: https://www.w3.org/TR/css-contain-3/#container-type
 
 {{CSSRef}}
 
-The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the type of [containment context](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
+The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the [type of containment](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
 The `container-type` property can have the following values:
 
 - `size`
-  - : Establishes a query container for dimensional queries on the block and inline axis.
-    Applies layout, style, and size containment to the element.
+
+  - : Establishes a query container for container size queries on both the inline and block axis.
+    Applies layout containment, style containment, and size containment to the container.
+
 - `inline-size`
+
   - : Establishes a query container for dimensional queries on the inline axis of the container.
     Applies layout, style, and inline-size containment to the element.
-- `block-size`
-  - : Establishes a query container for dimensional queries on the block axis of the container.
-    Applies layout, style, and block-size containment to the element.
+
+- `normal`
+
+  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the documentation for {{cssxref("contain")}}.
 

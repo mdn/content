@@ -23,6 +23,7 @@ This allows the user agent to apply containment on elements when appropriate, an
 
 The specification defines the CSS properties {{cssxref("contain")}} and {{cssxref("content-visibility")}}.
 This document describes the basic aims of the specification.
+For details on CSS container queries, see [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries).
 
 ## Basic example
 
