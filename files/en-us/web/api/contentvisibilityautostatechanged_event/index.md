@@ -20,7 +20,7 @@ This occurs when:
 - The element or its contents are selected or stop being selected; for example, manually, by dragging over the text with mouse cursor, or by some other highlight operation as described in [Selecting highlighted contents](https://www.w3.org/TR/css-pseudo-4/#highlight-selectors).
 - The element or its contents are placed in or removed from the top layer.
 
-> **Note:** In real terms, "stops being rendered" means that the user agent skips an element's rendering (including layout and painting) until it is actually needed, making preceding page rendering much faster.
+> **Note:** In real terms, _stops being rendered_ means that the user agent skips an element's rendering (including layout and painting) until it is needed, making preceding page rendering much faster.
 
 This provides a way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power. It should be noted that, even when hidden from view, element contents will remain semantically relevant (e.g. to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
 
