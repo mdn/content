@@ -37,6 +37,29 @@ Once an eligible query container has been selected for an element, each containe
 }
 ```
 
+### Descriptors
+
+The following descriptors can be used within the container condition:
+
+- `aspect-ratio`
+
+  - : The aspect ratio of the container calculated as the width to the height of the container expressed as a `<ratio>` value.
+
+- `block-size`
+
+  - : The block size of the container expressed as a `<length>` value.
+
+- `inline-size`
+
+  - : The inline size of the container expressed as a `<length>` value.
+
+- `orientation`
+
+  - : The orientation of the container, either `landscape` or `portrait`.
+
+- `width`
+  - : The width of the container expressed as a `<length>` value.
+
 ## Examples
 
 ### Basic example
