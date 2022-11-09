@@ -8,7 +8,7 @@ tags:
   - CSS Containment
   - Reference
   - Property
-spec-urls: https://www.w3.org/TR/css-contain-3/#container-shorthand
+browser-compat: css.properties.container
 ---
 
 {{CSSRef}}
@@ -68,9 +68,15 @@ You can then target that container by adding the name to the container query:
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
-- {{Cssxref("@container")}}
-- {{Cssxref("container-name")}}
-- {{Cssxref("container-type")}}
-- {{Cssxref("contain")}}
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- {{Cssxref("@container")}} at-rule
+- CSS {{Cssxref("contain")}} property
+- CSS {{Cssxref("container-type")}} property
+- CSS {{Cssxref("container-name")}} property
+- CSS {{cssxref("content-visibility")}} property
