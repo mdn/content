@@ -44,25 +44,21 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ```html
 <div id="div1">
-<br /><span class="bold">DIV #1</span>
-<br />position: relative;
-   <div id="div2">
-   <br /><span class="bold">DIV #2</span>
-   <br />position: absolute;
-   <br />z-index: 1;
-   </div>
+  <br /><span class="bold">DIV #1</span> <br />position: relative;
+  <div id="div2">
+    <br /><span class="bold">DIV #2</span> <br />position: absolute;
+    <br />z-index: 1;
+  </div>
 </div>
 
 <br />
 
 <div id="div3">
-<br /><span class="bold">DIV #3</span>
-<br />position: relative;
-   <div id="div4">
-   <br /><span class="bold">DIV #4</span>
-   <br />position: absolute;
-   <br />z-index: 2;
-   </div>
+  <br /><span class="bold">DIV #3</span> <br />position: relative;
+  <div id="div4">
+    <br /><span class="bold">DIV #4</span> <br />position: absolute;
+    <br />z-index: 2;
+  </div>
 </div>
 ```
 
