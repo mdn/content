@@ -21,7 +21,7 @@ To mark a declaration important, add the _important flag_ (`!important`) after t
 selector {
   property: value; /* normal declaration */
   property: value !important; /* important declaration (standard) */
-  property: value !important; /* important declaration (non-standard) */
+  property: value ! important; /* important declaration (non-standard) */
 }
 ```
 
