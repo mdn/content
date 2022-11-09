@@ -40,10 +40,8 @@ contentvisibilityautostatechanged = (event) => {};
 ```js
 const canvasElem = document.querySelector('canvas');
 
-function init() {
-  canvasElem.addEventListener('contentvisibilityautostatechanged', stateChanged);
-  canvasElem.style.contentVisibility = 'auto';
-}
+canvasElem.addEventListener('contentvisibilityautostatechanged', stateChanged);
+canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {
   if (event.skipped) {
