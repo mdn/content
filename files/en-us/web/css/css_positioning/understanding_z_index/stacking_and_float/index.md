@@ -26,7 +26,7 @@ See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) fo
 
 ## Example
 
-Actually, as you can see in the example below, the background and border of the non-positioned element (DIV #4) is completely unaffected by floating elements, but the content is affected. This happens according to standard float behavior which can be shown with a rule added to the above list:
+You can see in this example that the background and border of the non-positioned element (DIV #4) is completely unaffected by floating elements, but the content is affected. This happens according to standard float behavior which can be shown with a rule added to the above list:
 
 1. The background and borders of the root element.
 2. Descendant non-positioned elements, in order of appearance in the HTML.
