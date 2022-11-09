@@ -1,5 +1,5 @@
 ---
-title: How to write in markdown
+title: How to write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 tags:
   - meta
@@ -154,7 +154,7 @@ Notes and warnings will render the **Note:** or **Warning:** text in the output,
 
 Processing of the markup works on the AST it produces, not on the exact characters provided. This means that providing `<strong>Note:</strong>` will also generate a note. However, the Markdown syntax is required as a matter of style.
 
-Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal markdown lines, and concatenated.
+Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
 The blockquote can contain code blocks or other block elements.
 
