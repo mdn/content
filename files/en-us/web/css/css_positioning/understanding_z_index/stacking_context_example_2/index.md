@@ -15,18 +15,18 @@ tags:
 
 This is a very simple example, but it is the key for understanding the concept of _stacking context_. There are the same four DIVs of the previous example, but now `z-index` properties are assigned on both levels of the hierarchy.
 
-You can see that DIV #2 (`z-index: 2`) is above DIV #3 (`z-index: 1`), because they both belong to the same stacking context (the root one), so `z-index` values rule how elements are stacked.
+You can see that DIV #2 (`z-index`: 2) is above DIV #3 (`z-index`: 1), because they both belong to the same stacking context (the root one), so z-index values rule how elements are stacked.
 
-What can be considered strange is that DIV #2 (`z-index: 2`) is above DIV #4 (`z-index: 10`), despite their `z-index` values. The reason is that they do not belong to the same stacking context. DIV #4 belongs to the stacking context created by DIV #3, and as explained previously DIV #3 (and all its content) is under DIV #2.
+What can be considered strange is that DIV #2 (`z-index`: 2) is above DIV #4 (`z-index`: 10), despite their z-index values. The reason is that they do not belong to the same stacking context. DIV #4 belongs to the stacking context created by DIV #3, and as explained previously DIV #3 (and all its content) is under DIV #2.
 
 To better understand the situation, this is the stacking context hierarchy:
 
 - Root stacking context
 
-  - DIV #2 (`z-index: 2`)
-  - DIV #3 (`z-index: 1`)
+  - DIV #2 (`z-index`: 2)
+  - DIV #3 (`z-index`: 1)
 
-    - DIV #4 (`z-index: 10`)
+    - DIV #4 (`z-index`: 10)
 
 > **Note:** It is worth remembering that in general the HTML hierarchy is different from the stacking context hierarchy. In the stacking context hierarchy, elements that do not create a stacking context are collapsed on their parent.
 
