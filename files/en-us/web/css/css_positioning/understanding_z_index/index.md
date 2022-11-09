@@ -19,7 +19,7 @@ In the most basic cases, [HTML](/en-US/docs/Web/HTML) pages can be considered tw
 
 (from [CSS 2.1 Section 9.9.1 - Layered presentation](https://www.w3.org/TR/CSS21/visuren.html#z-index))
 
-This means that CSS style rules allow you to position boxes on layers in addition to the default rendering layer (layer 0). The position on an imaginary z-axis of each layer is expressed as an integer representing the stacking order for rendering. Greater numbers mean closer to the observer. This position on this z-axis can be controlled with the CSS `z-index` property.
+This means that CSS style rules allow you to position boxes on layers in addition to the default rendering layer (layer 0). The position on an imaginary z-axis of each layer is expressed as an integer representing the stacking order for rendering. Greater numbers mean closer to the observer. Control the position on this z-axis with the CSS `z-index` property.
 
 Using `z-index` appears extremely easy: a single property assigned a single integer number with an easy-to-understand behavior. When `z-index` is applied to complex hierarchies of HTML elements, its behavior can be hard to understand or predict. This is due to complex stacking rules. In fact, a dedicated section has been reserved in the CSS specification [CSS-2.1 Appendix E](https://www.w3.org/TR/CSS21/zindex.html) to explain these rules better.
 
