@@ -51,7 +51,7 @@ document.requestStorageAccess().then(
 
 Access to cross-site cookies is granted to iframes based on a number of prerequisites:
 
-1. The browser must be processing a user gesture (see {{Glossary("Transient activation")}}).
+1. The browser must be processing a user gesture ({{Glossary("transient activation")}}).
 2. The document or the top-level document must not have a null origin.
 3. The document's window must be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 4. If the document is sandboxed, it must have the `allow-storage-access-by-user-activation` token.
