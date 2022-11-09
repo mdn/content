@@ -3,20 +3,9 @@ title: contentvisibilityautostatechanged event
 slug: Web/API/contentvisibilityautostatechanged_event
 page-type: web-api-interface
 tags:
-  - API
-  - ContentVisibilityAutoStateChangedEvent
-  - content-visibility
-  - CSS
-  - CSS Containment
-  - Event
   - Experimental
-  - Interface
-  - Landing
-  - Layout
-  - Paint
+  - Event
   - Reference
-  - Style
-  - Web
 browser-compat: api.contentvisibilityautostatechanged_event
 ---
 
