@@ -164,7 +164,7 @@ The `array` parameter never changes through the process — it's always `[15, 16
 
 ### How reduce() works with an initial value
 
-Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed the second argument to `reduce()`:
+Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed as the second argument to `reduce()`:
 
 ```js
 [15, 16, 17, 18, 19].reduce(
