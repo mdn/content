@@ -3,18 +3,9 @@ title: ContentVisibilityAutoStateChangedEvent()
 slug: Web/API/ContentVisibilityAutoStateChangedEvent/ContentVisibilityAutoStateChangedEvent
 page-type: web-api-constructor
 tags:
-  - API
   - Constructor
-  - ContentVisibilityAutoStateChangedEvent
-  - content-visibility
-  - CSS
-  - CSS Containment
   - Experimental
-  - Layout
-  - Paint
   - Reference
-  - Style
-  - Web
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
 ---
 
