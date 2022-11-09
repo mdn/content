@@ -12,18 +12,18 @@ browser-compat: api.PerformanceEntry.duration
 
 {{APIRef("Performance API")}}
 
-The read-only **`duration`** property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the {{domxref("PerformanceEntry","performance entry")}}. The semantics of this property depend on the subclass.
+The read-only **`duration`** property returns a {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} that is the duration of the {{domxref("PerformanceEntry","performance entry", "", "no-code")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} representing the duration of the {{domxref("PerformanceEntry","performance entry")}}. If the duration concept doesn't apply for a particular performance metric, a duration of `0` is returned.
+A {{domxref("DOMHighResTimeStamp")}} representing the duration of the {{domxref("PerformanceEntry","performance entry", "", "no-code")}}. If the duration concept doesn't apply for a particular performance metric, a duration of `0` is returned.
 
-The value returned by this property depends on the performance entry's {{domxref("PerformanceEntry.entryType","type")}}:
+The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
 
 - `element`
   - : The `duration` is always `0`.
 - `event`
-  - : The `duration` is a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the time from event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
+  - : Indicates the time from the event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
 - `first-input`
   - : The `duration` is a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the time from the first input event's `startTime` to the next rendering paint (rounded to the nearest 8ms).
 - `largest-contentful-paint`
@@ -35,11 +35,11 @@ The value returned by this property depends on the performance entry's {{domxref
 - `measure`
   - : The `duration` is a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the measure.
 - `navigation`
-  - : The `duration` is a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceNavigationTiming.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties, respectively.
+  - : The difference between the entry's {{domxref("PerformanceNavigationTiming.loadEventEnd", "loadEventEnd")}} and {{domxref("PerformanceEntry.startTime", "startTime")}} properties.
 - `paint`
   - : The `duration` is always `0`.
 - `resource`
-  - : The `duration` is the difference between the resource's {{domxref("PerformanceResourceTiming/responseEnd", "responseEnd")}} {{domxref("DOMHighResTimeStamp","timestamp")}} and its {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","timestamp")}}.
+  - : The entry's {{domxref("PerformanceResourceTiming/responseEnd", "responseEnd")}} value minus the entry's {{domxref("PerformanceEntry.startTime","startTime")}} value.
 - `taskattribution`
   - : The `duration` is always `0`.
 

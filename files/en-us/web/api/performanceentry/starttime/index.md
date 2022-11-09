@@ -12,37 +12,37 @@ browser-compat: api.PerformanceEntry.startTime
 
 {{APIRef("Performance API")}}
 
-The read-only **`startTime`** property returns the first recorded {{domxref("DOMHighResTimeStamp","timestamp")}} of the {{domxref("PerformanceEntry","performance entry")}}. The semantics of this property depend on the subclass.
+The read-only **`startTime`** property returns the first {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for this {{domxref("PerformanceEntry","performance entry", "", "no-code")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
 
 ## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
 {{domxref("PerformanceEntry","performance entry")}} was created.
 
-The value returned by this property depends on the performance entry's {{domxref("PerformanceEntry.entryType","type")}}:
+The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
 
 - `element`
-  - : The `startTime` is either the value of {{domxref("PerformanceElementTiming.renderTime")}} if it is not `0`, otherwise it is the value of {{domxref("PerformanceElementTiming.loadTime")}}.
+  - : Either the value of this entry's {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}.
 - `event`
-  - : The `startTime` is the time the event was created, i.e. the event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property.
+  - : The time the event was created, i.e. the event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp) property.
 - `first-input`
-  - : The `startTime` is the time the first input event was created, i.e. that event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp).
+  - : The time the first input event was created, i.e. that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
 - `largest-contentful-paint`
-  - : The `startTime` is either the value of {{domxref("LargestContentfulPaint.renderTime")}} if it is not `0`, otherwise it is the value of {{domxref("LargestContentfulPaint.loadTime")}}.
+  - : The value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
 - `longtask`
-  - : The `startTime` is the {{domxref("DOMHighResTimeStamp","timestamp")}} when the task started.
+  - : The time when the task started.
 - `mark`
-  - : The `startTime` is the {{domxref("DOMHighResTimeStamp","timestamp")}} when the mark was created by a call to {{domxref("Performance.mark","performance.mark()")}}.
+  - : The time at which the mark was created by a call to {{domxref("Performance.mark","performance.mark()")}}.
 - `measure`
-  - : The `startTime` is the {{domxref("DOMHighResTimeStamp","timestamp")}} when the measure was created by a call to {{domxref("Performance.measure","performance.measure()")}}.
+  - : The time at which the measure was created by a call to {{domxref("Performance.measure","performance.measure()")}}.
 - `navigation`
-  - : The `startTime` is always `0`.
+  - : Always `0`.
 - `paint`
-  - : The `startTime` is the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint occurred.
+  - : The time when the paint occurred.
 - `resource`
-  - : The `startTime` is the {{domxref("PerformanceResourceTiming.fetchStart")}} {{domxref("DOMHighResTimeStamp","timestamp")}}.
+  - : The value of this entry's {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} property.
 - `taskattribution`
-  - : The `startTime` is always `0`.
+  - : Always `0`.
 
 ## Examples
 
@@ -50,7 +50,7 @@ The value returned by this property depends on the performance entry's {{domxref
 
 The following example shows the use of the `startTime` property which you can log during performance observation.
 
-Note: The {{domxref("performance.mark()")}} method allows you to set your own `startTime`, as well as {{domxref("performance.measure()")}} which allows to set the `start` of the measure.
+Note: The {{domxref("performance.mark()")}} method allows you to set your own `startTime`, and the {{domxref("performance.measure()")}} method allows to set the start of the measure.
 
 ```js
 performance.mark("my-mark");
