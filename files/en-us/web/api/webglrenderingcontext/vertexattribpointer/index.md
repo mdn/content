@@ -53,7 +53,6 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.INT_2_10_10_10_REV`: 32-bit signed integer with values in \[-512, 511]
     - `gl.UNSIGNED_INT_2_10_10_10_REV`: 32-bit unsigned integer with values in \[0, 1023]
 
-
 - `normalized`
 
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether integer data values should be
