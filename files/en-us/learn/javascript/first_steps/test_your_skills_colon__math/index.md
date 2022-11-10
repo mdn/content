@@ -42,7 +42,7 @@ To pass this test, you should have a result of `48`.
 ## Math 2
 
 In the second task, you are provided with two calculations with the results stored in the variables `result` and `result2`.
-You need to take the calculations and change their formatting so it has two decimal places.
+You need to take the calculations, multiply them, and format the result to two decimal places.
 
 Try updating the live code below to recreate the finished example by following these steps:
 
