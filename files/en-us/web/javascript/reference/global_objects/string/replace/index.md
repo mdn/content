@@ -224,11 +224,8 @@ function addOffset(match, ...args) {
   return `${match} (${offset}) `;
 }
 
-// "abc (1) d"
-console.log("abcd".replace(/(bc)/, addOffset));
-
-// "abc (abcd) d"
-console.log("abcd".replace(/(?<group>bc)/, addOffset));
+console.log("abcd".replace(/(bc)/, addOffset)); // "abc (1) d"
+console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (abcd) d"
 ```
 
 The `addOffset` example above doesn't work when the regex contains a named group, because in this case `args.at(-2)` would be the `string` instead of the `offset`.
