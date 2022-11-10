@@ -364,7 +364,7 @@ const obj = {
   }
 }
 const [a, b, ...rest] = obj; // Logs 0 1 2 3
-console.log(rest); // Logs an array [2, 3]
+console.log(rest); // [2, 3] (an array)
 ```
 
 ### Object destructuring
@@ -423,7 +423,7 @@ const user = {
   id: 42,
   displayName: 'jdoe',
   fullName: {
-    firstName: 'John',
+    firstName: 'Jane',
     lastName: 'Doe',
   },
 };
@@ -459,7 +459,7 @@ function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} is ${name}`;
 }
 
-console.log(whois(user));  // "jdoe is John"
+console.log(whois(user));  // "jdoe is Jane"
 ```
 
 #### Setting a function parameter's default value
@@ -568,6 +568,28 @@ const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
 console.log(fizzBuzz); // true
+```
+
+### Destructuring primitive values
+
+Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
+
+```js
+const { a, toFixed } = 1;
+console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
+```
+
+Same as accessing properties, destructuring `null` or `undefined` throws a {{jsxref("TypeError")}}.
+
+```js example-bad
+const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
+const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+```
+
+This happens even when the pattern is empty.
+
+```js example-bad
+const {} = null; // TypeError: Cannot destructure 'null' as it is null.
 ```
 
 #### Combined Array and Object Destructuring

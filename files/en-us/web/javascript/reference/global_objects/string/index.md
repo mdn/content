@@ -134,10 +134,10 @@ const strPrim2 = String(1); // Coerced into the string primitive "1"
 const strPrim3 = String(true); // Coerced into the string primitive "true"
 const strObj = new String(strPrim); // String with new returns a string wrapper object.
 
-console.log(typeof strPrim); // Logs "string"
-console.log(typeof strPrim2); // Logs "string"
-console.log(typeof strPrim3); // Logs "string"
-console.log(typeof strObj);  // Logs "object"
+console.log(typeof strPrim); // "string"
+console.log(typeof strPrim2); // "string"
+console.log(typeof strPrim3); // "string"
+console.log(typeof strObj); // "object"
 ```
 
 > **Warning:** You should rarely find yourself using `String` as a constructor.
@@ -176,7 +176,7 @@ Many built-in operations that expect strings first coerce their arguments to str
 - Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first converted to a primitive by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
 
 There are several ways to achieve nearly the same effect in JavaScript.
 

@@ -33,7 +33,7 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
@@ -50,7 +50,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XREquirectLayer.upperVerticalAngle")}} {{Experimental_Inline}}
   - : A number indicating the upper vertical angle in radians for the sphere.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 

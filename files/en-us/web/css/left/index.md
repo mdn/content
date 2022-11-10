@@ -63,7 +63,7 @@ left: unset;
 
 The effect of `left` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's left edge and the left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.)
+- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's outer margin of left edge and the inner border of left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.)
 - When `position` is set to `relative`, the `left` property specifies the distance the element's left edge is moved to the right from its normal position.
 - When `position` is set to `sticky`, the `left` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `left` property has _no effect_.

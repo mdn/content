@@ -15,19 +15,30 @@ browser-compat: api.AudioDecoder
 
 The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} decodes chunks of audio.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("AudioDecoder.AudioDecoder", "AudioDecoder()")}} {{Experimental_Inline}}
   - : Creates a new `AudioDecoder` object.
 
-## Properties
+## Instance properties
+
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("AudioDecoder.decodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of decode queue requests.
 - {{domxref("AudioDecoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the state of the underlying codec and whether it is configured for decoding.
 
-## Methods
+### Events
+
+- {{domxref("AudioDecoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
+  - : Fires to signal a decrease in {{domxref("AudioDecoder.decodeQueueSize")}}.
+
+## Instance methods
+
+_Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("AudioDecoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the audio decoder for decoding chunks.

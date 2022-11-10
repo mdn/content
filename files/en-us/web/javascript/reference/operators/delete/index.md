@@ -208,7 +208,7 @@ var nameOther = "XYZ";
 
 // We can access this global property using:
 Object.getOwnPropertyDescriptor(globalThis, "nameOther");
-// Object {
+// {
 //   value: "XYZ",
 //   writable: true,
 //   enumerable: true,

@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.base
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<base>`** [HTML](/en-US/docs/Web/HTML) element specifies the base URL to use for all _relative_ URLs in a document. There can be only one `<base>` element in a document.
 
@@ -28,7 +28,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node.baseU
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

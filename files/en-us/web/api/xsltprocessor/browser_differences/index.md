@@ -1,5 +1,5 @@
 ---
-title: Browser Differences
+title: Browser differences
 slug: Web/API/XSLTProcessor/Browser_Differences
 page-type: guide
 ---

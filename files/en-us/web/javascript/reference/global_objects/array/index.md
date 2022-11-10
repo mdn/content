@@ -20,12 +20,237 @@ The **`Array`** object, as with arrays in other programming languages, enables [
 In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but are instead `Array` objects with the following core characteristics:
 
 - **JavaScript arrays are resizable** and **can contain a mix of different [data types](/en-US/docs/Web/JavaScript/Data_structures)**. (When those characteristics are undesirable, use [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) instead.)
-
-- **JavaScript arrays are not associative arrays** and so, [array elements cannot be accessed using arbitrary strings as indexes](#notes), but must be accessed using nonnegative integers (or their respective string form) as indexes.
-
+- **JavaScript arrays are not associative arrays** and so, array elements cannot be accessed using arbitrary strings as indexes, but must be accessed using nonnegative integers (or their respective string form) as indexes.
 - **JavaScript arrays are [zero-indexed](https://en.wikipedia.org/wiki/Zero-based_numbering)**: the first element of an array is at index `0`, the second is at index `1`, and so on — and the last element is at the value of the array's {{jsxref("Array/length", "length")}} property minus `1`.
-
 - **JavaScript [array-copy operations](#copy_an_array) create [shallow copies](/en-US/docs/Glossary/Shallow_copy)**. (All standard built-in copy operations with _any_ JavaScript objects create shallow copies, rather than [deep copies](/en-US/docs/Glossary/Deep_copy)).
+
+### Array indices
+
+`Array` objects cannot use arbitrary strings as element indexes (as in an [associative array](https://en.wikipedia.org/wiki/Associative_array)) but must use nonnegative integers (or their respective string form). Setting or accessing via non-integers will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's [object property collection](/en-US/docs/Web/JavaScript/Data_structures#properties). The array's object properties and list of array elements are separate, and the array's [traversal and mutation operations](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) cannot be applied to these named properties.
+
+Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
+
+```js example-bad
+console.log(arr.0); // a syntax error
+```
+
+JavaScript syntax requires properties beginning with a digit to be accessed using [bracket notation](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties) instead of [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). It's also possible to quote the array indices (e.g., `years['2']` instead of `years[2]`), although usually not necessary.
+
+The `2` in `years[2]` is coerced into a string by the JavaScript engine through an implicit `toString` conversion. As a result, `'2'` and `'02'` would refer to two different slots on the `years` object, and the following example could be `true`:
+
+```js
+console.log(years['2'] !== years['02']);
+```
+
+Only `years['2']` is an actual array index. `years['02']` is an arbitrary string property that will not be visited in array iteration.
+
+### Relationship between length and numerical properties
+
+A JavaScript array's {{jsxref("Array/length", "length")}} property and numerical properties are connected.
+
+Several of the built-in array methods (e.g., {{jsxref("Array/join", "join()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/indexOf", "indexOf()")}}, etc.) take into account the value of an array's {{jsxref("Array/length", "length")}} property when they're called.
+
+Other methods (e.g., {{jsxref("Array/push", "push()")}}, {{jsxref("Array/splice", "splice()")}}, etc.) also result in updates to an array's {{jsxref("Array/length", "length")}} property.
+
+```js
+const fruits = [];
+fruits.push('banana', 'apple', 'peach');
+console.log(fruits.length); // 3
+```
+
+When setting a property on a JavaScript array when the property is a valid array index and that index is outside the current bounds of the array, the engine will update the array's {{jsxref("Array/length", "length")}} property accordingly:
+
+```js
+fruits[5] = 'mango';
+console.log(fruits[5]);            // 'mango'
+console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
+console.log(fruits.length);        // 6
+```
+
+Increasing the {{jsxref("Array/length", "length")}}.
+
+```js
+fruits.length = 10;
+console.log(fruits);              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length);       // 10
+console.log(fruits[8]);           // undefined
+```
+
+Decreasing the {{jsxref("Array/length", "length")}} property does, however, delete elements.
+
+```js
+fruits.length = 2;
+console.log(Object.keys(fruits)); // ['0', '1']
+console.log(fruits.length);       // 2
+```
+
+This is explained further on the {{jsxref("Array/length")}} page.
+
+### Array methods and empty slots
+
+Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave inconsistently between array methods. Generally, the older methods will skip empty slots, while newer ones treat them as `undefined`.
+
+Among methods that iterate through multiple elements, the following do an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check before accessing the index and do not conflate empty slots with `undefined`:
+
+- {{jsxref("Array/concat", "concat()")}}
+- {{jsxref("Array/copyWithin", "copyWithin()")}}
+- {{jsxref("Array/every", "every()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/flat", "flat()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/forEach", "forEach()")}}
+- {{jsxref("Array/indexOf", "indexOf()")}}
+- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/reduce", "reduce()")}}
+- {{jsxref("Array/reduceRight", "reduceRight()")}}
+- {{jsxref("Array/reverse", "reverse()")}}
+- {{jsxref("Array/slice", "slice()")}}
+- {{jsxref("Array/some", "some()")}}
+- {{jsxref("Array/sort", "sort()")}}
+- {{jsxref("Array/splice", "splice()")}}
+
+For exactly how they treat empty slots, see the page for each method.
+
+These methods treat empty slots as if they are `undefined`:
+
+- {{jsxref("Array/entries", "entries()")}}
+- {{jsxref("Array/fill", "fill()")}}
+- {{jsxref("Array/find", "find()")}}
+- {{jsxref("Array/findIndex", "findIndex()")}}
+- {{jsxref("Array/findLast", "findLast()")}}
+- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
+- {{jsxref("Array/group", "group()")}} {{Experimental_Inline}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}} {{Experimental_Inline}}
+- {{jsxref("Array/includes", "includes()")}}
+- {{jsxref("Array/join", "join()")}}
+- {{jsxref("Array/keys", "keys()")}}
+- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
+- {{jsxref("Array/values", "values()")}}
+
+### Copying methods and mutating methods
+
+Some methods do not mutate the existing array that the method was called on, but instead return a new array. They do so by first accessing [`this.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to determine the constructor to use for the new array. The newly constructed array is then populated with elements. The copy always happens [_shallowly_](/en-US/docs/Glossary/Shallow_copy) — the method never copies anything beyond the initially created array. Elements of the original array(s) are copied into the new array as follows:
+
+- Objects: the object reference is copied into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.
+- Primitive types such as strings, numbers and booleans (not {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, and {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): their values are copied into the new array.
+
+Other methods mutate the array that the method was called on, in which case their return value differs depending on the method: sometimes a reference to the same array, sometimes the length of the new array.
+
+The following methods create new arrays with `@@species`:
+
+- {{jsxref("Array/concat", "concat()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/flat", "flat()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/slice", "slice()")}}
+- {{jsxref("Array/splice", "splice()")}} (to construct the array of removed elements that's returned)
+
+Note that {{jsxref("Array/group", "group()")}} and {{jsxref("Array/groupToMap", "groupToMap()")}} do not use `@@species` to create new arrays for each group entry, but always use the plain `Array` constructor. Conceptually, they are not copying methods either.
+
+The following methods mutate the original array:
+
+- {{jsxref("Array/copyWithin", "copyWithin()")}}
+- {{jsxref("Array/fill", "fill()")}}
+- {{jsxref("Array/pop", "pop()")}}
+- {{jsxref("Array/push", "push()")}}
+- {{jsxref("Array/reverse", "reverse()")}}
+- {{jsxref("Array/shift", "shift()")}}
+- {{jsxref("Array/sort", "sort()")}}
+- {{jsxref("Array/splice", "splice()")}}
+- {{jsxref("Array/unshift", "unshift()")}}
+
+### Iterative methods
+
+Many array methods take a callback function as an argument. The callback function is called sequentially and at most once for each element in the array, and the return value of the callback function is used to determine the return value of the method. They all share the same signature:
+
+```js-nolint
+method(callbackFn, thisArg)
+```
+
+Where `callbackFn` takes three arguments:
+
+- `element`
+  - : The current element being processed in the array.
+- `index`
+  - : The index of the current element being processed in the array.
+- `array`
+  - : The array `groupToMap()` was called upon.
+
+What `callbackFn` is expected to return depends on the array method that was called.
+
+The `thisArg` argument (defaults to `undefined`) will be used as the `this` value when calling `callbackFn`. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules](/en-US/docs/Web/JavaScript/Reference/Operators/this): if `callbackFn` is [non-strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution), primitive `this` values are wrapped into objects, and `undefined`/`null` is substituted with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis). The `thisArg` argument is irrelevant for any `callbackFn` defined with an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as arrow functions don't have their own `this` binding.
+
+All iterative methods are [copying](#copying_methods_and_mutating_methods) and [generic](#generic_array_methods), although they behave differently with [empty slots](#array_methods_and_empty_slots).
+
+The following methods are iterative:
+
+- {{jsxref("Array/every", "every()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/find", "find()")}}
+- {{jsxref("Array/findIndex", "findIndex()")}}
+- {{jsxref("Array/findLast", "findLast()")}}
+- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/forEach", "forEach()")}}
+- {{jsxref("Array/group", "group()")}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/some", "some()")}}
+
+In particular, {{jsxref("Array/every", "every()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, and {{jsxref("Array/some", "some()")}} do not always invoke `callbackFn` on every element — they stop iteration as soon as the return value is determined.
+
+There are two other methods that take a callback function and run it at most once for each element in the array, but they have slightly different signatures from typical iterative methods (for example, they don't accept `thisArg`):
+
+- {{jsxref("Array/reduce", "reduce()")}}
+- {{jsxref("Array/reduceRight", "reduceRight()")}}
+
+The {{jsxref("Array/sort", "sort()")}} method also takes a callback function, but it is not an iterative method. It mutates the array in-place, doesn't accept `thisArg`, and may invoke the callback multiple times on an index.
+
+### Generic array methods
+
+Array methods are always generic — they don't access any internal data of the array object. They only access the array elements through the `length` property and the indexed elements. This means that they can be called on array-like objects as well.
+
+```js
+const arrayLike = {
+  0: "a",
+  1: "b",
+  length: 2,
+};
+console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
+```
+
+#### Normalization of the length property
+
+The `length` property is [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), truncated to an integer, and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
+
+```js
+Array.prototype.flat.call({}); // []
+```
+
+Some array methods set the `length` property of the array object. They always set the value after normalization, so `length` always ends as an integer.
+
+```js
+const a = { length: 0.7 };
+Array.prototype.push.call(a);
+console.log(a.length); // 0
+```
+
+#### Array-like objects
+
+The term [_array-like object_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) refers to any object that doesn't throw during the `length` conversion process described above. In practice, such object is expected to actually have a `length` property and to have indexed elements in the range `0` to `length - 1`. (If it doesn't have all indices, it will be functionally equivalent to a [sparse array](#array_methods_and_empty_slots).)
+
+Many DOM objects are array-like — for example, [`NodeList`](/en-US/docs/Web/API/NodeList) and [`HTMLCollection`](/en-US/docs/Web/API/HTMLCollection). The [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is also array-like. You can call array methods on them even if they don't have these methods themselves.
+
+```js
+function f() {
+  console.log(Array.prototype.join.call(arguments, "+"));
+}
+
+f("a", "b"); // 'a+b'
+```
 
 ## Constructor
 
@@ -437,7 +662,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 You can also create deep copies using the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method, which has the advantage of allowing {{Glossary("transferable objects")}} in the source to be _transferred_ to the new copy, rather than just cloned.
 
-Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
+Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
 
 ```js
 const fruits = ['Strawberry', 'Mango'];
@@ -470,14 +695,14 @@ const inventory = [
 
 To use `group()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
 
-The code below uses a arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
+The code below uses a arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
 The result is an object that has properties named after the unique strings returned by the callback.
 Each property is assigned an array containing the elements in the group.
 
 ```js
 const result = inventory.group(({ type }) => type);
 console.log(result.vegetables);
-// expected output: Array [Object { name: "asparagus", type: "vegetables" }]
+// [{ name: "asparagus", type: "vegetables" }]
 ```
 
 Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
@@ -485,8 +710,6 @@ Changing the internal structure of these elements will be reflected in both the 
 
 If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Array.prototype.groupToMap()")}}.
 This is very similar to `group` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
-
-## Other examples
 
 ### Creating a two-dimensional array
 
@@ -578,156 +801,10 @@ const execResult = myRe.exec('cdbBdbsbz');
 
 console.log(execResult.input); // 'cdbBdbsbz'
 console.log(execResult.index); // 1
-console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
+console.log(execResult); // [ "dbBd", "bB", "d" ]
 ```
 
 For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
-
-## Notes
-
-`Array` objects cannot use arbitrary strings as element indexes (as in an [associative array](https://en.wikipedia.org/wiki/Associative_array)) but must use nonnegative integers (or their respective string form). Setting or accessing via non-integers will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's [object property collection](/en-US/docs/Web/JavaScript/Data_structures#properties). The array's object properties and list of array elements are separate, and the array's [traversal and mutation operations](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) cannot be applied to these named properties.
-
-Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
-
-```js example-bad
-console.log(arr.0); // a syntax error
-```
-
-JavaScript syntax requires properties beginning with a digit to be accessed using [bracket notation](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties) instead of [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). It's also possible to quote the array indices (e.g., `years['2']` instead of `years[2]`), although usually not necessary.
-
-The `2` in `years[2]` is coerced into a string by the JavaScript engine through an implicit `toString` conversion. As a result, `'2'` and `'02'` would refer to two different slots on the `years` object, and the following example could be `true`:
-
-```js
-console.log(years['2'] !== years['02']);
-```
-
-Only `years['2']` is an actual array index. `years['02']` is an arbitrary string property that will not be visited in array iteration.
-
-### Relationship between length and numerical properties
-
-A JavaScript array's {{jsxref("Array/length", "length")}} property and numerical properties are connected.
-
-Several of the built-in array methods (e.g., {{jsxref("Array/join", "join()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/indexOf", "indexOf()")}}, etc.) take into account the value of an array's {{jsxref("Array/length", "length")}} property when they're called.
-
-Other methods (e.g., {{jsxref("Array/push", "push()")}}, {{jsxref("Array/splice", "splice()")}}, etc.) also result in updates to an array's {{jsxref("Array/length", "length")}} property.
-
-```js
-const fruits = [];
-fruits.push('banana', 'apple', 'peach');
-console.log(fruits.length); // 3
-```
-
-When setting a property on a JavaScript array when the property is a valid array index and that index is outside the current bounds of the array, the engine will update the array's {{jsxref("Array/length", "length")}} property accordingly:
-
-```js
-fruits[5] = 'mango';
-console.log(fruits[5]);            // 'mango'
-console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
-console.log(fruits.length);        // 6
-```
-
-Increasing the {{jsxref("Array/length", "length")}}.
-
-```js
-fruits.length = 10;
-console.log(fruits);              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
-console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length);       // 10
-console.log(fruits[8]);           // undefined
-```
-
-Decreasing the {{jsxref("Array/length", "length")}} property does, however, delete elements.
-
-```js
-fruits.length = 2;
-console.log(Object.keys(fruits)); // ['0', '1']
-console.log(fruits.length);       // 2
-```
-
-This is explained further on the {{jsxref("Array/length")}} page.
-
-### Array methods and empty slots
-
-Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave inconsistently between array methods. Generally, the older methods will skip empty slots, while newer ones treat them as `undefined`.
-
-Among methods that iterate through multiple elements, the following do an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check before accessing the index and do not conflate empty slots with `undefined`:
-
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/indexOf", "indexOf()")}}
-- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/some", "some()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
-
-For exactly how they treat empty slots, see the page for each method.
-
-These methods treat empty slots as if they are `undefined`:
-
-- {{jsxref("Array/entries", "entries()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
-- {{jsxref("Array/includes", "includes()")}}
-- {{jsxref("Array/join", "join()")}}
-- {{jsxref("Array/keys", "keys()")}}
-- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
-- {{jsxref("Array/values", "values()")}}
-
-### Copying methods and mutating methods
-
-Some methods do not mutate the existing array that the method was called on, but instead return a new array. They do so by first accessing [`this.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to determine the constructor to use for the new array. The newly constructed array is then populated with elements. The copy always happens [_shallowly_](/en-US/docs/Glossary/Shallow_copy) — the method never copies anything beyond the initially created array. Elements of the original array(s) are copied into the new array as follows:
-
-- Objects: the object reference is copied into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.
-- Primitive types such as strings, numbers and booleans (not {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, and {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): their values are copied into the new array.
-
-Other methods mutate the array that the method was called on, in which case their return value differs depending on the method: sometimes a reference to the same array, sometimes the length of the new array.
-
-The following methods create new arrays with `@@species`:
-
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/splice", "splice()")}} (to construct the array of removed elements that's returned)
-
-Note that {{jsxref("Array/group", "group()")}} and {{jsxref("Array/groupToMap", "groupToMap()")}} do not use `@@species` to create new arrays for each group entry, but always use the plain `Array` constructor. Conceptually, they are not copying methods either.
-
-The following methods mutate the original array:
-
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/pop", "pop()")}}
-- {{jsxref("Array/push", "push()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/shift", "shift()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
-- {{jsxref("Array/unshift", "unshift()")}}
-
-### Generic array methods
-
-Array methods are always generic — they don't access any internal data of the array object. They only access the array elements through the `length` property and the indexed elements. This means that they can be called on array-like objects as well.
-
-```js
-Array.prototype.join.call({ 0: 'a', 1: 'b', length: 2 }, '+'); // 'a+b'
-```
 
 ## Specifications
 
@@ -741,8 +818,8 @@ Array.prototype.join.call({ 0: 'a', 1: 'b', length: 2 }, '+'); // 'a+b'
 
 - From the JavaScript Guide:
 
-  - ["Indexing object properties"](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
-  - ["Indexed collections: `Array` object"](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
+  - [Accessing properties](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#accessing_properties)
+  - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

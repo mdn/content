@@ -14,24 +14,17 @@ browser-compat: api.SubtleCrypto.wrapKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`wrapKey()`** method of the {{domxref("SubtleCrypto")}}
-interface "wraps" a key. This means that it exports the key in an external, portable
-format, then encrypts the exported key. Wrapping a key helps protect it in untrusted
-environments, such as inside an otherwise unprotected data store or in transmission over
-an unprotected network.
+The **`wrapKey()`** method of the {{domxref("SubtleCrypto")}} interface "wraps" a key.
+This means that it exports the key in an external, portable format, then encrypts the exported key.
+Wrapping a key helps protect it in untrusted environments, such as inside an otherwise unprotected data store or in transmission over an unprotected network.
 
-As with {{DOMxRef("SubtleCrypto.exportKey()")}},
-you specify an [export format](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats)
-for the key. To export a key, it must have {{DOMxRef("CryptoKey.extractable")}}
-set to `true`.
+As with {{DOMxRef("SubtleCrypto.exportKey()")}}, you specify an [export format](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) for the key.
+To export a key, it must have {{DOMxRef("CryptoKey.extractable")}} set to `true`.
 
-But because `wrapKey()` also encrypts the key to be imported, you also need
-to pass in the key that must be used to encrypt it. This is sometimes called the
-"wrapping key".
+But because `wrapKey()` also encrypts the key to be imported, you also need to pass in the key that must be used to encrypt it.
+This is sometimes called the "wrapping key".
 
-The inverse of `wrapKey()` is {{domxref("SubtleCrypto.unwrapKey()")}}: while
-`wrapKey` is composed of export + encrypt, `unwrapKey` is composed
-of import + decrypt.
+The inverse of `wrapKey()` is {{domxref("SubtleCrypto.unwrapKey()")}}: while `wrapKey` is composed of export + encrypt, `unwrapKey` is composed of import + decrypt.
 
 ## Syntax
 
@@ -56,18 +49,47 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
 - `wrappingkey`
   - : The {{domxref("CryptoKey")}} used to encrypt the exported key. The key must have the `wrapKey` usage set.
 - `wrapAlgo`
-  - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
-    to be used to encrypt the exported key, and any required extra parameters:
-    - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
-      pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams) object.
-    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
-      pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams) object.
-    - To use [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams) object.
-    - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
-      pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams) object.
-    - To use [AES-KW](#aes-kw),
-      pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
+
+  - : An object specifying the [algorithm](#supported_algorithms) to be used to wrap the exported key, and any required extra parameters:
+
+    - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
+
+      - `name`
+        - : A string. This should be set to `RSA-OAEP`.
+      - `label` {{optional_inline}}
+
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
+          A digest of the label is part of the input to the encryption operation.
+
+          Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
+
+    - To use [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+
+      - `name`
+        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
+      - `iv`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+          The initialization vector.
+          Must be 16 bytes, unpredictable, and preferably cryptographically random.
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+
+    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
+
+      - `name`
+
+        - : A string indicating the name of the algorithm: `AES-CTR`.
+
+      - `counter`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block.
+          This must be 16 bytes long (the AES block size).
+          The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce.
+          For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
+      - `length`
+        - : A `Number` — the number of bits in the counter block that are used for the actual counter.
+          The counter must be big enough that it doesn't wrap: if the message is `n` blocks and the counter is `m` bits long, then the following must be true: `n <= 2^m`.
+          The [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) standard, which defines CTR, suggests that the counter should occupy half of the counter block (see [Appendix B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)), so for AES it would be 64.
+
+    - To use [AES-KW](#aes-kw), pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
 
 ### Return value
 
@@ -90,16 +112,15 @@ The promise is rejected when one of the following exceptions is encountered:
 
 ## Supported algorithms
 
-All [algorithms that are usable for encryption](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) are also usable for key wrapping,
-as long as the key has the "wrapKey" usage set. For key wrapping you have the additional option of AES-KW.
+All [algorithms that are usable for encryption](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) are also usable for key wrapping, as long as the key has the "wrapKey" usage set.
+For key wrapping you have the additional option of AES-KW.
 
 ### AES-KW
 
 AES-KW is a way to use the AES cipher for key wrapping.
 
-One advantage of using AES-KW over another AES mode such as AES-GCM is that AES-KW does
-not require an initialization vector. To use AES-KW, the input must be a multiple of 64
-bits.
+One advantage of using AES-KW over another AES mode such as AES-GCM is that AES-KW does not require an initialization vector.
+To use AES-KW, the input must be a multiple of 64 bits.
 
 AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394).
 
@@ -109,8 +130,7 @@ AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394)
 
 ### Raw wrap
 
-This example wraps an AES key. It uses "raw" as the export format and AES-KW, with a
-password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js).
+This example wraps an AES key. It uses "raw" as the export format and AES-KW, with a password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js).
 
 ```js
 let salt;
@@ -120,14 +140,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt('Enter your password');
+  const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    'raw',
+    "raw",
     enc.encode(password),
-    { name: 'PBKDF2' },
+    { name: "PBKDF2" },
     false,
-    ['deriveBits', 'deriveKey'],
+    ["deriveBits", "deriveKey"]
   );
 }
 
@@ -138,15 +158,15 @@ derive an AES-KW key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      name: 'PBKDF2',
+      name: "PBKDF2",
       salt,
       iterations: 100000,
-      hash: 'SHA-256',
+      hash: "SHA-256",
     },
     keyMaterial,
-    { name: 'AES-KW', length: 256 },
+    { name: "AES-KW", length: 256 },
     true,
-    ['wrapKey', 'unwrapKey'],
+    ["wrapKey", "unwrapKey"]
   );
 }
 
@@ -159,7 +179,7 @@ async function wrapCryptoKey(keyToWrap) {
   salt = window.crypto.getRandomValues(new Uint8Array(16));
   const wrappingKey = await getKey(keyMaterial, salt);
 
-  return window.crypto.subtle.wrapKey('raw', keyToWrap, wrappingKey, 'AES-KW');
+  return window.crypto.subtle.wrapKey("raw", keyToWrap, wrappingKey, "AES-KW");
 }
 
 /*
@@ -169,11 +189,11 @@ then wrap it.
 window.crypto.subtle
   .generateKey(
     {
-      name: 'AES-GCM',
+      name: "AES-GCM",
       length: 256,
     },
     true,
-    ['encrypt', 'decrypt'],
+    ["encrypt", "decrypt"]
   )
   .then((secretKey) => wrapCryptoKey(secretKey))
   .then((wrappedKey) => console.log(wrappedKey));
@@ -194,14 +214,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt('Enter your password');
+  const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    'raw',
+    "raw",
     enc.encode(password),
-    { name: 'PBKDF2' },
+    { name: "PBKDF2" },
     false,
-    ['deriveBits', 'deriveKey'],
+    ["deriveBits", "deriveKey"]
   );
 }
 
@@ -212,15 +232,15 @@ derive an AES-GCM key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      name: 'PBKDF2',
+      name: "PBKDF2",
       salt,
       iterations: 100000,
-      hash: 'SHA-256',
+      hash: "SHA-256",
     },
     keyMaterial,
-    { name: 'AES-GCM', length: 256 },
+    { name: "AES-GCM", length: 256 },
     true,
-    ['wrapKey', 'unwrapKey'],
+    ["wrapKey", "unwrapKey"]
   );
 }
 
@@ -234,11 +254,10 @@ async function wrapCryptoKey(keyToWrap) {
   const wrappingKey = await getKey(keyMaterial, salt);
   iv = window.crypto.getRandomValues(new Uint8Array(12));
 
-  return window.crypto.subtle.wrapKey(
-    'pkcs8',
-    keyToWrap,
-    wrappingKey,
-    { name: 'AES-GCM', iv });
+  return window.crypto.subtle.wrapKey("pkcs8", keyToWrap, wrappingKey, {
+    name: "AES-GCM",
+    iv,
+  });
 }
 
 /*
@@ -248,14 +267,14 @@ then wrap the private key.
 window.crypto.subtle
   .generateKey(
     {
-      name: 'RSA-PSS',
+      name: "RSA-PSS",
       // Consider using a 4096-bit key for systems that require long-term security
       modulusLength: 2048,
       publicExponent: new Uint8Array([1, 0, 1]),
-      hash: 'SHA-256',
+      hash: "SHA-256",
     },
     true,
-    ['sign', 'verify'],
+    ["sign", "verify"]
   )
   .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
   .then((wrappedKey) => {
@@ -278,14 +297,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt('Enter your password');
+  const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    'raw',
+    "raw",
     enc.encode(password),
-    { name: 'PBKDF2' },
+    { name: "PBKDF2" },
     false,
-    ['deriveBits', 'deriveKey'],
+    ["deriveBits", "deriveKey"]
   );
 }
 
@@ -296,15 +315,15 @@ derive an AES-CBC key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      name: 'PBKDF2',
+      name: "PBKDF2",
       salt,
       iterations: 100000,
-      hash: 'SHA-256',
+      hash: "SHA-256",
     },
     keyMaterial,
-    { name: 'AES-CBC', length: 256 },
+    { name: "AES-CBC", length: 256 },
     true,
-    ['wrapKey', 'unwrapKey'],
+    ["wrapKey", "unwrapKey"]
   );
 }
 
@@ -318,11 +337,10 @@ async function wrapCryptoKey(keyToWrap) {
   const wrappingKey = await getKey(keyMaterial, salt);
   iv = window.crypto.getRandomValues(new Uint8Array(16));
 
-  return window.crypto.subtle.wrapKey(
-    'spki',
-    keyToWrap,
-    wrappingKey,
-    { name: 'AES-CBC', iv });
+  return window.crypto.subtle.wrapKey("spki", keyToWrap, wrappingKey, {
+    name: "AES-CBC",
+    iv,
+  });
 }
 
 /*
@@ -332,14 +350,14 @@ then wrap it.
 window.crypto.subtle
   .generateKey(
     {
-      name: 'RSA-OAEP',
+      name: "RSA-OAEP",
       // Consider using a 4096-bit key for systems that require long-term security
       modulusLength: 2048,
       publicExponent: new Uint8Array([1, 0, 1]),
-      hash: 'SHA-256',
+      hash: "SHA-256",
     },
     true,
-    ['encrypt', 'decrypt'],
+    ["encrypt", "decrypt"]
   )
   .then((keyPair) => wrapCryptoKey(keyPair.publicKey))
   .then((wrappedKey) => console.log(wrappedKey));
@@ -360,14 +378,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt('Enter your password');
+  const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    'raw',
+    "raw",
     enc.encode(password),
-    { name: 'PBKDF2' },
+    { name: "PBKDF2" },
     false,
-    ['deriveBits', 'deriveKey'],
+    ["deriveBits", "deriveKey"]
   );
 }
 
@@ -378,15 +396,15 @@ derive an AES-GCM key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      name: 'PBKDF2',
+      name: "PBKDF2",
       salt,
       iterations: 100000,
-      hash: 'SHA-256',
+      hash: "SHA-256",
     },
     keyMaterial,
-    { name: 'AES-GCM', length: 256 },
+    { name: "AES-GCM", length: 256 },
     true,
-    ['wrapKey', 'unwrapKey'],
+    ["wrapKey", "unwrapKey"]
   );
 }
 
@@ -400,11 +418,10 @@ async function wrapCryptoKey(keyToWrap) {
   const wrappingKey = await getKey(keyMaterial, salt);
   iv = window.crypto.getRandomValues(new Uint8Array(12));
 
-  return window.crypto.subtle.wrapKey(
-    'jwk',
-    keyToWrap,
-    wrappingKey,
-    { name: 'AES-GCM', iv });
+  return window.crypto.subtle.wrapKey("jwk", keyToWrap, wrappingKey, {
+    name: "AES-GCM",
+    iv,
+  });
 }
 
 /*
@@ -414,11 +431,11 @@ then wrap the private key
 window.crypto.subtle
   .generateKey(
     {
-      name: 'ECDSA',
-      namedCurve: 'P-384',
+      name: "ECDSA",
+      namedCurve: "P-384",
     },
     true,
-    ['sign', 'verify'],
+    ["sign", "verify"]
   )
   .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
   .then((wrappedKey) => console.log(wrappedKey));

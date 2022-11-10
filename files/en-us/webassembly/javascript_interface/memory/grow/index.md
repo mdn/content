@@ -44,7 +44,7 @@ The following example creates a new WebAssembly Memory instance with an initial 
 ```js
 const memory = new WebAssembly.Memory({
   initial: 1,
-  maximum: 10
+  maximum: 10,
 });
 ```
 
@@ -52,9 +52,9 @@ We can then grow the instance by one page like so:
 
 ```js
 const bytesPerPage = 64 * 1024;
-console.log(memory.buffer.byteLength / bytesPerPage);  // "1"
-console.log(memory.grow(1));                           // "1"
-console.log(memory.buffer.byteLength / bytesPerPage);  // "2"
+console.log(memory.buffer.byteLength / bytesPerPage); // "1"
+console.log(memory.grow(1)); // "1"
+console.log(memory.buffer.byteLength / bytesPerPage); // "2"
 ```
 
 Note the return value of `grow()` here is the previous number of WebAssembly pages.
@@ -67,7 +67,7 @@ Accessing the `buffer` property after calling `grow`, will yield an `ArrayBuffer
 
 ```js example-bad
 const memory = new WebAssembly.Memory({
-  initial: 1
+  initial: 1,
 });
 const oldMemoryView = new Uint8Array(memory.buffer);
 memory.grow(1);
@@ -77,7 +77,7 @@ console.log(oldMemoryView); // Uint8Array []
 
 ```js example-good
 const memory = new WebAssembly.Memory({
-  initial: 1
+  initial: 1,
 });
 memory.grow(1);
 const currentMemoryView = new Uint8Array(memory.buffer);

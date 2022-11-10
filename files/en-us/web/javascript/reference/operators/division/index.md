@@ -27,21 +27,21 @@ x / y
 ### Basic division
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### Division by zero
 
 ```js
-2.0 / 0     // Infinity
+2.0 / 0; // Infinity
 
-2.0 / 0.0   // Infinity, because 0.0 === 0
+2.0 / 0.0; // Infinity, because 0.0 === 0
 
-2.0 / -0.0  // -Infinity
+2.0 / -0.0; // -Infinity
 ```
 
 ## Specifications

@@ -6,7 +6,7 @@ tags:
   - Reference
   - CSS Data Type
   - color
-browser-compat: css.types.color.color_keywords
+browser-compat: css.types.color.named-color
 ---
 
 {{CSSRef}}

@@ -30,7 +30,7 @@ This interface offers the same set of properties and methods as `AbstractRange`.
 - {{domxref("StaticRange.StaticRange", "StaticRange()")}}
   - : Creates a new `StaticRange` object given the {{domxref("StaticRangeInit")}} dictionary specifying the default values for its properties.
 
-## Properties
+## Instance properties
 
 _The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
 

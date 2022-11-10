@@ -33,6 +33,13 @@ The syntax starts with the **name of the functional notation**, followed by a le
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
+## Animation timeline functions
+
+This function can be used to provide the timeline for an animation.
+
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
+
 ## Transform functions
 
 These functions are used when the {{cssxref("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) is used as a value of {{cssxref("transform")}}.
@@ -277,15 +284,15 @@ The following functions are used as a value of properties to reference a value d
 - {{cssxref("attr", "attr()")}}
   - : Used to retrieve the value of an attribute of the selected element and use it in the stylesheet.
 - {{cssxref("env", "env()")}}
-  - : Used to insert the value of a user agent-defined environment variable.
+  - : Used to insert the value of a user-agent defined environment variable.
 - {{cssxref("url", "url()")}}
   - : Used to include a file.
 - {{cssxref("var", "var()")}}
   - : Used to insert a value of a custom property instead of any part of a value of another property.
 
-## CSS grid functions
+## Grid functions
 
-The following functions are used to define a CSS grid.
+The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 - {{cssxref("fit-content", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.

@@ -9,7 +9,7 @@ tags:
 browser-compat: html.elements.hr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
 
@@ -33,7 +33,7 @@ Historically, this has been presented as a horizontal rule or line. While it may
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

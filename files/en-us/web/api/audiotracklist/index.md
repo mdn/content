@@ -24,14 +24,14 @@ Retrieve an instance of this object with {{domxref('HTMLMediaElement.audioTracks
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AudioTrackList.length", "length")}} {{ReadOnlyInline}}
   - : The number of tracks in the list.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

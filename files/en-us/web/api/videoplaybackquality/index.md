@@ -22,7 +22,7 @@ browser-compat: api.VideoPlaybackQuality
 
 A **`VideoPlaybackQuality`** object is returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method and contains metrics that can be used to determine the playback quality of a video.
 
-## Properties
+## Instance properties
 
 _The `VideoPlaybackQuality` interface doesn't inherit properties from any other interfaces._
 
@@ -40,7 +40,7 @@ _The `VideoPlaybackQuality` interface doesn't inherit properties from any other 
 - {{domxref("VideoPlaybackQuality.totalFrameDelay", "totalFrameDelay")}} {{ReadOnlyInline}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : A `double` containing the sum of the frame delay since the creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is the difference between a frame's theoretical presentation time and its effective display time.
 
-## Methods
+## Instance methods
 
 _The `VideoPlaybackQuality` interface has no methods, and does not inherit any._
 

@@ -24,7 +24,7 @@ The **`MSGestureEvent`** is a proprietary interface specific to Internet Explore
 - {{domxref("MSGestureEvent.MSGestureEvent", "MSGestureEvent()")}}
   - : Creates an `MSGestureEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
@@ -49,7 +49,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MSGestureEvent.velocityY")}} {{ReadOnlyInline}}
   - : Velocity along the direction of the Y-axis.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 

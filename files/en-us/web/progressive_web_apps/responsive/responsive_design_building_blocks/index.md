@@ -345,8 +345,6 @@ There is a way to override this mobile rendering behavior — viewport, which is
 
 This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
 
-> **Note:** There is a spec called [device adaptation](https://drafts.csswg.org/css-device-adapt/), which defines the same functionality but in CSS, using a `@viewport` at-rule. This is probably a more logical place to put such information, but the spec is not as well supported as the viewport meta tag, therefore you should stick with that for now.
-
 ## Responsive images/video
 
 Another problem that comes up more and more these days is making image/video weight (size in KB) responsive as well as the dimensions of the image on screen. Yes, you want the images to be contained inside the app UI whether you are using it on desktop or mobile, but you should also consider that mobile apps have much smaller viewport dimensions available than desktop apps, so you should try to give mobile devices a smaller image to download. Mobiles in general (more commonly in some parts of the world than others) are on lower bandwidth connections and have less memory available than desktop devices, so yes, those extra kilobytes really do count.

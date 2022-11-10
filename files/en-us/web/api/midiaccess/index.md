@@ -16,7 +16,7 @@ The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MID
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("MIDIAccess.inputs")}} {{ReadOnlyInline}}
   - : Returns an instance of {{domxref("MIDIInputMap")}} which provides access to any available MIDI input ports.

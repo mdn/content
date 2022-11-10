@@ -50,7 +50,7 @@ After getting familiar with the basics of JavaScript, you should be in a positio
 >
 > We think that the features added to JavaScript in ECMAScript 2015 and subsequent versions enable developers to write more readable, reliable, and expressive code, and that it's important to learn about them.
 >
-> The features we teach in this course are stable and have been supported by all major browsers for several years. You're only likely to have trouble using them in obsolete browsers, in particular Internet Explorer. If you do need to support obsolete browsers, we recommend using a tool like [Babel](https://babeljs.io/), which enables you to write modern JavaScript but have it run in browsers that don't support it.
+> The features we teach in this course are stable and have been supported by all major browsers for several years.
 
 This topic contains the following modules, in a suggested order for working through them.
 

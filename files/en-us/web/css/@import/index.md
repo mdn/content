@@ -20,12 +20,12 @@ The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-ru
 ```css
 @import url;
 @import url list-of-media-queries;
-@import url supports( supports-query );
-@import url supports( supports-query ) list-of-media-queries;
+@import url supports(supports-query);
+@import url supports(supports-query) list-of-media-queries;
 @import url layer;
-@import url layer( layer-name );
-@import url layer( layer-name ) list-of-media-queries;
-@import url layer( layer-name ) supports( supports-query ) list-of-media-queries;
+@import url layer(layer-name);
+@import url layer(layer-name) list-of-media-queries;
+@import url layer(layer-name) supports(supports-query) list-of-media-queries;
 ```
 
 where:
@@ -49,11 +49,7 @@ The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/
 
 ## Formal syntax
 
-```
-@import [ <url> | <string> ]
-        [ supports( [ <supports-condition> | <declaration> ] ) ]?
-        <media-query-list>? ;
-```
+{{csssyntax}}
 
 ## Examples
 

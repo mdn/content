@@ -98,6 +98,11 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("inset-inline-end")}}
 - {{CSSxRef("inset-inline-start")}}
 
+### Properties for size containment
+
+- {{CSSxRef("contain-intrinsic-block-size")}}
+- {{CSSxRef("contain-intrinsic-inline-size")}}
+
 ### Other properties
 
 - {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)

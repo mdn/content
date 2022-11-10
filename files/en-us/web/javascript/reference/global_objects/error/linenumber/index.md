@@ -20,19 +20,19 @@ The **`lineNumber`** property contains the line number in the file that raised t
 
 ```js
 try {
-  throw new Error('Could not parse input');
+  throw new Error("Could not parse input");
 } catch (err) {
-  console.log(err.lineNumber) // 2
+  console.log(err.lineNumber); // 2
 }
 ```
 
 ### Alternative example using error event
 
 ```js
-window.addEventListener('error', (e) => {
+window.addEventListener("error", (e) => {
   console.log(e.lineNumber); // 5
 });
-const e = new Error('Could not parse input');
+const e = new Error("Could not parse input");
 throw e;
 ```
 

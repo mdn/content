@@ -24,12 +24,12 @@ Several members of {{domxref("HTMLMediaElement")}} objects return a **normalized
 
 _The ranges in such an object are ordered, don't overlap, and don't touch (adjacent ranges are folded into one bigger range). A range can be empty (referencing just a single moment in time)._
 
-## Properties
+## Instance properties
 
 - {{domxref("TimeRanges.length")}} {{ReadOnlyInline}}
   - : Returns an `unsigned long` representing the number of time ranges represented by the time range object.
 
-## Methods
+## Instance methods
 
 - {{domxref("TimeRanges.start()")}}
   - : Returns the time for the start of the range with the specified index.

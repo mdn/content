@@ -23,7 +23,7 @@ The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API
 
 This interface is accessible through the {{domxref("VRDisplay.capabilities")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("VRDisplayCapabilities.canPresent")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).

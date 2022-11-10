@@ -34,7 +34,7 @@ Several layer types inherit from `XRCompositionLayer`:
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}} {{Experimental_Inline}}
   - : A boolean enabling the layer's texture alpha channel.
@@ -47,7 +47,7 @@ Several layer types inherit from `XRCompositionLayer`:
 - {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean signaling that the layer should be re-rendered in the next frame.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 

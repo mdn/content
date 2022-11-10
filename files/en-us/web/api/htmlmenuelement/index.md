@@ -22,7 +22,7 @@ The **`HTMLMenuElement`** interface provides special properties (beyond those de
 - {{DOMxRef("HTMLMenuElement.HTMLMenuElement", "HTMLMenuElement()")}}
   - : Returns a newly constructed `HTMLMenuElement`.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}, and its ancestors._
 
@@ -38,7 +38,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}, and its ancest
     This use of the {{HTMLElement("menu")}} element has never been implemented widely
     and is now deprecated.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}, and its ancestors._
 

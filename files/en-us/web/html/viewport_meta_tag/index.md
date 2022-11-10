@@ -40,11 +40,11 @@ The basic properties of the "viewport" `<meta>` tag include:
 - `height`
   - : Controls the size of the viewport. It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is [100vh](/en-US/docs/Web/CSS/length#vh), or 100% of the viewport height. Minimum: `1`. Maximum: `10000`. Negative values: ignored.
 - `initial-scale`
-  - : Controls the zoom level when the page is first loaded. Minimum: `0.1`. Maximum: `10`. Default:`1`. Negative values: ignored.
+  - : Controls the zoom level when the page is first loaded. Minimum: `0.1`. Maximum: `10`. Default: `1`. Negative values: ignored.
 - `minimum-scale`
   - : Controls how much zoom out is allowed on the page. Minimum: `0.1`. Maximum: `10`. Default: `0.1`. Negative values: ignored.
 - `maximum-scale`
-  - : Controls how much zoom in is allowed on the page. Any value less than 3 fails accessibility. Minimum: `0.1`. Maximum: `10`. Default:`10`. Negative values: ignored.
+  - : Controls how much zoom in is allowed on the page. Any value less than 3 fails accessibility. Minimum: `0.1`. Maximum: `10`. Default: `10`. Negative values: ignored.
 - `user-scalable`
   - : Controls whether zoom in and zoom out actions are allowed on the page. Valid values: `0`, `1`, `yes`, or `no`. Default: `1`, which is the same as `yes`. Setting the value to `0`, which is the same as `no`, is against Web Content Accessibility Guidelines (WCAG).
 
@@ -52,7 +52,7 @@ The basic properties of the "viewport" `<meta>` tag include:
 
 ## Screen density
 
-Screen resolutions have risen to the size that individual pixels are indistinguishable by the human eye. For example, smartphones often have small screens with resolutions upwards of 1920—1080 pixels (\~400 dpi). Because of this, many browsers can display their pages in a smaller physical size by translating multiple hardware pixels for each CSS "pixel". Initially, this caused usability and readability problems on many touch-optimized web sites.
+Screen resolutions have risen to the size that individual pixels are indistinguishable by the human eye. For example, smartphones often have small screens with resolutions upwards of 1920—1080 pixels (\~400 dpi). Because of this, many browsers can display their pages in a smaller physical size by translating multiple hardware pixels for each CSS "pixel". Initially, this caused usability and readability problems on many touch-optimized websites.
 
 On high dpi screens, pages with `initial-scale=1` will effectively be zoomed by browsers. Their text will be smooth and crisp, but their bitmap images may not take advantage of the full screen resolution. To get sharper images on these screens, web developers may want to design images – or whole layouts – at a higher scale than their final size and then scale them down using CSS or viewport properties.
 
