@@ -212,8 +212,8 @@ function f2c(x) {
 Suppose we want to create a replacer that appends the offset data to every matched string. Because the replacer function already receives the `offset` parameter, it will be trivial if the regex is statically known.
 
 ```js
+"abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) `);
 // "abc (1) d"
-console.log("abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) `));
 ```
 
 However, this replacer would be hard to generalize if we want it to work with any regex pattern. The replacer is _variadic_ — the number of arguments it receives depends on the number of capturing groups present. We can use [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), but it would also collect `offset`, `string`, etc. into the array. The fact that `groups` may or may not be passed depending on the identity of the regex would also make it hard to generically know which argument corresponds to the `offset`.
