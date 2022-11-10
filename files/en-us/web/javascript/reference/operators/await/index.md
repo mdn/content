@@ -312,6 +312,7 @@ Only `lastAsyncTask` appears in the stack trace, because the promise is rejected
 
 ```js
 async function lastAsyncTask() {
+  await null;
   throw new Error("failed");
 }
 
