@@ -121,8 +121,8 @@ These methods treat empty slots as if they are `undefined`:
 - {{jsxref("Array/findIndex", "findIndex()")}}
 - {{jsxref("Array/findLast", "findLast()")}}
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
+- {{jsxref("Array/group", "group()")}} {{Experimental_Inline}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}} {{Experimental_Inline}}
 - {{jsxref("Array/includes", "includes()")}}
 - {{jsxref("Array/join", "join()")}}
 - {{jsxref("Array/keys", "keys()")}}
