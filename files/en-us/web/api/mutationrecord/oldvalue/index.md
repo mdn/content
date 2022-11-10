@@ -51,7 +51,7 @@ const changeValueButton = document.getElementById("changeColorButton");
 const log = document.getElementById("log");
 
 function changeColor() {
-  // Generates a 6 character hexadecimal string
+  // Random 6 character hexadecimal number to use as the hex color value
   const newColor = Math.floor(Math.random()*16777215).toString(16);
   h1.style.color = `#${newColor}`;
 }
