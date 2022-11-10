@@ -55,7 +55,7 @@ None.
 
 ## Examples
 
-Usage of info and state
+### Using info and state
 
 ```js
 async function handleReload() {
