@@ -39,7 +39,7 @@ updateCurrentEntry(options)
 
 ### Return value
 
-`undefined`.
+None (`undefined`).
 
 ### Exceptions
 
