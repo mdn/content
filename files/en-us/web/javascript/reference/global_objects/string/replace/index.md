@@ -184,7 +184,7 @@ Given `styleHyphenFormat('borderTop')`, this returns `'border-top'`.
 Because we want to further transform the _result_ of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method. If we had tried to do this using the match without a function, the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.
 
 ```js example-bad
-// won't work
+// Won't work
 const newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());
 ```
 
