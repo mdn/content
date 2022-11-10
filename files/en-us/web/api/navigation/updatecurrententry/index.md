@@ -20,9 +20,7 @@ browser-compat: api.Navigation.updateCurrentEntry
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`updateCurrentEntry()`** method of the
-{{domxref("Navigation")}} interface updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}}; used
-    in cases where the state change will be independent from a navigation or reload.
+The **`updateCurrentEntry()`** method of the {{domxref("Navigation")}} interface updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}}; used in cases where the state change will be independent from a navigation or reload.
 
 ## Syntax
 
