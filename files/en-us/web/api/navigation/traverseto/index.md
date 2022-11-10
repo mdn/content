@@ -20,8 +20,7 @@ browser-compat: api.Navigation.traverseTo
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`traverseTo()`** method of the
-{{domxref("Navigation")}} interface navigates to a specific {{domxref("NavigationHistoryEntry")}} by {{domxref("NavigationHistoryEntry.key", "key")}}.
+The **`traverseTo()`** method of the {{domxref("Navigation")}} interface navigates to the {{domxref("NavigationHistoryEntry")}} identified by the given {{domxref("NavigationHistoryEntry.key", "key")}}.
 
 ## Syntax
 
