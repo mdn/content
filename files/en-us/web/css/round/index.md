@@ -16,7 +16,7 @@ browser-compat: css.types.round
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a stepped-value function that returns a rounded number based on a selected rounding strategy.
+The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a rounded number based on a selected rounding strategy.
 
 ## Syntax
 
