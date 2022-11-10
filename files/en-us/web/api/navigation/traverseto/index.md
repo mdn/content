@@ -25,6 +25,7 @@ The **`traverseTo()`** method of the {{domxref("Navigation")}} interface navigat
 ## Syntax
 
 ```js-nolint
+traverseTo(key)
 traverseTo(key, options)
 ```
 
