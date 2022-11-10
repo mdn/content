@@ -35,7 +35,7 @@ m dx dy
 
 In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
-![](blank_path_area.png)
+![A red dot is drawn on a white sqare 10 pixels down and 10 pixels to the right. This dot would not normally show but is used as an example of where the cursor will start after the "Move To" command](blank_path_area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ There are two abbreviated forms for drawing horizontal and vertical lines. `H` d
 
 An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a {{SVGElement("rect")}} element). It's composed of horizontal and vertical lines only.
 
-![](path_line_commands.png)
+![A square with black fill is drawn within a white square. The black square's edges begin at position (10,10), move horizontally to position (90,10), move vertically to position (90,90), move horizontally back to position (10,90), and finally move back to the original position (10, 10).](path_line_commands.png)
 
 ```xml
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
