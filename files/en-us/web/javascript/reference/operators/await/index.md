@@ -42,6 +42,7 @@ If the promise is rejected, the `await` expression throws the rejected value. Th
 The `expression` is resolved in the same way as {{jsxref("Promise.resolve()")}}.
 As same as `Promise.resolve()`, the result is always a native `Promise` (that is constructed by engine's original constructor {{jsxref("Promise")}}), then this `Promise` is used internally to perform the awaition.
 If the `expression` is a:
+
 - native `Promise`: The promise is directly used. Method `then` doesn't get called, because the awaition is performed natively.
 - [thenable object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) (including non-native promises, that is polyfill, proxy, child class, ...): A native `Promise` is constructed by calling object's method `then`. The native `Promise` is used.
 - non-thenable value: A `Promise` already fulfilled is constructed and used.
