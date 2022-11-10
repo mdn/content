@@ -27,6 +27,7 @@ The **`updateCurrentEntry()`** method of the
 ## Syntax
 
 ```js-nolint
+updateCurrentEntry()
 updateCurrentEntry(options)
 ```
 
