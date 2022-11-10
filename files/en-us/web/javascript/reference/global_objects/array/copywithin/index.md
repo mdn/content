@@ -53,7 +53,7 @@ The modified array.
 
 ## Description
 
-The `copyWithin()` method works like C and C++'s `memmove`, and is a high-performance method to shift the data of an {{jsxref("Array")}}. This especially applies to the {{jsxref("TypedArray/copyWithin", "TypedArray")}} method of the same name. The sequence is copied and pasted as one operation; pasted sequence will have the copied values even when the copy and paste region overlap.
+The `copyWithin()` method works like C and C++'s `memmove`, and is a high-performance method to shift the data of an {{jsxref("Array")}}. This especially applies to the {{jsxref("TypedArray/copyWithin", "TypedArray")}} method of the same name. The sequence is copied and pasted as one operation; the pasted sequence will have the copied values even when the copy and paste region overlap.
 
 The `copyWithin()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter the length of `this`, but it will change the content of `this` and create new properties or delete existing properties, if necessary.
 
