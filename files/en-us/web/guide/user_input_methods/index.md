@@ -172,7 +172,6 @@ div {
 - [Touch events Guide](/en-US/docs/Web/API/Touch_events)
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Drag Operations Guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 
 ## Reference

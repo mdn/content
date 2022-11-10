@@ -26873,38 +26873,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/DataTransfer/mozClearDataAt": {
-    "modified": "2020-10-15T21:40:08.445Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozCursor": {
-    "modified": "2020-10-15T21:40:08.800Z",
-    "contributors": ["fscholz", "Sebastianz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozGetDataAt": {
-    "modified": "2020-10-15T21:40:09.937Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozItemCount": {
-    "modified": "2020-10-15T21:40:08.646Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozSetDataAt": {
-    "modified": "2020-10-15T21:40:08.879Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozSourceNode": {
-    "modified": "2020-10-15T21:40:08.759Z",
-    "contributors": ["fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozTypesAt": {
-    "modified": "2020-10-15T21:40:09.724Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozUserCancelled": {
-    "modified": "2020-10-15T21:40:09.021Z",
-    "contributors": ["fscholz", "rolfedh", "AFBarstow"]
-  },
   "Web/API/DataTransfer/setData": {
     "modified": "2020-10-15T21:40:08.494Z",
     "contributors": [
@@ -42581,21 +42549,6 @@
       "fscholz",
       "PushpitaPikuDey",
       "AFBarstow"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
-    "modified": "2019-03-23T23:45:39.658Z",
-    "contributors": [
-      "SphinxKnight",
-      "PageYe",
-      "chrisdavidmills",
-      "AFBarstow",
-      "teoli",
-      "Ericp",
-      "sdwilsh",
-      "drry",
-      "Piro",
-      "Enn"
     ]
   },
   "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
