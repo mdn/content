@@ -21,17 +21,17 @@ browser-compat:
 
 {{seecompattable}}{{DefaultAPISidebar("Navigation API")}}
 
-The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the [History API](/en-US/docs/Web/API/History_API) and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "History API", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
 
 ## Concepts and usage
 
-In SPAs, the page template tends to stay the same during usage, and the content is dynamically rewritten as the user visits different pages or features. As a result, only one distinct page is loaded in the browser, which breaks the expected user experience of navigating back and forth between different locations in the viewing history. This problem can be solved to a degree via the [History API](/en-US/docs/Web/API/History_API), but it is not designed for the needs of SPAs. The Navigation API aims to bridge that gap.
+In SPAs, the page template tends to stay the same during usage, and the content is dynamically rewritten as the user visits different pages or features. As a result, only one distinct page is loaded in the browser, which breaks the expected user experience of navigating back and forth between different locations in the viewing history. This problem can be solved to a degree via the {{domxref("History API", "History API", "", "nocode")}}, but it is not designed for the needs of SPAs. The Navigation API aims to bridge that gap.
 
 The API is accessed via the {{domxref("Window.navigation")}} property, which returns a reference to a global {{domxref("Navigation")}} object. Each `window` object has its own corresponding `navigation` instance.
 
 ### Handling navigations
 
-The `navigation` interface has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API")}}, where it is sometimes hard to figure out responding to all navigations.) The `navigate` event handler is passed a {{domxref("NavigateEvent")}} object, which contains detailed information including details around the navigation's destination, type, whether it contains `POST` form data or a download request, and more.
+The `navigation` interface has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API", "History API", "", "nocode")}}, where it is sometimes hard to figure out responding to all navigations.) The `navigate` event handler is passed a {{domxref("NavigateEvent")}} object, which contains detailed information including details around the navigation's destination, type, whether it contains `POST` form data or a download request, and more.
 
 The `NavigationEvent` object also provides two methods:
 
@@ -52,7 +52,7 @@ When the `intercept()` handler function's promise fulfills, the `Navigation` obj
 
 As the user navigates through your application, each new location navigated to results in the creation of a navigation history entry. Each history entry is represented by a distinct {{domxref("NavigationHistoryEntry")}} object instance. These contain several properties such as the entry's key, URL, and state information. You can get the entry that the user is currently on right now using {{domxref("Navigation.currentEntry")}}, and an array of all existing history entries using {{domxref("Navigation.entries()")}}. Each `NavigationHistoryEntry` object has a {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} event, which fires when the entry is no longer part of the browser history. For example, if the user navigates back three times, then navigates forward to somewhere else, those three history entries will be disposed of.
 
-> **Note:** The Navigation API only exposes history entries created directly by the application's top-level context (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+> **Note:** The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", "", "nocode")}}.
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
@@ -83,23 +83,23 @@ In some cases however, a state change will be independent from a navigation or r
 There are a few perceived limitations with the Navigation API:
 
 1. The current specification doesn't trigger {{domxref("Navigation.navigate_event", "navigate")}} on a page's first load. This might be fine for sites that use Server Side Rendering (SSR)—your server could return the correct initial state, which is the fastest way to get content to your users. But sites that leverage client-side code to create their pages may need an additional function to initialize the page.
-2. The Navigation API operates only within a single frame—the top-level page, or a single specific {{htmlelement("iframe")}}. This has some interesting implications that are [further documented in the spec](https://github.com/WICG/navigation-api#warning-backforward-are-not-always-opposites), but in practice, will reduce developer confusion. The previous History API has several confusing edge cases, like support for frames, which the Navigation API handles up-front.
+2. The Navigation API operates only within a single frame—the top-level page, or a single specific {{htmlelement("iframe")}}. This has some interesting implications that are [further documented in the spec](https://github.com/WICG/navigation-api#warning-backforward-are-not-always-opposites), but in practice, will reduce developer confusion. The previous {{domxref("History API", "History API", "", "nocode")}} has several confusing edge cases, like support for frames, which the Navigation API handles up-front.
 3. You can't currently use the Navigation API to programmatically modify or rearrange the history list. It might be useful to have a temporary state, for example navigating the user to a temporary modal that asks them for some information, then going back to the previous URL. In this case, you'd want to delete the temporary modal navigation entry so the user cannot mess up the application flow by hitting the forward button and opening it again.
 
 ## Interfaces
 
+- {{domxref("NavigateEvent")}}
+  - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. It provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
 - {{domxref("Navigation")}}
   - : Allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
+- {{domxref("NavigationCurrentEntryChangeEvent")}}
+  - : Event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the {{domxref("Navigation.currentEntry")}} has changed. It provides access to the navigation type, and the previous history entry that was navigated from.
 - {{domxref("NavigationDestination")}}
   - : Represents the destination being navigated to in the current navigation.
 - {{domxref("NavigationHistoryEntry")}}
   - : Represents a single navigation history entry.
 - {{domxref("NavigationTransition")}}
   - : Represents an ongoing navigation.
-- {{domxref("NavigationCurrentEntryChangeEvent")}}
-  - : Event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the {{domxref("Navigation.currentEntry")}} has changed. It provides access to the navigation type, and the previous history entry that was navigated from.
-- {{domxref("NavigateEvent")}}
-  - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. It provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
 
 ## Extensions to other interfaces
 
@@ -113,10 +113,12 @@ There are a few perceived limitations with the Navigation API:
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', event => {
+navigation.addEventListener('navigate', (event) => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(event)) return;
+  if (shouldNotIntercept(event)) {
+    return;
+  }
 
   const url = new URL(event.destination.url);
 
@@ -139,8 +141,10 @@ navigation.addEventListener('navigate', event => {
 ### Handling scrolling using `scroll()`
 
 ```js
-navigation.addEventListener('navigate', event => {
-  if (shouldNotIntercept(event)) return;
+navigation.addEventListener('navigate', (event) => {
+  if (shouldNotIntercept(event)) {
+    return;
+  } 
   const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {

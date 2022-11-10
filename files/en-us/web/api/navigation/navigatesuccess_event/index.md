@@ -23,7 +23,7 @@ browser-compat: api.Navigation.navigatesuccess_event
 
 The **`navigatesuccess`** event of the {{domxref("Navigation")}} interface is fired when a successful navigation has finished.
 
-This means that all promises returned by your `intercept()` handler are fulfilled. This is equivalent to the {{domxref("NavigationTransition.finished")}} promise fulfilling.
+In the case of an intercepted navigation, this would occur after any promises returned by your {{domxref("NavigateEvent.intercept", "intercept()")}} handler are fulfilled. The {{domxref("NavigationTransition.finished")}} promise will also fulfill at the same time.
 
 ## Syntax
 
@@ -35,14 +35,16 @@ addEventListener("navigatesuccess", (event) => {});
 onnavigatesuccess = (event) => {};
 ```
 
-> **Note:** The event object is of type {{domxref("Event")}}.
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
 You might deal with a successful navigation by hiding a previously displayed progress indicator, like this:
 
 ```js
-navigation.addEventListener('navigatesuccess', event => {
+navigation.addEventListener('navigatesuccess', (event) => {
   loadingIndicator.hidden = true;
 });
 ```
@@ -50,7 +52,7 @@ navigation.addEventListener('navigatesuccess', event => {
 Or you might show an error message on failure:
 
 ```js
-navigation.addEventListener('navigateerror', event => {
+navigation.addEventListener('navigateerror', (event) => {
   loadingIndicator.hidden = true; // also hide indicator
   showMessage(`Failed to load page: ${event.message}`);
 });

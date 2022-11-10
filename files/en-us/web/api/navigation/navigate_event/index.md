@@ -32,17 +32,23 @@ addEventListener("navigate", (event) => {});
 onnavigate = (event) => {};
 ```
 
-> **Note:** The event object is of type {{domxref("NavigateEvent")}}.
+## Event type
+
+An {{domxref("NavigateEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("NavigateEvent")}}
 
 ## Examples
 
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', event => {
+navigation.addEventListener('navigate', (event) => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(event)) return;
+  if (shouldNotIntercept(event)) {
+    return;
+  }
 
   const url = new URL(event.destination.url);
 
@@ -62,13 +68,15 @@ navigation.addEventListener('navigate', event => {
 });
 ```
 
-> **Note:** Previous to the Navigation API being available, to do something similar you'd have to listen for all click events on links, run `e.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
+> **Note:** Previous to the Navigation API being available, to do something similar you'd have to listen for all click events on links, run `event.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
 
 ### Handling scrolling using `scroll()`
 
 ```js
-navigation.addEventListener('navigate', event => {
-  if (shouldNotIntercept(navigateEvent)) return;
+navigation.addEventListener('navigate', (event) => {
+  if (shouldNotIntercept(navigateEvent)) {
+    return;
+  }
   const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {

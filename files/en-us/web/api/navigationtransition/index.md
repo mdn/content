@@ -19,7 +19,7 @@ browser-compat: api.NavigationTransition
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`NavigationTransition`** interface of the {{domxref("Navigation API")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} or {{domxref("Navigation/navigateerror_event", "navigateerror")}} stage.
+The **`NavigationTransition`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} or {{domxref("Navigation/navigateerror_event", "navigateerror")}} stage.
 
 It is accessed via the {{domxref("Navigation.transition")}} property.
 
@@ -37,9 +37,11 @@ It is accessed via the {{domxref("Navigation.transition")}} property.
 ## Examples
 
 ```js
-await navigation.transition.finished;
-// Navigation has completed successfully
-// Cleanup any ongoing monitoring
+async function cleanupNavigation() {
+  await navigation.transition.finished;
+  // Navigation has completed successfully
+  // Cleanup any ongoing monitoring
+}
 ```
 
 ## Specifications

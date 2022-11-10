@@ -58,10 +58,12 @@ new NavigateEvent(type, init)
 A developer would not use this constructor manually. A new `NavigateEvent` object is constructed when a handler is invoked as a result of the {{domxref("Navigation.navigate_event", "navigate")}} event firing.
 
 ```js
-navigation.addEventListener('navigate', event => {
+navigation.addEventListener('navigate', (event) => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(event)) return;
+  if (shouldNotIntercept(event)) {
+    return;
+  }
 
   const url = new URL(event.destination.url);
 

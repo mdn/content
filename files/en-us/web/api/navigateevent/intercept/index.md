@@ -84,7 +84,7 @@ navigation.addEventListener('navigate', event => {
 Form submission can be detected by querying for the {{domxref("NavigateEvent.formData")}} property. The following example turns any form submission into one which stays on the current page. In this case, you don't update the DOM, so you can cancel any default reset and scroll behavior using `focusReset` and `scroll`.
 
 ```js
-navigation.addEventListener('navigate', event => {
+navigation.addEventListener('navigate', (event) => {
   if (event.formData && event.canIntercept) {
     // User submitted a POST form to a same-domain URL
     // (If canIntercept is false, the event is just informative:
@@ -96,7 +96,7 @@ navigation.addEventListener('navigate', event => {
       // don't allow focus or scrolling to reset:
       focusReset: 'manual',
       scroll: 'manual',
-      handler() {
+      async handler() {
         await fetch(event.destination.url, {
           method: 'POST',
           body: event.formData,

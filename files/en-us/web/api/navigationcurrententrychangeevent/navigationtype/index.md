@@ -37,7 +37,7 @@ The possible values are:
 ## Examples
 
 ```js
-navigation.addEventListener("currententrychange", event => {
+navigation.addEventListener("currententrychange", (event) => {
   console.log(event.navigationType);
 });
 ```

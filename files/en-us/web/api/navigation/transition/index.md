@@ -26,15 +26,17 @@ The **`transition`** read-only property of the
 
 ## Value
 
-A {{domxref("NavigationTransition")}} object, or `null` in no navigation is currently in progress.
+A {{domxref("NavigationTransition")}} object, or `null` if no navigation is currently in progress.
 
 ## Examples
 
 ```js
-if(navigation.transition) {
-  showLoadingSpinner();
-  await navigation.transition.finished;
-  hideLoadingSpinner();
+async function handleTransition() {
+  if(navigation.transition) {
+    showLoadingSpinner();
+    await navigation.transition.finished;
+    hideLoadingSpinner();
+  }
 }
 ```
 

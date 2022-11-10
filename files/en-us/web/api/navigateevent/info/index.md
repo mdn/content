@@ -33,7 +33,7 @@ Any data type representing the `info` value, or `false` if none was passed.
 One example of how `info` might be used is to trigger different single-page navigation renderings depending on how a certain route was reached. For example, consider a photo gallery app, where you can reach the same photo URL and state via various routes. You might want to use a different animation to show the photo for each route.
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   if (isPhotoNavigation(event)) {
     event.intercept({ async handler() {
       switch (event.info.?via) {

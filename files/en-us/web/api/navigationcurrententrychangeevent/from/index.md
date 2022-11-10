@@ -30,7 +30,7 @@ A {{domxref("NavigationHistoryEntry")}} object.
 ## Examples
 
 ```js
-navigation.addEventListener("currententrychange", event => {
+navigation.addEventListener("currententrychange", (event) => {
   console.log(event.from);
 });
 ```

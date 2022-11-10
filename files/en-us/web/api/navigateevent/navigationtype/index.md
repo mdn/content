@@ -42,7 +42,7 @@ The possible values are:
 Sometimes it's desirable to handle back/forward navigations specially, e.g. reusing cached views by transitioning them onto the screen. This can be done by branching as follows:
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   // Some navigations, e.g. cross-origin navigations, we
   // cannot intercept. Let the browser handle those normally.
   if (!event.canIntercept) {

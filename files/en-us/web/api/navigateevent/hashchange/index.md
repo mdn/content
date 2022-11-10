@@ -31,7 +31,7 @@ A boolean value—`true` if the navigation is a fragment navigation, `false` if 
 ## Examples
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   // Some navigations, e.g. cross-origin navigations, we
   // cannot intercept. Let the browser handle those normally.
   if (!event.canIntercept) {

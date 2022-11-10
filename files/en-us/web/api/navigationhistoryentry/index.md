@@ -19,11 +19,11 @@ browser-compat: api.NavigationHistoryEntry
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`NavigationHistoryEntry`** interface of the {{domxref("Navigation API")}} represents a single navigation history entry.
+The **`NavigationHistoryEntry`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents a single navigation history entry.
 
 These objects are commonly accessed via the {{domxref("Navigation.currentEntry")}} property and {{domxref("Navigation.entries()")}} method.
 
-The Navigation API only exposes history entries created directly by the application (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+The Navigation API only exposes history entries created directly by the application (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API", "History API", "", "nocode")}}.
 
 {{InheritanceDiagram}}
 
@@ -42,11 +42,6 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("NavigationHistoryEntry.url", "url")}} {{ReadOnlyInline}}
   - : Returns the absolute URL of this history entry.
 
-## `NavigationHistoryEntry` events
-
-- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}}
-  - : Fires when the entry is no longer part of the history entry list.
-
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
@@ -54,16 +49,25 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("NavigationHistoryEntry.getState", "getState()")}}
   - : Returns a clone of the available state associated with this history entry.
 
+## Events
+
+- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}}
+  - : Fires when the entry is no longer part of the history entry list.
+
 ## Examples
 
 ```js
-// On JS startup, get the key of the first loaded page
-// so the user can always go back there.
-const {key} = navigation.currentEntry;
-backToHomeButton.onclick = () => navigation.traverseTo(key);
+async function initHomeBtn() {
+  // Get the key of the first loaded page
+  // so the user can always go back there.
+  const {key} = navigation.currentEntry;
+  backToHomeButton.onclick = () => navigation.traverseTo(key);
+}
 
-// Navigate away, but the button will always work.
-await navigation.navigate('/another_url').finished;
+async function handleNavigate(url) {
+  // Navigate away, but the button will always work.
+  await navigation.navigate(url).finished;
+}
 ```
 
 ## Specifications

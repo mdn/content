@@ -31,7 +31,7 @@ A {{domxref("FormData")}} object, or `null`.
 ## Examples
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   // Some navigations, e.g. cross-origin navigations, we
   // cannot intercept. Let the browser handle those normally.
   if (!event.canIntercept) {

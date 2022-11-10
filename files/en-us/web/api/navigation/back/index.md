@@ -52,22 +52,24 @@ An object containing two promises — `{ committed, finished }`. This allows the
 ## Examples
 
 ```js
-if(navigation.canGoBack) {
-  await navigation.back( { info: "swipe-right" } ).finished;
-  // Handle any required clean-up after
-  // navigation has finished
-} else {
-  displayBanner('You are on the first page');
+async function backHandler() {
+  if(navigation.canGoBack) {
+    await navigation.back().finished;
+    // Handle any required clean-up after
+    // navigation has finished
+  } else {
+    displayBanner('You are on the first page');
+  }
 }
 
-  ...
-
-if(navigation.canGoForward) {
-  await navigation.forward( { info: "swipe-right" } ).finished;
-  // Handle any required clean-up after
-  // navigation has finished
-} else {
-  displayBanner('You are on the last page');
+async function forwardHandler() {
+  if(navigation.canGoForward) {
+    await navigation.forward().finished;
+    // Handle any required clean-up after
+    // navigation has finished
+  } else {
+    displayBanner('You are on the last page');
+  }
 }
 ```
 

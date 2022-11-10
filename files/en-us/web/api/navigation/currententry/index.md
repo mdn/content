@@ -31,13 +31,17 @@ A {{domxref("NavigationHistoryEntry")}} object.
 ## Examples
 
 ```js
-// On JS startup, get the key of the first loaded page
-// so the user can always go back there.
-const {key} = navigation.currentEntry;
-backToHomeButton.onclick = () => navigation.traverseTo(key);
+async function initHomeBtn() {
+  // Get the key of the first loaded page
+  // so the user can always go back there.
+  const {key} = navigation.currentEntry;
+  backToHomeButton.onclick = () => navigation.traverseTo(key);
+}
 
-// Navigate away, but the button will always work.
-await navigation.navigate('/another_url').finished;
+async function handleNavigate(url) {
+  // Navigate away, but the button will always work.
+  await navigation.navigate(url).finished;
+}
 ```
 
 ## Specifications

@@ -43,7 +43,7 @@ new NavigationCurrentEntryChangeEvent(type, init)
 A developer would not use this constructor manually. A new `NavigationCurrentEntryChangeEvent` object is constructed when a handler is invoked as a result of the {{domxref("Navigation.currententrychange_event", "currententrychange")}} event firing.
 
 ```js
-navigation.addEventListener("currententrychange", event => {
+navigation.addEventListener("currententrychange", (event) => {
   console.log(event.navigationType);
 });
 ```

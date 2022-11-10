@@ -19,11 +19,11 @@ browser-compat: api.Navigation
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`Navigation`** interface of the {{domxref("Navigation API")}} allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, introspecting navigation history entries, and managing navigations as they happen.
+The **`Navigation`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
 
 It is accessed via the {{domxref("Window.navigation")}} property.
 
-The Navigation API only exposes history entries created directly by the application (i.e. not {{htmlelement("iframe")}} navigations or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than the older {{domxref("History API")}}.
+The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", "", "nocode")}}.
 
 {{InheritanceDiagram}}
 
@@ -44,18 +44,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
     navigated to right now.
 - {{domxref("Navigation.transition", "transition")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NavigationTransition")}} object representing the status of an in-progress navigation,
-    which can be used to track it. Returns `null` in no navigation is currently in progress.
-
-### `Navigation` events
-
-- {{domxref("Navigation/currententrychange_event", "currententrychange")}}
-  - : Fired when the {{domxref("Navigation.currentEntry")}} has changed.
-- {{domxref("Navigation/navigate_event", "navigate")}}
-  - : Fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, allowing you to intercept as required.
-- {{domxref("Navigation/navigateerror_event", "navigateerror")}}
-  - : Fired when a navigation fails.
-- {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}}
-  - : Fired when a successful navigation has finished.
+    which can be used to track it. Returns `null` if no navigation is currently in progress.
 
 ## Instance methods
 
@@ -77,27 +66,40 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Updates the state of the {{domxref("Navigation.currentEntry","currentEntry")}}; used
     in cases where the state change will be independent from a navigation or reload.
 
+## Events
+
+- {{domxref("Navigation/currententrychange_event", "currententrychange")}}
+  - : Fired when the {{domxref("Navigation.currentEntry")}} has changed.
+- {{domxref("Navigation/navigate_event", "navigate")}}
+  - : Fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, allowing you to intercept as required.
+- {{domxref("Navigation/navigateerror_event", "navigateerror")}}
+  - : Fired when a navigation fails.
+- {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}}
+  - : Fired when a successful navigation has finished.
+
 ## Examples
 
 ### Moving forwards and backwards in the history
 
 ```js
-if(navigation.canGoBack) {
-  await navigation.back().finished;
-  // Handle any required clean-up after
-  // navigation has finished
-} else {
-  displayBanner('You are on the first page');
+async function backHandler() {
+  if(navigation.canGoBack) {
+    await navigation.back().finished;
+    // Handle any required clean-up after
+    // navigation has finished
+  } else {
+    displayBanner('You are on the first page');
+  }
 }
 
-  ...
-
-if(navigation.canGoForward) {
-  await navigation.forward().finished;
-  // Handle any required clean-up after
-  // navigation has finished
-} else {
-  displayBanner('You are on the last page');
+async function forwardHandler() {
+  if(navigation.canGoForward) {
+    await navigation.forward().finished;
+    // Handle any required clean-up after
+    // navigation has finished
+  } else {
+    displayBanner('You are on the last page');
+  }
 }
 ```
 

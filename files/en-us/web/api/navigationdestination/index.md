@@ -19,7 +19,7 @@ browser-compat: api.NavigationDestination
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`NavigationDestination`** interface of the {{domxref("Navigation API")}} represents the destination being navigated to in the current navigation.
+The **`NavigationDestination`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents the destination being navigated to in the current navigation.
 
 It is accessed via the {{domxref("NavigateEvent.destination")}} property.
 
@@ -46,10 +46,12 @@ It is accessed via the {{domxref("NavigateEvent.destination")}} property.
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', event => {
+navigation.addEventListener('navigate', (event) => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(event)) return;
+  if (shouldNotIntercept(event)) {
+    return;
+  }
 
   // Returns a URL() object constructed from the
   // NavigationDestination.url value

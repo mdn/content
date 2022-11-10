@@ -31,7 +31,7 @@ A string containing the filename of the file requested for download, or `null`.
 ## Examples
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   // Some navigations, e.g. cross-origin navigations, we
   // cannot intercept. Let the browser handle those normally.
   if (!event.canIntercept) {

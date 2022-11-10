@@ -30,9 +30,11 @@ A {{jsxref("Promise")}} that resolves to `undefined`.
 ## Examples
 
 ```js
-await navigation.transition.finished;
-// Navigation has completed successfully
-// Cleanup any ongoing monitoring
+async function cleanupNavigation() {
+  await navigation.transition.finished;
+  // Navigation has completed successfully
+  // Cleanup any ongoing monitoring
+}
 ```
 
 ## Specifications

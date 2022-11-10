@@ -33,7 +33,7 @@ A boolean value—`true` if the navigation is user-initiated, `false` if not.
 ## Examples
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.userInitiated);
 });
 ```

@@ -40,7 +40,9 @@ addEventListener("dispose", (event) => {});
 ondispose = (event) => {};
 ```
 
-> **Note:** The event object is of type {{domxref("Event")}}.
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

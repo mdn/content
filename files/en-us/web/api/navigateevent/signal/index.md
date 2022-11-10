@@ -33,14 +33,14 @@ An {{domxref("AbortSignal")}} object.
 The general idea here is that the `signal` property can be passed to an associated {{domxref("fetch()")}} operation so that if the navigation is cancelled, it can be safely aborted, avoiding wasting bandwidth on fetches that are no longer needed.
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   event.intercept({ async handler() {
 
-      ...
+    // ...
 
     await fetch(`/img/some-image.jpg`, { signal: event.signal });
 
-      ...
+    // ...
 
   } });
 });

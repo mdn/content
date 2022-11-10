@@ -32,10 +32,12 @@ A string.
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', event => {
+navigation.addEventListener('navigate', (event) => {
   // Exit early if this navigation shouldn't be intercepted, 
   // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(event)) return;
+  if (shouldNotIntercept(event)) {
+    return;
+  }
 
   const url = new URL(event.destination.url);
 

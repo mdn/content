@@ -32,22 +32,24 @@ A boolean value—`true` if it is possible to navigate forwards in the navigatio
 ## Examples
 
 ```js
-if(navigation.canGoBack) {
-  await navigation.back().finished;
-  // Handle any required clean-up after
-  // navigation has finished
-} else {
-  displayBanner('You are on the first page');
+async function backHandler() {
+  if(navigation.canGoBack) {
+    await navigation.back().finished;
+    // Handle any required clean-up after
+    // navigation has finished
+  } else {
+    displayBanner('You are on the first page');
+  }
 }
 
-  ...
-
-if(navigation.canGoForward) {
-  await navigation.forward().finished;
-  // Handle any required clean-up after
-  // navigation has finished
-} else {
-  displayBanner('You are on the last page');
+async function forwardHandler() {
+  if(navigation.canGoForward) {
+    await navigation.forward().finished;
+    // Handle any required clean-up after
+    // navigation has finished
+  } else {
+    displayBanner('You are on the last page');
+  }
 }
 ```
 

@@ -46,8 +46,10 @@ None.
 ### Handling scrolling using `scroll()`
 
 ```js
-navigation.addEventListener('navigate', event => {
-  if (shouldNotIntercept(navigateEvent)) return;
+navigation.addEventListener('navigate', (event) => {
+  if (shouldNotIntercept(navigateEvent)) {
+    return;
+  } 
   const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {

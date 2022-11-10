@@ -55,13 +55,21 @@ None.
 Usage of info and state
 
 ```js
-await navigation.reload({ info: { animation: "fade-in" }, state: { infoPaneOpen: true } } );
+async function handleReload() {
+  await navigation.reload({ info: { animation: "fade-in" }, state: { infoPaneOpen: true } } );
+
+  // ...
+}
 ```
 
 Reload page and add a new state item:
 
 ```js
-await navigation.reload({ state: { ...navigation.currentEntry.getState(), newState: 3 } });
+async function handleReload() {
+  await navigation.reload({ state: { ...navigation.currentEntry.getState(), newState: 3 } });
+
+  // ...
+}
 ```
 
 ## Specifications
