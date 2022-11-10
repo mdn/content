@@ -239,11 +239,8 @@ function addOffset(match, ...args) {
   return `${match} (${offset}) `;
 }
 
-// "abc (1) d"
-console.log("abcd".replace(/(bc)/, addOffset));
-
-// "abc (1) d"
-console.log("abcd".replace(/(?<group>bc)/, addOffset));
+console.log("abcd".replace(/(bc)/, addOffset)); // "abc (1) d"
+console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 ```
 
 ## Specifications
