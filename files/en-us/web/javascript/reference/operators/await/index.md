@@ -149,6 +149,8 @@ const response = await promisedFunction().catch((err) => {
 // response will be "default response" if the promise is rejected
 ```
 
+Note that `catch()`'s behavior could be unexpected when the object returned by `promisedFunction()` is not a native {{jsxref("Promise")}}. To avoid unexpected behavior, use `Promise.resolve(promisedFunction())` instead of `promisedFunction()`.
+
 ### Top level await
 
 You can use the `await` keyword on its own (outside of an async function) at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules). This means that modules with child modules that use `await` will wait for the child modules to execute before they themselves run, all while not blocking other child modules from loading.
