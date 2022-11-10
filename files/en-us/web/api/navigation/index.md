@@ -61,7 +61,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("Navigation.reload", "reload()")}}
   - : Reloads the current URL, updating any provided state in the history entries list.
 - {{domxref("Navigation.traverseTo", "traverseTo()")}}
-  - : Navigates to a specific {{domxref("NavigationHistoryEntry")}} by {{domxref("NavigationHistoryEntry.key", "key")}}.
+  - : Navigates to a specific {{domxref("NavigationHistoryEntry")}} identified by {{domxref("NavigationHistoryEntry.key", "key")}}.
 - {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}
   - : Updates the state of the {{domxref("Navigation.currentEntry","currentEntry")}}; used
     in cases where the state change will be independent from a navigation or reload.
