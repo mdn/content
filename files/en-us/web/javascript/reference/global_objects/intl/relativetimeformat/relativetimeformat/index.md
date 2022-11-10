@@ -36,7 +36,7 @@ new Intl.RelativeTimeFormat(locales, options)
   - : An object with some or all of the following properties:
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `numeric`
 
       - : The format of output message. Possible values are:

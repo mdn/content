@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Performance.memory
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 ## Syntax
 

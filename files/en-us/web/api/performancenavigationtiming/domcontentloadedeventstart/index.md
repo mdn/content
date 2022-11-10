@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventStart
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}
 
 The **`domContentLoadedEventStart`** read-only property returns
 a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
