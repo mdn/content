@@ -294,7 +294,7 @@ However, consider the case where `someAsyncTask` asynchronously throws an error.
 
 ```js
 async function lastAsyncTask() {
-  await setTimeout(() => {}, 100);
+  await null;
   throw new Error("failed");
 }
 
