@@ -25,6 +25,7 @@ The **`navigate()`** method of the
 ## Syntax
 
 ```js-nolint
+navigate(url)
 navigate(url, options)
 ```
 
