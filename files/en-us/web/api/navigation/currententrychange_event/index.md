@@ -23,7 +23,13 @@ browser-compat: api.Navigation.currententrychange_event
 
 The **`currententrychange`** event of the {{domxref("Navigation")}} interface is fired when the {{domxref("Navigation.currentEntry")}} has changed.
 
-This event will fire for same-document navigations (e.g. {{domxref("Navigation.back", "back()")}} or {{domxref("Navigation.traverseTo", "traverseTo()")}}), replacements (i.e. a {{domxref("Navigation.navigate", "navigate()")}} call with `history` set to `replace`), or other calls that change the entry's state (e.g. {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}, or the {{domxref("History API", "History API", "", "nocode")}}'s {{domxref("History.replaceState()")}}).
+This event will fire for:
+
+- Same-document navigations (e.g. {{domxref("Navigation.back", "back()")}} or {{domxref("Navigation.traverseTo", "traverseTo()")}}).
+
+- Replacements (i.e. a {{domxref("Navigation.navigate", "navigate()")}} call with `history` set to `replace`).
+
+- Other calls that change the entry's state (e.g. {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}, or the {{domxref("History API", "History API", "", "nocode")}}'s {{domxref("History.replaceState()")}}).
 
 This event fires after the navigation is committed, meaning that the visible URL has changed and the {{domxref("NavigationHistoryEntry")}} update has occurred. It is useful for migrating from usage of older API features like the {{domxref("Window/hashchange_event", "hashchange")}} or {{domxref("Window/popstate_event", "popstate")}} events.
 
