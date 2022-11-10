@@ -61,6 +61,8 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 
 ## Formal syntax
 
+{{csssyntax}}
+
 ## Specifications
 
 {{Specifications}}

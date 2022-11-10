@@ -138,6 +138,13 @@
           "skipCode": true
         },
         {
+          "name": "nbsp",
+          "message": "Don't use no-break spaces",
+          "searchPattern": "/ /g",
+          "replace": " ",
+          "skipCode": false
+        },
+        {
           "name": "m-dash",
           "message": "Don't use '--'. Use m-dash — instead",
           "search": " -- ",
