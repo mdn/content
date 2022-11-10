@@ -70,14 +70,14 @@ The replacement string can include the following special replacement patterns:
 `$n` and `$<Name>` are only available if the `pattern` argument is a {{jsxref("RegExp")}} object. If the `pattern` is a string, or if the corresponding capturing group isn't present in the regex, then the pattern will be replaced as a literal. If the group is present but isn't matched (because it's part of a disjunction), it will be replaced with an empty string.
 
 ```js
-// "$2oo"; the regex doesn't have the second group
 "foo".replace(/(f)/, "$2");
+// "$2oo"; the regex doesn't have the second group
 
-// "$1oo"; the pattern is a string, so it doesn't have any groups
 "foo".replace("f", "$1");
+// "$1oo"; the pattern is a string, so it doesn't have any groups
 
-// "oo"; the second group exists but isn't matched
 "foo".replace(/(f)|(g)/, "$2");
+// "oo"; the second group exists but isn't matched
 ```
 
 ### Specifying a function as the replacement
