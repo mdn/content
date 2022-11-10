@@ -49,8 +49,8 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
     - `gl.INT`: 32-bit signed binary integer
     - `gl.UNSIGNED_INT`: 32-bit unsigned binary integer
-    - `gl.INT_2_10_10_10_REV`: 32-bit signed integer with values in \[-512, 511]
-    - `gl.UNSIGNED_INT_2_10_10_10_REV`: 32-bit unsigned integer with values in \[0, 1023]
+    - `gl.INT_2_10_10_10_REV`: 32-bit signed integer with values in \[0, 1023]
+    - `gl.UNSIGNED_INT_2_10_10_10_REV`: 32-bit unsigned integer with values in \[-512, 511]
 
 - `normalized`
 
