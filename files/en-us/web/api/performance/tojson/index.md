@@ -12,11 +12,7 @@ browser-compat: api.Performance.toJSON
 
 {{APIRef("Performance API")}}
 
-The **`toJSON()`** method of the {{domxref("Performance")}}
-interface is a standard serializer: it returns a JSON representation of the performance
-object's properties.
-
-{{availableinworkers}}
+The **`toJSON()`** method of the {{domxref("Performance")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("Performance")}} object.
 
 ## Syntax
 
@@ -30,13 +26,55 @@ None.
 
 ### Return value
 
-A JSON object that is the serialization of the {{domxref("Performance")}} object.
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performance")}} object.
+
+The returned JSON doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property, given it is of type {{domxref("EventCounts")}} (which doesn't provide a `toJSON()` operation).
+
+> **Note:** The JSON object contains the serialization of the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. To get a JSON representation of the newer {{domxref("PerformanceNavigationTiming")}} interface, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
 
 ## Examples
 
+### Using the toJSON method
+
+In this example, calling `performance.toJSON()` returns a JSON representation of the `Performance` object.
+
 ```js
-const js = window.performance.toJSON();
-console.log(`json = ${JSON.stringify(js)}`);
+performance.toJSON();
+```
+
+This would log a JSON object like so:
+
+```json
+{
+  "timeOrigin": 1668077531367.4,
+  "timing": {
+    "connectStart": 1668077531372,
+    "navigationStart": 1668077531367,
+    "secureConnectionStart": 0,
+    "fetchStart": 1668077531372,
+    "domContentLoadedEventStart": 1668077531580,
+    "responseStart": 1668077531372,
+    "domInteractive": 1668077531524,
+    "domainLookupEnd": 1668077531372,
+    "responseEnd": 1668077531500,
+    "redirectStart": 0,
+    "requestStart": 1668077531372,
+    "unloadEventEnd": 0,
+    "unloadEventStart": 0,
+    "domLoading": 1668077531512,
+    "domComplete": 1668077531585,
+    "domainLookupStart": 1668077531372,
+    "loadEventStart": 1668077531585,
+    "domContentLoadedEventEnd": 1668077531580,
+    "loadEventEnd": 1668077531585,
+    "redirectEnd": 0,
+    "connectEnd": 1668077531372
+  },
+  "navigation": {
+    "type": 0,
+    "redirectCount": 0
+  }
+}
 ```
 
 ## Specifications
@@ -46,3 +84,7 @@ console.log(`json = ${JSON.stringify(js)}`);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("JSON")}}
