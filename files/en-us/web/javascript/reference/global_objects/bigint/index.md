@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.BigInt
 
 {{JSRef}}
 
-**`BigInt`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate {{Glossary("Primitive", "primitive")}} `bigint` values — which are [too large](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
+**`BigInt`** values represent numeric values which are [too large](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
 
 ## Description
 
@@ -225,6 +225,11 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
   - : Clamps a BigInt value to a signed integer value, and returns that value.
 - [`BigInt.asUintN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN)
   - : Clamps a BigInt value to an unsigned integer value, and returns that value.
+
+## Instance properties
+
+- `BigInt.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"BigInt"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `BigInt` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a BigInt as `thisArg`.
 
 ## Instance methods
 

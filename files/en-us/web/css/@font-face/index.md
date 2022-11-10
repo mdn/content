@@ -24,9 +24,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 @font-face {
   font-family: "Trickster";
   src: local("Trickster"),
-       url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-       url("trickster-outline.otf") format("opentype"),
-       url("trickster-outline.woff") format("woff");
+    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
+      format("opentype"), url("trickster-outline.woff") format("woff");
 }
 ```
 
@@ -45,6 +44,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/font-style", "font-style")}}
   - : A {{cssxref("font-style")}} value. Accepts two values to specify a range that is supported by a font-face, for example `font-style: oblique 20deg 50deg;`
 - {{cssxref("@font-face/font-weight", "font-weight")}}
+
   - : A {{cssxref("font-weight")}} value. Accepts two values to specify a range that is supported by a font-face, for example `font-weight: 100 400;`
 
     > **Note:** The font-variant descriptor was removed from the specification in 2018. The {{cssxref("font-variant")}} value property is supported, but there is no descriptor equivalent.
@@ -58,20 +58,20 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
+
   - : Specifies font resources. A comma-separated list representing the resource fallback order, each resource specified by a `url()` or `local()`. If the previous resource is loaded successfully, the latter resources will not be used. The `url()` can be followed by `format()` and `tech()`, like this:
 
     ```css
     src: local("Trickster"),
-         url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-         url("trickster-outline.otf") format("opentype"),
-         url("trickster-outline.woff") format("woff");
+      url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
+        format("opentype"), url("trickster-outline.woff") format("woff");
     ```
 
     `url()`: Specifies the URL of a font file, like any other `url()` in CSS. If the font file is a container for multiple fonts, a fragment identifier is included to indicate which sub-font should be used, as follows:
 
     ```css
     src: url(collection.otc#WhichFont); /* WhichFont is the PostScript name of a font in the font file */
-    src: url(fonts.svg#WhichFont);      /* WhichFont is the element id of a font in the SVG Font file */
+    src: url(fonts.svg#WhichFont); /* WhichFont is the element id of a font in the SVG Font file */
     ```
 
     `local()`: Specifies the font name should the font be available on the user's device. Quoting the font name is optional.
@@ -147,11 +147,7 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 
 ## Formal syntax
 
-```
-@font-face {
-  <declaration-list>
-}
-```
+{{csssyntax}}
 
 ## Examples
 

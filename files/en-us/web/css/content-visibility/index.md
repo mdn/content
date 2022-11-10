@@ -48,7 +48,7 @@ content-visibility: unset;
 
 {{cssinfo}}
 
-## Accessibility
+## Accessibility concerns
 
 Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 

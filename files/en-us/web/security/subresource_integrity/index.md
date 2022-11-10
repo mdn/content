@@ -12,6 +12,8 @@ browser-compat:
   - html.elements.script.integrity
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
 > **Note:** For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
@@ -130,5 +132,3 @@ Browsers handle SRI by doing the following:
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
 - [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

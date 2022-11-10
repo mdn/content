@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEventTiming.processingEnd
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The read-only **`processingEnd`** property returns the time the last event handler finished executing.
 
@@ -39,7 +39,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 // Register the observer for events
-observer.observe({entryTypes: ["event"]});
+observer.observe({type: "event", buffered: true});
 ```
 
 ## Specifications

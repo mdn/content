@@ -512,21 +512,6 @@
       "properties": [],
       "events": []
     },
-    "High Resolution Time": {
-      "overview": ["Performance API"],
-      "interfaces": [
-        "PerformanceEntry",
-        "PerformanceMark",
-        "PerformanceMeasure",
-        "PerformanceNavigation",
-        "PerformanceResourceTiming",
-        "PerformanceTiming",
-        "DOMHighResTimeStamp"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "History API": {
       "overview": ["History API"],
       "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
@@ -763,23 +748,9 @@
       "properties": [],
       "events": []
     },
-    "Largest Contentful Paint API": {
-      "overview": ["Largest Contentful Paint API"],
-      "interfaces": ["LargestContentfulPaint"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "Long Tasks API": {
-      "overview": ["Long Tasks API"],
-      "interfaces": ["PerformanceLongTaskTiming", "TaskAttributionTiming"],
       "methods": [],
       "properties": [],
       "events": []
@@ -873,19 +844,6 @@
       "properties": [],
       "events": []
     },
-    "Navigation Timing": {
-      "overview": ["Navigation timing API"],
-      "guides": ["/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing"],
-      "interfaces": [
-        "Performance",
-        "PerformanceNavigation",
-        "PerformanceTiming",
-        "PerformanceNavigationTiming"
-      ],
-      "methods": [],
-      "properties": ["performance_property"],
-      "events": []
-    },
     "Network Information API": {
       "overview": ["Network Information API"],
       "interfaces": ["NetworkInformation"],
@@ -899,13 +857,6 @@
       "methods": [],
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
-    },
-    "Paint Timing API": {
-      "overview": ["Paint Timing API"],
-      "interfaces": ["PerformancePaintTiming"],
-      "methods": [],
-      "properties": [],
-      "events": []
     },
     "Payment Request API": {
       "overview": ["Payment Request API"],
@@ -940,42 +891,38 @@
       "overview": ["Performance API"],
       "guides": [
         "/docs/Web/API/Performance_API/Using_the_Performance_API",
-        "/docs/Web/API/Frame_timing_API",
         "/docs/Web/API/Long_Tasks_API",
         "/docs/Web/API/Navigation_timing_API",
+        "/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing",
         "/docs/Web/API/Performance_Timeline",
         "/docs/Web/API/Performance_Timeline/Using_Performance_Timeline",
         "/docs/Web/API/Resource_Timing_API",
         "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API",
-        "/docs/Web/API/User_timing_API"
+        "/docs/Web/API/User_timing_API",
+        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API",
+        "/docs/Web/API/Element_timing_API",
+        "/docs/Web/API/Paint_timing_API",
+        "/docs/Web/API/Largest_Contentful_Paint_API"
       ],
       "interfaces": [
+        "EventCounts",
+        "LargestContentfulPaint",
         "Performance",
         "PerformanceEntry",
+        "PerformanceElementTiming",
+        "PerformanceEventTiming",
         "PerformanceLongTaskTiming",
         "PerformanceMark",
         "PerformanceMeasure",
+        "PerformanceNavigation",
         "PerformanceNavigationTiming",
         "PerformanceObserver",
-        "PerformanceResourceTiming",
-        "TaskAttributionTiming",
-        "performance_property"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "Performance Timeline API": {
-      "overview": ["Performance Timeline"],
-      "guides": [
-        "/docs/Web/API/Performance_Timeline/Using_Performance_Timeline"
-      ],
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceObserver",
         "PerformanceObserverEntryList",
-        "PerformanceResourceTiming"
+        "PerformancePaintTiming",
+        "PerformanceResourceTiming",
+        "PerformanceServerTiming",
+        "PerformanceTiming",
+        "TaskAttributionTiming"
       ],
       "methods": [],
       "properties": ["performance_property"],
@@ -1127,20 +1074,6 @@
       "interfaces": ["ResizeObserver", "ResizeObserverEntry"],
       "methods": [],
       "properties": [],
-      "events": []
-    },
-    "Resource Timing API": {
-      "overview": ["Resource Timing API"],
-      "guides": [
-        "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API"
-      ],
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceResourceTiming"
-      ],
-      "methods": [],
-      "properties": ["performance_property"],
       "events": []
     },
     "Screen Capture API": {
@@ -1514,17 +1447,6 @@
     "URL Pattern API": {
       "overview": ["URL Pattern API"],
       "interfaces": ["URLPattern"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "User Timing API": {
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceMark",
-        "PerformanceMeasure"
-      ],
       "methods": [],
       "properties": [],
       "events": []

@@ -265,7 +265,7 @@ As you may have noticed, there are three distinct paths through which objects ma
 
 - [Primitive coercion](#primitive_coercion): `[@@toPrimitive]("default")` → `valueOf()` → `toString()`
 - [Numeric coercion](#numeric_coercion), [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion): `[@@toPrimitive]("number")` → `valueOf()` → `toString()`
-- [String coercion](#string_coercion): `[@@toPrimitive]("string")` → `toString()` → `valueOf()`
+- [String coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[@@toPrimitive]("string")` → `toString()` → `valueOf()`
 
 In all cases, `[@@toPrimitive]()`, if present, must be callable and return a primitive, while `valueOf` or `toString` will be ignored if they are not callable or return an object. At the end of the process, if successful, the result is guaranteed to be a primitive. The resulting primitive is then subject to further coercions depending on the context.
 

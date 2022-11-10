@@ -206,7 +206,7 @@ const instance = new Derived();
 // Derived constructor: 1
 ```
 
-Because class fields are added using the `[[Define]]` semantic (which is essentially {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
+Because class fields are added using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
 
 ```js
 class Base {

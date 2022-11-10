@@ -20,19 +20,21 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 ## Syntax
 
 ```js-nolint
+Array.from(arrayLike)
+
 // Arrow function
-Array.from(arrayLike, (element) => { /* … */ } )
-Array.from(arrayLike, (element, index) => { /* … */ } )
+Array.from(arrayLike, (element) => { /* … */ })
+Array.from(arrayLike, (element, index) => { /* … */ })
 
 // Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-Array.from(arrayLike, function mapFn(element) { /* … */ })
-Array.from(arrayLike, function mapFn(element, index) { /* … */ })
-Array.from(arrayLike, function mapFn(element) { /* … */ }, thisArg)
-Array.from(arrayLike, function mapFn(element, index) { /* … */ }, thisArg)
+Array.from(arrayLike, function (element) { /* … */ })
+Array.from(arrayLike, function (element, index) { /* … */ })
+Array.from(arrayLike, function (element) { /* … */ }, thisArg)
+Array.from(arrayLike, function (element, index) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -40,7 +42,15 @@ Array.from(arrayLike, function mapFn(element, index) { /* … */ }, thisArg)
 - `arrayLike`
   - : An iterable or array-like object to convert to an array.
 - `mapFn` {{Optional_inline}}
-  - : Map function to call on every element of the array.
+  - : Map function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead.
+
+    The function is called with the following arguments:
+
+    - `element`
+      - : The current element being processed in the array.
+    - `index`
+      - : The index of the current element being processed in the array.
+
 - `thisArg` {{Optional_inline}}
   - : Value to use as `this` when executing `mapFn`.
 
@@ -57,13 +67,9 @@ A new {{jsxref("Array")}} instance.
 
 `Array.from()` never creates a sparse array. If the `arrayLike` object is missing some index properties, they become `undefined` in the new array.
 
-`Array.from()` has an optional parameter `mapFn`, which allows you to execute a {{jsxref("Array.prototype.map()", "map()")}} function on each element of the array being created.
+`Array.from()` has an optional parameter `mapFn`, which allows you to execute a function on each element of the array being created, similar to {{jsxref("Array.prototype.map()", "map()")}}. More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.from(obj).map(mapFn, thisArg)`, except that it does not create an intermediate array, and `mapFn` only receives two arguments (`element`, `index`) without the whole array, because the array is still under construction.
 
-More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.from(obj).map(mapFn, thisArg)`, except that it does not create an intermediate array, and _mapFn_ only receives two arguments (_element_, _index_) without the whole array, because the array is still under construction.
-
-> **Note:** This is especially important for certain array subclasses, like [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays), since the intermediate array would necessarily have values truncated to fit into the appropriate type.
-
-The `length` property of the `from()` method is `1`.
+> **Note:** This behavior is more important for [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays), since the intermediate array would necessarily have values truncated to fit into the appropriate type. `Array.from()` is implemented to have the same signature as {{jsxref("TypedArray.from()")}}.
 
 The `Array.from()` method is a generic factory method. For example, if a subclass of `Array` inherits the `from()` method, the inherited `from()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array. When an iterable is passed as `arrayLike`, the constructor is called with no arguments; when an array-like object is passed, the constructor is called with the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) of the array-like object. The final `length` will be set again when iteration finishes. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
 

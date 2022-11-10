@@ -12,10 +12,9 @@ tags:
 browser-compat: api.PerformanceObserver.supportedEntryTypes
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
-The static **`supportedEntryTypes`** read-only property of the
-{{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
+The static **`supportedEntryTypes`** read-only property of the {{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
 As the list of supported entries varies per browser and is evolving, this property allows web developers to check which are available.
 
@@ -27,7 +26,7 @@ An array of {{domxref("PerformanceEntry.entryType")}} values.
 
 ### Using the console to check supported types
 
-To find out which {{domxref("PerformanceEntry.entryType","entryType")}} values a browser supports enter <kbd>PerformanceObserver.supportedEntryTypes</kbd> into the console. This will return an array of `EntryType` values.
+To find out which {{domxref("PerformanceEntry.entryType","entryType")}} values a browser supports, enter <kbd>PerformanceObserver.supportedEntryTypes</kbd> into the console. This will return an array of supported values.
 
 ```js
 PerformanceObserver.supportedEntryTypes
@@ -48,7 +47,7 @@ function detectSupport(entryTypes) {
   }
 }
 
-detectSupport(["resource", "mark", "frame"]);
+detectSupport(["resource", "mark", "first-input", "largest-contentful-paint"]);
 ```
 
 ## Specifications

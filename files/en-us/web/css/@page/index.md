@@ -54,11 +54,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 ## Formal syntax
 
-```
-@page <pseudo-selector> {
-  <page-body>
-}
-```
+{{csssyntax}}
 
 Where the `<page-body>` includes:
 
