@@ -16,7 +16,7 @@ browser-compat: http.headers.Sec-CH-Prefers-Reduced-Motion
 
 The **`Sec-CH-Prefers-Reduced-Motion`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user agent's reduced motion preference, typically (but not necessarily) reflecting the operating system's corresponding setting.
 
-If a server declares to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Reduced-Motion`, the client can then respond with this header to indicate the user's preference for reduced motion. The server can send the client appropriate CSS to reduce the motion of any animations presented on subsequent rendered content.
+If a server declares to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Reduced-Motion`, the client then responds with this header to indicate the user's preference for reduced motion. The server can send the client appropriately adapted content, for example, CSS to reduce the motion of any animations presented on subsequent rendered content.
 
 This header is modeled on the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media query.
 
