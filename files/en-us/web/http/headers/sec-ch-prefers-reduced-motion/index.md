@@ -57,15 +57,16 @@ GET / HTTP/1.1
 Host: example.com
 ```
 
-The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`:
+The server responds, telling the client via {{httpheader("Accept-CH")}} and {{httpheader("Critical-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion` and considers it a critical client hint:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: text/html
 Accept-CH: Sec-CH-Prefers-Reduced-Motion
+Critical-CH: Sec-CH-Prefers-Color-Scheme
 ```
 
-The client in future requests then tells the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
+The client then retries the request, telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
 
 ```http
 GET / HTTP/1.1
