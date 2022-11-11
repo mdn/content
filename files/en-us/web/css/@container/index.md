@@ -17,7 +17,7 @@ The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container changes size.
 
-An optional `<container-name>` can be provided which filters the set of query containers considered to just those with a matching query container name.
+An optional case-sensitive `<container-name>` can be provided which filters the set of query containers considered to just those with a matching query container name.
 Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
 
 ## Syntax
@@ -102,7 +102,7 @@ Given the following HTML example which is a card component with an image, a titl
 ```html
 <div class="container">
   <div class="card">
-    <img src="image.png" alt="An awesome picture of a cat" />
+    <img src="image.png" alt="A mostly white cat with a black heart on the forehead." />
     <h2>Card title</h2>
     <p>Card content</p>
   </div>

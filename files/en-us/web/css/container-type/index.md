@@ -1,5 +1,5 @@
 ---
-title: Container type
+title: container-type
 slug: Web/CSS/container-type
 page-type: css-property
 tags:
@@ -18,7 +18,7 @@ The `container-type` property can have the following values:
 
 - `size`
 
-  - : Establishes a query container for container size queries on both the inline and block axis.
+  - : Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
     Applies layout containment, style containment, and size containment to the container.
 
 - `inline-size`
@@ -30,7 +30,7 @@ The `container-type` property can have the following values:
 
   - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
-> **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the documentation for {{cssxref("contain")}}.
+> **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the {{cssxref("contain")}} property.
 
 ## Example
 
@@ -77,6 +77,6 @@ You can then target that container by adding the name to the container query:
 
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
 - {{Cssxref("@container")}} at-rule
-- CSS {{Cssxref("contain")}} property
+- CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property
 - CSS {{cssxref("content-visibility")}} property

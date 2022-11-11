@@ -1,7 +1,7 @@
 ---
-title: Container shorthand
+title: container
 slug: Web/CSS/container
-page-type: css-property
+page-type: css-shorthand-property
 tags:
   - container
   - CSS
@@ -13,7 +13,7 @@ browser-compat: css.properties.container
 
 {{CSSRef}}
 
-The **container** [CSS](/en-US/docs/Web/CSS) property is shorthand usage for giving a name to a [containment context](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
+The **container** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property establishes the element as a query container and specifies the name or name for the [containment context](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
 
 ## Syntax
 
