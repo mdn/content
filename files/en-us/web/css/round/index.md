@@ -29,7 +29,8 @@ margin: round(to-zero, -105, 10);
 
 ### Parameter
 
-The `round(<rounding-strategy>?, A, B)` function contains an optional rounding strategy, and two calculations `A` and `B` as its parameter.
+The `round(<rounding-strategy>, valueToRound, roundingInterval)` function specifies an optional rounding strategy, a value (or mathematical expression) to be rounded and a rounding interval (or mathematical expression).
+The `valueToRound` is rounded according to the rounding strategy, to the nearest integer multiple of `roundingInterval`.
 
 - `<rounding-strategy>`
 
@@ -37,34 +38,36 @@ The `round(<rounding-strategy>?, A, B)` function contains an optional rounding s
      This may be one of the following values:
 
      - `up`
-       - : Choose upper `B`. Equivalent to JS `Math.ceil()`.
+       - : Round `valueToRound` up to the nearest integer multiple of `roundingInterval` (if the value is negative, it will become "more positive"). This is equivalent to the JavaScript `Math.ceil()` method.
      - `down`
-       - : Choose lower `B`. Equivalent to JS `Math.floor()`.
+       - : Round `valueToRound` down to the nearest integer multiple of `roundingInterval` (if the value is negative, it will become "more negative"). This is equivalent to the JavaScript `Math.floor()` method.
      - `nearest`
-       - : (default) Rounding to the nearest integer. Equivalent to JS `Math.round()`.
+       - : (default) Round `valueToRound` to the nearest integer (`roundingInterval` is ignored). Equivalent to JS `Math.round()`.
      - `to-zero`
-       - : Choose whichever of lower `B` and upper `B` that has the smallest absolute difference from `0`. Equivalent to JS `Math.trunc()`.
+       - : Round `valueToRound` to the nearest integer multiple of `roundingInterval` closer to/towards zero (a positive number will decrease, while a negative value will become "less negative"). This is equivalent to the JavaScript `Math.trunc()` method.
 
-- `A`
-  - : A calculations that resolves to {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}.
+- `valueToRound`
+  - : The value to be rounded.
+    This must be a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to to one of those values.
 
-- `B`
-  - : A calculations that resolves to {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}.
+- `roundingInterval`
+  - : The rounding interval.
+    This is a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to to one of those values.
 
 ### Return value
 
-The value of `A`, rounded according to the rounding strategy, to the nearest integer multiple of `B` either above or below `A`.
+The value of `valueToRound`, rounded to the nearest lower or higher integer multiple of `roundingInterval`, depending on the `rounding strategy`.
 
-- If `B` is 0, the result is `NaN`.
-- If `A` and `B` are both `infinite`, the result is `NaN`.
-- If `A` is infinite but `B` is finite, the result is the same `infinity`.
-- If `A` is finite but `B` is infinite, the result depends on the rounding strategy and the sign of `A`:
+- If `roundingInterval` is 0, the result is `NaN`.
+- If `valueToRound` and `roundingInterval` are both `infinite`, the result is `NaN`.
+- If `valueToRound` is infinite but `roundingInterval` is finite, the result is the same `infinity`.
+- If `valueToRound` is finite but `roundingInterval` is infinite, the result depends on the rounding strategy and the sign of `A`:
 
-  - `up` - If `A` is positive (not zero), return `+∞`. If `A` is `0⁺`, return `0⁺`. Otherwise, return `0⁻`.
-  - `down` - If `A` is negative (not zero), return `−∞`. If `A` is `0⁻`, return `0⁻`. Otherwise, return `0⁺`.
-  - `nearest`, `to-zero` - If `A` is positive or `0⁺`, return `0⁺`. Otherwise, return `0⁻`.
+  - `up` - If `valueToRound` is positive (not zero), return `+∞`. If `valueToRound` is `0⁺`, return `0⁺`. Otherwise, return `0⁻`.
+  - `down` - If `valueToRound` is negative (not zero), return `−∞`. If `valueToRound` is `0⁻`, return `0⁻`. Otherwise, return `0⁺`.
+  - `nearest`, `to-zero` - If `valueToRound` is positive or `0⁺`, return `0⁺`. Otherwise, return `0⁻`.
 - The argument calculations can resolve to {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, but must have the same type, or else the function is invalid; the result will have the same type as the arguments.
-- If `A` is exactly equal to an integer multiple of `B`, `round()` resolves to `A` exactly (preserving whether `A` is `0⁻` or `0⁺`, if relevant). Otherwise, there are two integer multiples of `B` that are potentially "closest" to `A`, lower `B` which is closer to `−∞` and upper `B` which is closer to `+∞`.
+- If `valueToRound` is exactly equal to an integer multiple of `roundingInterval`, `round()` resolves to `valueToRound` exactly (preserving whether `valueToRound` is `0⁻` or `0⁺`, if relevant). Otherwise, there are two integer multiples of `roundingInterval` that are potentially "closest" to `valueToRound`, lower `roundingInterval` which is closer to `−∞` and upper `roundingInterval` which is closer to `+∞`.
 
 ### Formal syntax
 
