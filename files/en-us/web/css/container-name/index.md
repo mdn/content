@@ -17,6 +17,20 @@ The **container-name** [CSS](/en-US/docs/Web/CSS) property is used to give a nam
 The most common way that container queries are applied to elements is to use the nearest containment context as the query container.
 When a containment context is given a name, it can be specifically referenced using the {{Cssxref("@container")}} at-rule.
 
+## Syntax
+
+```plain
+container-name: <container-name>;
+```
+
+### Values
+
+- `<container-name>` is a case-sensitive string that is used to identify the containment context.
+  The following conditions apply:
+  - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
+  - The name value must not be in quotes.
+  - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
+
 ## Example
 
 Given the following HTML example which is a card component with an image, a title, and some text:

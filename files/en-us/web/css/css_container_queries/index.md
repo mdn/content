@@ -78,7 +78,7 @@ Specifically, we are using a larger font size for the card title if the containe
 If other areas of the page are also containment contexts, we can use the same component in those areas and it will respond to the relevant containment context.
 This makes reusable components a lot more flexible without needing to know specifically where they will be used each time.
 
-For more information on the syntax of container queries, see the {{cssxref("@container")}}.
+For more information on the syntax of container queries, see the {{cssxref("@container")}} page.
 
 ### Naming containment contexts
 

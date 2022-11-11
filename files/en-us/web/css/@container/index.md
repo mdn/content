@@ -17,12 +17,20 @@ The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container changes size.
 
-An optional case-sensitive `<container-name>` can be provided which filters the set of query containers considered to just those with a matching query container name.
+An optional case-sensitive {{cssxref("container-name")}} can be provided which filters the set of query containers considered to just those with a matching query container name.
 Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
 
 ## Syntax
 
 The `@container` at-rule has the following syntax:
+
+```plain
+@container <container-condition> {
+  <stylesheet>
+}
+```
+
+For example:
 
 ```css
 @container (width > 400px) {
@@ -30,14 +38,14 @@ The `@container` at-rule has the following syntax:
     font-size: 1.5em;
   }
 }
-
-/* Specifying a container name */
-@container sidebar (width > 400px) {
-  h2 {
-    font-size: 1.5em;
-  }
-}
 ```
+
+### Values
+
+- `<container-condition>`: A set of features that are evaluated against the query container.
+  The condition is evaluated when the container changes size and the styles defined in the `<stylesheet>` are applied if the condition is true.
+  More details on the syntax are covered in the following sections.
+- `<stylesheet>`: A set of CSS declarations.
 
 ### Logical keywords in container queries
 
@@ -48,19 +56,19 @@ Logical keywords can be used to define the container condition:
 - `not` negates the condition. Only one 'not' condition is allowed per container query and cannot be used with the `and` or `or` keywords.
 
 ```css
+@container not (width < 400px) {
+  /* <stylesheet> */
+}
+
+@container (width > 400px) and (height > 400px) {
+  /* <stylesheet> */
+}
+
 @container (width > 400px) or (height > 400px) {
   /* <stylesheet> */
 }
 
-@container (width > 400px) and (orientation: landscape) {
-  /* <stylesheet> */
-}
-
-@container (width > 400px) and (orientation: landscape) or (width > 800px) {
-  /* <stylesheet> */
-}
-
-@container not (width > 400px) {
+@container (width > 400px) and (width > 800px) or (orientation: portrait) {
   /* <stylesheet> */
 }
 ```
@@ -75,6 +83,35 @@ The following container query checks if the {{cssxref("computed_value")}} of the
   /* <stylesheet> */
 }
 ```
+
+### Named containment contexts
+
+A containment context can be named using the {{cssxref("container-name")}} property.
+
+```css
+.container {
+  container-name: sidebar;
+  container-type: inline-size;
+}
+```
+
+The shorthand syntax for this is to use {{cssxref("container")}} in the form `container: <name> / <type>`, for example:
+
+```css
+.container {
+  container: sidebar / inline-size;
+}
+```
+
+In container queries, the {{cssxref("container-name")}} property is used to filter the set of containers to those with a matching query container name:
+
+```css
+@container sidebar (width > 400px) {
+  /* <stylesheet> */
+}
+```
+
+Details about usage and naming restrictions are described in the {{cssxref("container-name")}} page.
 
 ### Descriptors
 
