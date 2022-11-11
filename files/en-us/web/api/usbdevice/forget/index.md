@@ -19,7 +19,7 @@ The **`forget()`** method of the {{domxref("USBDevice")}} interface returns a {{
 ## Syntax
 
 ```js
-USBDevice.forget()
+forget()
 ```
 
 ### Parameters

@@ -16,7 +16,7 @@ The **`SerialPort.forget()`** method of the {{domxref("SerialPort")}} interface 
 ## Syntax
 
 ```js
-SerialPort.forget()
+forget()
 ```
 
 ### Parameters
