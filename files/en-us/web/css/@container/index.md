@@ -22,6 +22,8 @@ Once an eligible query container has been selected for an element, each containe
 
 ## Syntax
 
+The `@container` at-rule has the following syntax:
+
 ```css
 @container (width > 400px) {
   h2 {
@@ -34,6 +36,43 @@ Once an eligible query container has been selected for an element, each containe
   h2 {
     font-size: 1.5em;
   }
+}
+```
+
+### Logical keywords in container queries
+
+Logical keywords can be used to define the container condition:
+
+- `and` combines two or more conditions.
+- `or` combines two or more conditions.
+- `not` negates the condition. Only one 'not' condition is allowed per container query and cannot be used with the `and` or `or` keywords.
+
+```css
+@container (width > 400px) or (height > 400px) {
+  /* <stylesheet> */
+}
+
+@container (width > 400px) and (orientation: landscape) {
+  /* <stylesheet> */
+}
+
+@container (width > 400px) and (orientation: landscape) or (width > 800px) {
+  /* <stylesheet> */
+}
+
+@container not (width > 400px) {
+  /* <stylesheet> */
+}
+```
+
+### Style container queries
+
+Container queries can also evaluate the computed style of the container element.
+The following container query checks if the {{cssxref("computed_value")}} of the the container element's `color` is `blue`:
+
+```css
+@container style(color: blue) {
+  /* <stylesheet> */
 }
 ```
 

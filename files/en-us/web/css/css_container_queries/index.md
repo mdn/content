@@ -57,7 +57,7 @@ We can create a containment context on the container `<div>` using the `containe
 }
 ```
 
-Once a containment context is created, we can use the `@container` at-rule to write the container query.
+Once a containment context is created, we can use the {{cssxref("@container")}} at-rule to write the container query.
 The query in the following example will look for the nearest containment context and apply styles to the child elements of the container.
 Specifically, we are using a larger font size for the card title if the container is wider than `700px`.
 
@@ -77,6 +77,8 @@ Specifically, we are using a larger font size for the card title if the containe
 
 If other areas of the page are also containment contexts, we can use the same component in those areas and it will respond to the relevant containment context.
 This makes reusable components a lot more flexible without needing to know specifically where they will be used each time.
+
+For more information on the syntax of container queries, see the {{cssxref("@container")}}.
 
 ### Naming containment contexts
 
@@ -117,7 +119,7 @@ The shorthand way of declaring a containment context is to use the `contain` pro
 
 ```css
 .container {
-  container: sidebar inline-size;
+  container: sidebar / inline-size;
 }
 ```
 
