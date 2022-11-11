@@ -30,7 +30,7 @@ None.
 
 A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceElementTiming")}} object.
 
-The JSON doesn't contain the {{domxref("PerformanceElementTiming.element", "element")}} property, given it is of type {{domxref("Element")}} (which doesn't provide a `toJSON()` operation). The {{domxref("PerformanceElementTiming.id", "id")}} of the element is provided, though.
+The JSON doesn't contain the {{domxref("PerformanceElementTiming.element", "element")}} property because it is of type {{domxref("Element")}}, which doesn't provide a `toJSON()` operation. The {{domxref("PerformanceElementTiming.id", "id")}} of the element is provided, though.
 
 ## Examples
 

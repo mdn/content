@@ -59,7 +59,7 @@ This would log a JSON object like so:
 }
 ```
 
-Note that it doesn't contain `PerformanceMark`'s {{domxref("PerformanceMark.detail", "detail")}} property, in case you provided it when calling {{domxref("Performance.mark()")}}.
+Note that it doesn't contain `PerformanceMark`'s {{domxref("PerformanceMark.detail", "detail")}} property.
 
 ## Specifications
 

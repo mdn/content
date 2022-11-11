@@ -34,7 +34,7 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performa
 
 ### Using the toJSON method
 
-In this example, calling `entry.toJSON()` returns a JSON representation of the `PerformanceResourceTiming` object.
+In this example, calling `serverEntry.toJSON()` returns a JSON representation of the `PerformanceServerTiming` object.
 
 ```js
 const observer = new PerformanceObserver((list) => {
