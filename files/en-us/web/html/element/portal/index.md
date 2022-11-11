@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.portal
 ---
 
-{{HTMLRef}}{{SeeCompatTable}}
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 The **`<portal>`** [HTML](/en-US/docs/Web/HTML) element enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages.
 

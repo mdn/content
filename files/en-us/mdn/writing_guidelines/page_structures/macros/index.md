@@ -9,7 +9,7 @@ tags:
 
 {{MDNSidebar}}
 
-The [Yari](/en-US/docs/MDN/Yari) platform on which MDN runs provides a macro system, [KumaScript](/en-US/docs/MDN/Tools/KumaScript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
+The [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) platform on which MDN runs provides a macro system, [KumaScript](/en-US/docs/MDN/Tools/KumaScript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
 
 The [KumaScript guide](/en-US/docs/MDN/Tools/KumaScript) provides an in-depth look at how to use macros on MDN, so this section is more of a brief overview.
 

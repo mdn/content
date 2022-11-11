@@ -17,7 +17,7 @@ tags:
 browser-compat: html.elements.audio
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
 
@@ -179,7 +179,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
+        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
       </td>
       <td>
         Playback is ready to start after having been paused or delayed due to

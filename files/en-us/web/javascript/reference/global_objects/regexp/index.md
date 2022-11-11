@@ -96,7 +96,7 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### Perl-like RegExp properties
 
-Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties).
+Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp).
 
 ## Constructor
 
@@ -188,7 +188,7 @@ The default line ending varies depending on the platform (Unix, Windows, etc.). 
 ```js
 const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
 const lines = text.split(/\r\n|\r|\n/);
-console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 Note that the order of the patterns in the regular expression matters.
@@ -234,7 +234,7 @@ while ((r = re.exec("123 456"))) {
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
 // [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
-//   ... and no more match.
+//  … and no more match.
 ```
 
 With the global flag `g`, all 6 digits would be matched, not just 3.
@@ -252,12 +252,12 @@ const text = 'Образец text на русском языке';
 const regex = /[\u0400-\u04FF]+/g;
 
 const match = regex.exec(text);
-console.log(match[0]); // logs 'Образец'
-console.log(regex.lastIndex); // logs '7'
+console.log(match[0]); // 'Образец'
+console.log(regex.lastIndex); // 7
 
 const match2 = regex.exec(text);
-console.log(match2[0]); // logs 'на' [did not log 'text']
-console.log(regex.lastIndex); // logs '15'
+console.log(match2[0]); // 'на' (did not log 'text')
+console.log(regex.lastIndex); // 15
 
 // and so on
 ```
@@ -268,7 +268,7 @@ The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressi
 
 ```js
 const url = "http://xxx.domain.com";
-console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
+console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).

@@ -70,12 +70,12 @@ Note that the [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-
 Depending on whether the above security measures are taken, the various memory-sharing APIs have different availabilities:
 
 - The `Atomics` object is always available.
-- `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) can still be used to get an instance.
+- `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) can still be used to get an instance.
 - Unless the two headers mentioned above are set, the various `postMessage()` APIs will throw for `SharedArrayBuffer` objects. If they are set, `postMessage()` on `Window` objects and dedicated workers will function and allow for memory sharing.
 
 ### WebAssembly shared memory
 
-[`WebAssembly.Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) objects can be created with the [`shared`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory#shared) constructor flag. When this flag is set to `true`, the constructed `Memory` object can be shared between workers via `postMessage()`, just like `SharedArrayBuffer`, and the backing [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) of the `Memory` object is a `SharedArrayBuffer`. Therefore, the requirements listed above for sharing a `SharedArrayBuffer` between workers also apply to sharing a `WebAssembly.Memory`.
+[`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects can be created with the [`shared`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/Memory#shared) constructor flag. When this flag is set to `true`, the constructed `Memory` object can be shared between workers via `postMessage()`, just like `SharedArrayBuffer`, and the backing [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) of the `Memory` object is a `SharedArrayBuffer`. Therefore, the requirements listed above for sharing a `SharedArrayBuffer` between workers also apply to sharing a `WebAssembly.Memory`.
 
 The WebAssembly Threads proposal also defines a new set of [atomic](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses) instructions. Just as `SharedArrayBuffer` and its methods are unconditionally enabled (and only sharing between threads is gated on the new headers), the WebAssembly atomic instructions are also unconditionally allowed.
 
@@ -86,6 +86,8 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 
 ## Instance properties
 
+- `SharedArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the array. This is established when the array is constructed and cannot be changed. **Read only.**
 

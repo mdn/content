@@ -18,7 +18,7 @@ browser-compat: webextensions.api.proxy.register
 
 > **Warning:** This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:
 >
-> ![](proxy_register_warning.png)
+> ![Proxy register error message](proxy_register_warning.png)
 
 Registers a [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file). The file is executed immediately, and its `FindProxyForURL()` function will be called for any HTTP or HTTPS requests.
 

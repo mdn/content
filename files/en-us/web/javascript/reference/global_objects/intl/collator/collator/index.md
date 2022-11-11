@@ -91,7 +91,7 @@ Intl.Collator(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `usage`
       - : Whether the comparison is for sorting or for searching for matching
         strings. Possible values are `"sort"` and
@@ -177,9 +177,9 @@ The following example demonstrates the different potential results for a string
 occurring before, after, or at the same level as another:
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // → a negative value
-console.log(new Intl.Collator().compare("c", "a")); // → a positive value
-console.log(new Intl.Collator().compare("a", "a")); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // -1, or some other negative value
+console.log(new Intl.Collator().compare("c", "a")); // 1, or some other positive value
+console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 
 Note that the results shown in the code above can vary between browsers and browser

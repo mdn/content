@@ -219,11 +219,11 @@ Object.defineProperty(o, 'a', {
   writable: false
 });
 
-console.log(o.a); // logs 37
+console.log(o.a); // 37
 o.a = 25; // No error thrown
 // (it would throw in strict mode,
 // even if the value had been the same)
-console.log(o.a); // logs 37. The assignment didn't work.
+console.log(o.a); // 37; the assignment didn't work
 
 // strict mode
 (() => {
@@ -276,7 +276,7 @@ Object.defineProperty(o, Symbol.for('f'), {
 for (const i in o) {
   console.log(i);
 }
-// logs 'a' and 'd' (in undefined order)
+// Logs 'a' and 'd' (always in that order)
 
 Object.keys(o); // ['a', 'd']
 
@@ -328,9 +328,9 @@ Object.defineProperty(o, 'a', {
   value: 12
 }); // throws a TypeError // ('value' can be changed when 'configurable' is false but not in this case due to 'get' accessor)
 
-console.log(o.a); // logs 1
+console.log(o.a); // 1
 delete o.a; // Nothing happens
-console.log(o.a); // logs 1
+console.log(o.a); // 1
 
 Object.defineProperty(o, 'b', {
   writable: true,

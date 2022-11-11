@@ -142,9 +142,7 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ## Formal syntax
 
-```
-@keyframes <keyframes-name> { <rule-list> }
-```
+{{csssyntax}}
 
 ## Examples
 

@@ -16,9 +16,9 @@ tags:
 browser-compat: html.elements.input.type_reset
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all of the inputs in the form to their initial values.
+{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all inputs in the form to their initial values.
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
@@ -70,7 +70,7 @@ An `<input type="reset">` element's {{htmlattrxref("value", "input")}} attribute
 
 ### Omitting the value attribute
 
-If you don't specify a `value`, you get an button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):
+If you don't specify a `value`, you get a button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):
 
 ```html
 <input type="reset" />

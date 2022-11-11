@@ -20,7 +20,7 @@ tags:
 browser-compat: html.elements.video
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the {{HTMLElement("audio")}} element may provide a more appropriate user experience.
 
@@ -87,7 +87,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
 - {{htmlattrdef("preload")}}
 
-  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience with regards to what content is loaded before the video is played. It may have one of the following values:
+  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
     - `none`: Indicates that the video should not be preloaded.
     - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
@@ -177,6 +177,15 @@ Like all other HTML elements, this element supports the [global attributes](/en-
         {{domxref("HTMLMediaElement.ended_event", 'ended')}}
       </td>
       <td>Playback has stopped because the end of the media was reached.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.error_event", 'error')}}
+      </td>
+      <td>
+        An error occurred while fetching the media data, or the type of the 
+        resource is not a supported media format.
+      </td>
     </tr>
     <tr>
       <td>

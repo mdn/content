@@ -22,6 +22,10 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### CSS
 
+- Trigonometric functions are enabled with the `layout.css.trig.enabled` preference set to `true` by default.
+  This allows the use of `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()` functions within the CSS [`calc()`](/en-US/docs/Web/CSS/calc) function.
+  Additionally, a CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-constant) type is implemented to allow for well-known constants such as `pi` and `e` within the `calc()` function ({{bug(1774589)}}, {{bug(1682444)}}).
+
 #### Removals
 
 ### JavaScript
@@ -42,6 +46,10 @@ This article provides information about the changes in Firefox 108 that will aff
 
 #### Media, WebRTC, and Web Audio
 
+- The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
+  Users must grants permission by accepting a prompt to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-addons).
+  For more information see {{bug(1795025)}}.
+
 #### Removals
 
 ### WebAssembly
@@ -53,6 +61,8 @@ This article provides information about the changes in Firefox 108 that will aff
 #### Removals
 
 ## Changes for add-on developers
+
+- Firefox now issues a warning when an extension is installed if its [version number](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) doesn't follow the recommended format ({{bug(1793925)}}).
 
 ### Removals
 

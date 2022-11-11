@@ -68,7 +68,7 @@ const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 // toLocaleDateString() without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(date.toLocaleDateString());
-// → "12/11/2012" if run in en-US locale with time zone America/Los_Angeles
+// "12/11/2012" if run in en-US locale with time zone America/Los_Angeles
 ```
 
 ### Checking for support for locales and options arguments
@@ -100,33 +100,33 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // US English uses month-day-year order
 console.log(date.toLocaleDateString('en-US'));
-// → "12/20/2012"
+// "12/20/2012"
 
 // British English uses day-month-year order
 console.log(date.toLocaleDateString('en-GB'));
-// → "20/12/2012"
+// "20/12/2012"
 
 // Korean uses year-month-day order
 console.log(date.toLocaleDateString('ko-KR'));
-// → "2012. 12. 20."
+// "2012. 12. 20."
 
 // Event for Persian, It's hard to manually convert date to Solar Hijri
 console.log(date.toLocaleDateString('fa-IR'));
-// → "۱۳۹۱/۹/۳۰"
+// "۱۳۹۱/۹/۳۰"
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
 console.log(date.toLocaleDateString('ar-EG'));
-// → "٢٠‏/١٢‏/٢٠١٢"
+// "٢٠‏/١٢‏/٢٠١٢"
 
 // for Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era
 console.log(date.toLocaleDateString('ja-JP-u-ca-japanese'));
-// → "24/12/20"
+// "24/12/20"
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
 console.log(date.toLocaleDateString(['ban', 'id']));
-// → "20/12/2012"
+// "20/12/2012"
 ```
 
 ### Using options
@@ -139,13 +139,13 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // request a weekday along with a long date
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 console.log(date.toLocaleDateString('de-DE', options));
-// → "Donnerstag, 20. Dezember 2012"
+// "Donnerstag, 20. Dezember 2012"
 
 // an application may want to use UTC and make that visible
 options.timeZone = 'UTC';
 options.timeZoneName = 'short';
 console.log(date.toLocaleDateString('en-US', options));
-// → "Thursday, December 20, 2012, UTC"
+// "Thursday, December 20, 2012, UTC"
 ```
 
 ## Specifications

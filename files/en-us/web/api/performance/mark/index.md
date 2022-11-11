@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Performance.mark
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`mark()`** method creates a
 {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry

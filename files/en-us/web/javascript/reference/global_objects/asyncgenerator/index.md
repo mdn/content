@@ -39,6 +39,11 @@ asyncGen.next()
   .then((res) => console.log(res.value)); // 3
 ```
 
+## Instance properties
+
+- `AsyncGenerator.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("AsyncGenerator.prototype.next()")}}

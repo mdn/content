@@ -216,7 +216,7 @@ This is still in the temporal dead zone as its declaration statement has not bee
 ```js example-bad
 function go(n) {
   // n here is defined!
-  console.log(n); // Object {a: [1,2,3]}
+  console.log(n); // { a: [1, 2, 3] }
 
   for (let n of n.a) { // ReferenceError
     console.log(n);
@@ -270,7 +270,7 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
-- [Hoisting > `let` and `const` hoisting](/en-US/docs/Glossary/Hoisting#let_and_const_hoisting)
+- [Hoisting](/en-US/docs/Glossary/Hoisting)
 - [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)

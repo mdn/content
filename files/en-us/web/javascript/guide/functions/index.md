@@ -338,8 +338,7 @@ function foo(i) {
 }
 foo(3);
 
-// Output:
-
+// Logs:
 // begin: 3
 // begin: 2
 // begin: 1
@@ -419,7 +418,7 @@ function A(x) {
   }
   B(2);
 }
-A(1); // logs 6 (1 + 2 + 3)
+A(1); // Logs 6 (which is 1 + 2 + 3)
 ```
 
 In this example, `C` accesses `B`'s `y` and `A`'s `x`.
@@ -650,11 +649,11 @@ const a = [
 
 const a2 = a.map(function(s) { return s.length; });
 
-console.log(a2); // logs [8, 6, 7, 9]
+console.log(a2); // [8, 6, 7, 9]
 
 const a3 = a.map((s) => s.length);
 
-console.log(a3); // logs [8, 6, 7, 9]
+console.log(a3); // [8, 6, 7, 9]
 ```
 
 ### No separate this
