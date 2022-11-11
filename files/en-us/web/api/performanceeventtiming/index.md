@@ -159,7 +159,7 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceEventTiming.toJSON()")}}
-  - : Converts the PerformanceEventTiming object to JSON.
+  - : Returns a JSON representation of the `PerformanceEventTiming` object.
 
 ## Examples
 
