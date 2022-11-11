@@ -82,7 +82,7 @@ The different categories of client hints are listed below.
 
 ### User agent client hints
 
-The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent and the platform/architecture on which it is running:
+The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent and the platform/architecture it is running on, and about user preferences:
 
 - {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
   - : User agent's reduced motion preference setting.
