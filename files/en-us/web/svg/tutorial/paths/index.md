@@ -158,7 +158,7 @@ Several Bézier curves can be strung together to create extended, smooth shapes.
 
 An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
 
-![](shortcut_cubic_bézier_with_grid.png)
+![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@ This shortcut looks at the previous control point used and infers a new one from
 
 This only works if the previous command was a `Q` or a `T` command. If not, then the control point is assumed to be the same as the previous point, and only lines will be drawn.
 
-![](shortcut_quadratic_bézier_with_grid.png)
+![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
