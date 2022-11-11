@@ -14,6 +14,7 @@ tags:
   - pip
 browser-compat: api.Document.exitPictureInPicture
 ---
+
 {{ApiRef("Picture-in-Picture API")}}
 
 The {{domxref("Document")}} method
@@ -24,7 +25,7 @@ effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPictur
 
 ## Syntax
 
-```js
+```js-nolint
 exitPictureInPicture()
 ```
 
@@ -44,7 +45,7 @@ This example causes the current document to exit picture-in-picture mode wheneve
 mouse button is clicked within it.
 
 ```js
-document.onclick = function (event) {
+document.onclick = (event) => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture()
       .then(() => console.log("Document Exited from Picture-in-Picture mode"))

@@ -12,7 +12,8 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.get
 ---
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+
+{{APIRef("Credential Management API")}}
 
 The **`get()`** method of the
 {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} to a
@@ -35,7 +36,7 @@ example: if options.password exists, then the
 
 ## Syntax
 
-```js
+```js-nolint
 get()
 get(options)
 ```
@@ -54,6 +55,7 @@ get(options)
         {{domxref("Credential")}} instances should include user (as opposed to federated)
         credentials.
     - `federated`
+
       - : An object containing requirements for returned federated credentials. The available
         options are:
 
@@ -67,7 +69,7 @@ get(options)
     - `publicKey`
       - : An object containing requirements for returned [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credentials. The available options are:
         - `challenge`
-          - :An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
         - `timeout` {{optional_inline}}
           - : A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.
         - `rpId` {{optional_inline}}

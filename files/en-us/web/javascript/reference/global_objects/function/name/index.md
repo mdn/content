@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Function.name
 ---
+
 {{JSRef}}
 
 A {{jsxref("Function")}} object's read-only **`name`** property indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
@@ -223,10 +224,10 @@ new Foo().getNames();
 You can use `obj.constructor.name` to check the "class" of an object.
 
 ```js
-function Foo() {}  // ES2015 Syntax: class Foo {}
+function Foo() {}  // Or: class Foo {}
 
 const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs "Foo"
+console.log(fooInstance.constructor.name); // "Foo"
 ```
 
 However, because static members will become own properties of the class, we can't obtain the class name for virtually any class with a static method property `name()`:
@@ -242,7 +243,7 @@ With a `static name()` method `Foo.name` no longer holds the actual class name b
 
 ```js
 const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs function name()
+console.log(fooInstance.constructor.name); // ƒ name() {}
 ```
 
 Due to the existence of static fields, `name` may not be a function either.
@@ -258,7 +259,7 @@ If a class has a static property called `name`, it will also become _writable_. 
 
 ```js
 Foo.name = 'Hello';
-console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
+console.log(Foo.name); // "Hello" if class Foo has a static "name" property, but "Foo" if not.
 ```
 
 Therefore you may not rely on the built-in `name` property to always hold a class's name.
@@ -292,7 +293,7 @@ if (b.constructor.name === 'Foo') {
 }
 ```
 
-In the uncompressed version, the program runs into the truthy branch and logs "'foo' is an instance of 'Foo'" — whereas, in the compressed version it behaves differently, and runs into the else branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function has a particular name.
+In the uncompressed version, the program runs into the truthy branch and logs "'foo' is an instance of 'Foo'" — whereas, in the compressed version it behaves differently, and runs into the else branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function has a particular name.
 
 ## Specifications
 

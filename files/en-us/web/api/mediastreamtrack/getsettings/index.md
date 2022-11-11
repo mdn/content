@@ -11,18 +11,19 @@ tags:
   - Reference
 browser-compat: api.MediaStreamTrack.getSettings
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`getSettings()`** method of the
 {{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
 object containing the current values of each of the constrainable properties for the
 current `MediaStreamTrack`.
 
-See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
+See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for details on how to work with constrainable properties.
 
 ## Syntax
 
-```js
+```js-nolint
 getSettings()
 ```
 

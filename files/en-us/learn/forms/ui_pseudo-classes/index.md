@@ -12,6 +12,7 @@ tags:
   - Styling
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 In the previous articles, we covered the styling of various form controls, in a general manner. This included some usage of pseudo-classes, for example using `:checked` to target a checkbox only when it is selected. In this article, we will explore in detail the different UI pseudo-classes available to us in modern browsers for styling forms in different states.
@@ -64,13 +65,13 @@ These basic pseudo-classes should be familiar to you now. More recently, the [CS
 - {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the `checked` attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the `selected` attribute set).
 
-There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
+There are many others too, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems, or not very well-supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
 
-> **Note:** A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple with regards to form validation, so it doesn't confuse things.
+> **Note:** A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple regarding the form validation, so it doesn't confuse things.
 
 ## Styling inputs based on whether they are required or not
 
-One of the most basic concepts with regards to client-side form validation is whether a form input is required (it has to be filled in before the form can be submitted) or optional.
+One of the most basic concepts regarding client-side form validation is whether a form input is required (it has to be filled in before the form can be submitted) or optional.
 
 {{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form will successfully submit. For example:
 
@@ -80,15 +81,17 @@ One of the most basic concepts with regards to client-side form validation is wh
     <legend>Feedback form</legend>
     <div>
       <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required>
+      <input id="fname" name="fname" type="text" required />
     </div>
     <div>
       <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required>
+      <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email">Email address (include if you want a response): </label>
-      <input id="email" name="email" type="email">
+      <label for="email">
+        Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
     </div>
     <div><button>Submit</button></div>
   </fieldset>
@@ -121,13 +124,13 @@ In the next section, we'll look at a better example of indicating required field
 
 > **Note:** You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
 
-> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}**.**
+> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}.
 
 ## Using generated content with pseudo-classes
 
 In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), but we thought now would be a good time to talk about it in a bit more detail.
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it's invisible to screenreaders; it is part of the document's styles. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
+The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it's invisible to screen readers; it is part of the document's styles. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, but don't want it to be picked up by assistive technologies. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the inner circle when a radio button is selected:
 
@@ -151,7 +154,7 @@ input[type="radio"]:checked::before {
 }
 ```
 
-This is really useful — screenreaders already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
+This is really useful — screen readers already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
 
 > **Note:** This also shows how you can combine a pseudo-class and pseudo-element if required.
 
@@ -163,14 +166,14 @@ First of all, we'll add a paragraph to the top of the form to say what you are l
 <p>Required fields are labelled with "required".</p>
 ```
 
-Screenreader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
+screen reader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
 
 Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
 
 ```html
 <div>
   <label for="fname">First name: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -233,7 +236,7 @@ As in the previous example, we've got extra `<span>`s to generate content on, wh
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -256,12 +259,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -291,7 +294,7 @@ The numeric input looks like this:
 ```html
 <div>
   <label for="age">Age (must be 12+): </label>
-  <input id="age" name="age" type="number" min="12" max="120" required>
+  <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
 ```
@@ -350,34 +353,38 @@ Let's have a look at an example that does just this. First of all, the HTML is a
     <legend>Shipping address</legend>
     <div>
       <label for="name1">Name: </label>
-      <input id="name1" name="name1" type="text" required>
+      <input id="name1" name="name1" type="text" required />
     </div>
     <div>
       <label for="address1">Address: </label>
-      <input id="address1" name="address1" type="text" required>
+      <input id="address1" name="address1" type="text" required />
     </div>
     <div>
       <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required>
+      <input id="pcode1" name="pcode1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
     <legend>Billing address</legend>
     <div>
       <label for="billing-checkbox">Same as shipping address:</label>
-      <input type="checkbox" id="billing-checkbox" checked>
+      <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
       <label for="name" class="billing-label disabled-label">Name: </label>
-      <input id="name" name="name" type="text" disabled required>
+      <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
-      <label for="address2" class="billing-label disabled-label">Address: </label>
-      <input id="address2" name="address2" type="text" disabled required>
+      <label for="address2" class="billing-label disabled-label">
+        Address:
+      </label>
+      <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">Zip/postal code: </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required>
+      <label for="pcode2" class="billing-label disabled-label">
+        Zip/postal code:
+      </label>
+      <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -389,8 +396,8 @@ Now onto the CSS. The most relevant parts of this example are as follows:
 
 ```css
 input[type="text"]:disabled {
-    background: #eee;
-    border: 1px solid #ccc;
+  background: #eee;
+  border: 1px solid #ccc;
 }
 
 .disabled-label {
@@ -404,26 +411,33 @@ Now finally, we've used some JavaScript to toggle the disabling of the billing a
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', function () {
-
-  // Attach `change` event listener to checkbox
-  document.getElementById('billing-checkbox').addEventListener('change', toggleBilling);
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    // Attach `change` event listener to checkbox
+    document
+      .getElementById("billing-checkbox")
+      .addEventListener("change", toggleBilling);
+  },
+  false
+);
 
 function toggleBilling() {
   // Select the billing text fields
-  let billingItems = document.querySelectorAll('#billing input[type="text"]');
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
   // Select the billing text labels
-  let billingLabels = document.querySelectorAll('.billing-label');
+  const billingLabels = document.querySelectorAll(".billing-label");
 
   // Toggle the billing text fields and labels
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
-    if(billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
-      billingLabels[i].setAttribute('class', 'billing-label');
+    if (
+      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
+    ) {
+      billingLabels[i].setAttribute("class", "billing-label");
     } else {
-      billingLabels[i].setAttribute('class', 'billing-label disabled-label');
+      billingLabels[i].setAttribute("class", "billing-label disabled-label");
     }
   }
 }
@@ -448,23 +462,20 @@ A fragment of the HTML is as follows — note the readonly attribute:
 ```html
 <div>
   <label for="name">Name: </label>
-  <input id="name" name="name" type="text"
-         value="Mr Soft" readonly>
+  <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
 
 If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
-input:-moz-read-only, textarea:-moz-read-only,
-input:read-only, textarea:read-only {
+:is(input:read-only, input:-moz-read-only, textarea:-moz-read-only, textarea:read-only) {
   border: 0;
   box-shadow: none;
   background-color: white;
 }
 
-textarea:-moz-read-write,
-textarea:read-write {
+:is(textarea:-moz-read-write, textarea:read-write) {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -533,7 +544,7 @@ Let's look at a couple of modified versions of the previous example that remind 
 
 ```html
 <p>
-  <input type="radio" name="fruit" value="cherry" id="cherry">
+  <input type="radio" name="fruit" value="cherry" id="cherry" />
   <label for="cherry">Cherry</label>
   <span></span>
 </p>
@@ -607,7 +618,7 @@ The following are fairly well-supported in modern browsers:
 
 The following are also interesting, but as yet not well-supported in browsers:
 
-- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other empty elements like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
+- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other {{glossary("void element", "void elements")}} like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
 - The [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
 
 ## Test your skills!
@@ -625,7 +636,7 @@ This completes our look at UI pseudo-classes that relate to form inputs. Keep pl
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 - [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
+- [The HTML input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)

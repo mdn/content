@@ -6,10 +6,11 @@ tags:
   - Game Development
   - Gamedev
   - Games
-  - HTML5 Games
+  - HTML Games
   - JavaScript Games
   - Web
 ---
+
 {{GamesSidebar}}
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
@@ -45,14 +46,9 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
   - : An online book, written by Bob Nystrom, which discusses programming patterns in the context of game development with the aim of helping game developers produce more effective and efficient code.
 - [Gamedev.js Weekly](https://gamedevjsweekly.com/)
-  - : Weekly newsletter about HTML5 game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
-- [HTML5 Game Devs Forum](https://www.html5gamedevs.com/)
-  - : Forums for developers, framework creators, and publishers. Ask questions, get feedback and help others.
-
-<!---->
-
+  - : Weekly newsletter about HTML game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
 - [HTML5 Game Engine](https://html5gameengine.com/)
-  - : List of the most popular HTML5 game frameworks along with their rating, features and samples.
+  - : List of the most popular HTML game frameworks along with their rating, features and samples.
 - [JSBreakouts](https://jsbreakouts.org/)
   - : Compare JavaScript Breakout clones in different frameworks to help you choose the right one for you.
 - [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
@@ -60,10 +56,7 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
 - [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
   - : Starter for the new game developers, a curated list of links to various useful resources around the web.
 - [js13kGames](https://js13kgames.com/)
-  - : JavaScript coding competition for HTML5 game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
+  - : JavaScript coding competition for HTML game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.
-
-## See also
-
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)

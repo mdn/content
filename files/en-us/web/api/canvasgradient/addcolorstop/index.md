@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasGradient.addColorStop
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`CanvasGradient.addColorStop()`** method adds a new color stop,
@@ -18,7 +19,7 @@ defined by an `offset` and a `color`, to a given canvas gradient.
 
 ## Syntax
 
-```js
+```js-nolint
 addColorStop(offset, color)
 ```
 

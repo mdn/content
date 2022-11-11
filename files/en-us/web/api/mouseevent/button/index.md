@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.button
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.button`** read-only property indicates which button was pressed on the mouse to trigger the event.
@@ -45,7 +46,9 @@ Others may have many buttons mapped to different functions and button values.
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse…</button>
+<button id="button" oncontextmenu="event.preventDefault();">
+  Click here with your mouse…
+</button>
 <p id="log"></p>
 ```
 

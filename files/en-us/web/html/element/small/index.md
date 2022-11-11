@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.small
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from `small` to `x-small`.
 
@@ -40,7 +40,7 @@ The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, must have both a start tag and an end tag.</td>
+      <td>None; must have both a start tag and an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -82,8 +82,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### Basic usage
 
 ```html
-<p>This is the first sentence.
- <small>This whole sentence is in small letters.</small>
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
 </p>
 ```
 
@@ -92,9 +93,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### CSS alternative
 
 ```html
-<p>This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small
-  letters.</span>
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
 
@@ -102,7 +103,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Notes
 
-Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement("i")}} elements, may be perceived to violate the principle of separation between structure and presentation, all three are valid in HTML5. Authors are encouraged to use their best judgement when determining whether to use `<small>` or CSS.
+Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement("i")}} elements, may be perceived to violate the principle of separation between structure and presentation, all three are valid in HTML. Authors are encouraged to use their best judgement when determining whether to use `<small>` or CSS.
 
 ## Specifications
 

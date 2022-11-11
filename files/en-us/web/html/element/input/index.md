@@ -14,7 +14,8 @@ tags:
   - Web
 browser-compat: html.elements.input
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
@@ -48,7 +49,7 @@ The available types are as follows:
       <td id="examplebutton">
         <pre class="brush: html hidden">
 &#x3C;input type="button" name="button" value="Button" /></pre>
-        {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplebutton",200,55)}}
       </td>
     </tr>
     <tr>
@@ -57,7 +58,7 @@ The available types are as follows:
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
 &#x3C;input type="checkbox" name="checkbox"/></pre>
-        {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecheckbox",200,55)}}
       </td>
     </tr>
     <tr>
@@ -68,7 +69,7 @@ The available types are as follows:
       <td id="examplecolor">
         <pre class="brush: html hidden">
 &#x3C;input type="color" name="color"/></pre>
-        {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecolor",200,55)}}
       </td>
     </tr>
     <tr>
@@ -81,7 +82,7 @@ The available types are as follows:
       <td id="exampledate">
         <pre class="brush: html hidden">
 &#x3C;input type="date" name="date"/></pre>
-        {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledate",200,55)}}
       </td>
     </tr>
     <tr>
@@ -95,7 +96,7 @@ The available types are as follows:
       <td id="exampledtl">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime-local" name="datetime-local"/></pre>
-        {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledtl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -108,7 +109,7 @@ The available types are as follows:
       <td id="exampleemail">
         <pre class="brush: html hidden">
 &#x3C;input type="email" name="email"/></pre>
-        {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleemail",200,55)}}
       </td>
     </tr>
     <tr>
@@ -120,7 +121,7 @@ The available types are as follows:
       <td id="examplefile">
         <pre class="brush: html hidden">
 &#x3C;input type="file" accept="image/*, text/*" name="file"/></pre>
-        {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplefile",'100%',55)}}
       </td>
     </tr>
     <tr>
@@ -133,7 +134,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
         >
-        {{EmbedLiveSample("examplehidden",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
     </tr>
     <tr>
@@ -145,7 +146,7 @@ The available types are as follows:
       <td id="exampleimage">
         <pre class="brush: html hidden">
 &#x3C;input type="image" name="image" src="" alt="image input"/></pre>
-        {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleimage",200,55)}}
       </td>
     </tr>
     <tr>
@@ -154,20 +155,20 @@ The available types are as follows:
       <td id="examplemonth">
         <pre class="brush: html hidden">
 &#x3C;input type="month" name="month"/></pre>
-        {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplemonth",200,55)}}
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td>
         A control for entering a number. Displays a spinner and adds default
-        validation when supported. Displays a numeric keypad in some devices
+        validation. Displays a numeric keypad in some devices
         with dynamic keypads.
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
 &#x3C;input type="number" name="number"/></pre>
-        {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplenumber",200,55)}}
       </td>
     </tr>
     <tr>
@@ -179,7 +180,7 @@ The available types are as follows:
       <td id="examplepassword">
         <pre class="brush: html hidden">
 &#x3C;input type="password" name="password"/></pre>
-        {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplepassword",200,55)}}
       </td>
     </tr>
     <tr>
@@ -191,7 +192,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="radio" name="radio"/></pre
         >
-        {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleradio",200,55)}}
       </td>
     </tr>
     <tr>
@@ -204,7 +205,7 @@ The available types are as follows:
       <td id="examplerange">
         <pre class="brush: html hidden">
 &#x3C;input type="range" name="range" min="0" max="25"/></pre>
-        {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplerange",200,55)}}
       </td>
     </tr>
     <tr>
@@ -216,7 +217,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="reset" name="reset"/></pre
         >
-        {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplereset",200,55)}}
       </td>
     </tr>
     <tr>
@@ -230,7 +231,7 @@ The available types are as follows:
       <td id="examplesearch">
         <pre class="brush: html hidden">
 &#x3C;input type="search" name="search"/></pre>
-        {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesearch",200,55)}}
       </td>
     </tr>
     <tr>
@@ -239,7 +240,7 @@ The available types are as follows:
       <td id="examplesubmit">
         <pre class="brush: html hidden">
 &#x3C;input type="submit" name="submit"/></pre>
-        {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesubmit",200,55)}}
       </td>
     </tr>
     <tr>
@@ -251,7 +252,7 @@ The available types are as follows:
       <td id="exampletel">
         <pre class="brush: html hidden">
 &#x3C;input type="tel" name="tel"/></pre>
-        {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletel",200,55)}}
       </td>
     </tr>
     <tr>
@@ -264,7 +265,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="text" name="text"/></pre
         >
-        {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletext",200,55)}}
       </td>
     </tr>
     <tr>
@@ -273,7 +274,7 @@ The available types are as follows:
       <td id="exampletime">
         <pre class="brush: html hidden">
 &#x3C;input type="time" name="time"/></pre>
-        {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletime",200,55)}}
       </td>
     </tr>
     <tr>
@@ -287,7 +288,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="url" name="url"/></pre
         >
-        {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleurl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -298,21 +299,21 @@ The available types are as follows:
       <td id="exampleweek">
         <pre class="brush: html hidden">
 &#x3C;input type="week" name="week"/></pre>
-        {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleweek",200,55)}}
       </td>
     </tr>
     <tr>
       <th colspan="3">Obsolete values</th>
     </tr>
     <tr>
-      <td>{{HTMLElement("input/datetime", "datetime")}}</td>
+      <td><code>datetime</code></td>
       <td>
         {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime" name="datetime"/></pre>
-        {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledatetime",200,75)}}
       </td>
     </tr>
   </tbody>
@@ -324,7 +325,7 @@ The `<input>` element is so powerful because of its attributes; the [`type`](#ty
 
 This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages.
 
-Attributes for the `<input`> element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
+Attributes for the `<input>` element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
 
 | Attribute                           | Type or Types                                                           | Description                                                                           |
 | ----------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -410,8 +411,10 @@ A few additional non-standard attributes are listed following the descriptions o
 
     ```html
     <form action="page.html" method="post">
-      <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
-      <input type="submit"/>
+      <label>Fruit:
+        <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
+      </label>
+      <input type="submit" />
     </form>
     <!-- page.html?fruit=cherry&fruit.dir=ltr -->
     ```
@@ -484,7 +487,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `minlength`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
 
     The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
 
@@ -557,6 +560,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
+
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
 - `step`
@@ -615,7 +619,7 @@ The following non-standard attributes are also available on some browsers. As a 
     <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
-        A string indicating whether or not autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
+        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
       </td>
     </tr>
     <tr>
@@ -653,7 +657,7 @@ The following non-standard attributes are also available on some browsers. As a 
         <a href="#webkitdirectory"><code>webkitdirectory</code></a>
       </td>
       <td>
-        A Boolean indicating whether or not to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
+        A Boolean indicating whether to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
       </td>
     </tr>
   </tbody>
@@ -661,7 +665,7 @@ The following non-standard attributes are also available on some browsers. As a 
 
 - `autocorrect` {{non-standard_inline}}
 
-  - : (Safari only). A string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
+  - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
     - `on`
       - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
@@ -677,6 +681,7 @@ The following non-standard attributes are also available on some browsers. As a 
     The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
 - `orient` {{non-standard_inline}}
+
   - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
 
 - `results` {{non-standard_inline}}
@@ -759,7 +764,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>{{Cssxref(":placeholder-shown")}}</td>
       <td>
         Element that is currently displaying <a href="#placeholder"><code>placeholder</code> text</a>,
-        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as of yet, no value.
+        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as yet, no value.
       </td>
     </tr>
     <tr>
@@ -863,7 +868,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the {{cssxref('color')}} and {{cssxref('font-weight')}} of the {{htmlelement('label')}} that comes immediately after a checked input. We haven't applied any styles if the `input` is not checked.
 
 ```html hidden
-<input id="checkboxInput" type="checkbox">
+<input id="checkboxInput" type="checkbox" />
 <label for="checkboxInput">Toggle the checkbox on and off</label>
 ```
 
@@ -878,17 +883,20 @@ input:checked + label {
 
 ### Attribute selectors
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.
+It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
 
 ```css
 /* matches a password input */
-input[type="password"] {}
+input[type="password"] {
+}
 
 /* matches a form control whose valid values are limited to a range of values*/
-input[min][max] {}
+input[min][max] {
+}
 
 /* matches a form control with a pattern attribute */
- input[pattern] {}
+input[pattern] {
+}
 ```
 
 ### ::placeholder
@@ -919,7 +927,7 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 
 ```html
 <label for="textInput">Note the red caret:</label>
-<input id="textInput" class="custom" size="32">
+<input id="textInput" class="custom" size="32" />
 ```
 
 #### CSS
@@ -927,7 +935,7 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif"
+  font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
 
@@ -965,13 +973,18 @@ It does not suffice to have plain text adjacent to the `<input>` element. Rather
 
 ```html
 <!-- inaccessible -->
-<p>Enter your name: <input id="name" type="text" size="30"></p>
+<p>Enter your name: <input id="name" type="text" size="30" /></p>
 
 <!-- implicit label -->
-<p><label>Enter your name: <input id="name" type="text" size="30"></label></p>
+<p>
+  <label>Enter your name: <input id="name" type="text" size="30" /></label>
+</p>
 
 <!-- explicit label -->
-<p><label for="name">Enter your name: </label><input id="name" type="text" size="30"></p>
+<p>
+  <label for="name">Enter your name: </label>
+  <input id="name" type="text" size="30" />
+</p>
 ```
 
 The first example is inaccessible: no relationship exists between the prompt and the `<input>` element.
@@ -999,7 +1012,7 @@ Some input types and other attributes place limits on what values are valid for 
 For the input types whose domain of possible values is periodic (that is, at the highest possible value, the values wrap back around to the beginning rather than ending), it's possible for the values of the [`max`](#max) and [`min`](#min) properties to be reversed, which indicates that the range of permitted values starts at `min`, wraps around to the lowest possible value, then continues on until `max` is reached. This is particularly useful for dates and times, such as when you want to allow the range to be from 8 PM to 8 AM:
 
 ```html
-<input type="time" min="20:00" max="08:00" name="overnight">
+<input type="time" min="20:00" max="08:00" name="overnight" />
 ```
 
 Specific attributes and their values can lead to a specific error {{domxref('ValidityState')}}:
@@ -1072,7 +1085,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td><a href="#type"><code>type</code></a></td>
       <td>{{domxref('validityState.typeMismatch')}}</td>
       <td>
-        Occurs when the value is not of the correct type, for example a email does not contain an <code>@</code> or a url doesn't contain a protocol.
+        Occurs when the value is not of the correct type, for example an email does not contain an <code>@</code> or a url doesn't contain a protocol.
       </td>
     </tr>
   </tbody>
@@ -1103,7 +1116,7 @@ If there is an error, supporting browsers will both alert the user and prevent t
 ```js
 function validate(input) {
   let validityState_object = input.validity;
-  if(validityState_object.valueMissing) {
+  if (validityState_object.valueMissing) {
      input.setCustomValidity('A value is required');
   } else if (validityState_object.rangeUnderflow) {
     input.setCustomValidity('Your value is too low');
@@ -1115,7 +1128,7 @@ function validate(input) {
 }
 ```
 
-The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is `null`.
+The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all the values are valid, until the message is `null`.
 
 #### Custom validation error example
 
@@ -1124,7 +1137,7 @@ If you want to present a custom error message when a field fails to validate, yo
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```
@@ -1142,7 +1155,7 @@ nameInput.addEventListener('input', () => {
 });
 
 nameInput.addEventListener('invalid', () => {
-  if(nameInput.value === '') {
+  if (nameInput.value === '') {
     nameInput.setCustomValidity('Enter your username!');
   } else {
     nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
@@ -1157,9 +1170,9 @@ The example renders like so:
 In brief:
 
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
-- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if()` block, and set a custom validity error message.
+- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
-- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.
+- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
 
 > **Note:** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
 
@@ -1191,7 +1204,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -1358,13 +1371,13 @@ Firefox uses the following heuristics to determine the locale to validate the us
 
 ### Labels
 
-When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
+When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
 
 The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
 
 ```html
 <label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas">
+<input type="checkbox" name="peas" id="peas" />
 ```
 
 ### Size

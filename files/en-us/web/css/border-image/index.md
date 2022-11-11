@@ -1,6 +1,7 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-image
 ---
+
 {{CSSRef}}
 
 The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/border).
@@ -72,7 +74,7 @@ The `border-image` property may be specified with anywhere from one to five of t
 Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1  | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Formal definition
 
@@ -93,7 +95,9 @@ In this example, we will apply a diamond pattern to an element's borders. The so
 #### HTML
 
 ```html
-<div id="bitmap">This element is surrounded by a bitmap-based border image!</div>
+<div id="bitmap">
+  This element is surrounded by a bitmap-based border image!
+</div>
 ```
 
 #### CSS
@@ -108,12 +112,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
   margin: 30px;
   padding: 10px;
 
-  border-image:
-      url("border.png")  /* source */
-      27 /                    /* slice */
-      36px 28px 18px 8px /    /* width */
-      18px 14px 9px 4px       /* outset */
-      round;                  /* repeat */
+  border-image: url("border.png") /* source */ 27 / /* slice */ 36px 28px 18px
+    8px / /* width */ 18px 14px 9px 4px /* outset */ round; /* repeat */
 }
 ```
 
@@ -126,7 +126,9 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 #### HTML
 
 ```html
-<div id="gradient">This element is surrounded by a gradient-based border image!</div>
+<div id="gradient">
+  This element is surrounded by a gradient-based border image!
+</div>
 ```
 
 #### CSS

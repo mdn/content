@@ -11,6 +11,7 @@ tags:
   - JavaScript
   - events
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript has a runtime model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
@@ -21,7 +22,7 @@ The following sections explain a theoretical model. Modern JavaScript engines im
 
 ### Visual representation
 
-![Stack, heap, queue](the_javascript_runtime_environment_example.svg)
+![A diagram showing how stacks are comprised of frames, heaps are comprised of objects, and queues are comprised of messages.](the_javascript_runtime_environment_example.svg)
 
 ### Stack
 
@@ -29,16 +30,16 @@ Function calls form a stack of _frames_.
 
 ```js
 function foo(b) {
-  let a = 10
-  return a + b + 11
+  const a = 10;
+  return a + b + 11;
 }
 
 function bar(x) {
-  let y = 3
-  return foo(x * y)
+  const y = 3;
+  return foo(x * y);
 }
 
-const baz = bar(7) // assigns 42 to baz
+const baz = bar(7); // assigns 42 to baz
 ```
 
 Order of operations:
@@ -68,7 +69,7 @@ The **event loop** got its name because of how it's usually implemented, which u
 
 ```js
 while (queue.waitForMessage()) {
-  queue.processNextMessage()
+  queue.processNextMessage();
 }
 ```
 
@@ -91,16 +92,16 @@ The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arg
 Here is an example that demonstrates this concept (`setTimeout` does not run immediately after its timer expires):
 
 ```js
-const seconds = new Date().getSeconds();
+const seconds = new Date().getTime() / 1000;
 
 setTimeout(() => {
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
-  console.log(`Ran after ${new Date().getSeconds() - seconds} seconds`);
+  console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
 }, 500)
 
 while (true) {
-  if (new Date().getSeconds() - seconds >= 2) {
-    console.log("Good, looped for 2 seconds")
+  if (new Date().getTime() / 1000 - seconds >= 2) {
+    console.log("Good, looped for 2 seconds");
     break;
   }
 }

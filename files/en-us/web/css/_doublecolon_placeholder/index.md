@@ -1,6 +1,7 @@
 ---
 title: '::placeholder'
 slug: Web/CSS/::placeholder
+page-type: css-pseudo-element
 tags:
   - '::placeholder'
   - CSS
@@ -9,6 +10,7 @@ tags:
   - Selector
 browser-compat: css.selectors.placeholder
 ---
+
 {{CSSRef}}
 
 The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the {{htmlattrxref("placeholder","input","placeholder text",1)}} in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
@@ -52,7 +54,11 @@ With this implementation, the hint content is available even if information is e
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -79,7 +85,7 @@ This example shows some of the adjustments that you can make to the styles of pl
 #### HTML
 
 ```html
-<input placeholder="Type here">
+<input placeholder="Type here" />
 ```
 
 #### CSS
@@ -103,8 +109,8 @@ Some browsers (such as Firefox) set the default {{cssxref("opacity")}} of placeh
 #### HTML
 
 ```html
-<input placeholder="Default opacity">
-<input placeholder="Full opacity" class="force-opaque">
+<input placeholder="Default opacity" />
+<input placeholder="Full opacity" class="force-opaque" />
 ```
 
 #### CSS

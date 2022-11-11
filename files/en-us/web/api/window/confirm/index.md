@@ -11,6 +11,7 @@ tags:
   - confirm
 browser-compat: api.Window.confirm
 ---
+
 {{ApiRef("Window")}}
 
 `window.confirm()` instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.
@@ -19,7 +20,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
+```js-nolint
 confirm(message)
 ```
 

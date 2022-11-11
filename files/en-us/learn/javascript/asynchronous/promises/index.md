@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** are the foundation of asynchronous programming in modern JavaScript. A promise is an object returned by an asynchronous function, which represents the current state of the operation. At the time the promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation.
@@ -31,7 +32,7 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 ## Using the fetch() API
 
-> **Note:** In this article we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
+> **Note:** In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
 >
 > 1. open a browser tab and visit <https://example.org>
 > 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
@@ -58,7 +59,7 @@ console.log("Started request…");
 Here we are:
 
 1. calling the `fetch()` API, and assigning the return value to the `fetchPromise` variable
-2. immediately after, logging the `fetchPromise` variable. This should output something like: `Promise { <state>: "pending" }`, telling us that we have a `Promise` object, and it has a `state` whose value is `"pending"`.  The `"pending"` state means that the fetch operation is still going on.
+2. immediately after, logging the `fetchPromise` variable. This should output something like: `Promise { <state>: "pending" }`, telling us that we have a `Promise` object, and it has a `state` whose value is `"pending"`. The `"pending"` state means that the fetch operation is still going on.
 3. passing a handler function into the Promise's **`then()`** method. When (and if) the fetch operation succeeds, the promise will call our handler, passing in a {{domxref("Response")}} object, which contains the server's response.
 4. logging a message that we have started the request.
 
@@ -103,15 +104,13 @@ It is, of course. But the elegant feature of promises is that _`then()` itself r
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then((response) => {
-    return response.json();
-  })
+  .then((response) => response.json())
   .then((data) => {
     console.log(data[0].name);
   });
 ```
 
-Instead of calling the second `then()` inside the handler for the first `then()`, we can *return* the promise returned by `json()`, and call the second `then()` on that return value. This is called **promise chaining** and means we can avoid ever-increasing levels of indentation when we need to make consecutive asynchronous function calls.
+Instead of calling the second `then()` inside the handler for the first `then()`, we can _return_ the promise returned by `json()`, and call the second `then()` on that return value. This is called **promise chaining** and means we can avoid ever-increasing levels of indentation when we need to make consecutive asynchronous function calls.
 
 Before we move on to the next step, there's one more piece to add. We need to check that the server accepted and was able to handle the request, before we try to read it. We'll do this by checking the status code in the response and throwing an error if it wasn't "OK":
 
@@ -136,7 +135,7 @@ This brings us to the last piece: how do we handle errors? The `fetch()` API can
 
 In the last article, we saw that error handling can get very difficult with nested callbacks, making us handle errors at every nesting level.
 
-To support error handling, `Promise` objects provide a {{jsxref("Promise/catch", "catch()")}} method. This is a lot like `then()`: you call it and pass in a handler function. However, while the handler passed to `then()` is called when the asynchronous operation *succeeds*, the handler passed to `catch()` is called when the asynchronous operation *fails*.
+To support error handling, `Promise` objects provide a {{jsxref("Promise/catch", "catch()")}} method. This is a lot like `then()`: you call it and pass in a handler function. However, while the handler passed to `then()` is called when the asynchronous operation _succeeds_, the handler passed to `catch()` is called when the asynchronous operation _fails_.
 
 If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fails. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
 
@@ -172,7 +171,7 @@ First, a promise can be in one of three states:
 - **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
 - **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
- Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
+Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
 
 Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
 
@@ -188,8 +187,8 @@ Sometimes, you need all the promises to be fulfilled, but they don't depend on e
 
 The promise returned by `Promise.all()` is:
 
-- fulfilled when and if *all* the promises in the array are fulfilled. In this case, the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`.
-- rejected when and if *any* of the promises in the array are rejected. In this case, the `catch()` handler is called with the error thrown by the promise that rejected.
+- fulfilled when and if _all_ the promises in the array are fulfilled. In this case, the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`.
+- rejected when and if _any_ of the promises in the array are rejected. In this case, the `catch()` handler is called with the error thrown by the promise that rejected.
 
 For example:
 
@@ -291,7 +290,7 @@ async function fetchProducts() {
     const data = await response.json();
     console.log(data[0].name);
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -315,7 +314,7 @@ async function fetchProducts() {
     const data = await response.json();
     return data;
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -336,7 +335,7 @@ async function fetchProducts() {
     const data = await response.json();
     return data;
   }
-  catch(error) {
+  catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -374,9 +373,9 @@ The `async` and `await` keywords make it easier to build an operation from a ser
 
 Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
 
-We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
+We didn't touch on all features of promises in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
 
-Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API), and many more.
+Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API), and many more.
 
 ## See also
 

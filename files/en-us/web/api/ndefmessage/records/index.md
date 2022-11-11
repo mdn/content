@@ -7,9 +7,11 @@ tags:
   - Reference
   - Web NFC
   - Property
+  - Experimental
 browser-compat: api.NDEFMessage.records
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The `records` property of
 {{DOMxRef("NDEFMessage")}} interface represents a list of {{DOMxRef("NDEFRecord")}}s

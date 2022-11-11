@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.fromEntries
 ---
+
 {{JSRef}}
 
 The **`Object.fromEntries()`** method transforms a list of
@@ -18,8 +19,8 @@ key-value pairs into an object.
 
 ## Syntax
 
-```js
-Object.fromEntries(iterable);
+```js-nolint
+Object.fromEntries(iterable)
 ```
 
 ### Parameters
@@ -72,7 +73,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 With `Object.fromEntries`, its reverse method
 {{jsxref("Object.entries()")}},
-and [array manipulation methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#methods_2), you are able to transform objects like this:
+and [array manipulation methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods), you are able to transform objects like this:
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };

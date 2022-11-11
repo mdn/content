@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.extends
 ---
+
 {{jsSidebar("Classes")}}
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or
@@ -18,16 +19,15 @@ create a class that is a child of another class.
 
 ## Syntax
 
-```js
+```js-nolint
 class ChildClass extends ParentClass { /* … */ }
 ```
 
 ## Description
 
-The `extends` keyword can be used to subclass custom classes as well as
-built-in objects.
+The `extends` keyword can be used to subclass custom classes as well as built-in objects.
 
-Any constructor that can be called with `new` (that is, it has the `prototype` property) can be the candidate for the parent class.
+Any constructor that can be called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) (which means it must have the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property) can be the candidate for the parent class.
 
 ```js
 function OldStyleClass() {
@@ -45,7 +45,7 @@ class ModernClass {
 class AnotherChildClass extends ModernClass {}
 ```
 
-The `.prototype` of the `ParentClass` must be an {{jsxref("Object")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+The `prototype` of the `ParentClass` must be an {{jsxref("Object")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
 function ParentClass() {}
@@ -55,13 +55,14 @@ class ChildClass extends ParentClass {}
 // Uncaught TypeError: Class extends value does not have valid prototype property 3
 ```
 
-> **Note:** You would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyway.
+> **Note:** You would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyway. (It's ignored by the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.)
 >
 > ```js
 > function ParentClass() {}
 > ParentClass.prototype = 3;
 > console.log(Object.getPrototypeOf(new ParentClass()));
-> // Logs "[Object: null prototype] {}": not actually a number!
+> // [Object: null prototype] {}
+> // Not actually a number!
 > ```
 
 `extends` will set the prototype for both `ChildClass` and `ChildClass.prototype`.
@@ -96,6 +97,30 @@ new SomeClass();
 ```
 
 This is often useful to create [mixins](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+
+While the base class may return anything from its constructor, the derived class must return an object or `undefined`, or a {{jsxref("TypeError")}} will be thrown.
+
+```js
+class ParentClass {
+  constructor() {
+    return 1;
+  }
+}
+
+console.log(new ParentClass()); // ParentClass {}
+// The return value is ignored because it's not an object
+// This is consistent with function constructors
+
+class ChildClass extends ParentClass {
+  constructor() {
+    return 1;
+  }
+}
+
+console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
+```
+
+If the parent class constructor returns an object, that object will be used as the `this` value for the derived class when further initializing [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields). This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) ones) to be defined on unrelated objects.
 
 ## Examples
 

@@ -9,10 +9,11 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Promise.catch
 ---
+
 {{JSRef}}
 
 The **`catch()`** method returns a {{jsxref("Promise")}} and
-deals with rejected cases only. It behaves the same as calling {{jsxref("Promise.then",
+deals with rejected cases only. It behaves the same as calling {{jsxref("Promise/then",
   "Promise.prototype.then(undefined, onRejected)")}} (in fact, calling
 `obj.catch(onRejected)` internally calls
 `obj.then(undefined, onRejected)`). This means that you have to provide an
@@ -23,7 +24,7 @@ deals with rejected cases only. It behaves the same as calling {{jsxref("Promise
 
 ## Syntax
 
-```js
+```js-nolint
 p.catch(onRejected)
 
 p.catch(function(reason) {
@@ -56,7 +57,7 @@ called, passing the parameters `undefined` and the received
 
 The `catch` method is used for error handling in promise composition. Since
 it returns a {{jsxref("Promise")}}, it [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch)
-in the same way as its sister method, {{jsxref("Promise.then", "then()")}}.
+in the same way as its sister method, {{jsxref("Promise/then", "then()")}}.
 
 `catch()` internally calls `then()`. This is observable if you wrap the methods.
 
@@ -66,20 +67,20 @@ in the same way as its sister method, {{jsxref("Promise.then", "then()")}}.
   const originalThen = Promise.prototype.then;
   const originalCatch = Promise.prototype.catch;
 
-  Promise.prototype.then = function () {
-    console.log("Called .then on %o with arguments: %o", this, arguments);
-    return originalThen.apply(this, arguments);
+  Promise.prototype.then = function (...args) {
+    console.log("Called .then on %o with arguments: %o", this, args);
+    return originalThen.apply(this, args);
   };
-  Promise.prototype.catch = function () {
-    console.error("Called .catch on %o with arguments: %o", this, arguments);
-    return originalCatch.apply(this, arguments);
+  Promise.prototype.catch = function (...args) {
+    console.error("Called .catch on %o with arguments: %o", this, args);
+    return originalCatch.apply(this, args);
   };
 })(Promise);
 
 // calling catch on an already resolved promise
 Promise.resolve().catch(function XXX() {});
 
-// logs:
+// Logs:
 // Called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
 // Called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
 ```
@@ -201,3 +202,4 @@ p2.then(
 
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.finally()")}}

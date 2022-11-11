@@ -3,13 +3,12 @@ title: Generating HTML
 slug: Web/API/XSLTProcessor/Generating_HTML
 page-type: guide
 ---
-## Generating HTML
 
-One common application of XSLT in the browser is to transform XML into HTML on the client. The second example will transform the input document (example2.xml), which again contains information about an article, into an HTML document.
+One common application of XSLT in the browser is transforming XML into HTML on the client. This example will transform the input document (example2.xml), which contains information about an article, into an HTML document.
 
-The `<body>` element of the article now contains HTML elements (a `<b>` and `<u>` tag, see figure 2). The XML document contains both HTML elements and XML elements, but only one namespace is needed, namely for the XML elements. Since there is no HTML namespace, and using the XHTML namespace would force the XSL to create an XML document that would not behave like a HTML document, the `xsl:output` in the XSL Stylesheet will make sure the resulting document will be handled as HTML. For the XML elements, our own namespace is needed, `http://devedge.netscape.com/2002/de`, and it is given the prefix myNS `(xmlns:myNS="http://devedge.netscape.com/2002/de")`.
+The `<body>` element of the article now contains HTML elements (a `<b>` and `<u>` tag). The XML document contains both HTML elements and XML elements, but only one namespace is needed, namely for the XML elements. Since there is no HTML namespace, and using the XHTML namespace would force the XSL to create an XML document that would not behave like an HTML document, the `xsl:output` in the XSL Stylesheet will make sure the resulting document will be handled as HTML. For the XML elements, our own namespace is needed, `http://devedge.netscape.com/2002/de`, and it is given the prefix myNS `(xmlns:myNS="http://devedge.netscape.com/2002/de")`.
 
-**Figure 2 XML file:(example2.xml)**
+## XML file
 
 ```xml
 <?xml version="1.0"?>
@@ -28,13 +27,13 @@ The `<body>` element of the article now contains HTML elements (a `<b>` and `<u>
 
 The XSL Stylesheet used will need to have two namespaces - one for the XSLT elements and one for our own XML elements used in the XML document. The output of the XSL Stylesheet is set to `HTML` by using the `xsl:output` element. By setting the output to be HTML and not having a namespace on the resulting elements (colored in blue), those elements will be treated as HTML elements.
 
-**Figure 3: XSL Stylesheet with 2 namespaces** (example2.xsl)
+## XSL stylesheet with 2 namespaces
 
 ```xml
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-                          xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                          xmlns:myNS="http://devedge.netscape.com/2002/de">
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:myNS="http://devedge.netscape.com/2002/de">
 
   <xsl:output method="html"/>
   …
@@ -43,7 +42,7 @@ The XSL Stylesheet used will need to have two namespaces - one for the XSLT elem
 
 A template matching the root node of the XML document is created and used to create the basic structure of the HTML page.
 
-**Figure 4: Creating the basic HTML document**
+## Creating the basic HTML document
 
 ```xml
 …
@@ -56,7 +55,7 @@ A template matching the root node of the XML document is created and used to cre
       <xsl:value-of select="/myNS:Article/myNS:Title"/>
     </title>
 
-    <style type="text/css">
+    <style>
       .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
     </style>
 
@@ -85,7 +84,7 @@ A template matching the root node of the XML document is created and used to cre
 
 Three more `xsl:template`'s are needed to complete the example. The first `xsl:template` is used for the author nodes, while the second one processes the body node. The third template has a general matching rule which will match any node and any attribute. It is needed in order to preserve the HTML elements in the XML document, since it matches all of them and copies them out into the HTML document the transformation creates.
 
-**Figure 5: Final 3 Templates**
+## Final 3 templates
 
 ```xml
 …
@@ -117,13 +116,13 @@ Three more `xsl:template`'s are needed to complete the example. The first `xsl:t
 
 The final XSLT stylesheet looks as follows:
 
-**Figure 6: final XSLT Stylesheet**
+## Final XSLT stylesheet
 
 ```xml
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-                          xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                          xmlns:myNS="http://devedge.netscape.com/2002/de">
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:myNS="http://devedge.netscape.com/2002/de">
 
   <xsl:output method="html" />
 
@@ -136,7 +135,7 @@ The final XSLT stylesheet looks as follows:
           <xsl:value-of select="/myNS:Article/myNS:Title"/>
         </title>
 
-        <style type="text/css">
+        <style>
           .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
         </style>
 

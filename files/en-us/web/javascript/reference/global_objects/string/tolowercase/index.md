@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLowerCase
 ---
+
 {{JSRef}}
 
 The **`toLowerCase()`** method returns the calling string value
@@ -18,7 +19,7 @@ converted to lower case.
 
 ## Syntax
 
-```js
+```js-nolint
 toLowerCase()
 ```
 
@@ -37,7 +38,7 @@ lower case. `toLowerCase()` does not affect the value of the string
 ### Using `toLowerCase()`
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## Specifications

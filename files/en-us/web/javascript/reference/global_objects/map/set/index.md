@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.set
 ---
+
 {{JSRef}}
 
 The **`set()`** method adds or updates an entry in a `Map` object with a specified key and a value.
@@ -18,16 +19,16 @@ The **`set()`** method adds or updates an entry in a `Map` object with a specifi
 
 ## Syntax
 
-```js
+```js-nolint
 set(key, value)
 ```
 
 ### Parameters
 
 - `key`
-  - : The key of the element to add to the `Map` object. The key may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
+  - : The key of the element to add to the `Map` object. The key may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
 - `value`
-  - : The value of the element to add to the `Map` object. The value may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
+  - : The value of the element to add to the `Map` object. The value may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
 
 ### Return value
 
@@ -38,14 +39,14 @@ The `Map` object.
 ### Using set()
 
 ```js
-let myMap = new Map()
+const myMap = new Map();
 
 // Add new elements to the map
-myMap.set('bar', 'foo')
-myMap.set(1, 'foobar')
+myMap.set('bar', 'foo');
+myMap.set(1, 'foobar');
 
 // Update an element in the map
-myMap.set('bar', 'baz')
+myMap.set('bar', 'baz');
 ```
 
 ### Using the set() with chaining
@@ -56,8 +57,8 @@ method call like below:
 ```js
 // Add new elements to the map with chaining.
 myMap.set('bar', 'foo')
-     .set(1, 'foobar')
-     .set(2, 'baz');
+  .set(1, 'foobar')
+  .set(2, 'baz');
 ```
 
 ## Specifications

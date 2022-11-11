@@ -13,6 +13,7 @@ tags:
   - mul()
 browser-compat: api.CSSNumericValue.mul
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`mul()`** method of the
@@ -21,7 +22,7 @@ the supplied value.
 
 ## Syntax
 
-```js
+```js-nolint
 mul(number)
 ```
 

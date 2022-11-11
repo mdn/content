@@ -2,11 +2,12 @@
 title: Firefox 75 for developers
 slug: Mozilla/Firefox/Releases/75
 tags:
-  - '75'
+  - "75"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.
@@ -33,7 +34,7 @@ This article provides information about the changes in Firefox 75 that will affe
 
 ### Accessibility
 
-The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations) are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screenreaders start to support them):
+The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations) are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screen readers start to support them):
 
 - `aria-description` ({{bug(1608961)}}).
 - [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role) ({{bug(1608965)}}).
@@ -80,13 +81,9 @@ _No changes._
 
 ### Security
 
-- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and  `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ({{bug(1374612)}}).
+- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ({{bug(1374612)}}).
 
 ### Plugins
-
-_No changes._
-
-### Security
 
 _No changes._
 

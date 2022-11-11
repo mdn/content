@@ -1,6 +1,7 @@
 ---
 title: font-smooth
 slug: Web/CSS/font-smooth
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,7 +10,8 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-smooth
 ---
-{{ CSSRef }} {{ Non-standard_header }}
+
+{{CSSRef}} {{ Non-standard_header }}
 
 The **`font-smooth`** [CSS](/en-US/docs/Web/CSS) property controls the application of anti-aliasing when fonts are rendered.
 
@@ -50,7 +52,10 @@ font-smooth: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+font-smooth =
+  auto | never | always | <absolute-size> | <length>
+```
 
 ## Examples
 
@@ -60,7 +65,7 @@ The following example shows the Safari/Chromium and Firefox equivalents that tur
 
 For those of you not on a macOS system, here is a screenshot (the live version appears later on):
 
-![](smoothing.png)
+![Two texts examples one with the font-smooth property and another one without](smoothing.png)
 
 #### HTML
 

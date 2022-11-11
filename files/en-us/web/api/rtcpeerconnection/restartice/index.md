@@ -17,6 +17,7 @@ tags:
   - restartIce
 browser-compat: api.RTCPeerConnection.restartIce
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC](/en-US/docs/Web/API/WebRTC_API) API's
@@ -48,7 +49,7 @@ This process continues until an ICE restart has been successfully completed.
 
 ## Syntax
 
-```js
+```js-nolint
 restartIce()
 ```
 

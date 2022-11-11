@@ -9,6 +9,7 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.languagechange_event
 ---
+
 {{APIRef}}
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.
@@ -34,7 +35,7 @@ A generic {{domxref("Event")}}.
 You can use the `languagechange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-worker.addEventListener('languagechange', function() {
+worker.addEventListener('languagechange', () => {
   console.log('languagechange event detected!');
 });
 ```
@@ -42,7 +43,7 @@ worker.addEventListener('languagechange', function() {
 Or use the `onlanguagechange` event handler property:
 
 ```js
-worker.onlanguagechange = function(event) {
+worker.onlanguagechange = (event) => {
   console.log('languagechange event detected!');
 };
 ```

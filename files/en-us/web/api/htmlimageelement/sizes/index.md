@@ -16,6 +16,7 @@ tags:
   - width
 browser-compat: api.HTMLImageElement.sizes
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property
@@ -36,7 +37,7 @@ comprised of a media condition, then at least one whitespace character, then the
 **source size value** to use for the image when the media condition
 evaluates to `true`.
 
-#### Media conditions
+### Media conditions
 
 Each source size descriptor consists of a media condition as defined by the media
 queries standard. Because a source size descriptor is used to specify the width to use
@@ -45,7 +46,7 @@ necessarily) based entirely on width information. See
 {{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
 details on how to construct a media condition.
 
-#### Source size values
+### Source size values
 
 The source size value is a [CSS length](/en-US/docs/Web/CSS/length). It may
 be specified using font-relative units (such as `em` or `ex`),
@@ -81,18 +82,25 @@ and 50em.
 <article>
   <h1>An amazing headline</h1>
   <div class="test"></div>
-  <p>This is even more amazing content text. It's really spectacular.
-     And fascinating. Oh, it's also clever and witty. Award-winning
-     stuff, I'm sure.</p>
-  <img src="new-york-skyline-wide.jpg"
-       srcset="new-york-skyline-wide.jpg 3724w,
-               new-york-skyline-4by3.jpg 1961w,
-               new-york-skyline-tall.jpg 1060w"
-       sizes="((min-width: 50em) and (max-width: 60em)) 50em,
+  <p>
+    This is even more amazing content text. It's really spectacular. And
+    fascinating. Oh, it's also clever and witty. Award-winning stuff, I'm sure.
+  </p>
+  <img
+    src="new-york-skyline-wide.jpg"
+    srcset="
+      new-york-skyline-wide.jpg 3724w,
+      new-york-skyline-4by3.jpg 1961w,
+      new-york-skyline-tall.jpg 1060w
+    "
+    sizes="((min-width: 50em) and (max-width: 60em)) 50em,
               ((min-width: 30em) and (max-width: 50em)) 30em,
-              (max-width: 30em) 20em">
-  <p>Then there's even more amazing stuff to say down here. Can you
-     believe it? I sure can't.</p>
+              (max-width: 30em) 20em"
+    alt="The New York City skyline on a beautiful day, with the One World Trade Center building in the middle." />
+  <p>
+    Then there's even more amazing stuff to say down here. Can you believe it? I
+    sure can't.
+  </p>
 
   <button id="break40">Last Width: 40em</button>
   <button id="break50">Last Width: 50em</button>
@@ -106,7 +114,7 @@ article {
   margin: 1em;
   max-width: 60em;
   min-width: 20em;
-  border: 4em solid #880E4F;
+  border: 4em solid #880e4f;
   border-radius: 7em;
   padding: 1.5em;
   font: 16px "Open Sans", Verdana, Arial, Helvetica, sans-serif;

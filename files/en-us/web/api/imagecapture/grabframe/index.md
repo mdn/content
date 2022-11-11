@@ -15,7 +15,8 @@ tags:
   - grabFrame
 browser-compat: api.ImageCapture.grabFrame
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`grabFrame()`** method of the
 {{domxref("ImageCapture")}} interface takes a snapshot of the live video in a
@@ -24,7 +25,7 @@ a {{domxref("ImageBitmap")}} containing the snapshot.
 
 ## Syntax
 
-```js
+```js-nolint
 grabFrame()
 ```
 
@@ -59,7 +60,7 @@ function grabFrame() {
       canvas.classList.remove('hidden');
     })
     .catch((error) => {
-      console.rttot('grabFrame() error: ', error);
+      console.error('grabFrame() error: ', error);
     });
 }
 ```

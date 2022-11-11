@@ -6,6 +6,7 @@ tags:
   - writing-guide
 page-type: mdn-writing-guide
 ---
+
 {{MDNSidebar}}
 
 This article gives you some handy information about approaching how to document technologies.
@@ -32,7 +33,7 @@ Useful resources for writing any documentation include:
 3. The latest modern web browsers:
    These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting.
    This is especially pertinent if you are documenting a feature that is 'upcoming'.
-4. Demos/blog posts/other info: Find as much info as you can. If you are updating a technology because it has changed,  ensure that the resources you are using to learn are not out of date. This is why the first two points above are important.
+4. Demos/blog posts/other info: Find as much info as you can. If you are updating a technology because it has changed, ensure that the resources you are using to learn are not out of date. This is why the first two points above are important.
 
 It can also be wise to try and find someone to help answer questions. This can be the specification authors or the engineers who implement browser features.
 
@@ -64,7 +65,9 @@ It's possible that the sidebar of the pages you write will also need to be defin
 
 ### Code examples
 
-Some of the code examples for MDN Web Docs are held in separate repositories (most notably, these are interactive examples at the top of pages and larger demo code needed for guides). You can find a handy [list of them here](/en-us/docs/MDN/Writing_guidelines/Page_structures/Code_examples) to find which one you should add to. If you do need to add to or amend one of these repos, it's a good idea to make a note of it in your list.
+Some of the code examples for MDN Web Docs are held in separate repositories. Most notably, these are the interactive examples that appear in the "Try it" section in the reference pages and the larger demo code needed for guides. If you do need to add to or amend one of these repositories, it's a good idea to make a note of it in your list.
+
+This [article](/en-us/docs/MDN/Writing_guidelines/Page_structures/Code_examples) describes the different types of code examples we use on MDN Web Docs.
 
 ### Example
 

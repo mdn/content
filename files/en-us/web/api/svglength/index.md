@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGLength
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG length interface
@@ -24,7 +25,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
   <tbody>
     <tr>
       <th scope="row">Also implement</th>
-      <td><var>None</var></td>
+      <td>None</td>
     </tr>
     <tr>
       <th scope="row">Methods</th>
@@ -92,7 +93,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
 
 ```xml
 <svg height="200" onload="start();" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg">
-  <script type="text/javascript"><![CDATA[
+  <script><![CDATA[
 function start() {
   const rect = document.getElementById("myRect");
   const val  = rect.x.baseVal;
@@ -207,7 +208,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -295,7 +296,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 <table class="no-markdown">
   <thead>

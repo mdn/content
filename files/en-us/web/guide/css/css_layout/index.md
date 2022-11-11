@@ -9,6 +9,7 @@ tags:
   - Web
   - Web Development
 ---
+
 There are a number of methods that you can use to lay out your web pages and applications. MDN contains a number of in-depth guides to the different methods, and this page provides an overview of them all.
 
 ## Normal flow, block, and inline layout
@@ -65,8 +66,6 @@ CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized 
   - : How to create flex containers with multiple lines and control the display of the items along those lines.
 - [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
   - : Common design patterns that are typical Flexbox use cases.
-- [Backwards compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-  - : Browser status of Flexbox, interoperability issues, and supporting older browsers and versions of the spec.
 
 ## Grid layout
 

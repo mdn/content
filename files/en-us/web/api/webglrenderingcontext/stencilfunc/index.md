@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilFunc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.stencilFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and back function
@@ -20,7 +21,7 @@ multipass rendering to achieve special effects.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilFunc(func, ref, mask)
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Advanced techniques: Creating and sequencing audio'
+title: "Advanced techniques: Creating and sequencing audio"
 slug: Web/API/Web_Audio_API/Advanced_techniques
 page-type: guide
 tags:
@@ -11,9 +11,12 @@ tags:
   - Web Audio API
   - sequencer
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We will introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and looking for an introduction to their application with the Web Audio API, you've come to the right place.
+
+> **Note:** You can find the source code for the demo below on GitHub in the [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer) subdirectory of the MDN [webaudio-examples](https://github.com/mdn/webaudio-examples) repo. You can also see the [live demo](https://mdn.github.io/webaudio-examples/step-sequencer/).
 
 ## Demo
 
@@ -22,8 +25,6 @@ We're going to be looking at a very simple step sequencer:
 ![A sound sequencer application featuring play and BPM master controls and 4 different voices with controls for each.](sequencer.png)
 
 In practice, this is easier to do with a library — the Web Audio API was built to be built upon. If you are about to embark on building something more complex, [tone.js](https://tonejs.github.io/) would be an excellent place to start. However, we want to demonstrate how to create such a demo from first principles as a learning exercise.
-
-> **Note:** You can find the source code on GitHub as [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer); see the [step-sequencer running live](https://mdn.github.io/webaudio-examples/step-sequencer/) also.
 
 The interface consists of master controls, which allow us to play/stop the sequencer, and adjust the BPM (beats per minute) to speed up or slow down the "music".
 
@@ -129,10 +130,24 @@ Let's say our envelope has attack and release. We can allow the user to control 
 
 ```html
 <label for="attack">Attack</label>
-<input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" />
+<input
+  name="attack"
+  id="attack"
+  type="range"
+  min="0"
+  max="1"
+  value="0.2"
+  step="0.1" />
 
 <label for="release">Release</label>
-<input name="release" id="release" type="range" min="0" max="1" value="0.5" step="0.1" />
+<input
+  name="release"
+  id="release"
+  type="range"
+  min="0"
+  max="1"
+  value="0.5"
+  step="0.1" />
 ```
 
 Now we can create some variables over in JavaScript and have them change when the input values are updated:
@@ -245,7 +260,14 @@ For the UI controls, let's expose both frequencies of our oscillators, allowing 
 
 ```html
 <label for="hz">Hz</label>
-<input name="hz" id="hz" type="range" min="660" max="1320" value="880" step="1" />
+<input
+  name="hz"
+  id="hz"
+  type="range"
+  min="660"
+  max="1320"
+  value="880"
+  step="1" />
 <label for="lfo">LFO</label>
 <input name="lfo" id="lfo" type="range" min="20" max="40" value="30" step="1" />
 ```
@@ -379,10 +401,24 @@ On the UI, we'll expose the noise duration and the frequency we want to band, al
 
 ```html
 <label for="duration">Duration</label>
-<input name="duration" id="duration" type="range" min="0" max="2" value="1" step="0.1" />
+<input
+  name="duration"
+  id="duration"
+  type="range"
+  min="0"
+  max="2"
+  value="1"
+  step="0.1" />
 
 <label for="band">Band</label>
-<input name="band" id="band" type="range" min="400" max="1200" value="1000" step="5" />
+<input
+  name="band"
+  id="band"
+  type="range"
+  min="400"
+  max="1200"
+  value="1000"
+  step="5" />
 ```
 
 ```js
@@ -391,7 +427,7 @@ const durControl = document.querySelector("#duration");
 durControl.addEventListener(
   "input",
   (ev) => {
-    noiseDuration = parseInt(ev.target.value, 10);
+    noiseDuration = parseFloat(ev.target.value);
   },
   false
 );
@@ -494,7 +530,7 @@ Let's create a `playSample()` function similarly to how we did with the other so
 function playSample(audioContext, audioBuffer, time) {
   const sampleSource = new AudioBufferSourceNode(audioCtx, {
     buffer: audioBuffer,
-    playbackRate: playbackRate,
+    playbackRate,
   });
   sampleSource.connect(audioContext.destination);
   sampleSource.start(time);
@@ -510,7 +546,14 @@ The {{domxref("AudioBufferSourceNode")}} comes with a [`playbackRate`](/en-US/do
 
 ```html
 <label for="rate">Rate</label>
-<input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" />
+<input
+  name="rate"
+  id="rate"
+  type="range"
+  min="0.1"
+  max="2"
+  value="1"
+  step="0.1" />
 ```
 
 ```js
@@ -533,7 +576,7 @@ We'll then add a line to update the `playbackRate` property to our `playSample()
 function playSample(audioContext, audioBuffer, time) {
   const sampleSource = new AudioBufferSourceNode(audioCtx, {
     buffer: audioBuffer,
-    playbackRate: playbackRate,
+    playbackRate,
   });
   sampleSource.connect(audioContext.destination);
   sampleSource.start(time);
@@ -549,7 +592,7 @@ A common problem with digital audio applications is getting the sounds to play i
 
 We could schedule our voices to play within a `for` loop; however, the biggest problem with this is updating while it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes will play and push them into a queue. We can start them at a precise time with the `currentTime` property and also consider any changes.
 
-> **Note:** This is a much stripped down version of [Chris Wilson's A Tale Of Two Clocks](https://www.html5rocks.com/en/tutorials/audio/scheduling/) article, which goes into this method with much more detail. There's no point repeating it all here, but we highly recommend reading this article and using this method. Much of the code here is taken from his [metronome example](https://github.com/cwilso/metronome/blob/master/js/metronome.js), which he references in the article.
+> **Note:** This is a much stripped down version of [Chris Wilson's A Tale Of Two Clocks (2013)](https://web.dev/audio-scheduling/) article, which goes into this method with much more detail. There's no point repeating it all here, but we highly recommend reading this article and using this method. Much of the code here is taken from his [metronome example](https://github.com/cwilso/metronome/blob/master/js/metronome.js), which he references in the article.
 
 Let's start by setting up our default BPM (beats per minute), which will also be user-controllable via — you guessed it — another range input.
 
@@ -596,7 +639,7 @@ const notesInQueue = [];
 
 function scheduleNote(beatNumber, time) {
   // Push the note on the queue, even if we're not playing.
-  notesInQueue.push({ note: beatNumber, time: time });
+  notesInQueue.push({ note: beatNumber, time });
 
   if (pads[0].querySelectorAll("input")[beatNumber].checked) {
     playSweep(time);
@@ -688,7 +731,7 @@ setupSample().then((sample) => {
       requestAnimationFrame(draw); // start the drawing loop.
       ev.target.dataset.playing = "true";
     } else {
-      window.clearTimeout(timerID);
+      clearTimeout(timerID);
       ev.target.dataset.playing = "false";
     }
   });

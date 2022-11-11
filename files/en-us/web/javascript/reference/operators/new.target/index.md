@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.new_target
 ---
+
 {{JSSidebar("Operators")}}
 
 The **`new.target`** pseudo-property lets you detect whether a
@@ -21,7 +22,7 @@ function calls, `new.target` is {{jsxref("undefined")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new.target
 ```
 
@@ -53,44 +54,40 @@ function was called with [new](/en-US/docs/Web/JavaScript/Reference/Operators/ne
 
 ```js
 function Foo() {
-  if (!new.target) { throw 'Foo() must be called with new' }
-  console.log('Foo instantiated with new')
+  if (!new.target) {
+    throw new Error("Foo() must be called with new");
+  }
+  console.log("Foo instantiated with new");
 }
 
-new Foo()  // logs "Foo instantiated with new"
-Foo()      // throws "Foo() must be called with new"
+new Foo(); // Logs "Foo instantiated with new"
+Foo(); // Throws "Foo() must be called with new"
 ```
 
 ### new\.target in constructors
 
 In class constructors, `new.target` refers to the constructor that was
 directly invoked by `new`. This is also the case if the constructor is in a
-parent class and was delegated from a child constructor.
+parent class and was delegated from a child constructor. `new.target` points to the class definition of class which is initialized. For example, when `b` was initialized using
+`new B()`, the name of `B` was printed; and similarly,
+in case of `a`, the name of class `A` was printed.
 
 ```js
 class A {
   constructor() {
-    console.log(new.target.name)
+    console.log(new.target.name);
   }
 }
 
-class B extends A { constructor() { super() } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
-let a = new A()  // logs "A"
-let b = new B()  // logs "B"
-
-class C { constructor() { console.log(new.target)  } }
-class D extends C { constructor() { super()  } }
-
-let c = new C()  // logs class C{constructor(){console.log(new.target);}}
-let d = new D()  // logs class D extends C{constructor(){super();}}
+const a = new A(); // Logs "A"
+const b = new B(); // Logs "B"
 ```
-
-Thus from the above example of class `C` and `D`,
-it seems that `new.target` points to the class definition of class which is
-initialized. For example, when `d` was initialized using
-`new D()`, the class definition of `D` was printed; and similarly,
-in case of `c`, the class `C` was printed.
 
 ## Specifications
 

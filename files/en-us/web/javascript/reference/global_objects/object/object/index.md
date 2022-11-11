@@ -8,25 +8,23 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.Object
 ---
+
 {{JSRef}}
 
-The **`Object` constructor** creates an object wrapper for the
-given value.
+The **`Object` constructor** turns the input into an object. Its behavior depends on the input's type.
 
-- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and
-  return an empty object.
-- Otherwise, it will return an object of a Type that corresponds to the given value.
-- If the value is an object already, it will return the value.
-
-When called in a non-constructor context, `Object` behaves identically to
-`new Object()`.
+- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it creates and returns an empty object.
+- Otherwise, it returns an object of a Type that corresponds to the given value.
+- If the value is an object already, it returns the value.
 
 ## Syntax
 
-```js
-new Object()
+```js-nolint
 new Object(value)
+Object(value)
 ```
+
+> **Note:** `Object()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new object.
 
 ### Parameters
 
@@ -38,11 +36,11 @@ new Object(value)
 ### Creating a new Object
 
 ```js
-let o = new Object()
-o.foo = 42
+const o = new Object();
+o.foo = 42;
 
-console.log(o)
-// Object { foo: 42 }
+console.log(o);
+// { foo: 42 }
 ```
 
 ### Using Object given undefined and null types
@@ -50,15 +48,15 @@ console.log(o)
 The following examples store an empty `Object` object in `o`:
 
 ```js
-let o = new Object()
+const o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+const o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+const o = new Object(null);
 ```
 
 ## Specifications

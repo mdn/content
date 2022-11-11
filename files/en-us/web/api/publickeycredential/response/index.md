@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.response
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`response`** read-only property of the
@@ -61,8 +62,8 @@ const options = {
   },
   user: {
     id: new Uint8Array(16) /* from the server */,
-    name: "jdoe@example.com",
-    displayName: "John Doe"
+    name: "canand@example.com",
+    displayName: "Carina Anand",
   },
   pubKeyCredParams: [
     {
@@ -73,13 +74,13 @@ const options = {
 };
 
 navigator.credentials.create({  publicKey: options })
-  .then(function (pubKeyCredential) {
+  .then((pubKeyCredential) => {
     const response = pubKeyCredential.response;
     const clientExtResults = pubKeyCredential.getClientExtensionResults();
     // Send response and client extensions to the server so that it can validate
     // and create credentials
 
-}).catch(function (err) {
+}).catch((err) => {
   // Deal with any error
 });
 ```

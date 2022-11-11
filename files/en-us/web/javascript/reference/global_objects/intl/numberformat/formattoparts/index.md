@@ -12,9 +12,10 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
+
 {{JSRef}}
 
-The **`Intl.Numberformat.prototype.formatToParts()`** method
+The **`Intl.NumberFormat.prototype.formatToParts()`** method
 allows locale-aware formatting of strings produced by `NumberFormat`
 formatters.
 
@@ -22,7 +23,7 @@ formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts()
 formatToParts(number)
 ```
@@ -54,32 +55,40 @@ looks like this:
 
 Possible types are the following:
 
-- currency
-  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro"
-    depending on how `currencyDisplay` is specified.
-- decimal
+- `compact`
+  - : The exponent in `"long"` or `"short"` form, depending on how `compactDisplay` (which defaults to `short`) is specified when `notation` is set to `compact`.
+- `currency`
+  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro", depending on how `currencyDisplay` is specified.
+- `decimal`
   - : The decimal separator string (".").
-- fraction
+- `exponentInteger`
+  - : The exponent integer value, when `notation` is set to `scientific` or `engineering`.
+- `exponentMinusSign`
+  - : The exponent minus sign string ("-").
+- `exponentSeparator`
+  - : The exponent separator, when `notation` is set to `scientific` or `engineering`.
+- `fraction`
   - : The fraction number.
-- group
+- `group`
   - : The group separator string (",").
-- infinity
+- `infinity`
   - : The {{jsxref("Infinity")}} string ("∞").
-- integer
+- `integer`
   - : The integer number.
-- literal
+- `literal`
   - : Any literal strings or whitespace in the formatted number.
-- minusSign
+- `minusSign`
   - : The minus sign string ("-").
-- nan
+- `nan`
   - : The {{jsxref("NaN")}} string ("NaN").
-- plusSign
+- `plusSign`
   - : The plus sign string ("+").
-- percentSign
+- `percentSign`
   - : The percent sign string ("%").
-- unit
-  - : The unit string, such as the "l" or "litres", depending on how
-    `unitDisplay` is specified.
+- `unit`
+  - : The unit string, such as the "l" or "litres", depending on how `unitDisplay` is specified.
+- `unknown`
+  - : The string for `unknown` type results.
 
 ## Examples
 

@@ -6,8 +6,9 @@ tags:
   - Functions
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
 Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
@@ -103,7 +104,7 @@ Function expressions are convenient when passing a function as an argument to an
 
 ```js
 function map(f, a) {
-  const result = [];
+  const result = new Array(a.length);
   for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
   }
@@ -115,7 +116,7 @@ In the following code, the function receives a function defined by a function ex
 
 ```js
 function map(f, a) {
-  const result = [];
+  const result = new Array(a.length);
   for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
   }
@@ -160,28 +161,7 @@ square(5);
 
 The preceding statement calls the function with an argument of `5`. The function executes its statements and returns the value `25`.
 
-Functions must be _in scope_ when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:
-
-```js
-console.log(square(5));
-// …
-function square(n) {
-  return n * n;
-}
-```
-
-The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).
-
-> **Note:** This works only when defining the function using the above syntax (i.e., `function funcName(){}`). The code below will not work.
->
-> This means that function hoisting only works with function _declarations_—not with function _expressions_.
->
-> ```js example-bad
-> console.log(square); // ReferenceError: Cannot access 'square' before initialization
-> const square = function (n) {
->   return n * n;
-> }
-> ```
+Functions must be _in scope_ when they are called, but the function declaration can be [hoisted](#function_hoisting) (appear below the call in the code). The scope of a function declaration is the function in which it is declared (or the entire program, if it is declared at the top level).
 
 The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The `showProps()` function (defined in [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)) is an example of a function that takes an object as an argument.
 
@@ -209,7 +189,39 @@ const e = factorial(5); // e gets the value 120
 
 There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
 
-It turns out that _functions are themselves objects_—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.
+It turns out that _functions are themselves objects_ — and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) The [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [`apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) methods can be used to achieve this goal.
+
+### Function hoisting
+
+Consider the example below:
+
+```js
+console.log(square(5)); // 25
+
+function square(n) {
+  return n * n;
+}
+```
+
+This code runs without any error, despite the `square()` function being called before it's declared. This is because the JavaScript interpreter hoists the entire function declaration to the top of the current scope, so the code above is equivalent to:
+
+```js
+// All function declarations are effectively at the top of the scope
+function square(n) {
+  return n * n;
+}
+
+console.log(square(5)); // 25
+```
+
+Function hoisting only works with function _declarations_ — not with function _expressions_. The code below will not work.
+
+```js example-bad
+console.log(square); // ReferenceError: Cannot access 'square' before initialization
+const square = function (n) {
+  return n * n;
+}
+```
 
 ## Function scope
 
@@ -236,7 +248,7 @@ function getScore() {
   const num2 = 3;
 
   function add() {
-    return name + ' scored ' + (num1 + num2);
+    return `${name} scored ${num1 + num2}`;
   }
 
   return add();
@@ -320,14 +332,13 @@ function foo(i) {
   if (i < 0) {
     return;
   }
-  console.log('begin: ' + i);
+  console.log(`begin: ${i}`);
   foo(i - 1);
-  console.log('end: ' + i);
+  console.log(`end: ${i}`);
 }
 foo(3);
 
-// Output:
-
+// Logs:
 // begin: 3
 // begin: 2
 // begin: 1
@@ -407,7 +418,7 @@ function A(x) {
   }
   B(2);
 }
-A(1); // logs 6 (1 + 2 + 3)
+A(1); // Logs 6 (which is 1 + 2 + 3)
 ```
 
 In this example, `C` accesses `B`'s `y` and `A`'s `x`.
@@ -572,13 +583,11 @@ See the {{jsxref("Function")}} object in the JavaScript reference for more infor
 
 ## Function parameters
 
-Starting with ECMAScript 2015, there are two new kinds of parameters: _default parameters_ and _rest parameters_.
+There are two special kinds of parameter syntax: _default parameters_ and _rest parameters_.
 
 ### Default parameters
 
 In JavaScript, parameters of functions default to `undefined`. However, in some situations it might be useful to set a different default value. This is exactly what default parameters do.
-
-#### Without default parameters (pre-ECMAScript 2015)
 
 In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are `undefined`.
 
@@ -592,8 +601,6 @@ function multiply(a, b) {
 
 multiply(5); // 5
 ```
-
-#### With default parameters (post-ECMAScript 2015)
 
 With _default parameters_, a manual check in the function body is no longer necessary. You can put `1` as the default value for `b` in the function head:
 
@@ -624,7 +631,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Arrow functions
 
-An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (previously, and now incorrectly known as **fat arrow function**) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [super](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [new.target](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous. See also this hacks.mozilla.org blog post: "[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (also called a _fat arrow_ to distinguish from a hypothetical `->` syntax in future JavaScript) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous.
 
 Two factors influenced the introduction of arrow functions: _shorter functions_ and _non-binding_ of `this`.
 
@@ -642,14 +649,14 @@ const a = [
 
 const a2 = a.map(function(s) { return s.length; });
 
-console.log(a2); // logs [8, 6, 7, 9]
+console.log(a2); // [8, 6, 7, 9]
 
 const a3 = a.map((s) => s.length);
 
-console.log(a3); // logs [8, 6, 7, 9]
+console.log(a3); // [8, 6, 7, 9]
 ```
 
-### No separate `this`
+### No separate this
 
 Until arrow functions, every new function defined its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value (a new object in the case of a constructor, undefined in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.
 
@@ -710,7 +717,7 @@ JavaScript has several top-level, built-in functions:
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : The global **`isFinite()`** function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to determine if the value is Not-A-Number.
+  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}} to determine if the value is Not-A-Number.
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : The **`parseFloat()`** function parses a string argument and returns a floating point number.
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

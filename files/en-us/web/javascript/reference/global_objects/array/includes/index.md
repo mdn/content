@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method determines whether an array
@@ -22,7 +23,7 @@ includes a certain value among its entries, returning `true` or
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```
@@ -51,19 +52,21 @@ includes(searchElement, fromIndex)
 
 ### Return value
 
-A boolean value which is `true` if the value
-`searchElement` is found within the array (or the part of the array
-indicated by the index `fromIndex`, if specified).
+A boolean value which is `true` if the value `searchElement` is found within the array (or the part of the array indicated by the index `fromIndex`, if specified).
 
-Values of zero are all considered to be equal, regardless of sign. (That is,
-`-0` is considered to be equal to both `0` and `+0`),
-but `false` is _not_ considered to be the same as `0`.
+## Description
 
-> **Note:** Technically speaking, `includes()` uses the
-> [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)
-> algorithm to determine whether the given element is found.
+Values of zero are all considered to be equal, regardless of sign. (That is, `-0` is considered to be equal to both `0` and `+0`), but `false` is _not_ considered to be the same as `0`. [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) can be correctly searched for.
+
+> **Note:** Technically speaking, `includes()` uses the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm to determine whether the given element is found.
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
+
+The `includes()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
+
+### Using includes()
 
 ```js
 [1, 2, 3].includes(2)         // true
@@ -74,7 +77,7 @@ but `false` is _not_ considered to be the same as `0`.
 ["1", "2", "3"].includes(3)   // false
 ```
 
-### `fromIndex` is greater than or equal to the array length
+### fromIndex is greater than or equal to the array length
 
 If `fromIndex` is greater than or equal to the length of the
 array, `false` is returned. The array will not be searched.
@@ -106,20 +109,29 @@ arr.includes('c', -100) // true
 arr.includes('a', -2)   // false
 ```
 
-### includes() used as a generic method
+### Using includes() on sparse arrays
 
-`includes()` method is intentionally generic. It does not require
-`this` value to be an Array object, so it can be applied to other kinds of
-objects (e.g. array-like objects).
-
-The example below illustrates `includes()` method called on the function's
-[arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
+You can search for `undefined` in a sparse array and get `true`.
 
 ```js
-(function () {
-  console.log(Array.prototype.includes.call(arguments, 'a')); // true
-  console.log(Array.prototype.includes.call(arguments, 'd')); // false
-})('a', 'b', 'c');
+console.log([1, , 3].includes(undefined)); // true
+```
+
+### Calling includes() on non-array objects
+
+The `includes()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.includes.call(arrayLike, 2));
+// true
+console.log(Array.prototype.includes.call(arrayLike, 1));
+// false
 ```
 
 ## Specifications

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.split
 ---
+
 {{JSRef}}
 
 The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
@@ -19,7 +20,7 @@ The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into
 
 ## Syntax
 
-```js
+```js-nolint
 split()
 split(separator)
 split(separator, limit)
@@ -28,7 +29,7 @@ split(separator, limit)
 ### Parameters
 
 - `separator` {{optional_inline}}
-  - : The pattern describing where each split should occur. Can be a string or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. If undefined, the original target string is returned wrapped in an array.
+  - : The pattern describing where each split should occur. Can be a string or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. If undefined, the original target string is returned wrapped in an array.
 - `limit` {{optional_inline}}
   - : A non-negative integer specifying a limit on the number of substrings to be included in the array. If provided, splits the string at each occurrence of the specified `separator`, but stops when `limit` entries have been placed in the array. Any leftover text is not included in the array at all.
     - The array may contain fewer entries than `limit` if the end of the string is reached before the limit is reached.
@@ -47,6 +48,13 @@ If `separator` is an empty string (`""`), `str` is converted to an array of each
 > **Note:** `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator`.
 
 > **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
+
+If `separator` is a regexp that matches empty strings, whether the match is split by UTF-16 code units or Unicode codepoints depends on if the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag is set.
+
+```js
+"😄😄".split(/(?:)/); // [ "\ud83d", "\ude04", "\ud83d", "\ude04" ]
+"😄😄".split(/(?:)/u); // [ "😄", "😄" ]
+```
 
 If `separator` is a regular expression with capturing groups, then each time `separator` matches, the captured groups (including any `undefined` results) are spliced into the output array. This behavior is specified by the regexp's [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method.
 
@@ -206,7 +214,7 @@ const splitByNumber = {
 };
 
 const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
+console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
 ```
 
 The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
@@ -284,8 +292,7 @@ const splitCommands = {
 };
 
 const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
-console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
-
+console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", "brightness down"]
 ```
 
 ## Specifications

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: input role'
+title: "ARIA: input role"
 slug: Web/Accessibility/ARIA/Roles/input_role
 tags:
   - Accessibility
@@ -10,9 +10,10 @@ tags:
   - ARIA input role
 spec-urls: https://w3c.github.io/aria/#input
 ---
+
 The `input` abstract role is a generic type of widget that allows user input.
 
-> **Note:**  The `input` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It is not to be used by web authors.
+> **Note:** The `input` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It is not to be used by web authors.
 
 ## Description
 
@@ -42,6 +43,6 @@ Do not use.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

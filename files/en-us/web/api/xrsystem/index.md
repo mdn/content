@@ -17,17 +17,18 @@ tags:
   - XRSystem
 browser-compat: api.XRSystem
 ---
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRSystem`** provides methods which let you get access to an {{domxref("XRSession")}} object representing a WebXR session. With that `XRSession` in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _While `XRSystem` directly offers no properties, it does inherit properties from its parent interface, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _In addition to inheriting methods from its parent interface, {{domxref("EventTarget")}}, the `XRSystem` interface includes the following methods:_
 
@@ -39,7 +40,7 @@ _In addition to inheriting methods from its parent interface, {{domxref("EventTa
 
 ## Events
 
-- {{domxref("XRSystem.devicechange_event", "devicechange")}} {{experimental_inline}}
+- {{domxref("XRSystem.devicechange_event", "devicechange")}} {{Experimental_Inline}}
   - : Sent when the set of available XR devices has changed.
     Also available using the `ondevicechange` event handler.
 
@@ -56,11 +57,7 @@ if (navigator.xr) {
   immersiveButton.addEventListener("click", onButtonClicked);
   navigator.xr.isSessionSupported('immersive-vr')
   .then((isSupported) => {
-    if (isSupported) {
-      immersiveButton.disabled = false;
-    } else {
-      immersiveButton.disabled = true;
-    }
+    immersiveButton.disabled = !isSupported;
   });
 }
 

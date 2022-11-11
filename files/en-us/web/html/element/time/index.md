@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML text-level semantics
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Phrasing content
@@ -14,7 +13,7 @@ tags:
 browser-compat: html.elements.time
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<time>`** [HTML](/en-US/docs/Web/HTML) element represents a specific period in time. It may include the `datetime` attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
 
@@ -92,7 +91,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 ## Usage notes
 
-This element is for presenting dates and times in a machine readable format. For example, this can help a user agent offer to add an event to a user's calendar.
+This element is for presenting dates and times in a machine-readable format. For example, this can help a user agent offer to add an event to a user's calendar.
 
 This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
 
@@ -160,8 +159,9 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 #### HTML
 
 ```html
-<p>The concert took place on <time
-  datetime="2001-05-15T19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.
+</p>
 ```
 
 #### Output

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.spread
 ---
+
 {{jsSidebar("Operators")}}
 
 **Spread syntax** (`...`) allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
@@ -19,10 +20,10 @@ Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opp
 
 ## Syntax
 
-```js
+```js-nolint
 myFunction(a, ...iterableObj, b)
 [1, ...iterableObj, '4', 'five', 6]
-({ ...obj, key: 'value' })
+{ ...obj, key: 'value' }
 ```
 
 ## Description
@@ -99,8 +100,7 @@ const d = new Date(...dateFields);
 Without spread syntax, to create a new array using an existing array as one part of it,
 the array literal syntax is no longer sufficient and imperative code must be used
 instead using a combination of {{jsxref("Array.prototype.push", "push()")}},
-{{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat",
-   "concat()")}}, etc. With spread syntax this becomes much more succinct:
+{{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. With spread syntax this becomes much more succinct:
 
 ```js
 const parts = ['shoulders', 'knees'];
@@ -129,11 +129,11 @@ arr2.push(4);
 > const b = [...a];
 >
 > b.shift().shift();
-> //  1
+> // 1
 >
-> //  Oh no!  Now array 'a' is affected as well:
-> a
-> //  [[], [2], [3]]
+> // Oh no! Now array 'a' is affected as well:
+> console.log(a);
+> // [[], [2], [3]]
 > ```
 
 #### A better way to concatenate arrays
@@ -168,8 +168,7 @@ const arr2 = [3, 4, 5];
 
 //  Prepend all items from arr2 onto arr1
 Array.prototype.unshift.apply(arr1, arr2);
-
-//  arr1 is now [3, 4, 5, 0, 1, 2]
+console.log(arr1); // [3, 4, 5, 0, 1, 2]
 ```
 
 With spread syntax, this becomes:
@@ -179,7 +178,7 @@ let arr1 = [0, 1, 2];
 const arr2 = [3, 4, 5];
 
 arr1 = [...arr2, ...arr1];
-//  arr1 is now [3, 4, 5, 0, 1, 2]
+console.log(arr1); // [3, 4, 5, 0, 1, 2]
 ```
 
 > **Note:** Unlike `unshift()`, this creates a new `arr1`, instead of modifying the original `arr1` array in-place.
@@ -193,10 +192,10 @@ const obj1 = { foo: 'bar', x: 42 };
 const obj2 = { foo: 'baz', y: 13 };
 
 const clonedObj = { ...obj1 };
-// Object { foo: "bar", x: 42 }
+// { foo: "bar", x: 42 }
 
 const mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }
+// { foo: "baz", x: 42, y: 13 }
 ```
 
 Note that {{jsxref("Object.assign()")}} can be used to mutate an object, whereas spread syntax can't.
@@ -204,7 +203,7 @@ Note that {{jsxref("Object.assign()")}} can be used to mutate an object, whereas
 ```js
 const obj1 = { foo: 'bar', x: 42 };
 Object.assign(obj1, { x: 1337 });
-console.log(obj1); // Object { foo: "bar", x: 1337 }
+console.log(obj1); // { foo: "bar", x: 1337 }
 ```
 
 In addition, {{jsxref("Object.assign()")}} triggers setters on the target object, whereas spread syntax does not.
@@ -217,7 +216,7 @@ const spread = { set foo(val) { console.log(val); }, ...{ foo: 1 } };
 // Nothing is logged; spread.foo is 1
 ```
 
-You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spread operator:
+You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spreading:
 
 ```js
 const obj1 = { foo: 'bar', x: 42 };
@@ -225,13 +224,13 @@ const obj2 = { foo: 'baz', y: 13 };
 const merge = (...objects) => ({ ...objects });
 
 const mergedObj1 = merge(obj1, obj2);
-// Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
+// { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
 
 const mergedObj2 = merge({}, obj1, obj2);
-// Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
+// { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread operator, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
+In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread syntax, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
 
 ```js
 const obj1 = { foo: 'bar', x: 42 };
@@ -239,7 +238,7 @@ const obj2 = { foo: 'baz', y: 13 };
 const merge = (...objects) => objects.reduce((acc, cur) => ({ ...acc, ...cur }));
 
 const mergedObj1 = merge(obj1, obj2);
-// Object { foo: 'baz', x: 42, y: 13 }
+// { foo: 'baz', x: 42, y: 13 }
 ```
 
 ## Specifications

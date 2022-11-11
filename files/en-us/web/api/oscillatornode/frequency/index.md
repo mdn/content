@@ -11,6 +11,7 @@ tags:
   - frequency
 browser-compat: api.OscillatorNode.frequency
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`frequency`** property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the frequency of oscillation in hertz.

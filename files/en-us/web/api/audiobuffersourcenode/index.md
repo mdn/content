@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioBufferSourceNode`** interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}.
@@ -50,7 +51,7 @@ Multiple calls to {{domxref("AudioScheduledSourceNode/stop", "stop()")}} are all
 - {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
   - : Creates and returns a new `AudioBufferSourceNode` object. As an alternative, you can use the {{domxref("BaseAudioContext.createBufferSource()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 
@@ -67,16 +68,16 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 - {{domxref("AudioBufferSourceNode.playbackRate")}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} that defines the speed factor at which the audio asset will be played, where a value of 1.0 is the sound's natural sampling rate. Since no pitch correction is applied on the output, this can be used to change the pitch of the sample. This value is compounded with `detune` to determine the final playback rate.
 
-### Event handlers
-
-_Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}}_.
-
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and overrides the following method:_.
 
 - {{domxref("AudioBufferSourceNode.start", "start()")}}
-  - :  Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
+  - : Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
+
+## Event handlers
+
+_Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 
 ## Examples
 
@@ -88,7 +89,11 @@ In this example, we create a two-second buffer, fill it with white noise, and th
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-const myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate
+);
 
 // Fill the buffer with white noise;
 //just random values between -1.0 and 1.0

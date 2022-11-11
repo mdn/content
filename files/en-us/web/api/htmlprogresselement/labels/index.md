@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLProgressElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLProgressElement.labels`** read-only property returns
@@ -34,7 +35,7 @@ with the `<progress>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const progress = document.getElementById("test");
   for (const label of progress.labels) {
     console.log(label.textContent); // "Label 1" and "Label 2"

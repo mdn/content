@@ -17,6 +17,7 @@ tags:
   - track
 browser-compat: api.RTCRtpSender.replaceTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSender")}} method
@@ -24,7 +25,7 @@ The {{domxref("RTCRtpSender")}} method
 as the sender's source with a new {{domxref("MediaStreamTrack")}}.
 
 The new
-track must be of the same media kind (audio, video, etc) and switching the track should
+track must be of the same media kind (audio, video, etc.) and switching the track should
 not require negotiation.
 
 Among the use cases for `replaceTrack()` is the common need to switch
@@ -34,8 +35,8 @@ the example [Switching cameras](#switching_cameras) below.
 
 ## Syntax
 
-```js
-trackReplacedPromise = sender.replaceTrack(newTrack);
+```js-nolint
+replaceTrack(newTrack)
 ```
 
 ### Parameters
@@ -86,7 +87,7 @@ negotiation:
   exceeded.
 - The new track is a video track and its raw or pre-encoded state differs from that of
   the original track.
-- The new track is an audio track with a different number of channels fom the
+- The new track is an audio track with a different number of channels from the
   original.
 - Media sources that have built-in encoders — such as hardware encoders — may not be
   able to provide the negotiated codec. Software sources may not implement the
@@ -107,16 +108,16 @@ navigator.mediaDevices
       }
     }
   })
-  .then(function(stream) {
-    let videoTrack = stream.getVideoTracks()[0];
-    PCs.forEach(function(pc) {
+  .then((stream) => {
+    const [videoTrack] = stream.getVideoTracks();
+    PCs.forEach((pc) => {
       const sender = pc.getSenders().find((s) => s.track.kind === videoTrack.kind);
-      console.log('found sender:', sender);
+      console.log('Found sender:', sender);
       sender.replaceTrack(videoTrack);
     });
   })
-  .catch(function(err) {
-    console.error('Error happens:', err);
+  .catch((err) => {
+    console.error(`Error happened: ${err}`);
   });
 ```
 

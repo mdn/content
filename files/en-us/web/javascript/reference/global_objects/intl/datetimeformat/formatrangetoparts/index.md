@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatRangeToParts()`**
@@ -24,7 +25,7 @@ range produced by {{jsxref("Intl.DateTimeFormat")}} formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatRangeToParts(startDate, endDate)
 ```
 
@@ -38,21 +39,17 @@ objects containing the _locale-specific_ tokens representing each part of the fo
 > **Note:** The return values shown in your locale may differ from those listed below.
 
 ```js
-let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-// > 'Wed, 10 Jan 2007 10:00:00 GMT'
-// > 'Wed, 10 Jan 2007 11:00:00 GMT'
+const date1 = new Date(Date.UTC(1906, 0, 10, 10, 0, 0)); // Wed, 10 Jan 1906 10:00:00 GMT
+const date2 = new Date(Date.UTC(1906, 0, 10, 11, 0, 0)); // Wed, 10 Jan 1906 11:00:00 GMT
 
-let fmt = new Intl.DateTimeFormat("en", {
-    hour: 'numeric',
-    minute: 'numeric'
+const fmt = new Intl.DateTimeFormat("en", {
+  hour: 'numeric',
+  minute: 'numeric',
 });
 
-console.log(fmt.formatRange(date1, date2));
-// > '10:00 – 11:00 AM'
+console.log(fmt.formatRange(date1, date2)); // '10:00 – 11:00 AM'
 
 fmt.formatRangeToParts(date1, date2);
-// return value:
 // [
 //   { type: 'hour',      value: '10',  source: "startRange" },
 //   { type: 'literal',   value: ':',   source: "startRange" },

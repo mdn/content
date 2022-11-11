@@ -11,9 +11,11 @@ tags:
   - Prototype
   - Reference
   - formatRangeToParts
+  - Experimental
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
-{{JSRef}}
+
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.
 
@@ -22,13 +24,14 @@ This makes it possible to provide locale-aware custom formatting ranges of numbe
 
 ## Syntax
 
-```js
+```js-nolint
 formatRangeToParts(startRange, endRange)
 ```
 
 ### Parameters
 
 - `startRange`
+
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 - `endRange`
@@ -48,7 +51,6 @@ The structure of the returned looks like this:
   { type: "literal", value: " ", source: "shared" },
   { type: "currency", value: "€", source: "shared" }
 ]
-
 ```
 
 Possible values for the `type` property include:
@@ -109,7 +111,7 @@ const formatter = new Intl.NumberFormat('de-DE', {
   currency: 'EUR'
 });
 
-formatter.formatRange(startRange, endRange)
+console.log(formatter.formatRange(startRange, endRange));
 // "3.500,00–9.500,00 €"
 ```
 
@@ -117,23 +119,23 @@ However, for many user interfaces there is a need to customize the formatting of
 The `formatRangeToParts` method enables locale-aware formatting of strings produced by `NumberFormat` formatters by providing you the string in parts:
 
 ```js
-formatter.formatRangeToParts(startRange, endRange)
+console.log(formatter.formatRangeToParts(startRange, endRange));
 
 // return value:
 [
-{ type: "integer", value: "3", source: "startRange" },
-{ type: "group", value: ".", source: "startRange" },
-{ type: "integer", value: "500", source: "startRange" },
-{ type: "decimal", value: ",", source: "startRange" },
-{ type: "fraction", value: "00", source: "startRange" },
-{ type: "literal", value: "–", source: "shared" },
-{ type: "integer", value: "9", source: "endRange" },
-{ type: "group", value: ".", source: "endRange" },
-{ type: "integer", value: "500", source: "endRange" },
-{ type: "decimal", value: ",", source: "endRange" },
-{ type: "fraction", value: "00", source: "endRange" },
-{ type: "literal", value: " ", source: "shared" },
-{ type: "currency", value: "€", source: "shared" },
+  { type: "integer", value: "3", source: "startRange" },
+  { type: "group", value: ".", source: "startRange" },
+  { type: "integer", value: "500", source: "startRange" },
+  { type: "decimal", value: ",", source: "startRange" },
+  { type: "fraction", value: "00", source: "startRange" },
+  { type: "literal", value: "–", source: "shared" },
+  { type: "integer", value: "9", source: "endRange" },
+  { type: "group", value: ".", source: "endRange" },
+  { type: "integer", value: "500", source: "endRange" },
+  { type: "decimal", value: ",", source: "endRange" },
+  { type: "fraction", value: "00", source: "endRange" },
+  { type: "literal", value: " ", source: "shared" },
+  { type: "currency", value: "€", source: "shared" },
 ]
 ```
 

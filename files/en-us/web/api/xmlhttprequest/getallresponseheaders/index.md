@@ -16,6 +16,7 @@ tags:
   - getAllResponseHeaders
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -31,7 +32,7 @@ is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllResponseHeaders()
 ```
 
@@ -48,7 +49,7 @@ happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 
-```
+```http
 date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
@@ -79,8 +80,8 @@ const request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
-request.onreadystatechange = function() {
-  if (this.readyState === this.HEADERS_RECEIVED) {
+request.onreadystatechange = () => {
+  if (request.readyState === this.HEADERS_RECEIVED) {
 
     // Get the raw header string
     const headers = request.getAllResponseHeaders();
@@ -91,7 +92,7 @@ request.onreadystatechange = function() {
 
     // Create a map of header names to values
     const headerMap = {};
-    arr.forEach(function (line) {
+    arr.forEach((line) => {
       const parts = line.split(': ');
       const header = parts.shift();
       const value = parts.join(': ');

@@ -11,6 +11,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getDirectoryHandle()`** method of the
@@ -20,7 +21,7 @@ within the directory handle on which the method is called.
 
 ## Syntax
 
-```js
+```js-nolint
 getDirectoryHandle(name)
 getDirectoryHandle(name, options)
 ```

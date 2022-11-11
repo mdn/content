@@ -1,5 +1,5 @@
 ---
-title: Open Source Etiquette
+title: Open source etiquette
 slug: MDN/Community/Open_source_etiquette
 page-type: mdn-community-guide
 tags:
@@ -8,6 +8,7 @@ tags:
   - governance
   - open-source
 ---
+
 {{MDNSidebar}}
 
 If you've not worked on an open source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs (or other open source projects). There are a few best practices to adopt that will help ensure that you and the other project contributors feel valued and safe, and stay productive.
@@ -65,7 +66,7 @@ If you receive anything that makes you feel uncomfortable, you should always rep
 
 Think about what you want to do on the project. For example, we have a large list of issues filed at on the [contributors task board](https://github.com/orgs/mdn/projects/25/views/1), broken up by various task types.
 
-You could also contribute by opening [pull requests](/en_US/docs/MDN/Community/Pull_requests) to fix problems that you come across while reading MDN articles.
+You could also contribute by opening [pull requests](/en-US/docs/MDN/Community/Pull_requests) to fix problems that you come across while reading MDN articles.
 
 A lot of the work on MDN revolves around writing documentation and code examples, but there are other ways to contribute too:
 
@@ -86,7 +87,7 @@ In many cases, things are like they are on OSPs for a reason. You should read th
 
 ## Read the manual
 
-Good OSPs will always make contributor documentation readily available. On GitHub projects, it is usually in the repo's CONTRIBUTING.md file, or sometimes in the project's README.md file. Being a documentation project, MDN content has a [README](https://github.com/mdn/content/blob/main/README.md) and a decent set of contributor docs on the site itself (see [Contributing to MDN](/en-US/docs/MDN/Community)).
+Good OSPs will always make contributor documentation readily available. On GitHub projects, it is usually in the repo's CONTRIBUTING.md file, or sometimes in the project's README.md file. Being a documentation project, MDN content has a [README](https://github.com/mdn/content/blob/main/README.md) and a decent set of contributor docs on the site itself (see [Contributing to MDN Web Docs](/en-US/docs/MDN/Community/Contributing)).
 
 Don't be afraid to ask for help, but ALWAYS try to find the answer to your question first before asking. This way you build up your knowledge of the project and become more independent, and don't put unnecessary burden on the other contributors.
 
@@ -94,7 +95,7 @@ Of course, the docs won't always be perfect. If an explanation is hard to find o
 
 ## Find out where to ask questions
 
-Always find out where the best place is to ask questions. Good OSPs will always make this clear in their docs (see [ask for help on MDN](/en-US/docs/MDN/Community)). If you want to ask general questions, then always make use of these channels. Don't just file an issue on GitHub for every question, as it adds noise to the project (see "Make progress, not noise" below).
+Always find out where the best place is to ask questions. Good OSPs will always make this clear in their docs (see [Get in touch](/en-US/docs/MDN/Community#get_in_touch)). If you want to ask general questions, then always make use of these channels. Don't just file an issue on GitHub for every question, as it adds noise to the project (see "Make progress, not noise" below).
 
 ## Make progress, not noise
 

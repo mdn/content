@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.Document.domain
 ---
+
 {{ApiRef}} {{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}

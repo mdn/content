@@ -10,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.registrations
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 The **`registrations`** method is used to ask the system about
@@ -19,7 +20,7 @@ existing push endpoint registrations.
 
 ## Syntax
 
-```js
+```js-nolint
 registrations()
 ```
 
@@ -48,17 +49,17 @@ Those objects are anonymous JavaScript objects with the following properties:
 ```js
 const req = navigator.push.registrations();
 
-req.onsuccess = function(e) {
+req.onsuccess = (e) => {
   if (req.result.length > 0) {
-    for (let i = 0, l = req.result.length; i < l; i++) {
-      console.log("Existing registration", req.result[i].pushEndpoint, req.result[i].version);
-    }
+    req.result.forEach((result) => {
+      console.log(`Existing registration ${result.pushEndpoint} ${result.version}`);
+    });
     // Reuse existing endpoints.
   } else {
     // Register for a new endpoint.
     const register = navigator.push.register();
-    register.onsuccess = function(e) {
-      console.log("Registered new endpoint", register.result);
+    register.onsuccess = (e) => {
+      console.log(`Registered new endpoint: ${register.result}`);
     }
   }
 }

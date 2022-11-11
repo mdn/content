@@ -10,20 +10,21 @@ tags:
   - WebGLContextEvent
 browser-compat: api.WebGLContextEvent
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is an interface for an event that is generated in response to a status change to the WebGL rendering context.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("WebGLContextEvent.statusMessage")}}
   - : A read-only property containing additional information about the event.
 
-## Methods
+## Instance methods
 
 _This interface doesn't define any own methods, but inherits methods from its parent interface, {{domxref("Event")}}._
 
@@ -35,7 +36,7 @@ With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simula
 const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextlost', function(e) {
+canvas.addEventListener('webglcontextlost', (e) => {
   console.log(e);
 }, false);
 

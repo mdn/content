@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.
@@ -14,14 +15,14 @@ The syntax section of an MDN reference page contains a syntax box defining the e
 
 Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
 The section starts with a heading (typically level two heading `##`) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
-Below the heading is a code block showing the feature's exact syntax, demarcated using code fence `` ``` [markup-language] `` class.
+Below the heading is a code block showing the feature's exact syntax, demarcated using code fence ` ``` [markup-language] ` class.
 
 The example below shows the Markdown code for a typical Syntax section (for a JavaScript function):
 
 ````
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)
@@ -41,7 +42,7 @@ A few rules to follow in terms of markup within the syntax block:
   //responseStr = element.querySelector(selector);
 
   new IntersectionObserver(callback, options)
-  // var observer = new IntersectionObserver(callback, options);
+  // const observer = new IntersectionObserver(callback, options);
   ```
 
 ### Constructors and methods
@@ -219,7 +220,7 @@ The last section, "Formal syntax", is automatically generated from the data incl
 
 The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/main/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
 
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data).
 
 ### Selectors
 
@@ -229,7 +230,7 @@ This block is automatically generated from the data included in the [MDN data re
 
 The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) file needs to contain an entry for the selector you are documenting.
 
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data).
 
 ## HTML reference syntax
 
@@ -287,4 +288,4 @@ SVG attribute reference pages also do not include syntax sections.
 
 ## See also
 
-- [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)
+- [Markdown in MDN](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks)

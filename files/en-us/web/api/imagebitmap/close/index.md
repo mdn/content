@@ -4,21 +4,21 @@ slug: Web/API/ImageBitmap/close
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - ImageBitmap
   - Method
   - OffscreenCanvas
   - Reference
 browser-compat: api.ImageBitmap.close
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+
+{{APIRef("Canvas API")}}
 
 The **`ImageBitmap.close()`**
 method disposes of all graphical resources associated with an `ImageBitmap`.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

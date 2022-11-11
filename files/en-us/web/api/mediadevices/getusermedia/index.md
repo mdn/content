@@ -18,7 +18,8 @@ tags:
   - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaDevices")}}**`.getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 
@@ -63,7 +64,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 ## Syntax
 
-```js
+```js-nolint
 getUserMedia(constraints)
 ```
 
@@ -216,6 +217,7 @@ object when the requested media has successfully been obtained.
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
 - `NotAllowedError` {{domxref("DOMException")}}
+
   - : Thrown if one or more of the requested source devices cannot be used at this time. This will
     happen if the browsing context is insecure (that is, the page was loaded using HTTP
     rather than HTTPS). It also happens if the user has specified that the current
@@ -226,6 +228,7 @@ object when the requested media has successfully been obtained.
 
     > **Note:** Older versions of the specification used `SecurityError`
     > for this instead; `SecurityError` has taken on a new meaning.
+
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if no media tracks of the type specified were found that satisfy the given constraints.
 - `NotReadableError` {{domxref("DOMException")}}
@@ -233,6 +236,7 @@ object when the requested media has successfully been obtained.
     occurred at the operating system, browser, or Web page level which prevented access to
     the device.
 - `OverconstrainedError` {{domxref("DOMException")}}
+
   - : Thrown if the specified constraints resulted in no candidate devices which met the criteria
     requested. The error is an object of type `OverconstrainedError`, and has a
     `constraint` property whose string value is the name of a constraint which
@@ -242,6 +246,7 @@ object when the requested media has successfully been obtained.
     > **Note:** Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
     > fingerprinting surface.
+
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
     `getUserMedia()` was called. The mechanism by which user media support is
@@ -329,14 +334,14 @@ For example, this line in the HTTP headers will enable use of a camera for the d
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
-```
+```http
 Feature-Policy: camera 'self'
 ```
 
 This will request access to the microphone for the current origin and the specific
-origin https\://developer.mozilla.org:
+origin `https://developer.mozilla.org`:
 
-```
+```http
 Feature-Policy: microphone 'self' https://developer.mozilla.org
 ```
 
@@ -446,13 +451,13 @@ const constraints = {
 
 ## See also
 
-- The older {{domxref("navigator.getUserMedia()")}} legacy API.
+- The older {{domxref("navigator.getUserMedia()")}} legacy API
 - {{domxref("mediaDevices.enumerateDevices()")}}: Listing available media devices
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): Capturing
   screen contents as a {{domxref("MediaStream")}}
 - {{domxref("mediaDevices.getDisplayMedia()")}}: Getting a stream containing screen
   contents
-- [Taking webcam photos](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
+- [Taking webcam photos](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
   rather than video

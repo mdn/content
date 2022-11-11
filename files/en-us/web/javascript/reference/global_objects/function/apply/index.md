@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Function.apply
 ---
+
 {{JSRef}}
 
 The **`apply()`** method calls the specified function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
@@ -16,7 +17,7 @@ The **`apply()`** method calls the specified function with a given `this` value,
 
 ## Syntax
 
-```js
+```js-nolint
 apply(thisArg)
 apply(thisArg, argsArray)
 ```
@@ -65,7 +66,7 @@ You can use {{jsxref("Array.prototype.push()")}} to append an element to an arra
 In this case, you can use `apply` to implicitly "spread" an array as a series of arguments.
 
 ```js
-const array = ['a', 'b'];
+const array = ["a", "b"];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -74,7 +75,7 @@ console.info(array); // ["a", "b", 0, 1, 2]
 The same effect can be achieved with the spread syntax.
 
 ```js
-const array = ['a', 'b'];
+const array = ["a", "b"];
 const elements = [0, 1, 2];
 array.push(...elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -98,7 +99,8 @@ let max = Math.max.apply(null, numbers);
 let min = Math.min.apply(null, numbers);
 
 // vs. simple loop based algorithm
-max = -Infinity, min = +Infinity;
+max = -Infinity;
+min = +Infinity;
 
 for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -119,12 +121,12 @@ If your value array might grow into the tens of thousands, use a hybrid strategy
 ```js
 function minOfArray(arr) {
   let min = Infinity;
-  let QUANTUM = 32768;
+  const QUANTUM = 32768;
 
   for (let i = 0; i < arr.length; i += QUANTUM) {
     const submin = Math.min.apply(
       null,
-      arr.slice(i, Math.min(i + QUANTUM, arr.length)),
+      arr.slice(i, Math.min(i + QUANTUM, arr.length))
     );
     min = Math.min(submin, min);
   }

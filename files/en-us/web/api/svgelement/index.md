@@ -12,15 +12,16 @@ tags:
   - SVGElement
 browser-compat: api.SVGElement
 ---
+
 {{APIRef("SVG")}}
 
 All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the `SVGElement` interface.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("SVGElementInstance")}}_
+_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}._
 
 - {{DOMxRef("SVGElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{SVGAttr("style")}} attribute.
@@ -39,29 +40,24 @@ _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, 
 - {{DOMxRef("SVGElement.viewportElement")}} {{ReadOnlyInline}}
   - : The {{DOMxRef("SVGElement")}} which established the current viewport. Often the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
 
-## Methods
+## Instance methods
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("SVGElementInstance")}}_
+_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}_.
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}}.
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property.
 
 - [`abort`](/en-US/docs/Web/API/SVGElement/abort_event)
   - : Fired when page loading is stopped before an SVG element has been allowed to load completely.
-    Also available via the [`onabort`](/en-US/docs/Web/API/GlobalEventHandlers/onabort) property.
 - [`error`](/en-US/docs/Web/API/SVGElement/error_event)
   - : Fired when an SVG element does not load properly or when an error occurs during script execution.
-    Also available via the [`onerror`](/en-US/docs/Web/API/GlobalEventHandlers/onerror) property.
 - [`load`](/en-US/docs/Web/API/SVGElement/load_event)
   - : Fires on an `SVGElement` when it is loaded in the browser.
-    Also available via the [`onload`](/en-US/docs/Web/API/GlobalEventHandlers/onload) property.
 - [`resize`](/en-US/docs/Web/API/SVGElement/resize_event)
   - : Fired when an SVG document is being resized.
-    Also available via the [`onresize`](/en-US/docs/Web/API/GlobalEventHandlers/onresize) property.
 - [`scroll`](/en-US/docs/Web/API/SVGElement/scroll_event)
   - : Fired when an SVG document view is being shifted along the X and/or Y axes.
-    Also available via the [`onscroll`](/en-US/docs/Web/API/GlobalEventHandlers/onscroll) property.
 - [`unload`](/en-US/docs/Web/API/SVGElement/unload_event)
   - : Fired when the DOM implementation removes an SVG document from a window or frame.
 

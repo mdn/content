@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisEvent.name
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`name`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken:
@@ -25,7 +26,7 @@ A string.
 ## Examples
 
 ```js
-utterThis.onboundary = function(event) {
+utterThis.onboundary = (event) => {
   console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 }
 ```

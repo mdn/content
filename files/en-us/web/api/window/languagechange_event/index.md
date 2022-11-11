@@ -9,6 +9,7 @@ tags:
   - Window
 browser-compat: api.Window.languagechange_event
 ---
+
 {{APIRef}}
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.
@@ -39,7 +40,7 @@ In addition to the `Window` interface, the event handler property `onlanguagecha
 You can use the `languagechange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-window.addEventListener('languagechange', function() {
+window.addEventListener('languagechange', () => {
   console.log('languagechange event detected!');
 });
 ```
@@ -47,7 +48,7 @@ window.addEventListener('languagechange', function() {
 Or use the `onlanguagechange` event handler property:
 
 ```js
-window.onlanguagechange = function(event) {
+window.onlanguagechange = (event) => {
   console.log('languagechange event detected!');
 };
 ```

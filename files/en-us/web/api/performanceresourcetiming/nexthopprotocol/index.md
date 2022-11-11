@@ -10,7 +10,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 ---
-{{APIRef("Resource Timing API")}}
+
+{{APIRef("Performance API")}}
 
 The **`nextHopProtocol`** read-only
 property is a string representing the _network
@@ -32,19 +33,16 @@ fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://da
 The following example uses the `nextHopProtocol` property.
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    print_nextHopProtocol(p[i]);
-  }
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printNextHopProtocol(entry);
+    });
 }
-function print_nextHopProtocol(perfEntry) {
-  const value = "nextHopProtocol" in perfEntry;
-  if (value)
-    console.log(`nextHopProtocol = ${perfEntry.nextHopProtocol}`);
-  else
-    console.log("nextHopProtocol = NOT supported");
+
+function printNextHopProtocol(perfEntry) {
+  console.log(`nextHopProtocol = ${perfEntry.nextHopProtocol ?? "NOT supported"}`);
 }
 ```
 

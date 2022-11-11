@@ -14,17 +14,18 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.clearHalt
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`clearHalt()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when a halt condition is
 cleared. A halt condition is when a data transfer to or from the device has a status
-of `'stall'`, which requires the web page (the *host* system, in USB
+of `'stall'`, which requires the web page (the _host_ system, in USB
 terminology) to clear that condition. See the for details.
 
 ## Syntax
 
-```js
+```js-nolint
 clearHalt(direction, endpointNumber)
 ```
 

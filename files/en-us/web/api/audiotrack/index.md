@@ -13,13 +13,14 @@ tags:
   - track
 browser-compat: api.AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`AudioTrack`** interface represents a single audio track from one of the HTML media elements, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
 
 The most common use for accessing an `AudioTrack` object is to toggle its {{domxref("AudioTrack.enabled", "enabled")}} property in order to mute and unmute the track.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioTrack.enabled", "enabled")}}
   - : A Boolean value which controls whether or not the audio track's sound is enabled. Setting this value to `false` mutes the track's audio.
@@ -54,12 +55,8 @@ const firstTrack = tracks[0];
 The next example scans through all of the media's audio tracks, enabling any that are in the user's preferred language (taken from a variable `userLanguage`) and disabling any others.
 
 ```js
-tracks.forEach(function(track) {
-  if (track.language === userLanguage) {
-    track.enabled = true;
-  } else {
-    track.enabled = false;
-  }
+tracks.forEach((track) => {
+  track.enabled = track.language === userLanguage;
 });
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.readyState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.readyState`** property indicates the
@@ -72,22 +73,22 @@ An `unsigned short`. Possible values are:
 
 ## Examples
 
-This example will listen for audio data to be loaded for the element \`example\`. It will
+This example will listen for audio data to be loaded for the element `example`. It will
 then check if at least the current playback position has been loaded. If it has, the
 audio will play.
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
 const obj = document.getElementById('example');
 
-obj.addEventListener('loadeddata', function() {
+obj.addEventListener('loadeddata', () => {
 
-  if(obj.readyState >= 2) {
+  if (obj.readyState >= 2) {
     obj.play();
   }
 

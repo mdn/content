@@ -10,7 +10,8 @@ tags:
   - Experimental
 browser-compat: api.Element.setHTML
 ---
-{{SeeCompatTable}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface is used to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.
 It should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
@@ -23,7 +24,7 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 ## Syntax
 
-```js
+```js-nolint
 setHTML(input, options)
 ```
 
@@ -32,11 +33,12 @@ setHTML(input, options)
 - `input`
   - : A string defining HTML to be sanitized.
 - `options` {{optional_inline}}
+
   - : A options object with the following optional parameters:
 
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} object which defines what elements of the input will be sanitized.
-         If not specified, the default {{domxref("Sanitizer")}} object is used.
+        If not specified, the default {{domxref("Sanitizer")}} object is used.
 
 ### Return value
 

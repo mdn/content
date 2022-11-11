@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a function" occurs when there was an attempt to call a
@@ -85,9 +86,7 @@ const numbers = [1, 4, 9];
 
 numbers.map(function (num) {
   return num * 2;
-});
-
-// Array [2, 8, 18]
+}); // [2, 8, 18]
 ```
 
 ### Function shares a name with a pre-existing property
@@ -97,15 +96,15 @@ name. Upon calling the function, the compiler thinks that the function ceases to
 
 ```js example-bad
 function Dog() {
- this.age = 11;
- this.color = "black";
- this.name = "Ralph";
- return this;
+  this.age = 11;
+  this.color = "black";
+  this.name = "Ralph";
+  return this;
 }
 
 Dog.prototype.name = function (name) {
- this.name = name;
- return this;
+  this.name = name;
+  return this;
 }
 
 const myNewDog = new Dog();
@@ -116,15 +115,15 @@ Use a different property name instead:
 
 ```js example-good
 function Dog() {
- this.age = 11;
- this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
- return this;
+  this.age = 11;
+  this.color = "black";
+  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  return this;
 }
 
 Dog.prototype.name = function (name) {
- this.dogName = name;
- return this;
+  this.dogName = name;
+  return this;
 }
 
 const myNewDog = new Dog();
@@ -139,16 +138,16 @@ Using the latter will throw an error:
 
 ```js example-bad
 const sixteen = 2(3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
-//Uncaught TypeError: 2 is not a function
+console.log(`2 x (3 + 5) is ${sixteen}`);
+// Uncaught TypeError: 2 is not a function
 ```
 
 You can correct the code by adding a `*` operator:
 
 ```js example-good
 const sixteen = 2 * (3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
-//2 x (3 + 5) is 16
+console.log(`2 x (3 + 5) is ${sixteen}`);
+// 2 x (3 + 5) is 16
 ```
 
 ### Import the exported module correctly

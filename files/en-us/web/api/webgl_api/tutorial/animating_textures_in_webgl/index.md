@@ -8,6 +8,7 @@ tags:
   - Video
   - WebGL
 ---
+
 {{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 In this demonstration, we build upon the previous example by replacing our static textures with the frames of an mp4 video file that's playing. This is actually pretty easy to do and fun to watch, so let's get started. You can use similar code to use any sort of data (such as a {{ HTMLElement("canvas") }}) as the source for your textures.
@@ -28,19 +29,19 @@ function setupVideo(url) {
   let playing = false;
   let timeupdate = false;
 
-  video.autoplay = true;
+  video.playsInline = true;
   video.muted = true;
   video.loop = true;
 
   // Waiting for these 2 events ensures
   // there is data in the video
 
-  video.addEventListener('playing', function() {
+  video.addEventListener('playing', () => {
      playing = true;
      checkReady();
   }, true);
 
-  video.addEventListener('timeupdate', function() {
+  video.addEventListener('timeupdate', () => {
      timeupdate = true;
      checkReady();
   }, true);
@@ -147,7 +148,7 @@ That's all there is to it!
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## See also
 

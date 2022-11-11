@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical OR (`||`) operator (logical disjunction) for a set of operands
@@ -22,7 +23,7 @@ non-Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 || expr2
 ```
 
@@ -66,11 +67,17 @@ happens because the value of the operator is already determined after the evalua
 the first operand. See example:
 
 ```js
-function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+function A() {
+  console.log('called A');
+  return false;
+}
+function B() {
+  console.log('called B');
+  return true;
+}
 
 console.log(B() || A());
-// logs "called B" due to the function call,
+// Logs "called B" due to the function call,
 // then logs true (which is the resulting value of the operator)
 ```
 
@@ -95,7 +102,7 @@ The following code shows examples of the `||` (logical OR) operator.
 o1 = true  || true       // t || t returns true
 o2 = false || true       // f || t returns true
 o3 = true  || false      // t || f returns true
-o4 = false || (3 == 4)   // f || f returns false
+o4 = false || (3 === 4)  // f || f returns false
 o5 = 'Cat' || 'Dog'      // t || t returns "Cat"
 o6 = false || 'Cat'      // f || t returns "Cat"
 o7 = 'Cat' || false      // t || f returns "Cat"
@@ -107,7 +114,7 @@ o10 = false || varObject // f || object returns varObject
 > **Note:** If you use this operator to provide a default value to some
 > variable, be aware that any _falsy_ value will not be used. If you only need to
 > filter out [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, consider using
-> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
 
 ### Conversion rules for booleans
 
@@ -166,7 +173,7 @@ is always equal to:
 
 ## See also
 
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

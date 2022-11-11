@@ -2,13 +2,14 @@
 title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
 tags:
-   - Function
-   - Iterator
-   - JavaScript
-   - Language feature
-   - Statement
+  - Function
+  - Iterator
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.async_generator_function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`async function*`** declaration defines an _async generator function_, which returns an {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} object.
@@ -19,7 +20,7 @@ You can also define async generator functions using the {{jsxref("AsyncGenerator
 
 ## Syntax
 
-```js
+```js-nolint
 async function* name(param0) {
   statements
 }
@@ -55,10 +56,14 @@ async function* foo() {
   yield Promise.reject(1);
 }
 
-foo().next().catch((e) => console.error(e));
+foo()
+  .next()
+  .catch((e) => console.error(e));
 ```
 
 `1` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
+
+`async function*` declarations are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope.
 
 ## Examples
 
@@ -75,7 +80,8 @@ async function* myGenerator(step) {
 }
 
 const gen = myGenerator(2);
-gen.next()
+gen
+  .next()
   .then((res) => {
     console.log(res); // { value: 0, done: false }
     return gen.next();
@@ -106,13 +112,13 @@ async function* readFiles(directory) {
     if (stats.isFile()) {
       yield {
         name: file,
-        content: await fs.readFile(file, 'utf8'),
+        content: await fs.readFile(file, "utf8"),
       };
     }
   }
 }
 
-const files = readFiles('.');
+const files = readFiles(".");
 console.log((await files.next()).value);
 // Possible output: { name: 'file1.txt', content: '...' }
 console.log((await files.next()).value);

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames.supportedLocalesOf()`** method returns
@@ -19,7 +20,7 @@ without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.DisplayNames.supportedLocalesOf(locales)
 Intl.DisplayNames.supportedLocalesOf(locales, options)
 ```
@@ -27,17 +28,16 @@ Intl.DisplayNames.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:
 
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
-        "`lookup`" and "`best fit`"; the default is
-        "`best fit`". For information about this option, see the
-        {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        `"lookup"` and `"best fit"`; the default is
+        `"best fit"`. For information about this option, see the
+        {{jsxref("Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
 
 ### Return value
 
@@ -59,8 +59,8 @@ Assuming a runtime that supports Indonesian and German but not Balinese in displ
 names, `supportedLocalesOf` returns the Indonesian and German language tags
 unchanged, even though `pinyin` collation is neither relevant to display
 names nor used with Indonesian, and a specialized German for Indonesia is unlikely to
-be supported. Note the specification of the "`lookup`" algorithm here — a
-"`best fit`" matcher might decide that Indonesian is an adequate match for
+be supported. Note the specification of the `"lookup"` algorithm here — a
+`"best fit"` matcher might decide that Indonesian is an adequate match for
 Balinese since most Balinese speakers also understand Indonesian, and therefore return
 the Balinese language tag as well.
 
@@ -68,7 +68,7 @@ the Balinese language tag as well.
 const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

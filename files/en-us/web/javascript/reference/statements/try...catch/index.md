@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.try_catch
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`try...catch`** statement is comprised of a `try` block and either a `catch` block, a `finally` block, or both. The code in the `try` block is executed first, and if it throws an exception, the code in the `catch` block will be executed. The code in the `finally` block will always be executed before control flow exits the entire construct.
@@ -16,28 +17,28 @@ The **`try...catch`** statement is comprised of a `try` block and either a `catc
 
 ## Syntax
 
-```js
+```js-nolint
 try {
-  try_statements
-} catch (exception_var) {
-  catch_statements
+  tryStatements
+} catch (exceptionVar) {
+  catchStatements
 } finally {
-  finally_statements
+  finallyStatements
 }
 ```
 
-- `try_statements`
+- `tryStatements`
   - : The statements to be executed.
-- `catch_statements`
+- `catchStatements`
   - : Statement that is executed if an exception is thrown in the `try`-block.
-- `exception_var` {{optional_inline}}
-  - : An optional identifier to hold the caught exception for the associated `catch` block. If the `catch` block does not utilize the exception's value, you can omit the `exception_var` and its surrounding parentheses, as `catch {...}`.
-- `finally_statements`
+- `exceptionVar` {{optional_inline}}
+  - : An optional identifier to hold the caught exception for the associated `catch` block. If the `catch` block does not utilize the exception's value, you can omit the `exceptionVar` and its surrounding parentheses, as `catch {...}`.
+- `finallyStatements`
   - : Statements that are executed before control flow exits the `try...catch...finally` construct. These statements execute regardless of whether an exception was thrown or caught.
 
 ## Description
 
-The `try` statement always starts with a `try` block. Then, a `catch` block, a `finally` block, or both must be present. This gives us three forms for the `try` statement:
+The `try` statement always starts with a `try` block. Then, a `catch` block or a `finally` block must be present. It's also possible to have both `catch` and `finally` blocks. This gives us three forms for the `try` statement:
 
 - `try...catch`
 - `try...finally`
@@ -76,7 +77,7 @@ exception occurs in the following code, control transfers to the
 
 ```js
 try {
-  throw 'myException'; // generates an exception
+  throw "myException"; // generates an exception
 } catch (e) {
   // statements to handle any exceptions
   logMyErrors(e); // pass exception object to error handler
@@ -120,7 +121,7 @@ try {
   if (e instanceof RangeError) {
     // statements to handle this very common expected error
   } else {
-    throw e;  // re-throw the error unchanged
+    throw e; // re-throw the error unchanged
   }
 }
 ```
@@ -128,7 +129,7 @@ try {
 ### The exception identifier
 
 When an exception is thrown in the `try`-block,
-_`exception_var`_ (i.e., the `e` in `catch (e)`)
+`exception_var` (i.e., the `e` in `catch (e)`)
 holds the exception value. You can use this identifier to get information about the
 exception that was thrown. This identifier is only available in the
 `catch`-block's {{Glossary("Scope", "scope")}}. If you don't need the
@@ -195,15 +196,15 @@ First, let's see what happens with this:
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
   } finally {
-    console.log('finally');
+    console.log("finally");
   }
 } catch (ex) {
-  console.error('outer', ex.message);
+  console.error("outer", ex.message);
 }
 
-// Output:
+// Logs:
 // "finally"
 // "outer" "oops"
 ```
@@ -214,17 +215,17 @@ Now, if we already caught the exception in the inner `try`-block by adding a
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
   } catch (ex) {
-    console.error('inner', ex.message);
+    console.error("inner", ex.message);
   } finally {
-    console.log('finally');
+    console.log("finally");
   }
 } catch (ex) {
-  console.error('outer', ex.message);
+  console.error("outer", ex.message);
 }
 
-// Output:
+// Logs:
 // "inner" "oops"
 // "finally"
 ```
@@ -234,18 +235,18 @@ And now, let's rethrow the error.
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
   } catch (ex) {
-    console.error('inner', ex.message);
+    console.error("inner", ex.message);
     throw ex;
   } finally {
-    console.log('finally');
+    console.log("finally");
   }
 } catch (ex) {
-  console.error('outer', ex.message);
+  console.error("outer", ex.message);
 }
 
-// Output:
+// Logs:
 // "inner" "oops"
 // "finally"
 // "outer" "oops"
@@ -267,20 +268,20 @@ This includes exceptions thrown inside of the `catch`-block:
 (() => {
   try {
     try {
-      throw new Error('oops');
+      throw new Error("oops");
     } catch (ex) {
-      console.error('inner', ex.message);
+      console.error("inner", ex.message);
       throw ex;
     } finally {
-      console.log('finally');
+      console.log("finally");
       return;
     }
   } catch (ex) {
-    console.error('outer', ex.message);
+    console.error("outer", ex.message);
   }
 })();
 
-// Output:
+// Logs:
 // "inner" "oops"
 // "finally"
 ```

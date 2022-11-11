@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol
 ---
+
 {{JSRef}}
 
 **`Symbol`** is a built-in object whose constructor returns a `symbol` [primitive](/en-US/docs/Glossary/Primitive) — also called a **Symbol value** or just a **Symbol** — that's guaranteed to be unique. Symbols are often used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak {{Glossary("encapsulation")}}, or a weak form of [information hiding](https://en.wikipedia.org/wiki/Information_hiding).
@@ -115,6 +116,8 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 
 ## Instance properties
 
+- `Symbol.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Symbol"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `Symbol` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a symbol as `thisArg`.
 - {{jsxref("Symbol.prototype.description")}}
   - : A read-only string containing the description of the Symbol.
 
@@ -154,16 +157,17 @@ Some things to note when working with type conversion of Symbols.
 Symbols are not enumerable in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) iterations. In addition, {{jsxref("Object.getOwnPropertyNames()")}} will not return Symbol object properties, however, you can use {{jsxref("Object.getOwnPropertySymbols()")}} to get these.
 
 ```js
-let obj = {}
+const obj = {};
 
-obj[Symbol('a')] = 'a'
-obj[Symbol.for('b')] = 'b'
-obj['c'] = 'c'
-obj.d = 'd'
+obj[Symbol('a')] = 'a';
+obj[Symbol.for('b')] = 'b';
+obj['c'] = 'c';
+obj.d = 'd';
 
-for (let i in obj) {
-   console.log(i)  // logs "c" and "d"
+for (const i in obj) {
+  console.log(i);
 }
+ // "c" "d"
 ```
 
 ### Symbols and JSON.stringify()
@@ -171,7 +175,7 @@ for (let i in obj) {
 Symbol-keyed properties will be completely ignored when using `JSON.stringify()`:
 
 ```js
-JSON.stringify({[Symbol('foo')]: 'foo'})
+JSON.stringify({ [Symbol('foo')]: 'foo' })
 // '{}'
 ```
 
@@ -182,8 +186,8 @@ For more details, see {{jsxref("JSON.stringify()")}}.
 When a Symbol wrapper object is used as a property key, this object will be coerced to its wrapped Symbol:
 
 ```js
-let sym = Symbol('foo')
-let obj = {[sym]: 1}
+const sym = Symbol('foo');
+const obj = {[sym]: 1};
 obj[sym]             // 1
 obj[Object(sym)]     // still 1
 ```

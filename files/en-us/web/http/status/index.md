@@ -10,18 +10,19 @@ tags:
   - Web
 browser-compat: http.status
 ---
+
 {{HTTPSidebar}}
 
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.
 Responses are grouped in five classes:
 
-1. [Informational responses](#information_responses) (`100`–`199`)
-2. [Successful responses](#successful_responses) (`200`–`299`)
-3. [Redirection messages](#redirection_messages) (`300`–`399`)
-4. [Client error responses](#client_error_responses) (`400`–`499`)
-5. [Server error responses](#server_error_responses) (`500`–`599`)
+1. [Informational responses](#information_responses) (`100` – `199`)
+2. [Successful responses](#successful_responses) (`200` – `299`)
+3. [Redirection messages](#redirection_messages) (`300` – `399`)
+4. [Client error responses](#client_error_responses) (`400` – `499`)
+5. [Server error responses](#server_error_responses) (`500` – `599`)
 
-The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6).
+The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 
 > **Note:** If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
 
@@ -51,15 +52,15 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
   - : The request succeeded, and a new resource was created as a result. This is typically the response sent after `POST` requests, or some `PUT` requests.
 - {{HTTPStatus(202, "202 Accepted")}}
   - : The request has been received but not yet acted upon.
-     It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request.
-     It is intended for cases where another process or server handles the request, or for batch processing.
+    It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request.
+    It is intended for cases where another process or server handles the request, or for batch processing.
 - {{HTTPStatus(203, "203 Non-Authoritative Information")}}
   - : This response code means the returned metadata is not exactly the same as is available from the origin server, but is collected from a local or a third-party copy.
-     This is mostly used for mirrors or backups of another resource.
-     Except for that specific case, the `200 OK` response is preferred to this status.
+    This is mostly used for mirrors or backups of another resource.
+    Except for that specific case, the `200 OK` response is preferred to this status.
 - {{HTTPStatus(204, "204 No Content")}}
   - : There is no content to send for this request, but the headers may be useful.
-     The user agent may update its cached headers for this resource with the new ones.
+    The user agent may update its cached headers for this resource with the new ones.
 - {{HTTPStatus(205, "205 Reset Content")}}
   - : Tells the user agent to reset the document which sent this request.
 - {{HTTPStatus(206, "206 Partial Content")}}
@@ -111,7 +112,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
   - : The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.
     Unlike `401 Unauthorized`, the client's identity is known to the server.
 - {{HTTPStatus(404, "404 Not Found")}}
-  - : The server can not find the requested resource.
+  - : The server cannot find the requested resource.
     In the browser, this means the URL is not recognized.
     In an API, this can also mean that the endpoint is valid but the resource itself does not exist.
     Servers may also send this response instead of `403 Forbidden` to hide the existence of a resource from an unauthorized client.

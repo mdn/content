@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.padStart
 ---
+
 {{JSRef}}
 
 The **`padStart()`** method pads the
@@ -23,7 +24,7 @@ current string.
 
 ## Syntax
 
-```js
+```js-nolint
 padStart(targetLength)
 padStart(targetLength, padString)
 ```
@@ -50,25 +51,24 @@ A {{jsxref("String")}} of the specified `targetLength` with
 ### Basic examples
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "foo");  // "foofoofabc"
-'abc'.padStart(6,"123465"); // "123abc"
-'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "foo"); // "foofoofabc"
+"abc".padStart(6, "123465"); // "123abc"
+"abc".padStart(8, "0"); // "00000abc"
+"abc".padStart(1); // "abc"
 ```
 
 ### Fixed width string number conversion
 
 ```js
-// Javascript version of: (unsigned)
-//  printf "%0*d" width num
+// JavaScript version of: (unsigned)
+// printf "%0*d" width num
 function leftFillNum(num, targetLength) {
-    return num.toString().padStart(targetLength, 0);
+  return num.toString().padStart(targetLength, 0);
 }
 
 const num = 123;
-console.log(leftFillNum(num, 5));
-// expected output: "00123"
+console.log(leftFillNum(num, 5)); // "00123"
 ```
 
 ## Specifications

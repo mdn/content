@@ -17,6 +17,7 @@ tags:
   - Visible Pages
 browser-compat: api.Document.visibilityState
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 The Page Visibility API provides events you can watch for to know when a document becomes visible or hidden, as well as features to look at the current visibility state of the page.
@@ -102,19 +103,19 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
+  videoElement.addEventListener("pause", () => {
     document.title = 'Paused';
   }, false);
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
+  videoElement.addEventListener("play", () => {
     document.title = 'Playing';
   }, false);
 
 }
 ```
 
-## Properties added to the Document interface
+## Instance properties added to the Document interface
 
 The Page Visibility API adds the following properties to the {{domxref("Document")}} interface:
 
@@ -128,17 +129,6 @@ The Page Visibility API adds the following properties to the {{domxref("Document
       - : The page content may be at least partially visible. In practice this means that the page is the foreground tab of a non-minimized window.
     - `hidden`
       - : The page's content is not visible to the user, either due to the document's tab being in the background or part of a window that is minimized, or because the device's screen is off.
-    - `prerender`
-
-      - : The page's content is being prerendered and is not visible to the user. A document may start in the `prerender` state, but will never switch to this state from any other state, since a document can only prerender once.
-
-        > **Note:** Not all browsers support prerendering.
-
-    - `unloaded`
-
-      - : The page is in the process of being unloaded from memory.
-
-        > **Note:** Not all browsers support the `unloaded` value.
 
 ## Events added to the Document interface
 

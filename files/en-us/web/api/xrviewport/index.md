@@ -22,11 +22,12 @@ tags:
   - viewport
 browser-compat: api.XRViewport
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The WebXR Device API's **`XRViewport`** interface provides properties used to describe the size and position of the current viewport within the {{domxref("XRWebGLLayer")}} being used to render the 3D scene.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRViewport.height", "height")}} {{ReadOnlyInline}}
   - : The height, in pixels, of the viewport.
@@ -44,7 +45,7 @@ Currently, the only type of surface available is the {{domxref("XRWebGLLayer")}}
 These values may be passed directly into the {{domxref("WebGLRenderingContext.viewport()")}} method:
 
 ```js
-let xrViewport = xrWebGLLayer.getViewport(xrView);
+const xrViewport = xrWebGLLayer.getViewport(xrView);
 gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);
 ```
 
@@ -54,12 +55,12 @@ This example sets up an animation frame callback using {{domxref("XRSession.requ
 
 ```js
 xrSession.requestAnimationFrame((time, xrFrame) => {
-  let viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
+  const viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
 
   gl.bindFramebuffer(xrWebGLLayer.framebuffer);
 
-  for (xrView of viewerPose.views) {
-    let xrViewport = xrWebGLLayer.getViewport(xrView);
+  for (const xrView of viewerPose.views) {
+    const xrViewport = xrWebGLLayer.getViewport(xrView);
     gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);
 
    // Now we can use WebGL to draw into a viewport matching

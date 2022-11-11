@@ -7,6 +7,7 @@ tags:
   - Web
 browser-compat: html.manifest.icons
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

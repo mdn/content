@@ -12,7 +12,8 @@ tags:
   - muted
 browser-compat: api.MediaStreamTrack.muted
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`muted`** read-only property of the
 {{domxref("MediaStreamTrack")}} interface returns a boolean value

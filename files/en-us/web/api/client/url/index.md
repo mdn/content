@@ -5,13 +5,13 @@ page-type: web-api-instance-property
 tags:
   - API
   - Client
-  - Experimental
   - Property
   - Reference
   - Service Workers
   - URL
 browser-compat: api.Client.url
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`url`** read-only property of the {{domxref("Client")}}

@@ -9,7 +9,8 @@ tags:
   - Reference
 browser-compat: api.MediaMetadata.album
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`album`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the name of the album or

@@ -14,6 +14,7 @@ tags:
   - ternary
 browser-compat: javascript.operators.conditional
 ---
+
 {{jsSidebar("Operators")}}
 
 The **conditional (ternary) operator** is the only JavaScript operator that takes three operands:
@@ -24,7 +25,7 @@ This operator is frequently used as an alternative to an [`if...else`](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 condition ? exprIfTrue : exprIfFalse
 ```
 
@@ -77,14 +78,21 @@ function example() {
         : condition3 ? value3
         : value4;
 }
+```
 
-// Equivalent to:
+This is equivalent to the following [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) chain.
 
+```js
 function example() {
-  if (condition1) { return value1; }
-  else if (condition2) { return value2; }
-  else if (condition3) { return value3; }
-  else { return value4; }
+  if (condition1) {
+    return value1;
+  } else if (condition2) {
+    return value2;
+  } else if (condition3) {
+    return value3;
+  } else {
+    return value4;
+  }
 }
 ```
 
@@ -99,7 +107,7 @@ function example() {
 ## See also
 
 - [if statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
 - [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)

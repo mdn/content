@@ -11,6 +11,7 @@ tags:
   - JavaScript
 browser-compat: javascript.classes
 ---
+
 {{JsSidebar("Classes")}}
 
 Classes are a template for creating objects.
@@ -53,7 +54,7 @@ This occurs because while the class is {{Glossary("Hoisting", "hoisted")}} its v
 A **class expression** is another way to define a class.
 Class expressions can be named or unnamed.
 The name given to a named class expression is local to the class's body.
-However, it can be accessed via the {{jsxref("Function.name", "name")}} property.
+However, it can be accessed via the {{jsxref("Function/name", "name")}} property.
 
 ```js
 // unnamed
@@ -63,8 +64,7 @@ let Rectangle = class {
     this.width = width;
   }
 };
-console.log(Rectangle.name);
-// output: "Rectangle"
+console.log(Rectangle.name); // "Rectangle"
 
 // named
 Rectangle = class Rectangle2 {
@@ -73,8 +73,7 @@ Rectangle = class Rectangle2 {
     this.width = width;
   }
 };
-console.log(Rectangle.name);
-// output: "Rectangle2"
+console.log(Rectangle.name); // "Rectangle2"
 ```
 
 > **Note:** Class **expressions** must be declared before they can be used (they are subject to the same hoisting restrictions as described in the [class declarations](#class_declarations) section).
@@ -373,7 +372,7 @@ d.speak(); // Mitzie makes a noise.
 You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`.
 The species pattern lets you override default constructors.
 
-For example, when using methods such as {{jsxref("Array.map", "map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object.
+For example, when using methods such as {{jsxref("Array.prototype.map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object.
 The {{jsxref("Symbol.species")}} symbol lets you do this:
 
 ```js

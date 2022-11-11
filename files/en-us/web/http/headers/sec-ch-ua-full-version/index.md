@@ -8,10 +8,11 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  -  Experimental
+  - Deprecated
 browser-compat: http.headers.Sec-CH-UA-Full-Version
 ---
-{{HTTPSidebar}} {{deprecated_header}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 > **Note:** This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 

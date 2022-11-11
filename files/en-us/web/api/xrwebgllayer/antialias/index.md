@@ -22,9 +22,11 @@ tags:
   - appearance
   - augmented
   - rendering
+  - Experimental
 browser-compat: api.XRWebGLLayer.antialias
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`antialias`** is a Boolean value which is `true`
@@ -35,8 +37,8 @@ the web site or web app.
 
 ## Syntax
 
-```js
-let antialiasingSupported = xrWebGLLayer.antialias;
+```js-nolint
+xrWebGLLayer.antialias
 ```
 
 ### Value

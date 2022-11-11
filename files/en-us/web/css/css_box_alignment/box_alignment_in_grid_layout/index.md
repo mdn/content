@@ -1,12 +1,14 @@
 ---
 title: Box alignment in grid layout
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+page-type: guide
 tags:
   - CSS
   - Guide
   - box alignment
   - grid
 ---
+
 {{CSSRef}}
 
 The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) specification details how alignment works in various layout methods. On this page we explore how box alignment works in the context of [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
@@ -25,7 +27,7 @@ As a two-dimensional layout method, when working with grid layout we always have
 
 The inline axis is the axis that corresponds to the direction that words in a sentence would run in the writing mode used. Therefore, in a horizontal language such as English or Arabic the inline direction runs horizontally. Should you be in a vertical writing mode the inline axis will run vertically.
 
-![](inline_axis.png)
+![Inline axes are horizontal.](inline_axis.png)
 
 To align things on the inline axis you use the properties that start with `justify-`, {{cssxref("justify-content")}}, {{cssxref("justify-items")}} and {{cssxref("justify-self")}}.
 
@@ -33,7 +35,7 @@ The block axis crosses the inline axis in the direction that blocks are displaye
 
 To align things on the block axis you use the properties that start with `align-`, {{cssxref("align-content")}}, {{cssxref("align-items")}} and {{cssxref("align-self")}}.
 
-![](block_axis.png)
+![The block axes are vertical.](block_axis.png)
 
 ## Self alignment
 

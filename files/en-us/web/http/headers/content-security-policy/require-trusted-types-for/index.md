@@ -6,9 +6,11 @@ tags:
   - Directive
   - HTTP
   - Security
+  - Experimental
 browser-compat: http.headers.Content-Security-Policy.require-trusted-types-for
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive instructs user agents to control the data passed to DOM XSS sink functions, like {{DOMxRef("Element.innerHTML")}} setter.
 
@@ -16,7 +18,7 @@ When used, those functions only accept non-spoofable, typed values created by Tr
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: require-trusted-types-for 'script';
 ```
 
@@ -55,7 +57,7 @@ if (typeof trustedTypes !== 'undefined') {
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/#injection-sinks)
+- [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/trusted-types/dist/spec/#injection-sinks)
 - [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
 - [Trusted Types polyfill](https://github.com/w3c/webappsec-trusted-types#polyfill)

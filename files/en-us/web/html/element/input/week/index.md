@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.input.type_week
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`week`** create input fields allowing easy entry of a year plus the [ISO 8601 week number](https://en.wikipedia.org/wiki/ISO_8601#Week_dates) during that year (i.e., week 1 to [52 or 53](https://en.wikipedia.org/wiki/ISO_8601#Week_dates)).
 
@@ -28,11 +28,11 @@ The control's user interface varies from browser to browser; cross-browser suppo
 
 In Chrome/Opera the `week` control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.
 
-![](week-control-chrome.png)
+![An input reading 'week 01, 2017'. The background of the 2017 is the same blue as the focus ring. There are 3 icons in the input: x or clear, a spinner with small up and down arrows, and a larger down arrow. A calendar is a pop-up below the input set to January 2017. The first column of the calendar is the week: 52, 1, 2, 3, 4, 5. the full month calendar is to the right of that. The row with Week 1 and January 2 to 8 is highlighted. On the same line as the month, there are buttons to move right and left for the next and previous months.](week-control-chrome.png)
 
 The Edge `week` control is somewhat more elaborate, opening up week and year pickers with sliding reels.
 
-![](week-control-edge.png)
+![An input reading 'week 01, 2017'. A popup is open below with two columns. The left column has a list of weeks, from week 48 to Week 52, continuing with week 01 to week 05. The right side has years, from 2012 to 2022. Week 01 and 2017 are in the middle, highlighted with a blue background. At the bottom, there is a row with a checkbox and an X; likely buttons.](week-control-edge.png)
 
 <table class="properties">
   <tbody>
@@ -89,7 +89,7 @@ You can set a default value for the input by including a value inside the {{html
 
 ```html
 <label for="week">What week would you like to start?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('Value', 600, 60)}}
@@ -99,7 +99,7 @@ One thing to note is that the displayed format may differ from the actual `value
 You can also get and set the value in JavaScript using the input element's {{domxref("HTMLInputElement.value", "value")}} property, for example:
 
 ```js
-var weekControl = document.querySelector('input[type="week"]');
+const weekControl = document.querySelector('input[type="week"]');
 weekControl.value = '2017-W45';
 ```
 
@@ -150,7 +150,7 @@ The simplest use of `<input type="week">` involves a basic `<input>` and {{htmle
 ```html
 <form>
   <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week">
+  <input id="week" type="week" name="week" />
 </form>
 ```
 
@@ -175,15 +175,14 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 ```html
 <form>
   <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52">
+  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
   <span class="validity"></span>
 </form>
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_weeks', 600, 40)}}
 
-Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
 ```css
 div {
@@ -199,15 +198,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -224,12 +223,17 @@ Let's look at an example; here we've set minimum and maximum weeks, and also mad
 <form>
   <div>
     <label for="week">What week would you like to start?</label>
-    <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2017-W52"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -238,9 +242,9 @@ If you try to submit the form with no value, the browser displays an error. Try 
 
 {{EmbedLiveSample('Making_week_values_required', 600, 120)}}
 
-Here's'a screenshot for those of you who aren't using a supporting browser:
+Here is a screenshot for those of you who aren't using a supporting browser:
 
-![](week-validation-chrome.png)
+![The week form control has two dashes where the week number should be. A popup with a yellow warning symbol and a 'Please fill out this field' is emanating from the two dashes, which are highlighted in blue, the same blue as the input's focus ring.](week-validation-chrome.png)
 
 > **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
@@ -248,9 +252,9 @@ Here's'a screenshot for those of you who aren't using a supporting browser:
 
 As mentioned above, the major problem with using week inputs right now is browser support: Safari and Firefox don't support it on desktop, and old versions of IE don't support it.
 
-Mobile platforms such as Android and iOS make really good use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the `week` picker on Chrome for Android looks like this:
+Mobile platforms such as Android and iOS make perfect use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the `week` picker on Chrome for Android looks like this:
 
-![](week-chrome-android.png)
+![A modal popup. The header reads 'set week'. There are two columns: the left has 36 in the middle at full opacity, with 35 above it and 37 below being semi-opaque. On the right side, 2017 is fully opaque. There are no other options. Three text links or buttons on the bottom include 'clear' on the 'left' and 'cancel' and 'set' on the right.](week-chrome-android.png)
 
 Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
@@ -275,8 +279,13 @@ The HTML looks like so:
 <form>
   <div class="nativeWeekPicker">
     <label for="week">What week would you like to start?</label>
-    <input id="week" type="week" name="week"
-           min="2017-W01" max="2018-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2018-W52"
+      required />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">What week would you like to start?</p>
@@ -284,8 +293,7 @@ The HTML looks like so:
     <div>
       <span>
         <label for="week">Week:</label>
-        <select id="fallbackWeek" name="week">
-        </select>
+        <select id="fallbackWeek" name="week"></select>
       </span>
       <span>
         <label for="year">Year:</label>
@@ -315,15 +323,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -331,20 +339,20 @@ input:valid+span:after {
 The other part of the code that may be of interest is the feature detection code. To detect whether the browser supports `<input type="week">`, we create a new {{htmlelement("input")}} element, try setting its `type` to `week`, then immediately check what its `type` is set to. Non-supporting browsers will return `text`, because the `week` type falls back to type `text`. If `<input type="week">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}s) instead.
 
 ```js
-// define variables
-var nativePicker = document.querySelector('.nativeWeekPicker');
-var fallbackPicker = document.querySelector('.fallbackWeekPicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+// Get UI elements
+const nativePicker = document.querySelector('.nativeWeekPicker');
+const fallbackPicker = document.querySelector('.fallbackWeekPicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector('#year');
+const weekSelect = document.querySelector('#fallbackWeek');
 
-// hide fallback initially
+// Hide fallback initially
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
 
 try {
   test.type = 'week';
@@ -352,9 +360,9 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
+// If it does, run the code inside the if () {} block
+if ( test.type === 'text') {
+  // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
   fallbackLabel.style.display = 'block';
@@ -365,9 +373,9 @@ if(test.type === 'text') {
 
 function populateWeeks() {
   // Populate the week select with 52 weeks
-  for (var i = 1; i <= 52; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 1; i <= 52; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }

@@ -15,9 +15,12 @@ tags:
   - Event
   - payment
   - shippingaddresschange
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`shippingaddresschange`** event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.
 
@@ -35,7 +38,7 @@ onshippingaddresschange = (event) => { };
 
 ## Event type
 
-An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 

@@ -8,6 +8,9 @@ tags:
   - referer
   - referrer
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 There are privacy and security risks associated with the [Referer HTTP header](/en-US/docs/Web/HTTP/Headers/Referer). This article describes them, and offers advice on mitigating those risks.
 
 ## The referrer problem

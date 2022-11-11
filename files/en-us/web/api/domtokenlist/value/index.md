@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.value
 ---
+
 {{APIRef("DOM")}}
 
 The **`value`** property of the {{domxref("DOMTokenList")}}

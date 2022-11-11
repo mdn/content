@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.fill
 ---
+
 {{JSRef}}
 
 The **`fill()`** method fills all the elements of a typed array
@@ -22,7 +23,7 @@ algorithm as {{jsxref("Array.prototype.fill()")}}. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)
@@ -60,10 +61,10 @@ If `start` is negative, it is treated as
 ### Using fill()
 
 ```js
-new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
-new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
+new Uint8Array([1, 2, 3]).fill(4); // Uint8Array [4, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1); // Uint8Array [1, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1, 2); // Uint8Array [1, 4, 3]
+new Uint8Array([1, 2, 3]).fill(4, 1, 1); // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
 ```
 

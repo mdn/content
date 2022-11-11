@@ -16,7 +16,8 @@ tags:
   - datetime-local
 browser-compat: html.elements.input.type_datetime-local
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
 
@@ -84,7 +85,11 @@ You can set a default value for the input by including a date and time inside th
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>
-<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+<input
+  id="party"
+  type="datetime-local"
+  name="partydate"
+  value="2017-06-01T08:30" />
 ```
 
 {{ EmbedLiveSample('Value', 600, 60) }}
@@ -100,7 +105,7 @@ const dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';
 ```
 
-There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string, or you can do it manually. For example, the {{jsxref("Date.toISOString()")}} method can be used for this purpose.
+There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string. For example, the {{jsxref("Date.toISOString()")}} method returns the date/time in UTC with the suffix "`Z`" denoting that timezone; removing the "`Z`" would provide a value in the format expected by a `datetime-local` input.
 
 ## Additional attributes
 
@@ -142,8 +147,8 @@ The simplest use of `<input type="datetime-local">` involves a basic `<input>` a
 
 ```html
 <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate">
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input id="party" type="datetime-local" name="partydate" />
 </form>
 ```
 
@@ -154,10 +159,15 @@ The simplest use of `<input type="datetime-local">` involves a basic `<input>` a
 You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates/times that can be chosen by the user. In the following example we are setting a minimum datetime of `2017-06-01T08:30` and a maximum datetime of `2017-06-30T16:30`:
 
 ```html
-  <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
-  </form>
+<form>
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input
+    id="party"
+    type="datetime-local"
+    name="partydate"
+    min="2017-06-01T08:30"
+    max="2017-06-30T16:30" />
+</form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
@@ -175,23 +185,23 @@ The result here is that:
 
 ### Setting timezones
 
-One thing the `datetime-local` input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime-local) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
+One thing the `datetime-local` input type doesn't provide is a way to set the time zone and/or locale of the date/time control. This was available in the `datetime` input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
 For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
 
 ```html
-<input type="hidden" id="timezone" name="timezone" value="-08:00">
+<input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
 On the other hand, if you were required to allow the user to enter a time zone along with a date/time input, you could have a {{htmlelement("select")}} element to enable the user to set the right time zone by choosing a particular location from among a set of locations:
 
 ```html
 <select name="timezone" id="timezone">
-    <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
-    <option value="Pacific/Midway">Midway Island, Samoa</option>
-    <option value="Pacific/Honolulu">Hawaii</option>
-    <option value="Pacific/Marquesas">Taiohae</option>
-    <!-- and so on -->
+  <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
+  <option value="Pacific/Midway">Midway Island, Samoa</option>
+  <option value="Pacific/Honolulu">Hawaii</option>
+  <option value="Pacific/Marquesas">Taiohae</option>
+  <!-- and so on -->
 </select>
 ```
 
@@ -207,14 +217,23 @@ Let's look at an example; here we've set minimum and maximum date/time values, a
 
 ```html
 <form>
-    <div>
-        <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
-        <span class="validity"></span>
-    </div>
-    <div>
-        <input type="submit" value="Book party!">
-    </div>
+  <div>
+    <label for="party">
+      Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):
+    </label>
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      required />
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="Book party!" />
+  </div>
 </form>
 ```
 
@@ -222,13 +241,13 @@ If you try to submit the form with an incomplete date (or with a date outside th
 
 {{ EmbedLiveSample('Validation', 600, 120) }}
 
-Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -236,18 +255,18 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span::after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span::after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
-> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -269,16 +288,24 @@ One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute o
 ```html
 <form>
   <div>
-    <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-    <input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <label for="party">
+      Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):
+    </label>
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Book party!">
+    <input type="submit" value="Book party!" />
   </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 </form>
 ```
 
@@ -299,8 +326,8 @@ input:invalid + span {
   position: relative;
 }
 
-input:invalid + span:after {
-  content: '✖';
+input:invalid + span::after {
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -309,8 +336,8 @@ input:valid + span {
   position: relative;
 }
 
-input:valid + span:after {
-  content: '✓';
+input:valid + span::after {
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -326,13 +353,13 @@ The problem is with the server side of things: storage of dates greater than 2^3
 
 ## The Y10k Problem (often client-side)
 
-In many servers, dates are stored as numbers instead of as strings--numbers of a fixed size and agnostic of format (aside from endianness). After the year 10,000, those numbers will just be a little bit bigger than before, so many servers will not see issues with forms submitted after the year 10,000.
+In many servers, dates are stored as numbers instead of as strings--numbers of a fixed size and agnostic of format (aside from endianness). After the year 10,000, those numbers will just be a bit bigger than before, so many servers will not see issues with forms submitted after the year 10,000.
 
 The problem is with the client side of things: parsing of dates with more than 4 digits in the year.
 
 ```html
 <!--midnight of January 1st, 10000: the exact time of Y10K-->
-<input type="datetime-local" value="+010000-01-01T05:00"/>
+<input type="datetime-local" value="+010000-01-01T05:00" />
 ```
 
 It's that simple. Just prepare your code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:
@@ -358,7 +385,7 @@ The HTML looks like so:
 <form>
   <div class="nativeDateTimePicker">
     <label for="party">Choose a date and time for your party:</label>
-    <input type="datetime-local" id="party" name="bday">
+    <input type="datetime-local" id="party" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">Choose a date and time for your party:</p>
@@ -366,8 +393,7 @@ The HTML looks like so:
     <div>
       <span>
         <label for="day">Day:</label>
-        <select id="day" name="day">
-        </select>
+        <select id="day" name="day"></select>
       </span>
       <span>
         <label for="month">Month:</label>
@@ -388,20 +414,17 @@ The HTML looks like so:
       </span>
       <span>
         <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
     <div>
       <span>
         <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>
@@ -424,15 +447,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -464,7 +487,7 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
+// if it does, run the code inside the if () {} block
 if (test.type === 'text') {
   // hide the native picker and show the fallback
   nativePicker.style.display = 'none';
@@ -549,7 +572,7 @@ function populateHours() {
   // populate the hours <select> with the 24 hours of the day
   for (let i = 0; i <= 23; i++) {
     const option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
@@ -558,7 +581,7 @@ function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
     const option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }

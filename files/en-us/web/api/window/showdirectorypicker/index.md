@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.Window.showDirectoryPicker
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
@@ -20,8 +21,8 @@ select a directory.
 
 ## Syntax
 
-```js
-const FileSystemDirectoryHandle = window.showDirectoryPicker();
+```js-nolint
+showDirectoryPicker()
 ```
 
 ### Parameters
@@ -50,6 +51,10 @@ A {{domxref('FileSystemDirectoryHandle')}}.
 - `AbortError`
   - : Thrown if the user dismisses the prompt without making a selection, or if the user
     agent deems the selected content to be too sensitive or dangerous
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

@@ -12,6 +12,7 @@ tags:
   - sound
 browser-compat: api.AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `AudioContext` interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}.
@@ -25,16 +26,16 @@ An audio context controls both the creation of the nodes it contains and the exe
 - {{domxref("AudioContext.AudioContext", "AudioContext()")}}
   - : Creates and returns a new `AudioContext` object.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
-- {{domxref("AudioContext.baseLatency")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("AudioContext.baseLatency")}} {{ReadOnlyInline}}
   - : Returns the number of seconds of processing latency incurred by the {{domxref("AudioContext")}} passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
-- {{domxref("AudioContext.outputLatency")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("AudioContext.outputLatency")}} {{ReadOnlyInline}}
   - : Returns an estimation of the output latency of the current audio context.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}._
 

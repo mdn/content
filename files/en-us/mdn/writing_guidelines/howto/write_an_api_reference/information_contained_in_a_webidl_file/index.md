@@ -5,6 +5,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
@@ -40,7 +41,7 @@ This section explains the WebIDL syntax that describes overall API features.
 
 The interface name is the string that appears after the keyword `interface` and before the next opening bracket (`'{'`) or colon (`':'`).
 
-```js
+```webidl
 interface URL {};
 ```
 
@@ -50,7 +51,7 @@ Each WebIDL interface, being a true interface or a mixin, has its own page in th
 
 The parent, if any, of a given interface is defined after the interface name, following a colon (`':'`). There can be only one parent per interface.
 
-```js
+```webidl
 interface HTMLMediaElement : HTMLElement {…}
 ```
 
@@ -62,7 +63,7 @@ Some properties or methods are available to several interfaces. To prevent redef
 
 As of September 2019, mixin syntax was updated. In the new syntax, you use `interface mixin` to define a mixin interface, like so:
 
-```js
+```webidl
 interface MyInterface {};
 
 interface mixin MyMixin {
@@ -72,13 +73,13 @@ interface mixin MyMixin {
 
 You then use the `includes` keyword to say that the properties defined inside a mixin are available on an interface:
 
-```js
+```webidl
 MyInterface includes MyMixin;
 ```
 
 Mixins have no inheritance and cannot include other mixins. They do however support partials, so you will see things like this:
 
-```js
+```webidl
 interface MyInterface {};
 interface mixin MyMixin {};
 
@@ -111,14 +112,14 @@ For compat data, consult the [data guideline for mixins in BCD](https://github.c
 
 In the old-style WebIDL mixin syntax, which you still might encounter in some places, mixins are prefixed using the `[NoInterfaceObject]` annotation:
 
-```js
+```webidl
 [NoInterfaceObject]
    interface MyMixin {…}
 ```
 
 In the old-style syntax, mixins implemented on an interface are defined using the `implements` keyword.
 
-```js
+```webidl
 MyInterface implements MyMixin;
 ```
 
@@ -126,7 +127,7 @@ MyInterface implements MyMixin;
 
 Availability in Web workers (of any type) and on the Window scope is defined using an annotation: `[Exposed=(Window,Worker)]`. The annotation applies to the partial interface it is listed with.
 
-```js
+```
 [Exposed=(Window,Worker)]
 interface Performance {
    [DependsOn=DeviceState, Affects=Nothing]
@@ -163,7 +164,7 @@ Another value is possible, like `System`, but this has a [special meaning](/en-U
 
 Note that these possible values are themselves defined in WebIDL files. Interfaces may have a `[Global=xyz]` annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with `xyz` as a value of `[Exposed]` is available.
 
-```js
+```webidl
 [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 ```
@@ -176,7 +177,7 @@ Here, it is defined that when the global scope is of type `DedicatedWorkerGlobal
 
 In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
 
-```js
+```webidl
 [Pref="media.webspeech.synth.enabled"]
 interface SpeechSynthesis {
    readonly attribute boolean pending;
@@ -193,7 +194,7 @@ Here `media.webspeech.synth.enabled` controls the `SpeechSynthesis` interface an
 
 Some interface features might only be available in browser internal system code, or chrome code. To signify this, in Gecko we use \[ChromeOnly], for example the property propName in the following example is only callable via chrome code:
 
-```js
+```webidl
 interface MyInterface {
   [ChromeOnly]
   readonly attribute PropValue propName;
@@ -206,7 +207,7 @@ You can recognize the definition of a property by the presence of the `attribute
 
 ### Name of the property
 
-```js
+```webidl
 readonly attribute MediaError? error;
 ```
 
@@ -214,7 +215,7 @@ In the above example the name of the property is `error`; in the docs we will re
 
 ### Type of the property
 
-```js
+```webidl
 readonly attribute MediaError? error;
 ```
 
@@ -222,7 +223,7 @@ The property value is an object of type `MediaError`. The question mark (`'?'`) 
 
 ### Writing permissions on the property
 
-```js
+```webidl
 readonly attribute MediaError? error;
 ```
 
@@ -237,7 +238,7 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 ### Throwing exceptions
 
-```js
+```webidl
 [SetterThrows]
             attribute DOMString src;
 ```
@@ -248,7 +249,7 @@ Note that some exceptions are not explicitly marked but are defined by the JavaS
 
 It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the `[GetterThrows]` annotation is used. Here also, the Syntax section of the property page _must_ have an Exceptions subsection.
 
-```js
+```webidl
 partial interface Blob {
   [GetterThrows]
   readonly attribute unsigned long long size;
@@ -261,7 +262,7 @@ When the semantics of Webidl is not followed, an exception is often thrown, even
 
 Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 
-```js
+```webidl
 partial interface Document {
   [LenientSetter]
   readonly attribute boolean fullscreen;
@@ -286,7 +287,7 @@ For interface objects, the default is to return a _reference_ to the internal ob
 
 Sometimes an API must return a _new_ object, or a _copy_ of an internal one. This case is indicated in the WebIDL using the `[NewObject]` annotation.
 
-```js
+```webidl
 [NewObject]
    readonly attribute TimeRanges buffered;
 ```
@@ -297,14 +298,14 @@ _The **`HTMLMediaElement.buffered`** read-only property returns a new \\{{domxre
 
 and
 
-- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{readonlyinline}}_
+- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{ReadOnlyInline}}_
   - : _Returns a new \\{{domxref("TimeRanges")}} object that …_
 
 In the case of a reference to a collection object (like `HTMLCollection`, `HTMLFormElementsCollection`, or `HTMLOptionsCollection`, always without `[NewObject]`), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a **live** `HTMLCollection` (or `HTMLFormElementsCollections`, or `HTMLOptionsCollection`), both in the interface description and in the subpage.
 
 E.g.
 
-- \\{{domxref("HTMLFormElement.elements")}}\\{{readonlyinline}}
+- \\{{domxref("HTMLFormElement.elements")}}\\{{ReadOnlyInline}}
   - : Returns a live \\{{domxref("HTMLFormControlsCollection")}} containing…
 
 ### Availability in workers
@@ -319,7 +320,7 @@ For documentation, the subpage must contain a sentence indicating if it is avail
 
 In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
-```js
+```webidl
 [Pref="media.webvtt.enabled"]
     readonly attribute TextTrackList? textTracks;
 ```
@@ -334,7 +335,7 @@ You can recognize the definition of a method by the presence of parentheses afte
 
 ### Name of the method
 
-```js
+```webidl
 DOMString canPlayType(DOMString type);
 ```
 
@@ -352,17 +353,17 @@ The parameters of a method are listed in the Syntax section of the method sub-pa
 
 ### Type of the return value
 
-```js
+```webidl
 DOMString canPlayType(DOMString type);
 ```
 
 The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
-The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple _None_.
+The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple "None.".
 
 ### Throwing exceptions
 
-```js
+```webidl
 [Throws]
    void fastSeek(double time);
 ```
@@ -385,7 +386,7 @@ For the documentation, the sub-page must contain a sentence indicating if it is 
 
 In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
-```js
+```webidl
 [Pref="media.webvtt.enabled"]
    TextTrack addTextTrack(TextTrackKind kind,
                           optional DOMString label = "",
@@ -404,7 +405,7 @@ Some methods are not listed as regular methods in WebIDL but instead as special 
 
 A stringifier specifies how an object based on an interface is resolved in contexts expecting a string. (See the [Stringifiers](#stringifiers) section.) Additionally, the keyword is mapped to `toString()` and defined as:
 
-```js
+```webidl
 stringifier;
 ```
 
@@ -412,7 +413,7 @@ The `toString()` method is listed just like any other method of the interface an
 
 A jsonifier is mapped to `toJSON()` and defined as:
 
-```js
+```webidl
 jsonifier; // Gecko version
 serializer; // Standard version
 ```
@@ -429,7 +430,7 @@ There are two kinds of iteration possible: the _value iterator_ and the _pair it
 
 #### Value iterator
 
-```js
+```webidl
 iterable<valueType>
 ```
 
@@ -440,7 +441,7 @@ The iterator will iterate over values of type _valueType_. The generated methods
 - `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys, that are its indexes (that are `unsigned long`). In the case of value iterators, `keys()` and `entries()` are identical.
 - `forEach()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys that calls a given callback function one for each entry in the list.
 
-Such an iterator allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description.
+Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description.
 
 > **Note:** the value pairs to iterate over can be defined in two different ways:
 >
@@ -449,7 +450,7 @@ Such an iterator allows to use the syntax `for (var p in object)` as a shorthand
 
 #### Pair iterator
 
-```js
+```webidl
 iterable<keyType, valueType>
 ```
 
@@ -460,17 +461,17 @@ The iterator will iterate over values of type _valueType_, with keys of type _ke
 - `keys()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('FormData.keys()')}}
 - Once {{bug(1216751)}} lands, `forEach()`.
 
-Such an iterator allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
+Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 
 > **Note:** the value pairs to iterate over are _not_ defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)…"_
 >
-> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry "concept-FormData-entry") with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name "concept-FormData-entry-name") and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value "concept-FormData-entry-value"). "_
+> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
 
 ### Set-like methods
 
 An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
-```js
+```webidl
 setlike<valueType>
 ```
 
@@ -487,7 +488,7 @@ In cases where the set-like declaration is not prefixed by read-only, the follow
 - `clear()` that empties the set-like structure. E.g. the `.clear()` method of {{domxref('FontFaceSet')}}.
 - `delete()` that removes an entry. E.g. the `.delete()` method of {{domxref('FontFaceSet')}}.
 
-Such an set interface also allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`.
+Such an set interface also allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`.
 
 ## Special Behaviors
 
@@ -499,7 +500,7 @@ In addition to adding the `toString()` method to an interface as described in [t
 
 When the `stringifier` keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:
 
-```js
+```webidl
 interface InterfaceIdentifier {
   stringifier attribute DOMString DOMString name;
 };
@@ -514,7 +515,7 @@ console.log(interfaceIdentifier.name);
 
 When the `stringifier` keyword is used by itself, an object of the interface may be used as above, but the behavior is defined in source code.
 
-```js
+```webidl
 interface InterfaceIdentifier {
   stringifier;
 };
@@ -530,7 +531,7 @@ Constructors are a little bit hidden in WebIDL: they are listed as annotations o
 
 This is the most common case for constructors. The constructor of a given interface A, can be used as `a = new A(parameters);`
 
-```js
+```webidl
 [Constructor, Func="MessageChannel::Enabled",
   Exposed=(Window,Worker)]
     interface MessageChannel {…};
@@ -540,7 +541,7 @@ A constructor with the same interface is defined using the `Constructor` annotat
 
 Another example of an unnamed constructor, with parameters:
 
-```js
+```webidl
 [Constructor(DOMString type, optional MessageEventInit eventInitDict),
  Exposed=(Window,Worker,System)]
    interface MessageEvent : Event {…};
@@ -548,7 +549,7 @@ Another example of an unnamed constructor, with parameters:
 
 There can also be several unnamed constructors, differing by their parameter lists. All syntax is documented in one single sub-page.
 
-```js
+```webidl
 [Constructor(DOMString url, URL base),
  Constructor(DOMString url, optional DOMString base),
  Exposed=(Window,Worker)]
@@ -557,7 +558,7 @@ There can also be several unnamed constructors, differing by their parameter lis
 
 ### Named constructors
 
-```js
+```webidl
 [NamedConstructor=Image(optional unsigned long width, optional unsigned long height)]
     interface HTMLImageElement : HTMLElement {…
 ```
@@ -570,7 +571,7 @@ There can be several named constructors for a specific interface, but this is ex
 
 As of September 2019, WebIDL constructor syntax was updated. Constructor syntax no longer involves an extended attribute on the interface:
 
-```js
+```webidl
 [Constructor(DOMString str)]
     interface MyInterface {
       ...
@@ -579,7 +580,7 @@ As of September 2019, WebIDL constructor syntax was updated. Constructor syntax 
 
 New specs instead use a method-like syntax named `constructor` with no explicitly-defined return type, written like so:
 
-```js
+```webidl
 interface MyInterface {
   constructor(DOMString str);
 };
@@ -587,7 +588,7 @@ interface MyInterface {
 
 This means extended attributes can now be specified on the constructor, and it is no longer assumed that all constructors throw. If a constructor does throw, `[Throws]` will be used to indicate that:
 
-```js
+```webidl
 interface MyInterface {
   [Throws] constructor();
 };

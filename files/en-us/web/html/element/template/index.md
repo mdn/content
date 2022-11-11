@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.template
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
 
@@ -93,9 +93,11 @@ Think of a template as a content fragment that is being stored for subsequent us
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+The only standard attributes that the `template` element supports are the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-However, the {{domxref("HTMLTemplateElement")}} has a {{domxref("HTMLTemplateElement.content", "content")}} property, which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} could lead to unexpected behavior, see [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
+In Chromium-based browsers, the `template` element also supports a non-standard [`shadowroot` attribute](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax), as part of an experimental ["Declarative Shadow DOM"](https://web.dev/declarative-shadow-dom/) proposal. In those browsers, a `template` element with the `shadowroot` attribute is detected by the HTML parser and immediately applied as the shadow root of its parent element.
+
+Also, the {{domxref("HTMLTemplateElement")}} has a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without a corresponding content/markup attribute), which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} property could lead to unexpected behavior; for details, see the [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
 
 ## Examples
 
@@ -130,22 +132,21 @@ Now that the table has been created and the template defined, we use JavaScript 
 // Test to see if the browser supports the HTML template element by checking
 // for the presence of the template element's content attribute.
 if ('content' in document.createElement('template')) {
-
     // Instantiate the table with the existing HTML tbody
     // and the row with the template
-    var tbody = document.querySelector("tbody");
-    var template = document.querySelector('#productrow');
+    const tbody = document.querySelector("tbody");
+    const template = document.querySelector('#productrow');
 
     // Clone the new row and insert it into the table
-    var clone = template.content.cloneNode(true);
-    var td = clone.querySelectorAll("td");
+    const clone = template.content.cloneNode(true);
+    let td = clone.querySelectorAll("td");
     td[0].textContent = "1235646565";
     td[1].textContent = "Stuff";
 
     tbody.appendChild(clone);
 
     // Clone the new row and insert it into the table
-    var clone2 = template.content.cloneNode(true);
+    const clone2 = template.content.cloneNode(true);
     td = clone2.querySelectorAll("td");
     td[0].textContent = "0384928528";
     td[1].textContent = "Acme Kidney Beans 2";

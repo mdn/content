@@ -7,11 +7,12 @@ tags:
   - DOM
   - DOM Element Methods
   - Gecko
-  - HTML5
+  - HTML
   - Method
   - Reference
 browser-compat: api.Document.getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 The **`getElementsByClassName`** method of
@@ -31,7 +32,7 @@ descendants of the specified root element with the given class name(s).
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByClassName(names)
 ```
 
@@ -78,9 +79,10 @@ we'll find all div elements that have a class of 'test':
 
 ```js
 const testElements = document.getElementsByClassName('test');
-const testDivs = Array.prototype.filter.call(testElements, function(testElement){
-  return testElement.nodeName === 'DIV';
-});
+const testDivs = Array.prototype.filter.call(
+  testElements,
+  (testElement) => testElement.nodeName === 'DIV',
+);
 ```
 
 ### Get the first element whose class is 'test'
@@ -88,25 +90,25 @@ const testDivs = Array.prototype.filter.call(testElements, function(testElement)
 This is the most commonly used method of operation.
 
 ```html
-<html>
-<body>
+<html lang="en">
+  <body>
     <div id="parent-id">
-        <p>hello world 1</p>
-        <p class="test">hello world 2</p>
-        <p>hello world 3</p>
-        <p>hello world 4</p>
+      <p>hello world 1</p>
+      <p class="test">hello world 2</p>
+      <p>hello world 3</p>
+      <p>hello world 4</p>
     </div>
 
     <script>
-        const parentDOM = document.getElementById("parent-id");
+      const parentDOM = document.getElementById("parent-id");
 
-        const test = parentDOM.getElementsByClassName("test"); // a list of matching elements, *not* the element itself
-        console.log(test); //HTMLCollection[1]
+      const test = parentDOM.getElementsByClassName("test"); // a list of matching elements, *not* the element itself
+      console.log(test); // HTMLCollection[1]
 
-        const testTarget = parentDOM.getElementsByClassName("test")[0]; // the first element, as we wanted
-        console.log(testTarget); //<p class="test">hello world 2</p>
+      const testTarget = parentDOM.getElementsByClassName("test")[0]; // the first element, as we wanted
+      console.log(testTarget); // <p class="test">hello world 2</p>
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -132,15 +134,15 @@ elements with ALL of the classNames specified are selected.
 // getElementsByClassName only selects elements that have both given classes
 const allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 let result = "document.getElementsByClassName('orange juice')";
-for (let i=0; i < allOrangeJuiceByClass.length; i++) {
-    result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
+for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
+  result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
 }
 
 // querySelector only selects full complete matches
 const allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (let i=0; i < allOrangeJuiceQuery.length; i++) {
-    result += `\n  ${allOrangeJuiceQuery[i].textContent}`;
+for (let i = 0; i < allOrangeJuiceQuery.length; i++) {
+  result += `\n  ${allOrangeJuiceQuery[i].textContent}`;
 }
 
 document.getElementById("resultArea").value = result;

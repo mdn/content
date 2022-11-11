@@ -6,7 +6,8 @@ tags:
   - Responsive Design
   - Web Development
 ---
-Silver bullets are hard to find in web development — you're more likely to come across strategies that make the best use of a variety of techniques given the circumstances. This brings us to our third approach, which aims to avoid some of the shortcomings the [separate sites](/en-US/docs/Web/Guide/Mobile/Separate_sites) and [responsive design](/en-US/docs/Web/Progressive_web_apps) approaches by combining them.
+
+Silver bullets are hard to find in web development — you're more likely to come across strategies that make the best use of a variety of techniques given the circumstances. This brings us to our third approach, which aims to avoid some of the shortcomings the separate sites and [responsive design](/en-US/docs/Web/Progressive_web_apps) approaches by combining them.
 
 This hybrid approach centers around breaking down mobile development into its [three goals](/en-US/docs/Web/Guide/Mobile/Mobile-friendliness), and then applying the best techniques available to tackle each goal individually. This article presents one potential combination of techniques as an example here, but different combinations will be appropriate under different circumstances. The most important concept to remember is that server-side and client-side techniques can be combined to fit your situation.
 
@@ -16,9 +17,9 @@ Responsive web design is great — right now it is the best technique available 
 
 Luckily, we aren't technically constrained to using client-side techniques here: another option is to use server-side user-agent detection to show the user the proper content. This keeps the complexity of altering content on the server side, but still allows our layouts to benefit from the flexibility and future-readiness of responsive design.
 
-Using user-agent detection specifically for content and not layout also allows you to have a single URL for each piece of content, so that the content can adapt its layout to the user's browser. This is generally thought to be [a good thing](https://www.w3.org/TR/mobile-bp/#OneWeb "W3C One Web Recommendation"). Instead of maintaining two completely different sites, we redirect users to pages for the content they care about. And since the design is responsive, you know that each page looks as good as possible on the user's screen.
+Using user-agent detection specifically for content and not layout also allows you to have a single URL for each piece of content, so that the content can adapt its layout to the user's browser. This is generally thought to be [a good thing](https://www.w3.org/TR/mobile-bp/#OneWeb). Instead of maintaining two completely different sites, we redirect users to pages for the content they care about. And since the design is responsive, you know that each page looks as good as possible on the user's screen.
 
-We can also address some of the performance problems with responsive design by incorporating server-side techniques. For example, an often-criticized point about responsive web design is that full-resolution images are sent to all devices, including phones that show the images scaled down anyway. [One such technique](https://www.scientiamobile.com/capabilities/?search=image) for dealing with this issue uses server-side user-agent detection along with the [WURFL](http://wurfl.sourceforge.net/) device capability library to send a properly sized image for the user's device. A range of [products](https://www.sencha.com/platform/ "Sencha IO") are also emerging which provide this as a service. Of course, this technique suffers from all the downsides associated with user-agent detection. But even if it does not work, it is no worse with respect to performance than only using [fluid images](https://unstoppablerobotninja.com/entry/fluid-images/).
+We can also address some of the performance problems with responsive design by incorporating server-side techniques. For example, an often-criticized point about responsive web design is that full-resolution images are sent to all devices, including phones that show the images scaled down anyway. [One such technique](https://www.scientiamobile.com/capabilities/?search=image) for dealing with this issue uses server-side user-agent detection along with the [WURFL](http://wurfl.sourceforge.net/) device capability library to send a properly sized image for the user's device. A range of [products](https://www.sencha.com/platform/) are also emerging which provide this as a service. Of course, this technique suffers from all the downsides associated with user-agent detection. But even if it does not work, it is no worse with respect to performance than only using [fluid images](https://unstoppablerobotninja.com/entry/fluid-images/).
 
 By combining the techniques listed above, we can get a mobile web development strategy that is both more flexible than pure separate sites and has better performance than pure responsive design.
 
@@ -30,7 +31,7 @@ One downside of mixing approaches is that it can lead to an increase in the numb
 
 Combining server-side and client-side techniques is something that is always worth considering; there are so many options that one must just weigh the pros and cons of each individual technique employed.
 
-In many cases, the added complexity of the hybrid approach is not even necessary. For example, you may not even need to adjust your content based on what actual device a user is using — just knowing whether a feature is present on their browser is often good enough. This is something you might be able to discern on the client-side using JavaScript feature detection from [Modernizr](https://modernizr.com/docs/#s2 "Features Detected by Modernizr") or [Detect It](https://github.com/rafgraph/detect-it "Detect if a device is mouseOnly, touchOnly, or hybrid").  It can't hurt to dig down and ask yourself which axis you are actually looking to adjust your content around.
+In many cases, the added complexity of the hybrid approach is not even necessary. For example, you may not even need to adjust your content based on what actual device a user is using — just knowing whether a feature is present on their browser is often good enough. This is something you might be able to discern on the client-side using JavaScript feature detection from [Modernizr](https://modernizr.com/docs/#s2) or [Detect It](https://github.com/rafgraph/detect-it). It can't hurt to dig down and ask yourself which axis you are actually looking to adjust your content around.
 
 We've talked about incorporating server-side techniques into a responsive design, but there are even ways to use the hybrid approach if your use cases for mobile and desktop are very different. You could, for example, increase the flexibility of your separate site designs by incorporating media queries and a flexible layout. You may even be able to make your mobile site design adaptable enough to extend comfortably to tablets as well.
 
@@ -55,7 +56,6 @@ No approach is a one-size-fits-all solution. Web applications that want to heavi
 See the following articles for background and other approaches to developing for mobile platforms.
 
 - [What is mobile-friendliness?](/en-US/docs/Web/Guide/Mobile/Mobile-friendliness)
-- [Separate sites](/en-US/docs/Web/Guide/Mobile/Separate_sites)
 - [Responsive design](/en-US/docs/Web/Progressive_web_apps)
 
 ## Original document information

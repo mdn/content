@@ -10,13 +10,14 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.getCueAsHTML
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`getCueAsHTML()`** method of the {{domxref("VTTCue")}} interface returns a {{domxref("DocumentFragment")}} containing the cue content.
 
 ## Syntax
 
-```js
+```js-nolint
 getCueAsHTML()
 ```
 

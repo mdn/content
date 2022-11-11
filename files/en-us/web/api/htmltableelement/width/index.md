@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.width
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.width`** property represents the

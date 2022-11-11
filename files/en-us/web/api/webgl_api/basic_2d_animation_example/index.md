@@ -12,6 +12,7 @@ tags:
   - WebGL
   - WebGL API
 ---
+
 {{WebGLSidebar}}
 
 In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas's coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).
@@ -145,8 +146,8 @@ function startup() {
   currentScale = [1.0, aspectRatio];
 
   vertexArray = new Float32Array([
-      -0.5, 0.5, 0.5, 0.5, 0.5, -0.5,
-      -0.5, 0.5, 0.5, -0.5, -0.5, -0.5
+    -0.5, 0.5, 0.5, 0.5, 0.5, -0.5,
+    -0.5, 0.5, 0.5, -0.5, -0.5, -0.5
   ]);
 
   vertexBuffer = gl.createBuffer();
@@ -186,10 +187,10 @@ The `buildShaderProgram()` function accepts as input an array of objects describ
 
 ```js
 function buildShaderProgram(shaderInfo) {
-  let program = gl.createProgram();
+  const program = gl.createProgram();
 
-  shaderInfo.forEach(function(desc) {
-    let shader = compileShader(desc.id, desc.type);
+  shaderInfo.forEach((desc) => {
+    const shader = compileShader(desc.id, desc.type);
 
     if (shader) {
       gl.attachShader(program, shader);
@@ -225,8 +226,8 @@ The `compileShader()` function, below, is called by `buildShaderProgram()` to co
 
 ```js
 function compileShader(id, type) {
-  let code = document.getElementById(id).firstChild.nodeValue;
-  let shader = gl.createShader(type);
+  const code = document.getElementById(id).firstChild.nodeValue;
+  const shader = gl.createShader(type);
 
   gl.shaderSource(shader, code);
   gl.compileShader(shader);
@@ -257,7 +258,7 @@ function animateScene() {
   gl.clearColor(0.8, 0.9, 1.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  let radians = currentAngle * Math.PI / 180.0;
+  const radians = currentAngle * Math.PI / 180.0;
   currentRotation[0] = Math.sin(radians);
   currentRotation[1] = Math.cos(radians);
 
@@ -285,9 +286,8 @@ function animateScene() {
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 
-  window.requestAnimationFrame(function(currentTime) {
-    let deltaAngle = ((currentTime - previousTime) / 1000.0)
-          * degreesPerSecond;
+  requestAnimationFrame((currentTime) => {
+    const deltaAngle = ((currentTime - previousTime) / 1000.0) * degreesPerSecond;
 
     currentAngle = (currentAngle + deltaAngle) % 360;
 

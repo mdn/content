@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.lineWidth
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.lineWidth()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the line width of rasterized
@@ -26,7 +27,7 @@ lines.
 
 ## Syntax
 
-```js
+```js-nolint
 lineWidth(width)
 ```
 

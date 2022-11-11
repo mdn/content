@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Promise.resolve
 ---
+
 {{JSRef}}
 
 The **`Promise.resolve()`** method "resolves" a given value to a {{jsxref("Promise")}}. If the value is a promise, that promise is returned; if the value is a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), `Promise.resolve()` will call the `then()` method with two callbacks it prepared; otherwise the returned promise will be fulfilled with the value.
@@ -19,8 +20,8 @@ This function flattens nested layers of promise-like objects (e.g. a promise tha
 
 ## Syntax
 
-```js
-Promise.resolve(value);
+```js-nolint
+Promise.resolve(value)
 ```
 
 ### Parameters
@@ -67,11 +68,11 @@ p.then((v) => {
 const original = Promise.resolve(33);
 const cast = Promise.resolve(original);
 cast.then((value) => {
-  console.log('value: ' + value);
+  console.log(`value: ${value}`);
 });
-console.log('original === cast ? ' + (original === cast));
+console.log(`original === cast ? ${original === cast}`);
 
-// logs, in order:
+// Logs, in order:
 // original === cast ? true
 // value: 33
 ```

@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.strong
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
 
@@ -49,7 +49,7 @@ The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its conte
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, must have both a start tag and an end tag.</td>
+      <td>None; must have both a start tag and an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -100,7 +100,7 @@ It is often confusing to new developers why there are so many ways to express th
 
 Not exactly. The `<strong>` element is for content that is of greater importance, while the `<b>` element is used to draw attention to text without indicating that it's more important.
 
-It may help to realize that both are valid and semantic elements in HTML5 and that it's a coincidence that they both have the same default styling (boldface) in most browsers (although some older browsers actually underline `<strong>`). Each element is meant to be used in certain types of scenarios, and if you want to bold text for decoration, you should instead actually use the CSS {{cssxref("font-weight")}} property.
+It may help to realize that both are valid and semantic elements in HTML and that it's a coincidence that they both have the same default styling (boldface) in most browsers (although some older browsers actually underline `<strong>`). Each element is meant to be used in certain types of scenarios, and if you want to bold text for decoration, you should instead actually use the CSS {{cssxref("font-weight")}} property.
 
 The intended meaning or purpose of the enclosed text should be what determines which element you use. Communicating meaning is what semantics are all about.
 
@@ -115,7 +115,9 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 ### Basic example
 
 ```html
-<p>Before proceeding, <strong>make sure you put on your safety goggles</strong>.</p>
+<p>
+  Before proceeding, <strong>make sure you put on your safety goggles</strong>.
+</p>
 ```
 
 The resulting output:
@@ -125,7 +127,10 @@ The resulting output:
 ### Labeling warnings
 
 ```html
-<p><strong>Important:</strong> Before proceeding, make sure you add plenty of butter.</p>
+<p>
+  <strong>Important:</strong> Before proceeding, make sure you add plenty of
+  butter.
+</p>
 ```
 
 This results in:

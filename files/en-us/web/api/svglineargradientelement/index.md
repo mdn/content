@@ -10,13 +10,14 @@ tags:
   - SVG DOM
 browser-compat: api.SVGLinearGradientElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGLinearGradientElement`** interface corresponds to the {{SVGElement("linearGradient")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGradientElement")}}._
 
@@ -29,7 +30,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGradient
 - {{domxref("SVGLinearGradientElement.y2")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y2")}} attribute of the given {{SVGElement("linearGradient")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGradientElement")}}._
 

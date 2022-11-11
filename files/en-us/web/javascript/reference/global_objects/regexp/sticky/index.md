@@ -12,24 +12,55 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.sticky
 ---
+
 {{JSRef}}
 
-The **`sticky`** property reflects whether or not the search is sticky (searches in strings only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression). `sticky` is a read-only property of an individual regular expression object.
+The **`sticky`** accessor property indicates whether or not the `y` flag is used with the regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
+{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
 
 ## Description
 
-The value of `sticky` is a {{jsxref("Boolean")}} and true if the "`y`" flag was used; otherwise, false. The "`y`" flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes). A regular expression defined as both `sticky` and `global` ignores the `global` flag.
+`RegExp.prototype.sticky` has the value `true` if the `y` flag was used; otherwise, `false`. The `y` flag indicates that the regex attempts to match the target string only from the index indicated by the {{jsxref("RegExp/lastIndex", "lastIndex")}} property (and unlike a global regex, does not attempt to match from any later indexes).
 
-You cannot change this property directly. It is read-only.
+The set accessor of `sticky` is `undefined`. You cannot change this property directly.
+
+For both sticky regexes and [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) regexes:
+
+- They start matching at `lastIndex`.
+- When the match succeeds, `lastIndex` is advanced to the end of the match.
+- When `lastIndex` is out of bounds of the currently matched string, `lastIndex` is reset to 0.
+
+However, for the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method, the behavior when matching fails is different:
+
+- When the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method is called on a sticky regex, if the regex fails to match at `lastIndex`, the regex immediately returns `null` and resets `lastIndex` to 0.
+- When the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method is called on a global regex, if the regex fails to match at `lastIndex`, it tries to match from the next character, and so on until a match is found or the end of the string is reached.
+
+For the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method, a regex that's both sticky and global behaves the same as a sticky and non-global regex. Because [`test()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) is a simple wrapper around `exec()`, `test()` would ignore the global flag and perform sticky matches as well. However, due to many other methods special-casing the behavior of global regexes, the global flag is, in general, orthogonal to the sticky flag.
+
+- [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) (which calls [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)): `y`, `g` and `gy` are all different.
+  - For `y` regexes: `matchAll()` throws; `[@@matchAll]()` yields the `exec()` result exactly once, without updating the regex's `lastIndex`.
+  - For `g` or `gy` regexes: returns an iterator that yields a sequence of `exec()` results.
+- [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) (which calls [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)): `y`, `g` and `gy` are all different.
+  - For `y` regexes: returns the `exec()` result and updates the regex's `lastIndex`.
+  - For `g` or `gy` regexes: returns an array of all `exec()` results.
+- [`String.prototype.search()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) (which calls [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)): the `g` flag is always irrelevant.
+  - For `y` or `gy` regexes: always returns `0` (if the very beginning of the string matches) or `-1` (if the beginning doesn't match), without updating the regex's `lastIndex` when it exits.
+  - For `g` regexes: returns the index of the first match in the string, or `-1` if no match is found.
+- [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) (which calls [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)): `y`, `g`, and `gy` all have the same behavior.
+- [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
+  - For `y` regexes: replaces once at the current `lastIndex` and updates `lastIndex`.
+  - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
+- [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
+  - For `y` regexes: `replaceAll()` throws.
+  - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
 
 ## Examples
 
 ### Using a regular expression with the sticky flag
 
 ```js
-const str = '#foo#';
+const str = "#foo#";
 const regex = /foo/y;
 
 regex.lastIndex = 1;
@@ -50,13 +81,13 @@ Examples of correct behavior:
 ```js
 const regex = /^foo/y;
 regex.lastIndex = 2;
-regex.test('..foo');   // false - index 2 is not the beginning of the string
+regex.test("..foo"); // false - index 2 is not the beginning of the string
 
 const regex2 = /^foo/my;
 regex2.lastIndex = 2;
-regex2.test('..foo');  // false - index 2 is not the beginning of the string or line
+regex2.test("..foo"); // false - index 2 is not the beginning of the string or line
 regex2.lastIndex = 2;
-regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
+regex2.test(".\nfoo"); // true - index 2 is the beginning of a line
 ```
 
 ## Specifications
@@ -70,7 +101,7 @@ regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
 ## See also
 
 - [Polyfill of `sticky` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResult/isFinal
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionResult
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult.isFinal
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+
+{{APIRef("Web Speech API")}}
 
 The **`isFinal`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface is a boolean value that states
@@ -29,7 +29,7 @@ A boolean value.
 ## Examples
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array

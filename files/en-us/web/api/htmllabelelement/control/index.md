@@ -12,6 +12,7 @@ tags:
   - control
 browser-compat: api.HTMLLabelElement.control
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLLabelElement.control`** property returns a

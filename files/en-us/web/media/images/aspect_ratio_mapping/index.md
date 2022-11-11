@@ -13,6 +13,8 @@ tags:
   - performance
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+
 When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the aspect ratio of the image can be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 ## Jank problems when loading images

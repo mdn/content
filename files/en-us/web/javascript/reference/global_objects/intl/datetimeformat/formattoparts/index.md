@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatToParts()`** method
@@ -22,7 +23,7 @@ formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(date)
 ```
 
@@ -53,40 +54,36 @@ looks like this:
 Possible types are the following:
 
 - day
-  - : The string used for the day, for example "`17`".
+  - : The string used for the day, for example `"17"`.
 - dayPeriod
-  - : The string used for the day period, for example, "`AM`",
-    "`PM`", "`in the morning`", or "`noon`"
+  - : The string used for the day period, for example, `"AM"`,
+    `"PM"`, `"in the morning"`, or `"noon"`
 - era
-  - : The string used for the era, for example "`BC`" or "`AD`".
+  - : The string used for the era, for example `"BC"` or `"AD"`.
 - fractionalSecond
-  - : The string used for the fractional seconds, for example "`0`" or
-    "`00`" or "`000`".
+  - : The string used for the fractional seconds, for example `"0"` or `"00"` or `"000"`.
 - hour
-  - : The string used for the hour, for example "`3`" or "`03`".
+  - : The string used for the hour, for example `"3"` or `"03"`.
 - literal
-  - : The string used for separating date and time values, for example "`/`",
-    "`,`", "`o'clock`", "`de`", etc.
+  - : The string used for separating date and time values, for example `"/"`,
+    `","`, `"o'clock"`, `"de"`, etc.
 - minute
-  - : The string used for the minute, for example "`00`".
+  - : The string used for the minute, for example `"00"`.
 - month
-  - : The string used for the month, for example "`12`".
+  - : The string used for the month, for example `"12"`.
 - relatedYear
   - : The string used for the related 4-digit Gregorian year, in the event that the
-    calendar's representation would be a yearName instead of a year, for example
-    "`2019`".
+    calendar's representation would be a yearName instead of a year, for example `"2019"`.
 - second
-  - : The string used for the second, for example "`07`" or "`42`".
+  - : The string used for the second, for example `"07"` or `"42"`.
 - timeZone
-  - : The string used for the name of the time zone, for example "`UTC`". Default is the timezone of the current environment.
+  - : The string used for the name of the time zone, for example `"UTC"`. Default is the timezone of the current environment.
 - weekday
-  - : The string used for the weekday, for example "`M`",
-    "`Monday`", or "`Montag`".
+  - : The string used for the weekday, for example `"M"`, `"Monday"`, or `"Montag"`.
 - year
-  - : The string used for the year, for example "`2012`" or "`96`".
+  - : The string used for the year, for example `"2012"` or `"96"`.
 - yearName
-  - : The string used for the yearName in relevant contexts, for example
-    "`geng-zi`"
+  - : The string used for the yearName in relevant contexts, for example `"geng-zi"`
 
 ## Examples
 
@@ -152,7 +149,7 @@ and {{jsxref("Array.prototype.join()")}}.
 const dateString = formatter.formatToParts(date).map(({type, value}) => {
   switch (type) {
     case 'dayPeriod': return `<em>${value}</em>`;
-    default : return value;
+    default: return value;
   }
 }).join('');
 ```
@@ -180,8 +177,8 @@ value) will yield both the and the `yearName` Gregorian
 `relatedYear`:
 
 ```js
-let opts = { year: "numeric", month: "numeric", day: "numeric" };
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
+const opts = { year: "numeric", month: "numeric", day: "numeric" };
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
@@ -197,15 +194,15 @@ If the `year` option is not set in the bag (to any value), the result will
 include only the `relatedYear`:
 
 ```js
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese");
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese");
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
-   { type: 'relatedYear', value: '2012' },
-   { type: 'literal', value: '年' },
-   { type: 'month', value: '十一月' },
-   { type: 'day', value: '4' }
+  { type: 'relatedYear', value: '2012' },
+  { type: 'literal', value: '年' },
+  { type: 'month', value: '十一月' },
+  { type: 'day', value: '4' }
 ]
 ```
 
@@ -213,40 +210,32 @@ In cases where the `year` would be output, `.format()` may
 commonly present these side-by-side:
 
 ```js
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
-df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
-
-// return value
-// 2012壬辰年
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
+df.format(Date.UTC(2012, 11, 17, 3, 0, 42)); // 2012壬辰年
 ```
 
 This also makes it possible to mix locale and calendar in both `format`:
 
 ```js
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", {year: "numeric"});
-let date = Date.UTC(2012, 11, 17, 3, 0, 42);
-df.format(date);
-
-// return value
-// 2012(ren-chen)
+const df = new Intl.DateTimeFormat("en-u-ca-chinese", { year: "numeric" });
+const date = Date.UTC(2012, 11, 17, 3, 0, 42);
+df.format(date); // 2012(ren-chen)
 ```
 
 And `formatToParts`:
 
 ```js
-let opts = {month: 'numeric', day: 'numeric', year: "numeric"};
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
-let date = Date.UTC(2012, 11, 17, 3);
-df.formatToParts(date)
-
-// return value
-[
-  { type: 'month', value: '11' },
-  { type: 'literal', value: '/' },
-  { type: 'day', value: '4' },
-  { type: 'literal', value: '/' },
-  { type: 'relatedYear', value: '2012' }
-]
+const opts = { month: "numeric", day: "numeric", year: "numeric" };
+const df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
+const date = Date.UTC(2012, 11, 17, 3);
+df.formatToParts(date);
+// [
+//   { type: 'month', value: '11' },
+//   { type: 'literal', value: '/' },
+//   { type: 'day', value: '4' },
+//   { type: 'literal', value: '/' },
+//   { type: 'relatedYear', value: '2012' }
+// ]
 ```
 
 ## Specifications

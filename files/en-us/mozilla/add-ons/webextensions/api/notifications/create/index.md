@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.create
 ---
+
 {{AddonSidebar()}}
 
 Creates and displays a notification.
@@ -27,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.notifications.create(
   id,                   // optional string
   options               // NotificationOptions
@@ -50,7 +51,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example displays a notification periodically, using {{WebExtAPIRef("alarms", "alarm")}}. Clicking the browser action dismisses the notification. You need the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications).
 
 ```js
-let cakeNotification = "cake-notification"
+let cakeNotification = "cake-notification";
 
 /*
 
@@ -63,14 +64,14 @@ than a minute.
 */
 let CAKE_INTERVAL = 0.1;
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener((alarm) => {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.runtime.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake"
+    type: "basic",
+    iconUrl: browser.runtime.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
   });
 });
 

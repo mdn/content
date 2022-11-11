@@ -9,9 +9,11 @@ tags:
   - Event Handler
   - Property
   - Screen Orientation
+  - Non-standard
 browser-compat: api.Screen.orientationchange_event
 ---
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
+
+{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The `orientationchange` event fires when the device's orientation has changed.
 

@@ -11,6 +11,7 @@ tags:
   - fullscreenerror
 browser-compat: api.Document.fullscreenerror_event
 ---
+
 {{APIRef}}
 
 The `fullscreenerror` event is fired when the browser cannot switch to fullscreen mode.

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Client
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -14,6 +13,7 @@ tags:
   - postMessage
 browser-compat: api.Client.postMessage
 ---
+
 {{APIRef("Service Worker API")}}
 
 The **`postMessage()`** method of the
@@ -24,7 +24,7 @@ message is received in the "`message`" event on
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message)
 postMessage(message, transferables)
 ```
@@ -48,7 +48,7 @@ Sending a message from a service worker to a client:
 
 ```js
 addEventListener('fetch', (event) => {
-  event.waitUntil(async function() {
+  event.waitUntil((async () => {
     // Exit early if we don't have access to the client.
     // Eg, if it's cross-origin.
     if (!event.clientId) return;
@@ -65,7 +65,7 @@ addEventListener('fetch', (event) => {
       url: event.request.url
     });
 
-  }());
+  })());
 });
 ```
 

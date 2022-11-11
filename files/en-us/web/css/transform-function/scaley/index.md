@@ -1,6 +1,7 @@
 ---
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scaleY
 ---
+
 {{CSSRef}}
 
 The **`scaleY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
@@ -25,7 +27,7 @@ property).
 > `scale(1, sy)` or
 > `scale3d(1, sy, 1)`.
 >
-> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
+> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
 
 ## Syntax
 
@@ -170,3 +172,8 @@ div {
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

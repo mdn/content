@@ -11,6 +11,7 @@ tags:
   - import.meta
 browser-compat: javascript.operators.import_meta
 ---
+
 {{JSSidebar("Operators")}}
 
 The **`import.meta`** object exposes context-specific metadata
@@ -18,7 +19,7 @@ to a JavaScript module. It contains information about the module, like the modul
 
 ## Syntax
 
-```js
+```js-nolint
 import.meta
 ```
 
@@ -29,22 +30,19 @@ the identifier `meta`. Normally the left-hand side of the dot is the object
 on which property access is performed, but here `import` is not really an
 object.
 
-The `import.meta` object is created by the ECMAScript implementation, with a
-[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) prototype. The object is extensible, and its properties are writable,
-configurable, and enumerable.
+The `import.meta` object is created by the ECMAScript implementation, as an extensible [`null`-prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) object. The JavaScript spec doesn't specify any properties to be defined on it, but usually there's a `url` property, which is writable, configurable, and enumerable.
 
 ## Examples
 
 ### Using import.meta
 
-Given a module `my-module.js`
+Given a module `my-module.js`:
 
 ```html
 <script type="module" src="my-module.js"></script>
 ```
 
-you can access meta information about the module using the `import.meta`
-object.
+You can access meta information about the module using the `import.meta` object.
 
 ```js
 console.log(import.meta); // { url: "file:///home/user/my-module.js" }
@@ -61,30 +59,30 @@ For example, with the following HTML:
 
 ```html
 <script type="module">
-import './index.mjs?someURLInfo=5';
+  import "./index.mjs?someURLInfo=5";
 </script>
 ```
 
-..the following JavaScript file will log the `someURLInfo` parameter:
+The following JavaScript logs the `someURLInfo` parameter:
 
 ```js
 // index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 The same applies when a file imports another:
 
 ```js
 // index.mjs
-import './index2.mjs?someURLInfo=5';
+import "./index2.mjs?someURLInfo=5";
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 Note that while Node.js will pass on query parameters (or the hash) as in the latter
-example, as of Node 14.1.0, a URL with query parameters will err when loading in the
-form `node --experimental-modules index.mjs?someURLInfo=5` (it is treated as
+example, as of Node 18.12.0, a URL with query parameters will err when loading in the
+form `node index.mjs?someURLInfo=5` (it is treated as
 a file rather than a URL in this context).
 
 Such file-specific argument passing may be complementary to that used in the

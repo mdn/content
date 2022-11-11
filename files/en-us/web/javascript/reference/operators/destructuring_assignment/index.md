@@ -12,6 +12,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.destructuring
 ---
+
 {{jsSidebar("Operators")}}
 
 The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
@@ -20,7 +21,7 @@ The **destructuring assignment** syntax is a JavaScript expression that makes it
 
 ## Syntax
 
-```js
+```js-nolint
 const [a, b] = array;
 const [a, , b] = array;
 const [a = aDefault, b] = array;
@@ -34,6 +35,7 @@ const { a: a1, b: b1 } = obj;
 const { a: a1 = aDefault, b = bDefault } = obj;
 const { a, b, ...rest } = obj;
 const { a: a1, b: b1, ...rest } = obj;
+const { [key]: a } = obj;
 
 let a, b, a1, b1, c, d, rest, pop, push;
 [a, b] = array;
@@ -154,7 +156,7 @@ You can end a destructuring pattern with a rest property `...rest`. This pattern
 const { a, ...others } = { a: 1, b: 2, c: 3 };
 console.log(others); // { b: 2, c: 3 }
 
-const [a, ...others2] = [1, 2, 3];
+const [first, ...others2] = [1, 2, 3];
 console.log(others2); // [2, 3]
 ```
 
@@ -303,7 +305,7 @@ When the regular expression [`exec()`](/en-US/docs/Web/JavaScript/Reference/Glob
 
 ```js
 function parseProtocol(url) {
-  const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+  const parsedURL = /^(\w+):\/\/([^/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
   }
@@ -362,7 +364,7 @@ const obj = {
   }
 }
 const [a, b, ...rest] = obj; // Logs 0 1 2 3
-console.log(rest); // Logs an array [2, 3]
+console.log(rest); // [2, 3] (an array)
 ```
 
 ### Object destructuring
@@ -421,7 +423,7 @@ const user = {
   id: 42,
   displayName: 'jdoe',
   fullName: {
-    firstName: 'John',
+    firstName: 'Jane',
     lastName: 'Doe',
   },
 };
@@ -457,7 +459,7 @@ function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} is ${name}`;
 }
 
-console.log(whois(user));  // "jdoe is John"
+console.log(whois(user));  // "jdoe is Jane"
 ```
 
 #### Setting a function parameter's default value
@@ -492,8 +494,8 @@ const metadata = {
   translations: [
     {
       locale: 'de',
-      localization_tags: [],
-      last_edit: '2014-04-14T08:43:37',
+      localizationTags: [],
+      lastEdit: '2014-04-14T08:43:37',
       url: '/de/docs/Tools/Scratchpad',
       title: 'JavaScript-Umgebung',
     },
@@ -501,11 +503,11 @@ const metadata = {
   url: '/en-US/docs/Tools/Scratchpad',
 };
 
-let {
+const {
   title: englishTitle, // rename
   translations: [
     {
-       title: localeTitle, // rename
+      title: localeTitle, // rename
     },
   ],
 } = metadata;
@@ -539,7 +541,7 @@ const people = [
 ];
 
 for (const { name: n, family: { father: f } } of people) {
-  console.log('Name: ' + n + ', Father: ' + f);
+  console.log(`Name: ${n}, Father: ${f}`);
 }
 
 // "Name: Mike Smith, Father: Harry Smith"
@@ -566,6 +568,28 @@ const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
 console.log(fizzBuzz); // true
+```
+
+### Destructuring primitive values
+
+Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
+
+```js
+const { a, toFixed } = 1;
+console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
+```
+
+Same as accessing properties, destructuring `null` or `undefined` throws a {{jsxref("TypeError")}}.
+
+```js example-bad
+const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
+const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+```
+
+This happens even when the pattern is empty.
+
+```js example-bad
+const {} = null; // TypeError: Cannot destructure 'null' as it is null.
 ```
 
 #### Combined Array and Object Destructuring

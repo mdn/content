@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: log role'
+title: "ARIA: log role"
 slug: Web/Accessibility/ARIA/Roles/log_role
 tags:
   - Accessibility
@@ -21,7 +21,7 @@ A log is a type of live region where new information is added in meaningful orde
 
 In contrast to other types of live region, a log is sequentially ordered and new information is only added to the end of the log. When this role is added to an element, the browser will send out an accessible log event to assistive technology products which can then notify the user about it.
 
-By default, updates contain only the changes to the live region and these are announced when the user is idle. Elements with the role `log` have an implicit `aria-live` value of `polite`.  Where the user needs to hear the entire live region upon a change `aria-atomic="true"` should be set. To have announcements made as soon as possible and where the user may be interrupted, `aria-live="assertive"` can be set for more aggressive updates.
+By default, updates contain only the changes to the live region and these are announced when the user is idle. Elements with the role `log` have an implicit `aria-live` value of `polite`. Where the user needs to hear the entire live region upon a change `aria-atomic="true"` should be set. To have announcements made as soon as possible and where the user may be interrupted, `aria-live="assertive"` can be set for more aggressive updates.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -35,7 +35,7 @@ By default, updates contain only the changes to the live region and these are an
 
 - `aria-label` and `aria-labelledby`
 
-  - : The `log` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
+  - : The `log` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 
 ## Best Practices
 
@@ -58,6 +58,6 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

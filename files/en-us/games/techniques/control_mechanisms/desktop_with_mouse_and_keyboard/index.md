@@ -9,6 +9,7 @@ tags:
   - keyboard
   - mouse
 ---
+
 {{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
@@ -24,8 +25,8 @@ It's also easier to test control-independent features like gameplay on desktop i
 Let's think about implementing pure JavaScript keyboard/mouse controls in the game first, to see how it would work. First, we'd need an event listener to listen for the pressed keys:
 
 ```js
-document.addEventListener('keydown', keyDownHandler, false);
-document.addEventListener('keyup', keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
 ```
 
 Whenever any key is pressed down, we're executing the `keyDownHandler` function, and when press finishes we're executing the `keyUpHandler` function, so we know when it's no longer pressed. To do that, we'll hold the information on whether the keys we are interested in are pressed or not:
@@ -64,13 +65,13 @@ function draw() {
   } else if (leftPressed) {
     playerX -= 5;
   }
-  
+
   if (downPressed) {
     playerY += 5;
   } else if (upPressed) {
     playerY -= 5;
   }
-  
+
   ctx.drawImage(img, playerX, playerY);
   requestAnimationFrame(draw);
 }
@@ -105,13 +106,25 @@ As I mentioned before, you can write everything on your own, but you can also ta
 The mouse interactions in the game are focused on clicking the buttons. In Phaser, the buttons you create will take any type of input, whether it's a touch on mobile or a click on desktop. That way, if you already implemented the buttons as shown in the [Mobile touch controls](/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch) article, it will work out of the box on the desktop too:
 
 ```js
-const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+const buttonEnclave = this.add.button(
+  10,
+  10,
+  "logo-enclave",
+  this.clickEnclave,
+  this
+);
 ```
 
 The button will be placed ten pixels from the top left corner of the screen, use the `logo-enclave` image, and will execute the `clickEnclave()` function when clicked. We can assign actions directly to the buttons:
 
 ```js
-this.buttonShoot = this.add.button(this.world.width * 0.5, 0, 'button-alpha', null, this);
+this.buttonShoot = this.add.button(
+  this.world.width * 0.5,
+  0,
+  "button-alpha",
+  null,
+  this
+);
 this.buttonShoot.onInputDown.add(this.shootingPressed, this);
 this.buttonShoot.onInputUp.add(this.shootingReleased, this);
 ```
@@ -148,7 +161,7 @@ In the main menu of the game, we can add an extra way to begin playing. The Star
 
 ```js
 const keyEnter = this.game.input.keyboard.addKey(Phaser.KeyCode.ENTER);
-const keyEnter.onDown.add(this.clickStart, this);
+keyEnter.onDown.add(this.clickStart, this);
 ```
 
 You can use `addKey()` to add any key the `Phaser.KeyCode` object has to offer. The `onDown()` function is executed whenever the <kbd>Enter</kbd> key is pressed. It will launch the `clickStart()` method, which starts a new game.
@@ -238,11 +251,11 @@ We've implemented the controls, and now we should inform the player about their 
 
 ```js
 if (this.game.device.desktop) {
-  moveText = 'Arrow keys or WASD to move';
-  shootText = 'X or Space to shoot';
+  moveText = "Arrow keys or WASD to move";
+  shootText = "X or Space to shoot";
 } else {
-  moveText = 'Tap and hold to move';
-  shootText = 'Tap to shoot';
+  moveText = "Tap and hold to move";
+  shootText = "Tap to shoot";
 }
 ```
 
@@ -253,8 +266,8 @@ If the game is running on desktop, the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd
 To skip the how to play screen, we can listen for any key being pressed and move on:
 
 ```js
-this.input.keyboard.onDownCallback = function() {
-  if (this.stateStatus === 'intro') {
+this.input.keyboard.onDownCallback = function () {
+  if (this.stateStatus === "intro") {
     this.hideIntro();
   }
 };

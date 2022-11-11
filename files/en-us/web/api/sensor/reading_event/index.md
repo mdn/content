@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.reading_event
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`reading`** event is fired when a new reading is available on a sensor.

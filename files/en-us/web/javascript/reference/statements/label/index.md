@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 The **labeled statement** can be used with {{jsxref("Statements/break", "break")}}
@@ -17,8 +18,8 @@ a statement with an identifier which you can refer to.
 
 ## Syntax
 
-```js
-label :
+```js-nolint
+label:
   statement
 ```
 
@@ -34,11 +35,11 @@ You can use a label to identify a loop, and then use the `break` or
 `continue` statements to indicate whether a program should interrupt the loop
 or continue its execution.
 
-Note that JavaScript has _no_ `goto` statement, you can only use
+Note that JavaScript has _no_ `goto` statement; you can only use
 labels with `break` or `continue`.
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, you
-can't use "`let`" as a label name. It will throw a {{jsxref("SyntaxError")}}
+can't use `let` as a label name. It will throw a {{jsxref("SyntaxError")}}
 (let is a reserved identifier).
 
 ## Examples
@@ -50,25 +51,26 @@ let i, j;
 
 loop1:
 for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         continue loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+  loop2:
+  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      continue loop1;
+    }
+    console.log(`i = ${i}, j = ${j}`);
+  }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
-//   "i = 1, j = 0"
-//   "i = 2, j = 0"
-//   "i = 2, j = 1"
-//   "i = 2, j = 2"
-// Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
+// Logs:
+// i = 0, j = 0
+// i = 0, j = 1
+// i = 0, j = 2
+// i = 1, j = 0
+// i = 2, j = 0
+// i = 2, j = 1
+// i = 2, j = 2
 ```
+
+Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2".
 
 ### Using a labeled continue statement
 
@@ -98,22 +100,23 @@ let i, j;
 
 loop1:
 for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         break loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+  loop2:
+  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log(`i = ${i}, j = ${j}`);
+  }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
-//   "i = 1, j = 0"
-// Notice the difference with the previous continue example
+// Logs:
+// i = 0, j = 0
+// i = 0, j = 1
+// i = 0, j = 2
+// i = 1, j = 0
 ```
+
+Notice the difference with the previous `continue` example.
 
 ### Using a labeled break statement
 
@@ -165,7 +168,7 @@ L: function F() {}
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code,
 however, this will throw a {{jsxref("SyntaxError")}}:
 
-```js
+```js example-bad
 'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled
@@ -174,7 +177,7 @@ L: function F() {}
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 can neither be labeled in strict code, nor in non-strict code:
 
-```js
+```js example-bad
 L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 ```

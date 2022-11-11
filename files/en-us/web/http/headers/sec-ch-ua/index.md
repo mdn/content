@@ -8,10 +8,11 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  -  Experimental
+  - Experimental
 browser-compat: http.headers.Sec-CH-UA
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and significant version information.
 

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.align
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLTableElement.align`** property represents the

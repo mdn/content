@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.line
 ---
+
 {{DefaultAPISidebar("")}}
 
 The **`line`** property of the {{domxref("VTTCue")}} interface represents the cue line of this WebVTT cue.

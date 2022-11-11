@@ -14,7 +14,7 @@ tags:
   - Web
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar("Attributes")}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 
@@ -75,7 +75,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
         {{ HTMLElement("img") }}, {{ HTMLElement("table") }},
         {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }},
-        {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }},
+        {{ HTMLElement("tfoot") }}, {{ HTMLElement("th") }},
         {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}
       </td>
       <td>Specifies the horizontal alignment of the element.</td>
@@ -1172,7 +1172,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>{{ HTMLElement("ol") }}</td>
       <td>
         Indicates whether the list should be displayed in a descending order
-        instead of a ascending.
+        instead of an ascending order.
       </td>
     </tr>
     <tr>
@@ -1507,22 +1507,24 @@ IDL attributes can [reflect other types](https://html.spec.whatwg.org/multipage/
 
 ## Boolean Attributes
 
-Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://html.spec.whatwg.org/multipage/infrastructure.html#sec-boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
+Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
 
-HTML5 defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
+HTML defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
 
-```html
-<div itemscope> This is valid HTML but invalid XML. </div>
-<div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
-<div itemscope=""> This is valid HTML and also valid XML. </div>
-<div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```html-nolint
+<div itemscope>This is valid HTML but invalid XML.</div>
+<div itemscope=itemscope>This is also valid HTML but invalid XML.</div>
+<div itemscope="">This is valid HTML and also valid XML.</div>
+<div itemscope="itemscope">
+  This is also valid HTML and XML, but perhaps a bit verbose.
+</div>
 ```
 
 To be clear, the values "`true`" and "`false`" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element's `checked` attribute would be interpreted as **true** because the attribute is present.
 
 ## Event handler attributes
 
-> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also blocked by content security policies.
+> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
 In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 

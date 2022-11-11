@@ -9,6 +9,7 @@ tags:
   - DecompressionStream
 browser-compat: api.DecompressionStream
 ---
+
 {{APIRef("Compression Streams API")}}
 
 The **`DecompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for decompressing a stream of data.
@@ -18,7 +19,7 @@ The **`DecompressionStream`** interface of the {{domxref('Compression Streams AP
 - {{domxref("DecompressionStream.DecompressionStream", "DecompressionStream()")}}
   - : Creates a new `DecompressionStream`
 
-## Properties
+## Instance properties
 
 - {{domxref("DecompressionStream.readable")}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.

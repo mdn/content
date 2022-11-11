@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.span
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes), or because they share attribute values, such as {{htmlattrxref("lang")}}. It should be used only when no other semantic element is appropriate. `<span>` is very much like a {{HTMLElement("div")}} element, but {{HTMLElement("div")}} is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) whereas a `<span>` is an [inline element](/en-US/docs/Web/HTML/Inline_elements).
 
@@ -73,9 +73,7 @@ The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline contai
     <tr>
       <th scope="row">DOM interface</th>
       <td>
-        {{domxref("HTMLSpanElement")}} (before
-        {{glossary("HTML5")}}, the interface was
-        {{domxref("HTMLElement")}})
+        {{domxref("HTMLSpanElement")}}
       </td>
     </tr>
   </tbody>
@@ -104,9 +102,11 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 #### HTML
 
 ```html
-<li><span>
+<li>
+  <span>
     <a href="portfolio.html" target="_blank">See my portfolio</a>
-</span></li>
+  </span>
+</li>
 ```
 
 #### CSS
@@ -114,7 +114,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ```css
 li span {
   background: gold;
- }
+}
 ```
 
 #### Result

@@ -13,7 +13,8 @@ tags:
   - Video
 browser-compat: api.MediaMetadata
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`MediaMetadata`** interface of the [Media Session API](/en-US/docs/Web/API/Media_Session_API) allows a web page to provide rich media metadata for display in a platform UI.
 
@@ -22,7 +23,7 @@ The **`MediaMetadata`** interface of the [Media Session API](/en-US/docs/Web/API
 - {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}}
   - : Creates a new `MediaMetaData` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaMetadata.title")}}
   - : Returns or sets the title of the media to be played.

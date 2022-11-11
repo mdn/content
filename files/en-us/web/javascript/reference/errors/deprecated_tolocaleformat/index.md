@@ -1,11 +1,12 @@
 ---
-title: 'Warning: Date.prototype.toLocaleFormat is deprecated'
+title: "Warning: Date.prototype.toLocaleFormat is deprecated"
 slug: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "Date.prototype.toLocaleFormat is deprecated; consider using
@@ -38,7 +39,7 @@ removed (no cross-browser support, available in Firefox only).
 
 ```js example-bad
 const today = new Date();
-const date = today.toLocaleFormat('%A, %e. %B %Y');
+const date = today.toLocaleFormat("%A, %e. %B %Y");
 
 console.log(date);
 // In German locale
@@ -57,12 +58,12 @@ you just want to format one date.
 ```js example-good
 const today = new Date();
 const options = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 };
-const date = today.toLocaleDateString('de-DE', options);
+const date = today.toLocaleDateString("de-DE", options);
 
 console.log(date);
 // "Freitag, 10. März 2017"
@@ -74,17 +75,14 @@ formatting is fast. This is useful if you have a loop of dates to format.
 
 ```js example-good
 const options = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 };
-const dateFormatter = new Intl.DateTimeFormat('de-DE', options);
+const dateFormatter = new Intl.DateTimeFormat("de-DE", options);
 
-const dates = [
-  Date.UTC(2012, 11, 20, 3, 0, 0),
-  Date.UTC(2014, 04, 12, 8, 0, 0),
-];
+const dates = [Date.UTC(2012, 11, 20, 3, 0, 0), Date.UTC(2014, 4, 12, 8, 0, 0)];
 
 dates.forEach((date) => console.log(dateFormatter.format(date)));
 
@@ -97,16 +95,16 @@ dates.forEach((date) => console.log(dateFormatter.format(date)));
 The {{jsxref("Date")}} object offers several methods to build a custom date string.
 
 ```js example-bad
-(new Date()).toLocaleFormat("%Y%m%d");
+new Date().toLocaleFormat("%Y%m%d");
 // "20170310"
 ```
 
 Can be converted to:
 
 ```js example-good
-let now = new Date();
-let date = now.getFullYear() * 10000 +
-          (now.getMonth() + 1) * 100 + now.getDate();
+const now = new Date();
+const date =
+  now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
 
 console.log(date);
 // "20170310"

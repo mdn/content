@@ -11,6 +11,9 @@ tags:
   - Security
   - TLS
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 The security of any connection using Transport Layer Security (TLS) is heavily dependent upon the cipher suites and security parameters selected. This article's goal is to help you make these decisions to ensure the confidentiality and integrity of communication between client and server. The Mozilla Operations Security (OpSec) team [maintains a wiki entry](https://wiki.mozilla.org/Security/Server_Side_TLS) with reference configurations for servers.
 
 The Transport Layer Security (TLS) protocol is the standard for enabling two networked applications or devices to exchange information privately and robustly. Applications that use TLS can choose their security parameters, which can have a substantial impact on the security and reliability of data. This article provides an overview of TLS and the kinds of decisions you need to make when securing your content.
@@ -105,5 +108,3 @@ If the TLS handshake starts to become slow or unresponsive for some reason, the 
 - [Mozilla Observatory](https://observatory.mozilla.org/), [SSL Labs](https://www.ssllabs.com/ssltest/), and [Cipherscan](https://github.com/mozilla/cipherscan) can help you test a site to see how secure its TLS configuration is.
 - [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
 - [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

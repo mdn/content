@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.object
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
 
@@ -85,7 +85,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{HTMLAttrDef("data")}}
   - : The address of the resource as a valid URL. At least one of **data** and **type** must be defined.
 - {{HTMLAttrDef("declare")}} {{deprecated_inline}}
-  - : The presence of this Boolean attribute makes this element a declaration only. The object must be instantiated by a subsequent `<object>` element. In HTML5, repeat the \<object> element completely each time that the resource is reused.
+  - : The presence of this Boolean attribute makes this element a declaration only. The object must be instantiated by a subsequent `<object>` element. Repeat the `<object>` element completely each time the resource is reused.
 - {{HTMLAttrDef("form")}}
   - : The form element, if any, that the object element is associated with (its _form owner_). The value of the attribute must be an ID of a {{HTMLElement("form")}} element in the same document.
 - {{HTMLAttrDef("height")}}
@@ -106,14 +106,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ### Embed a YouTube Video
 
 ```html
-<object type="video/mp4"
-    data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
-    width="1280"
-    height="720">
-</object>
+<object
+  type="video/mp4"
+  data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
+  width="1280"
+  height="720"></object>
 ```
 
-Note that a `type` field is normally specified, but is not needed for youtube videos.
+Note that a `type` field is normally specified, but is not needed for Youtube videos.
 
 ## Specifications
 

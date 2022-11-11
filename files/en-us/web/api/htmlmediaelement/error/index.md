@@ -15,6 +15,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.error
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.error`** is the
@@ -34,7 +35,7 @@ handler logs the details to console.
 
 ```js
 const videoElement = document.createElement('video');
-videoElement.onerror = function() {
+videoElement.onerror = () => {
   console.error(`Error ${videoElement.error.code}; details: ${videoElement.error.message}`);
 }
 videoElement.src = "https://example.com/bogusvideo.mp4";

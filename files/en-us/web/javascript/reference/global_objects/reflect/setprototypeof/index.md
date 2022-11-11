@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.setPrototypeOf
 ---
+
 {{JSRef}}
 
 The static
@@ -23,7 +24,7 @@ the operation was successful, or `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.setPrototypeOf(target, prototype)
 ```
 
@@ -54,18 +55,18 @@ the internal `[[Prototype]]` property) of the specified object.
 ### Using Reflect.setPrototypeOf()
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype)  // true
+Reflect.setPrototypeOf({}, Object.prototype); // true
 
 // It can change an object's [[Prototype]] to null.
-Reflect.setPrototypeOf({}, null)  // true
+Reflect.setPrototypeOf({}, null); // true
 
 // Returns false if target is not extensible.
-Reflect.setPrototypeOf(Object.freeze({}), null)  // false
+Reflect.setPrototypeOf(Object.freeze({}), null); // false
 
 // Returns false if it cause a prototype chain cycle.
-let target = {}
-let proto = Object.create(target)
-Reflect.setPrototypeOf(target, proto)  // false
+const target = {};
+const proto = Object.create(target);
+Reflect.setPrototypeOf(target, proto); // false
 ```
 
 ## Specifications

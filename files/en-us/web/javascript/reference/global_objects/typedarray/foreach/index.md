@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once
@@ -21,7 +22,7 @@ per array element. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((element) => { /* ... */ } )
 forEach((element, index) => { /* ... */ } )
@@ -76,7 +77,7 @@ However, it is executed for elements that are present and have the value
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callbackFn` when invoked, for use as its
-`this` value.  Otherwise, the value {{jsxref("undefined")}} will be passed
+`this` value. Otherwise, the value {{jsxref("undefined")}} will be passed
 for use as its `this` value. The `this` value ultimately
 observable by `callbackFn` is determined according to
 [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
@@ -84,7 +85,7 @@ observable by `callbackFn` is determined according to
 The range of elements processed by `forEach()` is set before the first
 invocation of `callbackFn`. Elements that are appended to the typed array after
 the call to `forEach()` begins will not be visited by
-`callbackFn` . If the values of existing elements of the typed array
+`callbackFn`. If the values of existing elements of the typed array
 are changed, the value passed to `callbackFn` will be the value at
 the time `forEach()` visits them; elements that are deleted before being
 visited are not visited.
@@ -102,11 +103,11 @@ The following code logs a line for each element in a typed array:
 
 ```js
 function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
+  console.log(`a[${index}] = ${element}`);
 }
 
 new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
-// logs:
+// Logs:
 // a[0] = 0
 // a[1] = 1
 // a[2] = 2

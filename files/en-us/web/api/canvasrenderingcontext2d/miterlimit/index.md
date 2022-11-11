@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.miterLimit
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.miterLimit`** property of the
@@ -54,14 +55,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -78,17 +79,6 @@ window.addEventListener("load", drawCanvas);
 ## Browser compatibility
 
 {{Compat}}
-
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-  `ctx.setMiterLimit()` is implemented in addition to this property.
-
-### Gecko-specific notes
-
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `miterLimit` to a
-  negative value no longer throws an exception; instead, it properly ignores
-  non-positive values.
 
 ## See also
 

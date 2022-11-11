@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet
 ---
+
 {{JSRef}}
 
 The **`WeakSet`** object lets you store weakly held _objects_ in a collection.
@@ -32,27 +33,26 @@ Functions that call themselves recursively need a way of guarding against circul
 
 ```js
 // Execute a callback on everything stored inside an object
-function execRecursively(fn, subject, _refs = null){
-  if(!_refs)
-    _refs = new WeakSet();
-
+function execRecursively(fn, subject, _refs = new WeakSet()) {
   // Avoid infinite recursion
-  if(_refs.has(subject))
+  if (_refs.has(subject)) {
     return;
+  }
 
   fn(subject);
-  if("object" === typeof subject){
+  if (typeof subject === "object") {
     _refs.add(subject);
-    for (let key in subject)
+    for (const key in subject) {
       execRecursively(fn, subject[key], _refs);
+    }
   }
 }
 
 const foo = {
   foo: "Foo",
   bar: {
-    bar: "Bar"
-  }
+    bar: "Bar",
+  },
 };
 
 foo.bar.baz = foo; // Circular reference!
@@ -68,13 +68,18 @@ The number of objects or their traversal order is immaterial, so a `WeakSet` is 
 - {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
   - : Creates a new `WeakSet` object.
 
+## Instance properties
+
+- `WeakSet.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakSet"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
-- {{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}
+- {{jsxref("WeakSet.prototype.add()")}}
   - : Appends `value` to the `WeakSet` object.
-- {{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}
+- {{jsxref("WeakSet.prototype.delete()")}}
   - : Removes `value` from the `WeakSet`. `WeakSet.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}
+- {{jsxref("WeakSet.prototype.has()")}}
   - : Returns a boolean asserting whether `value` is present in the `WeakSet` object or not.
 
 ## Examples
@@ -89,12 +94,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // removes foo from the set
-ws.has(foo);    // false, foo has been removed
-ws.has(bar);    // true, bar is retained
+ws.has(foo); // false, foo has been removed
+ws.has(bar); // true, bar is retained
 ```
 
 Note that `foo !== bar`. While they are similar objects, _they are not **the same object**_. And so they are both added to the set.

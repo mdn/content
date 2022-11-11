@@ -11,9 +11,10 @@ tags:
   - Landing page
   - Reference
   - es
-  - l10n:priority
+  - "l10n:priority"
   - programming
 ---
+
 {{JsSidebar}}
 
 This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more [about this reference](/en-US/docs/Web/JavaScript/Reference/About).
@@ -133,17 +134,6 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
 - {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
 
-### WebAssembly
-
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
-
 ## Statements
 
 [JavaScript statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)
@@ -215,7 +205,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 ### Left-hand-side expressions
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/Optional_chaining", "<code>?.</code> (Optional chaining)", "", 1)}}
+- [`?.` (Optional chaining)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
 - {{JSxRef("Operators/import%2Emeta", "import.meta")}}
@@ -280,7 +270,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
 - {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
 
 ### Conditional (ternary) operator
 
@@ -303,9 +293,9 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
+- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
+- {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
 
 ### Comma operators
 

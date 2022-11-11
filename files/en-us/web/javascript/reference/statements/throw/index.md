@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.throw
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`throw` statement** throws a user-defined exception.
@@ -20,8 +21,8 @@ the program will terminate.
 
 ## Syntax
 
-```js
-throw expression;
+```js-nolint
+throw expression
 ```
 
 - `expression`
@@ -58,7 +59,7 @@ function UserException(message) {
   this.name = 'UserException';
 }
 function getMonthName(mo) {
-  mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
     'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (months[mo] !== undefined) {
@@ -136,11 +137,8 @@ function verifyZipCode(z) {
   try {
     z = new ZipCode(z);
   } catch (e) {
-    if (e instanceof ZipCodeFormatException) {
-      return ZIPCODE_INVALID;
-    } else {
-      return ZIPCODE_UNKNOWN_ERROR;
-    }
+    const isInvalidCode = e instanceof ZipCodeFormatException;
+    return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
   }
   return z;
 }

@@ -16,7 +16,8 @@ tags:
   - track
 browser-compat: api.MediaStream.getVideoTracks
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`getVideoTracks()`** method of the
 {{domxref("MediaStream")}} interface returns a sequence of
@@ -24,7 +25,7 @@ The **`getVideoTracks()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoTracks()
 ```
 

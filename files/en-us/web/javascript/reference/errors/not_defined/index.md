@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - ReferenceError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_variable_ is not defined" occurs when there is a
@@ -57,8 +58,8 @@ scope of the function
 
 ```js example-bad
 function numbers() {
-  const num1 = 2,
-      num2 = 3;
+  const num1 = 2;
+  const num2 = 3;
   return num1 + num2;
 }
 
@@ -70,8 +71,8 @@ which it is defined. In other words, a function defined in the global scope can 
 all variables defined in the global scope.
 
 ```js example-good
-const num1 = 2,
-    num2 = 3;
+const num1 = 2;
+const num2 = 3;
 
 function numbers() {
   return num1 + num2;

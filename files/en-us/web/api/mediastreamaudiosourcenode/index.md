@@ -21,6 +21,7 @@ tags:
   - track
 browser-compat: api.MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaStreamAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which operates as an audio source whose media is received from a {{domxref("MediaStream")}} obtained using the WebRTC or Media Capture and Streams APIs.
@@ -59,14 +60,14 @@ The number of channels output by the node matches the number of tracks found in 
 - {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "new MediaStreamAudioSourceNode()")}}
   - : Creates a new `MediaStreamAudioSourceNode` object instance with the specified options.
 
-## Properties
+## Instance properties
 
 _In addition to the following properties, `MediaStreamAudioSourceNode` inherits the properties of its parent, {{domxref("AudioNode")}}._
 
 - {{domxref("MediaStreamAudioSourceNode.mediaStream", "mediaStream")}} {{ReadOnlyInline}}
   - : The {{domxref("MediaStream")}} used when constructing this `MediaStreamAudioSourceNode`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -103,5 +104,5 @@ See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStreamTrackAudioSourceNode")}}

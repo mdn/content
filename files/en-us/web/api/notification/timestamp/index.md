@@ -10,9 +10,11 @@ tags:
   - Property
   - Reference
   - timeStamp
+  - Experimental
 browser-compat: api.Notification.timestamp
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`timestamp`** read-only property of the
 {{domxref("Notification")}} interface returns a {{domxref("DOMTimeStamp")}}, as

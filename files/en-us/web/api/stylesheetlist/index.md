@@ -8,18 +8,19 @@ tags:
   - StyleSheetList
 browser-compat: api.StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 The `StyleSheetList` interface represents a list of {{domxref("CSSStyleSheet")}} objects. An instance of this object can be returned by {{domxref("Document.styleSheets")}}.
 
 It is an array-like object but can't be iterated over using {{jsxref("Array")}} methods. However it can be iterated over in a standard {{jsxref("Statements/for", "for")}} loop over its indices, or converted to an {{jsxref("Array")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("StyleSheetList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.
 
-## Methods
+## Instance methods
 
 - {{domxref("StyleSheetList.item()")}}
   - : Returns the {{domxref("CSSStyleSheet")}} object at the index passed in, or `null` if no item exists for that index.
@@ -29,13 +30,11 @@ It is an array-like object but can't be iterated over using {{jsxref("Array")}} 
 ### Get CSSStyleSheet objects with for loop
 
 ```js
-let i, styleSheet, styleSheets, styleSheetsNo;
-i = 0;
-styleSheets = document.styleSheets;
-styleSheetsNo = styleSheets.length;
+const styleSheet = [];
+const styleSheets = document.styleSheets;
 
-for (i; i < styleSheetsNo; i++) {
-  styleSheet = styleSheets[i];
+for (let i = 0; i < styleSheets.length; i++) {
+  styleSheet.push(styleSheets[i]);
 }
 ```
 

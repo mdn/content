@@ -23,6 +23,7 @@ tags:
   - transform
 browser-compat: api.XRReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 The WebXR Device API's **`XRReferenceSpace`** interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected [reference space type](#reference_space_types). It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
@@ -31,11 +32,11 @@ All reference spaces—with the sole exception being bounded reference spaces—
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`XRReferenceSpace` inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
-## Methods
+## Instance methods
 
 _`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in addition to the following methods._
 
@@ -82,7 +83,7 @@ To move or rotate the user's view of the world, you need to change the `XRRefere
 
 ```js
 let offsetTransform = new XRRigidTransform({x: 2, y: 0, z: 1},
-                                           {x: 0, y: 1, z: 0, w: 1});
+                                           {x: 0, y: 0, z: 0, w: 1});
 xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
 ```
 

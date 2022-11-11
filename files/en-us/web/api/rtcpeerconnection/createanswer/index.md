@@ -14,6 +14,7 @@ tags:
   - createAnswer
 browser-compat: api.RTCPeerConnection.createAnswer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createAnswer()`** method on the
@@ -27,7 +28,7 @@ the negotiation process.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnswer()
 createAnswer(options)
 
@@ -86,10 +87,8 @@ to another peer across the signaling channel.
 > fulfillment handler, depend entirely on your design
 
 ```js
-pc.createAnswer().then(function(answer) {
-  return pc.setLocalDescription(answer);
-})
-.then(function() {
+pc.createAnswer().then((answer) => pc.setLocalDescription(answer))
+.then(() => {
   // Send the answer to the remote peer through the signaling server.
 })
 .catch(handleGetUserMediaError);

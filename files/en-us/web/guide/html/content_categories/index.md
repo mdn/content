@@ -5,10 +5,10 @@ tags:
   - Advanced
   - Guide
   - HTML
-  - HTML5
   - NeedsUpdate
   - Web
 ---
+
 Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules, especially when you come upon their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
 
 There are three types of content categories:
@@ -33,22 +33,104 @@ Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("
 
 Flow content is a broad category that encompasses most elements that can go inside the {{HTMLElement("body")}} element, including heading elements, sectioning elements, phrasing elements, embedding elements, interactive elements, and form-related elements. It also includes text nodes (but not those that only consist of white space characters).
 
-The flow elements are: {{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("bdi")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("del")}}, {{HTMLElement("details")}}, {{HTMLElement("dfn")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("figure")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("ins")}}, {{HTMLElement("kbd")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("label")}}, {{HTMLElement("main")}}, {{HTMLElement("map")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("menu")}}, {{HTMLElement("meter")}}, {{HTMLElement("nav")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("ol")}}, {{HTMLElement("output")}}, {{HTMLElement("p")}}, {{HTMLElement("picture")}}, {{HTMLElement("pre")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("section")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("table")}}, {{HTMLElement("template")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("u")}}, {{HTMLElement("ul")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, and {{HTMLElement("wbr")}}.
+The flow elements are:
+
+- {{HTMLElement("a")}}
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("address")}}
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("bdi")}}
+- {{HTMLElement("blockquote")}}
+- {{HTMLElement("br")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("command")}} {{deprecated_inline}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("datalist")}}
+- {{HTMLElement("del")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("dl")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("figure")}}
+- {{HTMLElement("footer")}}
+- {{HTMLElement("form")}}
+- {{HTMLElement("h1")}}
+- {{HTMLElement("h2")}}
+- {{HTMLElement("h3")}}
+- {{HTMLElement("h4")}}
+- {{HTMLElement("h5")}}
+- {{HTMLElement("h6")}}
+- {{HTMLElement("header")}}
+- {{HTMLElement("hgroup")}}
+- {{HTMLElement("hr")}}
+- {{HTMLElement("i")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("ins")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("main")}}
+- {{HTMLElement("map")}}
+- {{HTMLElement("mark")}}
+- {{MathMLElement("math")}}
+- {{HTMLElement("menu")}}
+- {{HTMLElement("meter")}}
+- {{HTMLElement("nav")}}
+- {{HTMLElement("noscript")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("ol")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("p")}}
+- {{HTMLElement("picture")}}
+- {{HTMLElement("pre")}}
+- {{HTMLElement("progress")}}
+- {{HTMLElement("q")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("s")}}
+- {{HTMLElement("samp")}}
+- {{HTMLElement("script")}}
+- {{HTMLElement("section")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("small")}}
+- {{HTMLElement("span")}}
+- {{HTMLElement("strong")}}
+- {{HTMLElement("sub")}}
+- {{HTMLElement("sup")}}
+- {{SVGElement("svg")}}
+- {{HTMLElement("table")}}
+- {{HTMLElement("template")}}
+- {{HTMLElement("textarea")}}
+- {{HTMLElement("time")}}
+- {{HTMLElement("u")}}
+- {{HTMLElement("ul")}}
+- {{HTMLElement("var")}}
+- {{HTMLElement("video")}}
+- {{HTMLElement("wbr")}}
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
 - {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 - {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
-- {{HTMLElement("style")}}, if the {{htmlattrxref("scoped","style")}} {{deprecated_inline}} attribute is present
+- {{HTMLElement("style")}}, if the `scoped` {{deprecated_inline}} attribute is present
 
 ### Sectioning content
 
 Sectioning content is a subset of flow content, and can be used everywhere flow content is expected. Elements belonging to the sectioning content model create a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) that defines the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and [heading content](#heading_content).
 
 Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.
-
-> **Note:** Do not confuse this content model with the [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots) category, which isolates its content from the regular outline.
 
 ### Heading content
 
@@ -64,7 +146,56 @@ Elements belonging to this category are {{HTMLElement("h1")}}, {{HTMLElement("h2
 
 Phrasing content is a subset of flow content that defines the text and the markup it contains, and can be used everywhere flow content is expected. Runs of phrasing content make up paragraphs.
 
-Elements belonging to this category are {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("picture")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} and plain text (not only consisting of white spaces characters).
+Elements belonging to this category are:
+
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("br")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("command")}} {{deprecated_inline}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("datalist")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("i")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("mark")}}
+- {{MathMLElement("math")}}
+- {{HTMLElement("meter")}}
+- {{HTMLElement("noscript")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("picture")}}
+- {{HTMLElement("progress")}}
+- {{HTMLElement("q")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("s")}}
+- {{HTMLElement("samp")}}
+- {{HTMLElement("script")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("small")}}
+- {{HTMLElement("span")}}
+- {{HTMLElement("strong")}}
+- {{HTMLElement("sub")}}
+- {{HTMLElement("sup")}}
+- {{SVGElement("svg")}}
+- {{HTMLElement("textarea")}}
+- {{HTMLElement("time")}}
+- {{HTMLElement("u")}}
+- {{HTMLElement("var")}}
+- {{HTMLElement("video")}}
+- {{HTMLElement("wbr")}} and plain text (not only consisting of white spaces characters).
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -78,17 +209,37 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Embedded content
 
-Embedded content is a subset of flow content that imports another resource or inserts content from another mark-up language or namespace into the document, and can be used everywhere flow content is expected. Elements that belong to this category include: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{HTMLElement("picture")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.
+Embedded content is a subset of flow content that imports another resource or inserts content from another markup language or namespace into the document, and can be used everywhere flow content is expected. Elements that belong to this category include:
+
+- {{HTMLElement("audio")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("img")}}
+- {{MathMLElement("math")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("picture")}}
+- {{SVGElement("svg")}}
+- {{HTMLElement("video")}}.
 
 ### Interactive content
 
-Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction, and can be used everywhere flow content is expected. Elements that belong to this category include: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction, and can be used everywhere flow content is expected. Elements that belong to this category include:
+
+- {{HTMLElement("a")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+
 Some elements belong to this category only under specific conditions:
 
 - {{HTMLElement("audio")}}, if the {{htmlattrxref("controls", "audio")}} attribute is present
 - {{HTMLElement("img")}}, if the {{htmlattrxref("usemap", "img")}} attribute is present
-- {{HTMLElement("input")}}, if the {{htmlattrxref("type", "input")}} attribute is not in the hidden state
-- {{HTMLElement("menu")}}, if the {{htmlattrxref("type", "menu")}} attribute is in the toolbar state
+- {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
 - {{HTMLElement("object")}}, if the {{htmlattrxref("usemap", "object")}} attribute is present
 - {{HTMLElement("video")}}, if the {{htmlattrxref("controls", "video")}} attribute is present
 
@@ -115,7 +266,7 @@ Form-associated content is a subset of flow content comprising elements that hav
 This category contains several sub-categories:
 
 - listed
-  - : Elements that are listed in the {{domxref("HTMLFormElement.elements", "form.elements")}} and fieldset.elements IDL collections. Contains {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that are listed in the {{domxref("HTMLFormElement.elements", "form.elements")}} and `fieldset.elements` collections. Contains {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - labelable
   - : Elements that can be associated with {{HTMLElement("label")}} elements. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - submittable
@@ -143,7 +294,10 @@ If an element has a transparent content model, then its contents must be structu
 For example, the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements are transparent:
 
 ```html
-<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+<p>
+  We hold these truths to be <del><em>sacred &amp; undeniable</em></del>
+  <ins>self-evident</ins>.
+</p>
 ```
 
 If those elements were removed, this fragment would still be valid HTML (if not correct English).
@@ -151,7 +305,3 @@ If those elements were removed, this fragment would still be valid HTML (if not 
 ```html
 <p>We hold these truths to be <em>sacred &amp; undeniable</em> self-evident.</p>
 ```
-
-## Other content models
-
-Sectioning root.

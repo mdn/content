@@ -11,8 +11,10 @@ tags:
   - Reference
   - getLayoutMap()
   - keyboard
+  - Experimental
 browser-compat: api.Keyboard.getLayoutMap
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getLayoutMap()`** method of the
@@ -22,7 +24,7 @@ functions for retrieving the strings associated with specific physical keys.
 
 ## Syntax
 
-```js
+```js-nolint
 getLayoutMap()
 ```
 

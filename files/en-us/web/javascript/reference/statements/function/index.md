@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **function declaration** (function statement) defines a function with
@@ -20,7 +21,7 @@ You can also define functions using the {{jsxref("Function")}} constructor and a
 
 ## Syntax
 
-```js
+```js-nolint
 function name(param0) {
   statements
 }
@@ -53,62 +54,69 @@ By default, functions return `undefined`. To return any other value, the
 function must have a {{jsxref("Statements/return", "return")}} statement that specifies
 the value to return.
 
-### Conditionally created functions
+### Block-level function declaration
 
-Functions can be conditionally declared, that is, a function statement can be nested
-within an `if` statement, however the results are inconsistent across
-implementations and therefore this pattern should not be used in production code. For
-conditional function creation, use function expressions instead.
+> **Warning:** In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks behave strangely. Only declare functions in blocks if you are in strict mode.
+
+Functions can be conditionally declared — that is, a function statement can be nested within an [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement. However, in non-strict mode, the results are inconsistent across implementations.
 
 ```js
-var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(`'foo' name ${"foo" in globalThis ? "is" : "is not"} global. typeof foo is ${typeof foo}`);
 if (false) {
-  function foo(){ return 1; }
+  function foo() { return 1; }
 }
 
 // In Chrome:
-// 'foo' name is hoisted. typeof foo is undefined
+// 'foo' name is global. typeof foo is undefined
 //
 // In Firefox:
-// 'foo' name is hoisted. typeof foo is undefined
-//
-// In Edge:
-// 'foo' name is not hoisted. typeof foo is undefined
+// 'foo' name is global. typeof foo is undefined
 //
 // In Safari:
-// 'foo' name is hoisted. typeof foo is function
+// 'foo' name is global. typeof foo is function
 ```
 
-The results are exactly the same for a condition that evaluates to true
+The scoping and hoisting effect won't change regardless of whether the `if` body is actually executed.
 
 ```js
-var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(`'foo' name ${"foo" in globalThis ? "is" : "is not"} global. typeof foo is ${typeof foo}`);
 if (true) {
-  function foo(){ return 1; }
+  function foo() { return 1; }
 }
 
 // In Chrome:
-// 'foo' name is hoisted. typeof foo is undefined
+// 'foo' name is global. typeof foo is undefined
 //
 // In Firefox:
-// 'foo' name is hoisted. typeof foo is undefined
-//
-// In Edge:
-// 'foo' name is not hoisted. typeof foo is undefined
+// 'foo' name is global. typeof foo is undefined
 //
 // In Safari:
-// 'foo' name is hoisted. typeof foo is function
+// 'foo' name is global. typeof foo is function
+```
+
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [block](/en-US/docs/Web/JavaScript/Reference/Statements/block)-level function declarations are scoped to that block and are hoisted to the top of the block.
+
+```js
+"use strict";
+
+{
+  foo(); // Logs "foo"
+  function foo() {
+    console.log("foo");
+  }
+}
+
+console.log(`'foo' name ${"foo" in globalThis ? "is" : "is not"} global. typeof foo is ${typeof foo}`);
+// 'foo' name is not global. typeof foo is undefined
 ```
 
 ### Function declaration hoisting
 
-Function declarations in JavaScript are hoisted to the top of the enclosing function or
+Function declarations in JavaScript are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of the enclosing function or
 global scope. You can use the function before you declared it:
 
 ```js
-hoisted(); // logs "foo"
+hoisted(); // Logs "foo"
 
 function hoisted() {
   console.log('foo');
@@ -131,12 +139,11 @@ var notHoisted = function() {
 ### Using function
 
 The following code declares a function that returns the total amount of sales, when
-given the number of units sold of products `a`, `b`, and
-`c`.
+given the number of units sold of three products.
 
 ```js
-function calc_sales(units_a, units_b, units_c) {
-   return units_a * 79 + units_b * 129 + units_c * 699;
+function calcSales(unitsA, unitsB, unitsC) {
+  return unitsA * 79 + unitsB * 129 + unitsC * 699;
 }
 ```
 

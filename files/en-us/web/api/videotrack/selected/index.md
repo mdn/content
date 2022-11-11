@@ -15,6 +15,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.selected
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("VideoTrack")}}** property

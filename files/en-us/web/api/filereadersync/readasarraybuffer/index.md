@@ -4,12 +4,15 @@ slug: Web/API/FileReaderSync/readAsArrayBuffer
 page-type: web-api-instance-method
 browser-compat: api.FileReaderSync.readAsArrayBuffer
 ---
-{{APIRef("File API")}}The `readAsArrayBuffer()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+
+{{APIRef("File API")}}
+
+The `readAsArrayBuffer()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Syntax
 
-```js
-let arrayBuffer = readAsArrayBuffer(blob);
+```js-nolint
+readAsArrayBuffer(blob)
 ```
 
 ### Parameters
@@ -51,4 +54,4 @@ The following exceptions can be raised by this method:
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

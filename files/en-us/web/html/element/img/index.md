@@ -1,5 +1,5 @@
 ---
-title: '<img>: The Image Embed element'
+title: "<img>: The Image Embed element"
 slug: Web/HTML/Element/img
 tags:
   - Content
@@ -21,7 +21,8 @@ tags:
   - Web
 browser-compat: html.elements.img
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 
@@ -51,7 +52,7 @@ The image file formats that are most commonly used on the web are:
 - [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance.
 - [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) — Good choice for _simple_ images and animations.
 - [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — Good choice for lossy compression of still images (currently the most popular).
-- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) — Good choice for lossy compression of still images (slightly better quality than JPEG).
+- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) — Good choice for lossless compression of still images (slightly better quality than JPEG).
 - [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
 - [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
 
@@ -85,7 +86,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
-   Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
+    Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
@@ -178,8 +179,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     1. A {{glossary("URL")}} to an image
     2. Optionally, whitespace followed by one of:
 
-        - A width descriptor (a positive integer directly followed by `w`). The width descriptor is divided by the source size given in the `sizes` attribute to calculate the effective pixel density.
-        - A pixel density descriptor (a positive floating point number directly followed by `x`).
+       - A width descriptor (a positive integer directly followed by `w`). The width descriptor is divided by the source size given in the `sizes` attribute to calculate the effective pixel density.
+       - A pixel density descriptor (a positive floating point number directly followed by `x`).
 
     If no descriptor is specified, the source is assigned the default descriptor of `1x`.
 
@@ -246,20 +247,18 @@ Depending on its type, an image may have an intrinsic width and height. For some
 The following example embeds an image into the page and includes alternative text for accessibility.
 
 ```html
-<img src="favicon144.png"
-     alt="MDN logo">
+<img src="favicon144.png" alt="MDN logo" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
 
 ### Image link
 
-This example builds upon the previous one, showing how to turn the image into a link. To do so, nest the `<img>` tag inside the {{HTMLElement("a")}}. You should made the alternative text describe the resource the link is pointing to, as if you were using a text link instead.
+This example builds upon the previous one, showing how to turn the image into a link. To do so, nest the `<img>` tag inside the {{HTMLElement("a")}}. You should make the alternative text describe the resource the link is pointing to, as if you were using a text link instead.
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png"
-       alt="Visit the MDN site">
+  <img src="favicon144.png" alt="Visit the MDN site" />
 </a>
 ```
 
@@ -270,9 +269,7 @@ This example builds upon the previous one, showing how to turn the image into a 
 In this example we include a `srcset` attribute with a reference to a high-resolution version of the logo; this will be loaded instead of the `src` image on high-resolution devices. The image referenced in the `src` attribute is counted as a `1x` candidate in {{glossary("User agent", "user agents")}} that support `srcset`.
 
 ```html
- <img src="favicon72.png"
-      alt="MDN logo"
-      srcset="favicon144.png 2x">
+<img src="favicon72.png" alt="MDN logo" srcset="favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
@@ -282,11 +279,11 @@ In this example we include a `srcset` attribute with a reference to a high-resol
 The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that support `srcset` when `w` descriptors are included. When the `(max-width: 600px)` media condition matches, the 200 pixel-wide image will load (it is the one that matches `200px` most closely), otherwise the other image will load.
 
 ```html
- <img src="clock-demo-200px.png"
-      alt="Clock"
-      srcset="clock-demo-200px.png 200w,
-          clock-demo-400px.png 400w"
-      sizes="(max-width: 600px) 200px, 50vw">
+<img
+  src="clock-demo-200px.png"
+  alt="Clock"
+  srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+  sizes="(max-width: 600px) 200px, 50vw" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
@@ -306,13 +303,13 @@ An `alt` attribute's value should clearly and concisely describe the image's con
 #### Don't
 
 ```html example-bad
-<img alt="image" src="penguin.jpg">
+<img alt="image" src="penguin.jpg" />
 ```
 
 #### Do
 
 ```html example-good
-<img alt="A Rockhopper Penguin standing on a beach." src="penguin.jpg">
+<img alt="A Rockhopper Penguin standing on a beach." src="penguin.jpg" />
 ```
 
 When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
@@ -325,11 +322,11 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 
 ### Identifying SVG as an image
 
-Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not correctly announce SVG images images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
- <img src="mdn.svg" alt="MDN logo" role="img">
-``
+<img src="mdn.svg" alt="MDN logo" role="img" />
+```
 
 ### The title attribute
 
@@ -369,7 +366,7 @@ The value of the `title` attribute is usually presented to the user as a tooltip
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

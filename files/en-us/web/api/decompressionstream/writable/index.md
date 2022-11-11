@@ -10,6 +10,7 @@ tags:
   - DecompressionStream
 browser-compat: api.DecompressionStream.writable
 ---
+
 {{APIRef("Compression Streams API")}}
 
 The **`writable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}}.

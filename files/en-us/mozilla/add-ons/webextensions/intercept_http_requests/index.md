@@ -7,6 +7,7 @@ tags:
   - How-to
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 To intercept HTTP requests, use the {{WebExtAPIRef("webRequest")}} API.
@@ -50,7 +51,7 @@ Next, create a file called "background.js" and add:
 
 ```js
 function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+  console.log(`Loading: ${requestDetails.url}`);
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -66,9 +67,10 @@ To test it:
 
 - [Install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
-- Enable *Show Content Messages* in the menu:
+- Enable _Show Content Messages_ in the menu:
 
   ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
+
 - Open some web pages.
 
 In the Browser Console, you should see the URLs for any resources the browser requests.
@@ -113,10 +115,10 @@ Next, replace "background.js" with this:
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-let targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
-  console.log("Redirecting: " + requestDetails.url);
+  console.log(`Redirecting: ${requestDetails.url}`);
   if (requestDetails.url === targetUrl) {
     return;
   }
@@ -180,7 +182,7 @@ let targetPage = "http://useragentstring.com/*";
 let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
-  e.requestHeaders.forEach(function(header){
+  e.requestHeaders.forEach((header) => {
     if (header.name.toLowerCase() === "user-agent") {
       header.value = ua;
     }

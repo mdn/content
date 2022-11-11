@@ -9,9 +9,11 @@ tags:
   - Method
   - PWA
   - contact picker
+  - Experimental
 browser-compat: api.ContactsManager.select
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+
+{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`select()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when
@@ -21,7 +23,7 @@ resolve.
 
 ## Syntax
 
-```js
+```js-nolint
 select(properties)
 select(properties, options)
 ```
@@ -83,15 +85,15 @@ present the user with a contact picker interface and handle the chosen results.
 `handleResults()` is a developer defined function.
 
 ```js
-const props = ['name', 'email', 'tel', 'address', 'icon'];
-const opts = {multiple: true};
+const props = ["name", "email", "tel", "address", "icon"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, opts);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(props, opts);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```
@@ -105,10 +107,10 @@ const supportedProperties = await navigator.contacts.getProperties();
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(supportedProperties);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(supportedProperties);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

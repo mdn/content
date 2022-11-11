@@ -14,6 +14,7 @@ tags:
   - removeTrack
 browser-compat: api.RTCPeerConnection.removeTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The
@@ -32,8 +33,8 @@ let the local end know this negotiation must occur.
 
 ## Syntax
 
-```js
-pc.removeTrack(sender);
+```js-nolint
+removeTrack(sender)
 ```
 
 ### Parameters
@@ -58,13 +59,13 @@ button which removes the track when the user clicks the button.
 ```js
 let pc;
 let sender;
-navigator.getUserMedia({video: true}, function(stream) {
+navigator.getUserMedia({video: true}, (stream) => {
   pc = new RTCPeerConnection();
   const [track] = stream.getVideoTracks();
   sender = pc.addTrack(track, stream);
 });
 
-document.getElementById("closeButton").addEventListener("click", function(event) {
+document.getElementById("closeButton").addEventListener("click", (event) => {
   pc.removeTrack(sender);
   pc.close();
 }, false);

@@ -11,6 +11,7 @@ tags:
   - Reference
   - Non Standard
 ---
+
 {{APIRef("UI Events")}}
 
 > **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
@@ -22,14 +23,14 @@ tags:
 
 The **`KeyboardEvent.initKeyEvent()`** method is used to
 initialize the value of an event created using
-{{domxref("document.createEvent")}}`("KeyboardEvent")`. Events initialized in
+{{domxref("document.createEvent")}} `("KeyboardEvent")`. Events initialized in
 this way must have been created with the
-{{domxref("document.createEvent")}}`("KeyboardEvent")` method.
+{{domxref("document.createEvent")}} `("KeyboardEvent")` method.
 `initKeyEvent()` must be called to set the event before it is [dispatched](/en-US/docs/Web/API/EventTarget/dispatchEvent).
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyEvent (type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)
@@ -78,7 +79,7 @@ const event = document.createEvent('KeyboardEvent'); // create a key event
 event.initKeyEvent("keypress",       // typeArg,
                    true,             // canBubbleArg,
                    true,             // cancelableArg,
-                   null,             // viewArg,  Specifies UIEvent.view. This value may be null.
+                   null,             // viewArg, Specifies UIEvent.view. This value may be null.
                    false,            // ctrlKeyArg,
                    false,            // altKeyArg,
                    false,            // shiftKeyArg,

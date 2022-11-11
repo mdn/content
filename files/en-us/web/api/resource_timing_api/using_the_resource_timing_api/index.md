@@ -14,7 +14,8 @@ tags:
   - Web Development
   - Web Performance
 ---
-{{DefaultAPISidebar("Resource Timing API")}}
+
+{{DefaultAPISidebar("Performance API")}}
 
 The **Resource Timing API** provides a way to retrieve and analyze detailed network timing data regarding the loading of an application's _resource(s)_. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, script, etc.).
 
@@ -22,7 +23,7 @@ The interface's properties create a _resource loading timeline_ with {{domxref("
 
 This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the [See also](#see_also) section.
 
-A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/main/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Resource loading phases
 
@@ -53,40 +54,40 @@ function calculate_load_times() {
   }
 
   console.log("= Calculate Load Times");
-  for (let i=0; i < resources.length; i++) {
-    console.log(`== Resource[${i}] - ${resources[i].name}`);
+  resources.forEach((resource, i) => {
+    console.log(`== Resource[${i}] - ${resource.name}`);
     // Redirect time
-    let t = resources[i].redirectEnd - resources[i].redirectStart;
+    let t = resource.redirectEnd - resource.redirectStart;
     console.log(`… Redirect time = ${t}`);
 
     // DNS time
-    t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
+    t = resource.domainLookupEnd - resource.domainLookupStart;
     console.log(`… DNS lookup time = ${t}`);
 
     // TCP handshake time
-    t = resources[i].connectEnd - resources[i].connectStart;
+    t = resource.connectEnd - resource.connectStart;
     console.log(`… TCP time = ${t}`);
 
     // Secure connection time
-    t = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
+    t = (resource.secureConnectionStart > 0) ? (resource.connectEnd - resource.secureConnectionStart) : "0";
     console.log(`… Secure connection time = ${t}`);
 
     // Response time
-    t = resources[i].responseEnd - resources[i].responseStart;
+    t = resource.responseEnd - resource.responseStart;
     console.log(`… Response time = ${t}`);
 
     // Fetch until response end
-    t = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
+    t = (resource.fetchStart > 0) ? (resource.responseEnd - resource.fetchStart) : "0";
     console.log(`… Fetch until response end time = ${t}`);
 
     // Request start until response end
-    t = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
+    t = (resource.requestStart > 0) ? (resource.responseEnd - resource.requestStart) : "0";
     console.log(`… Request start until response end time = ${t}`);
 
     // Start until response end
-    t = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
+    t = (resource.startTime > 0) ? (resource.responseEnd - resource.startTime) : "0";
     console.log(`… Start until response end time = ${t}`);
-  }
+  });
 }
 ```
 
@@ -105,31 +106,34 @@ function display_size_data(){
     return;
   }
 
-  const list = performance.getEntriesByType("resource");
-  if (list === undefined) {
+  const entries = performance.getEntriesByType("resource");
+  if (entries === undefined) {
     console.log("= Display Size Data: performance.getEntriesByType() is NOT supported");
     return;
   }
 
   // For each "resource", display its *Size property values
   console.log("= Display Size Data");
-  for (let i=0; i < list.length; i++) {
-    console.log(`== Resource[${i}] - ${list[i].name}`);
-    if ("decodedBodySize" in list[i])
-      console.log(`… decodedBodySize[${i}] = ${list[i].decodedBodySize}`);
-    else
+  entries.forEach((entry, i) => {
+    console.log(`== Resource[${i}] - ${entry.name}`);
+    if ("decodedBodySize" in entry) {
+      console.log(`… decodedBodySize[${i}] = ${entry.decodedBodySize}`);
+    } else {
       console.log(`… decodedBodySize[${i}] = NOT supported`);
+    }
 
-    if ("encodedBodySize" in list[i])
-      console.log(`… encodedBodySize[${i}] = ${list[i].encodedBodySize}`);
-    else
+    if ("encodedBodySize" in entry) {
+      console.log(`… encodedBodySize[${i}] = ${entry.encodedBodySize}`);
+    } else {
       console.log(`… encodedBodySize[${i}] = NOT supported`);
+    }
 
-    if ("transferSize" in list[i])
-      console.log(`… transferSize[${i}] = ${list[i].transferSize}`);
-    else
+    if ("transferSize" in entry) {
+      console.log(`… transferSize[${i}] = ${entry.transferSize}`);
+    } else {
       console.log(`… transferSize[${i}] = NOT supported`);
-  }
+    }
+  });
 }
 ```
 
@@ -157,10 +161,11 @@ function clear_resource_timings() {
   }
   // getEntries should now return zero
   const p = performance.getEntriesByType("resource");
-  if (p.length === 0)
+  if (p.length === 0) {
     console.log("… Performance data buffer cleared");
-  else
+  } else {
     console.log(`… Performance data buffer NOT cleared (still have '${p.length}' items`);
+  }
 }
 
 function set_resource_timing_buffer_size(n) {

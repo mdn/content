@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLObjectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLObjectElement`** interface provides special properties and methods (beyond those on the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("object")}} element, representing external resources.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -31,15 +32,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the {{htmlattrxref("codebase", "object")}} HTML attribute, specifying the base path to use to resolve relative URIs.
 - {{domxref("HTMLObjectElement.codeType")}} {{deprecated_inline}}
   - : A string that reflects the {{htmlattrxref("codetype", "object")}} HTML attribute, specifying the content type of the data.
-- {{domxref("HTMLObjectElement.contentDocument")}} {{readonlyInline}}
+- {{domxref("HTMLObjectElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}} representing the active document of the object element's nested browsing context, if any; otherwise `null`.
-- {{domxref("HTMLObjectElement.contentWindow")}} {{readonlyInline}}
+- {{domxref("HTMLObjectElement.contentWindow")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WindowProxy")}} representing the window proxy of the object element's nested browsing context, if any; otherwise `null`.
 - {{domxref("HTMLObjectElement.data")}}
   - : Returns a string that reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address of a resource's data.
 - {{domxref("HTMLObjectElement.declare")}} {{deprecated_inline}}
   - : A boolean value that reflects the {{htmlattrxref("declare", "object")}} HTML attribute, indicating that this is a declaration, not an instantiation, of the object.
-- {{domxref("HTMLObjectElement.form")}} {{readonlyInline}}
+- {{domxref("HTMLObjectElement.form")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("HTMLFormElement")}} representing the object element's form owner, or null if there isn't one.
 - {{domxref("HTMLObjectElement.height")}}
   - : Returns a string that reflects the {{htmlattrxref("height", "object")}} HTML attribute, specifying the displayed height of the resource in CSS pixels.
@@ -53,18 +54,18 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type of the resource.
 - {{domxref("HTMLObjectElement.useMap")}}
   - : A string that reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a {{HTMLElement("map")}} element to use.
-- {{domxref("HTMLObjectElement.validationMessage")}} {{readonlyInline}}
+- {{domxref("HTMLObjectElement.validationMessage")}} {{ReadOnlyInline}}
   - : Returns a string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
-- {{domxref("HTMLObjectElement.validity")}} {{readonlyInline}}
+- {{domxref("HTMLObjectElement.validity")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} with the validity states that this element is in.
 - {{domxref("HTMLObjectElement.vspace")}} {{deprecated_inline}}
   - : A `long` representing the horizontal space in pixels around the control.
 - {{domxref("HTMLObjectElement.width")}}
   - : A string that reflects the {{htmlattrxref("width", "object")}} HTML attribute, specifying the displayed width of the resource in CSS pixels.
-- {{domxref("HTMLObjectElement.willValidate")}} {{readonlyInline}}
+- {{domxref("HTMLObjectElement.willValidate")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the element is a candidate for constraint validation. Always `false` for `HTMLObjectElement` objects.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 

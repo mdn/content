@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: api.HTMLAnchorElement.password
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.password`** property is a

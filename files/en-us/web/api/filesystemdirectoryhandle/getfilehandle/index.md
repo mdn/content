@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.getFileHandle
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getFileHandle()`** method of the
@@ -19,7 +20,7 @@ directory the method is called.
 
 ## Syntax
 
-```js
+```js-nolint
 getFileHandle(name)
 getFileHandle(name, options)
 ```

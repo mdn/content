@@ -6,6 +6,7 @@ tags:
   - User Interface
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.
@@ -48,7 +49,7 @@ When the window is no longer needed, it can be closed programmatically.
 For example, after the user clicks a button, you may pass the current window's id to {{WebExtAPIRef("windows.remove()")}}:
 
 ```js
-document.getElementById("closeme").addEventListener("click", function(){
+document.getElementById("closeme").addEventListener("click", () => {
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
 });

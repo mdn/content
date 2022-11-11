@@ -14,6 +14,7 @@ tags:
   - width
 browser-compat: svg.attributes.textLength
 ---
+
 {{SVGRef}}
 
 The **`textLength`** attribute, available on SVG {{SVGElement("text")}} and {{SVGElement("tspan")}} elements, lets you specify the width of the space into which the text will draw. The {{glossary("user agent")}} will ensure that the text does not extend farther than that distance, using the method or methods specified by the {{SVGAttr("lengthAdjust")}} attribute. By default, only the spacing between characters is adjusted, but the glyph size can also be adjusted if you change `lengthAdjust`.
@@ -30,7 +31,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -88,14 +91,27 @@ Let's create a simple example that presents text you can resize using an {{HTMLE
 Let's start with the SVG. It's pretty basic, with a 1000-by-300 pixel space mapped into a 10 centimeter by 3 centimeter box.
 
 ```html
-<svg width="10cm" height="3cm" viewBox="0 0 1000 300"
-    xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="10cm"
+  height="3cm"
+  viewBox="0 0 1000 300"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect
+    x="1"
+    y="1"
+    width="998"
+    height="298"
+    fill="none"
+    stroke="green"
+    stroke-width="2" />
 
-  <rect x="1" y="1" width="998" height="298"
-      fill="none" stroke="green" stroke-width="2"/>
-
-  <text id="hello" x="10" y="150"
-      font-family="sans-serif" font-size="60" fill="green">
+  <text
+    id="hello"
+    x="10"
+    y="150"
+    font-family="sans-serif"
+    font-size="60"
+    fill="green">
     Hello world!
   </text>
 </svg>
@@ -109,7 +125,7 @@ The HTML is also simple, with only two displayed elements contained inside a gro
 
 ```html
 <div class="controls">
-  <input type="range" id="widthSlider" min="80" max="978">
+  <input type="range" id="widthSlider" min="80" max="978" />
   <span id="widthDisplay"></span>
 </div>
 ```
@@ -128,11 +144,17 @@ const baseLength = Math.floor(textElement.textLength.baseVal.value);
 
 widthSlider.value = baseLength;
 
-widthSlider.addEventListener("input", function(event) {
-  textElement.textLength.baseVal.newValueSpecifiedUnits(
-      SVGLength.SVG_LENGTHTYPE_PX, widthSlider.valueAsNumber);
-  widthDisplay.innerText = widthSlider.value;
-}, false);
+widthSlider.addEventListener(
+  "input",
+  (event) => {
+    textElement.textLength.baseVal.newValueSpecifiedUnits(
+      SVGLength.SVG_LENGTHTYPE_PX,
+      widthSlider.valueAsNumber
+    );
+    widthDisplay.innerText = widthSlider.value;
+  },
+  false
+);
 
 widthSlider.dispatchEvent(new Event("input"));
 ```

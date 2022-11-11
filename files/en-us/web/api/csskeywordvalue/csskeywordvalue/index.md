@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSKeywordValue()`** constructor
@@ -20,7 +21,7 @@ other identifiers.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSKeywordValue(val)
 ```
 
@@ -48,7 +49,10 @@ to `style="display: initial"` if viewed in the [developer tools inspector](https
 ```
 
 ```html hidden
-<div id="myElement">Check the developer tools to see the log in the console and to inspect the style attribute on this div.</div>
+<div id="myElement">
+  Check the developer tools to see the log in the console and to inspect the
+  style attribute on this div.
+</div>
 ```
 
 ```js

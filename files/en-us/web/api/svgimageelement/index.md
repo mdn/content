@@ -13,13 +13,14 @@ tags:
   - SVGImageElement
 browser-compat: api.SVGImageElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGImageElement`** interface corresponds to the {{SVGElement("image")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
@@ -40,7 +41,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGImageElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given {{SVGElement("image")}} element.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}._
 

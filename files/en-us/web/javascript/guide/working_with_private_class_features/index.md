@@ -7,6 +7,7 @@ tags:
   - JavaScript
 browser-compat: javascript.classes
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 It's common to want to make fields or methods private, but JavaScript has lacked such a feature since its inception. Conventions have arisen — such as prefixing fields and methods that should be treated as private with an underscore, like `_hidden` — but these are merely conventions. The underscored features are still fully public.
@@ -49,32 +50,28 @@ class PrivateCounter {
   decrease(x = 1) { this.#count -= x; }
   reset(x = this.#init) { this.#count = x; }
   get current() {
-     return this.#count;
+    return this.#count;
   }
 }
 
-let total = new PrivateCounter(7);
-console.log(total.current);  // expected output: 7
-total.increase();            // #count now = 8
-total.increase(5);           // #count now = 13
-console.log(total.current);  // expected output: 13
-total.reset();               // #count now = 7
+const total = new PrivateCounter(7);
+console.log(total.current); // 7
+total.increase(); // #count now = 8
+total.increase(5); // #count now = 13
+console.log(total.current); // 13
+total.reset(); // #count now = 7
 ```
 
 The "hash mark" (`#`) is what marks a field as being private. It also prevents private fields and property names from ever being in conflict: private names **must** start with `#`, whereas property names can **never** start that way.
 
 Having declared the private fields, they act as we saw in the public example. The only way to change the `#count` value is via the publicly available methods like `decrease()`, and because (in this example) there are no defined ways to alter it, the `#init` value is immutable. It's set when a new `PrivateCounter` is constructed, and can never be changed thereafter.
 
-It's also the case that you **cannot** read a private value directly from code outside the class object. Consider:
+You **cannot** read a private value directly from code outside the class object. Consider:
 
-```js
-let score = new PrivateCounter(); // #count and #init are now both 0
-score.increase(100);
-console.log(score.current);
-  // output: 100
+```js example-bad
+const score = new PrivateCounter(); // #count and #init are now both 0
 console.log(score.#count);
-  // output:
-  // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
+// SyntaxError: Private field '#count' must be declared in an enclosing class
 ```
 
 If you wish to read private data from outside a class, you must first invent a method or other function to return it. We had already done that with the `current()` getter that returns the current value of `#count`, but `#init` is locked away. Unless we add something like a `getInit()` method to the class, we can't even see the initial value from outside the class, let alone alter it, and the compiler will throw errors if we try.
@@ -168,7 +165,7 @@ This can also be done for getters and setters, which is useful in any situation 
 ```js
 class Counter extends HTMLElement {
   #xValue = 0;
-  get #x() { return #xValue; }
+  get #x() { return this.#xValue; }
   set #x(value) {
     this.#xValue = value;
     window.requestAnimationFrame(this.#render.bind(this));
@@ -193,7 +190,7 @@ In this case, pretty much every field and method is private to the class. Thus, 
 
 ## Checking if a private field/method exists
 
-Javascript code will `throw` if you attempt to access a private method or field that does not exist (this differs from a normal/public method, which will return `undefined`). If you need to write code to test whether a private feature has been defined you might use `try`/`catch`, but it is more compact to use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator. This returns `true` or `false` depending on whether or not the property is defined.
+JavaScript code will `throw` if you attempt to access a private method or field that does not exist (this differs from a normal/public method, which will return `undefined`). If you need to write code to test whether a private feature has been defined you might use `try`/`catch`, but it is more compact to use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator. This returns `true` or `false` depending on whether or not the property is defined.
 
 The code below demonstrates the approach using the example of a class for adding `Scalar` values. The class uses the `in` operator to check that added objects have the `#total` private class field, and throws an informative exception message if a different type of object is passed.
 
@@ -213,7 +210,7 @@ class Scalar {
   }
 }
 
-let scalar1 = new Scalar(1);
+const scalar1 = new Scalar(1);
 scalar1.add(scalar1)
 scalar1.add({}) // throws informative exception
 ```
