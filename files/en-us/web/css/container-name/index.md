@@ -1,9 +1,9 @@
 ---
-title: Container name
+title: container-name
 slug: Web/CSS/container-name
-page-type: guide
+page-type: css-property
 tags:
-  - container
+  - container queries
   - CSS
   - CSS Containment
   - Reference
@@ -63,6 +63,6 @@ You can then target that container by adding the name to the container query:
 
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
 - {{Cssxref("@container")}} at-rule
-- CSS {{Cssxref("contain")}} property
+- CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-type")}} property
 - CSS {{cssxref("content-visibility")}} property
