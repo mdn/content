@@ -153,6 +153,7 @@ block content
     div.form-group
       label(for='date_of_birth') Date of birth:
       input#date_of_birth.form-control(type='date' name='date_of_birth' value=(undefined===author ? '' : author.date_of_birth) )
+      input#date_of_death.form-control(type='date' name='date_of_death' value=(undefined===author ? '' : author.date_of_death) )
     button.btn.btn-primary(type='submit') Submit
   if errors
     ul
