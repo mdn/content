@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.transferSize
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`transferSize`** read-only property represents the size
 (in octets) of the fetched resource. The size includes the response header fields plus

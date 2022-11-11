@@ -9,6 +9,8 @@ tags:
   - Navigation
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 Here we go over how to set up an image map, and some downsides to consider first.
 
 <table>

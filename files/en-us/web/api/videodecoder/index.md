@@ -15,6 +15,8 @@ browser-compat: api.VideoDecoder
 
 The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} decodes chunks of video.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("VideoDecoder.VideoDecoder", "VideoDecoder()")}} {{Experimental_Inline}}
@@ -22,12 +24,21 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Instance properties
 
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
+
 - {{domxref("VideoDecoder.decodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of decode queue requests.
 - {{domxref("VideoDecoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Indicates whether the underlying codec is configured for decoding.
 
+### Events
+
+- {{domxref("VideoDecoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
+  - : Fires to signal a decrease in {{domxref("VideoDecoder.decodeQueueSize")}}.
+
 ## Instance methods
+
+_Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("VideoDecoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the video decoder for decoding chunks.

@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceNavigationTiming.toJSON
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}
 
 The **`toJSON()`** method is a _serializer_ - it returns
 a JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.

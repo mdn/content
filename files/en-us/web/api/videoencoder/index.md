@@ -15,6 +15,8 @@ browser-compat: api.VideoEncoder
 
 The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("VideoFrame")}} objects.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("VideoEncoder.VideoEncoder", "VideoEncoder()")}} {{Experimental_Inline}}
@@ -22,10 +24,17 @@ The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Instance properties
 
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
+
 - {{domxref("VideoEncoder.encodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of encode queue requests.
 - {{domxref("VideoEncoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
+
+### Events
+
+- {{domxref("VideoEncoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
+  - : Fires to signal a decrease in {{domxref("VideoEncoder.encodeQueueSize")}}.
 
 ## Static methods
 
@@ -33,6 +42,8 @@ The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
   - : Returns a promise indicating whether the provided `VideoEncoderConfig` is supported.
 
 ## Instance methods
+
+_Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("VideoEncoder.configure()")}} {{Experimental_Inline}}
   - : Enqueues a control message to configure the video encoder for encoding chunks.
