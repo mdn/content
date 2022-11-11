@@ -180,6 +180,15 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     </tr>
     <tr>
       <td>
+        {{domxref("HTMLMediaElement.error_event", 'error')}}
+      </td>
+      <td>
+        An error occurred while fetching the media data, or the type of the 
+        resource is not a supported media format.
+      </td>
+    </tr>
+    <tr>
+      <td>
         {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
       </td>
       <td>The first frame of the media has finished loading.</td>

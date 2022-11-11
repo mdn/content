@@ -46,10 +46,8 @@ This article provides information about the changes in Firefox 108 that will aff
 
 #### Media, WebRTC, and Web Audio
 
-- The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), provided user permission has been granted.
-  Users are prompted for permission to _Access MIDI devices with SysEx support_ when they first call [Navigator.requestMIDIAccess()](/en-US/docs/Web/API/Navigator/requestMIDIAccess).
-  If granted, this installs a dynamically generated site-permission add-on.
-  Permission can later be revoked by clicking on the permission icon on the page, or by [uninstalling the add-on](https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons).
+- The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
+  Users must grants permission by accepting a prompt to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-addons).
   For more information see {{bug(1795025)}}.
 
 #### Removals
