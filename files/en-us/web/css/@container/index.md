@@ -43,22 +43,26 @@ The following descriptors can be used within the container condition:
 
 - `aspect-ratio`
 
-  - : The aspect ratio of the container calculated as the width to the height of the container expressed as a `<ratio>` value.
+  - : The {{cssxref("aspect-ratio")}} of the container calculated as the width to the height of the container expressed as a {{cssxref("ratio")}} value.
 
 - `block-size`
 
-  - : The block size of the container expressed as a `<length>` value.
+  - : The {{cssxref("block-size")}} of the container expressed as a {{cssxref("length")}} value.
+
+- `height`
+
+  - : The height of the container expressed as a {{cssxref("length")}} value.
 
 - `inline-size`
 
-  - : The inline size of the container expressed as a `<length>` value.
+  - : The {{cssxref("inline-size")}} of the container expressed as a {{cssxref("length")}} value.
 
 - `orientation`
 
   - : The orientation of the container, either `landscape` or `portrait`.
 
 - `width`
-  - : The width of the container expressed as a `<length>` value.
+  - : The width of the container expressed as a {{cssxref("length")}} value.
 
 ## Examples
 
@@ -102,7 +106,9 @@ Given the following HTML example which is a card component with an image, a titl
 ```html
 <div class="container">
   <div class="card">
-    <img src="image.png" alt="A mostly white cat with a black heart on the forehead." />
+    <img
+      src="image.png"
+      alt="A mostly white cat with a black heart on the forehead." />
     <h2>Card title</h2>
     <p>Card content</p>
   </div>
