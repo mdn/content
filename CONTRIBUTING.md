@@ -4,25 +4,25 @@ Thanks for taking the time to contribute to [MDN Web Docs](https://developer.moz
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
-If you want to jump right in, see [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started) for an overview of how to join, and the [Contribute page](https://developer.mozilla.org/en-US/docs/MDN/Contribute) on MDN for a filtered list of tasks.
+If you want to jump right in, see [Getting started on MDN][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
 
 ## Getting started
 
 Before contributing, make sure you're familiar with the project guidelines and conventions:
 
-- [MDN guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines) - This page covers everything from how and what we write to general project guidelines.
-- [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide) - This covers the language and style we use and how we write and format code examples.
-- [Guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN) - Which Markdown features we support and custom extensions we've added.
+- [MDN guidelines][] - This page covers everything from how and what we write to general project guidelines.
+- [Writing style guide][] - This covers the language and style we use and how we write and format code examples.
+- [Guide to writing Markdown for MDN][] - Which Markdown features we support and custom extensions we've added.
 
 ### Prerequisite knowledge
 
 We expect contributors to MDN to have some knowledge of web technologies before working on content.
 We've put together relevant resources to get up to speed on specific topics before contributing:
 
-- **Open source:** If you're new to open source projects, see the [open source etiquette](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette) page.
-- **Git and GitHub:** If you are unfamiliar with these, [GitHub for complete beginners](https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners) is a good primer.
-- **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development](https://developer.mozilla.org/en-US/docs/Learn) tutorials.
-- **MDN repository:** To find out where everything lives, see [Where is everything on MDN?](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything).
+- **Open source:** If you're new to open source projects, see the [open source etiquette][] page.
+- **Git and GitHub:** If you are unfamiliar with these, [GitHub for complete beginners][] is a good primer.
+- **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development][] tutorials.
+- **MDN repository:** To find out where everything lives, see [Where is everything on MDN?][].
 
 ### Documentation conventions
 
@@ -42,7 +42,7 @@ Each document's `index.md` starts with front-matter, which is written in [YAML](
 The YAML is read by the MDN build system and is used to read the metadata of a document.
 
 The front-matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines (`---`).
-Front-matter defines the document's `title`, `slug`, and optional [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag).
+Front-matter defines the document's `title`, `slug`, and optional [`tags`][].
 Here's an example of front-matter from the [JavaScript page](files/en-us/web/javascript/index.md):
 
 ```yaml
@@ -75,7 +75,7 @@ If you've created a new GitHub account and want to know what to do next, you can
 ### Simple changes
 
 If you want to make a small change like fixing a typo, the GitHub UI is the easiest way to get started.
-If you've found a typo on the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript), for example, you can propose a fix as follows:
+If you've found a typo on the [JavaScript landing page][], for example, you can propose a fix as follows:
 
 1. Sign in to [GitHub](https://github.com/)
 2. Navigate to [https://github.com/mdn/content](https://github.com/mdn/content)
@@ -226,7 +226,7 @@ There are a few things to keep in mind:
 - Documents must be written in Markdown.
 - A document is represented by an `index.md` file.
 - If you're creating a new CSS document for a property called `foo`, create a new folder `files/en-us/web/css/foo/` and put the Markdown file in this folder (`files/en-us/web/css/foo/index.md`).
-- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and optional [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag).
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and optional [`tags`][].
   You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ### Moving documents
@@ -402,3 +402,15 @@ There are some important rules of etiquette to remember that will help during th
 
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
+
+[`tags`]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag
+[Contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
+[Getting started on MDN]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
+[GitHub for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
+[Guide to writing Markdown for MDN]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[JavaScript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Learn web development]: https://developer.mozilla.org/en-US/docs/Learn
+[MDN guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
+[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette
+[Where is everything on MDN?]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything
+[Writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
