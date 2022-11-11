@@ -106,16 +106,7 @@ We can then target this containment context using the `@container` at-rule:
 
 ### Shorthand container syntax
 
-The explicit way to create a container context using `container-type` and `container-name` looks like the following:
-
-```css
-.container {
-  container-type: inline-size;
-  container-name: sidebar;
-}
-```
-
-The shorthand way of declaring a containment context is to use the `contain` property:
+The shorthand way of declaring a containment context is to use the `container` property:
 
 ```css
 .container {

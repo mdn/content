@@ -164,10 +164,10 @@ A container context can be created using the `container-type` property:
 }
 ```
 
-You can then target that container by adding the name to the container query:
+The following example will apply styles to the `.card` element if it's in a container that is wider than 400px and the container's `background-color` is `blue`:
 
 ```css
-@container (min-width: 400px) {
+@container (min-width: 400px) and style(background-color: blue) {
   .card {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -191,7 +191,9 @@ Given the following HTML example which is a card component with an image, a titl
 </div>
 ```
 
-When creating a container context using `container-type`, add the `container-name` property:
+First create a container context using `container-type`, add the `container-name` property.
+
+> **Note:** A shorthand syntax for this declaration is described in the {{cssxref("container")}} page.
 
 ```css
 .container {

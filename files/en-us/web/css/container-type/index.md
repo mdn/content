@@ -14,21 +14,22 @@ browser-compat: css.properties.container-type
 {{CSSRef}}
 
 The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the [type of containment](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
-The `container-type` property can have the following values:
 
-- `size`
+## Syntax
 
-  - : Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
-    Applies layout containment, style containment, and size containment to the container.
+```css
+container-type: <type>;
+```
 
-- `inline-size`
+### Values
 
-  - : Establishes a query container for dimensional queries on the inline axis of the container.
-    Applies layout, style, and inline-size containment to the element.
+- `size`: Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
+  Applies layout containment, style containment, and size containment to the container.
 
-- `normal`
+- `inline-size`: Establishes a query container for dimensional queries on the inline axis of the container.
+  Applies layout, style, and inline-size containment to the element.
 
-  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
+- `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the {{cssxref("contain")}} property.
 
@@ -64,6 +65,8 @@ You can then target that container by adding the name to the container query:
   }
 }
 ```
+
+For more information on container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries) page.
 
 ## Specifications
 

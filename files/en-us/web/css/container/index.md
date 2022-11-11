@@ -18,8 +18,15 @@ The **container** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/e
 ## Syntax
 
 ```css
-container: <container-name> <container-type>;
+container: <container-name> / <container-type>;
 ```
+
+### Values
+
+- `<container-name>`: A case-sensitive name for the containment context.
+  More details on the syntax are covered in the {{cssxref("container-name")}} property page.
+- `<container-type>`: The type of containment context.
+  More details on the syntax are covered in the {{cssxref("container-type")}} property page.
 
 ## Example
 
@@ -35,7 +42,7 @@ Given the following HTML example which is a card component with an image, a titl
 </div>
 ```
 
-The more explicit way to create a container context using `container-type` and `container-name` is:
+The explicit way to create a container context is to declare a `container-type` with an optional `container-name`:
 
 ```css
 .container {
@@ -44,25 +51,23 @@ The more explicit way to create a container context using `container-type` and `
 }
 ```
 
-The shorthand for this is the following:
+The `container` shorthand is intended to make this simpler to define in a single declaration:
 
 ```css
 .container {
-  container: sidebar inline-size;
+  container: sidebar / inline-size;
 }
 ```
 
-You can then target that container by adding the name to the container query:
+You can then target that container by name using the {{cssxref("@container")}} at-rule:
 
 ```css
 @container sidebar (min-width: 400px) {
-  .card {
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
+  /* <stylesheet> */
 }
 ```
+
+For more information on container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries) page.
 
 ## Specifications
 

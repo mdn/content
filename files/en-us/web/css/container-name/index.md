@@ -45,7 +45,9 @@ Given the following HTML example which is a card component with an image, a titl
 </div>
 ```
 
-When creating a container context using `container-type`, add the `container-name` property:
+First create a container context using `container-type`, then add the `container-name` property.
+
+> **Note:** A shorthand syntax for this declaration is described in the {{cssxref("container")}} page.
 
 ```css
 .container {
@@ -54,7 +56,7 @@ When creating a container context using `container-type`, add the `container-nam
 }
 ```
 
-You can then target that container by adding the name to the container query:
+You can then target that container by name using the {{cssxref("@container")}} at-rule:
 
 ```css
 @container sidebar (min-width: 400px) {
@@ -64,6 +66,8 @@ You can then target that container by adding the name to the container query:
   }
 }
 ```
+
+For more information on container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries) page.
 
 ## Specifications
 
