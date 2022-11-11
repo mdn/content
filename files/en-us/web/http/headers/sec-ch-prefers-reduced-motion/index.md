@@ -65,7 +65,7 @@ Content-Type: text/html
 Accept-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-The client then retries the request, telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
+The client in future requests then tells the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
 
 ```http
 GET / HTTP/1.1
