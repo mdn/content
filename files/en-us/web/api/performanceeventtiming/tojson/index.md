@@ -60,6 +60,8 @@ This would log a JSON object like so:
 }
 ```
 
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
+
 ## Specifications
 
 {{Specifications}}
