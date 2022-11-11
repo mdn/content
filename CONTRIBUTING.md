@@ -102,7 +102,7 @@ The following examples are using plain `git` commands, but you can use any of th
 To fork and clone the repository:
 
 1. [Create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the `mdn/content` repository to freely experiment with branches and changes.
-   Assuming your GitHub username is `octocat`, your fork would be a copy of of the `mdn/content` repository in your account at `https://github.com/octocat/content`.
+   Assuming your GitHub username is `octocat`, your fork would be a copy of the `mdn/content` repository in your account at `https://github.com/octocat/content`.
 
 2. Clone your fork to your local machine.
    Assuming your GitHub username is `octocat`, you would do something like this:
@@ -404,13 +404,13 @@ When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
 [`tags`]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag
-[Contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
-[Getting started on MDN]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
-[GitHub for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
-[Guide to writing Markdown for MDN]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
-[JavaScript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[Learn web development]: https://developer.mozilla.org/en-US/docs/Learn
-[MDN guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
+[contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
+[getting started on mdn]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
+[github for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
+[guide to writing markdown for mdn]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[javascript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[learn web development]: https://developer.mozilla.org/en-US/docs/Learn
+[mdn guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
 [open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette
-[Where is everything on MDN?]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything
-[Writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[where is everything on mdn?]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything
+[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
