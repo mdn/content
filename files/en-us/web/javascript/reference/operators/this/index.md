@@ -37,7 +37,7 @@ The value of `this` depends on in which context it appears: function, class, or 
 
 Inside a function, the value of `this` depends on how the function is called. Think about `this` as a hidden parameter of a function — just like the parameters declared in the function definition, `this` is a binding that the language creates for you when the function body is evaluated.
 
-For a typical function, the value of `this` is the object that the function is accessed on. In other words, if the function call is the form `obj.f()`, then `this` refers to `obj`. For example:
+For a typical function, the value of `this` is the object that the function is accessed on. In other words, if the function call is in the form `obj.f()`, then `this` refers to `obj`. For example:
 
 ```js
 function getThis() {
@@ -92,8 +92,8 @@ function getThisStrict() {
 }
 
 // Only for demonstration — you should not mutate built-in prototypes
-Number.prototype.getThis = getThisStrict;
-console.log(typeof (1).f()); // "number"
+Number.prototype.getThisStrict = getThisStrict;
+console.log(typeof (1).getThisStrict()); // "number"
 ```
 
 If the function is called without being accessed on anything, `this` will be `undefined` — but only if the function is in strict mode.
@@ -118,7 +118,7 @@ console.log(typeof (1).getThis()); // "object"
 console.log(getThis() === globalThis); // true
 ```
 
-In typical function calls, `this` is implicitly passed like a parameter through the function's prefix (the part before the dot). You can also explicitly set the value of `this` using the {{jsxref("Function.prototype.call()")}}, {{jsxref("Function.prototype.apply()")}}, or {{jsxref("Reflect.apply()")}} methods. You can also use the {{jsxref("Function.prototype.bind()")}} method to create a new function with a specific value of `this` that doesn't change regardless of how the function is called. When using these methods, the `this` substitution rules above still apply if the function is non-strict.
+In typical function calls, `this` is implicitly passed like a parameter through the function's prefix (the part before the dot). You can also explicitly set the value of `this` using the {{jsxref("Function.prototype.call()")}}, {{jsxref("Function.prototype.apply()")}}, or {{jsxref("Reflect.apply()")}} methods. Using {{jsxref("Function.prototype.bind()")}}, you can create a new function with a specific value of `this` that doesn't change regardless of how the function is called. When using these methods, the `this` substitution rules above still apply if the function is non-strict.
 
 #### Callbacks
 
@@ -260,7 +260,7 @@ console.log(window.b); // "MDN"
 console.log(b); // "MDN"
 ```
 
-If the source is loaded as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) (for HTML, this means adding `type="module"` to the `<script>` tag), `this` is always `undefined` at the top level — this behavior is specified by the language.
+If the source is loaded as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) (for HTML, this means adding `type="module"` to the `<script>` tag), `this` is always `undefined` at the top level.
 
 If the source is executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), `this` is the same as the enclosing context for direct eval, or `globalThis` (as if it's run in a separate global script) for indirect eval.
 
