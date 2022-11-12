@@ -259,7 +259,7 @@ This would output the following:
 
 {{ EmbedLiveSample('Void_elements', 700, 300, "", "") }}
 
-> **Note:** In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
+> **Note:** In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML. But be aware that if you do so, and if you then validate your HTML at the <a href="https://validator.w3.org/">W3C Validation Service</a>, you will be informed that a "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values." Below you'll learn that leaving attribute values unquoted is not the best practice any way, so if you follow best practice, this should not be an issue.
 
 ## Attributes
 
