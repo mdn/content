@@ -87,23 +87,17 @@ function logIterable(it) {
   }
 }
 
-const arr = ['a','b','c'];
-const str = "abc";
-const num = 123;
-
 // Array
-logIterable(arr);
+logIterable(["a", "b", "c"]);
 // a
 // b
 // c
-
 // string
-logIterable(str);
+logIterable("abc");
 // a
 // b
 // c
-
-logIterable(num);
+logIterable(123);
 // 123 is not an iterable object.
 ```
 
