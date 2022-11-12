@@ -22,6 +22,8 @@ One side initiates the connection, using a `connect()` API. This returns a `Port
 
 Once both sides have `Port` objects, they can exchange messages using `Port.postMessage()` and `Port.onMessage`. When they are finished, either end can disconnect using `Port.disconnect()`, which will generate a `Port.onDisconnect` event at the other end, enabling the other end to do any cleanup required.
 
+A `Port` can also become disconnected in response to various events. See [Lifecycle](#Lifecycle).
+
 You can use this pattern to communicate between:
 
 - different parts of your extension (for example, between [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts))
@@ -97,6 +99,13 @@ Values of this type are objects. They contain the following properties:
   - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
 - `sender` {{optional_inline}}
   - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
+
+## Lifecycle
+
+*This section is a stub. You can help by expanding it.*
+
+In some cases the lifecycle of a `Port` in Firefox may differ from that [in Chrome](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime).
+For example, if multiple frames have received the port (via `runtime.onConnect`), the `Port` may disconnect after a single one of these frames has unloaded.
 
 ## Browser compatibility
 
