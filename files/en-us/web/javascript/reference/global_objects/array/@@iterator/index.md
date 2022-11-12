@@ -78,29 +78,32 @@ Because both [strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Strin
 
 ```js
 function logIterable(it) {
-  if (!(Symbol.iterator in it)) {
-    console.log(it, " is not an iterable object.");
+  if (typeof it[Symbol.iterator] !== 'function') {
+    console.log(it, "is not an iterable object.");
     return;
   }
-
   for (const letter of it) {
     console.log(letter);
   }
 }
 
+const arr = ['a','b','c'];
+const str = "abc";
+const num = 123;
+
 // Array
-logIterable(["a", "b", "c"]);
+logIterable(arr);
 // a
 // b
 // c
 
 // string
-logIterable("abc");
+logIterable(str);
 // a
 // b
 // c
 
-logIterable(123);
+logIterable(num);
 // 123 is not an iterable object.
 ```
 
