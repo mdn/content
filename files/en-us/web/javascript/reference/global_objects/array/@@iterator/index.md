@@ -101,7 +101,7 @@ logIterable("abc");
 
 // Number
 logIterable(123);
-// 123 is not an iterable object.
+// 123 is not iterable.
 ```
 
 ## Specifications
