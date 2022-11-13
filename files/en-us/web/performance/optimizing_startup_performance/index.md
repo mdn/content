@@ -23,7 +23,7 @@ In the worst case, blocking the main thread can cause users to uninstall your ap
 
 ## Where there's a will…
 
-It is easier to just write everything the "right way" the first time then it is to retrofit for performance (and accessibility). When you are starting from scratch, making appropriate bits of code asynchronous means a retrofit isn't necessary. All pure startup calculations should be performed in background threads, while you keep the run-time of main thread events as short as possible. Instead of including a progress indicator so the user knows what's going on and how long they'll be waiting, make the progress bar unnecessary. 
+It is easier to just write everything the "right way" the first time then it is to retrofit for performance (and accessibility). When you are starting from scratch, making appropriate bits of code asynchronous means a retrofit isn't necessary. All pure startup calculations should be performed in background threads, while you keep the run-time of main thread events as short as possible. Instead of including a progress indicator so the user knows what's going on and how long they'll be waiting, make the progress bar unnecessary.
 
 On the other hand, porting an existing app to the Web can be challenging. Native application don't need to be written in an asynchronous fashion because the operating system usually handles loading for you. The source application might have a main loop that can easily be made to operate asynchronously (by running each main loop iteration separately); startup is often just a continuous, monolithic procedure that might periodically update a progress meter.
 
