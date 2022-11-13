@@ -17,7 +17,7 @@ Regardless of platform, it's always a good idea to start up as **quickly** as po
 
 Rather, create a [Web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) that does as much as possible in a background thread (for example, fetching and processing data.) Relegating tasks to a Web worker frees up the main thread for tasks requiring it, like user events and rendering UI. In turn, main thread events should consist of many small tasks, also known as [micro tasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth), rather than larger, more time consuming tasks.
 
-Asynchronous loading helps prevent pages and user interfaces from appearing to be (or actually becoming) unresponsive. By minimzing the time required for any individual loading task, the application's [event loop](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#event_loops) will continue to cycle while it starts up. This will prevent the application, browser, and/or device from appearing frozen. 
+Asynchronous loading helps prevent pages and user interfaces from appearing to be (or actually becoming) unresponsive. By minimzing the time required for any individual loading task, the application's [event loop](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#event_loops) will continue to cycle while it starts up. This will prevent the application, browser, and/or device from appearing frozen.
 
 In the worst case, blocking the main thread can cause users to uninstall your app; for example, if someone launches your app by mistake and they aren't prevented from closing the application, they may want to take action so that doesn't accidentally happen again.
 
