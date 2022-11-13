@@ -21,11 +21,9 @@ browser-compat: api.Window.rejectionhandled_event
 
 {{APIRef("HTML DOM")}}
 
-The **`rejectionhandled`** event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a JavaScript {{jsxref("Promise")}} is rejected but after the promise rejection has been handled.
+The **`rejectionhandled`** event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a rejected JavaScript {{jsxref("Promise")}} is handled late, after its rejections had caused an {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event, by subsequently attaching a handler.
 
-The `rejectionhandled` event doesn't fire on every handled rejection — instead, it only fires on rejections that caused [unhandledrejection](/en-US/docs/Web/API/Window/unhandledrejection_event) events but then did subsequently get a handler attached.
-
-The `rejectionhandled` event can be used in debugging and for general application resiliency, in tandem with the {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event, which is sent when a promise is rejected but there is no handler for the rejection.
+This can be used in debugging and for general application resiliency, in tandem with the `unhandledrejection` event, which is sent when a promise is rejected but there is no handler for the rejection at the time.
 
 ## Syntax
 
