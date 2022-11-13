@@ -38,13 +38,13 @@ The `valueToRound` is rounded according to the rounding strategy, to the nearest
     This may be one of the following values:
 
     - `up`
-      - : Round `valueToRound` up to the nearest integer multiple of `roundingInterval` (if the value is negative, it will become "more positive"). This is equivalent to the JavaScript `Math.ceil()` method.
+      - : Round `valueToRound` up to the nearest integer multiple of `roundingInterval` (if the value is negative, it will become "more positive"). This is equivalent to the JavaScript [`Math.ceil()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil) method.
     - `down`
-      - : Round `valueToRound` down to the nearest integer multiple of `roundingInterval` (if the value is negative, it will become "more negative"). This is equivalent to the JavaScript `Math.floor()` method.
+      - : Round `valueToRound` down to the nearest integer multiple of `roundingInterval` (if the value is negative, it will become "more negative"). This is equivalent to the JavaScript [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) method.
     - `nearest` (default)
       - : Round `valueToRound` to the nearest integer (`roundingInterval` is ignored). Equivalent to JavaScript [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round).
     - `to-zero`
-      - : Round `valueToRound` to the nearest integer multiple of `roundingInterval` closer to/towards zero (a positive number will decrease, while a negative value will become "less negative"). This is equivalent to the JavaScript `Math.trunc()` method.
+      - : Round `valueToRound` to the nearest integer multiple of `roundingInterval` closer to/towards zero (a positive number will decrease, while a negative value will become "less negative"). This is equivalent to the JavaScript [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) method.
 
 - `valueToRound`
   - : The value to be rounded.
