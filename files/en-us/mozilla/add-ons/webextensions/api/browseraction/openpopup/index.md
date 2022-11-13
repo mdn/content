@@ -18,17 +18,22 @@ browser-compat: webextensions.api.browserAction.openPopup
 
 Open the browser action's popup.
 
-You can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
-
 ## Syntax
 
 ```js-nolint
-browser.browserAction.openPopup()
+browser.browserAction.openPopup(
+  options // object
+)
 ```
 
 ### Parameters
 
-None.
+- `details`
+
+  - : An object with the following properties:
+
+    - `windowId` {{optional_inline}}
+      - : `integer`. Window to open the popup for. Defaults to the current window.
 
 ### Return value
 
