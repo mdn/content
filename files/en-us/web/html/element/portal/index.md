@@ -65,7 +65,7 @@ Portals are given a default label which is the title of the embedded page. If no
 
 Portals used for prerendering only should be hidden with the hidden HTML attribute or the CSS {{cssxref("display")}} property with a value of `none`.
 
-When using animations during portal activation the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) should be respected.
+When using animations during portal activation the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) and equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} should be respected.
 
 ## Specifications
 

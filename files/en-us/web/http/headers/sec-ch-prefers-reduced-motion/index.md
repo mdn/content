@@ -6,6 +6,7 @@ tags:
   - Client hint
   - HTTP
   - HTTP Header
+  - prefers-color-scheme
   - Reference
   - Request header
   - Experimental
@@ -90,6 +91,7 @@ The client will include the header in subsequent requests in the current session
 ## See also
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- `prefers-reduced-motion` CSS Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{HTTPHeader("Accept-CH")}}

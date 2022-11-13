@@ -104,6 +104,10 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying operation system/platform.
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : User agent's underlying operation system version.
+- {{HTTPHeader("Sec-CH-UA-Prefers-Color-Scheme")}} {{experimental_inline}}
+  - : User's preference of dark or light color scheme.
+- {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
+  - : User's preference to see fewer animations and content layout shifts.
 
 ### Device client hints
 

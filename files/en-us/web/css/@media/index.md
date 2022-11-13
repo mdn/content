@@ -179,6 +179,10 @@ Because media queries provide insights into the capabilities—and by extension,
 
 Because of this potential, a browser may opt to fudge the returned values in some manner in order to prevent them from being used to precisely identify a computer. A browser might also offer additional measures in this area; for example, if Firefox's "Resist Fingerprinting" setting is enabled, many media queries report default values rather than values representing the actual device state.
 
+## User Agent Client Hints
+
+Some media queries have corresponding [User Agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which represent the values of discrete headers as HTTP response headers. These headers include: {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
+
 ## Formal syntax
 
 {{csssyntax}}

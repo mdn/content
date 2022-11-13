@@ -128,5 +128,6 @@ This example has a scaling animation by default. If Reduce Motion is enabled in 
 
 ## See also
 
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - [An Introduction to the Reduced Motion Media Query (CSS Tricks)](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion (WebKit Blog)](https://webkit.org/blog/7551/responsive-design-for-motion/) includes vestibular motion trigger examples.
