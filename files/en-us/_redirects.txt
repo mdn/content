@@ -3599,6 +3599,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
+/en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
@@ -12101,6 +12102,7 @@
 /en-US/docs/Web/JavaScript/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features

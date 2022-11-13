@@ -84,7 +84,7 @@ console.log(scriptResources);
 
 Both, {{domxref("Performance")}} and {{domxref("PerformanceObserver")}}, provide methods that allow you to get performance entries by type directly. You don't necessarily need the `entryType` property for that, instead you might use {{domxref("Performance.getEntriesByType()")}} or {{domxref("PerformanceObserverEntryList.getEntriesByType()")}}.
 
-Also, when observing with a {{domxref("PerformanceObserver")}}, the {{domxref("PerformanceObserver.observe", "observe()")}} method takes an an array of `entryTypes` in its options object where you can decide which entry types to observe.
+Also, when observing with a {{domxref("PerformanceObserver")}}, the {{domxref("PerformanceObserver.observe", "observe()")}} method takes an array of `entryTypes` in its options object where you can decide which entry types to observe.
 
 ```js
 // Log all resource entries at this point
