@@ -9,11 +9,10 @@ tags:
   - Layout
   - Reference
   - Web
-  - Experimental
 browser-compat: css.types.calc-constant
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `π`. Rather than require authors to manually type out several digits of these mathematical constants or calculate them, a few of them are provided directly by CSS for convenience.
 
@@ -23,19 +22,19 @@ The `<calc-constant>` type defines numeric constants that can be used in [CSS ma
 
 ### Values
 
-- `e` {{Experimental_Inline}}
+- `e`
 
   - : The base of the natural logarithm, approximately equal to `2.7182818284590452354`.
 
-- `pi` {{Experimental_Inline}}
+- `pi`
 
   - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
 
-- `infinity` & `-infinity` {{Experimental_Inline}}
+- `infinity` & `-infinity`
 
   - : An infinite value, used to indicate the largest/smallest possible value.
 
-- `NaN` {{Experimental_Inline}}
+- `NaN`
 
   - : A value representing "Not a Number" canonical casing.
 
