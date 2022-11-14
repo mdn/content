@@ -57,7 +57,7 @@ GET / HTTP/1.1
 Host: example.com
 ```
 
-The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`. {{httpheader("Critical-CH")}} is also used in this case to specify that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint:
+The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`. In this example {{httpheader("Critical-CH")}} is also used, indicating that `Sec-CH-Prefers-Reduced-Motion` is considered a [critical client hint](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints):
 
 ```http
 HTTP/1.1 200 OK
