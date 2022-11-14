@@ -4,14 +4,10 @@ slug: Glossary/Unix_time
 tags:
   - Glossary
 ---
-The **Unix time** is the amount of time, expressed in millisecond, that happened since a specific point in time, called the _epoch_. It doesn't take into account leap seconds.
 
-It is a timestamp used to store a specific time. The epoch is arbitrarily set as January 1st, 1970, at midnight (UTC).
+Unix time is a method to represent a timestamp, and is usually defined as the number of seconds since the beginning of the Unix epoch, which is January 1st, 1970, at midnight (UTC). Leap seconds are ignored.
 
-The Unix time can be stored in two ways, depending on the need of the API:
-
-- As an integer.
-- As a floating-point value. The fractional part of the number indicates fractions of a millisecond, with a precision of up to 5 microseconds. Browsers _fuzz_ the value (typically between 60 microseconds and 2 milliseconds. This fuzzing increases security by preventing timing attacks.
+On the web platform, Unix time is used for timestamps, and is given as the number of milliseconds since the beginning of the Unix epoch.
 
 ## See also
 
