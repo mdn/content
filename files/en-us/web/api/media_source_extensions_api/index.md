@@ -43,6 +43,12 @@ Live profile content can introduce latency due to its transcoding and broadcasti
 
 There are numerous available free and open source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript.
 
+### Availability in workers
+
+Starting with Chrome 108, MSE features are available in dedicated {{domxref("Web Workers API", "web workers", "", "nocode")}}, which allows for improved performance when manipulating {{domxref("MediaSource")}}s and {{domxref("SourceBuffer")}}s. To play back the media, the {{domxref("MediaSource.handle")}} property is used to get a reference to a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
+
+See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-workers-demo/mse-in-workers-demo.html) for a live example.
+
 ## Interfaces
 
 - {{domxref("MediaSource")}}
