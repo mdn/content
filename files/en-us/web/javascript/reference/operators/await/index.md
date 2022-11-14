@@ -39,7 +39,13 @@ Throws the rejection reason if the promise or thenable object is rejected.
 
 If the promise is rejected, the `await` expression throws the rejected value. The function containing the `await` expression will [appear in the stack trace](#improving_stack_trace) of the error. Otherwise, if the rejected promise is not awaited or is immediately returned, the caller function will not appear in the stack trace.
 
-The `expression` is resolved in the same way as {{jsxref("Promise.resolve()")}}. This means [thenable objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are supported, and if `expression` is not a promise, it's implicitly wrapped in a `Promise` and then resolved. Even when `expression` is not a promise, the async function execution still pauses until the next tick, due to the implicit promise wrapping and unwrapping. In the meantime, the caller of the async function resumes execution. [See example below.](#control_flow_effects_of_await)
+The `expression` is resolved in the same way as {{jsxref("Promise.resolve()")}}: it's always converted to a native `Promise` and then awaited. If the `expression` is a:
+
+- Native `Promise` (which means `expression` belongs to `Promise` or a subclass, and `expression.constructor === Promise`): The promise is directly used and awaited natively, without calling `then()`.
+- [Thenable object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) (including non-native promises, polyfill, proxy, child class, etc.): A new promise is constructed with the native [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor by calling the object's `then()` method and passing in a handler that calls the `resolve` callback.
+- Non-thenable value: An already-fulfilled `Promise` is constructed and used.
+
+Even when the used promise is already fulfilled, the async function's execution still pauses until the next tick. In the meantime, the caller of the async function resumes execution. [See example below.](#control_flow_effects_of_await)
 
 Because `await` is only valid inside async functions and modules, which themselves are asynchronous and return promises, the `await` expression never blocks the main thread and only defers execution of code that actually depends on the result, i.e. anything after the `await` expression.
 
@@ -284,7 +290,7 @@ However, consider the case where `someAsyncTask` asynchronously throws an error.
 
 ```js
 async function lastAsyncTask() {
-  await setTimeout(() => {}, 100);
+  await null;
   throw new Error("failed");
 }
 
@@ -302,7 +308,7 @@ Only `lastAsyncTask` appears in the stack trace, because the promise is rejected
 
 ```js
 async function lastAsyncTask() {
-  await setTimeout(() => {}, 100);
+  await null;
   throw new Error("failed");
 }
 
