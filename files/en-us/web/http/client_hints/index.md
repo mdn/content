@@ -72,12 +72,35 @@ The high entropy hints are those that have the potential to give away more infor
 The decision might be based on user preferences, a permission request, or the permission policy.
 All client hints that are not low entropy hints are considered high entropy hints.
 
+## Specifying critical client hints
+
+You can use the {{HTTPHeader("Critical-CH")}} response header along with `Accept-CH` to specify that an accepted client hint is also a _critical client hint_. User agents should automatically send the server that client hint to indicate their preference in that regard.
+
+For example, in this case, the server tells a client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`. {{httpheader("Critical-CH")}} is also used to specify that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html
+Accept-CH: Sec-CH-Prefers-Reduced-Motion
+Critical-CH: Sec-CH-Prefers-Reduced-Motion
+```
+
+The client automatically retries the request, telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
+
+```http
+GET / HTTP/1.1
+Host: example.com
+Sec-CH-Prefers-Reduced-Motion: "reduce"
+```
+
 ## Hint types
 
 ### User-agent client hints
 
 User agent (UA) client hint headers allow a server to vary responses based on the user agent (browser), operating system, and device.
 Headers include: {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Arch")}}, {{HTTPHeader("Sec-CH-UA-Bitness")}}, {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}, {{HTTPHeader("Sec-CH-UA-Full-Version")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Model")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}, and {{HTTPHeader("Sec-CH-UA-Platform-Version")}}.
+
+There is also a specific class of "User Preference Media Features Client Hints Headers", which allow a server to vary responses based on a user agent's preferences for [CSS media features](/en-US/docs/Web/CSS/@media#media_features) such as color scheme or reduced motion. See {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
 
 Client hints are available to web page JavaScript via the [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
