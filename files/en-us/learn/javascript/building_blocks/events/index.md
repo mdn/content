@@ -602,12 +602,12 @@ Let's see how this works:
 
 You should see that when you click the button, the box and the video it contains are shown. But then when you click the video, the video starts to play, but the box is hidden again!
 
-This is because the video is inside the `<div>` — it is part of it — so clicking the video actually runs _both_ the event handlers.
+The video is inside the `<div>` — it is part of it — so clicking the video runs _both_ the event handlers, causing this behavior.
 
 ### Fixing the problem with stopPropagation()
 
-This can be a very annoying behavior, but there is a way to prevent it!
-The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that the first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
+As we saw in the last section, event bubbling can sometimes create problems, but there is a way to prevent it.
+The [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when called inside an event handler, prevents the event from bubbling up to any other elements.
 
 We can fix our current problem by changing the JavaScript to this:
 
