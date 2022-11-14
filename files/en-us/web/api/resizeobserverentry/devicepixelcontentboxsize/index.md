@@ -11,6 +11,7 @@ tags:
   - devicePixelContentBoxSize
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`devicePixelContentBoxSize`** read-only property of

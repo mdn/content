@@ -9,10 +9,10 @@ tags:
   - Request header
   - Deprecated
   - Non-standard
-  -  Experimental
 browser-compat: http.headers.DPR
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 The **`DPR`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 

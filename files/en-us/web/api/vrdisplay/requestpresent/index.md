@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.requestPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface starts the `VRDisplay` presenting a scene.
@@ -23,7 +24,7 @@ The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface star
 
 ## Syntax
 
-```js
+```js-nolint
 requestPresent(layers)
 ```
 
@@ -34,7 +35,7 @@ requestPresent(layers)
 
 ### Return value
 
-A promise that resolves once the presentation has begun. there are a number of rules surrounding the promise's fulfillment or rejection:
+A promise that resolves once the presentation has begun. There are a number of rules surrounding the promise's fulfillment or rejection:
 
 - If {{domxref("VRDisplayCapabilities.canPresent")}} is false, or if the VRLayer array contains more than {{domxref("VRDisplayCapabilities.maxLayers")}} layers, the promise will be rejected.
 - If the {{domxref("VRDisplay")}} is already presenting when `requestPresent()` is called, the `VRDisplay` will update the `VRLayer` array being presented.
@@ -88,7 +89,7 @@ if (navigator.getVRDisplays) {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

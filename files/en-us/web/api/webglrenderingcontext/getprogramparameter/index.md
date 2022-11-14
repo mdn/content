@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getProgramParameter()`** method of
@@ -19,7 +20,7 @@ given program.
 
 ## Syntax
 
-```js
+```js-nolint
 getProgramParameter(program, pname)
 ```
 
@@ -47,23 +48,25 @@ getProgramParameter(program, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
         number of active attribute variables to a program.
     - `gl.ACTIVE_UNIFORMS`
+
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
         number of active uniform variables to a program.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.TRANSFORM_FEEDBACK_BUFFER_MODE`
-        - : Returns a
-          {{domxref("WebGL_API/Types", "GLenum")}} indicating the buffer mode when transform feedback is
-          active. May be `gl.SEPARATE_ATTRIBS` or
-          `gl.INTERLEAVED_ATTRIBS`.
-      - `gl.TRANSFORM_FEEDBACK_VARYINGS`
-        - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
-          indicating the number of varying variables to capture in transform feedback
-          mode.
-      - `gl.ACTIVE_UNIFORM_BLOCKS`
-        - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
-          indicating the number of uniform blocks containing active uniforms.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.TRANSFORM_FEEDBACK_BUFFER_MODE`
+      - : Returns a
+        {{domxref("WebGL_API/Types", "GLenum")}} indicating the buffer mode when transform feedback is
+        active. May be `gl.SEPARATE_ATTRIBS` or
+        `gl.INTERLEAVED_ATTRIBS`.
+    - `gl.TRANSFORM_FEEDBACK_VARYINGS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
+        indicating the number of varying variables to capture in transform feedback
+        mode.
+    - `gl.ACTIVE_UNIFORM_BLOCKS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
+        indicating the number of uniform blocks containing active uniforms.
 
 ### Return value
 

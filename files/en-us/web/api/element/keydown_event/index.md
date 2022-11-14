@@ -13,11 +13,12 @@ tags:
   - keydown
 browser-compat: api.Element.keydown_event
 ---
+
 {{APIRef}}
 
 The **`keydown`** event is fired when a key is pressed.
 
-Unlike the {{domxref("Element/keypress_event", "keypress")}} event, the `keydown` event is fired for all keys, regardless of whether they produce a character value.
+Unlike the deprecated {{domxref("Element/keypress_event", "keypress")}} event, the `keydown` event is fired for all keys, regardless of whether they produce a character value.
 
 The `keydown` and [`keyup`](/en-US/docs/Web/API/Element/keyup_event) events provide a code indicating which key is pressed, while `keypress` indicates which character was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 
@@ -56,7 +57,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
 
-  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
 
@@ -97,7 +98,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key inside the {{HtmlElement("input")}} element.
 
 ```html
-<input placeholder="Click here, then press down a key." size="40">
+<input placeholder="Click here, then press down a key." size="40" />
 <p id="log"></p>
 ```
 

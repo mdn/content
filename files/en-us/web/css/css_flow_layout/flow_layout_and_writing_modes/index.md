@@ -1,6 +1,7 @@
 ---
 title: Flow layout and writing modes
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+page-type: guide
 tags:
   - CSS
   - Flow Layout
@@ -8,6 +9,9 @@ tags:
   - Orientation
   - Writing-mode
 ---
+
+{{CSSRef}}
+
 The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
 
 This is not a comprehensive guide to the use of writing modes in CSS, the aim here is to document the areas where flow layout interacts with writing modes in possibly unanticipated ways. The [external resources](#external_resources) and [see also](#see_also) sections of this document link to more writing modes resources.
@@ -28,7 +32,7 @@ While certain languages will use a particular writing mode or text direction, we
 
 ## Block flow direction
 
-The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb,` which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all `horizontal-tb`.
+The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb,` which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages, such as Arabic, are all `horizontal-tb`.
 
 The following example shows blocks using `horizontal-tb`.
 
@@ -77,6 +81,5 @@ In most cases, flow layout works as you would expect it to when changing the wri
 ## See also
 
 - [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
-- _[CSS Writing Modes](https://24ways.org/2016/css-writing-modes/)_, Jen Simmons on 24 Ways
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/CSS_Flow_Layout/")}}
+- [Writing Modes And CSS Layout](https://www.smashingmagazine.com/2019/08/writing-modes-layout/)
+- [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/)

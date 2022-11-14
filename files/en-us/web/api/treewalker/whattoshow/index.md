@@ -9,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.whatToShow
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.whatToShow`** read-only property returns a

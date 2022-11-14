@@ -12,13 +12,14 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTCharacteristic
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral's service.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{DOMxRef("BluetoothRemoteGATTService")}} this characteristic belongs to.
@@ -34,7 +35,7 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
 - `oncharacteristicvaluechanged` {{Experimental_Inline}}
   - : Event handler for the `characteristicvaluechanged` event.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptor()")}} {{Experimental_Inline}}
   - : Returns a {{JSxRef("Promise")}} that resolves to the first {{DOMxRef("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.

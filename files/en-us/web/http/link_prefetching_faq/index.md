@@ -2,7 +2,6 @@
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
 tags:
-  - Gecko
   - HTML
   - HTTP
   - Link
@@ -11,20 +10,17 @@ tags:
   - Prefetch
   - Web Development
 ---
-### What is link prefetching?
+
+{{HTTPSidebar}}
 
 Link prefetching is a browser mechanism, which utilizes browser idle time to download or _prefetch_ documents that the user might visit in the near future. A web page provides a set of prefetching hints to the browser, and after the browser is finished loading the page, it begins silently prefetching specified documents and stores them in its cache. When the user visits one of the prefetched documents, it can be served up quickly out of the browser's cache.
-
-### Does prefetching work with HTTPS?
-
-Starting in Gecko 1.9.1 (Firefox 3.5), HTTPS content can be prefetched.
 
 ### What are the prefetching hints?
 
 The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link:` header](/en-US/docs/Web/HTTP/Headers) with a relation type of either `next` or `prefetch`. An example using the `link` tag follows:
 
 ```html
-<link rel="prefetch" href="/images/big.jpeg">
+<link rel="prefetch" href="/images/big.jpeg" />
 ```
 
 The same prefetching hint using an HTTP `Link:` header:
@@ -40,8 +36,11 @@ The browser observes all of these hints and queues up each unique request to be 
 Some more examples follow:
 
 ```html
-<link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
-<link rel="next" href="2.html">
+<link
+  rel="prefetch alternate stylesheet"
+  title="Designed for Mozilla"
+  href="mozspecific.css" />
+<link rel="next" href="2.html" />
 ```
 
 ### Are anchor (\<a>) tags prefetched?
@@ -68,7 +67,7 @@ Yes and no. If you are downloading something using Mozilla, link prefetching wil
 
 ### Are there any restrictions on what is prefetched?
 
-Yes, only `http://` (and, starting in {{ Gecko("1.9.1") }} `https://`) URLs can be prefetched. Other protocols (such as FTP) do not provide rich enough support for client side caching.
+Yes, only `http://` and `https://` URLs can be prefetched. Other protocols (such as FTP) do not provide rich enough support for client side caching.
 
 ### Will Mozilla prefetch documents from a different host?
 

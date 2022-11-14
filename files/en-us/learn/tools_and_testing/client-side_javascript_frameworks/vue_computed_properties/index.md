@@ -11,6 +11,7 @@ tags:
   - computed properties
   - Vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.
@@ -48,7 +49,7 @@ In this article we'll add a counter that displays the number of completed todo i
 
 ## Using computed properties
 
-The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:
+The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5". While it might be tempting to do something like this:
 
 ```html
 <h2>\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed</h2>

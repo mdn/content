@@ -8,6 +8,7 @@ tags:
   - Web Components
   - shadow dom
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 An important aspect of web components is encapsulation — being able to keep the markup structure, style, and behavior hidden and separate from other code on the page so that different parts do not clash, and the code can be kept nice and clean. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element. This article covers the basics of using the Shadow DOM.
@@ -20,14 +21,19 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -56,8 +62,8 @@ Note that the shadow DOM is not a new thing by any means — browsers have used 
 You can attach a shadow root to any element using the {{domxref("Element.attachShadow()")}} method. This takes as its parameter an options object that contains one option — `mode` — with a value of `open` or `closed`:
 
 ```js
-const shadowOpen = elementRef.attachShadow({mode: 'open'});
-const shadowClosed = elementRef.attachShadow({mode: 'closed'});
+const shadowOpen = elementRef.attachShadow({ mode: "open" });
+const shadowClosed = elementRef.attachShadow({ mode: "closed" });
 ```
 
 `open` means that you can access the shadow DOM using JavaScript written in the main page context, for example using the {{domxref("Element.shadowRoot")}} property:
@@ -73,13 +79,13 @@ If you attach a shadow root to a custom element with `mode: closed` set, you won
 If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:
 
 ```js
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 ```
 
 When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:
 
 ```js
-const para = document.createElement('p');
+const para = document.createElement("p");
 shadow.appendChild(para);
 // etc.
 ```
@@ -107,7 +113,7 @@ We first attach a shadow root to the custom element:
 
 ```js
 // Create a shadow root
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 ```
 
 ### Creating the shadow DOM structure
@@ -116,21 +122,26 @@ Next, we use some DOM manipulation to create the element's internal shadow DOM s
 
 ```js
 // Create spans
-const wrapper = document.createElement('span');
-wrapper.setAttribute('class', 'wrapper');
-const icon = document.createElement('span');
-icon.setAttribute('class', 'icon');
-icon.setAttribute('tabindex', 0);
-const info = document.createElement('span');
-info.setAttribute('class', 'info');
+const wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+const icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+const info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // Take attribute content and put it inside the info span
-const text = this.getAttribute('data-text');
+const text = this.getAttribute("data-text");
 info.textContent = text;
 
 // Insert icon
-const img = document.createElement('img');
-img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+const img = document.createElement("img");
+img.src = this.hasAttribute("img")
+  ? this.getAttribute("img")
+  : "img/default.png";
+img.alt = this.hasAttribute("alt")
+  ? this.getAttribute("alt")
+  : "";
 icon.appendChild(img);
 ```
 
@@ -140,7 +151,7 @@ After that we create a {{htmlelement("style")}} element and populate it with som
 
 ```js
 // Create some CSS to apply to the shadow DOM
-let style = document.createElement('style');
+let style = document.createElement("style");
 
 style.textContent = `
 .wrapper {
@@ -190,13 +201,13 @@ Once the class is defined, using the element is as simple as defining it, and pu
 
 ```js
 // Define the new element
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
-                                    security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
 ```
 
 ### Internal versus external styles
@@ -207,9 +218,9 @@ For example, take a look at this code from our [popup-info-box-external-styleshe
 
 ```js
 // Apply external styles to the shadow DOM
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // Attach the created element to the shadow DOM
 shadow.appendChild(linkElem);

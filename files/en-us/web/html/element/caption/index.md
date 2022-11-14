@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.caption
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table.
 
@@ -81,7 +81,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
 
     - `left`
       - : The caption is displayed to the left of the table.
@@ -108,7 +108,9 @@ This simple example presents a table that includes a caption.
 
 ```html
 <table>
-  <caption>Example Caption</caption>
+  <caption>
+    Example Caption
+  </caption>
   <tr>
     <th>Login</th>
     <th>Email</th>
@@ -132,7 +134,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0px;
 }
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 ```

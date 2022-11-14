@@ -11,6 +11,7 @@ tags:
   - report-to
 browser-compat: http.headers.Content-Security-Policy.report-to
 ---
+
 {{HTTPSidebar}}
 
 The `Content-Security-Policy`

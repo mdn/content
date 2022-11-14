@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 The **`compareDocumentPosition()`** method of the {{domxref("Node")}} interface
@@ -14,8 +15,8 @@ reports the position of its argument node relative to the node on which it is ca
 
 ## Syntax
 
-```js
-compareDocumentPosition(otherNode);
+```js-nolint
+compareDocumentPosition(otherNode)
 ```
 
 ### Parameters

@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.origin
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 > **Note:** Use `self.origin` instead.

@@ -8,6 +8,9 @@ tags:
   - NeedsActiveLearning
   - Web
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article introduces the basic concepts behind web accessibility.
 
 <table class="standard-table">
@@ -47,7 +50,7 @@ Let's consider video:
 
 - Hearing impairment
 
-  - : How does a hearing-impaired person benefit from a video? You have to provide subtitles —or even better, a full text transcript.
+  - : How does a hearing-impaired person benefit from a video? You have to provide subtitles — or even better, a full text transcript.
 
     Also, make sure people can adjust the volume to accommodate their unique needs.
 

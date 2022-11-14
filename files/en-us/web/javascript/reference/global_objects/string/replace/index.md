@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.replace
 ---
+
 {{JSRef}}
 
 The **`replace()`** method returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
@@ -20,14 +21,14 @@ The **`replace()`** method returns a new string with one, some, or all matches o
 
 ## Syntax
 
-```js
+```js-nolint
 replace(pattern, replacement)
 ```
 
 ### Parameters
 
 - `pattern`
-  - : Can be a string or an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method — the typical example being a [regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Any value that doesn't have the `Symbol.replace` method will be coerced to a string.
+  - : Can be a string or an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method — the typical example being a [regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Any value that doesn't have the `Symbol.replace` method will be coerced to a string.
 - `replacement`
   - : Can be a string or a function.
     - If it's a string, it will replace the substring matched by `pattern`. A number of special replacement patterns are supported; see the [Specifying a string as the replacement](#specifying_a_string_as_the_replacement) section below.
@@ -58,7 +59,7 @@ A regexp with the `g` flag is the only case where `replace()` replaces more than
 The replacement string can include the following special replacement patterns:
 
 | Pattern   | Inserts                                                                                        |
-| --------- | -----------------------------------------------------------------------------------------------|
+| --------- | ---------------------------------------------------------------------------------------------- |
 | `$$`      | Inserts a `"$"`.                                                                               |
 | `$&`      | Inserts the matched substring.                                                                 |
 | `` $` ``  | Inserts the portion of the string that precedes the matched substring.                         |
@@ -69,9 +70,14 @@ The replacement string can include the following special replacement patterns:
 `$n` and `$<Name>` are only available if the `pattern` argument is a {{jsxref("RegExp")}} object. If the `pattern` is a string, or if the corresponding capturing group isn't present in the regex, then the pattern will be replaced as a literal. If the group is present but isn't matched (because it's part of a disjunction), it will be replaced with an empty string.
 
 ```js
-"foo".replace(/(f)/, "$2"); // "$2oo"; the regex doesn't have the second group
-"foo".replace("f", "$1"); // "$1oo"
-"foo".replace(/(f)|(g)/, "$2"); // "oo"; the second group exists but isn't matched
+"foo".replace(/(f)/, "$2");
+// "$2oo"; the regex doesn't have the second group
+
+"foo".replace("f", "$1");
+// "$1oo"; the pattern is a string, so it doesn't have any groups
+
+"foo".replace(/(f)|(g)/, "$2");
+// "oo"; the second group exists but isn't matched
 ```
 
 ### Specifying a function as the replacement
@@ -151,12 +157,12 @@ The following script switches the words in the string. For the replacement text,
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
+const str = 'Maria Cruz';
 const newstr = str.replace(re, '$2, $1');
-console.log(newstr);  // Smith, John
+console.log(newstr);  // Cruz, Maria
 ```
 
-This logs `'Smith, John'`.
+This logs `'Cruz, Maria'`.
 
 ### Using an inline function that modifies the matched characters
 
@@ -178,7 +184,8 @@ Given `styleHyphenFormat('borderTop')`, this returns `'border-top'`.
 Because we want to further transform the _result_ of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method. If we had tried to do this using the match without a function, the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.
 
 ```js example-bad
-const newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // won't work
+// Won't work
+const newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());
 ```
 
 This is because `'$&'.toLowerCase()` would first be evaluated as a string literal (resulting in the same `'$&'`) before using the characters as a pattern.
@@ -205,7 +212,8 @@ function f2c(x) {
 Suppose we want to create a replacer that appends the offset data to every matched string. Because the replacer function already receives the `offset` parameter, it will be trivial if the regex is statically known.
 
 ```js
-console.log("abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) `)); // "abc (1) d"
+"abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) `);
+// "abc (1) d"
 ```
 
 However, this replacer would be hard to generalize if we want it to work with any regex pattern. The replacer is _variadic_ — the number of arguments it receives depends on the number of capturing groups present. We can use [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), but it would also collect `offset`, `string`, etc. into the array. The fact that `groups` may or may not be passed depending on the identity of the regex would also make it hard to generically know which argument corresponds to the `offset`.

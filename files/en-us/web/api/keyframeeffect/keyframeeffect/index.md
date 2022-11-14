@@ -12,13 +12,14 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("KeyframeEffect")}} object instance, and also allows you to clone an existing keyframe effect object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new KeyframeEffect(target, keyframes)
 new KeyframeEffect(target, keyframes, options)
 new KeyframeEffect(sourceKeyFrames)
@@ -53,6 +54,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
     - `iterations` {{optional_inline}}
       - : The number of times the animation should repeat. Defaults to `1`, and can also take a value of {{jsxref("Infinity")}} to make it repeat for as long as the element exists.
     - `composite` {{optional_inline}}
+
       - : Determines how values are combined between this animation and other, separate
         animations that do not specify their own specific composite operation. Defaults to
         `replace`.

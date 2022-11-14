@@ -10,6 +10,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.yield
 ---
+
 {{jsSidebar("Operators")}}
 
 The `yield` keyword is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
@@ -18,7 +19,7 @@ The `yield` keyword is used to pause and resume a [generator function](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 [rv] = yield [expression]
 ```
 
@@ -122,12 +123,12 @@ function* counter(value) {
 }
 
 const generatorFunc = counter(0);
-console.log(generatorFunc.next().value);   // 0
-console.log(generatorFunc.next().value);   // 1
-console.log(generatorFunc.next().value);   // 2
-console.log(generatorFunc.next().value);   // 3
+console.log(generatorFunc.next().value); // 0
+console.log(generatorFunc.next().value); // 1
+console.log(generatorFunc.next().value); // 2
+console.log(generatorFunc.next().value); // 3
 console.log(generatorFunc.next(10).value); // 14
-console.log(generatorFunc.next().value);   // 15
+console.log(generatorFunc.next().value); // 15
 console.log(generatorFunc.next(10).value); // 26
 ```
 
@@ -143,5 +144,5 @@ console.log(generatorFunc.next(10).value); // 26
 
 - [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield*", "yield*")}}

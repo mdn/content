@@ -11,6 +11,9 @@ browser-compat:
   - html.elements.link.integrity
   - html.elements.script.integrity
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
 > **Note:** For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
@@ -57,8 +60,8 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 > **Note:**
 >
-> - The pipe-through-`xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
-> - The pipe-through-`awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
+> - The pipe-through `xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
+> - The pipe-through `awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
@@ -96,9 +99,10 @@ In the following examples, assume that `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7
 You can use the following {{HTMLElement("script")}} element to tell a browser that before executing the `https://example.com/example-framework.js` script, the browser must first compare the script to the expected hash, and verify that there's a match.
 
 ```html
-<script src="https://example.com/example-framework.js"
-        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
 ```
 
 > **Note:** For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin).
@@ -109,7 +113,7 @@ Browsers handle SRI by doing the following:
 
 1. When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
 
-    For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+   For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
 2. If the script or stylesheet doesn't match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
 
@@ -128,5 +132,3 @@ Browsers handle SRI by doing the following:
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
 - [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

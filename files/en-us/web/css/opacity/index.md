@@ -1,6 +1,7 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.opacity
 ---
+
 {{CSSRef}}
 
 The **`opacity`** CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
@@ -35,11 +37,11 @@ opacity: unset;
 
   - : A {{cssxref("number")}} in the range `0.0` to `1.0`, inclusive, or a {{cssxref("percentage")}} in the range `0%` to `100%`, inclusive, representing the opacity of the channel (that is, the value of its alpha channel). Any value outside the interval, though valid, is clamped to the nearest limit in the range.
 
-    | Value                                                         | Meaning                                                                       |
-    | ------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-    | `0`                                                           | The element is fully transparent (that is, invisible).                        |
+    | Value                                                  | Meaning                                                                       |
+    | ------------------------------------------------------ | ----------------------------------------------------------------------------- |
+    | `0`                                                    | The element is fully transparent (that is, invisible).                        |
     | Any {{cssxref("number")}} strictly between `0` and `1` | The element is translucent (that is, content behind the element can be seen). |
-    | `1` (default value)                                           | The element is fully opaque (visually solid).                                 |
+    | `1` (default value)                                    | The element is fully opaque (visually solid).                                 |
 
 ## Description
 
@@ -116,9 +118,12 @@ In the following example opacity is changed on hover, so the striped background 
 
 ```html
 <div class="wrapper">
-  <img src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
-  alt="MDN Dino" width="128" height="146"
-  class="opacity">
+  <img
+    src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
+    alt="MDN Dino"
+    width="128"
+    height="146"
+    class="opacity" />
 </div>
 ```
 

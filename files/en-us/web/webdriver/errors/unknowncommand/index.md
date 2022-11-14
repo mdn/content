@@ -7,6 +7,9 @@ tags:
   - Unknown command
   - WebDriver
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+
 The **unknown command** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when the driver does not recognize the command/HTTP endpoint.
 
 ## Examples

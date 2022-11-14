@@ -9,20 +9,21 @@ tags:
   - Reference
 browser-compat: api.HTMLBRElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLBRElement`** interface represents an HTML line break element ({{htmlelement("br")}}). It inherits from {{domxref("HTMLElement")}}.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
   - : A string indicating the flow of text around floating objects.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

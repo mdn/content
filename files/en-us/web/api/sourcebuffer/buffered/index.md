@@ -14,6 +14,7 @@ tags:
   - buffered
 browser-compat: api.SourceBuffer.buffered
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`buffered`** read-only property of the

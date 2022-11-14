@@ -12,6 +12,7 @@ tags:
   - web console
 browser-compat: api.console.timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.timeEnd()`** stops a timer that was previously started by calling {{domxref("console.time()")}}.
@@ -23,7 +24,7 @@ details and examples.
 
 ## Syntax
 
-```js
+```js-nolint
 timeEnd(label)
 ```
 
@@ -51,7 +52,7 @@ console.timeEnd("answer time");
 The output from the example above shows the time taken by the user to dismiss the first
 alert box, followed by the time it took for the user to dismiss the second alert:
 
-![](timer_output.png)
+![Timer output in Firefox console](timer_output.png)
 
 Notice that the timer's name is displayed when the timer value is logged using
 `timeLog()` and again when it's stopped. In addition, the call to timeEnd()

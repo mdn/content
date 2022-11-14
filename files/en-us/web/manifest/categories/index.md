@@ -5,9 +5,11 @@ tags:
   - Manifest
   - Web
   - categories
+  - Experimental
 browser-compat: html.manifest.categories
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

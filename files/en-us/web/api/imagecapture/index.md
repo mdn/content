@@ -14,31 +14,32 @@ tags:
   - Reference
 browser-compat: api.ImageCapture
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API) provides methods to enable the capture of images or photos from a camera or other photographic device. It provides an interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
 
 ## Constructor
 
-- {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}}
+- {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} {{Experimental_Inline}}
   - : Creates a new `ImageCapture` object which can be used to capture still frames (photos) from a given {{domxref("MediaStreamTrack")}} which represents a video stream.
 
-## Properties
+## Instance properties
 
-- {{domxref("ImageCapture.track")}} {{ReadOnlyInline}}
+- {{domxref("ImageCapture.track")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("MediaStreamTrack")}} passed to the constructor.
 
-## Methods
+## Instance methods
 
 The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it includes the methods defined by that interface as well as the ones listed below.
 
-- {{domxref("ImageCapture.takePhoto()")}}
+- {{domxref("ImageCapture.takePhoto()")}} {{Experimental_Inline}}
   - : Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.
-- {{domxref("ImageCapture.getPhotoCapabilities()")}}
+- {{domxref("ImageCapture.getPhotoCapabilities()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of available configuration options.
-- {{domxref("ImageCapture.getPhotoSettings()")}}
+- {{domxref("ImageCapture.getPhotoSettings()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object containing the current photo configuration settings.
-- {{domxref("ImageCapture.grabFrame()")}}
+- {{domxref("ImageCapture.grabFrame()")}} {{Experimental_Inline}}
   - : Takes a snapshot of the live video in a {{domxref("MediaStreamTrack")}}, returning an {{domxref("ImageBitmap")}}, if successful.
 
 ## Example

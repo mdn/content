@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/43
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 43 was released on December 15, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -75,7 +76,7 @@ _No change._
 #### Miscellaneous
 
 - The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ({{bug(1050749)}}).
-- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
+- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names")}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
 - The {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ({{bug("1161276")}}).
 - The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline_API) has been implemented ({{bug(1165796)}}).
 - The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ({{bug(1191178)}}).
@@ -116,7 +117,7 @@ _No change._
 
 ### Interfaces
 
-_No change_
+_No change._
 
 ### XUL
 

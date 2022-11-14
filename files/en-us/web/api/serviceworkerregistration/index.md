@@ -24,7 +24,7 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
 
@@ -47,7 +47,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
 
-## Methods
+## Instance methods
 
 _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 
@@ -106,7 +106,7 @@ if ("serviceWorker" in navigator) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

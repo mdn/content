@@ -11,6 +11,7 @@ tags:
   - Secure context
 spec-urls: https://w3c.github.io/reporting/#intro
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy), or feature deprecation reports) in a consistent manner.
@@ -118,7 +119,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/master/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
+> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
 
 ## Specifications
 

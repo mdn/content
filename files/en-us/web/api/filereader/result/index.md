@@ -12,6 +12,7 @@ tags:
   - result
 browser-compat: api.FileReader.result
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`result`** property returns the

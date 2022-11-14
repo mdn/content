@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.shiftKey
 ---
+
 {{ APIRef("Touch Events") }}
 
 The read-only **`shiftKey`** property of the `TouchEvent` interface returns a boolean value indicating whether or not the <kbd>shift</kbd> key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.

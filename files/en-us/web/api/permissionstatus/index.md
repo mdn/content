@@ -11,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.PermissionStatus
 ---
+
 {{APIRef("Permissions API")}}
 
-The **`PermissionStatus`** interface of the [Permissions API](Permissions_API) provides the state of an object and an event handler for monitoring changes to said state.
+The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the state of an object and an event handler for monitoring changes to said state.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PermissionStatus.name")}} {{ReadOnlyInline}}
   - : Returns the name of a requested permission, identical to the `name` passed to {{domxref("Permissions.query")}}.

@@ -9,9 +9,12 @@ tags:
   - Security
   - Subresource Integrity
   - require-sri-for
+  - Deprecated
+  - Non-standard
 browser-compat: http.headers.Content-Security-Policy.require-sri-for
 ---
-{{deprecated_header}}
+
+{{deprecated_header}}{{Non-standard_header}}
 
 The [HTTP](/en-US/docs/Web/HTTP) {{HTTPHeader("Content-Security-Policy")}}
 **`require-sri-for`** directive instructs the client to require
@@ -44,9 +47,10 @@ Content-Security-Policy: require-sri-for script style
 valid integrity attribute.
 
 ```html example-good
-<script src="https://code.jquery.com/jquery-3.1.1.slim.js"
-        integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
-        crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.slim.js"
+  integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
+  crossorigin="anonymous"></script>
 ```
 
 However, scripts without integrity won't load anymore:

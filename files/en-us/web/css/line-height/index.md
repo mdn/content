@@ -1,6 +1,7 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -14,6 +15,7 @@ tags:
   - size
 browser-compat: css.properties.line-height
 ---
+
 {{CSSRef}}
 
 The **`line-height`** [CSS](/en-US/docs/Web/CSS) property sets the height of a line box. It's commonly used to set the distance between lines of text. On block-level elements, it specifies the minimum height of line boxes within the element. On non-[replaced](/en-US/docs/Web/CSS/Replaced_element) inline elements, it specifies the height that is used to calculate line box height.
@@ -85,10 +87,28 @@ Use a minimum value of `1.5` for `line-height` for main paragraph content. This 
 ```css
 /* All rules below have the same resultant line height */
 
-div { line-height: 1.2;   font-size: 10pt; }   /* number/unitless */
-div { line-height: 1.2em; font-size: 10pt; }   /* length */
-div { line-height: 120%;  font-size: 10pt; }   /* percentage */
-div { font: 10pt/1.2 Georgia,"Bitstream Charter",serif; } /* font shorthand */
+/* number/unitless */
+div {
+  line-height: 1.2;
+  font-size: 10pt;
+}
+
+/* length */
+div {
+  line-height: 1.2em;
+  font-size: 10pt;
+}
+
+/* percentage */
+div {
+  line-height: 120%;
+  font-size: 10pt;
+}
+
+/* font shorthand */
+div {
+  font: 10pt/1.2 Georgia, "Bitstream Charter", serif;
+}
 ```
 
 It is often more convenient to set `line-height` by using the {{cssxref("font")}} shorthand as shown above, but this requires the `font-family` property to be specified as well.
@@ -101,17 +121,17 @@ This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values 
 
 ```html
 <div class="box green">
- <h1>Avoid unexpected results by using unitless line-height.</h1>
+  <h1>Avoid unexpected results by using unitless line-height.</h1>
   Length and percentage line-heights have poor inheritance behavior.
 </div>
 
 <div class="box red">
- <h1>Avoid unexpected results by using unitless line-height.</h1>
+  <h1>Avoid unexpected results by using unitless line-height.</h1>
   Length and percentage line-heights have poor inheritance behavior
 </div>
 
-<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  -->
-<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want -->
+<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px -->
+<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px, probably not what you want -->
 ```
 
 #### CSS

@@ -2,11 +2,12 @@
 title: Firefox 72 for Developers
 slug: Mozilla/Firefox/Releases/72
 tags:
-  - '72'
+  - "72"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.
@@ -57,7 +58,7 @@ _No changes._
 
 ### SVG
 
-_No changes_
+_No changes._
 
 ### JavaScript
 

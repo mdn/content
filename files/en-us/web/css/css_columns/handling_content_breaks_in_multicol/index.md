@@ -1,12 +1,14 @@
 ---
 title: Handling content breaks in multi-column layout
 slug: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
+page-type: guide
 tags:
   - CSS
   - CSS Multi-column Layout
   - Guide
   - Layout
 ---
+
 {{CSSRef}}
 
 Content is broken between column boxes in multi-column layout in the same way that it is broken between pages in paged media. In both contexts, we control where and how things break by using properties of the CSS Fragmentation specification. In this guide, we see how fragmentation works in a _multi-column container_ or _multicol container_ for short.

@@ -1,12 +1,14 @@
 ---
 title: Basic concepts of grid layout
 slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grids
   - Guide
   - Layout
 ---
+
 {{CSSRef}}
 
 [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide.
@@ -62,7 +64,9 @@ I make the `.wrapper` a grid container.
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -91,9 +95,11 @@ If we want to start making this more grid-like we need to add column tracks.
 
 ## Grid tracks
 
-We define rows and columns on our grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. These define grid tracks. A _grid track_ is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.
+We define rows and columns on our grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. These define grid tracks. A _grid track_ is the space between any two adjacent lines on the grid. The image below shows a highlighted track – this is the first-row track in our grid.
 
 ![A box with 3 grid items. Above the three items is a solid light green area which is the track.](1_grid_track.png)
+
+Grid tracks are defined in the explicit grid by using the `grid-template-columns` and `grid-template-rows` properties or the shorthand `grid` or `grid-template` properties. Tracks are also created in the implicit grid by positioning a grid item outside of the tracks created in the explicit grid.
 
 ### Basic example
 
@@ -119,7 +125,9 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -160,7 +168,9 @@ Tracks can be defined using any length unit. Grid also introduces an additional 
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -201,7 +211,9 @@ In this next example, we create a definition with a `2fr` track then two `1fr` t
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -242,7 +254,9 @@ In this final example, we mix absolute sized tracks with `fr` units. The first t
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -328,7 +342,9 @@ In the below example, we use `grid-auto-rows` to ensure that tracks created in t
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -362,7 +378,9 @@ Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -382,7 +400,8 @@ Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
+  <div>
+    Two
     <p>I have some more content in.</p>
     <p>This makes me taller than 100 pixels.</p>
   </div>
@@ -442,7 +461,9 @@ The second item starts on grid column line 1, and spans one track. This is the d
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -527,7 +548,9 @@ _Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("col
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   column-gap: 10px;
@@ -573,20 +596,22 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">
-      <div class="nested">a</div>
-      <div class="nested">b</div>
-      <div class="nested">c</div>
-    </div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
   </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
+</div>
 ```
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -679,7 +704,9 @@ If we return to our example with items positioned by line number, we can change 
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -738,7 +765,9 @@ We can control the order in which items stack up by using the `z-index` property
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

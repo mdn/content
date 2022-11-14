@@ -14,6 +14,7 @@ tags:
   - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`enabled`** property on the
@@ -87,7 +88,7 @@ Finally, the new value of `enabled` is saved, making the change take effect.
 
 ## See also
 
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

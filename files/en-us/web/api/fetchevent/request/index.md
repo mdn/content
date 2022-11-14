@@ -21,7 +21,7 @@ The **`request`** read-only property of the
 the event handler.
 
 This property is non-nullable (since version 46, in the case of Firefox.) If a request
-is not provided by some other means, the constructor `init` object must
+is not provided by some other means, the constructor `options` object must
 contain a request (see {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}.)
 
 ## Value
@@ -81,7 +81,7 @@ self.addEventListener("fetch", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

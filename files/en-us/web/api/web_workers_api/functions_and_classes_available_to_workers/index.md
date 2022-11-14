@@ -6,6 +6,7 @@ tags:
   - Reference
   - Web
 ---
+
 {{DefaultAPISidebar("Web Workers API") }}
 
 In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), there are a variety of functions available from the DOM to workers. This article provides a list of those.
@@ -29,9 +30,44 @@ The following functions are **only** available to workers:
 
 > **Note:** If a listed API is supported by a platform in a particular version, then it can generally be assumed to work in web workers.
 
-The following Web APIs are available to workers: {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}}, {{domxref("Console API", "Console API")}}, {{domxref("Crypto")}}, {{domxref("CustomEvent")}}, {{domxref("Data_Store_API", "Data Store")}} (Firefox only), `DOMRequest` and `DOMCursor`, {{domxref("Fetch_API", "Fetch")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, [Network Information API](/en-US/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "Notifications")}}, {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}, {{jsxref("Promise")}}, [Server-sent events](/en-US/docs/Web/API/Server-sent_events), {{domxref("ServiceWorkerRegistration")}}, {{domxref("TextEncoder")}} and {{domxref("TextDecoder")}}, {{ domxref("URL") }}, [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}} (enabled behind a feature preference setting `gfx.offscreencanvas.enabled`), {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}} (although the `responseXML` and `channel` attributes are always null).
+The following Web APIs are available to workers:
 
-Workers can also spawn other workers, so these APIs are also available: {{domxref("Worker")}}, {{domxref("WorkerGlobalScope")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerNavigator")}}.
+- {{domxref("Broadcast_Channel_API", "Broadcast Channel API")}}
+- {{domxref("Cache", "Cache API")}}
+- {{domxref("Channel_Messaging_API", "Channel Messaging API")}}
+- {{domxref("Console API", "Console API")}}
+- {{domxref("Crypto")}}
+- {{domxref("CustomEvent")}}, `DOMRequest` and `DOMCursor`
+- {{domxref("Fetch_API", "Fetch")}}
+- {{domxref("FileReader")}}
+- {{domxref("FileReaderSync")}} (only works in workers!)
+- {{domxref("FormData")}}
+- {{domxref("ImageData")}}
+- {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
+- [Network Information API](/en-US/docs/Web/API/Network_Information_API)
+- {{domxref("Notifications_API", "Notifications")}}
+- {{domxref("Performance")}}
+- {{domxref("PerformanceEntry")}}
+- {{domxref("PerformanceMeasure")}}
+- {{domxref("PerformanceMark")}}
+- {{domxref("PerformanceObserver")}}
+- {{domxref("PerformanceResourceTiming")}}
+- {{jsxref("Promise")}}
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
+- {{domxref("ServiceWorkerRegistration")}}
+- {{domxref("TextEncoder")}} and {{domxref("TextDecoder")}}
+- {{ domxref("URL") }}
+- [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}}
+- {{domxref("WebSocket")}}
+- {{domxref("XMLHttpRequest")}} (although the `responseXML` and `channel` attributes are always null).
+
+Workers can also spawn other workers, so these APIs are also available:
+
+- {{domxref("Worker")}}
+- {{domxref("WorkerGlobalScope")}}
+- {{domxref("WorkerLocation")}}
+- {{domxref("WorkerNavigator")}}.
 
 ## See also
 

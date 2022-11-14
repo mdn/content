@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: api.DOMException.DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DOMException()`** constructor returns a
@@ -17,7 +18,7 @@ The **`DOMException()`** constructor returns a
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMException()
 new DOMException(message)
 new DOMException(message, name)

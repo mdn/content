@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollWidth
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollWidth`** read-only property is a
@@ -39,7 +40,7 @@ A number.
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Example</title>
     <style>
       div {
@@ -59,44 +60,36 @@ A number.
   </head>
 
   <body>
-    <div id="aDiv">
-      FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="aButton">
-      Check for overflow
-    </button>
+    <div id="aDiv">FooBar-FooBar-FooBar-FooBar</div>
+    <button id="aButton">Check for overflow</button>
 
-    <div id="anotherDiv">
-      FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="anotherButton">
-      Check for overflow
-    </button>
+    <div id="anotherDiv">FooBar-FooBar-FooBar-FooBar</div>
+    <button id="anotherButton">Check for overflow</button>
   </body>
   <script>
-    const buttonOne = document.getElementById('aButton');
-    const buttonTwo = document.getElementById('anotherButton');
-    const divOne = document.getElementById('aDiv');
-    const divTwo = document.getElementById('anotherDiv');
+    const buttonOne = document.getElementById("aButton");
+    const buttonTwo = document.getElementById("anotherButton");
+    const divOne = document.getElementById("aDiv");
+    const divTwo = document.getElementById("anotherDiv");
 
     //check to determine if an overflow is happening
     function isOverflowing(element) {
-      return (element.scrollWidth > element.offsetWidth);
+      return element.scrollWidth > element.offsetWidth;
     }
 
     function alertOverflow(element) {
       if (isOverflowing(element)) {
-        alert('Contents are overflowing the container.');
+        alert("Contents are overflowing the container.");
       } else {
-        alert('No overflows!');
+        alert("No overflows!");
       }
     }
 
-    buttonOne.addEventListener('click', () => {
+    buttonOne.addEventListener("click", () => {
       alertOverflow(divOne);
     });
 
-    buttonTwo.addEventListener('click', () => {
+    buttonTwo.addEventListener("click", () => {
       alertOverflow(divTwo);
     });
   </script>

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.check
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `check()` method of the {{domxref("FontFaceSet")}} returns whether all
@@ -18,7 +19,7 @@ fonts in the given font list have been loaded and are available.
 
 ## Syntax
 
-```js
+```js-nolint
 check(font)
 check(font, text)
 ```
@@ -34,6 +35,8 @@ check(font, text)
 
 A {{jsxref("Boolean")}} value that is `true` if the font list is available.
 
+The method returns `true` if the font list contains system or nonexistent fonts. This prevents websites from identifying users by the fonts they have installed.
+
 ## Examples
 
 In the following example, the first line will print `true` if the Courier font is available at `12px`. The second line will print `true` if the font `MyFont` contains the "ß" character.
@@ -42,6 +45,13 @@ In the following example, the first line will print `true` if the Courier font i
 console.log(document.fonts.check("12px courier"));
 
 console.log(document.fonts.check("12px MyFont", "ß"));
+```
+
+If the font given in the font specification does not exist, this function returns `true`:
+
+```js
+console.log(document.fonts.check("12px NonExistingFont"));
+// true
 ```
 
 ## Specifications

@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.Document.hidden
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.hidden`** read-only property returns a Boolean
@@ -22,7 +23,7 @@ value indicating if the page is considered hidden or not.
 
 ## Syntax
 
-```js
+```js-nolint
 document.hidden
 ```
 

@@ -19,7 +19,7 @@ The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/Serv
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}}._
 
@@ -28,7 +28,7 @@ _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}
 - {{domxref("WindowClient.navigate()")}}
   - : Loads a specified URL into a controlled client page.
 
-## Properties
+## Instance properties
 
 _`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
 
@@ -75,7 +75,7 @@ self.addEventListener("notificationclick", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.input.type_submit
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`submit`** are rendered as buttons. When the {{domxref("Element/click_event", "click")}} event occurs (typically because the user clicked the button), the {{Glossary("user agent")}} attempts to submit the form to the server.
 
@@ -61,7 +61,7 @@ An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/inpu
 ### Setting the value attribute
 
 ```html
-<input type="submit" value="Send Request">
+<input type="submit" value="Send Request" />
 ```
 
 {{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
@@ -71,7 +71,7 @@ An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/inpu
 If you don't specify a `value`, the button will have a default label, chosen by the user agent. This label is likely to be something along the lines of "Submit" or "Submit Query." Here's an example of a submit button with a default label in your browser:
 
 ```html
-<input type="submit">
+<input type="submit" />
 ```
 
 {{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
@@ -122,7 +122,7 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 ### formtarget
 
-A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
+A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}). A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
 
 In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:
 
@@ -151,10 +151,10 @@ We'll begin by creating a form with a simple submit button:
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Send">
+    <input type="submit" value="Send" />
   </div>
 </form>
 ```
@@ -167,11 +167,11 @@ Try entering some text into the text field, and then submitting the form.
 
 Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=usertext`, where "usertext" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) for more details.
 
-### Adding a submit keyboard shortcut
+### Adding a keyboard shortcut to a submit button
 
 Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination. In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) for further details.
+In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination). In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) for further details.
 
 Here's the previous example with the <kbd>s</kbd> access key added:
 
@@ -179,18 +179,17 @@ Here's the previous example with the <kbd>s</kbd> access key added:
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Send"
-     accesskey="s">
+    <input type="submit" value="Send" accesskey="s" />
   </div>
 </form>
 ```
 
 For example, in Firefox for Mac, pressing <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> triggers the Send button, while Chrome on Windows uses <kbd>Alt</kbd>+<kbd>S</kbd>.
 
-{{EmbedLiveSample("Adding_a_submit_keyboard_shortcut", 650, 100)}}
+{{EmbedLiveSample("Adding_a_keyboard_shortcut_to_a_submit_button", 650, 100)}}
 
 The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute) can also help, although it's not a complete solution for accessibility purposes.
 
@@ -199,7 +198,7 @@ The problem with the above example is that the user will not know what the acces
 To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute on it, like so:
 
 ```html
-<input type="submit" value="Send" disabled>
+<input type="submit" value="Send" disabled />
 ```
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.

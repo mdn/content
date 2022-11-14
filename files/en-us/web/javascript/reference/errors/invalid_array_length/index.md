@@ -7,9 +7,10 @@ tags:
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "Invalid array length" occurs when specifying an array length that is either negative, a floating number or exceeds the maximum supported by the platform (i.e. when creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}}, or when setting the {{jsxref("Array.length")}} property).
+The JavaScript exception "Invalid array length" occurs when specifying an array length that is either negative, a floating number or exceeds the maximum supported by the platform (i.e. when creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}}, or when setting the {{jsxref("Array/length", "length")}} property).
 
 The maximum allowed array length depends on the platform, browser and browser version.
 For {{jsxref("Array")}} the maximum length is 4GB-1 (2^32-1).
@@ -34,10 +35,10 @@ RangeError: Array size is not a small enough positive integer. (Safari)
 
 An invalid array length might appear in these situations:
 
-- Creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}} with a negative length, or setting a negative value for the {{jsxref("Array.length")}} property.
-- Creating an {{jsxref("Array")}} or setting the {{jsxref("Array.length")}} property greater than 2GB-1 (2^32-1).
+- Creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}} with a negative length, or setting a negative value for the {{jsxref("Array/length", "length")}} property.
+- Creating an {{jsxref("Array")}} or setting the {{jsxref("Array/length", "length")}} property greater than 2GB-1 (2^32-1).
 - Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2GB-1 (2^32-1) on a 32-bit system or 8GB (2^33) on a 64-bit system.
-- Creating an {{jsxref("Array")}} or setting the {{jsxref("Array.length")}} property to a floating-point number.
+- Creating an {{jsxref("Array")}} or setting the {{jsxref("Array/length", "length")}} property to a floating-point number.
 - Before Firefox 89: Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2GB-1 (2^32-1).
 
 If you are creating an `Array`, using the constructor, you probably want to
@@ -92,5 +93,5 @@ const c = new Array(3);
 ## See also
 
 - {{jsxref("Array")}}
-- {{jsxref("Array.length")}}
+- {{jsxref("Array/length", "length")}}
 - {{jsxref("ArrayBuffer")}}

@@ -13,6 +13,7 @@ tags:
   - keys
 browser-compat: api.CSSTransformValue.keys
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue.keys()`** method
@@ -21,7 +22,7 @@ for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

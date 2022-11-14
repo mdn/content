@@ -14,6 +14,7 @@ tags:
   - label
 browser-compat: api.MediaDeviceInfo.label
 ---
+
 {{APIRef("Media Capture")}}
 
 The **`label`** ReadOnlyInline

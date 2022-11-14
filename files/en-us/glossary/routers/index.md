@@ -4,6 +4,7 @@ slug: Glossary/routers
 tags:
   - Intro
 ---
+
 There are three definitions for **routers** on the web:
 
 1. For the network layer, the router is a networking device that decides data {{Glossary('Packet')}}s directions. They are distributed by retailers allowing user interaction to the internet.
@@ -14,7 +15,7 @@ There are three definitions for **routers** on the web:
 
 For network layer context:
 
-- [Router (computing)](https://en.wikipedia.org/wiki/Router_(computing)) on Wikipedia
+- [Router (computing)](<https://en.wikipedia.org/wiki/Router_(computing)>) on Wikipedia
 
 For SPA in application layer context, most of the popular SPA frameworks have their routing libraries:
 

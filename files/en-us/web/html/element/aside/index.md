@@ -12,7 +12,8 @@ tags:
   - Web
 browser-compat: html.elements.aside
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
 
@@ -103,17 +104,13 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 ```html
 <article>
   <p>
-    The Disney movie <cite>The Little Mermaid</cite> was
-    first released to theatres in 1989.
+    The Disney movie <cite>The Little Mermaid</cite> was first released to
+    theatres in 1989.
   </p>
   <aside>
-    <p>
-      The movie earned $87 million during its initial release.
-    </p>
+    <p>The movie earned $87 million during its initial release.</p>
   </aside>
-  <p>
-    More info about the movie…
-  </p>
+  <p>More info about the movie…</p>
 </article>
 ```
 

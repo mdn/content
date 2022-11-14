@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Notification.silent
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`silent`** read-only property of the

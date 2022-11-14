@@ -10,6 +10,7 @@ tags:
   - web console
 browser-compat: api.console
 ---
+
 {{APIRef("Console API")}}
 
 The **`console`** object provides access to the browser's
@@ -23,7 +24,7 @@ property console. It's exposed as {{domxref("Window.console")}}, and can be refe
 `console`. For example:
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 This page documents the [Methods](#methods) available on the `console` object and
@@ -31,7 +32,7 @@ gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
-## Methods
+## Instance methods
 
 - {{domxref("console.assert()")}}
   - : Log a message and stack trace to console if the first argument is `false`.
@@ -116,7 +117,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```bash
-My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 ```
 
 #### Using string substitutions
@@ -137,8 +138,8 @@ When passing a string to one of the `console` object's methods that accepts a st
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
 ```js
-for (let i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+for (let i = 0; i < 5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
 }
 ```
 
@@ -157,17 +158,25 @@ Hello, Bob. You've called me 5 times.
 You can use the `%c` directive to apply a CSS style to console output:
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px"
+);
 ```
 
 The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.
 
-![](css-styling.png)
+![Styled Text in Firefox console](css-styling.png)
 
 You may use `%c` multiple times:
 
 ```js
-console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");
+console.log(
+  "Multiple styles: %cred %corange",
+  "color: red",
+  "color: orange",
+  "Additional unformatted message"
+);
 ```
 
 The properties usable along with the `%c` syntax are as follows (at least, in Firefox — they may differ in other browsers):
@@ -232,7 +241,7 @@ console.timeEnd("answer time");
 
 Will log the time needed by the user to dismiss the alert box, log the time to the console, wait for the user to dismiss the second alert, and then log the ending time to the console:
 
-![](console-timelog.png)
+![Time log in Firefox console](console-timelog.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
@@ -256,7 +265,7 @@ foo();
 
 The output in the console looks something like this:
 
-![](api-trace2.png)
+![Stack trace in Firefox console](api-trace2.png)
 
 ## Specifications
 
@@ -279,5 +288,5 @@ The output in the console looks something like this:
 ### Other implementations
 
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

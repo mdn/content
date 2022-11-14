@@ -12,23 +12,24 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResultList
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionResultList`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
 
-## Properties
+## Instance properties
 
 - {{domxref("SpeechRecognitionResultList.length")}} {{ReadOnlyInline}}
   - : Returns the length of the "array" — the number of {{domxref("SpeechRecognitionResult")}} objects in the list.
 
-## Methods
+## Instance methods
 
 - {{domxref("SpeechRecognitionResultList.item")}}
   - : A standard getter that allows {{domxref("SpeechRecognitionResult")}} objects in the list to be accessed via array syntax.
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

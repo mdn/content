@@ -7,7 +7,8 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.externally_connectable
 ---
-{{AddonSidebar}}{{SeeCompatTable}}
+
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -44,17 +45,24 @@ browser-compat: webextensions.manifest.externally_connectable
   </tbody>
 </table>
 
-Externally connectable allows extension developer to control which other extensions and web pages can communicate with this extension via {{WebExtAPIRef("runtime.connect","runtime.connect()")}} and {{WebExtAPIRef("runtime.sendMessage", "runtime.sendMessage()")}} message passing. If `externally_connectable` is not specified, all extensions can communicate with each other but not with web pages.
+Externally connectable controls which other extensions and web pages can communicate with an extension using {{WebExtAPIRef("runtime.connect","runtime.connect()")}} and {{WebExtAPIRef("runtime.sendMessage", "runtime.sendMessage()")}} message passing. If `externally_connectable` is not specified, all extensions can communicate with each other but not with web pages.
+
+> **Note:**
+> For communication with web pages:
+>
+> - In Chrome, `chrome.runtime.connect` and `chrome.runtime.sendMessage` are used. These methods are only available when there is at least one extension listening for messages, see [chrome.runtime will no longer be defined unconditionally in Chrome 106](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/tCWVZRq77cg/m/KB6-tvCdAgAJ) for more details.
+> - In Safari, `browser.runtime.connect` and `browser.runtime.sendMessage` are used.
+> - In Firefox, neither API is supported. See {{bug(1319168)}}.
 
 ### "ids" attribute
 
-`ids` enables communication between this extension and other installed extensions specified by extension identifiers. Use the pattern `"*"` if you wish to communicate with all extensions.
+`ids` enables communication between this extension and other installed extensions specified by extension identifiers. Use the pattern `"*"` to communicate with all extensions.
 
 ### "matches" attribute
 
-`matches` enables communication between this extension and the web pages. This is a list of regular expressions for page URLs that you wish to communicate with.
+`matches` is a list of regular expressions that enables communication between an extension and the web pages that match the expression.
 
-> **Note:** If `externally_connectable` is not specified, communication among extensions is still allowed as if `externally_connectable` was `{"ids": ["*"] }`, therefore if you specify `externally_connectable.matches` don't forget to add `ids` if you still want to communicate with other extensions.
+> **Note:** If `externally_connectable` is not specified, communication among extensions is allowed as if `externally_connectable` specified `{"ids": ["*"] }`. Therefore, if you specify `externally_connectable.matches`, don't forget to add `ids` if you want to communicate with other extensions.
 
 ## Browser compatibility
 

@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLTableSectionElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableSectionElement`** interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -30,7 +31,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableSectionElement.vAlign")}} {{deprecated_inline}}
   - : A string representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "tr")}} attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

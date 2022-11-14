@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.tFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.tFoot`** property represents the

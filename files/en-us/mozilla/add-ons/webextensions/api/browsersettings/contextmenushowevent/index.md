@@ -12,6 +12,7 @@ tags:
   - contextMenuShowEvent
 browser-compat: webextensions.api.browserSettings.contextMenuShowEvent
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object which determines whether the browser's context menu is shown on the mouseup event or on the mousedown event.
@@ -33,8 +34,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.contextMenuShowEvent.set({value: "mouseup"}).
-  then(logResult);
+browser.browserSettings.contextMenuShowEvent
+  .set({ value: "mouseup" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.acronym
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## Summary
 
@@ -30,7 +30,10 @@ This element implements the {{domxref('HTMLElement')}} interface.
 ## Example
 
 ```html
-<p>The <acronym title="World Wide Web">WWW</acronym> is only a component of the Internet.</p>
+<p>
+  The <acronym title="World Wide Web">WWW</acronym> is only a component of the
+  Internet.
+</p>
 ```
 
 ## Default styling
@@ -54,5 +57,3 @@ It is therefore recommended that web authors either explicitly style this elemen
 ## See also
 
 - The {{HTMLElement("abbr")}} HTML element
-
-{{HTMLRef}}

@@ -14,9 +14,9 @@ tags:
 browser-compat: html.elements.mark
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.
+The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes due to the marked passage's relevance in the enclosing context.
 
 {{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}
 
@@ -99,11 +99,10 @@ In this first example, a `<mark>` element is used to mark some text within a quo
 
 ```html
 <blockquote>
-  It is a period of civil war. Rebel spaceships, striking from a
-  hidden base, have won their first victory against the evil
-  Galactic Empire. During the battle, <mark>Rebel spies managed
-  to steal secret plans</mark> to the Empire's ultimate weapon,
-  the DEATH STAR, an armored space station with enough power to
+  It is a period of civil war. Rebel spaceships, striking from a hidden base,
+  have won their first victory against the evil Galactic Empire. During the
+  battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire's
+  ultimate weapon, the DEATH STAR, an armored space station with enough power to
   destroy an entire planet.
 </blockquote>
 ```
@@ -117,15 +116,17 @@ The resulting output looks like this:
 This example demonstrates using `<mark>` to mark search results within a passage.
 
 ```html
-<p>It is a dark time for the Rebellion. Although the Death
-Star has been destroyed, <mark class="match">Imperial</mark>
-troops have driven the Rebel forces from their hidden base and
-pursued them across the galaxy.</p>
+<p>
+  It is a dark time for the Rebellion. Although the Death Star has been
+  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
+  forces from their hidden base and pursued them across the galaxy.
+</p>
 
-<p>Evading the dreaded <mark class="match">Imperial</mark>
-Starfleet, a group of freedom fighters led by Luke Skywalker
-has established a new secret base on the remote ice world of
-Hoth.</p>
+<p>
+  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
+  freedom fighters led by Luke Skywalker has established a new secret base on
+  the remote ice world of Hoth.
+</p>
 ```
 
 To help distinguish the use of `<mark>` for search results from other potential usage, this example applies the custom class `"match"` to each match.

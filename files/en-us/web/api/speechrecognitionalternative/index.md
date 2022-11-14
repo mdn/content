@@ -12,11 +12,12 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionAlternative
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a single word that has been recognized by the speech recognition service.
 
-## Properties
+## Instance properties
 
 - {{domxref("SpeechRecognitionAlternative.transcript")}} {{ReadOnlyInline}}
   - : Returns a string containing the transcript of the recognized word.
@@ -26,7 +27,7 @@ The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

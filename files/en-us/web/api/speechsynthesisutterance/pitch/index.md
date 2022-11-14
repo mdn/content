@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.pitch
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`pitch`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the utterance will be spoken at.

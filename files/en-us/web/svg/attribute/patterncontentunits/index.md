@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.pattern.patternContentUnits
 ---
+
 {{SVGRef}}
 
 The **`patternContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("pattern") }} element.
@@ -19,7 +20,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -30,8 +35,11 @@ html,body,svg { height:100% }
   Note that the size of the tile is computed against
   the bounding box of the target element
   -->
-  <pattern id="p1" width="20%" height="20%"
-           patternContentUnits="userSpaceOnUse">
+  <pattern
+    id="p1"
+    width="20%"
+    height="20%"
+    patternContentUnits="userSpaceOnUse">
     <circle cx="10" cy="10" r="10" />
   </pattern>
 
@@ -41,18 +49,19 @@ html,body,svg { height:100% }
   Note that the size of the tile is also computed against
   the bounding box of the target element
   -->
-  <pattern id="p2" width="20%" height="20%"
-           patternContentUnits="objectBoundingBox">
+  <pattern
+    id="p2"
+    width="20%"
+    height="20%"
+    patternContentUnits="objectBoundingBox">
     <circle cx=".1" cy=".1" r=".1" />
   </pattern>
 
   <!-- Left square with user space tiles -->
-  <rect x="10"  y="10" width="80" height="80"
-        fill="url(#p1)" />
+  <rect x="10" y="10" width="80" height="80" fill="url(#p1)" />
 
   <!-- Right square with bounding box tiles -->
-  <rect x="110" y="10" width="80" height="80"
-        fill="url(#p2)" />
+  <rect x="110" y="10" width="80" height="80" fill="url(#p2)" />
 </svg>
 ```
 

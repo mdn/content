@@ -20,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceTransport.role
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**

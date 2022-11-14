@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FormDataEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`FormDataEvent`** interface represents a [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event) — such an event is fired on an {{domxref("HTMLFormElement")}} object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
@@ -23,14 +24,14 @@ This allows a {{domxref("FormData")}} object to be quickly obtained in response 
 - {{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}
   - : Creates a new `FormDataEvent` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("FormDataEvent.formData")}}
   - : Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("Event")}}._
 

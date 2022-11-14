@@ -10,19 +10,20 @@ tags:
   - Experimental
 browser-compat: api.VideoEncoder.VideoEncoder
 ---
+
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("VideoEncoder.state")}} set to `"unconfigured"`.
 
 ## Syntax
 
-```js
-new VideoEncoder(init)
+```js-nolint
+new VideoEncoder(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object containing two required callbacks.
     - `output`
       - : A callback which takes an {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:

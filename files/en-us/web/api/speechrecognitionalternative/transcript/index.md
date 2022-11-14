@@ -13,6 +13,7 @@ tags:
   - transcript
 browser-compat: api.SpeechRecognitionAlternative.transcript
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`transcript`** read-only property of the
@@ -30,7 +31,7 @@ A string.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

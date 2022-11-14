@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 The Web Audio API's `AudioParam` interface represents an audio-related parameter, usually a parameter of an {{domxref("AudioNode")}} (such as {{ domxref("GainNode.gain") }}).
@@ -33,7 +34,7 @@ An _a-rate_ `AudioParam` takes the current audio parameter value for each [sampl
 
 A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioParam.defaultValue")}} {{ReadOnlyInline}}
   - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
@@ -44,7 +45,7 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 - {{domxref("AudioParam.value")}}
   - : Represents the parameter's current value as of the current time; initially set to the value of {{domxref("AudioParam.defaultValue", "defaultValue")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioParam.setValueAtTime()")}}
   - : Schedules an instant change to the value of the `AudioParam` at a precise time, as measured against {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given by the `value` parameter.

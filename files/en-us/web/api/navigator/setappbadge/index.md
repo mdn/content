@@ -12,13 +12,14 @@ tags:
   - Experimental
 browser-compat: api.Navigator.setAppBadge
 ---
+
 {{APIRef("Badging API")}}{{SeeCompatTable}}
 
 The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
 
 ## Syntax
 
-```js
+```js-nolint
 setAppBadge()
 setAppBadge(contents)
 ```

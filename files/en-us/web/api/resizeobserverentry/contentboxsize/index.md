@@ -11,6 +11,7 @@ tags:
   - contentBoxSize
 browser-compat: api.ResizeObserverEntry.contentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`contentBoxSize`** read-only property of
@@ -37,7 +38,7 @@ The array is necessary to support elements that have multiple fragments, which o
 ## Examples
 
 The following snippet is taken from the [resize-observer-border-radius.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html)
-([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html)) example. This example includes a green box, sized as a percentage of the
+([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-border-radius.html)) example. This example includes a green box, sized as a percentage of the
 viewport size. When the viewport size is changed, the box's rounded corners change in
 proportion to the size of the box. We could just implement this using
 {{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking

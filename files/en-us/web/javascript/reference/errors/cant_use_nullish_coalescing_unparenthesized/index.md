@@ -6,9 +6,10 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "cannot use `??` unparenthesized within `||` and `&&` expressions" occurs when an [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) is used with a [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) or [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) in the same expression without parentheses.
+The JavaScript exception "cannot use `??` unparenthesized within `||` and `&&` expressions" occurs when an [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) is used with a [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) or [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) in the same expression without parentheses.
 
 ## Message
 
@@ -77,5 +78,5 @@ function getId(user, fallback) {
 ## See also
 
 - [Original discussion of nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
-- [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)

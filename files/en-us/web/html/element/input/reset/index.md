@@ -16,9 +16,9 @@ tags:
 browser-compat: html.elements.input.type_reset
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all of the inputs in the form to their initial values.
+{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all inputs in the form to their initial values.
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
@@ -63,17 +63,17 @@ An `<input type="reset">` element's {{htmlattrxref("value", "input")}} attribute
 ### Setting the value attribute
 
 ```html
-<input type="reset" value="Reset the form">
+<input type="reset" value="Reset the form" />
 ```
 
 {{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
 
 ### Omitting the value attribute
 
-If you don't specify a `value`, you get an button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):
+If you don't specify a `value`, you get a button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):
 
 ```html
-<input type="reset">
+<input type="reset" />
 ```
 
 {{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
@@ -90,10 +90,10 @@ We'll begin by creating a simple reset button:
 <form>
   <div>
     <label for="example">Type in some sample text</label>
-    <input id="example" type="text">
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="Reset the form">
+    <input type="reset" value="Reset the form" />
   </div>
 </form>
 ```
@@ -114,11 +114,10 @@ In this example, <kbd>r</kbd> is specified as the access key (you'll need to pre
 <form>
   <div>
     <label for="example">Type in some sample text</label>
-    <input id="example" type="text">
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="Reset the form"
-     accesskey="r">
+    <input type="reset" value="Reset the form" accesskey="r" />
   </div>
 </form>
 ```
@@ -132,7 +131,7 @@ The problem with the above example is that there's no way for the user to know w
 To disable a reset button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
 
 ```html
-<input type="reset" value="Disabled" disabled>
+<input type="reset" value="Disabled" disabled />
 ```
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.

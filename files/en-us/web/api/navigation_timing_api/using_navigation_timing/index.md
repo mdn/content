@@ -9,7 +9,8 @@ tags:
   - Optimization
   - Performance
 ---
-{{DefaultAPISidebar("Navigation Timing")}}
+
+{{DefaultAPISidebar("Performance API")}}
 
 The Navigation Timing API lets you easily obtain detailed and highly accurate timing information to help isolate performance problems with your site's code or resources.
 
@@ -31,8 +32,7 @@ window.addEventListener("load", () => {
 This code, executed when the {{domxref("Window/load_event", "load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
 
 ```html hidden
-<div class="output">
-</div>
+<div class="output"></div>
 ```
 
 ```css hidden
@@ -93,8 +93,7 @@ window.addEventListener("load", () => {
 This amends the previous example by looking at the contents of the `performance.navigation` object. {{domxref("PerformanceNavigation.type", "performance.navigation.type")}} indicates what kind of load operation took place: a navigation, a reload, or a shift through the browser's history. We also obtain the number of redirects that were incurred during the navigation from {{domxref("PerformanceNavigation.redirectCount", "performance.navigation.redirectCount")}}. This information is output to the screen just like the page load time was previously: by inserting it into the element with class `"output"`.
 
 ```html hidden
-<div class="output">
-</div>
+<div class="output"></div>
 ```
 
 ```css hidden

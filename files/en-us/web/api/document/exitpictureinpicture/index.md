@@ -14,6 +14,7 @@ tags:
   - pip
 browser-compat: api.Document.exitPictureInPicture
 ---
+
 {{ApiRef("Picture-in-Picture API")}}
 
 The {{domxref("Document")}} method
@@ -24,7 +25,7 @@ effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPictur
 
 ## Syntax
 
-```js
+```js-nolint
 exitPictureInPicture()
 ```
 

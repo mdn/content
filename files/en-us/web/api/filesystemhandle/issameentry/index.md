@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`isSameEntry()`** method of the
@@ -18,7 +19,7 @@ The **`isSameEntry()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 isSameEntry(fileSystemHandle)
 ```
 

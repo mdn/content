@@ -9,93 +9,69 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.startTime
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`startTime`** property returns the first recorded
-{{domxref("DOMHighResTimeStamp","timestamp")}} of the
-{{domxref("PerformanceEntry","performance entry")}}.
+{{APIRef("Performance API")}}
 
-{{AvailableInWorkers}}
-
-The value returned by this property depends on the performance entry's
-{{domxref("PerformanceEntry.entryType","type")}}:
-
-- "`frame`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-  when the frame was started.
-- "`mark`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-  when the mark was created by a call to
-  {{domxref("Performance.mark","performance.mark()")}}.
-- "`measure`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-  when the measure was created by a call to
-  {{domxref("Performance.measure","performance.measure()")}}.
-- "`navigation`" - returns the
-  {{domxref("DOMHighResTimeStamp","timestamp")}} with a value of "`0`".
-- "`resource`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-  immediately before the browser {{domxref("PerformanceResourceTiming/fetchStart","starts
-    fetching the resource")}}.
-
-This property is {{ReadOnlyInline}}.
+The read-only **`startTime`** property returns the first {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for this {{domxref("PerformanceEntry","performance entry", "", "no-code")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
 
 ## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
 {{domxref("PerformanceEntry","performance entry")}} was created.
 
-Note: if the performance entry has an
-{{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" (i.e.
-the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns
-the {{domxref("PerformanceResourceTiming.fetchStart")}}
-{{domxref("DOMHighResTimeStamp","timestamp")}}.
+The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
+
+- `element`
+  - : Either the value of this entry's {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}.
+- `event`
+  - : The time the event was created, i.e. the event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp) property.
+- `first-input`
+  - : The time the first input event was created, i.e. that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
+- `largest-contentful-paint`
+  - : The value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
+- `longtask`
+  - : The time when the task started.
+- `mark`
+  - : The time at which the mark was created by a call to {{domxref("Performance.mark","performance.mark()")}}.
+- `measure`
+  - : The time at which the measure was created by a call to {{domxref("Performance.measure","performance.measure()")}}.
+- `navigation`
+  - : Always `0`.
+- `paint`
+  - : The time when the paint occurred.
+- `resource`
+  - : The value of this entry's {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} property.
+- `taskattribution`
+  - : Always `0`.
 
 ## Examples
 
-The following example shows the use of the `startTime` property.
+### Using the startTime property
+
+The following example shows the use of the `startTime` property which you can log during performance observation.
+
+Note: The {{domxref("performance.mark()")}} method allows you to set your own `startTime`, and the {{domxref("performance.measure()")}} method allows to set the start of the measure.
 
 ```js
-function run_PerformanceEntry() {
-  console.log("PerformanceEntry support…");
+performance.mark("my-mark");
+performance.mark("my-other-mark", { startTime: 12.5 });
 
-  if (performance.mark === undefined) {
-    console.log("The property performance.mark is not supported");
-    return;
-  }
+loginButton.addEventListener('click', (clickEvent) => {
+  performance.measure("login-click", { start: clickEvent.timeStamp });
+});
 
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
-
-  // Use getEntries() to iterate through the each entry
-  const p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
-    log(`Entry[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
+function perfObserver(list, observer) {
+  list.getEntries().forEach((entry) =>  {
+    if (entry.entryType === "mark") {
+      console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+    };
+    if (entry.entryType === "measure") {
+      console.log(`${entry.name}'s duration: ${entry.duration}`);
+    };
+  });
 }
-function check_PerformanceEntry(obj) {
-  const properties = ["name", "entryType", "startTime", "duration"];
-  const methods = ["toJSON"];
-
-  for (let i = 0; i < properties.length; i++) {
-    // check each property
-    const supported = properties[i] in obj;
-    if (supported) {
-      console.log(`…${properties[i]} = ${obj[properties[i]]}`);
-    } else {
-      console.log(`…${properties[i]} = Not supported`);
-    }
-  }
-  for (let i = 0; i < methods.length; i++) {
-    // check each method
-    const supported = typeof obj[methods[i]] === "function";
-    if (supported) {
-      const js = obj[methods[i]]();
-      console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);
-    } else {
-      console.log(`…${methods[i]} = Not supported`);
-    }
-  }
-}
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["measure", "mark"] });
 ```
 
 ## Specifications

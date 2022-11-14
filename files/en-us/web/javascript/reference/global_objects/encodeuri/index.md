@@ -11,6 +11,7 @@ tags:
   - encodeURI
 browser-compat: javascript.builtins.encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`encodeURI()`** function encodes a {{glossary("URI")}} by
@@ -22,7 +23,7 @@ four escape sequences for characters composed of two "surrogate" characters).
 
 ## Syntax
 
-```js
+```js-nolint
 encodeURI(URI)
 ```
 
@@ -68,7 +69,7 @@ Not Escaped:
 
 ```js
 const set1 = ";,/?:@&=+$#"; // Reserved Characters
-const set2 = "-_.!~*'()";   // Unreserved Marks
+const set2 = "-_.!~*'()"; // Unreserved Marks
 const set3 = "ABC abc 123"; // Alphanumeric Characters + Space
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$#
@@ -94,13 +95,13 @@ not part of a high-low pair, e.g.,
 
 ```js
 // high-low pair OK
-console.log(encodeURI('\uD800\uDFFF'));
+console.log(encodeURI("\uD800\uDFFF"));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
-console.log(encodeURI('\uD800'));
+console.log(encodeURI("\uD800"));
 
 // lone low surrogate throws "URIError: malformed URI sequence"
-console.log(encodeURI('\uDFFF'));
+console.log(encodeURI("\uDFFF"));
 ```
 
 ### Encoding for IPv6
@@ -111,7 +112,7 @@ which could be part of a URL (such as a host), the following code snippet may he
 
 ```js
 function fixedEncodeURI(str) {
-  return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 ```
 

@@ -11,6 +11,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStreamDefaultWriter
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) is the object returned by {{domxref("WritableStream.getWriter()")}} and once created locks the writer to the `WritableStream` ensuring that no other streams can write to the underlying sink.
@@ -20,7 +21,7 @@ The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs
 - {{domxref("WritableStreamDefaultWriter.WritableStreamDefaultWriter", "WritableStreamDefaultWriter()")}}
   - : Creates a new `WritableStreamDefaultWriter` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("WritableStreamDefaultWriter.closed")}} {{ReadOnlyInline}}
   - : Allows you to write code that responds to an end to the streaming process. Returns a promise that fulfills if the stream becomes closed, or rejects if the stream errors or the writer's lock is released.
@@ -29,7 +30,7 @@ The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs
 - {{domxref("WritableStreamDefaultWriter.ready")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the desired size of the stream's internal queue transitions from non-positive to positive, signaling that it is no longer applying backpressure.
 
-## Methods
+## Instance methods
 
 - {{domxref("WritableStreamDefaultWriter.abort()")}}
   - : Aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded.

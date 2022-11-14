@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.ValidityState
 ---
+
 {{apiref()}}
 
 The Constraint Validation API enables checking values that users have entered into form controls, before submitting the values to the server.
@@ -42,7 +43,7 @@ The constraint validation API extends the interfaces for the form-associated ele
 - {{domxref("HTMLSelectElement")}}
 - {{domxref("HTMLTextAreaElement")}}
 
-#### Properties
+#### Instance properties
 
 - {{domxref('HTMLObjectElement.validity', 'validity')}}
   - : A read-only property that returns a [`ValidityState`](/en-US/docs/Web/API/ValidityState) object, whose properties represent validation errors for the value of that element.
@@ -51,7 +52,7 @@ The constraint validation API extends the interfaces for the form-associated ele
 - {{domxref('HTMLObjectElement.willValidate', 'willValidate')}}
   - : A read-only boolean property that returns `true` if the element is a candidate for constraint validation; and `false` otherwise. Elements with the `HTMLObjectElement` interface are _never_ candidates for constraint validation. Others may be barred from constraint validation depending on specific conditions.
 
-#### Methods
+#### Instance methods
 
 - {{domxref('HTMLInputElement.checkValidity', 'checkValidity()')}}
   - : Checks the element's value against its constraints. If the value is invalid, it fires an [invalid](/en-US/docs/Web/API/HTMLInputElement/invalid_event) event at the element and returns `false`; otherwise it returns `true`.
@@ -67,7 +68,7 @@ Take the following form:
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```
@@ -77,18 +78,20 @@ The basic HTML form validation features will cause this to produce a default err
 If you wanted to instead display custom error messages, you could use JavaScript like the following:
 
 ```js
-const nameInput = document.querySelector('input');
+const nameInput = document.querySelector("input");
 
-nameInput.addEventListener('input', () => {
-  nameInput.setCustomValidity('');
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
   nameInput.checkValidity();
 });
 
-nameInput.addEventListener('invalid', () => {
-  if (nameInput.value === '') {
-    nameInput.setCustomValidity('Enter your username!');
+nameInput.addEventListener("invalid", () => {
+  if (nameInput.value === "") {
+    nameInput.setCustomValidity("Enter your username!");
   } else {
-    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+    nameInput.setCustomValidity(
+      "Usernames can only contain upper and lowercase letters. Try again!"
+    );
   }
 });
 ```

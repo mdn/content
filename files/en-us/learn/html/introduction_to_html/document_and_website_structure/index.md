@@ -12,6 +12,7 @@ tags:
   - blocks
   - semantics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 In addition to defining individual parts of your page (such as "a paragraph" or "an image"), {{glossary("HTML")}} also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column"). This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
@@ -70,7 +71,7 @@ The simple example shown above isn't pretty, but it is perfectly fine for illust
 
 This is because visuals don't tell the whole story. We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?
 
-> **Note:** [Roughly 8% of men and 0.5% of women](https://www.color-blindness.com/2006/04/28/colorblind-population/) are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were [285 million such people in the world](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
+> **Note:** [Roughly 8% of men and 0.5% of women](https://www.color-blindness.com/) are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2015 there were [940 million people with some degree of vision loss](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7.5 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
 
 In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screen readers can recognize those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure).
 
@@ -90,12 +91,14 @@ Our example seen above is represented by the following code (you can also [find 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
 
     <title>My page title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -113,34 +116,57 @@ Our example seen above is represented by the following code (you can also [find 
         <li><a href="#">Contact</a></li>
       </ul>
 
-       <!-- A Search form is another common non-linear way to navigate through a website. -->
+      <!-- A Search form is another common non-linear way to navigate through a website. -->
 
-       <form>
-         <input type="search" name="q" placeholder="Search query">
-         <input type="submit" value="Go!">
-       </form>
-     </nav>
+      <form>
+        <input type="search" name="q" placeholder="Search query" />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
 
     <!-- Here is our page's main content -->
     <main>
-
       <!-- It contains an article -->
       <article>
         <h2>Article heading</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+          congue enim, ut porta lorem lacinia consectetur.
+        </p>
 
         <h3>Subsection</h3>
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p>
+          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        </p>
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <p>
+          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+        </p>
 
         <h3>Another subsection</h3>
 
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p>
+          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+          soclis natoque penatibus et manis dis parturient montes, nascetur
+          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+          facilisis semper ac in est.
+        </p>
 
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p>
+          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+          diam iaculis velit, is fringille sem nunc vet mi.
+        </p>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
@@ -155,7 +181,6 @@ Our example seen above is represented by the following code (you can also [find 
           <li><a href="#">Oh well…</a></li>
         </ul>
       </aside>
-
     </main>
 
     <!-- And here is our main footer that is used across all the pages of our website -->
@@ -163,7 +188,6 @@ Our example seen above is represented by the following code (you can also [find 
     <footer>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
-
   </body>
 </html>
 ```
@@ -191,9 +215,13 @@ Sometimes you'll come across a situation where you can't find an ideal semantic 
 {{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:
 
 ```html
-<p>The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
-him as he staggered through the door <span class="editor-note">[Editor's note: At this point in the
-play, the lights should be down low]</span>.</p>
+<p>
+  The King walked drunkenly back to his room at 01:00, the beer doing nothing to
+  aid him as he staggered through the door
+  <span class="editor-note">
+    [Editor's note: At this point in the play, the lights should be down low]
+  </span>.
+</p>
 ```
 
 In this case, the editor's note is supposed to merely provide extra direction for the director of the play; it is not supposed to have extra semantic meaning. For sighted users, CSS would perhaps be used to distance the note slightly from the main text.
@@ -205,12 +233,13 @@ In this case, the editor's note is supposed to merely provide extra direction fo
   <h2>Shopping cart</h2>
   <ul>
     <li>
-      <p><a href=""><strong>Silver earrings</strong></a>: $99.95.</p>
-      <img src="../products/3333-0985/thumb.png" alt="Silver earrings">
+      <p>
+        <a href=""><strong>Silver earrings</strong></a>:
+        $99.95.
+      </p>
+      <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>
-    <li>
-      …
-    </li>
+    <li>…</li>
   </ul>
   <p>Total cost: $237.89</p>
 </div>
@@ -229,10 +258,12 @@ Two elements that you'll use occasionally and will want to know about are {{html
 `<br>` creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines, such as in a postal address or a poem. For example:
 
 ```html
-<p>There once was a man named O'Dell<br>
-Who loved to write HTML<br>
-But his structure was bad, his semantics were sad<br>
-and his markup didn't read very well.</p>
+<p>
+  There once was a man named O'Dell<br />
+  Who loved to write HTML<br />
+  But his structure was bad, his semantics were sad<br />
+  and his markup didn't read very well.
+</p>
 ```
 
 Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html)); with `<br>` elements in the code, the markup renders like this:
@@ -244,14 +275,18 @@ Without the `<br>` elements, the paragraph would just be rendered in one long li
 `<hr>` elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just looks like a horizontal line. As an example:
 
 ```html
-<p>Ron was backed into a corner by the marauding
-   netherbeasts. Scared, but determined to protect his friends, he raised his
-   wand and prepared to do battle, hoping that his distress call had made it through.</p>
-<hr>
-<p>Meanwhile, Harry was sitting at home, staring at his royalty statement
-  and pondering when the next spin off series would come out, when an enchanted
+<p>
+  Ron was backed into a corner by the marauding netherbeasts. Scared, but
+  determined to protect his friends, he raised his wand and prepared to do
+  battle, hoping that his distress call had made it through.
+</p>
+<hr />
+<p>
+  Meanwhile, Harry was sitting at home, staring at his royalty statement and
+  pondering when the next spin off series would come out, when an enchanted
   distress letter flew through his window and landed in his lap. He read it
-  hazily and sighed; "better get back to work then", he mused.</p>
+  hazily and sighed; "better get back to work then", he mused.
+</p>
 ```
 
 Would render like this:

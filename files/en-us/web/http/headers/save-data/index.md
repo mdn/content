@@ -8,9 +8,11 @@ tags:
   - HTTP Header
   - Reference
   - Request header
+  - Experimental
 browser-compat: http.headers.Save-Data
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The **`Save-Data`** [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) request header field is a boolean which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.

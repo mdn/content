@@ -9,6 +9,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`async function`** keyword can be used to define
@@ -19,7 +20,7 @@ You can also define async functions using an
 
 ## Syntax
 
-```js
+```js-nolint
 async function (param0) {
   statements
 }
@@ -68,24 +69,26 @@ function resolveAfter2Seconds(x) {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-const add = async function (x) { // async function expression assigned to a variable
+// async function expression assigned to a variable
+const add = async function (x) {
   const a = await resolveAfter2Seconds(20);
   const b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
 add(10).then((v) => {
-  console.log(v);  // prints 60 after 4 seconds.
+  console.log(v); // prints 60 after 4 seconds.
 });
 
-(async function (x) { // async function expression used as an IIFE
+// async function expression used as an IIFE
+(async function (x) {
   const p1 = resolveAfter2Seconds(20);
   const p2 = resolveAfter2Seconds(30);
-  return x + await p1 + await p2;
+  return x + (await p1) + (await p2);
 })(10).then((v) => {
-  console.log(v);  // prints 60 after 2 seconds.
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 

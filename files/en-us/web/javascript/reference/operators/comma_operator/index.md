@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.comma
 ---
+
 {{jsSidebar("Operators")}}
 
 The **comma operator** (**`,`**) evaluates each of
@@ -24,7 +25,7 @@ expressions. This is commonly used to provide multiple parameters to a
 
 ## Syntax
 
-```js
+```js-nolint
 expr1, expr2, expr3/* , … */
 ```
 
@@ -34,7 +35,7 @@ expr1, expr2, expr3/* , … */
   - : One or more expressions, the last of which is returned as the value of the compound
     expression.
 
-## Usage notes
+## Description
 
 You can use the comma operator when you want to include multiple expressions in a
 location that requires a single expression. The most common usage of this operator is to
@@ -63,7 +64,7 @@ example, `a` is set to the value of `b = 3` (which is 3), but the
 `c = 4` expression still evaluates and its result returned to console (i.e., 4\).
 This is due to [operator precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
-```js
+```js-nolint
 let a, b, c;
 
 a = b = 3, c = 4; // Returns 4 in console
@@ -81,7 +82,7 @@ Another example that one could make with comma operator is processing before ret
 As stated, only the last element will be returned but all others are going to be
 evaluated as well. So, one could do:
 
-```js
+```js-nolint
 function myFunc() {
   let x = 0;
 

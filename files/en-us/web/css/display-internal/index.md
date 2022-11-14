@@ -1,6 +1,7 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -12,6 +13,7 @@ browser-compat:
   - css.properties.display.table_values
   - css.properties.display.ruby_values
 ---
+
 {{CSSRef}}
 
 Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill. This page defines those "internal" display values, which only have meaning within that particular layout mode.
@@ -41,7 +43,7 @@ Valid `<display-internal>` values:
 - `ruby-text` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rt")}} HTML elements.
 - `ruby-base-container` {{Experimental_Inline}}
-  - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
+  - : These elements are generated as anonymous boxes.
 - `ruby-text-container` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
@@ -61,11 +63,11 @@ The following example demonstrates laying out a simple form using CSS table layo
 <main>
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
 </main>
 ```
@@ -81,7 +83,8 @@ div {
   display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin: 5px;
 }

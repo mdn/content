@@ -13,11 +13,12 @@ tags:
   - grid
   - legacy
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
 
-In this module, we recommend using Flexbox and Grid as the main layout methods for your designs. However, there will be visitors to your site who use older browsers, or browsers which do not support the methods you have used. This will always be the case on the web — as new features are developed, different browsers will prioritize different things. This article explains how to use modern web techniques without locking out users of older technology.
+There will be visitors to your site who use older browsers, or browsers which may not support the features you have used. This will always be the case on the web — as new features are developed, different browsers will prioritize different things. This article explains how to use modern web techniques without locking out users of older technology.
 
 <table>
   <tbody>
@@ -64,7 +65,7 @@ A website can't possibly look the same in all browsers, because some of your use
 
 A basic level of support comes from structuring your content well so that the normal flow of your page makes sense. A user with a very limited feature phone might not get much of your CSS, but the content will flow in a way that makes reading easy. Therefore, a well-structured HTML document should always be your starting point. _If you remove your stylesheet, does your content make sense?_
 
-One option is to leave this plain view of the site as the fallback for people using very old or limited browsers. If you have a tiny number of people coming to the site in these browsers it may not make commercial sense to pour time into trying to give them a similar experience to people on modern browsers. It would be better to spend the time on things which make the site more accessible, thus serving far more users. There is a middle ground between a plain HTML page and all the bells and whistles, and CSS has actually made creating these fallbacks pretty straightforward.
+One option is to leave this plain view of the site as the fallback for people using very old or limited browsers. If you have a tiny number of people coming to the site in these browsers it may not make commercial sense to pour time into trying to give them a similar experience to people on modern browsers. It would be better to spend the time on things which make the site more [accessible](/en-US/docs/Web/Accessibility), thus serving far more users. There is a middle ground between a plain HTML page and all the bells and whistles, and CSS has actually made creating these fallbacks pretty straightforward.
 
 ## Creating fallbacks in CSS
 
@@ -75,10 +76,12 @@ CSS specifications contain information that explains what the browser does when 
 In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the `display: grid` and related properties and the floated layout is used.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -88,7 +91,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -114,21 +117,23 @@ There are a number of layout methods which can be used in a similar way to this 
 - display: inline-block
   - : This method can be used to create column layouts, if an item has `display: inline-block` set but then becomes a flex or grid item, the inline-block behavior is ignored.
 - display: table
-  - : The method of creating CSS Tables described in the [introduction](/en-US/docs/Learn/CSS/CSS_layout/Introduction) to these lessons can be used as a fallback. Items that have CSS table layouts set on them will lose this behavior if they become flex or grid items. Importantly, the anonymous boxes created to fix up the table structure are not created.
+  - : This method can be used to create table layouts, if an item has `display: table`, `display: table-cell`, etc., set but then becomes a flex or grid item, the display value is ignored.
 - Multiple-column Layout
   - : For certain layouts you could use [multi-col](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) as a fallback, if your container has any of the `column-*` properties defined on it and then becomes a grid container, the multicol behavior will not happen.
 - Flexbox as a Fallback for Grid
-  - : [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) has greater browser support than Grid due to being supported by IE10 and 11, although do check out the information later in this lesson explaining the rather patchy and confusing support for Flexbox in older browsers. If you make a flex container into a grid container, any `flex` property applied to the children will be ignored.
+  - : [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) has greater browser support than Grid due to being supported by IE10 and 11. If you make a flex container into a grid container, any `flex` property applied to the children will be ignored.
 
 For many layout tweaks in older browsers, you may find you can give a decent experience by using CSS in this way. We add a simpler layout based on older and well-supported techniques, then use the newer CSS to create the layout that over 90% of your audience will see. There are cases, however, when the fallback code will need to include something that the new browsers will also interpret. A good example of this is if we were to add percentage widths to our floated items to make the columns more like the grid display, stretching to fill the container.
 
 In the floated layout, the percentage is calculated from the container — 33.333% is a third of the container width. In Grid however that 33.333% is calculated from the grid area the item is placed in, so it actually becomes a third of the size we want once the Grid Layout is introduced.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -138,7 +143,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -163,10 +168,12 @@ Feature queries allow you to test whether a browser supports any particular CSS 
 If we add a feature query to the above example, we can use it to set the widths of our items back to `auto` if we know that we have grid support.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -176,14 +183,14 @@ If we add a feature query to the above example, we can use it to set the widths 
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```
@@ -202,10 +209,6 @@ Support for feature queries is very good across modern browsers. However, you sh
 
 The specification for feature queries also contains the ability to test if a browser does not support a feature — this is only helpful if the browser does support feature queries. In the future, an approach of checking for lack of support will work, as the browsers that don't have feature query support go away. For now, however, use the approach of doing the older CSS, then overwriting it, for the best support.
 
-## Older versions of Flexbox
-
-In older versions of browsers, you can find previous iterations of the Flexbox specification. At the time of writing, this is mostly an issue with Internet Explorer 10, which uses the `-ms-` prefix for Flexbox. This also means that there are some outdated articles and tutorials in existence; [this useful guide](https://css-tricks.com/old-flexbox-and-new-flexbox/) helps you check what you are looking at and can also help if you need flex support in very old browsers.
-
 ## The IE10 and 11 prefixed version of Grid
 
 The CSS Grid specification was initially prototyped In Internet Explorer 10; this means that while IE10 and IE11 do not have _modern_ grid support, they do have a version of Grid layout that is very usable, although different to the modern specification documented on this site. The IE10 and 11 implementations is `-ms-` prefixed, which means you can use it for these browsers and it will be ignored by non-Microsoft browsers. Edge does still understand the old syntax, however, so take care that everything is safely overwritten in your modern grid CSS.
@@ -216,11 +219,11 @@ The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_Gr
 
 With the majority of browsers supporting Flexbox and Grid, it can be reasonably hard to test older browsers. One way is to use an online testing tool such as Sauce Labs, as detailed in the [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-You can also download and install Virtual Machines, and run older versions of browsers in a contained environment on your own computer. Having access to older versions of Internet Explorer is particularly useful, and for that purpose, Microsoft has made [a range of Virtual Machines available for free download](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). These are available for Mac, Windows and Linux operating systems and so are a great way to test in old and modern Windows browsers even if you are not using a Windows computer.
+You can also download and install virtual machines, and run older versions of browsers in a contained environment on your computer. If you are still required to support Internet Explorer, Microsoft provides [a range of Virtual Machines available for free download](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). These are available for Mac, Windows and Linux operating systems and so are a great way to test in old and modern Windows browsers even if you are not using a Windows computer.
 
 ## Summary
 
-You now have the knowledge to confidently use techniques such as Grid and Flexbox, create fallbacks for older browsers, and make use of any new techniques that might come along in the future.
+You now have the knowledge to confidently use techniques such as Grid, create fallbacks for older browsers, and make use of any new techniques that might come along in the future.
 
 Now that you have worked through our articles on CSS layout, it's time to test your comprehension with our assessment for the module: [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension).
 

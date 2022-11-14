@@ -41,7 +41,7 @@ effect.
 
 ## Syntax
 
-```js
+```js-nolint
 setRemoteDescription(sessionDescription)
 ```
 

@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 tags:
   - Firefox 3
 ---
+
 {{FirefoxSidebar}}
 
 There are a number of changes in the upcoming Firefox 3 that may affect your web site or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
@@ -81,7 +82,7 @@ Using code in JAR files loaded from other domains is no longer allowed in frames
 
 ### Changes to same-origin policy for file: URIs
 
-The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Same-origin_policy_for_file:_URIs) for details.
+The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Web/Security/Same-origin_policy#file_origins) for details.
 
 ## JavaScript changes
 

@@ -10,6 +10,7 @@ tags:
   - Worker
 browser-compat: api.Worker.Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
@@ -18,7 +19,7 @@ The **`Worker()`** constructor creates a {{domxref("Worker")}} object that execu
 
 ## Syntax
 
-```js
+```js-nolint
 new Worker(aURL)
 new Worker(aURL, options)
 ```
@@ -61,7 +62,7 @@ first.onchange = () => {
 }
 ```
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 ## Specifications
 

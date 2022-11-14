@@ -7,6 +7,7 @@ tags:
   - Guide
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 > **Note:** This article discusses building cross-browser extensions for manifest v2. At the time of writing (December 2021), manifest v3 is being introduced by the major browser vendors. Manifest v3 is likely to change the way cross-browser extension development is undertaken. However, work on Manifest v3 is not complete. The major browser vendors are collaborating (with community members) to ease the development of a cross-browser extension in the [W3C WebExtensions Community Group](https://github.com/w3c/webextensions).
@@ -87,11 +88,11 @@ There are other polyfill options. However, at the time of writing, none of the o
 The differences in the API functions offered in each of the main browsers fall into three broad categories:
 
 1. **Lack of support for an entire function.**
-    For example, at the time of writing, Edge didn't support the {{WebExtAPIRef("browserSettings")}} function.
+   For example, at the time of writing, Edge didn't support the {{WebExtAPIRef("browserSettings")}} function.
 2. **Variations in the support for features within a function.**
-    For example, at the time of writing, Firefox doesn't support the notification function method {{WebExtAPIRef("notifications.onButtonClicked")}}, while Firefox is the only browser that supports {{WebExtAPIRef("notifications.onShown")}}.
+   For example, at the time of writing, Firefox doesn't support the notification function method {{WebExtAPIRef("notifications.onButtonClicked")}}, while Firefox is the only browser that supports {{WebExtAPIRef("notifications.onShown")}}.
 3. **Proprietary functions, supporting browser-specific features.**
-    For example, at the time of writing, containers was a Firefox-specific feature supported by the {{WebExtAPIRef("contextualIdentities")}} function.
+   For example, at the time of writing, containers was a Firefox-specific feature supported by the {{WebExtAPIRef("contextualIdentities")}} function.
 
 Details about the support for the extension APIs among the main browsers and Firefox for Android and Safari on iOS can be found on the Mozilla Developer Network [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) page. Browser compatibility information is also included with each function and its methods, types, and events in the Mozilla Developer Network [JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) reference pages.
 
@@ -116,11 +117,11 @@ if (typeof fn === "function") {
 The differences in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) file keys supported by the main browsers fall broadly into three categories:
 
 1. **Extension information attributes.**
-    For example, at the time of writing, Firefox and Opera include the [`developer`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) key for details about the developer of the extension.
+   For example, at the time of writing, Firefox and Opera include the [`developer`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) key for details about the developer of the extension.
 2. **Extension features.**
-    For example, at the time of writing, Chrome did not support the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#browser_compatibility) key.
+   For example, at the time of writing, Chrome did not support the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#browser_compatibility) key.
 3. **Key optionality.**
-    At the time of writing, generally, only `"manifest_version"`, `"version"`, and `"name"` are mandatory keys.
+   At the time of writing, generally, only `"manifest_version"`, `"version"`, and `"name"` are mandatory keys.
 
 Browser compatibility information is included with each key in the Mozilla Developer Network [`manifest.json` key reference pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
@@ -214,7 +215,5 @@ The Firefox, Chrome, and Edge stores require that each uploaded version has a di
 When approaching a cross-platform extension development, the differences between extension API implementations can be addressed by targeting Firefox and using the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/). Following this approach, you benefit from using API features that are closely aligned with the proposed extensions API standard and gain the simplicity of promises for asynchronous event handling.
 
 The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You will then need to account for the variations in the processes for submitting to each extension store.
-
-You can use [browser-extension-template](https://github.com/fregante/browser-extension-template) to quickly set up a working project for building and publishing a browser extension.
 
 Following the advice in this article, you should be able to create an extension that works well on all of the four main browsers, enabling you to deliver your extension features to more people.

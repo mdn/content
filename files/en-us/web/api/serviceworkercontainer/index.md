@@ -23,7 +23,7 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activating` or `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
@@ -39,7 +39,7 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 - [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
   - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
 
-## Methods
+## Instance methods
 
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
   - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
@@ -108,7 +108,7 @@ if ("serviceWorker" in navigator) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

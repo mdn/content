@@ -19,13 +19,14 @@ tags:
   - vtt
 browser-compat: api.TextTrackCue
 ---
+
 {{APIRef("WebVTT")}}
 
 **`TextTrackCue`** is an abstract class which is used as the basis for the various derived cue types, such as {{domxref("VTTCue")}}; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
 

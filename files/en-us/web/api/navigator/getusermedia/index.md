@@ -15,6 +15,7 @@ tags:
   - getusermedia
 browser-compat: api.Navigator.getUserMedia
 ---
+
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
@@ -29,7 +30,7 @@ If the user instead doesn't make a choice at all, neither callback is executed.
 
 ## Syntax
 
-```js
+```js-nolint
 getUserMedia(constraints, successCallback, errorCallback)
 ```
 
@@ -39,7 +40,7 @@ getUserMedia(constraints, successCallback, errorCallback)
   - : An object specifying the types of media to
     request, along with any requirements for each type. For details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 - `successCallback`
 
   - : A function which is invoked when the request for media access is approved. The
@@ -130,7 +131,7 @@ See [permission: audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#
 
 - {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API) - the API for the
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) - the API for the
   media stream objects
 - [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos) - a
   tutorial on using `getUserMedia() for taking photos rather than video.`

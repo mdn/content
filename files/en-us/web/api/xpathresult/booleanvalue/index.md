@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.booleanValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`booleanValue`** property of the

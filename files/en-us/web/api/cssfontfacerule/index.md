@@ -10,20 +10,21 @@ tags:
   - Reference
 browser-compat: api.CSSFontFaceRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSFontFaceRule.style")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSStyleDeclaration")}}.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
@@ -34,9 +35,8 @@ This example uses the CSS found as an example on the {{cssxref("@font-face")}} p
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-  local("HelveticaNeue-Bold"),
-  url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```

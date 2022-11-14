@@ -10,13 +10,14 @@ tags:
   - Deprecated
 browser-compat: api.HTMLParamElement
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLParamElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("param")}} elements, representing a pair of a key and a value that acts as a parameter for an {{HTMLElement("object")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -27,9 +28,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLParamElement.type")}} {{Deprecated_Inline}}
   - : A string containing the type of the parameter when `valueType` has the `"ref"` value. It reflects the {{htmlattrxref("type", "param")}} attribute.
 - {{domxref("HTMLParamElement.valueType")}} {{Deprecated_Inline}}
-  - : A string containing the type of the `value`. It reflects the {{htmlattrxref("<code>valuetype</code>", "param")}} attribute and has one of the values: `"data"`, `"ref"`, or `"object"`.
+  - : A string containing the type of the `value`. It reflects the [valuetype](/en-US/docs/Web/HTML/Element/param#attr-valuetype) attribute and has one of the values: `"data"`, `"ref"`, or `"object"`.
 
-## Methods
+## Instance methods
 
 _No specific methods, inherits methods from its parent, {{domxref("HTMLElement")}}._
 

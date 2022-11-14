@@ -9,6 +9,7 @@ tags:
   - Security
 browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive restricts the URLs which can be used in a document's {{HTMLElement("base")}} element. If this value is absent, then any URI is allowed. If this directive is absent, the user agent will use the value in the {{HTMLElement("base")}} element.
@@ -32,7 +33,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 ## Syntax
 
-One or more *sources* can be allowed for the base-uri policy:
+One or more _sources_ can be allowed for the base-uri policy:
 
 ```http
 Content-Security-Policy: base-uri <source>;
@@ -50,7 +51,7 @@ Note however that some of the values don't make sense for `base-uri`, such as th
 ### Meta tag configuration
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
 ```
 
 ### Apache configuration
@@ -72,12 +73,14 @@ add_header Content-Security-Policy "base-uri 'self';"
 Since your domain isn't `example.com`, a {{HTMLElement("base")}} element with its `href` set to `https://example.com` will result in a CSP violation.
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
-<base href="https://example.com/">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+<base href="https://example.com/" />
 
+<!--
 // Error: Refused to set the document's base URI to 'https://example.com/'
 // because it violates the following Content Security Policy
 // directive: "base-uri 'self'"
+-->
 ```
 
 ## Specifications

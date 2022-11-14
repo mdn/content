@@ -7,7 +7,8 @@ tags:
   - Property
   - Non-standard
 ---
-{{APIRef("Navigation timing API")}}
+
+{{APIRef("Performance API API")}}
 
 {{Non-standard_header()}}
 
@@ -22,8 +23,8 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-p = object.msFirstPaint;
+```js-nolint
+p = object.msFirstPaint
 ```
 
 ## Value

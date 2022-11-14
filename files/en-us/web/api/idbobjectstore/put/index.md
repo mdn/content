@@ -13,6 +13,7 @@ tags:
   - put
 browser-compat: api.IDBObjectStore.put
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.
@@ -31,7 +32,7 @@ record will be updated, instead of a new record being inserted.
 
 ## Syntax
 
-```js
+```js-nolint
 put(item)
 put(item, key)
 ```
@@ -79,8 +80,8 @@ the `onsuccess` function gets the associated record from the
 as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request with `put()`. For a full working example, see
-our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view example live](https://mdn.github.io/to-do-notifications/).)
+our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
+([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const title = "Walk dog";
@@ -127,4 +128,4 @@ objectStoreTitleRequest.onsuccess = () => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

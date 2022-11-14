@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -25,7 +26,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSKeyframesRule.cssRules")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSRuleList")}} of the keyframes in the list.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 

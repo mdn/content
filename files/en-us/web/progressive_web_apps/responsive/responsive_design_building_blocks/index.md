@@ -8,6 +8,7 @@ tags:
   - Mobile
   - Responsive Design
 ---
+
 In this article we will discuss the main essential components of responsive design, with some links to further information where necessary.
 
 For Web developers, it is now fairly common to be called upon to create a Web site or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.
@@ -247,7 +248,10 @@ Last, we have used `flex: 1;` to make the buttons always take up the same propor
 What's more relevant to this article is that we didn't want the Brick CSS and JavaScript files being applied to the markup unless we were looking at the mobile app view. To achieve this, we applied the Brick CSS to the page using a separate {{HTMLElement("link")}} element with a `media` attribute:
 
 ```html
-<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
+<link
+  href="dist/brick.css"
+  rel="stylesheet"
+  media="all and (max-width: 480px)" />
 ```
 
 This says that the whole stylesheet will not be linked to the HTML unless the viewport width is 480px or less. Moving on to the JavaScript, {{HTMLElement("script")}} elements don't accept `media` attributes, so I had to do this a different way. Fortunately there is a JavaScript construct called {{domxref("window.matchMedia()")}}, which can conditionally run JavaScript constructs depending on whether a media query returns `true` or not. We opened up the `brick.js` file and wrapped the whole lot in the following:
@@ -336,12 +340,10 @@ One last problem to mention for our example app is concerned with mobile browser
 There is a way to override this mobile rendering behavior — viewport, which is inserted into our HTML pages in the form of a {{HTMLElement("meta")}} tag. In my example, let's add the following into our HTML {{HTMLElement("head")}}:
 
 ```html
-<meta name="viewport" content="width=480">
+<meta name="viewport" content="width=480" />
 ```
 
 This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
-
-> **Note:** There is a spec called [device adaptation](https://drafts.csswg.org/css-device-adapt/), which defines the same functionality but in CSS, using a `@viewport` at-rule. This is probably a more logical place to put such information, but the spec is not as well supported as the viewport meta tag, therefore you should stick with that for now.
 
 ## Responsive images/video
 
@@ -375,7 +377,7 @@ button {
 }
 
 @media only screen and (min-resolution: 192dpi),
-       only screen and (min-resolution: 2dppx) {
+  only screen and (min-resolution: 2dppx) {
   button {
     background: url(images/high-res-header.jpg) 1rem center;
   }
@@ -390,8 +392,8 @@ HTML video is fairly well catered for in terms of responsive capabilities. If yo
 
 ```html
 <video controls>
-  <source src="videos/720/crystal720.mp4" type="video/mp4">
-  <source src="videos/720/crystal720.webm" type="video/webm">
+  <source src="videos/720/crystal720.mp4" type="video/mp4" />
+  <source src="videos/720/crystal720.webm" type="video/webm" />
 </video>
 ```
 
@@ -399,10 +401,22 @@ But you can go one step further. You can include `media` attributes on the `<sou
 
 ```html
 <video controls>
-  <source src="videos/320/crystal320.mp4" type="video/mp4" media="all and (max-width: 480px)">
-  <source src="videos/320/crystal320.webm" type="video/webm" media="all and (max-width: 480px)">
-  <source src="videos/720/crystal720.mp4" type="video/mp4" media="all and (min-width: 481px)">
-  <source src="videos/720/crystal720.webm" type="video/webm" media="all and (min-width: 481px)">
+  <source
+    src="videos/320/crystal320.mp4"
+    type="video/mp4"
+    media="all and (max-width: 480px)" />
+  <source
+    src="videos/320/crystal320.webm"
+    type="video/webm"
+    media="all and (max-width: 480px)" />
+  <source
+    src="videos/720/crystal720.mp4"
+    type="video/mp4"
+    media="all and (min-width: 481px)" />
+  <source
+    src="videos/720/crystal720.webm"
+    type="video/webm"
+    media="all and (min-width: 481px)" />
 </video>
 ```
 

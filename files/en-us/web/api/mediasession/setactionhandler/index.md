@@ -15,6 +15,7 @@ tags:
   - setActionHandler
 browser-compat: api.MediaSession.setActionHandler
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`setActionHandler()`** method of the {{domxref("MediaSession")}} interface sets a handler for a media session action.
@@ -22,7 +23,7 @@ These actions let a web app receive notifications when the user engages a device
 
 ## Syntax
 
-```js
+```js-nolint
 setActionHandler(type, callback)
 ```
 
@@ -66,7 +67,7 @@ setActionHandler(type, callback)
     - `action`
       - : A string representing the action type. This property allows a single callback to handle multiple action types.
     - `fastSeek` {{optional_inline}}
-      - : A [`seekto`](#seekto) action may *optionally* include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
+      - : A [`seekto`](#seekto) action may _optionally_ include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
         A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.
         This property can be used to indicate that you should use the shortest possible method to seek the media.
         `fastSeek` is not included on the final action in the seek sequence in this situation.

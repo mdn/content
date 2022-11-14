@@ -11,6 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.InterventionReportBody
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
@@ -25,7 +26,7 @@ A deprecation report is generated when a deprecated feature (for example a depre
 
 An instance of `InterventionReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `intervention`. The interface has no constructor.
 
-## Properties
+## Instance properties
 
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
@@ -40,7 +41,7 @@ This interface also inherits properties from {{domxref("ReportBody")}}.
 - {{domxref("InterventionReportBody.columnNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A string representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
 
-## Methods
+## Instance methods
 
 This interface also inherits methods from {{domxref("ReportBody")}}.
 

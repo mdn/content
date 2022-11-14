@@ -1,6 +1,7 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.break-inside
 ---
+
 {{CSSRef}}
 
 The **`break-inside`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored.
@@ -88,16 +90,34 @@ By default, it is possible for you to get a break between the image and its capt
 <article>
   <h1>Main heading</h1>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
+    fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec
+    lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus.
+    Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque
+    dapibus, eu lacinia lectus dictum.
+  </p>
 
   <figure>
-    <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png">
+    <img
+      src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
     <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
   </figure>
 
-  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
+  <p>
+    Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras
+    suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur
+    a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non
+    vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie
+    nec nisi.
+  </p>
 
-  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+  <p>
+    In finibus viverra enim vel suscipit. Quisque consequat velit eu orci
+    malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam
+    risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl,
+    sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.
+  </p>
 </article>
 ```
 

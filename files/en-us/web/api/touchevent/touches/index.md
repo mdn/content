@@ -14,6 +14,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.touches
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`touches`** is a read-only {{ domxref("TouchList") }} listing
@@ -27,7 +28,7 @@ the screen.
 ## Value
 
 A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface, regardless of whether or not they've changed or what their target element was at `touchstart`
-    time.
+time.
 
 ## Examples
 

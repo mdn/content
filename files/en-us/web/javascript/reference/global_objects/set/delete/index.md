@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes a specified value from a
@@ -19,7 +20,7 @@ The **`delete()`** method removes a specified value from a
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 
@@ -44,7 +45,7 @@ mySet.add("foo");
 console.log(mySet.delete("bar")); // false; no "bar" element found to be deleted.
 console.log(mySet.delete("foo")); // true; successfully removed.
 
-console.log(mySet.has("foo"));    // false; the "foo" element is no longer present.
+console.log(mySet.has("foo")); // false; the "foo" element is no longer present.
 ```
 
 ### Deleting an object from a set

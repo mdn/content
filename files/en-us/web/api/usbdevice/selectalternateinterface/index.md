@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.selectAlternateInterface
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`selectAlternateInterface()`** method of the
@@ -22,7 +23,7 @@ the specified alternative endpoint is selected.
 
 ## Syntax
 
-```js
+```js-nolint
 selectAlternateInterface(interfaceNumber, alternateSetting)
 ```
 

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndexEvent.id
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The read-only **`id`** property of the
@@ -33,11 +34,10 @@ The {{domxref('ContentIndexEvent')}} is only available to the
 {{domxref('ServiceWorker')}}.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
+self.addEventListener("contentdelete", (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
-
 });
 ```
 

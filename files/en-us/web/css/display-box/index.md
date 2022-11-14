@@ -1,6 +1,7 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - display-box
 browser-compat: css.properties.display.contents
 ---
+
 {{CSSRef}}
 
 These keywords define whether an element generates display boxes at all.

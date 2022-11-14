@@ -11,6 +11,7 @@ tags:
   - resize
 browser-compat: api.Window.resize_event
 ---
+
 {{APIRef}}
 
 The **`resize`** event fires when the document view (window) has been resized.

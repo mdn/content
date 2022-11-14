@@ -7,6 +7,7 @@ tags:
   - Intermediate
   - Resource
 ---
+
 {{HTTPSidebar}}{{non-standard_header}}
 
 Resource URLs, URLs prefixed with the `resource:` scheme, are used by

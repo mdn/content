@@ -8,6 +8,7 @@ tags:
   - part 6
   - server-side
 ---
+
 This subarticle shows how to define a page/form to create `BookInstance` objects. This is very much like the form we used to create `Book` objects.
 
 ## Import validation and sanitization methods
@@ -159,7 +160,7 @@ The view structure and behavior is almost the same as for the **book_form.pug** 
 
 Run the application and open your browser to `http://localhost:3000/`. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
 
-![Create BookInstance of the Local library application screenshot from localhost:3000.  The page is divided into two columns. The narrow left column has a vertical navigation bar with 10 links separated into two sections by a light-colored horizontal line. The top section link to already created data. The bottom links go to create new data forms. The wide right column has the create book instance form with a 'Create BookInstance' heading and four input fields labeled 'Book', 'Imprint', 'Date when book available' and 'Status'. The form is filled. There is a 'Submit' button at the bottom of the form.](locallibary_express_bookinstance_create_empty.png)
+![Create BookInstance of the Local library application screenshot from localhost:3000. The page is divided into two columns. The narrow left column has a vertical navigation bar with 10 links separated into two sections by a light-colored horizontal line. The top section link to already created data. The bottom links go to create new data forms. The wide right column has the create book instance form with a 'Create BookInstance' heading and four input fields labeled 'Book', 'Imprint', 'Date when book available' and 'Status'. The form is filled. There is a 'Submit' button at the bottom of the form.](locallibary_express_bookinstance_create_empty.png)
 
 ## Next steps
 

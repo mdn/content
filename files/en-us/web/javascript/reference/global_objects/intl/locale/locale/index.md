@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** constructor is a
@@ -22,7 +23,7 @@ identifier.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Locale(tag)
 new Intl.Locale(tag, options)
 ```

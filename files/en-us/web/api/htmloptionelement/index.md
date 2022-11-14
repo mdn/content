@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} elements and inherits all properties and methods of the {{domxref("HTMLElement")}} interface.
@@ -21,7 +22,7 @@ The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} eleme
 - {{domxref("HTMLOptionElement.Option", "Option()")}}
   - : Returns a newly created `HTMLOptionElement` object. It has four parameters: the text to display, `text`, the value associated, `value`, the value of `defaultSelected`, and the value of `selected`. The last three parameters are optional.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -42,7 +43,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLOptionElement.value")}}
   - : A string that reflects the value of the {{htmlattrxref("value", "option")}} HTML attribute, if it exists; otherwise reflects value of the {{domxref("Node.textContent")}} property.
 
-## Methods
+## Instance methods
 
 _Doesn't implement any specific method, but inherits methods from its parent, {{domxref("HTMLElement")}}._
 

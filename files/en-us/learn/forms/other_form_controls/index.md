@@ -11,6 +11,7 @@ tags:
   - Web
   - Widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 We now look at the functionality of non-`<input>` form elements in detail, from other control types such as drop-down lists and multi-line text fields, to other useful form features such as the {{htmlelement('output')}} element (which we saw in action in the previous article), and progress bars.
@@ -50,7 +51,7 @@ This renders like so:
 
 The main difference between a `<textarea>` and a regular single line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.
 
-`<textarea>` also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is an empty element with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Attributes/value) attribute.
+`<textarea>` also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is a {{glossary("void element")}} with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
 Note that even though you can put anything inside a `<textarea>` element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).
 
@@ -87,7 +88,7 @@ Play with the interactive example at the top of the {{cssxref("resize")}} refere
 
 ## Drop-down controls
 
-Drop-down controls are a simple way to let users select from many different options without taking up much space in the user interface. HTML has two forms of drop down content: the **select box**, and the **autocomplete box**. In both cases the interaction is the same — once the control is activated, the browser displays a list of values the user can select between.
+Drop-down controls are a simple way to let users select from many options without taking up much space in the user interface. HTML has two forms of drop down content: the **select box**, and the **autocomplete box**. In both cases the interaction is the same — once the control is activated, the browser displays a list of values the user can select between.
 
 > **Note:** You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
@@ -155,15 +156,15 @@ By default, a select box only lets the user select a single value. By adding the
 ```html
 <select id="multi" name="multi" multiple size="2">
   <optgroup label="fruits">
-     <option>Banana</option>
-     <option selected>Cherry</option>
-     <option>Lemon</option>
-   </optgroup>
-   <optgroup label="vegetables">
-     <option>Carrot</option>
-     <option>Eggplant</option>
-     <option>Potato</option>
-   </optgroup>
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </optgroup>
+  <optgroup label="vegetables">
+    <option>Carrot</option>
+    <option>Eggplant</option>
+    <option>Potato</option>
+  </optgroup>
 </select>
 ```
 
@@ -187,7 +188,7 @@ Let's look at an example.
 
 ```html
 <label for="myFruit">What's your favorite fruit?</label>
-<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
 <datalist id="mySuggestion">
   <option>Apple</option>
   <option>Banana</option>
@@ -208,7 +209,7 @@ Almost all browsers support datalist, but if you are still supporting older brow
 
 ```html
 <label for="myFruit">What is your favorite fruit? (With fallback)</label>
-<input type="text" id="myFruit" name="fruit" list="fruitList">
+<input type="text" id="myFruit" name="fruit" list="fruitList" />
 
 <datalist id="fruitList">
   <label for="suggestion">or pick a fruit</label>
@@ -309,7 +310,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-As you'll have seen in the last few articles, there are many different types of form control. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.
+As you'll have seen in the last few articles, there are many types of form control. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.
 
 Now that you have a grasp of the HTML behind the different available form controls, we'll take a look at [Styling them](/en-US/docs/Learn/Forms/Styling_web_forms).
 

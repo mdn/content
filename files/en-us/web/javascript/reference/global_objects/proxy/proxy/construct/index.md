@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.construct
 ---
+
 {{JSRef}}
 
 The **`handler.construct()`** method is a trap for the {{jsxref("Operators/new", "new")}} operator. In order for the new operation to be valid on the resulting Proxy object, the target used to initialize the proxy must itself have a `[[Construct]]` internal method (i.e. `new target` must be valid).
@@ -16,7 +17,7 @@ The **`handler.construct()`** method is a trap for the {{jsxref("Operators/new",
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   construct(target, argumentsList, newTarget) {
   }
@@ -46,12 +47,14 @@ The **`handler.construct()`** method is a trap for the {{jsxref("Operators/new",
 
 This trap can intercept these operations:
 
-- `new myFunction(...args)`
+- The [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator: `new myFunction(...args)`
 - {{jsxref("Reflect.construct()")}}
+
+Or any other operation that invokes the `[[Construct]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - The result must be an `Object`.
 

@@ -8,6 +8,7 @@ tags:
   - Web
   - WebMechanics
 ---
+
 {{LearnSidebar}}
 
 This section of the Learning Area is designed to provide answers to common questions that may come
@@ -22,7 +23,7 @@ This section covers questions relating to general knowledge of the web ecosystem
   - : The **Internet** is the backbone of the web, the technical infrastructure that makes the web possible.
     At its most basic, the internet is a massive network of computers communicating with each other. This article
     discusses how it works, in broad terms.
-- [What is the difference between   webpage, website, web server, and search engine?](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
+- [What is the difference between webpage, website, web server, and search engine?](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
   - : In this article we describe various web-related concepts: webpages, websites, web servers, and search engines. These
     terms are often a source of confusion for newcomers to the web, or are used incorrectly. Let's discover what they
     actually mean!

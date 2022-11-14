@@ -10,7 +10,8 @@ tags:
   - Response header
 browser-compat: http.headers.Pragma
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The **`Pragma`** HTTP/1.0 general header is an
 implementation-specific header that may have various effects along the request-response

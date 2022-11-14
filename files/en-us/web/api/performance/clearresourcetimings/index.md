@@ -9,7 +9,8 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearResourceTimings
 ---
-{{APIRef("Resource Timing API")}}
+
+{{APIRef("Performance API")}}
 
 The **`clearResourceTimings()`** method removes all
 {{domxref("PerformanceEntry","performance entries")}} with an
@@ -22,7 +23,7 @@ to zero. To set the size of the browser's performance data buffer, use the
 
 ## Syntax
 
-```js
+```js-nolint
 clearResourceTimings()
 ```
 

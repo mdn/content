@@ -1,6 +1,7 @@
 ---
 title: Block and inline layout in normal flow
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
+page-type: guide
 tags:
   - CSS
   - CSS Flow Layout
@@ -10,6 +11,7 @@ tags:
   - Margins
   - flow
 ---
+
 {{CSSRef}}
 
 In this guide, we will explore the basics of how Block and Inline elements behave when they are part of the normal flow.

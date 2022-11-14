@@ -14,6 +14,9 @@ tags:
   - Webapps
   - contents
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+
 While progressive web apps (PWAs) can do anything any web content can do, they need to have a particular structure and include specific components in order to be recognized as a web app that can be used both on the web and installed and run as a local application. In this structural overview, we'll look at the features that make up a standard web application, as well as some design patterns you can follow when building your PWA.
 
 ## Architecture of an app
@@ -23,7 +26,7 @@ There are two main, different approaches to rendering a website — on the serve
 - **Server-side rendering** (**SSR**) means a website is rendered on the server, so it offers quicker first load, but navigating between pages requires downloading new HTML content. It works great across browsers, but it suffers in terms of time navigating between pages and therefore general perceived performance — loading a page requires a new round trip to the server.
 - **Client-side rendering** (**CSR**) allows the website to be updated in the browser almost instantly when navigating to different pages, but requires more of an initial download hit and extra rendering on the client at the beginning. The website is slower on an initial visit, but can be faster to navigate.
 
-The best results tend to come when you use both client-side and server-side rendering; you can render a web site on the server, cache its contents, and then update the rendering on the client side as needed. The first page load is quick because of the SSR, and the navigation between pages is smooth because the client can re-render the page with only the parts that have changed.
+The best results tend to come when you use both client-side and server-side rendering; you can render a website on the server, cache its contents, and then update the rendering on the client side as needed. The first page load is quick because of the SSR, and the navigation between pages is smooth because the client can re-render the page with only the parts that have changed.
 
 PWAs can be built using any approach you like, but some will work better than the others. The most popular approach is the **app shell** concept, which mixes SSR and CSR in exactly the way described above, and in addition follows the "offline first" methodology which we will explain in detail in upcoming articles and use in our example application. There is also a new approach involving the [Streams API](/en-US/docs/Web/API/Streams_API), which we'll mention briefly.
 
@@ -37,7 +40,7 @@ We can control what is requested from the server and what is retrieved from the 
 
 ### Benefits of the app shell pattern
 
-This architecture allows a web site to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as [add to home screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) or [push notifications](/en-US/docs/Web/API/Push_API), safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.
+This architecture allows a website to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as [add to home screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) or [push notifications](/en-US/docs/Web/API/Push_API), safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.
 
 The website feels like a native app with instant interaction and solid performance while keeping all the benefits of the web.
 
@@ -63,7 +66,7 @@ For working examples and more information, see the [Streams API documentation](/
 
 ## Structure of a sample application
 
-The js13kPWA web site's structure is quite simple. It consists of a single HTML file (index.html), with basic CSS styling provided in style.css. Also included are a few images, scripts, and fonts. The file and folder hierarchy looks like this:
+The js13kPWA website's structure is quite simple. It consists of a single HTML file (index.html), with basic CSS styling provided in style.css. Also included are a few images, scripts, and fonts. The file and folder hierarchy looks like this:
 
 - `app.js`
 - `data/`
@@ -91,46 +94,58 @@ The HTML in the file `index.html` creates the structure of the app. The parts th
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>js13kGames A-Frame entries</title>
-  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-  <meta name="author" content="end3r">
-  <meta name="theme-color" content="#B12A34">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="icons/icon-512.png">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="js13kpwa.webmanifest">
-  <script src="data/games.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-<header>
-  <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-  <h1>js13kGames A-Frame entries</h1>
-  <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">
-    A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a>
-    competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
-    fork js13kPWA on GitHub</a> to check its source code.</p>
-  <button id="notifications">Request dummy notifications</button>
-  <section id="content">
-    // Content inserted in here
-  </section>
-</main>
-<footer>
-  <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">
-    Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>js13kGames A-Frame entries</title>
+    <meta
+      name="description"
+      content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
+    <meta name="author" content="end3r" />
+    <meta name="theme-color" content="#B12A34" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="icons/icon-512.png" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="js13kpwa.webmanifest" />
+    <script src="data/games.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>
+        <a class="logo" href="http://js13kgames.com">
+          <img src="img/js13kgames.png" alt="js13kGames" />
+        </a>
+      </p>
+    </header>
+    <main>
+      <h1>js13kGames A-Frame entries</h1>
+      <p class="description">
+        List of games submitted to the
+        <a href="http://js13kgames.com/aframe"> A-Frame category</a> in the
+        <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
+        You can
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
+          fork js13kPWA on GitHub</a>
+        to check its source code.
+      </p>
+      <button id="notifications">Request dummy notifications</button>
+      <section id="content">// Content inserted in here</section>
+    </main>
+    <footer>
+      <p>
+        © js13kGames 2012-2018, created and maintained by
+        <a href="http://end3r.com"> Andrzej Mazur</a> from
+        <a href="http://enclavegames.com">Enclave Games</a>.
+      </p>
+    </footer>
+  </body>
 </html>
 ```
 
 The {{HTMLElement("head")}} section contains basic information about the app, including its title, description, and the needed references to its CSS file, web manifest, the main application JavaScript file (`app.js`, in which the app is initialized) as well as an additional JavaScript code file. The {{HTMLElement("body")}} is split into the {{HTMLElement("header")}} (which displays an image) and the body of the app, which is found inside a {{HTMLElement("main")}} element. The app displays its title, a description, and then a place for the app content to be shown (a {{HTMLElement("section")}} element with the ID `content`. Below the content is a {{HTMLElement("footer")}}, which provides a copyright notice and assorted links.
 
-The app's only job is to list all the [A-Frame](https://aframe.io/) entries from the js13kGames 2017 competition. As you can see it is a very ordinary, one page website. Its only point is to have something simple we can use to examine the implementation of its actual PWA features.
+The app's only job is to list all the [A-Frame](https://aframe.io/) entries from the js13kGames 2017 competition. As you can see it is a very ordinary, one-page website. Its only point is to have something simple we can use to examine the implementation of its actual PWA features.
 
 ### The CSS
 

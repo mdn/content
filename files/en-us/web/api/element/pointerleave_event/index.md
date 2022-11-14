@@ -10,6 +10,7 @@ tags:
 browser-compat: api.Element.pointerleave_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The `pointerleave` event is fired when a pointing device is moved out of the hit test boundaries of an element. For pen devices, this event is fired when the stylus leaves the hover range detectable by the digitizer.
@@ -51,7 +52,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -87,13 +88,14 @@ para.onpointerleave = (event) => {
 
 ## See also
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
-- [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-- [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
-- [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
-- [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
-- [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-- [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
-- This event on `Document` targets: [`pointerleave`](/en-US/docs/Web/API/Document/pointerleave_event) event
+- Related events
+
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)

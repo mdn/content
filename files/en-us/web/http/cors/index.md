@@ -12,9 +12,10 @@ tags:
   - Same-origin policy
   - Security
   - XMLHttpRequest
-  - l10n:priority
+  - "l10n:priority"
 browser-compat: http.headers.Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 **Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is an {{Glossary("HTTP")}}-header based mechanism that allows a server to indicate any {{glossary("origin", "origins")}} (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
@@ -23,7 +24,7 @@ An example of a cross-origin request: the front-end JavaScript code served from 
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `XMLHttpRequest` and the [Fetch API](/en-US/docs/Web/API/Fetch_API) follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
-![](cors_principle.png)
+![Diagrammatic representation of CORS mechanism](cors_principle.png)
 
 The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as `XMLHttpRequest` or [Fetch](/en-US/docs/Web/API/Fetch_API) to mitigate the risks of cross-origin HTTP requests.
 
@@ -53,7 +54,11 @@ We present three scenarios that demonstrate how Cross-Origin Resource Sharing wo
 
 ### Simple requests
 
-Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the [Fetch](https://fetch.spec.whatwg.org/) spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
+Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_ from the obsolete [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology), though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn't use that term.
+
+The motivation is that the {{HTMLElement("form")}} element from HTML 4.0 (which predates cross-site {{domxref("XMLHttpRequest")}} and {{domxref("fetch")}}) can submit simple requests to any origin, so anyone writing a server must already be protecting against {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Under this assumption, the server doesn't have to opt-in (by responding to a preflight request) to receive any request that looks like a form submission, since the threat of CSRF is no worse than that of form submission. However, the server still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _share_ the response with the script.
+
+A _simple request_ is one that **meets all the following conditions**:
 
 - One of the allowed methods:
 
@@ -92,16 +97,16 @@ For example, suppose web content at `https://foo.example` wishes to invoke conte
 
 ```js
 const xhr = new XMLHttpRequest();
-const url = 'https://bar.other/resources/public-data/';
+const url = "https://bar.other/resources/public-data/";
 
-xhr.open('GET', url);
+xhr.open("GET", url);
 xhr.onreadystatechange = someHandler;
 xhr.send();
 ```
 
 This operation performs a simple exchange between the client and the server, using CORS headers to handle the privileges:
 
-![](simple-req.png)
+![Diagram of simple CORS GET request](simple-req.png)
 
 Let's look at what the browser will send to the server in this case:
 
@@ -155,11 +160,11 @@ The following is an example of a request that will be preflighted:
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://bar.other/resources/post-here/');
-xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'text/xml');
+xhr.open("POST", "https://bar.other/doc");
+xhr.setRequestHeader("X-PINGOTHER", "pingpong");
+xhr.setRequestHeader("Content-Type", "text/xml");
 xhr.onreadystatechange = handler;
-xhr.send('<person><name>Arun</name></person>');
+xhr.send("<person><name>Arun</name></person>");
 ```
 
 The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `text/xml`, and since a custom header is set, this request is preflighted.
@@ -283,11 +288,11 @@ In this example, content originally loaded from `https://foo.example` makes a si
 
 ```js
 const invocation = new XMLHttpRequest();
-const url = 'https://bar.other/resources/credentialed-content/';
+const url = "https://bar.other/resources/credentialed-content/";
 
 function callOtherDomain() {
   if (invocation) {
-    invocation.open('GET', url, true);
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();

@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
 
 A simple WebGL example in which we have some animation fun using scissoring and clearing operations.
@@ -25,7 +26,10 @@ In this example, we are animating squares using {{domxref("WebGLRenderingContext
 In contrast, the color of the square (set with {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) is only updated when a new square is created. This is a nice demonstration of {{Glossary("WebGL")}} as a state machine. For each square, we set its color once, and then update only its position every frame. The clear color state of WebGL remains at the set value, until we change it again when a new square is created.
 
 ```html hidden
-<p> WebGL animation by clearing the drawing buffer with solid color and applying scissor test.</p>
+<p>
+  WebGL animation by clearing the drawing buffer with solid color and applying
+  scissor test.
+</p>
 <button id="animation-onoff">
   Press here to <strong>[verb goes here]</strong> the animation.
 </button>
@@ -37,22 +41,22 @@ In contrast, the color of the square (set with {{domxref("WebGLRenderingContext.
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -106,7 +110,7 @@ function setupAnimation (evt) {
 const size = [60, 60];
 let velocity = 3.0;
 function drawAnimation () {
-  gl.scissor(position[0], position[1], size[0] , size[1]);
+  gl.scissor(position[0], position[1], size[0], size[1]);
   gl.clear(gl.COLOR_BUFFER_BIT);
   // Every frame the vertical position of the square is
   // decreased, to create the illusion of movement.

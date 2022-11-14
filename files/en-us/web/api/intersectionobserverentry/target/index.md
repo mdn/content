@@ -13,6 +13,7 @@ tags:
   - target
 browser-compat: api.IntersectionObserverEntry.target
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's

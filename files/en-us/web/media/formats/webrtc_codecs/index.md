@@ -11,6 +11,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct web sites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.

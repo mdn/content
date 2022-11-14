@@ -8,6 +8,7 @@ tags:
   - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.notificationclose_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`notificationclose`** event fires when a user closes a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.

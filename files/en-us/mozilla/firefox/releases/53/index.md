@@ -6,6 +6,7 @@ tags:
   - Mozilla
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -166,7 +167,7 @@ Enhanced APIs:
 
 ### JavaScript code modules
 
-- The asynchronous [AddonManager APIs](../../../Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ({{bug(987512)}}.
+- The asynchronous [AddonManager APIs]((/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ({{bug(987512)}}.
 
 ## Older versions
 

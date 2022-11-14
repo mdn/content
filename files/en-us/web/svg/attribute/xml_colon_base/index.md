@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.core.xml_base
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`xml:base`** attribute specifies a base {{Glossary("IRI")}} other than the base IRI of the document or external entity.

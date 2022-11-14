@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
+
 {{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**
@@ -18,7 +19,7 @@ caret's character offset within that node.
 
 ## Syntax
 
-```js
+```js-nolint
 caretPositionFromPoint(x, y)
 ```
 
@@ -41,7 +42,7 @@ Click anywhere in the **Demo** paragraph below to insert a line break at the poi
 
 {{EmbedLiveSample('Examples')}}
 
-The code below first checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} support, but if the browser doesn't support that, the code then checks for `document.caretPositionFromPoint`, and uses that instead.
+The code below first checks for `document.caretPositionFromPoint` support, but if the browser doesn't support that, the code then checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}}, and uses that instead.
 
 ### JavaScript
 
@@ -51,41 +52,77 @@ function insertBreakAtPoint(e) {
   let textNode;
   let offset;
 
-  if (document.caretRangeFromPoint) {
-    range = document.caretRangeFromPoint(e.clientX, e.clientY);
-    textNode = range.startContainer;
-    offset = range.startOffset;
-  } else if (document.caretPositionFromPoint) {
+  if (document.caretPositionFromPoint) {
     range = document.caretPositionFromPoint(e.clientX, e.clientY);
     textNode = range.offsetNode;
     offset = range.offset;
+  } else if (document.caretRangeFromPoint) {
+    // Use WebKit-proprietary fallback method
+    range = document.caretRangeFromPoint(e.clientX, e.clientY);
+    textNode = range.startContainer;
+    offset = range.startOffset;
   } else {
-    document.body.textContent = "[This browser supports neither"
-      + " document.caretRangeFromPoint"
-      + " nor document.caretPositionFromPoint.]";
+    // Neither method is supported, do nothing
     return;
   }
   // Only split TEXT_NODEs
   if (textNode?.nodeType === 3) {
     let replacement = textNode.splitText(offset);
-    let br = document.createElement('br');
+    let br = document.createElement("br");
     textNode.parentNode.insertBefore(br, replacement);
   }
 }
 
 let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+for (const paragraph of paragraphs) {
+  paragraph.addEventListener("click", insertBreakAtPoint, false);
+}
+```
+
+```js hidden
+let message = document.getElementById("message");
+if (document.caretPositionFromPoint) {
+  message.textContent =
+    "This browser supports the standard document.caretPositionFromPoint";
+  message.classList.add("supported");
+} else if (document.caretRangeFromPoint) {
+  message.textContent =
+    "This browser supports the non-standard document.caretRangeFromPoint";
+  message.classList.add("supported");
 }
 ```
 
 ### HTML
 
+```html hidden
+<div id="message">
+  This browser supports neither document.caretRangeFromPoint nor
+  document.caretPositionFromPoint
+</div>
+```
+
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
+```
+
+```css hidden
+#message {
+  color: red;
+  font-weight: bold;
+}
+
+#message.fallback {
+  color: darkorange;
+}
+
+#message.supported {
+  color: green;
+}
 ```
 
 ## Specifications

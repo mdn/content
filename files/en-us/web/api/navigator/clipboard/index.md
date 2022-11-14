@@ -16,6 +16,7 @@ tags:
   - paste
 browser-compat: api.Navigator.clipboard
 ---
+
 {{APIRef("Clipboard API")}}
 
 The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the

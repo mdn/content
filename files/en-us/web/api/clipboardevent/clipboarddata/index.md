@@ -14,6 +14,7 @@ tags:
   - paste
 browser-compat: api.ClipboardEvent.clipboardData
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **`ClipboardEvent.clipboardData`** property holds a {{domxref("DataTransfer")}} object, which can be used:

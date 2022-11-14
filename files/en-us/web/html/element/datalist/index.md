@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.datalist
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.
 
@@ -95,12 +95,12 @@ Typically the right side of a control will also have an arrow pointing to the pr
 <label for="myBrowser">Choose a browser from this list:</label>
 <input list="browsers" id="myBrowser" name="myBrowser" />
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 
@@ -114,11 +114,11 @@ Predefined values can be shown there, allowing the user to quickly fill the cont
 > **Note:** When type is not supported, `text` type creating simple text field will be used instead. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
 
 ```html
-<input type="time" list="popularHours">
+<input type="time" list="popularHours" />
 <datalist id="popularHours">
-  <option value="12:00">
-  <option value="13:00">
-  <option value="14:00">
+  <option value="12:00"></option>
+  <option value="13:00"></option>
+  <option value="14:00"></option>
 </datalist>
 ```
 
@@ -129,12 +129,13 @@ Predefined values can be shown there, allowing the user to quickly fill the cont
 The recommended values in the {{HTMLElement("input/range", "range")}} type will be shown as series of hash marks that the user can easily select.
 
 ```html
-<input type="range" list="tickmarks">
+<label for="tick">Tip amount:</label>
+<input type="range" list="tickmarks" min="0" max="100" id="tick" name="tick" />
 <datalist id="tickmarks">
-  <option value="0">
-  <option value="10">
-  <option value="20">
-  <option value="30">
+  <option value="0"></option>
+  <option value="10"></option>
+  <option value="20"></option>
+  <option value="30"></option>
 </datalist>
 ```
 
@@ -145,12 +146,13 @@ The recommended values in the {{HTMLElement("input/range", "range")}} type will 
 The {{HTMLElement("input/color", "color")}} type can show predefined colors in a browser-provided interface.
 
 ```html
-<input type="color" list="redColors">
+<label for="colors">Pick a color (preferably a red tone):</label>
+<input type="color" list="redColors" id="colors" />
 <datalist id="redColors">
-  <option value="#800000">
-  <option value="#8B0000">
-  <option value="#A52A2A">
-  <option value="#DC143C">
+  <option value="#800000"></option>
+  <option value="#8B0000"></option>
+  <option value="#A52A2A"></option>
+  <option value="#DC143C"></option>
 </datalist>
 ```
 
@@ -161,9 +163,10 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
 The specification allows linking `<datalist>` with a {{HTMLElement("input/password", "password")}} type, but no browser supports it for security reasons.
 
 ```html
-<input type="password" list="randomPassword">
+<label for="pwd">Enter a password:</label>
+<input type="password" list="randomPassword" id="pwd" />
 <datalist id="randomPassword">
-  <option value="5Mg[_3DnkgSu@!q#">
+  <option value="5Mg[_3DnkgSu@!q#"></option>
 </datalist>
 ```
 

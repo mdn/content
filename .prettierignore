@@ -1,1 +1,4 @@
 build/
+
+# Ignore markdown files till full pass is made on each folder
+*.md

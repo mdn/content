@@ -7,13 +7,14 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.cause
 ---
+
 {{JSRef}}
 
 The **`cause`** property indicates the specific original cause of an error.
 
-It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the the original error.
+It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
 
-## Value
+## Description
 
 This is the value that was passed to the [`Error()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) in the `options.cause` argument.
 
@@ -44,7 +45,7 @@ Error messages written for human consumption may be inappropriate for machine pa
 function makeRSA(p, q) {
   if (!Number.isInteger(p) || !Number.isInteger(q)) {
     throw new Error('RSA key generation requires integer inputs.', {
-      cause: { code: 'NonInteger', value: [p, q] },
+      cause: { code: 'NonInteger', values: [p, q] },
     });
   }
   if (!areCoprime(p, q)) {

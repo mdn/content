@@ -7,10 +7,10 @@ tags:
   - HTTP
   - header
   - microphone
-  - Experimental
 browser-compat: http.headers.Feature-Policy.microphone
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header
 `microphone` directive controls whether the current document is allowed to

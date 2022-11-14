@@ -9,6 +9,7 @@ tags:
   - Request header
 browser-compat: http.headers.Range
 ---
+
 {{HTTPSidebar}}
 
 The **`Range`** HTTP request header indicates the part of a document that the server should return. Several parts can be requested with one `Range` header at once, and the server may send back these ranges in a multipart document. If the server sends back ranges, it uses the {{HTTPStatus("206", "206 Partial Content")}} for the response. If the ranges are invalid, the server returns the {{HTTPStatus("416", "416 Range Not Satisfiable")}} error. The server can also ignore the `Range` header and return the whole document with a {{HTTPStatus("200")}} status code.
@@ -54,6 +55,8 @@ Requesting three ranges from the file.
 ```http
 Range: bytes=200-1000, 2000-6576, 19000-
 ```
+
+The ranges-specifier value `19000-` specifies `19000` as the first position, and omits any last position — in order to indicate that all bytes from 19000 onward are part of the third range.
 
 Requesting the first 500 and last 500 bytes of the file. The request may be rejected by the server if the ranges overlap.
 

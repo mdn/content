@@ -13,13 +13,14 @@ tags:
   - Tables
 browser-compat: api.HTMLTableCellElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableCellElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -48,7 +49,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
     - The empty string (`""`)
       - : The header cell has no predefined scope; the user agent will establish the scope based on contextual clues.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

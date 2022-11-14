@@ -1,6 +1,7 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.writing-mode
 ---
+
 {{CSSRef}}
 
 The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
@@ -129,40 +131,47 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
 
 ```css hidden
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
-td, th {
-  border: 1px black solid; padding: 3px;
+td,
+th {
+  border: 1px black solid;
+  padding: 3px;
 }
 th {
   background-color: lightgray;
 }
 .example {
-  height:75px;
-  width:75px;
+  height: 75px;
+  width: 75px;
 }
 ```
 
 The CSS that adjusts the directionality of the content looks like this:
 
 ```css
-.example.Text1 span, .example.Text1 {
+.example.Text1 span,
+.example.Text1 {
   writing-mode: horizontal-tb;
 }
 
-.example.Text2 span, .example.Text2 {
+.example.Text2 span,
+.example.Text2 {
   writing-mode: vertical-lr;
 }
 
-.example.Text3 span, .example.Text3 {
+.example.Text3 span,
+.example.Text3 {
   writing-mode: vertical-rl;
 }
 
-.example.Text4 span, .example.Text4 {
+.example.Text4 span,
+.example.Text4 {
   writing-mode: sideways-lr;
 }
 
-.example.Text5 span, .example.Text5 {
+.example.Text5 span,
+.example.Text5 {
   writing-mode: sideways-rl;
 }
 ```
@@ -171,7 +180,7 @@ The CSS that adjusts the directionality of the content looks like this:
 
 This image shows what the output should look like, in case your browser's support for `writing-mode` is incomplete:
 
-![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb css properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
+![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb CSS properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
 
 {{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}
 

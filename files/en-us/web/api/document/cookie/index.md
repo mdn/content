@@ -13,6 +13,7 @@ tags:
   - cookie
 browser-compat: api.Document.cookie
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} property `cookie` lets
@@ -46,16 +47,11 @@ In the code above, `newCookie` is a string of form
 single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value
-  pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
+  pair, specifying the cookie to set/update, and preceded by a semicolon separator:
 
   - `;path=path` (e.g., '`/`',
     '`/mydir`') If not specified, defaults to the current path
     of the current document location.
-
-    > **Note:** Prior to {{Gecko("6.0")}}, paths
-    > with quotes were treated as if the quotes were part of the string,
-    > instead of as if they were delimiters surrounding the actual path
-    > string. This has been fixed.
 
   - `;domain=domain` (e.g.,
     '`example.com`' or '`subdomain.example.com`'). If
@@ -126,7 +122,7 @@ single cookie at a time using this method. Consider also that:
 
 ## Examples
 
-### Example #1: Simple usage
+### Example 1: Simple usage
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -150,9 +146,7 @@ function clearOutputCookies() {
 ```html
 <button onclick="showCookies()">Show cookies</button>
 
-<button onclick="clearOutputCookies()">
-  Clear
-</button>
+<button onclick="clearOutputCookies()">Clear</button>
 
 <div>
   <code id="cookies"></code>
@@ -161,7 +155,7 @@ function clearOutputCookies() {
 
 {{EmbedLiveSample('Example_1_Simple_usage', 200, 72)}}
 
-### Example #2: Get a sample cookie named _test2_
+### Example 2: Get a sample cookie named test2
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -190,9 +184,7 @@ function clearOutputCookieValue() {
 ```html
 <button onclick="showCookieValue()">Show cookie value</button>
 
-<button onclick="clearOutputCookieValue()">
-  Clear
-</button>
+<button onclick="clearOutputCookieValue()">Clear</button>
 
 <div>
   <code id="cookie-value"></code>
@@ -201,7 +193,7 @@ function clearOutputCookieValue() {
 
 {{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 72)}}
 
-### Example #3: Do something only once
+### Example 3: Do something only once
 
 In order to use the following code, please replace all occurrences of the word
 `doSomethingOnlyOnce` (the name of the cookie) with a custom name.
@@ -229,9 +221,7 @@ function clearOutputDoOnce() {
 ```html
 <button onclick="doOnce()">Only do something once</button>
 
-<button onclick="clearOutputDoOnce()">
-  Clear
-</button>
+<button onclick="clearOutputDoOnce()">Clear</button>
 
 <div>
   <code id="do-once"></code>
@@ -240,7 +230,7 @@ function clearOutputDoOnce() {
 
 {{EmbedLiveSample('Example_3_Do_something_only_once', 200, 72)}}
 
-### Example #4: Reset the previous cookie
+### Example 4: Reset the previous cookie
 
 ```js
 function resetOnce() {
@@ -263,9 +253,7 @@ function clearOutputResetOnce() {
 ```html
 <button onclick="resetOnce()">Reset only once cookie</button>
 
-<button onclick="clearOutputResetOnce()">
-  Clear
-</button>
+<button onclick="clearOutputResetOnce()">Clear</button>
 
 <div>
   <code id="reset-once"></code>
@@ -274,7 +262,7 @@ function clearOutputResetOnce() {
 
 {{EmbedLiveSample('Example_4_Reset_the_previous_cookie', 200, 72)}}
 
-### Example #5: Check a cookie existence
+### Example 5: Check a cookie existence
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -297,13 +285,9 @@ function clearOutputACookieExists() {
 ```
 
 ```html
-<button onclick="checkACookieExists()">
-  Check a cookie exists
-</button>
+<button onclick="checkACookieExists()">Check a cookie exists</button>
 
-<button onclick="clearOutputACookieExists()">
-  Clear
-</button>
+<button onclick="clearOutputACookieExists()">Clear</button>
 
 <div>
   <code id="a-cookie-existence"></code>
@@ -312,7 +296,7 @@ function clearOutputACookieExists() {
 
 {{EmbedLiveSample('Example_5_Check_a_cookie_existence', 200, 72)}}
 
-### Example #6: Check that a cookie has a specific value
+### Example 6: Check that a cookie has a specific value
 
 ```js
 function checkCookieHasASpecificValue() {
@@ -333,9 +317,7 @@ function clearASpecificValueOfTheCookie() {
   Check that a cookie has a specific value
 </button>
 
-<button onclick="clearASpecificValueOfTheCookie()">
-  Clear
-</button>
+<button onclick="clearASpecificValueOfTheCookie()">Clear</button>
 
 <div>
   <code id="a-specific-value-of-the-cookie"></code>
@@ -384,7 +366,7 @@ The reason for the [syntax](#syntax) of the `document.cookie`
 accessor property is due to the client-server nature of cookies, which differs from
 other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):
 
-#### The server tells the client to store a cookie
+### The server tells the client to store a cookie
 
 ```bash
 HTTP/1.0 200 OK
@@ -395,7 +377,7 @@ Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 [content of the page here]
 ```
 
-#### The client sends back to the server its cookies previously stored
+### The client sends back to the server its cookies previously stored
 
 ```bash
 GET /sample_page.html HTTP/1.1

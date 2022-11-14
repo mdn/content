@@ -7,6 +7,9 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.style.class
 ---
+
+{{SVGRef}}
+
 « [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
 Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
@@ -60,7 +63,7 @@ You can use this class to style SVG content using CSS.
       viewPort="0 0 120 120"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg">
-      <style type="text/css">
+      <style>
         <![CDATA[
             rect.rectClass {
                 stroke: #000066;

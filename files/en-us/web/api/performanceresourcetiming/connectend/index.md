@@ -9,7 +9,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.connectEnd
 ---
-{{APIRef("Resource Timing API")}}
+
+{{APIRef("Performance API")}}
 
 The **`connectEnd`** read-only property returns the
 {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes
@@ -31,14 +32,15 @@ properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printStartAndEndProperties(entry);
+    });
 }
-function print_start_and_end_properties(perfEntry) {
+
+function printStartAndEndProperties(perfEntry) {
   // Print timestamps of the *start and *end properties
   properties = ["connectStart", "connectEnd",
                 "domainLookupStart", "domainLookupEnd",
@@ -47,15 +49,9 @@ function print_start_and_end_properties(perfEntry) {
                 "requestStart",
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
-
-  for (let i=0; i < properties.length; i++) {
-    // check each property
-    const value = perfEntry[properties[i]];
-    if (properties[i] in perfEntry) {
-      console.log(`… ${properties[i]} = ${value}`);
-    } else {
-      console.log(`… ${properties[i]} = NOT supported`);
-    }
+  for (const property of properties) {
+    // Log the property
+    console.log(`… ${property} = ${perfEntry[property] ?? "NOT supported"}`);
   }
 }
 ```

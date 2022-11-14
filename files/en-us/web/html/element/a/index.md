@@ -1,5 +1,5 @@
 ---
-title: '<a>: The Anchor element'
+title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 tags:
   - Content
@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.a
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
@@ -57,7 +57,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
-    - While web browsers may not support other URL schemes, web sites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+    - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
 - {{HTMLAttrDef("hreflang")}}
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
@@ -87,7 +87,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
     - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`.
 
 - {{HTMLAttrDef("type")}}
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
@@ -221,9 +221,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com"> Mozilla </a>
 ```
 
 #### Result
@@ -241,7 +239,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### Result
@@ -252,9 +253,7 @@ a { display: block; margin-bottom: 0.5em }
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">
-  Jump to the heading below
-</a></p>
+<p><a href="#Section_further_down"> Jump to the heading below </a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -290,14 +289,15 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
 
 #### Example painting app with save link
 
 ##### HTML
 
 ```html
-<p>Paint by holding down the mouse button and moving it.
+<p>
+  Paint by holding down the mouse button and moving it.
   <a href="" download="my_painting.png">Download my painting</a>
 </p>
 
@@ -412,9 +412,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 Annual Report (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
 If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
@@ -422,12 +420,12 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg">
+  <img alt="(opens in new tab)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg">
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -444,12 +442,10 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 <body>
   <a href="#content" class="skip-link">Skip to main content</a>
 
-  <header>
-    …
-  </header>
+  <header>…</header>
 
-  <main id="content"> </main> <!-- The skip link jumps to here -->
-
+  <main id="content"></main>
+  <!-- The skip link jumps to here -->
 </body>
 ```
 

@@ -13,13 +13,14 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionEvent
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechRecognitionEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents the event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`SpeechRecognitionEvent` also inherits properties from its parent interface, {{domxref("Event")}}._
 
@@ -34,7 +35,7 @@ _`SpeechRecognitionEvent` also inherits properties from its parent interface, {{
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

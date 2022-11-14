@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat()`** constructor creates
@@ -23,22 +24,23 @@ language-sensitive date and time formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DateTimeFormat()
 new Intl.DateTimeFormat(locales)
 new Intl.DateTimeFormat(locales, options)
+
+Intl.DateTimeFormat()
+Intl.DateTimeFormat(locales)
+Intl.DateTimeFormat(locales, options)
 ```
+
+> **Note:** `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.DateTimeFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.DateTimeFormat` instance; see [Return value](#return_value).
 
 ### Parameters
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. To use the
-    browser's default locale, omit this field, pass `undefined`, or pass an empty array. Unicode extension are supported
-    (for example `"en-US-u-ca-buddhist"`). For the general form and
-    interpretation of the `locales` argument, see the
-    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
-    extension keys are allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension keys are allowed:
 
     - `nu`
       - : Numbering system. Possible values include: `"arab"`,
@@ -50,6 +52,7 @@ new Intl.DateTimeFormat(locales, options)
         `"mymr"`, `"orya"`, `"tamldec"`,
         `"telu"`, `"thai"`, `"tibt"`.
     - `ca`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -96,6 +99,7 @@ new Intl.DateTimeFormat(locales, options)
         > `hour`, `month`, etc.).
 
     - `calendar`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -128,7 +132,7 @@ new Intl.DateTimeFormat(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `timeZone`
       - : The time zone to use. The only value implementations must recognize is
         `"UTC"`; the default is the runtime's default time zone.
@@ -257,6 +261,35 @@ new Intl.DateTimeFormat(locales, options)
     {{jsxref("undefined")}}, then `year`, `month`, and
     `day` are assumed to be `"numeric"`.
 
+### Return value
+
+A new `Intl.DateTimeFormat` object.
+
+> **Note:** The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
+
+Normally, `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), and a new `Intl.DateTimeFormat` instance is returned in both cases. However, if the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value is an object that is [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) `Intl.DateTimeFormat` (doesn't necessarily mean it's created via `new Intl.DateTimeFormat`; just that it has `Intl.DateTimeFormat.prototype` in its prototype chain), then the value of `this` is returned instead, with the newly created `Intl.DateTimeFormat` object hidden in a `[Symbol(IntlLegacyConstructedSymbol)]` property (a unique symbol that's reused between instances).
+
+```js
+const formatter = Intl.DateTimeFormat.call(
+  { __proto__: Intl.DateTimeFormat.prototype },
+  "en-US",
+  { dateStyle: "full" },
+);
+console.log(Object.getOwnPropertyDescriptors(formatter));
+// {
+//   [Symbol(IntlLegacyConstructedSymbol)]: {
+//     value: DateTimeFormat [Intl.DateTimeFormat] {},
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+//   }
+// }
+```
+
+Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+
+This behavior, called `ChainDateTimeFormat`, does not happen when `Intl.DateTimeFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.DateTimeFormat`. If you call it directly as `Intl.DateTimeFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.DateTimeFormat` instance is created normally.
+
 ## Examples
 
 ### Using DateTimeFormat
@@ -270,23 +303,23 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
+// "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
 ```
 
 ### Using timeStyle and dateStyle
 
 ```js
-const shortTime = new Intl.DateTimeFormat("en" , {
+const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short"
 });
 console.log(shortTime.format(Date.now())); // "13:31 AM"
 
-const shortDate = new Intl.DateTimeFormat("en" , {
+const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
 });
 console.log(shortDate.format(Date.now())); // "07/07/20"
 
-const mediumTime = new Intl.DateTimeFormat("en" , {
+const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });
@@ -303,10 +336,10 @@ const date = Date.UTC(2012, 11, 17, 4, 0, 42);
 console.log(new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
   hourCycle: 'h12',
-  dayPeriod: 'short', 
+  dayPeriod: 'short',
   timeZone: 'UTC',
 }).format(date));
-// > 4 at night"  (same formatting in en-GB for all dayPeriod values)
+// 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -314,7 +347,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'narrow',
   timeZone: 'UTC',
 }).format(date));
-// > "4 mat."  (same output in French for both narrow/short dayPeriod)
+// "4 mat."  (same output in French for both narrow/short dayPeriod)
 
 console.log(new Intl.DateTimeFormat('fr', {
   hour: 'numeric',
@@ -322,7 +355,7 @@ console.log(new Intl.DateTimeFormat('fr', {
   dayPeriod: 'long',
   timeZone: 'UTC',
 }).format(date));
-// > "4 du matin"
+// "4 du matin"
 ```
 
 ### Using timeZoneName
@@ -342,13 +375,13 @@ for (const zoneName of timezoneNames) {
   console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
-// expected output:
-// > "short: 12/16/2021, PST"
-// > "long: 12/16/2021, Pacific Standard Time"
-// > "shortOffset: 12/16/2021, GMT-8"
-// > "longOffset: 12/16/2021, GMT-08:00"
-// > "shortGeneric: 12/16/2021, PT"
-// > "longGeneric: 12/16/2021, Pacific Time"
+// Logs:
+// short: 12/16/2021, PST
+// long: 12/16/2021, Pacific Standard Time
+// shortOffset: 12/16/2021, GMT-8
+// longOffset: 12/16/2021, GMT-08:00
+// shortGeneric: 12/16/2021, PT
+// longGeneric: 12/16/2021, Pacific Time
 ```
 
 ## Specifications

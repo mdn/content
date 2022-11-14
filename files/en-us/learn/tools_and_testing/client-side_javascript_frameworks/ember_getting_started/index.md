@@ -10,6 +10,7 @@ tags:
   - Learn
   - client-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 In our first Ember article we will look at how Ember works and what it's useful for, install the Ember toolchain locally, create a sample app, and then do some initial setup to get it ready for development.
@@ -130,23 +131,23 @@ Ember uses a command-line interface (CLI) tool for building and scaffolding part
 1. You'll need node and npm installed before you can install ember-cli. [Go here to find out how to install node and npm](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups), if you haven't already got them.
 2. Now type the following into your terminal to install ember-cli:
 
-    ```
-    npm install -g ember-cli
-    ```
+   ```
+   npm install -g ember-cli
+   ```
 
-    This tool provides the `ember` program in your terminal, which is used to create, build, develop, test, and scaffold your application (run `ember --help` for a full list of commands and their options).
+   This tool provides the `ember` program in your terminal, which is used to create, build, develop, test, and scaffold your application (run `ember --help` for a full list of commands and their options).
 
 3. To create a brand new application, type the following in your terminal. This creates a new directory inside the current directory you are in called todomvc, containing the scaffolding for a new Ember app. Make sure you navigate to somewhere appropriate in the terminal before you run it. (Good suggestions are your "desktop" or "documents" directories, so that it is easy to find):
 
-    ```bash
-    ember new todomvc
-    ```
+   ```bash
+   ember new todomvc
+   ```
 
-    Or, on Windows:
+   Or, on Windows:
 
-    ```bash
-    npx ember-cli new todomvc
-    ```
+   ```bash
+   npx ember-cli new todomvc
+   ```
 
 This generates a production-ready application development environment that includes the following features by default:
 
@@ -168,42 +169,42 @@ Installing shared assets, as we're about to do, isn't normally a required step f
 1. First, enter into your `todomvc` directory in the terminal, for example using `cd todomvc` in macOS/Linux.
 2. Now run the following command to place the common todomvc CSS inside your app:
 
-    ```bash
-    npm install --save-dev todomvc-app-css todomvc-common
-    ```
+   ```bash
+   npm install --save-dev todomvc-app-css todomvc-common
+   ```
 
 3. Next, find the [ember-cli-build.js](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/ember-cli-build.js) file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.
 
-    We will however add lines to the ember-cli-build.js file to import our shared CSS files, so that they become part of our build without having to explicitly [`@import`](/en-US/docs/Web/CSS/@import) them into the `app.css` file (this would require URL rewrites at build time and therefore be less efficient and more complicated to set up).
+   We will however add lines to the ember-cli-build.js file to import our shared CSS files, so that they become part of our build without having to explicitly [`@import`](/en-US/docs/Web/CSS/@import) them into the `app.css` file (this would require URL rewrites at build time and therefore be less efficient and more complicated to set up).
 
 4. In `ember-cli-build.js`, find the following code:
 
-    ```js
-    let app = new EmberApp(defaults, {
-        // Add options here
-      });
-    ```
+   ```js
+   let app = new EmberApp(defaults, {
+     // Add options here
+   });
+   ```
 
 5. Add the following lines underneath it before saving the file:
 
-    ```js
-      app.import('node_modules/todomvc-common/base.css');
-      app.import('node_modules/todomvc-app-css/index.css');
-    ```
+   ```js
+   app.import("node_modules/todomvc-common/base.css");
+   app.import("node_modules/todomvc-app-css/index.css");
+   ```
 
-    For more information on what `ember-cli-build.js` does, and for other ways in which you can customize your build / pipeline, the Ember Guides have a page on [Addons and Dependencies](https://guides.emberjs.com/release/addons-and-dependencies/).
+   For more information on what `ember-cli-build.js` does, and for other ways in which you can customize your build / pipeline, the Ember Guides have a page on [Addons and Dependencies](https://guides.emberjs.com/release/addons-and-dependencies/).
 
 6. Finally, find `app.css`, located at `app/styles/app.css`, and paste in the following:
 
-    ```css
-    :focus,
-    .view label:focus,
-    .todo-list li .toggle:focus + label,
-    .toggle-all:focus + label {
-      /* !important needed because todomvc styles deliberately disable the outline */
-      outline: #d86f95 solid !important;
-    }
-    ```
+   ```css
+   :focus,
+   .view label:focus,
+   .todo-list li .toggle:focus + label,
+   .toggle-all:focus + label {
+     /* !important needed because todomvc styles deliberately disable the outline */
+     outline: #d86f95 solid !important;
+   }
+   ```
 
 This CSS overrides some of the styles provided by the `todomvc-app-css` npm package, therefore allowing keyboard focus to be visible. This goes some way towards fixing one of the major accessibility disadvantages of the default TodoMVC app.
 
@@ -233,7 +234,7 @@ If everything is working correctly, you should see a page like this:
 
 ![The default start page when you create a new Ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
 
-> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
+> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
 
 ## Summary
 

@@ -2,11 +2,11 @@
 title: SOAP
 slug: Glossary/SOAP
 tags:
-  - Glossary
   - Infrastructure
   - SOAP
   - WebMechanics
 ---
+
 **SOAP** (Simple Object Access Protocol) is a {{glossary('protocol')}} for transmitting data in {{glossary('XML')}} format.
 
 ## See also

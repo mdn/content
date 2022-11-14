@@ -9,15 +9,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segments.containing
 ---
+
 {{JSRef}}
 
-The **`Intl.Segments.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
+The **`Intl.Segments.prototype.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 containing(codeUnitIndex)
 ```
 
@@ -37,7 +38,7 @@ An object describing the segment of the original string with the following prope
 - `input`
   - : The complete input string that was segmented.
 - `isWordLike`
-  - : A boolean value only if `granularity` is `"word"`; otherwise, `undefined`.  If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, `false`.
+  - : A boolean value only if `granularity` is `"word"`; otherwise, `undefined`. If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, `false`.
 
 ## Examples
 
@@ -48,25 +49,24 @@ const input = "Allons-y!";
 
 const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
 const segments = segmenter.segment(input);
-let current = undefined;
 
-current = segments.containing();
-// → { index: 0, segment: "Allons", isWordLike: true }
+let current = segments.containing();
+// { index: 0, segment: "Allons", isWordLike: true }
 
 current = segments.containing(4);
-// → { index: 0, segment: "Allons", isWordLike: true }
+// { index: 0, segment: "Allons", isWordLike: true }
 
 current = segments.containing(6);
-// → { index: 6, segment: "-", isWordLike: false }
+// { index: 6, segment: "-", isWordLike: false }
 
 current = segments.containing(current.index + current.segment.length);
-// → { index: 7, segment: "y", isWordLike: true }
+// { index: 7, segment: "y", isWordLike: true }
 
 current = segments.containing(current.index + current.segment.length);
-// → { index: 8, segment: "!", isWordLike: false }
+// { index: 8, segment: "!", isWordLike: false }
 
 current = segments.containing(current.index + current.segment.length);
-// → undefined
+// undefined
 ```
 
 ## Specifications

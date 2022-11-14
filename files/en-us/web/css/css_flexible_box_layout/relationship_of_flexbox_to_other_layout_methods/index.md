@@ -2,6 +2,7 @@
 title: Relationship of flexbox to other layout methods
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -12,6 +13,7 @@ tags:
   - flexbox
   - grid
 ---
+
 {{CSSRef}}
 
 In this article we will take a look at how Flexbox fits in with all the other CSS modules. We'll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.

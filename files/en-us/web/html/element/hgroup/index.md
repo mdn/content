@@ -2,16 +2,14 @@
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
 tags:
-  - Deprecated
   - Element
-  - Experimental
   - HTML
   - Reference
   - Web
 browser-compat: html.elements.hgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 

@@ -1,5 +1,5 @@
 ---
-title: '<video>: The Video Embed element'
+title: "<video>: The Video Embed element"
 slug: Web/HTML/Element/video
 tags:
   - Element
@@ -19,7 +19,8 @@ tags:
   - Web
 browser-compat: html.elements.video
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the {{HTMLElement("audio")}} element may provide a more appropriate user experience.
 
@@ -47,9 +48,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A Boolean attribute which if `true` indicates that the element should automatically toggle picture-in-picture mode when the user switches back and forth between this document and another document or application.
 - {{htmlattrdef("controls")}}
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}
+- {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}
 
-  - : The [`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) attribute, when specified, helps the browser select what controls to show on the media element whenever the browser shows its own set of controls (e.g. when the `controls` attribute is specified).
+  - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `video` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
@@ -57,14 +58,14 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - {{htmlattrdef("crossorigin")}}
 
-  - : This enumerated attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
     - `anonymous`
-      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
+      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the resource will be _tainted_, and its usage restricted.
     - `use-credentials`
-      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
+      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the resource will be _tainted_ and its usage restricted.
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
 - {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
@@ -86,7 +87,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
 - {{htmlattrdef("preload")}}
 
-  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience with regards to what content is loaded before the video is played. It may have one of the following values:
+  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
     - `none`: Indicates that the video should not be preloaded.
     - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
@@ -176,6 +177,15 @@ Like all other HTML elements, this element supports the [global attributes](/en-
         {{domxref("HTMLMediaElement.ended_event", 'ended')}}
       </td>
       <td>Playback has stopped because the end of the media was reached.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.error_event", 'error')}}
+      </td>
+      <td>
+        An error occurred while fetching the media data, or the type of the
+        resource is not a supported media format.
+      </td>
     </tr>
     <tr>
       <td>
@@ -279,10 +289,12 @@ Browsers don't all support the same video formats; you can provide multiple sour
 
 ```html
 <video controls>
-  <source src="myVideo.webm" type="video/webm">
-  <source src="myVideo.mp4" type="video/mp4">
-  <p>Your browser doesn't support HTML video. Here is
-     a <a href="myVideo.mp4">link to the video</a> instead.</p>
+  <source src="myVideo.webm" type="video/webm" />
+  <source src="myVideo.mp4" type="video/mp4" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="myVideo.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -366,15 +378,14 @@ This example plays a video when activated, providing the user with the browser's
 <!-- Simple video example -->
 <!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
 <!-- Poster from peach.blender.org -->
-<video controls
-    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-    width="620">
-
-Sorry, your browser doesn't support embedded videos,
-but don't worry, you can <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
-and watch it with your favorite video player!
-
+<video
+  controls
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
+  and watch it with your favorite video player!
 </video>
 ```
 
@@ -394,22 +405,25 @@ This example builds on the last one, offering three different sources for the me
 <!-- Using multiple sources as fallbacks for a video tag -->
 <!-- 'Elephants Dream' by Orange Open Movie Project Studio, licensed under CC-3.0, hosted by archive.org -->
 <!-- Poster hosted by Wikimedia -->
-<video width="620" controls
-  poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg" >
+<video
+  width="620"
+  controls
+  poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg">
   <source
     src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
-    type="video/ogg">
+    type="video/ogg" />
   <source
     src="https://archive.org/download/ElephantsDream/ed_hd.avi"
-    type="video/avi">
+    type="video/avi" />
   <source
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
-    type="video/mp4">
+    type="video/mp4" />
 
-Sorry, your browser doesn't support embedded videos,
-but don't worry, you can <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">download the MP4</a>
-and watch it with your favorite video player!
-
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">
+    download the MP4
+  </a>
+  and watch it with your favorite video player!
 </video>
 ```
 

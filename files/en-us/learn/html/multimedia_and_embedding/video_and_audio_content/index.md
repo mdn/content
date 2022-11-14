@@ -12,6 +12,7 @@ tags:
   - subtitles
   - track
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.
@@ -62,7 +63,10 @@ The {{htmlelement("video")}} element allows you to embed a video very easily. A 
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p>
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.webm">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -98,7 +102,7 @@ The audio and video tracks within the container hold data in the appropriate for
 For example:
 
 - A WebM container typically packages Vorbis or Opus audio with VP8/VP9 video. This is supported in all modern browsers, though older versions may not work.
-- An MP4 container often packages AAC or MP3 audio with H.264 video. This is also supported in all modern browsers, as well as Internet Explorer.
+- An MP4 container often packages AAC or MP3 audio with H.264 video. This is also supported in all modern browsers.
 - The Ogg container tends to use Vorbis audio and Theora video. This is best supported in Firefox and Chrome, but has basically been superseded by the better quality WebM format.
 
 There are some special cases. For example, for some types of audio, a codec's data is often stored without a container, or with a simplified container. One such instance is the FLAC codec, which is stored most commonly in FLAC files, which are just raw FLAC tracks.
@@ -121,13 +125,16 @@ Due to the intricacies of ensuring your app's media is viewable across every com
 
 One additional thing to keep in mind: mobile browsers may support additional formats not supported by their desktop equivalents, just like they may not support all the same formats the desktop version does. On top of that, both desktop and mobile browsers _may_ be designed to offload handling of media playback (either for all media or only for specific types it can't handle internally). This means media support is partly dependent on what software the user has installed.
 
-So how do we do this? Take a look at the following [updated example](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) ([try it live here](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html), also):
+So how do we do this? Take a look at the following [updated example](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) ([try it live here](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html), also):
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support this video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support this video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -142,12 +149,21 @@ Refer to our [guide to media types and formats](/en-US/docs/Web/Media/Formats) f
 There are a number of other features you can include when displaying an HTML video. Take a look at our next example:
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted preload="auto"
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support this video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  preload="auto"
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support this video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -175,7 +191,7 @@ Features include:
     - `"auto"` buffers the media file
     - `"metadata"` buffers only the metadata for the file
 
-You can find the above example available to [play live on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (also [see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Note that we haven't included the `autoplay` attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!
+You can find the above example available to [play live on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (also [see the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Note that we haven't included the `autoplay` attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!
 
 ### The \<audio> element
 
@@ -183,9 +199,12 @@ The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support this audio file. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support this audio file. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 ```
 
@@ -193,7 +212,7 @@ This produces something like the following in a browser:
 
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
-> **Note:** You can [run the audio demo live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on GitHub (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> **Note:** You can [run the audio demo live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on GitHub (also see the [audio player source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 This takes up less space than a video player, as there is no visual component — you just need to display controls to play the audio. Other differences from HTML video are as follows:
 
@@ -249,9 +268,9 @@ Here's an example:
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish" />
 </video>
 ```
 

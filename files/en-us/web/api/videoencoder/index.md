@@ -7,36 +7,53 @@ tags:
   - Interface
   - Reference
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder
 ---
-{{APIRef("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+
 The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("VideoFrame")}} objects.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("VideoEncoder.VideoEncoder", "VideoEncoder()")}}
+- {{domxref("VideoEncoder.VideoEncoder", "VideoEncoder()")}} {{Experimental_Inline}}
   - : Creates a new `VideoEncoder` object.
 
-## Properties
+## Instance properties
 
-- {{domxref("VideoEncoder.encodeQueueSize")}} {{ReadOnlyInline}}
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
+
+- {{domxref("VideoEncoder.encodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An integer representing the number of encode queue requests.
-- {{domxref("VideoEncoder.state")}} {{ReadOnlyInline}}
+- {{domxref("VideoEncoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
 
-## Methods
+### Events
 
-- {{domxref("VideoEncoder.configure()")}}
-  - : Enqueues a control message to configure the video encoder for encoding chunks.
-- {{domxref("VideoEncoder.encode()")}}
-  - : Enqueues a control message to encode a given {{domxref("VideoFrame")}}.
-- {{domxref("VideoEncoder.flush()")}}
-  - : Returns a promise that resolves once all pending messages in the queue have been completed.
-- {{domxref("VideoEncoder.isConfigSupported()")}}
+- {{domxref("VideoEncoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
+  - : Fires to signal a decrease in {{domxref("VideoEncoder.encodeQueueSize")}}.
+
+## Static methods
+
+- {{domxref("VideoEncoder.isConfigSupported()")}} {{Experimental_Inline}}
   - : Returns a promise indicating whether the provided `VideoEncoderConfig` is supported.
-- {{domxref("VideoEncoder.reset()")}}
+
+## Instance methods
+
+_Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
+
+- {{domxref("VideoEncoder.configure()")}} {{Experimental_Inline}}
+  - : Enqueues a control message to configure the video encoder for encoding chunks.
+- {{domxref("VideoEncoder.encode()")}} {{Experimental_Inline}}
+  - : Enqueues a control message to encode a given {{domxref("VideoFrame")}}.
+- {{domxref("VideoEncoder.flush()")}} {{Experimental_Inline}}
+  - : Returns a promise that resolves once all pending messages in the queue have been completed.
+- {{domxref("VideoEncoder.reset()")}} {{Experimental_Inline}}
   - : Resets all states including configuration, control messages in the control message queue, and all pending callbacks.
-- {{domxref("VideoEncoder.close()")}}
+- {{domxref("VideoEncoder.close()")}} {{Experimental_Inline}}
   - : Ends all pending work and releases system resources.
 
 ## Specifications

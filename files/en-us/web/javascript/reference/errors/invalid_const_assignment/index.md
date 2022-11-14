@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid assignment to const" occurs when it was attempted to
@@ -108,7 +109,7 @@ But you can mutate the properties in a variable:
 
 ```js example-good
 obj.foo = 'baz';
-obj; // Object { foo: "baz" }
+obj; // { foo: "baz" }
 ```
 
 ## See also

@@ -9,18 +9,19 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`TrustedTypePolicy`** interface of the {{domxref('Trusted Types API')}} defines a group of functions which create {{domxref('TrustedType')}} objects.
 
 A `TrustedTypePolicy` object is created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}} to define a policy for enforcing security rules on input. Therefore, `TrustedTypePolicy` has no constructor.
 
-## Properties
+## Instance properties
 
 - {{domxref("TrustedTypePolicy.name")}} {{ReadOnlyInline}}
   - : A string containing the name of the policy.
 
-## Methods
+## Instance methods
 
 - {{domxref("TrustedTypePolicy.createHTML","TrustedTypePolicy.createHTML()")}}
   - : Creates a {{domxref("TrustedHTML")}} object.

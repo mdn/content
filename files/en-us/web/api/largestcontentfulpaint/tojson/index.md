@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.LargestContentfulPaint.toJSON
 ---
-{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
-The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface is a _serializer_, and returns a JSON representation of the `LargestContentfulPaint` object.
+{{APIRef("Performance API")}}{{SeeCompatTable}}
+
+The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("LargestContentfulPaint")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -27,28 +28,43 @@ None.
 
 ### Return value
 
-A JSON object that is the serialization of the {{domxref("LargestContentfulPaint")}} object.
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("LargestContentfulPaint")}} object.
+
+The JSON doesn't contain the {{domxref("LargestContentfulPaint.element", "element")}} property because it is of type {{domxref("Element")}}, which doesn't provide a `toJSON()` operation.
 
 ## Examples
 
-The following example gets the `LargestContentfulPaint` object and prints it as JSON to the console.
+### Using the toJSON method
+
+In this example, calling `entry.toJSON()` returns a JSON representation of the `LargestContentfulPaint` object.
 
 ```js
-try {
-  let lcp;
-
-  const po = new PerformanceObserver((entryList) => {
-    const entries = entryList.getEntries();
-    const lastEntry = entries[entries.length - 1];
-    console.log(lastEntry.toJSON());
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry.toJSON());
   });
+});
 
-  po.observe({type: 'largest-contentful-paint', buffered: true});
+observer.observe({type: 'largest-contentful-paint', buffered: true});
+```
 
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
+This would log a JSON object like so:
+
+```json
+{
+  "name": "",
+  "entryType": "largest-contentful-paint",
+  "startTime": 468.2,
+  "duration": 0,
+  "size": 19824,
+  "renderTime": 468.2,
+  "loadTime": 0,
+  "id": "",
+  "url": ""
 }
 ```
+
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 
@@ -57,3 +73,7 @@ try {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("JSON")}}

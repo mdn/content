@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The static **`Reflect.getPrototypeOf()`** method is almost the
@@ -20,7 +21,7 @@ value of the internal `[[Prototype]]` property) of the specified object.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.getPrototypeOf(target)
 ```
 
@@ -49,28 +50,28 @@ the internal `[[Prototype]]` property) of the specified object.
 ### Using Reflect.getPrototypeOf()
 
 ```js
-Reflect.getPrototypeOf({})                  // Object.prototype
-Reflect.getPrototypeOf(Object.prototype)    // null
-Reflect.getPrototypeOf(Object.create(null)) // null
+Reflect.getPrototypeOf({}); // Object.prototype
+Reflect.getPrototypeOf(Object.prototype); // null
+Reflect.getPrototypeOf(Object.create(null)); // null
 ```
 
 ### Compared to Object.getPrototypeOf()
 
 ```js
 // Same result for Objects
-Object.getPrototypeOf({})   // Object.prototype
-Reflect.getPrototypeOf({})  // Object.prototype
+Object.getPrototypeOf({}); // Object.prototype
+Reflect.getPrototypeOf({}); // Object.prototype
 
 // Both throw in ES5 for non-Objects
-Object.getPrototypeOf('foo')   // Throws TypeError
-Reflect.getPrototypeOf('foo')  // Throws TypeError
+Object.getPrototypeOf("foo"); // Throws TypeError
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // In ES2015 only Reflect throws, Object coerces non-Objects
-Object.getPrototypeOf('foo')   // String.prototype
-Reflect.getPrototypeOf('foo')  // Throws TypeError
+Object.getPrototypeOf("foo"); // String.prototype
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // To mimic the Object ES2015 behavior you need to coerce
-Reflect.getPrototypeOf(Object('foo'))  // String.prototype
+Reflect.getPrototypeOf(Object("foo")); // String.prototype
 ```
 
 ## Specifications

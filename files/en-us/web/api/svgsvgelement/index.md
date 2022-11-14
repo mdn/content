@@ -10,13 +10,14 @@ tags:
   - SVG DOM
 browser-compat: api.SVGSVGElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSVGElement`** interface provides access to the properties of {{SVGElement("svg")}} elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 
@@ -69,7 +70,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGSVGElement.currentTranslate")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGPoint")}} representing the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element. The behavior is undefined for `<svg>` elements that are not at the outermost level.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 

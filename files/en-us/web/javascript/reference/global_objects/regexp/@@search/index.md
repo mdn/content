@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@search
 ---
+
 {{JSRef}}
 
 The **`[@@search]()`** method of a regular expression specifies how [`String.prototype.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) should behave.
@@ -19,7 +20,7 @@ The **`[@@search]()`** method of a regular expression specifies how [`String.pro
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.search](str)
 ```
 
@@ -37,9 +38,9 @@ The index of the first match between the regular expression and the given string
 This method is called internally in {{jsxref("String.prototype.search()")}}. For example, the following two examples return the same result.
 
 ```js
-'abc'.search(/a/);
+"abc".search(/a/);
 
-/a/[Symbol.search]('abc');
+/a/[Symbol.search]("abc");
 ```
 
 This method does not copy the regular expression, unlike [`@@split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split) or [`@@matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll). However, unlike [`@@match`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match) or [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace), it will set [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when execution starts and restore it to the previous value when it exits, therefore generally avoiding side effects. This means that the `g` flag has no effect with this method, and it always returns the first match in the string even when `lastIndex` is non-zero. This also means sticky regexps will always search strictly at the beginning of the string.
@@ -67,9 +68,9 @@ This method can be used in almost the same way as {{jsxref("String.prototype.sea
 
 ```js
 const re = /-/g;
-const str = '2016-01-02';
+const str = "2016-01-02";
 const result = re[Symbol.search](str);
-console.log(result);  // 4
+console.log(result); // 4
 ```
 
 ### Using @@search in subclasses
@@ -79,7 +80,7 @@ Subclasses of {{jsxref("RegExp")}} can override `[@@search]()` method to modify 
 ```js
 class MyRegExp extends RegExp {
   constructor(str) {
-    super(str)
+    super(str);
     this.pattern = str;
   }
   [Symbol.search](str) {
@@ -87,8 +88,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp('a+b');
-const str = 'ab a+b';
+const re = new MyRegExp("a+b");
+const str = "ab a+b";
 const result = str.search(re); // String.prototype.search calls re[@@search].
 console.log(result); // 3
 ```

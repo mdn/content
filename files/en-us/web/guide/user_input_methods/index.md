@@ -12,13 +12,14 @@ tags:
   - touch
   - user input
 ---
+
 Modern web user input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies. Relevant APIs and events include [touch events](/en-US/docs/Web/API/Touch_events), [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API), [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) and more.
 
 ## User input and controls workflow
 
 The following diagram illustrates the typical workflow for implementing user input mechanisms:
 
-![](user-input-and-controls.png)
+![Flowchart of user input and controls workflow. The first step is to decide what input mechanism you're using, and the second step is to implement controls.](user-input-and-controls.png)
 
 First of all, you need to decide which input mechanisms you want to cover in your application out of mouse, keyboard, finger touch and so on. Once you decided the input mechanisms, you can control them using tools offered by the web platform or JavaScript libraries.
 
@@ -27,7 +28,7 @@ First of all, you need to decide which input mechanisms you want to cover in you
 Available input mechanisms depend on the capabilities of the device running the application:
 
 - Some devices provide touchscreen displays: the Web Platform offers [touch events](/en-US/docs/Web/API/Touch_events) to interpret finger activity on touch-based user interfaces.
-- For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) helps you in implementing a first person 3D game or other applications requiring full control of the pointing device. And the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) helps you in displaying your app in fullscreen mode.
+- For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) helps you in implementing a first-person 3D game or other applications requiring full control of the pointing device. And the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) helps you in displaying your app in fullscreen mode.
 - Using features such as [contentEditable](/en-US/docs/Web/Guide/HTML/Editable_content) elements you can implement fast rich-text editors and with [Drag\&Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app. When screen orientation matters for your application, through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
 - You should always be mindful of keyboard accessibility where appropriate — many web users only use keyboard to navigate web sites and apps, and locking them out of your functionality is a bad idea.
 
@@ -116,7 +117,7 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** To find more out about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+> **Note:** To find out more about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 #### Drag & Drop
 
@@ -125,8 +126,10 @@ if (elem.requestFullscreen) {
 Here is an example that allows a section of content to be dragged.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-    This text <strong>may</strong> be dragged.
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+  This text <strong>may</strong> be dragged.
 </div>
 ```
 
@@ -150,9 +153,7 @@ div {
 ```
 
 ```html
-<div contenteditable="true">
-    This text can be edited by the user.
-</div>
+<div contenteditable="true">This text can be edited by the user.</div>
 ```
 
 {{EmbedLiveSample("contentEditable")}}
@@ -171,7 +172,6 @@ div {
 - [Touch events Guide](/en-US/docs/Web/API/Touch_events)
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Drag Operations Guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 
 ## Reference

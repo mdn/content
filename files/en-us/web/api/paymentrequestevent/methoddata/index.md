@@ -4,6 +4,7 @@ slug: Web/API/PaymentRequestEvent/methodData
 page-type: web-api-instance-property
 browser-compat: api.PaymentRequestEvent.methodData
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`methodData`** read-only property of the

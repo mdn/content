@@ -17,9 +17,10 @@ tags:
   - inputSources
 browser-compat: api.XRSession.inputSources
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The *read-only* **`inputSources`** property of the
+The _read-only_ **`inputSources`** property of the
 {{DOMxRef("XRSession")}} interface returns an {{domxref("XRInputSourceArray")}} object
 which lists all controllers and input devices which are expressly associated with the
 XR device and are currently available. These controllers may include handheld

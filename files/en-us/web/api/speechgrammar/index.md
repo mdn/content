@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammar
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechGrammar`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a set of words or patterns of words that we want the recognition service to recognize.
@@ -21,14 +22,14 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 ## Constructor
 
-- {{domxref("SpeechGrammar.SpeechGrammar()", "SpeechGrammar()")}} {{non-standard_inline}}
+- {{domxref("SpeechGrammar.SpeechGrammar()", "SpeechGrammar()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
   - : Creates a new `SpeechGrammar` object.
 
-## Properties
+## Instance properties
 
-- {{domxref("SpeechGrammar.src")}}
+- {{domxref("SpeechGrammar.src")}} {{Experimental_Inline}}
   - : Sets and returns a string containing the grammar from within in the `SpeechGrammar` object instance.
-- {{domxref("SpeechGrammar.weight")}} {{optional_inline}}
+- {{domxref("SpeechGrammar.weight")}} {{Optional_Inline}} {{Experimental_Inline}}
   - : Sets and returns the weight of the `SpeechGrammar` object.
 
 ## Examples

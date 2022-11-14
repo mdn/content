@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedInteger
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated integer interface
@@ -50,7 +51,7 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -81,7 +82,7 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedInteger` interface do not provide any specific methods.
 

@@ -10,6 +10,9 @@ tags:
   - Mobile
   - NeedsActiveLearning
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article provides basic tips to help you design websites for any kind of user.
 
 <table class="standard-table">
@@ -69,7 +72,9 @@ You can specify font size on a website either through relative units or absolute
 Absolute units are not proportionally calculated but refer to a size set in stone, so to speak, and are expressed most of the time in pixels (`px`). For instance, if in your CSS you declare this:
 
 ```css
-body { font-size:16px; }
+body {
+  font-size: 16px;
+}
 ```
 
 … you are telling the browser that whatever happens, the font size must be 16 pixels. Modern browsers get around this rule by pretending that you're asking for "16 pixels when the user sets a zoom factor of 100%".
@@ -96,34 +101,51 @@ Here is the HTML we're using:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-    <h1>This is our main heading
-        <span class="subheading">This is our subheading</span>
+  </head>
+  <body>
+    <h1>
+      This is our main heading
+      <span class="subheading">This is our subheading</span>
     </h1>
-
-</body>
+  </body>
 </html>
 ```
 
 A percent-based CSS will look like this:
 
 ```css
-body { font-size:100%; } /* 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-h1 { font-size:200%; } /* twice the size of the body, thus 32 pixels */
-span.subheading { font-size:50%; } /* half the size of the h1, thus 16 pixels to come back to the original size */
+body {
+  /* 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+  font-size: 100%;
+}
+h1 {
+  /* twice the size of the body, thus 32 pixels */
+  font-size: 200%;
+}
+span.subheading {
+  /* half the size of the h1, thus 16 pixels to come back to the original size */
+  font-size: 50%;
+}
 ```
 
 The same problem expressed with ems:
 
 ```css
-body { font-size:1em; } /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-h1 { font-size:2em; } /* twice the size of the body, thus 32 pixels */
-span.subheading { font-size:0.5em; } /* half the size of the h1, thus 16 pixels to come back to the original size */
+body {
+  /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+  font-size: 1em;
+}
+h1 {
+  /* twice the size of the body, thus 32 pixels */
+  font-size: 2em;
+}
+span.subheading {
+  /* half the size of the h1, thus 16 pixels to come back to the original size */
+  font-size: 0.5em;
+}
 ```
 
 As you can see, the math quickly gets daunting when you have to keep track of the parent, the parent's parent, the parent's parent's parent, and so on. (Most designs are done in pixel-based software, so the math has to be done by the person coding the CSS).
@@ -131,9 +153,18 @@ As you can see, the math quickly gets daunting when you have to keep track of th
 Enter `rem`. This unit is relative to the root element's size and not to any other parent. The CSS can be rewritten thus:
 
 ```css
-body { font-size:1em; } /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-h1 { font-size:2rem; } /* twice the size of the body, thus 32 pixels */
-span.subheading { font-size:1rem; } /* original size */
+body {
+  /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
+  font-size: 1em;
+}
+h1 {
+  /* twice the size of the body, thus 32 pixels */
+  font-size: 2rem;
+}
+span.subheading {
+  /* original size */
+  font-size: 1rem;
+}
 ```
 
 Easier, isn't it? This works as of [Internet Explorer 9 and in every other current browser](https://caniuse.com/#search=rem), so please feel free to use this unit.
@@ -162,28 +193,29 @@ To achieve this, you can specify a size for your text's container. Let's conside
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-<div class="container">
-    <h1>This is our main heading
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        This is our main heading
         <span class="subheading">This is our subheading</span>
-    </h1>
+      </h1>
 
-    <p>[lengthy text that spans many lines]</p>
-</div>
-
-</body>
+      <p>[lengthy text that spans many lines]</p>
+    </div>
+  </body>
 </html>
 ```
 
 We have a `div` with class `container`. We can style the `div` either to set its width (using the `width` property) or its maximum width so that it never gets too large (using the `max-width` property). If you want an elastic/responsive website, and you don't know what the browser's default width is, you can use the `max-width` property to allow up to 70 characters per line and no more:
 
 ```css
-div.container { max-width:70em; }
+div.container {
+  max-width: 70em;
+}
 ```
 
 ### Alternative content for images, audio, and video

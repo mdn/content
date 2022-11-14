@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "called on incompatible target (or object)" occurs when a

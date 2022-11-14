@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`scale()`** method of the

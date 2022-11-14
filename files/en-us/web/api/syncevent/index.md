@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.SyncEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`SyncEvent`** interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
@@ -27,7 +28,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 - {{domxref("SyncEvent.SyncEvent", "SyncEvent()")}} {{Experimental_Inline}}
   - : Creates a new `SyncEvent` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
@@ -36,7 +37,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 - {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

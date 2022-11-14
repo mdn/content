@@ -7,31 +7,33 @@ tags:
   - Interface
   - Reference
   - EncodedVideoChunk
+  - Experimental
 browser-compat: api.EncodedVideoChunk
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' ')}} represents a chunk of encoded video data.
 
 ## Constructor
 
-- {{domxref("EncodedVideoChunk.EncodedVideoChunk", "EncodedVideoChunk()")}}
+- {{domxref("EncodedVideoChunk.EncodedVideoChunk", "EncodedVideoChunk()")}} {{Experimental_Inline}}
   - : Creates a new `EncodedVideoChunk` object.
 
-## Properties
+## Instance properties
 
-- {{domxref("EncodedVideoChunk.type")}} {{ReadOnlyInline}}
+- {{domxref("EncodedVideoChunk.type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string indicating whether this chunk of data is a key chunk.
-- {{domxref("EncodedVideoChunk.timestamp")}} {{ReadOnlyInline}}
+- {{domxref("EncodedVideoChunk.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer representing the timestamp of the video in microseconds.
-- {{domxref("EncodedVideoChunk.duration")}} {{ReadOnlyInline}}
+- {{domxref("EncodedVideoChunk.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer representing the duration of the video in microseconds.
-- {{domxref("EncodedVideoChunk.byteLength")}} {{ReadOnlyInline}}
+- {{domxref("EncodedVideoChunk.byteLength")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer representing the length of the video in bytes.
 
-## Methods
+## Instance methods
 
-- {{domxref("EncodedVideoChunk.copyTo()")}}
+- {{domxref("EncodedVideoChunk.copyTo()")}} {{Experimental_Inline}}
   - : Copies the encoded video data.
 
 ## Specifications

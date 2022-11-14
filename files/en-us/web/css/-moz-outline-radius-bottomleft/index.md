@@ -1,6 +1,7 @@
 ---
-title: '-moz-outline-radius-bottomleft'
+title: "-moz-outline-radius-bottomleft"
 slug: Web/CSS/-moz-outline-radius-bottomleft
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,9 +10,11 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.-moz-outline-radius-bottomleft
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 In Mozilla applications, the **`-moz-outline-radius-bottomleft`** [CSS](/en-US/docs/Web/CSS) property can be used to round the bottom-left corner of an element's {{cssxref("outline")}}.
 
@@ -32,7 +35,10 @@ The value of `-moz-outline-radius-bottomleft` is either a CSS {{cssxref("length"
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+ -moz-outline-radius-bottomleft =
+  <outline-radius>
+```
 
 ## Examples
 

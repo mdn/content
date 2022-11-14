@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) lets us create sets of animatable properties and values, called **keyframes.** These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.
@@ -24,18 +25,18 @@ The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/A
 - {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
   - : Returns a new `KeyframeEffect` object instance, and also allows you to clone an existing keyframe effect object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("KeyframeEffect.target")}}
   - : Gets and sets the element, or originating element of the pseudo-element, being animated by this object. This may be `null` for animations that do not target a specific element or pseudo-element.
-- {{domxref("KeyframeEffect.pseudoElement")}} {{Experimental_Inline}}
+- {{domxref("KeyframeEffect.pseudoElement")}}
   - : Gets and sets the selector of the pseudo-element being animated by this object. This may be `null` for animations that do not target a pseudo-element.
-- {{domxref("KeyframeEffect.iterationComposite")}}
+- {{domxref("KeyframeEffect.iterationComposite")}} {{Experimental_Inline}}
   - : Gets and sets the iteration composite operation for resolving the property value changes of this keyframe effect.
 - {{domxref("KeyframeEffect.composite")}}
   - : Gets and sets the composite operation property for resolving the property value changes between this and other keyframe effects.
 
-## Methods
+## Instance methods
 
 _This interface inherits some of its methods from its parent, {{domxref("AnimationEffect")}}._
 

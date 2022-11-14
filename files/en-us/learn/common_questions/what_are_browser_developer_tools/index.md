@@ -11,6 +11,9 @@ tags:
   - JavaScript
   - Learn
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
 
 > **Note:** Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) article series. You should have this open as you follow the steps below.
@@ -105,10 +108,9 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 
 ### Find out more
 
-Find more out about the Inspector in different browsers:
+Find out more about the Inspector in different browsers:
 
 - [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [IE DOM Explorer](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85))
 - [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera's inspector works the same as this)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
@@ -142,7 +144,7 @@ The first pane on the left contains the list of files associated with the page y
 
 Set breakpoints where you want to pause execution. In the following image, the highlight on the number 18 shows that the line has a breakpoint set.
 
-![](source_code.png)
+![Snippet of developer tools debugger panel with the breakpoint at line 18 highlighted.](source_code.png)
 
 #### Watch expressions and breakpoints
 
@@ -162,10 +164,10 @@ The final section, **Scopes**, shows what values are visible from various points
 
 ### Find out more
 
-Find more out about the JavaScript debugger in different browsers:
+Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
-- [Microsoft Edge Debugger](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
+- [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
 - [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/)
 - [Safari Debugger](https://developer.apple.com/safari/tools/)
 
@@ -183,44 +185,49 @@ This will give you a window like the following:
 
 To see what happens, try entering the following snippets of code into the console one by one (and then pressing Enter):
 
-1. ```js
-    alert('hello!');
-    ```
+```js
+alert("hello!");
+```
 
-2. ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
+```js
+document.querySelector("html").style.backgroundColor = "purple";
+```
 
-3. ```js
-    const myWordmark = document.createElement('img');
-    myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js
+const myWordmark = document.createElement("img");
+myWordmark.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
+```
 
 Now try entering the following incorrect versions of the code and see what you get.
 
-1. ```js example-bad
-    alert('hello!);
-    ```
+```js-nolint example-bad
+alert("hello!);
+```
 
-2. ```js example-bad
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
+```js example-bad
+document.cheeseSelector("html").style.backgroundColor = "purple";
+```
 
-3. ```js example-bad
-    const myWordmark = document.createElement('img');
-    myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js example-bad
+const myWordmark = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
+```
 
 You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!
 
 ### Find out more
 
-Find more out about the JavaScript console in different browsers:
+Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [IE JavaScript console](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))
 - [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera's inspector works the same as this)
 - [Safari Console](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 

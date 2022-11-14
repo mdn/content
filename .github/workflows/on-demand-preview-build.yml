@@ -79,7 +79,7 @@ jobs:
           yarn build
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
-          
+
       - name: Merge static assets with built documents
         run: |
           rsync -a node_modules/@mdn/yari/client/build/ build/
@@ -98,7 +98,7 @@ jobs:
           echo "After..."
           du -sh build
 
-      - uses: technote-space/get-diff-action@v6.1.0
+      - uses: technote-space/get-diff-action@v6.1.1
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -131,7 +131,7 @@ jobs:
         with:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
-          
+
       - name: Checkout Yari
         uses: actions/checkout@v3
         with:

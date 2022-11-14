@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.keyFor
 ---
+
 {{JSRef}}
 
 The **`Symbol.keyFor(sym)`** method retrieves a shared symbol
@@ -17,8 +18,8 @@ key from the global symbol registry for the given symbol.
 
 ## Syntax
 
-```js
-Symbol.keyFor(sym);
+```js-nolint
+Symbol.keyFor(sym)
 ```
 
 ### Parameters
@@ -35,7 +36,7 @@ A string representing the key for the given symbol if one is found on the [globa
 ### Using keyFor()
 
 ```js
-const globalSym = Symbol.for('foo'); // create a new global symbol
+const globalSym = Symbol.for("foo"); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 const localSym = Symbol();
@@ -43,7 +44,7 @@ Symbol.keyFor(localSym); // undefined
 
 // well-known symbols are not symbols registered
 // in the global symbol registry
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## Specifications

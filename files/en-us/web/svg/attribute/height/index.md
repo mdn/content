@@ -11,6 +11,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#Sizing
   - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
 ---
+
 {{SVGRef}}
 
 The **`height`** attribute defines the vertical length of an element in the user coordinate system.
@@ -46,15 +47,19 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
   <!-- With a height of 0 or less, nothing will be rendered -->
-  <rect y="0" x="0" width="90" height="0"/>
-  <rect y="0" x="100" width="90" height="60"/>
-  <rect y="0" x="200" width="90" height="100%"/>
+  <rect y="0" x="0" width="90" height="0" />
+  <rect y="0" x="100" width="90" height="60" />
+  <rect y="0" x="200" width="90" height="100%" />
 </svg>
 ```
 
@@ -650,7 +655,7 @@ For {{SVGElement('foreignObject')}}, `height` defines the vertical length for th
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
 ## image
 
@@ -684,7 +689,7 @@ For {{SVGElement('image')}}, `height` defines the vertical length for the image.
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for images.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
 ## mask
 
@@ -774,7 +779,7 @@ For {{SVGElement('rect')}}, `height` defines the vertical length for the rectang
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rectangles.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
 ## svg
 
@@ -810,7 +815,7 @@ For {{SVGElement('svg')}}, `height` defines the vertical length for the renderin
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<svg>`.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
 ## use
 
@@ -846,7 +851,7 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
 
 > **Note:** `height` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
 
 ## Specifications
 

@@ -10,6 +10,9 @@ tags:
   - git
   - publish
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using GitHub's gh-pages feature.
 
 ## Publishing content
@@ -28,17 +31,17 @@ You can store any code you like in a GitHub repository, but to use the GitHub Pa
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
-1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "*c*hange *d*irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
+1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "**c**hange **d**irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
-    ```bash
-    cd Desktop/test-site
-    ```
+   ```bash
+   cd Desktop/test-site
+   ```
 
 2. When the command line is pointing inside your website directory, type the following command, which tells the `git` tool to turn the directory into a git repository:
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 #### An aside on command line interfaces
 
@@ -61,32 +64,32 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 1. Next, you need to create a new repo for your files to go in. Click Plus (+) in the top right of the GitHub homepage, then choose _New Repository_.
 2. On this page, in the _Repository name_ box, enter a name for your code repository, for example _my-repository_.
 3. Also fill in a description to say what your repository is going to contain. Your screen should look like this:
-    ![New repository page opened in browser, repository owner input and the repository name are filled, same for the optional description input. The public check-box is selected, the private check-box is not, same goes for the initialize this repository with a readme.](create-new-repo.png)
+   ![New repository page opened in browser, repository owner input and the repository name are filled, same for the optional description input. The public check-box is selected, the private check-box is not, same goes for the initialize this repository with a readme.](create-new-repo.png)
 4. Click _Create repository_; this should bring you to the following page:
-    ![The repository page is opened in browser, below the github header composed of search bar and navigation links to the repository's pull request, issues and gist. Next to the navigation links, a bell notification and a link to your account. Below, the name of the owner's repository follow by a slash with the repository's name. Below a horizontal navigation bar composed of different tabs relating to your repository, the code tab selected displaying a documentation explaining how to create a repository or how to push from using command line.](github-repo.png)
+   ![The repository page is opened in browser, below the github header composed of search bar and navigation links to the repository's pull request, issues and gist. Next to the navigation links, a bell notification and a link to your account. Below, the name of the owner's repository follow by a slash with the repository's name. Below a horizontal navigation bar composed of different tabs relating to your repository, the code tab selected displaying a documentation explaining how to create a repository or how to push from using command line.](github-repo.png)
 
 ### Uploading your files to GitHub
 
 1. On the current page, you are interested in the section _…or push an existing repository from the command line_. You should see two lines of code listed in this section. Copy the whole of the first line, paste it into the command line, and press Enter. The command should look something like this:
 
-    ```bash
-    git remote add origin https://github.com/chrisdavidmills/my-repository.git
-    ```
+   ```bash
+   git remote add origin https://github.com/chrisdavidmills/my-repository.git
+   ```
 
 2. Next, type the following two commands, pressing Enter after each one. These prepare the code for uploading to GitHub, and ask Git to manage these files.
 
-    ```bash
-    git add --all
-    git commit -m 'adding my files to my repository'
-    ```
+   ```bash
+   git add --all
+   git commit -m 'adding my files to my repository'
+   ```
 
 3. Finally, push the code up to GitHub by going to the GitHub web page you're on and entering into the terminal the second of the two commands we saw the _…or push an existing repository from the command line_ section:
 
-    ```bash
-    git push -u origin main
-    ```
+   ```bash
+   git push -u origin main
+   ```
 
-4. Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose _Settings_, then select _Pages_ from the sidebar on the left. Underneath *Source*, choose the "main" branch. The page should refresh.
+4. Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose _Settings_, then select _Pages_ from the sidebar on the left. Underneath _Source_, choose the "main" branch. The page should refresh.
 5. Go to the GitHub Pages section again, and you should see a line of the form "Your site is ready to be published at `https://xxxxxx`."
 6. If you click on this URL, you should go to a live version of your example, provided the home page is called `index.html` — it goes to this entry point by default. If your site's entry point is called something else, for example `myPage.html`, you'll need to go to `https://xxxxxx/myPage.html`.
 

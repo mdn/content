@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.webkitRelativePath
 ---
+
 {{APIRef("File API")}}
 
 The **`File.webkitRelativePath`** is a read-only property that

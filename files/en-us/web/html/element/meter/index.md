@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.meter
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scalar value within a known range or a fractional value.
 
@@ -102,8 +102,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 #### HTML
 
 ```html
-<p>Heat the oven to <meter min="200" max="500"
-  value="350">350 degrees</meter>.</p>
+<p>
+  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
+</p>
 ```
 
 #### Result
@@ -121,8 +122,9 @@ Note that in this example the {{htmlattrxref("min", "meter")}} attribute is omit
 #### HTML
 
 ```html
-<p>He got a <meter low="69" high="80" max="100"
-  value="84">B</meter> on the exam.</p>
+<p>
+  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+</p>
 ```
 
 #### Result

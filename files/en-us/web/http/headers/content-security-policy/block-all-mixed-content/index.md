@@ -10,8 +10,10 @@ tags:
   - Reference
   - Security
   - block-all-mixed-content
+  - Deprecated
 browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 > **Warning:** This directive is marked as obsolete in the specification: all mixed content is now blocked if it can't be autoupgraded.

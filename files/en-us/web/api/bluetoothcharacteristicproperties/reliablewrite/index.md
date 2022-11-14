@@ -15,6 +15,7 @@ tags:
   - reliableWrite
 browser-compat: api.BluetoothCharacteristicProperties.reliableWrite
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`reliableWrite`** read-only property of

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createLinearGradient
 ---
+
 {{APIRef}}
 
 The
@@ -18,7 +19,7 @@ The
 method of the Canvas 2D API creates a gradient along the line connecting two given
 coordinates.
 
-![](mdn-canvas-lineargradient.png)
+![The gradient transitions colors along the gradient line, starting at point x0, y0 and going to x1, y1, even if those points extend the gradient line beyond the edges of the element on which the gradient is drawn.](mdn-canvas-lineargradient.png)
 
 This method returns a linear {{domxref("CanvasGradient")}}. To be applied to a shape,
 the gradient must first be assigned to the
@@ -31,7 +32,7 @@ the gradient must first be assigned to the
 
 ## Syntax
 
-```js
+```js-nolint
 createLinearGradient(x0, y0, x1, y1)
 ```
 
@@ -76,18 +77,18 @@ context, and is rendered to a filled rectangle.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create a linear gradient
 // The start gradient point is at x=20, y=0
 // The end gradient point is at x=220, y=0
-const gradient = ctx.createLinearGradient(20,0, 220,0);
+const gradient = ctx.createLinearGradient(20, 0, 220, 0);
 
 // Add three color stops
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(.5, 'cyan');
-gradient.addColorStop(1, 'green');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(0.5, "cyan");
+gradient.addColorStop(1, "green");
 
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;

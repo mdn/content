@@ -11,6 +11,7 @@ tags:
   - desiredSize
 browser-compat: api.WritableStreamDefaultWriter.desiredSize
 ---
+
 {{APIRef("Streams")}}
 
 The **`desiredSize`** read-only property of the

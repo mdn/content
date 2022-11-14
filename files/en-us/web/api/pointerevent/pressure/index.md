@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.pressure
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`pressure`** read-only property of the
@@ -19,11 +20,11 @@ input.
 
 ## Value
 
-The normalized pressure of the pointer input in the range of `0` to `1`, inclusive, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively. For hardware that does not support pressure, such as a mouse, the value is `0.5` when the pointer is active buttons state and `0`  otherwise.
+The normalized pressure of the pointer input in the range of `0` to `1`, inclusive, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively. For hardware that does not support pressure, such as a mouse, the value is `0.5` when the pointer is active buttons state and `0` otherwise.
 
 ## Examples
 
-In this snippet, when a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions
+In this snippet, when a {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired, different functions
 are called depending on the value of the event's `pressure` property.
 
 ```js

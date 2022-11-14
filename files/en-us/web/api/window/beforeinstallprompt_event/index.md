@@ -11,6 +11,7 @@ tags:
   - beforeinstallprompt
 browser-compat: api.Window.beforeinstallprompt_event
 ---
+
 {{APIRef}}
 
 The **`beforeinstallprompt`** event fires on devices when a user is about to be prompted to "install" a web application. It may be saved for later and used to prompt the user at a more suitable time.

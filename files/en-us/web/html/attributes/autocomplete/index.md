@@ -132,7 +132,7 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 - "`bday-year`"
   - : The year of a birth date.
 - "`sex`"
-  - : A gender identity (such as "Female", "Fa'afafine", "Male"), as freeform text without newlines.
+  - : A gender identity (such as "Female", "Fa'afafine", "Hijra", "Male", "Nonbinary"), as freeform text without newlines.
 - "`tel`"
 
   - : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
@@ -164,7 +164,7 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 ```html
 <div>
   <label for="cc-number">Enter your credit card number</label>
-  <input name="cc-number" id="cc-number" autocomplete="off">
+  <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 

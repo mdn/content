@@ -12,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.HTMLElement.drop_event
 ---
+
 {{APIRef}}
 
 The **`drop`** event is fired when an element or text selection is dropped on a valid drop target.
@@ -57,9 +58,7 @@ For a more complete example of drag and drop, see the page for the [`drag`](/en-
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.setProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 The
@@ -17,7 +18,7 @@ a new value for a property on a CSS style declaration object.
 
 ## Syntax
 
-```js
+```js-nolint
 setProperty(propertyName, value)
 setProperty(propertyName, value, priority)
 ```
@@ -31,6 +32,7 @@ setProperty(propertyName, value, priority)
     as the empty string.
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
+
   - : A string allowing the "important" CSS priority to be set. If not
     specified, treated as the empty string. The following values are accepted:
 
@@ -160,13 +162,7 @@ function randomColor() {
 }
 
 const stylesheet = document.styleSheets[1];
-let boxParaRule;
-
-for (let i = 0; i < stylesheet.cssRules.length; i++) {
-  if (stylesheet.cssRules[i].selectorText === '.box p') {
-    boxParaRule = stylesheet.cssRules[i];
-  }
-}
+const boxParaRule = [...stylesheet.cssRules].find((r) => r.selectorText === ".box p");
 
 function setRandomBorder() {
   const newBorder = `${random(1, 50)}px solid ${randomColor()}`;

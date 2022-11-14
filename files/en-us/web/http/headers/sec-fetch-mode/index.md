@@ -10,6 +10,7 @@ tags:
   - Request header
 browser-compat: http.headers.Sec-Fetch-Mode
 ---
+
 {{HTTPSidebar}}
 
 The **`Sec-Fetch-Mode`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the [mode](/en-US/docs/Web/API/Request/mode) of the request.

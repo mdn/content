@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.PaymentResponse.payerName
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`payerName`** read-only property of the

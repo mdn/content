@@ -12,6 +12,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.assignedSlot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`assignedSlot`** read-only

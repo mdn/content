@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.depthFunc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.depthFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a function that compares
@@ -17,7 +18,7 @@ incoming pixel depth to the current depth buffer value.
 
 ## Syntax
 
-```js
+```js-nolint
 depthFunc(func)
 ```
 

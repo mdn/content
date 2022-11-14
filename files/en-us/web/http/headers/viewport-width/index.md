@@ -9,10 +9,10 @@ tags:
   - Request header
   - Deprecated
   - Non-standard
-  -  Experimental
 browser-compat: http.headers.Viewport-Width
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
 
 The **`Viewport-Width`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).
 

@@ -1,5 +1,5 @@
 ---
-title: 'CSS: Cascading Style Sheets'
+title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
 tags:
   - CSS
@@ -12,8 +12,9 @@ tags:
   - Style Sheets
   - Styles
   - Stylesheets
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{CSSRef}}
 
 **Cascading Style Sheets** (**CSS**) is a [stylesheet](/en-US/docs/Web/API/StyleSheet) language used to describe the presentation of a document written in [HTML](/en-US/docs/Web/HTML) or [XML](/en-US/docs/Web/XML/XML_introduction) (including XML dialects such as [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML) or {{Glossary("XHTML")}}). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.

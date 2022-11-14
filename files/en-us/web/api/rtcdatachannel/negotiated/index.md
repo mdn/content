@@ -15,6 +15,7 @@ tags:
   - negotiated
 browser-compat: api.RTCDataChannel.negotiated
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property

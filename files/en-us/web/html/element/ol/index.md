@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.ol
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<ol>`** [HTML](/en-US/docs/Web/HTML) element represents an ordered list of items — typically rendered as a numbered list.
 
@@ -171,13 +171,16 @@ The above HTML will output:
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- closing </li> tag not here! -->
+  <li>
+    second item
+    <!-- closing </li> tag is not here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  </li>            <!-- Here's the closing </li> tag -->
+  </li>
+  <!-- Here's the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```
@@ -191,13 +194,16 @@ The above HTML will output:
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- closing </li> tag not here! -->
+  <li>
+    second item
+    <!-- closing </li> tag is not here! -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ul>
-  </li>            <!-- Here's the closing </li> tag -->
+  </li>
+  <!-- Here's the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```

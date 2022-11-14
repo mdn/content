@@ -10,6 +10,7 @@ tags:
   - JavaScript
   - Protocols
 ---
+
 {{jsSidebar("More")}}
 
 **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
@@ -43,9 +44,11 @@ An object is an iterator when it implements a **`next()`** method with the follo
 All iterator protocol methods (`next()`, `return()`, and `throw()`) are expected to return an object implementing the `IteratorResult` interface. It must have the following properties:
 
 - `done` {{optional_inline}}
+
   - : A boolean that's `false` if the iterator was able to produce the next value in the sequence. (This is equivalent to not specifying the `done` property altogether.)
 
     Has the value `true` if the iterator has completed its sequence. In this case, `value` optionally specifies the return value of the iterator.
+
 - `value` {{optional_inline}}
   - : Any JavaScript value returned by the iterator. Can be omitted when `done` is `true`.
 
@@ -72,7 +75,7 @@ const myIterator = {
   next() {
     // ...
   },
-  [Symbol.iterator] () {
+  [Symbol.iterator]() {
     return this;
   },
 };
@@ -145,15 +148,15 @@ Array Iterator {}
 
 There are many APIs that accept iterables. Some examples include:
 
-- {{jsxref("Map", "new Map([<var>iterable</var>])")}}
-- {{jsxref("WeakMap", "new WeakMap([<var>iterable</var>])")}}
-- {{jsxref("Set", "new Set([<var>iterable</var>])")}}
-- {{jsxref("WeakSet", "new WeakSet([<var>iterable</var>])")}}
-- {{jsxref("Promise.all()", "Promise.all(<var>iterable</var>)")}}
-- {{jsxref("Promise.allSettled()", "Promise.allSettled(<var>iterable</var>)")}}
-- {{jsxref("Promise.race()", "Promise.race(<var>iterable</var>)")}}
-- {{jsxref("Promise.any()", "Promise.any(<var>iterable</var>)")}}
-- {{jsxref("Array.from()", "Array.from(<var>iterable</var>)")}}
+- {{jsxref("Map/Map", "Map()")}}
+- {{jsxref("WeakMap/WeakMap", "WeakMap()")}}
+- {{jsxref("Set/Set", "Set()")}}
+- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
+- {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.allSettled()")}}
+- {{jsxref("Promise.race()")}}
+- {{jsxref("Promise.any()")}}
+- {{jsxref("Array.from()")}}
 
 ```js
 const myObj = {};
@@ -207,9 +210,9 @@ const obj = {
       return() {
         console.log("Closing");
         return { done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 const [b] = obj;
@@ -431,5 +434,5 @@ console.log(`${someString}`); // "hi"
 
 ## See also
 
-- {{jsxref("Statements/function*", "the <code>function*</code> documentation", "", 1)}}
+- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 - [Iteration in the ECMAScript specification](https://tc39.es/ecma262/#sec-iteration)

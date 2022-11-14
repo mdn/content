@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The static
@@ -22,7 +23,7 @@ otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ```
 
@@ -55,13 +56,13 @@ of the given property if it exists in the `target` object,
 ### Using Reflect.getOwnPropertyDescriptor()
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x')
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "x");
 // {value: "hello", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y')
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "y");
 // undefined
 
-Reflect.getOwnPropertyDescriptor([], 'length')
+Reflect.getOwnPropertyDescriptor([], "length");
 // {value: 0, writable: true, enumerable: false, configurable: false}
 ```
 
@@ -73,10 +74,10 @@ primitive), then it will cause a {{jsxref("TypeError")}}. With
 coerced to an object at first.
 
 ```js
-Reflect.getOwnPropertyDescriptor('foo', 0)
+Reflect.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not non-null object
 
-Object.getOwnPropertyDescriptor('foo', 0)
+Object.getOwnPropertyDescriptor("foo", 0);
 // { value: "f", writable: false, enumerable: true, configurable: false }
 ```
 

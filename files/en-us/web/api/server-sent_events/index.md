@@ -9,6 +9,7 @@ tags:
   - Server-sent events
 spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/en-US/docs/Web/API/Event) + data_ inside the web page.
@@ -28,7 +29,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Examples
 
-- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
 ## Specifications
 

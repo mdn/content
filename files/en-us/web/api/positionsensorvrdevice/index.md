@@ -14,11 +14,12 @@ tags:
   - Non-standard
 browser-compat: api.PositionSensorVRDevice
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`PositionSensorVRDevice`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents VR hardware's position sensor. You can access information such as the current position and orientation of the sensor in relation to the head mounted display through the {{domxref("PositionSensorVRDevice.getState()")}} method.
 
-## Methods
+## Instance methods
 
 - {{domxref("PositionSensorVRDevice.getState()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, versus `getImmediateState()`.
@@ -27,7 +28,7 @@ The **`PositionSensorVRDevice`** interface of the [WebVR API](/en-US/docs/Web/AP
 - {{domxref("PositionSensorVRDevice.resetSensor()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : _Can be used to reset the sensor if desired, returning the_ position and orientation values to zero.
 
-## Properties
+## Instance properties
 
 _This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDisplay")}}._
 

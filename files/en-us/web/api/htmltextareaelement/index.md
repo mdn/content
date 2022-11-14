@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTextAreaElement`** interface provides special properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 <table class="standard-table">
   <tbody>
@@ -255,7 +256,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
 
-## Methods
+## Instance methods
 
 <table class="standard-table">
   <tbody>
@@ -343,7 +344,7 @@ Make a textarea autogrow while typing:
 #### JavaScript
 
 ```js
-function autoGrow (oField) {
+function autoGrow(oField) {
   if (oField.scrollHeight > oField.clientHeight) {
     oField.style.height = `${oField.scrollHeight}px`;
   }
@@ -388,8 +389,8 @@ function insert(startTag, endTag) {
   const oldText = textArea.value;
 
   const prefix = oldText.substring(0, selectionStart);
-  const inserted = startTag +
-    oldText.substring(selectionStart, selectionEnd) + endTag;
+  const inserted =
+    startTag + oldText.substring(selectionStart, selectionEnd) + endTag;
   const suffix = oldText.substring(selectionEnd);
   textArea.value = `${prefix}${inserted}${suffix}`;
 
@@ -401,9 +402,9 @@ function insert(startTag, endTag) {
 }
 
 function insertURL() {
- const newURL = prompt("Enter the full URL for the link");
- if (newURL) {
-    insert(`<a href="${newURL}">`,"</a>");
+  const newURL = prompt("Enter the full URL for the link");
+  if (newURL) {
+    insert(`<a href="${newURL}">`, "</a>");
   } else {
     document.myForm.myTxtArea.focus();
   }
@@ -414,10 +415,10 @@ const em = document.querySelector("#format-em");
 const link = document.querySelector("#format-link");
 const code = document.querySelector("#format-code");
 
-strong.addEventListener("click", (e) => insert("<strong>","</strong>"));
-em.addEventListener("click", (e) => insert("<em>","</em>"));
+strong.addEventListener("click", (e) => insert("<strong>", "</strong>"));
+em.addEventListener("click", (e) => insert("<em>", "</em>"));
 link.addEventListener("click", (e) => insertURL());
-code.addEventListener("click", (e) => insert("\n<code>\n","\n</code>\n"));
+code.addEventListener("click", (e) => insert("\n<code>\n", "\n</code>\n"));
 ```
 
 #### CSS
@@ -436,14 +437,19 @@ HTML:
 
 ```html
 <form name="myForm">
-<p>[&nbsp;
-  <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
-  <span class="intLink" id="format-em"><em>Italic</em></span> |
-  <span class="intLink" id="format-link">URL</span> |
-  <span class="intLink" id="format-code">code</span> &nbsp;]
-</p>
+  <p>
+    [&nbsp;
+    <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
+    <span class="intLink" id="format-em"><em>Italic</em></span> |
+    <span class="intLink" id="format-link">URL</span> |
+    <span class="intLink" id="format-code">code</span> &nbsp;]
+  </p>
 
-<p><textarea name="myTxtArea" rows="10" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. </textarea></p>
+  <p>
+    <textarea name="myTxtArea" rows="10" cols="50">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem.
+    </textarea>
+  </p>
 </form>
 ```
 
@@ -457,35 +463,57 @@ First, create a function that takes the text field and a key event as input and 
 
 ```js
 function checkRows(oField, oKeyEvent) {
-  let nKey = (oKeyEvent || /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }).keyCode,
-
+  let nKey = (
+      oKeyEvent ||
+      /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }
+    ).keyCode,
     // put here the maximum number of characters per line:
     nCols = 30,
     // put here the maximum number of lines:
     nRows = 5,
-
-    nSelS = oField.selectionStart, nSelE = oField.selectionEnd,
-    sVal = oField.value, nLen = sVal.length,
-
+    nSelS = oField.selectionStart,
+    nSelE = oField.selectionEnd,
+    sVal = oField.value,
+    nLen = sVal.length,
     nBackward = nSelS >= nCols ? nSelS - nCols : 0,
-    nDeltaForw = sVal.substring(nBackward, nSelS).search(new RegExp(`\\n(?!.{0,${String(nCols - 2)}}\\n)`)) + 1,
+    nDeltaForw =
+      sVal
+        .substring(nBackward, nSelS)
+        .search(new RegExp(`\\n(?!.{0,${String(nCols - 2)}}\\n)`)) + 1,
     nRowStart = nBackward + nDeltaForw,
-    aReturns = (sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)).match(/\n/g),
+    aReturns = (
+      sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)
+    ).match(/\n/g),
     nRowEnd = nSelE + nRowStart + nCols - nSelS,
-    sRow = sVal.substring(nRowStart, nSelS) + sVal.substring(nSelE, nRowEnd > nLen ? nLen : nRowEnd),
-    bKeepCols = nKey === 13 || nLen + 1 < nCols || /\n/.test(sRow) || ((nRowStart === 0 || nDeltaForw > 0 || nKey > 0) && (sRow.length < nCols || (nKey > 0 && (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
+    sRow =
+      sVal.substring(nRowStart, nSelS) +
+      sVal.substring(nSelE, nRowEnd > nLen ? nLen : nRowEnd),
+    bKeepCols =
+      nKey === 13 ||
+      nLen + 1 < nCols ||
+      /\n/.test(sRow) ||
+      ((nRowStart === 0 || nDeltaForw > 0 || nKey > 0) &&
+        (sRow.length < nCols ||
+          (nKey > 0 && (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
 
-  return (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) < nRows) && ((nKey > 32 && nKey < 41) || bKeepCols);
+  return (
+    (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) < nRows) &&
+    ((nKey > 32 && nKey < 41) || bKeepCols)
+  );
 }
 ```
 
-In the HTML we just need to hook our function to the \`onkeypress\` event and specify that our textarea does not accept pasting:
+In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
 
 ```html
 <form>
-  <p>Textarea with fixed number of characters per line:<br />
-    <textarea cols="50" rows="10" onkeypress="return checkRows(this, event);"
-              onpaste="return false;"></textarea>
+  <p>
+    Textarea with fixed number of characters per line:<br />
+    <textarea
+      cols="50"
+      rows="10"
+      onkeypress="return checkRows(this, event);"
+      onpaste="return false;"></textarea>
   </p>
 </form>
 ```

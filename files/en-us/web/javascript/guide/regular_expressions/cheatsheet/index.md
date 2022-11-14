@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RegExp
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
@@ -288,7 +289,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           unescaped character equivalents in regular expressions. However, in
           regular expressions with the
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"
             >unicode flag</a
           >, these will cause an <em>invalid identity escape</em> error. This is
           done to ensure backward compatibility with existing code that uses new
@@ -531,7 +532,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
-              >String.match()</a
+              >String.prototype.match()</a
             ></code
           >
           won't return groups if the <code>/.../g</code> flag is set. However,
@@ -539,7 +540,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <code
             ><a
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
-              >String.matchAll()</a
+              >String.prototype.matchAll()</a
             ></code
           >
           to get all matches.
@@ -612,7 +613,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indicate numbers of characters or expressions to match.
 
-> **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
+> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
 
 <table class="standard-table">
   <thead>

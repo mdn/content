@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.cancelAnimationFrame
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.cancelAnimationFrame")}} that unregisters callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}}.
@@ -23,7 +24,7 @@ The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(handle)
 ```
 
@@ -98,7 +99,7 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

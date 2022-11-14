@@ -11,6 +11,7 @@ tags:
   - tilemap
   - tiles
 ---
+
 {{GamesSidebar}}
 
 Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called **tiles**. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using [JavaScript](/en-US/docs/Web/JavaScript) and [Canvas](/en-US/docs/Web/API/Canvas_API) (although the same high level techniques could be used in any programming language.)
@@ -79,11 +80,11 @@ Here are examples showing how to translate from world coordinates to screen coor
 // these functions assume that the camera points to the top left corner
 
 function worldToScreen(x, y) {
-  return {x: x - camera.x, y: y - camera.y};
+  return { x: x - camera.x, y: y - camera.y };
 }
 
-function screenToWorld(x,y) {
-  return {x: x + camera.x, y: y + camera.y};
+function screenToWorld(x, y) {
+  return { x: x + camera.x, y: y + camera.y };
 }
 ```
 
@@ -125,7 +126,7 @@ One way consists of [drawing the section that will be visible off-canvas](https:
 
 A caveat of that approach is that when there _is_ a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on the canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.
 
-In fast games that might still not be enough.  An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.
+In fast games that might still not be enough. An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.
 
 ## See also
 

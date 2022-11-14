@@ -7,6 +7,7 @@ tags:
   - Games
   - Web
 ---
+
 {{GamesSidebar}}
 
 This page lists a number of impressive web technology demos for you to get inspiration from, and generally have fun with. A testament to what can be done with JavaScript, WebGL, and related technologies. The first two sections list playable games, while the second is a catch-all area to list demos that aren't necessarily interactive/games.
@@ -32,9 +33,9 @@ This page lists a number of impressive web technology demos for you to get inspi
 - [X-Type](https://phoboslab.org/xtype/)
   - : Vertically scrolling space shooter demo.
 - [Xibalba](https://phoboslab.org/xibalba/)
-  - : Retro (Doom-style) first person shooter.
+  - : Retro (Doom-style) first-person shooter.
 - [Gorescript](https://timeinvariant.github.io/gorescript/play/)
-  - : Another retro style first person shooter.
+  - : Another retro style first-person shooter.
 - [The Wizard](https://hypnoticowl.com/games/the-wizard/)
   - : A turn-based, dungeon puzzle game.
 - [Hextris](https://hextris.io/)
@@ -52,10 +53,8 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 - [A Wizard's Lizard](http://www.wizardslizard.com/)
   - : Top down Zelda-esque exploration/RPG.
-
-**[Bullet Force](https://www.crazygames.com/game/bullet-force-multiplayer)**
-    3D multiplayer first-person shooter.
-
+- [Bullet Force](https://www.crazygames.com/game/bullet-force-multiplayer)
+  - : 3D multiplayer first-person shooter.
 - [Elliot Quest](https://elliotquest.com/)
   - : 8-bit graphic retro adventure game.
 - [RPG MO](https://data.mo.ee/index2.html)

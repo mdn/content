@@ -14,6 +14,7 @@ tags:
   - Property
 browser-compat: api.MediaMetadata.artist
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`artist`** property of the

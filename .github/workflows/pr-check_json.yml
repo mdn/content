@@ -6,8 +6,8 @@ on:
       - main
     paths:
       - "**/*.json"
+      - "**/*.jsonc"
       - .github/workflows/pr-check_json.yml
-
 
 jobs:
   docs:

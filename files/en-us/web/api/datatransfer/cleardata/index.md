@@ -12,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.clearData()`** method removes the drag
@@ -30,7 +31,7 @@ for there still to be an entry with the type `"Files"` left in the object's
 
 ## Syntax
 
-```js
+```js-nolint
 clearData()
 clearData(format)
 ```
@@ -57,7 +58,8 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 
 ```html
 <span class="tweaked" id="source" draggable="true">
-  Select this element, drag it to the Drop Zone and then release the selection to move the element.
+  Select this element, drag it to the Drop Zone and then release the selection
+  to move the element.
 </span>
 <span class="tweaked" id="target">Drop Zone</span>
 <div>Status: <span id="status">Drag to start</span></div>
@@ -186,5 +188,4 @@ window.addEventListener('DOMContentLoaded', () => {
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

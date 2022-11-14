@@ -10,6 +10,7 @@ tags:
   - Event
 browser-compat: api.HTMLMediaElement.playing_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `playing` event is fired after playback is first started, and whenever it is restarted. For example it is fired when playback resumes after having been paused or delayed due to lack of data.

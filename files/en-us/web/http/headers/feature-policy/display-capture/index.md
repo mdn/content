@@ -7,10 +7,10 @@ tags:
   - HTTP
   - Reference
   - display-capture
-  - Experimental
 browser-compat: http.headers.Feature-Policy.display-capture
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `display-capture` directive controls whether or not the document is permitted to use [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API), that is, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to capture the screen's contents.
 

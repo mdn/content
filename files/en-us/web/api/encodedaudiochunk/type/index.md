@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.EncodedAudioChunk.type
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns a value indicating whether the audio chunk is a key chunk, which does not relying on other frames for decoding.

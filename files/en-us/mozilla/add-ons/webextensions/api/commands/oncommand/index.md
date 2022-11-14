@@ -13,13 +13,16 @@ tags:
   - onCommand
 browser-compat: webextensions.api.commands.onCommand
 ---
-{{AddonSidebar()}}Fired when a command is executed using its associated keyboard shortcut.
+
+{{AddonSidebar()}}
+
+Fired when a command is executed using its associated keyboard shortcut.
 
 The listener is passed the command's name. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.onCommand.addListener(listener)
 browser.commands.onCommand.removeListener(listener)
 browser.commands.onCommand.hasListener(listener)

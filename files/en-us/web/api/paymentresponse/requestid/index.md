@@ -12,6 +12,7 @@ tags:
   - requestId
 browser-compat: api.PaymentResponse.requestId
 ---
+
 {{APIRef("Payment Request API")}}
 
 The **`requestId`** read-only property of the

@@ -7,6 +7,7 @@ tags:
   - Interface
   - Non-standard
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -16,7 +17,7 @@ that provides properties for info on protected video playback.
 
 This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-## Properties
+## Instance properties
 
 - `constrictionActive` {{ReadOnlyInline}}
   - : A read-only property which is _true_ when protected media is forced to play in a lower resolution.

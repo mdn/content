@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_draw_buffers
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_draw_buffers`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables a fragment shader to write to several textures, which is useful for [deferred shading](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/), for example.
@@ -30,7 +31,7 @@ This extension exposes new constants, which can be used in the {{domxref("WebGLR
 - `ext.MAX_DRAW_BUFFERS_WEBGL`
   - : A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of draw buffers.
 
-## Methods
+## Instance methods
 
 This extension exposes one new method.
 
@@ -71,16 +72,16 @@ Shader code that writes to multiple textures:
 
 ```html
 <script type="x-shader/x-fragment">
-#extension GL_EXT_draw_buffers : require
+  #extension GL_EXT_draw_buffers : require
 
-precision highp float;
+  precision highp float;
 
-void main(void) {
-  gl_FragData[0] = vec4(0.25);
-  gl_FragData[1] = vec4(0.5);
-  gl_FragData[2] = vec4(0.75);
-  gl_FragData[3] = vec4(1.0);
-}
+  void main(void) {
+    gl_FragData[0] = vec4(0.25);
+    gl_FragData[1] = vec4(0.5);
+    gl_FragData[2] = vec4(0.75);
+    gl_FragData[3] = vec4(1.0);
+  }
 </script>
 ```
 

@@ -7,9 +7,11 @@ tags:
   - Interface
   - WindowControlsOverlayGeometryChangeEvent
   - Reference
+  - Experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent
 ---
-{{APIRef("Window Controls Overlay API")}}
+
+{{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The **`WindowControlsOverlayGeometryChangeEvent`** interface of the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) is passed to [`geometrychange`](/en-US/docs/Web/API/WindowControlsOverlay/geometrychange_event) when the size or visibility of a desktop Progress Web App's title bar region changes.
 
@@ -17,16 +19,16 @@ The **`WindowControlsOverlayGeometryChangeEvent`** interface of the [Window Cont
 
 ## Constructor
 
-- {{domxref("WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent", "WindowControlsOverlayGeometryChangeEvent()")}}
+- {{domxref("WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent", "WindowControlsOverlayGeometryChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a `WindowControlsOverlayGeometryChangeEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("WindowControlsOverlayGeometryChangeEvent.titlebarAreaRect")}} {{ReadOnlyInline}}
+- {{domxref("WindowControlsOverlayGeometryChangeEvent.titlebarAreaRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMRect")}} representing the position and size of the title bar region.
-- {{domxref("WindowControlsOverlayGeometryChangeEvent.visible")}} {{ReadOnlyInline}}
+- {{domxref("WindowControlsOverlayGeometryChangeEvent.visible")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
 ## Examples

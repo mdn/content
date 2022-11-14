@@ -7,10 +7,10 @@ tags:
   - API
   - Event
   - Reference
-  - Deprecated
 browser-compat: api.Element.securitypolicyviolation_event
 ---
-{{APIRef}}{{Deprecated_Header}}
+
+{{APIRef}}
 
 The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 

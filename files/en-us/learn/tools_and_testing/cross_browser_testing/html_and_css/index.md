@@ -13,6 +13,7 @@ tags:
   - cross browser
   - linting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 With the scene set, we'll now look specifically at the common cross-browser problems you will come across in HTML and CSS code, and what tools can be used to prevent problems from happening, or fix problems that occur. This includes linting code, handling CSS prefixes, using browser dev tools to track down problems, using polyfills to add support into browsers, tackling responsive design problems, and more.
@@ -126,10 +127,16 @@ For example:
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
   <!-- Offer download -->
-  <p>Your browser does not support WebM video; here is a link to
-  <a href="video/tears-of-steel-battle-clip-medium.mp4">view the video directly</a></p>
+  <p>
+    Your browser does not support WebM video; here is a link to
+    <a href="video/tears-of-steel-battle-clip-medium.mp4"
+      >view the video directly</a
+    >
+  </p>
 </video>
 ```
 
@@ -143,11 +150,11 @@ The following example shows date and time inputs:
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -158,7 +165,7 @@ The output of this code is as follows:
 
 > **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
-If you view the example on a supporting browser, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
+If you view the example, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
 #### CSS fallback behavior
 
@@ -178,8 +185,8 @@ button {
 
   background-color: #ff0000;
   background-color: rgba(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4),
-              inset -1px -1px 3px rgba(0 0 0 / 0.4);
+  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4), inset -1px -1px 3px
+      rgba(0 0 0 / 0.4);
 }
 
 button:hover {
@@ -187,8 +194,8 @@ button:hover {
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4),
-              inset -1px -1px 3px rgba(255 255 255 / 0.4);
+  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4), inset -1px -1px 3px rgba(255
+          255 255 / 0.4);
 }
 ```
 
@@ -204,7 +211,7 @@ To sort this out, we have added a second `background-color` declaration, which j
 
 Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to select the element you want to style!
 
-In a comma separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the entire list of selectors and the selector block are ignored. For this reason, you never want to include a :-moz- prefixed pseudo class or pseudo-element in a group of selectors as all browsers other than Firefox will ignore the entire block.
+In a comma-separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the **entire** list of selectors is ignored, along with the entire style block. For this reason, only include a `:-moz-` prefixed pseudo class or pseudo-element in a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), such as `:where(::-moz-thumb)`. Don't include a `:-moz-` prefixed pseudo class or pseudo-element outside of a [`:is()`](/en-US/docs/Web/CSS/:is), [`:where()`](/en-US/docs/Web/CSS/:where), [`:has()`](/en-US/docs/Web/CSS/:has), or [`:not()`](/en-US/docs/Web/CSS/:not) forgiving selector list within a comma-separated group of selectors, as all browsers other than Firefox will ignore the entire block.
 
 We find that it is helpful to inspect the element you are trying to style using your browser's dev tools, then look at the DOM tree breadcrumb trail that DOM inspectors tend to provide to see if your selector makes sense compared to it.
 
@@ -222,59 +229,43 @@ form > #date
 
 #### Handling CSS prefixes
 
-Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations. So for example:
+Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations.
 
-- Firefox uses `-moz-`
-- Chrome/Edge/Opera/Safari use `-webkit-`
+For example, Firefox uses `-moz-` and Chrome/Edge/Opera/Safari use `-webkit-`. Other prefixes you may encounter in old code include `-ms-`, used by Internet Explorer and early versions of Edge, and `-o`, used in the original versions of Opera.
 
-More prefixes were used in the past: Internet Explorer and early versions of Edge used `-ms-`, and old versions of Opera used `-o`.
+Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, may cause performance issues in old browser versions that require them, and have been the cause of cross-browser issues. This is particularly a problem, for example, when developers decide to use only the `-webkit-` version of a property, which implied that the site won't work in other browsers. This actually happened so much that other browser vendors implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so that web developers can test them during development.
 
-Here's some examples:
+If using a prefix, make sure it is needed; that the property is one of the few remaining prefixed features. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers. Include the standard non-prefixed version after the prefixed style declaration; it will be ignored if not supported and used when supported.
 
 ```css
--webkit-transform: rotate(90deg);
--moz-transform: rotate(90deg);
-transform: rotate(90deg);
+.masked {
+  -webkit-mask-image: url(MDN.svg);
+  mask-image: url(MDN.svg);
+  -webkit-mask-size: 50%;
+  mask-size: 50%;
+}
 ```
-
-While the `transform` property does not require a prefix, you may encounter this old CSS in a codebase. The first line shows the {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
-
-The second line has a `-moz-` prefix, which is also no longer needed. The third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
-
-Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning and cause cross-browser issues. This is particularly a problem, for example, when developers decide to use only the `-webkit-` version of a property, which implied that the site won't work in other browsers. This actually happened so much that other browser vendors implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so that web developers can test them during development.
-
-If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
 
 Try this simple example:
 
-1. Open up google.com, or another site that has a prominent heading or other block-level element.
+1. Use this page, or another site that has a prominent heading or other block-level element.
 2. Right/Cmd + click on the element in question and choose Inspect/Inspect element (or whatever the option is in your browser) — this should open up the dev tools in your browser, with the element highlighted in the DOM inspector.
-3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
+3. Look for a feature you can use to select that element. For example, at the time of writing, this page on MDN has a logo with an ID of `mdn-docs-logo`.
 4. Store a reference to this element in a variable, for example:
 
-    ```js
-    const test = document.getElementById('hplogo');
-    ```
+   ```js
+   const test = document.getElementById("mdn-docs-logo");
+   ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/en-US/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = "rotate(90deg)";
+   ```
 
-As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
+As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what properties are implemented in that browser.
 
-At the time of writing, both Firefox and Chrome implemented `-webkit-` prefixed and non-prefixed versions of {{cssxref("transform")}}. As a general rule, put the prefixed version of a property name before the unprefixed version so that the unprefixed version overrides the prefixed version. Prefixed properties aren't guaranteed to perform well; unprefixed properties are.
-
-Once you've found out which prefixes you need to support, you should write them all out in your CSS, for example:
-
-```css
--webkit-appearance: none;
-appearance: none;
-```
-
-Generally, you will rarely need to include a prefix; and you may want to delete them from old code basis you inherit as a maintainer. If you do need to include prefixed features or super modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
+If you do need to include modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
 
 #### Responsive design problems
 

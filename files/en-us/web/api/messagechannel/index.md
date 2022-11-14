@@ -11,13 +11,14 @@ tags:
   - web messaging
 browser-compat: api.MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) allows us to create a new message channel and send data through it via its two {{domxref("MessagePort")}} properties.
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("MessageChannel.port1")}} {{ReadOnlyInline}}
   - : Returns port1 of the channel.
@@ -59,7 +60,7 @@ function onMessage(e) {
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

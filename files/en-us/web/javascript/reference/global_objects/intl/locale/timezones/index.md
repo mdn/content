@@ -14,6 +14,7 @@ tags:
   - time zone
 browser-compat: javascript.builtins.Intl.Locale.timeZones
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.timeZones`** property is an accessor property which returns an array of supported time zones for a chosen `Locale`.
@@ -33,17 +34,17 @@ List supported time zones for a given `Locale`.
 
 ```js
 const arEG = new Intl.Locale("ar-EG");
-console.log(arEG.timeZones); // logs ["Africa/Cairo"]
+console.log(arEG.timeZones); // ["Africa/Cairo"]
 ```
 
 ```js
 const jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.timeZones); // logs ["Asia/Tokyo"]
+console.log(jaJP.timeZones); // ["Asia/Tokyo"]
 ```
 
 ```js
 const ar = new Intl.Locale("ar");
-console.log(ar.timeZones); // logs undefined
+console.log(ar.timeZones); // undefined
 ```
 
 ## Specifications

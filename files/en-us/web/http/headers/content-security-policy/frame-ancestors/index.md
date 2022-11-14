@@ -1,5 +1,5 @@
 ---
-title: 'CSP: frame-ancestors'
+title: "CSP: frame-ancestors"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 tags:
   - Ancestors
@@ -12,11 +12,15 @@ tags:
   - frame-ancestors
 browser-compat: http.headers.Content-Security-Policy.frame-ancestors
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
 
 Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options")}}`: deny` (which is also supported in older browsers).
+
+> **Note:** **`frame-ancestors`** allows you to specify what parent source may embed a page.
+> This differs from **`frame-src`**, which allows you to specify where iframes in a page may be loaded from.
 
 <table class="properties">
   <tbody>
@@ -47,7 +51,7 @@ One or more sources can be set for the `frame-ancestors` policy:
 
 ```http
 Content-Security-Policy: frame-ancestors <source>;
-Content-Security-Policy: frame-ancestors <source> <source>;
+Content-Security-Policy: frame-ancestors <space separated list of sources>;
 ```
 
 ### Sources
@@ -72,7 +76,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
   - : A scheme such as `http:` or `https:`. The colon is required and scheme should not be quoted. You can also specify data schemes (not recommended).
 
     - `data:` Allows [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) to be used as a content source. _This is insecure; an attacker can also inject arbitrary `data:` URLs. Use this sparingly and definitely not for scripts._
-    - `mediastream:` Allows [`mediastream:` URIs](/en-US/docs/Web/API/Media_Streams_API) to be used as a content source.
+    - `mediastream:` Allows [`mediastream:` URIs](/en-US/docs/Web/API/Media_Capture_and_Streams_API) to be used as a content source.
     - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
     - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
 
@@ -87,6 +91,8 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
+
+Content-Security-Policy: frame-ancestors 'self' https://example.org https://example.com https://store.example.com;
 ```
 
 ## Specifications
@@ -101,3 +107,4 @@ Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("X-Frame-Options")}}
+- {{CSP("frame-src")}} CSP

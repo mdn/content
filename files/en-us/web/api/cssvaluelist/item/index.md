@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSValueList.item
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The **`item()`** method of the {{domxref("CSSValueList")}}
@@ -25,12 +26,12 @@ this method returns `null`.
 >
 > To achieve your purpose, you can use:
 >
-> - the untyped [CSS Object Model](CSS_Object_Model), widely supported, or
-> - the modern [CSS Typed Object Model API](CSS_Typed_OM_API), less supported and considered experimental.
+> - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

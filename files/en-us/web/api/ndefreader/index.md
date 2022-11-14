@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFReader
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) is used to read from and write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.
@@ -20,7 +21,7 @@ The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
 - {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}
   - : Returns a new `NDEFReader` object.
 
-## Methods
+## Instance methods
 
 _The `NDEFReader` interface inherits the methods of {{domxref("EventTarget")}}, its parent interface._
 

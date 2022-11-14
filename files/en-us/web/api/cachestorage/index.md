@@ -35,7 +35,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 {{securecontext_header}}
 
-## Methods
+## Instance methods
 
 - {{domxref("CacheStorage.match()")}}
   - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
@@ -50,7 +50,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Examples
 
-This code snippet is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/).)
+This code snippet is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/).)
 This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:

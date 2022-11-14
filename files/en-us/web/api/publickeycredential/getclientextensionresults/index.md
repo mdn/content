@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`getClientExtensionResults()`** is a method of the
@@ -34,7 +35,7 @@ respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")
 
 ## Syntax
 
-```js
+```js-nolint
 getClientExtensionResults()
 ```
 
@@ -69,8 +70,8 @@ const publicKey = {
   },
   user: {
     id: new Uint8Array(16) /* from the server */,
-    name: "jdoe@example.com",
-    displayName: "John Doe"
+    name: "canand@example.com",
+    displayName: "Carina Anand",
   },
   pubKeyCredParams: [
     {

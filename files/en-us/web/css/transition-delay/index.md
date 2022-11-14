@@ -1,6 +1,7 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transition-delay
 ---
+
 {{CSSRef}}
 
 The **`transition-delay`** CSS property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) when its value changes.

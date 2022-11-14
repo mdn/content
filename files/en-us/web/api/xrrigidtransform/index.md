@@ -22,6 +22,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRRigidTransform`** is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface that represents the 3D geometric transform described by a position and orientation.
@@ -40,15 +41,15 @@ Using `XRRigidTransform` in these places rather than bare arrays that provide th
 - {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}
   - : Creates a new `XRRigidTransform` object which represents a transform that applies a specified position and/or orientation.
 
-## Properties
+## Instance properties
 
-- {{DOMxRef("XRRigidTransform.position")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRigidTransform.position")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} specifying a 3-dimensional point, expressed in meters, describing the translation component of the transform. The {{DOMxRef("DOMPointReadonly.w", "w")}} property is always `1.0`.
-- {{DOMxRef("XRRigidTransform.orientation")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRigidTransform.orientation")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} which contains a unit quaternion describing the rotational component of the transform. As a unit quaternion, its length is always normalized to `1.0`.
-- {{DOMxRef("XRRigidTransform.matrix")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRigidTransform.matrix")}} {{ReadOnlyInline}}
   - : Returns the transform matrix in the form of a 16-member {{jsxref("Float32Array")}}. See the section [Matrix format](/en-US/docs/Web/API/XRRigidTransform/matrix#matrix_format) for how the array is used to represent a matrix.
-- {{DOMxRef("XRRigidTransform.inverse")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRigidTransform.inverse")}} {{ReadOnlyInline}}
   - : Returns a `XRRigidTransform` which is the inverse of this transform. That is, if applied to an object that had been previously transformed by the original transform, it will undo the transform and return the original object.
 
 ## Usage notes

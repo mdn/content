@@ -1,6 +1,7 @@
 ---
 title: Value definition syntax
 slug: Web/CSS/Value_definition_syntax
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -8,6 +9,7 @@ tags:
   - Syntax
 spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
+
 {{CSSRef}}
 
 **CSS value definition syntax**, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
@@ -72,7 +74,7 @@ But not:
 Placing several keywords, literals or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
 
 ```css
-bold <length> , thin
+bold <length>, thin
 ```
 
 This example matches the following values:
@@ -258,6 +260,34 @@ But not:
 - `bold`, as `smaller` must appear at least one time.
 - `bold smaller smaller smaller`, as the different occurrence of `smaller` must be separated by commas.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
+
+The hash mark may optionally be followed by curly braces to indicate precisely how many times the repetition occurs.
+
+```css
+bold smaller#{1,3}
+```
+
+This example matches the following values:
+
+- `bold smaller`
+- `bold smaller, smaller`
+- `bold smaller, smaller, smaller`
+
+But not:
+
+- `bold smaller, smaller, smaller, smaller`, as `smaller` must appear at most three times.
+
+```css
+bold smaller#{2}
+```
+
+This example matches the following value:
+
+- `bold smaller, smaller`
+
+But not:
+
+- `bold smaller`, as `smaller` must appear exactly two times.
 
 ### Exclamation point (`!`)
 

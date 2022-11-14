@@ -1,6 +1,7 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.types.ratio
 ---
+
 {{CSSRef}}
 
 The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [aspect ratios](/en-US/docs/Web/CSS/@media/aspect-ratio) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the proportion between two unitless values.
@@ -29,13 +31,15 @@ In Media Queries Level 4, the `<ratio>` date type is updated to consist of a str
 ### Use in a media query
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) { /* … */ }
+@media screen and (min-aspect-ratio: 16/9) {
+  /* … */
+}
 ```
 
 ### Common aspect ratios
 
-|                                     | Ratio               | Usage                                           |
-| ----------------------------------- | ------------------- | ----------------------------------------------- |
+|                                                                              | Ratio               | Usage                                           |
+| ---------------------------------------------------------------------------- | ------------------- | ----------------------------------------------- |
 | ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | `4/3`               | Traditional TV format in the twentieth century. |
 | ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | `16/9`              | Modern "widescreen" TV format.                  |
 | ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | `185/100` = `91/50` | The most common movie format since the 1960s.   |

@@ -16,7 +16,8 @@ tags:
   - legacy
 browser-compat: api.PerformanceNavigation
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 The legacy **`PerformanceNavigation`** interface represents information about how the navigation to the current document was done.
 
@@ -25,7 +26,7 @@ The legacy **`PerformanceNavigation`** interface represents information about ho
 
 An object of this type can be obtained by calling the {{domxref("Performance.navigation")}} read-only attribute.
 
-## Properties
+## Instance properties
 
 _The `PerformanceNavigation` interface doesn't inherit any properties._
 
@@ -45,7 +46,7 @@ _The `PerformanceNavigation` interface doesn't inherit any properties._
 - {{domxref("PerformanceNavigation.redirectCount")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : An `unsigned short` representing the number of REDIRECTs done before reaching the page.
 
-## Methods
+## Instance methods
 
 _The `Performance` interface doesn't inherit any methods._
 

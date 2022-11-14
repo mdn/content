@@ -1,6 +1,7 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translate
 ---
+
 {{CSSRef}}
 
 The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element in the horizontal and/or vertical
@@ -131,7 +133,7 @@ transform: translate(30%, 50%);
 ### Formal syntax
 
 ```css
-translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}?)
+translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
 ```
 
 ## Examples
@@ -156,7 +158,10 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
+  /* Equal to: translateX(10px) or translate(10px, 0) */
+  transform: translate(
+    10px
+  );
   background-color: pink;
 }
 ```
@@ -206,3 +211,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

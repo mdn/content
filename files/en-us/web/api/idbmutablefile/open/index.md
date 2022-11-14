@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBMutableFile.open
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -23,7 +24,7 @@ that allows to safely write in the file.
 
 ## Syntax
 
-```js
+```js-nolint
 open(mode)
 ```
 

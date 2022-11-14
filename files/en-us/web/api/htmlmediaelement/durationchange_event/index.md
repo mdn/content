@@ -10,6 +10,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.durationchange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `durationchange` event is fired when the `duration` attribute has been updated.

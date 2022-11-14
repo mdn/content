@@ -1,6 +1,7 @@
 ---
 title: display
 slug: Web/CSS/display
+page-type: css-property
 tags:
   - CSS
   - CSS Display
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.display
 ---
+
 {{CSSRef}}
 
 The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline element](/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
@@ -65,12 +67,13 @@ The keyword values can be grouped into six value categories.
 ### Outside
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
+
   - : These keywords specify the element's outer display type, which is essentially its role in flow layout:
 
     - `block`
       - : The element generates a block element box, generating line breaks both before and after the element when in the normal flow.
     - `inline`
-      - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space
+      - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > **Note:** Browsers that support the two-value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
 > This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
@@ -78,6 +81,7 @@ The keyword values can be grouped into six value categories.
 ### Inside
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
+
   - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
 
     - `flow` {{Experimental_Inline}}
@@ -118,6 +122,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Internal
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
+
   - : Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill.
     This section defines those "internal" display values, which only have meaning within that particular layout mode.
 
@@ -142,16 +147,18 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
     - `ruby-text` {{Experimental_Inline}}
       - : These elements behave like {{HTMLElement("rt")}} HTML elements.
     - `ruby-base-container` {{Experimental_Inline}}
-      - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
+      - : These elements are generated as anonymous boxes.
     - `ruby-text-container` {{Experimental_Inline}}
       - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
 ### Box
 
 - {{CSSxRef("&lt;display-box&gt;")}}
+
   - : These values define whether an element generates display boxes at all.
 
     - `contents`
+
       - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
         _Due to a bug in browsers, this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the [Accessibility concerns](#accessibility_concerns) section below for more details._
@@ -163,6 +170,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Precomposed
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
+
   - : CSS 2 used a single-keyword, precomposed syntax for the `display` property, requiring separate keywords for block-level and inline-level variants of the same layout mode.
 
     - `inline-block`
@@ -239,11 +247,9 @@ The individual pages for the different types of value that `display` can have se
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 - [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
 - [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
-- [Cross-browser Flexbox mixins](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
 - [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
 - [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
 - [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
 
 ### display: grid
@@ -353,12 +359,14 @@ article span {
   margin: 1px;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
 
-article, div {
+article,
+div {
   margin: 20px;
 }
 ```

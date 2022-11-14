@@ -1,6 +1,7 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/length-percentage
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -11,6 +12,7 @@ tags:
   - values
 browser-compat: css.types.length-percentage
 ---
+
 {{CSSRef}}
 
 The **`<length-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("length")}} or a {{Cssxref("percentage")}}.

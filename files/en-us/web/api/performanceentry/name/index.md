@@ -9,126 +9,130 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.name
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`name`** property of the
-{{domxref("PerformanceEntry")}} interface returns a value that further specifies the
-value returned by the {{domxref("PerformanceEntry.entryType")}} property. This
-property is read only.
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
-{{AvailableInWorkers}}
+The read-only **`name`** property of the {{domxref("PerformanceEntry")}} interface is a string representing the name for a performance entry. It acts as an identifier, but it does not have to be unique. The value depends on the subclass.
 
 ## Value
 
-The return value depends on the subtype of the `PerformanceEntry` object and
-the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.
+A string. The value depends on the subclass of the `PerformanceEntry` object as shown by the table below.
 
 <table class="no-markdown">
   <thead>
     <tr>
+      <th scope="col">Subclass</th>
       <th scope="col">Value</th>
-      <th scope="col">Subtype</th>
-      <th scope="col">entryType values</th>
-      <th scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{domxref("URL")}}</td>
-      <td>
-        {{domxref('PerformanceNavigationTiming')}}
-      </td>
-      <td><code>frame</code>, <code>navigation</code></td>
-      <td>The document's address.</td>
+      <td>{{domxref('LargestContentfulPaint')}}</td>
+      <td>Always returns an empty string.</td>
     </tr>
     <tr>
-      <td>{{domxref("URL")}}</td>
-      <td>{{domxref('PerformanceResourceTiming')}}</td>
-      <td><code>resource</code></td>
-      <td>
-        The resolved URL of the requested resource. This value doesn't change
-        even if the request is redirected.
+      <td>{{domxref('PerformanceElementTiming')}}</td>
+      <td>One of the following strings:
+        <ul>
+          <li><code>"image-paint"</code></li>
+          <li><code>"text-paint"</code></li>
+        </ul>
       </td>
     </tr>
     <tr>
-      <td>string</td>
+      <td>{{domxref('PerformanceEventTiming')}}</td>
+      <td>The associated event's type.</td>
+    </tr>
+    <tr>
+      <td>{{domxref('PerformanceLongTaskTiming')}}</td>
+      <td>One of the following strings:
+        <ul>
+          <li><code>"cross-origin-ancestor"</code></li>
+          <li><code>"cross-origin-descendant"</code></li>
+          <li><code>"cross-origin-unreachable"</code></li>
+          <li><code>"multiple-contexts"</code></li>
+          <li><code>"same-origin-ancestor"</code></li>
+          <li><code>"same-origin-descendant"</code></li>
+          <li><code>"same-origin"</code></li>
+          <li><code>"self"</code></li>
+          <li><code>"unknown"</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td>{{domxref('PerformanceMark')}}</td>
-      <td><code>mark</code></td>
       <td>
         The name used when the mark was created by calling
         {{domxref("Performance.mark","performance.mark()")}}.
       </td>
     </tr>
     <tr>
-      <td>string</td>
       <td>{{domxref('PerformanceMeasure')}}</td>
-      <td><code>measure</code></td>
       <td>
-        name used when the measure was created by calling
+        The name used when the measure was created by calling
         {{domxref("Performance.measure","performance.measure()")}}.
       </td>
     </tr>
     <tr>
-      <td>string</td>
+      <td>{{domxref('PerformanceNavigationTiming')}}</td>
+      <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
+    </tr>
+    <tr>
       <td>{{domxref('PerformancePaintTiming')}}</td>
-      <td><code>paint</code></td>
-      <td>
-        Either <code>'first-paint'</code> or
-        <code>'first-contentful-paint'</code>.
+      <td>One of the following strings:
+        <ul>
+          <li><code>"first-paint"</code></li>
+          <li><code>"first-contentful-paint"</code></li>
+        </ul>
       </td>
+    </tr>
+    <tr>
+      <td>{{domxref('PerformanceResourceTiming')}}</td>
+      <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
+    </tr>
+    <tr>
+      <td>{{domxref('TaskAttributionTiming')}}</td>
+      <td>Always returns <code>"unknown"</code>.</td>
     </tr>
   </tbody>
 </table>
 
 ## Examples
 
-The following example shows the use of the `name` property.
+### Filtering performance entries by name
+
+When the `PerformanceEntry` is a {{domxref('PerformanceResourceTiming')}} object, the `name` property refers to the resolved URL of the requested resource.
+In this case, the `name` property can be useful to filter out specific resources, for example all SVG images.
 
 ```js
-function run_PerformanceEntry() {
-  console.log("PerformanceEntry support…");
-
-  if (performance.mark === undefined) {
-    console.log("The property performance.mark is not supported");
-    return;
+// Log durations of SVG resources
+performance.getEntriesByType("resource").forEach((entry) => {
+  if (entry.name.endsWith(".svg")) {
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
   }
+});
+```
 
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
+### Getting performance entries by name
 
-  // Use getEntries() to iterate through the each entry
-  const p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
-    log(`Entry[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
+Both {{domxref("Performance")}} and {{domxref("PerformanceObserver")}} provide methods that allow you to get performance entries by name directly. You don't necessarily need the `name` property for that, instead you might use {{domxref("Performance.getEntriesByName()")}} or {{domxref("PerformanceObserverEntryList.getEntriesByName()")}}.
+
+```js
+// Log all marks named "debug-marks" at this point in time
+const debugMarks = performance.getEntriesByName("debug-mark", "mark");
+debugMarks.forEach((entry) => {
+  console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+});
+
+// PerformanceObserver version
+// Log all marks named "debug-marks" when they happen
+function perfObserver(list, observer) {
+  list.getEntriesByName("debug-mark", "mark").forEach((entry) =>  {
+     console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+  });
 }
-function check_PerformanceEntry(obj) {
-  const properties = ["name", "entryType", "startTime", "duration"];
-  const methods = ["toJSON"];
-
-  for (let i = 0; i < properties.length; i++) {
-    // check each property
-    const supported = properties[i] in obj;
-    if (supported) {
-      console.log(`…${properties[i]} = ${obj[properties[i]]}`);
-    } else {
-      console.log(`…${properties[i]} = Not supported`);
-    }
-  }
-  for (let i = 0; i < methods.length; i++) {
-    // check each method
-    const supported = typeof obj[methods[i]] === "function";
-    if (supported) {
-      const js = obj[methods[i]]();
-      console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);
-    } else {
-      console.log(`…${methods[i]} = Not supported`);
-    }
-  }
-}
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["measure", "mark"] });
 ```
 
 ## Specifications
@@ -138,3 +142,8 @@ function check_PerformanceEntry(obj) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Performance.getEntriesByName()")}}
+- {{domxref("PerformanceObserverEntryList.getEntriesByName()")}}

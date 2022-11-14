@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.visualViewport
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`visualViewport`** read-only property of the

@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.sup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<sup>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.
 
@@ -113,8 +113,10 @@ Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 Exponents, or powers of a number, are among the most common uses of superscripted text. For example:
 
 ```html
-<p>One of the most common equations in all of physics is
-<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.</p>
+<p>
+  One of the most common equations in all of physics is <var>E</var>=<var>m</var
+  ><var>c</var><sup>2</sup>.
+</p>
 ```
 
 The resulting output looks like this:
@@ -138,8 +140,9 @@ The resulting output:
 Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbreviated using numerals and language-specific text rendered in superscript:
 
 ```html
-<p>The ordinal number "fifth" can be abbreviated in various
-languages as follows:</p>
+<p>
+  The ordinal number "fifth" can be abbreviated in various languages as follows:
+</p>
 <ul>
   <li>English: 5<sup>th</sup></li>
   <li>French: 5<sup>ème</sup></li>
@@ -160,6 +163,6 @@ The output:
 
 ## See also
 
-- The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
+- The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use `sub` and `sup` at the same time: you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
 - The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
 - The CSS {{cssxref("vertical-align")}} property.

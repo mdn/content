@@ -10,6 +10,7 @@ tags:
   - asynchronous
 browser-compat: javascript.builtins.Symbol.asyncIterator
 ---
+
 {{JSRef}}
 
 The **`Symbol.asyncIterator`** well-known symbol specifies the default [async iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) for an object. If this property is set on an object, it is an async iterable and can be used in a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
@@ -32,18 +33,18 @@ const myAsyncIterable = {
     yield "hello";
     yield "async";
     yield "iteration!";
-  }
+  },
 };
 
 (async () => {
   for await (const x of myAsyncIterable) {
     console.log(x);
-    // expected output:
-    //    "hello"
-    //    "async"
-    //    "iteration!"
   }
 })();
+// Logs:
+// "hello"
+// "async"
+// "iteration!"
 ```
 
 When creating an API, remember that async iterables are designed to represent something _iterable_ — like a stream of data or a list —, not to completely replace callbacks and events in most situations.

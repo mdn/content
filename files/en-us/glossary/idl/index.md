@@ -3,10 +3,10 @@ title: IDL
 slug: Glossary/IDL
 tags:
   - CodingScripting
-  - Glossary
   - IDL
   - Interface description language
 ---
+
 An **IDL** (_Interface Description Language_) is a generic language used to specified objects' interfaces apart from any specific programming language.
 
 ## Content versus IDL attributes

@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRPose.linearVelocity
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`linearVelocity`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear velocity vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
