@@ -69,6 +69,7 @@ This article provides information about the changes in Firefox 107 that will aff
 - Improved reliability of the `browsingContext.navigate` command when called with the `wait` parameter set to `none` ({{bug("1763109")}}).
 
 #### Marionette
+
 - The command `WebDriver:ElementSendKeys` now only sets the caret if the element is not focused yet ({{bug("1791736")}}).
 
 - Updated the command `WebDriver:PerformAction` to no longer accept `undefined` as value for various parameters of the `pointerMove` and `wheel` actions ({{bug("1781066")}}).
