@@ -20,7 +20,7 @@ To mark a declaration important, add the _important flag_ (`!important`) after t
 ```css-nolint
 selector {
   property: value; /* normal declaration */
-  property: value !important; /* important declaration (standard) */
+  property: value !important; /* important declaration (preferred) */
   property: value ! important; /* important declaration (non-standard) */
 }
 ```
