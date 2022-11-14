@@ -13,7 +13,7 @@ tags:
 browser-compat: api.Navigator.globalPrivacyControl
 ---
 
-{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`Navigator.globalPrivacyControl`** property returns the user's Global Privacy Control setting. This setting indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 

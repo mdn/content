@@ -65,7 +65,7 @@ animation-timeline: unset;
   - : The animation is not associated with a timeline.
 - `auto`
   - : The animation's timeline is the document's default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline).
-- `scroll()`
+- `scroll()` {{Experimental_Inline}}
   - : The "anonymous" timeline is provided by some ancestor of the current element.
 
       See {{cssxref("animation-timeline/scroll", "scroll()")}} for additional information.
