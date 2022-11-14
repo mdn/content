@@ -267,6 +267,5 @@ In this example, the close quote ignores the inner span because it has style con
 ## See also
 
 - [CSS containment](/en-US/docs/Web/CSS/CSS_Containment)
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
 - CSS {{cssxref("content-visibility")}} property
 - CSS {{cssxref("position")}} property
