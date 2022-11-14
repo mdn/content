@@ -66,6 +66,8 @@ This article provides information about the changes in Firefox 107 that will aff
 
 ### Other
 
+- The `error` property returned when an error occurs in {{WebExtAPIRef("scripting.executeScript")}} now represents any value the script throws or rejects with, such as an error object, primitive, or undefined {{bug(1740608)}}.
+
 ## Older versions
 
 {{Firefox_for_developers(106)}}
