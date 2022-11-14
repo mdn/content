@@ -100,14 +100,17 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 User agent (UA) client hint headers allow a server to vary responses based on the user agent (browser), operating system, and device.
 Headers include: {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Arch")}}, {{HTTPHeader("Sec-CH-UA-Bitness")}}, {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}, {{HTTPHeader("Sec-CH-UA-Full-Version")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Model")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}, and {{HTTPHeader("Sec-CH-UA-Platform-Version")}}.
 
-There is also a specific class of "User Preference Media Features Client Hints Headers", which allow a server to vary responses based on a user agent's preferences for [CSS media features](/en-US/docs/Web/CSS/@media#media_features) such as color scheme or reduced motion. See {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
-
 Client hints are available to web page JavaScript via the [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
 > **Note:** Servers currently get most of the same information by parsing the {{HTTPHeader("User-Agent")}} header.
 > For historical reasons this header contains a lot of largely irrelevant information, and information that might be used to identify a _particular user_.
 > UA client hints provide a more efficient and privacy preserving way of getting the desired information.
 > They are eventually expected to replace this older approach.
+
+### User preference media features client hints
+
+User Preference Media Features Client Hints allow a server to vary responses based on a user agent's preferences for [CSS media features](/en-US/docs/Web/CSS/@media#media_features) such as color scheme or reduced motion.
+Headers include: {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}.
 
 ### Device client hints
 
