@@ -135,7 +135,7 @@ The following descriptors can be used within the container condition:
 
 - `orientation`
 
-  - : The orientation of the container, either `landscape` or `portrait`.
+  - : The [orientation](/en-US/docs/Web/CSS/@media/orientation) of the container, either `landscape` or `portrait`.
 
 - `width`
   - : The width of the container expressed as a {{cssxref("length")}} value.
@@ -175,7 +175,7 @@ The following example will apply styles to the `.card` element if it's in a cont
 }
 ```
 
-### Named container example
+### Named container contexts
 
 Given the following HTML example which is a card component with an image, a title, and some text:
 
@@ -209,6 +209,21 @@ You can then target that container by adding the name to the container query:
   .card {
     display: grid;
     grid-template-columns: 2fr 1fr;
+  }
+}
+```
+
+### Nested container queries
+
+It's not possible to target multiple containers in a single container query.
+It is possible to nest container queries which has the same effect.
+
+The following query evaluates to true and applies a style to child elements if the container named `card` is wider than 400px and it has an ancestor container that meets the style condition:
+
+```css
+@container card (min-width: 400px) {
+  @container style(--responsive: true) {
+    /* <stylesheet> */
   }
 }
 ```

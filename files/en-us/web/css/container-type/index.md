@@ -26,7 +26,7 @@ container-type: <type>;
 - `size`: Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
   Applies layout containment, style containment, and size containment to the container.
 
-- `inline-size`: Establishes a query container for dimensional queries on the inline axis of the container.
+- `inline-size`: Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container.
   Applies layout, style, and inline-size containment to the element.
 
 - `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
