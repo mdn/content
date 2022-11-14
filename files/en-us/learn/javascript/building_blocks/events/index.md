@@ -678,7 +678,6 @@ Event capture is disabled by default. To enable it you have to pass the `capture
 
 This example is just like the [bubbling example](#Bubbling_example) we saw earlier, except that we have used the `capture` option:
 
-
 ```html
 <body>
   <div id="container">
@@ -687,7 +686,6 @@ This example is just like the [bubbling example](#Bubbling_example) we saw earli
   <pre id="output"></pre>
 </body>
 ```
-
 
 ```js
 const output = document.querySelector('#output');
