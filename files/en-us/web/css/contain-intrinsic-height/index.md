@@ -2,12 +2,17 @@
 title: contain-intrinsic-height
 slug: Web/CSS/contain-intrinsic-height
 page-type: css-property
+tags:
+  - CSS
+  - CSS Property
+  - Reference
+  - contain-intrinsic-height
 browser-compat: css.properties.contain-intrinsic-height
 ---
 
 {{CSSRef}}
 
-The **`contain-intrinsic-length`** [CSS](/en-US/docs/Web/CSS) property sets the height of an element that will be used for layout when it is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The **`contain-intrinsic-length`** [CSS](/en-US/docs/Web/CSS) property sets the height of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
 ## Syntax
 
@@ -26,6 +31,7 @@ contain-intrinsic-height: auto 300px;
 contain-intrinsic-height: inherit;
 contain-intrinsic-height: initial;
 contain-intrinsic-height: revert;
+contain-intrinsic-height: revert-layer;
 contain-intrinsic-height: unset;
 ```
 
@@ -67,3 +73,11 @@ The remembered value is not used if the child elements are being rendered (if si
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+- {{CSSxRef("contain-intrinsic-size")}}
+- {{CSSxRef("contain-intrinsic-width")}}
+- {{CSSxRef("contain-intrinsic-block-size")}}
+- {{CSSxRef("contain-intrinsic-inline-size")}}

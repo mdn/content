@@ -42,10 +42,10 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 // Extension permissions are:
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
-browser.permissions.getAll().then((result) => {
-  console.log(result.permissions); // [ "webRequest", "tabs" ]
-  console.log(result.origins)      // [ "*://*.mozilla.org/*" ]
-});
+const currentPermissions = await browser.permissions.getAll();
+
+console.log(currentPermissions.permissions); // [ "webRequest", "tabs" ]
+console.log(currentPermissions.origins); // [ "*://*.mozilla.org/*" ]
 ```
 
 {{WebExtExamples}}

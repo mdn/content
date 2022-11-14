@@ -38,7 +38,7 @@ With the basics out of the way, we'll now look in more detail at the elements us
   </tbody>
 </table>
 
-The flexibility of forms makes them one of the most complex structures in [HTML](/en-US/docs/Learn/HTML); you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and [accessible](/en-US/docs/Learn/Accessibility).
+The flexibility of forms makes them one of the most complex structures in [HTML](/en-US/docs/Learn/HTML); you can build any kind of basic form using dedicated form elements and attributes. Using the correct structure when building an HTML form will help ensure that the form is both usable and [accessible](/en-US/docs/Learn/Accessibility).
 
 ## The \<form> element
 
@@ -46,7 +46,7 @@ The {{HTMLElement("form")}} element formally defines a form and attributes that 
 
 We already met this in the previous article.
 
-> **Warning:** It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner, so it is a bad idea.
+> **Warning:** It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave unpredictably, so it is a bad idea.
 
 It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
 
@@ -86,7 +86,7 @@ When reading the above form, a screen reader will speak "Fruit juice size small"
 
 The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.
 
-Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to [listen to how a screen reader](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) interprets it. If it sounds odd, try to improve the form structure.
+Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however, it is your responsibility not to abuse it. If possible, each time you build a form, try to [listen to how a screen reader](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) interprets it. If it sounds odd, try to improve the form structure.
 
 ## The \<label> element
 
@@ -144,7 +144,7 @@ Let's consider this example:
 <!--div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username">
-  <label for="username"><span aria-label="required">*</abbr></label>
+  <label for="username"><span aria-label="required">*</label>
 </div-->
 
 <!-- would be better done like this: -->
@@ -165,7 +165,7 @@ Let's consider this example:
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which is always read by screen readers.
+The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depends on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which is always read by screen readers.
 
 The above variants increase in effectiveness as you go through them:
 
@@ -216,7 +216,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    </p>
    ```
 
-5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
+5. Next, we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
 
    ```html
    <section>

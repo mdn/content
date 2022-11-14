@@ -22,7 +22,7 @@ tags:
 browser-compat: html.elements.img
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 
@@ -254,7 +254,7 @@ The following example embeds an image into the page and includes alternative tex
 
 ### Image link
 
-This example builds upon the previous one, showing how to turn the image into a link. To do so, nest the `<img>` tag inside the {{HTMLElement("a")}}. You should made the alternative text describe the resource the link is pointing to, as if you were using a text link instead.
+This example builds upon the previous one, showing how to turn the image into a link. To do so, nest the `<img>` tag inside the {{HTMLElement("a")}}. You should make the alternative text describe the resource the link is pointing to, as if you were using a text link instead.
 
 ```html
 <a href="https://developer.mozilla.org">
@@ -366,7 +366,7 @@ The value of the `title` attribute is usually presented to the user as a tooltip
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

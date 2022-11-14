@@ -18,14 +18,14 @@ The `SVGGeometryElement` interface represents SVG elements whose rendering is de
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGGeometryElement.pathLength")}} {{ReadOnlyInline}}
   - : This property reflects the {{SVGAttr("pathLength")}} attribute.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 

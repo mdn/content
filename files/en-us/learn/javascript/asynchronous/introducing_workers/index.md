@@ -228,7 +228,7 @@ The `generatePrimes()` function is just like the synchronous version, except ins
 >
 > If you have any problems creating or running the example, you can review the [finished version](https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished) and try it [live](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished).
 
-## Other types of worker
+## Other types of workers
 
 The worker we just created was what's called a _dedicated worker_. This means it's used by a single script instance.
 

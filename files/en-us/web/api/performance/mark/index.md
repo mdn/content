@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Performance.mark
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`mark()`** method creates a
 {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry
@@ -37,24 +37,22 @@ mark(name, markOptions)
 ### Parameters
 
 - `name`
-
-  - : A string representing the name of the mark. If the
-    `name` given to this method already exists in the
-    {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
-    thrown.
-
+  - : A string representing the name of the mark.
 - `markOptions` {{optional_inline}}
-
   - : An object for specifying a timestamp and additional metadata for the mark.
-
-    - `detail`
-      - : Arbitrary metadata to include in the mark.
-    - `startTime`
-      - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
+    - `detail` {{optional_inline}}
+      - : Arbitrary metadata to include in the mark. Defaults to `null`.
+    - `startTime` {{optional_inline}}
+      - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time. Defaults to {{domxref("performance.now()")}}.
 
 ### Return value
 
 The {{domxref("PerformanceMark")}} entry that was created.
+
+### Exceptions
+
+- {{jsxref("SyntaxError")}}: Thrown if the `name` given to this method already exists in the {{domxref("PerformanceTiming")}} interface.
+- {{jsxref("TypeError")}}: Thrown if `startTime` is negative.
 
 ## Examples
 

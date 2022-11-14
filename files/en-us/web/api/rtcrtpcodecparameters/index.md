@@ -29,7 +29,7 @@ In addition to being the type of the {{domxref("RTCRtpParameters.codecs")}} prop
 
 Most of the fields in this property take values which are defined and maintained by the Internet Assigned Numbers Authority (IANA). References to relevant IANA documents are provided in the [see also](#see_also) section at the end of this article.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpCodecParameters.payloadType", "payloadType")}} {{optional_inline}}
   - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.

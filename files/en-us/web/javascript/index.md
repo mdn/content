@@ -54,7 +54,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 - [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
-- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
+- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_Overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
 - [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
   - : Overview of available data structures in JavaScript.

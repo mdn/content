@@ -72,7 +72,7 @@ cast.then((value) => {
 });
 console.log(`original === cast ? ${original === cast}`);
 
-// logs, in order:
+// Logs, in order:
 // original === cast ? true
 // value: 33
 ```

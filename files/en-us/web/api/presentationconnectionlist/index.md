@@ -19,7 +19,7 @@ browser-compat: api.PresentationConnectionList
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref('PresentationConnectionList.connections')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the non-terminated set of {{DOMxRef("PresentationConnection")}}s in the [set of presentation controllers](https://www.w3.org/TR/presentation-api/#dfn-set-of-presentation-controllers).

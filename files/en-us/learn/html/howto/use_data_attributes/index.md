@@ -9,9 +9,9 @@ tags:
   - Web
 ---
 
-{{LearnSidebar}}
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
 
-[HTML5](/en-US/docs/Glossary/HTML5) is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
+HTML is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
 
 ## HTML syntax
 
@@ -75,12 +75,6 @@ Data values are strings. Number values must be quoted in the selector for the st
 ## Issues
 
 Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them. In addition, search crawlers may not index data attributes' values.
-
-The main issues to consider are Internet Explorer support and performance. Internet Explorer 11+ provides support for the standard, but all earlier versions [do not support `dataset`](https://caniuse.com/#feat=dataset). To support IE 10 and under you need to access data attributes with {{domxref("Element.getAttribute", "getAttribute()")}} instead. Also, the performance of reading `data-*` attributes compared to storing the data in a regular JavaScript object is poor.
-
-That said, though, for custom element-associated metadata, they are a great solution.
-
-In Firefox 49.0.2 (and perhaps earlier/later versions), the data attributes that exceed 1022 characters will not be read by JavaScript (ECMAScript 4).
 
 ## See also
 

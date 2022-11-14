@@ -34,14 +34,14 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRSessionEvent
 - {{domxref("XRSessionEvent.XRSessionEvent", "XRSessionEvent()")}}
   - : Creates and returns a new `XRSessionEvent` object.
 
-## Properties
+## Instance properties
 
 _In addition to properties inherited from its parent interface, {{domxref("Event")}}, `XRSessionEvent` provides the following:_
 
 - {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which the event refers.
 
-## Methods
+## Instance methods
 
 _While `XRSessionEvent` defines no methods, it inherits methods from its parent interface, {{domxref("Event")}}._
 

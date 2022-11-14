@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.template
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
 

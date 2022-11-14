@@ -124,7 +124,7 @@ const myInstance = MyClass(); // TypeError: Class constructor MyClass cannot be 
 
 ### Class declaration hoisting
 
-Unlike function declarations, class declarations are not hoisted, which means you cannot use a class before it is declared.
+Unlike function declarations, class declarations are not [hoisted](/en-US/docs/Glossary/Hoisting) (or, in some interpretations, hoisted but with the temporal dead zone restriction), which means you cannot use a class before it is declared.
 
 ```js
 new MyClass(); // ReferenceError: Cannot access 'MyClass' before initialization
@@ -538,7 +538,7 @@ Static properties are very similar to their instance counterparts, except that:
 console.log(new Color(0, 0, 0).isValid); // undefined
 ```
 
-There is also a special construct called a [_static initialization block_](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks), which is a block of code that runs when the class is first loaded.
+There is also a special construct called a [_static initialization block_](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), which is a block of code that runs when the class is first loaded.
 
 ```js
 class MyClass {

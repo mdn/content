@@ -74,7 +74,7 @@ Then, copy and paste the following commands into your terminal to delete some un
 # Move into the src directory of your project
 cd src
 # Delete a few files
-rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
+rm -- App.test.js App.css logo.svg reportWebVitals.js setupTests.js
 # Move back up to the root of the project
 cd ..
 ```

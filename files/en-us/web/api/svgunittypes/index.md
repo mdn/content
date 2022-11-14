@@ -48,11 +48,11 @@ The **`SVGUnitTypes`** interface defines a commonly used set of constants used f
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods._
 

@@ -3,6 +3,8 @@ title: Features gated by user activation
 slug: Web/Security/User_activation
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 To ensure applications are unable to abuse APIs that can create bad user experience when the behavior is not desired, some APIs can only be used when the user is in an "active interaction" state, meaning the user is currently interacting with the web page, or has interacted with the page at least once. Browsers limit access to sensitive APIs like popups, fullscreen, or vibration APIs to active user interactions to prevent malicious scripts from abusing these features. This page lists web platform features available only after user activation.
 
 A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load. Typically, this is a click on a button or some other user interaction with the UI.
@@ -65,10 +67,16 @@ Examples APIs that require sticky activation:
 - `navigator.getAutoplayPolicy()`
 - `navigator.virtualKeyboard.show()`
 
+## UserActivation API
+
+To programmatically determine if a window has either sticky or transient user activation, the {{domxref("UserActivation")}} API provides two properties which are available using {{domxref("navigator.userActivation")}}:
+
+- {{domxref("UserActivation.hasBeenActive")}} indicates whether the window has sticky user activation.
+- {{domxref("UserActivation.isActive")}} indicates whether the window has transient user activation.
+
 ## See also
 
 - {{Glossary("Transient activation")}}
 - {{Glossary("Sticky activation")}}
+- {{domxref("UserActivation")}} API
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

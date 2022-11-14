@@ -21,14 +21,14 @@ The `SerialPort` interface of the {{domxref("Web_Serial_API", "Web Serial API")}
 
 Instances of this interface may be obtained by calling methods of the {{domxref("Serial")}} interface, therefore it has no constructor of its own.
 
-## Properties
+## Instance properties
 
 - {{domxref("SerialPort.readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.
 - {{domxref("SerialPort.writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.
 
-## Methods
+## Instance methods
 
 - {{domxref("SerialPort.getInfo()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.

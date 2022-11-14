@@ -25,16 +25,18 @@ You could implement your custom `instanceof` behavior like this, for example:
 ```js
 class MyArray {
   static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance)
+    return Array.isArray(instance);
   }
 }
 console.log([] instanceof MyArray); // true
 ```
 
 ```js
-function MyArray() { }
+function MyArray() {}
 Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value(instance) { return Array.isArray(instance); }
+  value(instance) {
+    return Array.isArray(instance);
+  },
 });
 console.log([] instanceof MyArray); // true
 ```

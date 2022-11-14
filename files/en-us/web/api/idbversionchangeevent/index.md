@@ -28,7 +28,7 @@ The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web
 - {{domxref("IDBVersionChangeEvent.IDBVersionChangeEvent", "IDBVersionChangeEvent()")}}
   - : Creates and returns a new `IDBVersionChangeEvent` object which is used to represent when a version of the database has changed.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
@@ -37,13 +37,13 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
 - {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
-### Methods
+## Instance methods
 
 _No specific method, but inherits methods from its parent, {{domxref("Event")}} interface._
 
 ## Example
 
-In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. Upon a version change (after an `upgradeneeded` event), the `success` event will implement the `IDBVersionChangeEvent` interface. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. Upon a version change (after an `upgradeneeded` event), the `success` event will implement the `IDBVersionChangeEvent` interface. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const note = document.querySelector("ul");
@@ -80,4 +80,4 @@ DBOpenRequest.onsuccess = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSinkInfo": {
+      "inh": "",
+      "impl": []
+    },
     "AudioTrack": {
       "inh": "",
       "impl": []
@@ -316,6 +320,10 @@
       "inh": "Event",
       "impl": []
     },
+    "CaptureController": {
+      "inh": "",
+      "impl": []
+    },
     "CaretPosition": {
       "inh": "",
       "impl": []
@@ -464,6 +472,10 @@
       "inh": "CSSColorValue",
       "impl": []
     },
+    "CSSColorProfileRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColorValue": {
       "inh": "CSSStyleValue",
       "impl": []
@@ -589,10 +601,6 @@
       "impl": []
     },
     "CSSNamespaceRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
-    "CSSNestingRule": {
       "inh": "CSSRule",
       "impl": []
     },
@@ -736,10 +744,6 @@
       "inh": "",
       "impl": []
     },
-    "CSSViewportRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
     "CustomElementRegistry": {
       "inh": "",
       "impl": []
@@ -877,10 +881,6 @@
       "impl": []
     },
     "DOMTokenList": {
-      "inh": "",
-      "impl": []
-    },
-    "DOMTransition": {
       "inh": "",
       "impl": []
     },
@@ -1069,6 +1069,10 @@
       "impl": []
     },
     "FileSystemHandle": {
+      "inh": "",
+      "impl": []
+    },
+    "FileSystemSyncAccessHandle": {
       "inh": "",
       "impl": []
     },
@@ -1730,6 +1734,10 @@
     },
     "IdentityCredential": {
       "inh": "Credential",
+      "impl": []
+    },
+    "IdentityProvider": {
+      "inh": "",
       "impl": []
     },
     "IdleDeadline": {
@@ -2489,6 +2497,10 @@
       "impl": []
     },
     "PressureObserver": {
+      "inh": "",
+      "impl": []
+    },
+    "PressureRecord": {
       "inh": "",
       "impl": []
     },
@@ -3606,6 +3618,10 @@
     },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
+      "impl": []
+    },
+    "ViewTransition": {
+      "inh": "",
       "impl": []
     },
     "VirtualKeyboard": {

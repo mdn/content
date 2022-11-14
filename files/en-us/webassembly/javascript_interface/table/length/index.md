@@ -36,9 +36,9 @@ const table = new WebAssembly.Table({
 Grow the table by 1 using `WebAssembly.grow()`:
 
 ```js
-console.log(table.length);   // 2
+console.log(table.length); // 2
 table.grow(1);
-console.log(table.length);   // 3
+console.log(table.length); // 3
 ```
 
 ## Specifications

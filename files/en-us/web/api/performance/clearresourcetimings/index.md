@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Performance.clearResourceTimings
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`clearResourceTimings()`** method removes all
 {{domxref("PerformanceEntry","performance entries")}} with an

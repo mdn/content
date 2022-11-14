@@ -76,17 +76,17 @@ Properties:
 
 Methods:
 
-- ```cs
+- Writes bytes from buffer, offset and size determine length of message.
+
+  ```cs
   Write(Byte[] buffer, int offset, int size)
   ```
 
-  Writes bytes from buffer, offset and size determine length of message.
+- Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
 
-- ```cs
+  ```cs
   Read(Byte[] buffer, int offset, int size)
   ```
-
-  Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
 
 Let us extend our example.
 

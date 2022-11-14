@@ -26,7 +26,7 @@ An object implementing `FormData` can directly be used in a {{jsxref("Statements
 - {{domxref("FormData.FormData","FormData()")}}
   - : Creates a new `FormData` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("FormData.append()")}}
   - : Appends a new value onto an existing key inside a `FormData` object, or adds the key if it does not already exist.

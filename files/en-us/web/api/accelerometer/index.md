@@ -31,7 +31,7 @@ If a feature policy blocks the use of a feature, it is because your code is inco
 - {{domxref("Accelerometer.Accelerometer()", "Accelerometer()")}} {{Experimental_Inline}}
   - : Creates a new `Accelerometer` object.
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, `Accelerometer` inherits properties from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
@@ -42,7 +42,7 @@ _In addition to the properties listed below, `Accelerometer` inherits properties
 - {{domxref('Accelerometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's z axis.
 
-## Methods
+## Instance methods
 
 _`Accelerometer` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 

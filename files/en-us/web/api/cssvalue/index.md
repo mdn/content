@@ -25,7 +25,7 @@ The **`CSSValue`** interface represents the current computed value of a CSS prop
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("CSSValue.cssText")}} {{Deprecated_Inline}}
   - : A string representing the current value.

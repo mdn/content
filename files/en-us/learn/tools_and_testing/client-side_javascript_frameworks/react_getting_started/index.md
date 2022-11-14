@@ -45,7 +45,7 @@ In this article we will say hello to React. We'll discover a little bit of detai
       <td>
         <p>
           To set up a local React development environment, create a start app, and
-          understand the basics of how it works
+          understand the basics of how it works.
         </p>
       </td>
     </tr>
@@ -207,7 +207,6 @@ In React, a **component** is a reusable module that renders a part of our app. T
 Let's open `src/App.js`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
 
 ```jsx
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -241,18 +240,15 @@ The `App.js` file consists of three main parts: some [`import`](/en-US/docs/Web/
 The `import` statements at the top of the file allow `App.js` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
 ```jsx
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 ```
 
-The first statement imports the React library itself. Prior to the React 17 release in 2020, skipping this step would result in an error: React turned the JSX we write into `React.createElement()`, so all React components needed to import the `React` module. React 17 introduced a new, rewritten version of the JSX transform that makes this statement unnecessary, with backported support to React 16.14.0, React 15.7.0, and React 0.14.10 (read more on the [official React doc](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)). While you will see this statement reappear throughout our tutorial, when you use `create-react-app` now, you will see that `import React from 'react'` has already been omitted.
+The first statement imports a logo from `'./logo.svg'`. Note the use of `./` at the beginning of the path and the `.svg` extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the `logo.svg` file lives in our source directory.
 
-Note that we don't write a path or extension when importing the `React` module — this is not a local file; instead, it is listed as a dependency in our `package.json` file. Be careful of this distinction as you work through this lesson!
+The second statement imports the CSS related to our App component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Webpack, the bundler, to add the referenced CSS file to the final CSS bundle.
 
-The second statement imports a logo from `'./logo.svg'`. Note the use of `./` at the beginning of the path, and the `.svg` extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the `logo.svg` file lives in our source directory.
-
-The third statement imports the CSS related to our App component. Note that there is no variable name and no `from` directive. This is called a _side-effect import_ — it doesn't import any value into the JavaScript file, but it tells Webpack, the bundler, to add the referenced CSS file to the final CSS bundle.
+Releases of React prior to the React 17 release in 2020 also required an import of the React library itself, as in - `import React from 'react'`. Skipping this step would result in an error: React turned the JSX we write into `React.createElement()`, so all React components needed to import the `React` module. React 17 introduced a new, rewritten version of the JSX transform that makes this statement unnecessary, with backported support to React 16.14.0, React 15.7.0, and React 0.14.10 (read more on the [official React doc](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)).
 
 ### The App component
 
@@ -287,7 +283,7 @@ The `App` function returns a JSX expression. This expression defines what your b
 
 Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/en-US/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
 
-Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
+Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
 
 Your `App` component should now look like this:
 
@@ -321,7 +317,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
@@ -334,11 +330,15 @@ root.render(
 reportWebVitals();
 ```
 
-As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run. `src/index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
+As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run.
 
-Line 7 calls React's `ReactDOM.createRoot()` function with one argument - the DOM element inside which we want the component to be rendered, in this case, the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`.
+The first two statements import the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
 
-Line 8 calls the `render()` method of the root we just created with one argument - the component we want to render, `<App />` in this case.
+`index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
+
+Line 7 calls React's `ReactDOM.createRoot()` function with the DOM element inside which we want the component to be rendered, in this case the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`. React will create a root for this node, and take over managing the DOM inside it (read more on the [official react doc](https://beta.reactjs.org/apis/react-dom/client/createRoot)). The function returns the `root` which we can use to `render` a React element into the DOM.
+
+Line 8 calls `root.render()` with the component we want to render, `<App />` in this case.
 
 All of this tells React that we want to render our React application with the `App` component as the root, or first component.
 
@@ -350,7 +350,7 @@ Your final `index.js` file should look like this:
 
 ```jsx
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
@@ -364,7 +364,7 @@ Next, we'll use a few of our JavaScript skills to get a bit more comfortable edi
 
 ### Variables in JSX
 
-Back in `App.js`, let's focus on line 5:
+Back in `App.js`, let's focus on line 8:
 
 ```jsx
 <img src={logo} className="App-logo" alt="logo" />
@@ -390,7 +390,7 @@ function App() {
 }
 ```
 
-Change line 8 to use our `subject` variable instead of the word "world", like this:
+Change line 8 to use our `subject` variable instead of the word "World", like this:
 
 ```jsx
 function App() {
@@ -408,7 +408,7 @@ function App() {
 }
 ```
 
-When you save, your browser should display "Hello, React!" instead of "Hello, world!"
+When you save, your browser should display "Hello, React!" instead of "Hello, World!"
 
 Variables are convenient, but the one we've just set doesn't make great use of React's features. That's where props come in.
 
@@ -490,7 +490,7 @@ In React:
 - [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - **Getting started with React**
   - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)

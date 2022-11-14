@@ -18,7 +18,7 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PermissionStatus.name")}} {{ReadOnlyInline}}
   - : Returns the name of a requested permission, identical to the `name` passed to {{domxref("Permissions.query")}}.

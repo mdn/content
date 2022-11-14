@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.figure
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
 

@@ -142,11 +142,46 @@ browser.commands.onCommand.addListener((command) => {
 
 ### Special shortcuts
 
-There are 3 **special shortcuts with default actions**, for which the {{WebExtAPIRef("commands.onCommand")}} event is not fired:
+There are these 4 **special shortcuts with default actions** for which the {{WebExtAPIRef("commands.onCommand")}} event does not fire:
 
-- `_execute_browser_action`: works like a click on the extension's [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).
-- `_execute_page_action`: works like a click on the extension's [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
-- `_execute_sidebar_action`: opens the extension's [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars). Only supported in Firefox 54 and newer.
+- `_execute_browser_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) created with {{WebExtAPIRef("browserAction")}} or specified in the [browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json key.
+- `_execute_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) created with {{WebExtAPIRef("action")}} or specified in the [action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key in the manifest.json key.
+- `_execute_page_action`: works like a click on an [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) created with {{WebExtAPIRef("pageAction")}} or specified in the [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in the manifest.json key.
+- `_execute_sidebar_action`: opens the extension's [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) specified in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key.
+
+The availability of these special shortcuts varies between manifest versions and browsers, like this:
+
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Manifest V2</th>
+    <th>Manifest V3</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><code>_execute_browser_action</code></td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><code>_execute_action</code></td>
+    <td>No</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><code>_execute_page_action</code></td>
+    <td>Yes</td>
+    <td>Not available in Chromium-based browsers</td>
+  </tr>
+  <tr>
+    <td><code>_execute_sidebar_action</code></td>
+    <td>Firefox only</td>
+    <td>Firefox only</td>
+  </tr>
+</tbody>
+</table>
 
 For example, this JSON defines a key combination that clicks the extension's browser action:
 

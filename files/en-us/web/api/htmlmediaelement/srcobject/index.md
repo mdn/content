@@ -106,6 +106,27 @@ if ('srcObject' in video) {
 }
 ```
 
+### Constructuring a `MediaSource` in a worker and passing it to the main thread to play
+
+The {{domxref("MediaSource.handle")}} property can be accessed inside a dedicated worker and the resulting {{domxref("MediaSourceHandle")}} object is then transferred over to the main thread via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
+
+```js
+let mediaSource = new MediaSource();
+let handle = mediaSource.handle;
+postMessage({arg: handle}, [handle]);
+
+// Fetch the media, buffer it, and pass it into the MediaSource
+```
+
+Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
+
+```js
+worker.addEventListener('message', (msg) => {
+  video.srcObject = msg.data.arg;
+  video.play();
+})
+```
+
 ## Specifications
 
 {{Specifications}}

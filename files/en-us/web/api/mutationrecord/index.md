@@ -16,7 +16,7 @@ browser-compat: api.MutationRecord
 
 A **`MutationRecord`** represents an individual DOM mutation. It is the object that is inside the array passed to {{domxref("MutationObserver")}}'s callback.
 
-## Properties
+## Instance properties
 
 <table class="standard-table">
   <thead>

@@ -16,11 +16,11 @@ The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("
 
 > **Warning:** This interface is **only available** in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
-## Properties
+## Instance properties
 
 This interface does not have any properties.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}
   - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into an {{jsxref("ArrayBuffer")}} representing the input data as a binary string.

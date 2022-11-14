@@ -32,7 +32,7 @@ gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
-## Methods
+## Instance methods
 
 - {{domxref("console.assert()")}}
   - : Log a message and stack trace to console if the first argument is `false`.
@@ -117,7 +117,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```bash
-My first car was a Dodge Charger. The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 ```
 
 #### Using string substitutions
@@ -166,7 +166,7 @@ console.log(
 
 The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.
 
-![](css-styling.png)
+![Styled Text in Firefox console](css-styling.png)
 
 You may use `%c` multiple times:
 
@@ -241,7 +241,7 @@ console.timeEnd("answer time");
 
 Will log the time needed by the user to dismiss the alert box, log the time to the console, wait for the user to dismiss the second alert, and then log the ending time to the console:
 
-![](console-timelog.png)
+![Time log in Firefox console](console-timelog.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
@@ -265,7 +265,7 @@ foo();
 
 The output in the console looks something like this:
 
-![](api-trace2.png)
+![Stack trace in Firefox console](api-trace2.png)
 
 ## Specifications
 

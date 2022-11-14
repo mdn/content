@@ -30,7 +30,7 @@ If a feature policy blocks use of a feature, it's because your code is inconsist
 - {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}} {{Experimental_Inline}}
   - : Creates a new `Magnetometer` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('Magnetometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the magnetic field around the device's x axis.
@@ -39,7 +39,7 @@ If a feature policy blocks use of a feature, it's because your code is inconsist
 - {{domxref('Magnetometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the magnetic field around the device's z axis.
 
-## Methods
+## Instance methods
 
 _`Magnetometer` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 

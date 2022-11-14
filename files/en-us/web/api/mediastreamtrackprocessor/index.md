@@ -21,7 +21,7 @@ The **`MediaStreamTrackProcessor`** interface of the {{domxref('Insertable Strea
 - {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Creates a new `MediaStreamTrackProcessor` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaStreamTrackProcessor.readable")}} {{Experimental_Inline}}
   - : Returns a {{domxref("ReadableStream")}}.

@@ -88,13 +88,14 @@ para.onpointerup = (event) => {
 
 ## See also
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
-- [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-- [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
-- [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
-- [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-- [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
-- [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-- This event on [`Document`](/en-US/docs/Web/API/Document) targets: [`pointerup`](/en-US/docs/Web/API/Document/pointerup_event)
+- Related events
+
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)

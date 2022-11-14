@@ -90,4 +90,14 @@ para.onpointerdown = (event) => {
 
 ## See also
 
-- This event on `Document` targets: [`pointerdown`](/en-US/docs/Web/API/Document/pointerdown_event) event
+- Related events
+
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
