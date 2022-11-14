@@ -74,6 +74,8 @@ Host: example.com
 Sec-CH-Prefers-Reduced-Motion: "reduce"
 ```
 
+The client will include the header in subsequent requests in the current session, unless the `Accept-CH` changes in responses to indicate that it is no longer supported by the server.
+
 ## Specifications
 
 {{Specifications}}
