@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceNavigationTiming.domComplete
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}
 
 The **`domComplete`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the

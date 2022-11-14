@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.input.type_range
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`range`** let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.
 
@@ -127,7 +127,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
-## Non Standard Attributes
+## Non-standard Attributes
 
 ### orient
 

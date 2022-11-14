@@ -49,7 +49,7 @@ Intl.NumberFormat(locales, options)
         `"gujr"`, `"guru"`, `"hanidec"`, `"hmng"`, `"hmnp"`, `"java"`,
         `"kali"`, `"khmr"`, `"knda"`, `"lana"`, `"lanatham"`, `"laoo"`,
         `"latn"`, `"lepc"`, `"limb"`, `"mathbold"`, `"mathdbl"`, `"mathmono"`,
-        `"mathsanb"`, `mathsans"`, `"mlym"`, `"modi"`, `"mong"`, `"mroo"`,
+        `"mathsanb"`, `"mathsans"`, `"mlym"`, `"modi"`, `"mong"`, `"mroo"`,
         `"mtei"`, `"mymr"`, `"mymrshan"`, `"mymrtlng"`, `"newa"`, `"nkoo"`,
         `"olck"`, `"orya"`, `"osma"`, `"rohg"`, `"saur"`, `"segment"`,
         `"shrd"`, `"sind"`, `"sinh"`, `"sora"`, `"sund"`, `"takr"`, `"talu"`, `"tamldec"`, `"telu"`,
@@ -79,7 +79,7 @@ Intl.NumberFormat(locales, options)
         The default value is `"standard"`.
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`.
-        For information about this option, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+        For information about this option, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
     - `notation`
 
       - : The formatting that should be displayed for the number. The default is `"standard"`.
@@ -176,7 +176,7 @@ Intl.NumberFormat(locales, options)
 
     - `roundingPriority` {{experimental_inline}}
 
-      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maxmumsignificantdigits)) are specified:
+      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified:
 
         - `"auto"`: the result from the significant digits property is used (default).
         - `"morePrecision"`: the result from the property that results in more precision is used.

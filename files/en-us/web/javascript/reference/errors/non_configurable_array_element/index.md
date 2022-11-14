@@ -37,9 +37,7 @@ The `configurable` attribute controls whether the property can be deleted
 from the object and whether its attributes (other than `writable`) can be
 changed.
 
-Usually, properties in an object created by an [array initializer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax)
-are configurable. However, for example, when using
-{{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.
+Usually, properties in an object created by an [array initializer](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) are configurable. However, for example, when using {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.
 
 ## Examples
 

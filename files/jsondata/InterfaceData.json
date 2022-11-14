@@ -472,6 +472,10 @@
       "inh": "CSSColorValue",
       "impl": []
     },
+    "CSSColorProfileRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColorValue": {
       "inh": "CSSStyleValue",
       "impl": []
@@ -597,10 +601,6 @@
       "impl": []
     },
     "CSSNamespaceRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
-    "CSSNestingRule": {
       "inh": "CSSRule",
       "impl": []
     },

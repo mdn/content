@@ -12,7 +12,7 @@ tags:
 browser-compat: css.at-rules.media.prefers-color-scheme
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{CSSRef}}
 
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
 A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
@@ -21,7 +21,7 @@ A user indicates their preference through an operating system setting (e.g. ligh
 
 For SVG and iframes, `prefers-color-scheme` lets you set a CSS style for the SVG or iframe based on the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the parent element in the web page.
 SVGs must be used embedded (i.e., `<img src="circle.svg" alt="circle" />`) as opposed to [inlined in HTML](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction#basic_example).
-An example of using `prefers-color-scheme` in SVGs can be found in in the [Color scheme inheritance](#color_scheme_inheritance) section.
+An example of using `prefers-color-scheme` in SVGs can be found in the [Color scheme inheritance](#color_scheme_inheritance) section.
 
 Using `prefers-color-scheme` is allowed in [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) `<svg>` and `<iframe>` elements. Cross-origin elements are elements retrieved from a different host than the page that is referencing them.
 To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and for more information about iframes, see the [iframe documentation](/en-US/docs/Web/HTML/Element/iframe).

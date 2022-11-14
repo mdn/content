@@ -66,6 +66,7 @@ attachShadow(options)
             for example using {{domxref("Element.shadowRoot")}}:
 
             ```js
+            element.attachShadow({ mode: "open" });
             element.shadowRoot; // Returns a ShadowRoot obj
             ```
 
@@ -75,6 +76,7 @@ attachShadow(options)
             from JavaScript outside it:
 
             ```js
+            element.attachShadow({ mode: "closed" });
             element.shadowRoot; // Returns null
             ```
 
