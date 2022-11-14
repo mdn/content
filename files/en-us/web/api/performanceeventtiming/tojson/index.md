@@ -12,9 +12,7 @@ browser-compat: api.PerformanceEventTiming.toJSON
 
 {{APIRef("Performance API")}}
 
-The **`toJSON()`** method is a _serializer_; it returns a JSON representation of the {{domxref("PerformanceEventTiming","performance event timing entry")}} object.
-
-Note that it doesn't contain the {{domxref("PerformanceEventTiming.target", "target")}} property, given it is of type {{domxref("Node")}} (which doesn't provide a `toJSON()` operation).
+The **`toJSON()`** method of the {{domxref("PerformanceEventTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEventTiming")}} object.
 
 ## Syntax
 
@@ -28,13 +26,15 @@ None.
 
 ### Return value
 
-A JSON object that is the serialization of the {{domxref("PerformanceEventTiming")}} object.
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceEventTiming")}} object.
+
+The JSON doesn't contain the {{domxref("PerformanceEventTiming.target", "target")}} property because it is of type {{domxref("Node")}}, which doesn't provide a `toJSON()` operation.
 
 ## Examples
 
 ### Using the toJSON method
 
-The following example shows the use of the `toJSON()` method.
+In this example, calling `entry.toJSON()` returns a JSON representation of the `PerformanceEventTiming` object.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -43,8 +43,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-// Register the observer for events
-observer.observe({entryTypes: ["event"]});
+observer.observe({type: "event", buffered: true});
 ```
 
 This would log a JSON object like so:
@@ -60,6 +59,8 @@ This would log a JSON object like so:
   "cancelable": true
 }
 ```
+
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 

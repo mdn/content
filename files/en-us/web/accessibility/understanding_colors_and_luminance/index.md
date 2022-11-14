@@ -404,7 +404,7 @@ function sRGBtoLin(colorChannel) {
 }
 ```
 
-> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.0 guidelines were drafted citing an obsolete value. In May 2021, this was corrected to 0.04045 in the WCAG 2.1 document. For the record, the WCAG 2.0 value is 0.03928.
+> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.0 guidelines were drafted citing an obsolete value. In May 2021, this was corrected to 0.03928 in the WCAG 2.1 document. For the record, the WCAG 2.0 value is 0.03928.
 
 #### Step three: Spectrally Weighted Luminance
 

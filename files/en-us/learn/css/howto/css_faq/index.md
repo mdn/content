@@ -10,6 +10,8 @@ tags:
   - questions
 ---
 
+{{LearnSidebar}}
+
 In this article, you'll find some frequently-asked questions (FAQs) about CSS, along with answers that may help you on your quest to become a web developer.
 
 ## Why doesn't my CSS, which is valid, render correctly?
@@ -21,7 +23,7 @@ Modern browsers have two main rendering modes:
 - _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
 - _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
+Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode)_ that has only a few minor quirks.
 
 The standard `DOCTYPE` declaration that will trigger standards mode is:
 
@@ -125,7 +127,7 @@ Style rules that are syntactically correct may not apply in certain situations. 
 
 ### HTML elements hierarchy
 
-The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendant overrides the style of the parent, in spite of any specificity or priority of CSS rules.
+The way CSS styles are applied to HTML elements depends also on the elements' hierarchy. It is important to remember that a rule applied to a descendant overrides the style of the parent, in spite of any specificity or priority of CSS rules.
 
 ```css
 .news {

@@ -3413,7 +3413,6 @@
 /en-US/docs/DragDrop/DataTransfer	/en-US/docs/Web/API/DataTransfer
 /en-US/docs/DragDrop/Drag_Operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/DragDrop/Drag_and_Drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
-/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /en-US/docs/DragDrop/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /en-US/docs/Drawing_Graphics_with_Canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Drawing_text_using_a_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -3600,6 +3599,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
+/en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
@@ -5470,7 +5470,7 @@
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN/Tools/Sample_server
+/en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Structures	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Structures/:-ms-input-placeholder_pseudo-class	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
@@ -5511,10 +5511,10 @@
 /en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/Tools	/en-US/docs/MDN/Tools
-/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
+/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
 /en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
-/en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN/Tools/Sample_server
+/en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Where_is_everything	/en-US/docs/MDN/Community/Contributing/Our_repositories
 /en-US/docs/MDN/Doc_status/NSPR	https://firefox-source-docs.mozilla.org/nspr/index.html
 /en-US/docs/MDN/Feedback	/en-US/docs/MDN/Community
@@ -5536,7 +5536,7 @@
 /en-US/docs/MDN/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/API	/en-US/docs/MDN/Tools/Unsupported_GET_API
+/en-US/docs/MDN/Kuma/API	/en-US/docs/MDN
 /en-US/docs/MDN/Kuma/Changelog	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /en-US/docs/MDN/Kuma/Contributing	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /en-US/docs/MDN/Kuma/Contributing/Getting_started	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
@@ -5577,7 +5577,9 @@
 /en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
-/en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
+/en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN
+/en-US/docs/MDN/Tools/Sample_server	/en-US/docs/MDN
+/en-US/docs/MDN/Tools/Unsupported_GET_API	/en-US/docs/MDN
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
@@ -11826,7 +11828,6 @@
 /en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
-/en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Element	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
 /en-US/docs/Web/Guide/HTML/Email_links	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links
@@ -12101,6 +12102,7 @@
 /en-US/docs/Web/JavaScript/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
