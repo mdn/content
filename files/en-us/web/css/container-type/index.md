@@ -47,7 +47,8 @@ Given the following HTML example which is a card component with an image, a titl
 </div>
 ```
 
-To create a container context, add the `container-type` property:
+To create a container context, add the `container-type` property to an element.
+The following uses the `inline-size` value to create a containment context for the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container:
 
 ```css
 .container {
@@ -55,7 +56,7 @@ To create a container context, add the `container-type` property:
 }
 ```
 
-You can then target that container by adding the name to the container query:
+Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when it is wider than 400px:
 
 ```css
 @container (min-width: 400px) {
