@@ -74,9 +74,15 @@ All client hints that are not low entropy hints are considered high entropy hint
 
 ## Critical client hints
 
-You can use the {{HTTPHeader("Critical-CH")}} response header along with `Accept-CH` to specify that an accepted client hint is also a _critical client hint_. User agents should automatically send the server that client hint to indicate their preference in that regard.
+A _critical client hint_ is one where applying the response may significantly change the rendered page, potentially in a way that is jarring or will significantly affect usability, and which must therefore be applied before the content is rendered.
+For example, `Sec-CH-Prefers-Reduced-Motion` is commonly treated as a critical hint, because it might markedly affect the behaviour of animations, and because a user who chooses this preference really needs for it to be set.
 
-For example, in this case, the server tells a client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`. {{httpheader("Critical-CH")}} is also used to specify that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint:
+A server can use the {{HTTPHeader("Critical-CH")}} response header along with `Accept-CH` to specify that an accepted client hint is also a critical client hint (note that a header in `Critical-CH` must also appear in `Accept-CH`).
+User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, then the user agent will retry the request rather than rendering the page.
+This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or if the server configuration changes.
+
+
+For example, in this case, the server tells a client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`, and {{httpheader("Critical-CH")}} is used to specify that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint:
 
 ```http
 HTTP/1.1 200 OK
@@ -85,7 +91,7 @@ Accept-CH: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-The client automatically retries the request, telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
+As `Sec-CH-Prefers-Reduced-Motion` is a critical hint that was not in the original request, the client automatically retries the request — this time telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
 
 ```http
 GET / HTTP/1.1
