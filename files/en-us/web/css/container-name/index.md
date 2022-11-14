@@ -14,8 +14,7 @@ browser-compat: css.properties.container-name
 {{CSSRef}}
 
 The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/@container) at-rule in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
-
-A queried element will use the nearest ancestor with a containment context to determine the container size.
+A container query will apply styles to elements based on the size of the nearest ancestor with a containment context.
 When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
 
 ## Syntax
