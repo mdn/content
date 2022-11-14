@@ -69,8 +69,7 @@ This property may be specified as:
 - {{cssxref("&lt;length&gt;")}}
   - : Is a non-negative length.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value, relative to the block size of the grid container. If the size of the grid container depends on the size of its tracks, then the percentage must be treated as `auto`.
-    The intrinsic size contributions of the track may be adjusted to the size of the grid container, and increase the final size of the track by the minimum amount that would result in honoring the percentage.
+  - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value, relative to the block size of the grid container. If the size of the grid container depends on the size of its tracks, then the percentage must be treated as `auto` for the purpose of calculating the intrinsic sizes of the grid container and then resolve against that resulting grid container size for the purpose of laying out the grid and its items. i.e. the intrinsic size contributions of the track may be adjusted to the size of the grid container, and increase the final size of the track by the minimum amount that would result in honoring the percentage.
 - {{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}
   - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
 - {{cssxref("max-content")}}
