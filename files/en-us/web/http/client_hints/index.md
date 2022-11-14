@@ -72,7 +72,7 @@ The high entropy hints are those that have the potential to give away more infor
 The decision might be based on user preferences, a permission request, or the permission policy.
 All client hints that are not low entropy hints are considered high entropy hints.
 
-## Specifying critical client hints
+## Critical client hints
 
 You can use the {{HTTPHeader("Critical-CH")}} response header along with `Accept-CH` to specify that an accepted client hint is also a _critical client hint_. User agents should automatically send the server that client hint to indicate their preference in that regard.
 
