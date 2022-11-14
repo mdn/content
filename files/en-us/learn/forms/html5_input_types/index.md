@@ -190,10 +190,10 @@ To actually display the current value, and update it as it changed, you must use
 const price = document.querySelector("#price");
 const output = document.querySelector(".price-output");
 
-output.textContent = price.value;
+output.value = price.value;
 
 price.addEventListener("input", () => {
-  output.textContent = price.value;
+  output.value = price.value;
 });
 ```
 
