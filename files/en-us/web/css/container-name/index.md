@@ -69,8 +69,8 @@ The following example creates two containment contexts, one for the card meta in
 }
 ```
 
-Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when the container matches the query.
-The following example has two container queries, one that will apply only to the contents of the `.post-excerpt` elements and one that will apply to both the `.post-meta` and `.post-excerpt` contents:
+Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when the query evaluates to true.
+The following example has two container queries, one that will apply only to the contents of the `.post-excerpt` element and one that will apply to both the `.post-meta` and `.post-excerpt` contents:
 
 ```css
 @container excerpt (min-width: 400px) {
