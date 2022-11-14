@@ -19,8 +19,9 @@ browser-compat: http.headers.Content-Security-Policy.script-src-elem
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-elem`** directive specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
 
-Other JavaScript sources that can trigger script execution, such as inline script event handlers (`onclick`) and [XSLT stylesheets](/en-US/docs/Web/XSLT), are not blocked.
-(These can be blocked using {{CSP("script-src")}}.)
+This directive only specifies valid sources in `<script>` elements (both script requests and blocks).
+It does not apply to other JavaScript sources that can trigger script execution, such as inline script event handlers (`onclick`) and [XSLT stylesheets](/en-US/docs/Web/XSLT).
+(Valid sources can be specified for all JavaScript script sources using {{CSP("script-src")}}, or just for inline script handlers using {{CSP("script-src-attr")}}.)
 
 <table class="properties">
   <tbody>
