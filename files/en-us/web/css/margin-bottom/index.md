@@ -1,6 +1,7 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -8,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.margin-bottom
 ---
+
 {{CSSRef}}
 
 The **`margin-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
@@ -64,9 +66,9 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
 
 ```html
 <div class="container">
-<div class="box0">Box 0</div>
-<div class="box1">Box 1</div>
-<div class="box2">Box one's negative margin pulls me up</div>
+  <div class="box0">Box 0</div>
+  <div class="box1">Box 1</div>
+  <div class="box2">Box one's negative margin pulls me up</div>
 </div>
 ```
 
@@ -76,17 +78,17 @@ CSS for divs to set margin-bottom and height
 
 ```css
 .box0 {
-    margin-bottom:1em;
-    height:3em;
+  margin-bottom: 1em;
+  height: 3em;
 }
 .box1 {
-    margin-bottom:-1.5em;
-    height:4em;
+  margin-bottom: -1.5em;
+  height: 4em;
 }
 .box2 {
-    border:1px dashed black;
-    border-width:1px 0;
-    margin-bottom:2em;
+  border: 1px dashed black;
+  border-width: 1px 0;
+  margin-bottom: 2em;
 }
 ```
 
@@ -94,13 +96,13 @@ Some definitions for container and divs so margins' effects can be seen more cle
 
 ```css
 .container {
-    background-color:orange;
-    width:320px;
-    border:1px solid black;
+  background-color: orange;
+  width: 320px;
+  border: 1px solid black;
 }
 div {
-    width:320px;
-    background-color:gold;
+  width: 320px;
+  background-color: gold;
 }
 ```
 

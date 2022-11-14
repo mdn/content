@@ -11,6 +11,7 @@ tags:
   - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a `WritableStream`, the underlying sink is given a corresponding `WritableStreamDefaultController` instance to manipulate.
@@ -19,11 +20,11 @@ The **`WritableStreamDefaultController`** interface of the [Streams API](/en-US/
 
 None. `WritableStreamDefaultController` instances are created automatically during `WritableStream` construction.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("WritableStreamDefaultController.error()")}}
   - : Causes any future interactions with the associated stream to error.

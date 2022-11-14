@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new window.
@@ -29,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.windows.create(
   createData            // optional object
 )
@@ -43,7 +44,7 @@ let creating = browser.windows.create(
 
     - `allowScriptsToClose` {{optional_inline}}
 
-      - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/en-US/docs/Web/API/Window/close).  If you include `allowScriptsToClose` and set it to `true` , then this default behavior is changed, so scripts can close their tabs. Note that:
+      - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/en-US/docs/Web/API/Window/close). If you include `allowScriptsToClose` and set it to `true`, then this default behavior is changed, so scripts can close their tabs. Note that:
 
         - this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.
         - if the URL(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
@@ -154,7 +155,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -181,8 +183,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-</pre></div>
+-->
 
 ## See also
 

@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.WebSocket.close_event
 ---
+
 {{APIRef}}
 
 The `close` event is fired when a connection with a `WebSocket` is closed.
@@ -28,7 +29,7 @@ onclose = (event) => { }
 
 ## Event type
 
-An {{domxref("CloseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("CloseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("CloseEvent")}}
 

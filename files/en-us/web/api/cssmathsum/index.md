@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathSum
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
@@ -25,18 +26,22 @@ A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get
 - {{domxref("CSSMathSum.CSSMathSum", "CSSMathSum()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathSum` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMathSum.values')}} {{Experimental_Inline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-### Event handlers
+## Static methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Event handlers
 
 No
-
-## Methods
-
-None.
 
 ## Examples
 

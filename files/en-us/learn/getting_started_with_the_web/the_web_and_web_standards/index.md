@@ -8,6 +8,7 @@ tags:
   - Web
   - Web Standards
 ---
+
 {{learnsidebar}}
 
 This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.
@@ -86,19 +87,19 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
 [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website:
 
-- Hypertext markup language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
+- HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
 
   ```html
   <h1>This is a top-level heading</h1>
 
   <p>This is a paragraph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
 
-- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML, for example setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
+- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
 
   ```css
   p {
@@ -111,8 +112,8 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - **JavaScript** is the programming language we use to add interactivity to web sites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality

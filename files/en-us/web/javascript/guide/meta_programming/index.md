@@ -7,8 +7,9 @@ tags:
   - JavaScript
   - Proxy
   - Reflect
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
 The {{jsxref("Proxy")}} and {{jsxref("Reflect")}} objects allow you to intercept and define custom behavior for fundamental language operations (e.g. property lookup, assignment, enumeration, function invocation, etc.). With the help of these two objects you are able to program at the meta level of JavaScript.
@@ -31,7 +32,7 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-The `Proxy` object defines a _`target`_ (an empty object here) and a _`handler`_ object, in which a `get` _trap_ is implemented. Here, an object that is proxied will not return `undefined` when getting undefined properties, but will instead return the number `42`.
+The `Proxy` object defines a `target` (an empty object here) and a `handler` object, in which a `get` _trap_ is implemented. Here, an object that is proxied will not return `undefined` when getting undefined properties, but will instead return the number `42`.
 
 Additional examples are available on the {{jsxref("Proxy")}} reference page.
 

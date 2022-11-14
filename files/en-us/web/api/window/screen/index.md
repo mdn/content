@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.screen
 ---
+
 {{APIRef("CSSOM")}}
 
 The {{DOMxRef("Window")}} property **`screen`** returns a

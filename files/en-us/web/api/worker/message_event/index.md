@@ -10,6 +10,7 @@ tags:
   - message
 browser-compat: api.Worker.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('Worker')}} object when the worker's parent receives a message from its worker (i.e. when the worker sends a message using [`DedicatedWorkerGlobalScope.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage)).
@@ -28,7 +29,7 @@ onmessage = (event) => { };
 
 ## Event type
 
-An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 

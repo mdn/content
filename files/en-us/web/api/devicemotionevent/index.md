@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`DeviceMotionEvent`** interface provides web developers with information about the speed of changes for the device's position and orientation.
@@ -26,7 +27,7 @@ The **`DeviceMotionEvent`** interface provides web developers with information a
 - {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}}
   - : Creates a new `DeviceMotionEvent`.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("DeviceMotionEvent.acceleration")}} {{ReadOnlyInline}}
   - : An object giving the acceleration of the device on the three axis X, Y and Z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
@@ -60,5 +61,5 @@ window.addEventListener('devicemotion', (event) => {
 - {{domxref("Window/devicemotion_event", "devicemotion")}}
 - {{DOMxRef("Accelerometer")}}
 - {{DOMxRef("LinearAccelerationSensor")}}
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

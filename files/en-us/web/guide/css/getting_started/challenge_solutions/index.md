@@ -5,6 +5,7 @@ tags:
   - Beginner
   - NeedsUpdate
 ---
+
 This page provides solutions to the challenges posed in the [CSS Getting Started](/en-US/docs/Learn/CSS/First_steps) tutorial. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.
 
 ## Why use CSS
@@ -42,8 +43,13 @@ The challenges on page [Cascading and inheritance](/en-US/docs/Learn/CSS/Buildin
   - : Move the declaration for underlining from the rule for {{ HTMLElement("p") }} to the one for {{ HTMLElement("strong") }}. The resulting file looks like this:
 
     ```css
-    p {color: blue; }
-    strong {color: orange; text-decoration: underline;}
+    p {
+      color: blue;
+    }
+    strong {
+      color: orange;
+      text-decoration: underline;
+    }
     ```
 
 Later sections of this tutorial describe style rules and declarations in greater detail.
@@ -61,7 +67,9 @@ The challenges on page [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selecto
   - : Add a rule with an ID selector of `#second` and a declaration `color: blue;`, as shown below:
 
     ```css
-    #second { color: blue; }
+    #second {
+      color: blue;
+    }
     ```
 
     A more specific selector, `p#second` also works.
@@ -75,7 +83,9 @@ The challenges on page [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selecto
   - : Change the selector of the new rule to be a tag selector using `p`:
 
     ```css
-    p { color: blue; }
+    p {
+      color: blue;
+    }
     ```
 
 The rules for the other colors all have more specific selectors, so they override the blue of the paragraph.
@@ -109,7 +119,7 @@ The rules for the other colors all have more specific selectors, so they overrid
   - : Add the following style declaration to the `strong` rule:
 
     ```css
-      font: 200% serif;
+    font: 200% serif;
     ```
 
     If you use separate declarations for `font-size` and `font-family`, then the `font-style` setting on the first paragraph is _not_ overridden.
@@ -190,7 +200,9 @@ The challenges on page [Lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 
     ```css
     /* numbered headings */
-    body {counter-reset: headnum;}
+    body {
+      counter-reset: headnum;
+    }
     h3::before {
       content: "(" counter(headnum, upper-latin) ") ";
       counter-increment: headnum;
@@ -228,7 +240,7 @@ The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
   - : Change your sample document, `doc2.html`, adding this tag to it near the end, just before `</BODY>`: `<IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin">` Predict where the image will appear in your document. Then refresh your browser to see if you were correct.
 - Solution
   - : The image appears to the right of the second list.
-    ![](pin_placement.png)
+    ![A list of five placeholder texts is titled Numbered Paragraphs. A yellow pin is placed to the right of a blue box containing the list.](pin_placement.png)
 - Challenge
   - : Add a rule to your stylesheet that places the image in the top right of your document.
 - Solution

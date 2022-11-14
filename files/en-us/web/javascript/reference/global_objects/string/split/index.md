@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.split
 ---
+
 {{JSRef}}
 
 The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
@@ -19,7 +20,7 @@ The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into
 
 ## Syntax
 
-```js
+```js-nolint
 split()
 split(separator)
 split(separator, limit)
@@ -213,7 +214,7 @@ const splitByNumber = {
 };
 
 const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
+console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
 ```
 
 The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
@@ -291,7 +292,7 @@ const splitCommands = {
 };
 
 const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
-console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
+console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", "brightness down"]
 ```
 
 ## Specifications

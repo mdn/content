@@ -18,6 +18,7 @@ tags:
   - droppedVideoFrames
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`droppedVideoFrames`**

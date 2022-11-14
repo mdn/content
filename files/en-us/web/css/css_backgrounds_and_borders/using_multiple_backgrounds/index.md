@@ -1,6 +1,7 @@
 ---
 title: Using multiple backgrounds
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+page-type: guide
 tags:
   - CSS
   - CSS Background
@@ -8,6 +9,7 @@ tags:
   - Guide
   - Reference
 ---
+
 {{CSSRef}}
 
 You can apply **multiple backgrounds** to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.
@@ -38,15 +40,9 @@ In this example, three backgrounds are stacked: the Firefox logo, an image of bu
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png),
-      url(bubbles.png),
-      linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat,
-      no-repeat,
-      no-repeat;
-  background-position: bottom right,
-      left,
-      right;
+  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right, left, right;
 }
 ```
 

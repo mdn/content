@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaPlaceholder
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface reflects the value of the `aria-placeholder` attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
@@ -28,7 +29,12 @@ In this example the `aria-placeholder` attribute on the element with an ID of `t
 
 ```html
 <div id="txtboxLabel">Enter your five-digit zipcode</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="txtboxLabel"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-placeholder="5-digit zipcode"
+  aria-labelledby="txtboxLabel"></div>
 ```
 
 ```js

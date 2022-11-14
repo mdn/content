@@ -12,12 +12,13 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports.
 Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 
-## Properties
+## Instance properties
 
 - {{domxref("SpeechSynthesisVoice.default")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is the default voice for the current app language (`true`), or not (`false`.)
@@ -32,7 +33,7 @@ Every `SpeechSynthesisVoice` has its own relative speech service including infor
 
 ## Examples
 
-The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speak-easy-synthesis/script.js).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speak-easy-synthesis/script.js).
 
 ```js
 const synth = window.speechSynthesis;

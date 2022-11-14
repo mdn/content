@@ -8,43 +8,49 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.munderover
 ---
+
 {{MathMLRef}}
 
-The MathML `<munderover>` element is used to attach accents or limits both under and over an expression.
+The **`<munderover>`** [MathML](/en-US/docs/Web/MathML) element is used to attach accents or limits both under and over an expression.
 
 It uses the following syntax: `<munderover> base underscript overscript </munderover>`
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `accent`
-  - : If `true`, the overscript is an _accent_, which is drawn closer to the base expression.
-    If `false` (default value), the overscript is a _limit_ over the base expression.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the over script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 - `accentunder`
-  - : If `true`, the underscript is an _accent_, which is drawn closer to the base expression.
-    If `false` (default value), the underscript is a _limit_ under the base expression.
-- `align` {{deprecated_inline}}
-  - : The alignment of both underscript and overscript. Possible values are: `left`, `center`, and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
 ## Examples
 
-Sample rendering: ![integral-0-infinity](munderover.png)
-
-Rendering in your browser: <math><munderover><mo>∫</mo><mn>0</mn><mi>∞</mi></munderover></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math displaystyle="true">
-
-  <munderover >
-    <mo>&#x222B;<!--INTEGRAL--></mo>
-    <mn>0</mn>
-    <mi>&#x221E;<!--INFINITY--></mi>
+<math display="block">
+  <munderover>
+    <mo>∑</mo>
+    <mrow>
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <mo>+</mo>
+      <mn>∞</mn>
+    </mrow>
   </munderover>
-
 </math>
 ```
+
+{{ EmbedLiveSample('munderover_example', 700, 200, "", "") }}
 
 ## Specifications
 

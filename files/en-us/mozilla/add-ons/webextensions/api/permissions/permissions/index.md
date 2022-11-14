@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.permissions.Permissions
 ---
+
 {{AddonSidebar()}}
 
 A `Permissions` object represents a collection of permissions.

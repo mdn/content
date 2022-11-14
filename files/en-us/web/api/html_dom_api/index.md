@@ -17,6 +17,7 @@ tags:
   - hierarchy
 browser-compat: api.HTMLElement
 ---
+
 {{DefaultAPISidebar("HTML DOM")}}
 
 The **HTML DOM API** is made up of the interfaces that define the functionality of each of the {{Glossary("element", "elements")}} in {{Glossary("HTML")}}, as well as any supporting types and interfaces they rely upon.
@@ -81,7 +82,8 @@ These element-specific interfaces make up the majority of the HTML DOM API, and 
 
 ## HTML DOM target audience
 
-The features exposed by the HTML DOM are among the most commonly-used APIs in the web developer's arsenal. All but the most simple web applications will use some features of the HTML DOM.
+The features exposed by the HTML DOM are among the most commonly-used APIs in a web developer's toolkit.
+All but the most simple web applications will use some features of the HTML DOM.
 
 ## HTML DOM API interfaces
 
@@ -311,11 +313,11 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
 
-#### JavaScript
+### JavaScript
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
@@ -333,7 +335,7 @@ nameField.addEventListener("input", (event) => {
 });
 ```
 
-This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`.  With these, we can access the properties and methods that provide information about and grant control over these elements.
+This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`. With these, we can access the properties and methods that provide information about and grant control over these elements.
 
 The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to `true`, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.
 
@@ -341,7 +343,7 @@ Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called
 
 With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
 
-#### HTML
+### HTML
 
 The HTML for the form looks like this:
 
@@ -350,17 +352,17 @@ The HTML for the form looks like this:
 <form action="" method="get">
   <p>
     <label for="userName" required>Your name:</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
     <label for="email">Email:</label>
-    <input type="email" id="userEmail">
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="Send" id="sendButton">
+  <input type="submit" value="Send" id="sendButton" />
 </form>
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 

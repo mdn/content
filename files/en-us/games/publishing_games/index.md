@@ -3,13 +3,14 @@ title: Publishing games
 slug: Games/Publishing_games
 tags:
   - Games
-  - HTML5
+  - HTML
   - JavaScript
   - Monetization
   - Promotion
   - distribution
   - publishing
 ---
+
 {{GamesSidebar}}
 
 HTML games have a huge advantage over native in terms of publishing and distribution — you have the freedom of distribution, promotion and monetization of your game on the Web, rather than each version being locked into a single store controlled by one company. You can benefit from the web being truly multiplatform. This series of articles looks at the options you have when you want to publish and distribute your game, and earn something out of it while you wait for it to become famous.

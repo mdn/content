@@ -1,6 +1,7 @@
 ---
 title: Applying color to HTML elements using CSS
 slug: Web/CSS/CSS_Colors/Applying_color
+page-type: guide
 tags:
   - Beginner
   - CSS
@@ -12,6 +13,7 @@ tags:
   - Styling HTML
   - color
 ---
+
 {{CSSRef}}
 
 This article is a primer introducing each of the ways CSS color can be used in HTML.
@@ -134,7 +136,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255, 0, 0
 
 Designers and artists often prefer to work using the [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
 
-The diagram below shows an HSL color cylinder. Hue defines the actual color based on the position along a circular {{glossary("color wheel")}} representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://www.wikipedia.org/), distributed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
+The diagram below shows an HSL color cylinder. Hue defines the actual color based on the position along a circular {{glossary("color wheel")}} representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://en.wikipedia.org/), distributed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
 ![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
 
@@ -160,9 +162,10 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -173,38 +176,38 @@ th {
 
 ```html
 <table>
- <thead>
-  <tr>
-   <th scope="col">Color in HSL notation</th>
-   <th scope="col">Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(90deg, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(90, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 50%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 50%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(270deg, 90%, 50%)</code></td>
-   <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Color in HSL notation</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(90deg, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(90, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 50%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 50%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(270deg, 90%, 50%)</code></td>
+      <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -251,14 +254,10 @@ The HTML responsible for creating the above example is shown here:
 ```html
 <div class="wrapper">
   <div class="box boxLeft">
-    <p>
-      This is the first box.
-    </p>
+    <p>This is the first box.</p>
   </div>
   <div class="box boxRight">
-    <p>
-      This is the second box.
-    </p>
+    <p>This is the second box.</p>
   </div>
 </div>
 ```
@@ -358,7 +357,7 @@ The HTML here creates a box that contains a color picker control (with a label c
 ```html
 <div id="box">
   <label for="colorPicker">Border color:</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
@@ -373,7 +372,7 @@ The CSS establishes a size for the box and some basic styling for appearances. T
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
 }
 ```
 

@@ -10,6 +10,7 @@ tags:
   - grid
   - normal flow
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
@@ -46,7 +47,7 @@ Before digging deeper into different layout methods, it's worth revisiting some 
 
 The process begins as the boxes of individual elements are laid out in such a way that any padding, border, or margin they happen to have is added to their content. This is what we call the **box model**.
 
-By default, a [block level element](/en-US/docs/Web/HTML/Block-level_elements)'s content fills the available inline space of the parent element containing it and grows along the block dimension to accommodate its content. The size of [Inline elements](/en-US/docs/Web/HTML/Inline_elements) is just the size of their content. You can't set width or height on inline elements — they just sit inside the content of block level elements. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
+By default, a [block level element](/en-US/docs/Web/HTML/Block-level_elements)'s content fills the available inline space of the parent element containing it and grows along the block dimension to accommodate its content. The size of [inline elements](/en-US/docs/Web/HTML/Inline_elements) is just the size of their content. You can't set width or height on inline elements — they just sit inside the content of block level elements — except for images. Unlike other inline elements, images can be resized without changing their `display` property. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
 
 That explains how elements are structured individually, but how about the way they're structured when they interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, which is based on the parent's [writing mode](/en-US/docs/Web/CSS/writing-mode) (_initial_: horizontal-tb). Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified. In English, for example, (or any other horizontal, top to bottom writing mode) block-level elements are laid out vertically.
 
@@ -60,13 +61,30 @@ Let's look at a simple example that explains all of this:
 ```html
 <h1>Basic document flow</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p>By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p>
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>Inline elements <span>like this one</span> and <span>this one</span> sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg" alt="snippet of cloth"></p>
+<p>
+  Inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line along with adjacent text nodes, if there is space on the same
+  line. Overflowing inline elements will
+  <span>wrap onto a new line if possible (like this one containing text)</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" alt="snippet of cloth" />
+</p>
 ```
 
 ```css
@@ -76,8 +94,8 @@ body {
 }
 
 p {
-  background: rgba(255,84,104,0.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
 }

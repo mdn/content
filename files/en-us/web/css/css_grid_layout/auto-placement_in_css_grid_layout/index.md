@@ -1,11 +1,13 @@
 ---
 title: Auto-placement in grid layout
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
 In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items.
@@ -15,20 +17,22 @@ In addition to the ability to place items accurately onto a created grid, the CS
 If you give the items no placement information they will position themselves on the grid, one in each grid cell.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -63,30 +67,32 @@ The default for automatically created rows in the implicit grid is for them to b
 You can however control the size of these rows with the property `grid-auto-rows`. To cause all created rows to be 100 pixels tall for example you would use:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -106,36 +112,35 @@ You can however control the size of these rows with the property `grid-auto-rows
 You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-     <div>One</div>
-     <div>Two</div>
-     <div>Three</div>
-     <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
-     <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>
+    Four <br />This cell <br />Has extra <br />content. <br />Max is auto
+    <br />so the row expands.
+  </div>
+  <div>Five</div>
 </div>
 ```
 
@@ -155,33 +160,35 @@ You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-a
 You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as `200px`. This will continue for as long as content is added to the implicit grid.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -204,42 +211,44 @@ In this next example I have created a grid with three row tracks of 200 pixels h
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-rows: repeat(3, 200px);
-    gap: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 300px 100px;
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px 100px;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -258,37 +267,39 @@ Grid places items that have not been given a grid position in what is described 
 The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don't start after the position of a placed item that comes before them.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -299,13 +310,13 @@ The first thing grid will do is place any items that have a position. In the exa
   grid-auto-rows: 100px;
   gap: 10px;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 ```
 
@@ -318,36 +329,38 @@ You can use placement properties while still taking advantage of auto-placement.
 You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn't fit into a track, it will move to the next row until it finds a space the item can fit in.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -358,18 +371,18 @@ You can see how this then leaves gaps in the grid, as for the auto-placed items 
   grid-auto-rows: 100px;
   gap: 10px;
 }
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 ```
 
@@ -384,52 +397,54 @@ To do this, add the property {{cssxref("grid-auto-flow")}} with a value of `dens
 Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
 ```css
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 .wrapper {
   display: grid;
@@ -467,28 +482,30 @@ Try removing the line `grid-auto-flow: dense` to see the content reflow to leave
 Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of `dt` and `dd` items. In my example I am allowing auto-placement to place the items, however I have classes that start a `dt` in column 1, and `dd` in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <dl>
-       <dt>Mammals</dt>
-       <dd>Cat</dd>
-       <dd>Dog</dd>
-       <dd>Mouse</dd>
-       <dt>Fish</dt>
-       <dd>Guppy</dd>
-       <dt>Birds</dt>
-       <dd>Pied Wagtail</dd>
-       <dd>Owl</dd>
-   </dl>
+  <dl>
+    <dt>Mammals</dt>
+    <dd>Cat</dd>
+    <dd>Dog</dd>
+    <dd>Mouse</dd>
+    <dt>Fish</dt>
+    <dd>Guppy</dd>
+    <dt>Birds</dt>
+    <dd>Pied Wagtail</dd>
+    <dd>Owl</dd>
+  </dl>
 </div>
 ```
 
@@ -505,8 +522,8 @@ dt {
   font-weight: bold;
 }
 dd {
-   grid-column: 2;
- }
+  grid-column: 2;
+}
 ```
 
 {{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}

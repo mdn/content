@@ -12,13 +12,15 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter.Segmenter
 ---
 
+{{JSRef}}
+
 The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) objects that enable locale-sensitive text segmentation.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Segmenter()
 new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
@@ -28,19 +30,19 @@ new Intl.Segmenter(locales, options)
 
 ### Parameters
 
-- `locales` {{ optional_inline }}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
-- `options` {{ optional_inline }}
+- `locales` {{optional_inline}}
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+- `options` {{optional_inline}}
   - : An object with some or all of the following properties:
-    - `granularity` {{ optional_inline }}
-      - : A string.  Possible values are:
+    - `granularity` {{optional_inline}}
+      - : A string. Possible values are:
         - `"grapheme"` (default)
           - : Split the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.
         - `"word"`
           - : Split the input into segments at word boundaries, as determined by the locale.
         - `"sentence"`
           - : Split the input into segments at sentence boundaries, as determined by the locale.
-    - `localeMatcher` {{ optional_inline }}
+    - `localeMatcher` {{optional_inline}}
       - : The locale matching algorithm to use. Possible values are:
         - `"best fit"` (default)
           - : The runtime may choose a possibly more suited locale than the result of the lookup algorithm.
@@ -61,7 +63,7 @@ The following example shows how to count words in a string using the Japanese la
 const text = "吾輩は猫である。名前はたぬき。";
 const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
 console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
-// logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
+// 8, as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 
 ## Specifications

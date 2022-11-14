@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.strike
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (horizontal line) over text.
 

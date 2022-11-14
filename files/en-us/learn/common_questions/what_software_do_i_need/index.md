@@ -6,6 +6,9 @@ tags:
   - NeedsActiveLearning
   - WebMechanics
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article, we lay out which software components you need when you're editing, uploading, or viewing a website.
 
 <table class="standard-table">
@@ -261,7 +264,7 @@ As you already know, you need a web browser to view websites. There are [dozens]
 
 If you're targeting a specific group (e.g., technical platform or country), you may have to test the site with additional browsers, like [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/).
 
-But testing gets complicated because some browsers only run on certain operating systems. Apple Safari runs on iOS and Mac OS, while Internet Explorer runs only on Windows. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots furnishes screenshots of your website as it will look in various browsers. Browserstack actually gives you full remote access to virtual machines so you can test your site in the most common environments. Alternatively, you can set up your own virtual machine, but that takes some expertise. (If you're going that route, Microsoft has made [ready-to-use virtual machines](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/) available.)
+But testing gets complicated because some browsers only run on certain operating systems. Apple Safari runs on iOS and macOS, while Internet Explorer runs only on Windows. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots furnishes screenshots of your website as it will look in various browsers. Browserstack actually gives you full remote access to virtual machines, so you can test your site in the most common environments. Alternatively, you can set up your own virtual machine, but that takes some expertise. (If you're going that route, Microsoft has made [ready-to-use virtual machines](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/) available.)
 
 By all means run some tests on a real device, especially on real mobile devices. Mobile device simulation is a new, evolving technology and less reliable than desktop simulation. Mobile devices cost money, of course, so we suggest taking a look at the [Open Device Lab initiative](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls). You can also share devices if you want to test on many platforms without spending too much.
 

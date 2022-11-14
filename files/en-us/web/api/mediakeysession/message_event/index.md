@@ -10,6 +10,7 @@ tags:
   - MediaKeySession
 browser-compat: api.MediaKeySession.message_event
 ---
+
 {{APIRef("Encrypted Media Extensions")}}
 
 The **`message`** event of the
@@ -28,7 +29,7 @@ onmessage = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaKeyMessageEvent")}}
 

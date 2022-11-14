@@ -6,7 +6,6 @@ tags:
   - API
   - AR
   - Augmented Reality
-  - Experimental
   - Input
   - Interface
   - Reference
@@ -18,13 +17,14 @@ tags:
   - control
 browser-compat: api.XRInputSource
 ---
-{{securecontext_header}}{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`** interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system. The device is specific to the platform being used, but provides the direction in which it is being aimed and optionally may generate events if the user triggers performs actions using the device.
 
-## Properties
+## Instance properties
 
-- {{domxref("XRInputSource.gamepad", "gamepad")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("XRInputSource.gamepad", "gamepad")}} {{ReadOnlyInline}}
   - : A {{domxref("Gamepad")}} object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is `null`.
 - {{domxref('XRInputSource.gripSpace', 'gripSpace')}} {{ReadOnlyInline}}
   - : An {{domxref("XRSpace")}} whose origin tracks the pose which is used to render objects which should appear as if they're held in the hand indicated by `handedness`. The orientation of this space indicates the angle at which the hand is gripping the object. Read on in the main article on {{domxref("XRInputSource.gripSpace", "gripSpace")}} for more details on how to use this space.
@@ -39,7 +39,7 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
 - {{domxref('XRInputSource.targetRaySpace', 'targetRaySpace')}} {{ReadOnlyInline}}
   - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direction in which it extends. This space is established using the method defined by `targetRayMode`.
 
-## Methods
+## Instance methods
 
 _The `XRInputSource` interface defines no methods._
 

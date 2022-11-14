@@ -1,6 +1,7 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,7 +12,8 @@ tags:
   - transform-origin
 browser-compat: css.properties.transform-origin
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`transform-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin for an element's transformations.
 
@@ -139,104 +141,102 @@ This example shows the effect of choosing different `transform-origin` values fo
 
 ```html hidden
 <div class="container">
+  <div class="example">
+    <div class="box box1">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<div class="example">
-  <div class="box box1">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
-
-<pre>
+  <pre>
 transform: none;
 </pre>
 
-<div class="example">
-  <div class="box box2">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box2">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 </pre>
 
-<div class="example">
-  <div class="box box3">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box3">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: 0 0;
 </pre>
 
-<div class="example">
-  <div class="box box4">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box4">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: 100% 100%;
 </pre>
 
-<div class="example">
-  <div class="box box5">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box5">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: -1em -3em;
 </pre>
 
-<div class="example">
-  <div class="box box6">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box6">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
 </pre>
 
-<div class="example">
-  <div class="box box7">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box7">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
 transform-origin: 0 0;
 </pre>
 
-<div class="example">
-  <div class="box box8">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box8">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
 transform-origin: 100% -30%;
 </pre>
 
-<div class="example">
-  <div class="box box9">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box9">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: skewX(50deg);
 transform-origin: 100% -30%;
 </pre>
 
-<div class="example">
-  <div class="box box10">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box10">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: skewY(50deg);
 transform-origin: 100% -30%;
 </pre>
-
 </div>
 ```
 

@@ -11,18 +11,19 @@ tags:
   - Service Workers
 browser-compat: api.PushManager
 ---
+
 {{ApiRef("Push API")}}
 
 The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
 
 This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushManager")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("PushManager.supportedContentEncodings")}}
   - : Returns an array of supported content codings that can be used to encrypt the payload of a push message.
 
-## Methods
+## Instance methods
 
 - {{domxref("PushManager.getSubscription()")}}
   - : Retrieves an existing push subscription. It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a `null` value.

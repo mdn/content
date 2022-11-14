@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URLSearchParams()`** constructor creates and returns a
@@ -19,14 +20,14 @@ new {{domxref("URLSearchParams")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new URLSearchParams()
-new URLSearchParams(init)
+new URLSearchParams(options)
 ```
 
 ### Parameters
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
   - : One of:
     - A string, which will be parsed from `application/x-www-form-urlencoded` format. A leading `'?'` character is ignored.
     - A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators) that produces a sequence of string pairs. Note that {{domxref("File")}} entries will be serialized as `[object File]` rather than as their filename (as they would in an `application/x-www-form-urlencoded` form).
@@ -44,7 +45,10 @@ various inputs.
 ```js
 // Retrieve params via url.search, passed into ctor
 const url = new URL('https://example.com?foo=1&bar=2');
-const params = new URLSearchParams(url.search);
+const params1 = new URLSearchParams(url.search);
+
+// Get the URLSearchParams object directly from an URL object
+const params1a = url.searchParams
 
 // Pass in a string literal
 const params2 = new URLSearchParams("foo=1&bar=2");

@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feDisplacementMap.yChannelSelector
 ---
+
 {{SVGRef}}
 
 The **`yChannelSelector`** attribute indicates which color channel from {{SVGAttr("in2")}} to use to displace the pixels in {{SVGAttr("in")}} along the y-axis.
@@ -18,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -26,22 +29,40 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg">
   <filter id="displacementFilter">
-    <feImage xlink:href="mdn.svg"
-        x="0" y="0" width="100%" height="100%" result="abc"/>
-    <feDisplacementMap in2="abc" in="SourceGraphic"
-        scale="30" yChannelSelector="R"/>
+    <feImage
+      xlink:href="mdn.svg"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      result="abc" />
+    <feDisplacementMap
+      in2="abc"
+      in="SourceGraphic"
+      scale="30"
+      yChannelSelector="R" />
   </filter>
   <filter id="displacementFilter2">
-    <feImage xlink:href="mdn.svg"
-        x="0" y="0" width="100%" height="100%" result="abc"/>
-    <feDisplacementMap in2="abc" in="SourceGraphic"
-        scale="30" yChannelSelector="B"/>
+    <feImage
+      xlink:href="mdn.svg"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      result="abc" />
+    <feDisplacementMap
+      in2="abc"
+      in="SourceGraphic"
+      scale="30"
+      yChannelSelector="B" />
   </filter>
 
-  <text x="10" y="60" font-size="50"
-      filter="url(#displacementFilter)">Some displaced text</text>
-  <text x="10" y="120" font-size="50"
-      filter="url(#displacementFilter2)">Some displaced text</text>
+  <text x="10" y="60" font-size="50" filter="url(#displacementFilter)">
+    Some displaced text
+  </text>
+  <text x="10" y="120" font-size="50" filter="url(#displacementFilter2)">
+    Some displaced text
+  </text>
 </svg>
 ```
 

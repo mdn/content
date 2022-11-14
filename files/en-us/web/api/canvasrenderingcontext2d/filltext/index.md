@@ -18,6 +18,7 @@ tags:
   - fillText
 browser-compat: api.CanvasRenderingContext2D.fillText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -43,7 +44,7 @@ The text is rendered using the font and text layout configuration as defined by 
 
 ## Syntax
 
-```js
+```js-nolint
 fillText(text, x, y)
 fillText(text, x, y, maxWidth)
 ```
@@ -92,11 +93,11 @@ First, we need a canvas to draw into. This code creates a context 400 pixels wid
 The JavaScript code for this example follows.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90);
 ```
 
 This code obtains a reference to the {{HTMLElement("canvas")}}, then gets a reference
@@ -124,11 +125,11 @@ This example writes the words "Hello world," restricting its width to 140 pixels
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90, 140);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90, 140);
 ```
 
 #### Result

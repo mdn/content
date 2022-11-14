@@ -7,10 +7,11 @@ tags:
   - Reference
 browser-compat: html.global_attributes.enterkeyhint
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`enterkeyhint`** [global attribute](/en-US/docs/Web/HTML/Global_attributes)
-is an enumerated attribute defining what action label (or icon) to present for the enter key on virtual keyboards.
+is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute defining what action label (or icon) to present for the enter key on virtual keyboards.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-enterkeyhint.html","tabbed-shorter")}}
 
@@ -32,7 +33,7 @@ attributes to display a suitable enter key label (or icon).
 
 ### Values
 
-The `enterkeyhint` attribute is an enumerated attribute and only accepts the following values:
+The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute and only accepts the following values:
 
 <table class="no-markdown">
   <thead>

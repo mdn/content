@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.host
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.host`** property is a

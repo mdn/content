@@ -12,20 +12,21 @@ tags:
   - Reference
 browser-compat: api.PresentationConnectionList
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
+
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
 `PresentationConnectionList` is the collection of incoming presentation connections.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref('PresentationConnectionList.connections')}} {{ReadOnlyInline}}
+- {{domxref('PresentationConnectionList.connections')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the non-terminated set of {{DOMxRef("PresentationConnection")}}s in the [set of presentation controllers](https://www.w3.org/TR/presentation-api/#dfn-set-of-presentation-controllers).
 
 ### Event Handlers
 
-- {{domxref('PresentationConnectionList.onconnectionavailable')}}
+- {{domxref('PresentationConnectionList.onconnectionavailable')}} {{Experimental_Inline}}
   - : Fired whenever a new [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) becomes available.
 
 ## Specifications

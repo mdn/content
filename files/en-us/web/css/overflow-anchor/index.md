@@ -1,6 +1,7 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overflow-anchor
 ---
+
 {{CSSRef}}
 
 The **`overflow-anchor`** [CSS](/en-US/docs/Web/CSS) property provides a way to opt out of the browser's scroll anchoring behavior, which adjusts scroll position to minimize content shifts.

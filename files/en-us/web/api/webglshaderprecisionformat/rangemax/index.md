@@ -9,6 +9,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat.rangeMax
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLShaderPrecisionFormat.rangeMax`** property returns the base 2 log of the absolute value of the maximum value that can be represented.

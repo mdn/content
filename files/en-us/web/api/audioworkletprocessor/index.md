@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioWorkletProcessor
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents an audio processing code behind a custom {{domxref("AudioWorkletNode")}}. It lives in the {{domxref("AudioWorkletGlobalScope")}} and runs on the Web Audio rendering thread. In turn, an {{domxref("AudioWorkletNode")}} based on it runs on the main thread.
@@ -24,12 +25,12 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : Creates a new instance of an `AudioWorkletProcessor` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioWorkletProcessor.port", "port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the processor and the {{domxref("AudioWorkletNode")}} which it belongs to. The other end is available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
-## Methods
+## Instance methods
 
 _The `AudioWorkletProcessor` interface does not define any methods of its own. However, you must provide a {{domxref("AudioWorkletProcessor.process", "process()")}} method, which is called in order to process the audio stream._
 
@@ -54,8 +55,8 @@ An example algorithm of creating a custom audio processing mechanism is:
 1. Create a separate file;
 2. In the file:
 
-    1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
-    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
+   1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
+   2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 
 3. Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;
 4. Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the `AudioWorkletNode` constructor.
@@ -70,27 +71,30 @@ First, we need to define a custom `AudioWorkletProcessor`, which will output whi
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
-    const output = outputs[0]
+  process(inputs, outputs, parameters) {
+    const output = outputs[0];
     output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
-        channel[i] = Math.random() * 2 - 1
+        channel[i] = Math.random() * 2 - 1;
       }
-    })
-    return true
+    });
+    return true;
   }
 }
 
-registerProcessor('white-noise-processor', WhiteNoiseProcessor)
+registerProcessor("white-noise-processor", WhiteNoiseProcessor);
 ```
 
 Next, in our main script file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}}, passing it the name of the processor, then connect the node to an audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('white-noise-processor.js')
-const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
-whiteNoiseNode.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("white-noise-processor.js");
+const whiteNoiseNode = new AudioWorkletNode(
+  audioContext,
+  "white-noise-processor"
+);
+whiteNoiseNode.connect(audioContext.destination);
 ```
 
 ## Specifications

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat()`** constructor creates
@@ -23,19 +24,23 @@ number formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.NumberFormat()
 new Intl.NumberFormat(locales)
 new Intl.NumberFormat(locales, options)
+
+Intl.NumberFormat()
+Intl.NumberFormat(locales)
+Intl.NumberFormat(locales, options)
 ```
+
+> **Note:** `Intl.NumberFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.NumberFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.NumberFormat` instance; see [Return value](#return_value).
 
 ### Parameters
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings.
-    For the general form and interpretation of the `locales` argument, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
-    The following Unicode extension key is allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension key is allowed:
 
     - `nu`
       - : The numbering system to be used. Possible values include:
@@ -44,7 +49,7 @@ new Intl.NumberFormat(locales, options)
         `"gujr"`, `"guru"`, `"hanidec"`, `"hmng"`, `"hmnp"`, `"java"`,
         `"kali"`, `"khmr"`, `"knda"`, `"lana"`, `"lanatham"`, `"laoo"`,
         `"latn"`, `"lepc"`, `"limb"`, `"mathbold"`, `"mathdbl"`, `"mathmono"`,
-        `"mathsanb"`, `mathsans"`, `"mlym"`, `"modi"`, `"mong"`, `"mroo"`,
+        `"mathsanb"`, `"mathsans"`, `"mlym"`, `"modi"`, `"mong"`, `"mroo"`,
         `"mtei"`, `"mymr"`, `"mymrshan"`, `"mymrtlng"`, `"newa"`, `"nkoo"`,
         `"olck"`, `"orya"`, `"osma"`, `"rohg"`, `"saur"`, `"segment"`,
         `"shrd"`, `"sind"`, `"sinh"`, `"sora"`, `"sund"`, `"takr"`, `"talu"`, `"tamldec"`, `"telu"`,
@@ -67,13 +72,14 @@ new Intl.NumberFormat(locales, options)
         - `"narrowSymbol"`: use a narrow format symbol ("$100" rather than "US$100").
         - `"code"`: use the ISO currency code.
         - `"name"`: use a localized currency name such as `"dollar"`.
+
     - `currencySign`
       - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign.
         You can enable this formatting by setting the `currencySign` option to `"accounting"`.
         The default value is `"standard"`.
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`.
-        For information about this option, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+        For information about this option, see the [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
     - `notation`
 
       - : The formatting that should be displayed for the number. The default is `"standard"`.
@@ -170,7 +176,7 @@ new Intl.NumberFormat(locales, options)
 
     - `roundingPriority` {{experimental_inline}}
 
-      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
+      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified:
 
         - `"auto"`: the result from the significant digits property is used (default).
         - `"morePrecision"`: the result from the property that results in more precision is used.
@@ -199,9 +205,9 @@ new Intl.NumberFormat(locales, options)
         >   roundingIncrement: 5,
         > });
         >
-        > console.log(nf.format(11.29)); // > output: "$11.30"
-        > console.log(nf.format(11.25)); // > output: "$11.25"
-        > console.log(nf.format(11.22)); // > output: "$11.20"
+        > console.log(nf.format(11.29)); // "$11.30"
+        > console.log(nf.format(11.25)); // "$11.25"
+        > console.log(nf.format(11.22)); // "$11.20"
         > ```
         >
         > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
@@ -228,13 +234,13 @@ new Intl.NumberFormat(locales, options)
       - : The minimum number of fraction digits to use.
         Possible values are from 0 to 20;
         the default for plain number and percent formatting is 0;
-        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use.
         Possible values are from 0 to 20;
         the default for plain number formatting is the larger of `minimumFractionDigits` and 3;
-        the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml) (2 if the list doesn't provide that information);
+        the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml) (2 if the list doesn't provide that information);
         the default for percent formatting is the larger of `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
       - : The minimum number of significant digits to use.
@@ -242,6 +248,35 @@ new Intl.NumberFormat(locales, options)
     - `maximumSignificantDigits`
       - : The maximum number of significant digits to use.
         Possible values are from 1 to 21; the default is 21.
+
+### Return value
+
+A new `Intl.NumberFormat` object.
+
+> **Note:** The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
+
+Normally, `Intl.NumberFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), and a new `Intl.NumberFormat` instance is returned in both cases. However, if the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value is an object that is [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) `Intl.NumberFormat` (doesn't necessarily mean it's created via `new Intl.NumberFormat`; just that it has `Intl.NumberFormat.prototype` in its prototype chain), then the value of `this` is returned instead, with the newly created `Intl.NumberFormat` object hidden in a `[Symbol(IntlLegacyConstructedSymbol)]` property (a unique symbol that's reused between instances).
+
+```js
+const formatter = Intl.NumberFormat.call(
+  { __proto__: Intl.NumberFormat.prototype },
+  "en-US",
+  { notation: "scientific" },
+);
+console.log(Object.getOwnPropertyDescriptors(formatter));
+// {
+//   [Symbol(IntlLegacyConstructedSymbol)]: {
+//     value: NumberFormat [Intl.NumberFormat] {},
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+//   }
+// }
+```
+
+Note that there's only one actual `Intl.NumberFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange)) would fail with "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+
+This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.NumberFormat`. If you call it directly as `Intl.NumberFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.NumberFormat` instance is created normally.
 
 ## Examples
 
@@ -253,7 +288,7 @@ In basic use without specifying a locale, a formatted string in the default loca
 const amount = 3500;
 
 console.log(new Intl.NumberFormat().format(amount));
-// → '3,500' if in US English locale
+// '3,500' if in US English locale
 ```
 
 ### Decimal and percent formatting
@@ -263,12 +298,10 @@ const amount = 3500;
 
 new Intl.NumberFormat("en-US", {
   style: "decimal",
-}).format(amount);
-// → '3,500'
+}).format(amount); // '3,500'
 new Intl.NumberFormat("en-US", {
   style: "percent",
-}).format(amount);
-// → '350,000%'
+}).format(amount); // '350,000%'
 ```
 
 ### Unit formatting
@@ -282,15 +315,13 @@ const amount = 3500;
 new Intl.NumberFormat("en-US", {
   style: "unit",
   unit: "liter",
-}).format(amount);
-// → '3,500 L'
+}).format(amount); // '3,500 L'
 
 new Intl.NumberFormat("en-US", {
   style: "unit",
   unit: "liter",
   unitDisplay: "long",
-}).format(amount);
-// → '3,500 liters'
+}).format(amount); // '3,500 liters'
 ```
 
 ### Currency formatting
@@ -304,22 +335,19 @@ const amount = -3500;
 new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
-}).format(amount);
-// → '-$3,500.00'
+}).format(amount); // '-$3,500.00'
 
 new Intl.NumberFormat("bn", {
   style: "currency",
   currency: "USD",
   currencyDisplay: "name",
-}).format(amount);
-// →  '-3,500.00 US dollars'
+}).format(amount); // '-3,500.00 US dollars'
 
 new Intl.NumberFormat("bn", {
   style: "currency",
   currency: "USD",
   currencySign: "accounting",
-}).format(amount);
-// →  '($3,500.00)'
+}).format(amount); // '($3,500.00)'
 ```
 
 ### Scientific, engineering or compact notations
@@ -330,39 +358,39 @@ Scientific and compact notation are represented by the `notation` option and can
 new Intl.NumberFormat("en-US", {
   notation: "scientific",
 }).format(987654321);
-// → 9.877E8
+// 9.877E8
 
 new Intl.NumberFormat("pt-PT", {
   notation: "scientific",
 }).format(987654321);
-// → 9,877E8
+// 9,877E8
 
 new Intl.NumberFormat("en-GB", {
   notation: "engineering",
 }).format(987654321);
-// → 987.654E6
+// 987.654E6
 
 new Intl.NumberFormat("de", {
   notation: "engineering",
 }).format(987654321);
-// → 987,654E6
+// 987,654E6
 
 new Intl.NumberFormat("zh-CN", {
   notation: "compact",
 }).format(987654321);
-// → 9.9亿
+// 9.9亿
 
 new Intl.NumberFormat("fr", {
   notation: "compact",
   compactDisplay: "long",
 }).format(987654321);
-// → 988 millions
+// 988 millions
 
 new Intl.NumberFormat("en-GB", {
   notation: "compact",
   compactDisplay: "short",
 }).format(987654321);
-// → 988M
+// 988M
 ```
 
 ### Displaying signs
@@ -374,7 +402,7 @@ new Intl.NumberFormat("en-US", {
   style: "percent",
   signDisplay: "exceptZero",
 }).format(0.55);
-// → '+55%'
+// '+55%'
 ```
 
 Note that when the currency sign is "accounting", parentheses might be used instead of a minus sign:
@@ -386,8 +414,7 @@ new Intl.NumberFormat("bn", {
   currencySign: "accounting",
   signDisplay: "always",
 }).format(-3500);
-
-// → '($3,500.00)'
+// '($3,500.00)'
 ```
 
 ### FractionDigits, SignificantDigits and IntegerDigits
@@ -411,7 +438,7 @@ console.log(
     minimumFractionDigits: 4,
   }).format(4.33)
 );
-// > "004.3300"
+// "004.3300"
 ```
 
 If a value has more fractional digits than the specified maximum number, it will be rounded.
@@ -425,7 +452,7 @@ console.log(
     maximumFractionDigits: 2,
   }).format(4.33145)
 );
-// > "4.33"
+// "4.33"
 ```
 
 The minimum factional digits have no effect if the value already has more than 2 fractional digits:
@@ -437,7 +464,7 @@ console.log(
     minimumFractionDigits: 2,
   }).format(4.33145)
 );
-// > "4.331"
+// "4.331"
 ```
 
 > **Warning:** Watch out for default values as they may affect formatting even if not specified in your code.
@@ -454,14 +481,26 @@ console.log(
     maximumFractionDigits: 2,
   }).resolvedOptions()
 );
-// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumFractionDigits: 0, maximumFractionDigits: 2, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+// {
+//   …
+//   minimumIntegerDigits: 1,
+//   minimumFractionDigits: 0,
+//   maximumFractionDigits: 2,
+//   …
+// }
 
 console.log(
   new Intl.NumberFormat("en", {
     minimumFractionDigits: 2,
   }).resolvedOptions()
 );
-// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumFractionDigits: 2, maximumFractionDigits: 3, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+// {
+//   …
+//   minimumIntegerDigits: 1, 
+//   minimumFractionDigits: 2,
+//   maximumFractionDigits: 3,
+//   …
+// }
 ```
 
 #### Using SignificantDigits
@@ -479,7 +518,7 @@ console.log(
     maximumSignificantDigits: 5,
   }).format(54.33145)
 );
-// > "54.331"
+// "54.331"
 
 // Max 2 significant digits
 console.log(
@@ -487,7 +526,7 @@ console.log(
     maximumSignificantDigits: 2,
   }).format(54.33145)
 );
-// > "54"
+// "54"
 
 // Max 1 significant digits
 console.log(
@@ -495,7 +534,7 @@ console.log(
     maximumSignificantDigits: 1,
   }).format(54.33145)
 );
-// > "50"
+// "50"
 ```
 
 The `minimumSignificantDigits` ensures that at least the specified number of digits are displayed, adding zeros to the end of the value if needed.
@@ -507,7 +546,7 @@ console.log(
     minimumSignificantDigits: 10,
   }).format(54.33145)
 );
-// > "54.33145000"
+// "54.33145000"
 ```
 
 > **Warning:** Watch out for default values as they may affect formatting.
@@ -516,7 +555,7 @@ console.log(
 
 #### Specifying significant and fractional digits at the same time
 
-The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and significant digits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are both ways of controlling how many fractional and leading digits should be formatted.
+The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and significant digits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are both ways of controlling how many fractional and leading digits should be formatted.
 If both are used at the same time, it is possible for them to conflict.
 
 These conflicts are resolved using the [`roundingPriority`](#roundingpriority) property.
@@ -531,20 +570,20 @@ console.log(
     maximumFractionDigits: 3,
   }).format(4.33145)
 );
-// > "4.331"
+// "4.331"
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
   }).format(4.33145)
 );
-// > "4.3"
+// "4.3"
 console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 3,
     maximumSignificantDigits: 2,
   }).format(4.33145)
 );
-// > "4.3"
+// "4.3"
 ```
 
 Using [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) to inspect the formatter, we can see that the returned object does not include `maximumFractionDigits` when `maximumSignificantDigits` or `minimumSignificantDigits` are specified.
@@ -556,14 +595,26 @@ console.log(
     maximumSignificantDigits: 2,
   }).resolvedOptions()
 );
-// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumSignificantDigits: 1, maximumSignificantDigits: 2, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+// {
+//   …
+//   minimumIntegerDigits: 1,
+//   minimumSignificantDigits: 1,
+//   maximumSignificantDigits: 2,
+//   …
+// }
 console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 3,
     minimumSignificantDigits: 2,
   }).resolvedOptions()
 );
-// > Object { locale: "en", numberingSystem: "latn", style: "decimal", minimumIntegerDigits: 1, minimumSignificantDigits: 2, maximumSignificantDigits: 21, useGrouping: "auto", notation: "standard", signDisplay: "auto", roundingMode: "halfExpand", roundingIncrement: 1, trailingZeroDisplay: "auto", roundingPriority: "auto" }
+// {
+//   …
+//   minimumIntegerDigits: 1,
+//   minimumSignificantDigits: 2,
+//   maximumSignificantDigits: 21,
+//   …
+// }
 ```
 
 In addition to `"auto"`, you can resolve conflicts by specifying [`roundingPriority`](#roundingpriority) as `"morePrecision"` or `"lessPrecision"`.
@@ -576,20 +627,20 @@ const maxFracNF = new Intl.NumberFormat("en", {
   maximumFractionDigits: 3,
 });
 console.log(`maximumFractionDigits:3 - ${maxFracNF.format(1.23456)}`);
-// > "maximumFractionDigits:2 - 1.235"
+// "maximumFractionDigits:2 - 1.235"
 
 const maxSigNS = new Intl.NumberFormat("en", {
   maximumSignificantDigits: 3,
 });
 console.log(`maximumSignificantDigits:3 - ${maxSigNS.format(1.23456)}`);
-// > "maximumSignificantDigits:3 - 1.23"
+// "maximumSignificantDigits:3 - 1.23"
 
 const bothAuto = new Intl.NumberFormat("en", {
   maximumSignificantDigits: 3,
   maximumFractionDigits: 3,
 });
 console.log(`auto - ${bothAuto.format(1.23456)}`);
-// > "auto - 1.23"
+// "auto - 1.23"
 
 const bothLess = new Intl.NumberFormat("en", {
   roundingPriority: "lessPrecision",
@@ -597,7 +648,7 @@ const bothLess = new Intl.NumberFormat("en", {
   maximumFractionDigits: 3,
 });
 console.log(`lessPrecision - ${bothLess.format(1.23456)}`);
-// > "lessPrecision - 1.23"
+// "lessPrecision - 1.23"
 
 const bothMore = new Intl.NumberFormat("en", {
   roundingPriority: "morePrecision",
@@ -605,7 +656,7 @@ const bothMore = new Intl.NumberFormat("en", {
   maximumFractionDigits: 3,
 });
 console.log(`morePrecision - ${bothMore.format(1.23456)}`);
-// > "morePrecision - 1.235"
+// "morePrecision - 1.235"
 ```
 
 Note that the algorithm can behave in an unintuitive way if a minimum value is specified without a maximum value.
@@ -619,7 +670,7 @@ const bothLess = new Intl.NumberFormat("en", {
   minimumSignificantDigits: 2,
 });
 console.log(`lessPrecision - ${bothLess.format(1)}`);
-// > "lessPrecision - 1.00"
+// "lessPrecision - 1.00"
 
 const bothMore = new Intl.NumberFormat("en", {
   roundingPriority: "morePrecision",
@@ -627,7 +678,7 @@ const bothMore = new Intl.NumberFormat("en", {
   minimumSignificantDigits: 2,
 });
 console.log(`morePrecision - ${bothMore.format(1)}`);
-// > "morePrecision - 1.0"
+// "morePrecision - 1.0"
 ```
 
 The reason for this is that only the "maximum precision" values are used for the calculation, and the default value of `maximumSignificantDigits` is much higher than `maximumFractionDigits`.
@@ -653,7 +704,7 @@ console.log(
     maximumSignificantDigits: 2,
   }).format(2.23)
 );
-// > "2.2"
+// "2.2"
 
 // Value on or above half-increment: round up.
 console.log(
@@ -666,8 +717,8 @@ console.log(
     maximumSignificantDigits: 2,
   }).format(2.28)
 );
-// > "2.3"
-// > "2.3"
+// "2.3"
+// "2.3"
 ```
 
 A negative number on or below the half-increment point is also rounded away from zero (becomes more negative):
@@ -679,7 +730,7 @@ console.log(
     maximumSignificantDigits: 2,
   }).format(-2.23)
 );
-// > "-2.2"
+// "-2.2"
 
 // Value on or above half-increment: round up.
 console.log(
@@ -692,23 +743,23 @@ console.log(
     maximumSignificantDigits: 2,
   }).format(-2.28)
 );
-// > "-2.3"
-// > "-2.3"
+// "-2.3"
+// "-2.3"
 ```
 
 The table below show the effect of different rounding modes for positive and negative values that are on and around the half-increment.
 
-| rounding mode  | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
-| -------------- | ---- | ---- | ---- | ----- | ----- | ----- |
-| `ceil`         | 2.3  | 2.3  | 2.3  | -2.2  | -2.2  | -2.2  |
-| `floor`        | 2.2  | 2.2  | 2.2  | -2.3  | -2.3  | -2.3  |
-| `expand`       | 2.3  | 2.3  | 2.3  | -2.3  | -2.3  | -2.3  |
-| `trunc`        | 2.2  | 2.2  | 2.2  | -2.2  | -2.2  | -2.2  |
-| `halfCeil`     | 2.2  | 2.3  | 2.3  | -2.2  | -2.2  | -2.3  |
-| `halfFloor`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.3  | -2.3  |
-| `halfExpand`   | 2.2  | 2.3  | 2.3  | -2.2  | -2.3  | -2.3  |
-| `halfTrunc`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
-| `halfEven`     | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
+| rounding mode | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
+| ------------- | ---- | ---- | ---- | ----- | ----- | ----- |
+| `ceil`        | 2.3  | 2.3  | 2.3  | -2.2  | -2.2  | -2.2  |
+| `floor`       | 2.2  | 2.2  | 2.2  | -2.3  | -2.3  | -2.3  |
+| `expand`      | 2.3  | 2.3  | 2.3  | -2.3  | -2.3  | -2.3  |
+| `trunc`       | 2.2  | 2.2  | 2.2  | -2.2  | -2.2  | -2.2  |
+| `halfCeil`    | 2.2  | 2.3  | 2.3  | -2.2  | -2.2  | -2.3  |
+| `halfFloor`   | 2.2  | 2.2  | 2.3  | -2.2  | -2.3  | -2.3  |
+| `halfExpand`  | 2.2  | 2.3  | 2.3  | -2.2  | -2.3  | -2.3  |
+| `halfTrunc`   | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
+| `halfEven`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 
 When using `halfEven`, its behavior also depends on the parity (odd or even) of the last digit of the rounded number. For example, the behavior of `halfEven` in the table above is the same as `halfTrunc`, because the magnitudes of all numbers are between a smaller "even" number (2.2) and a larger "odd" number (2.3). If the numbers are between ±2.3 and ±2.4, `halfEven` will behave like `halfExpand` instead. This behavior avoids consistently under- or over-estimating half-increments in a large data sample.
 
@@ -729,9 +780,9 @@ const nf = new Intl.NumberFormat("en-US", {
   roundingIncrement: 5,
 });
 
-console.log(nf.format(11.29)); // > output: "$11.30"
-console.log(nf.format(11.25)); // > output: "$11.25"
-console.log(nf.format(11.22)); // > output: "$11.20"
+console.log(nf.format(11.29)); // "$11.30"
+console.log(nf.format(11.25)); // "$11.25"
+console.log(nf.format(11.22)); // "$11.20"
 ```
 
 This particular pattern is referred to as "nickel rounding", where nickel is the colloquial name for a USA 5 cent coin.
@@ -745,9 +796,9 @@ const nf = new Intl.NumberFormat("en-US", {
   roundingIncrement: 5,
 });
 
-console.log(nf.format(11.29)); // > output: "$11.30"
-console.log(nf.format(11.25)); // > output: "$11.25"
-console.log(nf.format(11.22)); // > output: "$11.20"
+console.log(nf.format(11.29)); // "$11.30"
+console.log(nf.format(11.25)); // "$11.25"
+console.log(nf.format(11.22)); // "$11.20"
 ```
 
 You can also use [`roundingMode`](#roundingmode) to change the rounding algorithm.
@@ -763,11 +814,11 @@ const nf = new Intl.NumberFormat("en-US", {
   roundingMode: "halfCeil",
 });
 
-console.log(nf.format(11.21)); // > output: "$11.20"
-console.log(nf.format(11.22)); // > output: "$11.20"
-console.log(nf.format(11.224)); // > output: "$11.20"
-console.log(nf.format(11.225)); // > output: "$11.25"
-console.log(nf.format(11.23)); // > output: "$11.25"
+console.log(nf.format(11.21)); // "$11.20"
+console.log(nf.format(11.22)); // "$11.20"
+console.log(nf.format(11.224)); // "$11.20"
+console.log(nf.format(11.225)); // "$11.25"
+console.log(nf.format(11.23)); // "$11.25"
 ```
 
 If you need to change the number of digits, remember that `minimumFractionDigits` and `maximumFractionDigits` must both be set to the same value, or a `RangeError` is thrown.

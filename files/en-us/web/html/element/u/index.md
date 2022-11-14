@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.u
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
 
@@ -123,8 +123,7 @@ This example uses the `<u>` element and some CSS to display a paragraph which in
 #### HTML
 
 ```html
-<p>This paragraph includes a <u class="spelling">wrnogly</u>
-spelled word.</p>
+<p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
 
 In the HTML, we see the use of `<u>` with a class, `spelling`, which is used to indicate the misspelling of the word "wrongly".
@@ -157,7 +156,7 @@ To underline text without implying any semantic meaning, use a {{HTMLElement("sp
 
 ```html
 <span class="underline">Today's Special</span>
-<br>
+<br />
 Chicken Noodle Soup With Carrots
 ```
 

@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.xlink.xlink_arcrole
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`xlink:arcrole`** attribute specifies a contextual role for the element and corresponds to the [RDF Primer](https://www.w3.org/TR/rdf-primer/) notion of a property.

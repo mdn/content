@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Request")}} interface
@@ -18,7 +19,7 @@ reads the request body and returns it as a promise that resolves with an {{jsxre
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 

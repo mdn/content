@@ -4,11 +4,12 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_actions
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A browser action is a button you can add to the browser toolbar. Users can click the button to interact with your extension.
 
-![](browser-action.png)
+![Play button browser action in the browser toolbar: it looks like a play button](browser-action.png)
 
 There are two ways to specify a browser action: with a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), or without a popup.
 

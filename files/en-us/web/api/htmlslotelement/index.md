@@ -10,18 +10,19 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement
 ---
+
 {{APIRef('Web Components')}}
 
 The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref('HTMLSlotElement.name')}}
   - : A string used to get and set the slot's name.
 
-## Methods
+## Instance methods
 
 - {{domxref('HTMLSlotElement.assign()')}}
   - : Sets the manually assigned nodes for this slot to the given nodes.

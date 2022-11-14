@@ -13,6 +13,7 @@ tags:
   - getViews
 browser-compat: webextensions.api.extension.getViews
 ---
+
 {{AddonSidebar()}}
 
 Returns an array of the [Window](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension. This includes, for example:
@@ -26,7 +27,7 @@ In Firefox, if this method is called from a page that is part of a private brows
 
 ## Syntax
 
-```js
+```js-nolint
 let windows = browser.extension.getViews(
   fetchProperties // optional object
 )
@@ -81,7 +82,8 @@ const windows = browser.extension.getViews({ type: "popup" });
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +110,4 @@ const windows = browser.extension.getViews({ type: "popup" });
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

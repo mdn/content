@@ -1,6 +1,7 @@
 ---
-title: '::before (:before)'
+title: "::before"
 slug: Web/CSS/::before
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.before
 ---
+
 {{CSSRef}}
 
 In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the first child of the selected element. It is often used to add cosmetic content to an element with the {{cssxref("content")}} property. It is inline by default.
@@ -70,12 +72,12 @@ We can style text or images in the {{cssxref("content")}} property almost any wa
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
   content: "Look at this orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -115,11 +117,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -136,12 +138,16 @@ li.done::before {
 #### JavaScript
 
 ```js
-const list = document.querySelector('ul');
-list.addEventListener('click', (ev) => {
-  if (ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+const list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  (ev) => {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false
+);
 ```
 
 Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
@@ -161,7 +167,7 @@ As this is CSS; not HTML, you can **not** use markup entities in content values.
   <li>Crack Eggs into bowl</li>
   <li>Add Milk</li>
   <li>Add Flour</li>
-  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li aria-current="step">Mix thoroughly into a smooth batter</li>
   <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
   <li>Fry until the top of the pancake loses its gloss</li>
   <li>Flip it over and fry for a couple more minutes</li>
@@ -173,14 +179,14 @@ As this is CSS; not HTML, you can **not** use markup entities in content values.
 
 ```css
 li {
-  padding:0.5em;
+  padding: 0.5em;
 }
 
-li[aria-current='step'] {
-  font-weight:bold;
+li[aria-current="step"] {
+  font-weight: bold;
 }
 
-li[aria-current='step']::after {
+li[aria-current="step"]::after {
   content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
   display: inline;
 }

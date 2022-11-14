@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.timeLog
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling
@@ -23,7 +24,7 @@ details and examples.
 
 ## Syntax
 
-```js
+```js-nolint
 timeLog(label)
 ```
 
@@ -73,7 +74,7 @@ console.timeEnd("answer time");
 The output from the example above shows the time taken by the user to dismiss the first
 alert box, followed by the time it took for the user to dismiss the second alert:
 
-![](timer_output.png)
+![Timer output in Firefox console](timer_output.png)
 
 Notice that the timer's name is displayed when the timer value is logged using
 `timeLog()` and again when it's stopped. In addition, the call to timeEnd()

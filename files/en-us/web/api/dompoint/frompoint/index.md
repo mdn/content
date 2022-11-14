@@ -17,6 +17,7 @@ tags:
   - fromPoint
 browser-compat: api.DOMPoint.fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The static **{{domxref("DOMPoint")}}** method
@@ -31,7 +32,7 @@ the properties within may be changed at will.
 
 ## Syntax
 
-```js
+```js-nolint
 fromPoint(sourcePoint)
 ```
 

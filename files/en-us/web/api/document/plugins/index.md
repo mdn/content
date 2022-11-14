@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.plugins
 ---
+
 {{APIRef("DOM")}}
 
 The **`plugins`** read-only property of the

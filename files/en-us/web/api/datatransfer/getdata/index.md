@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`DataTransfer.getData()`**
@@ -21,7 +22,7 @@ Example data types are `text/plain` and `text/uri-list`.
 
 ## Syntax
 
-```js
+```js-nolint
 getData(format)
 ```
 
@@ -37,6 +38,7 @@ A string representing the drag data for the specified `format`. If the drag oper
 ### Caveats
 
 - Data availability
+
   - : The [HTML Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
     This may result in unexpected behavior, being
     **`DataTransfer.getData()`** not returning an expected
@@ -54,7 +56,9 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
+  <span id="drag" draggable="true" ondragstart="drag(event)"
+    >drag me to the other box</span
+  >
 </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```
@@ -108,5 +112,4 @@ function drop(dropevent) {
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

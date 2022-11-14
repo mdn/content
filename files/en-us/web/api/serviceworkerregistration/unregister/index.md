@@ -11,6 +11,7 @@ tags:
   - unregister
 browser-compat: api.ServiceWorkerRegistration.unregister
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`unregister()`** method of the
@@ -26,7 +27,7 @@ unregistered.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister()
 ```
 
@@ -45,18 +46,21 @@ The following simple example registers a service worker example, but then immedi
 unregisters it again:
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then((registration) => {
-    // registration worked
-    console.log('Registration succeeded.');
-    registration.unregister().then((boolean) => {
-      // if boolean = true, unregister is successful
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js", { scope: "/" })
+    .then((registration) => {
+      // registration worked
+      console.log("Registration succeeded.");
+      registration.unregister().then((boolean) => {
+        // if boolean = true, unregister is successful
+      });
+    })
+    .catch((error) => {
+      // registration failed
+      console.error(`Registration failed with ${error}`);
     });
-  }).catch((error) => {
-    // registration failed
-    console.error(`Registration failed with ${error}`);
-  });
-};
+}
 ```
 
 ## Specifications
@@ -70,7 +74,7 @@ if ('serviceWorker' in navigator) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

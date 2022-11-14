@@ -15,6 +15,7 @@ tags:
   - wheel
 browser-compat: api.Element.mousewheel_event
 ---
+
 {{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
 
 The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously at an {{domxref("Element")}} to provide updates while a mouse wheel or similar device is operated. The `mousewheel` event was never part of any standard, and while it was implemented by several browsers, it was never implemented by Firefox.
@@ -83,10 +84,6 @@ IE and Opera (Presto) only support `wheelDelta` attribute and do _not_ support h
 The `wheelDeltaX` attribute value indicates the `wheelDelta` attribute value along the horizontal axis. When a user operates the device for scrolling to right, the value is negative. Otherwise, i.e., if it's to left, the value is positive.
 
 The `wheelDeltaY` attribute value indicates the `wheelDelta` attribute value along the vertical axis. The sign of the value is the same as the `wheelDelta` attribute value.
-
-### Internet Explorer
-
-The value is the same as the delta value of Windows' `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. It means that if the mouse wheel doesn't support high resolution scroll, the value is 120 per notch. The value isn't changed even if the scroll amount of system settings is page scroll.
 
 ### Chrome
 

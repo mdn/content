@@ -7,13 +7,14 @@ tags:
   - Game publishing
   - Games
   - Gaming
-  - HTML5
+  - HTML
   - JavaScript
   - Mobile Game Distribution
   - Phonegap
   - Web Stores
   - distribution
 ---
+
 {{GamesSidebar}}
 
 You've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! This article covers all you need to know about the ways in which you can distribute your newly created game into the wild. This includes hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
@@ -96,13 +97,13 @@ If you're looking for more information about the different types of app stores y
 
 ### Native desktop
 
-To broaden your audience you can hit the desktop ecosystem with your HTML games too — just remember all the popular AAA games that take most of the market share, and think carefully about whether this suits your strategy. To do the desktop thing properly you should support all three operating systems: Windows, Mac OS and Linux. The biggest desktop store for games is definitely [Steam](https://steamcommunity.com/) — indie developers can get on Steam via the [Steam Direct](https://partner.steamgames.com/steamdirect) program. Remember that you have to deal with the cross-platform issues yourself by uploading separate versions for different platforms.
+To broaden your audience you can hit the desktop ecosystem with your HTML games too — just remember all the popular AAA games that take most of the market share, and think carefully about whether this suits your strategy. To do the desktop thing properly you should support all three operating systems: Windows, macOS and Linux. The biggest desktop store for games is definitely [Steam](https://steamcommunity.com/) — indie developers can get on Steam via the [Steam Direct](https://partner.steamgames.com/steamdirect) program. Remember that you have to deal with the cross-platform issues yourself by uploading separate versions for different platforms.
 
 After you've covered Steam, there's plenty of buzz around initiatives like [Humble Bundle](https://www.humblebundle.com/) where the most popular indie games get presented to a broader audience. It's more like an excellent promotional opportunity than a way to earn a lot of money, however, as the prices paid for the games in a bundle are usually quite low.
 
 ## Packaging games
 
-The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools like [Phonegap](/en-US/docs/Web) or [CocoonIO](/en-US/docs/Web) to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
+The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools like [Phonegap](https://phonegap.com/) or [CocoonIO](http://cocoon.io/) to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
 
 ### Available tools
 
@@ -110,7 +111,7 @@ There are various tools to choose from depending on your skills, preferred frame
 
 - [Phonegap](https://phonegap.com/) — based on Cordova, this is the most popular tool for building/packaging JavaScript apps for native platforms.
 - [CocoonIO](http://cocoon.io/) — the most popular tool specifically for building HTML games for multiple native stores. It has its own performance optimizations for games rendered on Canvas and supports many game frameworks.
-- [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it only supports only one framework and app store.
+- [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it supports only one framework and app store.
 - [NW.js](https://nwjs.io/) — formerly known as Node-Webkit, this is the first choice when it comes to building a desktop game that works on Windows, Mac and Linux. The distributions are packaged with the WebKit engine to provide rendering on any platform.
 
 Other alternative tools are:

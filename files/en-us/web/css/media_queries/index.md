@@ -1,6 +1,7 @@
 ---
 title: Media queries
 slug: Web/CSS/Media_Queries
+page-type: css-module
 tags:
   - CSS
   - Guide
@@ -12,13 +13,20 @@ spec-urls:
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/css-conditional/
 ---
+
 {{CSSRef}}
 
-**Media queries** let you adapt your site or app depending on the presence or value of various device characteristics and parameters.
+**Media queries** are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) that allow you to apply CSS styles depending on the presence or value of device characteristics.
 
-They are a key component of [responsive design](/en-US/docs/Web/Progressive_web_apps). For example, a media query can shrink the font size on small devices, increase the padding between paragraphs when a page is viewed in portrait mode, or bump up the size of buttons on touchscreens.
+It's common to apply a media query based on the {{Glossary("viewport")}} size so that layout choices can be made for devices with different screen sizes.
+For example, you may have a smaller font size for devices with small screens, increase the padding between paragraphs when a page is viewed in portrait mode, or increase the size of buttons on touchscreens.
 
-In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query. Use {{cssxref("@import")}} to conditionally apply an entire style sheet.
+![A laptop and a mobile device with different viewport sizes that can be queried using media queries.](media-queries.png)
+
+In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query.
+To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
+
+When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_Container_Queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
 
 ### Media queries in HTML
 
@@ -30,7 +38,9 @@ In [HTML](/en-US/docs/Web/HTML), media queries can be applied to various element
 
 ### Media queries in JavaScript
 
-In [JavaScript](/en-US/docs/Web/JavaScript), you can use the {{domxref("Window.matchMedia()")}} method to test the window against a media query. You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of a query changes. With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.
+In [JavaScript](/en-US/docs/Web/JavaScript), you can use the {{domxref("Window.matchMedia()")}} method to test the window against a media query.
+You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of a query changes.
+With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.
 
 You can learn more about programmatically using media queries in [Testing media queries](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries).
 
@@ -56,4 +66,5 @@ You can learn more about programmatically using media queries in [Testing media 
 
 ## See also
 
+- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.

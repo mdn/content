@@ -9,6 +9,7 @@ tags:
   - message
 browser-compat: api.WebSocket.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired when data is received through a `WebSocket`.
@@ -25,7 +26,7 @@ onmessage = (event) => { }
 
 ## Event type
 
-An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 

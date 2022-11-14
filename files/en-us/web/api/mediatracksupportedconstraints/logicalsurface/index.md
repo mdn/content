@@ -19,6 +19,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`logicalSurface`** property indicates whether or not the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the user agent and the device on which the content is being used.
@@ -27,8 +28,8 @@ The supported constraints list is obtained by calling {{domxref("MediaDevices.ge
 
 ## Syntax
 
-```js
-isLogicalSurfaceSupported = supportedConstraints.logicalSurface;
+```js-nolint
+isLogicalSurfaceSupported = supportedConstraints.logicalSurface
 ```
 
 ### Value
@@ -77,7 +78,7 @@ async function capture() {
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

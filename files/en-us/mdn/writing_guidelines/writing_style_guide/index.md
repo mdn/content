@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This writing style guide describes how content should be written, organized, spelled, and formatted on MDN Web Docs.
@@ -14,7 +15,7 @@ These guidelines are for ensuring language and style consistency across the webs
 
 > **Note:** The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
 
-After listing the general writing guidelines, this guide describes the recommended the writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
+After listing the general writing guidelines, this guide describes the recommended writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
 
 ## General writing guidelines
 
@@ -72,8 +73,8 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
 
 - **Example of an appropriate introduction**: Here we see a much better overview for the `strokeText()` method.
 
-  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API),   strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y   coordinates.
-  > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according   to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}},   and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+  > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
   > For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -126,7 +127,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
 
 - **Ensure that pages aren't too similar**: If the content on different pages is similar textually, search engines will assume that the pages are about the same thing even if they aren't.
   For example, if an interface has the properties `width` and `height`, it's easy for the text to be surprisingly similar on the two pages documenting these two properties, with just a few words swapped out and using the same example. This makes it hard for search engines to know which is which, and they wind up sharing page rank, resulting in both being harder to find than they ought to be.
-  
+
   It's important, then, to ensure that every page has its own content. Here are some suggestions to help you accomplish that:
 
   - **Explain more unique concepts**: Consider use cases where there might be more differences than one would think. For instance, in the case of documenting `width` and `height` properties, perhaps write about the ways horizontal space and vertical space are used differently, and provide a discussion about the appropriate concepts. Perhaps you can mention the use of `width` in terms of making room for a sidebar, while using `height` to handle vertical scrolling or footers. Including information about accessibility issues is a useful and important idea as well.
@@ -179,7 +180,7 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
   - **Correct**: ... web browsers, and so on.
   - **Incorrect**: ... web browsers, etc.
-  
+
   - **Correct**: Web browsers such as Firefox can be used ...
   - **Incorrect**: Web browsers e.g. Firefox can be used ...
 
@@ -239,19 +240,20 @@ Our writing style tends to be casual, so you should feel free to use contraction
   - **Correct**: 4000; 54,000
   - **Incorrect**: 4,000; 54000
 
-- **Dates**: For dates (not including dates in code samples), use the format "January 1, 1990".
+- **Dates**: For dates (not including dates in code samples), use the format "January 1, 1900".
 
-  - **Correct**: February 24, 2006
-  - **Incorrect**: February 24th, 2006; 24 February, 2006; 24/02/2006
+  - **Correct**: February 24, 1906
+  - **Incorrect**: February 24th, 1906; 24 February, 1906; 24/02/1906
 
   Alternately, you can use the YYYY/MM/DD format.
-  - **Correct**: 2006/02/24
-  - **Incorrect**: 02/24/2006; 24/02/2006; 02/24/06
+
+  - **Correct**: 1906/02/24
+  - **Incorrect**: 02/24/1906; 24/02/1906; 02/24/06
 
 - **Decades**: Use the format "1990s". Don't use an apostrophe.
 
-  - **Correct**: 1990s
-  - **Incorrect**: 1990's
+  - **Correct**: 1920s
+  - **Incorrect**: 1920's
 
 - **Plurals of numerals**: Add "s". Don't use an apostrophe.
 
@@ -270,13 +272,14 @@ Use English-style plurals, not the Latin- or Greek-influenced forms.
 Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use straight quotes and apostrophes. This is because we need to choose one or the other for consistency. If curly quotes or apostrophes make their way into code snippets, even inline ones, readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don’t use “curly quotes.”
+- **Incorrect**: Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
 
 ### Commas
 
 The list below describes some of the common situations where we need to be aware of the comma usage rules:
 
 - **After introductory clauses**: An introductory clause is a dependent clause, usually found at the beginning of a sentence. Use a comma after an introductory clause to separate it from the following independent clause.
+
   - Example 1:
     - **Correct**: "In this example, you will see how to use a comma."
     - **Incorrect**: "In this example you will see how to use a comma."
@@ -298,6 +301,7 @@ The list below describes some of the common situations where we need to be aware
   - **Incorrect**: "My dog is cute, and smart."
 
   Use comma before the conjunctions "and", "but", and "or" if they join two independent clauses. However, if the sentence is becoming very long or complex with the conjunction, consider rewriting it as two sentences.
+
   - Example 1:
     - **Correct**: "You can perform this step, but you need to pay attention to the file setting."
     - **Incorrect**: "You can perform this step but you need to pay attention to the file setting."
@@ -308,12 +312,12 @@ The list below describes some of the common situations where we need to be aware
 - **Before "that" and "which"**: A restrictive clause is essential for the meaning of the sentence and does not need commas to be set off from the remaining sentence. A restrictive clause is usually introduced by "that" and **should not** be preceded by a comma.
 
   - **Correct**: "We have put together a course that includes all the essential information you need to work towards your goal."
-  - **Incorrect**: "We have put together a course, that includes all the essential information you need to work towards your goal."W
+  - **Incorrect**: "We have put together a course, that includes all the essential information you need to work towards your goal."
 
   A nonrestrictive clause provides additional information and is not essential to the meaning of the sentence. A nonrestrictive clause is usually introduced by "which" and should be preceded by a comma.
 
   - **Correct**: "You write a policy, which is an allowed list of origins for each feature."
-  - **Incorrect**: "You write a policy, which is an allowed list of origins for each feature."
+  - **Incorrect**: "You write a policy which is an allowed list of origins for each feature."
 
 - **Before "such as"**: If "such as" is part of a nonrestrictive clause and the remaining sentence is an independent clause, use comma before "such as".
 
@@ -337,7 +341,7 @@ Hyphenated compounds should be used when the last letter of the prefix is a vowe
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional *u* added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
 Do not use variant spellings.
 
 - **Correct**: localize, behavior
@@ -439,7 +443,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 If you include images or other media in on a page, follow these guidelines:
 
-- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license —  [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - When displaying icons on a page (e.g., via {{cssxref("background-image")}}), use icons from the [mdn-dinocons](https://github.com/mdn/mdn-dinocons) repository, where appropriate, and try to match their style in other cases. <!--this is not valid anymore, the repo has been archived. do we want to point readers to another resource?-->
@@ -468,10 +472,11 @@ However, depending on the type of list you are creating, you will want to adjust
   >
   > 1. Open with a heading or brief paragraph to introduce the instructions. It's important to provide the user with context before beginning the instructions.
   > 2. Start creating your instructions, and keep each step in its own numbered item.
-  >   Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.
+  >    Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.
   > 3. After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.
 
   The following is an example of writing a closing explanation for the above list:
+
   > We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
   Notice how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.
@@ -520,7 +525,7 @@ Keep the following guidelines in mind when writing titles:
   - **Group logically**: Make sure all related subsections are grouped together logically under a higher level heading. Naming titles of various sections can help you in this exercise.
   - **Keep titles short**: Shorter titles are easier to scan in text and in table of contents.
   - **Keep titles specific**: Use the title to convey the specific information that will be covered in the section. For example, for a section introducing HTML elements, use the title "HTML elements" instead of "Introduction" or "Overview".
-  - **Keep titles focussed**: Use the title to convey one objective—a single idea or a concept that will be covered in that section. For that purpose, as far as possible, try not to use the conjunction "and" in a title.
+  - **Keep titles focused**: Use the title to convey one objective—a single idea or a concept that will be covered in that section. For that purpose, as far as possible, try not to use the conjunction "and" in a title.
   - **Use parallel construction**: Use similar language for titles at the same heading level. For example, if a `###` heading level title uses gerunds, that is, words ending in "-ing", such as "Installing", then try to write all titles at that heading level using gerunds. If a title starts with an imperative verb, such as "Use", "Configure", then write all titles at that heading level starting with an imperative verb.
   - **Avoid common term in lower-level heading**: Do not repeat the text in the title of a higher-level heading in lower-level titles. For example, in a section titled "Commas", name the title of a subsection "After introductory clauses" instead of "Commas after introductory clauses".
   - **Don't begin with article**: Avoid starting titles with articles "a", "an", or "the".
@@ -530,7 +535,7 @@ Keep the following guidelines in mind when writing titles:
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary
@@ -549,6 +554,5 @@ If you're interested in improving your writing and editing skills, you may find 
 - [Style: The Basics of Clarity and Grace](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/), by Joseph Williams and Gregory Colomb (Amazon link)
 - [Common Errors in English](https://brians.wsu.edu/common-errors-in-english-usage/)
 - [English Grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) (alt.usage.english)
-- [Bob's quick guide to the apostrophe, you idiots](https://www.angryflower.com/bobsqu.gif) (funny)
 - [Merriam-Webster's Concise Dictionary of English Usage](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.
 - [English Language and Usage StackExchange](https://english.stackexchange.com/): Question and answer site for English language usage.

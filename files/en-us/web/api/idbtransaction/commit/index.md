@@ -11,6 +11,7 @@ tags:
   - commit
 browser-compat: api.IDBTransaction.commit
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`commit()`** method of the {{domxref("IDBTransaction")}} interface commits the transaction if it is called on an active transaction.
@@ -23,7 +24,7 @@ If it is called on a transaction that is not active, it throws an `InvalidStateE
 
 ## Syntax
 
-```js
+```js-nolint
 commit()
 ```
 
@@ -89,4 +90,4 @@ transaction.commit();
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

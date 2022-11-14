@@ -1,12 +1,16 @@
 ---
 title: CSS Tutorials
 slug: Web/CSS/Tutorials
+page-type: landing-page
 tags:
   - CSS
   - Guide
   - Junk
   - Tutorial
 ---
+
+{{CSSRef}}
+
 Learning CSS may be a daunting task.
 In order to help you, we have written numerous **tutorials about CSS**.
 Some are aimed at complete beginners, while others present complex features to be used by more experienced users.
@@ -26,7 +30,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
     This tutorial describes how to achieve this in a simple way.
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays.
-    Media queries are the fundamental building blocks in achieving Web sites that render everywhere in their best quality.
+    Media queries are the fundamental building blocks in building websites that render everywhere in their best quality.
 - [Understanding z-index](/en-US/docs/Web/CSS/Understanding_z-index)
   - : Controlling superposition of boxes is a basic feature that is very quickly needed by Web developers.
     Though not that difficult, it requires a basic knowledge of CSS.
@@ -34,7 +38,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
 ## Intermediate-level CSS tutorials
 
 After the release of CSS 2 (Level 1), new features have been added to CSS.
-Some of them are _fancy_ and are pretty self contained.
+Some of them are _fancy_ and are pretty self-contained.
 They are easy to use for anybody with a fair knowledge of basic concepts.
 
 - [CSS Counters](/en-US/docs/Web/CSS/counters)

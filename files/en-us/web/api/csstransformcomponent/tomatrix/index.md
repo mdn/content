@@ -13,6 +13,7 @@ tags:
   - toMatrix
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`toMatrix()`** method of the
@@ -25,7 +26,7 @@ All transform functions can be represented mathematically as a 4x4 transformatio
 
 ## Syntax
 
-```js
+```js-nolint
 toMatrix()
 ```
 

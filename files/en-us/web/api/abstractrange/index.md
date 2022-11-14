@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.AbstractRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbstractRange`** abstract interface is the base class upon which all {{Glossary("DOM")}} range types are defined. A **range** is an object that indicates the start and end points of a section of content within the document.
@@ -15,7 +16,7 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("AbstractRange.collapsed", "collapsed")}} {{ReadOnlyInline}}
   - : A Boolean value which is `true` if the range is _collapsed_. A collapsed range is a range whose start position and end position are the same, resulting in a zero-character-long range.
@@ -28,7 +29,7 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
   - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
 
-## Methods
+## Instance methods
 
 _The `AbstractRange` interface does provide any methods._
 
@@ -76,7 +77,7 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo">
+    <img src="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
@@ -97,7 +98,7 @@ After loading the HTML and constructing the DOM representation of the document, 
 
 [![Diagram of the DOM for a simple web page](simpledom.svg)](simpledom.svg)
 
-In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
+In this diagram, the nodes representing HTML elements are shown in green. Each row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 
 If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum…"`, you can do so like this:
 
@@ -135,7 +136,7 @@ The resulting document fragment looks like this:
 
 ![A DocumentFragment representing the cloned content](dom-fragment.svg)
 
-Notice especially that the contents of this fragment are all *below* the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
+Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
 
 ## Example
 

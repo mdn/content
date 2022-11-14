@@ -12,6 +12,7 @@ tags:
   - screenreader
   - touch
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 With web access on mobile devices being so popular and renowned platforms such as iOS and Android having full-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
@@ -88,7 +89,7 @@ When TalkBack is turned on, unlocking the phone is a bit different.
 
 You can do a two-finger swipe up from the bottom of the lock screen. If you've set a passcode or pattern for unlocking your device, you will then be taken to the relevant entry screen to enter it.
 
-You can also explore by touch to find the *Unlock* button at the bottom middle of the screen, and then double-tap.
+You can also explore by touch to find the _Unlock_ button at the bottom middle of the screen, and then double-tap.
 
 #### Global and local menus
 
@@ -113,9 +114,9 @@ For example, with TalkBack turned on:
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
-    - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
-    - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
-    - Once you've finished, find the Enter key and press it.
+   - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
+   - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
+   - Once you've finished, find the Enter key and press it.
 
 4. Swipe left and right to move between different items on the page.
 5. Swipe up and right with a smooth motion to enter the local content menu.
@@ -129,7 +130,7 @@ For example, with TalkBack turned on:
 
 A mobile version of VoiceOver is built into the iOS operating system.
 
-To turn it on, go to Your *Settings* app and select _Accessibility > VoiceOver_. Press the *VoiceOver* slider to enable it (you'll also see a number of other options related to VoiceOver on this page).
+To turn it on, go to Your _Settings_ app and select _Accessibility > VoiceOver_. Press the _VoiceOver_ slider to enable it (you'll also see a number of other options related to VoiceOver on this page).
 
 > **Note:** Some older iOS devices have the VoiceOver menu at _Settings app_ > _General_ > _Accessibility_ > _VoiceOver_.
 
@@ -141,7 +142,7 @@ Once VoiceOver is enabled, iOS's basic control gestures will be a bit different:
 4. Swipe with three fingers to scroll through a page.
 5. Tap with two fingers to perform a context-relevant action — for example, taking a photo while in the camera app.
 
-To turn it off again, navigate back to *Settings > General > Accessibility > VoiceOver* using the above gestures, and toggle the *VoiceOver* slider back to off.
+To turn it off again, navigate back to _Settings > General > Accessibility > VoiceOver_ using the above gestures, and toggle the _VoiceOver_ slider back to off.
 
 #### Unlock phone
 
@@ -154,8 +155,8 @@ When VoiceOver is turned on, you have a navigation feature called the Rotor avai
 1. Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
 2. Once you've found the option you want:
 
-    - Release your fingers to select it.
-    - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
+   - Release your fingers to select it.
+   - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
 
 The options available under the Rotor are context-sensitive — they will differ depending on what app or view you are in (see below for an example).
 
@@ -167,22 +168,22 @@ Let's have a go at web browsing with VoiceOver:
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
-    - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
-    - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
-    - Once you've finished, find the Enter key and press it.
+   - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
+   - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
+   - Once you've finished, find the Enter key and press it.
 
 4. Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
 5. By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
 6. Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
 
-    - _Speaking Rate_: Change the speaking rate.
-    - _Containers_: Move between different semantic containers on the page.
-    - _Headings_: Move between headings on the page.
-    - _Links_: Move between links on the page.
-    - _Form Controls_: Move between form controls on the page.
-    - _Language_: Move between different translations, if they are available.
+   - _Speaking Rate_: Change the speaking rate.
+   - _Containers_: Move between different semantic containers on the page.
+   - _Headings_: Move between headings on the page.
+   - _Links_: Move between links on the page.
+   - _Form Controls_: Move between form controls on the page.
+   - _Language_: Move between different translations, if they are available.
 
-7. Select *Headings*. Now you'll be able to swipe up and down to move between headings on the page.
+7. Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
 
 > **Note:** For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html).
 
@@ -201,7 +202,7 @@ div.onmousedown = () => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -214,7 +215,7 @@ div.ontouchstart = (e) => {
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
@@ -231,7 +232,7 @@ In particular, the most common problems that need to be addressed for mobile are
 
 - Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/Media_Queries), [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), and [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
 - Conserving image sizes downloaded. In general, small screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
-- Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed  (see [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
+- Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
 
 > **Note:** We won't provide a full discussion of responsive design techniques here, as they are covered in other places around MDN (see above links).
 
@@ -244,7 +245,7 @@ There are other important issues to consider when making sites more accessible o
 Using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="width=device-width; user-scalable=yes">
+<meta name="viewport" content="width=device-width; user-scalable=yes" />
 ```
 
 You should never set `user-scalable=no` if at all possible — many people rely on zoom to be able to see the content of your website, so taking this functionality away is a really bad idea. There are certain situations where zooming might break the UI; in such cases, if you feel that you absolutely need to disable zoom, you should provide some other kind of equivalent, such as a control for increasing the text size in a way that doesn't break your UI.

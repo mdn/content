@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 tags:
   - msSetVideoRectangle
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -16,8 +17,8 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-HTMLVideoElement.msSetVideoRectangle();
+```js-nolint
+msSetVideoRectangle()
 ```
 
 ### Parameters

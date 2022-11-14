@@ -11,6 +11,7 @@ tags:
   - django
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 In this assessment you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) module to create a very basic blog.
@@ -253,10 +254,10 @@ The following sections describe what you need to do.
 1. Create a skeleton project and web application for the site (as described in [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)). You might use 'diyblog' for the project name and 'blog' for the application name.
 2. Create models for the Blog posts, Comments, and any other objects needed. When thinking about your design, remember:
 
-    - Each comment will have only one blog, but a blog may have many comments.
-    - Blog posts and comments must be sorted by post date.
-    - Not every user will necessarily be a blog author though any user may be a commenter.
-    - Blog authors must also include bio information.
+   - Each comment will have only one blog, but a blog may have many comments.
+   - Blog posts and comments must be sorted by post date.
+   - Not every user will necessarily be a blog author though any user may be a commenter.
+   - Blog authors must also include bio information.
 
 3. Run migrations for your new models and create a superuser.
 4. Use the admin site to create some example blog posts and blog comments.
@@ -274,28 +275,28 @@ Some general hints:
 2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
 
-    - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
-    - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
+   - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
+   - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
 
-    - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
-    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
+   - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
+   - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
-      ```python
-          def form_valid(self, form):
-              """
-              Add author and associated blog to form data before setting it as valid (so it is saved to model)
-              """
-              #Add logged-in user as author of comment
-              form.instance.author = self.request.user
-              #Associate comment with blog based on passed id
-              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
-              # Call super-class form validation behavior
-              return super(BlogCommentCreate, self).form_valid(form)
-      ```
+     ```python
+         def form_valid(self, form):
+             """
+             Add author and associated blog to form data before setting it as valid (so it is saved to model)
+             """
+             #Add logged-in user as author of comment
+             form.instance.author = self.request.user
+             #Associate comment with blog based on passed id
+             form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
+             # Call super-class form validation behavior
+             return super(BlogCommentCreate, self).form_valid(form)
+     ```
 
-    - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
+   - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
 
 We briefly talked about passing a context to the template in a class-based view in the [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views#overriding_methods_in_class-based_views) topic. To do this you need to override `get_context_data()` (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their `BlogAuthor` id.
 
@@ -313,7 +314,7 @@ class SomeView(generic.ListView):
 
 ## Assessment
 
-The assessment for this task is [available on Github here](https://github.com/mdn/django-diy-blog/blob/master/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code.
+The assessment for this task is [available on Github here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code.
 When you're done, you can check out [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!

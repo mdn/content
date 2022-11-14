@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsText
 ---
+
 {{APIRef("File API")}}
 
 The **`readAsText()`** method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}.
@@ -18,9 +19,11 @@ the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and t
 
 > **Note:** The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as text.
 
+> **Note:** This method loads the entire file's content into memory and is not suitable for large files. Prefer [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer) for large files.
+
 ## Syntax
 
-```js
+```js-nolint
 readAsText(blob)
 readAsText(blob, encoding)
 ```
@@ -41,7 +44,7 @@ None ({{jsxref("undefined")}}).
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
+<input type="file" onchange="previewFile()" /><br />
 <p class="content"></p>
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-rowindextext
 ---
+
 The `aria-rowindextext` attribute defines a human-readable text alternative of `aria-rowindex`.
 
 ## Description

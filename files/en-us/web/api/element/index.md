@@ -12,6 +12,7 @@ tags:
   - Web API
 browser-compat: api.Element
 ---
+
 {{APIRef("DOM")}}
 
 **`Element`** is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
@@ -22,7 +23,7 @@ Languages outside the realm of the Web platform, like XUL through the `XULElemen
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}._
 
@@ -93,7 +94,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
   - : Returns a string with the name of the tag for the given element.
 
-### Properties included from ARIA
+### Instance properties included from ARIA
 
 _The `Element` interface includes the following properties, defined on the `ARIAMixin` mixin._
 
@@ -178,7 +179,7 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 - {{domxref("Element.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
-## Methods
+## Instance methods
 
 _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}._
 
@@ -299,17 +300,16 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
+- {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
+  - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
-
   - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.
-
 - {{domxref("Element/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}} {{Deprecated_Inline}}
+- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
-
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
 - {{domxref("Element/show_event", "show")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -345,9 +345,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/focus_event", "focus")}}
   - : Fired when an element has gained focus.
 - {{domxref("Element/focusin_event", "focusin")}}
-  - : Fired when an element is about to gain focus.
+  - : Fired when an element has gained focus, after {{domxref("Element/focus_event", "focus")}}.
 - {{domxref("Element/focusout_event", "focusout")}}
-  - : Fired when an element is about to lose focus.
+  - : Fired when an element has lost focus, after {{domxref("Element/blur_event", "blur")}}.
 
 ### Fullscreen events
 
@@ -360,7 +360,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
-- {{domxref("Element/keypress_event", "keypress")}}  {{Deprecated_Inline}}
+- {{domxref("Element/keypress_event", "keypress")}} {{Deprecated_Inline}}
   - : Fired when a key that produces a character value is pressed down.
 - {{domxref("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.

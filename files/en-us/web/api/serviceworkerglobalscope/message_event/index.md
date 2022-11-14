@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: message event'
+title: "ServiceWorkerGlobalScope: message event"
 slug: Web/API/ServiceWorkerGlobalScope/message_event
 page-type: web-api-event
 tags:
@@ -10,9 +10,10 @@ tags:
   - message
 browser-compat: api.ServiceWorkerGlobalScope.message_event
 ---
-{{APIRef}}
 
-The **`message`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.
+{{APIRef("Service Workers API")}}
+
+The **`message`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("Worker.postMessage()", "ServiceWorker.postMessage()")}} method to send messages to service workers.
 The service worker can optionally send a response back via the {{domxref("Client.postMessage()")}}, corresponding to the controlled page.
 
 This event is not cancelable and does not bubble.
@@ -22,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## Event type
@@ -55,10 +56,9 @@ In the below example a page gets a handle to the {{domxref("ServiceWorker")}} ob
 ```js
 // main.js
 if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("service-worker.js");
 
-  navigator.serviceWorker.register('service-worker.js');
-
-  navigator.serviceWorker.addEventListener('message', (event) => {
+  navigator.serviceWorker.addEventListener("message", (event) => {
     // event is a MessageEvent object
     console.log(`The service worker sent me a message: ${event.data}`);
   });
@@ -66,7 +66,6 @@ if (navigator.serviceWorker) {
   navigator.serviceWorker.ready.then((registration) => {
     registration.active.postMessage("Hi service worker");
   });
-
 }
 ```
 
@@ -74,7 +73,7 @@ The service worker can receive the message by listening to the `message` event:
 
 ```js
 // service-worker.js
-addEventListener('message', (event) => {
+addEventListener("message", (event) => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 
@@ -105,6 +104,6 @@ self.onmessage = (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

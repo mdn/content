@@ -18,6 +18,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceCandidate`** interface—part of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API)—represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) configuration which may be used to establish an {{domxref("RTCPeerConnection")}}.
@@ -34,14 +35,14 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 
     > **Note:** For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCIceCandidate.address", "address")}} {{ReadOnlyInline}}
   - : A string containing the IP address of the candidate.
 - {{domxref("RTCIceCandidate.candidate", "candidate")}} {{ReadOnlyInline}}
   - : A string representing the transport address for the candidate that can be used for connectivity checks. The format of this address is a `candidate-attribute` as defined in {{RFC(5245)}}. This string is empty (`""`) if the `RTCIceCandidate` is an "end of candidates" indicator.
 - {{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}
-  - : A string which indicates whether the candidate is an RTP or an RTCP candidate; its value is either `rtp` or `rtcp`, and is derived from the  `"component-id"` field in the `candidate` a-line string.
+  - : A string which indicates whether the candidate is an RTP or an RTCP candidate; its value is either `rtp` or `rtcp`, and is derived from the `"component-id"` field in the `candidate` a-line string.
 - {{domxref("RTCIceCandidate.foundation", "foundation")}} {{ReadOnlyInline}}
   - : Returns a string containing a unique identifier that is the same for any candidates of the same type, share the same base (the address from which the ICE agent sent the candidate), and come from the same {{Glossary("STUN")}} server. This is used to help optimize ICE performance while prioritizing and correlating candidates that appear on multiple {{domxref("RTCIceTransport")}} objects.
 - {{domxref("RTCIceCandidate.port", "port")}} {{ReadOnlyInline}}
@@ -65,7 +66,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
   - : A string containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same `usernameFragment`, even across ICE restarts.
 
-## Methods
+## Instance methods
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
   - : Returns a {{Glossary("JSON")}} representation of the `RTCIceCandidate`'s current configuration.

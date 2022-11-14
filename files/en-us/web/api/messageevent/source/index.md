@@ -12,6 +12,7 @@ tags:
   - source
 browser-compat: api.MessageEvent.source
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`source`** read-only property of the

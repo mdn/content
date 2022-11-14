@@ -12,13 +12,14 @@ tags:
   - WindowClient
 browser-compat: api.WindowClient
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API) represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}}._
 
@@ -27,7 +28,7 @@ _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}
 - {{domxref("WindowClient.navigate()")}}
   - : Loads a specified URL into a controlled client page.
 
-## Properties
+## Instance properties
 
 _`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
 
@@ -39,24 +40,27 @@ _`WindowClient` inherits properties from its parent interface, {{domxref("Client
 ## Example
 
 ```js
-self.addEventListener('notificationclick', (event) => {
-  console.log('On notification click: ', event.notification.tag);
+self.addEventListener("notificationclick", (event) => {
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // This looks to see if the current is already open and
   // focuses if it is
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then((clientList) => {
-    for (const client of clientList) {
-      if (client.url === '/' && 'focus' in client) {
-        client.focus();
-        break;
-      }
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === "/" && "focus" in client) {
+            client.focus();
+            break;
+          }
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      })
+  );
 });
 ```
 
@@ -71,7 +75,7 @@ self.addEventListener('notificationclick', (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

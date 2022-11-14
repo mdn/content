@@ -9,20 +9,21 @@ tags:
   - NeedsContent
   - Reference
   - Security
-spec-urls: https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 browser-compat:
   - html.elements.img.crossorigin
   - html.elements.link.crossorigin
   - html.elements.script.crossorigin
   - html.elements.video.crossorigin
 ---
+
 {{HTMLSidebar}}
 
 The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, and {{HTMLElement("video")}} elements, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
 
 The `crossorigin` content attribute on media elements is a CORS settings attribute.
 
-These attributes are enumerated, and have the following possible values:
+These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
 - `anonymous`
   - : Request uses CORS headers and credentials flag is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
@@ -69,7 +70,9 @@ By default (that is, when the attribute is not specified), CORS is not used at a
 You can use the following {{HTMLElement("script")}} element to tell a browser to execute the `https://example.com/example-framework.js` script without sending user-credentials.
 
 ```html
-<script src="https://example.com/example-framework.js" crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  crossorigin="anonymous"></script>
 ```
 
 ### Example: Web manifest with credentials
@@ -77,7 +80,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser to
 The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Manifest) that requires credentials, even if the file is from the same origin.
 
 ```html
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
 ```
 
 ## Specifications

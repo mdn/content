@@ -9,6 +9,7 @@ tags:
   - WebExtensions
   - tabs
 ---
+
 {{AddonSidebar}}
 
 Tabs let a user open several web pages in their browser window and then switch between those web pages. With the Tabs API, you can work with and manipulate these tabs to create utilities that provide users with new ways to work with tabs or to deliver the features of your extension.
@@ -95,9 +96,9 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
 
     ```html
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
       <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <link rel="stylesheet" href="tabs.css" />
       </head>
 
@@ -110,7 +111,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
           <a href="#" id="tabs-move-beginning">
             Move active tab to the beginning of the window
           </a>
-          <br>
+          <br />
 
           <!-- Define the other menu items -->
 
@@ -276,15 +277,15 @@ But first, here is a demonstration of the feature in action:
     <a href="#" id="tabs-move-beginning">
       Move active tab to the beginning of the window
     </a>
-    <br>
+    <br />
     <a href="#" id="tabs-move-end">Move active tab to the end of the window</a>
-    <br>
+    <br />
 
     <div class="panel-section-separator"></div>
 
-    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br>
-    <a href="#" id="tabs-reload">Reload active tab</a><br>
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br>
+    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
+    <a href="#" id="tabs-reload">Reload active tab</a><br />
+    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
     ```
 
 - tabs.js

@@ -16,6 +16,9 @@ tags:
   - operable
   - seizures
 ---
+
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Operable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Operable states that user interface components and navigation must be operable.
 
 > **Note:** To read the W3C definitions for Operable and its guidelines and success criteria, see [Principle 2: Operable — User interface components and navigation must be operable.](https://www.w3.org/TR/WCAG21/#operable)
@@ -475,7 +478,7 @@ The conformance criteria under this guideline relate to ways in which users can 
 
 > **Note:** Also see the WCAG description for [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)
 
-## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.
+## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard
 
 The conformance criteria under this guideline ensures that users are able to interact with digital technology using different input methods beyond a keyboard or mouse (including touchscreen, voice, device motion, or alternative input devices).
 
@@ -510,7 +513,7 @@ The conformance criteria under this guideline ensures that users are able to int
   </tr>
   <tr>
    <td>2.5.5 Target Size (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height.  Exceptions exist.</td>
+   <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height. Exceptions exist.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Target Size</a></td>
   </tr>
   <tr>

@@ -11,6 +11,7 @@ tags:
   - online
 browser-compat: api.WorkerGlobalScope.online_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`online`** event of the {{domxref("WorkerGlobalScope")}} fires when the device reconnects to the internet.

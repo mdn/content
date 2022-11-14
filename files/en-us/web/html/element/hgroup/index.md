@@ -2,19 +2,16 @@
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
 tags:
-  - Deprecated
   - Element
-  - Experimental
   - HTML
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.hgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more  [`<p>`](/en-US/docs/Web/HTML/Element/p).
+The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
@@ -96,7 +93,9 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
   </hgroup>
   <p>Some intro to the document.</p>
   <h2>Table of contents</h2>
-  <ol id=toc>…</ol>
+  <ol id="toc">
+    …
+  </ol>
   <h2>First section</h2>
   <p>Some intro to the first section.</p>
 </body>

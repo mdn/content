@@ -12,6 +12,7 @@ tags:
   - access
 browser-compat: api.Permissions
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.

@@ -10,6 +10,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecolormatrix-values
   - https://svgwg.org/specs/animations/#ValuesAttribute
 ---
+
 {{SVGRef}}
 
 The `values` attribute has different meanings, depending upon the context where it's used, either it defines a sequence of values used over the course of an animation, or it's a list of numbers for a color matrix, which is interpreted differently depending on the type of color change to be performed.
@@ -87,6 +88,7 @@ For the {{SVGElement("feColorMatrix")}} element, `values` is a list of numbers i
 </table>
 
 - `<list-of-numbers>`
+
   - : The value is a list of numbers, which is interpreted differently depending on the value of the `type` attribute:
 
     - For `type="matrix"`, `values` is a list of 20 matrix values (a00 a01 a02 a03 a04 a10 a11 … a34), separated by whitespace and/or a comma.

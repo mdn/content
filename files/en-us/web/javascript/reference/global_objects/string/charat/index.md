@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.charAt
 ---
+
 {{JSRef}}
 
 The {{jsxref("String")}} object's
@@ -19,7 +20,7 @@ single UTF-16 code unit located at the specified offset into the string.
 
 ## Syntax
 
-```js
+```js-nolint
 charAt(index)
 ```
 
@@ -41,7 +42,7 @@ A string representing the character (exactly one UTF-16 code unit) at the specif
 
 Characters in a string are indexed from left to right. The index of the first character
 is `0`, and the index of the last character—in a string called
-`stringName`—is `stringName.length - 1`. If
+`stringName` is `stringName.length - 1`. If
 the `index` you supply is out of this range, JavaScript returns an
 empty string.
 

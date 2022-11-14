@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.ImageDecoder.complete
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`complete`** read-only property of the {{domxref("ImageDecoder")}} interface returns true if encoded data has completed buffering.

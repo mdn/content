@@ -9,6 +9,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals
 ---
+
 {{APIRef("DOM")}}
 
 The **`ElementInternals`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) to the element.
@@ -17,7 +18,7 @@ The **`ElementInternals`** interface of the [Document Object Model](/en-US/docs/
 
 This interface has no constructor. An `ElementInternals` object is returned when calling {{domxref("HTMLElement.attachInternals()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("ElementInternals.shadowRoot")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ShadowRoot")}} object associated with this element.
@@ -35,7 +36,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
 - {{domxref("ElementInternals.labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of all of the label elements associated with this element.
 
-### Properties included from ARIA
+### Instance properties included from ARIA
 
 The `ElementInternals` interface includes the following properties, defined on the `ARIAMixin` mixin.
 
@@ -97,6 +98,8 @@ The `ElementInternals` interface includes the following properties, defined on t
   - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 - {{domxref("ElementInternals.ariaRequired")}}
   - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
+- {{domxref("ElementInternals.role")}} {{Experimental_Inline}}
+  - : A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
 - {{domxref("ElementInternals.ariaRoleDescription")}}
   - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an Element.
 - {{domxref("ElementInternals.ariaRowCount")}}
@@ -122,7 +125,7 @@ The `ElementInternals` interface includes the following properties, defined on t
 - {{domxref("ElementInternals.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
-## Methods
+## Instance methods
 
 - {{domxref("ElementInternals.setFormValue()")}}
   - : Sets the element's submission value and state, communicating these to the user agent.

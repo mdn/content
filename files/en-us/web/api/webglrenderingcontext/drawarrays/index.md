@@ -10,13 +10,14 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
 ## Syntax
 
-```js
+```js-nolint
 drawArrays(mode, first, count)
 ```
 

@@ -18,6 +18,7 @@ spec-urls:
   - https://w3c.github.io/mediacapture-main/
   - https://w3c.github.io/mediacapture-fromelement/
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communication) is a technology that enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary. The set of standards that comprise WebRTC makes it possible to share data and perform teleconferencing peer-to-peer, without requiring that the user install plug-ins or any other third-party software.
@@ -34,7 +35,7 @@ To learn more about Adapter.js, see [Improving compatibility using WebRTC adapte
 
 ## WebRTC concepts and usage
 
-WebRTC serves multiple purposes; together with the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API), they provide powerful multimedia capabilities to the Web, including support for audio and video conferencing, file exchange, screen sharing, identity management, and interfacing with legacy telephone systems including support for sending {{Glossary("DTMF")}} (touch-tone dialing) signals. Connections between peers can be made without requiring any special drivers or plug-ins, and can often be made without any intermediary servers.
+WebRTC serves multiple purposes; together with the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API), they provide powerful multimedia capabilities to the Web, including support for audio and video conferencing, file exchange, screen sharing, identity management, and interfacing with legacy telephone systems including support for sending {{Glossary("DTMF")}} (touch-tone dialing) signals. Connections between peers can be made without requiring any special drivers or plug-ins, and can often be made without any intermediary servers.
 
 Connections between two peers are represented by the {{DOMxRef("RTCPeerConnection")}} interface. Once a connection has been established and opened using `RTCPeerConnection`, media streams ({{DOMxRef("MediaStream")}}s) and/or data channels ({{DOMxRef("RTCDataChannel")}}s) can be added to the connection.
 
@@ -223,7 +224,7 @@ These interfaces and events are related to interactivity with Public-Switched Te
 - {{DOMxRef("MediaStreamTrack")}}
 - {{DOMxRef("MessageEvent")}}
 - {{DOMxRef("MediaStream")}}
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [Firefox multistream and renegotiation for Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
 - [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
 - [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)

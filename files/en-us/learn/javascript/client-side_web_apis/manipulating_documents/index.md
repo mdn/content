@@ -15,6 +15,7 @@ tags:
   - WebAPI
   - Window
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 When writing web pages and apps, one of the most common things you'll want to do is manipulate the document structure in some way. This is usually done by using the Document Object Model (DOM), a set of APIs for controlling HTML and styling information that makes heavy use of the {{domxref("Document")}} object. In this article we'll look at how to use the DOM in detail, along with some other interesting APIs that can alter your environment in interesting ways.
@@ -62,14 +63,19 @@ We have created a simple example page at [dom-example.html](https://github.com/m
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -100,21 +106,21 @@ To start learning about DOM manipulation, let's begin with a practical example.
 2. Add a `<script></script>` element just above the closing `</body>` tag.
 3. To manipulate an element inside the DOM, you first need to select it and store a reference to it inside a variable. Inside your script element, add the following line:
 
-    ```js
-    const link = document.querySelector('a');
-    ```
+   ```js
+   const link = document.querySelector('a');
+   ```
 
 4. Now we have the element reference stored in a variable, we can start to manipulate it using properties and methods available to it (these are defined on interfaces like {{domxref("HTMLAnchorElement")}} in the case of {{htmlelement("a")}} element, its more general parent interface {{domxref("HTMLElement")}}, and {{domxref("Node")}} — which represents all nodes in a DOM). First of all, let's change the text inside the link by updating the value of the {{domxref("Node.textContent")}} property. Add the following line below the previous one:
 
-    ```js
-    link.textContent = 'Mozilla Developer Network';
-    ```
+   ```js
+   link.textContent = 'Mozilla Developer Network';
+   ```
 
 5. We should also change the URL the link is pointing to, so that it doesn't go to the wrong place when it is clicked on. Add the following line, again at the bottom:
 
-    ```js
-    link.href = 'https://developer.mozilla.org';
-    ```
+   ```js
+   link.href = 'https://developer.mozilla.org';
+   ```
 
 Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach. It is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)-like object called a {{domxref("NodeList")}}.
 
@@ -131,35 +137,35 @@ The above has given you a little taste of what you can do, but let's go further 
 
 1. Going back to the current example, let's start by grabbing a reference to our {{htmlelement("section")}} element — add the following code at the bottom of your existing script (do the same with the other lines too):
 
-    ```js
-    const sect = document.querySelector('section');
-    ```
+   ```js
+   const sect = document.querySelector('section');
+   ```
 
 2. Now let's create a new paragraph using {{domxref("Document.createElement()")}} and give it some text content in the same way as before:
 
-    ```js
-    const para = document.createElement('p');
-    para.textContent = 'We hope you enjoyed the ride.';
-    ```
+   ```js
+   const para = document.createElement('p');
+   para.textContent = 'We hope you enjoyed the ride.';
+   ```
 
 3. You can now append the new paragraph at the end of the section using {{domxref("Node.appendChild()")}}:
 
-    ```js
-    sect.appendChild(para);
-    ```
+   ```js
+   sect.appendChild(para);
+   ```
 
 4. Finally for this part, let's add a text node to the paragraph the link sits inside, to round off the sentence nicely. First we will create the text node using {{domxref("Document.createTextNode()")}}:
 
-    ```js
-    const text = document.createTextNode(' — the premier source for web development knowledge.');
-    ```
+   ```js
+   const text = document.createTextNode(' — the premier source for web development knowledge.');
+   ```
 
 5. Now we'll grab a reference to the paragraph the link is inside, and append the text node to it:
 
-    ```js
-    const linkPara = document.querySelector('p');
-    linkPara.appendChild(text);
-    ```
+   ```js
+   const linkPara = document.querySelector('p');
+   linkPara.appendChild(text);
+   ```
 
 That's most of what you need for adding nodes to the DOM — you'll make a lot of use of these methods when building dynamic interfaces (we'll look at some examples later).
 
@@ -205,19 +211,22 @@ The first way is to add inline styles directly onto elements you want to dynamic
 
 1. As an example, try adding these lines to our ongoing example:
 
-    ```js
-    para.style.color = 'white';
-    para.style.backgroundColor = 'black';
-    para.style.padding = '10px';
-    para.style.width = '250px';
-    para.style.textAlign = 'center';
-    ```
+   ```js
+   para.style.color = 'white';
+   para.style.backgroundColor = 'black';
+   para.style.padding = '10px';
+   para.style.width = '250px';
+   para.style.textAlign = 'center';
+   ```
 
 2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you'll see that these lines are indeed adding inline styles to the document:
 
-    ```html
-    <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
-    ```
+   ```html
+   <p
+     style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
+     We hope you enjoyed the ride.
+   </p>
+   ```
 
 > **Note:** Notice how the JavaScript property versions of the CSS styles are written in lower camel case whereas the CSS versions are hyphenated (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
@@ -226,23 +235,23 @@ There is another common way to dynamically manipulate styles on your document, w
 1. Delete the previous five lines you added to the JavaScript.
 2. Add the following inside your HTML {{htmlelement("head")}}:
 
-    ```html
-    <style>
-    .highlight {
-      color: white;
-      background-color: black;
-      padding: 10px;
-      width: 250px;
-      text-align: center;
-    }
-    </style>
-    ```
+   ```html
+   <style>
+     .highlight {
+       color: white;
+       background-color: black;
+       padding: 10px;
+       width: 250px;
+       text-align: center;
+     }
+   </style>
+   ```
 
 3. Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
 
-    ```js
-    para.setAttribute('class', 'highlight');
-    ```
+   ```js
+   para.setAttribute('class', 'highlight');
+   ```
 
 4. Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.
 
@@ -277,7 +286,7 @@ To complete the exercise, follow the steps below, and make sure that the list be
 7. Append the span and the button as children of the list item.
 8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
 9. Append the list item as a child of the list.
-10. Attach an event handler to the delete button, so that when clicked it will delete the entire list item it is inside.
+10. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
 11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
 
 > **Note:** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)

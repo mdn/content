@@ -10,11 +10,12 @@ tags:
   - Secure context
 browser-compat: api.GeolocationCoordinates
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates`** interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.
 
-## Properties
+## Instance properties
 
 _The `GeolocationCoordinates` interface doesn't inherit any properties._
 
@@ -33,7 +34,7 @@ _The `GeolocationCoordinates` interface doesn't inherit any properties._
 - {{domxref("GeolocationCoordinates.speed")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a `double` representing the velocity of the device in meters per second. This value can be `null`.
 
-## Methods
+## Instance methods
 
 _The `GeolocationCoordinates` interface neither implements, nor inherits any method._
 

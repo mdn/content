@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.contains
 ---
+
 {{APIRef("DOM")}}
 
 The **`contains()`** method of the {{domxref("Node")}} interface
@@ -19,8 +20,8 @@ one of the children's direct children, and so on.
 
 ## Syntax
 
-```js
-contains(otherNode);
+```js-nolint
+contains(otherNode)
 ```
 
 ### Parameters

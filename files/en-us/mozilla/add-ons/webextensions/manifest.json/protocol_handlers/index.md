@@ -8,6 +8,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.protocol_handlers
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

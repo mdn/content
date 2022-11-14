@@ -15,6 +15,7 @@ tags:
   - addSourceBuffer
 browser-compat: api.MediaSource.addSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`addSourceBuffer()`** method of the
@@ -25,7 +26,7 @@ given {{Glossary("MIME type")}} and adds it to the `MediaSource`'s
 
 ## Syntax
 
-```js
+```js-nolint
 addSourceBuffer(mimeType)
 ```
 

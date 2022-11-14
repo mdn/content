@@ -8,6 +8,7 @@ tags:
   - Source maps
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "-file- is being assigned a //# sourceMappingURL, but already has one." occurs when a source map has been specified more than once for a given JavaScript source.
@@ -40,7 +41,7 @@ Setting a source map by using a comment in the file:
 
 Or, alternatively, you can set a header to your JavaScript file:
 
-```plain example-good
+```http example-good
 X-SourceMap: /path/to/file.js.map
 ```
 

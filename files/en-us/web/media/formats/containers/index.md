@@ -13,6 +13,7 @@ tags:
   - Video
   - formats
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 The format of audio and video media files is defined in two parts (three if a file has both audio and video in it, of course): the audio and/or video codecs used and the media container format (or file type) used.
@@ -1078,7 +1079,7 @@ Be sure to consider the needs of your application and your organization before s
 
 #### Audio-only files
 
-| If you need…                                | Consider using this container format |
+| If you need…                                  | Consider using this container format |
 | --------------------------------------------- | ------------------------------------ |
 | Compressed files for general-purpose playback | MP3 (MPEG-1 Audio Layer III)         |
 | Losslessly compressed files                   | FLAC with ALAC fallback              |
@@ -1089,7 +1090,7 @@ It's no longer necessary to choose between MP3's broad compatibility and the nee
 
 #### Video files
 
-| If you need…                                      | Consider using this container format                |
+| If you need…                                        | Consider using this container format                |
 | --------------------------------------------------- | --------------------------------------------------- |
 | General purpose video, preferably in an open format | WebM (ideally with MP4 fallback)                    |
 | General purpose video                               | MP4 (ideally with WebM or Ogg fallback)             |
@@ -1128,13 +1129,13 @@ If neither of those can be played, the text "This browser does not support the H
 | [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 Systems)                                                                           | Defines the MPEG-2 container format                                                                             |
 | [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 file format)                                                                | Defines the MPEG-4 (MP4) version 2 container format                                                             |
 | [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | Defines the original MPEG-4 (MP4) container format                                                              |
-| {{RFC(3533)}}                                                                                                                                             | Defines the Ogg container format                                                                                |
-| {{RFC(5334)}}                                                                                                                                             | Defines the Ogg media types and file extensions                                                                 |
+| {{RFC(3533)}}                                                                                                                                                | Defines the Ogg container format                                                                                |
+| {{RFC(5334)}}                                                                                                                                                | Defines the Ogg media types and file extensions                                                                 |
 | [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | Defines the QuickTime movie (MOV) format                                                                        |
 | [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
-| [Resource Interchange File Format](https://docs.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
+| [Resource Interchange File Format](https://docs.microsoft.com/windows/win32/xaudio2/resource-interchange-file-format--riff-) (used by WAV)                   | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
 | [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Guide for adapting Matroska for WebM                                                                            |
-| [Matroska Specifications](https://matroska.org/index.html)                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
+| [Matroska Specifications](https://matroska.org/index.html)                                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
 | [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | WebM byte stream format for use with [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) |
 
 ## Browser compatibility

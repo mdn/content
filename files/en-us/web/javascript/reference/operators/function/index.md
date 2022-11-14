@@ -9,6 +9,7 @@ tags:
   - Primary Expressions
 browser-compat: javascript.operators.function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.
@@ -71,7 +72,8 @@ You can't use function expressions before you create them:
 
 ```js
 console.log(notHoisted); // undefined
-//  even though the variable name is hoisted, the definition isn't. so it's undefined.
+// Even though the variable name is hoisted,
+// the definition isn't. so it's undefined.
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function () {
@@ -103,7 +105,7 @@ The variable to which the function expression is assigned will have a `name` pro
 The name doesn't change if it's assigned to a different variable.
 If function name is omitted, it will be the variable name (implicit name).
 If function name is present, it will be the function name (explicit name).
-This also applies to {{jsxref("Functions/Arrow_functions", "arrow functions")}} (arrows don't have a name so you can only give the variable an implicit name).
+This also applies to [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (arrows don't have a name so you can only give the variable an implicit name).
 
 ```js
 const foo = function () {};

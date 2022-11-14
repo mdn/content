@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.fill
 ---
+
 {{JSRef}}
 
 The **`fill()`** method changes all elements in an array to a static value, from a start index (default `0`) to an end index (default `array.length`).
@@ -19,7 +20,7 @@ It returns the modified array.
 
 ## Syntax
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)
@@ -28,11 +29,18 @@ fill(value, start, end)
 ### Parameters
 
 - `value`
-  - : Value to fill the array with. (Note all elements in the array will be this exact value.)
+  - : Value to fill the array with. Note all elements in the array will be this exact value: if `value` is an object, each slot in the array will reference that object.
 - `start` {{optional_inline}}
-  - : Start index (inclusive), default `0`.
+  - : Zero-based index at which to start filling, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+    - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
+    - If `start < -array.length` or `start` is omitted, `0` is used.
+    - If `start >= array.length`, no index is filled.
 - `end` {{optional_inline}}
-  - : End index (exclusive), default `arr.length`.
+  - : Zero-based index at which to end filling, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `fill()` fills up to but not including `end`.
+    - Negative index counts back from the end of the array — if `end < 0`, `end + array.length` is used.
+    - If `end < -array.length`, `0` is used.
+    - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all indices until the end to be filled.
+    - If `end` is positioned before or at `start` after normalization, no index is filled.
 
 ### Return value
 
@@ -40,14 +48,14 @@ The modified array, filled with `value`.
 
 ## Description
 
-- If `start` is negative, it is treated as `array.length + start`.
-- If `end` is negative, it is treated as `array.length + end`.
-- `fill` is intentionally generic: it does not require that its `this` value be an `Array` object.
-- `fill` is a mutator method: it will change the array itself and return it, not a copy of it.
-- If the first parameter is an object, each slot in the array will reference that object.
+The `fill()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter the length of `this`, but it will change the content of `this`.
 
-> **Note:** Using `Array.prototype.fill()` on an empty array would not modify it as the array has nothing to be modified.
-> To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
+The `fill()` method fills empty slots in [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) arrays with `value` as well.
+
+The `fill()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
+
+> **Note:** Using `Array.prototype.fill()` on an empty array (`length = 0`) would not modify it as the array has nothing to be modified.
+> To use `Array.prototype.fill()` when declaring an array, make sure the array has non-zero `length`.
 > [See example](#using_fill_to_populate_an_empty_array).
 
 ## Examples
@@ -64,7 +72,6 @@ console.log([1, 2, 3].fill(4, -3, -2));        // [4, 2, 3]
 console.log([1, 2, 3].fill(4, NaN, NaN));      // [1, 2, 3]
 console.log([1, 2, 3].fill(4, 3, 5));          // [1, 2, 3]
 console.log(Array(3).fill(4));                 // [4, 4, 4]
-console.log([].fill.call({ length: 3 }, 4));   // {0: 4, 1: 4, 2: 4, length: 3}
 
 // A single object, referenced by each slot of the array:
 const arr = Array(3).fill({}); // [{}, {}, {}]
@@ -93,6 +100,18 @@ The `end` parameter does not have to be specified.
 
 ```js
 const tempGirls = Array(5).fill("girl", 0);
+```
+
+Note that the array was initially a [sparse array](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) with no assigned indices. `fill()` is still able to fill this array.
+
+### Calling fill() on non-array objects
+
+The `fill()` method reads the `length` property of `this` and sets the value of each integer property from `start` to `end`.
+
+```js
+const arrayLike = { length: 2 };
+console.log(Array.prototype.fill.call(arrayLike, 1));
+// { '0': 1, '1': 1, length: 2 }
 ```
 
 ## Specifications

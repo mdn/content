@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
+
 {{JSRef}}
 
 The **`handler.apply()`** method is a trap for a function call.
@@ -16,7 +17,7 @@ The **`handler.apply()`** method is a trap for a function call.
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   apply(target, thisArg, argumentsList) {
   }
@@ -25,8 +26,7 @@ new Proxy(target, {
 
 ### Parameters
 
-The following parameters are passed to the `apply()` method.
-`this` is bound to the handler.
+The following parameters are passed to the `apply()` method. `this` is bound to the handler.
 
 - `target`
   - : The target callable object.
@@ -47,17 +47,17 @@ The **`handler.apply()`** method is a trap for a function call.
 
 This trap can intercept these operations:
 
-- `proxy(...args)`
+- Function call: `proxy(...args)`
 - {{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Reflect.apply()")}}
 
+Or any other operation that invokes the `[[Call]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}.
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
-The `target` must be a callable itself. That is, it must be a
-function object.
+- The `target` must be a callable itself. That is, it must be a function object.
 
 ## Examples
 

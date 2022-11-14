@@ -11,6 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.DeprecationReportBody
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `DeprecationReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a deprecation report.
@@ -23,13 +24,13 @@ A deprecation report is generated when a deprecated feature (for example a depre
 
 An instance of `DeprecationReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `deprecation`. The interface has no constructor.
 
-## Properties
+## Instance properties
 
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
 - {{domxref("DeprecationReportBody.id")}} {{experimental_inline}}
   - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`. This can be used to group reports by deprecated feature.
-- {{domxref("DeprecationReportBody.anticipatedRemoval")}}
+- {{domxref("DeprecationReportBody.anticipatedRemoval")}} {{Experimental_Inline}}
   - : A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return `null`.
 - {{domxref("DeprecationReportBody.message")}} {{experimental_inline}}
   - : A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.
@@ -40,7 +41,7 @@ This interface also inherits properties from {{domxref("ReportBody")}}.
 - {{domxref("DeprecationReportBody.columnNumber")}} {{experimental_inline}}
   - : A number representing the column in the source file in which the deprecated feature was used, if known, or `null` otherwise.
 
-## Methods
+## Instance methods
 
 This interface also inherits methods from {{domxref("ReportBody")}}.
 
@@ -52,12 +53,12 @@ This interface also inherits methods from {{domxref("ReportBody")}}.
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver((reports, observer) => {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -80,21 +81,20 @@ function displayReports(reports) {
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for (let i = 0; i < reports.length; i++) {
+  reports.forEach((report, i) => {
     const listItem = document.createElement('li');
-    const textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
+    const textNode = document.createTextNode(`Report ${i + 1}, type: ${report.type}`);
     listItem.appendChild(textNode);
     const innerList = document.createElement('ul');
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (const key in reports[i].body) {
+    for (const [key, value] of Object.entries(report.body)) {
       const innerListItem = document.createElement('li');
-      const keyValue = reports[i].body[key];
-      innerListItem.textContent = `${key}: ${keyValue}`;
+      innerListItem.textContent = `${key}: ${value}`;
       innerList.appendChild(innerListItem);
     }
-  }
+  });
 }
 ```
 

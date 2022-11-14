@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.empty
 ---
+
 {{jsSidebar("Statements")}}
 
 An **empty statement** is used to provide no statement, although the
@@ -16,7 +17,7 @@ JavaScript syntax would expect one.
 
 ## Syntax
 
-```js
+```js-nolint
 ;
 ```
 
@@ -36,7 +37,7 @@ which combines several statements into a single one.
 The empty statement is sometimes used with loop statements. See the following example
 with an empty loop body:
 
-```js
+```js-nolint
 const arr = [1, 2, 3];
 
 // Assign all array values to 0
@@ -53,9 +54,9 @@ not really obvious to distinguish from a normal semicolon.
 
 In the following example, the usage is probably not intentional:
 
-```js example-bad
+```js-nolint example-bad
 if (condition);      // Caution, this "if" does nothing!
-  killTheUniverse()  // So this always gets executed!!!
+  killTheUniverse(); // So this always gets executed!!!
 ```
 
 ## Specifications
@@ -68,4 +69,4 @@ if (condition);      // Caution, this "if" does nothing!
 
 ## See also
 
-- {{jsxref("Statements/block", "Block statement")}}
+- [Block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)

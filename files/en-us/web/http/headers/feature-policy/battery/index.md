@@ -8,13 +8,14 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.battery
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `battery` directive controls whether the current document is allowed to gather information about the battery of the device through the {{DOMxRef("BatteryManager")}} interface obtained via {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: battery <allowlist>;
 ```
 

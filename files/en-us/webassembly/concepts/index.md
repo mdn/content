@@ -13,6 +13,7 @@ tags:
   - text format
   - web platform
 ---
+
 {{WebAssemblySidebar}}
 
 This article explains the concepts behind how WebAssembly works including its goals, the problems it solves, and how it runs inside the web browser's rendering engine.
@@ -54,11 +55,11 @@ WebAssembly is a different language from JavaScript, but it is not intended as a
 
 With the advent of WebAssembly appearing in browsers, the virtual machine that we talked about earlier will now load and run two types of code — JavaScript AND WebAssembly.
 
-The different code types can call each other as required — the [WebAssembly JavaScript API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) wraps exported WebAssembly code with JavaScript functions that can be called normally, and WebAssembly code can import and synchronously call normal JavaScript functions. In fact, the basic unit of WebAssembly code is called a module and WebAssembly modules are symmetric in many ways to ES modules.
+The different code types can call each other as required — the [WebAssembly JavaScript API](/en-US/docs/WebAssembly/JavaScript_interface) wraps exported WebAssembly code with JavaScript functions that can be called normally, and WebAssembly code can import and synchronously call normal JavaScript functions. In fact, the basic unit of WebAssembly code is called a module and WebAssembly modules are symmetric in many ways to ES modules.
 
 ### WebAssembly key concepts
 
-There are several key concepts needed to understand how WebAssembly runs in the browser. All of these concepts are reflected 1:1 in the [WebAssembly JavaScript API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly).
+There are several key concepts needed to understand how WebAssembly runs in the browser. All of these concepts are reflected 1:1 in the [WebAssembly JavaScript API](/en-US/docs/WebAssembly/JavaScript_interface).
 
 - **Module**: Represents a WebAssembly binary that has been compiled by the browser into executable machine code. A Module is stateless and thus, like a [`Blob`](/en-US/docs/Web/API/Blob), can be explicitly shared between windows and workers (via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage)). A Module declares imports and exports just like an ES module.
 - **Memory**: A resizable ArrayBuffer that contains the linear array of bytes read and written by WebAssembly's low-level memory access instructions.
@@ -96,7 +97,7 @@ These are great resources for people who are trying to figure out where to start
 
 The Emscripten tool is able to take just about any C/C++ source code and compile it into a .wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
-![](emscripten-diagram.png)
+![Diagram: Emscripten compiles C/C++ source code and into a WASM module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
 
 In a nutshell, the process works as follows:
 

@@ -8,6 +8,7 @@ tags:
   - slot
   - slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 This article explains how you can use the {{htmlelement("template")}} and {{htmlelement("slot")}} elements to create a flexible template that can then be used to populate the shadow DOM of a web component.
@@ -29,7 +30,7 @@ Let's look at a trivial quick example:
 This won't appear in your page until you grab a reference to it with JavaScript and then append it to the DOM, using something like the following:
 
 ```js
-let template = document.getElementById('my-paragraph');
+let template = document.getElementById("my-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -43,14 +44,15 @@ Let's define a web component that uses our template as the content of its shadow
 We'll call it `<my-paragraph>` as well:
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
+      let template = document.getElementById("my-paragraph");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
   }
@@ -99,7 +101,7 @@ So, if we want to add a slot into our trivial example, we could update our templ
 <p><slot name="my-text">My default text</slot></p>
 ```
 
-If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>`  just contains the fallback content "My default text".
+If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>` just contains the fallback content "My default text".
 
 To define the slot's content, we include an HTML structure inside the `<my-paragraph>` element with a {{htmlattrxref("slot")}} attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:
 
@@ -150,14 +152,36 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 ```html
 <template id="element-details-template">
   <style>
-  details {font-family: "Open Sans Light",Helvetica,Arial}
-  .name {font-weight: bold; color: #217ac0; font-size: 120%}
-  h4 { margin: 10px 0 -8px 0; }
-  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-  h4 span { color: white }
-  .attributes { margin-left: 22px; font-size: 90% }
-  .attributes p { margin-left: 16px; font-style: italic }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+    }
+    h4 span {
+      background: #217ac0;
+      padding: 2px 6px 2px 6px;
+    }
+    h4 span {
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    h4 span {
+      color: white;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
@@ -171,7 +195,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 
@@ -192,14 +216,15 @@ Next, let's create a new custom element named **`<element-details>`** and use {{
 This uses exactly the same pattern as we saw in our earlier trivial example.
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const template = document.getElementById(
+        "element-details-template"
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.cloneNode(true));
     }
   }
@@ -243,14 +268,24 @@ About that snippet, notice these points:
 As a finishing touch, we'll add a tiny bit more CSS for the {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, and {{HTMLElement("dd")}} elements in our doc:
 
 ```css
-  dl { margin-left: 6px; }
-  dt { font-weight: bold; color: #217ac0; font-size: 110% }
-  dt { font-family: Consolas, "Liberation Mono", Courier }
-  dd { margin-left: 16px }
+dl {
+  margin-left: 6px;
+}
+dt {
+  color: #217ac0;
+  font-family: Consolas, "Liberation Mono", Courier;
+  font-size: 110%;
+  font-weight: bold;
+}
+dd {
+  margin-left: 16px;
+}
 ```
 
 ```css hidden
-body { margin-top: 47px }
+body {
+  margin-top: 47px;
+}
 ```
 
 ### Result

@@ -15,6 +15,7 @@ tags:
   - events
 browser-compat: api.PromiseRejectionEvent.promise
 ---
+
 {{APIRef("HTML DOM") }}
 
 The {{domxref("PromiseRejectionEvent")}} interface's

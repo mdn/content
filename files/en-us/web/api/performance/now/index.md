@@ -10,7 +10,8 @@ tags:
   - Web Performance API
 browser-compat: api.Performance.now
 ---
-{{APIRef("High Resolution Timing")}}
+
+{{APIRef("Performance API")}}
 
 The **`performance.now()`** method
 returns a {{domxref("DOMHighResTimeStamp")}}, measured in milliseconds.
@@ -38,7 +39,7 @@ are alleviated through other means.
 
 ## Syntax
 
-```js
+```js-nolint
 now()
 ```
 
@@ -122,4 +123,4 @@ of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## See also
 
-- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/).
+- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/)

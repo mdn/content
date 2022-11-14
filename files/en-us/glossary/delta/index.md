@@ -3,10 +3,10 @@ title: Delta
 slug: Glossary/Delta
 tags:
   - Delta
-  - Glossary
   - difference
   - value
 ---
+
 The term **delta** refers to the difference between two values or states.
 
 The name originates from the Greek letter Δ (delta), which is equivalent to the letter _D_ in the Roman alphabet. _Delta_ refers to the use of the letter Δ as a shorthand for _difference_.

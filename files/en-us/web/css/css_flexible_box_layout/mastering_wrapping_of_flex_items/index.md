@@ -1,6 +1,7 @@
 ---
 title: Mastering wrapping of flex items
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+page-type: guide
 tags:
   - CSS
   - Flex
@@ -10,6 +11,7 @@ tags:
   - grid
   - wrapping
 ---
+
 {{CSSRef}}
 
 Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. In this guide I will explain how this works, what it is designed for and what situations really require [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) rather than flexbox.
@@ -50,7 +52,7 @@ This is the difference between one and two-dimensional layout. In a one dimensio
 
 Typically flexbox-based grid systems work by taking flexbox back to the familiar world of float-based layouts. If you assign percentage widths to flex items — either as `flex-basis` or by adding a width to the item itself leaving the value of `flex-basis` as `auto` — you can get the impression of a two dimensional layout. You can see this working in the example below.
 
-Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and am then controlling flexibility using percentages, just like we used to do in float layouts.
+Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and I'm then controlling flexibility using percentages, just like we used to do in float layouts.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
 

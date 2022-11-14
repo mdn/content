@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.get
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`get`** syntax binds an object property to a function
@@ -19,7 +20,7 @@ that will be called when that property is looked up.
 
 ## Syntax
 
-```js
+```js-nolint
 { get prop() { /* … */ } }
 { get [expression]() { /* … */ } }
 ```
@@ -217,6 +218,6 @@ console.log(
 - [Setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object/__defineGetter__", "__defineGetter__")}}
-- {{jsxref("Object/__defineSetter__", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in JavaScript Guide

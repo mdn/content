@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.details
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the {{HTMLElement("summary")}} element.
 
@@ -88,7 +88,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("open")}}
 
-  - : This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
+  - : This Boolean attribute indicates whether the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
 
     > **Note:** You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
 
@@ -117,10 +117,11 @@ This example shows a simple `<details>` element with a `<summary>`.
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -135,10 +136,11 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 ```html
 <details open>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -189,10 +191,11 @@ The selector `details[open]` can be used to style the element which is open.
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -240,10 +243,11 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 

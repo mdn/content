@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplayEvent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRDisplayEvent`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents the event object of WebVR-related events (see the [list of WebVR window extensions](/en-US/docs/Web/API/WebVR_API#window)).
@@ -25,7 +26,7 @@ The **`VRDisplayEvent`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_
 - {{domxref("VRDisplayEvent.VRDisplayEvent", "VRDisplayEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates a `VRDisplayEvent` object instance.
 
-## Properties
+## Instance properties
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 

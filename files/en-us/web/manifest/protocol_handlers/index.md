@@ -5,10 +5,11 @@ tags:
   - protocol_handlers
   - Manifest
   - Web
-  - Non-standard
+  - Experimental
 browser-compat: html.manifest.protocol_handlers
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

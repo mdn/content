@@ -8,8 +8,9 @@ tags:
   - HTML
   - Learn
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
@@ -45,9 +46,10 @@ Elements can also have attributes that look like the following:
 
 ![Paragraph opening tag with a class attribute highlighted: class=editor-note](grumpy-cat-attribute-small.png)
 
-Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute *name* and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
+Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute _name_ and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
+Some attributes have no value, such as [`required`](/en-US/docs/Web/HTML/Attributes/required).
 
-An attribute should always have the following:
+Attributes that set a value always have:
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
 2. The attribute name followed by an equal sign.
@@ -65,18 +67,18 @@ You can put elements inside other elements too — this is called **nesting**. I
 
 You do however need to make sure that your elements are properly nested. In the example above, we opened the {{htmlelement("p")}} element first, then the {{htmlelement("strong")}} element; therefore, we have to close the {{htmlelement("strong")}} element first, then the {{htmlelement("p")}} element. The following is incorrect:
 
-```html example-bad
+```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
 The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
 
-### Empty elements
+### Void elements
 
-Some elements have no content and are called **empty elements**. Take the {{htmlelement("img")}} element that we already have in our HTML page:
+Some elements have no content and are called **{{glossary("void element", "void elements")}}**. Take the {{htmlelement("img")}} element that we already have in our HTML page:
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 This contains two attributes, but there is no closing `</img>` tag and no inner content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the HTML page in the place it appears.
@@ -89,22 +91,22 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My test page</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="My test image" />
   </body>
 </html>
 ```
 
 Here, we have the following:
 
-- `<!DOCTYPE html>` — [doctype](/en-US/docs/Glossary/Doctype). It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
+- `<!DOCTYPE html>` — [doctype](/en-US/docs/Glossary/Doctype). It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
 - `<html></html>` — the {{htmlelement("html")}} element. This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the `lang` attribute, setting the primary language of the document.
 - `<head></head>` — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that _isn't_ the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
-- `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
+- `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
 - `<meta name="viewport" content="width=device-width">` — This [viewport element](/en-US/docs/Web/CSS/Viewport_concepts#mobile_viewports) ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
 - `<title></title>` — the {{htmlelement("title")}} element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
 - `<body></body>` — the {{htmlelement("body")}} element. This contains _all_ the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
@@ -114,7 +116,7 @@ Here, we have the following:
 Let's turn our attention to the {{htmlelement("img")}} element again:
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 As we said before, it embeds an image into our page in the position it appears. It does this via the `src` (source) attribute, which contains the path to our image file.
@@ -134,7 +136,7 @@ Try coming up with some better alt text for your image now.
 
 ## Marking up text
 
-This section will cover some of the essential HTML elements you'll use for marking up the text.
+This section will cover some essential HTML elements you'll use for marking up the text.
 
 ### Headings
 
@@ -176,7 +178,10 @@ Each item inside the lists is put inside an {{htmlelement("li")}} (list item) el
 For example, if we wanted to turn the part of the following paragraph fragment into a list
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+<p>
+  At Mozilla, we're a global community of technologists, thinkers, and builders
+  working together…
+</p>
 ```
 
 We could modify the markup to this
@@ -190,7 +195,7 @@ We could modify the markup to this
   <li>builders</li>
 </ul>
 
-<p>working together… </p>
+<p>working together…</p>
 ```
 
 Try adding an ordered or unordered list to your example page.
@@ -202,21 +207,21 @@ Links are very important — they are what makes the web a web! To add a link, w
 1. Choose some text. We chose the text "Mozilla Manifesto".
 2. Wrap the text in an {{htmlelement("a")}} element, as shown below:
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. Give the {{htmlelement("a")}} element an `href` attribute, as shown below:
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. Fill in the value of this attribute with the web address that you want the link to:
 
-    ```html
-    <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+   ```
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 

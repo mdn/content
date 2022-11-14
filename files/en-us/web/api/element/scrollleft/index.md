@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollLeft`** property gets or sets the number

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.keys
 ---
+
 {{APIRef}}
 
 The **`Headers.keys()`** method returns an
@@ -20,7 +21,7 @@ in this object. The keys are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

@@ -16,6 +16,7 @@ tags:
   - StyleSheet
 browser-compat: api.CSSStyleSheet.cssRules
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{domxref("CSSStyleSheet")}} property

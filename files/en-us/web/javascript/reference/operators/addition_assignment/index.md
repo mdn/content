@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The addition assignment operator (`+=`) adds the value of the right operand
@@ -20,7 +21,7 @@ possible.
 
 ## Syntax
 
-```js
+```js-nolint
 x += y // x = x + y
 ```
 
@@ -39,13 +40,13 @@ baz += false; // 2
 ```
 
 ```js
-let foo = 'foo';
+let foo = "foo";
 
 // String + Boolean -> concatenation
 foo += false; // "foofalse"
 
 // String + String -> concatenation
-foo += 'bar'; // "foofalsebar"
+foo += "bar"; // "foofalsebar"
 ```
 
 ```js
@@ -55,7 +56,7 @@ let bar = 5;
 bar += 2; // 7
 
 // Number + String -> concatenation
-bar += 'foo'; // "7foo"
+bar += "foo"; // "7foo"
 ```
 
 ## Specifications
@@ -68,5 +69,5 @@ bar += 'foo'; // "7foo"
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
 - [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

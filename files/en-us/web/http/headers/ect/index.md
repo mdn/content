@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.ect
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The **`ECT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field indicates the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, `4g`.
@@ -39,7 +40,7 @@ The hint allows a server to choose what information is sent based on the broad c
 
 ## Syntax
 
-```
+```http
 ECT: <value>
 ```
 
@@ -52,13 +53,13 @@ ECT: <value>
 
 A server first needs to opt in to receive the `ECT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `ECT`.
 
-```
+```http
 Accept-CH: ECT
 ```
 
 Then on subsequent requests the client might send an `ECT` header back:
 
-```
+```http
 ECT: 2g
 ```
 

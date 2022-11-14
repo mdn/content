@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Source maps
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "Using `//@` to indicate sourceURL pragmas is deprecated. Use `//#` instead" occurs when there is a deprecated source map syntax in a JavaScript source.
@@ -53,7 +54,7 @@ Use the "#" sign instead.
 
 Or, alternatively, you can set a {{HTTPHeader("SourceMap")}} header to your JavaScript file to avoid having a comment at all:
 
-```plain example-good
+```http example-good
 SourceMap: /path/to/file.js.map
 ```
 

@@ -17,11 +17,12 @@ tags:
   - parameters
 browser-compat: api.RTCRtpReceiveParameters
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCRtpReceiveParameters`** dictionary, based upon the {{domxref("RTCRtpParameters")}} dictionary, is returned by the {{domxref("RTCRtpReceiver")}} method {{domxref("RTCRtpReceiver.getParameters", "getParameters()")}}. It describes the parameters being used by the receiver's {{Glossary("RTP")}} connection to the remote peer.
 
-## Properties
+## Instance properties
 
 _This dictionary currently has no properties of its own; it exists for future expansion. It inherits all of the properties of its parent, {{domxref("RTCRtpParameters")}}._
 

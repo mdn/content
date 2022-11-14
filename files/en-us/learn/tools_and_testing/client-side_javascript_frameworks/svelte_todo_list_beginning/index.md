@@ -12,6 +12,7 @@ tags:
   - client-side
   - state
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -104,41 +105,41 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 
 1. Create a new folder — `src/components`.
 
-    > **Note:** You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
+   > **Note:** You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
 
 2. Create a file named `src/components/Todos.svelte` with the following content:
 
-    ```html
-    <h1>Svelte to-do list</h1>
-    ```
+   ```html
+   <h1>Svelte to-do list</h1>
+   ```
 
 3. Change the `title` element in `public/index.html` to contain the text _Svelte to-do list_:
 
-    ```html
-    <title>Svelte to-do list</title>
-    ```
+   ```html
+   <title>Svelte to-do list</title>
+   ```
 
 4. Open `src/App.svelte` and replace its contents with the following:
 
-    ```html
-    <script>
-      import Todos from './components/Todos.svelte'
-    </script>
+   ```html
+   <script>
+     import Todos from "./components/Todos.svelte";
+   </script>
 
-    <Todos />
-    ```
+   <Todos />
+   ```
 
 5. In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
 
-    ```js
-    import App from './App.svelte'
+   ```js
+   import App from "./App.svelte";
 
-    const app = new App({
-      target: document.body
-    })
+   const app = new App({
+     target: document.body,
+   });
 
-    export default app
-    ```
+   export default app;
+   ```
 
 Now if you check your testing server URL you'll see our `Todos.svelte` component being rendered:
 
@@ -151,16 +152,12 @@ For the moment we will start with a static markup representation of our app, so 
 ```html
 <!-- Todos.svelte -->
 <div class="todoapp stack-large">
-
   <!-- NewTodo -->
   <form>
     <h2 class="label-wrapper">
-      <label for="todo-0" class="label__lg">
-        What needs to be done?
-      </label>
+      <label for="todo-0" class="label__lg"> What needs to be done? </label>
     </h2>
-    <input type="text" id="todo-0" autocomplete="off"
-      class="input input__lg" />
+    <input type="text" id="todo-0" autocomplete="off" class="input input__lg" />
     <button type="submit" disabled="" class="btn btn__primary btn__lg">
       Add
     </button>
@@ -190,7 +187,6 @@ For the moment we will start with a static markup representation of our app, so 
 
   <!-- Todos -->
   <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
-
     <!-- todo-1 (editing mode) -->
     <li class="todo">
       <div class="stack-small">
@@ -199,7 +195,11 @@ For the moment we will start with a static markup representation of our app, so 
             <label for="todo-1" class="todo-label">
               New name for 'Create a Svelte starter app'
             </label>
-            <input type="text" id="todo-1" autocomplete="off" class="todo-text" />
+            <input
+              type="text"
+              id="todo-1"
+              autocomplete="off"
+              class="todo-text" />
           </div>
           <div class="btn-group">
             <button class="btn todo-cancel" type="button">
@@ -219,7 +219,7 @@ For the moment we will start with a static markup representation of our app, so 
     <li class="todo">
       <div class="stack-small">
         <div class="c-cb">
-          <input type="checkbox" id="todo-2" checked/>
+          <input type="checkbox" id="todo-2" checked />
           <label for="todo-2" class="todo-label">
             Create your first component
           </label>
@@ -267,7 +267,6 @@ For the moment we will start with a static markup representation of our app, so 
     <button type="button" class="btn btn__primary">Check all</button>
     <button type="button" class="btn btn__primary">Remove completed</button>
   </div>
-
 </div>
 ```
 
@@ -306,7 +305,10 @@ The class `visually-hidden` has no effect yet, because we have not included any 
 Further down, you can find the following `<ul>` element:
 
 ```html
-<ul role="list" className="todo-list stack-large" aria-labelledby="list-heading">
+<ul
+  role="list"
+  className="todo-list stack-large"
+  aria-labelledby="list-heading">
 ```
 
 The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara's article "Fixing Lists".
@@ -326,7 +328,7 @@ For example, if we add an `<img>` element to our `todos.svelte` component withou
 ```html
 <h1>Svelte To-Do list</h1>
 
-<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
+<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
 The compiler will issue the following warning:
@@ -351,7 +353,7 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 
 ```html
 <!-- svelte-ignore a11y-missing-attribute -->
-<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
+<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
 > **Note:** With VSCode you can automatically add this ignore comment by clicking on the _Quick fix…_ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
@@ -363,22 +365,24 @@ plugins: [
   svelte({
     dev: !production,
     css: (css) => {
-      css.write('public/build/bundle.css');
+      css.write("public/build/bundle.css");
     },
     // Warnings are normally passed straight to Rollup. You can
     // optionally handle them here, for example to squelch
     // warnings with a particular code
     onwarn: (warning, handler) => {
       // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
-      if (warning.code === 'a11y-missing-attribute') return;
+      if (warning.code === "a11y-missing-attribute") {
+        return;
+      }
 
       // let Rollup handle all other warnings normally
       handler(warning);
-    }
+    },
   }),
 
   // …
-]
+];
 ```
 
 By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.
@@ -496,7 +500,7 @@ body {
 }
 .btn__primary:disabled {
   color: darkgrey;
-  background-color:#565656;
+  background-color: #565656;
 }
 .btn-group {
   display: flex;

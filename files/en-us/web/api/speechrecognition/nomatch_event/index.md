@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.nomatch_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`nomatch`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a final result with no significant recognition.
@@ -26,7 +27,7 @@ onnomatch = (event) => { }
 
 ## Event type
 
-An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechRecognitionEvent")}}
 

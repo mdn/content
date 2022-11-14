@@ -11,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.HTMLElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("Element")}}._
 
@@ -42,13 +43,15 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.enterkeyhint")}}
   - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
 - {{DOMxRef("HTMLElement.hidden")}}
-  - : A boolean value indicating if the element is hidden or not.
+  - : A string or boolean value reflecting the value of the element's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute.
 - {{DOMxRef("HTMLElement.inert")}}
   - : A boolean value indicating whether the user agent must act as though the given node is absent for the purposes of user interaction events, in-page text searches ("find in page"), and text selection.
 - {{DOMxRef("HTMLElement.innerText")}}
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
+- {{DOMxRef("HTMLElement.inputMode")}}
+  - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -82,7 +85,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.translate")}}
   - : A boolean value representing the translation.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("Element")}}._
 
@@ -110,13 +113,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ### Animation events
 
-- {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}
+- {{domxref("Element/animationcancel_event", "animationcancel")}}
   - : Fired when an animation unexpectedly aborts.
-- {{domxref("HTMLElement/animationend_event", "animationend")}}
+- {{domxref("Element/animationend_event", "animationend")}}
   - : Fired when an animation has completed normally.
-- {{domxref("HTMLElement/animationiteration_event", "animationiteration")}}
+- {{domxref("Element/animationiteration_event", "animationiteration")}}
   - : Fired when an animation iteration has completed.
-- {{domxref("HTMLElement/animationstart_event", "animationstart")}}
+- {{domxref("Element/animationstart_event", "animationstart")}}
   - : Fired when an animation starts.
 
 ### Input events
@@ -130,36 +133,36 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ### Pointer events
 
-- {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
   - : Fired when an element captures a pointer using {{domxref("Element/setPointerCapture", "setPointerCapture()")}}.
-- {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
   - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
-- {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}
+- {{domxref("Element/pointercancel_event", "pointercancel")}}
   - : Fired when a pointer event is canceled.
-- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
   - : Fired when a pointer becomes active.
-- {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
+- {{domxref("Element/pointerenter_event", "pointerenter")}}
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-- {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
+- {{domxref("Element/pointerleave_event", "pointerleave")}}
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-- {{domxref("HTMLElement/pointermove_event", "pointermove")}}
+- {{domxref("Element/pointermove_event", "pointermove")}}
   - : Fired when a pointer changes coordinates.
-- {{domxref("HTMLElement/pointerout_event", "pointerout")}}
+- {{domxref("Element/pointerout_event", "pointerout")}}
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-- {{domxref("HTMLElement/pointerover_event", "pointerover")}}
+- {{domxref("Element/pointerover_event", "pointerover")}}
   - : Fired when a pointer is moved into an element's hit test boundaries.
-- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.
 
 ### Transition events
 
-- {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
-- {{domxref("HTMLElement/transitionend_event", "transitionend")}}
+- {{domxref("Element/transitionend_event", "transitionend")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
-- {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}
+- {{domxref("Element/transitionrun_event", "transitionrun")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
-- {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}
+- {{domxref("Element/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications

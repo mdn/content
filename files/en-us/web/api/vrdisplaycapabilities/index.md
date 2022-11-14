@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplayCapabilities
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) describes the capabilities of a {{domxref("VRDisplay")}} — its features can be used to perform VR device capability tests, for example can it return position information.
@@ -22,7 +23,7 @@ The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API
 
 This interface is accessible through the {{domxref("VRDisplay.capabilities")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("VRDisplayCapabilities.canPresent")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).

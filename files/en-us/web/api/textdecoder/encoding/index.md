@@ -10,13 +10,16 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder.encoding
 ---
+
 {{APIRef("Encoding API")}}
 
-The **`TextDecoder.encoding`** read-only property
-returns a string containing the name of the decoding algorithm used by
-the specific decoder.
+The **`TextDecoder.encoding`** read-only property returns a string containing the name of the decoding algorithm used by the specific decoder object.
 
-It can be one of the following values:
+The encoding is set by the [constructor](/en-US/docs/Web/API/TextDecoder/TextDecoder) `label` parameter, and defaults to `utf-8`.
+
+## Value
+
+A lower-cased ASCII string, which can be one of the following values:
 
 - The recommended encoding for the Web: `'utf-8'`.
 - The legacy single-byte encodings:
@@ -50,29 +53,23 @@ It can be one of the following values:
   ['x-mac-cyrillic'](https://en.wikipedia.org/wiki/Macintosh_Cyrillic_encoding).
 - The legacy multi-byte Chinese (simplified) encodings:
   ['gbk'](https://en.wikipedia.org/wiki/GBK),
-  ['gb18030'](https://en.wikipedia.org/wiki/GB_18030), and
-  ['hz-gb-2312'](https://en.wikipedia.org/wiki/HZ_(character_encoding)).
+  ['gb18030'](https://en.wikipedia.org/wiki/GB_18030)
 - The legacy multi-byte Chinese (traditional) encoding:
   ['big5'](https://en.wikipedia.org/wiki/Big5).
 - The legacy multi-byte Japanese encodings:
   ['euc-jp'](https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-JP),
   ['iso-2022-jp'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-JP),
-  and ['shift-jis'](https://en.wikipedia.org/wiki/Shift_JIS).
+  ['shift-jis'](https://en.wikipedia.org/wiki/Shift_JIS).
 - The legacy multi-byte Korean encodings:
-  ['euc-kr'](https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR), and
-  ['iso-2022-kr'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR).
+  ['euc-kr'](https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR)
 - The legacy miscellaneous encodings:
   ['utf-16be'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
   ['utf-16le'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
-  and `'x-user-defined'`.
-- A special encoding, `'replacement'`, which only emits an error and an
-  `EOF` code point. It is used to prevent attacks that mismatch encodings
-  between the client and server. It can happen with `ISO-2022-CN` and
-  `ISO-2022-CN-ext`.
-
-## Value
-
-A string.
+  `'x-user-defined'`.
+- A special encoding, `'replacement'`.
+  This decodes empty input into empty output and any other arbitrary-length input into a single replacement character.
+  It is used to prevent attacks that mismatch encodings between the client and server.
+  The following encodings also map to the replacement encoding: `ISO-2022-CN`, `ISO-2022-CN-ext`, ['iso-2022-kr'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR) and ['hz-gb-2312'](<https://en.wikipedia.org/wiki/HZ_(character_encoding)>).
 
 ## Specifications
 

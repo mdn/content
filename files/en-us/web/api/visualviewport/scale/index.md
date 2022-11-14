@@ -12,6 +12,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport.scale
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`scale`** read-only property of the

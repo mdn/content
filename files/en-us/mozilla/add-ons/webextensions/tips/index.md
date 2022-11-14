@@ -8,6 +8,7 @@ tags:
   - WebExtensions
   - tricks
 ---
+
 {{AddonSidebar}}
 
 This page contains various tips and tricks which should be useful to many people developing extensions using WebExtension APIs.

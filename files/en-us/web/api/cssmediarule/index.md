@@ -9,20 +9,21 @@ tags:
   - Reference
 browser-compat: api.CSSMediaRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSMediaRule`** interface represents a single CSS {{cssxref("@media")}} rule.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
 - {{domxref("CSSMediaRule.media")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 

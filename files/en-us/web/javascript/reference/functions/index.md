@@ -10,13 +10,14 @@ tags:
   - parameters
 browser-compat: javascript.functions
 ---
+
 {{jsSidebar("Functions")}}
 
 Generally speaking, a function is a "subprogram" that can be _called_ by code
 external (or internal in the case of recursion) to the function. Like the program
 itself, a function is composed of a sequence of statements called the _function
 body_. Values can be _passed_ to a function, and the function
-will *return* a value.
+will _return_ a value.
 
 In JavaScript, functions are first-class objects, because they can have properties and
 methods just like any other object. What distinguishes them from other objects is that
@@ -165,7 +166,7 @@ When functions are used only once, a common pattern is an [IIFE (Immediately Inv
 
 IIFE are function expressions that are invoked as soon as the function is declared.
 
-### The generator function (function*) declaration
+### The generator function (function\*) declaration
 
 There is a special syntax for generator function declarations (see
 {{jsxref('Statements/function*', 'function* statement')}} for details):
@@ -183,7 +184,7 @@ function* name([param[, param[, ... param]]]) {
 - `statements`
   - : The statements comprising the body of the function.
 
-### The generator function (function*) expression
+### The generator function (function\*) expression
 
 A generator function expression is similar to and has the same syntax as a generator
 function declaration (see {{jsxref('Operators/function*', 'function* expression')}} for
@@ -409,7 +410,7 @@ constructor, a function defined by a function declaration can be used before the
 function declaration itself. For example:
 
 ```js
-foo(); // logs "FOO!"
+foo(); // Logs "FOO!"
 function foo() {
   console.log('FOO!');
 }
@@ -644,16 +645,16 @@ are no brackets "()" after the function name so the actual function is not calle
 
 ## See also
 
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Function")}}
 - {{jsxref("GeneratorFunction")}}
-- {{jsxref("Functions/Arrow_functions", "Arrow functions")}}
-- {{jsxref("Functions/Default_parameters", "Default parameters")}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters")}}
-- {{jsxref("Functions/arguments", "Arguments object")}}
-- {{jsxref("Functions/get", "getter")}}
-- {{jsxref("Functions/set", "setter")}}
-- {{jsxref("Functions/Method_definitions", "Method definitions")}}
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [The `arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)

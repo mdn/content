@@ -11,9 +11,10 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.proto
 ---
+
 {{JSRef}}{{Deprecated_header}}
 
-> **Warning:** Changing the `[[Prototype]]` of an object is, by the nature of [how modern JavaScript engines optimize property accesses](https://mathiasbynens.be/notes/prototypes), currently a very slow operation in every browser and JavaScript engine. In addition, the effects of altering inheritance are subtle and far-flung, and are not limited to the time spent in the `Object.setPrototypeOf(...)` statement, but may extend to **_any_** code that has access to any object whose `[[Prototype]]` has been altered. You can read more in [The performance hazards of [[Prototype]] mutation](/en-US/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation).
+> **Warning:** Changing the `[[Prototype]]` of an object is, by the nature of how modern JavaScript engines optimize property accesses, currently a very slow operation in every browser and JavaScript engine. In addition, the effects of altering inheritance are subtle and far-flung, and are not limited to the time spent in the `obj.__proto__ = ...` statement, but may extend to **_any_** code that has access to any object whose `[[Prototype]]` has been altered. You can read more in [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes).
 
 > **Warning:** While `Object.prototype.__proto__` is supported today in most browsers, its existence and exact behavior has only been standardized as a legacy feature to ensure compatibility for web browsers. For better support, use {{JSxRef("Object.getPrototypeOf()")}} and {{JSxRef("Object.setPrototypeOf()")}} instead.
 
@@ -25,7 +26,7 @@ The `__proto__` property can also be used in an object literal definition to set
 
 ## Syntax
 
-```js
+```js-nolint
 obj.__proto__
 ```
 
@@ -61,24 +62,29 @@ shape.__proto__ = circle;
 
 // Get the object prototype
 console.log(shape.__proto__ === Circle);  // false
+```
 
+```js
 const ShapeA = function () {};
 const ShapeB = {
   a() {
-    console.log('aaa');
+    console.log("aaa");
   },
 };
-console.log(ShapeA.prototype.__proto__ = ShapeB);
 
-const shapea = new ShapeA();
-shapea.a(); // aaa
-console.log(ShapeA.prototype === shapea.__proto__); // true
+ShapeA.prototype.__proto__ = ShapeB;
+console.log(ShapeA.prototype.__proto__); // { a: [Function: a] }
 
-// or
+const shapeA = new ShapeA();
+shapeA.a(); // aaa
+console.log(ShapeA.prototype === shapeA.__proto__); // true
+```
+
+```js
 const ShapeC = function () {};
 const ShapeD = {
   a() {
-    console.log('a');
+    console.log("a");
   },
 };
 
@@ -86,26 +92,21 @@ const shapeC = new ShapeC();
 shapeC.__proto__ = ShapeD;
 shapeC.a(); // a
 console.log(ShapeC.prototype === shapeC.__proto__); // false
+```
 
-// or
+```js
 function Test() {}
-Test.prototype.myname = function () {
-  console.log('myname');
+Test.prototype.myName = function () {
+  console.log("myName");
 };
 
-const a = new Test();
-console.log(a.__proto__ === Test.prototype); // true
-a.myname(); // myname
-
-// or
-const fn = function () {};
-fn.prototype.myname = function () {
-  console.log('myname');
-};
+const test = new Test();
+console.log(test.__proto__ === Test.prototype); // true
+test.myName(); // myName
 
 const obj = {};
-obj.__proto__ = fn.prototype;
-obj.myname(); // myname
+obj.__proto__ = Test.prototype;
+obj.myName(); // myName
 ```
 
 ## Specifications

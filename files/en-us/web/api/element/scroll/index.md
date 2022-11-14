@@ -10,6 +10,7 @@ tags:
   - Scroll
 browser-compat: api.Element.scroll
 ---
+
 {{APIRef}}
 
 The **`scroll()`** method of the {{domxref("Element")}}
@@ -18,7 +19,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 scroll(x-coord, y-coord)
 scroll(options)
 ```
@@ -41,7 +42,7 @@ scroll(options)
     - `left`
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
+      - : Specifies whether the scrolling should animate smoothly (`smooth`) or happen instantly in a single jump (`auto`, default).
 
 ### Return value
 

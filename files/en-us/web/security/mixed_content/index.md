@@ -8,6 +8,9 @@ tags:
   - Web
   - console
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
 
 ## Types of mixed content
@@ -52,7 +55,7 @@ Other resource types like web fonts and workers may be considered active mixed c
 
 ## Loading mixed-content resources
 
-Most browsers prevent *mixed active content* from loading, and some also block *mixed display content*.
+Most browsers prevent _mixed active content_ from loading, and some also block _mixed display content_.
 
 ### Loading locally delivered mixed-resources
 
@@ -87,11 +90,9 @@ Starting in Firefox 23, mixed active content is blocked by default (and mixed di
 
 To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.
 
-> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources)  (instead of a warning about "Loading mixed (insecure) display content").
+> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources) (instead of a warning about "Loading mixed (insecure) display content").
 
 ## See also
 
 - [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -16,6 +16,7 @@ tags:
   - Non-standard
 browser-compat: api.SourceBuffer.appendStream
 ---
+
 {{APIRef("Media Source Extensions")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`appendStream()`** method of the
@@ -24,7 +25,7 @@ The **`appendStream()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 appendStream(stream, maxSize)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - TV Leap Motion
   - Voice
 ---
+
 {{GamesSidebar}}
 
 {{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
@@ -37,9 +38,13 @@ if (this.cursors.right.isDown) {
 It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:
 
 ```js
-window.addEventListener("keydown", (event) => {
-  console.log(event.keyCode);
-}, true);
+window.addEventListener(
+  "keydown",
+  (event) => {
+    console.log(event.keyCode);
+  },
+  true
+);
 ```
 
 Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:
@@ -49,19 +54,23 @@ Every key pressed on the remote will show its key code in the console. You can a
 You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:
 
 ```js
-window.addEventListener("keydown", (event) => {
-  switch(event.keyCode) {
-    case 8: {
-      // Pause the game
-      break;
+window.addEventListener(
+  "keydown",
+  (event) => {
+    switch (event.keyCode) {
+      case 8: {
+        // Pause the game
+        break;
+      }
+      case 588: {
+        // Detonate bomb
+        break;
+      }
+      // …
     }
-    case 588: {
-      // Detonate bomb
-      break;
-    }
-    // …
-  }
-}, true);
+  },
+  true
+);
 ```
 
 You can see it in action by watching [this video](https://www.youtube.com/watch?v=Bh11sP0bcTY).
@@ -96,11 +105,12 @@ Leap.loop({
     horizontalDegree = Math.round(hand.roll() * toDegrees);
     verticalDegree = Math.round(hand.pitch() * toDegrees);
     grabStrength = hand.grabStrength;
-    output.innerHTML = `Leap Motion: <br />`
-      + ` roll: ${horizontalDegree}° <br />`
-      + ` pitch: ${verticalDegree}° <br />`
-      + ` strength: ${grabStrength}`;
-  }
+    output.innerHTML =
+      `Leap Motion: <br />` +
+      ` roll: ${horizontalDegree}° <br />` +
+      ` pitch: ${verticalDegree}° <br />` +
+      ` strength: ${grabStrength}`;
+  },
 });
 ```
 
@@ -123,7 +133,7 @@ function draw() {
     playerY -= 5;
   }
   if (grabStrength === 1) {
-    alert('BOOM!');
+    alert("BOOM!");
   }
 
   ctx.drawImage(img, playerX, playerY);
@@ -131,7 +141,7 @@ function draw() {
 }
 ```
 
-If the `horizontalDegree` value is greater than our `degreeThreshold`, which is 30 in this case, then the ship will be moved left 5 pixels on every frame. If its value is lower than the threshold's negative value, then the ship is moved right. up/down movement works in the same sort of way. The last value is `grabStrength`, which is a float between 0 and 1 — when reaching 1 (fist fully clenched), we show an alert for now (in a full game this could be replaced with the shooting logic.)
+If the `horizontalDegree` value is greater than our `degreeThreshold`, which is 30 in this case, then the ship will be moved left 5 pixels on every frame. If its value is lower than the threshold's negative value, then the ship is moved right. Up/down movement works in the same sort of way. The last value is `grabStrength`, which is a float between 0 and 1 — when reaching 1 (fist fully clenched), we show an alert for now (in a full game this could be replaced with the shooting logic.)
 
 ![Leap Motion controller support in the game, with visible output for roll, pitch and strength.](controls-leapmotion.png)
 
@@ -168,19 +178,19 @@ Check out the [banana piano video](https://www.youtube.com/watch?v=_DWQ6ce2Ags),
 There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.com/documentation/drivers/makey-button/) inspired by the MaKey MaKey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:
 
 ```js
-const Cylon = require('cylon');
+const Cylon = require("cylon");
 Cylon.robot({
   connections: {
-    arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }
+    arduino: { adaptor: "firmata", port: "/dev/ttyACM0" },
   },
   devices: {
-    makey: { driver: 'makey-button', pin: 2 }
+    makey: { driver: "makey-button", pin: 2 },
   },
   work(my) {
-    my.makey.on('push', () => {
+    my.makey.on("push", () => {
       console.log("Button pushed!");
     });
-  }
+  },
 }).start();
 ```
 

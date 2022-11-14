@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Navigator.cookieEnabled
 ---
+
 {{ApiRef("HTML DOM")}}
 
 `navigator.cookieEnabled` returns a Boolean value that indicates whether cookies are enabled or not.

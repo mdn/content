@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules()`** constructor creates
@@ -18,7 +19,7 @@ The **`Intl.PluralRules()`** constructor creates
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.PluralRules()
 new Intl.PluralRules(locales)
 new Intl.PluralRules(locales, options)
@@ -29,9 +30,7 @@ new Intl.PluralRules(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the
-    general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
 
   - : An object with some or all of the following properties:
@@ -40,7 +39,7 @@ new Intl.PluralRules(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `type`
 
       - : The type to use. Possible values are:
@@ -65,14 +64,14 @@ new Intl.PluralRules(locales, options)
       - : The minimum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number and percent formatting is 0; the
         default for currency formatting is the number of minor unit digits
-        provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number formatting is the larger of
         `minimumFractionDigits` and 3; the default for currency
         formatting is the larger of `minimumFractionDigits` and the
-        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)
         (2 if the list doesn't provide that information); the default for percent formatting is the larger of
         `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
@@ -93,14 +92,11 @@ plural forms, e.g. "dog" and "dogs".
 ```js
 const pr = new Intl.PluralRules();
 
-pr.select(0);
-// → 'other' if in US English locale
+pr.select(0); // 'other' if in US English locale
 
-pr.select(1);
-// → 'one' if in US English locale
+pr.select(1); // 'one' if in US English locale
 
-pr.select(2);
-// → 'other' if in US English locale
+pr.select(2); // 'other' if in US English locale
 ```
 
 ### Using options

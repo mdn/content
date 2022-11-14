@@ -6,6 +6,7 @@ tags:
   - Mozilla
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)Firefox 51 was released on January 24, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -132,7 +133,7 @@ tags:
 
 ### Security
 
-- When login pages (i.e,. those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ({{bug(1319119)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ({{bug(1319119)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 
 ### Removals
 

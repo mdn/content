@@ -1,6 +1,7 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.skew
 ---
+
 {{CSSRef}}
 
 The **`skew()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that skews an element on the 2D
@@ -249,3 +251,8 @@ div {
 - {{cssxref("&lt;transform-function&gt;")}}
 - [skewX()](/en-US/docs/Web/CSS/transform-function/skewX)
 - [skewY()](/en-US/docs/Web/CSS/transform-function/skewY)
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

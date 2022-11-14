@@ -13,13 +13,14 @@ tags:
   - Deprecated
 browser-compat: api.Window.releaseEvents
 ---
+
 {{APIRef}}{{Deprecated_Header}}
 
 Releases the window from trapping events of a specific type.
 
 ## Syntax
 
-```js
+```js-nolint
 releaseEvents(eventType)
 ```
 
@@ -28,14 +29,14 @@ releaseEvents(eventType)
 - `eventType`
 
   - : `eventType` is a combination of the following values:
-`Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
-`Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`,
-`Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`,
-`Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`,
-`Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`,
-`Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`,
-`Event.RESET`, `Event.RESIZE`, `Event.SELECT`,
-`Event.SUBMIT`, `Event.UNLOAD`.
+    `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
+    `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`,
+    `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`,
+    `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`,
+    `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`,
+    `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`,
+    `Event.RESET`, `Event.RESIZE`, `Event.SELECT`,
+    `Event.SUBMIT`, `Event.UNLOAD`.
 
 ### Return value
 

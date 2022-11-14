@@ -6,7 +6,8 @@ tags:
   - Tutorial
   - WebMechanics
 ---
-{{LearnSidebar}}
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
 
 This article discusses what the Internet is and how it works.
 
@@ -40,8 +41,8 @@ The **Internet** is the backbone of the Web, the technical infrastructure that m
 
 ## Active Learning
 
-- [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc): A 5 minute video to understand the very basics of Internet by Aaron Titus.
-- [How does the Internet work?](https://www.youtube.com/watch?v=x3c1ih2NJEg) Detailed well visualized 9 minute video.
+- [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc): A 5-minute video to understand the very basics of Internet by Aaron Titus.
+- [How does the Internet work?](https://www.youtube.com/watch?v=x3c1ih2NJEg) Detailed well visualized 9-minute video.
 
 ## Deeper dive
 
@@ -85,7 +86,7 @@ So we are connected to the telephone infrastructure. The next step is to send th
 
 If you want to send a message to a computer, you have to specify which one. Thus any computer linked to a network has a unique address that identifies it, called an "IP address" (where IP stands for _Internet Protocol_). It's an address made of a series of four numbers separated by dots, for example: `192.168.2.10`.
 
-That's perfectly fine for computers, but we human beings have a hard time remembering that sort of address. To make things easier, we can alias an IP address with a human readable name called a _domain name_. For example (at the time of writing; IP addresses can change) `google.com` is the domain name used on top of the IP address `142.250.190.78`. So using the domain name is the easiest way for us to reach a computer over the Internet.
+That's perfectly fine for computers, but we human beings have a hard time remembering that sort of address. To make things easier, we can alias an IP address with a human-readable name called a _domain name_. For example (at the time of writing; IP addresses can change) `google.com` is the domain name used on top of the IP address `142.250.190.78`. So using the domain name is the easiest way for us to reach a computer over the Internet.
 
 ![Show how a domain name can alias an IP address](dns-ip.png)
 
@@ -112,5 +113,5 @@ They can therefore be accessed by authorized members from different physical loc
 ## Next steps
 
 - [How the Web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Understanding the difference between a web page, a web site, a web server and a search engine](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
+- [Understanding the difference between a web page, a website, a web server and a search engine](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
 - [Understanding domain names](/en-US/docs/Learn/Common_questions/What_is_a_domain_name)

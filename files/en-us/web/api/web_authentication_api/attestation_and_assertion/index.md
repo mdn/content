@@ -8,6 +8,7 @@ tags:
   - Web Authentication API
   - WebAuthn
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Web Authentication API")}}
 
 There are two different types of certificates used in WebAuthn for registration and authentication. They have similar names and similar purposes, but understanding the differences may be an initial point of confusion. The sections below describe attestation, which happens during registration, and assertion which happens during authentication.
@@ -28,7 +29,7 @@ Different devices have different attestation formats. The [pre-defined attestati
 - **Android Key Attestation** - one of the features added in Android O was Android Key Attestation, which enables the Android operating system to attest to keys.
 - **Android SafetyNet** -prior to Android Key Attestation, the only option for Android devices was to create Android SafetyNet attestations
 - **FIDO U2F** - security keys that implement the FIDO U2F standard use this format
-- **none** - browsers may prompt users whether they want a site to be allowed to see their attestation data and/or may remove attestation data from the authenticator's response if the \`attestation\` parameter in \`navigator.credentials.create()\` is set to \`none\`
+- **none** - browsers may prompt users whether they want a site to be allowed to see their attestation data and/or may remove attestation data from the authenticator's response if the `attestation` parameter in `navigator.credentials.create()` is set to `none`
 
 The purpose of attestation is to cryptographically prove that a newly generated key pair came from a specific device. This provides a root of trust for a newly generated key pair as well as being able to identify the attributes of a device being used (how the private key is protected; if / what kind of biometric is being used; whether a device has been certified; etc.). It should be noted that while attestation provides the capability for a root of trust, validating the root of trust is frequently not necessary. When registering an authenticator for a new account, typically a Trust On First Use (TOFU) model applies; and when adding an authenticator to an existing account, a user has already been authenticated and has established a secure session.
 

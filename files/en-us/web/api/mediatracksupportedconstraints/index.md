@@ -17,6 +17,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaTrackSupportedConstraints`** dictionary establishes the list of constrainable properties recognized by the {{Glossary("user agent")}} or browser in its implementation of the {{domxref("MediaStreamTrack")}} object. An object conforming to `MediaTrackSupportedConstraints` is returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
@@ -25,9 +26,9 @@ Because of the way interface definitions in WebIDL work, if a constraint is requ
 
 An actual constraint set is described using an object based on the {{domxref("MediaTrackConstraints")}} dictionary.
 
-To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
-## Properties
+## Instance properties
 
 Some combination—but not necessarily all—of the following properties will exist on the object.
 
@@ -64,7 +65,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - {{domxref("MediaTrackSupportedConstraints.groupId", "groupId")}}
   - : A Boolean value whose value is `true` if the [`groupId`](/en-US/docs/Web/API/MediaTrackConstraints#groupid) constraint is supported in the current environment.
 
-### Properties specific to shared screen tracks
+### Instance properties specific to shared screen tracks
 
 For tracks containing video sources from the user's screen contents, the following additional properties are may be included in addition to those available for video tracks.
 
@@ -79,8 +80,8 @@ For tracks containing video sources from the user's screen contents, the followi
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaTrackConstraints")}}

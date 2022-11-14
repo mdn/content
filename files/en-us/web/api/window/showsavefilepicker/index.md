@@ -9,9 +9,11 @@ tags:
   - Method
   - Window
   - working with files
+  - Experimental
 browser-compat: api.Window.showSaveFilePicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showSaveFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to save a file.
@@ -19,13 +21,13 @@ Either by selecting an existing file, or entering a name for a new file.
 
 ## Syntax
 
-```js
+```js-nolint
 showSaveFilePicker()
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
 
   - : An object containing options, which are as follows:
 
@@ -37,6 +39,7 @@ showSaveFilePicker()
     - `suggestedName`
       - : A {{jsxref('String')}}. The suggested file name.
     - `types`
+
       - : An {{jsxref('Array')}} of allowed file types to save. Each
         item is an object with the following options:
 
@@ -56,6 +59,10 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 - `AbortError`
   - : Thrown if the user dismisses the file picker without selecting or inputting a file,
     or if the user agent deems any selected files too sensitive or dangerous.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: CSS Logical Properties and Values
 slug: Web/CSS/CSS_Logical_Properties
+page-type: css-module
 tags:
   - CSS
   - CSS Logical Properties
@@ -10,6 +11,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-logical/
 ---
+
 {{CSSRef}}
 
 **CSS Logical Properties and Values** is a module of [CSS](/en-US/docs/Web/CSS) introducing logical properties and values that provide the ability to control layout through logical, rather than physical, direction and dimension mappings.
@@ -95,6 +97,11 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("inset-inline")}}
 - {{CSSxRef("inset-inline-end")}}
 - {{CSSxRef("inset-inline-start")}}
+
+### Properties for size containment
+
+- {{CSSxRef("contain-intrinsic-block-size")}}
+- {{CSSxRef("contain-intrinsic-inline-size")}}
 
 ### Other properties
 

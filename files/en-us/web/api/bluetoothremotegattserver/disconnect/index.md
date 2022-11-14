@@ -13,6 +13,7 @@ tags:
   - disconnect()
 browser-compat: api.BluetoothRemoteGATTServer.disconnect
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.disconnect()`** method causes
@@ -20,7 +21,7 @@ the script execution environment to disconnect from `this.device`.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

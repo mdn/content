@@ -14,6 +14,7 @@ tags:
   - hiding
   - unobtrusive
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, or they can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure even complex content is as accessible as possible.
@@ -78,7 +79,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -99,13 +101,16 @@ Inline markup that confers specific emphasis to the text that it wraps:
 ```html
 <p>The water is <em>very hot</em>.</p>
 
-<p>Water droplets collecting on surfaces is called <strong>condensation</strong>.</p>
+<p>
+  Water droplets collecting on surfaces is called <strong>condensation</strong>.
+</p>
 ```
 
 You might want to add some simple coloring to your emphasized text:
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -117,7 +122,10 @@ You will however rarely need to style emphasis elements in any significant way. 
 An element that allows an abbreviation, acronym, or initialization to be associated with its expansion:
 
 ```html
-<p>Web content is marked up using Hypertext Markup Language, or <abbr>HTML</abbr>.</p>
+<p>
+  Web content is marked up using Hypertext Markup Language, or
+  <abbr>HTML</abbr>.
+</p>
 ```
 
 Again, you might want to style it in some simple way:
@@ -145,7 +153,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -171,7 +181,7 @@ Elements to allow users to input data into websites:
 ```html
 <div>
   <label for="name">Enter your name</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -213,12 +223,10 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 
 ### Accept that users can override styles
 
-#### Accept that users can override your styles
-
 It is possible for users to override your styles with their own custom styles, for example:
 
 - See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
-- It is probably easier to do it using an extension, for example, the Stylish extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/) and [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe).
+- It is probably easier to do it using an extension. For example, the Stylus extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), with Stylish being a [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe) equivalent.
 
 Users might do this for a variety of reasons. A visually impaired user might want to make the text bigger on all websites they visit, or a user with severe color deficiency might want to put all websites in high contrast colors that are easy for them to see. Whatever the need, you should be comfortable with this, and make your designs flexible enough so that such changes will work in your design. As an example, you might want to make sure your main content area can handle bigger text (maybe it will start to scroll to allow it all to be seen), and won't just hide it, or break completely.
 
@@ -262,7 +270,7 @@ We've made this form validation pretty accessible too. We've used {{htmlelement(
 
 ```html
 <label for="name">Enter your name:</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 We only do the validation when the form is submitted — this is so that we don't update the UI too often and potentially confuse screen reader (and possibly other) users:
@@ -271,16 +279,16 @@ We only do the validation when the form is submitted — this is so that we don'
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(let i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if (testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if (errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -296,8 +304,8 @@ For each input that doesn't have a value filled in when the form is submitted, w
 
 ```js
 function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement("li");
+  const anchor = document.createElement("a");
 
   const name = testItem.input.name;
   anchor.textContent = `${name} field is empty: fill in your ${name}.`;
@@ -320,8 +328,7 @@ As a final note, we have used some WAI-ARIA attributes in our demo to help solve
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 

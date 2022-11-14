@@ -6,8 +6,9 @@ tags:
   - JavaScript
   - Loop
   - Syntax
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
   "Web/JavaScript/Guide/Functions")}}
@@ -124,7 +125,7 @@ do
 while (condition);
 ```
 
-_`statement`_ is always executed once before the condition is
+`statement` is always executed once before the condition is
 checked. (To execute multiple statements, use a block statement (`{ }`)
 to group those statements.)
 
@@ -157,13 +158,13 @@ while (condition)
   statement
 ```
 
-If the *`condition`* becomes `false`,
+If the `condition` becomes `false`,
 `statement` within the loop stops executing and control passes to the
 statement following the loop.
 
 The condition test occurs _before_ `statement` in the loop is
 executed. If the condition returns `true`, `statement` is executed
-and the _`condition`_ is tested again. If the condition returns
+and the `condition` is tested again. If the condition returns
 `false`, execution stops, and control is passed to the statement following
 `while`.
 
@@ -172,7 +173,7 @@ those statements.
 
 ### Example 1
 
-The following `while` loop iterates as long as _`n`_ is
+The following `while` loop iterates as long as `n` is
 less than `3`:
 
 ```js
@@ -344,18 +345,18 @@ If you comment out the `continue;`, the loop would run till the end and you woul
 
 ### Example 2
 
-A statement labeled _`checkiandj`_ contains a statement labeled
-_`checkj`_. If `continue` is encountered, the program
-terminates the current iteration of _`checkj`_ and begins the next
-iteration. Each time `continue` is encountered, _`checkj`_
+A statement labeled `checkiandj` contains a statement labeled
+`checkj`. If `continue` is encountered, the program
+terminates the current iteration of `checkj` and begins the next
+iteration. Each time `continue` is encountered, `checkj`
 reiterates until its condition returns `false`. When `false` is
-returned, the remainder of the _`checkiandj`_ statement is completed,
-and _`checkiandj`_ reiterates until its condition returns
+returned, the remainder of the `checkiandj` statement is completed,
+and `checkiandj` reiterates until its condition returns
 `false`. When `false` is returned, the program continues at the
-statement following _`checkiandj`_.
+statement following `checkiandj`.
 
-If `continue` had a label of _`checkiandj`_, the program
-would continue at the top of the _`checkiandj`_ statement.
+If `continue` had a label of `checkiandj`, the program
+would continue at the top of the `checkiandj` statement.
 
 ```js
 let i = 0;
@@ -445,12 +446,26 @@ const arr = [3, 5, 7];
 arr.foo = 'hello';
 
 for (const i in arr) {
-  console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i);
 }
+// "0" "1" "2" "foo"
 
 for (const i of arr) {
-  console.log(i); // logs 3, 5, 7
+  console.log(i);
 }
+// Logs: 3 5 7
+```
+
+The `for...of` and `for...in` statements can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). For example, you can simultaneously loop over the keys and values of an object using {{jsxref("Object.entries()")}}.
+
+```js
+const obj = { foo: 1, bar: 2 };
+
+for (const [key, val] of Object.entries(obj)) {
+  console.log(key, val);
+}
+// "foo" 1
+// "bar" 2
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",

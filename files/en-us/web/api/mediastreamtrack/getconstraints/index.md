@@ -12,6 +12,7 @@ tags:
   - getConstraints
 browser-compat: api.MediaStreamTrack.getConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getConstraints()`** method of
@@ -25,11 +26,11 @@ specified are required or acceptable for the included constrainable properties.
 Constraints can be used to ensure that the media meets certain guidelines you prefer.
 For example, you may prefer high definition video but require that the frame rate be a
 little low to help keep the data rate low enough not overtax the network. Constraints
-can also specify ideal and/or acceptable sizes or ranges of sizes. See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
+can also specify ideal and/or acceptable sizes or ranges of sizes. See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for details on how to work with constrainable properties.
 
 ## Syntax
 
-```js
+```js-nolint
 getConstraints()
 ```
 

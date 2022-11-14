@@ -13,6 +13,7 @@ tags:
   - encodingInfo
 browser-compat: api.MediaCapabilities.encodingInfo
 ---
+
 {{APIRef("MediaCapabilities")}}
 
 The **`MediaCapabilities.encodingInfo()`** method, part of the {{domxref("MediaCapabilities")}} interface of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities information.
@@ -20,16 +21,18 @@ This contains the three boolean properties `supported`, `smooth`, and `powereffi
 
 ## Syntax
 
-```js
+```js-nolint
 encodingInfo(configuration)
 ```
 
 ### Parameters
 
 - `configuration`
+
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaEncodingConfiguration in the spec -->
 
     - `type`
+
       - : The type of media being tested. This takes one of two values:
 
         - `record`
@@ -38,6 +41,7 @@ encodingInfo(configuration)
           - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
 
     - `video`
+
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
@@ -73,7 +77,7 @@ A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attri
 - `supported`
   - : `true` if the media content can be decoded at all. Otherwise, it is `false`.
 - `smooth`
-  - : `true` if playback of the media will be smooth (of high quality). Otherwise is is `false`.
+  - : `true` if playback of the media will be smooth (of high quality). Otherwise it is `false`.
 - `powerEfficient`
   - : `true` if playback of the media will be power efficient. Otherwise, it is `false`.
 

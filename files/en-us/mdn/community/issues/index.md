@@ -7,9 +7,10 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
-[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories/) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
+[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
 
 > **Note:** If an issue has a triage label, we haven't reviewed it yet, and you shouldn't begin work on it.
 
@@ -35,22 +36,6 @@ We should therefore replace all instances of the `\{{ warning }}` macro with the
 - [ ] Deprecate `\{{ warning }}` macro
 - [ ] Notify localization team leads of the change.
 ```
-
-## Opening an issue
-
-What info should be included
-What we accept and don't accept
-
-Discussions should be here
-
-<!-- content from elsewhere -->
-
-Priority:
-
-- `p0` Urgent: Something is broken and needs to be fixed immediately.
-- `p1` High priority: This is needed, but not something that's broken and affecting our users.
-- `p2` Medium priority: It would be great to get this done if there aren't any other high priority tasks, chances are this issue will escalate to high priority soon enough.
-- `p3` Low priority: This is a nice to have. Small chance of it escalating, but something we should consider.
 
 ## Make progress, not noise
 
@@ -81,8 +66,6 @@ Most issues need some investigation before work can start, if you need to ask qu
 If you take on an issue we expect work to happen in a timely manner. If you can no longer take on the task, leave a comment and unassign yourself.
 
 Fork and branch the repository, do your work and open a [pull request](/en-US/docs/MDN/Community/Pull_requests).
-
-_(more stuff)_
 
 Now and then, you may run into problems while using MDN. Whether it's a problem with site infrastructure or an error in documentation content, you can either try to fix it yourself or report the problem. While the former is preferred, the latter is sometimes the best you can manage, and that's okay too.
 

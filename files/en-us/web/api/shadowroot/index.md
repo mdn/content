@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 The **`ShadowRoot`** interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
@@ -19,7 +20,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("ShadowRoot.activeElement")}} {{ReadOnlyInline}}
   - : Returns the {{domxref('Element')}} within the shadow tree that has focus.
@@ -45,12 +46,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
-### Event handlers
-
-- {{domxref("ShadowRoot.onslotchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event is raised.
-
-## Methods
+## Instance methods
 
 - {{DOMxRef("ShadowRoot.getAnimations()")}}
   - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.
@@ -60,6 +56,13 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the topmost element at the specified coordinates.
 - {{domxref("ShadowRoot.elementsFromPoint()")}}
   - : Returns an array of all elements at the specified coordinates.
+
+## Events
+
+The following events are available to `ShadowRoot` via event bubbling from {{domxref("HTMLSlotElement")}}:
+
+- `HTMLSlotElement` {{domxref("HTMLSlotElement.slotchange_event", "slotchange")}} event
+  - : An event fired when the node(s) contained in that slot change.
 
 ## Examples
 

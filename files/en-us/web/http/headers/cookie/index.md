@@ -9,9 +9,10 @@ tags:
   - request
 browser-compat: http.headers.Cookie
 ---
+
 {{HTTPSidebar}}
 
-The **`Cookie`** HTTP request header contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) associated with the server (i.e. previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header or set in Javascript using {{domxref("Document.cookie")}}).
+The **`Cookie`** HTTP request header contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) associated with the server (i.e. previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header or set in JavaScript using {{domxref("Document.cookie")}}).
 
 The `Cookie` header is optional and may be omitted if, for example, the browser's privacy settings block cookies.
 
@@ -30,7 +31,7 @@ The `Cookie` header is optional and may be omitted if, for example, the browser'
 
 ## Syntax
 
-```
+```http
 Cookie: <cookie-list>
 Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3
@@ -43,7 +44,7 @@ Cookie: name=value; name2=value2; name3=value3
 
 ## Examples
 
-```
+```http
 Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 ```
 

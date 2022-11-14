@@ -7,6 +7,9 @@ tags:
   - JavaScript
   - OpenPractices
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 
 <table>
@@ -54,9 +57,9 @@ You may also add JavaScript code between `<script>` tags rather than providing a
 
 ```html
 <script>
-window.addEventListener('load', () => {
-  console.log('This function is executed once the page is fully loaded');
-});
+  window.addEventListener("load", () => {
+    console.log("This function is executed once the page is fully loaded");
+  });
 </script>
 ```
 
@@ -77,7 +80,7 @@ Accessibility is a major issue in any software development. JavaScript can make 
   - If you use pointer events (like mouse events or touch events), duplicate the functionality with keyboard events.
   - Test your site using a keyboard only.
 
-- **Don't set nor even guess time limits.** It takes extra time to navigate with the keyboard or hear content read out. You can hardly ever predict just how long it will take for users or browsers to complete an process (especially asynchronous actions such as loading resources).
+- **Don't set nor even guess time limits.** It takes extra time to navigate with the keyboard or hear content read out. You can hardly ever predict just how long it will take for users or browsers to complete a process (especially asynchronous actions such as loading resources).
 - **Keep animations subtle and brief with no flashing.** Flashing is annoying and can [cause seizures](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html). Additionally, if an animation lasts more than a couple seconds, give the user a way to cancel it.
 - **Let users initiate interactions.** That means, don't update content, redirect, or refresh automatically. Don't use carousels or display popups without warning.
 - **Have a plan B for users without JavaScript.** People may have JavaScript turned off to improve speed and security, and users often face network issues that prevent loading scripts. Moreover, third-party scripts (ads, tracking scripts, browser extensions) might break your scripts.

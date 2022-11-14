@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Reference
 ---
+
 {{jsSidebar("Intermediate")}}
 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
@@ -275,7 +276,7 @@ function sum(a) {
   };
 }
 
-console.log(sum(1)(2)(3)(4)); // log 20
+console.log(sum(1)(2)(3)(4)); // 20
 ```
 
 You can also write without anonymous functions:
@@ -299,7 +300,7 @@ const sum2 = sum(1);
 const sum3 = sum2(2);
 const sum4 = sum3(3);
 const result = sum4(4);
-console.log(result); //log 20
+console.log(result); // 20
 ```
 
 In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to _all_ outer function scopes.
@@ -315,7 +316,7 @@ function outer() {
   }
 }
 
-outer()(); // logs 5 6
+outer()(); // Logs 5 6
 ```
 
 Closures over modules can be more interesting.
@@ -371,9 +372,9 @@ Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/St
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js

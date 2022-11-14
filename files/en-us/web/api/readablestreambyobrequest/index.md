@@ -11,6 +11,7 @@ tags:
   - Steams
 browser-compat: api.ReadableStreamBYOBRequest
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a "pull request" for data from an underlying source that will made as a zero-copy transfer to a consumer (bypassing the stream's internal queues).
@@ -34,17 +35,17 @@ Note that a {{domxref("ReadableByteStreamController")}} is only created for unde
 
 None. `ReadableStreamBYOBRequest` instance is created automatically by `ReadableByteStreamController` as needed.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStreamBYOBRequest.view")}} {{ReadOnlyInline}}
   - : Returns the current view.
     This is a view on a buffer that will be transferred to the consumer when `ReadableStreamBYOBRequest.respond()` is called.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamBYOBRequest.respond()")}}
   - : Signals the associated readable byte stream that the specified number of bytes were written into the current [`view`](#readablestreambyobrequest.view), which then causes the pending request from the consumer to be resolved.
-     Note that after this method is called the `view` is transferred and no longer modifiable.
+    Note that after this method is called the `view` is transferred and no longer modifiable.
 - {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}}
   - : Signals to the associated readable byte stream view passed as an argument should be transferred to the consumer of the readable byte stream.
     This new view must use the same buffer as the original [`view`](#readablestreambyobrequest.view), start at the same offset, and be the same length or shorter.

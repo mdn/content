@@ -1,8 +1,9 @@
 ---
-title: ':default'
+title: ":default"
 slug: Web/CSS/:default
+page-type: css-pseudo-class
 tags:
-  - ':default'
+  - ":default"
   - CSS
   - Forms
   - Layout
@@ -13,6 +14,7 @@ tags:
   - default
 browser-compat: css.selectors.default
 ---
+
 {{CSSRef}}
 
 The **`:default`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects form elements that are the default in a group of related elements.
@@ -39,16 +41,16 @@ What this selector matches is defined in [HTML Standard §4.16.3 Pseudo-classes]
 <fieldset>
   <legend>Favorite season</legend>
 
-  <input type="radio" name="season" id="spring">
+  <input type="radio" name="season" id="spring" value="spring" />
   <label for="spring">Spring</label>
 
-  <input type="radio" name="season" id="summer" checked>
+  <input type="radio" name="season" id="summer" value="summer" checked />
   <label for="summer">Summer</label>
 
-  <input type="radio" name="season" id="fall">
+  <input type="radio" name="season" id="fall" value="fall" />
   <label for="fall">Fall</label>
 
-  <input type="radio" name="season" id="winter">
+  <input type="radio" name="season" id="winter" value="winter" />
   <label for="winter">Winter</label>
 </fieldset>
 ```

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 The
@@ -24,7 +25,7 @@ different drawing context object on a given canvas element.
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType)
 getContext(contextType, contextAttributes)
 ```
@@ -62,9 +63,9 @@ getContext(contextType, contextAttributes)
     example:
 
     ```js
-    const gl = canvas.getContext('webgl', {
+    const gl = canvas.getContext("webgl", {
       antialias: false,
-      depth: false
+      depth: false,
     });
     ```
 
@@ -75,6 +76,10 @@ getContext(contextType, contextAttributes)
         contains an alpha channel. If set to `false`, the browser now knows
         that the backdrop is always opaque, which can speed up drawing of transparent
         content and images.
+    - `colorSpace` {{optional_inline}}
+      - : Specifies the color space of the rendering context. Possible values are:
+        - `"srgb"` selects the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). This is the default value.
+        - `"display-p3"` selects the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
     - `desynchronized`
       - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
@@ -109,6 +114,7 @@ getContext(contextType, contextAttributes)
         indicates if a context will be created if the system performance is low or if no
         hardware GPU is available.
     - `powerPreference`
+
       - : A hint to the user agent
         indicating what configuration of GPU is suitable for the WebGL context. Possible
         values are:
@@ -163,8 +169,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a `2d` context of the canvas with the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { /* … */ }
 ```
 
@@ -187,3 +193,4 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
 - Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
   {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
   {{domxref("ImageBitmapRenderingContext")}}.
+- Available color spaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).

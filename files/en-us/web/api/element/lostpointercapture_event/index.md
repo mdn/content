@@ -11,6 +11,7 @@ tags:
 browser-compat: api.Element.lostpointercapture_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
@@ -52,7 +53,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -107,5 +108,3 @@ para.addEventListener('pointerdown', (event) => {
   - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-- This event on `Document` targets: [`lostpointercapture`](/en-US/docs/Web/API/Document/lostpointercapture_event) event

@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult.length
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`length`** read-only property of the
@@ -30,7 +31,7 @@ A number.
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

@@ -13,6 +13,7 @@ tags:
   - onerror
 browser-compat: api.FileReader.error_event
 ---
+
 {{APIRef}}
 
 The `error` event is fired when the read failed due to an error (for example, because the file was not found or not readable).
@@ -31,7 +32,7 @@ onerror = (event) => { };
 
 ## Event type
 
-An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ProgressEvent")}}
 

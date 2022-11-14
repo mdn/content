@@ -1,6 +1,7 @@
 ---
 title: Coordinate systems
 slug: Web/CSS/CSSOM_View/Coordinate_systems
+page-type: guide
 tags:
   - CSS
   - CSSOM
@@ -11,9 +12,10 @@ tags:
   - Layout
   - NeedsContent
 ---
+
 {{CSSRef}}
 
-When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in [algebra](https://en.wikipedia.org/wiki/Algebra)), its position is defined relative to a fixed point in the context. This fixed point is called the [origin](https://en.wikipedia.org/wiki/Origin_(mathematics)). The position is specified as the number of pixels offset from the origin along each dimension of the context.
+When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in [algebra](https://en.wikipedia.org/wiki/Algebra)), its position is defined relative to a fixed point in the context. This fixed point is called the [origin](<https://en.wikipedia.org/wiki/Origin_(mathematics)>). The position is specified as the number of pixels offset from the origin along each dimension of the context.
 
 This guide describes the standard coordinate systems used by the CSS object model. These are generally only different in terms of where their origin is located.
 
@@ -23,7 +25,7 @@ In the coordinate systems used by web technologies, convention dictates that the
 
 On the web, the default origin is the _top_-left corner of a given context (with positive y-coordinate values being below the origin). Note that this is unlike most mathematical models, where the origin is at the _bottom_-left corner, with positive y-coordinate values being above the origin.
 
-When drawing 3D graphics, or using a third dimension to layer objects from front to back, the _z-coordinate_ is also used. This specifies the distance away from the viewer if positive and toward the viewer if negative.
+When using the third dimension to layer objects from front to back, we use the z-axis. The z-axis runs from the viewer to the screen's surface. The CSS z-index attribute affects where positioned elements sit on this axis, giving the effect of moving away from or toward the viewer.
 
 > **Note:** It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
 

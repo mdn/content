@@ -12,6 +12,7 @@ tags:
   - request
 browser-compat: api.Request
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Request`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents a resource request.
@@ -23,7 +24,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.Request","Request()")}}
   - : Creates a new `Request` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("Request.body")}} {{ReadOnlyInline}}
   - : A {{domxref("ReadableStream")}} of the body contents.
@@ -43,7 +44,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains the request's method (`GET`, `POST`, etc.)
 - {{domxref("Request.mode")}} {{ReadOnlyInline}}
   - : Contains the mode of the request (e.g., `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.priority")}} {{ReadOnlyInline}}
+- {{domxref("Request.priority")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Contains the request's priority hint (e.g., `high`, `low`, `auto`).
 - {{domxref("Request.redirect")}} {{ReadOnlyInline}}
   - : Contains the mode for how redirects are handled. It may be one of `follow`, `error`, or `manual`.
@@ -54,7 +55,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 
-## Methods
+## Instance methods
 
 - {{domxref("Request.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.

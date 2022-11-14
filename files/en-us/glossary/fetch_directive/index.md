@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Security
 ---
+
 **{{Glossary("CSP")}} fetch directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and control locations from which certain resource types may be loaded. For instance, {{CSP("script-src")}} allows developers to allow trusted sources of script to execute on a page, while {{CSP("font-src")}} controls the sources of web fonts.
 
 All fetch directives fall back to {{CSP("default-src")}}. That means, if a fetch directive is absent in the CSP header, the user agent will look for the `default-src` directive.

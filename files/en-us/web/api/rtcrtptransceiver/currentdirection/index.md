@@ -15,6 +15,7 @@ tags:
   - currentDirection
 browser-compat: api.RTCRtpTransceiver.currentDirection
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only {{domxref("RTCRtpTransceiver")}} property

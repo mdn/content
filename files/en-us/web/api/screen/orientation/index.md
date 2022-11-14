@@ -11,6 +11,7 @@ tags:
   - screen
 browser-compat: api.Screen.orientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 The **`orientation`** read-only property of the
@@ -27,11 +28,11 @@ Note that older, prefixed versions returned a string equivalent to
 ## Examples
 
 ```js
-switch (screen.orientation) {
+switch (screen.orientation.type) {
   case "landscape-primary":
     console.log("That looks good.");
     break;
-  case "landscape-secondary": 
+  case "landscape-secondary":
     console.log("Mmmh… the screen is upside down!");
     break;
   case "portrait-secondary":

@@ -12,6 +12,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -77,18 +78,19 @@ The following connections are blocked and won't load:
 
 ```html
 <a ping="https://not-example.com">
+  <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://not-example.com/");
+    xhr.send();
 
-<script>
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://not-example.com/');
-  xhr.send();
+    const ws = new WebSocket("https://not-example.com/");
 
-  const ws = new WebSocket("https://not-example.com/");
+    const es = new EventSource("https://not-example.com/");
 
-  const es = new EventSource("https://not-example.com/");
-
-  navigator.sendBeacon("https://not-example.com/", { /* … */ });
-</script>
+    navigator.sendBeacon("https://not-example.com/", {
+      /* … */
+    });
+  </script></a>
 ```
 
 ## Specifications

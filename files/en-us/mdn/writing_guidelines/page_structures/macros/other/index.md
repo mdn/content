@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 In contrast to the macros listed in [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.
@@ -40,4 +41,3 @@ These macros have been replace by other ways of doing the same thing, and should
 ### Linking
 
 - The [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) macro creates a phrase that links to both the name of a section and the article containing that section. For example, `\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}` outputs the following: _{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}_.
-- The [`Link`](https://github.com/mdn/yari/blob/main/kumascript/macros/Link.ejs) macro inserts a link to the specified page on MDN, using the page's title as the visible string to click on, and the tooltip picked up from the page's SEO summary.

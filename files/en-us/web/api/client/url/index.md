@@ -11,6 +11,7 @@ tags:
   - URL
 browser-compat: api.Client.url
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`url`** read-only property of the {{domxref("Client")}}

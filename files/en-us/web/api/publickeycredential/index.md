@@ -12,6 +12,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.
@@ -20,7 +21,7 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 > **Note:** This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
-## Properties
+## Instance properties
 
 - `PublicKeyCredential.type` {{ReadOnlyInline()}} {{securecontext_inline}}
   - : Inherited from {{domxref("Credential")}}. Always set to `public-key` for `PublicKeyCredential` instances.
@@ -31,12 +32,15 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 - {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
   - : An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the `PublicKeyCredential` was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the `PublicKeyCredential` was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
 
-## Methods
+## Static methods
+
+- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
+  - : A static method returning a {{jsxref("Promise")}} which resolves to `true` if an authenticator bound to the platform is capable of _verifying_ the user.
+
+## Instance methods
 
 - {{domxref("PublicKeyCredential.getClientExtensionResults()")}} {{securecontext_inline}}
   - : If any extensions were requested, this method will return the results of processing those extensions.
-- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
-  - : A static method returning a {{jsxref("Promise")}} which resolves to `true` if an authenticator bound to the platform is capable of _verifying_ the user.
 
 ## Examples
 
@@ -53,8 +57,8 @@ const publicKey = {
   },
   user: {
     id: new Uint8Array(16),
-    name: "jdoe@example.com",
-    displayName: "John Doe"
+    name: "canand@example.com",
+    displayName: "Carina Anand",
   },
   pubKeyCredParams: [
     {

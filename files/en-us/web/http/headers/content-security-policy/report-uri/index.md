@@ -7,8 +7,10 @@ tags:
   - HTTP
   - Reference
   - Security
+  - Deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -53,7 +55,7 @@ with other directives.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: report-uri <uri>;
 Content-Security-Policy: report-uri <uri> <uri>;
 ```
@@ -66,7 +68,7 @@ Content-Security-Policy: report-uri <uri> <uri>;
 See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
 examples.
 
-```
+```http
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 

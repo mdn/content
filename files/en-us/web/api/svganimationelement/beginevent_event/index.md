@@ -1,5 +1,5 @@
 ---
-title: 'SVGAnimationElement: beginEvent event'
+title: "SVGAnimationElement: beginEvent event"
 slug: Web/API/SVGAnimationElement/beginEvent_event
 page-type: web-api-event
 tags:
@@ -11,6 +11,7 @@ tags:
   - Event
 browser-compat: api.SVGAnimationElement.beginEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`beginEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when the element local timeline begins to play. It will be raised each time the element begins the active duration (i.e., when it restarts, but not when it repeats).
@@ -31,7 +32,7 @@ onbegin = (event) => { };
 
 ## Event type
 
-An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
@@ -50,17 +51,13 @@ An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
   <title>SVG SMIL Animate with Path</title>
   <circle cx="0" cy="50" r="50" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="5s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="5s" repeatCount="indefinite" />
   </circle>
 </svg>
 
-<hr>
+<hr />
 
-<ul>
-
-</ul>
+<ul></ul>
 ```
 
 ```css

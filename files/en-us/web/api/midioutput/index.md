@@ -9,17 +9,18 @@ tags:
   - MIDIOutput
 browser-compat: api.MIDIOutput
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIOutput`** interface of the {{domxref('Web MIDI API','','',' ')}} provides methods to add messages to the queue of an output device, and to clear the queue of messages.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("MIDIPort")}}._
 

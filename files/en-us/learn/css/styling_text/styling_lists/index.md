@@ -11,6 +11,7 @@ tags:
   - bullets
   - lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [Lists](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) behave like any other text for the most part, but there are some CSS properties specific to lists that you need to know about, as well as some best practices to consider. This article explains all.
@@ -49,8 +50,10 @@ The HTML for our list example looks like so:
 ```html
 <h2>Shopping (unordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ul>
   <li>Hummus</li>
@@ -61,28 +64,40 @@ paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
 <h2>Recipe (ordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ol>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
 
 <h2>Ingredient description list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <dl>
   <dt>Hummus</dt>
-  <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+  <dd>
+    A thick dip/sauce generally made from chick peas blended with tahini, lemon
+    juice, salt, garlic, and other ingredients.
+  </dd>
   <dt>Pita</dt>
   <dd>A soft, slightly leavened flatbread.</dd>
   <dt>Halloumi</dt>
-  <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+  <dd>
+    A semi-hard, unripened, brined cheese with a higher-than-usual melting
+    point, usually made from goat/sheep milk.
+  </dd>
   <dt>Green salad</dt>
   <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
 </dl>
@@ -114,17 +129,22 @@ h2 {
   font-size: 2rem;
 }
 
-ul,ol,dl,p {
+ul,
+ol,
+dl,
+p {
   font-size: 1.5rem;
 }
 
-li, p {
+li,
+p {
   line-height: 1.5;
 }
 
 /* Description list styles */
 
-dd, dt {
+dd,
+dt {
   line-height: 1.5;
 }
 
@@ -208,7 +228,7 @@ ul li {
 
 Here we've done the following:
 
-- Set the {{cssxref("padding-left")}} of the {{htmlelement("ul")}} down from the default `40px` to `20px`, then set the same amount on the list items. This is so that, overall, the list items are still lined up with the order list items and the description list descriptions, but the list items have some padding for the background images to sit inside. If we didn't do this, the background images would overlap with the list item text, which would look messy.
+- Set the {{cssxref("padding-left")}} of the {{htmlelement("ul")}} down from the default `40px` to `20px`, then set the same amount on the list items. This is so that, overall, the list items are still lined up with the ordered list items and the description list descriptions, but the list items have some padding for the background images to sit inside. If we didn't do this, the background images would overlap with the list item text, which would look messy.
 - Set the {{cssxref("list-style-type")}} to `none`, so that no bullet appears by default. We're going to use {{cssxref("background")}} properties to handle the bullets instead.
 - Inserted a bullet onto each unordered list item. The relevant properties are as follows:
 
@@ -254,7 +274,9 @@ The {{htmlattrxref("start","ol")}} attribute allows you to start the list counti
 ```html
 <ol start="4">
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -271,7 +293,9 @@ The {{htmlattrxref("reversed","ol")}} attribute will start the list counting dow
 ```html
 <ol start="4" reversed>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -290,7 +314,9 @@ The {{htmlattrxref("value","li")}} attribute allows you to set your list items t
 ```html
 <ol>
   <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
-  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="4">
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li value="6">Wash and chop the salad.</li>
   <li value="8">Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -314,9 +340,15 @@ In this active learning session, we want you to take what you've learned above a
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see a potential answer.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><ul>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<ul>
   <li>First, light the candle.</li>
   <li>Next, open the box.</li>
   <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
@@ -329,13 +361,26 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 </ul></textarea>
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -349,8 +394,8 @@ const cssCode = cssInput.value;
 const output = document.querySelector(".output");
 const solution = document.getElementById("solution");
 
-const styleElem = document.createElement('style');
-const headElem = document.querySelector('head');
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {

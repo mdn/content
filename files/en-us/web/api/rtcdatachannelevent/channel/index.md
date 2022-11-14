@@ -11,6 +11,7 @@ tags:
   - channel
 browser-compat: api.RTCDataChannelEvent.channel
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCDataChannelEvent.channel`**

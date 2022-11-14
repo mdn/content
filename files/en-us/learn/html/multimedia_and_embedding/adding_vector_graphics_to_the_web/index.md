@@ -14,6 +14,7 @@ tags:
   - iframe
   - img
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
@@ -66,10 +67,12 @@ Moreover, vector image files are much lighter than their raster equivalents, bec
 As a simple example, the following code creates a circle and a rectangle:
 
 ```html
-<svg version="1.1"
-     baseProfile="full"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  version="1.1"
+  baseProfile="full"
+  width="300"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
@@ -90,7 +93,6 @@ So why would anyone want to use raster graphics over SVG? Well, SVG does have so
 
 - SVG can get complicated very quickly, meaning that file sizes can grow; complex SVGs can also take significant processing time in the browser.
 - SVG can be harder to create than raster images, depending on what kind of image you are trying to create.
-- SVG is not supported in older browsers, so may not be suitable if you need to support older versions of Internet Explorer with your web site (SVG started being supported as of IE9.)
 
 Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.
 
@@ -106,10 +108,10 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 
 ```html
 <img
-    src="equilateral.svg"
-    alt="triangle with all three sides equal"
-    height="87"
-    width="100" />
+  src="equilateral.svg"
+  alt="triangle with all three sides equal"
+  height="87"
+  width="100" />
 ```
 
 #### Pros
@@ -129,7 +131,10 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a {{htmlattrxref("srcset", "img")}} attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
 ```html
-<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+<img
+  src="equilateral.png"
+  alt="triangle with equal sides"
+  srcset="equilateral.svg" />
 ```
 
 You can also use SVGs as CSS background images, as shown below. In the below code, older browsers will stick with the PNG that they understand, while newer browsers will load the SVG:
@@ -150,7 +155,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 ```html
 <svg width="300" height="200">
-    <rect width="100%" height="100%" fill="green" />
+  <rect width="100%" height="100%" fill="green" />
 </svg>
 ```
 
@@ -176,7 +181,7 @@ Here's a quick review:
 
 ```html
 <iframe src="triangle.svg" width="500" height="500" sandbox>
-    <img src="triangle.png" alt="Triangle with three unequal sides" />
+  <img src="triangle.png" alt="Triangle with three unequal sides" />
 </iframe>
 ```
 
@@ -196,11 +201,12 @@ If you get stuck and can't get your code working, you can always reset it using 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="width: 95%;min-height: 200px;">
   <svg width="100%" height="100%">
@@ -215,8 +221,8 @@ If you get stuck and can't get your code working, you can always reset it using 
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution" disabled>
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" disabled />
 </div>
 ```
 

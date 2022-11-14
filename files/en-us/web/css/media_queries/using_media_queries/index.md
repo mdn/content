@@ -1,6 +1,7 @@
 ---
 title: Using media queries
 slug: Web/CSS/Media_Queries/Using_media_queries
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -10,10 +11,10 @@ tags:
   - Responsive Design
   - Web
 ---
+
 {{CSSRef}}
 
-**Media queries** are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser {{glossary("viewport")}} width).
-
+**Media queries** allow you to apply CSS styles depending on a device's general type (such as print vs. screen) or other characteristics such as screen resolution or browser {{glossary("viewport")}} width.
 Media queries are used for the following:
 
 - To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules.](/en-US/docs/Web/CSS/At-rule)
@@ -30,7 +31,38 @@ Media queries are case-insensitive.
 - [Media types](/en-US/docs/Web/CSS/@media#media_types) define the broad category of device for which the media query applies: `all`, `print`, `screen`.
 
   The type is optional (assumed to be `all`) except when using the `not` or `only` logical operators.
-- [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment: {{cssxref("@media/any-hover", "any-hover")}}, {{cssxref("@media/any-pointer", "any-pointer")}}, {{cssxref("@media/aspect-ratio", "aspect-ratio")}}, {{cssxref("@media/color", "color")}}, {{cssxref("@media/color-gamut", "color-gamut")}}, {{cssxref("@media/color-index", "color-index")}}, {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}, {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}, {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}, {{cssxref("@media/display-mode", "display-mode")}}, {{cssxref("@media/dynamic-range", "dynamic-range")}}, {{cssxref("@media/forced-colors", "forced-colors")}}, {{cssxref("@media/grid", "grid")}}, {{cssxref("@media/height", "height")}}, {{cssxref("@media/hover", "hover")}}, {{cssxref("@media/inverted-colors", "inverted-colors")}}, {{cssxref("@media/monochrome", "monochrome")}}, {{cssxref("@media/orientation", "orientation")}}, {{cssxref("@media/overflow-block", "overflow-block")}}, {{cssxref("@media/overflow-inline", "overflow-inline")}}, {{cssxref("@media/pointer", "pointer")}}, {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/resolution", "resolution")}}, {{cssxref("@media/scripting", "scripting")}}, {{cssxref("@media/update-frequency", "update")}}, {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}, {{cssxref("@media/width", "width")}}.
+
+- [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
+
+  - {{cssxref("@media/any-hover", "any-hover")}}
+  - {{cssxref("@media/any-pointer", "any-pointer")}}
+  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+  - {{cssxref("@media/color", "color")}}
+  - {{cssxref("@media/color-gamut", "color-gamut")}}
+  - {{cssxref("@media/color-index", "color-index")}}
+  - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
+  - {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
+  - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
+  - {{cssxref("@media/display-mode", "display-mode")}}
+  - {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - {{cssxref("@media/forced-colors", "forced-colors")}}
+  - {{cssxref("@media/grid", "grid")}}
+  - {{cssxref("@media/height", "height")}}
+  - {{cssxref("@media/hover", "hover")}}
+  - {{cssxref("@media/inverted-colors", "inverted-colors")}}
+  - {{cssxref("@media/monochrome", "monochrome")}}
+  - {{cssxref("@media/orientation", "orientation")}}
+  - {{cssxref("@media/overflow-block", "overflow-block")}}
+  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
+  - {{cssxref("@media/pointer", "pointer")}}
+  - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+  - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+  - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+  - {{cssxref("@media/resolution", "resolution")}}
+  - {{cssxref("@media/scripting", "scripting")}}
+  - {{cssxref("@media/update-frequency", "update")}}
+  - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - {{cssxref("@media/width", "width")}}.
 
   For example, the {{cssxref("@media/hover", "hover")}} feature allows a query to test against whether the device supports hovering over elements.
   Media feature expressions test for their presence or value, and are entirely optional.
@@ -53,14 +85,18 @@ Although websites are commonly designed with screens in mind, you may want to cr
 For example, this CSS targets printers:
 
 ```css
-@media print { /* … */ }
+@media print {
+  /* … */
+}
 ```
 
 You can also target multiple devices.
 For instance, this `@media` rule uses two media queries to target both screen and print devices:
 
 ```css
-@media screen, print { /* … */ }
+@media screen, print {
+  /* … */
+}
 ```
 
 See [media type](/en-US/docs/Web/CSS/@media#media_types) for a list of all media types.
@@ -73,21 +109,27 @@ For instance, you can apply specific styles to widescreen monitors, computers th
 This example applies styles when the user's _primary_ input mechanism (such as a mouse) can hover over elements:
 
 ```css
-@media (hover: hover) { /* … */ }
+@media (hover: hover) {
+  /* … */
+}
 ```
 
 Many media features are _range features_, which means they can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints.
-For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 12450px:
+For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 1250px:
 
 ```css
-@media (max-width: 12450px) { /* … */ }
+@media (max-width: 1250px) {
+  /* … */
+}
 ```
 
 If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or `none`, in [Level 4](https://drafts.csswg.org/mediaqueries-4/)).
 For example, this CSS will apply to any device with a color screen:
 
 ```css
-@media (color) { /* … */ }
+@media (color) {
+  /* … */
+}
 ```
 
 If a feature doesn't apply to the device on which the browser is running, expressions involving that media feature are always false.
@@ -104,7 +146,7 @@ The `and` operator can also combine multiple media features into a single media 
 The `only` operator prevents older browsers from applying the styles.
 
 > **Note:** In most cases, the `all` media type is used by default when no other type is specified.
-However, if you use the `not` or `only` operators, you must explicitly specify a media type.
+> However, if you use the `not` or `only` operators, you must explicitly specify a media type.
 
 ### Combining multiple types or features
 
@@ -112,13 +154,17 @@ The `and` keyword combines a media feature with a media type _or_ other media fe
 This example combines two media features to restrict styles to landscape-oriented devices with a width of at least 30 ems:
 
 ```css
-@media (min-width: 30em) and (orientation: landscape) { /* … */ }
+@media (min-width: 30em) and (orientation: landscape) {
+  /* … */
+}
 ```
 
 To limit the styles to devices with a screen, you can chain the media features to the `screen` media type:
 
 ```css
-@media screen and (min-width: 30em) and (orientation: landscape) { /* … */ }
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  /* … */
+}
 ```
 
 ### Testing for multiple queries
@@ -127,7 +173,9 @@ You can use a comma-separated list to apply styles when the user's device matche
 For instance, the following rule will apply its styles if the user's device has either a minimum height of 680px _or_ is a screen device in portrait mode:
 
 ```css
-@media (min-height: 680px), screen and (orientation: portrait) { /* … */ }
+@media (min-height: 680px), screen and (orientation: portrait) {
+  /* … */
+}
 ```
 
 Taking the above example, if the user had a printer with a page height of 800px, the media statement would return true because the first query would apply.
@@ -141,31 +189,41 @@ The `not` keyword can't be used to negate an individual feature query, only an e
 The `not` is evaluated last in the following query:
 
 ```css
-@media not all and (monochrome) { /* … */ }
+@media not all and (monochrome) {
+  /* … */
+}
 ```
 
 This means that the above query is evaluated like this:
 
 ```css
-@media not (all and (monochrome)) { /* … */ }
+@media not (all and (monochrome)) {
+  /* … */
+}
 ```
 
 It wouldn't be evaluated like this:
 
 ```css example-bad
-@media (not all) and (monochrome) { /* … */ }
+@media (not all) and (monochrome) {
+  /* … */
+}
 ```
 
 As another example, the following media query:
 
 ```css
-@media not screen and (color), print and (color) { /* … */ }
+@media not screen and (color), print and (color) {
+  /* … */
+}
 ```
 
 This means that the above query is evaluated like this:
 
 ```css
-@media (not (screen and (color))), print and (color) { /* … */ }
+@media (not (screen and (color))), print and (color) {
+  /* … */
+}
 ```
 
 ### Improving compatibility with older browsers
@@ -174,7 +232,9 @@ The `only` keyword prevents older browsers that do not support media queries wit
 _It has no effect on modern browsers._
 
 ```css
-@media only screen and (color) { /* … */ }
+@media only screen and (color) {
+  /* … */
+}
 ```
 
 ## Syntax improvements in Level 4
@@ -186,25 +246,33 @@ Level 4 adds a _range context_ for writing such queries. For example, using the 
 > See the [`@media` browser compatibility table](/en-US/docs/Web/CSS/@media#browser_compatibility) for more details.
 
 ```css
-@media (max-width: 30em) { /* … */ }
+@media (max-width: 30em) {
+  /* … */
+}
 ```
 
 In Media Queries Level 4 this can be written as:
 
 ```css
-@media (width <= 30em) { /* … */ }
+@media (width <= 30em) {
+  /* … */
+}
 ```
 
 Using `min-` and `max-` we might test for a width between two values like so:
 
 ```css
-@media (min-width: 30em) and (max-width: 50em) { /* … */ }
+@media (min-width: 30em) and (max-width: 50em) {
+  /* … */
+}
 ```
 
 This would convert to the Level 4 syntax as:
 
 ```css
-@media (30em <= width <= 50em ) { /* … */ }
+@media (30em <= width <= 50em) {
+  /* … */
+}
 ```
 
 Media Queries Level 4 also adds ways to combine media queries using full boolean algebra with **and**, **not**, and **or**.
@@ -214,7 +282,9 @@ Media Queries Level 4 also adds ways to combine media queries using full boolean
 Using `not()` around a media feature negates that feature in the query. For example, `not(hover)` would match if the device had no hover capability:
 
 ```css
-@media (not(hover)) { /* … */ }
+@media (not(hover)) {
+  /* … */
+}
 ```
 
 ### Testing for multiple features with `or`
@@ -223,12 +293,15 @@ You can use `or` to test for a match among more than one feature, resolving to `
 For example, the following query tests for devices that have a monochrome display or hover capability:
 
 ```css
-@media (not (color)) or (hover) { /* … */ }
+@media (not (color)) or (hover) {
+  /* … */
+}
 ```
 
 ## See also
 
 - [@media](/en-US/docs/Web/CSS/@media)
+- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)

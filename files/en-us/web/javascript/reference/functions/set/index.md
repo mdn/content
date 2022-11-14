@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.set
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`set`** syntax binds an object
@@ -19,7 +20,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 { set prop(val) { /* … */ } }
 { set [expression](val) { /* … */ } }
 ```
@@ -95,10 +96,9 @@ Object.defineProperty(o, 'b', {
 });
 
 o.b = 10;
-//  Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+// Runs the setter, which assigns 10 / 2 (5) to the 'a' property
 
-console.log(o.a)
-//  5
+console.log(o.a); // 5
 ```
 
 ### Using a computed property name
@@ -111,14 +111,12 @@ const obj = {
   set [expr](v) { this.baz = v; }
 };
 
-console.log(obj.baz);
-//  "bar"
+console.log(obj.baz); // "bar"
 
 obj.foo = 'baz';
-//  run the setter
+// Run the setter
 
-console.log(obj.baz);
-//  "baz"
+console.log(obj.baz); // "baz"
 ```
 
 ## Specifications

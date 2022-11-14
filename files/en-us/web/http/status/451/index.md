@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.451
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`451 Unavailable For Legal Reasons`** client error response code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
@@ -26,7 +27,7 @@ This example response is taken from the IETF RFC (see below) and contains a refe
 
 Any attempt to identify the entity ultimately responsible for the resource being unavailable belongs in the response body, not in the `rel="blocked-by"` link. This includes the name of the person or organization that made a legal demand resulting in the content's removal.
 
-```
+```http
 HTTP/1.1 451 Unavailable For Legal Reasons
 Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
 Content-Type: text/html

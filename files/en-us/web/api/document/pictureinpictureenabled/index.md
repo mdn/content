@@ -14,6 +14,7 @@ tags:
   - pip
 browser-compat: api.Document.pictureInPictureEnabled
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The read-only

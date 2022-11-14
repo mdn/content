@@ -1,6 +1,7 @@
 ---
 title: In flow and out of flow
 slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
+page-type: guide
 tags:
   - CSS
   - CSS Flow Layout
@@ -10,6 +11,7 @@ tags:
   - Layout
   - flow
 ---
+
 {{CSSRef}}
 
 The [previous guide](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.

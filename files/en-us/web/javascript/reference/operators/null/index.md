@@ -8,6 +8,7 @@ tags:
   - Primitive
 browser-compat: javascript.operators.null
 ---
+
 {{jsSidebar("Operators")}}
 
 The value `null` represents the intentional absence of any object value. It
@@ -18,7 +19,7 @@ is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 
 ## Syntax
 
-```js
+```js-nolint
 null
 ```
 
@@ -73,4 +74,4 @@ isNaN(1 + undefined) // true
 
 - {{jsxref("undefined")}}
 - {{jsxref("NaN")}}
-- {{jsxref("Operators/void", "void operator")}}
+- {{jsxref("Operators/void", "void")}}

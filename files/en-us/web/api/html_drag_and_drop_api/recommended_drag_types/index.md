@@ -6,11 +6,10 @@ tags:
   - Guide
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.
-
-> **Warning:** All methods and properties in this document with a `moz` prefix, such as `mozSetDataAt()`, will **only** work with Gecko-based browsers.
 
 ## Dragging Text
 
@@ -83,43 +82,6 @@ dt.setData("text/html", "Hello there, <strong>stranger</strong>");
 dt.setData("text/plain", "Hello there, stranger");
 ```
 
-## Dragging Files
-
-A local file is dragged using the `application/x-moz-file` type with a data value that is an `nsIFile` object. Non-privileged web pages cannot retrieve or modify data of this type.
-
-Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
-
-```js
-event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
-```
-
-If possible, include the file URL of the file using both the `text/uri-list` and `text/plain` types. These types should be added afterward so that the more specific `application/x-moz-file` type has higher priority.
-
-Multiple files will be received during a drop as multiple items in the data transfer. See [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items) for more details about this.
-
-The following example shows how to create an area for receiving dropped files:
-
-```xml
-<listbox ondragenter="return checkDrag(event)"
-         ondragover="return checkDrag(event)"
-         ondrop="doDrop(event)"/>
-
-<script>
-function checkDrag(event) {
-  return event.dataTransfer.types.contains("application/x-moz-file");
-}
-
-function doDrop(event) {
-  const file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
-  if (file instanceof Components.interfaces.nsIFile) {
-    event.currentTarget.appendItem(file.leafName);
-  }
-}
-</script>
-```
-
-In this example, the event returns false only if the data transfer contains the `application/x-moz-file` type. During the drop event, the data associated with the file type is retrieved, and the filename of the file is added to the listbox. Note that the `instanceof` operator is used here as the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method will return an `nsISupports` that needs to be checked and converted into an nsIFile. This is also a good extra check in case someone made a mistake and added a non-file for this type.
-
 ### Updates to DataTransfer.types
 
 The latest spec dictates that {{domxref("DataTransfer.types")}} should return a frozen array of strings rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
@@ -148,13 +110,9 @@ It is important to set the data in the right order, from most-specific to least-
 
 ```js
 const dt = event.dataTransfer;
-dt.mozSetDataAt("image/png", stream, 0);
-dt.mozSetDataAt("application/x-moz-file", file, 0);
 dt.setData("text/uri-list", imageurl);
 dt.setData("text/plain", imageurl);
 ```
-
-Note the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method is used for non-textual data. As some contexts may only include some of these types, it is important to check which type is made available when receiving dropped images.
 
 ## Dragging Nodes
 
@@ -176,9 +134,6 @@ You may want to add a file to an existing drag event session, and you may also w
 currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-dest-filename", leafName);
-currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
-                  new dataProvider(success,error),
-                  0, Components.interfaces.nsISupports);
 
 function dataProvider(){}
 
@@ -227,5 +182,4 @@ dataProvider.prototype = {
 
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

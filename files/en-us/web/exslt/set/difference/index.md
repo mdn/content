@@ -6,6 +6,7 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `set:difference()` returns the difference between two node-sets. In other words, it returns a node-set whose nodes are in one node-set but not in the other.

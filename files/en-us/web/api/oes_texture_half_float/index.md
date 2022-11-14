@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_texture_half_float
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_texture_half_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds texture formats with 16- (aka half float) and 32-bit floating-point components.

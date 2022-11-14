@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`undefined`** property represents the primitive
@@ -19,7 +20,7 @@ value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 
 ## Syntax
 
-```js
+```js-nolint
 undefined
 ```
 
@@ -39,18 +40,16 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 > **Note:** While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
 >
 > ```js example-bad
-> //  DON'T DO THIS
+> // DON'T DO THIS
 >
-> //  logs "foo string"
 > (() => {
->   const undefined = 'foo';
->   console.log(undefined, typeof undefined);
+>   const undefined = "foo";
+>   console.log(undefined, typeof undefined); // foo string
 > })();
 >
-> //  logs "foo string"
 > ((undefined) => {
->   console.log(undefined, typeof undefined);
-> })('foo');
+>   console.log(undefined, typeof undefined); // foo string
+> })("foo");
 > ```
 
 ## Examples
@@ -84,7 +83,7 @@ Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 
 ```js
 let x;
-if (typeof x === 'undefined') {
+if (typeof x === "undefined") {
   // these statements execute
 }
 ```
@@ -93,12 +92,14 @@ One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not t
 error if the variable has not been declared.
 
 ```js
-//  x has not been declared before
-if (typeof x === 'undefined') { //  evaluates to true without errors
-  //  these statements execute
+// x has not been declared before
+// evaluates to true without errors
+if (typeof x === 'undefined') {
+  // these statements execute
 }
 
-if (x === undefined) { //  throws a ReferenceError
+// Throws a ReferenceError
+if (x === undefined) {
 
 }
 ```
@@ -113,8 +114,8 @@ existence of a property on the _global object_, using the
 {{jsxref("Operators/in", "in")}} operator, for instance:
 
 ```js
-if ('x' in window) {
-  //  these statements execute only if x is defined globally
+if ("x" in window) {
+  // These statements execute only if x is defined globally
 }
 ```
 
@@ -125,12 +126,12 @@ The {{jsxref("Operators/void", "void")}} operator is a third alternative.
 ```js
 let x;
 if (x === void 0) {
-  //  these statements execute
+  // these statements execute
 }
 
-//  y has not been declared before
+// y has not been declared before
 if (y === void 0) {
-  //  throws Uncaught ReferenceError: y is not defined
+  // throws Uncaught ReferenceError: y is not defined
 }
 ```
 

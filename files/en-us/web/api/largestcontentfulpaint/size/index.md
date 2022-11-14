@@ -11,7 +11,8 @@ tags:
   - Experimental
 browser-compat: api.LargestContentfulPaint.size
 ---
-{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`size`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the intrinsic size of the element that is the largest contentful paint.
 

@@ -1,6 +1,7 @@
 ---
 title: Mozilla CSS extensions
 slug: Web/CSS/Mozilla_Extensions
+page-type: landing-page
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{CSSRef}}
 
 Mozilla applications such as Firefox support a number of special **Mozilla extensions to [CSS](/en-US/docs/Web/CSS)**, including properties, values, pseudo-elements and pseudo-classes, at-rules, and media queries. These extensions are prefixed with `-moz-`.

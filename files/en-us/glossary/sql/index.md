@@ -4,9 +4,9 @@ slug: Glossary/SQL
 tags:
   - CodingScripting
   - Database
-  - Glossary
   - Sql
 ---
+
 **SQL** (Structured Query Language) is a descriptive computer language designed for updating, retrieving, and calculating data in table-based databases.
 
 ## See also

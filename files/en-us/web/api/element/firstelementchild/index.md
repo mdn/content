@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Element.firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.firstElementChild`** read-only property
@@ -26,15 +27,15 @@ An {{domxref("Element")}} object, or `null`.
 
 ```html
 <ul id="list">
-  <li>First  (1)</li>
+  <li>First (1)</li>
   <li>Second (2)</li>
-  <li>Third  (3)</li>
+  <li>Third (3)</li>
 </ul>
 
 <script>
-const list = document.getElementById('list');
-console.log(list.firstElementChild.textContent);
-// logs "First (1)"
+  const list = document.getElementById("list");
+  console.log(list.firstElementChild.textContent);
+  // logs "First (1)"
 </script>
 ```
 

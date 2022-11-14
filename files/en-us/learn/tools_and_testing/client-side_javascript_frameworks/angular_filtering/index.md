@@ -10,6 +10,7 @@ tags:
   - Angular
   - Filtering
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now let's move on to adding functionality to allow users to filter their to-do items, so they can view active, completed, or all items.
@@ -48,7 +49,7 @@ The default value for filter is `all`, but it can also be `active` or `done`.
 
 ## Adding filter controls
 
-In `app.component.html`, add the following HTML before the **Add** button but above the section that lists the items.
+In `app.component.html`, add the following HTML below the **Add** button but above the section that lists the items.
 In the following snippet, the existing sections in your HTML are in comments so you can see exactly where to put the buttons.
 
 ```html
@@ -80,7 +81,7 @@ In the following snippet, the existing sections in your HTML are in comments so 
   </div>
 
   <!-- <h2>\{{items.length}} item(s)</h2>
-        <ul>... -->
+         <ul>... -->
 ```
 
 Clicking the buttons changes the `filter` values, which determines the `items` that show as well as the styles that Angular applies to the active button.

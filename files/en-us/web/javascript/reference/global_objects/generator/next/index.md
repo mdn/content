@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator.next
 ---
+
 {{JSRef}}
 
 The **`next()`** method returns an
@@ -19,7 +20,7 @@ generator.
 
 ## Syntax
 
-```js
+```js-nolint
 generatorObject.next(value)
 ```
 
@@ -80,10 +81,10 @@ function* getPage(list, pageSize = 1) {
 const list = [1, 2, 3, 4, 5, 6, 7, 8]
 const page = getPage(list, 3);            // Generator { }
 
-page.next();                              // Object {value: (3) [1, 2, 3], done: false}
-page.next();                              // Object {value: (3) [4, 5, 6], done: false}
-page.next();                              // Object {value: (2) [7, 8], done: false}
-page.next();                              // Object {value: undefined, done: true}
+page.next();                              // { value: [1, 2, 3], done: false }
+page.next();                              // { value: [4, 5, 6], done: false }
+page.next();                              // { value: [7, 8], done: false }
+page.next();                              // { value: undefined, done: true }
 ```
 
 ### Sending values to the generator

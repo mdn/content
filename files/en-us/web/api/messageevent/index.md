@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`MessageEvent`** interface represents a message received by a target object.
@@ -37,7 +38,7 @@ The action triggered by this event is defined in a function set as the event han
 - {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
   - : Creates a new `MessageEvent`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
@@ -52,7 +53,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("Event")}}._
 
@@ -61,7 +62,7 @@ _This interface also inherits methods from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
+In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
 
 The following code snippet shows creation of a {{domxref("SharedWorker")}} object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
 

@@ -8,8 +8,9 @@ tags:
   - Learn
   - Styling
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Cascading Style Sheets) is the code that styles web content. _CSS basics_ walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?
@@ -30,9 +31,9 @@ To make the code work, we still need to apply this CSS (above) to your HTML docu
 
 1. Open your `index.html` file. Paste the following line in the head (between the {{HTMLElement("head")}} and `</head>` tags):
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" />
+   ```
 
 2. Save `index.html` and load it in your browser. You should see something like this:
 
@@ -40,7 +41,7 @@ To make the code work, we still need to apply this CSS (above) to your HTML docu
 
 ### Anatomy of a CSS ruleset
 
-Let's dissect the CSS code for red paragraph text to understand how it works :
+Let's dissect the CSS code for red paragraph text to understand how it works:
 
 ![CSS p declaration color red](css-declaration-small.png)
 
@@ -76,7 +77,9 @@ p {
 You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
 
 ```css
-p, li, h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -153,48 +156,51 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 
 1. First, find the [output from Google Fonts](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font) that you previously saved from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
 
-    ```html
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    ```
+   ```html
+   <link
+     href="https://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet" />
+   ```
 
-    This code links your page to a style sheet that loads the Open Sans font family with your webpage.
+   This code links your page to a style sheet that loads the Open Sans font family with your webpage.
 
 2. Next, delete the existing rule you have in your `style.css` file. It was a good test, but let's not continue with lots of red text.
 3. Add the following lines (shown below), replacing the `font-family` assignment with your `font-family` selection from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font). The property `font-family` refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same `font-size` and `font-family`.
 
-    ```css
-    html {
-      font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
-      font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
+     font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
+   }
+   ```
 
-    > **Note:** Anything in CSS between `/*` and `*/` is a **CSS comment**. The browser ignores comments as it renders the code. CSS comments are a way for you to write helpful notes about your code or logic.
+   > **Note:** Anything in CSS between `/*` and `*/` is a **CSS comment**. The browser ignores comments as it renders the code. CSS comments are a way for you to write helpful notes about your code or logic.
 
 4. Now let's set font sizes for elements that will have text inside the HTML body ({{htmlelement("h1")}}, {{htmlelement("li")}}, and {{htmlelement("p")}}). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 Adjust the `px` values as you like. Your work-in-progress should look similar to this:
 
-![a Mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
+![A Mozilla logo and some paragraphs. A sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
 
 ## CSS: all about boxes
 
 Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.
 
-![a big stack of boxes or crates sat on top of one another](boxes.jpg)
+![A big stack of boxes or crates sat on top of one another](boxes.jpg)
 
 Photo from [https://www.geograph.org.uk/photo/3418115](https://www.geograph.org.uk/photo/3418115) Copyright © [Jim Barton](https://www.geograph.org.uk/profile/26362) [cc-by-sa/2.0](https://creativecommons.org/licenses/by-sa/2.0/)
 
@@ -204,7 +210,7 @@ CSS layout is mostly based on the _box model._ Each box taking up space on your 
 - `border`, the solid line that is just outside the padding.
 - `margin`, the space around the outside of the border.
 
-![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
+![Three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
 
 In this section we also use:
 
@@ -220,7 +226,7 @@ To continue, let's add more CSS. Keep adding these new rules at the bottom of `s
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -232,7 +238,7 @@ This rule sets a background color for the entire page. Change the color code to 
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -252,7 +258,7 @@ There are several declarations for the {{htmlelement("body")}} element. Let's go
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```
@@ -293,7 +299,7 @@ The {{htmlelement("body")}} is a **block** element, meaning it takes up space on
 
 If you followed all the instructions in this article, you should have a page that looks similar to this one:
 
-![a Mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
+![A Mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 (You can [view our version here](https://mdn.github.io/beginner-html-site-styled/).) If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 

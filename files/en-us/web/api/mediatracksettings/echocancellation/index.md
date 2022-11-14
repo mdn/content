@@ -15,6 +15,7 @@ tags:
   - echoCancellation
 browser-compat: api.MediaTrackSettings.echoCancellation
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
@@ -48,7 +49,7 @@ functionality enabled or `false` if echo cancellation is disabled.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Specifications
 
@@ -60,7 +61,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.echoCancellation")}}
 - {{domxref("MediaTrackSettings")}}

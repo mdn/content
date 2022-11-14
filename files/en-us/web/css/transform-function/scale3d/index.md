@@ -1,6 +1,7 @@
 ---
 title: scale3d()
 slug: Web/CSS/transform-function/scale3d
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scale3d
 ---
+
 {{CSSRef}}
 
 The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element in 3D space.
@@ -175,3 +177,7 @@ div {
 - [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
 - [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}

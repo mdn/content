@@ -9,7 +9,8 @@ tags:
   - main
 browser-compat: html.elements.main
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant content of the {{HTMLElement("body")}} of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
 
@@ -99,16 +100,16 @@ The content of a `<main>` element should be unique to the document. Content that
 
   <article>
     <h2>Red Delicious</h2>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
+    <p>
+      These bright red apples are the most common found in many supermarkets.
+    </p>
     <p>…</p>
     <p>…</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
     <p>…</p>
     <p>…</p>
   </article>
@@ -156,8 +157,6 @@ Browser reader mode functionality looks for the presence of the `<main>` element
 ## Browser compatibility
 
 {{Compat}}
-
-To support Internet Explorer 11 and lower, you can add an {{glossary("ARIA")}} role of `"main"` to the `<main>` element. But understand that the ARIA in HTML specification states that `role="main"` shouldn't actually be used with the `<main>` element, and the W3C validator will report a warning for it. However, Internet Explorer 11 and lower will otherwise not correctly expose the `<main>` element to screen readers such JAWS unless the element also has a `role="main"` attribute.
 
 ## See also
 

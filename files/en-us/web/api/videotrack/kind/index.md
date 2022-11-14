@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`kind`** property contains a

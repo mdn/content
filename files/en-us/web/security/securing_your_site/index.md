@@ -7,6 +7,9 @@ tags:
   - Web Development
   - Website Security
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 There are a number of things you can do to help secure your site. This article offers an assortment of suggestions, as well as links to other articles providing more useful information.
 
 > **Note:** This article is a work in progress, and is neither complete nor does following its suggestions guarantee your site will be fully secure.
@@ -31,7 +34,7 @@ There are a number of things you can do to help secure your site. This article o
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
   - : An added layer of security that helps to detect and mitigate certain types of attacks, including {{Glossary("Cross-site_scripting", "Cross Site Scripting (XSS)")}} and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. Code is executed by the victims and lets the attackers bypass access controls and impersonate users.
 - [The X-Frame-Options response header](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The `X-Frame-Options:` [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a {{ HTMLElement("frame") }}. Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+  - : The `X-Frame-Options:` [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a {{ HTMLElement("frame") }}. Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 - Access control by configuring a website
   - : It is the best way to secure your site. You can ignore specific IPs, restrict access to certain areas of website, protect different files, protect against image hotlinking, and a lot more. For example, .htaccess file is used for websites hosted on [Apache HTTP Server](https://httpd.apache.org/).
 
@@ -40,5 +43,3 @@ There are a number of things you can do to help secure your site. This article o
 - [Open Web Application Security Project (OWASP)](https://owasp.org/)
 - [Mozilla Web Security Cheat Sheet](https://infosec.mozilla.org/guidelines/web_security.html#web-security-cheat-sheet)
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

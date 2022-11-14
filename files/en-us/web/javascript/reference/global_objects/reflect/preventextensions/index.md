@@ -10,19 +10,16 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.preventExtensions
 ---
+
 {{JSRef}}
 
-The static
-**`Reflect.preventExtensions()`** method prevents new
-properties from ever being added to an object (i.e., prevents future extensions to the
-object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with
-some [differences](#difference_from_object.preventextensions).
+The static **`Reflect.preventExtensions()`** method prevents new properties from ever being added to an object (i.e., prevents future extensions to the object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with [some differences](#difference_with_object.preventextensions).
 
 {{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.preventExtensions(target)
 ```
 
@@ -33,19 +30,11 @@ Reflect.preventExtensions(target)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the target was successfully set to
-prevent extensions.
+A {{jsxref("Boolean")}} indicating whether or not the target was successfully set to prevent extensions.
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an
-{{jsxref("Object")}}.
-
-## Description
-
-The `Reflect.preventExtensions()` method allows you to prevent new
-properties from ever being added to an object (i.e., prevents future extensions to the
-object). It is similar to {{jsxref("Object.preventExtensions()")}}.
+A {{jsxref("TypeError")}}, if `target` is not an {{jsxref("Object")}}.
 
 ## Examples
 
@@ -56,19 +45,16 @@ See also {{jsxref("Object.preventExtensions()")}}.
 ```js
 // Objects are extensible by default.
 const empty = {};
-Reflect.isExtensible(empty)  // === true
+Reflect.isExtensible(empty); // true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty)  // === false
+Reflect.isExtensible(empty); // false
 ```
 
-### Difference from Object.preventExtensions()
+### Difference with Object.preventExtensions()
 
-If the `target` argument to this method is not an object (a
-primitive), then it will cause a {{jsxref("TypeError")}}. With
-{{jsxref("Object.preventExtensions()")}}, a non-object `target`
-will be coerced to an object.
+If the `target` argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.preventExtensions()")}}, a non-object `target` will be returned as-is without any errors.
 
 ```js
 Reflect.preventExtensions(1);

@@ -17,7 +17,7 @@ tags:
 browser-compat: html.elements.input.type_image
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.
 
@@ -166,8 +166,13 @@ The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/R
 Let's look at a basic example that includes all the essential features you'd need to use (These work exactly the same as they do on the `<img>` element.):
 
 ```html
-<input id="image" type="image" width="100" height="30" alt="Login"
-       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+<input
+  id="image"
+  type="image"
+  width="100"
+  height="30"
+  alt="Login"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
 ```
 
 {{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
@@ -196,7 +201,7 @@ Let's look at a basic example that includes all the essential features you'd nee
   - : Specifies the HTTP method that the browser uses to submit the form. Possible values are:
 
     - `post`: The data from the form is included in the body of the form and is sent to the server.
-    - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+    - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side effects and contains only ASCII characters.
 
     If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
 
@@ -240,14 +245,19 @@ The following example shows the same button as before, but included in the conte
   <p>Login to your account</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" alt="Login" width="100">
+    <input
+      id="image"
+      type="image"
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      alt="Login"
+      width="100" />
   </div>
 </form>
 ```
@@ -282,16 +292,20 @@ In this example, we adapt the previous example to set aside more space for the i
   <p>Login to your account</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image"
+    <input
+      id="image"
+      type="image"
       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
-      alt="Login" width="200" height="100">
+      alt="Login"
+      width="200"
+      height="100" />
   </div>
 </form>
 ```
@@ -317,7 +331,7 @@ label {
 }
 ```
 
-Here, `object-position` is configured to draw the image at the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
+Here, `object-position` is configured to draw the image in the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
 
 ## Specifications
 

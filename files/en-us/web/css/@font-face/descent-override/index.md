@@ -1,8 +1,9 @@
 ---
 title: descent-override
 slug: Web/CSS/@font-face/descent-override
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -10,6 +11,7 @@ tags:
   - descent-override
 browser-compat: css.at-rules.font-face.descent-override
 ---
+
 {{CSSRef}}
 
 The **`descent-override`** CSS descriptor defines the descent metric for the font. The descent metric is the height below the baseline that CSS uses to lay out line boxes in an inline formatting context.
@@ -34,9 +36,7 @@ descent-override: 90%;
 
 ## Formal syntax
 
-```
-normal | <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -73,7 +73,6 @@ The `descent-override` property can help when overriding the metrics of a fallba
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}

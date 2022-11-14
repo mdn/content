@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionErrorEvent.error
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`error`** read-only property of the
@@ -43,7 +44,7 @@ A string naming the type of error. The possible error types are:
   - : There was an error in the speech recognition grammar or semantic tags, or the chosen
     grammar format or semantic tag format was unsupported.
 - `language-not-supported`
-  - : The language was not supported.
+  - : The user agent does not support the language specified in the value of [`lang`](/en-US/docs/Web/API/SpeechRecognition/lang) attribute of the {{domxref("SpeechRecognition")}} object. The set of supported languages is browser-dependent, and from frontend code there is no way to programmatically determine what languages a user's browser supports for speech recognition.
 
 ## Examples
 

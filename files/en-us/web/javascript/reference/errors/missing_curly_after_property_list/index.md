@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after property list" occurs when there is a mistake

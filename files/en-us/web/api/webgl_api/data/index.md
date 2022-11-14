@@ -17,13 +17,14 @@ tags:
   - WebGL
   - WebGL API
 ---
+
 {{WebGLSidebar}}
 
 Shader programs have access to three kinds of data storage, each of which has a specific use case. Each kind of variable is accessible by one or both types of shader program (depending on the data store type) and possibly by the site's JavaScript code, depending on the specific type of variable.
 
 ## GLSL data types
 
-<\<document the basic types, vectors, etc.; see [Data Type (GLSL)](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) on the Khronos WebGL wiki>>
+See [Data Types](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) in the GLSL documentation.
 
 ## GLSL variables
 
@@ -71,7 +72,7 @@ void main()
 
 ### Varyings
 
-**Varyings** are variables that are declared by the vertex shader and used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's [normal vector](https://en.wikipedia.org/wiki/Normal_(geometry)) after it has been computed by the vertex shader.
+**Varyings** are variables that are declared by the vertex shader and used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's [normal vector](<https://en.wikipedia.org/wiki/Normal_(geometry)>) after it has been computed by the vertex shader.
 
 <\<how to use>>
 

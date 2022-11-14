@@ -6,6 +6,7 @@ tags:
   - MathML
   - Project
 ---
+
 Fonts with appropriate Unicode coverage and Open Font Format features are required for good math rendering.
 This page describes how users can install such math fonts to properly display MathML in browsers.
 
@@ -24,7 +25,7 @@ Install the _Latin Modern Math_ and _STIX Two Math_ fonts as follows:
 5. Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular` file.
 6. Open the `STIXTwoMath-Regular` file and click the **Install** button. If desired, you may also do the same for the other font files in the directory.
 
-> **Note:** _Cambria Math_ is installed by default on Windows 7 and later versions and should ensure relatively good MathML rendering.
+> **Note:** _Cambria Math_ is installed by default on Windows and should ensure relatively good MathML rendering.
 
 ### macOS
 
@@ -138,7 +139,7 @@ A better alternative on UNIX systems is to install the OTF files for [Latin Mode
 You can actually install any [mathematical OpenType font](https://fred-wang.github.io/MathFonts/) and use them for MathML rendering. Some browsers provide a way to configure the default font for MathML in their font preference menu. Alternatively, you can try the [MathML-fontsettings add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/).
 
 - [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
-- [Cambria Math](https://docs.microsoft.com/en-us/typography/font-list/?FID=360)
+- [Cambria Math](https://docs.microsoft.com/typography/font-list/?FID=360)
 - [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
 - [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math)
 - [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math)

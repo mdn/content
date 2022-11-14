@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Set
 ---
+
 {{JSRef}}
 
 The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
@@ -24,9 +25,7 @@ The specification requires sets to be implemented "that, on average, provide acc
 
 ### Value equality
 
-Because each value in the `Set` has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the `===` operator. Specifically, for `Set`s, `+0` (which is strictly equal to `-0`) and `-0` were different values. However, this was changed in the ECMAScript 2015 specification. See _"Key equality for -0 and 0"_ in the [browser compatibility](#browser_compatibility) table for details.
-
-{{jsxref("NaN")}} and {{jsxref("undefined")}} can also be stored in a Set. All `NaN` values are equated (i.e. `NaN` is considered the same as `NaN`, even though `NaN !== NaN`).
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Performance
 
@@ -44,27 +43,26 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
 ## Instance properties
 
+- `Set.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Set.prototype.size")}}
   - : Returns the number of values in the `Set` object.
 
 ## Instance methods
 
-- {{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}
+- {{jsxref("Set.prototype.add()")}}
   - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
 - {{jsxref("Set.prototype.clear()")}}
   - : Removes all elements from the `Set` object.
-- {{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}
+- {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
+- {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-
-### Iteration methods
-
 - {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
 
@@ -72,7 +70,7 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
     This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
 
-- {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
+- {{jsxref("Set.prototype.forEach()")}}
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 
 ## Examples
@@ -82,10 +80,10 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 ```js
 const mySet1 = new Set()
 
-mySet1.add(1)           // Set [ 1 ]
-mySet1.add(5)           // Set [ 1, 5 ]
-mySet1.add(5)           // Set [ 1, 5 ]
-mySet1.add('some text') // Set [ 1, 5, 'some text' ]
+mySet1.add(1)           // Set(1) { 1 }
+mySet1.add(5)           // Set(2) { 1, 5 }
+mySet1.add(5)           // Set(2) { 1, 5 }
+mySet1.add('some text') // Set(3) { 1, 5, 'some text' }
 const o = {a: 1, b: 2}
 mySet1.add(o)
 
@@ -105,39 +103,38 @@ mySet1.has(5)       // false, 5 has been removed
 
 mySet1.size         // 4, since we just removed one value
 
-mySet1.add(5)       // Set [1, 'some text', {...}, {...}, 5] - a previously deleted item will be added as a new item, it will not retain its original position before deletion
+mySet1.add(5)       // Set(5) { 1, 'some text', {...}, {...}, 5 } - a previously deleted item will be added as a new item, it will not retain its original position before deletion
 
-console.log(mySet1)
-// logs Set(5) [ 1, "some text", {…}, {…}, 5 ] in Firefox
-// logs Set(5) { 1, "some text", {…}, {…}, 5 } in Chrome
+console.log(mySet1) // Set(5) { 1, "some text", {…}, {…}, 5 }
 ```
 
 ### Iterating Sets
 
+Iteration of sets visits elements in insertion order.
+
 ```js
-// iterate over items in set
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1) {
   console.log(item);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1.keys()) {
   console.log(item);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1.values()) {
   console.log(item);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
-// (key and value are the same here)
+// key and value are the same here
 for (const [key, value] of mySet1.entries()) {
   console.log(key);
 }
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// convert Set object to an Array object, with Array.from
+// Convert Set object to an Array object, with Array.from
 const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
 
 // the following will also work if run in an HTML document
@@ -159,7 +156,6 @@ const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
 mySet2.forEach((value) => {
   console.log(value);
 });
-
 // 1
 // 2
 // 3

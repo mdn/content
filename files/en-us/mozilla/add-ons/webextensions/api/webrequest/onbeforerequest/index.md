@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onBeforeRequest
 ---
+
 {{AddonSidebar()}}
 
 This event is triggered when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.
@@ -24,7 +25,7 @@ To cancel or redirect the request, first include `"blocking"` in the `extraInfoS
 
 If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
-When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same  `requestId` again if another blocking handler redirected the request.
+When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same `requestId` again if another blocking handler redirected the request.
 
 From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
@@ -32,7 +33,7 @@ If you use `"blocking"`, you must have the ["webRequestBlocking" API permission]
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onBeforeRequest.addListener(
   listener,             // function
   filter,               //  object
@@ -170,7 +171,7 @@ Events have three functions:
 
     - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
-    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
@@ -331,7 +332,8 @@ browser.webRequest.onBeforeRequest.addListener(
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -358,4 +360,4 @@ browser.webRequest.onBeforeRequest.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

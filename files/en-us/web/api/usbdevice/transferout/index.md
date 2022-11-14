@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.transferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`transferOut()`** method of the {{domxref("USBDevice")}}
@@ -23,7 +24,7 @@ device.
 
 ## Syntax
 
-```js
+```js-nolint
 transferOut(endpointNumber, data)
 ```
 
@@ -32,7 +33,7 @@ transferOut(endpointNumber, data)
 - `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
 - `data`
-  - : A {{domxref("TypedArray")}} containing the data to send to the device.
+  - : A {{jsxref("TypedArray")}} containing the data to send to the device.
 
 ### Return value
 

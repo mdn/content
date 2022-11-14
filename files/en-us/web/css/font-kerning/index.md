@@ -1,6 +1,7 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-kerning
 ---
+
 {{CSSRef}}
 
 The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.

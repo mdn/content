@@ -10,6 +10,9 @@ tags:
   - Performance
   - Transitions
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Animations are critical for a pleasurable user experience on many applications. There are many ways to implement web animations, such as CSS {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} or JavaScript-based animations (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). In this article, we analyze the performance differences between CSS-based and JavaScript-based animation.
 
 ## CSS transitions and animations
@@ -39,11 +42,11 @@ In this section we'll walk you through a performance test, using Firefox, to see
 
 Before going through the example, please enable FPS tools first to see the current frame rate:
 
-1. In the URL bar, enter _about:config_; click the _I'll be careful, I promise!_ button to enter the config screen.
-    ![Warning screen that changing settings can be risky, with a button to accept risks.](pic1.png)
+1. In the URL bar, enter _about:config_; click the `I'll be careful, I promise!` button to enter the config screen.
+   ![Warning screen that changing settings can be risky, with a button to accept risks.](pic1.png)
 2. In the search bar, search for the `layers.acceleration.draw-fps` preference.
-3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes at the upper left corner of the Firefox window. The first box represents FPS.
-    ![Entering the search term filters the options. Only the layers.acceleration.draw-fps preference is showing and is set to true. Three numbers (001, 001, and 108) are appearing in the upper left corner of the browser, overlaying its UI.](pic2.png)
+3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes in the upper left corner of the Firefox window. The first box represents FPS.
+   ![Entering the search term filters the options. Only the layers.acceleration.draw-fps preference is showing and is set to true. Three numbers (001, 001, and 108) are appearing in the upper left corner of the browser, overlaying its UI.](pic2.png)
 
 ### Running the performance test
 
@@ -51,34 +54,33 @@ Initially in the test seen below, a total of 1000 {{htmlelement("div")}} element
 
 ```js
 const boxes = [];
-const button = document.getElementById('toggle-button');
-const boxContainer = document.getElementById('box-container');
-const animationType = document.getElementById('type');
+const button = document.getElementById("toggle-button");
+const boxContainer = document.getElementById("box-container");
+const animationType = document.getElementById("type");
 
 // create boxes
 for (let i = 0; i < 1000; i++) {
-  const div = document.createElement('div');
-  div.classList.add('css-animation');
-  div.classList.add('box');
+  const div = document.createElement("div");
+  div.classList.add("css-animation");
+  div.classList.add("box");
   boxContainer.appendChild(div);
   boxes.push(div.style);
 }
 
 let toggleStatus = true;
 let rafId;
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   if (toggleStatus) {
-    animationType.textContent = ' requestAnimationFrame';
+    animationType.textContent = " requestAnimationFrame";
     for (const child of boxContainer.children) {
-      child.classList.remove('css-animation');
+      child.classList.remove("css-animation");
     }
     rafId = window.requestAnimationFrame(animate);
-
   } else {
     window.cancelAnimationFrame(rafId);
-    animationType.textContent = ' CSS animation';
+    animationType.textContent = " CSS animation";
     for (const child of boxContainer.children) {
-      child.classList.add('css-animation');
+      child.classList.add("css-animation");
     }
   }
   toggleStatus = !toggleStatus;
@@ -102,9 +104,13 @@ function animate(time) {
     let transform;
     if (progress >= 1) {
       x = (2 - progress) * translateX;
-      transform = `translateX(${ x }px) rotate(${ (2 - progress) * rotate }deg) scale(${ (0.6 + (2 - progress) * scale ) })`;
+      transform = `translateX(${x}px) rotate(${
+        (2 - progress) * rotate
+      }deg) scale(${0.6 + (2 - progress) * scale})`;
     } else {
-      transform = `translateX(${ x }px) rotate(${ progress * rotate }deg) scale(${ (0.6 + progress * scale ) })`;
+      transform = `translateX(${x}px) rotate(${progress * rotate}deg) scale(${
+        0.6 + progress * scale
+      })`;
     }
 
     for (const box of boxes) {
@@ -152,8 +158,12 @@ function animate(time) {
 }
 
 @keyframes animate {
-  0%   {transform: translateX(0) rotate(0deg) scale(0.6)}
-  100% {transform: translateX(500px) rotate(360deg) scale(1.4);}
+  0% {
+    transform: translateX(0) rotate(0deg) scale(0.6);
+  }
+  100% {
+    transform: translateX(500px) rotate(360deg) scale(1.4);
+  }
 }
 ```
 
