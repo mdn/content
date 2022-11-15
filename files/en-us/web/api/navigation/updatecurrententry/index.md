@@ -34,7 +34,7 @@ updateCurrentEntry(options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `state`
-      - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it.
+      - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it. Any data stored in `state` must be [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 ### Return value
 
@@ -42,6 +42,8 @@ None (`undefined`).
 
 ### Exceptions
 
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the `state` parameter had values included in it that are not structured-clonable.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("Navigation.currentEntry")}} is `null`, i.e. there is no current history entry. This could occur for exaple if the current page is `about:blank`.
 
