@@ -477,7 +477,8 @@ a {
 a:link,
 a:visited,
 a:focus {
-  background: yellow;
+  background: palegoldenrod;
+  color: black;
 }
 
 a:hover {
@@ -485,7 +486,7 @@ a:hover {
 }
 
 a:active {
-  background: red;
+  background: darkred;
   color: white;
 }
 ```
