@@ -1210,7 +1210,7 @@
 /en-US/docs/DOM/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/DOM/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/DOM/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
-/en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
+/en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/DOM/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/DOM/DOM_Mutation_Observers	/en-US/docs/Web/API/MutationObserver
 /en-US/docs/DOM/DOM_Reference	/en-US/docs/Web/API/Document_Object_Model
@@ -2743,7 +2743,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
-/en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
+/en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Document_Object_Model_(DOM)/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/Document_Object_Model_(DOM)/DOM_event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Document_Object_Model_(DOM)/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
@@ -7833,8 +7833,7 @@
 /en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
-/en-US/docs/Web/API/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-/en-US/docs/Web/API/DOMString/binary	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add
 /en-US/docs/Web/API/DataTransfer/clearData()	/en-US/docs/Web/API/DataTransfer/clearData
 /en-US/docs/Web/API/DataTransfer/getData()	/en-US/docs/Web/API/DataTransfer/getData
@@ -8071,6 +8070,7 @@
 /en-US/docs/Web/API/EncryptedMediaExtensions	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/EncryptedMediaExtensions_API	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/Entry	/en-US/docs/Web/API/FileSystemEntry
+/en-US/docs/Web/API/EpochTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Web/API/ErrorEvent.error	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
