@@ -1,6 +1,7 @@
 ---
 title: USBDevice.forget()
 slug: Web/API/USBDevice/forget
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -14,11 +15,11 @@ browser-compat: api.USBDevice.forget
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`forget()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when all pending operations are aborted, all open interfaces are released, the device session has ended, and permission is reset.
+The **`forget()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves when all pending operations are aborted, all open interfaces are released, the device session has ended, and the permission is reset.
 
 ## Syntax
 
-```js
+```js-nolint
 forget()
 ```
 
@@ -28,7 +29,7 @@ None.
 
 ### Return value
 
-A {{jsxref("promise")}} which resolves with `undefined` once the device access permission is revoked.
+A {{jsxref("Promise")}} which resolves with `undefined` once the device access permission is revoked.
 
 ## Specifications
 

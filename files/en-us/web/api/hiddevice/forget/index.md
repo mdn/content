@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.forget()
 slug: Web/API/HIDDevice/forget
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,13 +10,13 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.forget
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}
 
 The **`forget()`** method of the {{domxref("HIDDevice")}} interface closes the connection to the HID device and forgets the device.
 
 ## Syntax
 
-```js
+```js-nolint
 forget()
 ```
 
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `undefined` once the connection is closed and device is forgeotten (permission is reset).
+A {{jsxref("Promise")}} that resolves with `undefined` once the connection is closed, the device is forgotten, and the permission is reset.
 
 ## Examples
 
