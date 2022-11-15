@@ -468,7 +468,7 @@ class Counter extends HTMLElement {
 customElements.define("num-counter", Counter);
 ```
 
-In this case, pretty much every field and method is private to the class. Thus, it presents an interface to the rest of the code that's essentially just like a built-in HTML element. No other part of the program has the power to affect any of the internal of `Counter`.
+In this case, pretty much every field and method is private to the class. Thus, it presents an interface to the rest of the code that's essentially just like a built-in HTML element. No other part of the program has the power to affect any of the internals of `Counter`.
 
 ## Accessor fields
 
