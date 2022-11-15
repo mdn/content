@@ -40,7 +40,7 @@ This method requires one of the following:
     - `value`
       - : A string with the value of the cookie.
     - `expires` {{Optional_Inline}}
-      - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
     - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie.
     - `path` {{Optional_Inline}}

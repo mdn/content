@@ -121,8 +121,8 @@ These methods treat empty slots as if they are `undefined`:
 - {{jsxref("Array/findIndex", "findIndex()")}}
 - {{jsxref("Array/findLast", "findLast()")}}
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
+- {{jsxref("Array/group", "group()")}} {{Experimental_Inline}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}} {{Experimental_Inline}}
 - {{jsxref("Array/includes", "includes()")}}
 - {{jsxref("Array/join", "join()")}}
 - {{jsxref("Array/keys", "keys()")}}
@@ -224,7 +224,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 #### Normalization of the length property
 
-The `length` property is [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), truncated to an integer, and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
+The `length` property is [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
 
 ```js
 Array.prototype.flat.call({}); // []

@@ -49,7 +49,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-In this example the service worker get the client's ID from a [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch) event and then sends it a message using [`Client.postMessage`](/en-US/docs/Web/API/Client/postMessage):
+In this example the service worker get the client's ID from a [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event and then sends it a message using [`Client.postMessage`](/en-US/docs/Web/API/Client/postMessage):
 
 ```js
 // service-worker.js
@@ -75,7 +75,7 @@ navigator.serviceWorker.addEventListener("message", (message) => {
 });
 ```
 
-Alternatively, he client can receive the message with the `onmessage` event handler:
+Alternatively, the client can receive the message with the `onmessage` event handler:
 
 ```js
 // main.js
