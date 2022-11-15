@@ -12697,8 +12697,6 @@
 /en-US/docs/WebAssembly/API/Table/grow	/en-US/docs/WebAssembly/JavaScript_interface/Table/grow
 /en-US/docs/WebAssembly/API/Table/length	/en-US/docs/WebAssembly/JavaScript_interface/Table/length
 /en-US/docs/WebAssembly/API/Table/set	/en-US/docs/WebAssembly/JavaScript_interface/Table/set
-/en-US/docs/WebAssembly/Caching_WebAssembly	/en-US/docs/WebAssembly/Caching_modules
-/en-US/docs/WebAssembly/Caching_WebAssembly_IndexedDB	/en-US/docs/WebAssembly/Caching_modules
 /en-US/docs/WebAssembly/Exported_function_exotic_objects	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Exported_wasm_functions	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Fetching_WebAssembly_bytecode	/en-US/docs/WebAssembly/Loading_and_running

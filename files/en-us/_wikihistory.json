@@ -131999,16 +131999,6 @@
       "BrainBuzzer"
     ]
   },
-  "WebAssembly/Caching_modules": {
-    "modified": "2020-09-19T15:39:46.216Z",
-    "contributors": [
-      "mfuji09",
-      "leela52452",
-      "chrisdavidmills",
-      "lukewagner",
-      "kingysu"
-    ]
-  },
   "WebAssembly/Concepts": {
     "modified": "2020-09-11T03:22:18.074Z",
     "contributors": [
