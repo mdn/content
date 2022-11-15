@@ -31,7 +31,7 @@ browser-compat: webextensions.manifest.install_origins
   </tbody>
 </table>
 
-Enables the distribution and update of Manifest V3 extensions from third-party origins, in addition to store distribution. If [`update_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#firefox_gecko_properties) is specified, its origin must be included here.
+Enables the distribution and update of Manifest V3 extensions from a third-party {{glossary("origin")}}, in addition to store distribution. If [`update_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#firefox_gecko_properties) is specified, its origin must be included here.
 
 Up to 5 origins can be specified.
 
