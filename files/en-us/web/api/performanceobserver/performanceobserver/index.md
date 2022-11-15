@@ -62,18 +62,18 @@ There is a buffer size limit, though. The performance observer callback contains
 
 ```js
 function perfObserver(list, observer, droppedEntriesCount) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     // do something with the entries
   });
   if (droppedEntriesCount > 0) {
-    console.warn(droppedEntriesCount + " entries got dropped due to the buffer being full.");
+    console.warn(`${droppedEntriesCount} entries got dropped due to the buffer being full.`);
   }
 }
 const observer = new PerformanceObserver(perfObserver);
-observer.observe({ type: "resource", "buffered": true });
+observer.observe({ type: "resource", buffered: true });
 ```
 
-Usually there are a lot of resource timing entries and for these entries specifically, you can also set a larger buffer using {{domxref("performance.setResourceTimingBufferSize()")}} and watch for the {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} event.
+Usually, there are a lot of resource timing entries, and for these entries specifically, you can also set a larger buffer using {{domxref("performance.setResourceTimingBufferSize()")}} and watch for the {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} event.
 
 ## Specifications
 
