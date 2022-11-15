@@ -122,5 +122,4 @@ Not part of any standard.
 ## See also
 
 - External projects: [TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
-- MSDN: [archived error.stack docs](https://web.archive.org/web/20180618201428/https://docs.microsoft.com/scripting/javascript/reference/stack-property-error-javascript)
 - [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)
