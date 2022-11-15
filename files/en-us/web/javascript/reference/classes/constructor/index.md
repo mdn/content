@@ -275,4 +275,4 @@ console.log(newInstance.name); // Polygon
 - [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - {{jsxref("Classes")}}
 - [`Object.prototype.constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
-- [Class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks)
+- [Static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)

@@ -1210,7 +1210,7 @@
 /en-US/docs/DOM/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/DOM/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/DOM/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
-/en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
+/en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/DOM/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/DOM/DOM_Mutation_Observers	/en-US/docs/Web/API/MutationObserver
 /en-US/docs/DOM/DOM_Reference	/en-US/docs/Web/API/Document_Object_Model
@@ -2743,7 +2743,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
-/en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
+/en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Document_Object_Model_(DOM)/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/Document_Object_Model_(DOM)/DOM_event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Document_Object_Model_(DOM)/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
@@ -7833,8 +7833,7 @@
 /en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
-/en-US/docs/Web/API/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-/en-US/docs/Web/API/DOMString/binary	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add
 /en-US/docs/Web/API/DataTransfer/clearData()	/en-US/docs/Web/API/DataTransfer/clearData
 /en-US/docs/Web/API/DataTransfer/getData()	/en-US/docs/Web/API/DataTransfer/getData
@@ -8071,6 +8070,7 @@
 /en-US/docs/Web/API/EncryptedMediaExtensions	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/EncryptedMediaExtensions_API	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/Entry	/en-US/docs/Web/API/FileSystemEntry
+/en-US/docs/Web/API/EpochTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Web/API/ErrorEvent.error	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
@@ -12090,6 +12090,7 @@
 /en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Guide/Using_native_JSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
+/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features	/en-US/docs/Web/JavaScript/Guide/Using_Classes#private_fields
 /en-US/docs/Web/JavaScript/Guide/iterable	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 /en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
 /en-US/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
@@ -12102,6 +12103,7 @@
 /en-US/docs/Web/JavaScript/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -12696,8 +12698,6 @@
 /en-US/docs/WebAssembly/API/Table/grow	/en-US/docs/WebAssembly/JavaScript_interface/Table/grow
 /en-US/docs/WebAssembly/API/Table/length	/en-US/docs/WebAssembly/JavaScript_interface/Table/length
 /en-US/docs/WebAssembly/API/Table/set	/en-US/docs/WebAssembly/JavaScript_interface/Table/set
-/en-US/docs/WebAssembly/Caching_WebAssembly	/en-US/docs/WebAssembly/Caching_modules
-/en-US/docs/WebAssembly/Caching_WebAssembly_IndexedDB	/en-US/docs/WebAssembly/Caching_modules
 /en-US/docs/WebAssembly/Exported_function_exotic_objects	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Exported_wasm_functions	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Fetching_WebAssembly_bytecode	/en-US/docs/WebAssembly/Loading_and_running

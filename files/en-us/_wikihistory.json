@@ -26568,22 +26568,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DOMTimeStamp": {
-    "modified": "2020-07-25T11:26:24.857Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "flimzy",
-      "Sebastianz",
-      "teoli",
-      "DomenicDenicola",
-      "kscarfone",
-      "FredB",
-      "Sheppy",
-      "ethertank",
-      "Brettz9"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:11:17.375Z",
     "contributors": [
@@ -131997,16 +131981,6 @@
       "kyuwoo-choi",
       "topicus",
       "BrainBuzzer"
-    ]
-  },
-  "WebAssembly/Caching_modules": {
-    "modified": "2020-09-19T15:39:46.216Z",
-    "contributors": [
-      "mfuji09",
-      "leela52452",
-      "chrisdavidmills",
-      "lukewagner",
-      "kingysu"
     ]
   },
   "WebAssembly/Concepts": {
