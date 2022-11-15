@@ -12090,6 +12090,7 @@
 /en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Guide/Using_native_JSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
+/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features	/en-US/docs/Web/JavaScript/Guide/Using_Classes#private_fields
 /en-US/docs/Web/JavaScript/Guide/iterable	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 /en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
 /en-US/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
