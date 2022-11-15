@@ -75,7 +75,7 @@ Given this CSP header:
 Content-Security-Policy: script-src-attr 'none'
 ```
 
-the following inline event handler is blocked and won't be loaded or executed:
+…the following inline event handler is blocked and won't be loaded or executed:
 
 ```html
 <button id="btn" onclick="doSomething()"></button>

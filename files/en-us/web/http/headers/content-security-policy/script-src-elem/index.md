@@ -37,7 +37,7 @@ It does not apply to other JavaScript sources that can trigger script execution,
       <th scope="row">{{CSP("default-src")}} fallback</th>
       <td>
         Yes.
-        If this directive is absent, the user agent will look for the {{CSP("script-src")}} directive, and if both of them are absent, fallback to <code>default-src</code> directive.
+        If this directive is absent, the user agent will look for the {{CSP("script-src")}} directive, and if both of them are absent, fall back to <code>default-src</code> directive.
       </td>
     </tr>
   </tbody>
@@ -75,7 +75,7 @@ Given this CSP header:
 Content-Security-Policy: script-src-elem https://example.com/
 ```
 
-the following script is blocked and won't be loaded or executed:
+…the following script is blocked and won't be loaded or executed:
 
 ```html
 <script src="https://not-example.com/js/library.js"></script>

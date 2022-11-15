@@ -37,7 +37,7 @@ The directive does not set valid sources for inline style attributes; these are 
       <td>
         <p>
           Yes.
-          If this directive is absent, the user agent will look for the {{CSP("style-src")}} directive, and if both of them are absent, fallback to <code>default-src</code> directive.
+          If this directive is absent, the user agent will look for the {{CSP("style-src")}} directive, and if both of them are absent, fall back to <code>default-src</code> directive.
         </p>
       </td>
     </tr>
@@ -76,7 +76,7 @@ Given this CSP header:
 Content-Security-Policy: style-src-elem https://example.com/
 ```
 
-the following stylesheets are blocked and won't load:
+…the following stylesheets are blocked and won't load:
 
 ```html
 <link href="https://not-example.com/styles/main.css" rel="stylesheet" />
@@ -92,7 +92,7 @@ the following stylesheets are blocked and won't load:
 </style>
 ```
 
-as well as styles loaded using the {{HTTPHeader("Link")}} header:
+…as well as styles loaded using the {{HTTPHeader("Link")}} header:
 
 ```http
 Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
