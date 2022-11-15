@@ -123,7 +123,7 @@ function fetchAB (url, cb) {
 };
 ```
 
-### Constructuring a `MediaSource` in a worker and passing it to the main thread
+### Constructing a `MediaSource` in a worker and passing it to the main thread
 
 The `handle` property can be accessed inside a dedicated worker and the resulting `MediaSourceHandle` object is then transferred over to the main thread via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
 
