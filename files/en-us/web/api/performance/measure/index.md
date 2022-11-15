@@ -13,17 +13,10 @@ browser-compat: api.Performance.measure
 
 {{APIRef("Performance API")}}
 
-The **`measure()`** method creates a named {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry buffer_ between marks, the navigation start time, or the current time.
+The **`measure()`** method creates a named {{domxref("PerformanceMeasure")}} object representing a time measurement between two marks in the browser's performance timeline.
 
 When measuring between two marks, there is a _start mark_ and _end mark_, respectively.
 The named timestamp is referred to as a _measure_.
-
-The `measure` can be retrieved using any of the {{domxref("Performance")}} interfaces:
-({{domxref("Performance.getEntries","getEntries()")}},
-{{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
-{{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -49,24 +42,19 @@ If only `measureName` is specified, the start timestamp is set to zero, and the 
     - `detail`
       - : Arbitrary metadata to be included in the measure.
     - `start`
-      - : Timestamp {{domxref("DOMHighResTimeStamp")}} to be used as the start time, or string to be used as start mark.
-        If this represents the name of a start mark, then it is defined in the same way as `startMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
+      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time, or string to be used as start mark.
+        If this represents the name of a start mark, then it is defined in the same way as `startMark`.
     - `duration`
       - : Duration between the start and end mark times ({{domxref("DOMHighResTimeStamp")}}).
     - `end`
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string to be used as end mark.
-        If this represents the name of an end mark, then it is defined in the same way as `endMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
+        If this represents the name of an end mark, then it is defined in the same way as `endMark`.
 
 - `startMark` {{optional_inline}}
-
   - : A string representing the name of the measure's starting mark.
-    May also be the name of a {{domxref("PerformanceTiming")}} property.
-    Specifying a name that does not represent an existing {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}} raises a `SyntaxError` {{domxref("DOMException")}}.
 
 - `endMark` {{optional_inline}}
   - : A string representing the name of the measure's ending mark.
-    This may also be the name of a {{domxref("PerformanceTiming")}} property.
-    Specifying a name that does not represent an existing {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}} raises a `SyntaxError` {{domxref("DOMException")}}.
 
 ### Return value
 
@@ -122,31 +110,40 @@ The returned _measure_ will have the following property values:
 
 ## Examples
 
-The following example shows how `measure()` is used to create a new _measure_ {{domxref("PerformanceEntry","performance entry")}} in the browser's performance entry buffer.
+### Measuring duration between named markers
+
+Given two of your own markers `"login-started"` and `"login-finished"`, you can create a measurement called `"login-duration"` as shown in the following example. The returned {{domxref("PerformanceMeasure")}} object will then provide a `duration` property to tell you the elapsed time between the two markers.
 
 ```js
-const markerNameA = "example-marker-a"
-const markerNameB = "example-marker-b"
+const loginMeasure = performance.measure(
+  "login-duration",
+  "login-started",
+  "login-finished"
+);
+console.log(loginMeasure.duration);
+```
 
-// Run some nested timeouts, and create a PerformanceMark for each.
-performance.mark(markerNameA);
-setTimeout(() => {
-  performance.mark(markerNameB);
-  setTimeout(() => {
-    // Create a variety of measurements.
-    performance.measure("measure a to b", markerNameA, markerNameB);
-    performance.measure("measure a to now", markerNameA);
-    performance.measure("measure from navigation start to b", undefined, markerNameB);
-    performance.measure("measure from navigation start to now");
+### Measuring duration with custom start and end times
 
-    // Pull out all of the measurements.
-    console.log(performance.getEntriesByType("measure"));
+To do more advanced measurements, you can configure an `MeasureOptions` object. For example, you can use the [`event.timestamp`](/en-US/docs/Web/API/Event/timeStamp) property from a [`click` event](/en-US/docs/Web/API/Element/click_event) as the start time.
 
-    // Finally, clean up the entries.
-    performance.clearMarks();
-    performance.clearMeasures();
-  }, 1000);
-}, 1000);
+```js
+performance.measure("login-click", {
+  start: myClickEvent.timeStamp,
+  end: myMarker.startTime
+});
+```
+
+### Proving additional measurement details
+
+You can use the `details` property to provide additional information of any type. Maybe you want to record which HTML element was clicked, for example.
+
+```js
+performance.measure("login-click", {
+  detail: { htmlElement: myElement.id },
+  start: myClickEvent.timeStamp,
+  end: myMarker.startTime
+});
 ```
 
 ## Specifications
