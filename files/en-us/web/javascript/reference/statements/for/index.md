@@ -164,7 +164,7 @@ The scoping effect of the initialization block can be understood as if the decla
 2. The binding values from the last iteration are used to re-initialize the new variables.
 3. `afterthought` is evaluated in the new scope.
 
-So re-assigning the new variables within `afterthought` do not affect the bindings from the previous iteration.
+So re-assigning the new variables within `afterthought` does not affect the bindings from the previous iteration.
 
 Creating closures allows you to get hold of a binding during any particular iteration. This explains why closures created within the `initialization` section do not get updated by re-assignments of `i` in the `afterthought`.
 
@@ -175,7 +175,7 @@ for (let i = 0, getI = () => i; i < 3; i++) {
 // Logs 0, 0, 0
 ```
 
-This does not log "0, 1, 2", like what would happen if `getI` is declared in the loop body. This is because `getI` is not re-evaluated on each iteration — rather, the function is created once and closes over the `i` variable, which refers to the variable declared when the loop was first initialized. Subsequent updates to the value of `i` actually creates new variables called `i`, which `getI` does not see. A way to fix this is to re-compute `getI` every time `i` updates:
+This does not log "0, 1, 2", like what would happen if `getI` is declared in the loop body. This is because `getI` is not re-evaluated on each iteration — rather, the function is created once and closes over the `i` variable, which refers to the variable declared when the loop was first initialized. Subsequent updates to the value of `i` actually create new variables called `i`, which `getI` does not see. A way to fix this is to re-compute `getI` every time `i` updates:
 
 ```js
 for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
