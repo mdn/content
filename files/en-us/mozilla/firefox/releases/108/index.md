@@ -63,7 +63,9 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+#### Marionette
 
 ## Changes for add-on developers
 
