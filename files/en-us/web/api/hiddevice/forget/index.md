@@ -29,7 +29,7 @@ None.
 
 A {{jsxref("Promise")}} that resolves with `undefined` once the connection is closed, the device is forgotten, and the permission is reset.
 
-## Examples
+## Example
 
 In the following example we connect to a Nintendo Switch Joy-Con Right HID device, blink once and disconnect from it.
 
