@@ -89,10 +89,9 @@ let stdECDSACertificate = {
 
 ### Certificate expiration time
 
-By default the new certificate is configured with `expires` set to a
-a value of 2592000000 milliseconds, or 30 days. The expiration time cannot
-exceed 31536000000 milliseconds, or 365 days. It's also useful to note that browsers may further
-restrict the expiration time of certificates if they choose.
+By default the new certificate is configured with `expires` set to a value of 2592000000 milliseconds, or 30 days.
+The expiration time cannot exceed 31536000000 milliseconds, or 365 days.
+It's also useful to note that browsers may further restrict the expiration time of certificates if they choose.
 
 ## Examples
 
