@@ -326,5 +326,5 @@ These browsers have similar implementations again: subtitles are enabled by defa
 
 ## Plugins
 
-There are also many open-source and commercial HTML video player plugins that offer caption and subtitle support that you can use instead of rolling out your own.
-You can search for these on the Internet using terms like "HTML Video Player Plugin".
+There are also many open-source and commercial HTML video-player plugins that offer caption and subtitle support that you can use instead of rolling your own.
+You can search for those on the web using search terms like _"HTML video player plugin"_.
