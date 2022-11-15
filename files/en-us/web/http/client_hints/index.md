@@ -74,13 +74,12 @@ All client hints that are not low entropy hints are considered high entropy hint
 
 ## Critical client hints
 
-A _critical client hint_ is one where applying the response may significantly change the rendered page, potentially in a way that is jarring or will significantly affect usability, and which must therefore be applied before the content is rendered.
-For example, `Sec-CH-Prefers-Reduced-Motion` is commonly treated as a critical hint, because it might markedly affect the behaviour of animations, and because a user who chooses this preference really needs for it to be set.
+A _critical client hint_ is one where applying the response may significantly change the rendered page, potentially in a way that is jarring or will affect usability, and therefore which must be applied before the content is rendered.
+For example, `Sec-CH-Prefers-Reduced-Motion` is commonly treated as a critical hint, because it might markedly affect the behavior of animations, and because a user who chooses this preference needs it to be set.
 
-A server can use the {{HTTPHeader("Critical-CH")}} response header along with `Accept-CH` to specify that an accepted client hint is also a critical client hint (note that a header in `Critical-CH` must also appear in `Accept-CH`).
-User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, then the user agent will retry the request rather than rendering the page.
+A server can use the {{HTTPHeader("Critical-CH")}} response header along with `Accept-CH` to specify that an accepted client hint is also a critical client hint (a header in `Critical-CH` must also appear in `Accept-CH`).
+User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, then the user agent will retry the request rather than render the page.
 This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or if the server configuration changes.
-
 
 For example, in this case, the server tells a client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`, and {{httpheader("Critical-CH")}} is used to specify that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint:
 

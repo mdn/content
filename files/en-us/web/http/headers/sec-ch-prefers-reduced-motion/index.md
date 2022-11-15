@@ -14,9 +14,9 @@ browser-compat: http.headers.Sec-CH-Prefers-Reduced-Motion
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Sec-CH-Prefers-Reduced-Motion`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header indicates the user agent's preference for animations to be displayed with reduced motion.
+The **`Sec-CH-Prefers-Reduced-Motion`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) request header indicates the user agent's preference for animations to be displayed with reduced motion.
 
-If a server declares to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Reduced-Motion`, the client then responds with this header to indicate the user's preference for reduced motion. The server can send the client appropriately adapted content, for example, JavaScript or CSS to reduce the motion of any animations presented on subsequent rendered content. This could include reducing the speed or amplitude of movement, to reduce discomfort for those with vestibular motion disorders.
+If a server declares to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Reduced-Motion`, the client then responds with this header to indicate the user's preference for reduced motion. The server can send the client appropriately adapted content, for example, JavaScript or CSS, to reduce the motion of any animations presented on subsequent rendered content. This could include reducing the speed or amplitude of movement to reduce discomfort for those with vestibular motion disorders.
 
 This header is modeled on the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media query.
 
@@ -46,7 +46,7 @@ Sec-CH-Prefers-Reduced-Motion: <preference>
 
 - `<preference>`
 
-  - : The user agent's preference for reduced-motion animations, which is often taken from the underlying operating system's setting. The value of this directive can be either `no-preference` or `reduce`.
+  - : The user agent's preference for reduced-motion animations. This is often taken from the underlying operating system's setting. The value of this directive can be either `no-preference` or `reduce`.
 
 ## Examples
 
@@ -66,7 +66,7 @@ Accept-CH: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
+The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations:
 
 ```http
 GET / HTTP/1.1
@@ -74,7 +74,7 @@ Host: example.com
 Sec-CH-Prefers-Reduced-Motion: "reduce"
 ```
 
-The client will include the header in subsequent requests in the current session, unless the `Accept-CH` changes in responses to indicate that it is no longer supported by the server.
+The client will include the header in subsequent requests in the current session unless the `Accept-CH` changes in responses to indicate that it is no longer supported by the server.
 
 ## Specifications
 
