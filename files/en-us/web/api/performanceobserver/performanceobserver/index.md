@@ -25,9 +25,12 @@ new PerformanceObserver(callback)
 
 - `callback`
   - : A `PerformanceObserverCallback` callback that will be invoked when observed performance events are recorded. When the callback is invoked, the following parameters are available:
-    - `entries`: The {{domxref("PerformanceObserverEntryList","list of performance observer entries", '', 'true')}}.
-    - `observer`: The {{domxref("PerformanceObserver","observer")}} object that is receiving the above entries.
-    - `droppedEntriesCount`: {{optional_inline}} The number of buffered entries which got dropped from the buffer due to the buffer being full. See the [`buffered`](/en-US/docs/Web/API/PerformanceObserver/observe#parameters) flag.
+    - `entries`
+      - : The {{domxref("PerformanceObserverEntryList","list of performance observer entries", '', 'true')}}.
+    - `observer`
+      - : The {{domxref("PerformanceObserver","observer")}} object that is receiving the above entries.
+    - `droppedEntriesCount` {{optional_inline}}
+      - : The number of buffered entries which got dropped from the buffer due to the buffer being full. See the [`buffered`](/en-US/docs/Web/API/PerformanceObserver/observe#parameters) flag.
 
 ### Return value
 
