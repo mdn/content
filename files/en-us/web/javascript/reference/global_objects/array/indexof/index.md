@@ -31,12 +31,10 @@ indexOf(searchElement, fromIndex)
 - `searchElement`
   - : Element to locate in the array.
 - `fromIndex` {{optional_inline}}
-  - : The index to start the search at. If the index is greater than or equal to the
-    array's length, -1 is returned, which means the array will not be searched. If the
-    provided index value is a negative number, it is taken as the offset from the end of
-    the array. Note: if the provided index is negative, the array is still searched from
-    front to back. If the provided index is 0, then the whole array will be searched.
-    Default: 0 (entire array is searched).
+  - : Zero-based index at which to start searching, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+    - Negative index counts back from the end of the array — if `fromIndex < 0`, `fromIndex + array.length` is used. Note, the array is still searched from front to back in this case.
+    - If `fromIndex < -array.length` or `fromIndex` is omitted, `0` is used, causing the entire array to be searched.
+    - If `fromIndex >= array.length`, the array is not searched and `-1` is returned.
 
 ### Return value
 
@@ -44,12 +42,7 @@ The first index of the element in the array; **-1** if not found.
 
 ## Description
 
-`indexOf()` compares `searchElement` to elements of
-the Array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-(the same method used by the `===` or triple-equals operator).
-
-> **Note:** For the String method, see
-> {{jsxref("String.prototype.indexOf()")}}.
+The `indexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator).
 
 The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 

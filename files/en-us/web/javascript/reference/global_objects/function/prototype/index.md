@@ -101,7 +101,7 @@ Dog.prototype.species = "dog";
 console.log(new Dog("Jack").species); // "dog"
 ```
 
-This can be made more ergonomic using [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks), which are called when the class is initialized.
+This can be made more ergonomic using [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), which are called when the class is initialized.
 
 ```js
 class Dog {

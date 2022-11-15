@@ -142,8 +142,8 @@ The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute let
 This provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 It takes three possible values: `Strict`, `Lax`, and `None`.
 
-With `Strict`, the cookie is only sent to the site where it originated.
-`Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site.
+With `Strict`, the browser only sends the cookie with requests from the cookie's origin site.
+`Lax` is similar, except the browser also sends the cookie when the user _navigates_ to the cookie's origin site (even if the user is coming from a different site).
 For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but _only in secure contexts_ (i.e., if `SameSite=None` then the `Secure` attribute must also be set).
 If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
