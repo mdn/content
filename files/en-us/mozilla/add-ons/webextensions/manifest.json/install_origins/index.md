@@ -1,5 +1,5 @@
 ---
-title: author
+title: install_origins
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/install_origins
 tags:
   - Add-ons
@@ -14,7 +14,7 @@ browser-compat: webextensions.manifest.install_origins
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td><code>String</code></td>
+      <td><code>Array of string</code></td>
     </tr>
     <tr>
       <th scope="row">Mandatory</th>
@@ -26,7 +26,7 @@ browser-compat: webextensions.manifest.install_origins
     </tr>
     <tr>
       <th scope="row">Example</th>
-      <td><pre class="brush: json">"install_origins": "https://www.example.com"</pre></td>
+      <td><pre class="brush: json">"install_origins": ["https://www.example.com"]</pre></td>
     </tr>
   </tbody>
 </table>
@@ -38,7 +38,7 @@ Up to 5 origins can be specified.
 ## Example
 
 ```json
-"install_origins": "https://www.example.com"
+"install_origins": ["https://www.example.com"]
 ```
 
 ## Browser compatibility
