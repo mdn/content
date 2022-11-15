@@ -90,9 +90,9 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
     | `embedded-opentype` | Embedded OpenType     | .eot              |
     | `svg`               | SVG Font (deprecated) | .svg, .svgz       |
 
-    > **Note:** The values `opentype` and `truetype` are completely equivalent, regardless of whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyf table).
+    > **Note:** The values `opentype` and `truetype` are completely equivalent, regardless of whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
 
-    `tech()`: **Optional**. Not yet widely supported. Value is a _keyword_, support: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
+    `tech()`: **Optional**. {{Experimental_inline}} Value is a one of the following _keywords_: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
 
     The following table shows several old unnormalized `format()` values and their new equivalent syntax:
 
