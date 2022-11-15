@@ -8,6 +8,7 @@ tags:
   - Reference
   - forget
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.forget
 ---
 {{securecontext_header}}{{APIRef("WebHID API")}}

@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - forget
+  - Experimental
 browser-compat: api.USBDevice.forget
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

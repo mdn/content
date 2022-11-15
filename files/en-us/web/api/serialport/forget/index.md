@@ -8,6 +8,7 @@ tags:
   - Reference
   - forget
   - SerialPort
+  - Experimental
 browser-compat: api.SerialPort.forget
 ---
 {{securecontext_header}}{{APIRef("Serial API")}}
