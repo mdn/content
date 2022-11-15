@@ -323,3 +323,8 @@ Safari 6.1+ has similar support to Internet Explorer 10+, displaying a menu with
 ### Chrome and Opera
 
 These browsers have similar implementations again: subtitles are enabled by default and the default control set contains a 'cc' button that turns subtitles on and off. Chrome and Opera ignore the `default` attribute on the `<track>` element and will instead try to match the browser's language to the subtitle's language.
+
+## Plugins
+
+There are also many open-source and commercial HTML video player plugins that offer caption and subtitle support that you can use instead of rolling out your own.
+You can search for these on the Internet using terms like "HTML Video Player Plugin".
