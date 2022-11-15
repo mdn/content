@@ -44,6 +44,7 @@ These are the `manifest.json` keys and the manifest versions they are supported 
 - [host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) (Manifest V3 and above)
 - [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) (Manifest V2 and above)
 - [incognito](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito) (Manifest V2 and above)
+- [install_origins](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/install_origins) (Manifest V3 and above)
 - [manifest_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version) (Manifest V2 and above)
 - [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) (Manifest V2 and above)
 - [offline_enabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled) (Manifest V2 and above)
