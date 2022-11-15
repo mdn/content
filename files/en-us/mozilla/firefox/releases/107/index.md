@@ -20,6 +20,11 @@ This article provides information about the changes in Firefox 107 that will aff
 
 #### Removals
 
+### MathML
+
+- Deprecated `lquote` and `rquote` attributes of the [`<ms>`](/en-US/docs/Web/MathML/Element/ms) MathML element for custom opening and closing quotes are now disabled.
+  This behavior is configured via the `mathml.ms_lquote_rquote_attributes.disabled` preference which is set to `true` by default ({{bug(1793387)}}).
+
 ### CSS
 
 - The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) shorthand CSS property can now be applied to specify the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
