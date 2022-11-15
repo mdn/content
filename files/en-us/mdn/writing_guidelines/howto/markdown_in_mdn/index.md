@@ -110,6 +110,20 @@ const greeting = "I will get JavaScript syntax highlighting";
 If the highlighting that you wish to use is not listed above you should markup the code block as `plain`.
 Additional languages may be requested by following the [this process](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
 
+### Suppressing linting
+
+Writers can add a `-nolint` suffix to any of the language identifiers:
+
+```html-nolint
+<p>
+I will not be linted.
+</p>
+```
+
+Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. This suffix is useful for demonstrating alternative formatting choices that would be "fixed" by a formatter, or intentionally invalid code.
+
+### Additional words
+
 Writers will be able to supply any one of the following additional words, which must come after the language word:
 
 - `example-good`: style this example as a good example (one to follow)
@@ -140,7 +154,10 @@ const greeting = "I'm a bad example";
 
 ### Discussion reference
 
-This issue was resolved in <https://github.com/mdn/content/issues/3512>.
+This issue was resolved in:
+
+- <https://github.com/mdn/content/issues/3512>
+- <https://github.com/mdn/yari/pull/7017>
 
 ## Notes, warnings, and callouts
 
@@ -509,7 +526,7 @@ Properties tables are a specific type of table used for displaying structured pr
 
 These pages can't be represented in GFM anyway, because they have a header column. Writers should therefore use HTML. To get the special styling, writers should apply the `"properties"` class to the table:
 
-```html
+```html-nolint
 <table class="properties">
 ```
 
