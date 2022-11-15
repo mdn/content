@@ -1,5 +1,5 @@
 ---
-title: 'Window: resize event'
+title: "Window: resize event"
 slug: Web/API/Window/resize_event
 page-type: web-api-event
 tags:
@@ -29,7 +29,7 @@ If the resize event is triggered too many times for your application, see [Optim
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resize', (event) => {});
+addEventListener("resize", (event) => {});
 
 onresize = (event) => {};
 ```
@@ -57,7 +57,9 @@ _This interface also inherits properties of its parent, {{domxref("Event")}}._
 
 ### Window size logger
 
-The following example reports the window size each time it is resized. Bear in mind that since the example is running in an `<iframe>`, you'll need to actually get the `<iframe>` to resize before you see an effect.
+The following example reports the window size each time it is resized.
+
+#### HTML
 
 ```html
 <p>Resize the browser window to fire the <code>resize</code> event.</p>
@@ -65,9 +67,11 @@ The following example reports the window size each time it is resized. Bear in m
 <p>Window width: <span id="width"></span></p>
 ```
 
+#### JavaScript
+
 ```js
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
 
 function reportWindowSize() {
   heightOutput.textContent = window.innerHeight;
@@ -77,14 +81,20 @@ function reportWindowSize() {
 window.onresize = reportWindowSize;
 ```
 
+#### Result
+
 {{EmbedLiveSample("Window_size_logger")}}
+
+> **Note:** The example output here is in an {{HTMLElement("iframe")}}, so the reported width and height values are for the `<iframe>`, not the window that this page is in. In particular, it will be hard to adjust the window size so as to see a difference in the reported height.
+>
+> The effect is easier to see if you [view the example in its own window](https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/Window/resize_event/_sample_.window_size_logger.html).
 
 ### addEventListener equivalent
 
 You could set up the event handler using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('resize', reportWindowSize);
+window.addEventListener("resize", reportWindowSize);
 ```
 
 ## Specifications
