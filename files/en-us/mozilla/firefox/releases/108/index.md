@@ -16,6 +16,9 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### HTML
 
+- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#attr-height) & [`width`](/en-US/docs/Web/HTML/Element/source#attr-width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+  This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ({{bug(1795953)}}).
+
 #### Removals
 
 ### CSS
