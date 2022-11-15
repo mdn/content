@@ -136,37 +136,6 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
     `vi` represents the viewport-percentage length unit based on the browser default viewport size.
 
-### Container query length units
-
-When applying styles to a container using container queries, you can use container query length units.
-These units specify a length relative to the dimensions of a query container.
-Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
-For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries).
-
-- `cqw`
-
-  - : Represents a percentage of the width of the query container. `1cqw` is 1% of the query container's width. For example, if the query container's width is `800px`, then a value of `50cqw` on a property will be `400px`.
-
-- `cqh`
-
-  - : Represents a percentage of the height of the query container. `1cqh` is 1% of the query container's height. For example, if the query container's height is `300px`, then a value of `10cqh` on a property will be `30px`.
-
-- `cqi`
-
-  - : Represents a percentage of the inline size of the query container. `1cqi` is 1% of the query container's inline size. For example, if the query container's inline size is `800px`, then a value of `50cqi` on a property will be `400px`.
-
-- `cqb`
-
-  - : Represents a percentage of the block size of the query container. `1cqb` is 1% of the query container's block size. For example, if the query container's block size is `300px`, then a value of `10cqb` on a property will be `30px`.
-
-- `cqmin`
-
-  - : Represents a percentage of the smaller value of either the query container's inline size or block size. `1cqmin` is 1% of the smaller value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmin` on a property will be `150px`.
-
-- `cqmax`
-
-  - : Represents a percentage of the larger value of either the query container's inline size or block size. `1cqmax` is 1% of the larger value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmax` on a property will be `400px`.
-
 #### Absolute length units
 
 Absolute length units represent a physical measurement when the physical properties of the output medium are known, such as for print layout. This is done by anchoring one of the units to a physical unit and then defining the others relative to it. The anchoring is done differently for low-resolution devices, such as screens, versus high-resolution devices, such as printers.
@@ -275,22 +244,22 @@ label {
 #### JavaScript
 
 ```js
-const inputDiv = document.querySelector(".inner");
-const inputElem = document.querySelector("input");
-const resultsDiv = document.querySelector(".results");
+const inputDiv = document.querySelector('.inner');
+const inputElem = document.querySelector('input');
+const resultsDiv = document.querySelector('.results');
 
-inputElem.addEventListener("change", () => {
+inputElem.addEventListener('change', () => {
   inputDiv.style.width = inputElem.value;
 
-  const result = document.createElement("div");
-  result.className = "result";
+  const result = document.createElement('div');
+  result.className = 'result';
   result.style.width = inputElem.value;
   result.innerHTML = `<code>width: ${inputElem.value}</code>`;
   resultsDiv.appendChild(result);
 
-  inputElem.value = "";
+  inputElem.value = '';
   inputElem.focus();
-});
+})
 ```
 
 #### Result

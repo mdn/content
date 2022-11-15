@@ -80,7 +80,7 @@ A common approach when using Media Queries is to create a simple single-column l
 
 If using breakpoints, best practices encourage defining media query breakpoints with [relative units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) rather than absolute sizes of an individual device.
 
-There are different approaches to the styles defined within a media query block; ranging from using media queries to {{htmlelement("link")}} style sheets based on browser size ranges to only including custom properties variables to store values associated with each breakpoint.
+There are different approaches to the styles defined within a media query block; ranging from using media queries to {{cssxref('link')}} style sheets based on browser size ranges to only including custom properties variables to store values associated with each breakpoint.
 
 Find out more in the MDN documentation for [Media Queries](/en-US/docs/Web/CSS/Media_Queries).
 
@@ -150,9 +150,7 @@ In CSS Grid Layout the `fr` unit allows the distribution of available space acro
 To ensure media is never larger than its responsive container, the following approach can be used:
 
 ```css
-img,
-picture,
-video {
+img, picture, video {
   max-width: 100%;
 }
 ```
@@ -268,7 +266,7 @@ It has also become much easier to achieve responsive designs with the help of th
 - [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
 - [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
+- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)

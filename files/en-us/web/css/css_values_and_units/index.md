@@ -135,8 +135,7 @@ These are all covered in subsections below.
 
 Where a distance unit, also known as a length, is allowed as a value for a property, this is described as the {{cssxref("&lt;length&gt;")}} type. There are two types of lengths in CSS: relative and absolute.
 
-Relative length units specify a length in relation to something else.
-For example, `em` is relative to the font size on the element and `vh` is relative to the viewport height.
+Relative length units specify a length in relation to something else. For example, `em` is relative to the font size on the element and `vh` is relative to the viewport height.
 
 | Unit   | Relative to                                                                                                                            |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,18 +153,6 @@ For example, `em` is relative to the font size on the element and `vh` is relati
 | `vb`   | 1% of viewport's size in the root element's block axis.                                                                                |
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                    |
 | `vmax` | 1% of viewport's larger dimension.                                                                                                     |
-
-Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_Container_Queries).
-For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
-
-| Unit    | Relative to                           |
-| ------- | ------------------------------------- |
-| `cqw`   | 1% of a query container's width       |
-| `cqh`   | 1% of a query container's height      |
-| `cqi`   | 1% of a query container's inline size |
-| `cqb`   | 1% of a query container's block size  |
-| `cqmin` | The smaller value of `cqi` or `cqb`   |
-| `cqmax` | The larger value of `cqi` or `cqb`    |
 
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
