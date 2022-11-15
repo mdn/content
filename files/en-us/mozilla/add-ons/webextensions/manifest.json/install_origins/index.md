@@ -33,9 +33,22 @@ browser-compat: webextensions.manifest.install_origins
 
 Enables the distribution and update of Manifest V3 extensions from a third-party {{glossary("origin")}}, in addition to store distribution. If [`update_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#firefox_gecko_properties) is specified, its origin must be included here.
 
-## Example
+## Examples
+
+In this example, the extension can also be installed from www.example.com.
 
 ```json
+"install_origins": ["https://www.example.com"]
+```
+
+In this example, in addition to being available to install from www.example.com an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/) is also provided.
+
+```json
+"browser_specific_settings": {
+  "gecko": {
+    "update_url": "https://example.com/updates.json"
+  }
+},
 "install_origins": ["https://www.example.com"]
 ```
 
