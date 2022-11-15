@@ -100,7 +100,7 @@ showNotification(title, options)
       - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds,
         representing the time when the notification was created.
         It can be used to indicate the time at which a notification is actual.
-        For example, this could be in the past when a notification
+        For example, this could be in the past when a notification.
         is used for a message that couldn't immediately be delivered because the device
         was offline, or in the future for a meeting that is about to start.
     - `vibrate` {{experimental_inline}}
