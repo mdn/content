@@ -114,13 +114,15 @@ Additional languages may be requested by following the [this process](https://gi
 
 Writers can add a `-nolint` suffix to any of the language identifiers:
 
+````plain
 ```html-nolint
 <p>
 I will not be linted.
 </p>
 ```
+````
 
-Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. This suffix is useful for demonstrating alternative formatting choices that would be "fixed" by a formatter, or intentionally invalid code.
+Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. This suffix is useful for demonstrating alternative formatting choices or intentionally invalid code that formatters or linters may complain about or autofix.
 
 ### Additional words
 
