@@ -100,7 +100,7 @@ You can also provide multiple names to a container context separated by a space:
 ```
 
 This will allow you to target the container using either name in the {{cssxref("@container")}} at-rule.
-This is useful if you want to separate
+This is useful if you want to target the same container with multiple container queries where either condition could be true:
 
 ```css
 @container meta (max-width: 500px) {
