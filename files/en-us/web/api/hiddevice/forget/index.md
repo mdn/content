@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HIDDevice.forget
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}
 
 The **`forget()`** method of the {{domxref("HIDDevice")}} interface closes the connection to the HID device and forgets the device.
