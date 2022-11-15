@@ -20,6 +20,11 @@ This article provides information about the changes in Firefox 107 that will aff
 
 #### Removals
 
+### MathML
+
+- Deprecated `lquote` and `rquote` attributes of the [`<ms>`](/en-US/docs/Web/MathML/Element/ms) MathML element for custom opening and closing quotes are now disabled.
+  This behavior is configured via the `mathml.ms_lquote_rquote_attributes.disabled` preference which is set to `true` by default ({{bug(1793387)}}).
+
 ### CSS
 
 - The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) shorthand CSS property can now be applied to specify the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
@@ -58,7 +63,23 @@ This article provides information about the changes in Firefox 107 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+- Added Realm support to `target` argument for `script.evaluate`, `script.callFunction`, and `script.disown` commands ({{bug("1779231")}}).
+
+- Added support for JSON serialization of complex objects with container value fields, eg. `WeakMap` and `Uint8Array` ({{bug("1770754")}}).
+
+- Added support for the `context` parameter of the `browsingContext.create` command, which allows opening a new tab related to an existing one ({{bug("1765619")}}).
+
+- Improved reliability of the `browsingContext.navigate` command when called with the `wait` parameter set to `none` ({{bug("1763109")}}).
+
+#### Marionette
+
+- The command `WebDriver:ElementSendKeys` now only sets the caret if the element is not focused yet ({{bug("1791736")}}).
+
+- Updated the command `WebDriver:PerformAction` to no longer accept `undefined` as value for various parameters of the `pointerMove` and `wheel` actions ({{bug("1781066")}}).
+
+- Updated the [Selenium Atoms](https://firefox-source-docs.mozilla.org/testing/marionette/SeleniumAtoms.html) to match a recent WebDriver specification change ({{bug("1771942")}}).
 
 ## Changes for add-on developers
 
