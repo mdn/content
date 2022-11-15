@@ -31,23 +31,26 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the connection is cl
 
 ## Example
 
-In the following example we connect to a Nintendo Switch Joy-Con Right HID device, blink once and disconnect from it.
+In the following example we connect to a Nintendo Switch Joy-Con Right HID device, blink once, and disconnect from it.
 
 ```js
 async function blink() {
-  const device = (await navigator.hid.requestDevice({filters: [{
-    vendorId: 0x057e, // Nintendo Co., Ltd
-    productId: 0x2007 // Joy-Con Right
-  }]}))[0];
+  const devices = await navigator.hid.requestDevice({
+    filters: [
+      {
+        vendorId: 0x057e, // Nintendo Co., Ltd
+        productId: 0x2007, // Joy-Con Right
+      },
+    ],
+  });
+  const device = devices[0];
   await device.open();
-
   // Turn off
   await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
   await waitFor(100);
   // Turn on
   await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
-  await (new Promise((resolve) => setTimeout(resolve, 100)));
-
+  await new Promise((resolve) => setTimeout(resolve, 100));
   // Finally, disconnect from it
   await device.forget();
 }

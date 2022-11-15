@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.SerialPort.forget
 ---
+
 {{securecontext_header}}{{APIRef("Serial API")}}
 
 The **`SerialPort.forget()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the serial port is closed and is forgotten.
