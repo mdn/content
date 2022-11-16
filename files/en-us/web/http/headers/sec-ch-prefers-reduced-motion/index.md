@@ -16,7 +16,7 @@ browser-compat: http.headers.Sec-CH-Prefers-Reduced-Motion
 
 The **`Sec-CH-Prefers-Reduced-Motion`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) request header indicates the user agent's preference for animations to be displayed with reduced motion.
 
-If a server declares to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Reduced-Motion`, the client then responds with this header to indicate the user's preference for reduced motion. The server can send the client appropriately adapted content, for example, JavaScript or CSS, to reduce the motion of any animations presented on subsequent rendered content. This could include reducing the speed or amplitude of movement to reduce discomfort for those with vestibular motion disorders.
+If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Reduced-Motion`, the client can then respond with this header to indicate the user's preference for reduced motion. The server can send the client appropriately adapted content, for example, JavaScript or CSS, to reduce the motion of any animations presented on subsequent rendered content. This could include reducing the speed or amplitude of movement to reduce discomfort for those with vestibular motion disorders.
 
 This header is modeled on the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media query.
 
@@ -57,14 +57,17 @@ GET / HTTP/1.1
 Host: example.com
 ```
 
-The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`. In this example {{httpheader("Critical-CH")}} is also used, indicating that `Sec-CH-Prefers-Reduced-Motion` is considered a [critical client hint](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints):
+The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`. In this example {{httpheader("Critical-CH")}} is also used, indicating that `Sec-CH-Prefers-Reduced-Motion` is considered a [critical client hint](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: text/html
 Accept-CH: Sec-CH-Prefers-Reduced-Motion
+Vary: Sec-CH-Prefers-Color-Scheme
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
+
+> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations:
 
