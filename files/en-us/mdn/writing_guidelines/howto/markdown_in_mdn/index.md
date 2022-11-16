@@ -8,14 +8,11 @@ tags:
 
 {{MDNSidebar}}
 
-This page describes how we use Markdown to write documentation on MDN Web Docs.
-We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
+This page describes how we use Markdown to write documentation on MDN Web Docs. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>.
-This means that you can refer to the GFM specification for anything not explicitly specified in this page.
-GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
 
 ## Links
 
@@ -42,9 +39,7 @@ This is an incorrect way to write links on MDN:
 
 ## Example code blocks
 
-In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks.
-The opening code fence may be followed by some text that is called the "info string".
-The specification states the following:
+In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The specification states the following:
 
 > The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
 
@@ -56,9 +51,7 @@ It's permissible for the info string to contain multiple words, like:
 ```
 ````
 
-On MDN, writers will use code fences for example code blocks.
-They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block.
-The following words are supported:
+On MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - Programming Languages
   - JavaScript
@@ -129,8 +122,7 @@ I will not be linted.
 ```
 ````
 
-Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier.
-Authors should use this suffix for showing invalid code or alternative formatting that linters or formatters should not fix.
+Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. Authors should use this suffix for showing invalid code or alternative formatting that linters or formatters should not fix.
 
 ### Additional words
 
@@ -171,27 +163,21 @@ This issue was resolved in:
 
 ## Notes, warnings, and callouts
 
-Sometimes writers want to call special attention to a piece of content.
-To do this, they will use a GFM blockquote with a special first paragraph.
-There are three types of these: notes, warnings, and callouts.
+Sometimes writers want to call special attention to a piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.
 
 - To add a note, create a GFM blockquote whose first paragraph starts with `**Note:**`.
 - To add a warning, create a GFM blockquote whose first paragraph starts with `**Warning:**`.
 - To add a callout, create a GFM blockquote whose first paragraph starts with `**Callout:**`.
 
-Notes and warnings will render the **Note:** or **Warning:** text in the output, while callouts will not.
-This makes callouts a good choice when an author wants to provide a custom title.
+Notes and warnings will render the **Note:** or **Warning:** text in the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
 
-Processing of the markup works on the AST it produces, not on the exact characters provided.
-This means that providing `<strong>Note:</strong>` will also generate a note. However, the Markdown syntax is required as a matter of style.
+Processing of the markup works on the AST it produces, not on the exact characters provided. This means that providing `<strong>Note:</strong>` will also generate a note. However, the Markdown syntax is required as a matter of style.
 
-Multiple lines are produced by an empty block quote line in the same way as normal paragraphs.
-Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
+Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
 The blockquote can contain code blocks or other block elements.
 
-Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations.
-In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
+Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
 ### Examples
 
@@ -334,8 +320,7 @@ In this form:
 - This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with ": " (a colon followed by a space).
   This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
 
-Each of these top-level GFM `<li>` elements will be transformed into a
-`<dt>`/`<dd>` pair, as follows:
+Each of these top-level GFM `<li>` elements will be transformed into a `<dt>`/`<dd>` pair, as follows:
 
 - The top-level GFM `<li>` element will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dt>`, except for the final nested `<ul>`, which will not be included in the `<dt>`.
 - The `<li>` element in the final nested `<ul>` will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dd>`, except for the leading ": ", which will be discarded.
@@ -402,9 +387,7 @@ On MDN, this would produce the following HTML:
 </dl>
 ```
 
-Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>` elements.
-Using this syntax, it's not possible to write a list with more than one consecutive `<dt>` element or more than one consecutive `<dd>` element: the parser will treat this as an error.
-We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.
+Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>` elements. Using this syntax, it's not possible to write a list with more than one consecutive `<dt>` element or more than one consecutive `<dd>` element: the parser will treat this as an error. We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.
 
 As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
@@ -428,8 +411,7 @@ We will make use of this but:
 - If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.
 - We support a special kind of table called a "properties table", which has its own CSS class and is therefore always HTML.
 
-So the general principle is that authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable.
-For more information, see [When to use HTML tables](#when_to_use_html_tables).
+So the general principle is that authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable. For more information, see [When to use HTML tables](#when_to_use_html_tables).
 
 ### GFM table syntax style
 
@@ -477,8 +459,7 @@ Note that we don't recommend the general use of `<caption>` elements on tables, 
 
 #### GFM table maximum width
 
-Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long.
-Consider the following table:
+Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. Consider the following table:
 
 ```html
 <table>
@@ -523,9 +504,7 @@ This leads us to the following guideline: _if the Markdown representation of the
 
 #### Properties tables
 
-Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type.
-These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item.
-For example, here's the properties table for the {{domxref("PannerNode")}} interface:
+Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("PannerNode")}} interface:
 
 <table class="properties">
   <tbody>
