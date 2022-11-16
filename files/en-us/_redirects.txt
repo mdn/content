@@ -12380,6 +12380,7 @@
 /en-US/docs/Web/MathML/Fonts/Test	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Web/MathML/Index	/en-US/docs/Web/MathML
 /en-US/docs/Web/Media/Formats/Guide_to_codecs_for_audio_on_the_web	/en-US/docs/Web/Media/Formats/Audio_codecs
+/en-US/docs/Web/Media/images/aspect_ratio_mapping	/en-US/docs/Learn/Performance/Multimedia
 /en-US/docs/Web/Media_Queries	/en-US/docs/Web/CSS/Media_Queries
 /en-US/docs/Web/Performance/Populating_the_page:_how_browsers_work	/en-US/docs/Web/Performance/How_browsers_work
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive

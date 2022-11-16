@@ -125874,10 +125874,6 @@
     "modified": "2020-07-28T00:42:48.458Z",
     "contributors": ["lbd1607", "Sheppy", "rachelandrew"]
   },
-  "Web/Media/images/aspect_ratio_mapping": {
-    "modified": "2020-11-18T11:22:57.796Z",
-    "contributors": ["ramiy", "chrisdavidmills", "rachelandrew"]
-  },
   "Web/OpenSearch": {
     "modified": "2019-10-30T22:44:38.715Z",
     "contributors": [
