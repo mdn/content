@@ -5,9 +5,9 @@ page-type: css-property
 tags:
   - CSS
   - CSS Fonts
+  - Color Fonts
   - CSS Property
   - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.font-palette
 ---
 

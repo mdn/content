@@ -6,9 +6,7 @@ tags:
   - CSS
   - CSS Fonts
   - Color Fonts
-  - CSS Property
   - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.at-rules.font-palette-values
 ---
 
