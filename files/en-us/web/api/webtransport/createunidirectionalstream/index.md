@@ -42,7 +42,7 @@ A {{domxref("WritableStream")}} object.
 
 ## Examples
 
-Use the `createUnidirectionalStream()` method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer")}} to allow data to be written to the stream and sent to the server.
+Use the `createUnidirectionalStream()` method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer", "", "nocode")}} to allow data to be written to the stream and sent to the server.
 
 ```js
 async function writeData() {

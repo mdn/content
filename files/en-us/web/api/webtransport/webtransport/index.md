@@ -54,10 +54,11 @@ new WebTransport(url, options)
 
 ```js
 const url = 'https://example.com:4999/wt';
-// Initialize transport connection
-const transport = new WebTransport(url);
 
-async function initTransport(transport) {
+async function initTransport(url) {
+  // Initialize transport connection
+  const transport = new WebTransport(url);
+
   // Respond to connection closing
   try {
     await transport.closed;

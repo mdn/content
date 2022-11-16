@@ -26,8 +26,26 @@ An enumerated value; can be either `stream` or `session`.
 ## Examples
 
 ```js
-// some kind of WebTransport error
-console.log(error.source)
+const url = "notaurl";
+
+async function initTransport(url) {
+
+  try {
+    // Initialize transport connection
+    const transport = new WebTransport(url);
+
+    // The connection can be used once ready fulfills
+    await transport.ready;
+
+    // ...
+  } catch(error) {
+    const msg = `Transport initialization failed.
+                 Reason: ${error.message}.
+                 Source: ${error.source}.
+                 Error code: ${error.streamErrorCode}.`
+    console.log(msg);
+  }
+}
 ```
 
 ## Specifications

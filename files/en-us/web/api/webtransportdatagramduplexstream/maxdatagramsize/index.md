@@ -1,27 +1,27 @@
 ---
-title: WebTransport.ready
-slug: Web/API/WebTransport/ready
+title: WebTransportDatagramDuplexStream.maxDatagramSize
+slug: Web/API/WebTransportDatagramDuplexStream/maxDatagramSize
 page-type: web-api-instance-property
 tags:
   - API
   - Experimental
+  - maxDatagramSize
   - Property
-  - ready
   - Reference
   - WebTransport
   - WebTransport API
-browser-compat: api.WebTransport.ready
+browser-compat: api.WebTransportDatagramDuplexStream.maxDatagramSize
 ---
 
 {{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
 
-The **`ready`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is ready to use.
+The **`maxDatagramSize`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}}.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{jsxref("Promise")}} that resolves to `undefined`.
+A number.
 
 ## Examples
 
@@ -32,18 +32,13 @@ async function initTransport(url) {
   // Initialize transport connection
   const transport = new WebTransport(url);
 
-  // Respond to connection closing
-  try {
-    await transport.closed;
-    console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
-  } catch(error) {
-    console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
-  }
-
   // The connection can be used once ready fulfills
   await transport.ready;
 
-  // ...
+  const datagrams = transport.datagrams;
+
+  // get maxDatagramSize
+  console.log(datagrams.maxDatagramSize);
 }
 ```
 

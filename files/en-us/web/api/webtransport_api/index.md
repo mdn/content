@@ -43,10 +43,11 @@ Also note that you can respond to the connection closing by waiting for the {{do
 
 ```js
 const url = 'https://example.com:4999/wt';
-// Initialize transport connection
-const transport = new WebTransport(url);
 
-async function initTransport(transport) {
+async function initTransport(url) {
+  // Initialize transport connection
+  const transport = new WebTransport(url);
+
   // Respond to connection closing
   try {
     await transport.closed;
@@ -66,7 +67,7 @@ async function initTransport(transport) {
 
 "Unreliable" means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.
 
-Unreliable data transmission is handled via the {{domxref("WebTransport.datagram")}} property — this returns a {{domxref("WebTransportDatagramDuplexStream")}} object containing everything you need to send datagrams to the server, and receive them back.
+Unreliable data transmission is handled via the {{domxref("WebTransport.datagrams")}} property — this returns a {{domxref("WebTransportDatagramDuplexStream")}} object containing everything you need to send datagrams to the server, and receive them back.
 
 The {{domxref("WebTransportDatagramDuplexStream.writable")}} property returns a {{domxref("WritableStream")}} object that you can write data to using a writer, for transmission to the server:
 
@@ -120,7 +121,7 @@ async function writeData() {
 }
 ```
 
-Note also the use of the {{domxref("WritableStream.close()")}} method to close the associated HTTP/3 connection once all data has been sent.
+Note also the use of the {{domxref("WritableStreamDefaultWriter.close()")}} method to close the associated HTTP/3 connection once all data has been sent.
 
 If the server opens a unidirectional stream to transmit data to the client, this can be accessed via the {{domxref("WebTransport.incomingUnidirectionalStreams")}} property, which returns a {{domxref("ReadableStream")}} of `WebTransportReceiveStream` objects. Each one can be used to read {{jsxref("Uint8Array")}} instances sent by the server.
 

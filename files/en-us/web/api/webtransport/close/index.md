@@ -56,7 +56,6 @@ transport.close({
   closeCode: 017,
   reason: 'CloseButtonPressed'
 });
-}
 ```
 
 ## Specifications
