@@ -66,4 +66,5 @@ _As this type is not a real type but a convenience type used to simplify the def
 
 ## See also
 
-- {{CSSxRef("&lt;custom-ident&gt;")}} – A restricted subset of `<ident>` values excluding CSS-wide keywords, {{CSSxRef("--*", "custom properties")}} and other per-property values.
+- [&lt;custom-ident&gt;](/en-US/docs/Web/CSS/custom-ident)
+- [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident)

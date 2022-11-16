@@ -148,4 +148,5 @@ _As this type is not a real type but a convenience type used to simplify the des
 
 ## See also
 
-- {{CSSxRef("&lt;ident&gt;")}}
+- [&lt;ident&gt;](/en-US/docs/Web/CSS/ident)
+- [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident)
