@@ -24,7 +24,7 @@ mark(name, markOptions)
 ### Parameters
 
 - `name`
-  - : A string representing the name of the mark.
+  - : A string representing the name of the mark. Must not be the same name as one of the properties of the deprecated {{domxref("PerformanceTiming")}} interface.
 - `markOptions` {{optional_inline}}
   - : An object for specifying a timestamp and additional metadata for the mark.
     - `detail` {{optional_inline}}
@@ -38,7 +38,7 @@ The {{domxref("PerformanceMark")}} entry that was created.
 
 ### Exceptions
 
-- {{jsxref("SyntaxError")}}: Thrown if the `name` given to this method already exists in the {{domxref("PerformanceTiming")}} interface.
+- {{jsxref("SyntaxError")}}: Thrown if the `name` is one of the properties of the deprecated {{domxref("PerformanceTiming")}} interface. See the [example below](#reserved_names).
 - {{jsxref("TypeError")}}: Thrown if `startTime` is negative.
 
 ## Examples
