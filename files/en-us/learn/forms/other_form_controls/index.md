@@ -57,7 +57,7 @@ Note that even though you can put anything inside a `<textarea>` element (includ
 
 Visually, the text entered wraps and the form control is by default resizable. Modern browsers provide a drag handle that you can drag to increase/decrease the size of the text area.
 
-The following screenshots show default, focused, and disabled `<textarea>` elements in Firefox 71 and Safari 13 on macOS, and Edge 18, Yandex 14, Firefox 71, and Chrome 79 on Windows 10.
+The following screenshots show default, focused, and disabled `<textarea>` elements in Firefox 71 and Safari 13 on macOS and in Edge 18, Yandex 14, Firefox 71, and Chrome 79 on Windows 10.
 
 ![The default, focused, and disabled \<textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
@@ -88,7 +88,7 @@ Play with the interactive example at the top of the {{cssxref("resize")}} refere
 
 ## Drop-down controls
 
-Drop-down controls are a simple way to let users select from many options without taking up much space in the user interface. HTML has two forms of drop-down content: the **select box**, and the **autocomplete box**. In both cases the interaction is the same — once the control is activated, the browser displays a list of values the user can select between.
+Drop-down controls are a simple way to let users select from many options without taking up much space in the user interface. HTML has two types of drop-down controls: the **select box** and the **autocomplete box**. The interaction is the same in both the types of drop-down controls — after the control is activated, the browser displays a list of values the user can select from.
 
 > **Note:** You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
@@ -151,7 +151,7 @@ By default, the height of the select box is enough to display a single value. Th
 
 ### Multiple choice select box
 
-By default, a select box only lets the user select a single value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> and clicking multiple values on the desktop).
+By default, a select box lets a user select only one value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values. Users can select multiple values by using the default mechanism provided by the operating system (e.g., on the desktop, multiple values can be clicked while holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> keys).
 
 ```html
 <select id="multi" name="multi" multiple size="2">
@@ -274,7 +274,7 @@ The content inside the {{HTMLElement("progress")}} element is a fallback for bro
 
 A meter bar represents a fixed value in a range delimited by {{htmlattrxref("max","meter")}} and {{htmlattrxref("min","meter")}} values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
 
-- The {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values divide the range into three parts:
+- The {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values divide the range into the following three parts:
 
   - The lower part of the range is between the {{htmlattrxref("min","meter")}} and {{htmlattrxref("low","meter")}} values, inclusive.
   - The medium part of the range is between the {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values, exclusive.
@@ -292,7 +292,7 @@ All browsers that implement the {{HTMLElement("meter")}} element use those value
 - If the current value is in the average part of the range, the bar is yellow.
 - If the current value is in the worst part of the range, the bar is red.
 
-Such a bar is created using a {{HTMLElement("meter")}} element. This is for implementing any kind of meter, for example a bar showing the total space used on a disk, which turns red when it starts to get full.
+Such a bar is created by using the {{HTMLElement("meter")}} element. This is for implementing any kind of meter; for example, a bar showing the total space used on a disk, which turns red when it starts to get full.
 
 ```html
 <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
