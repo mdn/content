@@ -46,8 +46,14 @@ None.
 ## Examples
 
 ```js
-let current = navigation.currentEntry;
-console.log(current.getState());
+async function handleReload() {
+  // Update existing state via reload()
+  await navigation.reload({ state: { ...navigation.currentEntry.getState(), newState: 3 } });
+
+  // Print current state to the console
+  const current = navigation.currentEntry;
+  console.log(current.getState());
+}
 ```
 
 ## Specifications

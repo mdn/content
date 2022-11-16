@@ -59,16 +59,29 @@ Either one of these promises rejects if the navigation has failed for some reaso
 ### Set up home button
 
 ```js
-async function initHomeBtn() {
-  // Get the key of the first loaded page
-  // so the user can always go back there.
+function initHomeBtn() {
+  // Get the key of the first loaded entry
+  // so the user can always go back to this view.
   const {key} = navigation.currentEntry;
-  backToHomeButton.onclick = () => navigation.traverseTo(key);
+  backToHomeButton.onclick = () => {
+    navigation.traverseTo(key);
+  }
 }
 
+navigation.addEventListener("navigate", event => {
+  event.intercept({
+      async handler() {
+        // Handle single-page navigations
+      }
+  });
+});
+
 async function handleNavigate(url) {
-  // Navigate away, but the button will always work.
+
+  // Navigate to a different view, but the button will always work.
   await navigation.navigate(url).finished;
+
+  // ...
 }
 ```
 

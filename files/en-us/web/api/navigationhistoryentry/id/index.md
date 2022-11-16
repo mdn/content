@@ -21,16 +21,18 @@ browser-compat: api.NavigationHistoryEntry.id
 {{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`id`** read-only property of the
-{{domxref("NavigationHistoryEntry")}} interface returns the `id` of the history entry. This is a unique, UA-generated value that always represents the history entry, useful to correlate a history entry with an external resource such as a storage cache.
+{{domxref("NavigationHistoryEntry")}} interface returns the `id` of the history entry. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
+
+This differs from the {{domxref("NavigationHistoryEntry.key", "key")}} of a history entry. The `key` is a unique, UA-generated value that represents the history entry's slot in the entries list rather than the entry itself. It is used to navigate that particular slot via {{domxref("Navigation.traverseTo()")}}. The `key` will be reused by other entries that replace the entry in the list (that is, if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
 
 ## Value
 
-A string representing the `id` of the destination {{domxref("NavigationHistoryEntry")}}.
+A string representing the `id` of the {{domxref("NavigationHistoryEntry")}}.
 
 ## Examples
 
 ```js
-let current = navigation.currentEntry;
+const current = navigation.currentEntry;
 console.log(current.id);
 ```
 

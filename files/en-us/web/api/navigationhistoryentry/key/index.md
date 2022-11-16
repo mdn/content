@@ -21,11 +21,13 @@ browser-compat: api.NavigationHistoryEntry.key
 {{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`key`** read-only property of the
-{{domxref("NavigationHistoryEntry")}} interface returns the `key` of the history entry. This is a unique, UA-generated value that represents the history entry's slot in the history entries list, used to navigate to this place in the history via {{domxref("Navigation.traverseTo()")}}. It will be reused by other entries that replace the entry in the list (i.e. if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
+{{domxref("NavigationHistoryEntry")}} interface returns the `key` of the history entry. This is a unique, UA-generated value that represents the history entry's slot in the entries list. It is used to navigate that particular slot via {{domxref("Navigation.traverseTo()")}}. The `key` will be reused by other entries that replace the entry in the list (that is, if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
+
+This differs from the {{domxref("NavigationHistoryEntry.id", "id")}} of a history entry. The `id` is a unique, UA-generated value that always represents a specific history entry rather than its slot in the entries list. This is useful to correlate it with an external resource such as a storage cache.
 
 ## Value
 
-A string representing the `key` of the destination {{domxref("NavigationHistoryEntry")}}.
+A string representing the `key` of the {{domxref("NavigationHistoryEntry")}}.
 
 ## Examples
 
@@ -39,16 +41,29 @@ console.log(current.key);
 ### Set up a home button
 
 ```js
-async function initHomeBtn() {
-  // Get the key of the first loaded page
-  // so the user can always go back there.
+function initHomeBtn() {
+  // Get the key of the first loaded entry
+  // so the user can always go back to this view.
   const {key} = navigation.currentEntry;
-  backToHomeButton.onclick = () => navigation.traverseTo(key);
+  backToHomeButton.onclick = () => {
+    navigation.traverseTo(key);
+  } 
 }
 
+navigation.addEventListener("navigate", event => {
+  event.intercept({
+      async handler() {
+        // Handle single-page navigations
+      }
+  });
+});
+
 async function handleNavigate(url) {
-  // Navigate away, but the button will always work.
+
+  // Navigate to a different view, but the button will always work.
   await navigation.navigate(url).finished;
+
+  // ...
 }
 ```
 
