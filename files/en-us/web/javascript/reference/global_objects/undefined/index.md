@@ -14,9 +14,9 @@ The global **`undefined`** property represents the primitive
 value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
-{{js_property_attributes(0,0,0)}}
-
 {{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+
+{{js_property_attributes(0,0,0)}}
 
 ## Syntax
 

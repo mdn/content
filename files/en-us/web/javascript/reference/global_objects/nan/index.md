@@ -12,9 +12,9 @@ browser-compat: javascript.builtins.NaN
 
 The global **`NaN`** property is a value representing Not-A-Number.
 
-{{js_property_attributes(0, 0, 0)}}
-
 {{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 

@@ -12,9 +12,9 @@ browser-compat: javascript.builtins.Infinity
 
 The global property **`Infinity`** is a numeric value representing infinity.
 
-{{js_property_attributes(0,0,0)}}
-
 {{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
+
+{{js_property_attributes(0,0,0)}}
 
 ## Description
 

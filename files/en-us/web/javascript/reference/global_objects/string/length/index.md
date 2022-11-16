@@ -15,9 +15,9 @@ browser-compat: javascript.builtins.String.length
 
 The **`length`** read-only property of a string contains the length of the string in UTF-16 code units.
 
-{{js_property_attributes(0, 0, 0)}}
-
 {{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
