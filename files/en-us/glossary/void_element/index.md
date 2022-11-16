@@ -41,7 +41,7 @@ If a trailing `/` (slash) character is present in the start tag of an HTML eleme
 
 However, some code formatters add the trailing slash character to the start tags of void elements to make them XHTML-compatible and more readable. For example, some code formatters will convert `<input type="text">` to `<input type="text" />`.
 
-Self-closing tags are required in void elements in [XML](/en-US/docs/Glossary/XML), [XHMTL](/en-US/docs/Glossary/XHTML), and [SVG](/en-US/docs/Glossary/SVG) (e.g., `<circle cx="50" cy="50" r="50" />`).
+Self-closing tags are required in void elements in [XML](/en-US/docs/Glossary/XML), [XHTML](/en-US/docs/Glossary/XHTML), and [SVG](/en-US/docs/Glossary/SVG) (e.g., `<circle cx="50" cy="50" r="50" />`).
 
 In SVG and MathML, elements that cannot have any child nodes are allowed to be marked as self-closing. In such cases, if an element's start tag is marked as self-closing, the element must not have an end tag.
 

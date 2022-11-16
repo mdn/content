@@ -187,21 +187,37 @@ class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD;
 
   static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
     return this.#PRIVATE_STATIC_FIELD;
   }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField {}
 
-try {
-  SubClass.basePublicStaticMethod();
-} catch (e) {
-  console.log(e);
-  // TypeError: Cannot write private member #PRIVATE_STATIC_FIELD
-  // to an object whose class did not declare it
-}
+SubClass.basePublicStaticMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
 ```
+
+This is the same if you call the method with `super`, because [`super` methods are not called with the super class as `this`](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
+
+```js
+class BaseClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD;
+
+  static basePublicStaticMethod() {
+    // When invoked through super, `this` still refers to Subclass
+    return this.#PRIVATE_STATIC_FIELD;
+  }
+}
+
+class SubClass extends BaseClassWithPrivateStaticField {
+  static callSuperBaseMethod() {
+    return super.basePublicStaticMethod();
+  }
+}
+
+SubClass.callSuperBaseMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+```
+
+You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
 
 ### Private methods
 
