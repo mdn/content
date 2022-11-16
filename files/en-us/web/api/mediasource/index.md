@@ -34,7 +34,7 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
 - {{domxref("MediaSource.handle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
+  - : Inside a dedicated worker, returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from the worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 - {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
 - {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
@@ -123,26 +123,36 @@ function fetchAB (url, cb) {
 };
 ```
 
-### Constructing a `MediaSource` in a worker and passing it to the main thread
+### Constructing a `MediaSource` in a dedicated worker and passing it to the main thread
 
-The `handle` property can be accessed inside a dedicated worker and the resulting `MediaSourceHandle` object is then transferred over to the main thread via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
+The {{domxref("MediaSource.handle", "handle")}} property can be accessed inside a dedicated worker and the resulting {{domxref("MediaSourceHandle")}} object is then transferred over to the thread that created the worker (in this case the main thread) via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
 
 ```js
+// Inside dedicated worker
 let mediaSource = new MediaSource();
 let handle = mediaSource.handle;
+// Transfer the handle to the context that created the worker
 postMessage({arg: handle}, [handle]);
-
-// Fetch the media, buffer it, and pass it into the MediaSource
 ```
 
 Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
 
 ```js
 worker.addEventListener('message', (msg) => {
-  video.srcObject = msg.data.arg;
+  let mediaSource = msg.data.arg;
+  video.srcObject = mediaSource;
   video.play();
+
+  mediaSource.addEventListener('sourceopen', () => {
+    // Await sourceopen on MediaSource before creating SourceBuffers
+    // and populating them with fetched media — the dedicated worker
+    // MediaSource won't accept creation of SourceBuffers until it is
+    // attached to the HTMLMediaElement its readyState is "open"
+  })
 })
 ```
+
+> **Note:** {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.
 
 ## Specifications
 
