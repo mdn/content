@@ -106,7 +106,7 @@ if ('srcObject' in video) {
 }
 ```
 
-### Constructuring a `MediaSource` in a worker and passing it to the main thread to play
+### Constructing a `MediaSource` in a worker and passing it to the main thread to play
 
 The {{domxref("MediaSource.handle")}} property can be accessed inside a dedicated worker and the resulting {{domxref("MediaSourceHandle")}} object is then transferred over to the main thread via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
 

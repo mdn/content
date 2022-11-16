@@ -9,7 +9,7 @@ tags:
 
 {{QuickLinksWithSubPages("Web/Performance")}}
 
-Improving your startup performance is often one of the highest value peformance optimizations that can be made. How long does your app take to start up? Does it seem to lock up the device or the user's browser while the app loads? That makes users worry that your application has crashed, or that something else is wrong. Good user experience includes ensuring your app loads quickly. This article provides performance tips and suggestions for both writing new applications and porting applications to the web from other platforms.
+Improving your startup performance is often one of the highest value performance optimizations that can be made. How long does your app take to start up? Does it seem to lock up the device or the user's browser while the app loads? That makes users worry that your application has crashed, or that something else is wrong. Good user experience includes ensuring your app loads quickly. This article provides performance tips and suggestions for both writing new applications and porting applications to the web from other platforms.
 
 ## Fast asynchronous loading
 
@@ -17,7 +17,7 @@ Regardless of platform, it's always a good idea to start up as **quickly** as po
 
 Rather, create a [Web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) that does as much as possible in a background thread (for example, fetching and processing data.) Relegating tasks to a Web worker frees up the main thread for tasks requiring it, like user events and rendering UI. In turn, main thread events should consist of many small tasks, also known as [micro tasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth), rather than larger, more time consuming tasks.
 
-Asynchronous loading helps prevent pages and user interfaces from appearing to be (or actually becoming) unresponsive. By minimzing the time required for any individual loading task, the application's [event loop](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#event_loops) will continue to cycle while it starts up. This will prevent the application, browser, and/or device from appearing frozen.
+Asynchronous loading helps prevent pages and user interfaces from appearing to be (or actually becoming) unresponsive. By minimizing the time required for any individual loading task, the application's [event loop](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#event_loops) will continue to cycle while it starts up. This will prevent the application, browser, and/or device from appearing frozen.
 
 In the worst case, blocking the main thread can cause users to uninstall your app; for example, if someone launches your app by mistake and they aren't prevented from closing the application, they may want to take action so that doesn't accidentally happen again.
 
@@ -55,7 +55,7 @@ That leaves, though, the problem of having to refactor your existing code to act
 
 ### How asynchronous should I get?
 
-The faster your site first becomes usable and the more responsive it is to user input, the better it will be percieved.
+The faster your site first becomes usable and the more responsive it is to user input, the better it will be perceived.
 A site that takes 1 or 2 seconds before content first appears is usually seen as fast; if you're used to sites taking 3 or 4 seconds, then 7 or 8 seconds feels like a very long time.
 
 In terms of responsiveness, users won't notice a delay of 50ms or less. Any delay of over 200ms and the user will perceive your site as sluggish. When working to improve the loading and responsiveness of your applications, remember that many of your users may have older, slower computer than yours, they may experience longer delays than you do!

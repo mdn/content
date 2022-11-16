@@ -193,6 +193,10 @@ console.log(o.a); // 38
 
 In the second example (`C2`), because an object was returned during construction, the new object that `this` was bound to gets discarded. (This essentially makes the statement `this.a = 37;` dead code. It's not exactly dead because it gets executed, but it can be eliminated with no outside effects.)
 
+#### super
+
+When a function is invoked in the `super.method()` form, the `this` inside the `method` function is the same value as the `this` value around the `super.method()` call, and is generally not equal to the object that `super` refers to. This is because `super.method` is not an object member access like the ones above — it's a special syntax with different binding rules. For examples, see the [`super` reference](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
+
 ### Class context
 
 A [class](/en-US/docs/Web/JavaScript/Reference/Classes) can be split into two contexts: static and instance. [Constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor), methods, and instance field initializers ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)) belong to the instance context. [Static](/en-US/docs/Web/JavaScript/Reference/Classes/static) methods, static field initializers, and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) belong to the static context. The `this` value is different in each context.

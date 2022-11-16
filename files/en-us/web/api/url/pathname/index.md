@@ -13,7 +13,7 @@ browser-compat: api.URL.pathname
 
 {{ApiRef("URL API")}}
 
-The **`pathname`** property of the {{domxref("URL")}} interface is a string containing an initial `/` followed by the path of the URL, not including the query string or fragment (or the empty string if there is no path).
+The **`pathname`** property of the {{domxref("URL")}} interface represents a location in a directory structure. It is a string constructed from a list of path segments, each of which is prefixed by a `/` character. If the URL has no path segments, the value of its `pathname` property will be the empty string.
 
 The path of the URL is a `/` delimited sequence of segments, which may each be one of `.`, `..` or a string with zero or more characters excluding `/`, `?`, and `#`.
 

@@ -13,9 +13,9 @@ tags:
 browser-compat: api.MediaSourceHandle
 ---
 
-{{APIRef("Media Source Extensions")}}{{seecompattable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-The **`MediaSourceHandle`** interface of the {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} is a proxy for a {{domxref("MediaSource")}} that can be transferre from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property. `MediaSource` objects are not transferable because they are event targets, hence the need for `MediaSourceHandle`s. Each `MediaSource` object has its own distinct `MediaSourceHandle`.
+The **`MediaSourceHandle`** interface of the {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} is a proxy for a {{domxref("MediaSource")}} that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property. `MediaSource` objects are not transferable because they are event targets, hence the need for `MediaSourceHandle`s. Each `MediaSource` object has its own distinct `MediaSourceHandle`.
 
 It can be accessed via the {{domxref("MediaSource.handle")}} property.
 

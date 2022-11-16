@@ -10,13 +10,14 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and will ship on [December 13, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [December 13, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
+
+- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#attr-height) & [`width`](/en-US/docs/Web/HTML/Element/source#attr-width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+  This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ({{bug(1795953)}}).
 
 #### Removals
 
@@ -63,7 +64,9 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+#### Marionette
 
 ## Changes for add-on developers
 

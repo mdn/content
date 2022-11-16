@@ -10,6 +10,7 @@ tags:
 browser-compat: mathml.elements.math
 ---
 
+
 <section id="Quick_links">
   {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
 </section>
