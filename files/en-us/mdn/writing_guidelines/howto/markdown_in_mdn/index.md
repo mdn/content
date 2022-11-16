@@ -312,13 +312,11 @@ This issue was resolved in <https://github.com/mdn/content/issues/3483>.
 
 ## Definition lists
 
-To create definition lists in MDN authors write a modified form of a GFM unordered list ({{HTMLElement("ul")}}).
-In this form:
+To create definition lists in MDN authors write a modified form of a GFM unordered list ({{HTMLElement("ul")}}). In this form:
 
 - The GFM `<ul>` contains any number of top-level GFM `<li>` elements.
 - Each of these top-level GFM `<li>` elements must contain, as its final element, one GFM `<ul>` element.
-- This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with ": " (a colon followed by a space).
-  This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
+- This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with ": " (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
 
 Each of these top-level GFM `<li>` elements will be transformed into a `<dt>`/`<dd>` pair, as follows:
 
@@ -404,8 +402,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4367>.
 
 ## Tables
 
-In GFM (but not CommonMark) there is a syntax for tables: <https://github.github.com/gfm/#tables-extension->.
-We will make use of this but:
+In GFM (but not CommonMark) there is a syntax for tables: <https://github.github.com/gfm/#tables-extension->. We will make use of this but:
 
 - The GFM syntax only supports a subset of the features available in HTML. If you need to use table features that are not supported in GFM, use HTML for the table.
 - If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.
