@@ -124,6 +124,7 @@ As a rule, do:
 Don't:
 
 - Try to cram multiple fixes into a single pull request. It makes it a lot harder to review, and raises suspicions (some people might think you are trying to hide some malicious code in between the valid changes).
+- Unnecessarily add or remove line breaks on pages that follow a certain formatting style.
 
 ## Deployment timeline
 
