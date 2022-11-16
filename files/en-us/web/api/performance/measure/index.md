@@ -125,7 +125,7 @@ console.log(loginMeasure.duration);
 
 ### Measuring duration with custom start and end times
 
-To do more advanced measurements, you can configure an `MeasureOptions` object. For example, you can use the [`event.timestamp`](/en-US/docs/Web/API/Event/timeStamp) property from a [`click` event](/en-US/docs/Web/API/Element/click_event) as the start time.
+To do more advanced measurements, you can pass a `measureOptions` parameter. For example, you can use the [`event.timeStamp`](/en-US/docs/Web/API/Event/timeStamp) property from a [`click` event](/en-US/docs/Web/API/Element/click_event) as the start time.
 
 ```js
 performance.measure("login-click", {

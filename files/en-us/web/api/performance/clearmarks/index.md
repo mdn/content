@@ -12,7 +12,7 @@ browser-compat: api.Performance.clearMarks
 
 {{APIRef("Performance API")}}
 
-The **`clearMarks()`** method removes all or specific markers from the browser's performance timeline.
+The **`clearMarks()`** method removes all or specific {{domxref("PerformanceMark")}} objects from the browser's performance timeline.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ clearMarks(name)
 ### Parameters
 
 - `name` {{optional_inline}}
-  - : A string representing the name of the {{domxref("PerformanceMark")}} object. If this argument is omitted, all entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`" will be removed.
+  - : A string representing the {{domxref("PerformanceEntry.name", "name")}} of the {{domxref("PerformanceMark")}} object. If this argument is omitted, all entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`" will be removed.
 
 ### Return value
 
@@ -45,15 +45,15 @@ performance.mark("form-sent");
 performance.mark("video-loaded");
 performance.mark("video-loaded");
 
-performance.getEntriesByType("mark").length // 6
+performance.getEntriesByType("mark").length; // 6
 
 // Delete just the "login-started" mark entries
 performance.clearMarks("login-started");
-performance.getEntriesByType("mark").length // 4
+performance.getEntriesByType("mark").length; // 4
 
 // Delete all of the mark entries
 performance.clearMarks();
-performance.getEntriesByType("mark").length // 0
+performance.getEntriesByType("mark").length; // 0
 ```
 
 ## Specifications

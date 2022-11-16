@@ -58,7 +58,7 @@ const videoMarker = performance.mark("video-loaded");
 
 ### Creating markers with details
 
-If the `name` argument isn't enough, `mark()` is configurable using the `markOptions` object where you can put additional information in the `detail` property, which can be of any type.
+The performance mark is configurable using the `markOptions` object where you can put additional information in the `detail` property, which can be of any type.
 
 ```js
 performance.mark("login-started", {
@@ -86,7 +86,7 @@ performance.mark("login-button-pressed", {
 
 ### Reserved names
 
-Note that names that are part of the deprecated {{domxref("PerformanceTiming")}} interface can't be used to remain backwards compatible. The following example throws:
+Note in order to maintain backwards compatibility, names that are part of the deprecated {{domxref("PerformanceTiming")}} interface can't be used. The following example throws:
 
 ```js example-bad
 performance.mark("navigationStart"); 

@@ -12,7 +12,7 @@ browser-compat: api.Performance.clearMeasures
 
 {{APIRef("Performance API")}}
 
-The **`clearMeasures()`** method removes all or specific measures from the browser's performance timeline.
+The **`clearMeasures()`** method removes all or specific {{domxref("PerformanceMeasure")}} objects from the browser's performance timeline.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ clearMeasures(name)
 ### Parameters
 
 - `name` {{optional_inline}}
-  - : A string representing the name of the {{domxref("PerformanceMeasure")}} object. If this argument is omitted, all entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`" will be removed.
+  - : A string representing the {{domxref("PerformanceEntry.name", "name")}} of the {{domxref("PerformanceMeasure")}} object. If this argument is omitted, all entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`" will be removed.
 
 ### Return value
 
@@ -46,15 +46,15 @@ performance.measure("from mark a", "a");
 performance.mark("b");
 performance.measure("between a and b", "a", "b");
 
-performance.getEntriesByType("measure").length // 5
+performance.getEntriesByType("measure").length; // 5
 
 // Delete just the "from navigation" measure entries
 performance.clearMeasures("from navigation");
-performance.getEntriesByType("measure").length // 3
+performance.getEntriesByType("measure").length; // 3
 
 // Delete all of the measure entries
 performance.clearMeasures();
-performance.getEntriesByType("measure").length // 0
+performance.getEntriesByType("measure").length; // 0
 ```
 
 ## Specifications
