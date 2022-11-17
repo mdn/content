@@ -17,7 +17,7 @@ browser-compat: api.Notification.timestamp
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`timestamp`** read-only property of the
-{{domxref("Notification")}} interface returns a {{domxref("DOMTimeStamp")}}, as
+{{domxref("Notification")}} interface returns a number, as
 specified in the `timestamp` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
@@ -29,7 +29,7 @@ missed message could be set in the past.
 
 ## Value
 
-A {{domxref("DOMTimeStamp")}}.
+A number representing a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds.
 
 ## Examples
 

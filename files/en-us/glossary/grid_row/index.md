@@ -1,6 +1,6 @@
 ---
 title: Grid Row
-slug: Glossary/Grid_Rows
+slug: Glossary/Grid_Row
 tags:
   - CSS Grids
 ---
