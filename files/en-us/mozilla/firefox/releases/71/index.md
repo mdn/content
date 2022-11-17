@@ -47,7 +47,7 @@ This article provides information about the changes in Firefox 71 that will affe
 - Added the [subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ({{bug(1580894)}})
 - Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_Columns) ({{bug(1426010)}})
 - Added support for the `path()` value of {{cssxref("clip-path")}} ({{bug(1488530)}})
-- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ({{bug(1585637)}}). [See the guide to this feature on MDN](/en-US/docs/Web/Media/images/aspect_ratio_mapping).
+- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ({{bug(1585637)}}). [See the guide to this feature on MDN](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
 
 #### Removals
 
