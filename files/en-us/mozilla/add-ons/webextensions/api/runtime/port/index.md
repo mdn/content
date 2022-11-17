@@ -22,7 +22,7 @@ One side initiates the connection, using a `connect()` API. This returns a `Port
 
 Once both sides have `Port` objects, they can exchange messages using `Port.postMessage()` and `Port.onMessage`. When they are finished, either end can disconnect using `Port.disconnect()`, which will generate a `Port.onDisconnect` event at the other end, enabling the other end to do any cleanup required.
 
-A `Port` can also become disconnected in response to various events. See [Lifecycle](#Lifecycle).
+A `Port` can also become disconnected in response to various events. See [Lifecycle](#lifecycle).
 
 You can use this pattern to communicate between:
 
