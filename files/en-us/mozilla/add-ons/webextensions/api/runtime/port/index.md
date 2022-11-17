@@ -104,7 +104,7 @@ Values of this type are objects. They contain the following properties:
 
 *This section is a stub. You can help by expanding it.*
 
-In some cases the lifecycle of a `Port` in Firefox may differ from that [in Chrome](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime).
+In some cases the lifecycle of a `Port` in Firefox may differ from that [in Chrome.](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime)
 For example, if multiple frames have received the port (via `runtime.onConnect`), the `Port` may disconnect after a single one of these frames has unloaded.
 
 ## Browser compatibility
