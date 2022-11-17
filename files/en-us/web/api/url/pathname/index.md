@@ -13,9 +13,11 @@ browser-compat: api.URL.pathname
 
 {{ApiRef("URL API")}}
 
-The **`pathname`** property of the {{domxref("URL")}} interface represents a location in a directory structure. It is a string constructed from a list of path segments, each of which is prefixed by a `/` character. If the URL has no path segments, the value of its `pathname` property will be the empty string.
+The **`pathname`** property of the {{domxref("URL")}} interface represents a location in a hierarchical structure. It is a string constructed from a list of path segments, each of which is prefixed by a `/` character. If the URL has no path segments, the value of its `pathname` property will be the empty string.
 
-The path of the URL is a `/` delimited sequence of segments, which may each be one of `.`, `..` or a string with zero or more characters excluding `/`, `?`, and `#`.
+URLs such as `https` and `http` URLs that have [hierarchical schemes](https://datatracker.ietf.org/doc/html/draft-fielding-url-syntax-09) (which the current URL standard calls “[special schemes](https://url.spec.whatwg.org/#special-scheme)”), always have at least one (invisible) path segment: the empty string — and thus the `pathname` value for such “[special scheme](https://url.spec.whatwg.org/#special-scheme)” URLs can never be the empty string but will instead always have a least one `/` character.
+
+For example, the URL `https://developer.mozilla.org` has just one path segment: the empty string — so its `pathname` value is constructed by prefixing a `/` character to the empty string.
 
 Some systems define the term _slug_ to mean the final segment of a non-empty path if it identifies a page in human-readable keywords. For example, the URL `https://example.org/articles/this-that-other-outre-collection` has `this-that-other-outre-collection` as its slug.
 
