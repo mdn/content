@@ -23,7 +23,7 @@ the source of the media associated with the {{domxref("HTMLMediaElement")}}.
 The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 {{domxref("Blob")}}, or a {{domxref("File")}} (which inherits from `Blob`).
 
-> **Note:** As of March 2020, only Safari has full support for `srcObject`, i.e. using `MediaSource`, `MediaStream`, `Blob`, and `File` objects as values. Other browsers support `MediaStream` objects. In addition, as of version 108 Chromium supports `MediaSource` objects created inside dedicated workers via {{domxref("MediaSource.handle")}}. Until other browsers catch up, consider falling back to creating a URL with {{domxref("URL.createObjectURL()")}} and assigning it to {{domxref("HTMLMediaElement.src")}}. See below for examples.
+> **Note:** As of March 2020, only Safari has full support for `srcObject`, i.e. using `MediaSource`, `MediaStream`, `Blob`, and `File` objects as values. Other browsers support `MediaStream` objects; until they catch up, consider falling back to creating a URL with {{domxref("URL.createObjectURL()")}} and assigning it to {{domxref("HTMLMediaElement.src")}} (see below for an example). In addition, as of version 108 Chromium supports attaching a dedicated worker `MediaSource` object by assigning that object's {{domxref("MediaSourceHandle")}} instance (transferred from the worker) to `srcObject`.
 
 ## Value
 
@@ -112,22 +112,22 @@ let mediaSource = new MediaSource();
 let handle = mediaSource.handle;
 // Transfer the handle to the context that created the worker
 postMessage({arg: handle}, [handle]);
+
+mediaSource.addEventListener('sourceopen', () => {
+  // Await sourceopen on MediaSource before creating SourceBuffers
+  // and populating them with fetched media — MediaSource won't
+  // accept creation of SourceBuffers until it is attached to the
+  // HTMLMediaElement and its readyState is "open"
+})
 ```
 
 Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
 
 ```js
 worker.addEventListener('message', (msg) => {
-  let mediaSource = msg.data.arg;
-  video.srcObject = mediaSource;
+  let mediaSourceHandle = msg.data.arg;
+  video.srcObject = mediaSourceHandle;
   video.play();
-
-  mediaSource.addEventListener('sourceopen', () => {
-    // Await sourceopen on MediaSource before creating SourceBuffers
-    // and populating them with fetched media — the dedicated worker
-    // MediaSource won't accept creation of SourceBuffers until it is
-    // attached to the HTMLMediaElement its readyState is "open"
-  })
 })
 ```
 
