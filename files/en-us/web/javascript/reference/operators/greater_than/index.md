@@ -11,7 +11,7 @@ browser-compat: javascript.operators.greater_than
 
 {{jsSidebar("Operators")}}
 
-The greater than operator (`>`) returns `true` if the left
+The **greater than (`>`)** operator returns `true` if the left
 operand is greater than the right operand, and `false` otherwise.
 
 {{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}
