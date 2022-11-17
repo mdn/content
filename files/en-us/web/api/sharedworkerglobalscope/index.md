@@ -17,7 +17,7 @@ The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
@@ -26,7 +26,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This property returns the {{domxref("ApplicationCache")}} object for the worker.
 
-### Properties inherited from WorkerGlobalScope
+### Instance properties inherited from WorkerGlobalScope
 
 - {{domxref("WorkerGlobalScope.self")}}
   - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
@@ -39,7 +39,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
@@ -59,9 +59,9 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("btoa", "btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("WindowTimers.clearInterval()")}}
+- {{domxref("clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("WindowTimers.clearTimeout()")}}
+- {{domxref("clearTimeout()")}}
   - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
 - {{domxref("setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.

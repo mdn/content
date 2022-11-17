@@ -127,7 +127,7 @@ The following example shows a possible use of the `size` property:
                   units[exponent]
                 } (${numberOfBytes} bytes)`;
 
-          document.getElementById("fileNum").textContent = fileList.length;
+          document.getElementById("fileNum").textContent = uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
         false
@@ -150,7 +150,7 @@ Consider this HTML:
   multiple
   accept="image/*"
   style="display:none" />
-<button id="fileSelect">Select some files</button>
+<button id="fileSelect" type="button">Select some files</button>
 ```
 
 The code that handles the `click` event can look like this:
@@ -266,7 +266,7 @@ function handleFiles(files) {
     preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
 
     const reader = new FileReader();
-    reader.onload = (e) => { aImg.src = e.target.result; };
+    reader.onload = (e) => { img.src = e.target.result; };
     reader.readAsDataURL(file);
   }
 }
@@ -346,7 +346,7 @@ function handleFiles() {
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
       img.onload = () => {
-        URL.revokeObjectURL(this.src);
+        URL.revokeObjectURL(img.src);
       }
       li.appendChild(img);
       const info = document.createElement("span");

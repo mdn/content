@@ -17,7 +17,7 @@ The **`HIDDevice`** interface of the {{domxref('WebHID API')}} represents a HID 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 This interface also inherits properties from {{domxref("EventTarget")}}.
 
@@ -37,7 +37,7 @@ This interface also inherits properties from {{domxref("EventTarget")}}.
 - {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}}
   - : Fires when a report is sent from the device.
 
-## Methods
+## Instance methods
 
 This interface also inherits methods from {{domxref("EventTarget")}}.
 
@@ -45,6 +45,8 @@ This interface also inherits methods from {{domxref("EventTarget")}}.
   - : Opens a connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been successful.
 - {{domxref("HIDDevice.close()")}} {{Experimental_Inline}}
   - : Closes the connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been closed.
+- {{domxref("HIDDevice.forget()")}} {{Experimental_Inline}}
+  - : Closes the connection to this HID device and resets access permission, and returns a {{jsxref("Promise")}} which resolves once the permission was reset.
 - {{domxref("HIDDevice.sendReport()")}} {{Experimental_Inline}}
   - : Sends an output report to this HID Device, and returns a {{jsxref("Promise")}} which resolves once the report has been sent.
 - {{domxref("HIDDevice.sendFeatureReport()")}} {{Experimental_Inline}}

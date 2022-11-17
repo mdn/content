@@ -40,11 +40,11 @@ In practice, it reads the regex's [`source`](/en-US/docs/Web/JavaScript/Referenc
 The following example displays the string value of a {{jsxref("RegExp")}} object:
 
 ```js
-const myExp = new RegExp('a+b+c');
-console.log(myExp.toString());  // logs '/a+b+c/'
+const myExp = new RegExp("a+b+c");
+console.log(myExp.toString()); // '/a+b+c/'
 
-const foo = new RegExp('bar', 'g');
-console.log(foo.toString());    // logs '/bar/g'
+const foo = new RegExp("bar", "g");
+console.log(foo.toString()); // '/bar/g'
 ```
 
 ### Empty regular expressions and escaping
@@ -54,7 +54,7 @@ Since `toString()` accesses the [`source`](/en-US/docs/Web/JavaScript/Reference/
 ```js
 new RegExp().toString(); // "/(?:)/"
 
-new RegExp('\n').toString() === '/\\n/'; // true
+new RegExp("\n").toString() === "/\\n/"; // true
 ```
 
 ## Specifications

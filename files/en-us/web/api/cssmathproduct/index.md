@@ -25,14 +25,18 @@ The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_
 - {{domxref("CSSMathProduct.CSSMathProduct", "CSSMathProduct()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathProduct` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMathProduct.values')}} {{Experimental_Inline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Methods
+## Static methods
 
-None.
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
 
 ## Specifications
 

@@ -20,7 +20,7 @@ The **`AudioTrack`** interface represents a single audio track from one of the H
 
 The most common use for accessing an `AudioTrack` object is to toggle its {{domxref("AudioTrack.enabled", "enabled")}} property in order to mute and unmute the track.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioTrack.enabled", "enabled")}}
   - : A Boolean value which controls whether or not the audio track's sound is enabled. Setting this value to `false` mutes the track's audio.

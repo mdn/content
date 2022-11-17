@@ -12,7 +12,7 @@ tags:
 browser-compat: api.Performance
 ---
 
-{{APIRef("High Resolution Time")}}
+{{APIRef("Performance API")}}
 
 The **`Performance`** interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API).
 
@@ -22,9 +22,12 @@ An object of this type can be obtained by calling the {{domxref("window.performa
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `Performance` interface doesn't inherit any properties._
+
+- {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
+  - : An {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
 
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
 
@@ -43,7 +46,7 @@ _The `Performance` interface doesn't inherit any properties._
 - {{domxref("Performance.timeOrigin")}} {{ReadOnlyInline}}
   - : Returns the high resolution timestamp of the start time of the performance measurement.
 
-## Methods
+## Instance methods
 
 _The `Performance` interface doesn't inherit any methods._
 
@@ -68,7 +71,7 @@ _The `Performance` interface doesn't inherit any methods._
 - {{domxref("Performance.setResourceTimingBufferSize()")}}
   - : Sets the browser's resource timing buffer size to the specified number of "`resource`" {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry","performance entry")}} objects.
 - {{domxref("Performance.toJSON()")}}
-  - : A jsonizer returning a JSON object representing the `Performance` object.
+  - : Returns a JSON representation of the `Performance` object.
 
 ## Events
 

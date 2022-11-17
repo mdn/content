@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.embed
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
 
@@ -46,7 +46,7 @@ Keep in mind that most modern browsers have deprecated and removed support for b
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is a {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

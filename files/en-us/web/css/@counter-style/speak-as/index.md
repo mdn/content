@@ -63,16 +63,7 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 
 ## Formal syntax
 
-```
-auto                 |
-bullets              |
-numbers              |
-words                |
-spell-out            |
-<counter-style-name>
-
-<counter-style-name> = <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

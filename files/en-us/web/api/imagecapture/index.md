@@ -24,12 +24,12 @@ The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/d
 - {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} {{Experimental_Inline}}
   - : Creates a new `ImageCapture` object which can be used to capture still frames (photos) from a given {{domxref("MediaStreamTrack")}} which represents a video stream.
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageCapture.track")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("MediaStreamTrack")}} passed to the constructor.
 
-## Methods
+## Instance methods
 
 The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it includes the methods defined by that interface as well as the ones listed below.
 

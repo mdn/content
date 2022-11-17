@@ -29,11 +29,11 @@ Access the audio context's instance of `AudioWorklet` through the {{domxref("Bas
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `AudioWorklet` interface does not define any properties of its own, but does inherit properties of {{domxref("Worklet")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from {{domxref('Worklet')}}. The `AudioWorklet` interface does not define any methods of its own._
 

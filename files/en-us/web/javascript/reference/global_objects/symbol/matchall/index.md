@@ -25,17 +25,16 @@ For more information, see {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matc
 ### Using Symbol.matchAll
 
 ```js
-const str = '2016-01-02|2019-03-07';
+const str = "2016-01-02|2019-03-07";
 
 const numbers = {
   *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g))
-      yield n[0];
-  }
+    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+  },
 };
 
 console.log(Array.from(str.matchAll(numbers)));
-//  Array ["2016", "01", "02", "2019", "03", "07"]
+// ["2016", "01", "02", "2019", "03", "07"]
 ```
 
 ## Specifications

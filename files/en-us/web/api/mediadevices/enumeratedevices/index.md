@@ -87,6 +87,6 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 - {{domxref("MediaDevices.getUserMedia")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API) - the API for the media stream objects
-- [Taking webcam photos](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos) - a
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a
   tutorial on using `getUserMedia()` for taking photos rather than video.

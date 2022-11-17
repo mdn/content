@@ -35,7 +35,7 @@ A boolean value that is `true` if at least one cell was unregistered and `false`
 - {{jsxref("TypeError")}}
   - : Thrown when `unregisterToken` is not an object.
 
-## Notes
+## Description
 
 When a target object has been reclaimed, it is no longer registered in the registry.
 There is no need to call `unregister` in your cleanup callback. Only call
@@ -52,7 +52,7 @@ token, then later unregistering it via `unregister`:
 ```js
 class Thingy {
   static #cleanup = (label) => {
-  //                 ^^^^^−−−−− held value
+    //               ^^^^^−−−−− held value
     console.error(
       `The "release" method was never called for the object with the label "${label}"`
     );
@@ -87,7 +87,7 @@ unregister token:
 ```js
 class Thingy {
   static #cleanup = (file) => {
-  //                 ^^^^−−−−− held value
+    //               ^^^^−−−−− held value
     console.error(
       `The "release" method was never called for the "Thingy" for the file "${file.name}"`
     );

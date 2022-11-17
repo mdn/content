@@ -22,9 +22,9 @@ The **`MediaStreamTrack`** interface represents a single media track within a st
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-In addition to the properties listed below, `MediaStreamTrack` has constrainable properties which can be set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} and accessed using {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}. See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) to learn how to correctly work with constrainable properties. Not doing so correctly will result in your code being unreliable.
+In addition to the properties listed below, `MediaStreamTrack` has constrainable properties which can be set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} and accessed using {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}. See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) to learn how to correctly work with constrainable properties. Not doing so correctly will result in your code being unreliable.
 
 - {{domxref("MediaStreamTrack.contentHint")}}
   - : A string that may be used by the web application to provide a hint as to what type of content the track contains to guide how it should be treated by API consumers.
@@ -56,7 +56,7 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 - {{domxref("MediaStreamTrack.remote")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a Boolean with a value of `true` if the track is sourced by a {{domxref("RTCPeerConnection")}}, `false` otherwise.
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
   - : Lets the application specify the ideal and/or ranges of acceptable values for any number of the available constrainable properties of the `MediaStreamTrack`.
@@ -94,5 +94,5 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}

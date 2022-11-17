@@ -45,10 +45,10 @@ const wm = new WeakMap();
 const obj = {};
 
 // Add new elements to the WeakMap
-wm.set(obj, 'foo').set(window, 'bar'); // chainable
+wm.set(obj, "foo").set(window, "bar"); // chainable
 
 // Update an element in the WeakMap
-wm.set(obj, 'baz');
+wm.set(obj, "baz");
 ```
 
 ## Specifications

@@ -49,14 +49,15 @@ The **`handler.deleteProperty()`** method is a trap for the
 
 This trap can intercept these operations:
 
-- Property deletion: `delete proxy[foo]` and
+- The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator: `delete proxy[foo]` and
   `delete proxy.foo`
 - {{jsxref("Reflect.deleteProperty()")}}
 
+Or any other operation that invokes the `[[Delete]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - A property cannot be deleted, if it exists as a non-configurable own property of the
   target object.
@@ -68,24 +69,27 @@ If the following invariants are violated, the proxy will throw a
 The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
 
 ```js
-const p = new Proxy({}, {
-  deleteProperty(target, prop) {
-    if (!(prop in target)) {
-      console.log(`property not found: ${prop}`);
-      return false;
-    }
-    delete target[prop];
-    console.log(`property removed: ${prop}`);
-    return true;
-  },
-});
+const p = new Proxy(
+  {},
+  {
+    deleteProperty(target, prop) {
+      if (!(prop in target)) {
+        console.log(`property not found: ${prop}`);
+        return false;
+      }
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      return true;
+    },
+  }
+);
 
 p.a = 10;
-console.log('a' in p); // true
+console.log("a" in p); // true
 
 const result1 = delete p.a; // "property removed: a"
 console.log(result1); // true
-console.log('a' in p); // false
+console.log("a" in p); // false
 
 const result2 = delete p.a; // "property not found: a"
 console.log(result2); // false

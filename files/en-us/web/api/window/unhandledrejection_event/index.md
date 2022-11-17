@@ -59,6 +59,8 @@ In addition to the `Window` interface, the event handler property `onunhandledre
 
 Allowing the `unhandledrejection` event to bubble will eventually result in an error message being output to the console. You can prevent this by calling {{domxref("Event.preventDefault", "preventDefault()")}} on the {{domxref("PromiseRejectionEvent")}}; see [Preventing default handling](#preventing_default_handling) below for an example.
 
+Because this event can leak data, {{jsxref("Promise")}} rejections that originate from a cross-origin script won't fire this event.
+
 ## Examples
 
 ### Basic error logging

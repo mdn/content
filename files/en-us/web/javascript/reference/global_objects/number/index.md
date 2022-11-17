@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Number
 
 {{JSRef}}
 
-**`Number`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate numbers like `37` or `-9.25`.
+**`Number`** values represent floating-point numbers like `37` or `-9.25`.
 
 The `Number` constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the `Number()` function.
 
@@ -75,7 +75,7 @@ Many built-in operations that expect numbers first coerce their arguments to num
   - [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are not allowed.
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first converted to a primitive by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
 
 There are two ways to achieve nearly the same effect in JavaScript.
 
@@ -84,7 +84,13 @@ There are two ways to achieve nearly the same effect in JavaScript.
 
 {{jsxref("Number.parseFloat()")}} and {{jsxref("Number.parseInt()")}} are similar to `Number()` but only convert strings, and have slightly different parsing rules. For example, `parseInt()` doesn't recognize the decimal point, and `parseFloat()` doesn't recognize the `0x` prefix.
 
-### Fixed-width number conversion
+#### Integer conversion
+
+Some operations expect integers, most notably those that work with array/string indices, date/time components, and number radixes. After performing the number coercion steps above, the result is [truncated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) to an integer (by discarding the fractional part). If the number is ±Infinity, it's returned as-is. If the number is `NaN` or `-0`, it's returned as `0`. The result is therefore always an integer (which is not `-0`) or ±Infinity.
+
+Notably, when converted to integers, both `undefined` and `null` become `0`, because `undefined` is converted to `NaN`, which also becomes `0`.
+
+#### Fixed-width number conversion
 
 JavaScript has some lower-level functions that deal with the binary encoding of integer numbers, most notably [bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) and {{jsxref("TypedArray")}} objects. Bitwise operators always convert the operands to 32-bit integers. In these cases, after converting the value to a number, the number is then normalized to the given width by first [truncating](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) the fractional part and then taking the lowest bits in the integer's two's complement encoding.
 
@@ -176,7 +182,7 @@ const notANum = Number.NaN;
 The following example shows the minimum and maximum integer values that can be represented as `Number` object.
 
 ```js
-const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9007199254740991
+const biggestInt = Number.MAX_SAFE_INTEGER; // (2**53 - 1) => 9007199254740991
 const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9007199254740991
 ```
 

@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.keygen
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate generation of key material, and submission of the public key as part of an [HTML form](/en-US/docs/Learn/Forms). This mechanism is designed for use with Web-based certificate management systems. It is expected that the `<keygen>` element will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate.
 
@@ -50,7 +50,7 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is a {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.col
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a {{HTMLElement("colgroup")}} element.
 
@@ -31,7 +31,7 @@ The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a t
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is a {{Glossary("void element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

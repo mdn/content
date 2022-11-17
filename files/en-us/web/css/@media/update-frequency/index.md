@@ -14,7 +14,13 @@ browser-compat: css.at-rules.media.update
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`update`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test how frequently (if at all) the output device is able to modify the appearance of content.
+The **`update`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test how frequently (if at all) the output device is able to modify the appearance of content once rendered.
+
+```css
+@media (update: < none | slow | fast >) {
+  /* styles to apply if the update frequency of the output device is a match */
+}
+```
 
 ## Syntax
 
@@ -32,7 +38,7 @@ The `update` feature is specified as a single keyword value chosen from the list
 ### HTML
 
 ```html
-<p>If this text animates for you, you are using a fast-updating device.</p>
+<p>If this text animates for you, your browser supports `update` and you are using a fast-updating device.</p>
 ```
 
 ### CSS

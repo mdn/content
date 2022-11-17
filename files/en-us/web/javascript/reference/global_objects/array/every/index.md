@@ -23,26 +23,26 @@ returns a Boolean value.
 
 ```js-nolint
 // Arrow function
-every((element) => { /* … */ } )
-every((element, index) => { /* … */ } )
-every((element, index, array) => { /* … */ } )
+every((element) => { /* … */ })
+every((element, index) => { /* … */ })
+every((element, index, array) => { /* … */ })
 
 // Callback function
 every(callbackFn)
 every(callbackFn, thisArg)
 
 // Inline callback function
-every(function(element) { /* … */ })
-every(function(element, index) { /* … */ })
-every(function(element, index, array){ /* … */ })
-every(function(element, index, array) { /* … */ }, thisArg)
+every(function (element) { /* … */ })
+every(function (element, index) { /* … */ })
+every(function (element, index, array) { /* … */ })
+every(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : A function to test for each element.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise.
 
     The function is called with the following arguments:
 
@@ -51,51 +51,32 @@ every(function(element, index, array) { /* … */ }, thisArg)
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array `every` was called upon.
+      - : The array `every()` was called upon.
 
-- `thisArg` {{Optional_inline}}
-  - : A value to use as `this` when executing `callbackFn`.
+- `thisArg` {{optional_inline}}
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
-**`true`** if the `callbackFn` function
-returns a {{Glossary("truthy")}} value for every array element. Otherwise,
-**`false`**.
+`true` if `callbackFn` returns a {{Glossary("truthy")}} value for every array element. Otherwise, `false`.
 
 ## Description
 
-The `every` method executes the provided `callbackFn`
-function once for each element present in the array until it finds the one where
-`callbackFn` returns a {{Glossary("falsy")}} value. If such an
-element is found, the `every` method immediately returns `false`.
-Otherwise, if `callbackFn` returns a {{Glossary("truthy")}} value
-for all elements, `every` returns `true`.
+The `every()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, until the `callbackFn` returns a [falsy](/en-US/docs/Glossary/Falsy) value. If such an element is found, `every()` immediately returns `false` and stops iterating through the array. Otherwise, if `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value for all elements, `every()` returns `true`.
+
+`every` acts like the "for all" quantifier in mathematics. In particular, for an empty array, it returns `true`. (It is [vacuously true](https://en.wikipedia.org/wiki/Vacuous_truth) that all elements of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties) satisfy any given condition.)
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-`callbackFn` is invoked with three arguments: the value of the
-element, the index of the element, and the Array object being traversed.
+`every()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-If a `thisArg` parameter is provided to `every`, it
-will be used as callback's `this` value. Otherwise, the value
-`undefined` will be used as its `this` value. The
-`this` value ultimately observable by `callback` is
-determined according to
-[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `every()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
 
-`every` does not mutate the array on which it is called.
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
-The range of elements processed by `every` is set before the first
-invocation of `callbackFn`. Therefore,
-`callbackFn` will not run on elements that are appended to the array
-after the call to `every` begins. If existing elements of the array are
-changed, their value as passed to `callbackFn` will be the value at
-the time `every` visits them. Elements that are deleted are not visited.
-
-`every` acts like the "for all" quantifier in mathematics. In particular,
-for an empty array, it returns `true`. (It is [vacuously true](https://en.wikipedia.org/wiki/Vacuous_truth) that all
-elements of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties)
-satisfy any given condition.)
+The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -185,6 +166,22 @@ arr.every((elem, index, arr) => {
 //
 // 1st iteration: [1,2,3][0] -> 1
 // 2nd iteration: [1,2][1] -> 2
+```
+
+### Calling every() on non-array objects
+
+The `every()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `false`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(
+  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+); // true
 ```
 
 ## Specifications

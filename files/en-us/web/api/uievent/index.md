@@ -28,7 +28,7 @@ Several interfaces are direct or indirect descendants of this one: {{domxref("Mo
 - {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
   - : Creates a `UIEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parent, {{domxref("Event")}}._
 
@@ -37,11 +37,11 @@ _This interface also inherits properties of its parent, {{domxref("Event")}}._
 - {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
 - {{domxref("UIEvent.view")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
+  - : Returns a {{glossary("WindowProxy")}} that contains the view that generated the event.
 - {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("Event")}}._
 

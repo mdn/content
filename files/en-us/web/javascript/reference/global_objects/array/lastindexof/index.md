@@ -31,14 +31,10 @@ lastIndexOf(searchElement, fromIndex)
 - `searchElement`
   - : Element to locate in the array.
 - `fromIndex` {{optional_inline}}
-
-  - : The position in the array at which to start searching backwards. Defaults to the array's length minus one (`arr.length - 1`), causing the whole array to be searched.
-
-    A `fromIndex` value greater than or equal to the length of the array also causes the whole array to be searched. (In this case, you can think of it conceptually as causing the method to start its search at a nonexistent position beyond the end of the array, but to then go backwards from there looking for the real end position of the array, at which point it starts searching backwards through the actual array elements.)
-
-    A `fromIndex` value greater than 0 is taken as the offset from the beginning of the array.
-
-    A `fromIndex` value less than 0 is taken as the offset from the end of the array — in other words, it is taken as specifying the position at `array.length + fromIndex`. Therefore, if `array.length + fromIndex` is less than 0, the array is not searched, and the method returns -1. (In this case, because `fromIndex` specifies a nonexistent position before the beginning of the array, you can think of it conceptually as causing the method to start its search at that nonexistent position and to then go backwards from there looking for array elements, which it never finds.)
+  - : Zero-based index at which to start searching backwards, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+    - Negative index counts back from the end of the array — if `fromIndex < 0`, `fromIndex + array.length` is used.
+    - If `fromIndex < -array.length`, the array is not searched and `-1` is returned. You can think of it conceptually as starting at a nonexistent position before the beginning of the array and going backwards from there. There are no array elements on the way, so `searchElement` is never found.
+    - If `fromIndex >= array.length` or `fromIndex` is omitted, `array.length - 1` is used, causing the entire array to be searched. You can think of it conceptually as starting at a nonexistent position beyond the end of the array and going backwards from there. It eventually reaches the real end position of the array, at which point it starts searching backwards through the actual array elements.
 
 ### Return value
 
@@ -46,11 +42,11 @@ The last index of the element in the array; **-1** if not found.
 
 ## Description
 
-`lastIndexOf` compares `searchElement` to elements of the Array
-using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-(the same method used by the `===`, or triple-equals, operator).
+The `lastIndexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator).
 
 The `lastIndexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
+The `lastIndexOf()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -99,6 +95,23 @@ You cannot use `lastIndexOf()` to search for empty slots in sparse arrays.
 
 ```js
 console.log([1, , 3].lastIndexOf(undefined)); // -1
+```
+
+### Calling lastIndexOf() on non-array objects
+
+The `lastIndexOf()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 2,
+};
+console.log(Array.prototype.lastIndexOf.call(arrayLike, 2));
+// 2
+console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
+// -1
 ```
 
 ## Specifications

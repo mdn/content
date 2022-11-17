@@ -49,7 +49,7 @@ mediaRecorder.onstart = () => {
 }
 ```
 
-## Properties
+## Instance properties
 
 None.
 

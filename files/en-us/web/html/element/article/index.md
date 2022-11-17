@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.article
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
 
@@ -93,7 +93,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-- Each `<article>` should be identified, typically by including a heading ([`<h1>`-`<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
+- Each `<article>` should be identified, typically by including a heading ([`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
 - When an `<article>` element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be `<article>` elements nested in the `<article>` representing the blog post.
 - Author information of an `<article>` element can be provided through the {{HTMLElement("address")}} element, but it doesn't apply to nested `<article>` elements.
 - The publication date and time of an `<article>` element can be described using the {{htmlattrxref("datetime", "time")}} attribute of a {{HTMLElement("time")}} element.

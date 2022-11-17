@@ -39,12 +39,12 @@ If the match succeeds, the `exec()` method returns an array and updates the [`la
 - `input`
   - : The original string that was matched against.
 - `groups`
-  - : An object of named capturing groups whose keys are the names and values are the capturing groups or {{jsxref("undefined")}} if no named capturing groups were defined. See [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) for more information.
+  - : A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) of named capturing groups, whose keys are the names, and values are the capturing groups, or {{jsxref("undefined")}} if no named capturing groups were defined. See [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) for more information.
 - `indices` {{optional_inline}}
 
-  - : This property is only present when the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag is set. It is an array where each entry represents the bounds of a substring match. Each substring match itself is an array where the first entry represents its start index and the second entry its end index.
+  - : This property is only present when the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag is set. It is an array where each entry represents the bounds of a substring match. The index of each element in this array corresponds to the index of the respective substring match in the array returned by `exec()`. In other words, the first `indices` entry represents the entire match, the second `indices` entry represents the first capturing group, etc. Each entry itself is a two-element array, where the first number represents the match's start index, and the second number, its end index.
 
-    It additionally has a `groups` property which holds an object of all named capturing groups. The keys are the names of the capturing groups and each value is an array with the first item being the start entry and the second entry being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, `groups` is `undefined`.
+    The `indices` array additionally has a `groups` property, which holds a [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) of all named capturing groups. The keys are the names of the capturing groups, and each value is a two-element array, with the first number being the start index, and the second number being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, `groups` is `undefined`.
 
 ## Description
 
@@ -68,8 +68,8 @@ Consider the following example:
 // Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-const re = /quick\s(?<color>brown).+?(jumps)/igd;
-const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+const re = /quick\s(?<color>brown).+?(jumps)/dgi;
+const result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 The following table shows the state of `result` after running this script:
@@ -94,7 +94,7 @@ For example, assume you have this script:
 
 ```js
 const myRe = /ab*/g;
-const str = 'abbcdefabh';
+const str = "abbcdefabh";
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
   let msg = `Found ${myArray[0]}. `;
@@ -124,7 +124,7 @@ You can also use `exec()` without creating a {{jsxref("RegExp")}} object
 explicitly:
 
 ```js
-const matches = /(hello \S+)/.exec('This is a hello world!');
+const matches = /(hello \S+)/.exec("This is a hello world!");
 console.log(matches[1]);
 ```
 

@@ -23,7 +23,7 @@ The **`TextDecoder`** interface represents a decoder for a specific text encodin
 - {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
   - : Returns a newly constructed `TextDecoder` that will generate a code point stream with the decoding method specified in parameters.
 
-## Properties
+## Instance properties
 
 _The `TextDecoder` interface doesn't inherit any properties._
 
@@ -34,7 +34,7 @@ _The `TextDecoder` interface doesn't inherit any properties._
 - {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
 
-## Methods
+## Instance methods
 
 _The `TextDecoder` interface doesn't inherit any methods_.
 
@@ -45,7 +45,7 @@ _The `TextDecoder` interface doesn't inherit any methods_.
 
 ### Representing text with typed arrays
 
-This example shows how to decode a Chinese/Japanese character ![](2019-05-21_191907.png), as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.
+This example shows how to decode a Chinese/Japanese character ![Chinese character meaning lucky](2019-05-21_191907.png), as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.
 
 ```js
 let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'

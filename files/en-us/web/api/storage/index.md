@@ -18,12 +18,12 @@ The **`Storage`** interface of the [Web Storage API](/en-US/docs/Web/API/Web_Sto
 
 To manipulate, for instance, the session storage for a domain, a call to {{domxref("Window.sessionStorage")}} is made; whereas for local storage the call is made to {{domxref("Window.localStorage")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("Storage.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of data items stored in the `Storage` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("Storage.key()")}}
   - : When passed a number `n`, this method will return the name of the nth key in the storage.

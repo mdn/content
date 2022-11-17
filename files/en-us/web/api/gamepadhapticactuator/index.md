@@ -20,12 +20,12 @@ The **`GamepadHapticActuator`** interface of the [Gamepad API](/en-US/docs/Web/A
 
 This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}}
   - : Returns an enum representing the type of the haptic hardware.
 
-## Methods
+## Instance methods
 
 - {{domxref("GamepadHapticActuator.pulse()")}} {{ReadOnlyInline}}
 

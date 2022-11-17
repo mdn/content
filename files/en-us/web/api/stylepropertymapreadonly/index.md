@@ -17,12 +17,12 @@ browser-compat: api.StylePropertyMapReadOnly
 
 The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
-## Properties
+## Instance properties
 
 - {{domxref('StylePropertyMapReadOnly.size')}} {{Experimental_Inline}}
   - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
 
-## Methods
+## Instance methods
 
 - {{domxref('StylePropertyMapReadOnly.entries()')}} {{Experimental_Inline}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
