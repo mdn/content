@@ -25,7 +25,7 @@ The **`@font-palette-values`** allows a user to defined a [font-palette](/en-US/
 }
 ```
 
-The {{cssxref("dashed-ident")}} (dashed identifier) is a user defined identifier, that while it looks like a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties) behaves in a different way and is just used to reference the values set by the `@font-palette-values` [@rule](/en-US/docs/Web/CSS/At-rule).
+The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined identifier, that while it looks like a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties) behaves in a different way and is not wrapped in a [CSS var() function](/en-US/docs/Web/CSS/var).
 
 ### Descriptors
 
