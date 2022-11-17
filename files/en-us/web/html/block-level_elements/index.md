@@ -50,10 +50,24 @@ p {
 
 There are a couple of key differences between block-level elements and inline elements:
 
-- Content model
-  - : Generally, block-level elements may contain inline elements and (sometimes) other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.
-- Default formatting
-  - : By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.
+<table>
+  <tr>
+    <td></td>
+    <td>Block Level</td>
+    <td>Inline Level</td>
+  </tr>
+  <tr>
+    <td>Content Model</td>
+    <td>They may contain inline elements and (sometimes) other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements</td>
+    <td></td>
+  <tr>
+    <td>Default Formatting</td>
+    <td>By default, block-level elements begin on new lines</td>
+    <td>Inline elements can start anywhere in a line</td>
+  </tr>
+  
+  </table>
+
 
 The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. Later, this binary distinction is replaced with a more complex set of [content categories](/en-US/docs/Web/Guide/HTML/Content_categories). While the "inline" category roughly corresponds to the category of [phrasing content](/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content), the "block-level" category doesn't directly correspond to any HTML content category, but _"block-level" and "inline" elements combined_ correspond to the [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) in HTML. There are also additional categories, e.g. [interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content).
 
