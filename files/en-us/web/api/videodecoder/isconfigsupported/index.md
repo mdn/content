@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} that resolves with an object containing the following me
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the provided `config` is invalid; that is, if doesn't have required values (such as an empty `codec` field) or has invalid values (such as a negative `codedWidth`)
+  - : Thrown if the provided `config` is invalid; that is, if doesn't have required values (such as an empty `codec` field) or has invalid values (such as a negative `codedWidth`).
 
 ## Examples
 
