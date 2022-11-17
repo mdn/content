@@ -6,13 +6,11 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - experimental
   - contain-intrinsic-height
-  - Experimental
 browser-compat: css.properties.contain-intrinsic-height
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`contain-intrinsic-length`** [CSS](/en-US/docs/Web/CSS) property sets the height of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
@@ -67,6 +65,39 @@ The remembered value is not used if the child elements are being rendered (if si
 ## Formal syntax
 
 {{csssyntax}}
+
+## Examples
+
+In addition to the example below, the {{CSSxRef("contain-intrinsic-size")}} page contains a live example that demonstrates the effect of modifying the intrinsic width and height.
+
+### Setting the intrinsic height
+
+The HTML below defines an element "contained_element" that will be subject to size constraint, and which contains a child element.
+
+```html
+<div id="contained_element">
+  <div class="child_element"></div>
+</div>
+```
+
+The CSS below sets the [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
+The width and height that are used when it is size constrained are set at the same time using `contain-intrinsic-width` and `contain-intrinsic-height`, respectively.
+
+```css
+#contained_element {
+  border: 2px solid green;
+  width: 151px;
+  content-visibility: auto;
+  contain-intrinsic-width: 152px;
+  contain-intrinsic-height: 52px;
+}
+.child_element {
+  border: 1px solid red;
+  background: blue;
+  height: 50px;
+  width: 150px;
+}
+```
 
 ## Specifications
 

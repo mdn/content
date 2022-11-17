@@ -44,10 +44,11 @@ The `bind()` function creates a new _bound function_. Calling the bound function
 A bound function can be further bound by calling `boundFn.bind(thisArg, /* more args */)`, which creates another bound function `boundFn2`. The newly bound `thisArg` value is ignored, because the target function of `boundFn2`, which is `boundFn`, already has a bound `this`. When `boundFn2` is called, it would call `boundFn`, which in turn calls `fn`. The arguments that `fn` ultimately receives are, in order: the arguments bound by `boundFn`, arguments bound by `boundFn2`, and the arguments received by `boundFn2`.
 
 ```js
+"use strict"; // prevent `this` from being boxed into the wrapper object
+
 function log(...args) {
-  "use strict"; // prevent `this` from being boxed into the wrapper object
   console.log(this, ...args);
-};
+}
 const boundLog = log.bind("this value", 1, 2);
 const boundLog2 = boundLog.bind("new this value", 3, 4);
 boundLog2(5, 6); // "this value", 1, 2, 3, 4, 5, 6
