@@ -52,7 +52,7 @@ h3, h6 {
 
 ### @color-profile
 
-When `<dashed-ident>` is used for [@color-profile](/en-US/docs/Web/CSS/@color-profile) [@rule](/en-US/docs/Web/CSS/At-rule), the property is declared first and then used within a [CSS color() function](/en-US/docs/Web/CSS/color_value/color).
+When `<dashed-ident>` is used for [@color-profile](/en-US/docs/Web/CSS/@color-profile) [At-rules](/en-US/docs/Web/CSS/At-rule), the property is declared first and then used within a [CSS color() function](/en-US/docs/Web/CSS/color_value/color).
 
 #### Example
 
@@ -67,7 +67,7 @@ When `<dashed-ident>` is used for [@color-profile](/en-US/docs/Web/CSS/@color-pr
 
 ### @font-palette-values
 
-When `<dashed-ident>` is used for [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [@rule](/en-US/docs/Web/CSS/At-rule), the property is declared first and then used as the value for the [font-palette](/en-US/docs/Web/CSS/font-palette) property.
+When `<dashed-ident>` is used for [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [At-rules](/en-US/docs/Web/CSS/At-rule), the property is declared first and then used as the value for the [font-palette](/en-US/docs/Web/CSS/font-palette) property.
 
 #### Example
 
