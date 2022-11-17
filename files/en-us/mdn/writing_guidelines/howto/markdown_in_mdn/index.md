@@ -12,7 +12,7 @@ This page describes how we use Markdown to write documentation on MDN Web Docs. 
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
 
 ## Links
 
@@ -39,7 +39,7 @@ This is an incorrect way to write links on MDN:
 
 ## Example code blocks
 
-In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". From the spec:
+In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The specification states the following:
 
 > The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
 
@@ -51,7 +51,7 @@ It's permissible for the info string to contain multiple words, like:
 ```
 ````
 
-In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
+On MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - Programming Languages
   - JavaScript
@@ -108,7 +108,7 @@ const greeting = "I will get JavaScript syntax highlighting";
 ````
 
 If the highlighting that you wish to use is not listed above you should markup the code block as `plain`.
-Additional languages may be requested by following the [this process](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
+Additional languages may be requested in the process [discussed on GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
 
 ### Suppressing linting
 
@@ -122,7 +122,7 @@ I will not be linted.
 ```
 ````
 
-Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. This suffix is useful for demonstrating alternative formatting choices or intentionally invalid code that formatters or linters may complain about or autofix.
+Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. Authors should use this suffix for showing invalid code or alternative formatting that linters or formatters should not fix.
 
 ### Additional words
 
@@ -163,7 +163,7 @@ This issue was resolved in:
 
 ## Notes, warnings, and callouts
 
-Sometimes writers want to call special attention to some piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.
+Sometimes writers want to call special attention to a piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.
 
 - To add a note, create a GFM blockquote whose first paragraph starts with `**Note:**`.
 - To add a warning, create a GFM blockquote whose first paragraph starts with `**Warning:**`.
@@ -198,7 +198,7 @@ This will produce the following HTML:
 </div>
 ```
 
-This HTML will be rendered as a highlighted box, like:
+This HTML will be rendered as a highlighted box:
 
 > **Note:** This is how you write a note.
 >
@@ -221,7 +221,7 @@ This will produce the following HTML:
 </div>
 ```
 
-This HTML will be rendered as a highlighted box, like:
+This HTML will be rendered as a highlighted box:
 
 > **Warning:** This is how you write a warning.
 >
@@ -244,7 +244,7 @@ This will produce the following HTML:
 </div>
 ```
 
-This HTML will be rendered as a highlighted box, like:
+This HTML will be rendered as a highlighted box:
 
 > **Callout:**
 >
@@ -294,7 +294,7 @@ This will produce the following HTML:
 </div>
 ```
 
-This HTML will be rendered as with a code block, like:
+This HTML will be rendered as with a code block:
 
 > **Note:** This is how you write a note.
 >
@@ -318,11 +318,9 @@ To create definition lists in MDN authors write a modified form of a GFM unorder
 - Each of these top-level GFM `<li>` elements must contain, as its final element, one GFM `<ul>` element.
 - This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with ": " (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
 
-Each of these top-level GFM `<li>` elements will be transformed into a
-`<dt>`/`<dd>` pair, as follows:
+Each of these top-level GFM `<li>` elements will be transformed into a `<dt>`/`<dd>` pair, as follows:
 
-- The top-level GFM `<li>` element will be parsed as a GFM `<li>` element
-  and its internal contents will comprise the contents of the `<dt>`, except for the final nested `<ul>`, which will not be included in the `<dt>`.
+- The top-level GFM `<li>` element will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dt>`, except for the final nested `<ul>`, which will not be included in the `<dt>`.
 - The `<li>` element in the final nested `<ul>` will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dd>`, except for the leading ": ", which will be discarded.
 
 For example, this is a `<dl>`:
@@ -410,7 +408,7 @@ In GFM (but not CommonMark) there is a syntax for tables: <https://github.github
 - If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.
 - We support a special kind of table called a "properties table", which has its own CSS class and is therefore always HTML.
 
-So the general principle here is: authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable. See "When to use HTML tables" below.
+So the general principle is that authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable. For more information, see [When to use HTML tables](#when_to_use_html_tables).
 
 ### GFM table syntax style
 
@@ -436,7 +434,11 @@ cell 4    | cell 5    | cell 6
 
 ### When to use HTML tables
 
-There are three main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, when the GFM table would be too wide to be readable, and when the writer wants a special type of table called a "properties table".
+There are three main circumstances in which authors should use HTML tables rather than GFM syntax:
+
+1. The table uses features that are not supported in GFM.
+2. The GFM table would be too wide to be readable.
+3. The writer wants a special type of table called a "properties table".
 
 #### Table features that are not supported in GFM
 
@@ -454,7 +456,7 @@ Note that we don't recommend the general use of `<caption>` elements on tables, 
 
 #### GFM table maximum width
 
-Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. For example, consider this table:
+Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. Consider the following table:
 
 ```html
 <table>
@@ -526,7 +528,8 @@ Properties tables are a specific type of table used for displaying structured pr
   </tbody>
 </table>
 
-These pages can't be represented in GFM anyway, because they have a header column. Writers should therefore use HTML. To get the special styling, writers should apply the `"properties"` class to the table:
+These pages can't be represented in GFM because they have a header column, so writers should use HTML in this case.
+To get the special styling, writers should apply the `"properties"` class to the table:
 
 ```html-nolint
 <table class="properties">
@@ -541,13 +544,8 @@ This issue was resolved in <https://github.com/mdn/content/issues/4325>, <https:
 Writers will be able to use the HTML {{HTMLElement("sup")}} and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
 
 - For exponentiation, use the caret: `2^53`.
-- For ordinal expressions like 1
-
-  <sup>st</sup>
-
-  , prefer words like "first".
-
-- For footnotes, don't mark up the footnote references with, e.g., `<sup>[1]</sup>`; it's unnecessary.
+- For ordinal expressions like 1<sup>st</sup>, prefer words like "first".
+- For footnotes, don't mark up the footnote references, e.g., `<sup>[1]</sup>`.
 
 ### Discussion reference
 
