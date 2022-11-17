@@ -9,8 +9,7 @@ tags:
   - CSS Descriptor
   - CSS Property
   - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.at-rules.font-palette-values
+browser-compat: css.at-rules.font-palette-values.base-palette
 ---
 
 {{CSSRef}}
