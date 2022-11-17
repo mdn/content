@@ -30,7 +30,7 @@ createConicGradient(startAngle, x, y)
 ### Parameters
 
 - `startAngle`
-  - : The angle at which to begin the gradient, in radians. Angle measurements start vertically above the center and move around clockwise.
+  - : The angle at which to begin the gradient, in radians. Angle measurements start to the right side of the center and move around clockwise.
 - `x`
   - : The x-axis coordinate of the center of the gradient.
 - `y`
