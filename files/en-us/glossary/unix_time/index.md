@@ -12,4 +12,4 @@ On the web platform, Unix time is used for timestamps, and is given as the numbe
 ## See also
 
 - [Unix time](https://en.wikipedia.org/wiki/Unix_time) on Wikipedia
-- [Leep second](https://en.wikipedia.org/wiki/Leap_second) on Wikipedia
+- [Leap second](https://en.wikipedia.org/wiki/Leap_second) on Wikipedia

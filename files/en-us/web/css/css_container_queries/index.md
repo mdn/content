@@ -19,7 +19,7 @@ If you are creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Respo
 It's common to group HTML elements into reusable components that have a specific layout depending on the available space in a page.
 The available space might not only depend on the size of the viewport, but also on the context where a component appears.
 
-![A viewport media query is based on the viewport's width. A container query is based on the width of a container.](container-query-diagram.png)
+![A media query based on the viewport's width and a container query based on the width of a container context.](container-query-diagram.png)
 
 Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport or other device characteristics.
 If the container has less space in the surrounding context, you can hide certain elements or use smaller fonts, for example.

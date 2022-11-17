@@ -30,11 +30,11 @@ The `<calc-constant>` type defines numeric constants that can be used in [CSS ma
 
   - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
 
-- `infinity` & `-infinity`
+- `infinity` & `-infinity` {{Experimental_Inline}}
 
   - : An infinite value, used to indicate the largest/smallest possible value.
 
-- `NaN`
+- `NaN` {{Experimental_Inline}}
 
   - : A value representing "Not a Number" canonical casing.
 
