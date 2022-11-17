@@ -10,14 +10,14 @@ tags:
   - Layout
   - Reference
   - Web
-  - ident
+  - dashed-ident
 spec-urls:
   - https://drafts.csswg.org/css-values/#dashed-idents
 ---
 
 {{CSSRef}}
 
-The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}.
+The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}. `<dashed-ident>`s are only every defined by the user and [CSS](/en-US/docs/Web/CSS) will never define a `<dashed-ident>`.
 
 ## Syntax
 
@@ -40,19 +40,19 @@ html {
   --tertiary-color: green;
 }
 h1, h4 {
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 h2, h5 {
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 h3, h6 {
-  color: var(--tertiary-color)
+  color: var(--tertiary-color);
 }
 ```
 
 ### @color-profile
 
-When `<dashed-ident>` is used for [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), the property is declared first and then used within a [CSS color() function](/en-US/docs/Web/CSS/color_value/color).
+When `<dashed-ident>` is used for [@color-profile](/en-US/docs/Web/CSS/@color-profile) [@rule](/en-US/docs/Web/CSS/At-rule), the property is declared first and then used within a [CSS color() function](/en-US/docs/Web/CSS/color_value/color).
 
 #### Example
 
@@ -67,7 +67,7 @@ When `<dashed-ident>` is used for [CSS Custom Properties](/en-US/docs/Web/CSS/Us
 
 ### @font-palette-values
 
-When `<dashed-ident>` is used for [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values), the property is declared first and then used as the value for the [font-palette](/en-US/docs/Web/CSS/font-palette) property.
+When `<dashed-ident>` is used for [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [@rule](/en-US/docs/Web/CSS/At-rule), the property is declared first and then used as the value for the [font-palette](/en-US/docs/Web/CSS/font-palette) property.
 
 #### Example
 
@@ -78,7 +78,7 @@ When `<dashed-ident>` is used for [@font-palette-values](/en-US/docs/Web/CSS/@fo
   override-colors: 0 #ff0000;
 }
 h1, h2, h3, h4 {
-  font-palette: --my-palette
+  font-palette: --my-palette;
 }
 ```
 
