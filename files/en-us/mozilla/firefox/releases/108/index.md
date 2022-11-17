@@ -26,7 +26,6 @@ This article provides information about the changes in Firefox 108 that will aff
 - [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) are now enabled with the `layout.css.trig.enabled` preference set to `true` by default.
   This allows the use of [`sin()`](/en-US/docs/Web/CSS/sin), [`cos()`](/en-US/docs/Web/CSS/cos), [`tan()`](/en-US/docs/Web/CSS/tan), [`asin()`](/en-US/docs/Web/CSS/asin), [`acos()`](/en-US/docs/Web/CSS/acos), [`atan()`](/en-US/docs/Web/CSS/atan), and [`atan2()`](/en-US/docs/Web/CSS/atan2) functions everywhere ({{bug(1774589)}}, {{bug(1787070)}}).
 - CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-constant) type is implemented to allow for well-known constants such as `pi` and `e` within [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) ({{bug(1682444)}}, {{bug(1787070)}}).
-- CSS [`round()`](/en-US/docs/Web/CSS/round) function is now supported via the the `layout.css.round.enabled` preference, which is set to `false` by default ({{bug(1764850)}}).
 - Container query length units are now supported via the the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
   Setting this preference to `true` allows the use of `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, and `cqmax` units of length which are relative to the size of a query container.
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
