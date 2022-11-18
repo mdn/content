@@ -86,13 +86,13 @@ setAttribute.addEventListener("click", () => {
 
 reset.addEventListener("click", () => self.location.reload());
 
-function logNextSibling(records) {
+function logMutationType(records) {
   for (const record of records) {
     log.textContent = `Mutation type: ${record.type}`;
   }
 }
 
-const observer = new MutationObserver(logNextSibling);
+const observer = new MutationObserver(logMutationType);
 observer.observe(target, {childList: true, attributes: true, subtree: true});
 ```
 
