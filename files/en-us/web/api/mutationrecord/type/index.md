@@ -26,36 +26,79 @@ The property is set to the type of the mutation as a string. The value can be on
 
 ## Examples
 
-This code snippet is used to observe changes in a userlist: the userlist is DOM element that functions as a list of all users currently connected to a server (in this example, consider it is a `<ul>`). The userlist itself contains child elements (i.e. `<li>`), each containing an attribute associated with the username the user status.
+### Log the type of a mutation
 
-The {{domxref("MutationObserver")}} observes changes in the status and username attributes of the elements via the {{domxref("MutationObserver.observe()")}} `attributeFilter` parameter- when a change is observed, the appropriate callback function is called. The propertys {{domxref("MutationRecord.type")}} and {{domxref("MutationRecord.attributeName")}} are used to further filter the mutations to execute some desired functionality.
+The following example gives you two buttons to manipulate the DOM. The first button adds a new node to the example, and the second button changes the `color` attribute of all the added nodes. A {{domxref("MutationObserver")}} is created to observe it all, and the observer is set to log the `type` of the mutation record to `#log`.
 
-```js
-const userListElement = document.querySelector("#userlist");
+You'll notice the when you add a node, the `type` is `childList`, and when you change the `color` attribute, the `type` is `attributes`.
 
-const observer = new MutationObserver(callback);
-observer.observe(userListElement, {
-  attributeFilter: [ "status", "username" ],
-  attributeOldValue: true,
-  subtree: true
-});
+#### HTML
 
-function callback(mutationList) {
-  mutationList.forEach((mutation) => {
-    if (mutation.type == "attributes") {
-        switch(mutation.attributeName) {
-          case "status":
-            userStatusChanged(mutation.target.username, mutation.target.status);
-            break;
-          case "username":
-            usernameChanged(mutation.oldValue, mutation.target.username);
-            break;
-        }
-        break;
-    }
-  });
+```html
+<button id="add-nodes">Add a node</button>
+<button id="set-attribute">Change the color</button>
+
+<button id="reset">Reset</button>
+
+<pre id= "log">Mutation type:</pre>
+<div id= "target" class="my-class"></div>
+```
+
+```css hidden
+#log {
+  border: 1px dotted black;
+  padding: .5rem;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+ color: red;
 }
 ```
+
+#### JavaScript
+
+```js
+const addNodes = document.querySelector("#add-nodes");
+const setAttribute = document.querySelector("#set-attribute");
+const reset = document.querySelector("#reset");
+const log = document.querySelector("#log");
+const target = document.querySelector("#target");
+let nodeNumber = 1;
+
+addNodes.addEventListener("click", () => {
+  const newPara = document.createElement("p");
+  newPara.textContent = `Node number: ${nodeNumber}`;
+  nodeNumber++;
+  target.appendChild(newPara);
+});
+
+setAttribute.addEventListener("click", () => {
+  if (target.getAttribute("class") === "red") {
+    target.setAttribute("class", "blue");  
+  } else {
+    target.setAttribute("class", "red");  
+  }
+});
+
+reset.addEventListener("click", () => self.location.reload());
+
+function logNextSibling(records) {
+  for (const record of records) {
+    log.textContent = `Mutation type: ${record.type}`;
+  }
+}
+
+const observer = new MutationObserver(logNextSibling);
+observer.observe(target, {childList: true, attributes: true, subtree: true});
+```
+
+#### Result
+
+{{EmbedLiveSample("Log the type of a mutation", "", 200)}}
 
 ## Specifications
 

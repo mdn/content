@@ -22,18 +22,64 @@ The value is `null` if there are no added or removed nodes, or if the node is th
 
 ## Examples
 
-In this code snippet, the observer will log to the console the tag name of every node added to the target node with the {{domxref("MutationObserver.observe()")}} property. It will then use the {{domxref("MutationRecord.nextSibling")}} property to log the tag name of the node after the added node.
+### Log the next sibling of a mutation
+
+This adds a node every time you click the button, but it adds the node at the *start of the target*, not the end. Then the observer logs the `textContent` of the `nextSibling` of the added node. The first time this is `null` because the target didn't have any children to begin with (so now it has only the most recently added node), but after this it logs the node after (the `nextSibling` of) the one we just added.
+
+#### HTML
+
+```html
+<button id="add-nodes">Add a node</button>
+<button id="reset">Reset</button>
+
+<pre id="log" class="log">Next sibling of added node:</pre>
+<pre id="counter" class="log">Node count: 0</pre>
+<div id="target"></div>
+```
+
+```css hidden
+.log {
+  border: 1px dotted black;
+  padding: .5rem;
+}
+```
+
+#### JavaScript
 
 ```js
-const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        for (var i = 0; i < mutation.addedNodes.length; i++) {
-            console.log(mutation.addedNodes[i].tagName);
-            console.log(mutation.addedNodes[i].nextSibling.tagName);
-        }
-    });
+const addNodes = document.querySelector("#add-nodes");
+const reset = document.querySelector("#reset");
+const counter = document.querySelector("#counter");
+const target = document.querySelector("#target");
+let nodeNumber = 1;
+
+addNodes.addEventListener("click", () => {
+  const newPara = document.createElement("p");
+  newPara.textContent = `Node #${nodeNumber}`;
+  nodeNumber++;
+  target.insertBefore(newPara, target.firstChild);
 });
+
+reset.addEventListener("click", () => self.location.reload());
+
+function logNextSibling(records) {
+  for (const record of records) {
+    if (record.type === "childList") {
+      for (const newNode of record.addedNodes) {
+        counter.textContent = `Node count: ${target.children.length}`;
+        log.textContent = `Next sibling of added node: ${record.nextSibling.textContent}`
+      }
+    }
+  }
+}
+
+const observer = new MutationObserver(logNextSibling);
+observer.observe(target, {childList: true});
 ```
+
+#### Result
+
+{{EmbedLiveSample("Log the next sibling of a mutation", "", 250)}}
 
 ## Specifications
 

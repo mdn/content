@@ -24,16 +24,16 @@ The {{domxref("Node")}} that the mutation affected.
 
 ## Examples
 
-### Red Div, Blue Div
+### Red div, blue div
 
-In the following example, there are two divs: a red div (`#red-div`) and a blue div (`#blue-div`). A {{domxref("MutationObserver")}} is created to observe the parent div (`#container`) of the two divs, and the observer is set to observe for changes to the child list of the parent div. 
+In the following example, there are two divs: a red div (`#red-div`) and a blue div (`#blue-div`). A {{domxref("MutationObserver")}} is created to observe the parent div (`#container`) of the red and blue divs, and the observer is set to observe for changes to the childlist of the parent div. 
 
-The observer is set to log the `target` of the mutation record. You'll see that even though the {{domxref("MutationObserver")}} is observing the `#container` directly, the `target` will be whichever child div whose children have changed as the {{domxref("MutationObserver")}} is observing for changes to the childlist and subtree of the `#container` div.
+The observer is set to log the `target` of the mutation record by calling the function `logNewNodes`. You should see that even though the {{domxref("MutationObserver")}} is observing the `#container` directly, the `target` will be whichever child div whose children have changed as the {{domxref("MutationObserver")}} is observing for changes to the childlist of `#container`, `#red-div` and `#blue-div`, and the subtree (the childlists of `#red-div` and `#blue-div`).
 
 #### HTML
 
 ```html
-<pre id="log">Target of mutation: n/a</pre>
+<pre id="log">Target of mutation:</pre>
 <button id="add-nodes-to-red-div">Add a node to red div</button>
 <button id="add-nodes-to-blue-div">Add a node to blue div</button>
 <button id="reset">Reset</button>
@@ -53,21 +53,23 @@ The observer is set to log the `target` of the mutation record. You'll see that 
 
 #red-div {
   border: 1px solid red;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0.5rem;
   overflow: auto;
 }
 
 #blue-div {
   border: 1px solid blue;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
   padding: 0.5rem;
   overflow: auto;
 }
 
 #container {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% auto;
 }
 ```
 #### JavaScript
@@ -107,7 +109,7 @@ observer.observe(container, {childList: true, subtree: true});
 
 #### Result
 
-{{EmbedLiveSample("Red Div, Blue Div")}}
+{{EmbedLiveSample("Red Div, Blue Div", "", 200)}}
 
 ## Specifications
 

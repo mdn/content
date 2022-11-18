@@ -66,7 +66,7 @@ changeColorButton.addEventListener("click", function () {
 function logOldValue(mutationRecordArray) {
   for (const record of mutationRecordArray) {
     log.textContent = `Old value: ${record.oldValue}`;
-    log.style.cssText  = record.oldValue;
+    log.style.cssText = record.oldValue;
   }
 }
 

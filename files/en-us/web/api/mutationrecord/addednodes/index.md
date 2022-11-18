@@ -24,7 +24,7 @@ A {{domxref("NodeList")}}  containing the nodes added to the target of the mutat
 
 In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logNewNodes`.
 
-The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of new nodes that have been added. However, note that clicking the "Remove a node" button will not increment the total number of new nodes, because in this case `addedNodes` will have a length of `0`.
+The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of new nodes that have been added. However, note that clicking the "Remove a node" button will not increment the total number of new nodes, because in this case `record.addedNodes` will have a length of `0`.
 
 #### HTML
 
@@ -33,7 +33,7 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 <button id="remove-nodes">Remove a node</button>
 <button id="reset">Reset</button>
 
-<pre id="counter">Total new nodes: 0</pre>
+<pre id="counter">Total added nodes: 0</pre>
 <div id= "target"></div>
 ```
 
@@ -52,7 +52,7 @@ const removeNodes = document.querySelector("#remove-nodes");
 const reset = document.querySelector("#reset");
 const counter = document.querySelector("#counter");
 const target = document.querySelector("#target");
-let totalNewNodes = 0;
+let totalAddedNodes = 0;
 
 addNodes.addEventListener("click", () => {
   const newPara = document.createElement("p");
@@ -73,9 +73,9 @@ function logNewNodes(records) {
   for (const record of records) {
     // Check if the childlist of the target node has been mutated
     if (record.type === "childList") {
-      totalNewNodes = totalNewNodes + record.addedNodes.length;
+      totalAddedNodes = totalAddedNodes + record.addedNodes.length;
       // Log the number of nodes added
-      counter.textContent = `Total new nodes: ${totalNewNodes}`;
+      counter.textContent = `Total added nodes: ${totalAddedNodes}`;
     }
   }
 }

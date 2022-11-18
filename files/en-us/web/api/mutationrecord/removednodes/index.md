@@ -22,7 +22,9 @@ A {{domxref("NodeList")}}  containing the nodes removed from the target of the m
 
 ### Update when removing a node
 
-The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of  nodes that have been removed. However, note that clicking the "Add a node" button will not increment the total number of removed nodes, because in this case `removedNodes` will have a length of `0`.
+In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logNewNodes`.
+
+The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of nodes that have been removed. However, note that clicking the "Add a node" button will not increment the total number of removed nodes, because in this case `record.removedNodes` will have a length of `0`.
 
 #### HTML
 
@@ -32,7 +34,7 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 <button id="reset">Reset</button>
 
 <pre id="counter">Total removed nodes: 0</pre>
-<div id="target"><p>Hi, Mom!</p></div>
+<div id= "target"></div>
 ```
 
 ```css hidden
