@@ -14,7 +14,7 @@ tags:
 browser-compat: api.FileSystemSyncAccessHandle.flush
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`flush()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface persists any changes made to the file associated with the handle via the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method to disk.
@@ -59,7 +59,7 @@ onmessage = async (e) => {
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // Get size of the file.
-  const fileSize = await accessHandle.getSize();
+  const fileSize = accessHandle.getSize();
   // Read file content to a buffer.
   const buffer = new DataView(new ArrayBuffer(fileSize));
   const readBuffer = accessHandle.read(buffer, { at: 0 });
@@ -70,18 +70,14 @@ onmessage = async (e) => {
   const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
 
   // Persist changes to disk.
-  await accessHandle.flush();
+  accessHandle.flush();
 
   // Always close FileSystemSyncAccessHandle if done.
-  await accessHandle.close();
+  accessHandle.close();
 }
 ```
 
-Note that some browsers feature an experimental synchronous version of `flush()` that provides further improved performance:
-
-```js
-accessHandle.flush();
-```
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, `flush()`, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
 
 ## Specifications
 

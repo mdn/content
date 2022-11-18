@@ -12,9 +12,11 @@ tags:
 browser-compat: api.FileSystemSyncAccessHandle
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
-The **`FileSystemSyncAccessHandle`** interface of the {{domxref('File System Access API')}} represents a synchronous handle to a file system entry. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly). This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+The **`FileSystemSyncAccessHandle`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} represents a synchronous handle to a file system entry. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly).
+
+This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).
 
 The interface is accessed through the {{domxref('FileSystemFileHandle.createSyncAccessHandle()')}} method.
 
@@ -61,7 +63,7 @@ onmessage = async (e) => {
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // Get size of the file.
-  const fileSize = await accessHandle.getSize();
+  const fileSize = accessHandle.getSize();
   // Read file content to a buffer.
   const buffer = new DataView(new ArrayBuffer(fileSize));
   const readBuffer = accessHandle.read(buffer, { at: 0 });
@@ -72,21 +74,14 @@ onmessage = async (e) => {
   const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
 
   // Persist changes to disk.
-  await accessHandle.flush();
+  accessHandle.flush();
 
   // Always close FileSystemSyncAccessHandle if done.
-  await accessHandle.close();
+  accessHandle.close();
 }
 ```
 
-Note that some browsers feature experimental synchronous versions of the {{domxref('FileSystemSyncAccessHandle.close', 'close()')}}, {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}}, {{domxref('FileSystemSyncAccessHandle.getSize', 'getSize()')}}, and {{domxref('FileSystemSyncAccessHandle.truncate', 'truncate()')}} methods that provide further improved performance:
-
-```js
-accessHandle.close();
-accessHandle.flush();
-const fileSize = accessHandle.getSize();
-accessHandle.truncate(0);
-```
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
 
 ## Specifications
 

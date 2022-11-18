@@ -12,9 +12,9 @@ tags:
 browser-compat: api.FileSystemFileHandle
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
-The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
+The **`FileSystemFileHandle`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
 
 Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.
 
@@ -107,7 +107,7 @@ onmessage = async (e) => {
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // Get size of the file.
-  const fileSize = await accessHandle.getSize();
+  const fileSize = accessHandle.getSize();
   // Read file content to a buffer.
   const buffer = new DataView(new ArrayBuffer(fileSize));
   const readBuffer = accessHandle.read(buffer, { at: 0 });
@@ -118,10 +118,10 @@ onmessage = async (e) => {
   const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
 
   // Persist changes to disk.
-  await accessHandle.flush();
+  accessHandle.flush();
 
   // Always close FileSystemSyncAccessHandle if done.
-  await accessHandle.close();
+  accessHandle.close();
 }
 ```
 

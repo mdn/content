@@ -13,17 +13,14 @@ tags:
 browser-compat: api.FileSystemFileHandle.createSyncAccessHandle
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`createSyncAccessHandle()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemSyncAccessHandle')}} object
 that can be used to synchronously read from and write to a file. The synchronous nature of this method brings performance advantages,
-but it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+but it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).
 
-Creating a {{domxref('FileSystemSyncAccessHandle')}} takes an exclusive lock on the file associated with the file handle. This prevents the creation of further {{domxref('FileSystemSyncAccessHandle')}}s or {{domxref('FileSystemWritableFileStream')}}s for the file, until the existing access handle is closed.
-
-If the file on disk changes or is removed after this method is called, the returned
-{{domxref('File')}} object will likely be no longer readable.
+Creating a {{domxref('FileSystemSyncAccessHandle')}} takes an exclusive lock on the file associated with the file handle. This prevents the creation of further {{domxref('FileSystemSyncAccessHandle')}}s or {{domxref('FileSystemWritableFileStream')}}s for the file until the existing access handle is closed.
 
 ## Syntax
 
@@ -42,12 +39,11 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemSyncAccessHandl
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref('FileSystemSyncAccessHandle')}} object does not represent an file in the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).
+  - : Thrown if the {{domxref('FileSystemSyncAccessHandle')}} object does not represent a file in the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).
 - `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the browser is not able to take an exclusive lock on the file associated with the file handle.
+  - : Thrown if the browser is not able to acquire a lock on the file associated with the file handle.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in
-    read mode.
+  - : Thrown if the permission has not been granted at the API level (i.e. {{domxref("FileSystemHandle.requestPermission")}} is required).
 
 ## Examples
 

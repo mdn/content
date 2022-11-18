@@ -13,7 +13,7 @@ tags:
 browser-compat: api.FileSystemFileHandle.getFile
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`getFile()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a

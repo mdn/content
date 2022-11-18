@@ -14,7 +14,7 @@ tags:
 browser-compat: api.FileSystemSyncAccessHandle.truncate
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`truncate()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface resizes the file associated with the handle to a specified number of bytes.
@@ -52,21 +52,17 @@ async function truncateFile() {
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // Truncate the file to 0 bytes
-  await accessHandle.truncate(0);
+  accessHandle.truncate(0);
 
   // Persist changes to disk.
-  await accessHandle.flush();
+  accessHandle.flush();
 
   // Always close FileSystemSyncAccessHandle if done.
-  await accessHandle.close();
+  accessHandle.close();
 }
 ```
 
-Note that some browsers feature an experimental synchronous version of `truncate()` that provides further improved performance:
-
-```js
-accessHandle.truncate(0);
-```
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and `truncate()` were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
 
 ## Specifications
 
