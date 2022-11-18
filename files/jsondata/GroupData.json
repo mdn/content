@@ -333,7 +333,6 @@
         "DOMPoint",
         "DOMPointReadOnly",
         "DOMRect",
-        "DOMTimeStamp",
         "DOMTokenList",
         "Element",
         "Event",
@@ -822,6 +821,7 @@
       "overview": ["Media Source Extensions API"],
       "interfaces": [
         "MediaSource",
+        "MediaSourceHandle",
         "SourceBuffer",
         "SourceBufferList",
         "VideoPlaybackQuality"
@@ -1206,6 +1206,8 @@
         "ReadableStreamBYOBRequest",
         "ReadableStreamDefaultController",
         "ReadableStreamDefaultReader",
+        "TransformStream",
+        "TransformStreamDefaultController",
         "WritableStream",
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"

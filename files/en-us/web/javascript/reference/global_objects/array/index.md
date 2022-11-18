@@ -121,8 +121,8 @@ These methods treat empty slots as if they are `undefined`:
 - {{jsxref("Array/findIndex", "findIndex()")}}
 - {{jsxref("Array/findLast", "findLast()")}}
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
+- {{jsxref("Array/group", "group()")}} {{Experimental_Inline}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}} {{Experimental_Inline}}
 - {{jsxref("Array/includes", "includes()")}}
 - {{jsxref("Array/join", "join()")}}
 - {{jsxref("Array/keys", "keys()")}}
@@ -162,6 +162,53 @@ The following methods mutate the original array:
 - {{jsxref("Array/splice", "splice()")}}
 - {{jsxref("Array/unshift", "unshift()")}}
 
+### Iterative methods
+
+Many array methods take a callback function as an argument. The callback function is called sequentially and at most once for each element in the array, and the return value of the callback function is used to determine the return value of the method. They all share the same signature:
+
+```js-nolint
+method(callbackFn, thisArg)
+```
+
+Where `callbackFn` takes three arguments:
+
+- `element`
+  - : The current element being processed in the array.
+- `index`
+  - : The index of the current element being processed in the array.
+- `array`
+  - : The array `groupToMap()` was called upon.
+
+What `callbackFn` is expected to return depends on the array method that was called.
+
+The `thisArg` argument (defaults to `undefined`) will be used as the `this` value when calling `callbackFn`. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules](/en-US/docs/Web/JavaScript/Reference/Operators/this): if `callbackFn` is [non-strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution), primitive `this` values are wrapped into objects, and `undefined`/`null` is substituted with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis). The `thisArg` argument is irrelevant for any `callbackFn` defined with an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as arrow functions don't have their own `this` binding.
+
+All iterative methods are [copying](#copying_methods_and_mutating_methods) and [generic](#generic_array_methods), although they behave differently with [empty slots](#array_methods_and_empty_slots).
+
+The following methods are iterative:
+
+- {{jsxref("Array/every", "every()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/find", "find()")}}
+- {{jsxref("Array/findIndex", "findIndex()")}}
+- {{jsxref("Array/findLast", "findLast()")}}
+- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/forEach", "forEach()")}}
+- {{jsxref("Array/group", "group()")}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/some", "some()")}}
+
+In particular, {{jsxref("Array/every", "every()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, and {{jsxref("Array/some", "some()")}} do not always invoke `callbackFn` on every element — they stop iteration as soon as the return value is determined.
+
+There are two other methods that take a callback function and run it at most once for each element in the array, but they have slightly different signatures from typical iterative methods (for example, they don't accept `thisArg`):
+
+- {{jsxref("Array/reduce", "reduce()")}}
+- {{jsxref("Array/reduceRight", "reduceRight()")}}
+
+The {{jsxref("Array/sort", "sort()")}} method also takes a callback function, but it is not an iterative method. It mutates the array in-place, doesn't accept `thisArg`, and may invoke the callback multiple times on an index.
+
 ### Generic array methods
 
 Array methods are always generic — they don't access any internal data of the array object. They only access the array elements through the `length` property and the indexed elements. This means that they can be called on array-like objects as well.
@@ -177,7 +224,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 #### Normalization of the length property
 
-The `length` property is [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), truncated to an integer, and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
+The `length` property is [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
 
 ```js
 Array.prototype.flat.call({}); // []

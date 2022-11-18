@@ -127,21 +127,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-```
-<font-stretch-absolute>{1,2}
-
-<font-stretch-absolute> =
-  normal          |
-  ultra-condensed |
-  extra-condensed |
-  condensed       |
-  semi-condensed  |
-  semi-expanded   |
-  expanded        |
-  extra-expanded  |
-  ultra-expanded  |
-  <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 

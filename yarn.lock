@@ -34,27 +34,28 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.2.12":
-  version "5.2.12"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.12.tgz#840eb59ae8e2887657b64f02fabcf92f83af44c5"
-  integrity sha512-lyEya27qBCLUWFRIG2hSmvaChE+sCxgpg+8OyZba089hzJ30MhKmbJKhwwDKiFV/7NlizMT/9uPmkJ7p1iNByg==
+"@mdn/browser-compat-data@^5.2.16":
+  version "5.2.16"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.16.tgz#5f240c77c68202ce91c81e97e9bc1156b21c4976"
+  integrity sha512-VxxLd+kSq0Rspru9FpRUfHmRkm5DAEyrpmHvzPaFr0QmPrBhglP/tpggOPnsjENfp2WeBKqQ4r0NFyAFIW3Nug==
 
-"@mdn/yari@1.23.0":
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.23.0.tgz#82608e5267b550d071588e2ed27e8ad1bf3e9608"
-  integrity sha512-RRBJhvBEXRhkI2dCoHoLx59eHyI0GTiCUAFNg9iYRuVEcmmNTNw3bKoXzktOG506YK6HpYfhYfiDZdcA1VIIOw==
+"@mdn/yari@1.24.10":
+  version "1.24.10"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.24.10.tgz#708c5f87d423b2738116982090deb47c92ede03d"
+  integrity sha512-VepctNFnznXNBLzPtH89zjx+0RXoBCMQMFcwIEgnZwKtQ4C8u4WLxdTi06bxlvzLi6BfisQnEeQfJoLBfU6elw==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.2.12"
+    "@mdn/browser-compat-data" "^5.2.16"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
-    "@webref/css" "^5.4.1"
+    "@webref/css" "^5.4.2"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.31.0"
+    browser-specs "^3.33.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
+    compare-versions "^5.0.1"
     compression "^1.7.4"
     cookie "^0.5.0"
     cookie-parser "^1.4.6"
@@ -81,7 +82,7 @@
     inquirer "^8.2.5"
     is-svg "^4.3.2"
     js-yaml "^4.1.0"
-    loglevel "^1.8.0"
+    loglevel "^1.8.1"
     lru-cache "^7.14.1"
     md5-file "^5.0.0"
     mdast-util-from-markdown "^0.8.5"
@@ -293,10 +294,10 @@
   resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-1.0.0.tgz#c42c68f22ca29a0dc929041746373d94496d2b3a"
   integrity sha512-WQFcnSt/xM/mS8ZtJ0ut5lhPrl+V0HDPPcI/J0eUClsfiD+/r8A7IeW/pVcfpSVGWRmN3+WnjNteWuKyWs2WZg==
 
-"@webref/css@^5.4.1":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.4.1.tgz#67c7627fe2a476eb9e5731eeb6c0b6792b0b0069"
-  integrity sha512-HN0Ad7tQmNHWNVSHAd2UZPVhjQ3+ijuWbDcBAwj2jrqUbMRdNmBt7cwuan8YBAPXn/+VfTxKOydsIuhPC2dh2A==
+"@webref/css@^5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-5.4.2.tgz#fa6717b594d95a0d5a36c6941d0648ea7f355e83"
+  integrity sha512-E+uB6HV5sYiN8Nk9prbqIK8J4IbgArJMWDpdla4xK2Id7Dfr5TkgBgzS82z0h2bJfFjg0ErCwXcpiw6aLZ1qdg==
 
 accept-language-parser@^1.5.0:
   version "1.5.0"
@@ -602,10 +603,10 @@ braces@^3.0.1, braces@^3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.31.0:
-  version "3.31.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.31.0.tgz#d1627b0231d68b3d5f51ae6749eef80479db14a8"
-  integrity sha512-2AbMpugGhBYDFuvA0GRbM7+gQoR1jpY5Q3l14ogIpL991eQRQur7T4qonW/MripEtZMOksrRqrnYUPmVuuy/IA==
+browser-specs@^3.33.0:
+  version "3.33.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.33.0.tgz#c295ebdf834b30c45a5a41594a6ff295339d17ed"
+  integrity sha512-GZQytfKC3ebFHJf312PdCHqEB94ElzntJvEYQsaabTm0Qx5rPeVWqPJIuAR9lrCtbhxO52PQYMKuIbZyry+Qzg==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -970,6 +971,11 @@ commander@^9.3.0:
   version "9.4.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.0.tgz#bc4a40918fefe52e22450c111ecd6b7acce6f11c"
   integrity sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==
+
+compare-versions@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-5.0.1.tgz#14c6008436d994c3787aba38d4087fabe858555e"
+  integrity sha512-v8Au3l0b+Nwkp4G142JcgJFh1/TUhdxut7wzD1Nq1dyp5oa3tXaqb03EXOAB6jS4gMlalkjAUPZBMiAfKUixHQ==
 
 compressible@~2.0.16:
   version "2.0.18"
@@ -3080,10 +3086,10 @@ logform@^2.1.1:
     ms "^2.1.1"
     triple-beam "^1.3.0"
 
-loglevel@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.8.0.tgz#e7ec73a57e1e7b419cb6c6ac06bf050b67356114"
-  integrity sha512-G6A/nJLRgWOuuwdNuA6koovfEV1YpqqAG4pRUlFaz3jj2QNZ8M4vBqnVA+HBTmU/AMNUtlOsMmSpF6NyOjztbA==
+loglevel@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.8.1.tgz#5c621f83d5b48c54ae93b6156353f555963377b4"
+  integrity sha512-tCRIJM51SHjAayKwC+QAg8hT8vg6z7GSgLJKGvzuPb1Wc+hLzqtuVLxp6/HzSPOozuK+8ErAhy7U/sVzw8Dgfg==
 
 longest-streak@^2.0.0:
   version "2.0.4"

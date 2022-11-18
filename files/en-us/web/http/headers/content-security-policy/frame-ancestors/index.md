@@ -51,7 +51,7 @@ One or more sources can be set for the `frame-ancestors` policy:
 
 ```http
 Content-Security-Policy: frame-ancestors <source>;
-Content-Security-Policy: frame-ancestors <source> <source>;
+Content-Security-Policy: frame-ancestors <space separated list of sources>;
 ```
 
 ### Sources
@@ -91,6 +91,8 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
+
+Content-Security-Policy: frame-ancestors 'self' https://example.org https://example.com https://store.example.com;
 ```
 
 ## Specifications
