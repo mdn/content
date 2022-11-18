@@ -21,3 +21,11 @@ A regular expression generally matches from left to right. This is why lookahead
 ```js
 /(?<=([ab]*)([bc]+))/.exec("ab");
 ```
+
+## See also
+
+- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_Expressions)
+- [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
+- [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
+- [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
+- [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)

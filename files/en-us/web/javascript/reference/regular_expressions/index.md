@@ -16,7 +16,7 @@ A **regular expression** (_regex_ for short) enable
 ### Assertions
 
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
-  - : Asserts that the current position is the start or end of input.
+  - : Asserts that the current position is the start or end of input, or start or end of a line if the `m` flag is set.
 - [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
   - : Asserts that the current position is a word boundary.
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
@@ -27,10 +27,9 @@ A **regular expression** (_regex_ for short) enable
 ### Atoms
 
 - [Wildcard: `.`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
-  - : Matches any character except line terminators, unless the `m` flag is set.
-- [Character class: `[...]`, `[^...]](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+  - : Matches any character except line terminators, unless the `s` flag is set.
+- [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
   - : Matches any character in or not in a set of characters.
-  - : Matches any character in or not in a predefined set of characters.
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
   - : Matches a subpattern and remembers information about the match.
 - [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
@@ -42,6 +41,7 @@ A **regular expression** (_regex_ for short) enable
 - [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
   - : Matches a previously matched subpattern captured with a named capturing group.
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
+  - : Matches any character in or not in a predefined set of characters.
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - : Matches any character in or not in a set of Unicode characters identified by a Unicode property.
 - [Escape characters: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_characters)

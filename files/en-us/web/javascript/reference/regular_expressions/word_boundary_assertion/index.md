@@ -16,7 +16,7 @@ A **word boundary assertion** checks if the current position in the string is a 
 
 ## Description
 
-`\b` asserts that the current position in the string is a word boundary. `\B` negates the assertion: it asserts that the current position is not a word boundary. Both are _assertions_, so they don't consume any characters.
+`\b` asserts that the current position in the string is a word boundary. `\B` negates the assertion: it asserts that the current position is not a word boundary. Both are _assertions_, so unlike other [escape characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_characters) or [escape classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), they don't consume any characters.
 
 A word character includes the following:
 
@@ -32,3 +32,29 @@ Out-of-bounds input positions are considered non-word characters. For example, t
 /\B /.exec(" abc");
 / \B/.exec("abc ");
 ```
+
+## Examples
+
+### Detecting words
+
+The following example detects if a string contains the word "thanks" or "thank you":
+
+```js
+function hasThanks(str) {
+  return /\b(thanks|thank you)\b/i.test(str);
+}
+
+hasThanks("Thanks! You helped me a lot."); // true
+hasThanks("Just want to say thank you for all your work."); // true
+hasThanks("Thanksgiving is around the corner."); // false
+```
+
+> **Warning:** Not all languages have clearly defined word boundaries. If you are working with languages like Chinese or Thai, where there are no whitespace separators, use a more advanced library like {{jsxref("Intl.Segmenter")}} to search for words instead.
+
+## See also
+
+- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_Expressions)
+- [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
+- [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
+- [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+- [Escape characters: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_characters)
