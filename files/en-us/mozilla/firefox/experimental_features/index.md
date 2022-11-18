@@ -680,6 +680,47 @@ For more information on these units, see the [CSS Container Queries](/en-US/docs
   </tbody>
 </table>
 
+### round() math function
+
+CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounded number based on a selected rounding strategy.
+See {{bug(1764850)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.round.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
