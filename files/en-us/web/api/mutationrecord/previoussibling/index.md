@@ -67,7 +67,7 @@ function logPreviousSibling(records) {
     if (record.type === "childList") {
       for (const newNode of record.addedNodes) {
         counter.textContent = `Node count: ${target.children.length}`;
-        log.textContent = `Previous sibling of added node: ${newNode.previousSibling.textContent}`;
+        log.textContent = `Previous sibling of added node: ${newNode.previousSibling?.textContent}`;
       }
     }
   }
