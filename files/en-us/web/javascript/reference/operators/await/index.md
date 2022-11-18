@@ -12,7 +12,7 @@ browser-compat: javascript.operators.await
 
 {{jsSidebar("Operators")}}
 
-The `await` operator is used to wait for a {{jsxref("Promise")}} and get its fulfillment value. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
+The **`await`** operator is used to wait for a {{jsxref("Promise")}} and get its fulfillment value. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
 ## Syntax
 
@@ -41,7 +41,7 @@ If the promise is rejected, the `await` expression throws the rejected value. Th
 
 The `expression` is resolved in the same way as {{jsxref("Promise.resolve()")}}: it's always converted to a native `Promise` and then awaited. If the `expression` is a:
 
-- Native `Promise` (tested with `expression.constructor === Promise`): The promise is directly used and awaited natively, without calling `then()`.
+- Native `Promise` (which means `expression` belongs to `Promise` or a subclass, and `expression.constructor === Promise`): The promise is directly used and awaited natively, without calling `then()`.
 - [Thenable object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) (including non-native promises, polyfill, proxy, child class, etc.): A new promise is constructed with the native [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor by calling the object's `then()` method and passing in a handler that calls the `resolve` callback.
 - Non-thenable value: An already-fulfilled `Promise` is constructed and used.
 

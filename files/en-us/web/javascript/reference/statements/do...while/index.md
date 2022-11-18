@@ -10,7 +10,7 @@ browser-compat: javascript.statements.do_while
 
 {{jsSidebar("Statements")}}
 
-The **`do...while` statement** creates a loop that executes a
+The **`do...while`** statement creates a loop that executes a
 specified statement until the test condition evaluates to false. The condition is
 evaluated after executing the statement, resulting in the specified statement executing
 at least once.

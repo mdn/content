@@ -1,5 +1,5 @@
 ---
-title: '<video>: The Video Embed element'
+title: "<video>: The Video Embed element"
 slug: Web/HTML/Element/video
 tags:
   - Element
@@ -183,7 +183,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
         {{domxref("HTMLMediaElement.error_event", 'error')}}
       </td>
       <td>
-        An error occurred while fetching the media data, or the type of the 
+        An error occurred while fetching the media data, or the type of the
         resource is not a supported media format.
       </td>
     </tr>

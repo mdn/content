@@ -42,7 +42,7 @@ _This interface also inherits properties from {{domxref("PerformanceEntry")}}._
 _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 
 - {{domxref("LargestContentfulPaint.toJSON()")}} {{Experimental_Inline}}
-  - : Returns the above properties as JSON.
+  - : Returns a JSON representation of the `LargestContentfulPaint` object.
 
 ## Examples
 

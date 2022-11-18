@@ -1,6 +1,6 @@
 ---
-title: Class static initialization blocks
-slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
+title: Static initialization blocks
+slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 tags:
   - Classes
   - ECMAScript 2022
@@ -14,7 +14,7 @@ browser-compat: javascript.classes.static_initialization_blocks
 
 {{jsSidebar("Classes")}}
 
-**Class static initialization blocks** are a special feature of a {{jsxref("Statements/class", "class")}} that enable more flexible initialization of {{jsxref("Classes/static", "static")}} properties than can be achieved using per-field initialization.
+**Static initialization blocks** are a special feature of a {{jsxref("Statements/class", "class")}} that enable more flexible initialization of {{jsxref("Classes/static", "static")}} properties than can be achieved using per-field initialization.
 
 Static blocks allow statements to be evaluated during initialization, which allows initializations that (for example) include `try...catch` or set multiple fields from a single value.
 
@@ -26,7 +26,11 @@ This means that static blocks can also be used to share information between clas
 ## Syntax
 
 ```js-nolint
-static { /* … */ }
+class ClassWithSIB {
+  static {
+    // …
+  }
+}
 ```
 
 ## Description
