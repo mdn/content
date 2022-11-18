@@ -41,7 +41,7 @@ You'll notice the when you add a node, the `type` is `childList`, and when you c
 <button id="reset">Reset</button>
 
 <pre id= "log">Mutation type:</pre>
-<div id= "target" class="my-class"></div>
+<div id= "target"></div>
 ```
 
 ```css hidden
