@@ -14,7 +14,7 @@ tags:
 browser-compat: api.MediaSource.handle
 ---
 
-{{APIRef("Media Source Extensions")}}{{seecompattable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`handle`** read-only property of the {{domxref("MediaSource")}} interface returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 

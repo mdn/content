@@ -333,7 +333,6 @@
         "DOMPoint",
         "DOMPointReadOnly",
         "DOMRect",
-        "DOMTimeStamp",
         "DOMTokenList",
         "Element",
         "Event",
@@ -1207,6 +1206,8 @@
         "ReadableStreamBYOBRequest",
         "ReadableStreamDefaultController",
         "ReadableStreamDefaultReader",
+        "TransformStream",
+        "TransformStreamDefaultController",
         "WritableStream",
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"

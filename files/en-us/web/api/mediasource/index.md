@@ -33,7 +33,7 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
   - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
-- {{domxref("MediaSource.handle")}} {{ReadOnlyInline}}
+- {{domxref("MediaSource.handle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 - {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
@@ -42,7 +42,7 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 
 ## Static properties
 
-- {{domxref("MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}}
+- {{domxref("MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
 
 ## Instance methods
@@ -123,7 +123,7 @@ function fetchAB (url, cb) {
 };
 ```
 
-### Constructuring a `MediaSource` in a worker and passing it to the main thread
+### Constructing a `MediaSource` in a worker and passing it to the main thread
 
 The `handle` property can be accessed inside a dedicated worker and the resulting `MediaSourceHandle` object is then transferred over to the main thread via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
 
