@@ -1,5 +1,5 @@
 ---
-title: Disjunction |
+title: "Disjunction: |"
 slug: Web/JavaScript/Reference/Regular_expressions/Disjunction
 ---
 
@@ -9,9 +9,9 @@ A **disjunction** specifies multiple alternatives. Any alternative matching the 
 
 ## Syntax
 
-```js-nolint
-/alternative1|alternative2/
-/alternative1|alternative2|alternative3/
+```regex
+alternative1|alternative2
+alternative1|alternative2|alternative3|…
 ```
 
 ### Parameters

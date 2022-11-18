@@ -1,5 +1,5 @@
 ---
-title: Wildcard .
+title: "Wildcard: ."
 slug: Web/JavaScript/Reference/Regular_expressions/Wildcard
 ---
 
@@ -9,8 +9,8 @@ A **wildcard** matches all characters except line terminators. It also matches l
 
 ## Syntax
 
-```js-nolint
-/./
+```regex
+.
 ```
 
 ## Description

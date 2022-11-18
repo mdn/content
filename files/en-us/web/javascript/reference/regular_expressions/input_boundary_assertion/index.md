@@ -1,5 +1,5 @@
 ---
-title: Input boundary assertion ^, $
+title: "Input boundary assertion: ^, $"
 slug: Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion
 ---
 
@@ -9,9 +9,9 @@ An **input boundary assertion** checks if the current position in the string is 
 
 ## Syntax
 
-```js-nolint
-/^/
-/$/
+```regex
+^
+$
 ```
 
 ## Description

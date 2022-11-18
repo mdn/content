@@ -1,5 +1,5 @@
 ---
-title: Word boundary assertion \b, \B
+title: "Word boundary assertion: \\b, \\B"
 slug: Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion
 ---
 
@@ -9,9 +9,9 @@ A **word boundary assertion** checks if the current position in the string is a 
 
 ## Syntax
 
-```js-nolint
-/\b/
-/\B/
+```regex
+\b
+\B
 ```
 
 ## Description

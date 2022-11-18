@@ -1,5 +1,5 @@
 ---
-title: Lookbehind assertion (?<=...), (?<!...)
+title: "Lookbehind assertion: (?<=...), (?<!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion
 ---
 
@@ -9,9 +9,9 @@ A **lookbehind assertion** TODO
 
 ## Syntax
 
-```js-nolint
-/(?<=disjunction)/
-/(?<!disjunction)/
+```regex
+(?<=disjunction)
+(?<!disjunction)
 ```
 
 ## Description
