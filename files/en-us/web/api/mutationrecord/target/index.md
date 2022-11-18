@@ -26,7 +26,7 @@ The {{domxref("Node")}} that the mutation affected.
 
 ### Red div, blue div
 
-In the following example, there are two divs: a red div (`#red-div`) and a blue div (`#blue-div`). A {{domxref("MutationObserver")}} is created to observe the parent div (`#container`) of the red and blue divs, and the observer is set to observe for changes to the childlist of the parent div. 
+In the following example, there are two divs: a red div (`#red-div`) and a blue div (`#blue-div`). A {{domxref("MutationObserver")}} is created to observe the parent div (`#container`) of the red and blue divs, and the observer is set to observe for changes to the childlist of the parent div.
 
 The observer is set to log the `target` of the mutation record by calling the function `logNewNodes`. You should see that even though the {{domxref("MutationObserver")}} is observing the `#container` directly, the `target` will be whichever child div whose children have changed as the {{domxref("MutationObserver")}} is observing for changes to the childlist of `#container`, `#red-div` and `#blue-div`, and the subtree (the childlists of `#red-div` and `#blue-div`).
 
@@ -72,6 +72,7 @@ The observer is set to log the `target` of the mutation record by calling the fu
   grid-template-columns: 50% auto;
 }
 ```
+
 #### JavaScript
 
 ```js

@@ -24,7 +24,7 @@ The value is `null` if there are no added or removed nodes, or if the node is th
 
 ### Log the next sibling of a mutation
 
-This adds a node every time you click the button, but it adds the node at the *start of the target*, not the end. Then the observer logs the `textContent` of the `nextSibling` of the added node. The first time this is `null` because the target didn't have any children to begin with (so now it has only the most recently added node), but after this it logs the node after (the `nextSibling` of) the one we just added.
+This adds a node every time you click the button, but it adds the node at the _start of the target_, not the end. Then the observer logs the `textContent` of the `nextSibling` of the added node. The first time this is `null` because the target didn't have any children to begin with (so now it has only the most recently added node), but after this it logs the node after (the `nextSibling` of) the one we just added.
 
 #### HTML
 

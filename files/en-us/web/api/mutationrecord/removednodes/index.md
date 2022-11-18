@@ -16,7 +16,7 @@ The {{domxref("MutationRecord")}} read-only property **`removedNodes`** is a {{d
 
 ## Value
 
-A {{domxref("NodeList")}}  containing the nodes removed from the target of the mutation observed by the {{domxref("MutationObserver")}}.
+A {{domxref("NodeList")}} containing the nodes removed from the target of the mutation observed by the {{domxref("MutationObserver")}}.
 
 ## Examples
 

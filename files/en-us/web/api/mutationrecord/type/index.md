@@ -78,9 +78,9 @@ addNodes.addEventListener("click", () => {
 
 setAttribute.addEventListener("click", () => {
   if (target.getAttribute("class") === "red") {
-    target.setAttribute("class", "blue");  
+    target.setAttribute("class", "blue");
   } else {
-    target.setAttribute("class", "red");  
+    target.setAttribute("class", "red");
   }
 });
 

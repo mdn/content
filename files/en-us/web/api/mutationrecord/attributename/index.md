@@ -38,6 +38,7 @@ In the following example, there are four buttons: two change the style attribute
 
 <p id="log">Updated attribute name:</p>
 ```
+
 #### CSS
 
 ```css

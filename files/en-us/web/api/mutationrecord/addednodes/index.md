@@ -16,7 +16,7 @@ The {{domxref("MutationRecord")}} read-only property **`addedNodes`** is a {{dom
 
 ## Value
 
-A {{domxref("NodeList")}}  containing the nodes added to the target of the mutation observed by the {{domxref("MutationObserver")}}.
+A {{domxref("NodeList")}} containing the nodes added to the target of the mutation observed by the {{domxref("MutationObserver")}}.
 
 ## Examples
 
