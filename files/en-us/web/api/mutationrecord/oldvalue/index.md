@@ -12,24 +12,27 @@ browser-compat: api.MutationRecord.oldValue
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} **`oldValue`** property contains the character data or attribute value of an observed node before it was changed.
+The {{domxref("MutationRecord")}} read-only property **`oldValue`** contains the character data or attribute value of an observed node before it was changed.
 
 ## Value
 
-The property is set to the value (as a string) of a node before a mutation observed with a {{domxref("MutationObserver")}}. The value depends based on the value of {{domxref("MutationRecord.type")}}.
+A string representing the old value of an attribute which has been changed, if:
 
-> **Note:** For this to work as expected, the `attributeOldValue` or `characterDataOldValue` parameters of the
-> {{domxref("MutationObserver.observe()")}} must be set to `true` to demonstrate the functionality detailed below.
+- the `attributeOldValue` parameter to {{domxref("MutationObserver.observe()")}} is `true`
+- the `attributes` parameter to {{domxref("MutationObserver.observe()")}} is `true` or omitted
+- the mutation {{domxref("MutationRecord.type", "type")}} is `attributes`.
 
-- If the mutation type is `attributes`, the value will be the pre-mutation value of the attribute element whose attribute(s) have been mutated.
+A string representing the old value of a {{domxref("CharacterData")}} node that has been changed, if:
 
-- If the mutation type is `characterData`, the value will be the pre-mutation value of the {{domxref("characterData")}} node that has been mutated.
+- the `characterDataOldValue` parameter to {{domxref("MutationObserver.observe()")}} is `true`
+- the `characterData` parameter to {{domxref("MutationObserver.observe()")}} is `true` or omitted
+- the mutation {{domxref("MutationRecord.type", "type")}} is `characterData`.
 
-- If the mutation type is `childList`, the value will be `null`.
+Otherwise this property is `null`.
 
 ## Examples
 
-### Show Old Color Value
+### Show old color value
 
 In the following example, there is a button that changes the color of an `h1` to a random new color. A {{domxref("MutationObserver")}} is used to observe the target node (`h1`) for changes to the attribute; when a change is detected, the observer calls a function, `logOldValue`.
 
@@ -75,7 +78,7 @@ observer.observe(h1, {
 
 #### Result
 
-{{EmbedLiveSample("Show Old Color Value")}}
+{{EmbedLiveSample("Show old color value", "", 200)}}
 
 ## Specifications
 

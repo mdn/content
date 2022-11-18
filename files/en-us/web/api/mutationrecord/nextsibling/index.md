@@ -12,11 +12,13 @@ browser-compat: api.MutationRecord.nextSibling
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} property **`nextSibling`** is the next sibling of an added or removed child node of the [`target`](/en-US/docs/Web/API/MutationRecord/target) of a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`nextSibling`** is the next sibling of an added or removed child node of the [`target`](/en-US/docs/Web/API/MutationRecord/target) of a {{domxref("MutationObserver")}}.
 
 ## Value
 
-If a node is added or removed from the [`target`](/en-US/docs/Web/API/MutationRecord/target) of a {{domxref("MutationObserver")}}, the value is the node after (the next sibling of) the added or removed node. The value is `null` if there are no added or removed nodes.
+If a node is added to or removed from the [`target`](/en-US/docs/Web/API/MutationRecord/target) of a {{domxref("MutationObserver")}}, the value is the {{domxref("Node")}} that is the next sibling of the added or removed node: that is, the node immediately following this one in the parent's {{domxref("Node.childNodes", "childNodes")}} list.
+
+The value is `null` if there are no added or removed nodes, or if the node is the last child of its parent.
 
 ## Examples
 

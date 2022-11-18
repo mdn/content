@@ -12,21 +12,19 @@ browser-compat: api.MutationRecord.addedNodes
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} property **`addedNodes`** is a {{domxref("NodeList")}} of nodes added to a target node by a mutation observed with a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`addedNodes`** is a {{domxref("NodeList")}} of nodes added to a target node by a mutation observed with a {{domxref("MutationObserver")}}.
 
 ## Value
 
-If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `childList`, this is a `NodeList` of the nodes added to the target of the mutation observed by the {{domxref("MutationObserver")}}. The value will be an empty `NodeList` if no nodes were added. 
-
-If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is not `childList`, this is `null`.
+A {{domxref("NodeList")}}  containing the nodes added to the target of the mutation observed by the {{domxref("MutationObserver")}}.
 
 ## Examples
 
-### Update when Adding a Node
+### Update when adding a node
 
 In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logNewNodes`.
 
-The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. However, notice that clicking the "Remove a node" button will not trigger the counter to update, as the function only updates for each added node. If there are no added nodes, the counter will not be updated.
+The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of new nodes that have been added. However, note that clicking the "Remove a node" button will not increment the total number of new nodes, because in this case `addedNodes` will have a length of `0`.
 
 #### HTML
 
@@ -35,16 +33,10 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 <button id="remove-nodes">Remove a node</button>
 <button id="reset">Reset</button>
 
-<pre id= "counter">Observed node count: 0</pre>
+<pre id="counter">Total new nodes: 0</pre>
 <div id= "target"></div>
 ```
 
-```css hidden
-#log {
-  border: 1px dotted black;
-  padding: .5rem;
-}
-```
 
 #### JavaScript
 
@@ -54,6 +46,7 @@ const removeNodes = document.querySelector("#remove-nodes");
 const reset = document.querySelector("#reset");
 const counter = document.querySelector("#counter");
 const target = document.querySelector("#target");
+let totalNewNodes = 0;
 
 addNodes.addEventListener("click", () => {
   const newPara = document.createElement("p");
@@ -62,10 +55,10 @@ addNodes.addEventListener("click", () => {
 });
 
 removeNodes.addEventListener("click", () => {
-    const lastChild = target.lastChild;
-    if (lastChild) {
-        target.removeChild(lastChild);
-    }
+  const lastChild = target.lastChild;
+  if (lastChild) {
+    target.removeChild(lastChild);
+  }
 });
 
 reset.addEventListener("click", () => self.location.reload());
@@ -74,21 +67,20 @@ function logNewNodes(records) {
   for (const record of records) {
     // Check if the childlist of the target node has been mutated
     if (record.type === "childList") {
-    // Update counter for each added node, if any
-      for (const newNode of record.addedNodes) {
-        counter.textContent = `Observed node count: ${target.children.length}`;
-      }
+      totalNewNodes = totalNewNodes + record.addedNodes.length;
+      // Log the number of nodes added
+      counter.textContent = `Total new nodes: ${totalNewNodes}`;
     }
   }
 }
 
 const observer = new MutationObserver(logNewNodes);
-observer.observe(target, {childList: true});
+observer.observe(target, { childList: true });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Styling a paragraph")}}
+{{EmbedLiveSample("Update when adding a node")}}
 
 ## Specifications
 
