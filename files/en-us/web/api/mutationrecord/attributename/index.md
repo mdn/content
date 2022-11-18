@@ -12,17 +12,17 @@ browser-compat: api.MutationRecord.attributeName
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} **`attributeName`** property contains the name of a changed attribute belonging to a node that is observed by a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`attributeName`** contains the name of a changed attribute belonging to a node that is observed by a {{domxref("MutationObserver")}}.
 
 ## Value
 
-If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `attributes`, this is the name of the mutated attribute of the mutation target.
+If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `attributes`, this is a string representing the name of the mutated attribute of the mutation target.
 
 If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is not `attributes`, this is `null`.
 
 ## Examples
 
-### Get Last Updated Attribute Name
+### Get last updated attribute name
 
 In the following example, there are four buttons: two change the style attribute of the `h1` element, and two change the class attribute of the `h1` element. The script uses a {{domxref("MutationObserver")}} to detect the changes and will update the text below to the name of the last attribute that was changed.
 
@@ -59,34 +59,34 @@ const blueButton = document.querySelector("#blueButton ");
 const whiteButton = document.querySelector("#whiteButton");
 const blackButton = document.querySelector("#blackButton");
 const log = document.querySelector("#log");
-
-redButton.addEventListener("click", function () { 
-  hiMom.classList.add('red'); hiMom.classList.remove('blue') }); 
-
-blueButton.addEventListener("click", function () { 
-  hiMom.classList.add('blue'); hiMom.classList.remove('red') });
-
-whiteButton.addEventListener("click", function () {  
-  hiMom.style.color = "white" }); 
-
-blackButton.addEventListener("click", function () { 
-  hiMom.style.color = "black" }); 
-
+redButton.addEventListener("click", () => {
+  hiMom.classList.add("red");
+  hiMom.classList.remove("blue");
+});
+blueButton.addEventListener("click", () => {
+  hiMom.classList.add("blue");
+  hiMom.classList.remove("red");
+});
+whiteButton.addEventListener("click", () => {
+  hiMom.style.color = "white";
+});
+blackButton.addEventListener("click", () => {
+  hiMom.style.color = "black";
+});
 function logLastAttr(mutationRecordArray) {
   for (const record of mutationRecordArray) {
-  if (record.type === 'attributes') {
-    log.textContent = `Updated attribute name: ${record.attributeName}`;
-   }
+    if (record.type === "attributes") {
+      log.textContent = `Updated attribute name: ${record.attributeName}`;
+    }
   }
 }
-
 const observer = new MutationObserver(logLastAttr);
-observer.observe(hiMom, {attributes: true});
+observer.observe(hiMom, { attributes: true });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Get Last Updated Attribute Name")}}
+{{EmbedLiveSample("Get last updated attribute name", "", 200)}}
 
 ## Specifications
 

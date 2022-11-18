@@ -12,17 +12,15 @@ browser-compat: api.MutationRecord.target
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} property **`target`** is the target (i.e. the mutated/changed node) of a mutation observed with a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`target`** is the target (i.e. the mutated/changed node) of a mutation observed with a {{domxref("MutationObserver")}}.
 
 ## Value
 
-The value of the property is the node changed by a mutation observed with a {{domxref("MutationObserver")}}; the value can be vastly different depending on the value of {{domxref("MutationRecord.type")}}.
+The {{domxref("Node")}} that the mutation affected.
 
-- If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `attributes`, the value will be the element whose attribute(s) have been mutated.
-
-- If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `childList`, the value will be the element whose child element(s) have been mutated.
-
-- If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `characterData`, the value will be the {{domxref("characterData")}} node.
+- If the record's {{domxref("MutationRecord.type", "type")}} is `attributes`, this is the {{domxref("Element")}} whose attributes changed.
+- If the record's {{domxref("MutationRecord.type", "type")}} is `characterData`, this is the {{domxref("CharacterData")}} node.
+- If the record's {{domxref("MutationRecord.type", "type")}} is `childList`, this is the {{domxref("Node")}} whose children changed.
 
 ## Examples
 
@@ -109,7 +107,7 @@ observer.observe(container, {childList: true, subtree: true});
 
 #### Result
 
-{{EmbedLiveSample("Two Divs")}}
+{{EmbedLiveSample("Red Div, Blue Div")}}
 
 ## Specifications
 

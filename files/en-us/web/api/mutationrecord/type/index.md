@@ -12,17 +12,17 @@ browser-compat: api.MutationRecord.type
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} property **`type`** is the type of the {{domxref("MutationRecord")}} observed by a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`type`** is the type of the {{domxref("MutationRecord")}} observed by a {{domxref("MutationObserver")}}.
 
 ## Value
 
-The property is set to the type of the mutated node as a string. The value can be one of the following:
+The property is set to the type of the mutation as a string. The value can be one of the following:
 
-- The value will be `attributes` if the mutation to the target node of the was an attribute mutation, {{domxref("Attr")}}. This mutated node type can appear if the "attribute" parameter of {{domxref("MutationObserver.observe()")}} is set to true or the `attributeFilter` parameter is in use.
+- `attributes` if the mutation was an attribute mutation.
 
-- The value will be `childList` if the mutation to the target node was a mutation to the tree of nodes, i.e. the `childList` paremeter of {{domxref("MutationObserver.observe()")}} is set to true.
+- `characterData` if it was a mutation to a {{domxref("CharacterData")}} node.
 
-- The value will be `characterData` if it was called on a mutation to a {{domxref("CharacterData")}} node.
+- `childList` if the mutation a mutation to the tree of nodes.
 
 ## Examples
 

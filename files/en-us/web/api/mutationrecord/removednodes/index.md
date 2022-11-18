@@ -12,21 +12,17 @@ browser-compat: api.MutationRecord.removedNodes
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} property **`removedNodes`** is a {{domxref("NodeList")}} of nodes removed from a target node by a mutation observed with a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`removedNodes`** is a {{domxref("NodeList")}} of nodes removed from a target node by a mutation observed with a {{domxref("MutationObserver")}}.
 
 ## Value
 
-If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is `childList`, this is a `NodeList` of the nodes removed from the target of the mutation observed by the {{domxref("MutationObserver")}}. The value will be an empty `NodeList` if no nodes were removed. 
-
-If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is not `childList`, this is `null`.
+A {{domxref("NodeList")}}  containing the nodes removed from the target of the mutation observed by the {{domxref("MutationObserver")}}.
 
 ## Examples
 
-### Update when Removing a Node
+### Update when removing a node
 
-In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logNewNodes`.
-
-The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. However, notice that clicking the "Add a node" button will not trigger the counter to update, as the function only updates for each removed node. If there are no removed nodes, the counter will not be updated.
+The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of  nodes that have been removed. However, note that clicking the "Add a node" button will not increment the total number of removed nodes, because in this case `removedNodes` will have a length of `0`.
 
 #### HTML
 
@@ -35,8 +31,8 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 <button id="remove-nodes">Remove a node</button>
 <button id="reset">Reset</button>
 
-<pre id= "counter">Observed node count: 1</pre>
-<div id= "target"><p>Hi, Mom!</p></div>
+<pre id="counter">Total removed nodes: 0</pre>
+<div id="target"><p>Hi, Mom!</p></div>
 ```
 
 ```css hidden
@@ -54,6 +50,7 @@ const removeNodes = document.querySelector("#remove-nodes");
 const reset = document.querySelector("#reset");
 const counter = document.querySelector("#counter");
 const target = document.querySelector("#target");
+let totalRemovedNodes = 0;
 
 addNodes.addEventListener("click", () => {
   const newPara = document.createElement("p");
@@ -62,11 +59,10 @@ addNodes.addEventListener("click", () => {
 });
 
 removeNodes.addEventListener("click", () => {
-    const lastChild = target.lastChild;
-    console.log(lastChild);
-    if (lastChild) {
-        target.removeChild(lastChild);
-    }
+  const lastChild = target.lastChild;
+  if (lastChild) {
+    target.removeChild(lastChild);
+  }
 });
 
 reset.addEventListener("click", () => self.location.reload());
@@ -75,16 +71,15 @@ function logNewNodes(records) {
   for (const record of records) {
     // Check if the childlist of the target node has been mutated
     if (record.type === "childList") {
-    // Update counter for each removed node, if any
-      for (const newNode of record.removedNodes) {
-        counter.textContent = `Observed node count: ${target.children.length}`;
-      }
+      totalRemovedNodes = totalRemovedNodes + record.removedNodes.length;
+      // Log the number of nodes added
+      counter.textContent = `Total removed nodes: ${totalRemovedNodes}`;
     }
   }
 }
 
 const observer = new MutationObserver(logNewNodes);
-observer.observe(target, {childList: true});
+observer.observe(target, { childList: true });
 ```
 
 #### Result
