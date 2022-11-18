@@ -33,9 +33,11 @@ A new string representing the provided `uriComponent` encoded as a URI component
 ### Exceptions
 
 - {{jsxref("URIError")}}
-  - : Thrown if `uriComponent` contains a lone surrogate.
+  - : Thrown if `uriComponent` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
 
 ## Description
+
+`encodeURIComponent()` is a function property of the global object.
 
 `encodeURIComponent()` uses the same encoding algorithm as described in {{jsxref("encodeURI()")}}. It escapes all characters **except**:
 

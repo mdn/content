@@ -33,7 +33,14 @@ encodeURI(uri)
 
 A new string representing the provided string encoded as a URI.
 
+### Exceptions
+
+- {{jsxref("URIError")}}
+  - : Thrown if `uri` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+
 ## Description
+
+`encodeURI()` is a function property of the global object.
 
 The `encodeURI()` function escapes characters by UTF-8 code units, with each octet encoded in the format `%XX`, left-padded with 0 if necessary. Because lone surrogates in UTF-16 do not encode any valid Unicode character, they cause `encodeURI()` to throw a {{jsxref("URIError")}}.
 
