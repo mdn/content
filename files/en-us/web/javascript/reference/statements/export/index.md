@@ -94,9 +94,9 @@ export default myFunction;
 // export individual features as default
 export default function () { /* … */ }
 export default class { /* … */ }
-
-// each export overwrites the previous one
 ```
+
+> **Note:** The names exported by all export declarations must be distinct from each other. Because default exports are conceptually exports with the name `default`, this means a module can only have one default export declaration.
 
 The `export default` syntax allows any expression.
 
