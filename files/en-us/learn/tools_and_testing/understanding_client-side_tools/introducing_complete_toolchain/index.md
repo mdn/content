@@ -266,7 +266,7 @@ At this point, we'll get hold of the project's code files (HTML, CSS, JavaScript
 
 We have our project files in place. That's all we need to do for now!
 
-> **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all of the project dependencies that are stored in the \`package.json\` file.
+> **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all of the project dependencies that are stored in the `package.json` file.
 
 #### Installing our tools
 
