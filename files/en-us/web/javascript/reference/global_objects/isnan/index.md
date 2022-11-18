@@ -10,10 +10,7 @@ browser-compat: javascript.builtins.isNaN
 
 {{jsSidebar("Objects")}}
 
-The **`isNaN()`** function determines whether a value is
-{{jsxref("NaN")}} or not. Because coercion inside the `isNaN`
-function can be [surprising](#confusing_special-case_behavior), you may alternatively
-want to use {{jsxref("Number.isNaN()")}}.
+The **`isNaN()`** function determines whether a value is {{jsxref("NaN")}} when converted to a number. Because coercion inside the `isNaN()` function can be [surprising](#description), you may alternatively want to use {{jsxref("Number.isNaN()")}}.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
 
@@ -30,93 +27,45 @@ isNaN(value)
 
 ### Return value
 
-**`true`** if the given value is {{jsxref("NaN")}}; otherwise,
-**`false`**.
+`true` if the given value is {{jsxref("NaN")}} after being [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion); otherwise, `false`.
 
 ## Description
 
-### The convenience of an isNaN function
+`isNaN()` is a function property of the global object.
 
-Unlike all other possible values in JavaScript, it is not possible to use the equality
-operators (== and ===) to compare a value against {{jsxref("NaN")}} to determine whether
-the value _is_ `NaN` or not, because both `NaN == NaN` and
-`NaN === NaN` evaluate to `false`. The `isNaN()` function provides a convenient
-equality check against {{jsxref("NaN")}}.
+For number values, `isNaN()` tests if the number is the value [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), but `isNaN()`'s behavior for non-numeric arguments has always been confusing. When the argument to the `isNaN()` function is not of type [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type), the value is first coerced to a number. The resulting value is then compared against {{jsxref("NaN")}}. Thus, `isNaN()` returns `false` if the input is a non-number that, when coerced to a number, results in a non-`NaN` numeric value (for example, the empty string becomes `0`, while boolean primitives become `0` or `1`). This may be unexpected, because the empty string is surely "not a number". `isNaN()` answers neither the question "is the input the floating point {{jsxref("NaN")}} value" nor the question "is the input not a number".
 
-### Origin of NaN values
+{{jsxref("Number.isNaN()")}} is a more reliable way to test whether a value is the number value `NaN` or not. Alternatively, the expression `x !== x` can be used, and both of the solutions are not subject to the false positives that make the global `isNaN()` unreliable. To test if a value is a number, use [`typeof x === "number"`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 
-`NaN` values are generated when arithmetic operations result in
-_undefined_ or _unrepresentable_ values. Such values do not necessarily
-represent overflow conditions. A `NaN` also results from attempted coercion
-to numeric values of non-numeric values for which no primitive numeric value is
-available.
+The `isNaN()` function answers the question "is the input functionally equivalent to {{jsxref("NaN")}} when used in a number context". If `isNaN(x)` returns `false`, you can use `x` in an arithmetic expression as if it's a valid number that's not `NaN`. If `isNaN(x)` returns `true`, `x` will get coerced to `NaN` and make most arithmetic expressions return `NaN` (because `NaN` propagates).
 
-For example, dividing zero by zero results in a `NaN` — but dividing other
-numbers by zero does not.
-
-### Confusing special-case behavior
-
-Since the very earliest versions of the `isNaN` function specification, its
-behavior for non-numeric arguments has been confusing. When the argument to the
-`isNaN` function is not of type [Number](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type), the value is first coerced to a
-Number. The resulting value is then tested to determine whether it is {{jsxref("NaN")}}.
-Thus for non-numbers that when coerced to numeric type result in a valid non-NaN numeric
-value (notably the empty string and boolean primitives, which when coerced give numeric
-values zero or one), the "false" returned value may be unexpected; the empty string, for
-example, is surely "not a number." The confusion stems from the fact that the term, "not
-a number", has a specific meaning for numbers represented as IEEE-754 floating-point
-values. The function should be interpreted as answering the question, "is this value,
-when coerced to a numeric value, an IEEE-754 'Not A Number' value?"
-
-{{jsxref("Number.isNaN()")}} is a more reliable way to test whether a value is the number value `NaN` or not. Alternatively, the expression `x !== x` can be used, and both of the solutions are not subject to the false positives that make the global `isNaN()` unreliable.
+You can use this, for example, to test whether an argument to a function is arithmetically processable (usable "like" a number), and handle values that are not number-like by throwing an error, providing a default value, etc. This way, you can have a function that makes use of the full versatility JavaScript provides by implicitly converting values depending on context.
 
 ## Examples
 
+Note how `isNaN()` returns `true` for values that are not the value `NaN` but are not numbers either:
+
 ```js
-isNaN(NaN);       // true
+isNaN(NaN); // true
 isNaN(undefined); // true
-isNaN({});        // true
+isNaN({}); // true
 
-isNaN(true);      // false
-isNaN(null);      // false
-isNaN(37);        // false
+isNaN(true); // false
+isNaN(null); // false
+isNaN(37); // false
 
-// strings
-isNaN('37');      // false: "37" is converted to the number 37 which is not NaN
-isNaN('37.37');   // false: "37.37" is converted to the number 37.37 which is not NaN
-isNaN("37,5");    // true
-isNaN('123ABC');  // true:  parseInt("123ABC") is 123 but Number("123ABC") is NaN
-isNaN('');        // false: the empty string is converted to 0 which is not NaN
-isNaN(' ');       // false: a string with spaces is converted to 0 which is not NaN
+// Strings
+isNaN("37"); // false: "37" is converted to the number 37 which is not NaN
+isNaN("37.37"); // false: "37.37" is converted to the number 37.37 which is not NaN
+isNaN("37,5"); // true
+isNaN("123ABC"); // true: Number("123ABC") is NaN
+isNaN(""); // false: the empty string is converted to 0 which is not NaN
+isNaN(" "); // false: a string with spaces is converted to 0 which is not NaN
 
-// dates
-isNaN(new Date());                // false
-isNaN(new Date().toString());     // true
-
-// This is a false positive and the reason why isNaN is not entirely reliable
-isNaN('blabla');   // true: "blabla" is converted to a number.
-                   // Parsing this as a number fails and returns NaN
+// Dates
+isNaN(new Date()); // false; Date objects can be converted to a number (timestamp)
+isNaN(new Date().toString()); // true; the string representation of a Date object cannot be parsed as a number
 ```
-
-### Useful special-case behavior
-
-There is a more usage oriented way to think of `isNaN()`: If
-`isNaN(x)` returns `false`, you can use `x` in an
-arithmetic expression not making the expression return `NaN`. If it returns
-`true`, `x` will make every arithmetic expression return
-`NaN`. This means that in JavaScript, `isNaN(x) == true` is
-equivalent to `x - 0` returning `NaN` (though in JavaScript
-`x - 0 == NaN` always returns false, so you can't test for it). Actually,
-`isNaN(x)`, `isNaN(x - 0)`, `isNaN(Number(x))`,
-`Number.isNaN(x - 0)`, and `Number.isNaN(Number(x))` always return
-the same and in JavaScript `isNaN(x)` is just the shortest possible form to
-express each of these terms.
-
-You can use this, for example, to test whether an argument to a function is
-arithmetically processable (usable "like" a number), or if it's not and you have to
-provide a default value or something else. This way you can have a function that makes
-use of the full versatility JavaScript provides by implicitly converting values
-depending on context.
 
 ## Specifications
 
