@@ -10,7 +10,8 @@ tags:
 
 {{MDNSidebar}}
 
-👋 Welcome to MDN Web Docs! MDN Web Docs is an open-source, collaborative project that documents web platform technologies, including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), and [Web APIs](/en-US/docs/Web/API). We also provide extensive [learning resources](/en-US/docs/Learn) for early-stage developers and students.
+👋 Welcome to MDN Web Docs, an open-source, collaborative project that documents web platform technologies, including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), and [Web APIs](/en-US/docs/Web/API).
+We also provide extensive [learning resources](/en-US/docs/Learn) for early-stage developers and students.
 
 By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to the [Mozilla community participation guidelines](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md).
 

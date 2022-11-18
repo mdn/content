@@ -2607,7 +2607,7 @@
     "modified": "2019-03-23T22:16:40.876Z",
     "contributors": ["teoli", "rachelandrew"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-23T22:16:37.786Z",
     "contributors": ["teoli", "rachelandrew"]
   },
@@ -26568,22 +26568,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DOMTimeStamp": {
-    "modified": "2020-07-25T11:26:24.857Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "flimzy",
-      "Sebastianz",
-      "teoli",
-      "DomenicDenicola",
-      "kscarfone",
-      "FredB",
-      "Sheppy",
-      "ethertank",
-      "Brettz9"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:11:17.375Z",
     "contributors": [
@@ -26872,38 +26856,6 @@
       "rolfedh",
       "AFBarstow"
     ]
-  },
-  "Web/API/DataTransfer/mozClearDataAt": {
-    "modified": "2020-10-15T21:40:08.445Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozCursor": {
-    "modified": "2020-10-15T21:40:08.800Z",
-    "contributors": ["fscholz", "Sebastianz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozGetDataAt": {
-    "modified": "2020-10-15T21:40:09.937Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozItemCount": {
-    "modified": "2020-10-15T21:40:08.646Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozSetDataAt": {
-    "modified": "2020-10-15T21:40:08.879Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozSourceNode": {
-    "modified": "2020-10-15T21:40:08.759Z",
-    "contributors": ["fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozTypesAt": {
-    "modified": "2020-10-15T21:40:09.724Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozUserCancelled": {
-    "modified": "2020-10-15T21:40:09.021Z",
-    "contributors": ["fscholz", "rolfedh", "AFBarstow"]
   },
   "Web/API/DataTransfer/setData": {
     "modified": "2020-10-15T21:40:08.494Z",
@@ -42581,21 +42533,6 @@
       "fscholz",
       "PushpitaPikuDey",
       "AFBarstow"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
-    "modified": "2019-03-23T23:45:39.658Z",
-    "contributors": [
-      "SphinxKnight",
-      "PageYe",
-      "chrisdavidmills",
-      "AFBarstow",
-      "teoli",
-      "Ericp",
-      "sdwilsh",
-      "drry",
-      "Piro",
-      "Enn"
     ]
   },
   "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
@@ -125937,10 +125874,6 @@
     "modified": "2020-07-28T00:42:48.458Z",
     "contributors": ["lbd1607", "Sheppy", "rachelandrew"]
   },
-  "Web/Media/images/aspect_ratio_mapping": {
-    "modified": "2020-11-18T11:22:57.796Z",
-    "contributors": ["ramiy", "chrisdavidmills", "rachelandrew"]
-  },
   "Web/OpenSearch": {
     "modified": "2019-10-30T22:44:38.715Z",
     "contributors": [
@@ -132044,16 +131977,6 @@
       "kyuwoo-choi",
       "topicus",
       "BrainBuzzer"
-    ]
-  },
-  "WebAssembly/Caching_modules": {
-    "modified": "2020-09-19T15:39:46.216Z",
-    "contributors": [
-      "mfuji09",
-      "leela52452",
-      "chrisdavidmills",
-      "lukewagner",
-      "kingysu"
     ]
   },
   "WebAssembly/Concepts": {

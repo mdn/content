@@ -243,7 +243,7 @@ You'll now get three `1fr` tracks just as before. The first value passed to the 
 
 ### The implicit and explicit grid
 
-We've only specified column tracks so far, yet rows are being created to hold our content. This is an example of the _explicit_ versus the _implicit_ grid. The explicit grid is the one that you create using `grid-template-columns` or `grid-template-rows`. The implicit grid is created when content is placed outside of that grid, such as into our rows.
+We've only specified column tracks so far, yet rows are being created to hold our content. This is an example of the _explicit_ versus the _implicit_ grid. The explicit grid is the one that you create using `grid-template-columns` or `grid-template-rows`. The implicit grid extends the defined explicit grid when content is placed outside of that grid, such as into our rows by drawing additional grid lines.
 
 By default, tracks created in the implicit grid are `auto` sized, which in general means that they're large enough to accommodate their content. If you wish to give implicit grid tracks a size, you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add `grid-auto-rows` with a value of `100px` to your CSS, you'll see that those created rows are now 100 pixels tall.
 

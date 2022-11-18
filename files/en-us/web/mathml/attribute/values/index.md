@@ -8,7 +8,9 @@ tags:
 browser-compat: mathml.attribute_values
 ---
 
-{{MathMLRef}}
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
+</section>
 
 ## MathML-specific types
 
