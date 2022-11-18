@@ -6,7 +6,7 @@ tags:
   - Client hint
   - HTTP
   - HTTP Header
-  - prefers-color-scheme
+  - prefers-reduced-motion
   - Reference
   - Request header
   - Experimental
