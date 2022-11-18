@@ -20,6 +20,8 @@ The **`handle`** read-only property of the {{domxref("MediaSource")}} interface 
 
 > **Note:** `handle` is only visible on {{domxref("MediaSource")}} instances inside dedicated workers.
 
+Each `MediaSource` object created inside a dedicated worker has its own distinct `MediaSourceHandle`. The `handle` getter will always return the `MediaSourceHandle` instance specific to the associated dedicated worker `MediaSource` instance. If the handle has already been transferred to the main thread using {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}}, the handle instance in the worker is technically detached and can't be transferred again.
+
 {{AvailableInWorkers}}
 
 ## Value
