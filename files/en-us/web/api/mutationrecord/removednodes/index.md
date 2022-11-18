@@ -40,7 +40,7 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 ```
 
 ```css hidden
-#log {
+#counter {
   border: 1px dotted black;
   padding: .5rem;
 }

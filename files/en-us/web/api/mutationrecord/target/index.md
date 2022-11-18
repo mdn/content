@@ -26,15 +26,90 @@ The value of the property is the node changed by a mutation observed with a {{do
 
 ## Examples
 
-In this code snippet, the `observer` will log to the console the tag name of every element with an observed mutation with the {{domxref("MutationObserver.observe()")}} property.
+### Red Div, Blue Div
+
+In the following example, there are two divs: a red div (`#red-div`) and a blue div (`#blue-div`). A {{domxref("MutationObserver")}} is created to observe the parent div (`#container`) of the two divs, and the observer is set to observe for changes to the child list of the parent div. 
+
+The observer is set to log the `target` of the mutation record. You'll see that even though the {{domxref("MutationObserver")}} is observing the `#container` directly, the `target` will be whichever child div whose children have changed as the {{domxref("MutationObserver")}} is observing for changes to the childlist and subtree of the `#container` div.
+
+#### HTML
+
+```html
+<pre id="log">Target of mutation: n/a</pre>
+<button id="add-nodes-to-red-div">Add a node to red div</button>
+<button id="add-nodes-to-blue-div">Add a node to blue div</button>
+<button id="reset">Reset</button>
+<div id="container">
+  <div id="red-div">
+  </div>
+  <div id="blue-div">
+  </div>
+</div>
+```
+
+```css hidden
+#log {
+  border: 1px dotted black;
+  padding: .5rem;
+}
+
+#red-div {
+  border: 1px solid red;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+#blue-div {
+  border: 1px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+```
+#### JavaScript
 
 ```js
-const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        console.log(mutation.target.tagName);
-    });
+const container = document.querySelector("#container");
+const redDiv = document.querySelector("#red-div");
+const blueDiv = document.querySelector("#blue-div");
+const addToRed = document.querySelector("#add-nodes-to-red-div");
+const addToBlue = document.querySelector("#add-nodes-to-blue-div");
+const reset = document.querySelector("#reset");
+const log = document.querySelector("#log");
+
+addToRed.addEventListener("click", () => {
+  const newPara = document.createElement("p");
+  newPara.textContent = `Current time: ${Date.now()}`;
+  redDiv.appendChild(newPara);
 });
+
+addToBlue.addEventListener("click", () => {
+  const newPara = document.createElement("p");
+  newPara.textContent = `Current time: ${Date.now()}`;
+  blueDiv.appendChild(newPara);
+});
+
+reset.addEventListener("click", () => self.location.reload());
+
+function logNewNodes(records) {
+  for (const record of records) {
+     log.textContent = `Target of mutation: ${record.target.id}`;
+  }
+}
+
+const observer = new MutationObserver(logNewNodes);
+observer.observe(container, {childList: true, subtree: true});
 ```
+
+#### Result
+
+{{EmbedLiveSample("Two Divs")}}
 
 ## Specifications
 

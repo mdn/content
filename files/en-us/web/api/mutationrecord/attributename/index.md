@@ -22,7 +22,7 @@ If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is not `attrib
 
 ## Examples
 
-### Get Last Updated Attribute
+### Get Last Updated Attribute Name
 
 In the following example, there are four buttons: two change the style attribute of the `h1` element, and two change the class attribute of the `h1` element. The script uses a {{domxref("MutationObserver")}} to detect the changes and will update the text below to the name of the last attribute that was changed.
 
@@ -86,7 +86,7 @@ observer.observe(hiMom, {attributes: true});
 
 #### Result
 
-{{EmbedLiveSample("Get Last Updated Attribute")}}
+{{EmbedLiveSample("Get Last Updated Attribute Name")}}
 
 ## Specifications
 

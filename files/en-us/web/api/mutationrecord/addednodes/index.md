@@ -40,7 +40,7 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 ```
 
 ```css hidden
-#log {
+#counter {
   border: 1px dotted black;
   padding: .5rem;
 }
@@ -88,7 +88,7 @@ observer.observe(target, {childList: true});
 
 #### Result
 
-{{EmbedLiveSample("Styling a paragraph")}}
+{{EmbedLiveSample("Update when Adding a Node")}}
 
 ## Specifications
 
