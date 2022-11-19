@@ -44,7 +44,7 @@ A new string representing the unencoded version of the given encoded Uniform Res
 
 `decodeURI()` is a function property of the global object.
 
-The `decodeURI()` function decodes characters by UTF-8 code units. In UTF-8, the number of leading 1 bits in first byte, which may be 0 (for ASCII characters), 2, 3, or 4, indicates the number of bytes (each encoded in the form `%XX`) in the sequence. So by reading the first escape sequence, `decodeURI()` can determine how many more escape sequences to consume. If `decodeURI()` fails to find the expected number of sequences, it throws a {{jsxref("URIError")}}.
+The `decodeURI()` function decodes characters by UTF-8 code units. In UTF-8, the number of leading 1 bits in thw first byte, which may be 0 (for ASCII characters), 2, 3, or 4, indicates the number of bytes (each encoded in the form `%XX`) in the sequence. So by reading the first escape sequence, `decodeURI()` can determine how many more escape sequences to consume. If `decodeURI()` fails to find the expected number of sequences, it throws a {{jsxref("URIError")}}.
 
 `decodeURI()` decodes all escape sequences, but if the escape sequence encodes one of the following characters, the escape sequence is preserved in the output string (because they are part of the URI syntax):
 
