@@ -5,7 +5,9 @@ tags:
   - Browser
   - CodingScripting
   - DOCTYPE
-  - HTML
+  - HTML   <!DOCTYPE html>
+<html lang="en">
+…
   - Intro
 ---
 
