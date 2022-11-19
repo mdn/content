@@ -83,6 +83,6 @@ catch (e)
 
 ## See also
 
-- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_Expressions)
-- [Character class: `[...]`, `[^...]](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)

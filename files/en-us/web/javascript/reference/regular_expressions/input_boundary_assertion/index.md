@@ -20,6 +20,8 @@ $
 
 More precisely, `^` asserts that the character to the left is out of bounds of the string; `$` asserts that the character to the right is out of bounds of the string. If the [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) flag is set, `^` also matches if the character to the left is a [line terminator](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) character, and `$` also matches if the character to the right is a line terminator.
 
+Unless the `m` flag is set, the `^` and `$` assertions only make sense when placed at the boundaries of the pattern, because any other characters to the left or right of them would necessarily cause the assertion to fail.
+
 The `y` flag doesn't change the meaning of these assertions — see also [anchored sticky flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag).
 
 ## Examples
@@ -43,7 +45,7 @@ The following example checks file types by matching the file extension, which al
 
 ```js
 function isImage(filename) {
-  return /\.(png|jpe?g|webp|avif|gif)$/i.test(filename);
+  return /\.(?:png|jpe?g|webp|avif|gif)$/i.test(filename);
 }
 
 isImage("image.png"); // true
@@ -68,7 +70,7 @@ isValidIdentifier("  foo  "); // true
 
 ## See also
 
-- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_Expressions)
+- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
