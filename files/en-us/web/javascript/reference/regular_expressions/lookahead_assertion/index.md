@@ -58,6 +58,14 @@ The matching of the pattern above happens as follows:
 5. At this position, the lookahead fails to match, because the remaining input does not follow the pattern "any number of `"a"`s, a `"b"`, the same number of `"a"`s, a `c`". This causes the assertion to succeed.
 6. However, because nothing was matched within the assertion, the `\1` backreference has no value, so it matches the empty string. This causes the rest of the input to be consumed by the `(.*)` at the end.
 
+Normally, assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). However, in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, lookahead assertions) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+
+TODO: deprecated regex syntax on that page
+
+```js
+/(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
+```
+
 ## Examples
 
 ### Matching strings without consuming them

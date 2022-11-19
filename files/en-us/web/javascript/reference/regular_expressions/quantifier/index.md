@@ -53,7 +53,7 @@ A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regu
 
 The `?`, `{count}`, and `{min,max}` syntaxes all match for finite times, meaning they are equivalent to enumerating all possibilities in a [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction). However, using quantifiers makes the pattern shorter and more readable.
 
-For the `{count}`, `{min,}`, and `{min,max}` syntaxes, there cannot be white spaces around the numbers — otherwise, it becomes a literal pattern.
+For the `{count}`, `{min,}`, and `{min,max}` syntaxes, there cannot be white spaces around the numbers — otherwise, it becomes a literal pattern. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
 
 ```js example-bad
 const re = /a{1, 3}/;
@@ -100,6 +100,20 @@ In this example, `[ab]+` first greedily matches `"abb"`, but `[abc]c` is not abl
 Greedy quantifiers avoid matching infinitely many empty strings. If the minimum number of matches is reached and no more characters are being consumed by the atom at this position, the quantifier stops matching. This is why `/(a*)*/.exec("b")` does not result in an infinite loop.
 
 Greedy quantifiers try to match as many _times_ as possible; it does not maximize the _length_ of the match. For example, `/(aa|aabaac|ba)*/.exec("aabaac")` matches `"aa"` and then `"ba"` instead of `"aabaac"`.
+
+Quantifiers apply to a single atom. If you want to quantify a longer pattern or a disjunction, you must [group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group) it. Quantifiers cannot be applied to [assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#assertions).
+
+```js
+/^*/; // SyntaxError: Invalid regular expression: nothing to repeat
+```
+
+In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+
+TODO: deprecated regex syntax on that page
+
+```js
+/(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
+```
 
 ## Examples
 
