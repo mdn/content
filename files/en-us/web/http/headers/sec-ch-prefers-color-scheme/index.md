@@ -17,6 +17,10 @@ browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
 
 The **`Sec-CH-Prefers-Color-Scheme`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user's preference for light or dark color themes. A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
+If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Color-Scheme`, the client can then respond with this header to indicate the user's preference for a specific color scheme. The server can send the client appropriately adapted content, for example, images or CSS, to display light text on dark background on subsequent rendered content.
+
+This header is modeled on the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media query.
+
 <table class="properties">
   <tbody>
     <tr>
@@ -46,31 +50,39 @@ Sec-CH-Prefers-Color-Scheme: <preference>
 ### Directives
 
 - `<preference>`
-  - : A string indicating the user preference, either `"light"` or `"dark"`.
+
+  - : The user agent's preference for dark or light content. This is often taken from the underlying operating system's setting. The value of this directive can be either `light` or `dark`. A string indicating the user preference, either `"light"` or `"dark"`.
 
 ## Examples
 
-`Sec-CH-Prefers-Color-Scheme` is a [high entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints). A server requests the `Sec-CH-Prefers-Color-Scheme` header by including the {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Vary")}} in a response to some request from the client, using the name of the desired header as a token. The inclussion of `Vary` header is not necessary for the client to send `Sec-CH-Prefers-Color-Scheme`, but it will indicate that the provided response is tailored to a particular color scheme.
+The client makes an initial request to the server:
+
+```http
+GET / HTTP/1.1
+Host: example.com
+```
+
+The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Color-Scheme`. In this example {{httpheader("Critical-CH")}} is also used, indicating that `Sec-CH-Prefers-Color-Scheme` is considered a [critical client hint](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
 
 ```http
 HTTP/1.1 200 OK
+Content-Type: text/html
 Accept-CH: Sec-CH-Prefers-Color-Scheme
 Vary: Sec-CH-Prefers-Color-Scheme
+Critical-CH: Sec-CH-Prefers-Color-Scheme
 ```
 
-The client may choose to provide the hint, and add the `Sec-CH-Prefers-Color-Scheme` header to subsequent requests. For example, on a Windows computer set to Dark Mode, the client might add the header as shown:
+> **Note:** We've also specified `Sec-CH-Prefers-Color-Scheme` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
+
+The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Color-Scheme` that it has a user preference for dark content:
 
 ```http
-GET /GET /my/page HTTP/1.1
-Host: example.site
-
-Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
-Sec-CH-UA-Mobile: ?0
-Sec-CH-UA-Platform: "Windows"
+GET / HTTP/1.1
+Host: example.com
 Sec-CH-Prefers-Color-Scheme: "dark"
 ```
 
-Note above that the [low entropy headers](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints) are added to the request even though not specified in the server response.
+The client will include the header in subsequent requests in the current session unless the `Accept-CH` changes in responses to indicate that it is no longer supported by the server.
 
 ## Specifications
 

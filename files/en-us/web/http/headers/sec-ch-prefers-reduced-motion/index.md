@@ -64,7 +64,7 @@ The server responds, telling the client via {{httpheader("Accept-CH")}} that it 
 HTTP/1.1 200 OK
 Content-Type: text/html
 Accept-CH: Sec-CH-Prefers-Reduced-Motion
-Vary: Sec-CH-Prefers-Color-Scheme
+Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
