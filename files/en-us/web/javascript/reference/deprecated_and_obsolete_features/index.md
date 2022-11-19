@@ -60,7 +60,7 @@ The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a 
 The following regex syntaxes are deprecated and only available in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode:
 
 - [Lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) are [quantifiable](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
-- [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) that do not refer to an existing capturing group become [legacy octal escapes](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences).
+- [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) that do not refer to an existing capturing group become [legacy octal escapes](#escape_sequences).
 - In [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), character ranges where one boundary is a character class makes the `-` become a literal character.
 - [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character) that're not one of the recognized kinds become "identity escapes".
 - Escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with ASCII letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character.
