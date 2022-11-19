@@ -128,9 +128,10 @@ transform: translate(30%, 50%);
       <td><code>[1 0 0 1 tx ty]</code></td>
     </tr>
   </tbody>
-</table>
+</tabl
+Internal com
 
-### Formal syntax
+
 
 ```css
 translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
