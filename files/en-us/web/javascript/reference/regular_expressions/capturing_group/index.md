@@ -52,6 +52,20 @@ Capturing groups can be used in [lookahead](/en-US/docs/Web/JavaScript/Reference
 /(?<=([ab])+)c/.exec("abc"); // ['', 'a']; because "a" is seen by the lookbehind after it's seen "b"
 ```
 
+Capturing groups can be nested, in which case the outer group is numbered first, then the inner group, because they are ordered by their opening parentheses. If a nested group is repeated by a quantifier, then each time the group matches, the subgroups' results are all overwritten, sometimes with `undefined`.
+
+```js
+/((a+)?(b+)?(c))*/.exec("aacbbbcac"); // ['aacbbbcac', 'ac', 'a', undefined, 'c']
+```
+
+In the example above, the outer group is matched three times:
+
+1. Matches `"aac"`, with subgroups `"aa"`, `undefined`, and `"c"`.
+2. Matches `"bbbc"`, with subgroups `undefined`, `"bbb"`, and `"c"`.
+3. Matches `"ac"`, with subgroups `"a"`, `undefined`, and `"c"`.
+
+The `"bbb"` result from the second match is not preserved, because the third match overwrites it with `undefined`.
+
 You can get the start and end indices of each capturing group in the input string by using the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag. This creates an extra `indices` property on the array returned by `exec()`.
 
 You can optionally specify a [name](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) to a capturing group, which helps avoid pitfalls related to group positions and indexing.
@@ -93,5 +107,7 @@ parseTitle('title="Named capturing groups\' advantages"'); // "Named capturing g
 
 ## See also
 
+- [Regex guide: Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Non-capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
 - [Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

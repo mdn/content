@@ -24,6 +24,7 @@ A regular expression generally matches from left to right. This is why lookahead
 
 ## See also
 
+- [Regex guide: Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
