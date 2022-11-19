@@ -53,7 +53,7 @@ A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regu
 
 The `?`, `{count}`, and `{min,max}` syntaxes all match for finite times, meaning they are equivalent to enumerating all possibilities in a [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction). However, using quantifiers makes the pattern shorter and more readable.
 
-For the `{count}`, `{min,}`, and `{min,max}` syntaxes, there cannot be white spaces around the numbers — otherwise, it becomes a literal pattern. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+For the `{count}`, `{min,}`, and `{min,max}` syntaxes, there cannot be white spaces around the numbers — otherwise, it becomes a literal pattern.
 
 ```js example-bad
 const re = /a{1, 3}/;
@@ -61,7 +61,7 @@ re.test("aa"); // false
 re.test("a{1, 3}"); // true
 ```
 
-This behavior is fixed in the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, where braces cannot appear literally without escaping.
+This behavior is fixed in the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, where braces cannot appear literally without [escaping](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character). The ability to use `{` and `}` literally without escaping is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
 
 ```js
 /a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
@@ -108,8 +108,6 @@ Quantifiers apply to a single atom. If you want to quantify a longer pattern or 
 ```
 
 In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
-
-TODO: deprecated regex syntax on that page
 
 ```js
 /(?=a)?b/.test("b"); // true; the lookahead is matched 0 time

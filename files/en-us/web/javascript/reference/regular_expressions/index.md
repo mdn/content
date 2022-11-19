@@ -44,7 +44,7 @@ A **regular expression** (_regex_ for short) enable
   - : Matches any character in or not in a predefined set of characters.
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - : Matches any character in or not in a set of Unicode characters identified by a Unicode property.
-- [Escape characters: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_characters)
+- [Escape characters: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
   - : Matches a character that may not be able to be conveniently represented in its literal form.
 
 ### Other features

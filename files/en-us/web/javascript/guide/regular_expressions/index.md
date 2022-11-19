@@ -402,12 +402,6 @@ For example, the following regular expression might be used to match against an 
 /\p{L}*/u;
 ```
 
-There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
-
-- Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is not needed and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
-- Curly brackets need to be escaped when not used as [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers). For example, `/{/` is a valid regular expression matching the curly bracket '{', but `/{/u` is not — instead, the bracket should be escaped and `/\\{/u` should be used instead.
-- The `-` character is interpreted differently within character classes. In particular, for Unicode regular expressions, `-` is interpreted as a literal `-` (and not as part of a range) only if it appears at the start or end of the character class. For example, `/[\w-:]/` is a valid regular expression matching a word character, a `-`, or `:`, but `/[\w-:]/u` is an invalid regular expression, as `\w` to `:` is not a well-defined range of characters.
-
 Unicode regular expressions have different execution behavior as well. [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) contains more explanation about this.
 
 ## Examples

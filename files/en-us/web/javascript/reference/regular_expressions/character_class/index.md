@@ -25,7 +25,7 @@ A character class specifies a list of characters between square bracket and matc
 
 - A single character: matches the character itself.
 - A range of characters: matches any character in the inclusive range. The range is specified by two characters separated by a dash (`-`). The first character must be smaller in character value than the second character.
-- Escape sequences: `\b`, `\-`, [character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), [Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), and other [escape characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_characters).
+- Escape sequences: `\b`, `\-`, [character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), [Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), and other [escape characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character).
 
 These syntaxes can occur any number of times, and the character sets they represent are unioned. For example, `/[a-zA-Z0-9]/` matches any letter or digit.
 
@@ -44,8 +44,6 @@ The boundaries of a character range must not specify more than one character, wh
 ```
 
 In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, character ranges where one boundary is a character class makes the `-` become a literal character. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
-
-TODO: deprecated regex syntax on that page
 
 ```js
 /[\s-9]/.test("-"); // true
@@ -70,5 +68,5 @@ The `^` prefix in a character class inverts the match. For example, `[^abc]` mat
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-- [Escape characters: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_characters)
+- [Escape characters: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)

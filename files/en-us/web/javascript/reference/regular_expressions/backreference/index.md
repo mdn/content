@@ -17,11 +17,13 @@ A **backreference** refers to the submatch of a previous [capturing group](/en-U
 ### Parameters
 
 - `N`
-  - : An integer referring to the number of a capturing group.
+  - : A positive integer referring to the number of a capturing group.
 
 ## Description
 
-A backreference is a way to match the same text as previously matched by a capturing group. In [case-insensitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) matching, the backreference may match text with different casing from the original text.
+A backreference is a way to match the same text as previously matched by a capturing group. Capturing groups count from 1, so the first capturing group's result can be referenced with `\1`, the second with `\2`, and so on. `\0` is an [escape character](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character) for the NUL character.
+
+In [case-insensitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) matching, the backreference may match text with different casing from the original text.
 
 ```js
 /(b)\1/i.test("bB"); // true
@@ -33,9 +35,7 @@ The backreference must refer to an existent capturing group. If the number it sp
 /(a)\2/u; // SyntaxError: Invalid regular expression: Invalid escape
 ```
 
-In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, invalid backreferences become a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal) sequence. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
-
-TODO: deprecated regex syntax on that page
+In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, invalid backreferences become a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
 
 ```js
 /(a)\2/.test("a\x02"); // true

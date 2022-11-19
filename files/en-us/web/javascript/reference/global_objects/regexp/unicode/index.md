@@ -19,7 +19,7 @@ The **`unicode`** accessor property of {{jsxref("RegExp")}} instances returns wh
 - Surrogate pairs will be interpreted as whole characters instead of two separate characters. For example, `/[😄]/u` would only match `"😄"` but not `"\ud83d"`.
 - When [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) is automatically advanced (such as when calling [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)), unicode regexes advance by Unicode code points instead of UTF-16 code units.
 
-There are other changes to the parsing behavior that prevent possible syntax mistakes (which are analogous to [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) for regex syntax). This is explained in more detail in [Using Unicode regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#using_unicode_regular_expressions).
+There are other changes to the parsing behavior that prevent possible syntax mistakes (which are analogous to [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) for regex syntax). These syntaxes are all [deprecated and only kept for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on them.
 
 The set accessor of `unicode` is `undefined`. You cannot change this property directly.
 

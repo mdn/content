@@ -60,8 +60,6 @@ The matching of the pattern above happens as follows:
 
 Normally, assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). However, in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, lookahead assertions) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
 
-TODO: deprecated regex syntax on that page
-
 ```js
 /(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
 ```

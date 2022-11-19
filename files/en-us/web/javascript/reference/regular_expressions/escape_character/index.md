@@ -1,6 +1,6 @@
 ---
-title: "Escape characters: \\n, \\u{...}"
-slug: Web/JavaScript/Reference/Regular_expressions/Escape_characters
+title: "Escape character: \\n, \\u{...}"
+slug: Web/JavaScript/Reference/Regular_expressions/Escape_character
 ---
 
 {{JsSidebar}}
@@ -34,7 +34,7 @@ The following escape characters are recognized in regular expressions:
 - `\c` followed by a letter from `A` to `Z` or `a` to `z`
   - : Represents the control character with value equal to the letter's character value modulo 32. For example, `\cJ` represents line break (`\n`), because the code point of `J` is 74, and 74 modulo 32 is 10, which is the code point of line break. Because an uppercase letter and its lowercase form differ by 32, `\cJ` and `\cj` are equivalent. You can represent control characters from 1 to 26 in this form.
 - `\0`
-  - : Represents the U+0000 NUL character. Cannot be followed by a digit (which makes it a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal) sequence).
+  - : Represents the U+0000 NUL character. Cannot be followed by a digit (which makes it a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence).
 - `\^`, `\$`, `\\`, `\.` `\*`, `\+`, `\?`, `\(`, `\)`, `\[`, `\]`, `\{`, `\}`, `\|`, `\/`
   - : Represents the character itself. For example, `\\` represents a backslash, and `\(` represents a left parenthesis. These are syntax characters in regexes (`/` is the delimiter of a regex literal), so they require escaping unless in a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class).
 - `\xHH`
@@ -47,6 +47,15 @@ The following escape characters are recognized in regular expressions:
 In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in unicode mode.
 
 In non-unicode mode, `]`, `{`, and `}` may appear literally if it's not possible to parse them as the end of a character class, or quantifier delimiters. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+
+In non-unicode mode, escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with ASCII letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character. These syntaxes are also deprecated.
+
+```js
+/\c/.test("\\c"); // true
+/[\c0]/.test("\x10"); // true
+/[\c_]/.test("\x1f"); // true
+/\c0/.test("\\c0"); // true
+```
 
 ## Examples
 
