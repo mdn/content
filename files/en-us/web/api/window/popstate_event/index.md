@@ -84,7 +84,7 @@ To better understand when the `popstate` event is fired, consider this simplifie
 11. If **new-entry** has serialized state information saved with it, that information is deserialized into {{domxref("History.state")}}; otherwise, `state` is `null`.
 12. If the value of `state` changed, the `popstate` event is sent to the document.
 13. Any persisted user state is restored, if the browser chooses to do so.
-14. If the original and new entry's shared the same document, but had different fragments in their URLs, send the {{domxref("Window.hashchange_event", "hashchange")}} event to the window.
+14. If the original and new entries shared the same document, but had different fragments in their URLs, send the {{domxref("Window.hashchange_event", "hashchange")}} event to the window.
 
 As you can see, the `popstate` event is nearly the last thing done in the process of navigating pages in this way.
 
