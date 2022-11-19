@@ -10,7 +10,10 @@ tags:
 browser-compat: mathml.elements.math
 ---
 
-{{MathMLRef}}
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
+</section>
 
 **Mathematical Markup Language (MathML)** is an [XML](/en-US/docs/Web/XML)-based language for describing mathematical notation.
 

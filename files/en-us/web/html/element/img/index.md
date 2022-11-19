@@ -131,6 +131,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("height")}}
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
+
+  > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 - {{htmlattrdef("ismap")}}
 
   - : This Boolean attribute indicates that the image is part of a [server-side map](https://en.wikipedia.org/wiki/Image_map#Server-side). If so, the coordinates where the user clicked on the image are sent to the server.
