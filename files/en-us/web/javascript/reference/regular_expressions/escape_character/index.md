@@ -61,7 +61,9 @@ In non-unicode mode, escape sequences within [character classes](/en-US/docs/Web
 
 ## See also
 
-- [Regex guide: Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+- [Regex guide: Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
-- [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+- [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+- [Escape character: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)

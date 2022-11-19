@@ -23,6 +23,8 @@ A word character includes the following:
 - Letters (A–Z, a–z), numbers (0–9), and underscore (_).
 - If the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) and [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flags are both set, other Unicode characters that get canonicalized to one of the characters above through [case folding](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
 
+Word characters are also matched by the `\w` [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape).
+
 Out-of-bounds input positions are considered non-word characters. For example, the following are successful matches:
 
 ```js
@@ -58,4 +60,4 @@ hasThanks("Thanksgiving is around the corner."); // false
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
-- [Escape characters: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
+- [Escape character: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
