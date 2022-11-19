@@ -167,7 +167,7 @@ In the example below, we've used four block and one inline `@layer` at-rules. Th
 1. Creates a named `layout` layer
 2. Creates an unnamed, anonymous layer
 3. Declares a list of three layers and creates only two new layers, `theme` and `utilities`, because `layout` already exists
-4. Adds additional styles to the already existing`layout` layer
+4. Adds additional styles to the already existing `layout` layer
 5. Creates a second unnamed, anonymous layer
 
 ```css
