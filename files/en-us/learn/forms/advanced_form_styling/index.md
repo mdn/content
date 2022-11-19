@@ -13,7 +13,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the bits that are more problematic.
+In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the more problematic bits.
 
 <table>
   <tbody>
@@ -55,7 +55,7 @@ Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) proper
 
 ## appearance: controlling OS-level styling
 
-In the previous article we said that historically, styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.
+In the previous article we said that historically, the styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.
 
 The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. By far the most helpful value, and probably the only one you'll use, is `none`. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.
 
@@ -104,7 +104,7 @@ In most cases, the effect is to remove the stylized border, which makes CSS styl
 
 ### Taming search boxes
 
-[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that in Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example.
+[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example.
 
 This can be fixed using our friend `appearance: none;`, which disables the default appearance:
 
@@ -126,7 +126,7 @@ Interestingly, setting border/background on the search field also fixes this pro
 
 ### Styling checkboxes and radio buttons
 
-Styling a checkbox or a radio button is tricky by default. The sizes of check boxes and radio buttons are not meant to be changed with their default designs, and browsers react very differently when you try.
+Styling a checkbox or a radio button is tricky by default. The sizes of checkboxes and radio buttons are not meant to be changed with their default designs, and browsers react very differently when you try.
 
 For example, consider this simple test case:
 
@@ -504,11 +504,11 @@ You can see the result of the above CSS styling in the below live example (see a
 
 ### Meters and progress bars
 
-[`<meter>`](/en-US/docs/Web/HTML/Element/meter) and [`<progress>`](/en-US/docs/Web/HTML/Element/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to a desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
+[`<meter>`](/en-US/docs/Web/HTML/Element/meter) and [`<progress>`](/en-US/docs/Web/HTML/Element/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
 
 It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
-The article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) provides an example of how to build a custom designed select with HTML, CSS and JavaScript.
+The article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) provides an example of how to build a custom designed select with HTML, CSS, and JavaScript.
 
 ## Test your skills!
 
