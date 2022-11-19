@@ -69,7 +69,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) {{Experimental_Inline}}
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden)
-  - : A Boolean attribute indicates that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
+  - : An enumerated attribute indicates that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
 - [`id`](/en-US/docs/Web/HTML/Global_attributes/id)
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
