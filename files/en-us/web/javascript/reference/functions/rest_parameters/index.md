@@ -120,7 +120,7 @@ myFun("one");
 
 ### Argument length
 
-Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array/length", "length")}} property. If the function's only parameter is a rest parameter, `restParams.length` will be equal to {{jsxref("arguments.length")}}.
+Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array/length", "length")}} property. If the function's only parameter is a rest parameter, `restParams.length` will be equal to [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length).
 
 ```js
 function fun1(...theArgs) {
