@@ -67,6 +67,7 @@ parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM
 
 - [Regex guide: Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
-- [Non-capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
-- [Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+- [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
+- [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
 - [ESLint rule: `prefer-named-capture-group`](https://eslint.org/docs/rules/prefer-named-capture-group)

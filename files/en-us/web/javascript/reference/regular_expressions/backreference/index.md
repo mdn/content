@@ -68,6 +68,6 @@ parseTitle('title="Named capturing groups\' advantages"'); // "Named capturing g
 
 - [Regex guide: Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
-- [Named backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
-- [Capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
-- [Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+- [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
