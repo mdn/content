@@ -30,7 +30,8 @@ createConicGradient(startAngle, x, y)
 ### Parameters
 
 - `startAngle`
-  - : The angle at which to begin the gradient, in radians. Angle measurements start to the right side of the center and move around clockwise.
+  - : The angle at which to begin the gradient, in radians.
+  - Note: As of November 2022, the start angle of createConicGradient() varies across different browsers. Chromium based browsers such as Chrome, Edge, Opera and Samsung Internet follows the canvas tradition and start at 3 o'clock, while other browsers such as Firefox and Safari follows the CSS tradition and starts at 12 o' clock.
 - `x`
   - : The x-axis coordinate of the center of the gradient.
 - `y`
