@@ -11,7 +11,7 @@ browser-compat: javascript.operators.strict_equality
 
 {{jsSidebar("Operators")}}
 
-The strict equality operator (`===`) checks whether its two operands are
+The **strict equality (`===`)** operator checks whether its two operands are
 equal, returning a Boolean result. Unlike the [equality](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) operator,
 the strict equality operator always considers operands of different types to be
 different.

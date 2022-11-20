@@ -59,7 +59,7 @@ function fn() {}
 A [bound function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) does not have a `prototype` property, but may be constructable. When it's constructed, the target function is constructed instead, and if the target function is constructable, it would return a normal instance.
 
 ```js
-const boundFunction = (function () {}).bind(null);
+const boundFunction = function () {}.bind(null);
 ```
 
 A function's `prototype` property, by default, is a plain object with one property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which is a reference to the function itself. The `constructor` property is writable, non-enumerable, and configurable.
@@ -101,7 +101,7 @@ Dog.prototype.species = "dog";
 console.log(new Dog("Jack").species); // "dog"
 ```
 
-This can be made more ergonomic using [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks), which are called when the class is initialized.
+This can be made more ergonomic using [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), which are called when the class is initialized.
 
 ```js
 class Dog {

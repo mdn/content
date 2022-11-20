@@ -151,7 +151,7 @@ new Stamper(obj);
 // now the `this` value. `Stamper` then defines `#stamp` on `obj`
 
 console.log(obj); // In some dev tools, it shows {#stamp: 42}
-console.log(getStamp(obj)); // 42
+console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
 ```
 
@@ -187,21 +187,37 @@ class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD;
 
   static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
     return this.#PRIVATE_STATIC_FIELD;
   }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField {}
 
-try {
-  SubClass.basePublicStaticMethod();
-} catch (e) {
-  console.log(e);
-  // TypeError: Cannot write private member #PRIVATE_STATIC_FIELD
-  // to an object whose class did not declare it
-}
+SubClass.basePublicStaticMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
 ```
+
+This is the same if you call the method with `super`, because [`super` methods are not called with the super class as `this`](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
+
+```js
+class BaseClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD;
+
+  static basePublicStaticMethod() {
+    // When invoked through super, `this` still refers to Subclass
+    return this.#PRIVATE_STATIC_FIELD;
+  }
+}
+
+class SubClass extends BaseClassWithPrivateStaticField {
+  static callSuperBaseMethod() {
+    return super.basePublicStaticMethod();
+  }
+}
+
+SubClass.callSuperBaseMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+```
+
+You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
 
 ### Private methods
 
@@ -246,6 +262,20 @@ class ClassWithPrivateAccessor {
 
 new ClassWithPrivateAccessor();
 // 🎬hello world🛑
+```
+
+Unlike public methods, private methods are not accessible on `Class.prototype`.
+
+```js
+class C {
+  #method() {}
+  static getMethod(x) {
+    return x.#method;
+  }
+}
+
+console.log(C.getMethod(new C())); // [Function: #method]
+console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
 ```
 
 #### Private static methods
@@ -336,7 +366,7 @@ PrivateConstructor.create(); // PrivateConstructor {}
 ## See also
 
 - [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
-- [Working with private class features](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
 - [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - [Public and private class fields](https://v8.dev/features/class-fields) article at the v8.dev site

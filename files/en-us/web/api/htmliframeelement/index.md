@@ -16,7 +16,7 @@ The **`HTMLIFrameElement`** interface provides special properties and methods (b
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
@@ -31,7 +31,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WindowProxy")}}, the window proxy for the nested browsing context.
+  - : Returns a {{glossary("WindowProxy")}}, the window proxy for the nested browsing context.
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
 - {{domxref("HTMLIFrameElement.fetchPriority")}} {{Experimental_Inline}}
@@ -63,7 +63,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.width")}}
   - : A string that reflects the {{htmlattrxref("width", "iframe")}} HTML attribute, indicating the width of the frame.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

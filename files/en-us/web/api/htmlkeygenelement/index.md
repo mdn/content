@@ -19,7 +19,7 @@ browser-compat: api.HTMLKeygenElement
 
 The {{HTMLElement("keygen")}} elements expose the **`HTMLKeygenElement`** interface, which provides special properties and methods (beyond the regular {{domxref("element")}} object interface they also have available to them by inheritance) for manipulating the layout and presentation of `keygen` elements.
 
-## Properties
+## Instance properties
 
 - `autofocus`
   - : A boolean value that reflects the {{ htmlattrxref("autofocus", "keygen") }} HTML attribute, indicating that the form control should have input focus when the page loads.
@@ -42,7 +42,7 @@ The {{HTMLElement("keygen")}} elements expose the **`HTMLKeygenElement`** interf
 - `willValidate`
   - : A boolean value that is always false because `keygen` objects are never candidates for constraint validation.
 
-## Methods
+## Instance methods
 
 - `checkValidity()`
   - : Always returns the boolean value `true` because `HTMLKeygenElement` objects are never candidates for constraint validation.

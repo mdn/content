@@ -33,20 +33,16 @@ splice(start, deleteCount, item1, item2, itemN)
 
 - `start`
 
-  - : The index at which to start changing the array.
-
-    If greater than the length of the array, `start` will be set to the length of the array.
-    In this case, no element will be deleted but the method will behave as an adding function, adding as many elements as items provided.
-
-    If negative, it will begin that many elements from the end of the array.
-    (In this case, the origin is `-1`, meaning `-n` is the index of the `n`th last element, and is therefore equivalent to the index of `array.length - n`.)
-    If `start` is `-Infinity`, it will begin from index `0`.
+  - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+    - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
+    - If `start < -array.length` or `start` is omitted, `0` is used.
+    - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
 
 - `deleteCount` {{optional_inline}}
 
   - : An integer indicating the number of elements in the array to remove from `start`.
 
-    If `deleteCount` is omitted, or if its value is equal to or larger than `array.length - start` (that is, if it is equal to or greater than the number of elements left in the array, starting at `start`), then all the elements from `start` to the end of the array will be deleted. However, it must not be omitted if there is any `item1` parameter.
+    If `deleteCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `deleteCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
 
     If `deleteCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
@@ -70,6 +66,8 @@ If no elements are removed, an empty array is returned.
 The `splice()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It may change the content of `this`. If the specified number of elements to insert differs from the number of elements being removed, the array's `length` will be changed as well. At the same time, it uses [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to create a new array instance to be returned.
 
 If the deleted portion is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the array returned by `splice()` is sparse as well, with those corresponding indices being empty slots.
+
+The `splice()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
@@ -161,6 +159,23 @@ The `splice()` method preserves the array's sparseness.
 const arr = [1, , 3, 4, , 6];
 console.log(arr.splice(1, 2)); // [empty, 3]
 console.log(arr); // [1, 4, empty, 6]
+```
+
+### Calling splice() on non-array objects
+
+The `splice()` method reads the `length` property of `this`. It then updates the integer-keyed properties and the `length` property as needed.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+console.log(Array.prototype.splice.call(arrayLike, 0, 1, 2, 3));
+// [ 5 ]
+console.log(arrayLike);
+// { '0': 2, '1': 3, '3': 4, length: 4, unrelated: 'foo' }
 ```
 
 ## Specifications

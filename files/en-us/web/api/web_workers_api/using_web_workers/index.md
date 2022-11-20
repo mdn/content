@@ -262,7 +262,7 @@ console.log(typeof emulateMessage(example3)); // string
 
 // test #4
 const example4 = {
-  name: 'John Smith',
+  name: 'Carina Anand',
   age: 43,
 };
 console.log(typeof example4); // object
@@ -306,7 +306,7 @@ The [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_al
 
 ### Passing data examples
 
-#### Example #1: Advanced passing JSON Data and creating a switching system
+#### Example 1: Advanced passing JSON Data and creating a switching system
 
 If you have to pass some complex data and have to call many different functions both on the main page and in the Worker, you can create a system which groups everything together.
 
@@ -767,7 +767,7 @@ The web page creates a `<div>` element with the ID `result`, which gets used to 
 
 Finally, a message is sent to the worker to start it.
 
-[Try this example live](https://mdn.github.io/fibonacci-worker/).
+[Try this example live](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/).
 
 ### Dividing tasks among multiple workers
 

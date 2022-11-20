@@ -12,7 +12,7 @@ tags:
 browser-compat: css.selectors.defined
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
 

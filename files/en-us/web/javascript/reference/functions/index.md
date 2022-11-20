@@ -410,7 +410,7 @@ constructor, a function defined by a function declaration can be used before the
 function declaration itself. For example:
 
 ```js
-foo(); // logs "FOO!"
+foo(); // Logs "FOO!"
 function foo() {
   console.log('FOO!');
 }
@@ -646,7 +646,7 @@ are no brackets "()" after the function name so the actual function is not calle
 ## See also
 
 - [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 - [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Function")}}

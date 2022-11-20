@@ -27,7 +27,7 @@ As animations play, they report changes to their {{domxref("Animation.playState"
 - {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent", "AnimationPlaybackEvent()")}}
   - : Constructs a new `AnimationPlaybackEvent` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
   - : The current time of the animation that generated the event.

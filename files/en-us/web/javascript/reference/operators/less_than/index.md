@@ -11,7 +11,7 @@ browser-compat: javascript.operators.less_than
 
 {{jsSidebar("Operators")}}
 
-The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
+The **less than (`<`)** operator returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
 {{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
 
@@ -25,7 +25,7 @@ x < y
 
 The operands are compared with multiple rounds of coercion, which can be summarized as follows:
 
-- First, objects are converted to primitives using [`@@toPrimitive()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one.
+- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[@@toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
 - If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   - Boolean values `true` and `false` are converted to 1 and 0 respectively.

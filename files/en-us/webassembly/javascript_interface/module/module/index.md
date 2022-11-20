@@ -31,7 +31,7 @@ synchronously compile given WebAssembly binary code. However, the primary way to
 > compilation is absolutely required; the asynchronous
 > [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method should be used at all other times.
 
-```js
+```js-nolint
 new WebAssembly.Module(bufferSource)
 ```
 

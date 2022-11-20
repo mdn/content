@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.summary
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 
@@ -36,7 +36,7 @@ The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, ca
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, both the start tag and the end tag are mandatory.</td>
+      <td>None; both the start tag and the end tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

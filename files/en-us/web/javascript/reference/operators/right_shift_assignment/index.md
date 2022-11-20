@@ -12,7 +12,7 @@ browser-compat: javascript.operators.right_shift_assignment
 
 {{jsSidebar("Operators")}}
 
-The right shift assignment operator (`>>=`) moves the specified amount
+The **right shift assignment (`>>=`)** operator moves the specified amount
 of bits to the right and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-right-shift-assignment.html")}}
@@ -29,10 +29,10 @@ x >>= y // x = x >> y
 
 ```js
 let a = 5; //   (00000000000000000000000000000101)
-a >>= 2;   // 1 (00000000000000000000000000000001)
+a >>= 2; //   1 (00000000000000000000000000000001)
 
 let b = -5; //  (-00000000000000000000000000000101)
-b >>= 2;  // -2 (-00000000000000000000000000000010)
+b >>= 2; //  -2 (-00000000000000000000000000000010)
 ```
 
 ## Specifications

@@ -26,7 +26,7 @@ To create a data channel and ask a remote peer to join you, call the {{DOMxRef("
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
@@ -85,7 +85,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indicates whether or not the data channel is _reliable_.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 

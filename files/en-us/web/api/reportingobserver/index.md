@@ -21,11 +21,11 @@ The `ReportingObserver` interface of the [Reporting API](/en-US/docs/Web/API/Rep
 - {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} {{Experimental_Inline}}
   - : Creates a new `ReportingObserver` object instance, which can be used to collect and access reports.
 
-## Properties
+## Instance properties
 
 _This interface has no properties defined on it._
 
-## Methods
+## Instance methods
 
 - {{domxref("ReportingObserver.disconnect()")}} {{Experimental_Inline}}
   - : Stops a reporting observer that had previously started observing from collecting reports.

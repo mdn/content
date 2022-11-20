@@ -89,7 +89,7 @@ The same-origin policy controls interactions between two different origins, such
 Here are some examples of resources which may be embedded cross-origin:
 
 - JavaScript with `<script src="…"></script>`. Error details for syntax errors are only available for same-origin scripts.
-- CSS applied with `<link rel="stylesheet" href="…">`. Due to the [relaxed syntax rules](https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html) of CSS, cross-origin CSS requires a correct `Content-Type` header. Restrictions vary by browser: [Internet Explorer](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)>), [Firefox](https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/), [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/en-us/HT4070) (scroll down to CVE-2010-0051) and [Opera](https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/).
+- CSS applied with `<link rel="stylesheet" href="…">`. Due to the relaxed syntax rules of CSS, cross-origin CSS requires a correct `Content-Type` header. Browsers block stylesheet loads if it is a cross-origin load where the MIME type is incorrect and the resource does not start with a valid CSS construct.
 - Images displayed by {{htmlelement("img")}}.
 - Media played by {{htmlelement("video")}} and {{htmlelement("audio")}}.
 - External resources embedded with {{htmlelement("object")}} and {{htmlelement("embed")}}.
@@ -118,24 +118,24 @@ Specification: [HTML Living Standard § Cross-origin objects](https://html.spec.
 
 The following cross-origin access to these `Window` properties is allowed:
 
-| Methods                                      |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| Methods                           |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| Attributes                               |             |
-| ---------------------------------------- | ----------- |
-| {{domxref("window.closed")}}     | Read only.  |
-| {{domxref("window.frames")}}     | Read only.  |
-| {{domxref("window.length")}}     | Read only.  |
+| Attributes                     |             |
+| ------------------------------ | ----------- |
+| {{domxref("window.closed")}}   | Read only.  |
+| {{domxref("window.frames")}}   | Read only.  |
+| {{domxref("window.length")}}   | Read only.  |
 | {{domxref("window.location")}} | Read/Write. |
-| {{domxref("window.opener")}}     | Read only.  |
-| {{domxref("window.parent")}}     | Read only.  |
+| {{domxref("window.opener")}}   | Read only.  |
+| {{domxref("window.parent")}}   | Read only.  |
 | {{domxref("window.self")}}     | Read only.  |
-| {{domxref("window.top")}}         | Read only.  |
-| {{domxref("window.window")}}     | Read only.  |
+| {{domxref("window.top")}}      | Read only.  |
+| {{domxref("window.window")}}   | Read only.  |
 
 Some browsers allow access to more properties than the above.
 
@@ -143,12 +143,12 @@ Some browsers allow access to more properties than the above.
 
 The following cross-origin access to `Location` properties is allowed:
 
-| Methods                                  |
-| ---------------------------------------- |
+| Methods                         |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| Attributes                           |             |
-| ------------------------------------ | ----------- |
+| Attributes                   |             |
+| ---------------------------- | ----------- |
 | {{domxref("URLUtils.href")}} | Write-only. |
 
 Some browsers allow access to more properties than the above.

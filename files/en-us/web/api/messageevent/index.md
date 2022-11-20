@@ -38,7 +38,7 @@ The action triggered by this event is defined in a function set as the event han
 - {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
   - : Creates a new `MessageEvent`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
@@ -49,11 +49,11 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+  - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("Event")}}._
 

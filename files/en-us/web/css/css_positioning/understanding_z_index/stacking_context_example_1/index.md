@@ -11,13 +11,11 @@ tags:
 
 {{CSSRef}}
 
-« [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+## Description
 
-## Stacking context example 1
+Let's start with a basic example. In the root stacking context, there are two relatively positioned `<div>` elements (DIV #1 and DIV #3) without `z-index` properties. Inside DIV #1, there is an absolutely positioned DIV #2, while in DIV #3, there is an absolutely positioned DIV #4, both without `z-index` properties.
 
-Let's start with a basic example. In the root stacking context we have two DIVs (DIV #1 and DIV #3), both relatively positioned, but without z-index properties. Inside DIV #1 there is an absolutely positioned DIV #2, while in DIV #3 there is an absolutely positioned DIV #4, both without z-index properties.
-
-The only stacking context is the root context. Without z-indexes, elements are stacked in order of occurrence.
+The only stacking context is the root context. Without `z-index` values, elements are stacked in order of occurrence.
 
 ![Stacking context example 1](understanding_zindex_05a.png)
 
@@ -29,16 +27,16 @@ Then if DIV #4 is also assigned a positive z-index greater than DIV #2's z-index
 
 ![Stacking context example 1](understanding_zindex_05c.png)
 
-In this last example you can see that DIV #2 and DIV #4 are not siblings, because they belong to different parents in the HTML elements' hierarchy. Even so, stacking of DIV #4 with respect of DIV #2 can be controlled through z-index. It happens that, since DIV #1 and DIV #3 are not assigned any z-index value, they do not create a stacking context. This means that all their content, including DIV #2 and DIV #4, belongs to the same root stacking context.
+In this last example you can see that DIV #2 and DIV #4 are not siblings, because they belong to different parents in the HTML elements' hierarchy. Even so, stacking of DIV #4 with respect of DIV #2 can be controlled through `z-index`. It happens that, since DIV #1 and DIV #3 are not assigned any z-index value, they do not create a stacking context. This means that all their content, including DIV #2 and DIV #4, belongs to the same root stacking context.
 
 In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root element, and the resulting hierarchy is the following:
 
-- root stacking context
+- Root stacking context
 
-  - DIV #2 (z-index 1)
-  - DIV #4 (z-index 2)
+  - DIV #2 (`z-index`: 1)
+  - DIV #4 (`z-index`: 2)
 
-> **Note:** DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a z-index value. And this example shows what happens when a parent element does not create a stacking context.
+> **Note:** DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a `z-index` value. And this example shows what happens when a parent element does not create a stacking context.
 
 ## Example
 
@@ -46,28 +44,22 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ```html
 <div id="div1">
-<br /><span class="bold">DIV #1</span>
-<br />position: relative;
-   <div id="div2">
-   <br /><span class="bold">DIV #2</span>
-   <br />position: absolute;
-   <br />z-index: 1;
-   </div>
+  <br /><span class="bold">DIV #1</span> <br />position: relative;
+  <div id="div2">
+    <br /><span class="bold">DIV #2</span> <br />position: absolute;
+    <br />z-index: 1;
+  </div>
 </div>
 
 <br />
 
 <div id="div3">
-<br /><span class="bold">DIV #3</span>
-<br />position: relative;
-   <div id="div4">
-   <br /><span class="bold">DIV #4</span>
-   <br />position: absolute;
-   <br />z-index: 2;
-   </div>
+  <br /><span class="bold">DIV #3</span> <br />position: relative;
+  <div id="div4">
+    <br /><span class="bold">DIV #4</span> <br />position: absolute;
+    <br />z-index: 2;
+  </div>
 </div>
-
-</body></html>
 ```
 
 ### CSS
@@ -78,6 +70,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
   font-size: 12px;
   font-weight: bold;
 }
+
 #div1,
 #div3 {
   height: 80px;
@@ -86,6 +79,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
   background-color: #ccffcc;
   padding-left: 5px;
 }
+
 #div2 {
   opacity: 0.8;
   z-index: 1;
@@ -98,6 +92,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
   background-color: #ffdddd;
   text-align: center;
 }
+
 #div4 {
   opacity: 0.8;
   z-index: 2;
@@ -113,7 +108,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 }
 ```
 
-### Result
+## Result
 
 {{ EmbedLiveSample('Example', '', '300') }}
 

@@ -9,7 +9,7 @@ tags:
 browser-compat: mathml.global_attributes.mathsize
 ---
 
-{{MathMLRef("Global_attributes")}}{{Deprecated_Header}}
+{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}{{Deprecated_Header}}
 
 The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [font-size](/en-US/docs/Web/CSS/font-size) of a MathML element.
 
@@ -29,6 +29,7 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
+
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
 
 - {{cssxref("&lt;percentage&gt;")}}

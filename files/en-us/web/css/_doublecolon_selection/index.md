@@ -92,8 +92,6 @@ Color contrast ratio is found by comparing the luminosity of the selected text a
 
 {{Specifications}}
 
-> **Note:** `::selection` was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved [(based on discussion in the W3C Style mailing list)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html). It returned in [Pseudo-Elements Level 4](https://drafts.csswg.org/css-pseudo-4/).
-
 ## Browser compatibility
 
 {{Compat}}

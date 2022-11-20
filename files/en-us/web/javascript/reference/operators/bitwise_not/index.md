@@ -12,7 +12,7 @@ browser-compat: javascript.operators.bitwise_not
 
 {{jsSidebar("Operators")}}
 
-The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwise operators, it converts the operand to a 32-bit signed integer
+The **bitwise NOT (`~`)** operator inverts the bits of its operand. Like other bitwise operators, it converts the operand to a 32-bit signed integer
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}
 
@@ -64,9 +64,9 @@ Note that due to using 32-bit representation for numbers both `~-1` and
 ### Using bitwise NOT
 
 ```js
-~0;  // -1
+~0; // -1
 ~-1; // 0
-~1;  // -2
+~1; // -2
 ```
 
 ## Specifications

@@ -20,9 +20,9 @@ Format-control characters have no visual representation but are used to control 
 
 | Code point | Name                  | Abbreviation | Description                                                                                                                                                                                                                    |
 | ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `U+200C`   | Zero width non-joiner | \<ZWNJ>      | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
-| `U+200D`   | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF`   | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
+| U+200C     | Zero width non-joiner | \<ZWNJ>      | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
+| U+200D     | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| U+FEFF     | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
 
 In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as identifier parts, while \<BOM> (also called a zero-width no-break space \<ZWNBSP> when not at the start of text) is treated as whitespace.
 
@@ -30,14 +30,21 @@ In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as identifier parts, w
 
 [White space](/en-US/docs/Glossary/Whitespace) characters improve the readability of source text and separate tokens from each other. These characters are usually unnecessary for the functionality of the code. [Minification tools](https://en.wikipedia.org/wiki/Minification_%28programming%29) are often used to remove whitespace in order to reduce the amount of data that needs to be transferred.
 
-| Code point | Name                           | Abbreviation | Description                                                                                               | Escape sequence |
-| ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | \<TAB>       | Horizontal tabulation                                                                                     | \t              |
-| U+000B     | Line tabulation                | \<VT>        | Vertical tabulation                                                                                       | \v              |
-| U+000C     | Form feed                      | \<FF>        | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f              |
-| U+0020     | Space                          | \<SP>        | Normal space                                                                                              |                 |
-| U+00A0     | No-break space                 | \<NBSP>      | Normal space, but no point at which a line may break                                                      |                 |
-| Others     | Other Unicode space characters | \<USP>       | [Spaces in Unicode on Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
+| Code point | Name                           | Abbreviation | Description                                                                                        | Escape sequence |
+| ---------- | ------------------------------ | ------------ | -------------------------------------------------------------------------------------------------- | --------------- |
+| U+0009     | Character tabulation           | \<TAB>       | Horizontal tabulation                                                                              | \t              |
+| U+000B     | Line tabulation                | \<VT>        | Vertical tabulation                                                                                | \v              |
+| U+000C     | Form feed                      | \<FF>        | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f              |
+| U+0020     | Space                          | \<SP>        | Normal space                                                                                       |                 |
+| U+00A0     | No-break space                 | \<NBSP>      | Normal space, but no point at which a line may break                                               |                 |
+| U+FEFF     | Zero-width no-break space      | \<ZWNBSP>    | When not at the start of a script, the BOM marker is a normal whitespace character.                |                 |
+| Others     | Other Unicode space characters | \<USP>       | [Characters in the "Space_Separator" general category][space separator set]                        |                 |
+
+[space separator set]: https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BGeneral_Category%3DSpace_Separator%7D
+
+> **Note:** Of those [characters with the "White_Space" property but are not in the "Space_Separator" general category](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D), U+0009, U+000B, and U+000C are still treated as white space in JavaScript; U+0085 NEXT LINE has no special role; others become the set of [line terminators](#line_terminators).
+
+> **Note:** Changes to the Unicode standard used by the JavaScript engine may affect programs' behavior. For example, ES2016 upgraded the reference Unicode standard from 5.1 to 8.0.0, which caused U+180E MONGOLIAN VOWEL SEPARATOR to be moved from the "Space_Separator" category to the "Format (Cf)" category, and made it a non-whitespace. Subsequently, the result of [`"\u180E".trim().length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim) changed from `0` to `1`.
 
 ## Line terminators
 
@@ -56,7 +63,9 @@ Only the following Unicode code points are treated as line terminators in ECMASc
 
 Comments are used to add hints, notes, suggestions, or warnings to JavaScript code. This can make it easier to read and understand. They can also be used to disable code to prevent it from being executed; this can be a valuable debugging tool.
 
-JavaScript has two long-standing ways to add comments to code.
+JavaScript has two long-standing ways to add comments to code: line comments and block comments. In addition, there's a special hashbang comment syntax.
+
+### Line comments
 
 The first way is the `//` comment; this makes all text following it on the same line into a comment. For example:
 
@@ -67,6 +76,8 @@ function comment() {
 }
 comment();
 ```
+
+### Block comments
 
 The second way is the `/* */` style, which is much more flexible.
 
@@ -110,6 +121,8 @@ comment();
 ```
 
 In this case, the `console.log()` call is never issued, since it's inside a comment. Any number of lines of code can be disabled this way.
+
+### Hashbang comments
 
 There's a special third comment syntax, the **hashbang comment**. A hashbang comment behaves exactly like a single line-only (`//`) comment, except that it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
 
@@ -171,7 +184,7 @@ class C {
 
 _Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
 
-Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const`- and `let`-declarations.
+Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
@@ -208,7 +221,6 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/new", "new")}}
 - {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
-- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
@@ -220,11 +232,11 @@ These keywords cannot be used as identifiers for variables, functions, classes, 
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/with", "with")}}
-- {{jsxref("Operators/yield", "yield")}}
 
 The following are only reserved when they are found in strict mode code:
 
 - {{jsxref("Statements/let", "let")}} (also reserved in `const`, `let`, and class declarations)
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/yield", "yield")}} (also reserved in generator function bodies)
 
 The following are only reserved when they are found in module code or async function bodies:
@@ -274,9 +286,12 @@ The following are reserved as future keywords by older ECMAScript specifications
 A few identifiers have a special meaning in some contexts without being reserved words of any kind. They include:
 
 - {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- `as` ([`import * as ns from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import))
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- `from` ([`import x from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import))
 - {{jsxref("Functions/get", "get")}}
+- [`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - {{jsxref("Functions/set", "set")}}
 
 ## Literals
@@ -320,13 +335,13 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is _exponent_ or _power_ number – a signed integer.
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
-175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
-1E3    // => 1000
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
 ```
 
 #### Binary
@@ -573,7 +588,7 @@ This rule is a complement to the previous rule, specifically for the case where 
 - `(param) <here> => {}`
 - `async <here> function`, `async <here> prop()`, `async <here> function*`, `async <here> *prop()`, `async <here> (param) <here> => {}`
 
-Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
+Here [`++`](/en-US/docs/Web/JavaScript/Reference/Operators/Increment) is not treated as a postfix operator applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
 ```js
 a = b

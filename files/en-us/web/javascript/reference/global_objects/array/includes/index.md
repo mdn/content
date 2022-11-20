@@ -31,24 +31,12 @@ includes(searchElement, fromIndex)
 ### Parameters
 
 - `searchElement`
-
   - : The value to search for.
-
-    > **Note:** When comparing strings and characters,
-    > `includes()` is _case-sensitive_.
-
 - `fromIndex` {{optional_inline}}
-
-  - : The position in this array at which to begin searching for
-    `searchElement`.
-
-    The first element to be searched is found at `fromIndex` for
-    positive values of `fromIndex`, or at
-    `arr.length + fromIndex` for negative values of
-    `fromIndex` (using the [absolute value](https://en.wikipedia.org/wiki/Absolute_value) of `fromIndex` as the number of elements from the end
-    of the array at which to start the search).
-
-    Defaults to `0`.
+  - : Zero-based index at which to start searching, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+    - Negative index counts back from the end of the array — if `fromIndex < 0`, `fromIndex + array.length` is used. However, the array is still searched from front to back in this case.
+    - If `fromIndex < -array.length` or `fromIndex` is omitted, `0` is used, causing the entire array to be searched.
+    - If `fromIndex >= array.length`, the array is not searched and `false` is returned.
 
 ### Return value
 
@@ -56,11 +44,11 @@ A boolean value which is `true` if the value `searchElement` is found within the
 
 ## Description
 
-Values of zero are all considered to be equal, regardless of sign. (That is, `-0` is considered to be equal to both `0` and `+0`), but `false` is _not_ considered to be the same as `0`. [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) can be correctly searched for.
-
-> **Note:** Technically speaking, `includes()` uses the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm to determine whether the given element is found.
+The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) algorithm. Values of zero are all considered to be equal, regardless of sign. (That is, `-0` is equal to `0`), but `false` is _not_ considered to be the same as `0`. [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) can be correctly searched for.
 
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
+
+The `includes()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -115,20 +103,21 @@ You can search for `undefined` in a sparse array and get `true`.
 console.log([1, , 3].includes(undefined)); // true
 ```
 
-### includes() used as a generic method
+### Calling includes() on non-array objects
 
-`includes()` method is intentionally generic. It does not require
-`this` value to be an Array object, so it can be applied to other kinds of
-objects (e.g. array-like objects).
-
-The example below illustrates `includes()` method called on the function's
-[arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
+The `includes()` method reads the `length` property of `this` and then accesses each integer index.
 
 ```js
-(function () {
-  console.log(Array.prototype.includes.call(arguments, 'a')); // true
-  console.log(Array.prototype.includes.call(arguments, 'd')); // false
-})('a', 'b', 'c');
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.includes.call(arrayLike, 2));
+// true
+console.log(Array.prototype.includes.call(arrayLike, 1));
+// false
 ```
 
 ## Specifications

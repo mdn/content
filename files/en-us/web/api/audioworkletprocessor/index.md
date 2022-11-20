@@ -25,12 +25,12 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : Creates a new instance of an `AudioWorkletProcessor` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioWorkletProcessor.port", "port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the processor and the {{domxref("AudioWorkletNode")}} which it belongs to. The other end is available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
-## Methods
+## Instance methods
 
 _The `AudioWorkletProcessor` interface does not define any methods of its own. However, you must provide a {{domxref("AudioWorkletProcessor.process", "process()")}} method, which is called in order to process the audio stream._
 

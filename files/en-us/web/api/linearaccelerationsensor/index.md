@@ -31,11 +31,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("LinearAccelerationSensor.LinearAccelerationSensor", "LinearAccelerationSensor()")}}
   - : Creates a new `LinearAccelerationSensor` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestors, {{domxref('Accelerometer')}}, {{domxref("Sensor")}}, and {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _`LinearAccelerationSensor` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 

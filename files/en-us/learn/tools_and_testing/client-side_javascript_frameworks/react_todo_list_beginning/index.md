@@ -74,7 +74,7 @@ Then, copy and paste the following commands into your terminal to delete some un
 # Move into the src directory of your project
 cd src
 # Delete a few files
-rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
+rm -- App.test.js App.css logo.svg reportWebVitals.js setupTests.js
 # Move back up to the root of the project
 cd ..
 ```
@@ -86,7 +86,7 @@ Notes:
 
 ## Project starter code
 
-As a starting point for this project, we're going to provide two things: An `App()` function to replace the one you have now, and some CSS to style your app.
+As a starting point for this project, we're going to provide two things: an `App()` function to replace the one you have now, and some CSS to style your app.
 
 ### The JSX
 
@@ -208,7 +208,7 @@ It's ugly, and doesn't function yet, but that's okay — we'll style it in a mom
 - We have a [`<form>`](/en-US/docs/Web/HTML/Element/form) element, with an [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) for writing out a new task, and a button to submit the form.
 - We have an array of buttons that will be used to filter our tasks.
 - We have a heading that tells us how many tasks remain.
-- We have our 3 tasks, arranged in an un-ordered list. Each task is a list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)), and has buttons to edit and delete it and a checkbox to check it off as done.
+- We have our 3 tasks, arranged in an unordered list. Each task is a list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)), and has buttons to edit and delete it and a checkbox to check it off as done.
 
 The form will allow us to _make_ tasks; the buttons will let us _filter_ them; the heading and list are our way to _read_ them. The UI for _editing_ a task is conspicuously absent for now. That's okay – we'll write that later.
 
