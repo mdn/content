@@ -20,7 +20,7 @@ For an alphabetical listing see the sidebar on the left.
 
 ### Primary expressions
 
-Basic keywords and general expressions in JavaScript.
+Basic keywords and general expressions in JavaScript. These expressions have the highest [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 - {{JSxRef("Operators/this", "this")}}
   - : The `this` keyword refers to a special property of an execution context.
@@ -30,14 +30,8 @@ Basic keywords and general expressions in JavaScript.
   - : The `class` keyword defines a class expression.
 - {{JSxRef("Operators/function*", "function*")}}
   - : The `function*` keyword defines a generator function expression.
-- {{JSxRef("Operators/yield", "yield")}}
-  - : Pause and resume a generator function.
-- {{JSxRef("Operators/yield*", "yield*")}}
-  - : Delegate to another generator function or iterable object.
 - {{JSxRef("Operators/async_function", "async function")}}
   - : The `async function` defines an async function expression.
-- {{JSxRef("Operators/await", "await")}}
-  - : Pause and resume an async function and wait for the promise's resolution/rejection.
 - {{JSxRef("Operators/async_function*", "async function*")}}
   - : The `async function*` keywords define an async generator function expression.
 - {{JSxRef("Global_Objects/Array", "[]")}}
@@ -46,6 +40,10 @@ Basic keywords and general expressions in JavaScript.
   - : Object initializer/literal syntax.
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
   - : Regular expression literal syntax.
+- [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
+  - : Basic `null`, boolean, number, and string literals.
+- {{JSxRef("Template_literals", "`string`")}}
+  - : Template literal syntax.
 - {{JSxRef("Operators/Grouping", "( )")}}
   - : Grouping operator.
 
@@ -54,8 +52,9 @@ Basic keywords and general expressions in JavaScript.
 Left values are the destination of an assignment.
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-  - : Member operators provide access to a property or method of an object
-    (`object.property` and `object["property"]`).
+  - : Member operators provide access to a property or method of an object (`object.property` and `object["property"]`).
+- {{JSxRef("Operators/Optional_chaining", "?.")}}
+  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 - {{JSxRef("Operators/new", "new")}}
   - : The `new` operator creates an instance of a constructor.
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
@@ -63,9 +62,9 @@ Left values are the destination of an assignment.
 - {{JSxRef("Operators/import%2Emeta", "import.meta")}}
   - : An object exposing context-specific metadata to a JavaScript module.
 - {{JSxRef("Operators/super", "super")}}
-  - : The `super` keyword calls the parent constructor.
-- {{JSxRef("Operators/Spread_syntax", "...obj")}}
-  - : Spread syntax allows an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) are expected.
+  - : The `super` keyword calls the parent constructor or allows accessing properties of the parent object.
+- {{JSxRef("Operators/import", "import()")}}
+  - : The `import()` syntax allows loading a module asynchronously and dynamically into a potentially non-module environment.
 
 ### Increment and decrement
 
@@ -87,7 +86,7 @@ A unary operation is an operation with only one operand.
 - {{JSxRef("Operators/delete", "delete")}}
   - : The `delete` operator deletes a property from an object.
 - {{JSxRef("Operators/void", "void")}}
-  - : The `void` operator discards an expression's return value.
+  - : The `void` operator evaluates an expression and discards its return value.
 - {{JSxRef("Operators/typeof", "typeof")}}
   - : The `typeof` operator determines the type of a given object.
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -98,6 +97,8 @@ A unary operation is an operation with only one operand.
   - : Bitwise NOT operator.
 - {{JSxRef("Operators/Logical_NOT", "!")}}
   - : Logical NOT operator.
+- {{JSxRef("Operators/await", "await")}}
+  - : Pause and resume an async function and wait for the promise's fulfillment/rejection.
 
 ### Arithmetic operators
 
@@ -172,7 +173,7 @@ Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and 
 
 ### Binary logical operators
 
-Logical operators are typically used with boolean (logical) values, and when they are, they return a boolean value.
+Logical operators implement boolean (logical) values and have short-circuiting behavior.
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
   - : Logical AND.
@@ -185,11 +186,6 @@ Logical operators are typically used with boolean (logical) values, and when the
 
 - {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
   - : The conditional operator returns one of two values based on the logical value of the condition.
-
-### Optional Chaining operator
-
-- {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ### Assignment operators
 
@@ -229,6 +225,18 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Nullish coalescing assignment.
 - [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
   - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
+
+### Yield operators
+
+- {{JSxRef("Operators/yield", "yield")}}
+  - : Pause and resume a generator function.
+- {{JSxRef("Operators/yield*", "yield*")}}
+  - : Delegate to another generator function or iterable object.
+
+### Spread syntax
+
+- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+  - : Spread syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
 
 ### Comma operator
 

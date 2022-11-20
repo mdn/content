@@ -25,10 +25,10 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ### Value properties
 
-- {{JSxRef("globalThis")}}
 - {{JSxRef("Infinity")}}
 - {{JSxRef("NaN")}}
 - {{JSxRef("undefined")}}
+- {{JSxRef("globalThis")}}
 
 ### Function properties
 
@@ -37,10 +37,12 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
 - {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
 - {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
 - {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
+- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+- {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 
@@ -52,15 +54,16 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 ### Error objects
 
 - {{JSxRef("Error")}}
+- {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
+- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}
 - {{JSxRef("TypeError")}}
 - {{JSxRef("URIError")}}
-- {{JSxRef("AggregateError")}}
 
-### Numbers & dates
+### Numbers and dates
 
 - {{JSxRef("Number")}}
 - {{JSxRef("BigInt")}}
@@ -72,7 +75,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("String")}}
 - {{JSxRef("RegExp")}}
 
-### Indexed Collections
+### Indexed collections
 
 - {{JSxRef("Array")}}
 - {{JSxRef("Int8Array")}}
@@ -82,10 +85,10 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Uint16Array")}}
 - {{JSxRef("Int32Array")}}
 - {{JSxRef("Uint32Array")}}
-- {{JSxRef("BigInt64Array")}}
-- {{JSxRef("BigUint64Array")}}
 - {{JSxRef("Float32Array")}}
 - {{JSxRef("Float64Array")}}
+- {{JSxRef("BigInt64Array")}}
+- {{JSxRef("BigUint64Array")}}
 
 ### Keyed collections
 
@@ -98,23 +101,23 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{JSxRef("ArrayBuffer")}}
 - {{JSxRef("SharedArrayBuffer")}}
-- {{JSxRef("DataView")}}
 - {{JSxRef("Atomics")}}
+- {{JSxRef("DataView")}}
 - {{JSxRef("JSON")}}
 
-### Memory management
+### Managing memory
 
 - {{JSxRef("WeakRef")}}
-- {{JsxRef("FinalizationRegistry")}}
+- {{JSxRef("FinalizationRegistry")}}
 
-### Control abstraction
+### Control abstraction objects
 
 - {{JSxRef("Promise")}}
-- {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("AsyncGeneratorFunction")}}
 - {{JSxRef("Generator")}}
-- {{JSxRef("AsyncGenerator")}}
+- {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncFunction")}}
+- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
+- {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
 
 ### Reflection
 
@@ -140,16 +143,15 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ### Control flow
 
-- {{jsxref("Statements/block", "Block", "", 1)}}
-- {{jsxref("Statements/Empty", "Empty statement", "", 1)}}
+- {{jsxref("Statements/return", "return")}}
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/if...else", "if...else")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 
-### Declarations
+### Declaring variables
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
@@ -161,7 +163,6 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Statements/async_function", "async function")}}
 - {{jsxref("Statements/async_function*", "async function*")}}
-- {{jsxref("Statements/return", "return")}}
 - {{jsxref("Statements/class", "class")}}
 
 ### Iterations
@@ -173,13 +174,15 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{jsxref("Statements/for-await...of", "for await...of")}}
 - {{jsxref("Statements/while", "while")}}
 
-### Other
+### Others
 
+- {{jsxref("Statements/Empty", "Empty","",1)}}
+- {{jsxref("Statements/block", "Block","",1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}
-- {{jsxref("Statements/label", "label")}}
-- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Statements/label", "label", "", 1)}}
+- {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
 
 ## Expressions and operators
 
@@ -191,28 +194,26 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
-- {{JSxRef("Operators/yield", "yield")}}
-- {{JSxRef("Operators/yield*", "yield*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
 - {{JSxRef("Operators/async_function*", "async function*")}}
-- {{JSxRef("Operators/await", "await")}}
 - {{JSxRef("Global_Objects/Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
+- {{JSxRef("Template_literals", "`string`")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 
 ### Left-hand-side expressions
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- [`?.` (Optional chaining)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- {{JSxRef("Operators/Optional_chaining", "?.")}}
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
 - {{JSxRef("Operators/import%2Emeta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
-- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+- {{JSxRef("Operators/import", "import()")}}
 
-### Increment & decrement
+### Increment and decrement
 
 - {{JSxRef("Operators/Increment", "A++")}}
 - {{JSxRef("Operators/Decrement", "A--")}}
@@ -228,10 +229,11 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Unary_negation", "-")}}
 - {{JSxRef("Operators/Bitwise_NOT", "~")}}
 - {{JSxRef("Operators/Logical_NOT", "!")}}
+- {{JSxRef("Operators/await", "await")}}
 
 ### Arithmetic operators
 
-- {{JSxRef("Operators/Addition", "+")}}
+- {{JSxRef("Operators/Addition", "+")}} (Plus)
 - {{JSxRef("Operators/Subtraction", "-")}}
 - {{JSxRef("Operators/Division", "/")}}
 - {{JSxRef("Operators/Multiplication", "*")}}
@@ -242,8 +244,8 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{JSxRef("Operators/in", "in")}}
 - {{JSxRef("Operators/instanceof", "instanceof")}}
-- {{JSxRef("Operators/Less_than", "&lt;")}}
-- {{JSxRef("Operators/Greater_than", "&gt;")}}
+- {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
+- {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
 
@@ -294,10 +296,18 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
 - {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-### Comma operators
+### Yield operators
+
+- {{JSxRef("Operators/yield", "yield")}}
+- {{JSxRef("Operators/yield*", "yield*")}}
+
+### Spread syntax
+
+- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+
+### Comma operator
 
 - {{JSxRef("Operators/Comma_Operator", ",")}}
 
@@ -317,9 +327,19 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 [JavaScript classes.](/en-US/docs/Web/JavaScript/Reference/Classes)
 
+- {{JSxRef("Classes/Constructor", "constructor")}}
+- {{JSxRef("Classes/extends", "extends")}}
+- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- {{JSxRef("Classes/static", "static")}}
+- [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+
 ## Additional reference pages
 
 - {{JSxRef("Lexical_grammar", "Lexical grammar", "", 1)}}
 - [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
+- [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)
 - {{JSxRef("Strict_mode", "Strict mode", "", 1)}}
 - {{JSxRef("Deprecated_and_obsolete_features", "Deprecated features", "", 1)}}

@@ -85,7 +85,7 @@ For an alphabetical listing see the sidebar on the left.
   - : Used to import functions exported from an external module, another script.
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
-- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
   - : Extends the scope chain for a statement.
 
 ## Difference between statements and declarations

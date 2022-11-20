@@ -44,14 +44,12 @@ These global functions—functions which are called globally, rather than on an 
 - {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
 - {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- **Deprecated**
-
-  - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
-  - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+- {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+- {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 
-These are the fundamental, basic objects upon which all other objects are based. This includes general objects, booleans, functions, and symbols.
+These objects represent fundamental language constructs.
 
 - {{JSxRef("Object")}}
 - {{JSxRef("Function")}}
@@ -124,6 +122,13 @@ These objects represent and interact with structured data buffers and data coded
 - {{JSxRef("DataView")}}
 - {{JSxRef("JSON")}}
 
+### Managing memory
+
+These objects interact with the garbage collection mechanism.
+
+- {{JSxRef("WeakRef")}}
+- {{JSxRef("FinalizationRegistry")}}
+
 ### Control abstraction objects
 
 Control abstractions can help to structure code, especially async code (without using deeply nested callbacks, for example).
@@ -147,8 +152,10 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 - {{JSxRef("Intl")}}
 - {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
 - {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
 - {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
+- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
 - {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
 - {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
 - {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
+- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
