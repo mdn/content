@@ -15,7 +15,7 @@ browser-compat: javascript.operators.yield_star
 
 {{jsSidebar("Operators")}}
 
-The **`yield*` expression** is used to
+The **`yield*`** operator is used to
 delegate to another {{jsxref("Statements/function*", "generator")}} or iterable
 object.
 

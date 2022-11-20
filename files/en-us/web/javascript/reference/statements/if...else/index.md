@@ -13,7 +13,7 @@ browser-compat: javascript.statements.if_else
 
 {{jsSidebar("Statements")}}
 
-The **`if`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
+The **`if...else`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
 
 {{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
 

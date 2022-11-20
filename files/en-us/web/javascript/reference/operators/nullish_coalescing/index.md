@@ -12,7 +12,7 @@ browser-compat: javascript.operators.nullish_coalescing
 
 {{JSSidebar("Operators")}}
 
-The **nullish coalescing operator (`??`)** is a logical
+The **nullish coalescing (`??`)** operator is a logical
 operator that returns its right-hand side operand when its left-hand side operand is
 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, and otherwise returns its left-hand side
 operand.

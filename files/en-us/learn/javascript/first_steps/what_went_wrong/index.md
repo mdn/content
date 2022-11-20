@@ -73,6 +73,10 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 3. If we look at line 86 in our code editor, we'll find this line:
 
+   > **Warning:** Error message may not be on line 86.
+   >
+   > If you are using any code editor with an extension that launches a live server on your local machine, this will cause extra code to be injected. Because of this, the developer tools will list the error as occurring on a line that is not 86.
+
    ```js
    guessSubmit.addeventListener("click", checkGuess);
    ```

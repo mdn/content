@@ -28,17 +28,17 @@ at(index)
 ### Parameters
 
 - `index`
-  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index; i.e. if a negative number is used, the element returned will be found by counting back from the end of the array.
+  - : Zero-based index of the array element to be returned, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). Negative index counts back from the end of the array — if `index < 0`, `index + array.length` is accessed.
 
 ### Return value
 
-The element in the array matching the given index. Returns {{jsxref('undefined')}} if the given index can not be found.
+The element in the array matching the given index. Always returns {{jsxref('undefined')}} if `index < -array.length` or `index >= array.length` without attempting to access the corresponding property.
 
 ## Description
 
 The `at()` method is equivalent to the bracket notation when `index` is non-negative. For example, `array[0]` and `array.at(0)` both return the first item. However, when counting elements from the end of the array, you cannot use `array[-1]` like you may in Python or R, because all values inside the square brackets are treated literally as string properties, so you will end up reading `array["-1"]`, which is just a normal string property instead of an array index.
 
-The usual practice is to access {{jsxref("Array/length", "length")}} and calculate the index from that — for example, `array[array.length - 1]`. The `at()` method allows relative indexing so this can be shortened to `array.at(-1)`. More formally, when `index < 0`, `index + array.length` is accessed.
+The usual practice is to access {{jsxref("Array/length", "length")}} and calculate the index from that — for example, `array[array.length - 1]`. The `at()` method allows relative indexing, so this can be shortened to `array.at(-1)`.
 
 The `at()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
