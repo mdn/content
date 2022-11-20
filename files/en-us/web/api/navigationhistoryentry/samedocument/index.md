@@ -30,7 +30,7 @@ A boolean.
 ## Examples
 
 ```js
-let current = navigation.currentEntry;
+const current = navigation.currentEntry;
 console.log(current.sameDocument);
 // Will always return true
 ```

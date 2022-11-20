@@ -30,7 +30,7 @@ A number representing the `index` of the entry in the history entries list, or `
 ## Examples
 
 ```js
-let current = navigation.currentEntry;
+const current = navigation.currentEntry;
 console.log(current.index);
 ```
 

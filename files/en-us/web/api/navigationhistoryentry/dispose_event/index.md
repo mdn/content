@@ -28,7 +28,7 @@ Disposal occurs when:
 
 - Forward history entries are cleared. See the example at [Notifications on entry disposal](https://github.com/wicg/navigation-api#notifications-on-entry-disposal) for more information.
 - The user clears their browser history using settings or provided UI controls.
-- The 50-page history limit is exceeded. This is not specified anywhere, but it is widely implemented. See the discussion in [How to Manipulate history.length and set it to more than 50](https://stackoverflow.com/questions/25275418/how-to-manipulate-history-length-and-set-it-to-more-than-50).
+- The history limit is exceeded. This is not specified anywhere, but browsers tend to have a history limit of 50 pages.
 
 ## Syntax
 

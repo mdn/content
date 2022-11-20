@@ -22,7 +22,7 @@ browser-compat: api.NavigateEvent.formData
 {{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`formData`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns the {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission, or `null` otherwise.
+{{domxref("NavigateEvent")}} interface returns the {{domxref("FormData")}} object representing the submitted data in the case of a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) form submission, or `null` otherwise.
 
 ## Value
 

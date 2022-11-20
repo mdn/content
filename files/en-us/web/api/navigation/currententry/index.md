@@ -38,22 +38,16 @@ function initHomeBtn() {
     navigation.traverseTo(key);
   }
 }
-
+// Intercept navigate events, such as link clicks, and
+// replace them with single-page navigations
 navigation.addEventListener("navigate", event => {
   event.intercept({
       async handler() {
-        // Handle single-page navigations
+        // Navigate to a different view,
+        // but the "home" button will always work.
       }
   });
 });
-
-async function handleNavigate(url) {
-
-  // Navigate to a different view, but the button will always work.
-  await navigation.navigate(url).finished;
-
-  // ...
-}
 ```
 
 ## Specifications

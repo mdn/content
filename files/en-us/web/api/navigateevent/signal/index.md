@@ -30,7 +30,7 @@ An {{domxref("AbortSignal")}} object.
 
 ## Examples
 
-The general idea here is that the `signal` property can be passed to an associated {{domxref("fetch()")}} operation so that if the navigation is cancelled, it can be safely aborted, avoiding wasting bandwidth on fetches that are no longer needed.
+The general idea here is that the `signal` property can be passed to an associated {{domxref("fetch()")}} operation so that if the navigation is cancelled, the `fetch()` operation can be safely aborted, avoiding wasting bandwidth on fetches that are no longer needed.
 
 ```js
 navigation.addEventListener("navigate", (event) => {

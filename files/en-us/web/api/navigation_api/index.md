@@ -82,7 +82,7 @@ In some cases however, a state change will be independent from a navigation or r
 
 There are a few perceived limitations with the Navigation API:
 
-1. The current specification doesn't trigger {{domxref("Navigation.navigate_event", "navigate")}} on a page's first load. This might be fine for sites that use Server Side Rendering (SSR)—your server could return the correct initial state, which is the fastest way to get content to your users. But sites that leverage client-side code to create their pages may need an additional function to initialize the page.
+1. The current specification doesn't trigger a {{domxref("Navigation.navigate_event", "navigate")}} event on a page's first load. This might be fine for sites that use Server Side Rendering (SSR)—your server could return the correct initial state, which is the fastest way to get content to your users. But sites that leverage client-side code to create their pages may need an additional function to initialize the page.
 2. The Navigation API operates only within a single frame—the top-level page, or a single specific {{htmlelement("iframe")}}. This has some interesting implications that are [further documented in the spec](https://github.com/WICG/navigation-api#warning-backforward-are-not-always-opposites), but in practice, will reduce developer confusion. The previous {{domxref("History API", "History API", "", "nocode")}} has several confusing edge cases, like support for frames, which the Navigation API handles up-front.
 3. You can't currently use the Navigation API to programmatically modify or rearrange the history list. It might be useful to have a temporary state, for example navigating the user to a temporary modal that asks them for some information, then going back to the previous URL. In this case, you'd want to delete the temporary modal navigation entry so the user cannot mess up the application flow by hitting the forward button and opening it again.
 
@@ -140,6 +140,8 @@ navigation.addEventListener('navigate', (event) => {
 
 ### Handling scrolling using `scroll()`
 
+In this example of intercepting a navigation, the `handler()` function starts by fetching and rendering some article content, but then fetches and renders some secondary content afterwards. It makes sense to scroll the page to the main article content as soon as it is available so the user can interact with it, rather than waiting until the secondary content is also rendered. To achieve this, we have added a {{domxref("NavigateEvent.scroll", "scroll()")}} call between the two.
+
 ```js
 navigation.addEventListener('navigate', (event) => {
   if (shouldNotIntercept(event)) {
@@ -152,6 +154,7 @@ navigation.addEventListener('navigate', (event) => {
       async handler() {
         const articleContent = await getArticleContent(url.pathname);
         renderArticlePage(articleContent);
+
         event.scroll();
 
         const secondaryContent = await getSecondaryContent(url.pathname);

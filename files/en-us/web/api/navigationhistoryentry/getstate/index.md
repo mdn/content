@@ -21,7 +21,7 @@ browser-compat: api.NavigationHistoryEntry.getState
 {{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`getState()`** method of the
-{{domxref("NavigationHistoryEntry")}} interface returns a clone of the available state associated with this history entry.
+{{domxref("NavigationHistoryEntry")}} interface returns a clone of the developer-supplied state associated with this history entry.
 
 ## Syntax
 
@@ -35,7 +35,7 @@ None.
 
 ### Return value
 
-A value representing the state. This can be any type.
+A value representing the state. This can be any [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) data type.
 
 If no state is defined, it returns `undefined`.
 
@@ -69,3 +69,4 @@ async function handleReload() {
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
 - Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)
+- Methods that allow state to be updated — {{domxref("Navigation.navigate()")}}, {{domxref("Navigation.reload()")}}, and {{domxref("Navigation.updateCurrentEntry()")}}

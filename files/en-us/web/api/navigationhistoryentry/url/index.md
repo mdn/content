@@ -30,7 +30,7 @@ A string representing the URL.
 ## Examples
 
 ```js
-let current = navigation.currentEntry;
+const current = navigation.currentEntry;
 console.log(current.url);
 ```
 

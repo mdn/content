@@ -22,7 +22,16 @@ browser-compat: api.NavigateEvent.canIntercept
 {{APIRef("Navigation API")}}{{seecompattable}}
 
 The **`canIntercept`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns `true` if the navigation can be intercepted, or `false` otherwise (e.g. you can't intercept a cross-origin navigation).
+{{domxref("NavigateEvent")}} interface returns `true` if the navigation can be intercepted and have its URL rewritten, or `false` otherwise
+
+There are several rules around when a navigation can be intercepted. For example:
+
+- You can't intercept cross-origin navigations.
+- You can intercept `http` or `https` URLs if only the `path`, `query`, and `fragment` portions of the new URL differ from the current URL.
+- You can intercept `file` URLs if only the `query` and `fragment` portions of the new URL differ.
+- For other URL types you can intercept the navigation if only the `fragment` portion differs.
+
+See the spec for more explanation on [when a Document can have its URL rewritten](https://html.spec.whatwg.org/multipage/nav-history-apis.html#can-have-its-url-rewritten), including a table of examples.
 
 ## Value
 

@@ -26,6 +26,7 @@ The **`intercept()`** method of the
 ## Syntax
 
 ```js-nolint
+intercept()
 intercept(options)
 ```
 
@@ -35,14 +36,22 @@ intercept(options)
   - : An options object containing the following properties:
     - `handler`
       - : A callback function that defines what the navigation handling behavior should be. This generally handles resource fetching, and returns a promise.
-    - `focusReset`
-      - : Defines the navigation's focus behavior. Once the promise returned by your handler function resolves, by default the browser will focus the first element with the {{htmlattrxref("autofocus")}} attribute, or the {{htmlelement("body")}} element if no element has `autofocus` set. You can turn this behavior off setting `focusReset` to `manual`. The other available value is `after-transition`, which is the default.
-    - `scroll`
-      - : Defines the navigation's focus behavior. By default the browser will handle scrolling, for example by scrolling to the relevant fragment identifier if the URL contains a fragment, or restoring the scroll position to the same place as last time if the page is reloaded or page in the history is revisited. You can turn this behavior off setting `scroll` to `manual`. The other available value is `after-transition`, which is the default.
+    - `focusReset` {{optional_inline}}
+      - : Defines the navigation's focus behavior. This may take one of the following values:
+        - `after-transition`
+          - : Once the promise returned by your handler function resolves, the browser will focus the first element with the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute, or the {{htmlelement("body")}} element if no element has `autofocus` set. This is the default value.
+        - `manual`
+          - : Disable the default behavior.
+    - `scroll` {{optional_inline}}
+      - : Defines the navigation's scrolling behavior. This may take one of the following values:
+        - `after-transition`
+          - : Allow the browser to handle scrolling, for example by scrolling to the relevant fragment identifier if the URL contains a fragment, or restoring the scroll position to the same place as last time if the page is reloaded or a page in the history is revisited. This is the default value.
+        - `manual`
+          - : Disable the default behavior.
 
 ### Return value
 
-`undefined`.
+None (`undefined`).
 
 ### Exceptions
 
