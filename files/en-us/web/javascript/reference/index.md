@@ -114,9 +114,9 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{JSxRef("Promise")}}
 - {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
-- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
 - {{JSxRef("Generator")}}
+- {{JSxRef("AsyncGenerator")}}
 - {{JSxRef("AsyncFunction")}}
 
 ### Reflection
@@ -176,8 +176,8 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ### Others
 
-- {{jsxref("Statements/Empty", "Empty","",1)}}
-- {{jsxref("Statements/block", "Block","",1)}}
+- {{jsxref("Statements/Empty", "Empty", "", 1)}}
+- {{jsxref("Statements/block", "Block", "", 1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}

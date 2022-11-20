@@ -135,9 +135,9 @@ Control abstractions can help to structure code, especially async code (without 
 
 - {{JSxRef("Promise")}}
 - {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
-- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
 - {{JSxRef("Generator")}}
+- {{JSxRef("AsyncGenerator")}}
 - {{JSxRef("AsyncFunction")}}
 
 ### Reflection
