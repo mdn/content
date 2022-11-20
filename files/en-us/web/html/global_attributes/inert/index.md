@@ -39,3 +39,7 @@ In providing visual and non-visual cues to intertness, remember the visual viewp
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- HTML {{HTMLElement('dialog')}} element
