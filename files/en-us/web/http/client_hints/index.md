@@ -87,8 +87,11 @@ For example, in this case, the server tells a client via {{httpheader("Accept-CH
 HTTP/1.1 200 OK
 Content-Type: text/html
 Accept-CH: Sec-CH-Prefers-Reduced-Motion
+Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
+
+> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 As `Sec-CH-Prefers-Reduced-Motion` is a critical hint that was not in the original request, the client automatically retries the request — this time telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
 
