@@ -54,7 +54,9 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
 ## Tools
 
 - [XPath tester](https://extendsclass.com/xpath-tester.html)
-  - : An online XPath Builder/Debugger.
+  - : An online XPath Builder/Debugger with some explanations.
+- [XPather](http://xpather.com/)
+  - : Yet another online XPath Builder/Debugger.
 
 ## Related Topics
 
