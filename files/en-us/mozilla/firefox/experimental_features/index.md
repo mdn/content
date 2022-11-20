@@ -697,7 +697,7 @@ See {{bug(1764850)}} for more details.
     <tr>
       <th>Nightly</th>
       <td>108</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
