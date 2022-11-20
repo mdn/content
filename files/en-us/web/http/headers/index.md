@@ -111,15 +111,15 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 
 ### Device client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
   - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}}
   - : Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
   - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-- {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Width")}} {{deprecated_inline}}
   - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
 
 ### Network client hints
@@ -132,7 +132,9 @@ Network client hints allow a server to choose what information is sent based on 
   - : The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("RTT")}}
   - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
-- {{HTTPHeader("Save-Data")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-Save-Data")}} {{experimental_inline}}
+  - : A boolean that indicates the user agent's preference for reduced data usage.
+- {{HTTPHeader("Save-Data")}} {{deprecated_inline}}
   - : A boolean that indicates the user agent's preference for reduced data usage.
 
 ## Conditionals
