@@ -42,7 +42,9 @@ The `valueToRound` is rounded according to the rounding strategy, to the nearest
     - `down`
       - : Round `valueToRound` down to the nearest integer multiple of `roundingInterval` (if the value is negative, it will become "more negative"). This is equivalent to the JavaScript [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) method.
     - `nearest` (default)
-      - : Round `valueToRound` to the nearest integer (`roundingInterval` is ignored). Equivalent to JavaScript [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round).
+      - : Round `valueToRound` to the nearest integer multiple of `roundingInterval`, which may be either above or below the value.
+        If the `valueToRound` is half way between the rounding targets above and below (neither is "nearest"), it will be rounded up.
+        Equivalent to JavaScript [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round).
     - `to-zero`
       - : Round `valueToRound` to the nearest integer multiple of `roundingInterval` closer to/towards zero (a positive number will decrease, while a negative value will become "less negative"). This is equivalent to the JavaScript [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) method.
 
