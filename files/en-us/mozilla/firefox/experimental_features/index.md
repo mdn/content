@@ -682,7 +682,7 @@ For more information on these units, see the [CSS Container Queries](/en-US/docs
 
 ### round() math function
 
-CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounded number based on a selected rounding strategy.
+The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
 See {{bug(1764850)}} for more details.
 
 <table>
