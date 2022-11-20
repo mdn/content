@@ -299,7 +299,7 @@ Import `useState` into `App.js`, so that we can store our tasks in state — upd
 import React, { useState } from "react";
 ```
 
-We want to pass `props.tasks` into the `useState()` hook – this will preserve its initial state. Add the following right at the top of your App() function definition:
+We want to pass `props.tasks` into the `useState()` hook – this will preserve its initial state. Add the following right at the top of your `App()` function definition:
 
 ```jsx
 const [tasks, setTasks] = useState(props.tasks);
@@ -347,7 +347,7 @@ Make sure you're in the root directory of your application and run the following
 npm install nanoid
 ```
 
-> **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`
+> **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
 Now we can import `nanoid` into the top of `App.js` so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of `App.js`:
 
@@ -464,7 +464,7 @@ Then we call `setTasks()` with this new array in order to update our state.
 
 ## Deleting a task
 
-Deleting a task will follow a similar pattern to toggling its completed state: We need to define a function for updating our state, then pass that function into `<Todo />` as a prop and call it when the right event happens.
+Deleting a task will follow a similar pattern to toggling its completed state: we need to define a function for updating our state, then pass that function into `<Todo />` as a prop and call it when the right event happens.
 
 ### The `deleteTask` callback prop
 
@@ -493,7 +493,7 @@ const taskList = tasks.map((task) => (
 
 In `Todo.js`, we want to call `props.deleteTask()` when the "Delete" button is pressed. `deleteTask()` needs to know the ID of the task that called it, so it can delete the correct task from the state.
 
-Update the "Delete" button inside Todo.js, like so:
+Update the "Delete" button inside `Todo.js`, like so:
 
 ```jsx
 <button
@@ -511,7 +511,7 @@ Now when you click on any of the "Delete" buttons in the app, your browser conso
 
 Now that we know `deleteTask()` is invoked correctly, we can call our `setTasks()` hook in `deleteTask()` to actually delete that task from the app's state as well as visually in the app UI. Since `setTasks()` expects an array as an argument, we should provide it with a new array that copies the existing tasks, _excluding_ the task whose ID matches the one passed into `deleteTask()`.
 
-This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). We can test each task, and exclude a task from the new array if its `id` prop matches the `id` parameter passed into `deleteTask()`.
+This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). We can test each task, and exclude a task from the new array if its `id` prop matches the `id` argument passed into `deleteTask()`.
 
 Update the `deleteTask()` function inside your `App.js` file as follows:
 
