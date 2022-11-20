@@ -25,10 +25,10 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ### Value properties
 
+- {{JSxRef("globalThis")}}
 - {{JSxRef("Infinity")}}
 - {{JSxRef("NaN")}}
 - {{JSxRef("undefined")}}
-- {{JSxRef("globalThis")}}
 
 ### Function properties
 
@@ -37,10 +37,10 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
 - {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
 - {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
 - {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
+- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
 - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
 - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 
@@ -56,12 +56,12 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}
 - {{JSxRef("TypeError")}}
 - {{JSxRef("URIError")}}
+- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 
 ### Numbers and dates
 
@@ -85,10 +85,10 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Uint16Array")}}
 - {{JSxRef("Int32Array")}}
 - {{JSxRef("Uint32Array")}}
-- {{JSxRef("Float32Array")}}
-- {{JSxRef("Float64Array")}}
 - {{JSxRef("BigInt64Array")}}
 - {{JSxRef("BigUint64Array")}}
+- {{JSxRef("Float32Array")}}
+- {{JSxRef("Float64Array")}}
 
 ### Keyed collections
 
@@ -101,8 +101,8 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{JSxRef("ArrayBuffer")}}
 - {{JSxRef("SharedArrayBuffer")}}
-- {{JSxRef("Atomics")}}
 - {{JSxRef("DataView")}}
+- {{JSxRef("Atomics")}}
 - {{JSxRef("JSON")}}
 
 ### Managing memory
@@ -113,11 +113,11 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 ### Control abstraction objects
 
 - {{JSxRef("Promise")}}
-- {{JSxRef("Generator")}}
 - {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("AsyncFunction")}}
-- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
 - {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
+- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
+- {{JSxRef("Generator")}}
+- {{JSxRef("AsyncFunction")}}
 
 ### Reflection
 
@@ -191,15 +191,15 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 ### Primary expressions
 
 - {{JSxRef("Operators/this", "this")}}
+- [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
+- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
 - {{JSxRef("Operators/async_function*", "async function*")}}
-- {{JSxRef("Global_Objects/Array", "[]")}}
-- {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
-- [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
 - {{JSxRef("Template_literals", "`string`")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
 
@@ -233,21 +233,21 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 ### Arithmetic operators
 
+- {{JSxRef("Operators/Exponentiation", "**")}}
+- {{JSxRef("Operators/Multiplication", "*")}}
+- {{JSxRef("Operators/Division", "/")}}
+- {{JSxRef("Operators/Remainder", "%")}}
 - {{JSxRef("Operators/Addition", "+")}} (Plus)
 - {{JSxRef("Operators/Subtraction", "-")}}
-- {{JSxRef("Operators/Division", "/")}}
-- {{JSxRef("Operators/Multiplication", "*")}}
-- {{JSxRef("Operators/Remainder", "%")}}
-- {{JSxRef("Operators/Exponentiation", "**")}}
 
 ### Relational operators
 
-- {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
 - {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
 - {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
+- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("Operators/in", "in")}}
 
 ### Equality operators
 
@@ -282,7 +282,6 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{JSxRef("Operators/Assignment", "=")}}
 - {{JSxRef("Operators/Multiplication_assignment", "*=")}}
-- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
 - {{JSxRef("Operators/Division_assignment", "/=")}}
 - {{JSxRef("Operators/Remainder_assignment", "%=")}}
 - {{JSxRef("Operators/Addition_assignment", "+=")}}
@@ -293,6 +292,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 - {{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}
 - {{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
+- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
 - {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}

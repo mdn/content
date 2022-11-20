@@ -24,6 +24,12 @@ Basic keywords and general expressions in JavaScript. These expressions have the
 
 - {{JSxRef("Operators/this", "this")}}
   - : The `this` keyword refers to a special property of an execution context.
+- [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
+  - : Basic `null`, boolean, number, and string literals.
+- {{JSxRef("Global_Objects/Array", "[]")}}
+  - : Array initializer/literal syntax.
+- {{JSxRef("Operators/Object_initializer", "{}")}}
+  - : Object initializer/literal syntax.
 - {{JSxRef("Operators/function", "function")}}
   - : The `function` keyword defines a function expression.
 - {{JSxRef("Operators/class", "class")}}
@@ -34,14 +40,8 @@ Basic keywords and general expressions in JavaScript. These expressions have the
   - : The `async function` defines an async function expression.
 - {{JSxRef("Operators/async_function*", "async function*")}}
   - : The `async function*` keywords define an async generator function expression.
-- {{JSxRef("Global_Objects/Array", "[]")}}
-  - : Array initializer/literal syntax.
-- {{JSxRef("Operators/Object_initializer", "{}")}}
-  - : Object initializer/literal syntax.
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
   - : Regular expression literal syntax.
-- [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
-  - : Basic `null`, boolean, number, and string literals.
 - {{JSxRef("Template_literals", "`string`")}}
   - : Template literal syntax.
 - {{JSxRef("Operators/Grouping", "( )")}}
@@ -104,27 +104,23 @@ A unary operation is an operation with only one operand.
 
 Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value.
 
+- {{JSxRef("Operators/Exponentiation", "**")}}
+  - : Exponentiation operator.
+- {{JSxRef("Operators/Multiplication", "*")}}
+  - : Multiplication operator.
+- {{JSxRef("Operators/Division", "/")}}
+  - : Division operator.
+- {{JSxRef("Operators/Remainder", "%")}}
+  - : Remainder operator.
 - {{JSxRef("Operators/Addition", "+")}} (Plus)
   - : Addition operator.
 - {{JSxRef("Operators/Subtraction", "-")}}
   - : Subtraction operator.
-- {{JSxRef("Operators/Division", "/")}}
-  - : Division operator.
-- {{JSxRef("Operators/Multiplication", "*")}}
-  - : Multiplication operator.
-- {{JSxRef("Operators/Remainder", "%")}}
-  - : Remainder operator.
-- {{JSxRef("Operators/Exponentiation", "**")}}
-  - : Exponentiation operator.
 
 ### Relational operators
 
 A comparison operator compares its operands and returns a boolean value based on whether the comparison is true.
 
-- {{JSxRef("Operators/in", "in")}}
-  - : The `in` operator determines whether an object has a given property.
-- {{JSxRef("Operators/instanceof", "instanceof")}}
-  - : The `instanceof` operator determines whether an object is an instance of another object.
 - {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
   - : Less than operator.
 - {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
@@ -133,6 +129,10 @@ A comparison operator compares its operands and returns a boolean value based on
   - : Less than or equal operator.
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
   - : Greater than or equal operator.
+- {{JSxRef("Operators/instanceof", "instanceof")}}
+  - : The `instanceof` operator determines whether an object is an instance of another object.
+- {{JSxRef("Operators/in", "in")}}
+  - : The `in` operator determines whether an object has a given property.
 
 > **Note:** `=>` is not an operator, but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
@@ -195,8 +195,6 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Assignment operator.
 - {{JSxRef("Operators/Multiplication_assignment", "*=")}}
   - : Multiplication assignment.
-- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
-  - : Exponentiation assignment.
 - {{JSxRef("Operators/Division_assignment", "/=")}}
   - : Division assignment.
 - {{JSxRef("Operators/Remainder_assignment", "%=")}}
@@ -217,6 +215,8 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Bitwise XOR assignment.
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
   - : Bitwise OR assignment.
+- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
+  - : Exponentiation assignment.
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
   - : Logical AND assignment.
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
