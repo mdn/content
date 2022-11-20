@@ -120,7 +120,7 @@ Content-Type: image/jpeg
 
 ## See also
 
-- {{HTTPHeader("Sec-CH-Save-Data")}} header which supercedes `Save-Data`
+- {{HTTPHeader("Sec-CH-Save-Data")}} (supercedes `Save-Data`)
 - [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Delivering Fast and Light Applications with Save-Data - web.dev](https://web.dev/optimizing-content-efficiency-save-data/)
 - {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses))
