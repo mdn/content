@@ -13,7 +13,7 @@ browser-compat: javascript.statements.import.import_assertions
 
 {{jsSidebar("Statements")}}
 
-The **import assertion** feature of [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements and [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) statements tell the host to do after-the-fact checks about a module's metadata, making the host optionally throw if the assertion fails.
+The **import assertion** feature tell the host to do after-the-fact checks about a module's metadata, making the host optionally throw if the assertion fails. It's supported in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations, and dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import).
 
 ## Syntax
 
@@ -47,7 +47,7 @@ export { exports } from "module-name" assert { key: "data", key2: "data2", /* �
 
 ## Description
 
-Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary motivation was to ensure that JSON modules are not parsed as code if served incorrectly.
+Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary motivation was to ensure that modules that are expected to be JSON are always parsed as JSON (in other words, to ensure that they are never executed with the privilege of JS code).
 
 Consider the following statement:
 
@@ -64,15 +64,15 @@ Content-Type: application/json; charset=utf-8
 {"name":"John"}
 ```
 
-JSON modules are identified by the `application/json` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). When the host sees this MIME type instead of `text/javascript` (for JavaScript source), it would parse the result as JSON instead of executing it as code — and the former is generally a safer thing to do. However, there's no in-code metadata that signals the author's intent that a particular module should always be interpreted as JSON. Very importantly, the extension (the last part of the URL) cannot be used to identify a file's type — only the MIME type can. If the `https://example.com/data.json` URL actually returns a JS file with `text/javascript` MIME, the `import` would unintentionally execute external code, causing a security threat.
+Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) — the URL file extension cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the host browser that the file is JSON and must be parsed as JSON. If, for some reason (the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "json" file actually contained malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
 
-Import assertions fix this problem by allowing the author to explicitly specify how a module should be validated. For example, the import statement above would actually fail in a browser:
+Import assertions fix this problem by allowing the author to explicitly specify how a module should be validated. For example, the import statement above, which lacks an assertion, would actually fail:
 
 ```
 Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "application/json". Strict MIME type checking is enforced for module scripts per HTML spec.
 ```
 
-Instead, you must provide an assertion. To validate the module's type (via MIME type), you use the assertion key called `type`. To validate that the module is a JSON module, the value is `"json"`.
+Instead, you must provide an assertion to tell the host that this file must contain JSON. To validate the module's type (via MIME type), you use the assertion key called `type`. To validate that the module is a JSON module, the value is `"json"`.
 
 > **Note:** The actual assertion value does not correspond to the MIME type. It's separately specified by the WHATWG specification.
 
@@ -88,6 +88,8 @@ This does NOT change how the module is interpreted. The host already knows to pa
 Failed to load module script: Expected a JSON module script but the server responded with a MIME type of "text/javascript". Strict MIME type checking is enforced for module scripts per HTML spec.
 ```
 
+If the assertion is absent, browsers implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevent any security risks. Other non-browser hosts are free to implement their own behavior. The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` assertions, the host may still parse it as JSON if security is not an issue in this environment.
+
 The assertion syntax is designed to be extensible — although only `type` is known to be supported, you can put arbitrary keys in the assertion bag.
 
 ```js
@@ -99,9 +101,7 @@ This likely does nothing unless your host understands that key. The assertion:
 
 - Does not affect the module's behavior. What the importer has asserted about the module is not available to the module being imported. (For example, it's not part of [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta).) Only the host can read and validate the assertion.
 - Does not affect how the host interprets the module. For example, the host will not decide to parse a module as JSON if it has already decided that the module contains JavaScript — via MIME type in browsers or extensions in Node.js — even when there's a `type: "json"` assertion. It would simply fail the import.
-- Is not used by the host to cache the module. If a module with the same specifier is imported twice, once with the assertion and once without, and neither import fails, then they would result in the exact same module without re-executing it.
-
-The specification explicitly calls out `type: "json"` to be supported. If a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` assertions, the host may still parse it as JSON if security is not an issue in this environment.
+- Is not used by the host to cache the module — a host will only store only one copy of the module in memory, whether or not it's imported with an assertion. If a module with the same specifier is imported twice, once with the assertion and once without, and neither import fails, then they would result in the exact same module without re-executing the module's code.
 
 ## Examples
 
