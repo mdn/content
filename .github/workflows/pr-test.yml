@@ -7,6 +7,15 @@
 name: PR Test
 
 on:
+  # The reason for building once it's pushed to `main`, too, is an
+  # optimization. This way, when workflow is built on the `main` branch
+  # anything that's stored in the cache (e.g. node_modules) can be
+  # re-used by consecutive PRs in other branches.
+  # See https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows#restrictions-for-accessing-a-cache
+  # and https://github.community/t/how-come-the-actions-cache-is-failing-so-much-often/196279/3
+  push:
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -14,23 +23,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
-          node-version: "12"
-
-      - name: Cache node_modules
-        uses: actions/cache@v2.1.4
-        id: cached-node_modules
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          node-version: "16"
+          cache: yarn
 
       - name: Install all yarn packages
-        if: steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
           yarn --frozen-lockfile
 
@@ -55,10 +56,10 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v6.1.1
         id: git_diff_content
         with:
-          PATTERNS: files/**/*.html
+          PATTERNS: files/**/*.+(html|md)
           SET_ENV_NAME: GIT_DIFF_CONTENT
 
       - name: Build changed content
@@ -68,7 +69,7 @@ jobs:
 
           # This is so that if there's a single 'unsafe_html' flaw, it
           # completely fails the build.
-          # But all other flaws should be 'warn' so that we can include
+          # But all other flaws should be 'warn', so that we can include
           # information about the flaws when we analyze the built PR.
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
 
@@ -90,7 +91,7 @@ jobs:
           # where there are interesting cookies, it's a safe choice.
           BUILD_LIVE_SAMPLES_BASE_URL: ""
 
-          # In these builds we never care for or need the ability to sign in.
+          # In these builds, we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
           REACT_APP_DISABLE_AUTH: true
 
@@ -136,13 +137,13 @@ jobs:
           echo "After..."
           du -sh build
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
           name: build
           path: build/
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v6.1.1
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -156,7 +157,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v6.1.1
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

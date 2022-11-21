@@ -9,47 +9,42 @@
 # ----------------------------------------------------------------------------
 # DEFAULT OWNERS
 # ----------------------------------------------------------------------------
-*    @mdn/core-yari-dev
+*    @mdn/core-yari-content
 
 # ----------------------------------------------------------------------------
 # DEFAULT ENGLISH CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/    @mdn/core-yari-content
+/files/en-us/    @mdn/yari-content-mdn
 
 # ----------------------------------------------------------------------------
 # ENGLISH WEB ACCESSIBILITY CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
 /files/en-us/web/accessibility/    @mdn/yari-content-accessibility
+/files/en-us/learn/accessibility/    @mdn/yari-content-accessibility
 
 # ----------------------------------------------------------------------------
-# DEFAULT ENGLISH LEARNING CONTENT OWNER(S)
+# ENGLISH CSS CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/learn/    @mdn/yari-content-learn
+/files/en-us/web/css/    @mdn/yari-content-css
+/files/en-us/learn/css/    @mdn/yari-content-css
 
 # ----------------------------------------------------------------------------
-# ENGLISH LEARNING CSS CONTENT OWNER(S)
+# ENGLISH HTML CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/learn/css/    @mdn/yari-content-learn-css
+/files/en-us/web/html/    @mdn/yari-content-html
+/files/en-us/learn/html/    @mdn/yari-content-html
 
 # ----------------------------------------------------------------------------
-# ENGLISH LEARNING SERVER-SIDE CONTENT OWNER(S)
+# ENGLISH JAVASCRIPT CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/learn/server-side/    @mdn/yari-content-learn-server-side
+/files/en-us/web/javascript/    @mdn/yari-content-javascript
+/files/en-us/learn/javascript/    @mdn/yari-content-javascript
 
 # ----------------------------------------------------------------------------
-# ENGLISH TOOLS CONTENT OWNER(S)
+# ENGLISH HTTP CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/tools/    @mdn/yari-content-tools
-
-# ----------------------------------------------------------------------------
-# ENGLISH MDN CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/mdn/    @mdn/yari-content-mdn
-
-# ----------------------------------------------------------------------------
-# ENGLISH MOZILLA ADD-ONS CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/mozilla/add-ons/    @mdn/yari-content-mozilla-add-ons
+/files/en-us/web/http/    @mdn/yari-content-http
+/files/en-us/learn/server-side/    @mdn/yari-content-http
 
 # ----------------------------------------------------------------------------
 # ENGLISH WEB API CONTENT OWNER(S)
@@ -57,29 +52,20 @@
 /files/en-us/web/api/    @mdn/yari-content-web-api
 
 # ----------------------------------------------------------------------------
-# ENGLISH CSS CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/css/    @mdn/yari-content-css
-
-# ----------------------------------------------------------------------------
-# ENGLISH HTML CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/html/    @mdn/yari-content-html
-
-# ----------------------------------------------------------------------------
-# ENGLISH HTTP CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/http/    @mdn/yari-content-http
-
-# ----------------------------------------------------------------------------
-# ENGLISH JAVASCRIPT CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/javascript/    @mdn/yari-content-javascript
-
-# ----------------------------------------------------------------------------
 # ENGLISH SVG CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
 /files/en-us/web/svg/    @mdn/yari-content-svg
+
+# ----------------------------------------------------------------------------
+# ENGLISH MOZILLA ADD-ONS CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/mozilla/add-ons/    @mdn/yari-content-mozilla-add-ons
+
+# ----------------------------------------------------------------------------
+# ENGLISH MATHML CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/mathml/    @mdn/content-mathml
+
 
 # ----------------------------------------------------------------------------
 # CONTROL FILES OWNER(S)
@@ -88,10 +74,10 @@
 # tries to change any one or more of these files should be escalated to the
 # owners specified here.
 # ----------------------------------------------------------------------------
-/.github/     @mdn/core-yari-dev
-/*            @mdn/core-yari-dev
-/*.md         @mdn/core-yari-dev @mdn/core-yari-content
-# These are @peterbe because the auto-merge GHA workflow will assign @peterbe,
-# and if we add another reviewer, the auto-merge will cease to be automatic.
-/package.json @peterbe
-/yarn.lock    @peterbe
+/.github/     @mdn/core-dev
+/*            @mdn/core-dev
+/*.md         @mdn/core-yari-content
+# These are @schalkneethling because the auto-merge GHA workflow uses my PAT and will assign me.
+# If we add another reviewer, the auto-merge will cease to be automatic.
+/package.json @schalkneethling
+/yarn.lock    @schalkneethling

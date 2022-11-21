@@ -20,11 +20,11 @@ jobs:
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: 'Download artifact'
-        uses: actions/github-script@v3
+      - name: "Download artifact"
+        uses: actions/github-script@v6
         with:
           script: |
-            var artifacts = await github.actions.listWorkflowRunArtifacts({
+            var artifacts = await github.rest.actions.listWorkflowRunArtifacts({
                owner: context.repo.owner,
                repo: context.repo.repo,
                run_id: ${{github.event.workflow_run.id }},
@@ -44,7 +44,7 @@ jobs:
               );
             }
             var matchArtifact = matchArtifacts[0];
-            var download = await github.actions.downloadArtifact({
+            var download = await github.rest.actions.downloadArtifact({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 artifact_id: matchArtifact.id,
@@ -57,28 +57,40 @@ jobs:
         run: |
           unzip build.zip -d build
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-           repository: mdn/yari
-           path: yari
+          repository: mdn/yari
+          path: yari
 
       - name: Install Python
-        uses: actions/setup-python@v2
+        id: setup-python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.8"
 
+      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
+      - name: Load cached ~/.local
+        uses: actions/cache@v3
+        with:
+          path: ~/.local
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
+
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.4
+        uses: snok/install-poetry@v1.3
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: yari/deployer/.venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install poetry dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
@@ -110,14 +122,15 @@ jobs:
 
           poetry run deployer upload \
             --prefix="pr$PR_NUMBER" \
-            --no-redirects \
             --default-cache-control 0 \
             "$BUILD_OUT_ROOT"
 
           poetry run deployer analyze-pr-build \
             --prefix="pr$PR_NUMBER" \
-            --analyze-flaws --analyze-dangerous-content \
+            --analyze-flaws \
+            --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
+            --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
