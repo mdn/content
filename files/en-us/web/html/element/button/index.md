@@ -13,7 +13,7 @@ browser-compat: html.elements.button
 
 {{HTMLSidebar}}
 
-The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs a native action, such as submitting a [form](/en-US/docs/Learn/Forms). An activated button can also perform a programmable action using [JavaScript](/en-US/docs/Learn/JavaScript), such as opening a dialog or removing an item from a list.
+The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn/Forms) or opening a dialog.
 
 By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons' appearance with [CSS](/en-US/docs/Web/CSS).
 
@@ -184,6 +184,8 @@ A submit button with the attribute `formaction` set, but without an associated f
 `<button>` elements are much easier to style than {{HTMLElement("input")}} elements. You can add inner HTML content (think `<i>`, `<br>`, or even `<img>`), and use {{Cssxref("::after")}} and {{Cssxref("::before")}} pseudo-elements for complex rendering.
 
 If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
+
+Although not required, an activated button can also perform a programmable action using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
 ## Example
 
