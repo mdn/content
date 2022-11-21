@@ -14,7 +14,7 @@ browser-compat: http.headers.Sec-CH-Save-Data
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Sec-CH-Save-Data`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) request header indicates the user agent's preference for reduced data usage. This could be for reasons such as high transfer costs, slow connection speeds, etc.
+The **`Sec-CH-Save-Data`** [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) request header indicates the user agent prefers less data be sent. This could be for reasons such as high transfer costs, slow connection speeds, and so on.
 
 If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Save-Data`, the client can then respond with this header to indicate the user's preference for reduced data usage. The server can send the client appropriately adapted content, for example, JavaScript, videos, images, or CSS, to reduce the amount of data transfered for displaying subsequent rendered content. This could include reducing the amount of images, videos, simpler CSS styles, simpler HTML markup. Further, `Sec-CH-Save-Data` should be used to reduce data sent to the client irrespective of the values of other client hints that indicate network capability, like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 
