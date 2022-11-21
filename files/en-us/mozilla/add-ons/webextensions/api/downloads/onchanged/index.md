@@ -46,7 +46,7 @@ Events have three functions:
   - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
 
     - `downloadDelta`
-      - : An [`object`](#downloaddelta) representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it.
+      - : An `object` representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it. See the [downloadDelta](#downloaddelta_2) section for more details.
 
 ## Additional objects
 
