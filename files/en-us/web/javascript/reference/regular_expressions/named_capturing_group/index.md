@@ -40,7 +40,7 @@ Named capturing groups will all be present in the result. If a named capturing g
 /(?<ab>ab)|(?<cd>cd)/.exec("cd").groups; // [Object: null prototype] { ab: undefined, cd: 'cd' }
 ```
 
-You can get the start and end indices of each named capturing group in the input string by using the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag. In addition to accessing them on the `indices` property on the array returned by `exec()`, you can also access them by their names through `indices.groups`.
+You can get the start and end indices of each named capturing group in the input string by using the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag. In addition to accessing them on the `indices` property on the array returned by `exec()`, you can also access them by their names on `indices.groups`.
 
 Compared to unnamed capturing groups, named capturing groups have the following advantages:
 

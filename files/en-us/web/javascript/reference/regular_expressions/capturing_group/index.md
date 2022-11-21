@@ -49,7 +49,7 @@ Capturing groups can be used in [lookahead](/en-US/docs/Web/JavaScript/Reference
 ```js
 /c(?=(ab))/.exec("cab"); // ['', 'ab']
 /(?<=(a)(b))c/.exec("abc"); // ['', 'a', 'b']
-/(?<=([ab])+)c/.exec("abc"); // ['', 'a']; because "a" is seen by the lookbehind after it's seen "b"
+/(?<=([ab])+)c/.exec("abc"); // ['', 'a']; because "a" is seen by the lookbehind after the lookbehind has seen "b"
 ```
 
 Capturing groups can be nested, in which case the outer group is numbered first, then the inner group, because they are ordered by their opening parentheses. If a nested group is repeated by a quantifier, then each time the group matches, the subgroups' results are all overwritten, sometimes with `undefined`.

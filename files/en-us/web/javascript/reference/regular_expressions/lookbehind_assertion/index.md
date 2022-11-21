@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion
 
 {{JsSidebar}}
 
-A **lookbehind assertion** "looks behind": it attempts to match the previous input with the given pattern, but it does not consume any of the input — if the match is successful, the current position in the input is not advanced. It matches each atom in its pattern in the reverse order.
+A **lookbehind assertion** "looks behind": it attempts to match the previous input with the given pattern, but it does not consume any of the input — if the match is successful, the current position in the input stays the same. It matches each atom in its pattern in the reverse order.
 
 ## Syntax
 
@@ -32,11 +32,11 @@ Lookbehind generally has the same semantics as lookahead — however, within a l
 // Not ['', 'ab', 'c']
 ```
 
-If the lookbehind matches from left to right, it should first greedily match `[ab]+`, which makes the first group capture `"ab"`, and the remaining `"c"` is captured by `[bc]+`. However, because `[bc]+` is matched first, it greedily grabs the `"b"`, leaving only `"a"` for `[ab]+`.
+If the lookbehind matches from left to right, it should first greedily match `[ab]+`, which makes the first group capture `"ab"`, and the remaining `"c"` is captured by `[bc]+`. However, because `[bc]+` is matched first, it greedily grabs `"bc"`, leaving only `"a"` for `[ab]+`.
 
 This behavior is reasonable — the matcher does not know where to _start_ the match (because the lookbehind may not be fixed-length), but it does know where to _end_ (at the current position). Therefore, it starts from the current position and works backwards. (Regexes in some other languages forbid non-fixed-length lookbehind to avoid this issue.)
 
-For [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) [capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) inside the lookbehind, the match furthest to the left — instead of the one on the right — is captured because of backward matching. See the capturing groups page for more information. [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) inside the lookbehind must appear on the _left_ of the group it's referring to. However, [disjunctions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) are still attempted left-to-right.
+For [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) [capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) inside the lookbehind, the match furthest to the left of the input string — instead of the one on the right — is captured because of backward matching. See the capturing groups page for more information. [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) inside the lookbehind must appear on the _left_ of the group it's referring to, also due to backward matching. However, [disjunctions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) are still attempted left-to-right.
 
 ## Examples
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion
 
 {{JsSidebar}}
 
-A **lookahead assertion** "looks ahead": it attempts to match the subsequent input with the given pattern, but it does not consume any of the input — if the match is successful, the current position in the input is not advanced.
+A **lookahead assertion** "looks ahead": it attempts to match the subsequent input with the given pattern, but it does not consume any of the input — if the match is successful, the current position in the input stays the same.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ A **lookahead assertion** "looks ahead": it attempts to match the subsequent inp
 
 A regular expression generally matches from left to right. This is why lookahead and [lookbehind](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion) assertions are called as such — lookahead asserts what's on the right, and lookbehind asserts what's on the left.
 
-In order for a `(?=pattern)` assertion to succeed, the `pattern` must match at the current position, but the current position is not advanced before matching the subsequent input. The `(?!pattern)` form negates the assertion — it succeeds if the `pattern` does not match at the current position.
+In order for a `(?=pattern)` assertion to succeed, the `pattern` must match the text after the current position, but the current position is not changed. The `(?!pattern)` form negates the assertion — it succeeds if the `pattern` does not match at the current position.
 
 The `pattern` can contain [capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group). See the capturing groups page for more information on the behavior in this case.
 
@@ -41,9 +41,9 @@ The matching of the pattern above happens as follows:
 3. `\1` does not match the following string, because that requires 2 `"a"`s, but only 1 is available. So the matcher backtracks, but it doesn't go into the lookahead, so the capturing group cannot be reduced to 1 `"a"`, and the entire match fails at this point.
 4. `exec()` re-attempts matching at the next position — before the second `"a"`. This time, the lookahead matches `"a"`, and `a*b` matches `"b"`. The backreference `\1` matches the captured `"a"`, and the match succeeds.
 
-If the regex is able to backtrack into the lookahead and revise the choice made in there, then the match would succeed at step 3 by `(a+)` matching the first `"a"` (instead of the first two `"a"`s) and `a*b` matching `"ab"`, without even attempting the next input position.
+If the regex is able to backtrack into the lookahead and revise the choice made in there, then the match would succeed at step 3 by `(a+)` matching the first `"a"` (instead of the first two `"a"`s) and `a*b` matching `"ab"`, without even re-attempting the next input position.
 
-Negative lookaheads can contain capturing groups as well, but backreferences only make sense within the `pattern`, because if matching continues, `pattern` would necessarily be unmatched (otherwise the assertion fails). This means outside of the `pattern`, backreferences to capturing groups in negative lookaheads always succeed. For example:
+Negative lookaheads can contain capturing groups as well, but backreferences only make sense within the `pattern`, because if matching continues, `pattern` would necessarily be unmatched (otherwise the assertion fails). This means outside of the `pattern`, backreferences to those capturing groups in negative lookaheads always succeed. For example:
 
 ```js
 /(.*?)a(?!(a+)b\1c)\1(.*)/.exec("baaabaac"); // ['baaabaac', 'ba', undefined, 'abaac']
@@ -58,7 +58,7 @@ The matching of the pattern above happens as follows:
 5. At this position, the lookahead fails to match, because the remaining input does not follow the pattern "any number of `"a"`s, a `"b"`, the same number of `"a"`s, a `c`". This causes the assertion to succeed.
 6. However, because nothing was matched within the assertion, the `\1` backreference has no value, so it matches the empty string. This causes the rest of the input to be consumed by the `(.*)` at the end.
 
-Normally, assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). However, in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, lookahead assertions) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+Normally, assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). However, in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, lookahead assertions can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
 /(?=a)?b/.test("b"); // true; the lookahead is matched 0 time

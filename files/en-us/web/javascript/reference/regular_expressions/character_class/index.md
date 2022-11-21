@@ -21,7 +21,7 @@ A **character class** matches any character in or not in a custom set of charact
 
 ## Description
 
-A character class specifies a list of characters between square bracket and matches any character in the list. The following syntaxes are available:
+A character class specifies a list of characters between square brackets and matches any character in the list. The following syntaxes are available:
 
 - A single character: matches the character itself.
 - A range of characters: matches any character in the inclusive range. The range is specified by two characters separated by a dash (`-`). The first character must be smaller in character value than the second character.
@@ -35,15 +35,15 @@ Unlike other parts of the regex, character classes interpret most character lite
 - The `]` character indicates the end of the character class. To use it literally, escape it as `\]`.
 - The dash (`-`) character, when used between two characters, indicates a range. When it appears at the start or end of a character class, it is a literal character. It's also a literal character when it's used in the boundary of a range. For example, `[a-]` matches the characters `a` and `-`, `[!--]` matches the characters `!` to `-`, and `[--9]` matches the characters `-` to `9`. You can also escape it as `\-` if you want to use it literally anywhere.
 
-The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#regular_expression_literals) does a very rough parse of regex literals, so that it does not end the regex literal at a `/` character that appears within a character class. This means `/[/]/` is valid without needing to escape the `/`.
+The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#regular_expression_literals) does a very rough parse of regex literals, so that it does not end the regex literal at a `/` character which appears within a character class. This means `/[/]/` is valid without needing to escape the `/`.
 
-The boundaries of a character range must not specify more than one character, which happens if you use a [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape). For example,
+The boundaries of a character range must not specify more than one character, which happens if you use a [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape). For example:
 
 ```js
 /[\s-9]/u; // SyntaxError: Invalid regular expression: Invalid character class
 ```
 
-In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, character ranges where one boundary is a character class makes the `-` become a literal character. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, character ranges where one boundary is a character class makes the `-` become a literal character. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
 /[\s-9]/.test("-"); // true
