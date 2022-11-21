@@ -22,9 +22,9 @@ A {{domxref("NodeList")}} containing the nodes added to the target of the mutati
 
 ### Update when adding a node
 
-In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logNewNodes`.
+In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logNewNodes()`.
 
-The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of new nodes that have been added. However, note that clicking the "Remove a node" button will not increment the total number of new nodes, because in this case `record.addedNodes` will have a length of `0`.
+The `logNewNodes()` function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of new nodes that have been added. However, note that clicking the "Remove a node" button will not increment the total number of new nodes, because in this case `record.addedNodes` will have a length of `0`.
 
 #### HTML
 
@@ -34,13 +34,13 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 <button id="reset">Reset</button>
 
 <pre id="counter">Total added nodes: 0</pre>
-<div id= "target"></div>
+<div id="target"></div>
 ```
 
 ```css hidden
 #counter {
   border: 1px dotted black;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 ```
 
