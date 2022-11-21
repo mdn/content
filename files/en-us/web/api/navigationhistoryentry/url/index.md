@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationHistoryEntry.url
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the
 {{domxref("NavigationHistoryEntry")}} interface returns the absolute URL of this history entry.

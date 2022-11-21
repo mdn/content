@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationDestination.url
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the
 {{domxref("NavigationDestination")}} interface returns the URL being navigated to.

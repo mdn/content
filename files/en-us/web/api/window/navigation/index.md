@@ -14,7 +14,7 @@ tags:
 browser-compat: api.Window.navigation
 ---
 
-{{APIRef}}{{seecompattable}}
+{{APIRef}}{{SeeCompatTable}}
 
 The `navigation` read-only property of the {{domxref("Window")}} interface returns the current `window`'s associated {{domxref("Navigation")}} object.
 

@@ -17,7 +17,7 @@ tags:
 browser-compat: api.Navigation
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`Navigation`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
 

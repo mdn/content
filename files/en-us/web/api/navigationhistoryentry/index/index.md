@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationHistoryEntry.index
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`index`** read-only property of the
 {{domxref("NavigationHistoryEntry")}} interface returns the index of the history entry in the history entries list (that is, the list returned by {{domxref("Navigation.entries()")}}), or `-1` if the entry does not appear in the list.

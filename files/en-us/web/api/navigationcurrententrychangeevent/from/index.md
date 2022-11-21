@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationCurrentEntryChangeEvent.from
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`from`** read-only property of the
 {{domxref("NavigationCurrentEntryChangeEvent")}} interface returns the {{domxref("NavigationHistoryEntry")}} that was navigated from.
